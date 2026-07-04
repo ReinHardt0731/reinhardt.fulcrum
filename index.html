@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fulcrum | Board Exam Prep</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="home-page">
+    <main class="home-shell">
+        <section class="home-intro" aria-label="Fulcrum introduction">
+            <h1 class="home-logo">Fulcrum</h1>
+        </section>
+        <div class="home-boundary" aria-hidden="true"></div>
+
+        <section class="home-dashboard" id="home-dashboard" aria-label="Home dashboard">
+            <div class="home-hero">
+                <div class="hero-copy">
+                    <p class="eyebrow">Short quiz - learn mode - flashcards</p>
+                    <h2 id="subject-title">Upload a quiz to begin</h2>
+                    <p id="subject-meta" class="hero-meta">
+                        This GitHub Pages version stores subjects in your browser with localStorage.
+                    </p>
+                </div>
+                <div class="hero-actions">
+                    <button class="ghost-button" id="refresh-button" type="button">Refresh</button>
+                </div>
+            </div>
+
+            <div class="mode-launcher" role="navigation" aria-label="Study mode launcher">
+                <button class="mode-launch-card is-active" type="button" data-home-mode="quiz">
+                    <span class="mode-launch-title">Quiz</span>
+                    <span class="mode-launch-copy">Instant feedback when you tap a choice.</span>
+                </button>
+                <button class="mode-launch-card" type="button" data-home-mode="learn">
+                    <span class="mode-launch-title">Learn mode</span>
+                    <span class="mode-launch-copy">Review answers right after each question.</span>
+                </button>
+                <button class="mode-launch-card" type="button" data-home-mode="flashcards">
+                    <span class="mode-launch-title">Flashcards</span>
+                    <span class="mode-launch-copy">Reveal, recall, then move on.</span>
+                </button>
+            </div>
+
+            <div class="home-subjects">
+                <div>
+                    <p class="section-label">Subjects</p>
+                    <h3>Pick a subject from the carousel</h3>
+                </div>
+                <div class="carousel-shell home-carousel-shell">
+                    <div class="carousel-controls">
+                        <button id="home-carousel-prev" class="carousel-arrow" type="button" aria-label="Previous subject">&#8249;</button>
+                        <button id="home-carousel-next" class="carousel-arrow" type="button" aria-label="Next subject">&#8250;</button>
+                    </div>
+                    <div id="home-subject-carousel" class="carousel-track home-subject-carousel"></div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="home-footer panel" aria-label="Social links">
+            <div class="home-footer-copy">
+                <span class="home-footer-brand">Fulcrum</span>
+                <span class="home-footer-note">Placeholder links for GitHub and LinkedIn.</span>
+            </div>
+            <div class="home-footer-links">
+                <a class="home-footer-link" href="#" aria-label="GitHub placeholder link">GitHub</a>
+                <a class="home-footer-link" href="#" aria-label="LinkedIn placeholder link">LinkedIn</a>
+            </div>
+        </footer>
+    </main>
+
+    <script type="module" src="home.js"></script>
+</body>
+</html>

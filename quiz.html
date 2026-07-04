@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepCore Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="mode-page">
+    <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+
+    <div class="app-shell">
+        <aside class="drawer panel" id="subject-drawer" aria-label="Subjects">
+            <div class="drawer-header">
+                <div>
+                    <p class="eyebrow">Subject drawer</p>
+                    <h1>Mini Quiz</h1>
+                </div>
+                <button class="icon-button drawer-close" id="drawer-close" type="button" aria-label="Close subject drawer">&times;</button>
+            </div>
+
+            <label class="drawer-fallback">
+                <span class="section-label">Choose subject</span>
+                <select id="subject-select" class="subject-select"></select>
+            </label>
+
+            <div id="subject-list" class="subject-list"></div>
+        </aside>
+
+        <main class="workspace">
+            <section class="hero-panel mode-topbar">
+                <div class="hero-copy">
+                    <p class="eyebrow">Instant-feedback quiz</p>
+                    <div class="mode-topbar-row">
+                        <h2 id="subject-title">Upload a quiz to begin</h2>
+                        <div class="hero-actions mode-actions" aria-label="Quick actions">
+                            <button class="icon-button mobile-only" id="drawer-open" type="button" aria-label="Open subjects">&#9776;</button>
+                            <button class="icon-button" id="refresh-button" type="button" aria-label="Refresh page">&#8635;</button>
+                            <a class="icon-button" href="index.html" aria-label="Home">&#8962;</a>
+                        </div>
+                    </div>
+                    <p id="subject-meta" class="hero-meta">
+                        This GitHub Pages version stores subjects in your browser with localStorage.
+                    </p>
+                </div>
+            </section>
+
+            <div class="mode-buttons mode-switch-row" role="tablist" aria-label="Study mode selector">
+                <button class="mode-button is-active" type="button" data-mode="quiz">Quiz</button>
+                <button class="mode-button" type="button" data-mode="learn">Learn mode</button>
+                <button class="mode-button" type="button" data-mode="flashcards">Flashcards</button>
+            </div>
+
+            <section class="panel quiz-panel" aria-live="polite">
+                <div class="quiz-panel-header">
+                    <div>
+                        <p class="section-label" id="mode-label">Quiz mode</p>
+                        <h3 id="question-counter">Waiting for a subject</h3>
+                    </div>
+                    <div class="progress-track" aria-hidden="true">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div id="question-stage" class="question-stage">
+                    <div class="empty-state">
+                        <h4>No subject loaded yet</h4>
+                        <p>Use the admin page to add a quiz, then choose it from the subject drawer.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel assessment-panel" id="assessment-panel">
+                <div class="assessment-header">
+                    <div>
+                        <p class="section-label">Assessment</p>
+                        <h3>Your results will appear here after each session.</h3>
+                    </div>
+                    <div class="summary-pill" id="assessment-score">Pending</div>
+                </div>
+                <div id="assessment-content" class="assessment-content">
+                    <div class="empty-state compact">
+                        <h4>Nothing to review yet</h4>
+                        <p>Complete a chapter to see score, missed questions, and weak areas.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="quiz.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepCore Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-page">
+    <main class="admin-shell admin-layout">
+        <section class="panel admin-lock-panel" id="admin-lock-panel">
+            <p class="eyebrow">Hidden admin page</p>
+            <h1>Unlock quiz library</h1>
+            <p class="hero-meta">
+                This page is intentionally hidden from the public site and protected only by a browser-side password gate.
+            </p>
+
+            <form id="admin-lock-form" class="admin-lock-form">
+                <label>
+                    <span class="section-label">Password</span>
+                    <input id="admin-password" type="password" autocomplete="current-password" placeholder="Enter admin password" required>
+                </label>
+                <div class="admin-actions">
+                    <button class="primary-button" type="submit">Unlock admin tools</button>
+                    <a class="ghost-button" href="index.html">Back to quiz site</a>
+                </div>
+                <p class="status-line" id="admin-lock-status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section class="panel admin-app admin-workspace" id="admin-app" hidden>
+            <aside class="admin-sidebar">
+                <details class="admin-collapse-panel admin-subject-panel" id="admin-subject-panel" open>
+                    <summary class="admin-collapse-summary">
+                        <div>
+                            <p class="section-label">Branches</p>
+                            <h2>Subject sidebar</h2>
+                        </div>
+                        <div class="summary-pill" id="admin-library-summary">Loading</div>
+                    </summary>
+
+                    <div class="admin-collapse-body">
+                        <section class="panel admin-tool-panel admin-subject-panel-card">
+                            <div class="mode-header">
+                                <div>
+                                    <p class="section-label">Branch builder</p>
+                                    <h3>Add a subject</h3>
+                                </div>
+                            </div>
+
+                            <button class="primary-button" id="admin-subject-add-toggle" type="button">Add subject</button>
+
+                            <form id="admin-subject-create-form" class="admin-form" hidden>
+                                <label>
+                                    <span class="section-label">Subject name</span>
+                                    <input id="admin-subject-create-name" type="text" placeholder="Physics" autocomplete="off" required>
+                                </label>
+                                <div class="admin-actions">
+                                    <button class="ghost-button" id="admin-subject-create-cancel" type="button">Cancel</button>
+                                    <button class="primary-button" id="admin-subject-create-button" type="submit">Create subject</button>
+                                </div>
+                            </form>
+
+                            <div class="mode-header">
+                                <div>
+                                    <p class="section-label">Selected subject</p>
+                                    <h3>Rename or delete</h3>
+                                </div>
+                            </div>
+
+                            <div id="admin-subject-editor-shell" class="admin-subject-editor-shell" hidden>
+                                <label class="admin-inline-field">
+                                    <span class="section-label">Rename subject</span>
+                                    <input id="admin-subject-name" type="text" placeholder="Select a subject to edit" autocomplete="off">
+                                </label>
+                                <div class="admin-actions">
+                                    <button class="primary-button" id="admin-subject-save" type="button">Save rename</button>
+                                    <button class="ghost-button" id="admin-subject-delete" type="button">Delete subject</button>
+                                </div>
+                            </div>
+
+                            <div class="subject-panel-divider"></div>
+
+                            <div class="mode-header">
+                                <div>
+                                    <p class="section-label">Tree</p>
+                                    <h3>Organize your library</h3>
+                                </div>
+                            </div>
+                            <p class="hero-meta compact-note">Subjects are branches. Chapters are leaves.</p>
+                            <div id="admin-subject-list" class="subject-list admin-subject-list"></div>
+                        </section>
+                    </div>
+                </details>
+            </aside>
+
+            <section class="admin-main">
+                <p class="status-line" id="admin-status" aria-live="polite"></p>
+
+                <div class="panel admin-management-card admin-chapter-panel">
+                    <div class="mode-header">
+                        <div>
+                            <p class="section-label">Leaves</p>
+                            <h2 id="admin-active-subject-title">No subject selected</h2>
+                        </div>
+                        <div class="summary-pill" id="admin-chapter-summary">No chapters</div>
+                    </div>
+
+                    <div class="admin-carousel-shell">
+                        <div class="carousel-controls">
+                            <button class="carousel-arrow" id="admin-chapter-prev" type="button" aria-label="Previous chapter">&#8249;</button>
+                            <button class="carousel-arrow" id="admin-chapter-next" type="button" aria-label="Next chapter">&#8250;</button>
+                        </div>
+                        <div id="admin-chapter-carousel" class="admin-carousel"></div>
+                    </div>
+
+                    <section class="panel admin-tool-panel admin-chapter-import-panel">
+                        <div class="mode-header">
+                            <div>
+                                <p class="section-label">Add leaf</p>
+                                <h3>Attach a JSON quiz file to this subject</h3>
+                            </div>
+                            <div class="summary-pill" id="chapter-upload-status">Waiting for a file</div>
+                        </div>
+
+                        <form id="chapter-import-form" class="admin-form">
+                            <label>
+                                <span class="section-label">Chapter name</span>
+                                <input id="chapter-name" type="text" placeholder="New chapter title" autocomplete="off">
+                            </label>
+
+                            <label>
+                                <span class="section-label">Quiz JSON file</span>
+                                <input id="chapter-quiz-file" type="file" accept=".json,application/json" required>
+                            </label>
+
+                            <div class="admin-actions">
+                                <button class="ghost-button" id="chapter-preview-button" type="button">Preview file</button>
+                                <button class="primary-button" id="chapter-import-button" type="submit">Add leaf</button>
+                            </div>
+                        </form>
+
+                        <section class="panel admin-preview-panel">
+                            <div class="mode-header">
+                                <div>
+                                    <p class="section-label">Preview</p>
+                                    <h3>Chapter import details</h3>
+                                </div>
+                            </div>
+                            <div id="chapter-preview-content" class="preview-content">
+                                <div class="empty-state compact">
+                                    <h4>No file previewed yet</h4>
+                                    <p>Choose a JSON file to inspect the chapter before adding it to the selected subject.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+
+                    <section class="panel admin-tool-panel admin-chapter-editor-panel">
+                        <div class="mode-header">
+                            <div>
+                                <p class="section-label">Selected chapter</p>
+                                <h3>Rename or delete</h3>
+                            </div>
+                        </div>
+
+                        <div id="admin-chapter-editor-shell" class="admin-chapter-editor-shell">
+                            <label class="admin-inline-field">
+                                <span class="section-label">Rename selected chapter</span>
+                                <input id="admin-chapter-name" type="text" placeholder="Select a chapter to edit" autocomplete="off">
+                            </label>
+                            <div class="admin-actions">
+                                <button class="primary-button" id="admin-chapter-save" type="button">Save rename</button>
+                                <button class="ghost-button" id="admin-chapter-delete" type="button">Delete chapter</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
