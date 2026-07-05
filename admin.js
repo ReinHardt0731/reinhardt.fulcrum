@@ -1,21 +1,10 @@
-import {
+﻿import {
     ACTIVE_CHAPTER_KEY,
     ACTIVE_MODE_KEY,
     ACTIVE_SUBJECT_KEY,
     ADMIN_PASSWORD,
-<<<<<<< HEAD
-=======
-    buildChapterFilePath,
->>>>>>> 0ee96ad (Add admin chapter import workflow)
-    getChapterByTitle,
-    getSubjectById,
-    isAdminUnlocked,
-    previewQuizFile,
-    saveSubjects,
-<<<<<<< HEAD
-=======
     serializeSubjects,
->>>>>>> 0ee96ad (Add admin chapter import workflow)
+
     setAdminUnlocked,
     storageSelectState,
     syncSelection,
@@ -23,11 +12,8 @@ import {
     textValue
 } from "./shared.js";
 
-<<<<<<< HEAD
-document.addEventListener("DOMContentLoaded", () => {
-=======
 document.addEventListener("DOMContentLoaded", async () => {
->>>>>>> 0ee96ad (Add admin chapter import workflow)
+
     if (!document.body.classList.contains("admin-page")) {
         return;
     }
@@ -51,111 +37,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         subjectSaveButton: document.getElementById("admin-subject-save"),
         subjectDeleteButton: document.getElementById("admin-subject-delete"),
         activeSubjectTitle: document.getElementById("admin-active-subject-title"),
-<<<<<<< HEAD
-=======
-        exportButton: document.getElementById("admin-export-button"),
->>>>>>> 0ee96ad (Add admin chapter import workflow)
-        chapterSummary: document.getElementById("admin-chapter-summary"),
-        chapterCarousel: document.getElementById("admin-chapter-carousel"),
-        chapterPrev: document.getElementById("admin-chapter-prev"),
-        chapterNext: document.getElementById("admin-chapter-next"),
-        chapterImportForm: document.getElementById("chapter-import-form"),
-        chapterPreviewButton: document.getElementById("chapter-preview-button"),
-        chapterNameInput: document.getElementById("chapter-name"),
-        chapterFileInput: document.getElementById("chapter-quiz-file"),
-        chapterPreviewStatus: document.getElementById("chapter-upload-status"),
-        chapterPreviewContent: document.getElementById("chapter-preview-content"),
-        chapterImportButton: document.getElementById("chapter-import-button"),
-        chapterRenameInput: document.getElementById("admin-chapter-name"),
-        chapterSaveButton: document.getElementById("admin-chapter-save"),
-        chapterDeleteButton: document.getElementById("admin-chapter-delete")
-    };
-
-    if (
-        !elements.lockForm ||
-        !elements.lockPanel ||
-        !elements.adminApp ||
-        !elements.subjectAddToggle ||
-        !elements.subjectCreateForm ||
-        !elements.chapterImportForm
-    ) {
-        return;
-    }
-
-    const state = {
-        subjects: [],
-        activeSubjectId: "",
-        activeChapterTitle: "",
-        activeMode: "quiz",
-        expandedSubjectId: ""
-    };
-
-    const now = () => new Date().toISOString();
-
-    const slugify = (value) =>
-        textValue(value)
-            .toLowerCase()
-            .normalize("NFKD")
-            .replace(/[\u0300-\u036f]/g, "")
-            .replace(/[^a-z0-9]+/g, "-")
-            .replace(/^-+|-+$/g, "") || "subject";
-
-    const emptyState = (headingText, bodyText) => {
-        const box = document.createElement("div");
-        box.className = "empty-state compact";
-        box.append(
-            Object.assign(document.createElement("h4"), { textContent: headingText }),
-            Object.assign(document.createElement("p"), { textContent: bodyText })
-        );
-        return box;
-    };
-
-    const cloneQuestions = (questions) =>
-        questions.map((question) => ({
-            ...question,
-            choices: Array.isArray(question.choices) ? [...question.choices] : [],
-            tags: Array.isArray(question.tags) ? [...question.tags] : []
-        }));
-
-    const uniqueSubjectName = (subjects, rawName, excludedId = "") => {
-        const value = textValue(rawName);
-        if (!value) {
-            return "";
-        }
-
-        const existing = new Set(
-            subjects
-                .filter((subject) => subject.id !== excludedId)
-                .map((subject) => textValue(subject.name).toLowerCase())
-        );
-        const normalized = value.toLowerCase();
-        if (!existing.has(normalized)) {
-            return value;
-        }
-
-        let suffix = 2;
-        while (existing.has(`${normalized} ${suffix}`)) {
-            suffix += 1;
-        }
-        return `${value} ${suffix}`;
-    };
-
-    const uniqueSubjectId = (subjects, rawName, excludedId = "") => {
-        const base = slugify(rawName);
-        const existing = new Set(subjects.filter((subject) => subject.id !== excludedId).map((subject) => textValue(subject.id)));
-        if (!existing.has(base)) {
-            return base;
-        }
-
-        let suffix = 2;
-        while (existing.has(`${base}-${suffix}`)) {
-            suffix += 1;
-        }
-        return `${base}-${suffix}`;
-    };
-
-<<<<<<< HEAD
-=======
     const uniqueChapterFilePath = (subject, rawTitle, excludedTitle = "") => {
         const basePath = buildChapterFilePath(rawTitle || "chapter");
         const existing = new Set(
@@ -178,7 +59,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         return `${directory}/${name}-${suffix}.${extension}`;
     };
 
->>>>>>> 0ee96ad (Add admin chapter import workflow)
+
     const createEmptySubjectRecord = (subjects, rawName) => {
         const name = uniqueSubjectName(subjects, rawName);
         if (!name) {
@@ -220,49 +101,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     };
 
-<<<<<<< HEAD
-=======
-    const downloadTextFile = (filename, content) => {
-        const blob = new Blob([content], { type: "application/json;charset=utf-8" });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.download = filename;
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-        URL.revokeObjectURL(url);
-    };
-
->>>>>>> 0ee96ad (Add admin chapter import workflow)
-    const getActiveSubject = () => getSubjectById(state.subjects, state.activeSubjectId) || state.subjects[0] || null;
-
-    const getActiveChapter = () => {
-        const subject = getActiveSubject();
-        return subject ? getChapterByTitle(subject, state.activeChapterTitle) || subject.chapters[0] || null : null;
-    };
-
-    const persistSelection = () => {
-        syncSelection(state.activeSubjectId, state.activeChapterTitle, state.activeMode);
-    };
-
-    const showAdminApp = () => {
-        elements.lockPanel.hidden = true;
-        elements.adminApp.hidden = false;
-    };
-
-    const hideAdminApp = () => {
-        elements.lockPanel.hidden = false;
-        elements.adminApp.hidden = true;
-    };
-
-<<<<<<< HEAD
-    const loadState = () => {
-        const fresh = storageSelectState();
-=======
     const loadState = async () => {
         const fresh = await storageSelectState();
->>>>>>> 0ee96ad (Add admin chapter import workflow)
+
         state.subjects = fresh.subjects;
         state.activeSubjectId = fresh.activeSubject?.id || state.subjects[0]?.id || "";
         state.activeMode = fresh.mode || "quiz";
@@ -694,11 +535,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             state.expandedSubjectId = subjectRecord.id;
             persistSelection();
             closeSubjectCreate();
-<<<<<<< HEAD
-            setStatus(`Created subject "${subjectRecord.name}".`);
-=======
             setStatus(`Created subject "${subjectRecord.name}". Use Export JSON to save it to the repo file.`);
->>>>>>> 0ee96ad (Add admin chapter import workflow)
+
             renderAll();
         } catch (error) {
             setStatus(error?.message || "Could not create subject.");
@@ -706,133 +544,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 
-<<<<<<< HEAD
-=======
-    elements.exportButton?.addEventListener("click", () => {
-        try {
-            const payload = serializeSubjects(state.subjects);
-            const blob = new Blob([payload], { type: "application/json;charset=utf-8" });
-            const url = URL.createObjectURL(blob);
-            const link = document.createElement("a");
-            link.href = url;
-            link.download = "subjects.json";
-            document.body.appendChild(link);
-            link.click();
-            link.remove();
-            URL.revokeObjectURL(url);
-            setStatus("Downloaded subjects.json.");
-        } catch (error) {
-            setStatus(error?.message || "Could not export subjects.json.");
-        }
-    });
-
->>>>>>> 0ee96ad (Add admin chapter import workflow)
-    elements.subjectSaveButton?.addEventListener("click", () => {
-        const subject = getActiveSubject();
-        const nextName = uniqueSubjectName(state.subjects, elements.subjectRenameInput?.value, subject?.id || "");
-        if (!subject || !nextName) {
-            setStatus("Choose a subject and enter a name first.");
-            return;
-        }
-
-        const nextSubjects = state.subjects.map((entry) =>
-            entry.id === subject.id
-                ? { ...entry, name: nextName, updatedAt: now() }
-                : entry
-        );
-        commitSubjects(nextSubjects, subject.id, state.activeChapterTitle);
-<<<<<<< HEAD
-        setStatus(`Renamed subject to "${nextName}".`);
-=======
-        setStatus(`Renamed subject to "${nextName}". Use Export JSON to save it to the repo file.`);
->>>>>>> 0ee96ad (Add admin chapter import workflow)
-    });
-
-    elements.subjectDeleteButton?.addEventListener("click", () => {
-        const subject = getActiveSubject();
-        if (!subject || state.subjects.length <= 1) {
-            setStatus("Keep at least one subject available.");
-            return;
-        }
-
-        const remainingSubjects = state.subjects.filter((entry) => entry.id !== subject.id);
-        const nextSubject = remainingSubjects[0] || null;
-        state.subjects = saveSubjects(remainingSubjects);
-        state.activeSubjectId = nextSubject?.id || "";
-        state.activeChapterTitle = nextSubject?.selectedChapter || nextSubject?.chapters[0]?.title || "";
-        state.expandedSubjectId = nextSubject?.id || "";
-        persistSelection();
-        renderAll();
-<<<<<<< HEAD
-        setStatus(`Deleted subject "${subject.name}".`);
-=======
-        setStatus(`Deleted subject "${subject.name}". Use Export JSON to save the change to the repo file.`);
->>>>>>> 0ee96ad (Add admin chapter import workflow)
-    });
-
-    elements.chapterPreviewButton?.addEventListener("click", async () => {
-        closeSubjectCreate();
-        try {
-            await renderChapterPreview();
-            setStatus("");
-        } catch (error) {
-            renderPreviewError(elements.chapterPreviewStatus, elements.chapterPreviewContent, error);
-        }
-    });
-
-    elements.chapterFileInput?.addEventListener("change", () => {
-        closeSubjectCreate();
-        const subject = getActiveSubject();
-        if (!subject) {
-            return;
-        }
-
-        const hasFile = Boolean(elements.chapterFileInput?.files?.length);
-        if (elements.chapterPreviewStatus) {
-            elements.chapterPreviewStatus.textContent = hasFile ? "Ready to preview" : "Waiting for a file";
-        }
-        if (elements.chapterPreviewContent) {
-            elements.chapterPreviewContent.replaceChildren(
-                emptyState(
-                    hasFile ? "File selected" : "No file previewed yet",
-                    hasFile
-                        ? "Click Preview file to inspect the chapter before adding it."
-                        : "Choose a JSON file to inspect the chapter before adding it."
-                )
-            );
-        }
-    });
-
-    elements.chapterImportForm.addEventListener("submit", async (event) => {
-        event.preventDefault();
-        closeSubjectCreate();
-        const subject = getActiveSubject();
-        if (!subject) {
-            setStatus("Select a subject first.");
-            return;
-        }
-
-        try {
-            const quiz = await renderChapterPreview();
-            if (!quiz) {
-                return;
-            }
-
-            const sourceChapterTitle = textValue(quiz.selected_chapter) || quiz.chapters[0]?.title || "";
-            const sourceChapter = quiz.chapters.find((chapter) => chapter.title === sourceChapterTitle) || quiz.chapters[0] || null;
-            if (!sourceChapter) {
-                setStatus("The selected file does not contain a usable chapter.");
-                return;
-            }
-
-            const customChapterName = textValue(elements.chapterNameInput?.value);
-            const uniqueTitle = uniqueChapterTitle(subject, customChapterName || sourceChapter.title);
-<<<<<<< HEAD
-            const importedChapter = {
-                title: uniqueTitle,
-                questions: cloneQuestions(sourceChapter.questions)
-            };
-=======
             const chapterFilePath = uniqueChapterFilePath(subject, uniqueTitle);
             const chapterPayload = {
                 title: uniqueTitle,
@@ -846,7 +557,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const chapterDownloadName = chapterFilePath.split("/").pop() || "chapter.json";
             downloadTextFile(chapterDownloadName, `${JSON.stringify(chapterPayload, null, 2)}\n`);
->>>>>>> 0ee96ad (Add admin chapter import workflow)
+
 
             const nextSubjects = state.subjects.map((entry) =>
                 entry.id === subject.id
@@ -872,11 +583,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                     emptyState("Saved successfully", `The chapter was added to "${subject.name}".`)
                 );
             }
-<<<<<<< HEAD
-            setStatus(`Added chapter "${uniqueTitle}" to "${subject.name}".`);
-=======
             setStatus(`Added chapter "${uniqueTitle}" to "${subject.name}" and downloaded ${chapterDownloadName}. Use Export JSON to save the manifest to the repo file.`);
->>>>>>> 0ee96ad (Add admin chapter import workflow)
+
         } catch (error) {
             renderPreviewError(elements.chapterPreviewStatus, elements.chapterPreviewContent, error);
         }
@@ -981,24 +689,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         carousel.scrollBy({ left: Math.max(260, carousel.clientWidth * 0.7), behavior: "smooth" });
     });
 
-<<<<<<< HEAD
-    window.addEventListener("storage", (event) => {
-        if ([ACTIVE_SUBJECT_KEY, ACTIVE_CHAPTER_KEY, ACTIVE_MODE_KEY].includes(event.key)) {
-            loadState();
-=======
     window.addEventListener("storage", async (event) => {
         if ([ACTIVE_SUBJECT_KEY, ACTIVE_CHAPTER_KEY, ACTIVE_MODE_KEY].includes(event.key)) {
             await loadState();
->>>>>>> 0ee96ad (Add admin chapter import workflow)
+
             renderAll();
         }
     });
 
-<<<<<<< HEAD
-    loadState();
-=======
     await loadState();
->>>>>>> 0ee96ad (Add admin chapter import workflow)
+
     if (isAdminUnlocked()) {
         showAdminApp();
     } else {
@@ -1006,3 +706,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     renderAll();
 });
+
+
+
