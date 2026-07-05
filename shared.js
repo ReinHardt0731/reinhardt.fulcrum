@@ -5,6 +5,10 @@ export const ACTIVE_MODE_KEY = "prepcore.web.activeMode.v1";
 export const REVIEW_SESSION_KEY = "prepcore.web.reviewSession.v1";
 export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
 export const ADMIN_PASSWORD = "prepcore";
+<<<<<<< HEAD
+=======
+const SUBJECTS_PATH = "./subjects.json";
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
 
 const VALID_MODES = new Set(["quiz", "learn", "flashcards"]);
 
@@ -69,6 +73,14 @@ const slugify = (value) =>
         .replace(/[^a-z0-9]+/g, "-")
         .replace(/^-+|-+$/g, "") || "subject";
 
+<<<<<<< HEAD
+=======
+export function buildChapterFilePath(chapterTitle) {
+    const base = slugify(chapterTitle || "chapter");
+    return `chapters/${base}.json`;
+}
+
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
 const safeParse = (raw, fallback) => {
     try {
         return JSON.parse(raw);
@@ -400,9 +412,28 @@ function coerceQuestion(entry, position) {
     }
 }
 
+<<<<<<< HEAD
 function coerceChapter(entry, position) {
     if (Array.isArray(entry)) {
         const questions = collectQuestionEntries(entry).map((question, index) => coerceQuestion(question, index + 1));
+=======
+function coerceChapter(entry, position, chapterLookup = {}) {
+    const normalizedEntry = (() => {
+        if (!entry || typeof entry !== "object" || Array.isArray(entry)) {
+            return entry;
+        }
+
+        const file = text(entry.file || entry.path || entry.source || entry.chapterFile);
+        if (!file) {
+            return entry;
+        }
+
+        return chapterLookup[file] || entry;
+    })();
+
+    if (Array.isArray(normalizedEntry)) {
+        const questions = collectQuestionEntries(normalizedEntry).map((question, index) => coerceQuestion(question, index + 1));
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
         if (!questions.length) {
             return null;
         }
@@ -412,6 +443,7 @@ function coerceChapter(entry, position) {
         };
     }
 
+<<<<<<< HEAD
     if (!entry || typeof entry !== "object") {
         return null;
     }
@@ -419,6 +451,15 @@ function coerceChapter(entry, position) {
     const title = text(entry.title || entry.chapter || entry.name);
     const questionsSource = collectQuestionEntries(entry.questions ?? entry.questionList ?? entry.items ?? entry.question);
     const wrappedQuestions = questionsSource.length ? questionsSource : collectQuestionEntries(entry.rows ?? entry.cards);
+=======
+    if (!normalizedEntry || typeof normalizedEntry !== "object") {
+        return null;
+    }
+
+    const title = text(normalizedEntry.title || normalizedEntry.chapter || normalizedEntry.name || entry?.title || entry?.chapter || entry?.name);
+    const questionsSource = collectQuestionEntries(normalizedEntry.questions ?? normalizedEntry.questionList ?? normalizedEntry.items ?? normalizedEntry.question);
+    const wrappedQuestions = questionsSource.length ? questionsSource : collectQuestionEntries(normalizedEntry.rows ?? normalizedEntry.cards);
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
 
     if (!title && !wrappedQuestions.length) {
         return null;
@@ -429,6 +470,7 @@ function coerceChapter(entry, position) {
         return null;
     }
 
+<<<<<<< HEAD
     return {
         title: title || `Chapter ${position}`,
         questions
@@ -436,11 +478,73 @@ function coerceChapter(entry, position) {
 }
 
 function coerceStoredSubject(entry, position) {
+=======
+    const file = text(entry?.file || entry?.path || entry?.source || entry?.chapterFile);
+    return {
+        title: title || `Chapter ${position}`,
+        questions,
+        ...(file ? { file } : {})
+    };
+}
+
+async function resolveChapterData(entry, chapterLookup = {}) {
+    if (!entry || typeof entry !== "object" || Array.isArray(entry)) {
+        return null;
+    }
+
+    const file = text(entry.file || entry.path || entry.source || entry.chapterFile);
+    if (file) {
+        const cached = chapterLookup[file];
+        if (cached && typeof cached === "object") {
+            return {
+                ...cached,
+                title: text(cached.title || entry.title || entry.chapter || entry.name || "Imported"),
+                file
+            };
+        }
+
+        try {
+            const response = await fetch(file, { cache: "no-store" });
+            if (response.ok) {
+                const payload = await response.json();
+                if (Array.isArray(payload)) {
+                    return {
+                        title: text(entry.title || entry.chapter || entry.name || "Imported"),
+                        questions: collectQuestionEntries(payload),
+                        file
+                    };
+                }
+
+                if (payload && typeof payload === "object") {
+                    return {
+                        title: text(payload.title || payload.chapter || payload.name || entry.title || entry.chapter || entry.name || "Imported"),
+                        questions: collectQuestionEntries(payload.questions ?? payload.questionList ?? payload.items ?? payload.question ?? payload.rows ?? payload.cards),
+                        file
+                    };
+                }
+            }
+        } catch {
+            return null;
+        }
+    }
+
+    return null;
+}
+
+function coerceStoredSubject(entry, position, chapterLookup = {}) {
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
     if (!entry || typeof entry !== "object" || Array.isArray(entry)) {
         return null;
     }
 
     const name = text(entry.name || entry.subject || entry.title || `Subject ${position}`);
+<<<<<<< HEAD
+=======
+    if (!name) {
+        return null;
+    }
+
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
     let chaptersSource = [];
 
     const chapterEntries = collectChapterEntries(entry.chapters);
@@ -456,6 +560,7 @@ function coerceStoredSubject(entry, position) {
     }
 
     const chapters = chaptersSource
+<<<<<<< HEAD
         .map((chapter, index) => coerceChapter(chapter, index + 1))
         .filter(Boolean);
 
@@ -463,19 +568,44 @@ function coerceStoredSubject(entry, position) {
         return null;
     }
 
+=======
+        .map((chapter, index) => coerceChapter(chapter, index + 1, chapterLookup))
+        .filter(Boolean);
+
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
     return {
         id: text(entry.id) || slugify(name),
         name,
         quizType: text(entry.quizType || entry.quiz_type || "short_quiz"),
         schemaVersion: Number(entry.schemaVersion || entry.schema_version || 1),
+<<<<<<< HEAD
         selectedChapter: text(entry.selectedChapter || entry.selected_chapter || chapters[0].title || ""),
+=======
+        selectedChapter: text(entry.selectedChapter || entry.selected_chapter || chapters[0]?.title || ""),
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
         chapters,
         updatedAt: text(entry.updatedAt || entry.updated_at || new Date().toISOString())
     };
 }
 
+<<<<<<< HEAD
 export function normalizeChapter(entry, position) {
     const looseChapter = coerceChapter(entry, position);
+=======
+function normalizeSubjectCollection(subjects, chapterLookup = {}) {
+    if (!Array.isArray(subjects)) {
+        return [];
+    }
+
+    return subjects
+        .map((subject, index) => coerceStoredSubject(subject, index + 1, chapterLookup))
+        .filter(Boolean)
+        .sort((left, right) => text(left.name).localeCompare(text(right.name)));
+}
+
+export function normalizeChapter(entry, position, chapterLookup = {}) {
+    const looseChapter = coerceChapter(entry, position, chapterLookup);
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
     if (!looseChapter) {
         throw new Error(`Chapter ${position} must include a title and at least one question.`);
     }
@@ -487,8 +617,13 @@ export function normalizeChapter(entry, position) {
 }
 
 export function normalizeQuizPayload(payload, subjectOverride = "") {
+<<<<<<< HEAD
     if (!payload || typeof payload !== "object") {
         throw new Error("Quiz file must be a JSON object.");
+=======
+    if (!payload || (typeof payload !== "object" && !Array.isArray(payload))) {
+        throw new Error("Quiz file must be a JSON object or array.");
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
     }
 
     let chaptersSource = [];
@@ -515,6 +650,19 @@ export function normalizeQuizPayload(payload, subjectOverride = "") {
                 questions: collectQuestionEntries(payload.questions)
             }
         ];
+<<<<<<< HEAD
+=======
+    } else if (Array.isArray(payload)) {
+        const chapterLike = payload.length > 0 && payload.every((entry) => Array.isArray(entry) || isChapterLikeObject(entry));
+        chaptersSource = chapterLike
+            ? payload
+            : [
+                {
+                    title: text(subjectOverride || "Imported Chapter"),
+                    questions: collectQuestionEntries(payload)
+                }
+            ];
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
     } else {
         throw new Error("Quiz file must include chapters or questions.");
     }
@@ -553,6 +701,7 @@ export function createSubjectRecord(quiz, subjectName = "") {
     };
 }
 
+<<<<<<< HEAD
 export function loadSubjects() {
     const subjects = storageGet(STORAGE_KEY, []);
     if (!Array.isArray(subjects)) {
@@ -578,6 +727,85 @@ export function seedSubjectsIfNeeded() {
     storageSet(ACTIVE_SUBJECT_KEY, seeded[0].id);
     storageSet(ACTIVE_CHAPTER_KEY, seeded[0].selectedChapter);
     return seeded;
+=======
+export async function loadSubjects() {
+    try {
+        const response = await fetch(SUBJECTS_PATH, { cache: "no-store" });
+        if (!response.ok) {
+            return [];
+        }
+
+        const raw = await response.json();
+        const chapterLookup = raw?.chapterData || raw?.chapterFiles || {};
+        const subjects = Array.isArray(raw)
+            ? raw
+            : Array.isArray(raw?.subjects)
+                ? raw.subjects
+                : [];
+
+        const resolvedSubjects = [];
+        for (const subject of subjects) {
+            if (!subject || typeof subject !== "object" || Array.isArray(subject)) {
+                continue;
+            }
+
+            const chapterEntries = Array.isArray(subject.chapters) ? subject.chapters : [];
+            const resolvedChapters = [];
+            for (const chapterEntry of chapterEntries) {
+                const loadedChapter = await resolveChapterData(chapterEntry, chapterLookup);
+                const chapterPayload = loadedChapter || chapterEntry;
+                const chapter = coerceChapter(
+                    loadedChapter
+                        ? { ...chapterEntry, ...loadedChapter, file: loadedChapter.file || chapterEntry?.file || chapterEntry?.path || chapterEntry?.source || chapterEntry?.chapterFile }
+                        : chapterEntry,
+                    1,
+                    chapterLookup
+                );
+                if (chapter) {
+                    resolvedChapters.push(chapter);
+                }
+            }
+
+            const normalizedSubject = coerceStoredSubject({ ...subject, chapters: resolvedChapters }, 1, chapterLookup);
+            if (normalizedSubject) {
+                resolvedSubjects.push(normalizedSubject);
+            }
+        }
+
+        return resolvedSubjects.sort((left, right) => text(left.name).localeCompare(text(right.name)));
+    } catch {
+        return [];
+    }
+}
+
+export function saveSubjects(subjects) {
+    return normalizeSubjectCollection(subjects);
+}
+
+export function serializeSubjects(subjects) {
+    const normalizedSubjects = saveSubjects(subjects);
+    const chapterData = {};
+    const exportSubjects = normalizedSubjects.map((subject) => ({
+        ...subject,
+        chapters: subject.chapters.map((chapter) => {
+            const file = chapter.file || `chapters/${slugify(chapter.title || "chapter")}.json`;
+            chapterData[file] = {
+                title: chapter.title,
+                questions: Array.isArray(chapter.questions) ? chapter.questions.map((question) => ({
+                    ...question,
+                    choices: Array.isArray(question.choices) ? [...question.choices] : [],
+                    tags: Array.isArray(question.tags) ? [...question.tags] : []
+                })) : []
+            };
+            return {
+                title: chapter.title,
+                file
+            };
+        })
+    }));
+
+    return `${JSON.stringify({ subjects: exportSubjects, chapterData }, null, 2)}\n`;
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
 }
 
 export function getSubjectById(subjects, subjectId) {
@@ -715,8 +943,13 @@ export function clearReviewSession() {
     sessionRemove(REVIEW_SESSION_KEY);
 }
 
+<<<<<<< HEAD
 export function storageSelectState() {
     const subjects = seedSubjectsIfNeeded();
+=======
+export async function storageSelectState() {
+    const subjects = await loadSubjects();
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
     const storedSubjectId = text(storageGet(ACTIVE_SUBJECT_KEY, ""));
     const storedMode = text(storageGet(ACTIVE_MODE_KEY, "quiz")) || "quiz";
     const activeSubject = getSubjectById(subjects, storedSubjectId) || subjects[0] || null;
@@ -1511,7 +1744,11 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
     renderProgress(progressFill, session);
 }
 
+<<<<<<< HEAD
 export function initHomePage() {
+=======
+export async function initHomePage() {
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
     if (!document.body.classList.contains("home-page")) {
         return;
     }
@@ -1532,7 +1769,16 @@ export function initHomePage() {
         modeLinks: document.querySelectorAll("[data-home-mode]")
     };
 
+<<<<<<< HEAD
     const state = storageSelectState();
+=======
+    const state = {
+        subjects: [],
+        activeSubject: null,
+        activeChapter: null,
+        mode: "quiz"
+    };
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
 
     const renderModeLinks = () => {
         elements.modeLinks.forEach((button) => {
@@ -1541,6 +1787,7 @@ export function initHomePage() {
     };
 
     const render = () => {
+<<<<<<< HEAD
         state.subjects = seedSubjectsIfNeeded();
         state.activeSubject = getSubjectById(state.subjects, state.activeSubject?.id || storageGet(ACTIVE_SUBJECT_KEY, ""));
         if (!state.activeSubject) {
@@ -1553,13 +1800,20 @@ export function initHomePage() {
             ) || state.activeSubject.chapters[0] || null;
         }
 
+=======
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
         if (elements.title) {
             elements.title.textContent = state.activeSubject ? state.activeSubject.name : "Upload a quiz to begin";
         }
         if (elements.meta) {
             elements.meta.textContent = state.activeSubject
+<<<<<<< HEAD
                 ? `${state.activeSubject.chapters.length} chapter${state.activeSubject.chapters.length === 1 ? "" : "s"} • ${tallyQuestionCount(state.activeSubject)} questions stored in your browser.`
                 : "This GitHub Pages version stores subjects in your browser with localStorage.";
+=======
+                ? `${state.activeSubject.chapters.length} chapter${state.activeSubject.chapters.length === 1 ? "" : "s"} • ${tallyQuestionCount(state.activeSubject)} questions loaded from subjects.json.`
+                : "This GitHub Pages version loads subjects from subjects.json.";
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
         }
 
         renderModeLinks();
@@ -1574,13 +1828,25 @@ export function initHomePage() {
         }
     };
 
+<<<<<<< HEAD
     elements.refresh?.addEventListener("click", () => {
         const fresh = storageSelectState();
+=======
+    const refresh = async () => {
+        const fresh = await storageSelectState();
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
         state.subjects = fresh.subjects;
         state.activeSubject = fresh.activeSubject;
         state.activeChapter = fresh.activeChapter;
         state.mode = fresh.mode;
         render();
+<<<<<<< HEAD
+=======
+    };
+
+    elements.refresh?.addEventListener("click", () => {
+        refresh();
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
     });
 
     elements.prev?.addEventListener("click", () => {
@@ -1608,6 +1874,7 @@ export function initHomePage() {
         });
     });
 
+<<<<<<< HEAD
     render();
 
     window.addEventListener("storage", (event) => {
@@ -1618,11 +1885,22 @@ export function initHomePage() {
             state.activeChapter = fresh.activeChapter;
             state.mode = fresh.mode;
             render();
+=======
+    await refresh();
+
+    window.addEventListener("storage", async (event) => {
+        if ([STORAGE_KEY, ACTIVE_SUBJECT_KEY, ACTIVE_CHAPTER_KEY, ACTIVE_MODE_KEY].includes(event.key)) {
+            await refresh();
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
         }
     });
 }
 
+<<<<<<< HEAD
 export function initModePage(mode) {
+=======
+export async function initModePage(mode) {
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
     if (!document.body.classList.contains("mode-page")) {
         return;
     }
@@ -1657,7 +1935,13 @@ export function initModePage(mode) {
     };
 
     const state = {
+<<<<<<< HEAD
         ...storageSelectState(),
+=======
+        subjects: [],
+        activeSubject: null,
+        activeChapter: null,
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
         mode,
         session: null,
         reviewSession: loadReviewSession(),
@@ -1717,7 +2001,11 @@ export function initModePage(mode) {
                 elements.title.textContent = "Upload a quiz to begin";
             }
             if (elements.meta) {
+<<<<<<< HEAD
                 elements.meta.textContent = "Open the hidden admin page to add quiz JSON, or keep the browser-local sample subject.";
+=======
+                elements.meta.textContent = "Open the hidden admin page to edit subjects.json or load a new quiz file into the repo-backed library.";
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
             }
             if (elements.summaryPill) {
                 elements.summaryPill.textContent = "No subject loaded";
@@ -1743,7 +2031,11 @@ export function initModePage(mode) {
             elements.title.textContent = subject.name;
         }
         if (elements.meta) {
+<<<<<<< HEAD
             elements.meta.textContent = `${chapterCount} chapter${chapterCount === 1 ? "" : "s"} • ${questionCount} question${questionCount === 1 ? "" : "s"} stored in your browser.`;
+=======
+            elements.meta.textContent = `${chapterCount} chapter${chapterCount === 1 ? "" : "s"} • ${questionCount} question${questionCount === 1 ? "" : "s"} loaded from subjects.json.`;
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
         }
         if (elements.summaryPill) {
             elements.summaryPill.textContent = `${chapterCount} chapters • ${questionCount} questions`;
@@ -2229,12 +2521,18 @@ export function initModePage(mode) {
         state.activeSubject = subject;
         const nextChapterTitle = text(chapterTitle || subject.selectedChapter || subject.chapters[0]?.title || "");
         state.activeChapter = getUsableChapter(subject, nextChapterTitle) || subject.chapters[0] || null;
+<<<<<<< HEAD
         state.activeSubject.selectedChapter = state.activeChapter?.title || "";
+=======
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
         state.drawerExpandedSubjectId = subject.id;
         state.reviewSession = null;
         clearReviewSession();
         syncSelection(subject.id, state.activeChapter?.title || "", state.mode);
+<<<<<<< HEAD
         state.subjects = saveSubjects(state.subjects);
+=======
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
         renderDrawer();
         renderChapters();
         startSession(state.mode);
@@ -2252,12 +2550,18 @@ export function initModePage(mode) {
         }
 
         state.activeChapter = chapter;
+<<<<<<< HEAD
         state.activeSubject.selectedChapter = chapter.title;
+=======
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
         state.drawerExpandedSubjectId = subject.id;
         state.reviewSession = null;
         clearReviewSession();
         syncSelection(subject.id, chapter.title, state.mode);
+<<<<<<< HEAD
         state.subjects = saveSubjects(state.subjects);
+=======
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
         renderDrawer();
         renderChapters();
         startSession(state.mode);
@@ -2290,15 +2594,34 @@ export function initModePage(mode) {
     elements.drawerClose?.addEventListener("click", closeDrawer);
     elements.backdrop?.addEventListener("click", closeDrawer);
     elements.subjectSelect?.addEventListener("change", (event) => selectSubject(event.target.value));
+<<<<<<< HEAD
     elements.refresh?.addEventListener("click", () => {
         const fresh = storageSelectState();
+=======
+    const refresh = async () => {
+        const fresh = await storageSelectState();
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
         state.subjects = fresh.subjects;
         state.activeSubject = fresh.activeSubject;
         state.activeChapter = fresh.activeChapter;
         state.mode = mode;
         state.drawerExpandedSubjectId = state.activeSubject?.id || "";
+<<<<<<< HEAD
         renderAll();
         startSession(mode);
+=======
+        if (state.mode !== "learn") {
+            state.reviewSession = null;
+            clearReviewSession();
+        }
+        syncSelection(state.activeSubject?.id || "", state.activeChapter?.title || "", state.mode);
+        renderAll();
+        startSession(mode);
+    };
+
+    elements.refresh?.addEventListener("click", () => {
+        refresh();
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
     });
 
     elements.modeButtons.forEach((button) => {
@@ -2313,6 +2636,7 @@ export function initModePage(mode) {
         });
     });
 
+<<<<<<< HEAD
     state.subjects = seedSubjectsIfNeeded();
     const fresh = storageSelectState();
     state.subjects = fresh.subjects;
@@ -2339,6 +2663,13 @@ export function initModePage(mode) {
             state.drawerExpandedSubjectId = state.activeSubject?.id || "";
             renderAll();
             startSession(mode);
+=======
+    await refresh();
+
+    window.addEventListener("storage", async (event) => {
+        if ([STORAGE_KEY, ACTIVE_SUBJECT_KEY, ACTIVE_CHAPTER_KEY, ACTIVE_MODE_KEY].includes(event.key)) {
+            await refresh();
+>>>>>>> 0ee96ad (Add admin chapter import workflow)
         }
     });
 

@@ -1,0 +1,367 @@
+[
+  {
+    "question": "Why was wood one of the earliest structural materials used in aircraft construction?",
+    "choices": [
+      "It has excellent electrical conductivity.",
+      "It has a high strength-to-weight ratio.",
+      "It is completely resistant to moisture and decay.",
+      "It has greater strength than modern carbon fiber composites."
+    ],
+    "answer": "It has a high strength-to-weight ratio.",
+    "explanation": "Aircraft structures must be as light as possible while still carrying flight loads. Wood satisfies this requirement because it provides high strength for relatively little weight. This made it an ideal material during the early years of aviation.\n\nWhy the other choices are incorrect:\n• Excellent electrical conductivity — Wood is actually a poor electrical conductor.\n• Completely resistant to moisture and decay — Wood is vulnerable to fungi, moisture, and insects if not properly protected.\n• Greater strength than modern carbon fiber composites — Modern composites generally exceed wood in strength, stiffness, and durability.\n\n💡 Memory Hook:\n✈️ Aircraft = Light + Strong = Wood.\n\n🎯 Board Tip:\nWhenever asked why wood was historically used, immediately think 'high strength-to-weight ratio.'",
+    "difficulty": "easy",
+    "tags": [
+      "wood",
+      "materials",
+      "strength-to-weight",
+      "aircraft materials"
+    ]
+  },
+  {
+    "question": "In aircraft wood, the term 'grain' refers to the ________.",
+    "choices": [
+      "Annual growth rings",
+      "Direction of the wood fibers",
+      "Outer bark of the tree",
+      "Location of knots"
+    ],
+    "answer": "Direction of the wood fibers",
+    "explanation": "The grain is the direction in which the wood fibers run. These fibers extend longitudinally through the tree and are responsible for carrying most of the structural load. Many mechanical properties of wood depend on this direction.\n\nWhy the other choices are incorrect:\n• Annual growth rings — These indicate yearly growth but are not the grain.\n• Outer bark — The bark is a protective covering and has no structural significance in aircraft wood.\n• Location of knots — Knots are defects formed where branches once grew.\n\n💡 Memory Hook:\nGrain = Fibers.\nFibers = Strength.\n\n🎯 Board Tip:\nIf a question mentions 'longitudinal direction,' it is referring to the grain.",
+    "difficulty": "easy",
+    "tags": [
+      "wood",
+      "grain",
+      "fibers",
+      "terminology"
+    ]
+  },
+  {
+    "question": "Aircraft wood develops its greatest tensile strength when the load is applied ________.",
+    "choices": [
+      "Parallel to the grain",
+      "Perpendicular to the grain",
+      "At a 45° angle to the grain",
+      "Randomly across the grain"
+    ],
+    "answer": "Parallel to the grain",
+    "explanation": "Wood behaves like a bundle of long fibers. When the force acts parallel to the grain, the cellulose fibers themselves carry the load, resulting in maximum strength. When the force acts perpendicular to the grain, it attempts to separate the fibers from each other, relying mainly on the much weaker lignin between them.\n\nWhy the other choices are incorrect:\n• Perpendicular to the grain — Much weaker because the fibers are being separated rather than stretched.\n• At a 45° angle — Only part of the load is carried efficiently by the fibers.\n• Randomly across the grain — Wood is anisotropic, so strength depends on direction.\n\n💡 Memory Hook:\nImagine pulling on a bundle of ropes. Pull along the ropes = strong. Pull sideways = easy to separate.\n\n🎯 Board Tip:\n'Parallel to the grain,' 'along the fibers,' and 'longitudinal direction' all mean the same thing.",
+    "difficulty": "medium",
+    "tags": [
+      "wood",
+      "grain direction",
+      "strength",
+      "anisotropy"
+    ]
+  },
+  {
+    "question": "Why is wood considerably weaker when loaded perpendicular to the grain?",
+    "choices": [
+      "The cellulose fibers instantly fracture.",
+      "The load attempts to separate the fibers instead of loading them directly.",
+      "The annual growth rings become compressed.",
+      "The wood loses moisture during loading."
+    ],
+    "answer": "The load attempts to separate the fibers instead of loading them directly.",
+    "explanation": "The cellulose fibers provide most of wood's strength. A load applied perpendicular to the grain does not stretch these fibers. Instead, it tries to pull them apart from one another, leaving the weaker bonding material (lignin) to resist the load.\n\nWhy the other choices are incorrect:\n• The fibers instantly fracture — Failure usually occurs because the fibers separate, not because they instantly break.\n• Annual growth rings become compressed — Growth rings are not the primary reason for the reduced strength.\n• Wood loses moisture — Moisture content does not suddenly change because of loading.\n\n💡 Memory Hook:\n🥢 Imagine a bundle of chopsticks. They are difficult to pull apart lengthwise but much easier to separate sideways.\n\n🎯 Board Tip:\nMost PRC questions on wood strength can be answered simply by asking: 'Is the force acting along the fibers or across them?'",
+    "difficulty": "medium",
+    "tags": [
+      "wood",
+      "mechanical properties",
+      "grain",
+      "strength"
+    ]
+  },
+  {
+    "question": "Which type of lumber is generally preferred for aircraft structural members because it is less likely to warp?",
+    "choices": [
+      "Flat-sawn lumber",
+      "Quarter-sawn lumber",
+      "Plain-sawn lumber",
+      "Cross-grained lumber"
+    ],
+    "answer": "Quarter-sawn lumber",
+    "explanation": "Quarter-sawn lumber has straighter grain and better dimensional stability than flat-sawn lumber. As a result, it is more resistant to warping and twisting, making it more suitable for aircraft structural members.\n\nWhy the other choices are incorrect:\n• Flat-sawn lumber — More susceptible to warping.\n• Plain-sawn lumber — Another term commonly associated with flat-sawn lumber and is less dimensionally stable.\n• Cross-grained lumber — Cross grain is considered a defect because it reduces strength.\n\n💡 Memory Hook:\nQuarter-sawn = Quarter turns into Quality.\n\n🎯 Board Tip:\nRemember one important exception: although quarter-sawn lumber is preferred, it is also the type in which spike knots are most commonly encountered.",
+    "difficulty": "medium",
+    "tags": [
+      "wood",
+      "quarter-sawn",
+      "warpage",
+      "aircraft materials"
+    ]
+  },
+  {
+    "question": "A knot that extends through the thickness of a piece of aircraft lumber and significantly interrupts the grain is called a ________.",
+    "choices": [
+      "Pin knot",
+      "Spike knot",
+      "Sound knot",
+      "Edge knot"
+    ],
+    "answer": "Spike knot",
+    "explanation": "A spike knot is formed where a branch intersects the wood at a steep angle, causing the grain to deviate significantly. Since wood derives its strength from continuous, straight fibers, a spike knot interrupts these fibers and creates stress concentrations that weaken the member. For this reason, spike knots are unacceptable in aircraft structural wood.\n\nWhy the other choices are incorrect:\n• Pin knot — A very small knot that is generally less harmful than a spike knot.\n• Sound knot — Indicates a knot that is firmly attached but is still not the specific defect being described.\n• Edge knot — Refers to the knot's location rather than the severe grain disruption characteristic of a spike knot.\n\n💡 Memory Hook:\n🌳 Imagine driving a spike through a bundle of ropes—it forces the ropes to bend around it instead of staying straight.\n\n🎯 Board Tip:\nStraight grain = Strong wood. Anything that interrupts the grain (especially spike knots) weakens the structure.",
+    "difficulty": "medium",
+    "tags": [
+      "wood",
+      "wood defects",
+      "spike knot",
+      "inspection"
+    ]
+  },
+  {
+    "question": "Which wood defect is characterized by a small crack that extends across the annual growth rings, usually caused by drying?",
+    "choices": [
+      "Shake",
+      "Check",
+      "Split",
+      "Compression failure"
+    ],
+    "answer": "Check",
+    "explanation": "A check is a small crack that develops across the annual growth rings as the wood dries and shrinks. Although it may appear minor, checks indicate that the wood fibers have begun separating and can reduce structural integrity.\n\nWhy the other choices are incorrect:\n• Shake — A separation between adjacent annual growth rings rather than a crack through them.\n• Split — A complete separation of the wood fibers extending through the piece.\n• Compression failure — Damage caused by excessive compressive loading, not drying.\n\n💡 Memory Hook:\n✅ Check = Crack.\nBoth words begin with 'C'.\n\n🎯 Board Tip:\nIf the question mentions 'caused by drying,' think CHECK.",
+    "difficulty": "medium",
+    "tags": [
+      "wood",
+      "wood defects",
+      "check",
+      "drying"
+    ]
+  },
+  {
+    "question": "A separation that occurs along the annual growth rings of wood is known as a ________.",
+    "choices": [
+      "Split",
+      "Shake",
+      "Check",
+      "Warp"
+    ],
+    "answer": "Shake",
+    "explanation": "A shake is the separation of adjacent annual growth rings, usually resulting from stresses that occurred while the tree was growing or during seasoning. Unlike a check, which cracks across the rings, a shake follows the rings themselves.\n\nWhy the other choices are incorrect:\n• Split — Separation of the wood fibers completely through the member.\n• Check — A crack that cuts across the annual rings.\n• Warp — A distortion of shape rather than a crack or separation.\n\n💡 Memory Hook:\n🥤 Shake follows the rings just like liquid follows the curve of a cup.\n\n🎯 Board Tip:\nAELE loves asking the difference between CHECK and SHAKE:\n• Check → Across the rings.\n• Shake → Along the rings.",
+    "difficulty": "hard",
+    "tags": [
+      "wood",
+      "wood defects",
+      "shake",
+      "growth rings"
+    ]
+  },
+  {
+    "question": "Which defect describes a complete lengthwise separation of the wood fibers, usually extending from one surface through the member?",
+    "choices": [
+      "Check",
+      "Shake",
+      "Split",
+      "Pitch pocket"
+    ],
+    "answer": "Split",
+    "explanation": "A split is a complete separation of the wood fibers running lengthwise through the member. Because it extends through the material, it causes a much greater reduction in strength than a simple check.\n\nWhy the other choices are incorrect:\n• Check — Usually a shallow drying crack.\n• Shake — Separation occurs between annual rings rather than completely through the wood.\n• Pitch pocket — A cavity containing resin, not a fiber separation.\n\n💡 Memory Hook:\nThink of splitting firewood with an axe—the wood separates completely.\n\n🎯 Board Tip:\nSeverity generally increases:\nCheck → Shake → Split.",
+    "difficulty": "hard",
+    "tags": [
+      "wood",
+      "wood defects",
+      "split",
+      "inspection"
+    ]
+  },
+  {
+    "question": "Which statement correctly differentiates a CHECK from a SHAKE?",
+    "choices": [
+      "A check follows the annual rings, while a shake cuts across them.",
+      "A check cuts across the annual rings, while a shake follows the annual rings.",
+      "Both defects are identical except for their size.",
+      "A shake occurs only after compression loading."
+    ],
+    "answer": "A check cuts across the annual rings, while a shake follows the annual rings.",
+    "explanation": "This is one of the classic AELE board questions. A check is a drying crack that cuts across the annual growth rings, whereas a shake is a separation that follows the annual growth rings. Knowing this distinction is essential because both are common inspection defects.\n\nWhy the other choices are incorrect:\n• First choice — The definitions are reversed.\n• Third choice — They are fundamentally different defects.\n• Fourth choice — A shake is not caused by compression loading.\n\n💡 Memory Hook:\n✔️ CHECK = Cuts across.\n🥤 SHAKE = Slides along the rings.\n\n🎯 Board Tip:\nIf you can confidently distinguish CHECK, SHAKE, and SPLIT, you've already answered one of the most common wood-defect questions on the AELE.",
+    "difficulty": "expert",
+    "tags": [
+      "wood",
+      "wood defects",
+      "check",
+      "shake",
+      "comparison",
+      "board favorite"
+    ]
+  },
+  {
+    "question": "Compression wood is considered undesirable in aircraft structures primarily because it ________.",
+    "choices": [
+      "Contains excessive moisture that cannot be removed.",
+      "Has abnormal growth characteristics that reduce dimensional stability and mechanical properties.",
+      "Has a higher density that always increases structural strength.",
+      "Occurs only in hardwood species."
+    ],
+    "answer": "Has abnormal growth characteristics that reduce dimensional stability and mechanical properties.",
+    "explanation": "Compression wood develops naturally in trees that have grown under abnormal loading conditions, such as leaning trees or trees exposed to strong winds. Although it is denser than normal wood, it shrinks unevenly, is less dimensionally stable, and possesses inferior mechanical properties. For these reasons, compression wood is not acceptable for aircraft structural members.\n\nWhy the other choices are incorrect:\n• Contains excessive moisture — Moisture content can be controlled by seasoning and is not what defines compression wood.\n• Higher density always increases strength — Density alone does not guarantee better structural performance. Compression wood is actually considered inferior despite being denser.\n• Occurs only in hardwoods — Compression wood is associated primarily with softwoods used in aircraft construction.\n\n💡 Memory Hook:\nA leaning tree grows 'emergency wood.' Emergency does not mean better—it means abnormal.\n\n🎯 Board Tip:\nDo not assume 'denser' always means 'stronger.' Compression wood is a classic exception.",
+    "difficulty": "medium",
+    "tags": [
+      "wood",
+      "compression wood",
+      "wood defects",
+      "inspection"
+    ]
+  },
+  {
+    "question": "Compression failure differs from compression wood because compression failure ________.",
+    "choices": [
+      "Occurs naturally while the tree is growing.",
+      "Is caused by excessive compressive loading after the wood has been placed in service.",
+      "Results from fungal decay.",
+      "Occurs only after prolonged exposure to moisture."
+    ],
+    "answer": "Is caused by excessive compressive loading after the wood has been placed in service.",
+    "explanation": "Compression failure is a structural defect caused by excessive compressive stress acting on the wood after it has been manufactured or placed into service. It should not be confused with compression wood, which develops naturally while the tree is growing.\n\nWhy the other choices are incorrect:\n• Occurs naturally while growing — This describes compression wood.\n• Results from fungal decay — Fungi cause decay, not compression failure.\n• Moisture exposure — Moisture contributes to decay but is not the direct cause of compression failure.\n\n💡 Memory Hook:\nCompression WOOD = During Growth 🌳\nCompression FAILURE = During Service ✈️\n\n🎯 Board Tip:\nThe board frequently asks these two terms together because they sound similar but describe completely different conditions.",
+    "difficulty": "hard",
+    "tags": [
+      "wood",
+      "compression failure",
+      "compression wood",
+      "comparison"
+    ]
+  },
+  {
+    "question": "One characteristic sign of compression failure in aircraft wood is the presence of ________.",
+    "choices": [
+      "Thread-like lines across the grain.",
+      "Large circular knots.",
+      "Pitch pockets filled with resin.",
+      "Dark fungal stains."
+    ],
+    "answer": "Thread-like lines across the grain.",
+    "explanation": "Compression failure is identified by irregular thread-like or wrinkled lines that run across the grain. These markings indicate that the wood fibers have buckled under excessive compressive loading. This is one of the most recognizable inspection characteristics described in aircraft wood references.\n\nWhy the other choices are incorrect:\n• Large circular knots — These are natural growth defects, not signs of compression failure.\n• Pitch pockets — Resin pockets are separate defects.\n• Dark fungal stains — These may indicate decay rather than compression failure.\n\n💡 Memory Hook:\nToo much compression makes the fibers 'wrinkle,' just like pushing both ends of a drinking straw together.\n\n🎯 Board Tip:\nWhenever you see 'thread-like lines across the grain,' immediately think Compression Failure.",
+    "difficulty": "hard",
+    "tags": [
+      "wood",
+      "compression failure",
+      "inspection",
+      "identification"
+    ]
+  },
+  {
+    "question": "Wood decay in aircraft structures is primarily caused by ________.",
+    "choices": [
+      "Bacterial growth.",
+      "Fungal attack.",
+      "Oxidation of cellulose fibers.",
+      "Ultraviolet radiation."
+    ],
+    "answer": "Fungal attack.",
+    "explanation": "Wood decay is caused primarily by fungi. These microorganisms consume portions of the wood structure, reducing its strength and stiffness. Fungi require favorable environmental conditions such as moisture, warmth, and oxygen to grow.\n\nWhy the other choices are incorrect:\n• Bacterial growth — Bacteria are not the primary cause of structural wood decay.\n• Oxidation — Wood does not decay through oxidation like metals corrode.\n• Ultraviolet radiation — UV can weather the surface but does not produce true wood decay.\n\n💡 Memory Hook:\n🌧️ Moisture + 🌡️ Warmth + 🌬️ Oxygen = 🍄 Fungi = Decay.\n\n🎯 Board Tip:\nWhenever decay is mentioned, immediately think fungi—not rust, bacteria, or oxidation.",
+    "difficulty": "easy",
+    "tags": [
+      "wood",
+      "decay",
+      "fungi",
+      "maintenance"
+    ]
+  },
+  {
+    "question": "Which combination of environmental conditions is MOST favorable for fungal decay of aircraft wood?",
+    "choices": [
+      "Dry conditions, low temperature, and poor ventilation.",
+      "Moisture, warmth, and oxygen.",
+      "High altitude and low humidity.",
+      "Direct sunlight and dry air."
+    ],
+    "answer": "Moisture, warmth, and oxygen.",
+    "explanation": "Fungi thrive in moist, warm environments where oxygen is available. Removing any one of these conditions—especially moisture—is an effective way to prevent wood decay. This is why keeping aircraft wooden structures dry is critical during storage and operation.\n\nWhy the other choices are incorrect:\n• Dry conditions — Fungi cannot thrive without sufficient moisture.\n• High altitude and low humidity — These conditions discourage fungal growth.\n• Direct sunlight and dry air — These generally reduce the likelihood of decay.\n\n💡 Memory Hook:\nThink of fungi as tiny plants—they need water, warmth, and air to survive.\n\n🎯 Board Tip:\nThe simplest method of preventing wood decay is controlling moisture.",
+    "difficulty": "medium",
+    "tags": [
+      "wood",
+      "fungi",
+      "decay",
+      "maintenance",
+      "environment"
+    ]
+  },
+  {
+    "question": "In a properly constructed aircraft wood splice joint, the majority of the joint's strength comes from the ________.",
+    "choices": [
+      "Adhesive itself",
+      "Mechanical fasteners",
+      "Bearing surface of the wood fibers",
+      "Protective varnish coating"
+    ],
+    "answer": "Bearing surface of the wood fibers",
+    "explanation": "A common misconception is that the glue provides most of the strength. In reality, the adhesive's primary role is to bond two properly prepared wood surfaces together. The strength of the joint comes from the large bearing area of the wood fibers that share the applied load. A properly bonded joint should fail in the wood itself before the adhesive bond fails.\n\nWhy the other choices are incorrect:\n• Adhesive itself — The glue transfers the load but is not intended to be the weakest or strongest structural member.\n• Mechanical fasteners — Aircraft wood splices primarily rely on adhesive bonding rather than fasteners.\n• Protective varnish coating — Varnish protects against moisture but contributes essentially no structural strength.\n\n💡 Memory Hook:\nThink of the glue as introducing two people. The friendship (wood fibers sharing the load) is what actually keeps them together.\n\n🎯 Board Tip:\nWhenever asked 'What gives a wood splice its strength?' the answer is almost always the wood fibers or the bearing surface—not the glue.",
+    "difficulty": "hard",
+    "tags": [
+      "wood",
+      "splice",
+      "adhesives",
+      "joint design",
+      "board favorite"
+    ]
+  },
+  {
+    "question": "A properly bonded aircraft wood joint should fail ________.",
+    "choices": [
+      "Within the adhesive layer",
+      "At the glue line",
+      "In the wood adjacent to the glue line",
+      "At the protective coating"
+    ],
+    "answer": "In the wood adjacent to the glue line",
+    "explanation": "An ideal adhesive bond is actually stronger than the surrounding wood. Therefore, when overloaded, the wood fibers fail before the adhesive bond separates. If failure occurs directly along the glue line, it usually indicates poor surface preparation, improper curing, contamination, or an inadequate bond.\n\nWhy the other choices are incorrect:\n• Within the adhesive layer — Indicates adhesive failure.\n• At the glue line — Indicates bond failure and poor workmanship.\n• At the protective coating — Coatings are non-structural.\n\n💡 Memory Hook:\nGood glue breaks the wood—not itself.\n\n🎯 Board Tip:\nWood failure = Good bond.\nGlue-line failure = Bad bond.",
+    "difficulty": "hard",
+    "tags": [
+      "wood",
+      "adhesives",
+      "bond strength",
+      "inspection"
+    ]
+  },
+  {
+    "question": "If an adhesive joint separates cleanly along the glue line during testing, the MOST likely conclusion is that ________.",
+    "choices": [
+      "The adhesive performed correctly.",
+      "The wood was excessively strong.",
+      "The bond was defective.",
+      "The joint exceeded its design strength."
+    ],
+    "answer": "The bond was defective.",
+    "explanation": "A clean separation along the glue line indicates that the adhesive failed instead of the wood. In aircraft structures, this is undesirable because a properly manufactured bond should be stronger than the surrounding wood. Such failures often result from poor surface preparation, contamination, insufficient pressure, or improper curing.\n\nWhy the other choices are incorrect:\n• Adhesive performed correctly — The opposite is true.\n• Wood was excessively strong — The issue lies in the bond, not the wood.\n• Joint exceeded design strength — Even under overload, properly bonded joints normally fail in the wood first.\n\n💡 Memory Hook:\nGlue-line failure = Technician failure.\nWood failure = Successful bond.\n\n🎯 Board Tip:\nMany board questions test whether you know the difference between adhesive failure and wood failure.",
+    "difficulty": "expert",
+    "tags": [
+      "wood",
+      "adhesives",
+      "inspection",
+      "bond failure"
+    ]
+  },
+  {
+    "question": "Why are large bonding surfaces preferred in aircraft wood splice joints?",
+    "choices": [
+      "They reduce the density of the wood.",
+      "They distribute the applied load over more wood fibers.",
+      "They increase the moisture content of the joint.",
+      "They eliminate the need for proper adhesive curing."
+    ],
+    "answer": "They distribute the applied load over more wood fibers.",
+    "explanation": "Increasing the bonded area allows more wood fibers to participate in carrying the load. This reduces the stress experienced by any individual fiber and results in a stronger, more durable joint. The principle is identical to snowshoes distributing body weight over a larger area to reduce pressure.\n\nWhy the other choices are incorrect:\n• Reduce density — Bond area does not change wood density.\n• Increase moisture — Moisture actually weakens wood joints.\n• Eliminate curing — Proper curing is always essential for adhesive performance.\n\n💡 Memory Hook:\nMore surface area = More fibers sharing the work.\n\n🎯 Board Tip:\nWhenever you see a long scarf splice, think 'large bonding area = lower stress.'",
+    "difficulty": "medium",
+    "tags": [
+      "wood",
+      "splice",
+      "bonding",
+      "stress distribution"
+    ]
+  },
+  {
+    "question": "Which statement BEST explains why aircraft wood joints are designed with long scarf splices instead of short butt joints?",
+    "choices": [
+      "Scarf joints require less adhesive.",
+      "Scarf joints increase the effective bonding area and reduce stress concentration.",
+      "Scarf joints eliminate the effects of moisture.",
+      "Scarf joints increase the density of the wood."
+    ],
+    "answer": "Scarf joints increase the effective bonding area and reduce stress concentration.",
+    "explanation": "A scarf splice spreads the applied load over a much larger bonded surface than a butt joint. This allows stresses to be transferred gradually between the two pieces of wood, minimizing stress concentrations and producing a stronger repair. This principle is widely used in aircraft wooden structures.\n\nWhy the other choices are incorrect:\n• Require less adhesive — Scarf joints usually require more bonded surface, not less adhesive.\n• Eliminate moisture — Moisture protection is achieved by sealing, not by splice geometry.\n• Increase density — Joint design does not alter the density of the wood.\n\n💡 Memory Hook:\nImagine pushing someone gently with both hands instead of poking them with one finger. The same force is spread over a larger area.\n\n🎯 Board Tip:\nWhenever you hear 'scarf splice,' immediately associate it with 'large bonding area' and 'reduced stress concentration.'",
+    "difficulty": "expert",
+    "tags": [
+      "wood",
+      "scarf splice",
+      "repair",
+      "stress concentration",
+      "board favorite"
+    ]
+  }
+]
