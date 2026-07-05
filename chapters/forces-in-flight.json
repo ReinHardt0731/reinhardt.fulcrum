@@ -1,0 +1,19 @@
+{
+  "title": "Forces in Flight",
+  "questions": [
+    {
+      "question": "What force opposes thrust?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Lift",
+        "Weight",
+        "Drag",
+        "Gravity"
+      ],
+      "answerIndex": 2,
+      "answerText": "Drag",
+      "explanation": "Drag opposes motion through the air and acts against thrust.",
+      "tags": ["aerodynamics", "forces"]
+    }
+  ]
+}

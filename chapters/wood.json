@@ -1,0 +1,33 @@
+{
+  "title": "Non-Metal - WOOD",
+  "questions": [
+    {
+      "question": "Why was wood one of the earliest structural materials used in aircraft construction?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It has excellent electrical conductivity.",
+        "It has a high strength-to-weight ratio.",
+        "It is completely resistant to moisture and decay.",
+        "It has greater strength than modern carbon fiber composites."
+      ],
+      "answerIndex": 1,
+      "answerText": "It has a high strength-to-weight ratio.",
+      "explanation": "Wood offers a strong balance of strength and low weight, which made it practical for early aircraft structures.",
+      "tags": ["wood", "materials"]
+    },
+    {
+      "question": "The grain of wood refers to the ________.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Annual growth rings",
+        "Direction of the wood fibers",
+        "Outer bark of the tree",
+        "Location of knots"
+      ],
+      "answerIndex": 1,
+      "answerText": "Direction of the wood fibers",
+      "explanation": "The grain follows the direction of the wood fibers, which affects how the material behaves structurally.",
+      "tags": ["wood", "grain"]
+    }
+  ]
+}

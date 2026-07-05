@@ -1,0 +1,19 @@
+{
+  "title": "Controls",
+  "questions": [
+    {
+      "question": "Which control mainly changes roll?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Ailerons",
+        "Elevator",
+        "Rudder",
+        "Flaps"
+      ],
+      "answerIndex": 0,
+      "answerText": "Ailerons",
+      "explanation": "Ailerons change roll by affecting lift on each wing.",
+      "tags": ["controls", "aircraft"]
+    }
+  ]
+}
