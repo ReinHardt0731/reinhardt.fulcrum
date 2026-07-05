@@ -1,10 +1,15 @@
-﻿import {
+import {
     ACTIVE_CHAPTER_KEY,
     ACTIVE_MODE_KEY,
     ACTIVE_SUBJECT_KEY,
     ADMIN_PASSWORD,
+    buildChapterFilePath,
+    getChapterByTitle,
+    getSubjectById,
+    isAdminUnlocked,
+    previewQuizFile,
+    saveSubjects,
     serializeSubjects,
-
     setAdminUnlocked,
     storageSelectState,
     syncSelection,
@@ -13,7 +18,6 @@
 } from "./shared.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
-
     if (!document.body.classList.contains("admin-page")) {
         return;
     }
@@ -26,7 +30,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         adminApp: document.getElementById("admin-app"),
         statusLine: document.getElementById("admin-status"),
         librarySummary: document.getElementById("admin-library-summary"),
-        subjectPanel: document.getElementById("admin-subject-panel"),
         subjectAddToggle: document.getElementById("admin-subject-add-toggle"),
         subjectCreateForm: document.getElementById("admin-subject-create-form"),
         subjectCreateName: document.getElementById("admin-subject-create-name"),
@@ -37,19 +40,106 @@ document.addEventListener("DOMContentLoaded", async () => {
         subjectSaveButton: document.getElementById("admin-subject-save"),
         subjectDeleteButton: document.getElementById("admin-subject-delete"),
         activeSubjectTitle: document.getElementById("admin-active-subject-title"),
+        exportButton: document.getElementById("admin-export-button"),
+        chapterSummary: document.getElementById("admin-chapter-summary"),
+        chapterCarousel: document.getElementById("admin-chapter-carousel"),
+        chapterPrev: document.getElementById("admin-chapter-prev"),
+        chapterNext: document.getElementById("admin-chapter-next"),
+        chapterImportForm: document.getElementById("chapter-import-form"),
+        chapterPreviewButton: document.getElementById("chapter-preview-button"),
+        chapterNameInput: document.getElementById("chapter-name"),
+        chapterFileInput: document.getElementById("chapter-quiz-file"),
+        chapterPreviewStatus: document.getElementById("chapter-upload-status"),
+        chapterPreviewContent: document.getElementById("chapter-preview-content"),
+        chapterImportButton: document.getElementById("chapter-import-button"),
+        chapterRenameInput: document.getElementById("admin-chapter-name"),
+        chapterSaveButton: document.getElementById("admin-chapter-save"),
+        chapterDeleteButton: document.getElementById("admin-chapter-delete")
+    };
+
+    if (!elements.lockForm || !elements.lockPanel || !elements.adminApp) {
+        return;
+    }
+
+    const state = {
+        subjects: [],
+        activeSubjectId: "",
+        activeChapterTitle: "",
+        activeMode: "quiz",
+        expandedSubjectId: ""
+    };
+
+    const now = () => new Date().toISOString();
+    const text = (value) => String(value ?? "").trim();
+    const slugify = (value) =>
+        text(value)
+            .toLowerCase()
+            .normalize("NFKD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/[^a-z0-9]+/g, "-")
+            .replace(/^-+|-+$/g, "") || "subject";
+
+    const emptyState = (headingText, bodyText) => {
+        const box = document.createElement("div");
+        box.className = "empty-state compact";
+        box.append(
+            Object.assign(document.createElement("h4"), { textContent: headingText }),
+            Object.assign(document.createElement("p"), { textContent: bodyText })
+        );
+        return box;
+    };
+
+    const getActiveSubject = () => getSubjectById(state.subjects, state.activeSubjectId) || state.subjects[0] || null;
+    const getActiveChapter = () => {
+        const subject = getActiveSubject();
+        if (!subject) {
+            return null;
+        }
+        return getChapterByTitle(subject, state.activeChapterTitle) || subject.chapters[0] || null;
+    };
+    const persistSelection = () => syncSelection(state.activeSubjectId, state.activeChapterTitle, state.activeMode);
+
+    const uniqueSubjectName = (subjects, rawName, excludedId = "") => {
+        const value = text(rawName);
+        if (!value) {
+            return "";
+        }
+        const existing = new Set(subjects.filter((subject) => subject.id !== excludedId).map((subject) => text(subject.name).toLowerCase()));
+        const normalized = value.toLowerCase();
+        if (!existing.has(normalized)) {
+            return value;
+        }
+        let suffix = 2;
+        while (existing.has(`${normalized} ${suffix}`)) {
+            suffix += 1;
+        }
+        return `${value} ${suffix}`;
+    };
+
+    const uniqueSubjectId = (subjects, rawName, excludedId = "") => {
+        const base = slugify(rawName);
+        const existing = new Set(subjects.filter((subject) => subject.id !== excludedId).map((subject) => text(subject.id)));
+        if (!existing.has(base)) {
+            return base;
+        }
+        let suffix = 2;
+        while (existing.has(`${base}-${suffix}`)) {
+            suffix += 1;
+        }
+        return `${base}-${suffix}`;
+    };
+
     const uniqueChapterFilePath = (subject, rawTitle, excludedTitle = "") => {
         const basePath = buildChapterFilePath(rawTitle || "chapter");
         const existing = new Set(
             subject?.chapters
                 ?.filter((chapter) => chapter.title !== excludedTitle)
-                .map((chapter) => textValue(chapter.file))
+                .map((chapter) => text(chapter.file))
                 .filter(Boolean) || []
         );
-
         if (!existing.has(basePath)) {
             return basePath;
         }
-
         const [directory, filename] = basePath.split(/\/(.+)/);
         const [name, extension] = filename.split(/\.(?=[^.]+$)/);
         let suffix = 2;
@@ -59,13 +149,27 @@ document.addEventListener("DOMContentLoaded", async () => {
         return `${directory}/${name}-${suffix}.${extension}`;
     };
 
+    const uniqueChapterTitle = (subject, rawTitle, excludedTitle = "") => {
+        const value = text(rawTitle);
+        if (!value) {
+            return "";
+        }
+        const existing = new Set(subject.chapters.map((chapter) => chapter.title).filter((title) => title !== excludedTitle));
+        if (!existing.has(value)) {
+            return value;
+        }
+        let suffix = 2;
+        while (existing.has(`${value} ${suffix}`)) {
+            suffix += 1;
+        }
+        return `${value} ${suffix}`;
+    };
 
     const createEmptySubjectRecord = (subjects, rawName) => {
         const name = uniqueSubjectName(subjects, rawName);
         if (!name) {
             throw new Error("Enter a subject name.");
         }
-
         return {
             id: uniqueSubjectId(subjects, name),
             name,
@@ -77,197 +181,75 @@ document.addEventListener("DOMContentLoaded", async () => {
         };
     };
 
-    const uniqueChapterTitle = (subject, rawTitle, excludedTitle = "") => {
-        const value = textValue(rawTitle);
-        if (!value) {
-            return "";
-        }
-
-        const existing = new Set(subject.chapters.map((chapter) => chapter.title).filter((title) => title !== excludedTitle));
-        if (!existing.has(value)) {
-            return value;
-        }
-
-        let suffix = 2;
-        while (existing.has(`${value} ${suffix}`)) {
-            suffix += 1;
-        }
-        return `${value} ${suffix}`;
-    };
-
     const setStatus = (message) => {
         if (elements.statusLine) {
             elements.statusLine.textContent = message;
         }
     };
 
-    const loadState = async () => {
-        const fresh = await storageSelectState();
-
-        state.subjects = fresh.subjects;
-        state.activeSubjectId = fresh.activeSubject?.id || state.subjects[0]?.id || "";
-        state.activeMode = fresh.mode || "quiz";
-
-        const subject = getActiveSubject();
-        state.activeChapterTitle = subject
-            ? getChapterByTitle(subject, fresh.activeChapter?.title || subject.selectedChapter || subject.chapters[0]?.title || "")?.title || subject.selectedChapter || subject.chapters[0]?.title || ""
-            : "";
-        state.expandedSubjectId = state.activeSubjectId;
+    const showAdminApp = () => {
+        elements.adminApp.hidden = false;
+        elements.lockPanel.hidden = true;
     };
-
-    const commitSubjects = (subjects, subjectId = state.activeSubjectId, chapterTitle = state.activeChapterTitle) => {
-        state.subjects = saveSubjects(subjects);
-        const subject = getSubjectById(state.subjects, subjectId) || state.subjects[0] || null;
-        state.activeSubjectId = subject ? subject.id : "";
-        state.activeChapterTitle = subject
-            ? getChapterByTitle(subject, chapterTitle)?.title || subject.selectedChapter || subject.chapters[0]?.title || ""
-            : "";
-        state.expandedSubjectId = subject ? subject.id : "";
-        persistSelection();
-        renderAll();
-    };
-
-    const renderQuizPreview = async ({
-        fileInput,
-        previewStatus,
-        previewContent,
-        subjectOverride = "",
-        note = ""
-    }) => {
-        const file = fileInput?.files?.[0];
-        if (!file || !previewStatus || !previewContent) {
-            return null;
-        }
-
-        const quiz = await previewQuizFile(file, subjectOverride);
-        const chapterCount = quiz.chapters.length;
-        const questionCount = quiz.chapters.reduce((sum, chapter) => sum + chapter.questions.length, 0);
-        previewStatus.textContent = `${chapterCount} chapters | ${questionCount} questions`;
-        previewContent.replaceChildren();
-
-        const summary = document.createElement("div");
-        summary.className = "assessment-block";
-        const lines = [];
-        if (note) {
-            lines.push(note);
-        }
-        lines.push(`Subject: ${quiz.subject}`);
-        lines.push(`Selected chapter: ${quiz.selected_chapter}`);
-        lines.push(`Quiz type: ${quiz.quiz_type}`);
-        lines.forEach((line) => {
-            summary.appendChild(Object.assign(document.createElement("p"), { textContent: line }));
-        });
-
-        const chapterCards = document.createElement("div");
-        chapterCards.className = "review-list";
-        quiz.chapters.forEach((chapter) => {
-            const chapterCard = document.createElement("article");
-            chapterCard.className = "review-item";
-            chapterCard.append(
-                Object.assign(document.createElement("h5"), { textContent: chapter.title }),
-                Object.assign(document.createElement("p"), {
-                    textContent: `${chapter.questions.length} question${chapter.questions.length === 1 ? "" : "s"}`
-                })
-            );
-            chapterCards.appendChild(chapterCard);
-        });
-
-        previewContent.append(summary, chapterCards);
-        return quiz;
-    };
-
-    const renderChapterPreview = async () => {
-        const subject = getActiveSubject();
-        if (!subject) {
-            throw new Error("Select a subject first.");
-        }
-
-        const file = elements.chapterFileInput?.files?.[0];
-        if (!file) {
-            throw new Error("Choose a quiz JSON file first.");
-        }
-
-        const chapterName = textValue(elements.chapterNameInput?.value);
-        const note = chapterName
-            ? `This chapter will be added to "${subject.name}" as "${chapterName}".`
-            : `Enter a chapter title to save it into "${subject.name}".`;
-
-        return renderQuizPreview({
-            fileInput: elements.chapterFileInput,
-            previewStatus: elements.chapterPreviewStatus,
-            previewContent: elements.chapterPreviewContent,
-            note
-        });
+    const hideAdminApp = () => {
+        elements.adminApp.hidden = true;
+        elements.lockPanel.hidden = false;
     };
 
     const renderSummary = () => {
-        if (!elements.librarySummary) {
-            return;
+        if (elements.librarySummary) {
+            const chapterCount = state.subjects.reduce((sum, subject) => sum + subject.chapters.length, 0);
+            const questionCount = state.subjects.reduce((sum, subject) => sum + tallyQuestionCount(subject), 0);
+            elements.librarySummary.textContent = `${state.subjects.length} subjects | ${chapterCount} chapters | ${questionCount} questions`;
         }
-
-        const chapterCount = state.subjects.reduce((sum, subject) => sum + subject.chapters.length, 0);
-        const questionCount = state.subjects.reduce((sum, subject) => sum + tallyQuestionCount(subject), 0);
-        elements.librarySummary.textContent = `${state.subjects.length} subjects | ${chapterCount} chapters | ${questionCount} questions`;
     };
 
     const renderSubjectList = () => {
         if (!elements.subjectList) {
             return;
         }
-
         elements.subjectList.replaceChildren();
         if (!state.subjects.length) {
             elements.subjectList.appendChild(emptyState("No subjects yet", "Use Add subject to create the first branch."));
             return;
         }
-
         state.subjects.forEach((subject) => {
-            const isActiveSubject = subject.id === state.activeSubjectId;
+            const isActive = subject.id === state.activeSubjectId;
             const isExpanded = subject.id === state.expandedSubjectId;
-
             const card = document.createElement("div");
             card.className = "subject-card";
             card.dataset.subjectId = subject.id;
-
             const header = document.createElement("button");
             header.type = "button";
             header.className = "subject-item";
-            if (isActiveSubject) {
+            if (isActive) {
                 header.classList.add("is-active");
             }
             if (isExpanded) {
                 header.classList.add("is-open");
             }
             header.setAttribute("aria-expanded", String(isExpanded));
-
             const copy = document.createElement("span");
             copy.className = "subject-item-copy";
             copy.append(
                 Object.assign(document.createElement("span"), { className: "subject-item-title", textContent: subject.name }),
-                Object.assign(document.createElement("span"), {
-                    className: "subject-item-meta",
-                    textContent: `${subject.chapters.length} chapter${subject.chapters.length === 1 ? "" : "s"} | ${tallyQuestionCount(subject)} questions`
-                })
+                Object.assign(document.createElement("span"), { className: "subject-item-meta", textContent: `${subject.chapters.length} chapter${subject.chapters.length === 1 ? "" : "s"} | ${tallyQuestionCount(subject)} questions` })
             );
-
             const caret = document.createElement("span");
             caret.className = "subject-item-caret";
-            caret.textContent = "\u25BE";
-
+            caret.textContent = "▾";
             header.append(copy, caret);
             header.addEventListener("click", () => toggleSubject(subject.id));
-
             const chapterList = document.createElement("div");
             chapterList.className = "subject-chapters";
             chapterList.id = `admin-subject-chapters-${subject.id}`;
             chapterList.hidden = !isExpanded;
             header.setAttribute("aria-controls", chapterList.id);
-
             subject.chapters.forEach((chapter) => {
                 const chapterButton = document.createElement("button");
                 chapterButton.type = "button";
                 chapterButton.className = "subject-chapter-item";
-                if (isActiveSubject && chapter.title === state.activeChapterTitle) {
+                if (isActive && chapter.title === state.activeChapterTitle) {
                     chapterButton.classList.add("is-active");
                 }
                 chapterButton.textContent = chapter.title;
@@ -277,7 +259,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 });
                 chapterList.appendChild(chapterButton);
             });
-
             card.append(header, chapterList);
             elements.subjectList.appendChild(card);
         });
@@ -304,24 +285,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (!elements.chapterCarousel) {
             return;
         }
-
         const subject = getActiveSubject();
         elements.chapterCarousel.replaceChildren();
-
         if (!subject) {
-            elements.chapterCarousel.appendChild(
-                emptyState("No subject selected", "Choose a branch from the sidebar to manage its leaves.")
-            );
+            elements.chapterCarousel.appendChild(emptyState("No subject selected", "Choose a branch from the sidebar to manage its leaves."));
             return;
         }
-
         if (!subject.chapters.length) {
-            elements.chapterCarousel.appendChild(
-                emptyState("No chapters yet", "Add the first leaf using the form below.")
-            );
+            elements.chapterCarousel.appendChild(emptyState("No chapters yet", "Add the first leaf using the form below."));
             return;
         }
-
         subject.chapters.forEach((chapter) => {
             const card = document.createElement("button");
             card.type = "button";
@@ -329,18 +302,25 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (chapter.title === state.activeChapterTitle) {
                 card.classList.add("is-active");
             }
-
             card.append(
                 Object.assign(document.createElement("span"), { className: "chapter-carousel-title", textContent: chapter.title }),
-                Object.assign(document.createElement("span"), {
-                    className: "chapter-carousel-meta",
-                    textContent: `${chapter.questions.length} question${chapter.questions.length === 1 ? "" : "s"}`
-                })
+                Object.assign(document.createElement("span"), { className: "chapter-carousel-meta", textContent: `${chapter.questions.length} question${chapter.questions.length === 1 ? "" : "s"}` })
             );
-
             card.addEventListener("click", () => selectChapter(chapter.title));
             elements.chapterCarousel.appendChild(card);
         });
+    };
+
+    const moveChapterSelection = (direction) => {
+        const subject = getActiveSubject();
+        if (!subject || !subject.chapters.length) {
+            return;
+        }
+        const currentIndex = subject.chapters.findIndex((chapter) => chapter.title === state.activeChapterTitle);
+        const nextIndex = currentIndex < 0
+            ? 0
+            : (currentIndex + direction + subject.chapters.length) % subject.chapters.length;
+        selectChapter(subject.chapters[nextIndex].title);
     };
 
     const renderChapterEditor = () => {
@@ -349,15 +329,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         const hasSubject = Boolean(subject);
         const hasChapter = Boolean(chapter);
         const hasCarouselChapters = Boolean(subject && subject.chapters.length > 1);
-        const hasChapterFile = Boolean(elements.chapterFileInput?.files?.length);
-
         if (elements.activeSubjectTitle) {
             elements.activeSubjectTitle.textContent = subject ? subject.name : "No subject selected";
         }
         if (elements.chapterSummary) {
-            elements.chapterSummary.textContent = subject
-                ? `${subject.chapters.length} chapters | ${tallyQuestionCount(subject)} questions`
-                : "No chapters";
+            elements.chapterSummary.textContent = subject ? `${subject.chapters.length} chapters | ${tallyQuestionCount(subject)} questions` : "No chapters";
         }
         if (elements.chapterRenameInput) {
             elements.chapterRenameInput.value = chapter?.title || "";
@@ -388,19 +364,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (elements.chapterNext) {
             elements.chapterNext.disabled = !hasCarouselChapters;
         }
-        if (elements.chapterPreviewStatus && !hasChapterFile) {
-            elements.chapterPreviewStatus.textContent = hasSubject ? "Waiting for a file" : "Select a subject first";
-        }
-        if (elements.chapterPreviewContent && !hasChapterFile) {
-            elements.chapterPreviewContent.replaceChildren(
-                emptyState(
-                    hasSubject ? "No file previewed yet" : "No subject selected",
-                    hasSubject
-                        ? "Choose a JSON file to inspect the chapter before adding it to the selected subject."
-                        : "Choose a branch before adding a leaf."
-                )
-            );
-        }
     };
 
     const renderAll = () => {
@@ -416,9 +379,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (!subject) {
             return;
         }
-
-        closeSubjectCreate();
-        const resolvedChapterTitle = textValue(chapterTitle || subject.selectedChapter || subject.chapters[0]?.title || "");
+        const resolvedChapterTitle = text(chapterTitle || subject.selectedChapter || subject.chapters[0]?.title || "");
         const chapter = getChapterByTitle(subject, resolvedChapterTitle) || subject.chapters[0] || null;
         state.activeSubjectId = subject.id;
         state.activeChapterTitle = chapter?.title || "";
@@ -432,13 +393,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (!subject) {
             return;
         }
-
-        closeSubjectCreate();
         const chapter = getChapterByTitle(subject, chapterTitle);
         if (!chapter) {
             return;
         }
-
         state.activeSubjectId = subject.id;
         state.activeChapterTitle = chapter.title;
         state.expandedSubjectId = subject.id;
@@ -451,14 +409,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (!subject) {
             return;
         }
-
-        closeSubjectCreate();
         if (state.activeSubjectId === subject.id) {
             state.expandedSubjectId = state.expandedSubjectId === subject.id ? "" : subject.id;
             renderAll();
             return;
         }
-
         selectSubject(subject.id);
     };
 
@@ -483,10 +438,98 @@ document.addEventListener("DOMContentLoaded", async () => {
             previewStatus.textContent = "Invalid file";
         }
         if (previewContent) {
-            previewContent.replaceChildren(
-                emptyState("Could not parse this file", error?.message || "The JSON file does not match the quiz format.")
-            );
+            previewContent.replaceChildren(emptyState("Could not parse this file", error?.message || "The JSON file does not match the quiz format."));
         }
+    };
+
+    const loadState = async () => {
+        const fresh = await storageSelectState();
+        state.subjects = fresh.subjects;
+        state.activeSubjectId = fresh.activeSubject?.id || state.subjects[0]?.id || "";
+        state.activeMode = fresh.mode || "quiz";
+        const subject = getActiveSubject();
+        state.activeChapterTitle = subject ? getChapterByTitle(subject, fresh.activeChapter?.title || subject.selectedChapter || subject.chapters[0]?.title || "")?.title || subject.selectedChapter || subject.chapters[0]?.title || "" : "";
+        state.expandedSubjectId = state.activeSubjectId;
+    };
+
+    const persistLibraryToServer = async (subjects) => {
+        const payload = serializeSubjects(subjects);
+        try {
+            const response = await fetch("/api/save-library", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ subjects: saveSubjects(subjects), payload })
+            });
+            if (!response.ok) {
+                throw new Error(`Save failed with HTTP ${response.status}`);
+            }
+            return await response.json().catch(() => ({ saved: true }));
+        } catch (error) {
+            console.warn("Unable to save the library to the repo-backed file:", error);
+            return { saved: false, error };
+        }
+    };
+
+    const commitSubjects = (subjects, subjectId = state.activeSubjectId, chapterTitle = state.activeChapterTitle) => {
+        state.subjects = saveSubjects(subjects);
+        const subject = getSubjectById(state.subjects, subjectId) || state.subjects[0] || null;
+        state.activeSubjectId = subject ? subject.id : "";
+        state.activeChapterTitle = subject ? getChapterByTitle(subject, chapterTitle)?.title || subject.selectedChapter || subject.chapters[0]?.title || "" : "";
+        state.expandedSubjectId = subject ? subject.id : "";
+        persistSelection();
+        renderAll();
+        void persistLibraryToServer(state.subjects);
+    };
+
+    const renderQuizPreview = async ({ fileInput, previewStatus, previewContent, subjectOverride = "", note = "" }) => {
+        const file = fileInput?.files?.[0];
+        if (!file || !previewStatus || !previewContent) {
+            return null;
+        }
+        const quiz = await previewQuizFile(file, subjectOverride);
+        const chapterCount = quiz.chapters.length;
+        const questionCount = quiz.chapters.reduce((sum, chapter) => sum + chapter.questions.length, 0);
+        previewStatus.textContent = `${chapterCount} chapters | ${questionCount} questions`;
+        previewContent.replaceChildren();
+        const summary = document.createElement("div");
+        summary.className = "assessment-block";
+        const lines = [];
+        if (note) {
+            lines.push(note);
+        }
+        lines.push(`Subject: ${quiz.subject}`);
+        lines.push(`Selected chapter: ${quiz.selected_chapter}`);
+        lines.push(`Quiz type: ${quiz.quiz_type}`);
+        lines.forEach((line) => {
+            summary.appendChild(Object.assign(document.createElement("p"), { textContent: line }));
+        });
+        const chapterCards = document.createElement("div");
+        chapterCards.className = "review-list";
+        quiz.chapters.forEach((chapter) => {
+            const chapterCard = document.createElement("article");
+            chapterCard.className = "review-item";
+            chapterCard.append(
+                Object.assign(document.createElement("h5"), { textContent: chapter.title }),
+                Object.assign(document.createElement("p"), { textContent: `${chapter.questions.length} question${chapter.questions.length === 1 ? "" : "s"}` })
+            );
+            chapterCards.appendChild(chapterCard);
+        });
+        previewContent.append(summary, chapterCards);
+        return quiz;
+    };
+
+    const renderChapterPreview = async () => {
+        const subject = getActiveSubject();
+        if (!subject) {
+            throw new Error("Select a subject first.");
+        }
+        const file = elements.chapterFileInput?.files?.[0];
+        if (!file) {
+            throw new Error("Choose a quiz JSON file first.");
+        }
+        const chapterName = textValue(elements.chapterNameInput?.value);
+        const note = chapterName ? `This chapter will be added to "${subject.name}" as "${chapterName}".` : `Enter a chapter title to save it into "${subject.name}".`;
+        return renderQuizPreview({ fileInput: elements.chapterFileInput, previewStatus: elements.chapterPreviewStatus, previewContent: elements.chapterPreviewContent, note });
     };
 
     if (isAdminUnlocked()) {
@@ -495,17 +538,17 @@ document.addEventListener("DOMContentLoaded", async () => {
         hideAdminApp();
     }
 
-    elements.lockForm.addEventListener("submit", (event) => {
+    elements.lockForm.addEventListener("submit", async (event) => {
         event.preventDefault();
         if (textValue(elements.passwordInput.value) === ADMIN_PASSWORD) {
             setAdminUnlocked();
             elements.lockStatus.textContent = "";
             showAdminApp();
             elements.passwordInput.value = "";
+            await loadState();
             renderAll();
             return;
         }
-
         elements.lockStatus.textContent = "Wrong password. Try again.";
     });
 
@@ -515,197 +558,119 @@ document.addEventListener("DOMContentLoaded", async () => {
             setStatus("Enter a subject name and create the branch.");
             return;
         }
-
         elements.subjectCreateName?.focus();
     });
-
-    elements.subjectCreateCancel?.addEventListener("click", () => {
+    elements.subjectCreateCancel.addEventListener("click", () => {
         closeSubjectCreate();
         setStatus("Subject creation cancelled.");
     });
-
-    elements.subjectCreateForm.addEventListener("submit", (event) => {
+    elements.subjectCreateForm.addEventListener("submit", async (event) => {
         event.preventDefault();
-        try {
-            const subjectRecord = createEmptySubjectRecord(state.subjects, elements.subjectCreateName?.value);
-            state.subjects = saveSubjects([...state.subjects, subjectRecord]);
-            state.activeSubjectId = subjectRecord.id;
-            state.activeChapterTitle = "";
-            state.activeMode = "quiz";
-            state.expandedSubjectId = subjectRecord.id;
-            persistSelection();
-            closeSubjectCreate();
-            setStatus(`Created subject "${subjectRecord.name}". Use Export JSON to save it to the repo file.`);
-
-            renderAll();
-        } catch (error) {
-            setStatus(error?.message || "Could not create subject.");
-            elements.subjectCreateName?.focus();
+        const subjectName = textValue(elements.subjectCreateName.value);
+        if (!subjectName) {
+            setStatus("Enter a subject name.");
+            return;
         }
+        const subjectRecord = createEmptySubjectRecord(state.subjects, subjectName);
+        commitSubjects([...state.subjects, subjectRecord], subjectRecord.id, "");
+        closeSubjectCreate();
+        setStatus(`Created subject “${subjectRecord.name}”.`);
     });
-
-            const chapterFilePath = uniqueChapterFilePath(subject, uniqueTitle);
-            const chapterPayload = {
-                title: uniqueTitle,
-                questions: cloneQuestions(sourceChapter.questions)
-            };
-            const importedChapter = {
-                title: uniqueTitle,
-                questions: cloneQuestions(sourceChapter.questions),
-                file: chapterFilePath
-            };
-
-            const chapterDownloadName = chapterFilePath.split("/").pop() || "chapter.json";
-            downloadTextFile(chapterDownloadName, `${JSON.stringify(chapterPayload, null, 2)}\n`);
-
-
-            const nextSubjects = state.subjects.map((entry) =>
-                entry.id === subject.id
-                    ? {
-                        ...entry,
-                        chapters: [...entry.chapters, importedChapter],
-                        selectedChapter: uniqueTitle,
-                        updatedAt: now()
-                    }
-                    : entry
-            );
-
-            commitSubjects(nextSubjects, subject.id, uniqueTitle);
-            elements.chapterImportForm.reset();
-            if (elements.chapterNameInput) {
-                elements.chapterNameInput.value = "";
-            }
-            if (elements.chapterPreviewStatus) {
-                elements.chapterPreviewStatus.textContent = "Saved to browser";
-            }
-            if (elements.chapterPreviewContent) {
-                elements.chapterPreviewContent.replaceChildren(
-                    emptyState("Saved successfully", `The chapter was added to "${subject.name}".`)
-                );
-            }
-            setStatus(`Added chapter "${uniqueTitle}" to "${subject.name}" and downloaded ${chapterDownloadName}. Use Export JSON to save the manifest to the repo file.`);
-
+    elements.subjectSaveButton.addEventListener("click", () => {
+        const subject = getActiveSubject();
+        if (!subject) {
+            return;
+        }
+        const nextName = textValue(elements.subjectRenameInput.value);
+        if (!nextName) {
+            setStatus("Enter a subject name.");
+            return;
+        }
+        const nextSubjects = state.subjects.map((entry) => entry.id === subject.id ? { ...entry, name: nextName, updatedAt: now() } : entry);
+        commitSubjects(nextSubjects, subject.id, state.activeChapterTitle);
+        setStatus(`Renamed subject to “${nextName}”.`);
+    });
+    elements.subjectDeleteButton.addEventListener("click", () => {
+        const subject = getActiveSubject();
+        if (!subject || state.subjects.length <= 1) {
+            return;
+        }
+        const nextSubjects = state.subjects.filter((entry) => entry.id !== subject.id);
+        commitSubjects(nextSubjects, nextSubjects[0]?.id || "", "");
+        setStatus(`Deleted subject “${subject.name}”.`);
+    });
+    elements.chapterPreviewButton.addEventListener("click", async () => {
+        try {
+            await renderChapterPreview();
         } catch (error) {
             renderPreviewError(elements.chapterPreviewStatus, elements.chapterPreviewContent, error);
         }
     });
-
-    elements.chapterSaveButton?.addEventListener("click", () => {
-        const subject = getActiveSubject();
-        const chapter = getActiveChapter();
-        const nextTitle = textValue(elements.chapterRenameInput?.value);
-        if (!subject || !chapter || !nextTitle) {
-            setStatus("Choose a chapter and enter a title first.");
-            return;
-        }
-
-        const uniqueTitle = uniqueChapterTitle(subject, nextTitle, chapter.title);
-        const nextSubjects = state.subjects.map((entry) => {
-            if (entry.id !== subject.id) {
-                return entry;
+    elements.chapterImportForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        try {
+            const subject = getActiveSubject();
+            if (!subject) {
+                throw new Error("Select a subject first.");
             }
-
-            const nextChapters = entry.chapters.map((chapterEntry) =>
-                chapterEntry.title === chapter.title ? { ...chapterEntry, title: uniqueTitle } : chapterEntry
-            );
-
-            return {
-                ...entry,
-                selectedChapter: entry.selectedChapter === chapter.title ? uniqueTitle : entry.selectedChapter,
-                chapters: nextChapters,
+            const preview = await renderChapterPreview();
+            if (!preview) {
+                return;
+            }
+            const chapterTitle = uniqueChapterTitle(subject, textValue(elements.chapterNameInput.value), "");
+            const chapterFile = uniqueChapterFilePath(subject, chapterTitle, "");
+            const nextChapter = {
+                title: chapterTitle,
+                file: chapterFile,
+                questions: preview.chapters.flatMap((chapter) => chapter.questions || []),
                 updatedAt: now()
             };
-        });
-
-        commitSubjects(nextSubjects, subject.id, uniqueTitle);
-        setStatus(`Renamed chapter to "${uniqueTitle}".`);
+            const nextSubjects = state.subjects.map((entry) => entry.id === subject.id ? { ...entry, chapters: [...entry.chapters, nextChapter], selectedChapter: chapterTitle, updatedAt: now() } : entry);
+            commitSubjects(nextSubjects, subject.id, chapterTitle);
+            setStatus(`Added chapter “${chapterTitle}” to “${subject.name}”.`);
+        } catch (error) {
+            renderPreviewError(elements.chapterPreviewStatus, elements.chapterPreviewContent, error);
+        }
     });
-
-    elements.chapterDeleteButton?.addEventListener("click", () => {
-        const subject = getActiveSubject();
+    elements.chapterSaveButton.addEventListener("click", () => {
         const chapter = getActiveChapter();
-        if (!subject || !chapter || subject.chapters.length <= 1) {
-            setStatus("Keep at least one chapter in a subject.");
+        if (!chapter) {
             return;
         }
-
-        const chapterIndex = subject.chapters.findIndex((entry) => entry.title === chapter.title);
-        const nextChapters = subject.chapters.filter((entry) => entry.title !== chapter.title);
-        const fallbackChapter = nextChapters[Math.min(chapterIndex, nextChapters.length - 1)] || nextChapters[0] || null;
-
-        const nextSubjects = state.subjects.map((entry) =>
-            entry.id === subject.id
-                ? {
-                    ...entry,
-                    selectedChapter: fallbackChapter?.title || "",
-                    chapters: nextChapters,
-                    updatedAt: now()
-                }
-                : entry
-        );
-
-        commitSubjects(nextSubjects, subject.id, fallbackChapter?.title || "");
-        setStatus(`Deleted chapter "${chapter.title}".`);
-    });
-
-    elements.chapterNameInput?.addEventListener("input", () => {
-        closeSubjectCreate();
-        const subject = getActiveSubject();
-        if (!subject) {
-            setStatus("Select a subject first.");
+        const nextName = textValue(elements.chapterRenameInput.value);
+        if (!nextName) {
+            setStatus("Enter a chapter name.");
             return;
         }
-
-        setStatus(`Preparing to add a leaf to "${subject.name}".`);
+        const nextSubjects = state.subjects.map((subject) => subject.id === state.activeSubjectId ? { ...subject, chapters: subject.chapters.map((entry) => entry.title === chapter.title ? { ...entry, title: nextName, updatedAt: now() } : entry), updatedAt: now() } : subject);
+        commitSubjects(nextSubjects, state.activeSubjectId, nextName);
+        setStatus(`Renamed chapter to “${nextName}”.`);
     });
-
-    elements.subjectRenameInput?.addEventListener("input", () => {
-        const subject = getActiveSubject();
-        if (subject) {
-            setStatus(`Editing subject "${subject.name}".`);
-        }
-    });
-
-    elements.chapterRenameInput?.addEventListener("input", () => {
+    elements.chapterDeleteButton.addEventListener("click", () => {
         const chapter = getActiveChapter();
-        if (chapter) {
-            setStatus(`Editing chapter "${chapter.title}".`);
-        }
-    });
-
-    elements.chapterPrev?.addEventListener("click", () => {
-        const carousel = elements.chapterCarousel;
-        if (!carousel) {
+        if (!chapter) {
             return;
         }
-        carousel.scrollBy({ left: -Math.max(260, carousel.clientWidth * 0.7), behavior: "smooth" });
+        const nextSubjects = state.subjects.map((subject) => subject.id === state.activeSubjectId ? { ...subject, chapters: subject.chapters.filter((entry) => entry.title !== chapter.title), updatedAt: now() } : subject);
+        commitSubjects(nextSubjects, state.activeSubjectId, "");
+        setStatus(`Deleted chapter “${chapter.title}”.`);
     });
-
-    elements.chapterNext?.addEventListener("click", () => {
-        const carousel = elements.chapterCarousel;
-        if (!carousel) {
-            return;
-        }
-        carousel.scrollBy({ left: Math.max(260, carousel.clientWidth * 0.7), behavior: "smooth" });
+    elements.exportButton.addEventListener("click", async () => {
+        const payload = serializeSubjects(state.subjects);
+        const blob = new Blob([payload], { type: "application/json" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "subjects.json";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(link.href);
+        const saveResult = await persistLibraryToServer(state.subjects);
+        setStatus(saveResult?.saved ? "Downloaded subjects.json and saved the repo-backed library." : "Downloaded subjects.json. Auto-save to the repo was not available.");
     });
-
-    window.addEventListener("storage", async (event) => {
-        if ([ACTIVE_SUBJECT_KEY, ACTIVE_CHAPTER_KEY, ACTIVE_MODE_KEY].includes(event.key)) {
-            await loadState();
-
-            renderAll();
-        }
-    });
+    elements.chapterPrev.addEventListener("click", () => moveChapterSelection(-1));
+    elements.chapterNext.addEventListener("click", () => moveChapterSelection(1));
 
     await loadState();
-
-    if (isAdminUnlocked()) {
-        showAdminApp();
-    } else {
-        hideAdminApp();
-    }
     renderAll();
 });
-
-
-

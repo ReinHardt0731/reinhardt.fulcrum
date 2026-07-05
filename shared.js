@@ -6,6 +6,7 @@ export const REVIEW_SESSION_KEY = "prepcore.web.reviewSession.v1";
 export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
 export const ADMIN_PASSWORD = "prepcore";
 const SUBJECTS_PATH = "./subjects.json";
+const VALID_MODES = new Set(["quiz", "learn", "flashcards"]);
 
 const text = (value) => String(value ?? "").trim();
 
@@ -450,15 +451,14 @@ async function resolveChapterData(entry, chapterLookup = {}) {
 }
 
 function coerceStoredSubject(entry, position, chapterLookup = {}) {
-
     if (!entry || typeof entry !== "object" || Array.isArray(entry)) {
         return null;
     }
 
     const name = text(entry.name || entry.subject || entry.title || `Subject ${position}`);
+    const chapters = (Array.isArray(entry.chapters) ? entry.chapters : [])
         .map((chapter, index) => coerceChapter(chapter, index + 1, chapterLookup))
         .filter(Boolean);
-
 
     return {
         id: text(entry.id) || slugify(name),
@@ -466,7 +466,6 @@ function coerceStoredSubject(entry, position, chapterLookup = {}) {
         quizType: text(entry.quizType || entry.quiz_type || "short_quiz"),
         schemaVersion: Number(entry.schemaVersion || entry.schema_version || 1),
         selectedChapter: text(entry.selectedChapter || entry.selected_chapter || chapters[0]?.title || ""),
-
         chapters,
         updatedAt: text(entry.updatedAt || entry.updated_at || new Date().toISOString())
     };
@@ -499,7 +498,6 @@ export function normalizeChapter(entry, position, chapterLookup = {}) {
 export function normalizeQuizPayload(payload, subjectOverride = "") {
     if (!payload || (typeof payload !== "object" && !Array.isArray(payload))) {
         throw new Error("Quiz file must be a JSON object or array.");
-
     }
 
     let chaptersSource = [];
@@ -526,6 +524,17 @@ export function normalizeQuizPayload(payload, subjectOverride = "") {
                 questions: collectQuestionEntries(payload.questions)
             }
         ];
+    }
+
+    const chapters = chaptersSource.map((chapter, index) => normalizeChapter(chapter, index + 1));
+    return {
+        subject: text(payload.subject || payload.title || subjectOverride || "Imported"),
+        selected_chapter: text(payload.selected_chapter || payload.title || payload.chapter || subjectOverride || payload.subject || "Imported"),
+        quiz_type: text(payload.quiz_type || payload.quizType || "short_quiz"),
+        chapters
+    };
+}
+
 export async function loadSubjects() {
     try {
         const response = await fetch(SUBJECTS_PATH, { cache: "no-store" });
@@ -830,7 +839,7 @@ function renderHomeCarousel(track, subjects, activeSubjectId, selectSubject) {
 
         const meta = document.createElement("p");
         meta.className = "subject-carousel-meta";
-        meta.textContent = `${subject.chapters.length} chapter${subject.chapters.length === 1 ? "" : "s"} â€¢ ${tallyQuestionCount(subject)} questions`;
+        meta.textContent = `${subject.chapters.length} chapter${subject.chapters.length === 1 ? "" : "s"} • ${tallyQuestionCount(subject)} questions`;
 
         const tags = document.createElement("div");
         tags.className = "subject-carousel-tags";
@@ -898,7 +907,7 @@ function renderSubjectDrawer(subjects, activeSubjectId, activeChapterTitle, expa
 
         const caret = document.createElement("span");
         caret.className = "subject-item-caret";
-        caret.textContent = "â–¾";
+        caret.textContent = "▾";
         copy.append(title, meta);
         header.setAttribute("aria-expanded", String(isExpanded));
         header.append(copy, caret);
@@ -989,7 +998,7 @@ function createFeedbackCard(result, options = {}) {
 
     const details = document.createElement("p");
     details.textContent = result.correct
-        ? "Nice work â€” that one is locked in."
+        ? "Nice work — that one is locked in."
         : `You answered ${text(result.userAnswer) || "nothing"}; keep this one in review.`;
 
     wrapper.append(title, answer, details);
@@ -1104,7 +1113,7 @@ function createAssessmentChart(segments, centerValue, centerLabel, ariaLabel) {
 
         const meta = document.createElement("span");
         meta.className = "assessment-legend-meta";
-        meta.textContent = `${Math.max(0, Number(segment.value) || 0)}${segment.meta ? ` â€¢ ${segment.meta}` : ""}`;
+        meta.textContent = `${Math.max(0, Number(segment.value) || 0)}${segment.meta ? ` • ${segment.meta}` : ""}`;
 
         item.append(copy, meta);
         legend.appendChild(item);
@@ -1117,7 +1126,7 @@ function createAssessmentChart(segments, centerValue, centerLabel, ariaLabel) {
 
 function renderAssessment(summary, session, title, score, content, startSession) {
     title.textContent = `Results for ${session.chapterTitle}`;
-    score.textContent = `${summary.accuracy}% â€¢ ${summary.correctCount}/${summary.total}`;
+    score.textContent = `${summary.accuracy}% • ${summary.correctCount}/${summary.total}`;
     content.replaceChildren();
 
     const scoreCard = document.createElement("div");
@@ -1167,7 +1176,7 @@ function renderAssessment(summary, session, title, score, content, startSession)
     reviewCard.className = "assessment-block";
     reviewCard.appendChild(Object.assign(document.createElement("h4"), { textContent: "Missed questions" }));
     if (!summary.missed.length) {
-        reviewCard.appendChild(Object.assign(document.createElement("p"), { textContent: "Perfect session â€” nothing to review." }));
+        reviewCard.appendChild(Object.assign(document.createElement("p"), { textContent: "Perfect session — nothing to review." }));
     } else {
         const list = document.createElement("div");
         list.className = "review-list";
@@ -1574,6 +1583,34 @@ export async function initHomePage() {
         });
     };
 
+    elements.modeLinks.forEach((button) => {
+        button.addEventListener("click", () => {
+            const nextMode = button.dataset.homeMode;
+            if (!nextMode || !pageMap[nextMode]) {
+                return;
+            }
+            state.mode = nextMode;
+            syncSelection(state.activeSubject?.id || "", state.activeChapter?.title || "", state.mode);
+            renderModeLinks();
+            window.location.href = pageMap[nextMode];
+        });
+    });
+
+    const scrollCarouselToIndex = (index) => {
+        if (!elements.carousel) {
+            return;
+        }
+        const cards = Array.from(elements.carousel.children);
+        if (!cards.length) {
+            return;
+        }
+        const targetIndex = Math.max(0, Math.min(index, cards.length - 1));
+        const targetCard = cards[targetIndex];
+        if (targetCard) {
+            targetCard.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+        }
+    };
+
     const render = () => {
 
         if (elements.title) {
@@ -1581,7 +1618,7 @@ export async function initHomePage() {
         }
         if (elements.meta) {
             elements.meta.textContent = state.activeSubject
-                ? `${state.activeSubject.chapters.length} chapter${state.activeSubject.chapters.length === 1 ? "" : "s"} â€¢ ${tallyQuestionCount(state.activeSubject)} questions loaded from subjects.json.`
+                ? `${state.activeSubject.chapters.length} chapter${state.activeSubject.chapters.length === 1 ? "" : "s"} • ${tallyQuestionCount(state.activeSubject)} questions loaded from subjects.json.`
                 : "This GitHub Pages version loads subjects from subjects.json.";
 
         }
@@ -1595,6 +1632,10 @@ export async function initHomePage() {
                 syncSelection(state.activeSubject?.id || "", state.activeChapter?.title || "", state.mode);
                 render();
             });
+            const activeIndex = Math.max(0, state.subjects.findIndex((subject) => subject.id === state.activeSubject?.id));
+            if (activeIndex >= 0) {
+                requestAnimationFrame(() => scrollCarouselToIndex(activeIndex));
+            }
         }
     };
 
@@ -1606,6 +1647,8 @@ export async function initHomePage() {
         state.activeChapter = fresh.activeChapter;
         state.mode = fresh.mode;
         render();
+    };
+
     await refresh();
 
     window.addEventListener("storage", async (event) => {
@@ -1742,11 +1785,11 @@ export async function initModePage(mode) {
             elements.title.textContent = subject.name;
         }
         if (elements.meta) {
-            elements.meta.textContent = `${chapterCount} chapter${chapterCount === 1 ? "" : "s"} â€¢ ${questionCount} question${questionCount === 1 ? "" : "s"} loaded from subjects.json.`;
+            elements.meta.textContent = `${chapterCount} chapter${chapterCount === 1 ? "" : "s"} • ${questionCount} question${questionCount === 1 ? "" : "s"} loaded from subjects.json.`;
 
         }
         if (elements.summaryPill) {
-            elements.summaryPill.textContent = `${chapterCount} chapters â€¢ ${questionCount} questions`;
+            elements.summaryPill.textContent = `${chapterCount} chapters • ${questionCount} questions`;
         }
         if (elements.chapterTitle) {
             elements.chapterTitle.textContent = chapter ? chapter.title : "No chapter selected";
@@ -1981,7 +2024,7 @@ export async function initModePage(mode) {
             feedback.appendChild(Object.assign(document.createElement("p"), {
                 className: "answer-hint",
                 textContent: question.questionType === "numeric"
-                    ? "You can answer this row whenever youâ€™re ready."
+                    ? "You can answer this row whenever you’re ready."
                     : "Choose one option to lock in feedback for this row."
             }));
         }
@@ -2373,7 +2416,7 @@ export function initAdminPage() {
         const quiz = await previewQuizFile(file, subjectInput.value);
         const chapterCount = quiz.chapters.length;
         const questionCount = quiz.chapters.reduce((sum, chapter) => sum + chapter.questions.length, 0);
-        previewStatus.textContent = `${chapterCount} chapters â€¢ ${questionCount} questions`;
+        previewStatus.textContent = `${chapterCount} chapters • ${questionCount} questions`;
         previewContent.replaceChildren();
 
         const summary = document.createElement("div");

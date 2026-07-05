@@ -1230,7 +1230,7 @@ body.drawer-collapsed .mobile-only {
 .admin-shell {
     display: grid;
     gap: 18px;
-    width: min(1180px, calc(100% - 32px));
+    width: min(1440px, calc(100% - 32px));
     margin: 0 auto;
     padding: 24px 0 36px;
 }
@@ -1380,8 +1380,8 @@ body.drawer-collapsed .mobile-only {
 
 .admin-workspace {
     display: grid;
-    grid-template-columns: minmax(320px, 360px) minmax(0, 1fr);
-    gap: 20px;
+    grid-template-columns: minmax(300px, 360px) minmax(0, 1fr);
+    gap: 22px;
     align-items: start;
     padding: 24px;
 }
@@ -1399,6 +1399,41 @@ body.drawer-collapsed .mobile-only {
         top: 24px;
         max-height: calc(100vh - 48px);
         overflow: auto;
+        align-self: start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .admin-shell {
+        width: min(1600px, calc(100% - 40px));
+    }
+
+    .admin-workspace {
+        grid-template-columns: minmax(300px, 420px) minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .admin-sidebar {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .admin-collapse-panel {
+        padding: 16px;
+    }
+
+    .admin-subject-panel {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .admin-subject-list {
+        gap: 8px;
+    }
+
+    .subject-item {
+        min-height: 56px;
+        padding: 12px 14px;
     }
 }
 
@@ -1561,9 +1596,11 @@ body.drawer-collapsed .mobile-only {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 10px;
     width: 100%;
-    padding: 14px 16px;
+    min-height: 56px;
+    padding: 12px 14px;
+    box-sizing: border-box;
     border: 1px solid transparent;
     border-radius: 18px;
     color: var(--text);
@@ -1584,15 +1621,23 @@ body.drawer-collapsed .mobile-only {
     display: grid;
     gap: 4px;
     min-width: 0;
+    width: 100%;
 }
 
 .subject-item-title {
     font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
 }
 
 .subject-item-meta {
     color: var(--muted);
     font-size: 0.92rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .subject-item-caret {
