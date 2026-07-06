@@ -80,6 +80,7 @@ button {
     align-self: start;
     padding: 22px;
     min-height: calc(100vh - 40px);
+    max-height: calc(100vh - 40px);
     width: 100%;
     min-width: 0;
     overflow: hidden;
@@ -175,6 +176,7 @@ body.drawer-collapsed .mobile-only {
     gap: 10px;
     overflow: auto;
     padding-right: 4px;
+    max-height: calc(100vh - 180px);
 }
 
 .drawer .subject-list {
