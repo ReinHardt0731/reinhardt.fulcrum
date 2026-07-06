@@ -396,8 +396,8 @@ body.drawer-collapsed .mobile-only {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 42px;
-    padding: 0 16px;
+    width: 44px;
+    height: 44px;
     border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.12);
     color: var(--text);
@@ -410,6 +410,11 @@ body.drawer-collapsed .mobile-only {
     transform: translateY(-1px);
     border-color: rgba(97, 195, 255, 0.35);
     background: rgba(97, 195, 255, 0.12);
+}
+.home-footer-link svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
 }
 
 .home-dashboard {
