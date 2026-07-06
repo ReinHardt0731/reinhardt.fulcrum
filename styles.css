@@ -79,7 +79,7 @@ button {
     top: 20px;
     align-self: start;
     padding: 22px;
-    min-height: calc(100vh - 40px);
+    height: calc(100vh - 40px);
     max-height: calc(100vh - 40px);
     width: 100%;
     min-width: 0;
@@ -174,9 +174,10 @@ body.drawer-collapsed .mobile-only {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding-right: 4px;
-    max-height: calc(100vh - 180px);
+    min-height: 0;
 }
 
 .drawer .subject-list {
