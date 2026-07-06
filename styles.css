@@ -178,6 +178,28 @@ body.drawer-collapsed .mobile-only {
     overflow-x: hidden;
     padding-right: 4px;
     min-height: 0;
+    scrollbar-color: rgba(97, 195, 255, 0.45) rgba(18, 31, 54, 0.6);
+    scrollbar-width: thin;
+}
+
+.subject-list::-webkit-scrollbar {
+    width: 10px;
+}
+
+.subject-list::-webkit-scrollbar-track {
+    background: rgba(18, 31, 54, 0.45);
+    border-radius: 999px;
+}
+
+.subject-list::-webkit-scrollbar-thumb {
+    background: rgba(97, 195, 255, 0.35);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+.subject-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(97, 195, 255, 0.55);
 }
 
 .drawer .subject-list {
