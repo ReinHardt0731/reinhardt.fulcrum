@@ -663,10 +663,14 @@ export function buildQuestionResult(question, session, answer, correct) {
         ? question.choices?.[Number(answer)] ?? (answer === null || answer === undefined ? "" : String(answer))
         : answer === null || answer === undefined ? "" : String(answer);
 
+    const correctAnswer = question.questionType === "multiple_choice"
+        ? question.choices?.[Number(question.answerIndex)] ?? question.answerText
+        : question.answerText;
+
     return {
         questionText: question.question,
         chapterTitle: session.chapterTitle,
-        correctAnswer: question.answerText,
+        correctAnswer,
         userAnswer,
         userAnswerIndex,
         correct,
@@ -1483,7 +1487,8 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 const button = document.createElement("button");
                 button.type = "button";
                 button.className = "choice-button";
-                button.textContent = `${index + 1}. ${choice}`;
+                const label = index < 26 ? String.fromCharCode(65 + index) : String(index);
+                button.textContent = `${label}. ${choice}`;
                 button.disabled = session.reviewed;
                 if (session.selectedChoice === index) {
                     button.classList.add("is-selected");
