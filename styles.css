@@ -333,6 +333,14 @@ body.drawer-collapsed .mobile-only {
     text-align: center;
 }
 
+.home-logo img {
+    width: min(420px, 80vw);
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .home-boundary {
     position: relative;
     height: 24px;
