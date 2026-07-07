@@ -6,11 +6,20 @@ export const REVIEW_SESSION_KEY = "prepcore.web.reviewSession.v1";
 export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
 export const ADMIN_PASSWORD = "prepcore";
 const SUBJECTS_PATH = "./subjects.json";
-const VALID_MODES = new Set(["quiz", "learn", "flashcards"]);
+const VALID_MODES = new Set(["quiz", "learn", "flashcards", "exam"]);
 const SUBJECTS_CACHE_KEY = "prepcore.web.subjectsCache.v1";
 const CHAPTER_CACHE_KEY = "prepcore.web.chapterCache.v1";
 
 const text = (value) => String(value ?? "").trim();
+
+function shuffleArray(values) {
+    const next = [...values];
+    for (let index = next.length - 1; index > 0; index -= 1) {
+        const swapIndex = Math.floor(Math.random() * (index + 1));
+        [next[index], next[swapIndex]] = [next[swapIndex], next[index]];
+    }
+    return next;
+}
 
 const slugify = (value) =>
     text(value)
@@ -80,6 +89,11 @@ function normalizeTags(value) {
         return [];
     }
     return value.map((entry) => text(entry)).filter(Boolean);
+}
+
+function getPrimaryTag(question) {
+    const tags = Array.isArray(question?.tags) ? question.tags : [];
+    return text(tags[0] || question?.chapterTitle || "Untagged");
 }
 
 function isQuestionLikeObject(value) {
@@ -722,7 +736,63 @@ export function createSession(subject, chapter, mode, options = {}) {
     };
 }
 
-export function buildQuestionResult(question, session, answer, correct) {
+export function createExamSession(subject, chapterTitles, questionCount, options = {}) {
+    const selectedChapters = Array.isArray(chapterTitles) && chapterTitles.length
+        ? chapterTitles
+        : [options.chapterTitle || ""];
+    const questionPool = [];
+
+    selectedChapters.forEach((chapterTitle) => {
+        const chapter = getChapterByTitle(subject, chapterTitle);
+        if (!chapter) {
+            return;
+        }
+        const chapterQuestions = collectChapterQuestions(chapter);
+        chapterQuestions.forEach((question, index) => {
+            const normalizedQuestion = coerceQuestion(question, index + 1);
+            questionPool.push({
+                ...normalizedQuestion,
+                chapterTitle: chapter.title
+            });
+        });
+    });
+
+    const questions = shuffleArray(questionPool)
+        .slice(0, Math.max(1, Math.min(Number(questionCount) || 1, questionPool.length)));
+
+    return {
+        subjectId: subject.id,
+        subjectName: subject.name,
+        chapterTitle: text(options.chapterTitle || (selectedChapters[0] || subject.chapters[0]?.title || "Exam")),
+        mode: "exam",
+        questions,
+        index: 0,
+        answers: [],
+        drafts: questions.map(() => ""),
+        revealed: false,
+        reviewed: false,
+        busy: false,
+        lastResult: null,
+        selectedChoice: null,
+        typedAnswer: "",
+        complete: false,
+        currentSummary: null,
+        reviewLabel: "Exam review",
+        reviewSource: "exam",
+        selectedChapterTitles: selectedChapters.filter(Boolean),
+        questionCount: questions.length,
+        timeLimitSeconds: Number(options.timeLimitSeconds) || 0,
+        timeRemainingSeconds: Number(options.timeLimitSeconds) || 0,
+        startedAt: null,
+        submitted: false,
+        timerStarted: false,
+        reviewingAnswers: false,
+        reviewOnlyUnsure: false,
+        unsureFlags: questions.map(() => false)
+    };
+}
+
+export function buildQuestionResult(question, session, answer, correct, isUnsure = false) {
     const userAnswerIndex = question.questionType === "multiple_choice" ? Number(answer) : null;
     const userAnswer = question.questionType === "multiple_choice"
         ? question.choices?.[Number(answer)] ?? (answer === null || answer === undefined ? "" : String(answer))
@@ -739,6 +809,7 @@ export function buildQuestionResult(question, session, answer, correct) {
         userAnswer,
         userAnswerIndex,
         correct,
+        isUnsure,
         explanation: formatExplanationText(question.explanation || question.explaination),
         tags: question.tags
     };
@@ -774,11 +845,25 @@ export function summarizeResults(session) {
     const missed = session.answers.filter((entry) => entry && !entry.correct);
 
     const weakAreaCounts = new Map();
-    missed.forEach((entry) => {
-        const tags = entry.tags && entry.tags.length ? entry.tags : [entry.chapterTitle || "Untagged"];
-        tags.forEach((tag) => {
-            weakAreaCounts.set(tag, (weakAreaCounts.get(tag) || 0) + 1);
-        });
+    const tagBreakdown = new Map();
+    session.questions.forEach((question, index) => {
+        const entry = session.answers[index];
+        const tagName = getPrimaryTag(question);
+        const bucket = tagBreakdown.get(tagName) || { tag: tagName, correct: 0, incorrect: 0, total: 0 };
+        bucket.total += 1;
+        if (entry?.correct) {
+            bucket.correct += 1;
+        } else {
+            bucket.incorrect += 1;
+        }
+        tagBreakdown.set(tagName, bucket);
+
+        if (!entry?.correct) {
+            const tags = Array.isArray(question.tags) && question.tags.length ? question.tags : [question.chapterTitle || "Untagged"];
+            tags.forEach((tag) => {
+                weakAreaCounts.set(tag, (weakAreaCounts.get(tag) || 0) + 1);
+            });
+        }
     });
 
     const weakAreas = [...weakAreaCounts.entries()]
@@ -786,7 +871,14 @@ export function summarizeResults(session) {
         .slice(0, 3)
         .map(([name, count]) => ({ name, count }));
 
-    return { correctCount, total, accuracy, missed, weakAreas };
+    return {
+        correctCount,
+        total,
+        accuracy,
+        missed,
+        weakAreas,
+        tagBreakdown: [...tagBreakdown.values()].sort((left, right) => right.total - left.total || left.tag.localeCompare(right.tag))
+    };
 }
 
 export function createReviewSessionPayload(session, summary) {
@@ -1050,7 +1142,9 @@ function renderProgress(fill, session) {
         return;
     }
 
-    const current = session.mode === "quiz" ? countAnsweredQuestions(session) : session.index;
+    const current = session.mode === "quiz" || session.mode === "exam"
+        ? countAnsweredQuestions(session)
+        : session.index;
     const percent = session.complete ? 100 : Math.round((current / session.questions.length) * 100);
     fill.style.width = `${Math.max(0, Math.min(100, percent))}%`;
 }
@@ -1161,6 +1255,8 @@ function createAssessmentChart(segments, centerValue, centerLabel, ariaLabel) {
     segments.forEach((segment) => {
         const item = document.createElement("div");
         item.className = "assessment-legend-item";
+        item.style.setProperty("--legend-fill", `${Math.max(0, Number(segment.fillPercent) || 0)}%`);
+        item.style.setProperty("--legend-fill-color", segment.color);
 
         const copy = document.createElement("div");
         copy.className = "assessment-legend-copy";
@@ -1195,27 +1291,40 @@ function renderAssessment(summary, session, title, score, content, startSession)
 
     const scoreCard = document.createElement("div");
     scoreCard.className = "assessment-score-card";
+
+    const chartSegments = session.mode === "exam" && Array.isArray(summary.tagBreakdown) && summary.tagBreakdown.length
+        ? summary.tagBreakdown.map((entry, index) => ({
+            label: entry.tag,
+            value: entry.correct,
+            color: ["var(--success)", "var(--primary)", "var(--warning)", "var(--danger)"][index % 4],
+            fillPercent: entry.total ? Math.round((entry.correct / entry.total) * 100) : 0,
+            meta: `${entry.correct}/${entry.total} correct`
+        }))
+        : [
+            {
+                label: "Correct",
+                value: summary.correctCount,
+                color: "var(--success)",
+                meta: "locked in"
+            },
+            {
+                label: "Missed",
+                value: summary.missed.length,
+                color: "var(--danger)",
+                meta: "needs review"
+            }
+        ];
+
     scoreCard.append(
         Object.assign(document.createElement("h4"), { textContent: `${summary.correctCount} correct out of ${summary.total}` }),
         Object.assign(document.createElement("p"), { textContent: `Accuracy: ${summary.accuracy}%` }),
         createAssessmentChart(
-            [
-                {
-                    label: "Correct",
-                    value: summary.correctCount,
-                    color: "var(--success)",
-                    meta: "locked in"
-                },
-                {
-                    label: "Missed",
-                    value: summary.missed.length,
-                    color: "var(--danger)",
-                    meta: "needs review"
-                }
-            ],
+            chartSegments,
             `${summary.accuracy}%`,
-            "Accuracy",
-            `Accuracy breakdown: ${summary.correctCount} correct and ${summary.missed.length} missed.`
+            session.mode === "exam" ? "Tag accuracy" : "Accuracy",
+            session.mode === "exam"
+                ? `Tag accuracy breakdown: ${summary.tagBreakdown.map((entry) => `${entry.tag} ${entry.correct}/${entry.total}`).join(", ")}`
+                : `Accuracy breakdown: ${summary.correctCount} correct and ${summary.missed.length} missed.`
         )
     );
 
@@ -1300,13 +1409,49 @@ function renderAssessmentPlaceholder(title, score, content) {
     content.appendChild(empty);
 }
 
-function buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage) {
+function formatMinutesSeconds(value) {
+    const totalSeconds = Math.max(0, Number(value) || 0);
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+}
+
+function parseMinutesSecondsInput(value) {
+    const raw = String(value || "").trim();
+    if (!raw) {
+        return 0;
+    }
+
+    const parts = raw.split(":").map((part) => part.trim());
+    if (parts.length === 1) {
+        const parsed = Number(parts[0]);
+        return Number.isFinite(parsed) ? Math.max(0, Math.round(parsed)) : 0;
+    }
+
+    const minutes = Number(parts[0]) || 0;
+    const seconds = Number(parts[1]) || 0;
+    return Math.max(0, Math.round(minutes * 60 + seconds));
+}
+
+function buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, submitExamAnswer = null) {
     const { stage, progressFill } = elements;
+    const examStarter = typeof globalThis.__beginExamSession === "function" ? globalThis.__beginExamSession : null;
+    const examSubmitter = typeof submitExamAnswer === "function"
+        ? submitExamAnswer
+        : (typeof globalThis.__submitExamAnswer === "function" ? globalThis.__submitExamAnswer : null);
+    const examFinisher = typeof globalThis.__finishExamSession === "function" ? globalThis.__finishExamSession : null;
+    const renderHeaderRenderer = typeof globalThis.__renderHeader === "function"
+        ? globalThis.__renderHeader
+        : null;
     stage.replaceChildren();
 
     const subject = state.activeSubject;
     const chapter = state.activeChapter;
     const session = state.session;
+
+    if (session && !Array.isArray(session.unsureFlags)) {
+        session.unsureFlags = session.questions.map(() => false);
+    }
 
     if (!subject || !chapter || !session) {
         const empty = document.createElement("div");
@@ -1320,6 +1465,564 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             })
         );
         stage.appendChild(empty);
+        renderProgress(progressFill, session);
+        return;
+    }
+
+    if (session.mode === "exam") {
+        if (!session.questions.length) {
+            const setup = document.createElement("div");
+            setup.className = "question-card";
+            setup.append(
+                Object.assign(document.createElement("h4"), { textContent: "Exam setup" }),
+                Object.assign(document.createElement("p"), { className: "question-hint", textContent: "Choose your chapter coverage, how many questions to include, and an optional timer before you begin." }),
+                Object.assign(document.createElement("form"), {
+                    innerHTML: ""
+                })
+            );
+            const form = document.createElement("form");
+            form.className = "answer-form";
+
+            const chapterList = document.createElement("div");
+            chapterList.className = "review-list";
+            const chapters = Array.isArray(subject?.chapters) ? subject.chapters : [];
+            chapters.forEach((chapterEntry) => {
+                const label = document.createElement("label");
+                label.className = "tag-pill";
+                label.style.display = "flex";
+                label.style.justifyContent = "space-between";
+                const checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                checkbox.value = chapterEntry.title;
+                checkbox.checked = state.session?.selectedChapterTitles?.includes(chapterEntry.title) || chapterEntry.title === state.activeChapter?.title;
+                label.append(checkbox, document.createTextNode(chapterEntry.title));
+                chapterList.appendChild(label);
+            });
+
+            const countInput = Object.assign(document.createElement("input"), {
+                className: "answer-input",
+                type: "number",
+                min: "1",
+                max: "100",
+                value: session.questionCount || 10,
+                placeholder: "Number of questions"
+            });
+            const timeInput = Object.assign(document.createElement("input"), {
+                className: "answer-input",
+                type: "text",
+                inputMode: "numeric",
+                value: formatMinutesSeconds(session.timeLimitSeconds || 600),
+                placeholder: "mm:ss"
+            });
+
+            const actionRow = document.createElement("div");
+            actionRow.className = "question-actions";
+            const startButton = document.createElement("button");
+            startButton.type = "submit";
+            startButton.className = "primary-button";
+            startButton.textContent = "Start exam";
+            actionRow.appendChild(startButton);
+
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+                const selected = Array.from(chapterList.querySelectorAll("input[type='checkbox']:checked")).map((entry) => entry.value).filter(Boolean);
+                const questionCount = Math.max(1, Math.min(Number(countInput.value) || 10, 100));
+                const timeLimitSeconds = parseMinutesSecondsInput(timeInput.value);
+                if (typeof examStarter === "function") {
+                    examStarter({
+                        chapters: selected.length ? selected : [state.activeChapter?.title || subject.chapters[0]?.title || ""],
+                        questionCount,
+                        timeLimitSeconds
+                    });
+                }
+            });
+
+            form.append(
+                Object.assign(document.createElement("p"), { className: "section-label", textContent: "Chapters" }),
+                chapterList,
+                Object.assign(document.createElement("p"), { className: "section-label", textContent: "Question count" }),
+                countInput,
+                Object.assign(document.createElement("p"), { className: "section-label", textContent: "Timer (mm:ss, optional)" }),
+                timeInput,
+                actionRow
+            );
+            setup.appendChild(form);
+            if (session.setupError) {
+                setup.appendChild(Object.assign(document.createElement("p"), { className: "answer-hint", textContent: session.setupError }));
+            }
+            stage.appendChild(setup);
+            renderProgress(progressFill, session);
+            return;
+        }
+
+        if (session.complete || session.submitted) {
+            const completeCard = document.createElement("div");
+            completeCard.className = "question-card completion-card";
+            completeCard.append(
+                Object.assign(document.createElement("h4"), { textContent: `Exam complete for ${session.chapterTitle}` }),
+                Object.assign(document.createElement("p"), { textContent: "Review your tag-based results and missed questions in the assessment panel below." })
+            );
+            stage.appendChild(completeCard);
+            renderProgress(progressFill, session);
+            return;
+        }
+
+        if (session.reviewingAnswers) {
+            const sheet = document.createElement("div");
+            sheet.className = "quiz-sheet";
+
+            const intro = document.createElement("section");
+            intro.className = "quiz-sheet-intro";
+            const introHeader = document.createElement("div");
+            introHeader.className = "quiz-sheet-intro-top";
+            const introCopy = document.createElement("div");
+            introCopy.className = "quiz-sheet-intro-copy";
+            introCopy.append(
+                Object.assign(document.createElement("p"), { className: "section-label", textContent: "Review mode" }),
+                Object.assign(document.createElement("h3"), { textContent: "Verify every answer before final submission" }),
+                Object.assign(document.createElement("p"), {
+                    className: "hero-meta",
+                    textContent: "Each question shows your chosen answer so you can switch to a different choice quickly."
+                })
+            );
+            const timerPill = Object.assign(document.createElement("div"), {
+                className: "review-timer-badge mode-badge",
+                textContent: `⏱ ${formatMinutesSeconds(Math.max(0, session.timeRemainingSeconds))}`
+            });
+            timerPill.setAttribute("data-exam-timer-badge", "true");
+            introHeader.append(introCopy, timerPill);
+
+            const flaggedCount = session.answers.filter(Boolean).filter((entry) => entry.isUnsure).length;
+            const introMeta = document.createElement("div");
+            introMeta.className = "quiz-sheet-meta";
+            introMeta.append(
+                Object.assign(document.createElement("div"), {
+                    className: "summary-pill",
+                    textContent: `${session.questions.length} questions reviewed`
+                }),
+                Object.assign(document.createElement("div"), {
+                    className: "summary-pill",
+                    textContent: `${session.answers.filter(Boolean).length}/${session.questions.length} answered`
+                }),
+                Object.assign(document.createElement("div"), {
+                    className: "summary-pill",
+                    textContent: `${flaggedCount} unsure`
+                })
+            );
+            const filterButton = document.createElement("button");
+            filterButton.type = "button";
+            filterButton.className = `ghost-button ${session.reviewOnlyUnsure ? "is-active" : ""}`.trim();
+            filterButton.textContent = session.reviewOnlyUnsure ? "Showing unsure only" : "Show unsure only";
+            filterButton.addEventListener("click", (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                session.reviewOnlyUnsure = !session.reviewOnlyUnsure;
+                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
+            });
+            introMeta.append(filterButton);
+            intro.append(introHeader, introMeta);
+
+            const reviewList = document.createElement("div");
+            reviewList.className = "quiz-sheet-list";
+
+            const updateReviewAnswer = (question, questionIndex, answer) => {
+                const result = buildQuestionResult(
+                    question,
+                    session,
+                    answer,
+                    isQuestionCorrect(question, answer),
+                    session.unsureFlags[questionIndex]
+                );
+                session.answers[questionIndex] = result;
+                session.drafts[questionIndex] = question.questionType === "numeric"
+                    ? String(answer)
+                    : String(answer);
+            };
+
+            const visibleQuestions = session.reviewOnlyUnsure
+                ? session.questions
+                    .map((question, index) => ({ question, index, result: session.answers[index] || null }))
+                    .filter((entry) => entry.result?.isUnsure)
+                : session.questions.map((question, index) => ({ question, index, result: session.answers[index] || null }));
+
+            visibleQuestions.forEach(({ question, index, result }) => {
+                const item = document.createElement("article");
+                item.className = "question-card";
+
+                const itemHeader = document.createElement("div");
+                itemHeader.className = "question-card-header";
+                itemHeader.append(
+                    Object.assign(document.createElement("div"), {
+                        className: "question-counter-inline",
+                        textContent: `Question ${index + 1}`
+                    })
+                );
+                if (result?.isUnsure) {
+                    itemHeader.append(
+                        Object.assign(document.createElement("div"), {
+                            className: "summary-pill",
+                            textContent: "Unsure"
+                        })
+                    );
+                }
+                item.append(itemHeader);
+                item.append(
+                    Object.assign(document.createElement("h5"), { textContent: question.question })
+                );
+
+                if (question.questionType === "numeric") {
+                    const reviewInput = document.createElement("input");
+                    reviewInput.type = "number";
+                    reviewInput.className = "answer-input";
+                    reviewInput.value = result?.userAnswer || "";
+                    reviewInput.placeholder = "Enter numeric answer";
+                    reviewInput.addEventListener("input", () => {
+                        session.drafts[index] = reviewInput.value;
+                    });
+
+                    const saveButton = document.createElement("button");
+                    saveButton.type = "button";
+                    saveButton.className = "ghost-button";
+                    saveButton.textContent = "Update answer";
+                    saveButton.addEventListener("click", (event) => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        updateReviewAnswer(question, index, reviewInput.value);
+                        buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
+                    });
+
+                    const numericArea = document.createElement("div");
+                    numericArea.className = "answer-area";
+                    numericArea.append(reviewInput, saveButton);
+                    item.appendChild(numericArea);
+                } else {
+                    const choices = document.createElement("div");
+                    choices.className = "choice-grid";
+                    question.choices.forEach((choice, choiceIndex) => {
+                        const choiceButton = document.createElement("button");
+                        choiceButton.type = "button";
+                        choiceButton.className = "choice-button";
+                        const label = choiceIndex < 26 ? String.fromCharCode(65 + choiceIndex) : String(choiceIndex + 1);
+                        choiceButton.textContent = `${label}. ${choice}`;
+                        if (result?.userAnswerIndex === choiceIndex) {
+                            choiceButton.classList.add("is-selected");
+                        }
+                        choiceButton.addEventListener("click", (event) => {
+                            event.preventDefault();
+                            event.stopPropagation();
+                            updateReviewAnswer(question, index, choiceIndex);
+                            buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
+                        });
+                        choices.appendChild(choiceButton);
+                    });
+                    item.appendChild(choices);
+                }
+
+                const reviewActions = document.createElement("div");
+                reviewActions.className = "question-actions";
+                const editButton = document.createElement("button");
+                editButton.type = "button";
+                editButton.className = "ghost-button";
+                editButton.textContent = "Open question";
+                editButton.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    session.reviewingAnswers = false;
+                    session.index = index;
+                    if (typeof renderHeaderRenderer === "function") {
+                        renderHeaderRenderer();
+                    }
+                    buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
+                });
+                reviewActions.appendChild(editButton);
+                const flagButton = document.createElement("button");
+                flagButton.type = "button";
+                flagButton.className = "ghost-button";
+                flagButton.textContent = result?.isUnsure ? "Unmark unsure" : "Mark unsure";
+                flagButton.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    session.unsureFlags[index] = !session.unsureFlags[index];
+                    if (result) {
+                        result.isUnsure = session.unsureFlags[index];
+                        session.answers[index] = result;
+                    }
+                    buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
+                });
+                reviewActions.appendChild(flagButton);
+                item.appendChild(reviewActions);
+
+                reviewList.appendChild(item);
+            });
+
+            const actions = document.createElement("div");
+            actions.className = "question-actions";
+            const continueButton = document.createElement("button");
+            continueButton.type = "button";
+            continueButton.className = "ghost-button";
+            continueButton.textContent = "Back to questions";
+            continueButton.addEventListener("click", (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                session.reviewingAnswers = false;
+                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
+            });
+            const finishButton = document.createElement("button");
+            finishButton.type = "button";
+            finishButton.className = "primary-button";
+            finishButton.textContent = "Submit final answers";
+            finishButton.addEventListener("click", (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                session.reviewingAnswers = false;
+                if (typeof examFinisher === "function") {
+                    examFinisher();
+                }
+            });
+            actions.append(continueButton, finishButton);
+
+            sheet.append(intro, reviewList, actions);
+            stage.appendChild(sheet);
+            renderProgress(progressFill, session);
+            return;
+        }
+
+        const question = session.questions[session.index];
+        if (!question) {
+            return;
+        }
+
+        const card = document.createElement("article");
+        card.className = "question-card";
+
+        const header = document.createElement("div");
+        header.className = "question-card-header";
+        const counterBadge = Object.assign(document.createElement("div"), {
+            className: "question-counter-inline",
+            textContent: `Question ${session.index + 1} of ${session.questions.length}`
+        });
+        const statusGroup = document.createElement("div");
+        statusGroup.className = "question-card-meta";
+        statusGroup.append(
+            Object.assign(document.createElement("div"), { className: "mode-badge", textContent: "Exam mode" })
+        );
+        if (session.timeLimitSeconds > 0) {
+            const timerBadge = Object.assign(document.createElement("div"), {
+                className: "mode-badge",
+                textContent: `⏱ ${formatMinutesSeconds(Math.max(0, session.timeRemainingSeconds))}`
+            });
+            timerBadge.setAttribute("data-exam-timer-badge", "true");
+            statusGroup.append(timerBadge);
+        }
+        if (session.unsureFlags[session.index]) {
+            statusGroup.append(
+                Object.assign(document.createElement("div"), {
+                    className: "mode-badge",
+                    textContent: "Unsure"
+                })
+            );
+        }
+        header.append(counterBadge, statusGroup);
+
+        const questionText = document.createElement("h4");
+        questionText.textContent = question.question;
+
+        const hint = document.createElement("p");
+        hint.className = "question-hint";
+        hint.textContent = question.questionType === "numeric"
+            ? "Enter your answer and submit it to move on. No feedback is shown until the end."
+            : "Choose the best answer, then submit it to move on. No feedback is shown until the end.";
+
+        const answerArea = document.createElement("div");
+        answerArea.className = "answer-area";
+
+        if (question.questionType === "numeric") {
+            const input = document.createElement("input");
+            input.type = "number";
+            input.className = "answer-input";
+            input.placeholder = "Enter your answer";
+            input.value = session.drafts?.[session.index] || "";
+            input.addEventListener("input", () => {
+                session.drafts[session.index] = input.value;
+                session.typedAnswer = input.value;
+            });
+            answerArea.appendChild(input);
+        } else {
+            const choices = document.createElement("div");
+            choices.className = "choice-grid";
+            question.choices.forEach((choice, index) => {
+                const button = document.createElement("button");
+                button.type = "button";
+                button.className = "choice-button";
+                button.textContent = choice;
+                if (session.selectedChoice === index) {
+                    button.classList.add("is-selected");
+                }
+                button.addEventListener("click", () => {
+                    session.selectedChoice = index;
+                    session.drafts[session.index] = String(index);
+                    buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+                });
+                choices.appendChild(button);
+            });
+            answerArea.appendChild(choices);
+        }
+
+        const actions = document.createElement("div");
+        actions.className = "question-actions";
+        if (session.index > 0) {
+            const backButton = document.createElement("button");
+            backButton.type = "button";
+            backButton.className = "ghost-button";
+            backButton.textContent = "Back";
+            backButton.addEventListener("click", (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                if (session.index > 0) {
+                    session.reviewingAnswers = false;
+                    session.index -= 1;
+                    if (typeof renderHeaderRenderer === "function") {
+                        renderHeaderRenderer();
+                    }
+                    buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
+                }
+            });
+            actions.appendChild(backButton);
+        }
+        const unsureButton = document.createElement("button");
+        unsureButton.type = "button";
+        unsureButton.className = "ghost-button";
+        unsureButton.textContent = session.unsureFlags[session.index] ? "Unmark unsure" : "Mark unsure";
+        unsureButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            session.unsureFlags[session.index] = !session.unsureFlags[session.index];
+            buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
+        });
+
+        const submitButton = document.createElement("button");
+        submitButton.type = "button";
+        submitButton.className = "primary-button";
+        submitButton.textContent = session.index + 1 >= session.questions.length ? "Finish exam" : "Submit answer";
+        submitButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            if (typeof examSubmitter === "function") {
+                examSubmitter();
+            }
+        });
+        actions.append(unsureButton, submitButton);
+
+        if (session.setupError) {
+            answerArea.appendChild(Object.assign(document.createElement("p"), { className: "answer-hint", textContent: session.setupError }));
+        }
+
+        card.append(header, questionText, hint, answerArea, actions);
+        stage.appendChild(card);
+        renderProgress(progressFill, session);
+        return;
+    }
+
+    if (session.mode === "exam" && session.reviewingAnswers) {
+        const sheet = document.createElement("div");
+        sheet.className = "quiz-sheet";
+
+        const intro = document.createElement("section");
+        intro.className = "quiz-sheet-intro";
+        const introCopy = document.createElement("div");
+        introCopy.className = "quiz-sheet-intro-copy";
+        introCopy.append(
+            Object.assign(document.createElement("p"), { className: "section-label", textContent: "Review mode" }),
+            Object.assign(document.createElement("h3"), { textContent: "Verify every answer before final submission" }),
+            Object.assign(document.createElement("p"), {
+                className: "hero-meta",
+                textContent: "Browse your selected answers, jump back to edit any question, then submit when you’re ready."
+            })
+        );
+        const introMeta = document.createElement("div");
+        introMeta.className = "quiz-sheet-meta";
+        introMeta.append(
+            Object.assign(document.createElement("div"), {
+                className: "summary-pill",
+                textContent: `${session.questions.length} questions reviewed`
+            }),
+            Object.assign(document.createElement("div"), {
+                className: "summary-pill",
+                textContent: `${session.answers.filter(Boolean).length}/${session.questions.length} answered`
+            })
+        );
+        intro.append(introCopy, introMeta);
+
+        const reviewList = document.createElement("div");
+        reviewList.className = "quiz-sheet-list";
+
+        const formatReviewSummary = (question, index) => {
+            const result = session.answers[index];
+            if (!result) {
+                return "No answer recorded";
+            }
+            if (question.questionType === "numeric") {
+                return result.userAnswer || "No answer recorded";
+            }
+            if (result.userAnswerIndex !== null && result.userAnswerIndex !== undefined) {
+                return result.userAnswer || "No answer recorded";
+            }
+            return result.userAnswer || "No answer recorded";
+        };
+
+        session.questions.forEach((question, index) => {
+            const item = document.createElement("div");
+            item.className = "review-item";
+            item.append(
+                Object.assign(document.createElement("h5"), { textContent: question.question }),
+                Object.assign(document.createElement("p"), { textContent: `Answer: ${formatReviewSummary(question, index)}` })
+            );
+            const editButton = document.createElement("button");
+            editButton.type = "button";
+            editButton.className = "ghost-button";
+            editButton.textContent = "Edit";
+            editButton.addEventListener("click", (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                session.reviewingAnswers = false;
+                session.index = index;
+                if (typeof renderHeaderRenderer === "function") {
+                    renderHeaderRenderer();
+                }
+                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
+            });
+            item.appendChild(editButton);
+            reviewList.appendChild(item);
+        });
+
+        const actions = document.createElement("div");
+        actions.className = "question-actions";
+        const continueButton = document.createElement("button");
+        continueButton.type = "button";
+        continueButton.className = "ghost-button";
+        continueButton.textContent = "Back to questions";
+        continueButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            session.reviewingAnswers = false;
+            buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
+        });
+        const finishButton = document.createElement("button");
+        finishButton.type = "button";
+        finishButton.className = "primary-button";
+        finishButton.textContent = "Submit final answers";
+        finishButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            session.reviewingAnswers = false;
+            if (typeof examFinisher === "function") {
+                examFinisher();
+            }
+        });
+        actions.append(continueButton, finishButton);
+
+        sheet.append(intro, reviewList, actions);
+        stage.appendChild(sheet);
         renderProgress(progressFill, session);
         return;
     }
@@ -1342,8 +2045,8 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         if (typeof renderQuizSheetStage === "function") {
             renderQuizSheetStage();
         }
-        if (beforeSession !== state.session) {
-            renderHeader();
+        if (beforeSession !== state.session && typeof renderHeaderRenderer === "function") {
+            renderHeaderRenderer();
         }
         return;
     }
@@ -1457,6 +2160,8 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             if (event.target.closest("button")) {
                 return;
             }
+            event.preventDefault();
+            event.stopPropagation();
             session.flashcardTransition = session.revealed ? "hide" : "reveal";
             session.revealed = !session.revealed;
             buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
@@ -1469,7 +2174,9 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             revealButton.type = "button";
             revealButton.className = "primary-button";
             revealButton.textContent = "Flip card";
-            revealButton.addEventListener("click", () => {
+            revealButton.addEventListener("click", (event) => {
+                event.preventDefault();
+                event.stopPropagation();
                 session.flashcardTransition = "reveal";
                 session.revealed = true;
                 buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
@@ -1486,7 +2193,9 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             flipBackButton.type = "button";
             flipBackButton.className = "ghost-button";
             flipBackButton.textContent = "Flip back";
-            flipBackButton.addEventListener("click", () => {
+            flipBackButton.addEventListener("click", (event) => {
+                event.preventDefault();
+                event.stopPropagation();
                 session.flashcardTransition = "hide";
                 session.revealed = false;
                 buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
@@ -1496,7 +2205,11 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             reviewButton.type = "button";
             reviewButton.className = "ghost-button";
             reviewButton.textContent = "Review later";
-            reviewButton.addEventListener("click", () => submitCurrentQuestion({ correct: false, advanceImmediately: true }));
+            reviewButton.addEventListener("click", (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                submitCurrentQuestion({ correct: false, advanceImmediately: true });
+            });
             controls.append(knewButton, flipBackButton, reviewButton);
         }
 
@@ -1561,7 +2274,9 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                         button.classList.add("is-wrong");
                     }
                 }
-                button.addEventListener("click", () => {
+                button.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
                     session.selectedChoice = index;
                     submitCurrentQuestion();
                 });
@@ -1621,7 +2336,8 @@ export async function initHomePage() {
     const pageMap = {
         quiz: "quiz.html",
         learn: "learn.html",
-        flashcards: "flashcards.html"
+        flashcards: "flashcards.html",
+        exam: "exam.html"
     };
 
     const elements = {
@@ -1733,7 +2449,8 @@ export async function initModePage(mode) {
     const pageMap = {
         quiz: "quiz.html",
         learn: "learn.html",
-        flashcards: "flashcards.html"
+        flashcards: "flashcards.html",
+        exam: "exam.html"
     };
 
     const elements = {
@@ -1769,6 +2486,212 @@ export async function initModePage(mode) {
         reviewSession: loadReviewSession(),
         drawerExpandedSubjectId: ""
     };
+
+    let examTimerId = null;
+    globalThis.__beginExamSession = null;
+
+    const createExamPlaceholderSession = (subject) => ({
+        subjectId: subject?.id || "",
+        subjectName: subject?.name || "",
+        chapterTitle: text(state.activeChapter?.title || subject?.chapters?.[0]?.title || "Exam"),
+        mode: "exam",
+        questions: [],
+        index: 0,
+        answers: [],
+        drafts: [],
+        revealed: false,
+        reviewed: false,
+        busy: false,
+        lastResult: null,
+        selectedChoice: null,
+        typedAnswer: "",
+        complete: false,
+        currentSummary: null,
+        reviewLabel: "Exam review",
+        reviewSource: "exam",
+        selectedChapterTitles: [],
+        questionCount: 0,
+        timeLimitSeconds: 0,
+        timeRemainingSeconds: 0,
+        startedAt: null,
+        submitted: false,
+        timerStarted: false,
+        reviewingAnswers: false,
+        setupError: ""
+    });
+
+    const clearExamTimer = () => {
+        if (examTimerId !== null) {
+            window.clearInterval(examTimerId);
+            examTimerId = null;
+        }
+    };
+
+    const updateExamTimerBadge = () => {
+        const session = state.session;
+        if (!session || session.mode !== "exam" || session.complete || session.submitted) {
+            return;
+        }
+        const badge = document.querySelector("[data-exam-timer-badge]");
+        if (badge && session.timeLimitSeconds > 0) {
+            badge.textContent = `⏱ ${formatMinutesSeconds(Math.max(0, session.timeRemainingSeconds))}`;
+        }
+    };
+
+    const startExamTimer = () => {
+        const session = state.session;
+        if (!session || session.mode !== "exam" || session.complete || session.submitted || !session.timeLimitSeconds) {
+            clearExamTimer();
+            return;
+        }
+        if (session.timerStarted) {
+            return;
+        }
+        session.timerStarted = true;
+        session.startedAt = session.startedAt || Date.now();
+        examTimerId = window.setInterval(() => {
+            const activeSession = state.session;
+            if (!activeSession || activeSession.mode !== "exam" || activeSession.complete || activeSession.submitted) {
+                clearExamTimer();
+                return;
+            }
+            const elapsed = Math.max(0, Math.floor((Date.now() - (activeSession.startedAt || Date.now())) / 1000));
+            activeSession.timeRemainingSeconds = Math.max(0, activeSession.timeLimitSeconds - elapsed);
+            renderHeader();
+            updateExamTimerBadge();
+            if (activeSession.timeRemainingSeconds <= 0) {
+                clearExamTimer();
+                activeSession.submitted = true;
+                activeSession.complete = true;
+                activeSession.currentSummary = summarizeResults(activeSession);
+                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+                renderAssessment(activeSession.currentSummary, activeSession, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession);
+                return;
+            }
+        }, 1000);
+    };
+
+    function beginExamSession(config = {}) {
+        const subject = state.activeSubject;
+        if (!subject) {
+            return;
+        }
+
+        const selectedChapters = Array.isArray(config.chapters) && config.chapters.length
+            ? config.chapters
+            : state.activeChapter?.title
+                ? [state.activeChapter.title]
+                : subject.chapters.map((chapter) => chapter.title);
+
+        const questionCount = Math.max(1, Math.min(Number(config.questionCount) || 10, 100));
+        const timeLimitSeconds = Math.max(0, Number(config.timeLimitSeconds) || 0);
+        const chapterTitles = selectedChapters.filter(Boolean);
+
+        state.session = createExamSession(subject, chapterTitles, questionCount, {
+            chapterTitle: chapterTitles[0] || state.activeChapter?.title || subject.chapters[0]?.title || "Exam",
+            timeLimitSeconds
+        });
+        state.session.startedAt = Date.now();
+        state.session.timerStarted = false;
+        state.session.submitted = false;
+        state.session.complete = false;
+        state.session.reviewingAnswers = false;
+        state.session.setupError = "";
+        state.activeChapter = getChapterByTitle(subject, chapterTitles[0]) || state.activeChapter || subject.chapters[0] || null;
+        syncSelection(subject.id, state.activeChapter?.title || "", "exam");
+        renderModeSwitcher();
+        renderHeader();
+        renderChapters();
+        clearExamTimer();
+        startExamTimer();
+        buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+    };
+
+    globalThis.__beginExamSession = beginExamSession;
+
+    const finishExamSession = () => {
+        const session = state.session;
+        if (!session || session.mode !== "exam") {
+            return;
+        }
+
+        const unanswered = session.questions.some((_, index) => !session.answers[index]);
+        if (unanswered) {
+            session.setupError = "Answer every question before you finish the exam.";
+            buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+            return;
+        }
+
+        session.submitted = true;
+        session.complete = true;
+        session.currentSummary = summarizeResults(session);
+        clearExamTimer();
+        renderHeader();
+        renderAssessment(session.currentSummary, session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession);
+        buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+    };
+
+    globalThis.__finishExamSession = finishExamSession;
+
+    const submitExamAnswer = () => {
+        const session = state.session;
+        if (!session || session.mode !== "exam" || session.busy) {
+            return;
+        }
+
+        const question = session.questions[session.index];
+        if (!question) {
+            return;
+        }
+
+        const answer = question.questionType === "numeric"
+            ? text(session.typedAnswer)
+            : session.selectedChoice;
+
+        if (question.questionType === "numeric") {
+            if (!text(answer)) {
+                session.setupError = "Enter an answer before submitting.";
+                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+                return;
+            }
+        } else if (answer === null || answer === undefined) {
+            session.setupError = "Pick an answer before submitting.";
+            buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+            return;
+        }
+
+        session.busy = true;
+        const result = buildQuestionResult(
+            question,
+            session,
+            answer,
+            isQuestionCorrect(question, answer),
+            session.unsureFlags[session.index]
+        );
+        session.answers[session.index] = result;
+        session.drafts[session.index] = text(question.questionType === "numeric" ? session.typedAnswer : answer);
+        session.selectedChoice = null;
+        session.typedAnswer = "";
+        session.busy = false;
+        session.setupError = "";
+
+        if (session.index + 1 >= session.questions.length) {
+            if (session.timeLimitSeconds > 0 && session.timeRemainingSeconds <= 0) {
+                finishExamSession();
+            } else {
+                session.reviewingAnswers = true;
+                renderHeader();
+                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+            }
+            return;
+        }
+
+        session.index += 1;
+        renderHeader();
+        buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+    };
+
+    globalThis.__submitExamAnswer = submitExamAnswer;
 
     const isDesktopDrawerMode = () => document.fullscreenElement || window.innerWidth > 900;
 
@@ -1857,10 +2780,22 @@ export async function initModePage(mode) {
             elements.summaryPill.textContent = `${chapterCount} chapters • ${questionCount} questions`;
         }
         if (elements.chapterTitle) {
-            elements.chapterTitle.textContent = chapter ? chapter.title : "No chapter selected";
+            elements.chapterTitle.textContent = state.mode === "exam"
+                ? (state.session?.questions?.length ? `${state.session.questions.length} question${state.session.questions.length === 1 ? "" : "s"} exam` : "Exam setup")
+                : (chapter ? chapter.title : "No chapter selected");
         }
         if (elements.chapterSubtitle) {
-            if (state.session?.reviewLabel) {
+            if (state.mode === "exam") {
+                if (state.session?.questions?.length) {
+                    const remaining = Math.max(0, state.session.questions.length - state.session.answers.filter(Boolean).length);
+                    const timerText = state.session.timeLimitSeconds > 0
+                        ? ` • ${formatMinutesSeconds(Math.max(0, state.session.timeRemainingSeconds))} remaining`
+                        : "";
+                    elements.chapterSubtitle.textContent = `${state.session.questions.length} questions • ${remaining} left${timerText}`;
+                } else {
+                    elements.chapterSubtitle.textContent = "Choose chapters, number of questions, and an optional timer to begin your exam.";
+                }
+            } else if (state.session?.reviewLabel) {
                 elements.chapterSubtitle.textContent = `${state.session.reviewLabel}: ${state.session.questions.length} question${state.session.questions.length === 1 ? "" : "s"} from this chapter.`;
             } else {
                 elements.chapterSubtitle.textContent = chapter
@@ -1881,6 +2816,8 @@ export async function initModePage(mode) {
             }
         }
     };
+
+    globalThis.__renderHeader = renderHeader;
 
     const renderDrawer = () => {
         renderSubjectDrawer(
@@ -2246,21 +3183,29 @@ export async function initModePage(mode) {
 
         state.mode = nextMode;
         state.activeChapter = chapter;
-        const reviewSession = nextMode === "learn" ? state.reviewSession : null;
-        const reviewQuestions = Array.isArray(reviewSession?.questions) && reviewSession.questions.length ? reviewSession.questions : null;
-        if (nextMode !== "learn" || (reviewSession && !reviewQuestions)) {
-            state.reviewSession = null;
-            clearReviewSession();
-        }
-        state.session = createSession(subject, chapter, nextMode, reviewQuestions ? {
-            questions: reviewQuestions,
-            chapterTitle: reviewSession.chapterTitle || chapter.title,
-            reviewLabel: reviewSession.reviewLabel || "Missed questions",
-            reviewSource: reviewSession.reviewSource || "quiz"
-        } : {});
-        if (reviewQuestions) {
-            state.session.reviewLabel = reviewSession.reviewLabel || "Missed questions";
-            state.session.reviewSource = reviewSession.reviewSource || "quiz";
+        if (nextMode === "exam") {
+            clearExamTimer();
+            state.session = createExamPlaceholderSession(subject);
+            state.session.chapterTitle = chapter.title;
+            state.session.selectedChapterTitles = [chapter.title];
+            state.session.setupError = "";
+        } else {
+            const reviewSession = nextMode === "learn" ? state.reviewSession : null;
+            const reviewQuestions = Array.isArray(reviewSession?.questions) && reviewSession.questions.length ? reviewSession.questions : null;
+            if (nextMode !== "learn" || (reviewSession && !reviewQuestions)) {
+                state.reviewSession = null;
+                clearReviewSession();
+            }
+            state.session = createSession(subject, chapter, nextMode, reviewQuestions ? {
+                questions: reviewQuestions,
+                chapterTitle: reviewSession.chapterTitle || chapter.title,
+                reviewLabel: reviewSession.reviewLabel || "Missed questions",
+                reviewSource: reviewSession.reviewSource || "quiz"
+            } : {});
+            if (reviewQuestions) {
+                state.session.reviewLabel = reviewSession.reviewLabel || "Missed questions";
+                state.session.reviewSource = reviewSession.reviewSource || "quiz";
+            }
         }
         syncSelection(subject.id, chapter.title, nextMode);
         renderModeSwitcher();

@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrepCore Flashcards</title>
+    <title>PrepCore Exam</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="mode-page">
@@ -14,7 +14,7 @@
             <div class="drawer-header">
                 <div>
                     <p class="eyebrow">Subject drawer</p>
-                    <h1>Flashcards</h1>
+                    <h1>Exam mode</h1>
                 </div>
                 <button class="icon-button drawer-close" id="drawer-close" type="button" aria-label="Close subject drawer">&times;</button>
             </div>
@@ -30,7 +30,7 @@
         <main class="workspace">
             <section class="hero-panel mode-topbar">
                 <div class="hero-copy">
-                    <p class="eyebrow">Flashcards mode</p>
+                    <p class="eyebrow">Timed exam mode</p>
                     <div class="mode-topbar-row">
                         <h2 id="subject-title">Upload a quiz to begin</h2>
                         <div class="hero-actions mode-actions" aria-label="Quick actions">
@@ -41,7 +41,6 @@
                     </div>
                     <p id="subject-meta" class="hero-meta">
                         This GitHub Pages version loads subjects from the repository-backed subjects.json file.
-
                     </p>
                 </div>
             </section>
@@ -49,14 +48,14 @@
             <div class="mode-buttons mode-switch-row" role="tablist" aria-label="Study mode selector">
                 <button class="mode-button" type="button" data-mode="quiz">Quiz</button>
                 <button class="mode-button" type="button" data-mode="learn">Learn mode</button>
-                <button class="mode-button is-active" type="button" data-mode="flashcards">Flashcards</button>
-                <button class="mode-button" type="button" data-mode="exam">Exam</button>
+                <button class="mode-button" type="button" data-mode="flashcards">Flashcards</button>
+                <button class="mode-button is-active" type="button" data-mode="exam">Exam</button>
             </div>
 
             <section class="panel quiz-panel" aria-live="polite">
                 <div class="quiz-panel-header">
                     <div>
-                        <p class="section-label" id="mode-label">Flashcards mode</p>
+                        <p class="section-label" id="mode-label">Exam mode</p>
                         <h3 id="question-counter">Waiting for a subject</h3>
                     </div>
                     <div class="progress-track" aria-hidden="true">
@@ -83,15 +82,13 @@
                 <div id="assessment-content" class="assessment-content">
                     <div class="empty-state compact">
                         <h4>Nothing to review yet</h4>
-                        <p>Complete a chapter to see score, missed questions, and weak areas.</p>
+                        <p>Complete an exam to see score, missed questions, and weak areas.</p>
                     </div>
                 </div>
             </section>
         </main>
     </div>
 
-    <script type="module" src="flashcards.js"></script>
+    <script type="module" src="exam.js"></script>
 </body>
 </html>
-
-
