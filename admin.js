@@ -18,7 +18,12 @@ import {
 } from "./shared.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
+    console.log("admin.js start", {
+        bodyClass: document.body.className,
+        hasAdminPageClass: document.body.classList.contains("admin-page")
+    });
     if (!document.body.classList.contains("admin-page")) {
+        console.warn("Admin page logic skipped because body does not have admin-page class.");
         return;
     }
 
@@ -30,6 +35,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         adminApp: document.getElementById("admin-app"),
         statusLine: document.getElementById("admin-status"),
         librarySummary: document.getElementById("admin-library-summary"),
+        sidebarCard: document.getElementById("admin-sidebar-card"),
+        sidebarBody: document.getElementById("admin-sidebar-body"),
+        sidebarToggle: document.getElementById("admin-sidebar-toggle"),
         subjectAddToggle: document.getElementById("admin-subject-add-toggle"),
         subjectCreateForm: document.getElementById("admin-subject-create-form"),
         subjectCreateName: document.getElementById("admin-subject-create-name"),
@@ -66,7 +74,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         activeSubjectId: "",
         activeChapterTitle: "",
         activeMode: "quiz",
-        expandedSubjectId: ""
+        expandedSubjectId: "",
+        sidebarExpanded: true
     };
 
     const now = () => new Date().toISOString();
@@ -196,6 +205,28 @@ document.addEventListener("DOMContentLoaded", async () => {
         elements.lockPanel.hidden = false;
     };
 
+    const setSidebarExpanded = (expanded) => {
+        state.sidebarExpanded = expanded;
+        if (elements.sidebarBody) {
+            elements.sidebarBody.hidden = !expanded;
+        }
+        if (elements.sidebarToggle) {
+            elements.sidebarToggle.setAttribute("aria-expanded", String(expanded));
+            elements.sidebarToggle.setAttribute("aria-label", expanded ? "Collapse subject sidebar" : "Expand subject sidebar");
+            elements.sidebarToggle.textContent = expanded ? "▾" : "▸";
+        }
+        if (elements.sidebarCard) {
+            elements.sidebarCard.classList.toggle("is-collapsed", !expanded);
+        }
+    };
+
+    const toggleSidebar = () => setSidebarExpanded(!state.sidebarExpanded);
+
+    if (elements.sidebarToggle) {
+        elements.sidebarToggle.addEventListener("click", toggleSidebar);
+    }
+    setSidebarExpanded(state.sidebarExpanded);
+
     const renderSummary = () => {
         if (elements.librarySummary) {
             const chapterCount = state.subjects.reduce((sum, subject) => sum + subject.chapters.length, 0);
@@ -238,14 +269,43 @@ document.addEventListener("DOMContentLoaded", async () => {
             const caret = document.createElement("span");
             caret.className = "subject-item-caret";
             caret.textContent = "▾";
+            const actionGroup = document.createElement("div");
+            actionGroup.className = "subject-item-actions";
+            const moveUpButton = document.createElement("button");
+            moveUpButton.type = "button";
+            moveUpButton.className = "icon-button subject-item-order-button";
+            moveUpButton.disabled = state.subjects[0]?.id === subject.id;
+            moveUpButton.setAttribute("aria-label", `Move ${subject.name} up`);
+            moveUpButton.textContent = "▲";
+            moveUpButton.addEventListener("click", (event) => {
+                event.stopPropagation();
+                moveSubject(subject.id, -1);
+            });
+            const moveDownButton = document.createElement("button");
+            moveDownButton.type = "button";
+            moveDownButton.className = "icon-button subject-item-order-button";
+            moveDownButton.disabled = state.subjects[state.subjects.length - 1]?.id === subject.id;
+            moveDownButton.setAttribute("aria-label", `Move ${subject.name} down`);
+            moveDownButton.textContent = "▼";
+            moveDownButton.addEventListener("click", (event) => {
+                event.stopPropagation();
+                moveSubject(subject.id, 1);
+            });
+            actionGroup.append(moveUpButton, moveDownButton);
             header.append(copy, caret);
             header.addEventListener("click", () => toggleSubject(subject.id));
+            const headerShell = document.createElement("div");
+            headerShell.className = "subject-item-shell";
+            headerShell.append(header, actionGroup);
             const chapterList = document.createElement("div");
             chapterList.className = "subject-chapters";
             chapterList.id = `admin-subject-chapters-${subject.id}`;
             chapterList.hidden = !isExpanded;
             header.setAttribute("aria-controls", chapterList.id);
-            subject.chapters.forEach((chapter) => {
+            card.append(headerShell, chapterList);
+            subject.chapters.forEach((chapter, chapterIndex) => {
+                const chapterRow = document.createElement("div");
+                chapterRow.className = "subject-chapter-entry";
                 const chapterButton = document.createElement("button");
                 chapterButton.type = "button";
                 chapterButton.className = "subject-chapter-item";
@@ -257,11 +317,60 @@ document.addEventListener("DOMContentLoaded", async () => {
                     event.stopPropagation();
                     selectSubject(subject.id, chapter.title);
                 });
-                chapterList.appendChild(chapterButton);
+                const chapterActions = document.createElement("div");
+                chapterActions.className = "chapter-item-actions";
+                const chapterMoveUp = document.createElement("button");
+                chapterMoveUp.type = "button";
+                chapterMoveUp.className = "icon-button chapter-item-order-button";
+                chapterMoveUp.disabled = chapterIndex === 0;
+                chapterMoveUp.setAttribute("aria-label", `Move ${chapter.title} up`);
+                chapterMoveUp.textContent = "▲";
+                chapterMoveUp.addEventListener("click", (event) => {
+                    event.stopPropagation();
+                    moveChapter(subject.id, chapter.title, -1);
+                });
+                const chapterMoveDown = document.createElement("button");
+                chapterMoveDown.type = "button";
+                chapterMoveDown.className = "icon-button chapter-item-order-button";
+                chapterMoveDown.disabled = chapterIndex === subject.chapters.length - 1;
+                chapterMoveDown.setAttribute("aria-label", `Move ${chapter.title} down`);
+                chapterMoveDown.textContent = "▼";
+                chapterMoveDown.addEventListener("click", (event) => {
+                    event.stopPropagation();
+                    moveChapter(subject.id, chapter.title, 1);
+                });
+                chapterActions.append(chapterMoveUp, chapterMoveDown);
+                chapterRow.append(chapterButton, chapterActions);
+                chapterList.appendChild(chapterRow);
             });
-            card.append(header, chapterList);
             elements.subjectList.appendChild(card);
         });
+    };
+
+    const moveChapter = (subjectId, chapterTitle, direction) => {
+        const subject = getSubjectById(state.subjects, subjectId);
+        if (!subject) {
+            return;
+        }
+        const index = subject.chapters.findIndex((chapter) => chapter.title === chapterTitle);
+        if (index < 0) {
+            return;
+        }
+        const nextIndex = index + direction;
+        if (nextIndex < 0 || nextIndex >= subject.chapters.length) {
+            return;
+        }
+        const nextSubjects = state.subjects.map((entry) => {
+            if (entry.id !== subject.id) {
+                return entry;
+            }
+            const nextChapters = [...entry.chapters];
+            const [movedChapter] = nextChapters.splice(index, 1);
+            nextChapters.splice(nextIndex, 0, movedChapter);
+            return { ...entry, chapters: nextChapters, updatedAt: now() };
+        });
+        commitSubjects(nextSubjects, subjectId, chapterTitle);
+        setStatus(`Moved chapter “${chapterTitle}” ${direction < 0 ? "up" : "down"}.`);
     };
 
     const renderSubjectEditor = () => {
@@ -323,6 +432,22 @@ document.addEventListener("DOMContentLoaded", async () => {
         selectChapter(subject.chapters[nextIndex].title);
     };
 
+    const moveSubject = (subjectId, direction) => {
+        const index = state.subjects.findIndex((subject) => subject.id === subjectId);
+        if (index < 0) {
+            return;
+        }
+        const nextIndex = index + direction;
+        if (nextIndex < 0 || nextIndex >= state.subjects.length) {
+            return;
+        }
+        const nextSubjects = [...state.subjects];
+        const [movedSubject] = nextSubjects.splice(index, 1);
+        nextSubjects.splice(nextIndex, 0, movedSubject);
+        commitSubjects(nextSubjects, subjectId, state.activeChapterTitle);
+        setStatus(`Moved subject “${movedSubject.name}” ${direction < 0 ? "up" : "down"}.`);
+    };
+
     const renderChapterEditor = () => {
         const subject = getActiveSubject();
         const chapter = getActiveChapter();
@@ -373,6 +498,58 @@ document.addEventListener("DOMContentLoaded", async () => {
         renderChapterCarousel();
         renderChapterEditor();
     };
+
+    // Resize handler: compute branch/leaves distribution (40% / 60%) for desktop
+    const applyAdminLayoutVars = (width) => {
+        // Only apply dynamic widths for widths >= 768px (desktop/tablet)
+        if (width >= 768) {
+            const branchPx = Math.max(280, Math.round(width * 0.36));
+            const leavesPx = Math.max(420, Math.round(width * 0.64));
+            document.documentElement.style.setProperty("--admin-branch-width", `${branchPx}px`);
+            document.documentElement.style.setProperty("--admin-leaves-width", `${leavesPx}px`);
+        } else {
+            document.documentElement.style.removeProperty("--admin-branch-width");
+            document.documentElement.style.removeProperty("--admin-leaves-width");
+        }
+    };
+
+    const debouncedApply = (() => {
+        let t = null;
+        return () => {
+            if (t) clearTimeout(t);
+            t = setTimeout(() => {
+                applyAdminLayoutVars(window.innerWidth);
+                t = null;
+            }, 120);
+        };
+    })();
+
+    window.addEventListener("resize", debouncedApply);
+    // apply once on load
+    applyAdminLayoutVars(window.innerWidth);
+
+    // Carousel column count: choose a sensible number of cards per row based on window width
+    const applyCarouselCount = (width) => {
+        let count = 1;
+        if (width >= 1400) count = 3;
+        else if (width >= 1024) count = 2;
+        else if (width >= 768) count = 2;
+        document.documentElement.style.setProperty("--admin-carousel-count", String(count));
+    };
+
+    const debouncedCarousel = (() => {
+        let t = null;
+        return () => {
+            if (t) clearTimeout(t);
+            t = setTimeout(() => {
+                applyCarouselCount(window.innerWidth);
+                t = null;
+            }, 120);
+        };
+    })();
+
+    window.addEventListener("resize", debouncedCarousel);
+    applyCarouselCount(window.innerWidth);
 
     const selectSubject = (subjectId, chapterTitle = "") => {
         const subject = getSubjectById(state.subjects, subjectId);
@@ -540,16 +717,23 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     elements.lockForm.addEventListener("submit", async (event) => {
         event.preventDefault();
-        if (textValue(elements.passwordInput.value) === ADMIN_PASSWORD) {
-            setAdminUnlocked();
-            elements.lockStatus.textContent = "";
-            showAdminApp();
-            elements.passwordInput.value = "";
-            await loadState();
-            renderAll();
-            return;
+        try {
+            const enteredPassword = textValue(elements.passwordInput.value);
+            console.log("admin login attempt", { enteredPassword, expectedPassword: ADMIN_PASSWORD });
+            if (enteredPassword === ADMIN_PASSWORD) {
+                setAdminUnlocked();
+                elements.lockStatus.textContent = "";
+                showAdminApp();
+                elements.passwordInput.value = "";
+                await loadState();
+                renderAll();
+                return;
+            }
+            elements.lockStatus.textContent = "Wrong password. Try again.";
+        } catch (error) {
+            console.error("Admin login handler failed", error);
+            elements.lockStatus.textContent = "Unable to process login. Check console for details.";
         }
-        elements.lockStatus.textContent = "Wrong password. Try again.";
     });
 
     elements.subjectAddToggle.addEventListener("click", () => {

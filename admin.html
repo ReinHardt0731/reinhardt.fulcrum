@@ -30,16 +30,19 @@
 
         <section class="panel admin-app admin-workspace" id="admin-app" hidden>
             <aside class="admin-sidebar">
-                <details class="admin-collapse-panel admin-subject-panel" id="admin-subject-panel" open>
-                    <summary class="admin-collapse-summary">
+                <section class="panel admin-sidebar-card" id="admin-sidebar-card">
+                    <div class="admin-sidebar-header">
                         <div>
                             <p class="section-label">Branches</p>
                             <h2>Subject sidebar</h2>
                         </div>
-                        <div class="summary-pill" id="admin-library-summary">Loading</div>
-                    </summary>
+                        <div class="admin-sidebar-actions">
+                            <div class="summary-pill" id="admin-library-summary">Loading</div>
+                            <button class="icon-button admin-sidebar-toggle" id="admin-sidebar-toggle" type="button" aria-expanded="true" aria-controls="admin-sidebar-body" aria-label="Collapse subject sidebar">▾</button>
+                        </div>
+                    </div>
 
-                    <div class="admin-collapse-body">
+                    <div class="admin-sidebar-body" id="admin-sidebar-body">
                         <section class="panel admin-tool-panel admin-subject-panel-card">
                             <div class="mode-header">
                                 <div>
@@ -91,7 +94,7 @@
                             <div id="admin-subject-list" class="subject-list admin-subject-list"></div>
                         </section>
                     </div>
-                </details>
+                </section>
             </aside>
 
             <section class="admin-main">
