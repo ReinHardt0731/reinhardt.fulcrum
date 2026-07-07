@@ -224,6 +224,47 @@ function formatExplanationText(value) {
         .replace(/\r\n?/g, "\n");
 }
 
+function escapeHtml(value) {
+    return value
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+}
+
+function createFormattedTextNode(value) {
+    const rawText = formatExplanationText(value);
+    const fragment = document.createDocumentFragment();
+
+    if (!rawText) {
+        return fragment;
+    }
+
+    const escapedText = escapeHtml(rawText);
+    const segments = escapedText.split(/(\*\*[^*]+\*\*)/g).filter(Boolean);
+
+    segments.forEach((segment) => {
+        if (/^\*\*[^*]+\*\*$/.test(segment)) {
+            const strong = document.createElement("strong");
+            strong.textContent = segment.slice(2, -2);
+            fragment.appendChild(strong);
+        } else {
+            fragment.appendChild(document.createTextNode(segment));
+        }
+    });
+
+    return fragment;
+}
+
+function createFormattedTextElement(value, className) {
+    const element = document.createElement("p");
+    if (className) {
+        element.className = className;
+    }
+    element.style.whiteSpace = "pre-wrap";
+    element.appendChild(createFormattedTextNode(value));
+    return element;
+}
+
 export function normalizeQuestion(entry, position) {
     if (!entry || typeof entry !== "object" || Array.isArray(entry)) {
         throw new Error(`Question ${position} must be an object.`);
@@ -1037,10 +1078,7 @@ function createFeedbackCard(result, options = {}) {
         explanationLabel.className = "feedback-explanation-label";
         explanationLabel.textContent = "Explanation";
 
-        const explanation = document.createElement("p");
-        explanation.className = "feedback-explanation";
-        explanation.textContent = explanationText;
-        explanation.style.whiteSpace = "pre-wrap";
+        const explanation = createFormattedTextElement(explanationText, "feedback-explanation");
         wrapper.append(explanationLabel, explanation);
     }
 
@@ -1059,9 +1097,7 @@ function createExplanationCallout(result) {
     const title = document.createElement("strong");
     title.textContent = "Why this matters";
 
-    const body = document.createElement("p");
-    body.textContent = explanationText;
-    body.style.whiteSpace = "pre-wrap";
+    const body = createFormattedTextElement(explanationText);
 
     callout.append(title, body);
     return callout;
