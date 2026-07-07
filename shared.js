@@ -7,6 +7,8 @@ export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
 export const ADMIN_PASSWORD = "prepcore";
 const SUBJECTS_PATH = "./subjects.json";
 const VALID_MODES = new Set(["quiz", "learn", "flashcards"]);
+const SUBJECTS_CACHE_KEY = "prepcore.web.subjectsCache.v1";
+const CHAPTER_CACHE_KEY = "prepcore.web.chapterCache.v1";
 
 const text = (value) => String(value ?? "").trim();
 
@@ -413,6 +415,16 @@ async function resolveChapterData(entry, chapterLookup = {}) {
 
     const file = text(entry.file || entry.path || entry.source || entry.chapterFile);
     if (file) {
+        const cachedChapterMap = sessionGet(CHAPTER_CACHE_KEY, {});
+        const cachedChapter = cachedChapterMap[file];
+        if (cachedChapter && typeof cachedChapter === "object") {
+            return {
+                ...cachedChapter,
+                title: text(cachedChapter.title || entry.title || entry.chapter || entry.name || "Imported"),
+                file
+            };
+        }
+
         const cached = chapterLookup[file];
         if (cached && typeof cached === "object") {
             return {
@@ -423,23 +435,28 @@ async function resolveChapterData(entry, chapterLookup = {}) {
         }
 
         try {
-            const response = await fetch(file, { cache: "no-store" });
+            const response = await fetch(file, { cache: "force-cache" });
             if (response.ok) {
                 const payload = await response.json();
-                if (Array.isArray(payload)) {
-                    return {
+                const resolved = Array.isArray(payload)
+                    ? {
                         title: text(entry.title || entry.chapter || entry.name || "Imported"),
                         questions: collectQuestionEntries(payload),
                         file
-                    };
-                }
+                    }
+                    : payload && typeof payload === "object"
+                        ? {
+                            title: text(payload.title || payload.chapter || payload.name || entry.title || entry.chapter || entry.name || "Imported"),
+                            questions: collectQuestionEntries(payload.questions ?? payload.questionList ?? payload.items ?? payload.question ?? payload.rows ?? payload.cards),
+                            file
+                        }
+                        : null;
 
-                if (payload && typeof payload === "object") {
-                    return {
-                        title: text(payload.title || payload.chapter || payload.name || entry.title || entry.chapter || entry.name || "Imported"),
-                        questions: collectQuestionEntries(payload.questions ?? payload.questionList ?? payload.items ?? payload.question ?? payload.rows ?? payload.cards),
-                        file
-                    };
+                if (resolved) {
+                    const nextCache = sessionGet(CHAPTER_CACHE_KEY, {});
+                    nextCache[file] = resolved;
+                    sessionSet(CHAPTER_CACHE_KEY, nextCache);
+                    return resolved;
                 }
             }
         } catch {
@@ -537,7 +554,12 @@ export function normalizeQuizPayload(payload, subjectOverride = "") {
 
 export async function loadSubjects() {
     try {
-        const response = await fetch(SUBJECTS_PATH, { cache: "no-store" });
+        const cachedSubjects = sessionGet(SUBJECTS_CACHE_KEY, null);
+        if (Array.isArray(cachedSubjects) && cachedSubjects.length) {
+            return cachedSubjects;
+        }
+
+        const response = await fetch(SUBJECTS_PATH, { cache: "force-cache" });
         if (!response.ok) {
             return [];
         }
@@ -579,7 +601,9 @@ export async function loadSubjects() {
             }
         }
 
-        return resolvedSubjects.sort((left, right) => text(left.name).localeCompare(text(right.name)));
+        const sortedSubjects = resolvedSubjects.sort((left, right) => text(left.name).localeCompare(text(right.name)));
+        sessionSet(SUBJECTS_CACHE_KEY, sortedSubjects);
+        return sortedSubjects;
     } catch {
         return [];
     }
