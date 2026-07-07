@@ -3092,7 +3092,7 @@ export async function initModePage(mode) {
         const feedback = document.createElement("div");
         feedback.className = "feedback-block";
         if (answered) {
-            feedback.appendChild(createFeedbackCard(result));
+            feedback.appendChild(createFeedbackCard(result, { includeExplanation: false }));
         } else {
             feedback.appendChild(Object.assign(document.createElement("p"), {
                 className: "answer-hint",
