@@ -27,9 +27,7 @@ jobs:
       - name: Prepare site
         run: |
           mkdir -p public
-          find . -maxdepth 1 -mindepth 1 -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.json' \) -exec cp {} public/ \;
-          if [ -d assets ]; then cp -r assets public/; fi
-
+            find . -maxdepth 1 -mindepth 1 -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.json' -o -name '*.png' \) -exec cp {} public/ \;
           echo "Contents of public:"
           ls -la public
 
