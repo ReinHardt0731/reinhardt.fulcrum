@@ -3,6 +3,7 @@ export const ACTIVE_SUBJECT_KEY = "prepcore.web.activeSubject.v1";
 export const ACTIVE_CHAPTER_KEY = "prepcore.web.activeChapter.v1";
 export const ACTIVE_MODE_KEY = "prepcore.web.activeMode.v1";
 export const REVIEW_SESSION_KEY = "prepcore.web.reviewSession.v1";
+export const QUIZ_SESSION_KEY = "prepcore.web.quizSession.v1";
 export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
 export const ADMIN_PASSWORD = "prepcore";
 const SUBJECTS_PATH = "./subjects.json";
@@ -54,6 +55,14 @@ const storageGet = (key, fallback) => {
 const storageSet = (key, value) => {
     try {
         localStorage.setItem(key, JSON.stringify(value));
+    } catch {
+        return;
+    }
+};
+
+const storageRemove = (key) => {
+    try {
+        localStorage.removeItem(key);
     } catch {
         return;
     }
@@ -909,6 +918,56 @@ export function loadReviewSession() {
 
 export function clearReviewSession() {
     sessionRemove(REVIEW_SESSION_KEY);
+}
+
+function saveQuizSession(session) {
+    if (!session || session.mode !== "quiz" || !session.subjectId || !session.chapterTitle) {
+        return;
+    }
+
+    storageSet(QUIZ_SESSION_KEY, {
+        subjectId: session.subjectId,
+        chapterTitle: session.chapterTitle,
+        index: Number(session.index) || 0,
+        answers: Array.isArray(session.answers) ? session.answers : [],
+        drafts: Array.isArray(session.drafts) ? session.drafts : [],
+        complete: Boolean(session.complete),
+        currentSummary: session.currentSummary || null,
+        selectedChoice: session.selectedChoice ?? null,
+        typedAnswer: session.typedAnswer ?? "",
+        lastResult: session.lastResult || null
+    });
+}
+
+function loadQuizSession() {
+    return storageGet(QUIZ_SESSION_KEY, null);
+}
+
+function clearQuizSession() {
+    storageRemove(QUIZ_SESSION_KEY);
+}
+
+function restoreQuizSession(subject, chapter) {
+    const saved = loadQuizSession();
+    if (!saved || !subject || !chapter || saved.subjectId !== subject.id || saved.chapterTitle !== chapter.title) {
+        return null;
+    }
+
+    const session = createSession(subject, chapter, "quiz");
+    session.answers = Array.isArray(saved.answers)
+        ? saved.answers.slice(0, session.questions.length).map((entry) => entry || null)
+        : session.questions.map(() => null);
+    session.drafts = Array.isArray(saved.drafts)
+        ? saved.drafts.slice(0, session.questions.length).map((entry) => text(entry))
+        : session.questions.map(() => "");
+    session.index = Math.max(0, Math.min(Number(saved.index) || 0, session.questions.length - 1));
+    session.complete = Boolean(saved.complete);
+    session.currentSummary = saved.currentSummary || (session.complete ? summarizeResults(session) : null);
+    session.selectedChoice = saved.selectedChoice ?? null;
+    session.typedAnswer = saved.typedAnswer ?? "";
+    session.lastResult = saved.lastResult || null;
+
+    return session;
 }
 
 export async function storageSelectState() {
@@ -2935,6 +2994,7 @@ export async function initModePage(mode) {
         session.complete = answeredCount >= session.questions.length;
         session.currentSummary = session.complete ? summarizeResults(session) : null;
 
+        saveQuizSession(session);
         renderHeader();
         buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
     };
@@ -3201,21 +3261,31 @@ export async function initModePage(mode) {
             state.session.selectedChapterTitles = [chapter.title];
             state.session.setupError = "";
         } else {
-            const reviewSession = nextMode === "learn" ? state.reviewSession : null;
-            const reviewQuestions = Array.isArray(reviewSession?.questions) && reviewSession.questions.length ? reviewSession.questions : null;
-            if (nextMode !== "learn" || (reviewSession && !reviewQuestions)) {
-                state.reviewSession = null;
-                clearReviewSession();
-            }
-            state.session = createSession(subject, chapter, nextMode, reviewQuestions ? {
-                questions: reviewQuestions,
-                chapterTitle: reviewSession.chapterTitle || chapter.title,
-                reviewLabel: reviewSession.reviewLabel || "Missed questions",
-                reviewSource: reviewSession.reviewSource || "quiz"
-            } : {});
-            if (reviewQuestions) {
-                state.session.reviewLabel = reviewSession.reviewLabel || "Missed questions";
-                state.session.reviewSource = reviewSession.reviewSource || "quiz";
+            if (nextMode === "quiz") {
+                const restored = restoreQuizSession(subject, chapter);
+                if (restored) {
+                    state.session = restored;
+                } else {
+                    clearQuizSession();
+                    state.session = createSession(subject, chapter, nextMode, {});
+                }
+            } else {
+                const reviewSession = nextMode === "learn" ? state.reviewSession : null;
+                const reviewQuestions = Array.isArray(reviewSession?.questions) && reviewSession.questions.length ? reviewSession.questions : null;
+                if (nextMode !== "learn" || (reviewSession && !reviewQuestions)) {
+                    state.reviewSession = null;
+                    clearReviewSession();
+                }
+                state.session = createSession(subject, chapter, nextMode, reviewQuestions ? {
+                    questions: reviewQuestions,
+                    chapterTitle: reviewSession.chapterTitle || chapter.title,
+                    reviewLabel: reviewSession.reviewLabel || "Missed questions",
+                    reviewSource: reviewSession.reviewSource || "quiz"
+                } : {});
+                if (reviewQuestions) {
+                    state.session.reviewLabel = reviewSession.reviewLabel || "Missed questions";
+                    state.session.reviewSource = reviewSession.reviewSource || "quiz";
+                }
             }
         }
         syncSelection(subject.id, chapter.title, nextMode);
@@ -3372,8 +3442,10 @@ export async function initModePage(mode) {
     };
 
     elements.refresh?.addEventListener("click", () => {
+        if (mode === "quiz") {
+            clearQuizSession();
+        }
         refresh();
-
     });
 
     elements.modeButtons.forEach((button) => {
