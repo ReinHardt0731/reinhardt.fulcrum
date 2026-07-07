@@ -1292,11 +1292,22 @@ function renderAssessment(summary, session, title, score, content, startSession)
     const scoreCard = document.createElement("div");
     scoreCard.className = "assessment-score-card";
 
+    const chartColors = [
+        "var(--success)",
+        "var(--primary)",
+        "var(--warning)",
+        "var(--danger)",
+        "var(--secondary)",
+        "var(--info)",
+        "var(--accent)",
+        "var(--tertiary)"
+    ];
+
     const chartSegments = session.mode === "exam" && Array.isArray(summary.tagBreakdown) && summary.tagBreakdown.length
         ? summary.tagBreakdown.map((entry, index) => ({
             label: entry.tag,
             value: entry.correct,
-            color: ["var(--success)", "var(--primary)", "var(--warning)", "var(--danger)"][index % 4],
+            color: chartColors[index % chartColors.length],
             fillPercent: entry.total ? Math.round((entry.correct / entry.total) * 100) : 0,
             meta: `${entry.correct}/${entry.total} correct`
         }))
