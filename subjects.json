@@ -5,7 +5,7 @@
       "name": "ACRM",
       "quizType": "short_quiz",
       "schemaVersion": 1,
-      "selectedChapter": "Fasteners | Solid Shank Rivets",
+      "selectedChapter": "Testing and Inspection | Destructive Test",
       "chapters": [
         {
           "title": "Material Properties",
@@ -58,9 +58,13 @@
         {
           "title": "Fasteners | Blind Rivets",
           "file": "chapters/fasteners-blind-rivets.json"
+        },
+        {
+          "title": "Testing and Inspection | Destructive Test",
+          "file": "chapters/testing-and-inspection-destructive-test.json"
         }
       ],
-      "updatedAt": "2026-07-07T04:39:21.003Z"
+      "updatedAt": "2026-07-08T12:46:35.340Z"
     },
     {
       "id": "aerodynamics",
@@ -17129,6 +17133,315 @@
           "answerText": "The repair meets the essential installation requirements for a properly installed mechanical-lock blind rivet.",
           "explanation": "Every critical inspection criterion has been satisfied:\n\n✓ Correct rivet type\n✓ One-side installation\n✓ Proper stem break\n✓ Locking collar engaged\n✓ Proper blind-side bulb\n\nThese findings indicate a properly installed mechanical-lock blind rivet suitable for its intended application.\n\n💡 Engineering Checklist:\nHead Seated ✔\nStem Locked ✔\nBulb Formed ✔\nCorrect Grip ✔\nApproved Rivet ✔",
           "tags": [],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/testing-and-inspection-destructive-test.json": {
+      "title": "Testing and Inspection | Destructive Test",
+      "questions": [
+        {
+          "question": "Which hardness test is most commonly used for determining the hardness of ferrous and many nonferrous metals?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Brinell",
+            "Rockwell",
+            "Vickers",
+            "Knoop"
+          ],
+          "answerIndex": 1,
+          "answerText": "Rockwell",
+          "explanation": "Rockwell is the most commonly used hardness test for ferrous and many nonferrous metals because it provides rapid and direct hardness readings with minimal specimen preparation.\n\nWhy the other choices are incorrect:\n• Brinell is commonly used for coarse-grained materials and large castings.\n• Vickers is more versatile and suitable for a wide range of materials but is less commonly used for routine shop testing.\n• Knoop is primarily used for microhardness testing of thin sections and coatings.\n\nDifferentiate Similar Concepts:\n• Rockwell → Routine hardness testing.\n• Brinell → Large indentation using a ball.\n• Vickers → Diamond pyramid for broad material range.\n• Knoop → Microhardness for thin materials.\n\n💡 Memory Hook:\nRockwell = Routine.\n\n🎯 Board Tip:\nWhen asked for the most commonly used hardness test in aircraft maintenance, Rockwell is usually the correct answer.",
+          "tags": [
+            "Hardness Test",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which hardness test uses a hardened steel or tungsten carbide ball as its indenter?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rockwell",
+            "Brinell",
+            "Vickers",
+            "Knoop"
+          ],
+          "answerIndex": 1,
+          "answerText": "Brinell",
+          "explanation": "Brinell hardness testing uses a hardened steel or tungsten carbide ball that produces a relatively large indentation on the specimen surface.\n\nWhy the other choices are incorrect:\n• Rockwell uses either a steel ball or diamond cone but measures penetration depth rather than indentation size.\n• Vickers uses a square-based diamond pyramid.\n• Knoop uses an elongated diamond indenter for microhardness testing.\n\nDifferentiate Similar Concepts:\n• Brinell → Ball indenter.\n• Rockwell → Depth measurement.\n• Vickers → Diamond pyramid.\n• Knoop → Elongated diamond.\n\n💡 Memory Hook:\nBrinell = Ball.\n\n🎯 Board Tip:\nWhenever the indenter is specifically described as a hardened steel or tungsten carbide ball, think Brinell first.",
+          "tags": [
+            "Hardness Test",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which hardness test employs a square-based diamond pyramid indenter?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Brinell",
+            "Rockwell",
+            "Knoop",
+            "Vickers"
+          ],
+          "answerIndex": 3,
+          "answerText": "Vickers",
+          "explanation": "The Vickers hardness test uses a square-based diamond pyramid indenter, making it suitable for testing both soft and hard materials over a wide load range.\n\nWhy the other choices are incorrect:\n• Brinell uses a ball indenter.\n• Rockwell measures penetration depth using either a ball or diamond cone depending on the scale.\n• Knoop uses an elongated diamond indenter.\n\nDifferentiate Similar Concepts:\n• Vickers → Diamond pyramid.\n• Knoop → Elongated diamond.\n• Brinell → Ball.\n• Rockwell → Depth of penetration.\n\n💡 Memory Hook:\nVickers = V-shaped pyramid.\n\n🎯 Board Tip:\nIf the question specifically mentions a square-based diamond pyramid, the answer is always Vickers.",
+          "tags": [
+            "Hardness Test",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which hardness test is primarily intended for evaluating thin materials, surface coatings, and other microhardness applications?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rockwell",
+            "Brinell",
+            "Vickers",
+            "Knoop"
+          ],
+          "answerIndex": 3,
+          "answerText": "Knoop",
+          "explanation": "The Knoop hardness test is a microhardness test designed for thin materials, plated surfaces, brittle materials, and coatings where only a very shallow indentation is desirable.\n\nWhy the other choices are incorrect:\n• Rockwell is intended for routine hardness testing.\n• Brinell produces a relatively large indentation.\n• Vickers is versatile but is not as specialized for extremely thin specimens as Knoop.\n\nDifferentiate Similar Concepts:\n• Knoop → Thin sections and coatings.\n• Vickers → General laboratory testing.\n• Rockwell → Routine shop testing.\n• Brinell → Heavy sections and castings.\n\n💡 Memory Hook:\nKnoop = Keep the indentation small.\n\n🎯 Board Tip:\nWhenever the question involves coatings, plating, or microhardness, Knoop is the strongest choice.",
+          "tags": [
+            "Hardness Test",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which hardness test determines hardness by measuring the depth of penetration of an indenter under a specified load?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Vickers",
+            "Brinell",
+            "Rockwell",
+            "Knoop"
+          ],
+          "answerIndex": 2,
+          "answerText": "Rockwell",
+          "explanation": "Rockwell determines hardness by measuring the depth of penetration produced by a minor load followed by a major load. It provides direct hardness readings and is widely used for routine hardness testing.\n\nWhy the other choices are incorrect:\n• Brinell measures the diameter of an indentation.\n• Vickers measures the diagonal length of a diamond pyramid indentation.\n• Knoop measures the long diagonal of an elongated diamond indentation.\n\nDifferentiate Similar Concepts:\n• Rockwell → Depth of penetration.\n• Brinell → Indentation diameter.\n• Vickers → Pyramid diagonal.\n• Knoop → Long diagonal of elongated indentation.\n\n💡 Memory Hook:\nRockwell = Read the depth.\n\n🎯 Board Tip:\nIf the phrase 'depth of penetration' appears, Rockwell is almost always the correct answer.",
+          "tags": [
+            "Hardness Test",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which hardness test determines hardness by measuring the diameter of the indentation left by the indenter?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rockwell",
+            "Knoop",
+            "Brinell",
+            "Vickers"
+          ],
+          "answerIndex": 2,
+          "answerText": "Brinell",
+          "explanation": "Brinell hardness testing measures the diameter of the indentation produced by a hardened steel or tungsten carbide ball. The larger the indentation, the softer the material.\n\nWhy the other choices are incorrect:\n• Rockwell measures penetration depth.\n• Vickers measures indentation diagonals.\n• Knoop measures the long diagonal of a microhardness indentation.\n\nDifferentiate Similar Concepts:\n• Brinell → Diameter.\n• Rockwell → Depth.\n• Vickers → Diamond pyramid diagonals.\n• Knoop → Long diagonal.\n\n💡 Memory Hook:\nBrinell = Big Ball, Big Circle.\n\n🎯 Board Tip:\nThe word 'diameter' is a strong clue for Brinell.",
+          "tags": [
+            "Hardness Test",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which hardness test is capable of testing both very soft and very hard materials using the same type of indenter?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Brinell",
+            "Vickers",
+            "Rockwell",
+            "Knoop"
+          ],
+          "answerIndex": 1,
+          "answerText": "Vickers",
+          "explanation": "The Vickers hardness test uses a square-based diamond pyramid indenter for all materials. Only the applied load changes, making it suitable for a very wide range of material hardness.\n\nWhy the other choices are incorrect:\n• Rockwell uses different scales and indenters depending on the material.\n• Brinell uses a ball indenter primarily for softer or coarse-grained materials.\n• Knoop is intended mainly for microhardness testing.\n\nDifferentiate Similar Concepts:\n• Vickers → One indenter, many materials.\n• Rockwell → Multiple scales.\n• Brinell → Ball indenter.\n• Knoop → Thin sections.\n\n💡 Memory Hook:\nVickers = Versatile.\n\n🎯 Board Tip:\nIf the question emphasizes versatility across different materials, think Vickers.",
+          "tags": [
+            "Hardness Test",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which hardness test is commonly classified as a microhardness test?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Brinell",
+            "Rockwell",
+            "Knoop",
+            "Shore"
+          ],
+          "answerIndex": 2,
+          "answerText": "Knoop",
+          "explanation": "Knoop is specifically designed for microhardness testing where only a very small indentation can be tolerated, such as on thin sections, coatings, and brittle materials.\n\nWhy the other choices are incorrect:\n• Brinell is intended for macrohardness testing.\n• Rockwell is a routine hardness test.\n• Shore measures hardness using rebound or durometer principles depending on the application.\n\nDifferentiate Similar Concepts:\n• Knoop → Microhardness.\n• Vickers → Can perform both macro- and microhardness.\n• Rockwell → Routine testing.\n• Brinell → Large indentation.\n\n💡 Memory Hook:\nKnoop = Keep it microscopic.\n\n🎯 Board Tip:\nMicrohardness questions usually point toward Knoop unless another specialized method is specified.",
+          "tags": [
+            "Hardness Test",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Routine hardness evaluation of an aircraft maintenance specimen is most likely performed using which hardness test?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Vickers",
+            "Brinell",
+            "Knoop",
+            "Rockwell"
+          ],
+          "answerIndex": 3,
+          "answerText": "Rockwell",
+          "explanation": "Rockwell is the preferred hardness test for routine shop and laboratory hardness evaluation because it is fast, simple to perform, and provides direct hardness readings without measuring the indentation.\n\nWhy the other choices are incorrect:\n• Vickers is commonly used for laboratory evaluation over a wide range of materials.\n• Brinell is better suited for large castings and forgings.\n• Knoop is intended for microhardness testing of thin sections and coatings.\n\nDifferentiate Similar Concepts:\n• Rockwell → Routine shop testing.\n• Brinell → Large indentation.\n• Vickers → Laboratory versatility.\n• Knoop → Thin materials.\n\n💡 Memory Hook:\nRockwell = Routine.\n\n🎯 Board Tip:\nIf the question asks about routine aircraft maintenance hardness testing, Rockwell is the strongest answer.",
+          "tags": [
+            "Hardness Test",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Select the hardness test that is most suitable for evaluating the hardness of large castings and forgings.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Knoop",
+            "Brinell",
+            "Rockwell",
+            "Vickers"
+          ],
+          "answerIndex": 1,
+          "answerText": "Brinell",
+          "explanation": "Brinell is preferred for coarse-grained materials such as castings and forgings because its relatively large ball indenter averages the hardness over a larger surface area.\n\nWhy the other choices are incorrect:\n• Knoop is designed for microhardness testing.\n• Rockwell is intended for routine hardness testing.\n• Vickers is better suited for precise laboratory measurements across a broad range of materials.\n\nDifferentiate Similar Concepts:\n• Brinell → Castings and forgings.\n• Rockwell → Routine testing.\n• Vickers → Universal laboratory test.\n• Knoop → Microhardness.\n\n💡 Memory Hook:\nBrinell = Big parts.\n\n🎯 Board Tip:\nWhenever castings or forgings are mentioned, Brinell should immediately come to mind.",
+          "tags": [
+            "Hardness Test",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Among the standard hardness tests, which one uses a diamond pyramid indenter regardless of the material being tested?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Vickers",
+            "Rockwell",
+            "Brinell",
+            "Knoop"
+          ],
+          "answerIndex": 0,
+          "answerText": "Vickers",
+          "explanation": "Vickers uses the same square-based diamond pyramid indenter for all materials. Only the applied load changes, making it suitable for testing both soft and hard materials.\n\nWhy the other choices are incorrect:\n• Rockwell may use either a steel ball or diamond cone depending on the testing scale.\n• Brinell uses a hardened steel or tungsten carbide ball.\n• Knoop uses an elongated diamond indenter.\n\nDifferentiate Similar Concepts:\n• Vickers → Diamond pyramid.\n• Knoop → Elongated diamond.\n• Brinell → Ball.\n• Rockwell → Ball or diamond cone.\n\n💡 Memory Hook:\nVickers = Versatile pyramid.\n\n🎯 Board Tip:\nWhen the indenter is specifically identified as a square-based diamond pyramid, the answer is Vickers.",
+          "tags": [
+            "Hardness Test",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Aircraft engineers commonly select which hardness test when evaluating plated surfaces and very thin metallic sections?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rockwell",
+            "Vickers",
+            "Brinell",
+            "Knoop"
+          ],
+          "answerIndex": 3,
+          "answerText": "Knoop",
+          "explanation": "Knoop is specifically designed for microhardness testing of thin sections, surface coatings, and brittle materials because it produces a very shallow indentation.\n\nWhy the other choices are incorrect:\n• Rockwell produces deeper indentations intended for routine testing.\n• Vickers is versatile but is not as specialized for extremely thin specimens.\n• Brinell produces the largest indentation among the common hardness tests.\n\nDifferentiate Similar Concepts:\n• Knoop → Thin sections and coatings.\n• Vickers → Broad laboratory applications.\n• Rockwell → Routine maintenance.\n• Brinell → Large components.\n\n💡 Memory Hook:\nKnoop = Keep the indentation shallow.\n\n🎯 Board Tip:\nWhenever plating, coatings, or microhardness are mentioned, Knoop is the preferred answer.",
+          "tags": [
+            "Hardness Test",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which destructive test is performed to determine the maximum tensile load a material can withstand before failure?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Compression Testing",
+            "Impact Testing",
+            "Fatigue Testing",
+            "Tensile Testing"
+          ],
+          "answerIndex": 3,
+          "answerText": "Tensile Testing",
+          "explanation": "Tensile testing evaluates a material's behavior when subjected to an axial pulling force until fracture. It provides important mechanical properties such as ultimate tensile strength, yield strength, elongation, and modulus of elasticity.\n\nWhy the other choices are incorrect:\n• Compression testing evaluates resistance to compressive loads.\n• Impact testing measures a material's ability to absorb sudden energy.\n• Fatigue testing evaluates failure under repeated cyclic loading.\n\nDifferentiate Similar Concepts:\n• Tensile → Pulling force.\n• Compression → Pushing force.\n• Impact → Sudden shock.\n• Fatigue → Repeated loading.\n\n💡 Memory Hook:\nTensile = Tension = Pull.\n\n🎯 Board Tip:\nWhenever the question mentions ultimate tensile strength or yield strength, think Tensile Test.",
+          "tags": [
+            "Destructive Testing",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which destructive test evaluates a material's ability to resist failure when subjected to repeated cyclic loading?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fatigue Testing",
+            "Chemical Analysis",
+            "Compression Testing",
+            "Impact Testing"
+          ],
+          "answerIndex": 0,
+          "answerText": "Fatigue Testing",
+          "explanation": "Fatigue testing determines how a material performs under repeated or fluctuating stresses. Many aircraft structural failures occur due to fatigue even when the applied stress is below the material's ultimate strength.\n\nWhy the other choices are incorrect:\n• Chemical analysis identifies material composition.\n• Compression testing measures compressive strength.\n• Impact testing measures resistance to sudden loading.\n\nDifferentiate Similar Concepts:\n• Fatigue → Repeated loads.\n• Impact → One sudden load.\n• Tensile → Continuous pull.\n• Compression → Continuous push.\n\n💡 Memory Hook:\nFatigue = Many cycles.\n\n🎯 Board Tip:\nAircraft structures experience millions of load cycles during service. Fatigue is one of the most important failure modes in aviation.",
+          "tags": [
+            "Destructive Testing",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which destructive test is primarily used to determine a material's ability to absorb energy from a sudden load without fracturing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Impact Testing",
+            "Compression Testing",
+            "Chemical Analysis",
+            "Tensile Testing"
+          ],
+          "answerIndex": 0,
+          "answerText": "Impact Testing",
+          "explanation": "Impact testing evaluates a material's toughness by measuring the energy absorbed during sudden loading before fracture occurs. Common methods include the Charpy and Izod impact tests.\n\nWhy the other choices are incorrect:\n• Compression testing measures resistance to compressive forces.\n• Chemical analysis determines elemental composition.\n• Tensile testing measures behavior under axial tension.\n\nDifferentiate Similar Concepts:\n• Impact → Sudden shock.\n• Fatigue → Repeated shock.\n• Tensile → Pull.\n• Compression → Push.\n\n💡 Memory Hook:\nImpact = Instant hit.\n\n🎯 Board Tip:\nDo not confuse toughness with hardness. Impact testing evaluates toughness, not hardness.",
+          "tags": [
+            "Destructive Testing",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which destructive test evaluates the behavior of a material when subjected to an axial pushing force?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Chemical Analysis",
+            "Compression Testing",
+            "Impact Testing",
+            "Fatigue Testing"
+          ],
+          "answerIndex": 1,
+          "answerText": "Compression Testing",
+          "explanation": "Compression testing measures how a material responds to compressive forces and determines properties such as compressive strength and deformation under load.\n\nWhy the other choices are incorrect:\n• Chemical analysis determines composition rather than mechanical properties.\n• Impact testing evaluates resistance to sudden loading.\n• Fatigue testing evaluates cyclic loading performance.\n\nDifferentiate Similar Concepts:\n• Compression → Push.\n• Tensile → Pull.\n• Impact → Sudden load.\n• Fatigue → Repeated load.\n\n💡 Memory Hook:\nCompression = Compress.\n\n🎯 Board Tip:\nRemember the basic pair:\nTension = Pull.\nCompression = Push.",
+          "tags": [
+            "Destructive Testing",
+            "Recall"
+          ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         }
