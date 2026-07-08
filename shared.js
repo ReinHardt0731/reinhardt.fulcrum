@@ -735,16 +735,6 @@ async function resolveChapterData(entry, chapterLookup = {}) {
 
     const file = text(entry.file || entry.path || entry.source || entry.chapterFile);
     if (file) {
-        const cachedChapterMap = sessionGet(CHAPTER_CACHE_KEY, {});
-        const cachedChapter = cachedChapterMap[file];
-        if (cachedChapter && typeof cachedChapter === "object") {
-            return {
-                ...cachedChapter,
-                title: text(cachedChapter.title || entry.title || entry.chapter || entry.name || "Imported"),
-                file
-            };
-        }
-
         const cached = chapterLookup[file];
         if (cached && typeof cached === "object") {
             return {
@@ -755,7 +745,7 @@ async function resolveChapterData(entry, chapterLookup = {}) {
         }
 
         try {
-            const response = await fetch(file, { cache: "force-cache" });
+            const response = await fetch(file, { cache: "no-store" });
             if (response.ok) {
                 const payload = await response.json();
                 const resolved = Array.isArray(payload)
@@ -773,9 +763,6 @@ async function resolveChapterData(entry, chapterLookup = {}) {
                         : null;
 
                 if (resolved) {
-                    const nextCache = sessionGet(CHAPTER_CACHE_KEY, {});
-                    nextCache[file] = resolved;
-                    sessionSet(CHAPTER_CACHE_KEY, nextCache);
                     return resolved;
                 }
             }
@@ -874,12 +861,7 @@ export function normalizeQuizPayload(payload, subjectOverride = "") {
 
 export async function loadSubjects() {
     try {
-        const cachedSubjects = sessionGet(SUBJECTS_CACHE_KEY, null);
-        if (Array.isArray(cachedSubjects) && cachedSubjects.length) {
-            return cachedSubjects;
-        }
-
-        const response = await fetch(SUBJECTS_PATH, { cache: "force-cache" });
+        const response = await fetch(SUBJECTS_PATH, { cache: "no-store" });
         if (!response.ok) {
             return [];
         }
@@ -922,7 +904,6 @@ export async function loadSubjects() {
         }
 
         const sortedSubjects = resolvedSubjects.sort((left, right) => text(left.name).localeCompare(text(right.name)));
-        sessionSet(SUBJECTS_CACHE_KEY, sortedSubjects);
         return sortedSubjects;
     } catch {
         return [];
