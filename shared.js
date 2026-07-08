@@ -11,6 +11,13 @@ const SUBJECTS_PATH = "./subjects.json";
 const VALID_MODES = new Set(["quiz", "learn", "flashcards", "exam"]);
 const SUBJECTS_CACHE_KEY = "prepcore.web.subjectsCache.v1";
 const CHAPTER_CACHE_KEY = "prepcore.web.chapterCache.v1";
+const LEARN_SESSION_KEY = "prepcore.web.learnSession.v1";
+const FLASHCARDS_SESSION_KEY = "prepcore.web.flashcardsSession.v1";
+const MODE_SESSION_KEYS = {
+    quiz: QUIZ_SESSION_KEY,
+    learn: LEARN_SESSION_KEY,
+    flashcards: FLASHCARDS_SESSION_KEY
+};
 
 const text = (value) => String(value ?? "").trim();
 
@@ -1223,6 +1230,85 @@ function restoreQuizSession(subject, chapter) {
     session.selectedChoice = saved.selectedChoice ?? null;
     session.typedAnswer = saved.typedAnswer ?? "";
     session.lastResult = saved.lastResult || null;
+
+    return session;
+}
+
+function saveModeSession(session) {
+    if (!session || !MODE_SESSION_KEYS[session.mode] || !session.subjectId || !session.chapterTitle) {
+        return;
+    }
+
+    const key = MODE_SESSION_KEYS[session.mode];
+    storageSet(key, {
+        subjectId: session.subjectId,
+        chapterTitle: session.chapterTitle,
+        mode: session.mode,
+        index: Number(session.index) || 0,
+        answers: Array.isArray(session.answers) ? session.answers : [],
+        drafts: Array.isArray(session.drafts) ? session.drafts : [],
+        questions: Array.isArray(session.questions) ? session.questions : [],
+        complete: Boolean(session.complete),
+        currentSummary: session.currentSummary || null,
+        revealed: Boolean(session.revealed),
+        reviewed: Boolean(session.reviewed),
+        selectedChoice: session.selectedChoice ?? null,
+        typedAnswer: session.typedAnswer ?? "",
+        lastResult: session.lastResult || null,
+        assessmentModalShown: Boolean(session.assessmentModalShown),
+        progressRecorded: Boolean(session.progressRecorded),
+        reviewLabel: text(session.reviewLabel),
+        reviewSource: text(session.reviewSource)
+    });
+}
+
+function loadModeSession(mode) {
+    const key = MODE_SESSION_KEYS[mode];
+    return key ? storageGet(key, null) : null;
+}
+
+function clearModeSession(mode) {
+    const key = MODE_SESSION_KEYS[mode];
+    if (key) {
+        storageRemove(key);
+    }
+}
+
+function restoreModeSession(subject, chapter, mode) {
+    if (mode === "quiz") {
+        return restoreQuizSession(subject, chapter);
+    }
+
+    const saved = loadModeSession(mode);
+    if (!saved || !subject || !chapter || saved.subjectId !== subject.id || saved.chapterTitle !== chapter.title) {
+        return null;
+    }
+
+    const session = createSession(subject, chapter, mode, {
+        questions: Array.isArray(saved.questions) && saved.questions.length ? saved.questions : undefined,
+        chapterTitle: saved.chapterTitle,
+        reviewLabel: saved.reviewLabel,
+        reviewSource: saved.reviewSource
+    });
+
+    session.answers = Array.isArray(saved.answers)
+        ? saved.answers.slice(0, session.questions.length).map((entry) => entry || null)
+        : session.questions.map(() => null);
+    session.drafts = Array.isArray(saved.drafts)
+        ? saved.drafts.slice(0, session.questions.length).map((entry) => text(entry))
+        : session.questions.map(() => "");
+    session.index = Math.max(0, Math.min(Number(saved.index) || 0, session.questions.length - 1));
+    session.complete = Boolean(saved.complete);
+    session.currentSummary = saved.currentSummary || (session.complete ? summarizeResults(session) : null);
+    session.revealed = Boolean(saved.revealed);
+    session.reviewed = Boolean(saved.reviewed);
+    session.selectedChoice = saved.selectedChoice ?? null;
+    session.typedAnswer = saved.typedAnswer ?? "";
+    session.lastResult = saved.lastResult || null;
+    session.assessmentModalShown = Boolean(saved.assessmentModalShown);
+    session.progressRecorded = Boolean(saved.progressRecorded);
+    session.reviewLabel = text(saved.reviewLabel);
+    session.reviewSource = text(saved.reviewSource);
 
     return session;
 }
@@ -3203,10 +3289,7 @@ export async function initModePage(mode) {
             return;
         }
 
-        if (state.session.mode === "quiz") {
-            saveQuizSession(state.session);
-        }
-
+        saveModeSession(state.session);
         renderHeader();
         buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
     };
@@ -3940,19 +4023,28 @@ export async function initModePage(mode) {
             } else {
                 const reviewSession = nextMode === "learn" ? state.reviewSession : null;
                 const reviewQuestions = Array.isArray(reviewSession?.questions) && reviewSession.questions.length ? reviewSession.questions : null;
-                if (nextMode !== "learn" || (reviewSession && !reviewQuestions)) {
-                    state.reviewSession = null;
-                    clearReviewSession();
-                }
-                state.session = createSession(subject, chapter, nextMode, reviewQuestions ? {
-                    questions: reviewQuestions,
-                    chapterTitle: reviewSession.chapterTitle || chapter.title,
-                    reviewLabel: reviewSession.reviewLabel || "Missed questions",
-                    reviewSource: reviewSession.reviewSource || "quiz"
-                } : {});
-                if (reviewQuestions) {
+                if (nextMode === "learn" && reviewQuestions) {
+                    state.session = createSession(subject, chapter, nextMode, {
+                        questions: reviewQuestions,
+                        chapterTitle: reviewSession.chapterTitle || chapter.title,
+                        reviewLabel: reviewSession.reviewLabel || "Missed questions",
+                        reviewSource: reviewSession.reviewSource || "quiz"
+                    });
                     state.session.reviewLabel = reviewSession.reviewLabel || "Missed questions";
                     state.session.reviewSource = reviewSession.reviewSource || "quiz";
+                } else {
+                    if (nextMode !== "learn" || (reviewSession && !reviewQuestions)) {
+                        state.reviewSession = null;
+                        clearReviewSession();
+                    }
+
+                    const restored = restoreModeSession(subject, chapter, nextMode);
+                    if (restored) {
+                        state.session = restored;
+                    } else {
+                        clearModeSession(nextMode);
+                        state.session = createSession(subject, chapter, nextMode, {});
+                    }
                 }
             }
         }
@@ -3983,6 +4075,13 @@ export async function initModePage(mode) {
             session.complete = true;
             session.currentSummary = summarizeResults(session);
             recordSessionProgress(session);
+        }
+
+        if (["quiz", "learn", "flashcards"].includes(session.mode)) {
+            saveModeSession(session);
+        }
+
+        if (session.complete) {
             renderAssessment(session.currentSummary, session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession);
         }
 
@@ -4021,6 +4120,7 @@ export async function initModePage(mode) {
             session.answers[session.index] = result;
             session.reviewed = true;
             session.lastResult = result;
+            saveModeSession(session);
             recordStudyProgress({
                 mode: session.mode,
                 subjectId: session.subjectId,
