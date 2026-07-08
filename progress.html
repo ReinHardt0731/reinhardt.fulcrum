@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fulcrum | Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="progress-page">
+    <main class="progress-shell">
+        <section class="progress-hero">
+            <div class="progress-hero-copy">
+                <p class="section-label">Your study activity</p>
+                <h1 id="progress-title">Assessment</h1>
+                <p id="progress-summary" class="hero-meta">Track your quiz and exam performance by subject and chapter.</p>
+            </div>
+            <div class="hero-actions">
+                <button class="icon-button" id="progress-reset" type="button" aria-label="Reset assessment data">↻</button>
+                <a class="icon-button" id="progress-home" href="index.html" aria-label="Home">⌂</a>
+            </div>
+        </section>
+
+        <section class="progress-summary-grid" id="progress-summary-cards" aria-label="Recent performance summaries"></section>
+
+        <section class="assessment-container" id="assessment-container" aria-label="Subject assessments"></section>
+    </main>
+
+    <script type="module" src="progress.js"></script>
+</body>
+</html>

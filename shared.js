@@ -4,6 +4,7 @@ export const ACTIVE_CHAPTER_KEY = "prepcore.web.activeChapter.v1";
 export const ACTIVE_MODE_KEY = "prepcore.web.activeMode.v1";
 export const REVIEW_SESSION_KEY = "prepcore.web.reviewSession.v1";
 export const QUIZ_SESSION_KEY = "prepcore.web.quizSession.v1";
+export const PROGRESS_HISTORY_KEY = "prepcore.web.progressHistory.v1";
 export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
 export const ADMIN_PASSWORD = "prepcore";
 const SUBJECTS_PATH = "./subjects.json";
@@ -20,6 +21,32 @@ function shuffleArray(values) {
         [next[index], next[swapIndex]] = [next[swapIndex], next[index]];
     }
     return next;
+}
+
+function shuffleSessionQuestions(session) {
+    if (!session || !Array.isArray(session.questions) || session.questions.length < 2) {
+        return false;
+    }
+
+    const entries = session.questions.map((question, index) => ({
+        question,
+        answer: Array.isArray(session.answers) ? session.answers[index] : null,
+        draft: Array.isArray(session.drafts) ? session.drafts[index] : ""
+    }));
+    const shuffledEntries = shuffleArray(entries);
+
+    session.questions = shuffledEntries.map((entry) => entry.question);
+    session.answers = shuffledEntries.map((entry) => entry.answer ?? null);
+    session.drafts = shuffledEntries.map((entry) => entry.draft ?? "");
+    session.index = 0;
+    session.reviewed = false;
+    session.revealed = false;
+    session.lastResult = null;
+    session.selectedChoice = null;
+    session.typedAnswer = "";
+    session.complete = false;
+    session.currentSummary = null;
+    return true;
 }
 
 const slugify = (value) =>
@@ -67,6 +94,228 @@ const storageRemove = (key) => {
         return;
     }
 };
+
+const formatDateKey = (value = new Date()) => {
+    const date = value instanceof Date ? value : new Date(value);
+    const year = date.getFullYear();
+    const month = `${date.getMonth() + 1}`.padStart(2, "0");
+    const day = `${date.getDate()}`.padStart(2, "0");
+    return `${year}-${month}-${day}`;
+};
+
+function getProgressEntries() {
+    const entries = storageGet(PROGRESS_HISTORY_KEY, []);
+    return Array.isArray(entries) ? entries : [];
+}
+
+export function recordStudyProgress(payload = {}) {
+    const entry = {
+        id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+        timestamp: payload.timestamp || new Date().toISOString(),
+        dateKey: payload.dateKey || formatDateKey(payload.date || new Date()),
+        mode: text(payload.mode || "quiz"),
+        subjectId: text(payload.subjectId),
+        subjectName: text(payload.subjectName),
+        chapterTitle: text(payload.chapterTitle),
+        attempted: Math.max(0, Number(payload.attempted ?? payload.answered ?? 1) || 0),
+        correct: Math.max(0, Number(payload.correct ?? 0) || 0)
+    };
+
+    if (payload.accuracy !== undefined) {
+        entry.accuracy = Number(payload.accuracy) || 0;
+    }
+    if (payload.questionCount !== undefined) {
+        entry.questionCount = Math.max(0, Number(payload.questionCount) || 0);
+    }
+    if (payload.summaryType !== undefined) {
+        entry.summaryType = text(payload.summaryType);
+    }
+    if (payload.timeLimitSeconds !== undefined) {
+        entry.timeLimitSeconds = Math.max(0, Number(payload.timeLimitSeconds) || 0);
+    }
+    if (payload.timeRemainingSeconds !== undefined) {
+        entry.timeRemainingSeconds = Math.max(0, Number(payload.timeRemainingSeconds) || 0);
+    }
+    if (payload.elapsedSeconds !== undefined) {
+        entry.elapsedSeconds = Math.max(0, Number(payload.elapsedSeconds) || 0);
+    }
+    if (payload.selectedChapterTitles !== undefined) {
+        entry.selectedChapterTitles = Array.isArray(payload.selectedChapterTitles)
+            ? payload.selectedChapterTitles.map(text)
+            : [text(payload.selectedChapterTitles)];
+    }
+
+    const nextEntries = [...getProgressEntries(), entry].slice(-500);
+    storageSet(PROGRESS_HISTORY_KEY, nextEntries);
+    return entry;
+}
+
+export function recordExamSessionProgress(session) {
+    if (!session || session.mode !== "exam") {
+        return null;
+    }
+
+    const summary = session.currentSummary || summarizeResults(session);
+    const elapsedSeconds = session.startedAt
+        ? Math.max(0, Math.floor((Date.now() - Number(session.startedAt)) / 1000))
+        : 0;
+
+    return recordStudyProgress({
+        mode: "exam",
+        subjectId: session.subjectId,
+        subjectName: session.subjectName,
+        chapterTitle: session.chapterTitle,
+        attempted: session.questions.length,
+        correct: summary.correctCount,
+        accuracy: summary.accuracy,
+        questionCount: session.questions.length,
+        timeLimitSeconds: session.timeLimitSeconds,
+        timeRemainingSeconds: session.timeRemainingSeconds,
+        elapsedSeconds,
+        selectedChapterTitles: session.selectedChapterTitles,
+        summaryType: "session"
+    });
+}
+
+export function recordQuizSessionProgress(session) {
+    if (!session || session.mode !== "quiz" || !session.complete) {
+        return null;
+    }
+
+    const summary = session.currentSummary || summarizeResults(session);
+    return recordStudyProgress({
+        mode: "quiz",
+        subjectId: session.subjectId,
+        subjectName: session.subjectName,
+        chapterTitle: session.chapterTitle,
+        attempted: summary.total,
+        correct: summary.correctCount,
+        accuracy: summary.accuracy,
+        questionCount: summary.total,
+        summaryType: "session"
+    });
+}
+
+export function recordSessionProgress(session) {
+    if (!session || session.progressRecorded || !session.complete) {
+        return null;
+    }
+
+    let result = null;
+    if (session.mode === "quiz") {
+        result = recordQuizSessionProgress(session);
+    } else if (session.mode === "exam") {
+        result = recordExamSessionProgress(session);
+    }
+
+    if (result) {
+        session.progressRecorded = true;
+        if (session.mode === "quiz") {
+            saveQuizSession(session);
+        }
+    }
+
+    return result;
+}
+
+export function getDailyProgressSummary(dateKey = formatDateKey()) {
+    const entries = getProgressEntries().filter((entry) => entry.dateKey === dateKey);
+    const attempted = entries.reduce((sum, entry) => sum + Number(entry.attempted || 0), 0);
+    const correct = entries.reduce((sum, entry) => sum + Number(entry.correct || 0), 0);
+    return {
+        dateKey,
+        attempted,
+        correct,
+        accuracy: attempted ? Math.round((correct / attempted) * 100) : 0,
+        sessions: entries.length,
+        entries
+    };
+}
+
+export function getRecentProgressSummary(days = 7) {
+    const today = new Date();
+    const summary = [];
+    for (let index = days - 1; index >= 0; index -= 1) {
+        const date = new Date(today);
+        date.setDate(today.getDate() - index);
+        const dateKey = formatDateKey(date);
+        summary.push(getDailyProgressSummary(dateKey));
+    }
+    return summary;
+}
+
+export function getRecentModeSummary(mode, days = 7) {
+    const cutoff = new Date();
+    cutoff.setHours(0, 0, 0, 0);
+    cutoff.setDate(cutoff.getDate() - Math.max(0, days - 1));
+    const cutoffKey = formatDateKey(cutoff);
+    const entries = getProgressEntries().filter((entry) =>
+        text(entry.mode) === text(mode)
+        && text(entry.dateKey) >= cutoffKey
+        && text(entry.summaryType) === "session"
+    );
+    const attemptCount = entries.length;
+    const attempted = entries.reduce((sum, entry) => sum + Math.max(0, Number(entry.attempted || 0)), 0);
+    const correct = entries.reduce((sum, entry) => sum + Math.max(0, Number(entry.correct || 0)), 0);
+    return {
+        mode: text(mode),
+        attemptCount,
+        attempted,
+        correct,
+        accuracy: attempted ? Math.round((correct / attempted) * 100) : 0,
+        entries,
+        days: Math.max(0, Number(days) || 7)
+    };
+}
+
+export function getAssessmentsBySubject() {
+    const entries = getProgressEntries();
+    const bySubject = {};
+
+    entries.forEach((entry) => {
+        const subjectName = text(entry.subjectName) || "Untitled";
+        const chapterTitle = text(entry.chapterTitle) || "General";
+
+        if (!bySubject[subjectName]) {
+            bySubject[subjectName] = {
+                subjectName,
+                totalAttempted: 0,
+                totalCorrect: 0,
+                chapters: {},
+                entries: []
+            };
+        }
+
+        const subject = bySubject[subjectName];
+        subject.totalAttempted += Number(entry.attempted || 0);
+        subject.totalCorrect += Number(entry.correct || 0);
+        subject.entries.push(entry);
+
+        if (!subject.chapters[chapterTitle]) {
+            subject.chapters[chapterTitle] = {
+                chapterTitle,
+                attempted: 0,
+                correct: 0
+            };
+        }
+
+        subject.chapters[chapterTitle].attempted += Number(entry.attempted || 0);
+        subject.chapters[chapterTitle].correct += Number(entry.correct || 0);
+    });
+
+    Object.values(bySubject).forEach((subject) => {
+        subject.accuracy = subject.totalAttempted
+            ? Math.round((subject.totalCorrect / subject.totalAttempted) * 100)
+            : 0;
+        Object.values(subject.chapters).forEach((chapter) => {
+            chapter.accuracy = chapter.attempted
+                ? Math.round((chapter.correct / chapter.attempted) * 100)
+                : 0;
+        });
+    });
+
+    return bySubject;
+}
 
 const sessionGet = (key, fallback) => {
     try {
@@ -740,6 +989,8 @@ export function createSession(subject, chapter, mode, options = {}) {
         typedAnswer: "",
         complete: false,
         currentSummary: null,
+        assessmentModalShown: false,
+        progressRecorded: false,
         reviewLabel: text(options.reviewLabel),
         reviewSource: text(options.reviewSource)
     };
@@ -786,6 +1037,7 @@ export function createExamSession(subject, chapterTitles, questionCount, options
         typedAnswer: "",
         complete: false,
         currentSummary: null,
+        progressRecorded: false,
         reviewLabel: "Exam review",
         reviewSource: "exam",
         selectedChapterTitles: selectedChapters.filter(Boolean),
@@ -797,7 +1049,8 @@ export function createExamSession(subject, chapterTitles, questionCount, options
         timerStarted: false,
         reviewingAnswers: false,
         reviewOnlyUnsure: false,
-        unsureFlags: questions.map(() => false)
+        unsureFlags: questions.map(() => false),
+        assessmentModalShown: false
     };
 }
 
@@ -933,6 +1186,8 @@ function saveQuizSession(session) {
         drafts: Array.isArray(session.drafts) ? session.drafts : [],
         complete: Boolean(session.complete),
         currentSummary: session.currentSummary || null,
+        assessmentModalShown: Boolean(session.assessmentModalShown),
+        progressRecorded: Boolean(session.progressRecorded),
         selectedChoice: session.selectedChoice ?? null,
         typedAnswer: session.typedAnswer ?? "",
         lastResult: session.lastResult || null
@@ -963,6 +1218,8 @@ function restoreQuizSession(subject, chapter) {
     session.index = Math.max(0, Math.min(Number(saved.index) || 0, session.questions.length - 1));
     session.complete = Boolean(saved.complete);
     session.currentSummary = saved.currentSummary || (session.complete ? summarizeResults(session) : null);
+    session.assessmentModalShown = Boolean(saved.assessmentModalShown);
+    session.progressRecorded = Boolean(saved.progressRecorded);
     session.selectedChoice = saved.selectedChoice ?? null;
     session.typedAnswer = saved.typedAnswer ?? "";
     session.lastResult = saved.lastResult || null;
@@ -1061,33 +1318,23 @@ function renderHomeCarousel(track, subjects, activeSubjectId, selectSubject) {
         meta.className = "subject-carousel-meta";
         meta.textContent = `${subject.chapters.length} chapter${subject.chapters.length === 1 ? "" : "s"} • ${tallyQuestionCount(subject)} questions`;
 
-        const tags = document.createElement("div");
-        tags.className = "subject-carousel-tags";
-        subject.chapters.slice(0, 3).forEach((chapter) => {
-            const pill = document.createElement("span");
-            pill.className = "tag-pill";
-            pill.textContent = chapter.title;
-            tags.appendChild(pill);
-        });
-
         const actions = document.createElement("div");
         actions.className = "subject-carousel-actions";
         const button = document.createElement("button");
         button.type = "button";
         button.className = "primary-button";
-        button.textContent = subject.id === activeSubjectId ? "Selected" : "Select subject";
-        button.disabled = subject.id === activeSubjectId;
-        button.addEventListener("click", () => selectSubject(subject.id));
+        button.textContent = "Start quiz";
+        button.addEventListener("click", (event) => {
+            event.stopPropagation();
+            selectSubject(subject.id);
+        });
         actions.appendChild(button);
 
-        card.addEventListener("click", (event) => {
-            if (event.target === button) {
-                return;
-            }
+        card.addEventListener("click", () => {
             selectSubject(subject.id);
         });
 
-        card.append(title, meta, tags, actions);
+        card.append(title, meta, actions);
         track.appendChild(card);
     });
 }
@@ -1343,6 +1590,203 @@ function createAssessmentChart(segments, centerValue, centerLabel, ariaLabel) {
     return chartCard;
 }
 
+function createProgressSummaryCard(title, summary, description) {
+    const card = document.createElement("div");
+    card.className = "progress-summary-card";
+
+    const header = document.createElement("div");
+    header.className = "progress-summary-card-header";
+    const titleEl = document.createElement("h3");
+    titleEl.textContent = title;
+    const metaEl = document.createElement("p");
+    metaEl.className = "progress-summary-card-meta";
+    metaEl.textContent = summary.attemptCount
+        ? `${summary.attemptCount} attempts`
+        : "No attempts yet";
+    header.append(titleEl, metaEl);
+
+    const chart = createAssessmentChart(
+        [
+            {
+                label: "Correct",
+                value: summary.correct,
+                color: "var(--success)",
+                fillPercent: summary.attempted ? Math.round((summary.correct / summary.attempted) * 100) : 0,
+                meta: `${summary.correct}/${summary.attempted}`
+            },
+            {
+                label: "Missed",
+                value: Math.max(0, summary.attempted - summary.correct),
+                color: "var(--danger)",
+                fillPercent: summary.attempted ? Math.max(0, 100 - Math.round((summary.correct / summary.attempted) * 100)) : 0,
+                meta: `${Math.max(0, summary.attempted - summary.correct)}/${summary.attempted}`
+            }
+        ],
+        `${summary.accuracy}%`,
+        "Accuracy",
+        `${title} breakdown`
+    );
+
+    const note = document.createElement("p");
+    note.className = "progress-summary-card-note";
+    note.textContent = summary.attemptCount
+        ? `${summary.accuracy}% accuracy from ${summary.correct}/${summary.attempted} total questions in ${summary.attemptCount} sessions.`
+        : description;
+
+    const footer = document.createElement("div");
+    footer.className = "progress-summary-card-footer";
+    footer.textContent = summary.attemptCount
+        ? `${summary.attemptCount} completed session${summary.attemptCount === 1 ? "" : "s"} over the last ${summary.days} days.`
+        : `No ${summary.mode} session attempts recorded in the last ${summary.days} days.`;
+
+    card.append(header, chart, note, footer);
+    return card;
+}
+
+function createQuizAssessmentModal(summary, session, state, selectChapter, startSession) {
+    const backdrop = document.createElement("div");
+    backdrop.className = "modal-backdrop";
+    
+    const modal = document.createElement("div");
+    modal.className = "assessment-modal";
+    
+    const header = document.createElement("div");
+    header.className = "assessment-modal-header";
+
+    const headerCopy = document.createElement("div");
+    headerCopy.className = "assessment-modal-header-copy";
+    headerCopy.innerHTML = `
+        <h3>Results for ${session.chapterTitle}</h3>
+        <p>${summary.accuracy}% • ${summary.correctCount}/${summary.total} correct</p>
+    `;
+
+    const headerChart = document.createElement("div");
+    headerChart.className = "assessment-modal-header-chart";
+
+    const headerPie = document.createElement("div");
+    headerPie.className = "assessment-chart header-chart";
+    headerPie.setAttribute("role", "img");
+    headerPie.setAttribute("aria-label", `Accuracy breakdown: ${summary.correctCount} correct and ${summary.missed.length} missed.`);
+
+    const total = summary.correctCount + summary.missed.length;
+    if (total > 0) {
+        const correctPercent = Math.round((summary.correctCount / total) * 100);
+        headerPie.style.background = `conic-gradient(var(--success) 0% ${correctPercent}%, var(--danger) ${correctPercent}% 100%)`;
+    } else {
+        headerPie.classList.add("is-empty");
+    }
+
+    const headerPieCore = document.createElement("div");
+    headerPieCore.className = "assessment-chart-core";
+    headerPieCore.innerHTML = `<strong class="assessment-chart-value">${summary.accuracy}%</strong><span class="assessment-chart-label">Accuracy</span>`;
+    headerPie.appendChild(headerPieCore);
+    headerChart.appendChild(headerPie);
+
+    header.append(headerCopy, headerChart);
+
+    const content = document.createElement("div");
+    content.className = "assessment-modal-content";
+    
+    // Score card
+    const scoreCard = document.createElement("div");
+    scoreCard.className = "assessment-score-card";
+    scoreCard.innerHTML = `
+        <h4>${summary.correctCount} correct out of ${summary.total}</h4>
+        <p>Accuracy: ${summary.accuracy}%</p>
+    `;
+    
+    // Weak areas
+    const weakCard = document.createElement("div");
+    weakCard.className = "assessment-block";
+    weakCard.innerHTML = `<h4>Weak areas</h4>`;
+    const weakList = document.createElement("div");
+    weakList.className = "tag-row";
+    if (summary.weakAreas && summary.weakAreas.length) {
+        summary.weakAreas.forEach((weakArea) => {
+            const pill = document.createElement("span");
+            pill.className = "tag-pill";
+            pill.textContent = `${weakArea.name} (${weakArea.count})`;
+            weakList.appendChild(pill);
+        });
+    } else {
+        weakList.innerHTML = '<span class="tag-pill">No weak areas</span>';
+    }
+    weakCard.appendChild(weakList);
+    
+    // Missed questions
+    const reviewCard = document.createElement("div");
+    reviewCard.className = "assessment-block";
+    reviewCard.innerHTML = `<h4>Missed questions (${summary.missed.length})</h4>`;
+    if (summary.missed.length === 0) {
+        reviewCard.innerHTML += "<p>Perfect session — nothing to review.</p>";
+    } else {
+        const list = document.createElement("div");
+        list.className = "review-list compact";
+        summary.missed.forEach((entry) => {
+            const item = document.createElement("article");
+            item.className = "review-item compact";
+            item.innerHTML = `
+                <h5>${entry.questionText}</h5>
+                <p><strong>Correct:</strong> ${entry.correctAnswer}</p>
+            `;
+            list.appendChild(item);
+        });
+        reviewCard.appendChild(list);
+    }
+    
+    content.append(scoreCard, weakCard, reviewCard);
+    
+    // Action buttons
+    const actions = document.createElement("div");
+    actions.className = "assessment-modal-actions";
+    
+    const retakeBtn = document.createElement("button");
+    retakeBtn.className = "primary-button";
+    retakeBtn.textContent = "Retake Chapter";
+    retakeBtn.addEventListener("click", () => {
+        backdrop.remove();
+        startSession(session.mode);
+    });
+    
+    const learnBtn = document.createElement("button");
+    learnBtn.className = "secondary-button";
+    learnBtn.textContent = "Practice Missed in Learn Mode";
+    learnBtn.addEventListener("click", () => {
+        backdrop.remove();
+        const payload = createReviewSessionPayload(session, summary);
+        saveReviewSession(payload);
+        syncSelection(session.subjectId, session.chapterTitle, "learn");
+        window.location.href = "learn.html";
+    });
+    
+    const closeBtn = document.createElement("button");
+    closeBtn.className = "ghost-button";
+    closeBtn.textContent = "Close";
+    closeBtn.addEventListener("click", () => {
+        backdrop.remove();
+    });
+    
+    actions.append(retakeBtn);
+    if (summary.missed.length > 0) {
+        actions.append(learnBtn);
+    }
+    actions.append(closeBtn);
+    
+    modal.append(header, content, actions);
+    backdrop.appendChild(modal);
+
+    session.assessmentModalShown = true;
+    saveQuizSession(session);
+    
+    backdrop.addEventListener("click", (e) => {
+        if (e.target === backdrop) {
+            backdrop.remove();
+        }
+    });
+    
+    document.body.appendChild(backdrop);
+}
+
 function renderAssessment(summary, session, title, score, content, startSession) {
     title.textContent = `Results for ${session.chapterTitle}`;
     score.textContent = `${summary.accuracy}% • ${summary.correctCount}/${summary.total}`;
@@ -1415,30 +1859,6 @@ function renderAssessment(summary, session, title, score, content, startSession)
     }
     weakCard.appendChild(weakList);
 
-    const reviewCard = document.createElement("div");
-    reviewCard.className = "assessment-block";
-    reviewCard.appendChild(Object.assign(document.createElement("h4"), { textContent: "Missed questions" }));
-    if (!summary.missed.length) {
-        reviewCard.appendChild(Object.assign(document.createElement("p"), { textContent: "Perfect session — nothing to review." }));
-    } else {
-        const list = document.createElement("div");
-        list.className = "review-list";
-        summary.missed.forEach((entry) => {
-            const item = document.createElement("article");
-            item.className = "review-item";
-            const explanation = document.createElement("p");
-            explanation.textContent = formatExplanationText(entry.explanation || entry.explaination || "Revisit this topic in the chapter list.");
-            explanation.style.whiteSpace = "pre-wrap";
-            item.append(
-                Object.assign(document.createElement("h5"), { textContent: entry.questionText }),
-                Object.assign(document.createElement("p"), { textContent: `Correct answer: ${entry.correctAnswer}` }),
-                explanation
-            );
-            list.appendChild(item);
-        });
-        reviewCard.appendChild(list);
-    }
-
     const actions = document.createElement("div");
     actions.className = "question-actions";
     const retakeButton = document.createElement("button");
@@ -1462,19 +1882,46 @@ function renderAssessment(summary, session, title, score, content, startSession)
         actions.appendChild(reviewButton);
     }
 
-    content.append(scoreCard, weakCard, reviewCard, actions);
+    content.append(scoreCard, weakCard, actions);
+
+    if (session.mode === "exam") {
+        const reviewCard = document.createElement("div");
+        reviewCard.className = "assessment-block";
+        reviewCard.appendChild(Object.assign(document.createElement("h4"), { textContent: "Missed questions" }));
+        if (!summary.missed.length) {
+            reviewCard.appendChild(Object.assign(document.createElement("p"), { textContent: "Perfect session — nothing to review." }));
+        } else {
+            const list = document.createElement("div");
+            list.className = "review-list";
+            summary.missed.forEach((entry) => {
+                const item = document.createElement("article");
+                item.className = "review-item";
+                const explanation = document.createElement("p");
+                explanation.textContent = formatExplanationText(entry.explanation || entry.explaination || "Revisit this topic in the chapter list.");
+                explanation.style.whiteSpace = "pre-wrap";
+                item.append(
+                    Object.assign(document.createElement("h5"), { textContent: entry.questionText }),
+                    Object.assign(document.createElement("p"), { textContent: `Correct answer: ${entry.correctAnswer}` }),
+                    explanation
+                );
+                list.appendChild(item);
+            });
+            reviewCard.appendChild(list);
+        }
+        content.appendChild(reviewCard);
+    }
 }
 
-function renderAssessmentPlaceholder(title, score, content) {
-    title.textContent = "Your results will appear here after each session.";
+function renderAssessmentPlaceholder(title, score, content, message = "Your results will appear here after each session.") {
+    title.textContent = message;
     score.textContent = "Pending";
     content.replaceChildren();
 
     const empty = document.createElement("div");
     empty.className = "empty-state compact";
     empty.append(
-        Object.assign(document.createElement("h4"), { textContent: "Nothing to review yet" }),
-        Object.assign(document.createElement("p"), { textContent: "Complete a chapter to see score, missed questions, and weak areas." })
+        Object.assign(document.createElement("h4"), { textContent: "Nothing to review here" }),
+        Object.assign(document.createElement("p"), { textContent: "The assessment modal contains your final results for this completed quiz." })
     );
     content.appendChild(empty);
 }
@@ -2122,6 +2569,16 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
     }
 
     if (session.complete) {
+        console.log("Session complete triggered. Mode:", session.mode);
+        renderProgress(progressFill, session);
+        
+        if (session.mode === "quiz") {
+            console.log("Creating quiz assessment modal");
+            const summary = summarizeResults(session);
+            createQuizAssessmentModal(summary, session, state, selectChapter, startSession);
+            return;
+        }
+        
         const completeCard = document.createElement("div");
         completeCard.className = "question-card completion-card";
         completeCard.append(
@@ -2148,7 +2605,6 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         actions.append(retakeButton, nextButton);
         completeCard.appendChild(actions);
         stage.appendChild(completeCard);
-        renderProgress(progressFill, session);
         return;
     }
 
@@ -2417,6 +2873,7 @@ export async function initHomePage() {
         prev: document.getElementById("home-carousel-prev"),
         next: document.getElementById("home-carousel-next"),
         refresh: document.getElementById("refresh-button"),
+        progress: document.getElementById("progress-button"),
         modeLinks: document.querySelectorAll("[data-home-mode]")
     };
 
@@ -2446,6 +2903,12 @@ export async function initHomePage() {
             window.location.href = pageMap[nextMode];
         });
     });
+
+    if (elements.progress) {
+        elements.progress.addEventListener("click", () => {
+            window.location.href = "progress.html";
+        });
+    }
 
     const scrollCarouselToIndex = (index) => {
         if (!elements.carousel) {
@@ -2480,8 +2943,9 @@ export async function initHomePage() {
             renderHomeCarousel(elements.carousel, state.subjects, state.activeSubject?.id || "", (subjectId) => {
                 state.activeSubject = getSubjectById(state.subjects, subjectId);
                 state.activeChapter = state.activeSubject ? getUsableChapter(state.activeSubject, state.activeSubject.selectedChapter || state.activeSubject.chapters[0]?.title || "") : null;
+                state.mode = "quiz";
                 syncSelection(state.activeSubject?.id || "", state.activeChapter?.title || "", state.mode);
-                render();
+                window.location.href = pageMap.quiz;
             });
             const activeIndex = Math.max(0, state.subjects.findIndex((subject) => subject.id === state.activeSubject?.id));
             if (activeIndex >= 0) {
@@ -2509,6 +2973,177 @@ export async function initHomePage() {
         }
     });
 }
+
+function generatePieChartSVG(percentage, size = 100) {
+    const radius = size / 2;
+    const circumference = 2 * Math.PI * (radius - 8);
+    const strokeDashoffset = circumference * (1 - percentage / 100);
+
+    const color = percentage >= 80 ? "#10b981" : percentage >= 60 ? "#f59e0b" : "#ef4444";
+
+    return `
+        <svg viewBox="0 0 ${size} ${size}" class="assessment-chart-svg" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="${radius}" cy="${radius}" r="${radius - 8}" fill="rgba(255,255,255,0.05)" stroke="none"/>
+            <circle 
+                cx="${radius}" 
+                cy="${radius}" 
+                r="${radius - 8}" 
+                fill="none" 
+                stroke="${color}" 
+                stroke-width="8"
+                stroke-dasharray="${circumference}"
+                stroke-dashoffset="${strokeDashoffset}"
+                stroke-linecap="round"
+                transform="rotate(-90 ${radius} ${radius})"
+                style="transition: stroke-dashoffset 0.3s ease;"
+            />
+            <text 
+                x="${radius}" 
+                y="${radius}" 
+                text-anchor="middle" 
+                dy="0.3em" 
+                font-size="18" 
+                font-weight="700" 
+                fill="white"
+            >${percentage}%</text>
+        </svg>
+    `;
+}
+
+export function initProgressPage() {
+    if (!document.body.classList.contains("progress-page")) {
+        return;
+    }
+
+    const elements = {
+        title: document.getElementById("progress-title"),
+        summary: document.getElementById("progress-summary"),
+        container: document.getElementById("assessment-container"),
+        home: document.getElementById("progress-home"),
+        reset: document.getElementById("progress-reset")
+    };
+
+    if (elements.reset) {
+        elements.reset.addEventListener("click", () => {
+            if (confirm("Are you sure you want to reset all assessment data? This cannot be undone.")) {
+                storageRemove(PROGRESS_HISTORY_KEY);
+                location.reload();
+            }
+        });
+    }
+
+    const assessments = getAssessmentsBySubject();
+    const subjectNames = Object.keys(assessments).sort();
+
+    if (elements.title) {
+        elements.title.textContent = "Assessment";
+    }
+
+    if (elements.summary) {
+        const totalSessions = Object.values(assessments).reduce((sum, s) => sum + s.entries.length, 0);
+        const totalAttempted = Object.values(assessments).reduce((sum, s) => sum + s.totalAttempted, 0);
+        const totalCorrect = Object.values(assessments).reduce((sum, s) => sum + s.totalCorrect, 0);
+        
+        if (totalAttempted) {
+            const overallAccuracy = Math.round((totalCorrect / totalAttempted) * 100);
+            elements.summary.textContent = `${totalSessions} sessions • ${totalAttempted} questions • ${overallAccuracy}% accuracy overall`;
+        } else {
+            elements.summary.textContent = "No assessment data yet. Complete quiz or exam sessions to see your performance.";
+        }
+    }
+
+    const summaryCards = document.getElementById("progress-summary-cards");
+    if (summaryCards) {
+        const quizSummary = getRecentModeSummary("quiz", 7);
+        const examSummary = getRecentModeSummary("exam", 7);
+        summaryCards.replaceChildren(
+            createProgressSummaryCard("Quiz accuracy", quizSummary, "Recent quiz performance across the last 7 days."),
+            createProgressSummaryCard("Exam accuracy", examSummary, "Recent exam performance across the last 7 days.")
+        );
+    }
+
+    if (elements.container) {
+        elements.container.replaceChildren();
+
+        if (!subjectNames.length) {
+            const empty = document.createElement("div");
+            empty.className = "progress-empty";
+            empty.textContent = "No assessment data yet. Complete a quiz or exam to populate your assessments.";
+            empty.style.padding = "40px 20px";
+            empty.style.textAlign = "center";
+            elements.container.appendChild(empty);
+            return;
+        }
+
+        subjectNames.forEach((subjectName) => {
+            const subject = assessments[subjectName];
+            const card = document.createElement("div");
+            card.className = "assessment-card";
+            
+            const chapterNames = Object.keys(subject.chapters).sort();
+            const isExpandable = chapterNames.length > 0;
+
+            card.innerHTML = `
+                <div class="assessment-card-header">
+                    <div class="assessment-chart-container">
+                        ${generatePieChartSVG(subject.accuracy)}
+                    </div>
+                    <div class="assessment-info">
+                        <div class="assessment-subject-info">
+                            <h3>${subjectName}</h3>
+                            <div class="assessment-stats">
+                                <div class="assessment-stat">
+                                    <strong>${subject.totalAttempted}</strong>
+                                    <span>questions attempted</span>
+                                </div>
+                                <div class="assessment-stat">
+                                    <strong>${subject.totalCorrect}</strong>
+                                    <span>correct</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="assessment-accuracy">
+                            <span class="assessment-accuracy-value">${subject.accuracy}%</span>
+                            <span class="assessment-accuracy-label">Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="assessment-chapters">
+                    ${chapterNames.map((chapterName) => {
+                        const chapter = subject.chapters[chapterName];
+                        const fillPercent = Math.max(0, Math.min(100, Number(chapter.accuracy) || 0));
+                        return `
+                            <div class="assessment-chapter-item" style="background: linear-gradient(90deg, rgba(54, 217, 132, 0.18) 0%, rgba(54, 217, 132, 0.18) ${fillPercent}%, rgba(255, 255, 255, 0.02) ${fillPercent}%, rgba(255, 255, 255, 0.02) 100%);">
+                                <div class="assessment-chapter-name">
+                                    <strong>${chapterName}</strong>
+                                    <div class="assessment-chapter-stats">
+                                        <span>${chapter.attempted} • ${chapter.correct} correct</span>
+                                    </div>
+                                </div>
+                                <div class="assessment-chapter-accuracy">
+                                    <strong>${chapter.accuracy}%</strong>
+                                </div>
+                            </div>
+                        `;
+                    }).join("")}
+                </div>
+            `;
+
+            if (isExpandable) {
+                const chaptersDiv = card.querySelector(".assessment-chapters");
+                card.style.cursor = "pointer";
+                card.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    chaptersDiv.classList.toggle("expanded");
+                    card.classList.toggle("expanded");
+                });
+            }
+
+            elements.container.appendChild(card);
+        });
+    }
+}
+
 
 export async function initModePage(mode) {
 
@@ -2543,7 +3178,8 @@ export async function initModePage(mode) {
         assessmentScore: document.getElementById("assessment-score"),
         assessmentContent: document.getElementById("assessment-content"),
         modeButtons: document.querySelectorAll(".mode-button"),
-        refresh: document.getElementById("refresh-button")
+        refresh: document.getElementById("refresh-button"),
+        shuffle: document.getElementById("shuffle-button")
     };
 
     const state = {
@@ -2555,6 +3191,24 @@ export async function initModePage(mode) {
         session: null,
         reviewSession: loadReviewSession(),
         drawerExpandedSubjectId: ""
+    };
+
+    const handleShuffleSession = () => {
+        if (!state.session || !["quiz", "learn", "flashcards"].includes(state.session.mode)) {
+            return;
+        }
+
+        const shuffled = shuffleSessionQuestions(state.session);
+        if (!shuffled) {
+            return;
+        }
+
+        if (state.session.mode === "quiz") {
+            saveQuizSession(state.session);
+        }
+
+        renderHeader();
+        buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
     };
 
     let examTimerId = null;
@@ -2631,11 +3285,7 @@ export async function initModePage(mode) {
             updateExamTimerBadge();
             if (activeSession.timeRemainingSeconds <= 0) {
                 clearExamTimer();
-                activeSession.submitted = true;
-                activeSession.complete = true;
-                activeSession.currentSummary = summarizeResults(activeSession);
-                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
-                renderAssessment(activeSession.currentSummary, activeSession, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession);
+                finishExamSession(true);
                 return;
             }
         }, 1000);
@@ -2679,14 +3329,14 @@ export async function initModePage(mode) {
 
     globalThis.__beginExamSession = beginExamSession;
 
-    const finishExamSession = () => {
+    const finishExamSession = (force = false) => {
         const session = state.session;
         if (!session || session.mode !== "exam") {
             return;
         }
 
         const unanswered = session.questions.some((_, index) => !session.answers[index]);
-        if (unanswered) {
+        if (unanswered && !force) {
             session.setupError = "Answer every question before you finish the exam.";
             buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
             return;
@@ -2695,6 +3345,7 @@ export async function initModePage(mode) {
         session.submitted = true;
         session.complete = true;
         session.currentSummary = summarizeResults(session);
+        recordSessionProgress(session);
         clearExamTimer();
         renderHeader();
         renderAssessment(session.currentSummary, session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession);
@@ -2806,6 +3457,10 @@ export async function initModePage(mode) {
 
         setDrawerBackdropHidden(!document.body.classList.contains("drawer-open"));
     };
+
+    if (elements.shuffle) {
+        elements.shuffle.addEventListener("click", handleShuffleSession);
+    }
 
     const renderHeader = () => {
         const subject = state.activeSubject;
@@ -3224,7 +3879,20 @@ export async function initModePage(mode) {
             actions.append(retakeButton, nextButton);
             completionCard.appendChild(actions);
             sheet.appendChild(completionCard);
-            renderAssessment(session.currentSummary, session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession);
+            
+            // Show assessment modal once per completed quiz session
+            if (!session.assessmentModalShown) {
+                createQuizAssessmentModal(session.currentSummary, session, state, selectChapter, startSession);
+                renderAssessment(session.currentSummary, session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession);
+            } else {
+                renderAssessmentPlaceholder(
+                    elements.assessmentTitle,
+                    elements.assessmentScore,
+                    elements.assessmentContent,
+                    "Quiz complete — final results were shown in the assessment popup."
+                );
+            }
+            recordQuizSessionProgress(session);
         } else {
             renderQuizLiveSummary();
         }
@@ -3314,6 +3982,7 @@ export async function initModePage(mode) {
         if (session.index >= session.questions.length) {
             session.complete = true;
             session.currentSummary = summarizeResults(session);
+            recordSessionProgress(session);
             renderAssessment(session.currentSummary, session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession);
         }
 
@@ -3335,6 +4004,14 @@ export async function initModePage(mode) {
 
         if (extra.advanceImmediately || session.mode === "flashcards") {
             session.answers[session.index] = result;
+            recordStudyProgress({
+                mode: session.mode,
+                subjectId: session.subjectId,
+                subjectName: session.subjectName,
+                chapterTitle: session.chapterTitle,
+                attempted: 1,
+                correct: correct ? 1 : 0
+            });
             session.busy = false;
             advanceSession();
             return;
@@ -3344,6 +4021,14 @@ export async function initModePage(mode) {
             session.answers[session.index] = result;
             session.reviewed = true;
             session.lastResult = result;
+            recordStudyProgress({
+                mode: session.mode,
+                subjectId: session.subjectId,
+                subjectName: session.subjectName,
+                chapterTitle: session.chapterTitle,
+                attempted: 1,
+                correct: correct ? 1 : 0
+            });
             session.busy = false;
             buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
             renderHeader();
