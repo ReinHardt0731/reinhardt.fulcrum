@@ -5,7 +5,7 @@
       "name": "ACRM",
       "quizType": "short_quiz",
       "schemaVersion": 1,
-      "selectedChapter": "Testing and Inspection | Destructive Test",
+      "selectedChapter": "Testing and Inspection | NDT",
       "chapters": [
         {
           "title": "Material Properties",
@@ -62,9 +62,13 @@
         {
           "title": "Testing and Inspection | Destructive Test",
           "file": "chapters/testing-and-inspection-destructive-test.json"
+        },
+        {
+          "title": "Testing and Inspection | NDT",
+          "file": "chapters/testing-and-inspection-ndt.json"
         }
       ],
-      "updatedAt": "2026-07-08T12:46:35.340Z"
+      "updatedAt": "2026-07-09T04:54:44.327Z"
     },
     {
       "id": "aerodynamics",
@@ -74,6 +78,15 @@
       "selectedChapter": "",
       "chapters": [],
       "updatedAt": "2026-07-05T18:39:04.494Z"
+    },
+    {
+      "id": "aircraft-structure-and-design",
+      "name": "AIRCRAFT STRUCTURE AND DESIGN",
+      "quizType": "short_quiz",
+      "schemaVersion": 1,
+      "selectedChapter": "",
+      "chapters": [],
+      "updatedAt": "2026-07-09T04:53:16.490Z"
     },
     {
       "id": "airlaw",
@@ -88,6 +101,24 @@
         }
       ],
       "updatedAt": "2026-07-06T02:22:14.266Z"
+    },
+    {
+      "id": "math",
+      "name": "MATH",
+      "quizType": "short_quiz",
+      "schemaVersion": 1,
+      "selectedChapter": "",
+      "chapters": [],
+      "updatedAt": "2026-07-09T04:52:35.762Z"
+    },
+    {
+      "id": "powerplant",
+      "name": "POWERPLANT",
+      "quizType": "short_quiz",
+      "schemaVersion": 1,
+      "selectedChapter": "",
+      "chapters": [],
+      "updatedAt": "2026-07-09T04:52:14.930Z"
     }
   ],
   "chapterData": {
@@ -17440,6 +17471,391 @@
           "explanation": "Compression testing measures how a material responds to compressive forces and determines properties such as compressive strength and deformation under load.\n\nWhy the other choices are incorrect:\n• Chemical analysis determines composition rather than mechanical properties.\n• Impact testing evaluates resistance to sudden loading.\n• Fatigue testing evaluates cyclic loading performance.\n\nDifferentiate Similar Concepts:\n• Compression → Push.\n• Tensile → Pull.\n• Impact → Sudden load.\n• Fatigue → Repeated load.\n\n💡 Memory Hook:\nCompression = Compress.\n\n🎯 Board Tip:\nRemember the basic pair:\nTension = Pull.\nCompression = Push.",
           "tags": [
             "Destructive Testing",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/testing-and-inspection-ndt.json": {
+      "title": "Testing and Inspection | NDT",
+      "questions": [
+        {
+          "question": "Which non-destructive testing method is considered the simplest and most commonly performed inspection before any specialized testing is conducted?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Liquid Penetrant Inspection",
+            "Visual Inspection",
+            "Radiographic Inspection",
+            "Ultrasonic Inspection"
+          ],
+          "answerIndex": 1,
+          "answerText": "Visual Inspection",
+          "explanation": "Visual Inspection is the first and most fundamental non-destructive testing (NDT) method performed during aircraft maintenance. It requires little or no equipment and is used to detect obvious defects such as cracks, corrosion, dents, leaks, loose fasteners, and deformation before proceeding to more specialized inspection methods.\n\nWhy the other choices are incorrect:\n• Liquid Penetrant Inspection is used to detect surface-breaking defects but requires surface preparation.\n• Radiographic Inspection is used to detect internal defects using X-rays or gamma rays.\n• Ultrasonic Inspection detects internal discontinuities using high-frequency sound waves.\n\nDifferentiate Similar Concepts:\n• Visual Inspection → First inspection performed.\n• Liquid Penetrant → Surface-breaking defects.\n• Ultrasonic → Internal defects.\n• Radiography → Internal image.\n\n💡 Memory Hook:\nSee it first.\n\n🎯 Board Tip:\nWhen asked for the initial inspection performed before specialized NDT methods, think Visual Inspection.",
+          "tags": [
+            "Visual Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which non-destructive testing method is primarily used to detect surface-breaking defects in nonporous materials?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Magnetic Particle Inspection",
+            "Eddy Current Inspection",
+            "Liquid Penetrant Inspection",
+            "Coin Tap Test"
+          ],
+          "answerIndex": 2,
+          "answerText": "Liquid Penetrant Inspection",
+          "explanation": "Liquid Penetrant Inspection (LPI) is used to locate surface-breaking discontinuities in nonporous materials by allowing a penetrant to seep into open defects before applying a developer to reveal them.\n\nWhy the other choices are incorrect:\n• Magnetic Particle Inspection is limited to ferromagnetic materials.\n• Eddy Current Inspection is used on electrically conductive materials and can detect both surface and near-surface flaws.\n• Coin Tap Test is primarily used to detect disbonds and delamination in composite structures.\n\nDifferentiate Similar Concepts:\n• LPI → Surface-breaking defects on nonporous materials.\n• MPI → Ferromagnetic materials.\n• Eddy Current → Conductive materials.\n• Coin Tap → Composite delamination.\n\n💡 Memory Hook:\nDye finds open cracks.\n\n🎯 Board Tip:\nWhenever the question mentions 'surface-breaking' and 'nonporous,' LPI is usually the correct answer.",
+          "tags": [
+            "Liquid Penetrant Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which non-destructive testing method is specifically intended for detecting discontinuities in ferromagnetic materials?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Radiographic Inspection",
+            "Magnetic Particle Inspection",
+            "Borescope Inspection",
+            "Visual Inspection"
+          ],
+          "answerIndex": 1,
+          "answerText": "Magnetic Particle Inspection",
+          "explanation": "Magnetic Particle Inspection (MPI) is used to detect surface and near-surface discontinuities in ferromagnetic materials by magnetizing the specimen and applying fine magnetic particles that accumulate at leakage fields created by defects.\n\nWhy the other choices are incorrect:\n• Radiography detects internal defects using radiation and is not limited to ferromagnetic materials.\n• Borescope Inspection is a visual method used for inaccessible internal areas.\n• Visual Inspection detects only visible defects.\n\nDifferentiate Similar Concepts:\n• MPI → Ferromagnetic materials.\n• LPI → Nonporous materials.\n• Eddy Current → Conductive materials.\n• Radiography → Internal imaging.\n\n💡 Memory Hook:\nMagnet = Magnetic metal.\n\n🎯 Board Tip:\nIf the material is aluminum, MPI is automatically eliminated because aluminum is non-ferromagnetic.",
+          "tags": [
+            "Magnetic Particle Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which non-destructive testing method is commonly used to detect internal discontinuities by transmitting high-frequency sound waves through a material?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Ultrasonic Inspection",
+            "Visual Inspection",
+            "Liquid Penetrant Inspection",
+            "Borescope Inspection"
+          ],
+          "answerIndex": 0,
+          "answerText": "Ultrasonic Inspection",
+          "explanation": "Ultrasonic Inspection (UT) uses high-frequency sound waves to detect internal flaws, measure material thickness, and evaluate structural integrity without damaging the component.\n\nWhy the other choices are incorrect:\n• Visual Inspection is limited to visible external defects.\n• Liquid Penetrant detects only surface-breaking defects.\n• Borescope Inspection is a visual examination of inaccessible internal spaces.\n\nDifferentiate Similar Concepts:\n• Ultrasonic → Internal defects using sound.\n• Radiography → Internal defects using radiation.\n• Visual → External inspection.\n• LPI → Surface cracks.\n\n💡 Memory Hook:\nUltrasound looks inside.\n\n🎯 Board Tip:\nWhen the inspection method uses sound waves, the answer is Ultrasonic Inspection.",
+          "tags": [
+            "Ultrasonic Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft maintenance technician needs to inspect the interior of a turbine engine without disassembling it. Which non-destructive testing method is most appropriate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Coin Tap Test",
+            "Borescope Inspection",
+            "Radiographic Inspection",
+            "Visual Inspection"
+          ],
+          "answerIndex": 1,
+          "answerText": "Borescope Inspection",
+          "explanation": "Borescope Inspection allows maintenance personnel to visually examine inaccessible internal areas such as gas turbine engines, combustion chambers, cylinders, and ducts without extensive disassembly.\n\nWhy the other choices are incorrect:\n• Coin Tap Test is primarily used on composite structures.\n• Radiographic Inspection produces an image using X-rays or gamma rays but is not routinely used for direct internal visual examination of engines.\n• Visual Inspection requires direct line-of-sight.\n\nDifferentiate Similar Concepts:\n• Borescope → Internal visual inspection.\n• Visual → External inspection.\n• Radiography → Internal image.\n• Ultrasonic → Internal sound-wave inspection.\n\n💡 Memory Hook:\nBorescope = Eyes inside.\n\n🎯 Board Tip:\nWhenever an engine must be inspected without disassembly, think Borescope first.",
+          "tags": [
+            "Borescope Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which non-destructive testing method is commonly selected for detecting cracks in electrically conductive materials without requiring direct access to the opposite side of the component?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Liquid Penetrant Inspection",
+            "Eddy Current Inspection",
+            "Ultrasonic Inspection",
+            "Magnetic Particle Inspection"
+          ],
+          "answerIndex": 1,
+          "answerText": "Eddy Current Inspection",
+          "explanation": "Eddy Current Inspection uses electromagnetic induction to detect surface and near-surface discontinuities in electrically conductive materials. It is widely used on aluminum aircraft structures.\n\nWhy the other choices are incorrect:\n• Liquid Penetrant Inspection detects only surface-breaking defects.\n• Ultrasonic Inspection primarily detects internal discontinuities.\n• Magnetic Particle Inspection requires ferromagnetic materials.\n\nDifferentiate Similar Concepts:\n• Eddy Current → Conductive materials.\n• MPI → Ferromagnetic materials.\n• LPI → Surface-breaking defects.\n• Ultrasonic → Internal defects.\n\n💡 Memory Hook:\nEddy = Electricity.\n\n🎯 Board Tip:\nIf the question emphasizes electrically conductive materials, Eddy Current should immediately come to mind.",
+          "tags": [
+            "Eddy Current Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which non-destructive testing method produces an image of the internal structure of a component by using X-rays or gamma rays?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Radiographic Inspection",
+            "Ultrasonic Inspection",
+            "Visual Inspection",
+            "Liquid Penetrant Inspection"
+          ],
+          "answerIndex": 0,
+          "answerText": "Radiographic Inspection",
+          "explanation": "Radiographic Inspection uses X-rays or gamma rays to produce an image of the internal condition of a component, allowing inspectors to detect internal defects such as voids, inclusions, cracks, and incomplete weld penetration.\n\nWhy the other choices are incorrect:\n• Ultrasonic Inspection uses sound waves instead of radiation.\n• Visual Inspection is limited to visible surfaces.\n• Liquid Penetrant Inspection detects only surface-breaking defects.\n\nDifferentiate Similar Concepts:\n• Radiography → X-rays or gamma rays.\n• Ultrasonic → Sound waves.\n• Visual → External inspection.\n• Borescope → Internal visual examination.\n\n💡 Memory Hook:\nRadiography = X-ray vision.\n\n🎯 Board Tip:\nDon't confuse Radiographic Inspection with Ultrasonic Inspection—both inspect internal defects, but only Radiography creates an image using radiation.",
+          "tags": [
+            "Radiographic Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Aircraft technicians commonly use which non-destructive testing method to detect delamination or disbonding in composite structures through changes in sound?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Coin Tap Test",
+            "Visual Inspection",
+            "Magnetic Particle Inspection",
+            "Radiographic Inspection"
+          ],
+          "answerIndex": 0,
+          "answerText": "Coin Tap Test",
+          "explanation": "Coin Tap Test detects disbonding and delamination in composite structures by listening to the sound produced when the surface is lightly tapped. A clear ringing sound generally indicates a sound structure, while a dull sound may indicate damage.\n\nWhy the other choices are incorrect:\n• Visual Inspection may not detect internal delamination.\n• Magnetic Particle Inspection is limited to ferromagnetic materials.\n• Radiographic Inspection is not the routine field method for detecting composite disbonds.\n\nDifferentiate Similar Concepts:\n• Coin Tap → Composite delamination.\n• Ultrasonic → Internal composite defects using sound waves.\n• Visual → Surface defects.\n• Radiography → Internal imaging.\n\n💡 Memory Hook:\nTap the composite.\n\n🎯 Board Tip:\nWhenever the question mentions composite delamination or disbonding, Coin Tap Test is one of the first inspection methods to consider.",
+          "tags": [
+            "Coin Tap Test",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft inspector wants to examine a component without removing paint or applying any test media. Which inspection method should always be considered first?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Radiographic Inspection",
+            "Visual Inspection",
+            "Liquid Penetrant Inspection",
+            "Eddy Current Inspection"
+          ],
+          "answerIndex": 1,
+          "answerText": "Visual Inspection",
+          "explanation": "Visual Inspection is always the first line of inspection because it is quick, inexpensive, and may reveal obvious defects without additional equipment.\n\nWhy the other choices are incorrect:\n• Radiography requires specialized equipment.\n• Liquid Penetrant requires surface preparation.\n• Eddy Current requires specialized instruments.\n\nDifferentiate Similar Concepts:\n• Visual → Initial inspection.\n• Borescope → Internal visual inspection.\n• LPI → Surface-breaking defects.\n• UT → Internal defects.\n\n💡 Memory Hook:\nLook before you test.\n\n🎯 Board Tip:\nWhenever an inspection sequence is asked, Visual Inspection is generally performed first.",
+          "tags": [
+            "Visual Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An inspection method requires the test surface to be clean, dry, and nonporous before it can be performed effectively. Which method is being described?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Magnetic Particle Inspection",
+            "Liquid Penetrant Inspection",
+            "Coin Tap Test",
+            "Radiographic Inspection"
+          ],
+          "answerIndex": 1,
+          "answerText": "Liquid Penetrant Inspection",
+          "explanation": "Liquid Penetrant Inspection depends on capillary action. Therefore, the discontinuity must be open to the surface, and the material must be nonporous to prevent false indications.\n\nWhy the other choices are incorrect:\n• MPI requires ferromagnetic materials.\n• Coin Tap is for composites.\n• Radiography does not rely on penetrant.\n\nDifferentiate Similar Concepts:\n• LPI → Nonporous materials.\n• MPI → Ferromagnetic materials.\n• Eddy Current → Conductive materials.\n\n💡 Memory Hook:\nClean. Dry. Nonporous.\n\n🎯 Board Tip:\nWhenever 'nonporous' appears, immediately consider LPI.",
+          "tags": [
+            "Liquid Penetrant Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A maintenance technician needs an inspection method that cannot be used on aluminum alloys because of the material's magnetic properties. Which method is being referred to?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Ultrasonic Inspection",
+            "Magnetic Particle Inspection",
+            "Visual Inspection",
+            "Radiographic Inspection"
+          ],
+          "answerIndex": 1,
+          "answerText": "Magnetic Particle Inspection",
+          "explanation": "Magnetic Particle Inspection is limited to ferromagnetic materials. Since aluminum is non-ferromagnetic, MPI cannot be used.\n\nWhy the other choices are incorrect:\n• Ultrasonic and Radiographic Inspection can inspect aluminum.\n• Visual Inspection is not material dependent.\n\nDifferentiate Similar Concepts:\n• MPI → Ferromagnetic only.\n• Eddy Current → Conductive materials including aluminum.\n\n💡 Memory Hook:\nNo magnet. No MPI.\n\n🎯 Board Tip:\nOne of the most common elimination techniques is recognizing that aluminum automatically eliminates MPI.",
+          "tags": [
+            "Magnetic Particle Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which inspection technique is capable of measuring material thickness in addition to locating internal discontinuities?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Radiographic Inspection",
+            "Coin Tap Test",
+            "Ultrasonic Inspection",
+            "Visual Inspection"
+          ],
+          "answerIndex": 2,
+          "answerText": "Ultrasonic Inspection",
+          "explanation": "Ultrasonic Inspection is widely used for both flaw detection and thickness measurement by analyzing the travel time of high-frequency sound waves.\n\nWhy the other choices are incorrect:\n• Radiography produces an image but is not commonly used for routine thickness measurement.\n• Coin Tap evaluates composite integrity.\n• Visual Inspection cannot measure internal thickness.\n\nDifferentiate Similar Concepts:\n• Ultrasonic → Thickness + internal defects.\n• Radiography → Internal image.\n• Coin Tap → Composite delamination.\n\n💡 Memory Hook:\nUltrasound measures depth.\n\n🎯 Board Tip:\nThickness measurement is a favorite clue for Ultrasonic Inspection.",
+          "tags": [
+            "Ultrasonic Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft manufacturer requires an inspection record that can be reviewed long after the inspection has been completed. Which inspection method best satisfies this requirement?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Visual Inspection",
+            "Radiographic Inspection",
+            "Liquid Penetrant Inspection",
+            "Coin Tap Test"
+          ],
+          "answerIndex": 1,
+          "answerText": "Radiographic Inspection",
+          "explanation": "Radiographic Inspection produces permanent images that can be stored, reviewed, and compared during future maintenance.\n\nWhy the other choices are incorrect:\n• Visual Inspection depends on the inspector's observation.\n• Liquid Penetrant indications disappear after cleaning.\n• Coin Tap produces no permanent record.\n\nDifferentiate Similar Concepts:\n• Radiography → Permanent image.\n• Ultrasonic → Electronic signal.\n• Visual → Direct observation.\n\n💡 Memory Hook:\nX-rays leave evidence.\n\n🎯 Board Tip:\nIf the question mentions permanent records or permanent images, think Radiographic Inspection.",
+          "tags": [
+            "Radiographic Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which inspection method is especially useful around fastener holes because it can detect small cracks in electrically conductive materials without removing the fastener in many cases?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Borescope Inspection",
+            "Liquid Penetrant Inspection",
+            "Eddy Current Inspection",
+            "Visual Inspection"
+          ],
+          "answerIndex": 2,
+          "answerText": "Eddy Current Inspection",
+          "explanation": "Eddy Current Inspection is commonly used around rivet and fastener holes to detect surface and near-surface cracks in conductive materials such as aluminum alloys.\n\nWhy the other choices are incorrect:\n• Borescope is for inaccessible visual areas.\n• LPI requires an exposed surface crack.\n• Visual Inspection may miss very small cracks.\n\nDifferentiate Similar Concepts:\n• Eddy → Conductive metals.\n• MPI → Ferromagnetic metals.\n• LPI → Surface-breaking defects.\n\n💡 Memory Hook:\nEddy checks rivets.\n\n🎯 Board Tip:\nFastener holes and aluminum structures are classic clues for Eddy Current Inspection.",
+          "tags": [
+            "Eddy Current Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A mechanic suspects hidden damage inside an aircraft piston engine cylinder but wants to avoid unnecessary disassembly. Which inspection technique is the most practical choice?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Radiographic Inspection",
+            "Borescope Inspection",
+            "Liquid Penetrant Inspection",
+            "Magnetic Particle Inspection"
+          ],
+          "answerIndex": 1,
+          "answerText": "Borescope Inspection",
+          "explanation": "Borescope Inspection allows inspectors to visually examine enclosed or inaccessible areas such as engine cylinders, combustion chambers, and turbine sections without dismantling the component.\n\nWhy the other choices are incorrect:\n• Radiographic Inspection is not routinely used for direct engine visual examination.\n• Liquid Penetrant Inspection requires access to the test surface.\n• Magnetic Particle Inspection is applicable only to ferromagnetic materials.\n\nDifferentiate Similar Concepts:\n• Borescope → Internal visual examination.\n• Visual Inspection → External examination.\n• Radiography → Internal image.\n• Ultrasonic → Internal defect detection.\n\n💡 Memory Hook:\nBorescope = Look inside without taking it apart.\n\n🎯 Board Tip:\nWhenever inspection without disassembly is emphasized, Borescope is usually the preferred answer.",
+          "tags": [
+            "Borescope Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft component is suspected of having internal voids that cannot be seen from the surface. Which inspection method is commonly selected because it produces an image of the interior of the component?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Coin Tap Test",
+            "Radiographic Inspection",
+            "Visual Inspection",
+            "Liquid Penetrant Inspection"
+          ],
+          "answerIndex": 1,
+          "answerText": "Radiographic Inspection",
+          "explanation": "Radiographic Inspection produces an image of the internal condition of a component, making it effective for detecting internal voids, inclusions, cracks, and casting defects.\n\nWhy the other choices are incorrect:\n• Coin Tap Test evaluates composite integrity.\n• Visual Inspection is limited to visible surfaces.\n• Liquid Penetrant Inspection detects only surface-breaking defects.\n\nDifferentiate Similar Concepts:\n• Radiography → Permanent internal image.\n• Ultrasonic → Internal flaw detection through sound waves.\n• Visual → External defects.\n\n💡 Memory Hook:\nRadiography = Photograph the inside.\n\n🎯 Board Tip:\nIf the clue is 'internal image,' Radiography is almost always the correct answer.",
+          "tags": [
+            "Radiographic Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which inspection method is most commonly associated with evaluating the integrity of bonded composite structures by listening for changes in sound response?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Ultrasonic Inspection",
+            "Coin Tap Test",
+            "Borescope Inspection",
+            "Visual Inspection"
+          ],
+          "answerIndex": 1,
+          "answerText": "Coin Tap Test",
+          "explanation": "Coin Tap Test is a simple inspection method used on composite structures. A clear ringing sound generally indicates a sound bond, while a dull sound may indicate delamination or disbonding.\n\nWhy the other choices are incorrect:\n• Ultrasonic Inspection uses specialized electronic equipment rather than manual tapping.\n• Borescope Inspection is a visual method.\n• Visual Inspection may not reveal internal composite damage.\n\nDifferentiate Similar Concepts:\n• Coin Tap → Composite delamination.\n• Ultrasonic → Internal flaws using sound waves.\n• Visual → Surface condition.\n\n💡 Memory Hook:\nGood bond = Good ring.\n\n🎯 Board Tip:\nComposite structures are frequently associated with Coin Tap Test questions in review materials.",
+          "tags": [
+            "Coin Tap Test",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An inspection method relies on disturbances in an induced electromagnetic field to reveal flaws in a test specimen. Which method is being described?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Eddy Current Inspection",
+            "Magnetic Particle Inspection",
+            "Radiographic Inspection",
+            "Liquid Penetrant Inspection"
+          ],
+          "answerIndex": 0,
+          "answerText": "Eddy Current Inspection",
+          "explanation": "Eddy Current Inspection operates by inducing electromagnetic currents into a conductive material. Discontinuities disturb the current flow, allowing defects to be detected.\n\nWhy the other choices are incorrect:\n• Magnetic Particle Inspection relies on magnetic flux leakage.\n• Radiographic Inspection uses penetrating radiation.\n• Liquid Penetrant Inspection relies on capillary action.\n\nDifferentiate Similar Concepts:\n• Eddy Current → Electromagnetic induction.\n• MPI → Magnetic particles.\n• LPI → Penetrating dye.\n• UT → High-frequency sound.\n\n💡 Memory Hook:\nEddy = Electrical currents.\n\n🎯 Board Tip:\nDon't confuse Eddy Current with Magnetic Particle. One uses induced electrical currents, the other uses magnetic particles.",
+          "tags": [
+            "Eddy Current Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which non-destructive testing method is capable of detecting both surface and near-surface discontinuities in ferromagnetic materials?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Magnetic Particle Inspection",
+            "Liquid Penetrant Inspection",
+            "Visual Inspection",
+            "Coin Tap Test"
+          ],
+          "answerIndex": 0,
+          "answerText": "Magnetic Particle Inspection",
+          "explanation": "Magnetic Particle Inspection is capable of detecting both surface and shallow subsurface defects in ferromagnetic materials through magnetic flux leakage.\n\nWhy the other choices are incorrect:\n• Liquid Penetrant Inspection is limited to surface-breaking defects.\n• Visual Inspection detects only visible defects.\n• Coin Tap Test is intended for composite structures.\n\nDifferentiate Similar Concepts:\n• MPI → Surface and near-surface defects.\n• LPI → Surface-breaking defects only.\n• Eddy Current → Surface and near-surface defects in conductive materials.\n\n💡 Memory Hook:\nMagnet finds what lies just beneath.\n\n🎯 Board Tip:\nA favorite board distinction is that MPI can reveal some near-surface defects, whereas LPI cannot.",
+          "tags": [
+            "Magnetic Particle Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An inspector needs to verify the thickness of an aircraft structural member while simultaneously checking for hidden internal flaws. Which inspection technique is best suited for this task?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Ultrasonic Inspection",
+            "Radiographic Inspection",
+            "Visual Inspection",
+            "Borescope Inspection"
+          ],
+          "answerIndex": 0,
+          "answerText": "Ultrasonic Inspection",
+          "explanation": "Ultrasonic Inspection can accurately measure material thickness while also detecting internal discontinuities by analyzing reflected high-frequency sound waves.\n\nWhy the other choices are incorrect:\n• Radiographic Inspection provides an image but is not commonly used for routine thickness measurements.\n• Visual Inspection is limited to external observations.\n• Borescope Inspection provides visual access but cannot measure thickness.\n\nDifferentiate Similar Concepts:\n• Ultrasonic → Thickness + internal flaws.\n• Radiography → Internal image.\n• Borescope → Internal visual access.\n\n💡 Memory Hook:\nUltrasound measures what's inside.\n\n🎯 Board Tip:\nWhenever thickness measurement appears in a question, Ultrasonic Inspection should immediately be considered.",
+          "tags": [
+            "Ultrasonic Inspection",
             "Recall"
           ],
           "expectedAnswer": null,
