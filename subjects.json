@@ -5,11 +5,15 @@
       "name": "ACRM",
       "quizType": "short_quiz",
       "schemaVersion": 1,
-      "selectedChapter": "Testing and Inspection | NDT",
+      "selectedChapter": "Testing and Inspection | Corrosion",
       "chapters": [
         {
           "title": "Material Properties",
           "file": "chapters/material-properties.json"
+        },
+        {
+          "title": "Material Properties II",
+          "file": "chapters/material-properties-ii.json"
         },
         {
           "title": "Mechanical Process",
@@ -66,9 +70,13 @@
         {
           "title": "Testing and Inspection | NDT",
           "file": "chapters/testing-and-inspection-ndt.json"
+        },
+        {
+          "title": "Testing and Inspection | Corrosion",
+          "file": "chapters/testing-and-inspection-corrosion.json"
         }
       ],
-      "updatedAt": "2026-07-09T04:54:44.327Z"
+      "updatedAt": "2026-07-09T10:42:17.689Z"
     },
     {
       "id": "aerodynamics",
@@ -1840,6 +1848,315 @@
           "tags": [
             "metals",
             "toughness"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/material-properties-ii.json": {
+      "title": "Material Properties II",
+      "questions": [
+        {
+          "question": "An aircraft engineer is selecting a material that can resist permanent surface indentation caused by repeated contact with tools and fasteners. Which material property is most important?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Toughness",
+            "Hardness",
+            "Ductility",
+            "Elasticity"
+          ],
+          "answerIndex": 1,
+          "answerText": "Hardness",
+          "explanation": "Hardness is a material's ability to resist localized surface deformation such as indentation, scratching, or abrasion. It is one of the primary properties evaluated during quality control of aircraft materials.\n\nWhy the other choices are incorrect:\n• Toughness refers to the ability to absorb energy before fracture.\n• Ductility is the ability to deform plastically under tensile loading.\n• Elasticity is the ability to return to the original shape after the load is removed.\n\nDifferentiate Similar Concepts:\n• Hardness → Resists indentation.\n• Toughness → Resists fracture.\n• Ductility → Stretches before breaking.\n• Elasticity → Returns to original shape.\n\n💡 Memory Hook:\nHardness = Hard to dent.\n\n🎯 Board Tip:\nHardness and toughness are not synonymous. A very hard material may still fracture easily.",
+          "tags": [
+            "Material Properties",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which material property enables an aircraft structural member to absorb a large amount of energy before fracturing during an impact?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Brittleness",
+            "Toughness",
+            "Hardness",
+            "Plasticity"
+          ],
+          "answerIndex": 1,
+          "answerText": "Toughness",
+          "explanation": "Toughness is the ability of a material to absorb energy and plastically deform before fracture. Tough materials are generally more resistant to crack propagation and impact loading.\n\nWhy the other choices are incorrect:\n• Brittleness is the tendency to fracture with little deformation.\n• Hardness resists indentation but does not necessarily indicate resistance to fracture.\n• Plasticity refers to permanent deformation after yielding.\n\nDifferentiate Similar Concepts:\n• Toughness → Absorbs energy.\n• Hardness → Resists indentation.\n• Brittleness → Breaks suddenly.\n• Plasticity → Permanent deformation.\n\n💡 Memory Hook:\nTough = Takes a beating.\n\n🎯 Board Tip:\nImpact resistance is most closely associated with toughness rather than hardness.",
+          "tags": [
+            "Material Properties",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During a tensile test, an aluminum alloy stretches considerably before finally breaking. Which material property is demonstrated?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Brittleness",
+            "Elasticity",
+            "Ductility",
+            "Stiffness"
+          ],
+          "answerIndex": 2,
+          "answerText": "Ductility",
+          "explanation": "Ductility is the ability of a material to undergo significant plastic deformation under tensile loading before fracture. It is commonly evaluated by elongation or reduction in area during tensile testing.\n\nWhy the other choices are incorrect:\n• Brittleness involves little or no plastic deformation before fracture.\n• Elasticity refers to temporary deformation that disappears after unloading.\n• Stiffness describes resistance to elastic deformation.\n\nDifferentiate Similar Concepts:\n• Ductility → Stretch before breaking.\n• Brittleness → Break without stretching.\n• Elasticity → Springs back.\n• Plasticity → Permanent shape change.\n\n💡 Memory Hook:\nDuctility = Draw into wire.\n\n🎯 Board Tip:\nIf a material elongates significantly before fracture, the property being described is ductility.",
+          "tags": [
+            "Material Properties",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft component fractures suddenly with almost no noticeable deformation after being subjected to a load. Which material property best describes this behavior?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Plasticity",
+            "Elasticity",
+            "Brittleness",
+            "Resilience"
+          ],
+          "answerIndex": 2,
+          "answerText": "Brittleness",
+          "explanation": "Brittleness is the tendency of a material to fracture with little or no plastic deformation. Brittle materials absorb relatively little energy before failure.\n\nWhy the other choices are incorrect:\n• Plasticity refers to permanent deformation before fracture.\n• Elasticity is the ability to recover the original shape.\n• Resilience is the ability to absorb energy within the elastic range.\n\nDifferentiate Similar Concepts:\n• Brittleness → Breaks suddenly.\n• Ductility → Stretches before breaking.\n• Toughness → Absorbs energy.\n• Resilience → Stores elastic energy.\n\n💡 Memory Hook:\nBrittle = Breaks abruptly.\n\n🎯 Board Tip:\nA brittle material is not necessarily weak—it simply fails with little warning.",
+          "tags": [
+            "Material Properties",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "After a load is removed from an aircraft spring, it immediately returns to its original dimensions. Which material property is primarily demonstrated?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Plasticity",
+            "Elasticity",
+            "Malleability",
+            "Ductility"
+          ],
+          "answerIndex": 1,
+          "answerText": "Elasticity",
+          "explanation": "Elasticity is the ability of a material to return to its original shape and dimensions after the applied load is removed, provided the elastic limit has not been exceeded.\n\nWhy the other choices are incorrect:\n• Plasticity refers to permanent deformation after the load is removed.\n• Malleability is the ability to deform under compressive forces.\n• Ductility is the ability to elongate under tensile forces.\n\nDifferentiate Similar Concepts:\n• Elasticity → Returns to original shape.\n• Plasticity → Permanent deformation.\n• Ductility → Drawn into wire.\n• Malleability → Hammered into sheets.\n\n💡 Memory Hook:\nElastic = Returns.\n\n🎯 Board Tip:\nWhenever the material 'springs back' after unloading, think Elasticity.",
+          "tags": [
+            "Material Properties",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A sheet of aluminum remains permanently bent after the applied force is removed. Which material property allowed this permanent change in shape?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Elasticity",
+            "Plasticity",
+            "Resilience",
+            "Stiffness"
+          ],
+          "answerIndex": 1,
+          "answerText": "Plasticity",
+          "explanation": "Plasticity is the ability of a material to undergo permanent deformation without fracturing after the applied load exceeds the elastic limit.\n\nWhy the other choices are incorrect:\n• Elasticity allows recovery of the original shape.\n• Resilience refers to energy absorption within the elastic range.\n• Stiffness is resistance to elastic deformation.\n\nDifferentiate Similar Concepts:\n• Plasticity → Permanent deformation.\n• Elasticity → Temporary deformation.\n• Ductility → Permanent deformation in tension.\n• Malleability → Permanent deformation in compression.\n\n💡 Memory Hook:\nPlastic = Permanent.\n\n🎯 Board Tip:\nIf the material does not return to its original shape after unloading, the property involved is Plasticity.",
+          "tags": [
+            "Material Properties",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which material property enables a metal to be formed into thin sheets without fracturing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Ductility",
+            "Malleability",
+            "Hardness",
+            "Brittleness"
+          ],
+          "answerIndex": 1,
+          "answerText": "Malleability",
+          "explanation": "Malleability is the ability of a material to deform plastically under compressive forces, allowing it to be rolled or hammered into thin sheets.\n\nWhy the other choices are incorrect:\n• Ductility refers to deformation under tensile loading.\n• Hardness is resistance to indentation.\n• Brittleness is the tendency to fracture with little deformation.\n\nDifferentiate Similar Concepts:\n• Malleability → Sheets.\n• Ductility → Wire.\n• Plasticity → Permanent deformation.\n• Elasticity → Returns to shape.\n\n💡 Memory Hook:\nMalleability = Metal sheets.\n\n🎯 Board Tip:\nRemember the classic pair:\nMalleability → Sheets\nDuctility → Wires.",
+          "tags": [
+            "Material Properties",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft maintenance shop needs to manufacture electrical wire from a metallic material. Which material property is most desirable for this process?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Hardness",
+            "Ductility",
+            "Stiffness",
+            "Resilience"
+          ],
+          "answerIndex": 1,
+          "answerText": "Ductility",
+          "explanation": "Ductility is the ability of a material to be plastically deformed under tensile loading, allowing it to be drawn into wires without breaking.\n\nWhy the other choices are incorrect:\n• Hardness resists indentation.\n• Stiffness resists elastic deformation.\n• Resilience relates to elastic energy storage.\n\nDifferentiate Similar Concepts:\n• Ductility → Wire.\n• Malleability → Sheet.\n• Plasticity → Permanent deformation.\n• Toughness → Absorbs energy before fracture.\n\n💡 Memory Hook:\nDuctility = Drawn into wire.\n\n🎯 Board Tip:\nWhenever the question involves making wires or cables, the correct property is Ductility.",
+          "tags": [
+            "Material Properties",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The landing gear of an aircraft must support extremely high loads during touchdown without failing under normal operating conditions. Which material property is primarily required?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Strength",
+            "Hardness",
+            "Elasticity",
+            "Malleability"
+          ],
+          "answerIndex": 0,
+          "answerText": "Strength",
+          "explanation": "Strength is the ability of a material to withstand an applied load without failure. Aircraft landing gear requires high strength to safely support landing and taxiing loads.\n\nWhy the other choices are incorrect:\n• Hardness resists indentation, not overall structural failure.\n• Elasticity allows recovery after deformation.\n• Malleability is the ability to deform under compression.\n\nDifferentiate Similar Concepts:\n• Strength → Resists failure.\n• Hardness → Resists indentation.\n• Toughness → Resists fracture after absorbing energy.\n• Stiffness → Resists bending.\n\n💡 Memory Hook:\nStrength = Supports the load.\n\n🎯 Board Tip:\nDo not confuse strength with hardness. A material may be hard but not necessarily strong.",
+          "tags": [
+            "Material Properties",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft wing spar is designed to minimize bending while supporting aerodynamic loads during flight. Which material property is most desirable?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Plasticity",
+            "Stiffness",
+            "Ductility",
+            "Brittleness"
+          ],
+          "answerIndex": 1,
+          "answerText": "Stiffness",
+          "explanation": "Stiffness is the ability of a material to resist elastic deformation when subjected to an applied load. A stiff wing spar bends less under normal flight loads.\n\nWhy the other choices are incorrect:\n• Plasticity results in permanent deformation.\n• Ductility allows elongation before fracture.\n• Brittleness is the tendency to fracture suddenly.\n\nDifferentiate Similar Concepts:\n• Stiffness → Resists bending.\n• Strength → Resists failure.\n• Elasticity → Returns to shape.\n• Toughness → Resists fracture.\n\n💡 Memory Hook:\nStiff = Doesn't bend easily.\n\n🎯 Board Tip:\nA stiff structure is not necessarily stronger—it simply deforms less under load.",
+          "tags": [
+            "Material Properties",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft shock absorber temporarily stores energy during landing and releases it as it returns to its original position. Which material property is primarily involved?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Resilience",
+            "Plasticity",
+            "Hardness",
+            "Brittleness"
+          ],
+          "answerIndex": 0,
+          "answerText": "Resilience",
+          "explanation": "Resilience is the ability of a material to absorb energy while deforming elastically and release that energy when the load is removed. This property is essential for springs and shock-absorbing components.\n\nWhy the other choices are incorrect:\n• Plasticity produces permanent deformation.\n• Hardness resists indentation.\n• Brittleness describes sudden fracture with little deformation.\n\nDifferentiate Similar Concepts:\n• Resilience → Stores elastic energy.\n• Toughness → Absorbs energy until fracture.\n• Elasticity → Returns to original shape.\n• Plasticity → Permanent deformation.\n\n💡 Memory Hook:\nResilience = Rebounds with energy.\n\n🎯 Board Tip:\nSprings, shock absorbers, and elastic energy storage are classic clues for Resilience.",
+          "tags": [
+            "Material Properties",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which material property allows an aircraft spring to repeatedly return to its original shape after being loaded within its design limit?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Elasticity",
+            "Strength",
+            "Toughness",
+            "Plasticity"
+          ],
+          "answerIndex": 0,
+          "answerText": "Elasticity",
+          "explanation": "Elasticity is the ability of a material to regain its original shape after the applied load is removed, provided the elastic limit has not been exceeded.\n\nWhy the other choices are incorrect:\n• Strength is resistance to failure.\n• Toughness is resistance to fracture.\n• Plasticity results in permanent deformation.\n\nDifferentiate Similar Concepts:\n• Elasticity → Returns to original shape.\n• Resilience → Stores and releases elastic energy.\n• Plasticity → Permanent change.\n• Stiffness → Resistance to elastic deformation.\n\n💡 Memory Hook:\nElasticity = Returns.\n\n🎯 Board Tip:\nElasticity and Resilience are related but different. Elasticity describes shape recovery, while Resilience describes energy storage within the elastic range.",
+          "tags": [
+            "Material Properties",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Aircraft wings experience thousands of loading and unloading cycles throughout their service life. Which material property is most closely associated with a material's ability to withstand these repeated stresses?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Creep",
+            "Fatigue",
+            "Hardness",
+            "Resilience"
+          ],
+          "answerIndex": 1,
+          "answerText": "Fatigue",
+          "explanation": "Fatigue is the tendency of a material to fail after repeated or cyclic loading, even when the applied stress is below its ultimate tensile strength. Aircraft wings, fuselages, and landing gear are particularly susceptible to fatigue because of continuous loading and unloading during service.\n\nWhy the other choices are incorrect:\n• Creep results from prolonged loading at elevated temperatures.\n• Hardness is resistance to indentation.\n• Resilience is the ability to absorb and release elastic energy.\n\nDifferentiate Similar Concepts:\n• Fatigue → Repeated cyclic loading.\n• Creep → Constant load over time, usually at high temperature.\n• Toughness → Resistance to fracture after absorbing energy.\n• Strength → Resistance to failure under load.\n\n💡 Memory Hook:\nFatigue = Many cycles.\n\n🎯 Board Tip:\nAircraft structures are more commonly designed against fatigue failure than static overload failure.",
+          "tags": [
+            "Material Properties",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A turbine engine component slowly and permanently deforms after prolonged exposure to high temperatures and constant stress. Which material property best describes this behavior?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Plasticity",
+            "Fatigue",
+            "Creep",
+            "Elasticity"
+          ],
+          "answerIndex": 2,
+          "answerText": "Creep",
+          "explanation": "Creep is the slow, permanent deformation of a material subjected to constant stress over an extended period, particularly at elevated temperatures. It is an important consideration in gas turbine engine components.\n\nWhy the other choices are incorrect:\n• Plasticity is permanent deformation after exceeding the yield strength but is not necessarily time-dependent.\n• Fatigue results from repeated cyclic loading.\n• Elasticity is temporary deformation.\n\nDifferentiate Similar Concepts:\n• Creep → Time + heat + constant load.\n• Fatigue → Repeated loading.\n• Plasticity → Permanent deformation after overload.\n• Elasticity → Temporary deformation.\n\n💡 Memory Hook:\nCreep = Creeps slowly with heat.\n\n🎯 Board Tip:\nHigh temperature is one of the strongest clues pointing to creep.",
+          "tags": [
+            "Material Properties",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft landing gear undergoes thousands of takeoff and landing operations before a small crack eventually develops. Which material property is associated with this type of failure?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wear Resistance",
+            "Fatigue",
+            "Malleability",
+            "Stiffness"
+          ],
+          "answerIndex": 1,
+          "answerText": "Fatigue",
+          "explanation": "Fatigue failure develops after repeated loading cycles. Even relatively small stresses can eventually initiate and propagate cracks if applied many times.\n\nWhy the other choices are incorrect:\n• Wear resistance relates to surface wear.\n• Malleability is the ability to form sheets.\n• Stiffness is resistance to elastic deformation.\n\nDifferentiate Similar Concepts:\n• Fatigue → Repeated cycles.\n• Creep → Constant load over time.\n• Toughness → Absorbs impact energy.\n• Hardness → Resists surface damage.\n\n💡 Memory Hook:\nMany landings = Fatigue.\n\n🎯 Board Tip:\nLanding gear and wing structures are classic examples used in fatigue questions.",
+          "tags": [
+            "Material Properties",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which material property is most desirable for aircraft bushings and bearings that experience continuous rubbing contact during operation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wear Resistance",
+            "Elasticity",
+            "Resilience",
+            "Plasticity"
+          ],
+          "answerIndex": 0,
+          "answerText": "Wear Resistance",
+          "explanation": "Wear resistance is the ability of a material to resist gradual material loss caused by friction, abrasion, or repeated surface contact. It is an important property for bearings, bushings, and other moving aircraft components.\n\nWhy the other choices are incorrect:\n• Elasticity is the ability to return to the original shape.\n• Resilience is the ability to store elastic energy.\n• Plasticity is permanent deformation.\n\nDifferentiate Similar Concepts:\n• Wear Resistance → Resists friction and abrasion.\n• Hardness → Resists indentation.\n• Toughness → Resists fracture.\n• Strength → Resists failure.\n\n💡 Memory Hook:\nWear Resistance = Withstands rubbing.\n\n🎯 Board Tip:\nWhen bearings, bushings, or continuous friction are mentioned, think Wear Resistance.",
+          "tags": [
+            "Material Properties",
+            "Recall"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -17856,6 +18173,714 @@
           "explanation": "Ultrasonic Inspection can accurately measure material thickness while also detecting internal discontinuities by analyzing reflected high-frequency sound waves.\n\nWhy the other choices are incorrect:\n• Radiographic Inspection provides an image but is not commonly used for routine thickness measurements.\n• Visual Inspection is limited to external observations.\n• Borescope Inspection provides visual access but cannot measure thickness.\n\nDifferentiate Similar Concepts:\n• Ultrasonic → Thickness + internal flaws.\n• Radiography → Internal image.\n• Borescope → Internal visual access.\n\n💡 Memory Hook:\nUltrasound measures what's inside.\n\n🎯 Board Tip:\nWhenever thickness measurement appears in a question, Ultrasonic Inspection should immediately be considered.",
           "tags": [
             "Ultrasonic Inspection",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/testing-and-inspection-corrosion.json": {
+      "title": "Testing and Inspection | Corrosion",
+      "questions": [
+        {
+          "question": "Aircraft maintenance personnel routinely inspect for corrosion because it primarily causes which undesirable effect on metallic structures?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Increases electrical conductivity",
+            "Improves fatigue strength",
+            "Gradual deterioration of the metal",
+            "Increases material hardness"
+          ],
+          "answerIndex": 2,
+          "answerText": "Gradual deterioration of the metal",
+          "explanation": "Corrosion is the gradual deterioration of a metal due to chemical or electrochemical reactions with its environment. If left untreated, corrosion can reduce structural integrity, shorten service life, and increase maintenance costs.\n\nWhy the other choices are incorrect:\n• Corrosion does not improve conductivity.\n• Corrosion generally reduces fatigue strength rather than improving it.\n• Corrosion weakens materials instead of increasing hardness.\n\nDifferentiate Similar Concepts:\n• Corrosion → Material deterioration.\n• Wear → Material loss due to friction.\n• Fatigue → Failure from repeated loading.\n\n💡 Memory Hook:\nCorrosion = Metal returning to nature.\n\n🎯 Board Tip:\nNearly all aircraft corrosion questions begin with the idea that corrosion weakens the structure over time.",
+          "tags": [
+            "Corrosion Fundamentals",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which condition is essential for electrochemical corrosion to occur on an aircraft metallic structure?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The presence of an electrolyte",
+            "Continuous vibration",
+            "Exposure to ultraviolet radiation",
+            "High compressive stress"
+          ],
+          "answerIndex": 0,
+          "answerText": "The presence of an electrolyte",
+          "explanation": "Electrochemical corrosion requires an electrolyte to permit ion movement between the anodic and cathodic areas. Moisture containing dissolved salts is the most common electrolyte found on aircraft.\n\nWhy the other choices are incorrect:\n• Vibration contributes to fretting but is not required for electrochemical corrosion.\n• Ultraviolet radiation does not initiate electrochemical corrosion.\n• Compressive stress alone does not produce corrosion.\n\nDifferentiate Similar Concepts:\n• Electrolyte → Conducts ions.\n• Anode → Corrodes.\n• Cathode → Protected.\n\n💡 Memory Hook:\nNo moisture, no electrochemical corrosion.\n\n🎯 Board Tip:\nSalt water is one of the most common electrolytes encountered in aircraft maintenance.",
+          "tags": [
+            "Corrosion Fundamentals",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During an electrochemical corrosion process, metal loss occurs primarily at which location?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cathode",
+            "Electrolyte",
+            "Anode",
+            "Protective coating"
+          ],
+          "answerIndex": 2,
+          "answerText": "Anode",
+          "explanation": "The anode is the location where oxidation occurs, causing metal atoms to lose electrons and enter solution as ions. As a result, metal loss takes place at the anode.\n\nWhy the other choices are incorrect:\n• The cathode is protected from corrosion.\n• The electrolyte allows ion movement but does not lose metal.\n• A protective coating reduces corrosion rather than promoting it.\n\nDifferentiate Similar Concepts:\n• Anode → Oxidation and metal loss.\n• Cathode → Reduction and protection.\n• Electrolyte → Ion conductor.\n\n💡 Memory Hook:\nAnode = Attack.\n\n🎯 Board Tip:\nRemember the phrase: 'The anode corrodes.'",
+          "tags": [
+            "Corrosion Fundamentals",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "In an electrochemical corrosion cell, electrons flow directly from which location?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cathode to anode",
+            "Electrolyte to cathode",
+            "Anode to cathode",
+            "Electrolyte to anode"
+          ],
+          "answerIndex": 2,
+          "answerText": "Anode to cathode",
+          "explanation": "Electrons are released at the anode during oxidation and travel through the metallic path toward the cathode where reduction occurs.\n\nWhy the other choices are incorrect:\n• Electron flow is always from the anode toward the cathode.\n• The electrolyte carries ions rather than electrons.\n\nDifferentiate Similar Concepts:\n• Electron flow → Through the metal.\n• Ion flow → Through the electrolyte.\n\n💡 Memory Hook:\nElectrons exit the anode.\n\n🎯 Board Tip:\nMany students confuse electron flow with ion movement. Electrons travel through the metal, while ions move through the electrolyte.",
+          "tags": [
+            "Corrosion Fundamentals",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft parked near the coastline is more susceptible to corrosion because seawater provides which essential element of the corrosion process?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cathode",
+            "Electrolyte",
+            "Protective coating",
+            "Oxidizing agent"
+          ],
+          "answerIndex": 1,
+          "answerText": "Electrolyte",
+          "explanation": "Seawater contains dissolved salts that make it an excellent electrolyte. The electrolyte allows ions to move between anodic and cathodic areas, completing the electrochemical corrosion circuit.\n\nWhy the other choices are incorrect:\n• The cathode is an area where reduction occurs, not the medium that enables corrosion.\n• A protective coating prevents corrosion rather than promoting it.\n• Although oxygen participates in many corrosion reactions, seawater's primary contribution is acting as an electrolyte.\n\nDifferentiate Similar Concepts:\n• Electrolyte → Conducts ions.\n• Anode → Corrodes.\n• Cathode → Protected.\n\n💡 Memory Hook:\nSalt water = Strong electrolyte.\n\n🎯 Board Tip:\nMarine environments greatly accelerate aircraft corrosion because moisture and dissolved salts form excellent electrolytes.",
+          "tags": [
+            "Corrosion Fundamentals",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which part of an electrochemical corrosion cell is protected because reduction takes place at that location?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Electrolyte",
+            "Anode",
+            "Cathode",
+            "Corrosion product"
+          ],
+          "answerIndex": 2,
+          "answerText": "Cathode",
+          "explanation": "Reduction occurs at the cathode, making it the protected region of an electrochemical corrosion cell. Metal loss occurs at the anode instead.\n\nWhy the other choices are incorrect:\n• The anode is where oxidation and metal loss occur.\n• The electrolyte allows ion movement but is not protected.\n• Corrosion products are the result of corrosion rather than an active part of the corrosion cell.\n\nDifferentiate Similar Concepts:\n• Anode → Oxidation.\n• Cathode → Reduction.\n• Electrolyte → Ion conductor.\n\n💡 Memory Hook:\nCathode = Conserved.\n\n🎯 Board Tip:\nRemember the classic pair:\nAnode corrodes.\nCathode is protected.",
+          "tags": [
+            "Corrosion Fundamentals",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Aircraft corrosion develops more rapidly when moisture remains trapped on a metal surface for an extended period. Moisture primarily contributes by performing which role?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Providing mechanical strength",
+            "Acting as an electrolyte",
+            "Increasing material hardness",
+            "Preventing oxidation"
+          ],
+          "answerIndex": 1,
+          "answerText": "Acting as an electrolyte",
+          "explanation": "Moisture acts as an electrolyte that permits ion movement, allowing electrochemical corrosion to proceed. This is why proper drainage and drying are important corrosion prevention measures.\n\nWhy the other choices are incorrect:\n• Moisture does not strengthen the material.\n• Moisture does not increase hardness.\n• Moisture promotes rather than prevents corrosion.\n\nDifferentiate Similar Concepts:\n• Moisture → Electrolyte.\n• Oxygen → Participates in many reduction reactions.\n• Protective coatings → Isolate the metal from the environment.\n\n💡 Memory Hook:\nWet metal corrodes faster.\n\n🎯 Board Tip:\nMany aircraft corrosion prevention practices focus on removing moisture because it completes the corrosion cell.",
+          "tags": [
+            "Corrosion Fundamentals",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which maintenance practice is most effective in interrupting the electrochemical corrosion process before significant damage develops?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Allowing moisture to evaporate naturally",
+            "Keeping aircraft surfaces clean and dry",
+            "Increasing the operating temperature of the structure",
+            "Polishing the surface without removing contaminants"
+          ],
+          "answerIndex": 1,
+          "answerText": "Keeping aircraft surfaces clean and dry",
+          "explanation": "Keeping aircraft surfaces clean and dry removes contaminants and moisture that serve as electrolytes, interrupting the electrochemical corrosion process before it can progress.\n\nWhy the other choices are incorrect:\n• Waiting for natural evaporation allows corrosion to continue.\n• Higher temperatures may accelerate certain corrosion processes.\n• Polishing without removing contaminants leaves the electrolyte in place.\n\nDifferentiate Similar Concepts:\n• Cleaning → Removes contaminants.\n• Drying → Removes electrolyte.\n• Protective coatings → Prevent environmental exposure.\n\n💡 Memory Hook:\nClean + Dry = Corrosion control.\n\n🎯 Board Tip:\nThe simplest and most effective corrosion prevention practice is routine cleaning and drying of aircraft surfaces.",
+          "tags": [
+            "Corrosion Fundamentals",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aluminum aircraft skin is fastened using a stainless steel fastener. After prolonged exposure to a marine environment, corrosion develops around the fastener. Which type of corrosion is most likely responsible?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Pitting Corrosion",
+            "Galvanic Corrosion",
+            "Crevice Corrosion",
+            "Uniform Corrosion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Galvanic Corrosion",
+          "explanation": "Galvanic corrosion occurs when two dissimilar metals are in electrical contact in the presence of an electrolyte such as salt water. The less noble metal becomes the anode and corrodes preferentially.\n\nWhy the other choices are incorrect:\n• Pitting corrosion is localized but does not require dissimilar metals.\n• Crevice corrosion develops in confined spaces where moisture is trapped.\n• Uniform corrosion occurs relatively evenly across the exposed surface.\n\nDifferentiate Similar Concepts:\n• Galvanic → Dissimilar metals.\n• Crevice → Trapped moisture.\n• Pitting → Small localized holes.\n• Uniform → Even surface attack.\n\n💡 Memory Hook:\nDifferent metals = Different potentials.\n\n🎯 Board Tip:\nWhenever two different metals and moisture appear together, Galvanic Corrosion should immediately come to mind.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which condition must exist before galvanic corrosion can develop between two metallic aircraft components?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The metals must be electrically connected.",
+            "The metals must have identical compositions.",
+            "The metals must both be ferromagnetic.",
+            "The metals must both receive cyclic loading."
+          ],
+          "answerIndex": 0,
+          "answerText": "The metals must be electrically connected.",
+          "explanation": "Galvanic corrosion requires dissimilar metals to be in electrical contact while an electrolyte is present. Without electrical continuity, the galvanic corrosion cell cannot be established.\n\nWhy the other choices are incorrect:\n• Identical metals generally do not produce galvanic corrosion.\n• Ferromagnetic properties are unrelated.\n• Cyclic loading is associated with fatigue rather than galvanic corrosion.\n\nDifferentiate Similar Concepts:\n• Galvanic → Electrical contact between dissimilar metals.\n• Fretting → Relative movement.\n• Fatigue → Repeated loading.\n\n💡 Memory Hook:\nNo electrical contact = No galvanic cell.\n\n🎯 Board Tip:\nElectrical contact is one of the essential requirements for galvanic corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "In a galvanic couple formed between two dissimilar aircraft metals, which metal corrodes first?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The more noble metal",
+            "The less noble metal",
+            "Both metals corrode equally",
+            "The harder metal"
+          ],
+          "answerIndex": 1,
+          "answerText": "The less noble metal",
+          "explanation": "The less noble (more active) metal becomes the anode in a galvanic cell and corrodes preferentially, while the more noble metal acts as the cathode and is protected.\n\nWhy the other choices are incorrect:\n• The more noble metal becomes the cathode and is protected.\n• The metals do not corrode equally.\n• Hardness has no direct relationship with galvanic corrosion.\n\nDifferentiate Similar Concepts:\n• Less noble → Anode → Corrodes.\n• More noble → Cathode → Protected.\n\n💡 Memory Hook:\nActive metal sacrifices itself.\n\n🎯 Board Tip:\nMany AELE questions ask which metal corrodes first rather than asking you to identify galvanic corrosion directly.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Aircraft manufacturers commonly install protective finishes and sealants between dissimilar metals primarily to reduce the risk of which type of corrosion?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Intergranular Corrosion",
+            "Galvanic Corrosion",
+            "Pitting Corrosion",
+            "Exfoliation Corrosion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Galvanic Corrosion",
+          "explanation": "Protective finishes, sealants, and insulating materials prevent direct electrical contact between dissimilar metals, interrupting the galvanic corrosion process.\n\nWhy the other choices are incorrect:\n• Intergranular corrosion occurs along grain boundaries.\n• Pitting corrosion is localized surface attack.\n• Exfoliation corrosion is an advanced form of intergranular corrosion.\n\nDifferentiate Similar Concepts:\n• Sealants → Prevent galvanic contact.\n• Paint → General corrosion protection.\n• Anodizing → Protective oxide coating.\n\n💡 Memory Hook:\nSeparate the metals.\n\n🎯 Board Tip:\nOne of the simplest ways to prevent galvanic corrosion is to electrically isolate dissimilar metals.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "After removing a layer of paint from an aircraft skin panel, a technician discovers numerous small, deep cavities scattered across the aluminum surface. Which type of corrosion is most likely present?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Galvanic Corrosion",
+            "Pitting Corrosion",
+            "Uniform Corrosion",
+            "Crevice Corrosion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Pitting Corrosion",
+          "explanation": "Pitting corrosion is a localized form of corrosion characterized by small, deep cavities or pits that penetrate the metal surface. It is particularly dangerous because significant structural damage may occur with very little visible surface deterioration.\n\nWhy the other choices are incorrect:\n• Galvanic corrosion requires dissimilar metals in electrical contact.\n• Uniform corrosion attacks the surface relatively evenly.\n• Crevice corrosion develops within confined spaces rather than exposed surfaces.\n\nDifferentiate Similar Concepts:\n• Pitting → Small, deep holes.\n• Uniform → Even surface attack.\n• Crevice → Hidden spaces.\n• Galvanic → Dissimilar metals.\n\n💡 Memory Hook:\nPitting = Pin holes.\n\n🎯 Board Tip:\nSmall holes with deep penetration are classic clues for Pitting Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Corrosion is discovered beneath the edge of a gasket where moisture has remained trapped for an extended period. Which type of corrosion is most likely responsible?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Intergranular Corrosion",
+            "Crevice Corrosion",
+            "Galvanic Corrosion",
+            "Stress Corrosion Cracking"
+          ],
+          "answerIndex": 1,
+          "answerText": "Crevice Corrosion",
+          "explanation": "Crevice corrosion develops within narrow, poorly ventilated spaces where moisture and contaminants become trapped. Gaskets, lap joints, washers, and rivet heads are common locations.\n\nWhy the other choices are incorrect:\n• Intergranular corrosion attacks grain boundaries.\n• Galvanic corrosion requires dissimilar metals.\n• Stress corrosion cracking requires tensile stress and a corrosive environment.\n\nDifferentiate Similar Concepts:\n• Crevice → Trapped moisture.\n• Pitting → Open surface pits.\n• Galvanic → Dissimilar metals.\n\n💡 Memory Hook:\nCrevice = Confined space.\n\n🎯 Board Tip:\nWhenever the question mentions gaskets, lap joints, washers, or rivet heads with trapped moisture, think Crevice Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During inspection of an aluminum alloy component, corrosion is found progressing along the grain boundaries while the surface initially appears relatively unaffected. Which type of corrosion is indicated?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Intergranular Corrosion",
+            "Pitting Corrosion",
+            "Uniform Corrosion",
+            "Fretting Corrosion"
+          ],
+          "answerIndex": 0,
+          "answerText": "Intergranular Corrosion",
+          "explanation": "Intergranular corrosion attacks the grain boundaries of a metal while leaving much of the surface apparently intact during the early stages. This hidden attack can significantly reduce structural strength.\n\nWhy the other choices are incorrect:\n• Pitting produces localized holes.\n• Uniform corrosion attacks the entire exposed surface.\n• Fretting corrosion results from slight rubbing motion between contacting surfaces.\n\nDifferentiate Similar Concepts:\n• Intergranular → Grain boundaries.\n• Exfoliation → Advanced intergranular corrosion.\n• Pitting → Localized holes.\n\n💡 Memory Hook:\nIntergranular = Between the grains.\n\n🎯 Board Tip:\nGrain boundaries are one of the most frequently tested clues for Intergranular Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aluminum structural member shows layers of metal lifting and separating from the surface, giving it a swollen or leaf-like appearance. Which type of corrosion is most likely present?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Exfoliation Corrosion",
+            "Uniform Corrosion",
+            "Crevice Corrosion",
+            "Galvanic Corrosion"
+          ],
+          "answerIndex": 0,
+          "answerText": "Exfoliation Corrosion",
+          "explanation": "Exfoliation corrosion is an advanced form of intergranular corrosion in which corrosion products force the metal layers apart, producing a lifted or leaf-like appearance. Rolled aluminum products are particularly susceptible.\n\nWhy the other choices are incorrect:\n• Uniform corrosion occurs evenly over the surface.\n• Crevice corrosion is confined to narrow gaps.\n• Galvanic corrosion requires dissimilar metals.\n\nDifferentiate Similar Concepts:\n• Intergranular → Along grain boundaries.\n• Exfoliation → Grain boundaries + layer lifting.\n\n💡 Memory Hook:\nExfoliation = Peeling layers.\n\n🎯 Board Tip:\nIf the question mentions lifting, flaking, or leaf-like layers, the answer is almost always Exfoliation Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Small-amplitude vibration between two tightly fitted aircraft components produces reddish-brown debris at the contact surfaces. Which type of corrosion is most likely responsible?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Stress Corrosion Cracking",
+            "Uniform Corrosion",
+            "Fretting Corrosion",
+            "Pitting Corrosion"
+          ],
+          "answerIndex": 2,
+          "answerText": "Fretting Corrosion",
+          "explanation": "Fretting corrosion occurs when two closely fitted surfaces undergo repeated minute relative motion. The rubbing action removes the protective oxide film, allowing oxidation to occur and producing a characteristic reddish or dark debris.\n\nWhy the other choices are incorrect:\n• Stress Corrosion Cracking requires sustained tensile stress and a corrosive environment.\n• Uniform corrosion attacks the surface evenly.\n• Pitting corrosion forms localized cavities rather than wear debris.\n\nDifferentiate Similar Concepts:\n• Fretting → Slight rubbing motion.\n• Galvanic → Dissimilar metals.\n• Crevice → Trapped moisture.\n\n💡 Memory Hook:\nFretting = Friction.\n\n🎯 Board Tip:\nWhenever vibration, rubbing, or reddish powder appears in the question, think Fretting Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft component exposed to a corrosive environment develops fine cracks while under continuous tensile stress. Which type of corrosion is most likely involved?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Stress Corrosion Cracking",
+            "Intergranular Corrosion",
+            "Crevice Corrosion",
+            "Uniform Corrosion"
+          ],
+          "answerIndex": 0,
+          "answerText": "Stress Corrosion Cracking",
+          "explanation": "Stress Corrosion Cracking (SCC) occurs when sustained tensile stress and a corrosive environment act together, producing fine cracks that can lead to sudden failure.\n\nWhy the other choices are incorrect:\n• Intergranular corrosion attacks grain boundaries.\n• Crevice corrosion occurs in confined spaces.\n• Uniform corrosion attacks the surface evenly.\n\nDifferentiate Similar Concepts:\n• SCC → Tensile stress + corrosion.\n• Fatigue → Cyclic loading.\n• Intergranular → Grain boundaries.\n\n💡 Memory Hook:\nStress + Corrosion = Cracks.\n\n🎯 Board Tip:\nDo not confuse SCC with fatigue. SCC involves sustained tensile stress, while fatigue results from repeated cyclic loading.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "After the protective paint coating is damaged, thread-like corrosion begins spreading beneath the remaining paint film on an aluminum aircraft panel. Which type of corrosion is most likely present?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Pitting Corrosion",
+            "Filiform Corrosion",
+            "Galvanic Corrosion",
+            "Crevice Corrosion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Filiform Corrosion",
+          "explanation": "Filiform corrosion develops beneath thin protective coatings such as paint. It appears as fine, thread-like filaments that spread under the coating, particularly in humid environments.\n\nWhy the other choices are incorrect:\n• Pitting corrosion forms isolated pits.\n• Galvanic corrosion requires dissimilar metals.\n• Crevice corrosion develops within confined spaces.\n\nDifferentiate Similar Concepts:\n• Filiform → Under paint.\n• Pitting → Holes.\n• Uniform → Even surface attack.\n\n💡 Memory Hook:\nFiliform = Filaments.\n\n🎯 Board Tip:\nThread-like corrosion beneath paint is a classic indicator of Filiform Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An unprotected steel component exposed to the atmosphere gradually loses material at a relatively uniform rate across its entire surface. Which type of corrosion is most likely occurring?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Uniform Corrosion",
+            "Galvanic Corrosion",
+            "Exfoliation Corrosion",
+            "Stress Corrosion Cracking"
+          ],
+          "answerIndex": 0,
+          "answerText": "Uniform Corrosion",
+          "explanation": "Uniform corrosion attacks the exposed surface at approximately the same rate, producing relatively even material loss. Although common, it is usually easier to detect than localized corrosion.\n\nWhy the other choices are incorrect:\n• Galvanic corrosion requires dissimilar metals.\n• Exfoliation corrosion produces lifting layers.\n• Stress Corrosion Cracking forms cracks rather than uniform surface loss.\n\nDifferentiate Similar Concepts:\n• Uniform → Even attack.\n• Pitting → Localized attack.\n• Crevice → Hidden attack.\n\n💡 Memory Hook:\nUniform = Even everywhere.\n\n🎯 Board Tip:\nUniform corrosion is often less dangerous than localized corrosion because it is easier to detect during inspection.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Corrosion develops because adjacent areas of the same metal surface are exposed to different oxygen concentrations, creating anodic and cathodic regions. Which type of corrosion best describes this condition?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Concentration Cell Corrosion",
+            "Fretting Corrosion",
+            "Filiform Corrosion",
+            "Intergranular Corrosion"
+          ],
+          "answerIndex": 0,
+          "answerText": "Concentration Cell Corrosion",
+          "explanation": "Concentration Cell Corrosion occurs when differences in oxygen or electrolyte concentration create separate anodic and cathodic areas on the same metal surface, leading to localized corrosion.\n\nWhy the other choices are incorrect:\n• Fretting corrosion is caused by slight relative motion.\n• Filiform corrosion occurs beneath paint films.\n• Intergranular corrosion attacks grain boundaries.\n\nDifferentiate Similar Concepts:\n• Concentration Cell → Different oxygen concentration.\n• Crevice → Often caused by differential oxygen within confined spaces.\n• Galvanic → Dissimilar metals.\n\n💡 Memory Hook:\nDifferent concentration = Different potential.\n\n🎯 Board Tip:\nDifferential aeration is a common clue pointing toward Concentration Cell Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A technician notices white powdery corrosion surrounding steel fasteners installed on an aluminum inspection panel after several months of operation in a coastal environment. Which type of corrosion is most likely present?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Galvanic Corrosion",
+            "Pitting Corrosion",
+            "Filiform Corrosion",
+            "Uniform Corrosion"
+          ],
+          "answerIndex": 0,
+          "answerText": "Galvanic Corrosion",
+          "explanation": "Galvanic corrosion develops when dissimilar metals are in electrical contact in the presence of an electrolyte such as saltwater. Aluminum, being less noble than stainless steel, becomes the anodic metal and corrodes preferentially.\n\nWhy the other choices are incorrect:\n• Pitting corrosion does not require dissimilar metals.\n• Filiform corrosion develops beneath paint coatings.\n• Uniform corrosion attacks exposed surfaces evenly.\n\nDifferentiate Similar Concepts:\n• Galvanic → Dissimilar metals.\n• Pitting → Localized holes.\n• Crevice → Trapped moisture.\n\n💡 Memory Hook:\nDifferent metals + Moisture = Galvanic.\n\n🎯 Board Tip:\nFasteners made from a different metal are one of the most common clues for Galvanic Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Corrosion found beneath overlapping aircraft skin panels is primarily caused by stagnant moisture trapped between the mating surfaces. Which type of corrosion best fits this condition?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Stress Corrosion Cracking",
+            "Crevice Corrosion",
+            "Pitting Corrosion",
+            "Fretting Corrosion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Crevice Corrosion",
+          "explanation": "Crevice corrosion commonly develops in lap joints, overlapping sheets, under seals, and beneath fastener heads where moisture becomes trapped and oxygen is depleted.\n\nWhy the other choices are incorrect:\n• Stress Corrosion Cracking requires tensile stress.\n• Pitting corrosion forms isolated pits.\n• Fretting corrosion results from slight rubbing motion.\n\nDifferentiate Similar Concepts:\n• Crevice → Confined spaces.\n• Concentration Cell → Oxygen concentration differences.\n• Pitting → Surface cavities.\n\n💡 Memory Hook:\nHidden moisture = Hidden corrosion.\n\n🎯 Board Tip:\nLap joints are classic inspection locations for Crevice Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft engine mount is subjected to continuous vibration during operation. Inspection later reveals dark oxide debris at the contact surfaces of mating parts. Which type of corrosion is most likely responsible?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Intergranular Corrosion",
+            "Fretting Corrosion",
+            "Uniform Corrosion",
+            "Filiform Corrosion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Fretting Corrosion",
+          "explanation": "Fretting corrosion results from repeated minute relative movement between tightly fitted components. The rubbing removes protective oxide films and produces characteristic oxide debris.\n\nWhy the other choices are incorrect:\n• Intergranular corrosion attacks grain boundaries.\n• Uniform corrosion occurs evenly over the surface.\n• Filiform corrosion develops beneath paint.\n\nDifferentiate Similar Concepts:\n• Fretting → Vibration + rubbing.\n• Fatigue → Repeated loading.\n• Wear → Material removal without electrochemical action.\n\n💡 Memory Hook:\nVibration = Fretting.\n\n🎯 Board Tip:\nReddish or black oxide powder between contacting parts is a favorite clue for Fretting Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Fine hairline cracks are observed on a highly stressed aircraft component operating in a corrosive environment, even though no significant cyclic loading is reported. Which type of corrosion is the most likely cause?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fatigue",
+            "Stress Corrosion Cracking",
+            "Intergranular Corrosion",
+            "Pitting Corrosion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Stress Corrosion Cracking",
+          "explanation": "Stress Corrosion Cracking develops when sustained tensile stress and a corrosive environment act together to initiate and propagate cracks.\n\nWhy the other choices are incorrect:\n• Fatigue is caused by cyclic loading rather than sustained stress.\n• Intergranular corrosion attacks grain boundaries.\n• Pitting corrosion forms localized cavities.\n\nDifferentiate Similar Concepts:\n• SCC → Constant tensile stress.\n• Fatigue → Repeated loading.\n• Intergranular → Grain boundaries.\n\n💡 Memory Hook:\nStress stays. Cracks grow.\n\n🎯 Board Tip:\nQuestions that specifically mention the absence of cyclic loading are often steering you away from Fatigue and toward Stress Corrosion Cracking.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A painted aluminum access panel develops thin, worm-like corrosion tracks beneath an otherwise intact coating. Which corrosion type is most consistent with this appearance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Filiform Corrosion",
+            "Exfoliation Corrosion",
+            "Galvanic Corrosion",
+            "Uniform Corrosion"
+          ],
+          "answerIndex": 0,
+          "answerText": "Filiform Corrosion",
+          "explanation": "Filiform corrosion propagates beneath thin paint coatings as thread-like filaments, usually after the coating has been damaged in a humid environment.\n\nWhy the other choices are incorrect:\n• Exfoliation corrosion produces lifting layers.\n• Galvanic corrosion requires dissimilar metals.\n• Uniform corrosion attacks exposed surfaces evenly.\n\nDifferentiate Similar Concepts:\n• Filiform → Thread-like under paint.\n• Exfoliation → Layer lifting.\n• Uniform → Even attack.\n\n💡 Memory Hook:\nFiliform = Filaments.\n\n🎯 Board Tip:\nWhenever corrosion is described as worm-like, thread-like, or filamentous beneath paint, choose Filiform Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Inspection of a rolled aluminum extrusion reveals the surface separating into thin layers that resemble pages peeling from a book. Which type of corrosion is most likely present?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Exfoliation Corrosion",
+            "Intergranular Corrosion",
+            "Pitting Corrosion",
+            "Crevice Corrosion"
+          ],
+          "answerIndex": 0,
+          "answerText": "Exfoliation Corrosion",
+          "explanation": "Exfoliation corrosion is an advanced stage of intergranular corrosion in which corrosion products force the metal grains apart, causing the surface to lift and peel in layers.\n\nWhy the other choices are incorrect:\n• Intergranular corrosion may not produce visible layer separation.\n• Pitting corrosion forms holes.\n• Crevice corrosion occurs in confined spaces.\n\nDifferentiate Similar Concepts:\n• Intergranular → Along grain boundaries.\n• Exfoliation → Grain boundaries + peeling layers.\n\n💡 Memory Hook:\nExfoliation = Pages peeling.\n\n🎯 Board Tip:\nRolled aluminum products are especially susceptible to Exfoliation Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An inspector observes isolated cavities penetrating deep into an aluminum wing skin while the surrounding surface remains relatively unaffected. Which type of corrosion is most likely present?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Crevice Corrosion",
+            "Pitting Corrosion",
+            "Uniform Corrosion",
+            "Intergranular Corrosion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Pitting Corrosion",
+          "explanation": "Pitting corrosion is characterized by highly localized attack that produces deep cavities while leaving much of the surrounding surface intact. It is especially dangerous because significant penetration may occur before extensive surface damage becomes visible.\n\nWhy the other choices are incorrect:\n• Crevice corrosion develops in confined spaces.\n• Uniform corrosion attacks the surface evenly.\n• Intergranular corrosion progresses along grain boundaries.\n\nDifferentiate Similar Concepts:\n• Pitting → Deep localized cavities.\n• Uniform → Even attack.\n• Crevice → Hidden spaces.\n\n💡 Memory Hook:\nPitting = Deep pits, small opening.\n\n🎯 Board Tip:\nLocalized holes with relatively intact surrounding metal are classic indicators of Pitting Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A heat-treated aluminum alloy appears sound externally, but laboratory examination reveals corrosion progressing primarily along its grain boundaries. Which type of corrosion is indicated?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Exfoliation Corrosion",
+            "Galvanic Corrosion",
+            "Intergranular Corrosion",
+            "Filiform Corrosion"
+          ],
+          "answerIndex": 2,
+          "answerText": "Intergranular Corrosion",
+          "explanation": "Intergranular corrosion attacks the grain boundaries of an alloy, often leaving the surface relatively unchanged during the early stages. It commonly affects improperly heat-treated aluminum alloys.\n\nWhy the other choices are incorrect:\n• Exfoliation corrosion is an advanced form of intergranular corrosion with visible layer lifting.\n• Galvanic corrosion requires dissimilar metals.\n• Filiform corrosion develops beneath paint coatings.\n\nDifferentiate Similar Concepts:\n• Intergranular → Grain boundaries.\n• Exfoliation → Peeling layers.\n• Galvanic → Dissimilar metals.\n\n💡 Memory Hook:\nIntergranular = Inside the grains' borders.\n\n🎯 Board Tip:\nWhen the surface appears relatively intact but the grain boundaries are attacked, choose Intergranular Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft parked outdoors for many years develops corrosion that spreads fairly evenly over the exposed steel surface without forming deep pits or cracks. Which type of corrosion best describes this condition?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Stress Corrosion Cracking",
+            "Uniform Corrosion",
+            "Pitting Corrosion",
+            "Fretting Corrosion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Uniform Corrosion",
+          "explanation": "Uniform corrosion produces approximately the same rate of material loss over the exposed surface. Although it can remove significant metal over time, it is generally easier to detect than localized corrosion.\n\nWhy the other choices are incorrect:\n• Stress Corrosion Cracking forms cracks.\n• Pitting corrosion is highly localized.\n• Fretting corrosion requires relative motion between contacting surfaces.\n\nDifferentiate Similar Concepts:\n• Uniform → Even metal loss.\n• Pitting → Localized holes.\n• SCC → Cracks.\n\n💡 Memory Hook:\nUniform = Everywhere equally.\n\n🎯 Board Tip:\nUniform corrosion is often considered the easiest form of corrosion to identify during routine inspections.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Corrosion develops at the interface of two tightly fitted aircraft parts that experience repeated microscopic movement during operation. Which type of corrosion is most likely responsible?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fretting Corrosion",
+            "Crevice Corrosion",
+            "Galvanic Corrosion",
+            "Concentration Cell Corrosion"
+          ],
+          "answerIndex": 0,
+          "answerText": "Fretting Corrosion",
+          "explanation": "Fretting corrosion develops when closely fitted surfaces undergo repeated minute relative motion. The movement removes the protective oxide film, allowing oxidation and wear debris to form.\n\nWhy the other choices are incorrect:\n• Crevice corrosion is caused by trapped moisture rather than movement.\n• Galvanic corrosion requires dissimilar metals.\n• Concentration Cell Corrosion results from differences in oxygen or electrolyte concentration.\n\nDifferentiate Similar Concepts:\n• Fretting → Motion.\n• Crevice → Moisture.\n• Galvanic → Dissimilar metals.\n\n💡 Memory Hook:\nMove a little = Fretting.\n\n🎯 Board Tip:\nIf slight movement is the key clue, Fretting Corrosion is usually the correct answer.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft structure contains regions with different oxygen concentrations after prolonged moisture accumulation. These regions become anodic and cathodic, initiating localized corrosion. Which type of corrosion is this?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Concentration Cell Corrosion",
+            "Stress Corrosion Cracking",
+            "Pitting Corrosion",
+            "Exfoliation Corrosion"
+          ],
+          "answerIndex": 0,
+          "answerText": "Concentration Cell Corrosion",
+          "explanation": "Concentration Cell Corrosion occurs when differences in oxygen or electrolyte concentration create separate anodic and cathodic areas on the same metal surface. Areas with lower oxygen concentration typically become anodic and corrode.\n\nWhy the other choices are incorrect:\n• Stress Corrosion Cracking requires sustained tensile stress.\n• Pitting corrosion is a localized attack but is not specifically caused by concentration differences.\n• Exfoliation corrosion is an advanced form of intergranular corrosion.\n\nDifferentiate Similar Concepts:\n• Concentration Cell → Different oxygen concentrations.\n• Crevice → A common environment where concentration cells develop.\n• Galvanic → Different metals.\n\n💡 Memory Hook:\nDifferent oxygen = Different potential.\n\n🎯 Board Tip:\nDifferential aeration is one of the most common causes of Concentration Cell Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Corrosion is discovered beneath the paint of an aluminum inspection panel. The damage appears as numerous thread-like lines radiating from a small paint chip. Which type of corrosion is most likely present?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Filiform Corrosion",
+            "Intergranular Corrosion",
+            "Pitting Corrosion",
+            "Uniform Corrosion"
+          ],
+          "answerIndex": 0,
+          "answerText": "Filiform Corrosion",
+          "explanation": "Filiform corrosion develops beneath thin organic coatings such as paint. It spreads as thread-like filaments, usually beginning where the protective coating has been damaged.\n\nWhy the other choices are incorrect:\n• Intergranular corrosion attacks grain boundaries.\n• Pitting corrosion forms localized cavities.\n• Uniform corrosion attacks the surface evenly.\n\nDifferentiate Similar Concepts:\n• Filiform → Under paint.\n• Pitting → Deep pits.\n• Uniform → Even attack.\n\n💡 Memory Hook:\nFiliform = Filaments.\n\n🎯 Board Tip:\nThread-like corrosion beneath paint is one of the easiest clues to identify on the AELE.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During overhaul of a wing structure, corrosion is found primarily around the contact area between an aluminum alloy panel and a magnesium alloy fitting. Which type of corrosion is the most probable cause?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Crevice Corrosion",
+            "Galvanic Corrosion",
+            "Stress Corrosion Cracking",
+            "Uniform Corrosion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Galvanic Corrosion",
+          "explanation": "Galvanic corrosion develops when dissimilar metals are electrically connected in the presence of an electrolyte. Magnesium is more active than aluminum and will preferentially corrode.\n\nWhy the other choices are incorrect:\n• Crevice corrosion is caused by trapped moisture.\n• Stress Corrosion Cracking requires sustained tensile stress.\n• Uniform corrosion attacks the exposed surface evenly.\n\nDifferentiate Similar Concepts:\n• Galvanic → Dissimilar metals.\n• Crevice → Confined spaces.\n• Concentration Cell → Different oxygen concentrations.\n\n💡 Memory Hook:\nDifferent metals = Different potentials.\n\n🎯 Board Tip:\nWhenever two different aircraft metals are joined together, always consider Galvanic Corrosion first.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft structural member has been exposed to a corrosive environment for several years while under continuous tensile loading. Inspection reveals fine branching cracks with little general metal loss. Which type of corrosion is most likely present?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fatigue",
+            "Stress Corrosion Cracking",
+            "Intergranular Corrosion",
+            "Fretting Corrosion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Stress Corrosion Cracking",
+          "explanation": "Stress Corrosion Cracking occurs when sustained tensile stress acts together with a corrosive environment, producing fine cracks that may lead to sudden failure.\n\nWhy the other choices are incorrect:\n• Fatigue results from repeated cyclic loading.\n• Intergranular corrosion attacks grain boundaries.\n• Fretting corrosion is associated with rubbing motion.\n\nDifferentiate Similar Concepts:\n• SCC → Constant tensile stress.\n• Fatigue → Cyclic loading.\n• Fretting → Relative movement.\n\n💡 Memory Hook:\nStress stays. Cracks spread.\n\n🎯 Board Tip:\nThe phrase 'continuous tensile stress' is one of the strongest indicators of Stress Corrosion Cracking.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A corrosion inspection reveals severe attack hidden beneath a washer where moisture has remained trapped after repeated exposure to rain. Which type of corrosion is most likely responsible?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Concentration Cell Corrosion",
+            "Crevice Corrosion",
+            "Pitting Corrosion",
+            "Exfoliation Corrosion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Crevice Corrosion",
+          "explanation": "Crevice corrosion commonly develops beneath washers, seals, lap joints, and fastener heads where stagnant moisture creates an oxygen-deficient environment.\n\nWhy the other choices are incorrect:\n• Concentration Cell Corrosion is the electrochemical mechanism; the specific location under a washer is classically identified as Crevice Corrosion.\n• Pitting corrosion forms isolated pits on exposed surfaces.\n• Exfoliation corrosion causes lifting layers in rolled products.\n\nDifferentiate Similar Concepts:\n• Crevice → Trapped moisture in confined spaces.\n• Concentration Cell → Different oxygen concentrations.\n• Pitting → Localized holes.\n\n💡 Memory Hook:\nWasher + Moisture = Crevice.\n\n🎯 Board Tip:\nQuestions mentioning gaskets, washers, seals, or lap joints usually point toward Crevice Corrosion.",
+          "tags": [
+            "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An inspector reports that a rolled aluminum structural member has begun separating into thin layers after corrosion progressed along its grain boundaries. Which type of corrosion best describes this condition?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Exfoliation Corrosion",
+            "Intergranular Corrosion",
+            "Uniform Corrosion",
+            "Filiform Corrosion"
+          ],
+          "answerIndex": 0,
+          "answerText": "Exfoliation Corrosion",
+          "explanation": "Exfoliation corrosion is an advanced form of intergranular corrosion in which corrosion products force the metal apart, producing a layered or leaf-like appearance.\n\nWhy the other choices are incorrect:\n• Intergranular corrosion attacks grain boundaries but may not yet produce visible layer separation.\n• Uniform corrosion attacks the surface evenly.\n• Filiform corrosion develops beneath paint.\n\nDifferentiate Similar Concepts:\n• Intergranular → Grain boundaries.\n• Exfoliation → Grain boundaries with layer lifting.\n• Filiform → Beneath paint.\n\n💡 Memory Hook:\nExfoliation = Peeling pages.\n\n🎯 Board Tip:\nWhen corrosion causes the surface to lift into layers, the answer is almost always Exfoliation Corrosion.",
+          "tags": [
+            "Types of Corrosion",
             "Recall"
           ],
           "expectedAnswer": null,
