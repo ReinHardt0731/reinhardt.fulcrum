@@ -4084,14 +4084,6 @@ export async function initModePage(mode) {
 
         if (extra.advanceImmediately || session.mode === "flashcards") {
             session.answers[session.index] = result;
-            recordStudyProgress({
-                mode: session.mode,
-                subjectId: session.subjectId,
-                subjectName: session.subjectName,
-                chapterTitle: session.chapterTitle,
-                attempted: 1,
-                correct: correct ? 1 : 0
-            });
             session.busy = false;
             advanceSession();
             return;
@@ -4102,14 +4094,6 @@ export async function initModePage(mode) {
             session.reviewed = true;
             session.lastResult = result;
             saveModeSession(session);
-            recordStudyProgress({
-                mode: session.mode,
-                subjectId: session.subjectId,
-                subjectName: session.subjectName,
-                chapterTitle: session.chapterTitle,
-                attempted: 1,
-                correct: correct ? 1 : 0
-            });
             session.busy = false;
             buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
             renderHeader();
