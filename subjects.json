@@ -5,7 +5,7 @@
       "name": "ACRM",
       "quizType": "short_quiz",
       "schemaVersion": 1,
-      "selectedChapter": "Testing and Inspection | Corrosion",
+      "selectedChapter": "Publications",
       "chapters": [
         {
           "title": "Material Properties",
@@ -74,9 +74,17 @@
         {
           "title": "Testing and Inspection | Corrosion",
           "file": "chapters/testing-and-inspection-corrosion.json"
+        },
+        {
+          "title": "Testing and Inspection | Corrosion Prevention and Control",
+          "file": "chapters/testing-and-inspection-corrosion-prevention-and-control.json"
+        },
+        {
+          "title": "Publications",
+          "file": "chapters/publications.json"
         }
       ],
-      "updatedAt": "2026-07-09T10:42:17.689Z"
+      "updatedAt": "2026-07-09T12:40:59.664Z"
     },
     {
       "id": "aerodynamics",
@@ -18881,6 +18889,1232 @@
           "explanation": "Exfoliation corrosion is an advanced form of intergranular corrosion in which corrosion products force the metal apart, producing a layered or leaf-like appearance.\n\nWhy the other choices are incorrect:\n• Intergranular corrosion attacks grain boundaries but may not yet produce visible layer separation.\n• Uniform corrosion attacks the surface evenly.\n• Filiform corrosion develops beneath paint.\n\nDifferentiate Similar Concepts:\n• Intergranular → Grain boundaries.\n• Exfoliation → Grain boundaries with layer lifting.\n• Filiform → Beneath paint.\n\n💡 Memory Hook:\nExfoliation = Peeling pages.\n\n🎯 Board Tip:\nWhen corrosion causes the surface to lift into layers, the answer is almost always Exfoliation Corrosion.",
           "tags": [
             "Types of Corrosion",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/testing-and-inspection-corrosion-prevention-and-control.json": {
+      "title": "Testing and Inspection | Corrosion Prevention and Control",
+      "questions": [
+        {
+          "question": "Which maintenance practice is considered the first line of defense against corrosion on aircraft structures?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Routine cleaning",
+            "Anodizing",
+            "Passivation",
+            "Shot peening"
+          ],
+          "answerIndex": 0,
+          "answerText": "Routine cleaning",
+          "explanation": "Routine cleaning removes dirt, salt deposits, industrial pollutants, and other contaminants that can retain moisture and act as electrolytes. It is the simplest and most effective method of preventing corrosion.\n\nWhy the other choices are incorrect:\n• Anodizing is a protective surface treatment mainly for aluminum alloys.\n• Passivation enhances the corrosion resistance of stainless steel.\n• Shot peening improves fatigue resistance rather than serving as the primary corrosion prevention method.\n\nDifferentiate Similar Concepts:\n• Cleaning → Removes contaminants.\n• Anodizing → Creates protective oxide coating.\n• Passivation → Restores protective oxide film.\n\n💡 Memory Hook:\nClean aircraft = Happy aircraft.\n\n🎯 Board Tip:\nMany aircraft maintenance manuals emphasize cleaning as the most effective routine corrosion prevention practice.",
+          "tags": [
+            "Corrosion Prevention and Control",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Aircraft manufacturers frequently apply protective coatings to metallic surfaces primarily to achieve which objective?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Increase hardness",
+            "Prevent contact between the metal and the environment",
+            "Reduce the weight of the structure",
+            "Increase tensile strength"
+          ],
+          "answerIndex": 1,
+          "answerText": "Prevent contact between the metal and the environment",
+          "explanation": "Protective coatings such as primers and paint isolate the metal from moisture, oxygen, and contaminants, interrupting the electrochemical corrosion process.\n\nWhy the other choices are incorrect:\n• Coatings do not significantly increase hardness.\n• They do not reduce structural weight.\n• They do not increase tensile strength.\n\nDifferentiate Similar Concepts:\n• Paint → Environmental barrier.\n• Sealant → Blocks moisture entry into joints.\n• CPC → Moisture-displacing protective film.\n\n💡 Memory Hook:\nNo exposure = No corrosion.\n\n🎯 Board Tip:\nPaint protects by separating the metal from oxygen and moisture.",
+          "tags": [
+            "Corrosion Prevention and Control",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which corrosion prevention process intentionally forms a durable oxide layer on the surface of aluminum alloys to improve corrosion resistance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Passivation",
+            "Anodizing",
+            "Galvanizing",
+            "Tempering"
+          ],
+          "answerIndex": 1,
+          "answerText": "Anodizing",
+          "explanation": "Anodizing is an electrochemical process that thickens the natural oxide layer on aluminum alloys, providing improved corrosion resistance and an excellent surface for paint adhesion.\n\nWhy the other choices are incorrect:\n• Passivation is primarily applied to stainless steel.\n• Galvanizing protects steel using zinc.\n• Tempering is a heat treatment process.\n\nDifferentiate Similar Concepts:\n• Anodizing → Aluminum.\n• Passivation → Stainless steel.\n• Galvanizing → Zinc-coated steel.\n\n💡 Memory Hook:\nAnodizing = Aluminum armor.\n\n🎯 Board Tip:\nWhenever aluminum and oxide layer appear together, think Anodizing.",
+          "tags": [
+            "Corrosion Prevention and Control",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which corrosion prevention treatment is commonly applied to stainless steel to enhance its naturally protective oxide film?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Anodizing",
+            "Passivation",
+            "Alcladding",
+            "Electroplating"
+          ],
+          "answerIndex": 1,
+          "answerText": "Passivation",
+          "explanation": "Passivation removes free iron and contaminants from the surface of stainless steel, allowing a stable chromium oxide film to form and improve corrosion resistance.\n\nWhy the other choices are incorrect:\n• Anodizing is primarily for aluminum.\n• Alcladding is used with aluminum alloys.\n• Electroplating deposits another metal onto the surface.\n\nDifferentiate Similar Concepts:\n• Passivation → Stainless steel.\n• Anodizing → Aluminum.\n• Alclad → Pure aluminum coating.\n\n💡 Memory Hook:\nPassivation = Protect stainless.\n\n🎯 Board Tip:\nDo not confuse anodizing with passivation—they are used on different materials.",
+          "tags": [
+            "Corrosion Prevention and Control",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A manufacturer applies a thin layer of commercially pure aluminum over a high-strength aluminum alloy to improve its corrosion resistance. This protective treatment is known as:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Anodizing",
+            "Passivation",
+            "Alclad",
+            "Electroplating"
+          ],
+          "answerIndex": 2,
+          "answerText": "Alclad",
+          "explanation": "Alclad consists of a thin layer of commercially pure aluminum metallurgically bonded to a high-strength aluminum alloy core. The pure aluminum provides excellent corrosion resistance while the alloy core provides the required structural strength.\n\nWhy the other choices are incorrect:\n• Anodizing forms an oxide coating on aluminum.\n• Passivation improves the oxide film on stainless steel.\n• Electroplating deposits another metal onto the surface.\n\nDifferentiate Similar Concepts:\n• Alclad → Pure aluminum coating.\n• Anodizing → Oxide coating.\n• Passivation → Stainless steel treatment.\n\n💡 Memory Hook:\nAlclad = Aluminum clad with aluminum.\n\n🎯 Board Tip:\nAlclad combines the corrosion resistance of pure aluminum with the strength of heat-treated aluminum alloys.",
+          "tags": [
+            "Corrosion Prevention and Control",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which corrosion prevention method is commonly used to prevent moisture from entering aircraft lap joints, seams, and fastener locations?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Sealant",
+            "Anodizing",
+            "Passivation",
+            "Heat treatment"
+          ],
+          "answerIndex": 0,
+          "answerText": "Sealant",
+          "explanation": "Sealants prevent the entry of moisture, fuel, hydraulic fluid, and contaminants into joints and seams, reducing the likelihood of crevice and galvanic corrosion.\n\nWhy the other choices are incorrect:\n• Anodizing protects aluminum surfaces but does not seal joints.\n• Passivation is applied to stainless steel.\n• Heat treatment changes mechanical properties rather than sealing gaps.\n\nDifferentiate Similar Concepts:\n• Sealant → Closes gaps.\n• Paint → Protects exposed surfaces.\n• CPC → Protective film.\n\n💡 Memory Hook:\nSealant seals.\n\n🎯 Board Tip:\nLap joints, seams, and fasteners are common locations where sealants are used to reduce corrosion.",
+          "tags": [
+            "Corrosion Prevention and Control",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which corrosion prevention material is specifically formulated to leave a thin protective film that displaces moisture and inhibits corrosion on aircraft components?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Corrosion Preventive Compound (CPC)",
+            "Primer",
+            "Alclad",
+            "Passivation solution"
+          ],
+          "answerIndex": 0,
+          "answerText": "Corrosion Preventive Compound (CPC)",
+          "explanation": "Corrosion Preventive Compounds (CPCs) leave a thin protective film that displaces moisture and shields metallic surfaces from corrosive environments. They are commonly applied to enclosed structures and difficult-to-inspect areas.\n\nWhy the other choices are incorrect:\n• Primers provide a base for paint and corrosion protection but are not moisture-displacing films.\n• Alclad is a bonded protective layer.\n• Passivation is a chemical treatment for stainless steel.\n\nDifferentiate Similar Concepts:\n• CPC → Moisture-displacing film.\n• Primer → Base coating.\n• Paint → Environmental barrier.\n\n💡 Memory Hook:\nCPC = Coats and Protects Components.\n\n🎯 Board Tip:\nCPCs are especially useful inside aircraft structures where routine painting is impractical.",
+          "tags": [
+            "Corrosion Prevention and Control",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Aircraft structures are designed with drain holes primarily to achieve which corrosion prevention objective?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Reduce structural weight",
+            "Prevent accumulation of trapped moisture",
+            "Improve aerodynamic performance",
+            "Increase structural stiffness"
+          ],
+          "answerIndex": 1,
+          "answerText": "Prevent accumulation of trapped moisture",
+          "explanation": "Drain holes allow water and other fluids to escape from enclosed areas, preventing moisture accumulation that could create electrolytes and promote crevice or concentration cell corrosion.\n\nWhy the other choices are incorrect:\n• Drain holes are not intended for weight reduction.\n• They have little effect on aerodynamic performance.\n• They do not increase stiffness.\n\nDifferentiate Similar Concepts:\n• Drain holes → Remove moisture.\n• Vent holes → Equalize pressure and improve ventilation.\n• Sealants → Prevent moisture entry.\n\n💡 Memory Hook:\nDrain it before it corrodes.\n\n🎯 Board Tip:\nStanding water is one of the most common causes of corrosion inside aircraft structures.",
+          "tags": [
+            "Corrosion Prevention and Control",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "When two dissimilar metals must be joined in an aircraft structure, which maintenance practice best minimizes the risk of galvanic corrosion?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Increase the clamping force between the metals",
+            "Electrically isolate the metals",
+            "Polish both metal surfaces",
+            "Increase the thickness of the fastener"
+          ],
+          "answerIndex": 1,
+          "answerText": "Electrically isolate the metals",
+          "explanation": "Electrical isolation using sealants, insulating washers, bushings, or other nonconductive materials interrupts the galvanic circuit, reducing the likelihood of galvanic corrosion.\n\nWhy the other choices are incorrect:\n• Increasing clamping force does not interrupt the galvanic circuit.\n• Polishing alone does not prevent galvanic corrosion.\n• Fastener thickness does not eliminate galvanic action.\n\nDifferentiate Similar Concepts:\n• Isolation → Prevents galvanic contact.\n• Sealants → Block moisture and help isolate metals.\n• Paint → Protective barrier.\n\n💡 Memory Hook:\nSeparate the metals, stop the cell.\n\n🎯 Board Tip:\nElectrical isolation is one of the most effective methods of preventing galvanic corrosion between dissimilar aircraft metals.",
+          "tags": [
+            "Corrosion Prevention and Control",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Before applying the finish coat to an aircraft structure, which coating is primarily applied to improve adhesion while providing additional corrosion protection?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Corrosion Preventive Compound (CPC)",
+            "Primer",
+            "Anodized coating",
+            "Sealant"
+          ],
+          "answerIndex": 1,
+          "answerText": "Primer",
+          "explanation": "Primer is applied before the finish coat to improve paint adhesion and provide an additional barrier against moisture and corrosion. Aircraft primers often contain corrosion-inhibiting pigments.\n\nWhy the other choices are incorrect:\n• CPC is generally applied after assembly to protect enclosed areas.\n• Anodizing is a surface treatment rather than a paint coating.\n• Sealants prevent moisture entry into joints but are not substitutes for primers.\n\nDifferentiate Similar Concepts:\n• Primer → Base coat.\n• Paint → Environmental barrier.\n• CPC → Moisture-displacing film.\n• Sealant → Joint protection.\n\n💡 Memory Hook:\nPrimer prepares and protects.\n\n🎯 Board Tip:\nAircraft paint systems typically begin with a primer before the topcoat is applied.",
+          "tags": [
+            "Corrosion Prevention and Control",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which protective layer serves as the primary barrier that shields aircraft metal surfaces from direct exposure to oxygen, moisture, and contaminants?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Topcoat paint",
+            "Passivation",
+            "Drain holes",
+            "Electrical bonding"
+          ],
+          "answerIndex": 0,
+          "answerText": "Topcoat paint",
+          "explanation": "The aircraft topcoat provides the outer protective barrier against environmental exposure while also contributing to appearance and durability.\n\nWhy the other choices are incorrect:\n• Passivation is a chemical treatment for stainless steel.\n• Drain holes remove trapped moisture but do not form a protective barrier.\n• Electrical bonding is intended for electrical continuity rather than corrosion protection.\n\nDifferentiate Similar Concepts:\n• Primer → Base corrosion protection.\n• Topcoat → Environmental barrier.\n• CPC → Protective film for enclosed areas.\n\n💡 Memory Hook:\nTopcoat takes the weather.\n\n🎯 Board Tip:\nThe topcoat is the aircraft's first barrier against the external environment.",
+          "tags": [
+            "Corrosion Prevention and Control",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which maintenance practice helps reduce corrosion by allowing moisture to circulate out of enclosed aircraft compartments during storage?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Proper ventilation",
+            "Shot peening",
+            "Electroplating",
+            "Heat treatment"
+          ],
+          "answerIndex": 0,
+          "answerText": "Proper ventilation",
+          "explanation": "Proper ventilation reduces humidity and allows trapped moisture to escape from enclosed aircraft spaces, minimizing conditions favorable for corrosion.\n\nWhy the other choices are incorrect:\n• Shot peening improves fatigue resistance.\n• Electroplating deposits a metallic coating.\n• Heat treatment changes mechanical properties.\n\nDifferentiate Similar Concepts:\n• Ventilation → Reduces humidity.\n• Drain holes → Removes accumulated water.\n• Cleaning → Removes contaminants.\n\n💡 Memory Hook:\nDry air, less corrosion.\n\n🎯 Board Tip:\nMoisture control is one of the simplest yet most effective corrosion prevention strategies.",
+          "tags": [
+            "Corrosion Prevention and Control",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Corrosion products are found on an aircraft component during a scheduled inspection. What should generally be performed before applying any protective coating?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Remove the corrosion products",
+            "Apply Corrosion Preventive Compound immediately",
+            "Apply a fresh topcoat directly over the corrosion",
+            "Increase fastener torque"
+          ],
+          "answerIndex": 0,
+          "answerText": "Remove the corrosion products",
+          "explanation": "Corrosion products should be removed and the affected area inspected before primers, paint, or corrosion preventive compounds are applied. Applying coatings over active corrosion can trap contaminants and allow corrosion to continue.\n\nWhy the other choices are incorrect:\n• CPC should not be applied over active corrosion.\n• Painting over corrosion does not stop the corrosion process.\n• Fastener torque has no effect on existing corrosion.\n\nDifferentiate Similar Concepts:\n• Corrosion removal → First step.\n• Primer → Applied after surface preparation.\n• CPC → Applied after proper treatment.\n\n💡 Memory Hook:\nClean first. Protect second.\n\n🎯 Board Tip:\nNever seal active corrosion beneath paint or protective coatings.",
+          "tags": [
+            "Corrosion Prevention and Control",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which maintenance practice is most effective in detecting corrosion before it develops into significant structural damage?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Regular inspections",
+            "Increasing paint thickness",
+            "Installing larger fasteners",
+            "Applying heat treatment"
+          ],
+          "answerIndex": 0,
+          "answerText": "Regular inspections",
+          "explanation": "Regular inspections allow corrosion to be detected and corrected during its early stages, reducing repair costs and preventing structural deterioration.\n\nWhy the other choices are incorrect:\n• Increasing paint thickness alone does not replace routine inspections.\n• Larger fasteners do not prevent corrosion.\n• Heat treatment does not detect corrosion.\n\nDifferentiate Similar Concepts:\n• Inspection → Early detection.\n• Cleaning → Prevents contamination.\n• CPC → Long-term protection.\n\n💡 Memory Hook:\nFind it early. Fix it early.\n\n🎯 Board Tip:\nEarly detection is one of the most important principles of aircraft corrosion control.",
+          "tags": [
+            "Corrosion Prevention and Control",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/publications.json": {
+      "title": "Publications",
+      "questions": [
+        {
+          "question": "Which aircraft publication contains the manufacturer's approved procedures for inspection, servicing, troubleshooting, removal, installation, adjustment, and operational checks of aircraft systems and components?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Structural Repair Manual (SRM)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Illustrated Parts Catalog (IPC)",
+            "Wiring Diagram Manual (WDM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Aircraft Maintenance Manual (AMM)",
+          "explanation": "The Aircraft Maintenance Manual (AMM) is the primary maintenance reference used by technicians. It contains approved procedures for inspecting, servicing, troubleshooting, removing, installing, adjusting, testing, and operating aircraft systems.\n\nDifferentiate Similar Concepts:\n• AMM → Maintenance procedures.\n• SRM → Structural repairs.\n• IPC → Parts identification.\n• WDM → Electrical wiring.\n\n💡 Memory Hook:\nAMM = How do I do the job?\n\n🎯 Board Tip:\nIf the question asks for an approved maintenance procedure, the answer is usually the AMM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft publication provides approved structural repair procedures, allowable damage limits, and repair methods for aircraft structural components?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Illustrated Parts Catalog (IPC)",
+            "Structural Repair Manual (SRM)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Fault Isolation Manual (FIM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Structural Repair Manual (SRM)",
+          "explanation": "The Structural Repair Manual (SRM) contains manufacturer-approved methods for evaluating structural damage and performing repairs within specified limits.\n\nDifferentiate Similar Concepts:\n• SRM → Structural repair.\n• AMM → Routine maintenance.\n• IPC → Parts identification.\n\n💡 Memory Hook:\nSRM = Can it be repaired?\n\n🎯 Board Tip:\nWhenever damage limits or structural repair procedures are mentioned, think SRM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft publication contains exploded-view illustrations, part numbers, and part identification information for aircraft assemblies?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Maintenance Manual (AMM)",
+            "Illustrated Parts Catalog (IPC)",
+            "Minimum Equipment List (MEL)",
+            "Component Maintenance Manual (CMM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Illustrated Parts Catalog (IPC)",
+          "explanation": "The Illustrated Parts Catalog (IPC) identifies aircraft parts using illustrations, figures, and manufacturer part numbers for ordering and identification.\n\nDifferentiate Similar Concepts:\n• IPC → Parts.\n• AMM → Procedures.\n• CMM → Component repair.\n\n💡 Memory Hook:\nIPC = What is the correct part?\n\n🎯 Board Tip:\nIf you need a part number or exploded view, use the IPC.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft publication contains wiring diagrams, electrical circuits, connector information, and wire routing used during electrical maintenance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fault Isolation Manual (FIM)",
+            "Wiring Diagram Manual (WDM)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Structural Repair Manual (SRM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Wiring Diagram Manual (WDM)",
+          "explanation": "The Wiring Diagram Manual (WDM) provides detailed electrical wiring diagrams, connector locations, circuit identification, and wire routing information.\n\nDifferentiate Similar Concepts:\n• WDM → Wiring diagrams.\n• FIM → Troubleshooting.\n• AMM → Maintenance procedures.\n\n💡 Memory Hook:\nWDM = Where does the wire go?\n\n🎯 Board Tip:\nElectrical circuits almost always point to the WDM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft publication provides systematic troubleshooting procedures used to isolate the cause of aircraft system malfunctions?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Illustrated Parts Catalog (IPC)",
+            "Fault Isolation Manual (FIM)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Service Bulletin (SB)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Fault Isolation Manual (FIM)",
+          "explanation": "The Fault Isolation Manual (FIM) guides technicians through logical troubleshooting procedures to identify the source of aircraft system faults before corrective maintenance is performed.\n\nDifferentiate Similar Concepts:\n• FIM → Troubleshooting.\n• AMM → Maintenance procedures.\n• IPC → Parts.\n\n💡 Memory Hook:\nFIM = Find the fault.\n\n🎯 Board Tip:\nWhenever the question focuses on diagnosing or isolating a malfunction, think FIM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft publication is considered the primary reference used by technicians when performing scheduled maintenance tasks on a specific aircraft model?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Minimum Equipment List (MEL)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Illustrated Parts Catalog (IPC)",
+            "Fault Isolation Manual (FIM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Aircraft Maintenance Manual (AMM)",
+          "explanation": "The Aircraft Maintenance Manual (AMM) is the primary working reference used by maintenance personnel. It contains the manufacturer's approved maintenance procedures for scheduled and unscheduled maintenance.\n\nDifferentiate Similar Concepts:\n• AMM → Maintenance procedures.\n• IPC → Parts identification.\n• FIM → Troubleshooting.\n\n💡 Memory Hook:\nAMM = The mechanic's everyday manual.\n\n🎯 Board Tip:\nRoutine maintenance procedures almost always lead to the AMM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft publication should be consulted to determine whether structural damage is within allowable repair limits established by the manufacturer?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Maintenance Manual (AMM)",
+            "Structural Repair Manual (SRM)",
+            "Component Maintenance Manual (CMM)",
+            "Wiring Diagram Manual (WDM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Structural Repair Manual (SRM)",
+          "explanation": "The SRM specifies allowable damage limits and approved repair methods for aircraft structural components, ensuring repairs maintain structural integrity.\n\nDifferentiate Similar Concepts:\n• SRM → Damage limits and repairs.\n• AMM → Maintenance procedures.\n• CMM → Component maintenance.\n\n💡 Memory Hook:\nSRM = Structural decisions.\n\n🎯 Board Tip:\nIf the question asks whether damage is repairable, think SRM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft publication is primarily intended to help maintenance personnel identify the correct replacement component rather than explain how to install it?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Illustrated Parts Catalog (IPC)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Fault Isolation Manual (FIM)",
+            "Service Bulletin (SB)"
+          ],
+          "answerIndex": 0,
+          "answerText": "Illustrated Parts Catalog (IPC)",
+          "explanation": "The IPC identifies replacement parts through exploded illustrations and manufacturer part numbers. Installation procedures are found in the AMM.\n\nDifferentiate Similar Concepts:\n• IPC → What part.\n• AMM → How to install.\n• FIM → How to troubleshoot.\n\n💡 Memory Hook:\nIPC identifies, AMM installs.\n\n🎯 Board Tip:\nIf the question focuses on identifying or ordering a replacement part, the IPC is the correct reference.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft publication provides detailed information about electrical circuit routing, connector identification, and wire interconnections?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Structural Repair Manual (SRM)",
+            "Wiring Diagram Manual (WDM)",
+            "Illustrated Parts Catalog (IPC)",
+            "Fault Isolation Manual (FIM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Wiring Diagram Manual (WDM)",
+          "explanation": "The WDM contains complete electrical circuit diagrams, connector information, and wire routing to support electrical maintenance and troubleshooting.\n\nDifferentiate Similar Concepts:\n• WDM → Circuit layout.\n• FIM → Troubleshooting sequence.\n• AMM → Maintenance procedures.\n\n💡 Memory Hook:\nWDM = Wire directions.\n\n🎯 Board Tip:\nQuestions involving connectors, circuits, or wire routing usually point to the WDM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft publication is specifically organized to guide technicians through logical troubleshooting steps until the source of a malfunction is identified?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Maintenance Manual (AMM)",
+            "Service Bulletin (SB)",
+            "Fault Isolation Manual (FIM)",
+            "Illustrated Parts Catalog (IPC)"
+          ],
+          "answerIndex": 2,
+          "answerText": "Fault Isolation Manual (FIM)",
+          "explanation": "The Fault Isolation Manual (FIM) presents systematic troubleshooting procedures that help maintenance personnel isolate faults before performing corrective action.\n\nDifferentiate Similar Concepts:\n• FIM → Diagnose the problem.\n• AMM → Repair or maintain.\n• IPC → Identify replacement parts.\n\n💡 Memory Hook:\nFIM = Follow the fault.\n\n🎯 Board Tip:\nWhenever troubleshooting logic or fault isolation is emphasized, choose the FIM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft publication contains approved maintenance, inspection, repair, and testing procedures for an individual aircraft component after it has been removed from the aircraft?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Maintenance Manual (AMM)",
+            "Component Maintenance Manual (CMM)",
+            "Structural Repair Manual (SRM)",
+            "Illustrated Parts Catalog (IPC)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Component Maintenance Manual (CMM)",
+          "explanation": "The Component Maintenance Manual (CMM) provides manufacturer-approved instructions for inspecting, repairing, testing, and reassembling individual aircraft components after they have been removed from the aircraft.\n\nDifferentiate Similar Concepts:\n• CMM → Individual components.\n• AMM → Aircraft-installed components.\n• OHM → Complete overhaul procedures.\n\n💡 Memory Hook:\nCMM = Component Manual.\n\n🎯 Board Tip:\nIf the component has already been removed from the aircraft for bench maintenance, think CMM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft publication provides detailed procedures for completely disassembling, inspecting, repairing, reassembling, and testing a component during a major overhaul?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Component Maintenance Manual (CMM)",
+            "Overhaul Manual (OHM)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Fault Isolation Manual (FIM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Overhaul Manual (OHM)",
+          "explanation": "The Overhaul Manual (OHM) contains comprehensive procedures for restoring a component to serviceable condition through complete overhaul, including teardown, inspection, repair, reassembly, and final testing.\n\nDifferentiate Similar Concepts:\n• OHM → Complete overhaul.\n• CMM → General component maintenance.\n• AMM → Aircraft maintenance.\n\n💡 Memory Hook:\nOHM = Overhaul everything.\n\n🎯 Board Tip:\nMajor overhaul procedures belong in the Overhaul Manual, not the AMM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft publication identifies equipment that may be inoperative while still allowing the aircraft to be dispatched under specified operating conditions?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Configuration Deviation List (CDL)",
+            "Minimum Equipment List (MEL)",
+            "Service Bulletin (SB)",
+            "Aircraft Maintenance Manual (AMM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Minimum Equipment List (MEL)",
+          "explanation": "The Minimum Equipment List (MEL) specifies which installed aircraft equipment may be temporarily inoperative while permitting dispatch, provided stated conditions and limitations are met.\n\nDifferentiate Similar Concepts:\n• MEL → Installed equipment may be inoperative.\n• CDL → External parts may be missing.\n\n💡 Memory Hook:\nMEL = Missing Equipment is Limited.\n\n🎯 Board Tip:\nThe MEL deals with installed equipment that is not functioning—not components that have been removed from the aircraft.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft publication specifies the conditions under which an aircraft may be operated with certain external airframe components missing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Minimum Equipment List (MEL)",
+            "Configuration Deviation List (CDL)",
+            "Structural Repair Manual (SRM)",
+            "Illustrated Parts Catalog (IPC)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Configuration Deviation List (CDL)",
+          "explanation": "The Configuration Deviation List (CDL) allows an aircraft to be dispatched with specified external components missing, provided the required operating limitations and performance penalties are observed.\n\nDifferentiate Similar Concepts:\n• CDL → Missing external components.\n• MEL → Inoperative installed equipment.\n\n💡 Memory Hook:\nCDL = Configuration changed.\n\n🎯 Board Tip:\nA common board distinction is that the MEL concerns equipment that is present but inoperative, whereas the CDL concerns parts that are physically missing.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which manufacturer-issued publication informs operators of recommended inspections, modifications, or improvements that are generally not mandatory unless adopted by the regulatory authority?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Airworthiness Directive (AD)",
+            "Service Bulletin (SB)",
+            "Advisory Circular (AC)",
+            "Maintenance Planning Document (MPD)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Service Bulletin (SB)",
+          "explanation": "A Service Bulletin (SB) is issued by the manufacturer to communicate recommended inspections, modifications, or improvements. An SB becomes mandatory only if incorporated into an Airworthiness Directive or otherwise required by the operator or regulatory authority.\n\nDifferentiate Similar Concepts:\n• SB → Manufacturer recommendation.\n• AD → Regulatory requirement.\n• AC → Guidance material.\n\n💡 Memory Hook:\nSB = Suggestion by the manufacturer.\n\n🎯 Board Tip:\nOne of the most frequently tested distinctions is that Service Bulletins are generally not mandatory unless required by an Airworthiness Directive or applicable regulations.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which publication is issued by the aviation regulatory authority to require corrective action that must be complied with in order to maintain the airworthiness of an aircraft?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Service Bulletin (SB)",
+            "Airworthiness Directive (AD)",
+            "Advisory Circular (AC)",
+            "Maintenance Planning Document (MPD)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Airworthiness Directive (AD)",
+          "explanation": "An Airworthiness Directive (AD) is a legally enforceable rule issued by the aviation authority to correct an unsafe condition affecting an aircraft, engine, propeller, or appliance. Compliance with applicable ADs is mandatory.\n\nDifferentiate Similar Concepts:\n• AD → Mandatory corrective action.\n• SB → Manufacturer-issued recommendation.\n• AC → Guidance material.\n\n💡 Memory Hook:\nAD = Authority Directs.\n\n🎯 Board Tip:\nWhenever the words 'mandatory,' 'unsafe condition,' or 'regulatory authority' appear, the answer is usually an Airworthiness Directive.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which publication provides guidance, recommended practices, and acceptable methods of compliance but is not itself a regulatory requirement?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Airworthiness Directive (AD)",
+            "Advisory Circular (AC)",
+            "Service Bulletin (SB)",
+            "Structural Repair Manual (SRM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Advisory Circular (AC)",
+          "explanation": "An Advisory Circular (AC) provides guidance and acceptable methods for complying with aviation regulations. Although ACs are not regulations, they are widely recognized as an acceptable means of demonstrating compliance.\n\nDifferentiate Similar Concepts:\n• AC → Guidance.\n• AD → Mandatory requirement.\n• SB → Manufacturer information.\n\n💡 Memory Hook:\nAC = Advisory, not compulsory.\n\n🎯 Board Tip:\nIf the question asks for recommended methods or guidance rather than mandatory action, think Advisory Circular.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which publication contains the manufacturer's recommended maintenance tasks, intervals, and scheduling requirements that serve as the basis for an operator's maintenance program?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Maintenance Planning Document (MPD)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Fault Isolation Manual (FIM)",
+            "Illustrated Parts Catalog (IPC)"
+          ],
+          "answerIndex": 0,
+          "answerText": "Maintenance Planning Document (MPD)",
+          "explanation": "The Maintenance Planning Document (MPD) contains the manufacturer's recommended maintenance tasks and intervals used by operators when developing approved maintenance programs.\n\nDifferentiate Similar Concepts:\n• MPD → When maintenance is performed.\n• AMM → How maintenance is performed.\n• IPC → Which part is required.\n\n💡 Memory Hook:\nMPD = Maintenance schedule.\n\n🎯 Board Tip:\nDo not confuse the MPD with the AMM. The MPD tells you when maintenance should be accomplished, while the AMM explains how to accomplish it.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which publication serves as the manufacturer's primary source for establishing scheduled maintenance intervals throughout the aircraft's service life?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Illustrated Parts Catalog (IPC)",
+            "Maintenance Planning Document (MPD)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Component Maintenance Manual (CMM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Maintenance Planning Document (MPD)",
+          "explanation": "The MPD establishes recommended maintenance intervals and inspection requirements that operators use as the foundation of their approved maintenance schedules.\n\nDifferentiate Similar Concepts:\n• MPD → Maintenance intervals.\n• AMM → Maintenance procedures.\n• CMM → Component maintenance.\n\n💡 Memory Hook:\nMPD = Plan the maintenance.\n\n🎯 Board Tip:\nQuestions asking about maintenance intervals, inspection frequency, or scheduling generally refer to the MPD.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which publication is intended to communicate information and acceptable methods that help aviation personnel comply with regulations without establishing new regulatory requirements?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Service Bulletin (SB)",
+            "Advisory Circular (AC)",
+            "Airworthiness Directive (AD)",
+            "Minimum Equipment List (MEL)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Advisory Circular (AC)",
+          "explanation": "Advisory Circulars provide explanatory information, recommended practices, and acceptable means of compliance with aviation regulations. They assist operators and maintenance personnel but do not create new legal requirements.\n\nDifferentiate Similar Concepts:\n• AC → Guidance.\n• AD → Mandatory compliance.\n• SB → Manufacturer communication.\n\n💡 Memory Hook:\nAC = Advice from the Authority.\n\n🎯 Board Tip:\nA common AELE distinction is that an AD is enforceable, whereas an AC provides guidance on acceptable compliance methods.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A technician needs the manufacturer's approved reference that explains the correct sequence for performing routine maintenance tasks on an aircraft. Which publication should be consulted?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Illustrated Parts Catalog (IPC)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Component Maintenance Manual (CMM)",
+            "Maintenance Planning Document (MPD)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Aircraft Maintenance Manual (AMM)",
+          "explanation": "The Aircraft Maintenance Manual (AMM) is the primary reference for performing maintenance tasks on an aircraft. It provides approved procedures for servicing, inspection, removal, installation, adjustments, testing, and operational checks.\n\nDifferentiate Similar Concepts:\n• AMM → Perform maintenance.\n• MPD → Schedule maintenance.\n• IPC → Identify parts.\n• CMM → Repair removed components.\n\n💡 Memory Hook:\nAMM = How to maintain.\n\n🎯 Board Tip:\nIf the question asks how to accomplish a maintenance task, the answer is usually the AMM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A maintenance engineer must determine whether structural damage remains within the manufacturer's allowable repair limits before beginning any repair work. Which publication contains this information?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Structural Repair Manual (SRM)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Overhaul Manual (OHM)",
+            "Fault Isolation Manual (FIM)"
+          ],
+          "answerIndex": 0,
+          "answerText": "Structural Repair Manual (SRM)",
+          "explanation": "The Structural Repair Manual (SRM) establishes allowable damage limits and approved repair methods for aircraft structures.\n\nDifferentiate Similar Concepts:\n• SRM → Structural damage and repairs.\n• AMM → General maintenance.\n• OHM → Component overhaul.\n\n💡 Memory Hook:\nSRM = Structural decisions.\n\n🎯 Board Tip:\nIf you're deciding whether structural damage is repairable, consult the SRM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A replacement actuator has already been selected, but the technician must verify its manufacturer's part number before placing an order. Which publication provides this information?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fault Isolation Manual (FIM)",
+            "Illustrated Parts Catalog (IPC)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Service Bulletin (SB)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Illustrated Parts Catalog (IPC)",
+          "explanation": "The Illustrated Parts Catalog (IPC) provides exploded illustrations and manufacturer part numbers used for identifying and ordering replacement parts.\n\nDifferentiate Similar Concepts:\n• IPC → Part identification.\n• AMM → Installation procedures.\n• FIM → Troubleshooting.\n\n💡 Memory Hook:\nIPC = Identify the part.\n\n🎯 Board Tip:\nIf the question asks for a part number or exploded illustration, think IPC.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A technician is tracing an electrical fault and needs to identify the exact wire routing, connector locations, and circuit connections. Which publication provides this information?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wiring Diagram Manual (WDM)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Fault Isolation Manual (FIM)",
+            "Illustrated Parts Catalog (IPC)"
+          ],
+          "answerIndex": 0,
+          "answerText": "Wiring Diagram Manual (WDM)",
+          "explanation": "The Wiring Diagram Manual (WDM) contains electrical circuit diagrams, connector identification, and wire routing information that support electrical maintenance.\n\nDifferentiate Similar Concepts:\n• WDM → Wiring layout.\n• FIM → Troubleshooting logic.\n• AMM → Maintenance procedures.\n\n💡 Memory Hook:\nWDM = Wire directions.\n\n🎯 Board Tip:\nWhenever connectors, circuit paths, or wire routing are mentioned, choose the WDM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A maintenance technician has confirmed that an aircraft system is malfunctioning and now needs a logical sequence of diagnostic steps to determine the source of the problem. Which publication should be consulted?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Component Maintenance Manual (CMM)",
+            "Fault Isolation Manual (FIM)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Maintenance Planning Document (MPD)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Fault Isolation Manual (FIM)",
+          "explanation": "The Fault Isolation Manual (FIM) provides systematic troubleshooting procedures that guide technicians in identifying the root cause of aircraft system malfunctions.\n\nDifferentiate Similar Concepts:\n• FIM → Diagnose faults.\n• AMM → Perform maintenance.\n• CMM → Maintain removed components.\n\n💡 Memory Hook:\nFIM = Find the malfunction.\n\n🎯 Board Tip:\nThe FIM is used before corrective maintenance when the source of the malfunction is still unknown.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Maintenance personnel are preparing to inspect and repair a hydraulic pump after it has been removed from the aircraft. Which manual provides the approved maintenance procedures for this individual component?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Overhaul Manual (OHM)",
+            "Component Maintenance Manual (CMM)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Illustrated Parts Catalog (IPC)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Component Maintenance Manual (CMM)",
+          "explanation": "The Component Maintenance Manual (CMM) contains the manufacturer's approved procedures for inspecting, repairing, testing, and reassembling individual aircraft components after removal from the aircraft.\n\nDifferentiate Similar Concepts:\n• CMM → Component maintenance.\n• OHM → Complete overhaul.\n• AMM → Maintenance on the aircraft.\n\n💡 Memory Hook:\nCMM = Component Manual.\n\n🎯 Board Tip:\nIf the component is already on the workbench, the CMM is often the primary reference.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "This manual is intended for restoring a removed aircraft component to serviceable condition through complete disassembly, inspection, repair, reassembly, and testing. Which manual is being described?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Maintenance Manual (AMM)",
+            "Fault Isolation Manual (FIM)",
+            "Overhaul Manual (OHM)",
+            "Component Maintenance Manual (CMM)"
+          ],
+          "answerIndex": 2,
+          "answerText": "Overhaul Manual (OHM)",
+          "explanation": "The Overhaul Manual (OHM) provides comprehensive instructions for performing a complete overhaul of a component, including teardown, inspection, repair, reassembly, and acceptance testing.\n\nDifferentiate Similar Concepts:\n• OHM → Complete overhaul.\n• CMM → General component maintenance.\n• AMM → Aircraft maintenance.\n\n💡 Memory Hook:\nOHM = Overhaul from start to finish.\n\n🎯 Board Tip:\nWhen the task involves complete restoration of a component, think OHM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The appropriate reference for determining whether an aircraft may be dispatched with certain installed equipment temporarily inoperative is the:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Configuration Deviation List (CDL)",
+            "Minimum Equipment List (MEL)",
+            "Service Bulletin (SB)",
+            "Maintenance Planning Document (MPD)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Minimum Equipment List (MEL)",
+          "explanation": "The Minimum Equipment List (MEL) specifies which installed equipment may be inoperative while still allowing aircraft dispatch under specified limitations and conditions.\n\nDifferentiate Similar Concepts:\n• MEL → Installed equipment inoperative.\n• CDL → External components missing.\n\n💡 Memory Hook:\nMEL = Missing equipment is allowed (within limits).\n\n🎯 Board Tip:\nMEL concerns equipment that is installed but not functioning.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft is missing a fairing that is identified by the manufacturer as an allowable dispatch deviation under specified operating limitations. Which document contains this information?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Minimum Equipment List (MEL)",
+            "Configuration Deviation List (CDL)",
+            "Structural Repair Manual (SRM)",
+            "Aircraft Maintenance Manual (AMM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Configuration Deviation List (CDL)",
+          "explanation": "The Configuration Deviation List (CDL) specifies the conditions under which an aircraft may be operated with certain external components missing while accounting for any operational or performance limitations.\n\nDifferentiate Similar Concepts:\n• CDL → Missing external parts.\n• MEL → Installed equipment inoperative.\n\n💡 Memory Hook:\nCDL = Changed configuration.\n\n🎯 Board Tip:\nIf a component is physically absent rather than simply inoperative, think CDL.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The aircraft manufacturer publishes a document recommending a modification that improves reliability but does not automatically become a regulatory requirement. Which publication is being described?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Airworthiness Directive (AD)",
+            "Service Bulletin (SB)",
+            "Advisory Circular (AC)",
+            "Maintenance Planning Document (MPD)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Service Bulletin (SB)",
+          "explanation": "A Service Bulletin (SB) communicates manufacturer-recommended inspections, modifications, or improvements. It becomes mandatory only when required by the aviation authority, the operator, or other applicable regulations.\n\nDifferentiate Similar Concepts:\n• SB → Manufacturer recommendation.\n• AD → Mandatory regulatory action.\n• AC → Advisory guidance.\n\n💡 Memory Hook:\nSB = Suggestion from the manufacturer.\n\n🎯 Board Tip:\nAlways distinguish who issued the document: manufacturers issue SBs, while aviation authorities issue ADs.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aviation authority issues a document requiring operators to inspect and replace a defective flight control component because it poses an unsafe condition. Which publication is being described?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Service Bulletin (SB)",
+            "Airworthiness Directive (AD)",
+            "Advisory Circular (AC)",
+            "Maintenance Planning Document (MPD)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Airworthiness Directive (AD)",
+          "explanation": "An Airworthiness Directive (AD) is issued by the aviation authority to correct an unsafe condition affecting an aircraft, engine, propeller, or appliance. Compliance is mandatory.\n\nDifferentiate Similar Concepts:\n• AD → Mandatory regulatory action.\n• SB → Manufacturer-issued recommendation.\n• AC → Guidance material.\n\n💡 Memory Hook:\nAD = Authority Directs.\n\n🎯 Board Tip:\nIf the aviation authority requires compliance to correct an unsafe condition, the answer is an Airworthiness Directive.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft document provides guidance and acceptable methods of compliance with aviation regulations without creating new regulatory requirements?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Advisory Circular (AC)",
+            "Airworthiness Directive (AD)",
+            "Service Bulletin (SB)",
+            "Aircraft Maintenance Manual (AMM)"
+          ],
+          "answerIndex": 0,
+          "answerText": "Advisory Circular (AC)",
+          "explanation": "An Advisory Circular (AC) provides guidance, recommended practices, and acceptable means of compliance. Unlike an AD, it does not establish mandatory regulatory requirements.\n\nDifferentiate Similar Concepts:\n• AC → Guidance.\n• AD → Mandatory requirement.\n• SB → Manufacturer communication.\n\n💡 Memory Hook:\nAC = Advice.\n\n🎯 Board Tip:\nIf the document explains an acceptable way to comply with regulations, think Advisory Circular.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Maintenance personnel are reviewing the manufacturer's recommended inspection intervals before preparing the operator's maintenance schedule. Which publication contains this information?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Maintenance Manual (AMM)",
+            "Maintenance Planning Document (MPD)",
+            "Illustrated Parts Catalog (IPC)",
+            "Component Maintenance Manual (CMM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Maintenance Planning Document (MPD)",
+          "explanation": "The Maintenance Planning Document (MPD) establishes the manufacturer's recommended maintenance tasks and intervals that form the basis of an operator's maintenance program.\n\nDifferentiate Similar Concepts:\n• MPD → When maintenance is performed.\n• AMM → How maintenance is performed.\n• IPC → Parts identification.\n\n💡 Memory Hook:\nMPD = Maintenance planner.\n\n🎯 Board Tip:\nIntervals, schedules, and maintenance planning are strong clues for the MPD.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which publication is primarily intended to communicate manufacturer-recommended product improvements, inspections, or modifications to aircraft operators?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Service Bulletin (SB)",
+            "Airworthiness Directive (AD)",
+            "Fault Isolation Manual (FIM)",
+            "Minimum Equipment List (MEL)"
+          ],
+          "answerIndex": 0,
+          "answerText": "Service Bulletin (SB)",
+          "explanation": "A Service Bulletin (SB) communicates manufacturer-recommended actions intended to improve safety, reliability, or performance. Depending on regulatory action, some SBs may become mandatory.\n\nDifferentiate Similar Concepts:\n• SB → Manufacturer recommendation.\n• AD → Regulatory requirement.\n• AC → Guidance.\n\n💡 Memory Hook:\nSB = Service improvement.\n\n🎯 Board Tip:\nAlways identify who issued the publication. Manufacturers issue SBs; aviation authorities issue ADs.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A removed aircraft component requires complete teardown, detailed inspection, replacement of worn parts, reassembly, and acceptance testing before returning to service. Which manual is intended for this level of maintenance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Maintenance Manual (AMM)",
+            "Overhaul Manual (OHM)",
+            "Component Maintenance Manual (CMM)",
+            "Structural Repair Manual (SRM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Overhaul Manual (OHM)",
+          "explanation": "The Overhaul Manual (OHM) provides detailed procedures for restoring a component to serviceable condition through complete overhaul. This is more comprehensive than the maintenance procedures found in a CMM.\n\nDifferentiate Similar Concepts:\n• OHM → Complete overhaul.\n• CMM → Component maintenance and repair.\n• AMM → Maintenance on installed aircraft systems.\n\n💡 Memory Hook:\nOHM = Overhaul completely.\n\n🎯 Board Tip:\nIf the question mentions complete disassembly and restoration, the Overhaul Manual is the best answer.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A maintenance technician needs to determine whether an aircraft may legally be dispatched with one of its navigation radios temporarily inoperative. Which publication should be consulted?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Configuration Deviation List (CDL)",
+            "Minimum Equipment List (MEL)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Service Bulletin (SB)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Minimum Equipment List (MEL)",
+          "explanation": "The Minimum Equipment List (MEL) identifies installed equipment that may be inoperative while still permitting aircraft dispatch under specified operating limitations.\n\nDifferentiate Similar Concepts:\n• MEL → Installed equipment inoperative.\n• CDL → External component missing.\n• AMM → Maintenance procedures.\n\n💡 Memory Hook:\nMEL = Equipment is there but doesn't work.\n\n🎯 Board Tip:\nIf the equipment is still installed but inoperative, think MEL.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A removable wingtip fairing has been lost, but the aircraft manufacturer permits dispatch under specific performance limitations. Which publication contains these operating conditions?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Minimum Equipment List (MEL)",
+            "Configuration Deviation List (CDL)",
+            "Structural Repair Manual (SRM)",
+            "Illustrated Parts Catalog (IPC)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Configuration Deviation List (CDL)",
+          "explanation": "The Configuration Deviation List (CDL) specifies the conditions under which an aircraft may be dispatched with certain external airframe parts missing.\n\nDifferentiate Similar Concepts:\n• CDL → Missing external parts.\n• MEL → Installed equipment inoperative.\n\n💡 Memory Hook:\nCDL = Configuration has changed.\n\n🎯 Board Tip:\nA physically missing external part is a classic clue for the CDL.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft document is primarily used to establish the inspection frequency and maintenance intervals for an aircraft maintenance program?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Maintenance Manual (AMM)",
+            "Maintenance Planning Document (MPD)",
+            "Fault Isolation Manual (FIM)",
+            "Overhaul Manual (OHM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Maintenance Planning Document (MPD)",
+          "explanation": "The Maintenance Planning Document (MPD) contains the manufacturer's recommended maintenance tasks and intervals used to develop an operator's approved maintenance program.\n\nDifferentiate Similar Concepts:\n• MPD → When maintenance is due.\n• AMM → How maintenance is performed.\n• FIM → Troubleshooting.\n\n💡 Memory Hook:\nMPD = Maintenance calendar.\n\n🎯 Board Tip:\nIntervals, schedules, and maintenance planning point to the MPD—not the AMM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A manufacturer publishes a document describing an inspection that is recommended to improve fleet reliability. Unless required by the aviation authority or operator, compliance is generally determined by the operator. Which publication is this?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Airworthiness Directive (AD)",
+            "Service Bulletin (SB)",
+            "Advisory Circular (AC)",
+            "Component Maintenance Manual (CMM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Service Bulletin (SB)",
+          "explanation": "A Service Bulletin (SB) communicates manufacturer-recommended inspections, modifications, or improvements. Depending on regulatory action or operator requirements, compliance may become mandatory.\n\nDifferentiate Similar Concepts:\n• SB → Manufacturer recommendation.\n• AD → Mandatory regulatory action.\n• AC → Guidance material.\n\n💡 Memory Hook:\nSB = Service recommendation.\n\n🎯 Board Tip:\nAlways distinguish who issued the document—the manufacturer issues SBs, while the aviation authority issues ADs.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Maintenance personnel require a publication that explains acceptable methods and recommended practices for complying with aviation regulations without creating new legal requirements. Which publication should they consult?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Advisory Circular (AC)",
+            "Airworthiness Directive (AD)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Structural Repair Manual (SRM)"
+          ],
+          "answerIndex": 0,
+          "answerText": "Advisory Circular (AC)",
+          "explanation": "An Advisory Circular (AC) provides guidance and acceptable means of compliance with aviation regulations. It assists maintenance personnel but does not establish new regulatory requirements.\n\nDifferentiate Similar Concepts:\n• AC → Guidance.\n• AD → Mandatory requirement.\n• SB → Manufacturer communication.\n\n💡 Memory Hook:\nAC = Advisory guidance.\n\n🎯 Board Tip:\nIf the question asks for recommended methods rather than mandatory compliance, the answer is usually an Advisory Circular.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A maintenance technician needs to identify the manufacturer's approved replacement part number for a damaged fuel control unit before ordering a new component. Which aircraft publication contains this information?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Maintenance Manual (AMM)",
+            "Illustrated Parts Catalog (IPC)",
+            "Component Maintenance Manual (CMM)",
+            "Fault Isolation Manual (FIM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Illustrated Parts Catalog (IPC)",
+          "explanation": "The IPC provides exploded illustrations and manufacturer part numbers used for identifying and ordering replacement parts.\n\nDifferentiate Similar Concepts:\n• IPC → Part identification.\n• AMM → Maintenance procedures.\n• CMM → Component maintenance.\n\n💡 Memory Hook:\nIPC = Identify the Part.\n\n🎯 Board Tip:\nIf the question asks for a part number, the IPC is usually the correct answer.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A damaged fuselage skin requires evaluation to determine whether the damage is within the manufacturer's allowable repair limits. Which reference should be consulted first?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Maintenance Manual (AMM)",
+            "Structural Repair Manual (SRM)",
+            "Maintenance Planning Document (MPD)",
+            "Component Maintenance Manual (CMM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Structural Repair Manual (SRM)",
+          "explanation": "The SRM establishes allowable structural damage limits and approved repair methods for aircraft structures.\n\nDifferentiate Similar Concepts:\n• SRM → Structural repairs.\n• AMM → General maintenance.\n• MPD → Maintenance schedule.\n\n💡 Memory Hook:\nSRM = Structural Repairs.\n\n🎯 Board Tip:\nWhenever structural damage limits are mentioned, think SRM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An operator is developing its approved maintenance program and must determine the manufacturer's recommended inspection intervals. Which publication provides this information?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Maintenance Planning Document (MPD)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Fault Isolation Manual (FIM)",
+            "Service Bulletin (SB)"
+          ],
+          "answerIndex": 0,
+          "answerText": "Maintenance Planning Document (MPD)",
+          "explanation": "The MPD contains the manufacturer's recommended maintenance tasks and intervals used as the basis for an operator's maintenance program.\n\nDifferentiate Similar Concepts:\n• MPD → When maintenance is performed.\n• AMM → How maintenance is performed.\n• FIM → Troubleshooting.\n\n💡 Memory Hook:\nMPD = Maintenance Planner.\n\n🎯 Board Tip:\nIntervals, schedules, and maintenance planning point to the MPD.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Following reports of an unsafe condition affecting several aircraft, the aviation authority issues a legally enforceable document requiring corrective action. Which publication is this?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Service Bulletin (SB)",
+            "Airworthiness Directive (AD)",
+            "Advisory Circular (AC)",
+            "Minimum Equipment List (MEL)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Airworthiness Directive (AD)",
+          "explanation": "An Airworthiness Directive (AD) is issued by the aviation authority to correct an unsafe condition. Compliance is mandatory.\n\nDifferentiate Similar Concepts:\n• AD → Mandatory regulatory action.\n• SB → Manufacturer recommendation.\n• AC → Guidance.\n\n💡 Memory Hook:\nAD = Authority Directs.\n\n🎯 Board Tip:\nMandatory corrective action issued by the aviation authority always points to an AD.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A removed aircraft starter-generator will undergo complete teardown, inspection, replacement of worn parts, reassembly, and final acceptance testing before being returned to service. Which manual is intended for this level of maintenance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Overhaul Manual (OHM)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Component Maintenance Manual (CMM)",
+            "Structural Repair Manual (SRM)"
+          ],
+          "answerIndex": 0,
+          "answerText": "Overhaul Manual (OHM)",
+          "explanation": "The Overhaul Manual (OHM) provides comprehensive instructions for restoring a component to serviceable condition through complete overhaul.\n\nDifferentiate Similar Concepts:\n• OHM → Complete overhaul.\n• CMM → General component maintenance.\n• AMM → Aircraft maintenance.\n\n💡 Memory Hook:\nOHM = Overhaul completely.\n\n🎯 Board Tip:\nComplete disassembly and restoration are classic clues for the OHM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft may be dispatched even though one communication radio is temporarily inoperative, provided specified operational limitations are observed. Which document authorizes this condition?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Configuration Deviation List (CDL)",
+            "Minimum Equipment List (MEL)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Service Bulletin (SB)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Minimum Equipment List (MEL)",
+          "explanation": "The MEL specifies which installed equipment may be inoperative while still permitting aircraft dispatch under stated conditions.\n\nDifferentiate Similar Concepts:\n• MEL → Installed equipment inoperative.\n• CDL → External components missing.\n\n💡 Memory Hook:\nMEL = Equipment may be inoperative.\n\n🎯 Board Tip:\nInstalled but not working = MEL.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A technician has confirmed that an electrical malfunction exists and now needs a systematic troubleshooting sequence to isolate the exact source of the fault. Which publication should be consulted?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fault Isolation Manual (FIM)",
+            "Wiring Diagram Manual (WDM)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Illustrated Parts Catalog (IPC)"
+          ],
+          "answerIndex": 0,
+          "answerText": "Fault Isolation Manual (FIM)",
+          "explanation": "The FIM provides step-by-step troubleshooting logic used to isolate system malfunctions before maintenance is performed.\n\nDifferentiate Similar Concepts:\n• FIM → Diagnose faults.\n• WDM → Electrical circuit layout.\n• AMM → Maintenance procedures.\n\n💡 Memory Hook:\nFIM = Find It Methodically.\n\n🎯 Board Tip:\nIf troubleshooting is the focus, the answer is usually the FIM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The manufacturer issues a document recommending an inspection to improve fleet reliability. Unless required by regulation or the operator, compliance is generally at the operator's discretion. Which publication is this?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Service Bulletin (SB)",
+            "Airworthiness Directive (AD)",
+            "Advisory Circular (AC)",
+            "Maintenance Planning Document (MPD)"
+          ],
+          "answerIndex": 0,
+          "answerText": "Service Bulletin (SB)",
+          "explanation": "A Service Bulletin (SB) communicates manufacturer-recommended inspections, modifications, or improvements. Some SBs later become mandatory if referenced by an Airworthiness Directive.\n\nDifferentiate Similar Concepts:\n• SB → Manufacturer recommendation.\n• AD → Regulatory requirement.\n• AC → Guidance.\n\n💡 Memory Hook:\nSB = Service Better.\n\n🎯 Board Tip:\nAlways identify who issued the document before choosing between an SB and an AD.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An electrical technician needs to identify the connector numbers and routing of wires within the aircraft's anti-ice system. Which publication contains this information?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Maintenance Manual (AMM)",
+            "Wiring Diagram Manual (WDM)",
+            "Fault Isolation Manual (FIM)",
+            "Component Maintenance Manual (CMM)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Wiring Diagram Manual (WDM)",
+          "explanation": "The WDM contains wiring diagrams, connector identification, circuit routing, and wire information used during electrical maintenance.\n\nDifferentiate Similar Concepts:\n• WDM → Circuit layout.\n• FIM → Troubleshooting.\n• AMM → Maintenance procedures.\n\n💡 Memory Hook:\nWDM = Wire Directions Manual.\n\n🎯 Board Tip:\nIf the clue mentions connectors, wiring routes, or circuits, think WDM.",
+          "tags": [
+            "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Maintenance personnel need a document that explains acceptable methods for complying with aviation regulations but does not itself establish mandatory requirements. Which publication is being described?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Advisory Circular (AC)",
+            "Airworthiness Directive (AD)",
+            "Service Bulletin (SB)",
+            "Configuration Deviation List (CDL)"
+          ],
+          "answerIndex": 0,
+          "answerText": "Advisory Circular (AC)",
+          "explanation": "An Advisory Circular (AC) provides guidance and acceptable means of compliance with aviation regulations without creating new regulatory requirements.\n\nDifferentiate Similar Concepts:\n• AC → Guidance.\n• AD → Mandatory.\n• SB → Manufacturer recommendation.\n\n💡 Memory Hook:\nAC = Advisory Guidance.\n\n🎯 Board Tip:\nAcceptable methods of compliance are a hallmark of Advisory Circulars.",
+          "tags": [
+            "Aircraft Publications",
             "Recall"
           ],
           "expectedAnswer": null,
