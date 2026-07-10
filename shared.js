@@ -2953,9 +2953,9 @@ export async function initHomePage() {
         subjects: [],
         activeSubject: null,
         activeChapter: null,
-        mode: "quiz"
+        mode: "quiz",
+        carouselIndex: 0
     };
-
 
     const renderModeLinks = () => {
         elements.modeLinks.forEach((button) => {
@@ -2982,7 +2982,24 @@ export async function initHomePage() {
         });
     }
 
-    const scrollCarouselToIndex = (index) => {
+    const updateCarouselButtons = () => {
+        if (!elements.carousel) {
+            return;
+        }
+        const cards = Array.from(elements.carousel.children);
+        if (!cards.length) {
+            return;
+        }
+        state.carouselIndex = Math.max(0, Math.min(state.carouselIndex, cards.length - 1));
+        if (elements.prev) {
+            elements.prev.disabled = state.carouselIndex <= 0;
+        }
+        if (elements.next) {
+            elements.next.disabled = state.carouselIndex >= cards.length - 1;
+        }
+    };
+
+    const scrollCarouselToIndex = (index, options = {}) => {
         if (!elements.carousel) {
             return;
         }
@@ -2992,10 +3009,42 @@ export async function initHomePage() {
         }
         const targetIndex = Math.max(0, Math.min(index, cards.length - 1));
         const targetCard = cards[targetIndex];
-        if (targetCard) {
-            targetCard.scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+        if (!targetCard) {
+            return;
         }
+        state.carouselIndex = targetIndex;
+        updateCarouselButtons();
+        targetCard.scrollIntoView({ behavior: options.behavior || "smooth", inline: "start", block: "nearest" });
     };
+
+    const handleCarouselNavigation = (direction) => {
+        if (!elements.carousel) {
+            return;
+        }
+        const cards = Array.from(elements.carousel.children);
+        if (!cards.length) {
+            return;
+        }
+        const nextIndex = Math.max(0, Math.min(state.carouselIndex + direction, cards.length - 1));
+        if (nextIndex === state.carouselIndex) {
+            return;
+        }
+        scrollCarouselToIndex(nextIndex);
+    };
+
+    if (elements.prev) {
+        elements.prev.addEventListener("click", (event) => {
+            event.preventDefault();
+            handleCarouselNavigation(-1);
+        });
+    }
+
+    if (elements.next) {
+        elements.next.addEventListener("click", (event) => {
+            event.preventDefault();
+            handleCarouselNavigation(1);
+        });
+    }
 
     const render = () => {
 
@@ -3020,6 +3069,8 @@ export async function initHomePage() {
                 window.location.href = pageMap.quiz;
             });
             const activeIndex = Math.max(0, state.subjects.findIndex((subject) => subject.id === state.activeSubject?.id));
+            state.carouselIndex = activeIndex >= 0 ? activeIndex : 0;
+            updateCarouselButtons();
             if (activeIndex >= 0) {
                 requestAnimationFrame(() => scrollCarouselToIndex(activeIndex));
             }

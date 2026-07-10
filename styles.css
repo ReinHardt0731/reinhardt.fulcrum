@@ -651,6 +651,24 @@ body.drawer-collapsed .mobile-only {
     border-color: rgba(255, 209, 102, 0.4);
 }
 
+.carousel-arrow:focus-visible {
+    outline: 2px solid rgba(97, 195, 255, 0.7);
+    outline-offset: 3px;
+}
+
+.carousel-arrow:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.carousel-arrow:disabled:hover {
+    transform: none;
+    background: rgba(5, 13, 25, 0.64);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
 .home-subject-carousel {
     display: flex;
     gap: 16px;
