@@ -2088,6 +2088,27 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 chapterList.appendChild(label);
             });
 
+            const selectAllChapters = document.createElement("button");
+            selectAllChapters.type = "button";
+            selectAllChapters.className = "ghost-button";
+            selectAllChapters.textContent = "Select all";
+            selectAllChapters.addEventListener("click", (event) => {
+                event.preventDefault();
+                Array.from(chapterList.querySelectorAll("input[type='checkbox']")).forEach((checkbox) => {
+                    checkbox.checked = true;
+                });
+            });
+
+            const chapterHeader = document.createElement("div");
+            chapterHeader.className = "question-row";
+            chapterHeader.style.display = "flex";
+            chapterHeader.style.gap = "0.75rem";
+            chapterHeader.style.alignItems = "center";
+            chapterHeader.append(
+                Object.assign(document.createElement("p"), { className: "section-label", textContent: "Chapters" }),
+                selectAllChapters
+            );
+
             const countInput = Object.assign(document.createElement("input"), {
                 className: "answer-input",
                 type: "number",
@@ -2127,7 +2148,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             });
 
             form.append(
-                Object.assign(document.createElement("p"), { className: "section-label", textContent: "Chapters" }),
+                chapterHeader,
                 chapterList,
                 Object.assign(document.createElement("p"), { className: "section-label", textContent: "Question count" }),
                 countInput,
@@ -3653,7 +3674,12 @@ export async function initModePage(mode) {
         }
         if (elements.counter) {
             if (state.session && !state.session.complete) {
-                elements.counter.textContent = `Question ${state.session.index + 1} of ${state.session.questions.length}`;
+                if (state.mode === "exam" && state.session.questions.length === 0) {
+                    const questionCount = tallyQuestionCount(subject);
+                    elements.counter.textContent = `Available ${questionCount} question${questionCount === 1 ? "" : "s"}`;
+                } else {
+                    elements.counter.textContent = `Question ${state.session.index + 1} of ${state.session.questions.length}`;
+                }
             } else if (state.session && state.session.complete) {
                 elements.counter.textContent = "Quiz complete";
             } else {
