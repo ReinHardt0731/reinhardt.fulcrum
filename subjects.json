@@ -5,7 +5,7 @@
       "name": "ACRM",
       "quizType": "short_quiz",
       "schemaVersion": 1,
-      "selectedChapter": "Publications",
+      "selectedChapter": "Types of Maintenance",
       "chapters": [
         {
           "title": "Material Properties",
@@ -82,9 +82,13 @@
         {
           "title": "Publications",
           "file": "chapters/publications.json"
+        },
+        {
+          "title": "Types of Maintenance",
+          "file": "chapters/types-of-maintenance.json"
         }
       ],
-      "updatedAt": "2026-07-09T12:40:59.664Z"
+      "updatedAt": "2026-07-09T14:32:38.026Z"
     },
     {
       "id": "aerodynamics",
@@ -20115,6 +20119,581 @@
           "explanation": "An Advisory Circular (AC) provides guidance and acceptable means of compliance with aviation regulations without creating new regulatory requirements.\n\nDifferentiate Similar Concepts:\n• AC → Guidance.\n• AD → Mandatory.\n• SB → Manufacturer recommendation.\n\n💡 Memory Hook:\nAC = Advisory Guidance.\n\n🎯 Board Tip:\nAcceptable methods of compliance are a hallmark of Advisory Circulars.",
           "tags": [
             "Aircraft Publications",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/types-of-maintenance.json": {
+      "title": "Types of Maintenance",
+      "questions": [
+        {
+          "question": "Aircraft maintenance checks are periodic inspections performed primarily based on:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft color and operator preference",
+            "Time or aircraft utilization",
+            "Pilot experience",
+            "Airport elevation"
+          ],
+          "answerIndex": 1,
+          "answerText": "Time or aircraft utilization",
+          "explanation": "Aircraft maintenance checks are scheduled inspections performed after specified time intervals, flight hours, flight cycles, or other utilization criteria established by the manufacturer or regulatory authority.\n\nDifferentiate Similar Concepts:\n• Maintenance checks → Periodic inspections.\n• Unscheduled maintenance → Performed after unexpected defects.\n\n💡 Memory Hook:\nChecks follow the calendar or aircraft usage.\n\n🎯 Board Tip:\nScheduled maintenance is generally based on time, flight hours, or flight cycles.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which maintenance check includes routine inspections such as checking wheels, brakes, fluid levels, and performing minor repairs between aircraft operations?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A Check",
+            "Line Maintenance",
+            "C Check",
+            "D Check"
+          ],
+          "answerIndex": 1,
+          "answerText": "Line Maintenance",
+          "explanation": "Line Maintenance consists of routine inspections, servicing, and minor corrective actions performed while the aircraft remains in operational service.\n\nDifferentiate Similar Concepts:\n• Line Maintenance → Routine operational maintenance.\n• Base Maintenance → Extensive inspections inside a maintenance facility.\n\n💡 Memory Hook:\nLine = Keeps the aircraft flying.\n\n🎯 Board Tip:\nTransit inspections are a major part of line maintenance.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which scheduled maintenance check is normally performed approximately every 8 to 10 weeks and includes lubrication, filter replacement, and emergency equipment inspection?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "B Check",
+            "A Check",
+            "C Check",
+            "Transit Check"
+          ],
+          "answerIndex": 1,
+          "answerText": "A Check",
+          "explanation": "An A Check is a relatively light scheduled inspection performed approximately every 8–10 weeks. Typical tasks include lubrication, filter replacement, and inspection of emergency equipment.\n\nDifferentiate Similar Concepts:\n• A Check → Light scheduled inspection.\n• B Check → More extensive than an A Check.\n\n💡 Memory Hook:\nA = After several weeks.\n\n🎯 Board Tip:\nRemember the 8–10 week interval commonly associated with the A Check.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which maintenance check is typically performed every 6 to 8 months and is more extensive than an A Check?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Transit Check",
+            "B Check",
+            "D Check",
+            "Line Maintenance"
+          ],
+          "answerIndex": 1,
+          "answerText": "B Check",
+          "explanation": "A B Check is a scheduled inspection that is more comprehensive than an A Check and is typically completed in an airport hangar within one to three days.\n\nDifferentiate Similar Concepts:\n• B Check → More extensive than A Check.\n• C Check → Much more comprehensive than B Check.\n\n💡 Memory Hook:\nB = Bigger than A.\n\n🎯 Board Tip:\nMany operators now integrate B Check tasks into successive A Checks.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which maintenance check normally requires the aircraft to remain at a maintenance base for one to two weeks because most aircraft components are inspected?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A Check",
+            "C Check",
+            "Line Maintenance",
+            "Transit Check"
+          ],
+          "answerIndex": 1,
+          "answerText": "C Check",
+          "explanation": "The C Check is a major scheduled inspection requiring extensive examination of aircraft systems and structures. The aircraft is removed from service until the inspection is completed.\n\nDifferentiate Similar Concepts:\n• C Check → Major scheduled inspection.\n• D Check → Complete heavy maintenance with extensive disassembly.\n\n💡 Memory Hook:\nC = Comprehensive inspection.\n\n🎯 Board Tip:\nThe aircraft cannot return to service until the C Check is completed.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which maintenance check is commonly referred to as a Heavy Maintenance Visit (HMV) and involves extensive disassembly of the aircraft for detailed inspection and overhaul?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "B Check",
+            "D Check",
+            "C Check",
+            "Line Maintenance"
+          ],
+          "answerIndex": 1,
+          "answerText": "D Check",
+          "explanation": "The D Check is the most comprehensive scheduled maintenance inspection. It requires extensive disassembly of the aircraft, including removal of interior furnishings, major systems, engines, and landing gear for detailed inspection, repair, and overhaul.\n\nDifferentiate Similar Concepts:\n• D Check → Complete heavy maintenance.\n• C Check → Major inspection.\n• A/B Check → Routine scheduled inspections.\n\n💡 Memory Hook:\nD = Deep inspection.\n\n🎯 Board Tip:\nThe D Check is the most extensive scheduled maintenance check performed on an aircraft.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of maintenance is performed at predetermined intervals based on flight hours, flight cycles, calendar time, or manufacturer requirements?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Corrective Maintenance",
+            "Scheduled Maintenance",
+            "Unscheduled Maintenance",
+            "Emergency Maintenance"
+          ],
+          "answerIndex": 1,
+          "answerText": "Scheduled Maintenance",
+          "explanation": "Scheduled maintenance consists of inspections and servicing performed at predetermined intervals established by the manufacturer or regulatory authority.\n\nDifferentiate Similar Concepts:\n• Scheduled → Planned.\n• Unscheduled → Unexpected.\n• Corrective → After a defect is found.\n\n💡 Memory Hook:\nScheduled = Planned ahead.\n\n🎯 Board Tip:\nTime, flight hours, and flight cycles are clues for scheduled maintenance.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of maintenance is performed after an unexpected malfunction, defect, or failure has been discovered?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Preventive Maintenance",
+            "Scheduled Maintenance",
+            "Unscheduled Maintenance",
+            "Transit Check"
+          ],
+          "answerIndex": 2,
+          "answerText": "Unscheduled Maintenance",
+          "explanation": "Unscheduled maintenance is performed when unexpected defects or failures occur and cannot be planned in advance.\n\nDifferentiate Similar Concepts:\n• Unscheduled → Unexpected.\n• Scheduled → Planned.\n• Preventive → Prevents failures.\n\n💡 Memory Hook:\nUnscheduled = Unplanned.\n\n🎯 Board Tip:\nIf the maintenance results from a failure or defect, think unscheduled maintenance.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of maintenance is intended to reduce the probability of equipment failure before it occurs?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Corrective Maintenance",
+            "Preventive Maintenance",
+            "Line Maintenance",
+            "Base Maintenance"
+          ],
+          "answerIndex": 1,
+          "answerText": "Preventive Maintenance",
+          "explanation": "Preventive maintenance consists of planned inspections, servicing, lubrication, and replacement of parts intended to reduce the likelihood of equipment failure.\n\nDifferentiate Similar Concepts:\n• Preventive → Prevents failure.\n• Corrective → Restores after failure.\n\n💡 Memory Hook:\nPreventive = Prevent problems.\n\n🎯 Board Tip:\nThis is one of the most frequently tested maintenance definitions in review books and board examinations.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of maintenance is performed to restore an aircraft or component to an airworthy condition after a defect or failure has occurred?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Corrective Maintenance",
+            "Scheduled Maintenance",
+            "Preventive Maintenance",
+            "Transit Check"
+          ],
+          "answerIndex": 0,
+          "answerText": "Corrective Maintenance",
+          "explanation": "Corrective maintenance restores an aircraft or component to an airworthy condition by correcting defects discovered during operation or inspection.\n\nDifferentiate Similar Concepts:\n• Corrective → Fixes existing defects.\n• Preventive → Prevents defects.\n• Scheduled → Planned maintenance.\n\n💡 Memory Hook:\nCorrective = Correct the problem.\n\n🎯 Board Tip:\nIf the maintenance is performed because a fault already exists, the answer is corrective maintenance.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which maintenance check is considered the most comprehensive scheduled inspection performed on an aircraft?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A Check",
+            "C Check",
+            "D Check",
+            "Transit Check"
+          ],
+          "answerIndex": 2,
+          "answerText": "D Check",
+          "explanation": "The D Check is the most extensive scheduled maintenance inspection. It requires complete or near-complete disassembly of the aircraft for thorough inspection, repair, and overhaul.\n\nDifferentiate Similar Concepts:\n• D Check → Most extensive.\n• C Check → Major inspection.\n• A Check → Light inspection.\n\n💡 Memory Hook:\nD = Deep maintenance.\n\n🎯 Board Tip:\nWhen asked for the largest or most comprehensive scheduled inspection, the answer is D Check.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Maintenance performed immediately after a component failure or malfunction is classified as:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Scheduled Maintenance",
+            "Preventive Maintenance",
+            "Corrective Maintenance",
+            "Line Maintenance"
+          ],
+          "answerIndex": 2,
+          "answerText": "Corrective Maintenance",
+          "explanation": "Corrective maintenance is performed to restore an aircraft or component after a defect, malfunction, or failure has occurred.\n\nDifferentiate Similar Concepts:\n• Corrective → Fixes failures.\n• Preventive → Prevents failures.\n\n💡 Memory Hook:\nCorrective = Correct an existing problem.\n\n🎯 Board Tip:\nLook for keywords such as 'failure,' 'malfunction,' or 'repair.'",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Routine servicing, transit inspections, and minor repairs performed while the aircraft remains in operation are collectively classified as:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Base Maintenance",
+            "Line Maintenance",
+            "C Check",
+            "Scheduled Maintenance"
+          ],
+          "answerIndex": 1,
+          "answerText": "Line Maintenance",
+          "explanation": "Line maintenance includes routine inspections, servicing, and minor corrective actions performed to keep the aircraft in daily operation.\n\nDifferentiate Similar Concepts:\n• Line Maintenance → Operational maintenance.\n• Base Maintenance → Heavy maintenance.\n\n💡 Memory Hook:\nLine = Keeps the aircraft flying.\n\n🎯 Board Tip:\nTransit and daily inspections are typically associated with line maintenance.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Maintenance performed at predetermined intervals regardless of whether a defect exists is known as:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Corrective Maintenance",
+            "Unscheduled Maintenance",
+            "Scheduled Maintenance",
+            "Emergency Maintenance"
+          ],
+          "answerIndex": 2,
+          "answerText": "Scheduled Maintenance",
+          "explanation": "Scheduled maintenance is planned in advance and performed at specified flight hours, flight cycles, or calendar intervals.\n\nDifferentiate Similar Concepts:\n• Scheduled → Planned.\n• Unscheduled → Unexpected.\n\n💡 Memory Hook:\nScheduled = Set by schedule.\n\n🎯 Board Tip:\nTime, flight hours, and cycles are clues for scheduled maintenance.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which maintenance philosophy aims to minimize equipment failures by performing inspections and servicing before breakdown occurs?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Corrective Maintenance",
+            "Preventive Maintenance",
+            "Unscheduled Maintenance",
+            "Transit Check"
+          ],
+          "answerIndex": 1,
+          "answerText": "Preventive Maintenance",
+          "explanation": "Preventive maintenance consists of planned actions intended to reduce the probability of equipment failure and maintain airworthiness.\n\nDifferentiate Similar Concepts:\n• Preventive → Prevents failures.\n• Corrective → Repairs failures.\n\n💡 Memory Hook:\nPreventive = Prevent first.\n\n🎯 Board Tip:\nIf the objective is avoiding failures rather than repairing them, choose preventive maintenance.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which maintenance check requires the aircraft to remain out of service for the longest period due to extensive inspection and overhaul?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "C Check",
+            "A Check",
+            "D Check",
+            "B Check"
+          ],
+          "answerIndex": 2,
+          "answerText": "D Check",
+          "explanation": "The D Check is the most extensive scheduled maintenance inspection. It involves major disassembly and overhaul of the aircraft and requires the longest downtime.\n\nDifferentiate Similar Concepts:\n• A Check → Light inspection.\n• B Check → Intermediate inspection.\n• C Check → Major inspection.\n• D Check → Heavy maintenance overhaul.\n\n💡 Memory Hook:\nD = Deepest maintenance.\n\n🎯 Board Tip:\nWhen asked for the most comprehensive maintenance check, choose D Check.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of maintenance is normally carried out on the flight line to keep an aircraft available for daily operations?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Corrective Maintenance",
+            "Line Maintenance",
+            "Base Maintenance",
+            "C Check"
+          ],
+          "answerIndex": 1,
+          "answerText": "Line Maintenance",
+          "explanation": "Line maintenance includes routine servicing, transit inspections, defect rectification, and minor repairs performed while the aircraft remains in operational service.\n\nDifferentiate Similar Concepts:\n• Line Maintenance → Operational support.\n• Base Maintenance → Heavy maintenance.\n\n💡 Memory Hook:\nLine = On the flight line.\n\n🎯 Board Tip:\nRoutine servicing between flights is characteristic of line maintenance.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Maintenance accomplished at predetermined flight hours, flight cycles, or calendar intervals is classified as:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Preventive Maintenance",
+            "Corrective Maintenance",
+            "Scheduled Maintenance",
+            "Unscheduled Maintenance"
+          ],
+          "answerIndex": 2,
+          "answerText": "Scheduled Maintenance",
+          "explanation": "Scheduled maintenance is planned in advance and performed according to established maintenance intervals.\n\nDifferentiate Similar Concepts:\n• Scheduled → Planned.\n• Unscheduled → Unexpected.\n\n💡 Memory Hook:\nScheduled = Set by schedule.\n\n🎯 Board Tip:\nKeywords such as 'calendar,' 'flight hours,' or 'flight cycles' indicate scheduled maintenance.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which maintenance check is more extensive than an A Check but less extensive than a C Check?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Transit Check",
+            "D Check",
+            "B Check",
+            "Daily Check"
+          ],
+          "answerIndex": 2,
+          "answerText": "B Check",
+          "explanation": "Traditionally, the B Check is an intermediate scheduled inspection between the A and C Checks. Although many operators now distribute B Check tasks into phased maintenance programs, the traditional classification remains common in maintenance references and board reviews.\n\nDifferentiate Similar Concepts:\n• A Check → Light.\n• B Check → Intermediate.\n• C Check → Major.\n\n💡 Memory Hook:\nB = Between A and C.\n\n🎯 Board Tip:\nThe AELE commonly follows the traditional A-B-C-D maintenance hierarchy.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Maintenance performed to restore an aircraft to an airworthy condition after a defect has been discovered is known as:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Preventive Maintenance",
+            "Corrective Maintenance",
+            "Scheduled Maintenance",
+            "Line Maintenance"
+          ],
+          "answerIndex": 1,
+          "answerText": "Corrective Maintenance",
+          "explanation": "Corrective maintenance restores an aircraft or component after a malfunction or defect has already occurred.\n\nDifferentiate Similar Concepts:\n• Preventive → Prevents failures.\n• Corrective → Repairs failures.\n\n💡 Memory Hook:\nCorrective = Correct an existing defect.\n\n🎯 Board Tip:\nIf the maintenance follows a failure or discrepancy, the answer is corrective maintenance.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which maintenance inspection is performed immediately before each flight to verify that the aircraft is safe for operation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Postflight Inspection",
+            "Preflight Inspection",
+            "Transit Check",
+            "A Check"
+          ],
+          "answerIndex": 1,
+          "answerText": "Preflight Inspection",
+          "explanation": "A preflight inspection is conducted before every flight to verify the aircraft's overall condition and ensure it is safe for operation.\n\nDifferentiate Similar Concepts:\n• Preflight → Before flight.\n• Postflight → After flight.\n\n💡 Memory Hook:\nPre = Prior to flight.\n\n🎯 Board Tip:\nThe pilot is responsible for ensuring that the preflight inspection is completed before flight.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which inspection is recommended after every flight to identify defects or servicing requirements before the next operation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Transit Check",
+            "Daily Check",
+            "Postflight Inspection",
+            "B Check"
+          ],
+          "answerIndex": 2,
+          "answerText": "Postflight Inspection",
+          "explanation": "A postflight inspection is performed after flight to detect defects, leaks, or servicing requirements before the aircraft is flown again.\n\nDifferentiate Similar Concepts:\n• Preflight → Before flight.\n• Postflight → After flight.\n\n💡 Memory Hook:\nPost = After flight.\n\n🎯 Board Tip:\nPostflight inspections help identify discrepancies early, reducing delays during the next operation.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which maintenance check is typically performed between consecutive flights while the aircraft remains in operational service?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Transit Check",
+            "C Check",
+            "Base Maintenance",
+            "D Check"
+          ],
+          "answerIndex": 0,
+          "answerText": "Transit Check",
+          "explanation": "A transit check is a routine inspection performed during short ground stops between flights to ensure the aircraft is ready for its next departure.\n\nDifferentiate Similar Concepts:\n• Transit Check → Between flights.\n• Daily Check → Once each operational day.\n\n💡 Memory Hook:\nTransit = During transit.\n\n🎯 Board Tip:\nTransit checks are commonly included within line maintenance activities.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which maintenance inspection is generally performed once every operational day and is more comprehensive than a transit check?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Daily Check",
+            "A Check",
+            "Preflight Inspection",
+            "Scheduled Maintenance"
+          ],
+          "answerIndex": 0,
+          "answerText": "Daily Check",
+          "explanation": "A daily check is carried out approximately once each operational day and includes a broader inspection than a transit check.\n\nDifferentiate Similar Concepts:\n• Transit Check → Between flights.\n• Daily Check → Once per day.\n\n💡 Memory Hook:\nDaily = Once daily.\n\n🎯 Board Tip:\nA daily check covers more items than a transit inspection but is less extensive than an A Check.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of maintenance divides major maintenance requirements into smaller work packages completed over a period of time?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Corrective Maintenance",
+            "Progressive Maintenance",
+            "Line Maintenance",
+            "Preventive Maintenance"
+          ],
+          "answerIndex": 1,
+          "answerText": "Progressive Maintenance",
+          "explanation": "Progressive maintenance distributes major inspection tasks into smaller scheduled work packages, minimizing aircraft downtime while maintaining airworthiness.\n\nDifferentiate Similar Concepts:\n• Progressive → Work divided into phases.\n• Scheduled → Maintenance performed at predetermined intervals.\n\n💡 Memory Hook:\nProgressive = Progress little by little.\n\n🎯 Board Tip:\nProgressive maintenance spreads heavy maintenance over multiple shorter inspection periods.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of maintenance is normally performed in a maintenance hangar and involves extensive inspections, repairs, and modifications that cannot be accomplished on the flight line?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Line Maintenance",
+            "Transit Check",
+            "Base Maintenance",
+            "Daily Check"
+          ],
+          "answerIndex": 2,
+          "answerText": "Base Maintenance",
+          "explanation": "Base Maintenance consists of major inspections, repairs, modifications, and overhauls performed at a maintenance base or hangar. These tasks require specialized facilities and usually keep the aircraft out of service.\n\nDifferentiate Similar Concepts:\n• Base Maintenance → Heavy maintenance in a hangar.\n• Line Maintenance → Routine maintenance during operations.\n\n💡 Memory Hook:\nBase = Back to the hangar.\n\n🎯 Board Tip:\nIf extensive maintenance requiring hangar facilities is mentioned, think Base Maintenance.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Compared with a transit check, a daily check is generally:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Less comprehensive",
+            "Performed more frequently",
+            "More comprehensive",
+            "Performed only after major repairs"
+          ],
+          "answerIndex": 2,
+          "answerText": "More comprehensive",
+          "explanation": "A daily check covers more inspection items than a transit check and is normally performed once each operational day.\n\nDifferentiate Similar Concepts:\n• Transit Check → Between flights.\n• Daily Check → Once per operational day with broader inspection.\n\n💡 Memory Hook:\nDaily = Deeper than Transit.\n\n🎯 Board Tip:\nA transit check keeps the aircraft moving, while a daily check provides a more thorough routine inspection.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which maintenance program reduces aircraft downtime by distributing major inspection requirements into a series of smaller scheduled work packages?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Corrective Maintenance",
+            "Preventive Maintenance",
+            "Progressive Maintenance",
+            "Base Maintenance"
+          ],
+          "answerIndex": 2,
+          "answerText": "Progressive Maintenance",
+          "explanation": "Progressive Maintenance divides major maintenance requirements into smaller scheduled inspections performed over time instead of one large inspection.\n\nDifferentiate Similar Concepts:\n• Progressive → Divided into smaller work packages.\n• Scheduled → Performed at predetermined intervals.\n\n💡 Memory Hook:\nProgressive = Piece by piece.\n\n🎯 Board Tip:\nThe objective of progressive maintenance is to minimize aircraft downtime while maintaining airworthiness.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which inspection is intended to identify discrepancies that developed during flight so they can be corrected before the aircraft's next operation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Transit Check",
+            "Preflight Inspection",
+            "Postflight Inspection",
+            "A Check"
+          ],
+          "answerIndex": 2,
+          "answerText": "Postflight Inspection",
+          "explanation": "A postflight inspection is performed after a flight to detect damage, leaks, abnormal wear, or servicing requirements before the aircraft is returned to service.\n\nDifferentiate Similar Concepts:\n• Preflight → Before flight.\n• Postflight → After flight.\n\n💡 Memory Hook:\nPost = Problems after flight.\n\n🎯 Board Tip:\nPostflight inspections help identify maintenance needs before the next departure.",
+          "tags": [
+            "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which inspection is primarily intended to verify that an aircraft is in a safe and airworthy condition immediately before departure?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Postflight Inspection",
+            "Daily Check",
+            "Preflight Inspection",
+            "Transit Check"
+          ],
+          "answerIndex": 2,
+          "answerText": "Preflight Inspection",
+          "explanation": "A preflight inspection is conducted before flight to verify that the aircraft is airworthy and ready for safe operation.\n\nDifferentiate Similar Concepts:\n• Preflight → Before departure.\n• Postflight → After landing.\n\n💡 Memory Hook:\nPre = Prior to takeoff.\n\n🎯 Board Tip:\nThe purpose of the preflight inspection is to ensure the aircraft is safe before every flight.",
+          "tags": [
+            "Types of Maintenance Checks",
             "Recall"
           ],
           "expectedAnswer": null,
