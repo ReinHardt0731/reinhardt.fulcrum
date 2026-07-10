@@ -497,10 +497,15 @@ function parseNumericAnswer(entry) {
 }
 
 function formatExplanationText(value) {
-    return text(value)
+    const normalized = text(value)
         .replace(/\\r\\n/g, "\n")
         .replace(/\\n/g, "\n")
         .replace(/\r\n?/g, "\n");
+
+    return normalized
+        .replace(/\n{3,}/g, "\n\n")
+        .replace(/([^\n])\s*(💡|🎯|🧠|✅|⚠️)/g, "$1\n\n$2")
+        .replace(/\n{3,}/g, "\n\n");
 }
 
 function escapeHtml(value) {
