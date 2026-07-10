@@ -5,7 +5,7 @@
       "name": "ACRM",
       "quizType": "short_quiz",
       "schemaVersion": 1,
-      "selectedChapter": "Types of Maintenance",
+      "selectedChapter": "Major and Minor Modifications",
       "chapters": [
         {
           "title": "Material Properties",
@@ -86,9 +86,17 @@
         {
           "title": "Types of Maintenance",
           "file": "chapters/types-of-maintenance.json"
+        },
+        {
+          "title": "Major and Minor Repair",
+          "file": "chapters/major-and-minor-repair.json"
+        },
+        {
+          "title": "Major and Minor Modifications",
+          "file": "chapters/major-and-minor-modifications.json"
         }
       ],
-      "updatedAt": "2026-07-09T14:32:38.026Z"
+      "updatedAt": "2026-07-10T09:25:09.952Z"
     },
     {
       "id": "aerodynamics",
@@ -20694,6 +20702,1441 @@
           "explanation": "A preflight inspection is conducted before flight to verify that the aircraft is airworthy and ready for safe operation.\n\nDifferentiate Similar Concepts:\n• Preflight → Before departure.\n• Postflight → After landing.\n\n💡 Memory Hook:\nPre = Prior to takeoff.\n\n🎯 Board Tip:\nThe purpose of the preflight inspection is to ensure the aircraft is safe before every flight.",
           "tags": [
             "Types of Maintenance Checks",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/major-and-minor-repair.json": {
+      "title": "Major and Minor Repair",
+      "questions": [
+        {
+          "question": "Which term refers to the restoration of a damaged aircraft, airframe, engine, propeller, appliance, or component to an airworthy condition?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Modification",
+            "Repair",
+            "Alteration",
+            "Overhaul"
+          ],
+          "answerIndex": 1,
+          "answerText": "Repair",
+          "explanation": "A repair is the process of restoring a damaged aircraft or component to an airworthy condition while maintaining its original design and function.\n\nDifferentiate Similar Concepts:\n• Repair → Restores damaged parts.\n• Alteration → Changes the original design or configuration.\n• Overhaul → Restores a serviceable component by inspection, repair, and replacement of worn parts.\n\n💡 Memory Hook:\nRepair = Restore.\n\n🎯 Board Tip:\nIf the objective is to restore the aircraft after damage without changing its original design, the answer is Repair.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of repair is intended only to permit safe operation until a permanent repair can be accomplished?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Permanent Repair",
+            "Major Repair",
+            "Temporary Repair",
+            "Minor Repair"
+          ],
+          "answerIndex": 2,
+          "answerText": "Temporary Repair",
+          "explanation": "A temporary repair is performed to permit safe operation for a limited period or to allow the aircraft to be flown to a maintenance facility where a permanent repair can be made.\n\nDifferentiate Similar Concepts:\n• Temporary Repair → Interim measure.\n• Permanent Repair → Fully restores the aircraft.\n\n💡 Memory Hook:\nTemporary = Today, not forever.\n\n🎯 Board Tip:\nTemporary repairs are not intended to replace permanent corrective action.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of repair restores the aircraft to its approved airworthy condition without requiring a later replacement or corrective repair?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Temporary Repair",
+            "Major Repair",
+            "Permanent Repair",
+            "Preventive Repair"
+          ],
+          "answerIndex": 2,
+          "answerText": "Permanent Repair",
+          "explanation": "A permanent repair completely restores the aircraft to an approved airworthy condition and is intended to remain for the service life of the repaired structure unless another repair becomes necessary.\n\nDifferentiate Similar Concepts:\n• Permanent Repair → Final repair.\n• Temporary Repair → Interim repair.\n\n💡 Memory Hook:\nPermanent = Problem solved.\n\n🎯 Board Tip:\nA permanent repair restores structural integrity in accordance with approved data.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which classification of repair involves work that could appreciably affect the structural strength, performance, powerplant operation, flight characteristics, or other qualities affecting airworthiness?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Minor Repair",
+            "Temporary Repair",
+            "Major Repair",
+            "Routine Repair"
+          ],
+          "answerIndex": 2,
+          "answerText": "Major Repair",
+          "explanation": "A major repair is one that, if improperly performed, might appreciably affect structural strength, performance, powerplant operation, flight characteristics, or other qualities affecting airworthiness.\n\nDifferentiate Similar Concepts:\n• Major Repair → Significant effect on airworthiness.\n• Minor Repair → Does not appreciably affect airworthiness.\n\n💡 Memory Hook:\nMajor = Major effect.\n\n🎯 Board Tip:\nQuestions mentioning structural strength or flight characteristics usually point to a Major Repair.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which classification applies to repairs that do not appreciably affect structural strength, performance, powerplant operation, flight characteristics, or other qualities affecting airworthiness?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Major Repair",
+            "Minor Repair",
+            "Temporary Repair",
+            "Emergency Repair"
+          ],
+          "answerIndex": 1,
+          "answerText": "Minor Repair",
+          "explanation": "A minor repair is one that does not appreciably affect the structural strength, performance, powerplant operation, flight characteristics, or other qualities affecting airworthiness.\n\nDifferentiate Similar Concepts:\n• Minor Repair → No appreciable effect on airworthiness.\n• Major Repair → Significant effect on airworthiness.\n\n💡 Memory Hook:\nMinor = Minimal effect.\n\n🎯 Board Tip:\nThe phrase 'does not appreciably affect airworthiness' is the classic definition of a Minor Repair.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which term refers to a change made to the original design, construction, or configuration of an aircraft or one of its components?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Repair",
+            "Overhaul",
+            "Alteration",
+            "Inspection"
+          ],
+          "answerIndex": 2,
+          "answerText": "Alteration",
+          "explanation": "An alteration is a change to the original design, construction, configuration, or operating characteristics of an aircraft or its components.\n\nDifferentiate Similar Concepts:\n• Alteration → Changes the original design.\n• Repair → Restores the original condition.\n\n💡 Memory Hook:\nAlteration = Alter the design.\n\n🎯 Board Tip:\nIf the work changes the aircraft from its original approved configuration, think Alteration.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which classification of alteration could appreciably affect structural strength, performance, powerplant operation, flight characteristics, or other qualities affecting airworthiness?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Minor Alteration",
+            "Temporary Alteration",
+            "Major Alteration",
+            "Field Alteration"
+          ],
+          "answerIndex": 2,
+          "answerText": "Major Alteration",
+          "explanation": "A major alteration is one that could appreciably affect structural strength, performance, powerplant operation, flight characteristics, or other qualities affecting airworthiness.\n\nDifferentiate Similar Concepts:\n• Major Alteration → Significant effect on airworthiness.\n• Minor Alteration → No appreciable effect.\n\n💡 Memory Hook:\nMajor Alteration = Major change.\n\n🎯 Board Tip:\nThe phrase 'appreciably affect' is a classic clue for both Major Repairs and Major Alterations.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which classification applies to alterations that do not appreciably affect structural strength, performance, powerplant operation, flight characteristics, or other qualities affecting airworthiness?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Major Alteration",
+            "Minor Alteration",
+            "Preventive Alteration",
+            "Temporary Alteration"
+          ],
+          "answerIndex": 1,
+          "answerText": "Minor Alteration",
+          "explanation": "A minor alteration is one that does not appreciably affect structural strength, performance, powerplant operation, flight characteristics, or other qualities affecting airworthiness.\n\nDifferentiate Similar Concepts:\n• Minor Alteration → No appreciable effect.\n• Major Alteration → Significant effect.\n\n💡 Memory Hook:\nMinor = Minimal effect.\n\n🎯 Board Tip:\nThe definitions of Major/Minor Alterations closely parallel those of Major/Minor Repairs.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "When manufacturer-approved repair instructions are unavailable, which FAA document provides acceptable methods, techniques, and practices for aircraft inspection and repair?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Structural Repair Manual (SRM)",
+            "Aircraft Maintenance Manual (AMM)",
+            "FAA AC 43.13-1B",
+            "Illustrated Parts Catalog (IPC)"
+          ],
+          "answerIndex": 2,
+          "answerText": "FAA AC 43.13-1B",
+          "explanation": "FAA Advisory Circular 43.13-1B provides acceptable methods, techniques, and practices for aircraft inspection and repair when manufacturer instructions are unavailable and the data is applicable to the repair.\n\nDifferentiate Similar Concepts:\n• AC 43.13-1B → Acceptable repair methods.\n• SRM → Manufacturer-approved structural repair data.\n• AMM → Manufacturer maintenance procedures.\n\n💡 Memory Hook:\n43.13 = FAA repair handbook.\n\n🎯 Board Tip:\nIf the question mentions 'acceptable methods' and manufacturer data is unavailable, think AC 43.13-1B.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which document normally takes precedence when approved repair instructions are available from the aircraft manufacturer?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "FAA AC 43.13-1B",
+            "Structural Repair Manual (SRM)",
+            "Advisory Circular 120",
+            "Maintenance Planning Document (MPD)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Structural Repair Manual (SRM)",
+          "explanation": "The manufacturer's Structural Repair Manual (SRM) contains the approved repair procedures specific to the aircraft. FAA AC 43.13-1B is intended for use only when appropriate manufacturer repair data is unavailable and its guidance is applicable.\n\nDifferentiate Similar Concepts:\n• SRM → Manufacturer-approved repair instructions.\n• AC 43.13-1B → Acceptable methods when manufacturer data is unavailable.\n\n💡 Memory Hook:\nSRM first, FAA second.\n\n🎯 Board Tip:\nThe manufacturer always has priority when approved repair data exists.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which document contains the manufacturer's approved procedures, allowable damage limits, and repair methods for aircraft structural components?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Maintenance Manual (AMM)",
+            "Structural Repair Manual (SRM)",
+            "Illustrated Parts Catalog (IPC)",
+            "Maintenance Planning Document (MPD)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Structural Repair Manual (SRM)",
+          "explanation": "The Structural Repair Manual (SRM) contains manufacturer-approved structural repair procedures, allowable damage limits, repair schemes, and material specifications.\n\nDifferentiate Similar Concepts:\n• SRM → Structural repairs.\n• AMM → Maintenance procedures.\n• IPC → Parts identification.\n\n💡 Memory Hook:\nSRM = Structural Repairs Manual.\n\n🎯 Board Tip:\nWhenever structural damage limits or repair procedures are mentioned, the answer is usually the SRM.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which publication provides detailed maintenance instructions for servicing, removing, installing, and adjusting aircraft systems and components?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Maintenance Manual (AMM)",
+            "Structural Repair Manual (SRM)",
+            "Illustrated Parts Catalog (IPC)",
+            "Fault Isolation Manual (FIM)"
+          ],
+          "answerIndex": 0,
+          "answerText": "Aircraft Maintenance Manual (AMM)",
+          "explanation": "The Aircraft Maintenance Manual (AMM) contains procedures for inspection, servicing, removal, installation, adjustment, testing, and operational checks of aircraft systems.\n\nDifferentiate Similar Concepts:\n• AMM → How to maintain.\n• SRM → How to repair structures.\n\n💡 Memory Hook:\nAMM = Aircraft Maintenance Manual.\n\n🎯 Board Tip:\nIf the task involves routine maintenance rather than structural repair, think AMM.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which action should be taken first after structural damage has been discovered during an aircraft inspection?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install a temporary patch immediately",
+            "Consult the Structural Repair Manual (SRM)",
+            "Replace the damaged component",
+            "Apply corrosion protection"
+          ],
+          "answerIndex": 1,
+          "answerText": "Consult the Structural Repair Manual (SRM)",
+          "explanation": "Before performing a structural repair, the damage should be evaluated using the manufacturer's Structural Repair Manual (SRM) to determine allowable limits and approved repair procedures.\n\nDifferentiate Similar Concepts:\n• SRM → First reference for structural damage.\n• AMM → Maintenance procedures.\n\n💡 Memory Hook:\nDamage first, SRM second.\n\n🎯 Board Tip:\nDo not begin a structural repair before determining whether the damage is within allowable limits.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "If structural damage exceeds the allowable limits specified in the Structural Repair Manual, the next appropriate action is to:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Perform a temporary repair",
+            "Consult approved engineering repair data",
+            "Continue operating the aircraft under observation",
+            "Reduce the operating weight of the aircraft"
+          ],
+          "answerIndex": 1,
+          "answerText": "Consult approved engineering repair data",
+          "explanation": "When damage exceeds SRM limits, a repair outside the published limits requires approved engineering data from the manufacturer or the appropriate aviation authority before the repair can be accomplished.\n\nDifferentiate Similar Concepts:\n• Within SRM limits → Follow the SRM.\n• Beyond SRM limits → Approved engineering repair required.\n\n💡 Memory Hook:\nBeyond SRM = Engineering approval.\n\n🎯 Board Tip:\nThe SRM does not authorize repairs beyond its published limits.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A repair that restores the original strength, function, and airworthiness of the aircraft while complying with approved technical data should be accomplished using:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Operator preference",
+            "Approved repair data",
+            "Previous maintenance experience",
+            "Equivalent commercial practices"
+          ],
+          "answerIndex": 1,
+          "answerText": "Approved repair data",
+          "explanation": "Aircraft repairs must be accomplished using approved repair data to ensure that the repaired structure maintains its original strength, function, and airworthiness.\n\nDifferentiate Similar Concepts:\n• Approved Data → Legally acceptable repair basis.\n• Acceptable Methods → Guidance when approved manufacturer data is unavailable and applicable.\n\n💡 Memory Hook:\nRepair = Approved Data.\n\n🎯 Board Tip:\nThe objective of every aircraft repair is to restore airworthiness using approved technical data.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of repair is commonly used when aerodynamic smoothness is not a primary consideration and the repair patch overlaps the damaged area?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Flush Patch",
+            "Lap Patch",
+            "Scarf Patch",
+            "Insert Patch"
+          ],
+          "answerIndex": 1,
+          "answerText": "Lap Patch",
+          "explanation": "A lap patch is an external overlapping repair in which the patch is placed over the damaged skin. It is commonly used where aerodynamic smoothness is not critical and is generally easier to fabricate than a flush patch.\n\nDifferentiate Similar Concepts:\n• Lap Patch → Overlapping external patch.\n• Flush Patch → Surface remains flush.\n\n💡 Memory Hook:\nLap = Overlap.\n\n🎯 Board Tip:\nIf the repair overlaps the original skin, think Lap Patch.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of repair restores the original aerodynamic contour by keeping the repaired surface level with the surrounding aircraft skin?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Lap Patch",
+            "Flush Patch",
+            "Doubler Repair",
+            "External Reinforcement"
+          ],
+          "answerIndex": 1,
+          "answerText": "Flush Patch",
+          "explanation": "A flush patch restores the original surface contour by fitting the repair patch level with the surrounding skin. It is preferred on areas where smooth airflow is important.\n\nDifferentiate Similar Concepts:\n• Flush Patch → Flush with skin.\n• Lap Patch → Overlaps the skin.\n\n💡 Memory Hook:\nFlush = Flat surface.\n\n🎯 Board Tip:\nQuestions mentioning aerodynamic smoothness almost always point to a Flush Patch.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which repair method is generally preferred for aircraft surfaces where aerodynamic efficiency is important?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Lap Patch",
+            "Flush Patch",
+            "External Doubler",
+            "Temporary Patch"
+          ],
+          "answerIndex": 1,
+          "answerText": "Flush Patch",
+          "explanation": "Flush patches preserve the aircraft's original aerodynamic contour by maintaining a smooth outer surface, making them the preferred repair for high-speed airflow areas.\n\nDifferentiate Similar Concepts:\n• Flush Patch → Aerodynamic surfaces.\n• Lap Patch → Non-critical aerodynamic areas.\n\n💡 Memory Hook:\nFlush = Fast airflow.\n\n🎯 Board Tip:\nWhenever the question mentions aerodynamic smoothness or contour, choose Flush Patch.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which component is installed behind a flush patch to restore the structural strength of the repaired aircraft skin?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Stringer",
+            "Doubler",
+            "Gusset",
+            "Splice Plate"
+          ],
+          "answerIndex": 1,
+          "answerText": "Doubler",
+          "explanation": "A doubler is a reinforcement plate installed behind a flush patch to restore structural strength and provide support for the repaired skin. FAA guidance commonly recommends using a doubler one gauge thicker than the original skin for flush repairs, unless otherwise specified by approved data.:contentReference[oaicite:0]{index=0}\n\nDifferentiate Similar Concepts:\n• Doubler → Reinforcement behind the repair.\n• Flush Patch → Restores surface contour.\n\n💡 Memory Hook:\nDoubler = Double the support.\n\n🎯 Board Tip:\nDo not confuse the patch itself with the doubler that supports it.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Compared with a lap patch, a flush patch is generally:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Simpler to fabricate",
+            "Less expensive to install",
+            "More difficult to fabricate",
+            "Used only as a temporary repair"
+          ],
+          "answerIndex": 2,
+          "answerText": "More difficult to fabricate",
+          "explanation": "Flush patches require precise cutting, fitting, and installation of a supporting doubler to maintain the original skin contour, making them more difficult to fabricate than lap patches.\n\nDifferentiate Similar Concepts:\n• Flush Patch → More complex but aerodynamically superior.\n• Lap Patch → Simpler and faster to fabricate.\n\n💡 Memory Hook:\nFlush = More finesse.\n\n🎯 Board Tip:\nIf asked which repair is more difficult to fabricate, the answer is the Flush Patch.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which repair method normally requires the damaged skin to be cut out and replaced with a filler patch that fits level with the surrounding surface?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Lap Patch",
+            "Flush Patch",
+            "Temporary Patch",
+            "External Reinforcement"
+          ],
+          "answerIndex": 1,
+          "answerText": "Flush Patch",
+          "explanation": "A flush patch replaces the damaged skin with a filler patch that fits flush with the surrounding surface. A supporting doubler is installed beneath the repair to restore structural strength.\n\nDifferentiate Similar Concepts:\n• Flush Patch → Filler patch with internal doubler.\n• Lap Patch → External overlapping patch.\n\n💡 Memory Hook:\nFlush = Fill the hole.\n\n🎯 Board Tip:\nIf the damaged skin is removed and replaced with a flush insert, the answer is Flush Patch.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which repair method normally requires fewer fabrication steps because the repair patch simply overlaps the damaged skin?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Flush Patch",
+            "Lap Patch",
+            "Scarf Repair",
+            "Insert Repair"
+          ],
+          "answerIndex": 1,
+          "answerText": "Lap Patch",
+          "explanation": "A lap patch is simpler to fabricate because the repair patch overlaps the existing skin and usually does not require a flush insert or extensive skin fitting.\n\nDifferentiate Similar Concepts:\n• Lap Patch → Simpler construction.\n• Flush Patch → Requires precise fitting.\n\n💡 Memory Hook:\nLap = Lay over.\n\n🎯 Board Tip:\nQuestions mentioning ease of fabrication usually indicate a Lap Patch.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A reinforcement plate installed beneath a repaired aircraft skin to restore strength is known as a:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Splice",
+            "Doubler",
+            "Stringer",
+            "Insert"
+          ],
+          "answerIndex": 1,
+          "answerText": "Doubler",
+          "explanation": "A doubler is a reinforcement plate installed behind the repaired skin to restore the structural strength lost because of damage or material removal.\n\nDifferentiate Similar Concepts:\n• Doubler → Reinforces repaired skin.\n• Stringer → Original structural member.\n\n💡 Memory Hook:\nDoubler = Double the strength.\n\n🎯 Board Tip:\nA doubler supports the repair—it is not the repair patch itself.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which repair is generally selected when maintaining the original aerodynamic contour of the aircraft is essential?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Lap Patch",
+            "Flush Patch",
+            "External Reinforcement",
+            "Temporary Repair"
+          ],
+          "answerIndex": 1,
+          "answerText": "Flush Patch",
+          "explanation": "A flush patch restores the original contour of the aircraft skin and minimizes aerodynamic drag, making it the preferred repair where airflow is important.\n\nDifferentiate Similar Concepts:\n• Flush Patch → Smooth aerodynamic contour.\n• Lap Patch → Raised external surface.\n\n💡 Memory Hook:\nFlush = Flight efficiency.\n\n🎯 Board Tip:\nAerodynamic contour and smooth airflow are classic clues for a Flush Patch.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which repair method produces a raised external surface after installation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Flush Patch",
+            "Lap Patch",
+            "Scarf Repair",
+            "Insert Repair"
+          ],
+          "answerIndex": 1,
+          "answerText": "Lap Patch",
+          "explanation": "Because a lap patch overlaps the existing aircraft skin, the repaired area remains raised above the surrounding surface.\n\nDifferentiate Similar Concepts:\n• Lap Patch → Raised surface.\n• Flush Patch → Level surface.\n\n💡 Memory Hook:\nLap = Layer on top.\n\n🎯 Board Tip:\nIf the repaired area is not flush with the surrounding skin, think Lap Patch.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of repair is commonly used to restore the strength of a damaged aircraft skin by attaching a reinforcing plate behind or over the damaged area?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Finger Patch",
+            "Doubler Repair",
+            "Scarf Repair",
+            "Stop Drilling"
+          ],
+          "answerIndex": 1,
+          "answerText": "Doubler Repair",
+          "explanation": "A doubler repair restores structural strength by attaching a reinforcing plate to the damaged area. The doubler redistributes loads and reinforces the weakened structure.\n\nDifferentiate Similar Concepts:\n• Doubler → Reinforcement.\n• Flush Patch → Restores contour.\n• Lap Patch → Overlapping skin repair.\n\n💡 Memory Hook:\nDoubler = Double the strength.\n\n🎯 Board Tip:\nWhenever reinforcement of a weakened skin is mentioned, think Doubler.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which repair procedure is commonly performed to prevent an existing crack from propagating farther until permanent corrective action can be accomplished?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Lap Patch",
+            "Stop Drilling",
+            "Scarf Repair",
+            "Stringer Splice"
+          ],
+          "answerIndex": 1,
+          "answerText": "Stop Drilling",
+          "explanation": "Stop drilling involves drilling a small hole at the end of a crack to reduce stress concentration and help prevent further crack propagation. It is usually an interim measure and does not eliminate the need for an approved permanent repair.\n\nDifferentiate Similar Concepts:\n• Stop Drilling → Arrest crack growth.\n• Permanent Repair → Restores structural integrity.\n\n💡 Memory Hook:\nStop Drill = Stop the crack.\n\n🎯 Board Tip:\nIf the question mentions preventing crack growth, the answer is Stop Drilling.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which structural member is primarily repaired by using a splice when only a localized damaged section requires replacement?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Skin",
+            "Stringer",
+            "Windshield",
+            "Control Cable"
+          ],
+          "answerIndex": 1,
+          "answerText": "Stringer",
+          "explanation": "A stringer splice joins a replacement section to the remaining sound portion of a damaged stringer, restoring its structural continuity.\n\nDifferentiate Similar Concepts:\n• Stringer Splice → Repairs longitudinal stiffeners.\n• Skin Patch → Repairs sheet covering.\n\n💡 Memory Hook:\nSplice = Join two sections.\n\n🎯 Board Tip:\nFAA AC 43.13 illustrates several approved methods for stringer splices depending on the stringer configuration. :contentReference[oaicite:1]{index=1}",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which repair method joins two sound structural sections after the damaged portion has been removed?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Doubler",
+            "Splice",
+            "Flush Patch",
+            "Lap Patch"
+          ],
+          "answerIndex": 1,
+          "answerText": "Splice",
+          "explanation": "A splice restores continuity by joining two sound structural members after the damaged portion has been removed.\n\nDifferentiate Similar Concepts:\n• Splice → Joins structural members.\n• Doubler → Reinforces existing members.\n\n💡 Memory Hook:\nSplice = Splice two pieces together.\n\n🎯 Board Tip:\nThe key word is 'join.' If two structural sections are connected, think Splice.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "According to acceptable structural repair practices, the primary objective of any aircraft repair is to:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Reduce maintenance cost",
+            "Improve aircraft performance",
+            "Restore the original strength and airworthiness of the structure",
+            "Reduce aircraft weight"
+          ],
+          "answerIndex": 2,
+          "answerText": "Restore the original strength and airworthiness of the structure",
+          "explanation": "The objective of an aircraft structural repair is to restore the original strength, function, and airworthiness without introducing new structural weaknesses.\n\nDifferentiate Similar Concepts:\n• Repair → Restore original condition.\n• Alteration → Change original design.\n\n💡 Memory Hook:\nRepair = Restore.\n\n🎯 Board Tip:\nWhen asked about the goal of structural repair, always think restoration of strength and airworthiness.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which repair method is commonly used to restore the aerodynamic contour of a damaged composite laminate by gradually tapering the damaged area before bonding replacement plies?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Potted Repair",
+            "Scarf Repair",
+            "Lap Patch",
+            "Plug Repair"
+          ],
+          "answerIndex": 1,
+          "answerText": "Scarf Repair",
+          "explanation": "A scarf repair restores a damaged composite laminate by tapering the damaged area and bonding replacement plies over the scarfed surface. This method provides a smooth aerodynamic contour and efficient load transfer.\n\nDifferentiate Similar Concepts:\n• Scarf Repair → Tapered bonded repair.\n• Plug Repair → Localized replacement.\n• Potted Repair → Core restoration.\n\n💡 Memory Hook:\nScarf = Sloping taper.\n\n🎯 Board Tip:\nQuestions mentioning a tapered repair surface or restoration of aerodynamic contour usually refer to a Scarf Repair.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which repair method is commonly used to restore localized damage in the core of a honeycomb sandwich structure by filling the damaged core with a suitable compound?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Scarf Repair",
+            "Potted Repair",
+            "Flush Patch",
+            "Finger Patch"
+          ],
+          "answerIndex": 1,
+          "answerText": "Potted Repair",
+          "explanation": "A potted repair restores localized damage in a honeycomb core by removing the damaged core material and filling the cavity with an approved potting compound.\n\nDifferentiate Similar Concepts:\n• Potted Repair → Core filled with potting compound.\n• Scarf Repair → Laminate taper repair.\n\n💡 Memory Hook:\nPotting = Fill the cavity.\n\n🎯 Board Tip:\nWhen the question focuses on restoring a honeycomb core rather than the face sheet, think Potted Repair.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which repair method involves removing a damaged section of a composite sandwich panel and replacing it with a properly fitted replacement insert?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Plug Repair",
+            "Scarf Repair",
+            "Lap Patch",
+            "Stop Drilling"
+          ],
+          "answerIndex": 0,
+          "answerText": "Plug Repair",
+          "explanation": "A plug repair restores localized composite damage by removing the damaged section and installing a replacement insert that matches the original structure.\n\nDifferentiate Similar Concepts:\n• Plug Repair → Replace a localized section.\n• Potted Repair → Fill the damaged core.\n• Scarf Repair → Bond tapered plies.\n\n💡 Memory Hook:\nPlug = Plug the hole.\n\n🎯 Board Tip:\nIf the damaged section is cut out and replaced with an insert, think Plug Repair.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "When repairing a metal-faced honeycomb sandwich panel, the edges of the repair doubler are gradually tapered primarily to:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Reduce structural weight",
+            "Improve appearance",
+            "Reduce stress concentration",
+            "Simplify installation"
+          ],
+          "answerIndex": 2,
+          "answerText": "Reduce stress concentration",
+          "explanation": "The tapered edge distributes structural loads gradually, minimizing stress concentration and reducing the likelihood of crack initiation or adhesive failure. FAA guidance commonly recommends a long taper, approximately 100 times the face-sheet thickness, for this type of repair.\n\nDifferentiate Similar Concepts:\n• Taper → Better load distribution.\n• Sharp edge → Stress concentration.\n\n💡 Memory Hook:\nLong taper = Lower stress.\n\n🎯 Board Tip:\nThe famous 100:1 taper rule applies to bonded honeycomb repair, not ordinary metallic flush patches.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of aircraft structure consists of two thin face sheets bonded to a lightweight core to obtain high strength with minimum weight?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Monocoque Structure",
+            "Honeycomb Sandwich Structure",
+            "Truss Structure",
+            "Semi-monocoque Structure"
+          ],
+          "answerIndex": 1,
+          "answerText": "Honeycomb Sandwich Structure",
+          "explanation": "A honeycomb sandwich structure consists of two thin face sheets bonded to a lightweight honeycomb core. This construction provides an excellent strength-to-weight ratio and is widely used in aircraft control surfaces, floors, fairings, and other structural components.\n\nDifferentiate Similar Concepts:\n• Honeycomb Sandwich → Face sheets + core.\n• Semi-monocoque → Skin reinforced by frames and stringers.\n\n💡 Memory Hook:\nSandwich = Two skins with a core.\n\n🎯 Board Tip:\nWhenever the question mentions face sheets bonded to a lightweight core, think Honeycomb Sandwich Structure.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which part of a honeycomb sandwich structure primarily carries the tensile and compressive loads?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Honeycomb Core",
+            "Face Sheet",
+            "Adhesive Film",
+            "Edge Filler"
+          ],
+          "answerIndex": 1,
+          "answerText": "Face Sheet",
+          "explanation": "The face sheets carry most of the tensile and compressive stresses in a honeycomb sandwich structure, while the core keeps the face sheets separated and stabilizes them against buckling.\n\nDifferentiate Similar Concepts:\n• Face Sheet → Carries bending stresses.\n• Honeycomb Core → Maintains spacing and resists shear.\n\n💡 Memory Hook:\nFace = Force.\n\n🎯 Board Tip:\nIf the question asks which component primarily carries structural loads, think Face Sheet.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary function of the honeycomb core in a sandwich structure?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Carry all tensile loads",
+            "Increase weight for rigidity",
+            "Separate the face sheets and resist shear loads",
+            "Provide corrosion protection"
+          ],
+          "answerIndex": 2,
+          "answerText": "Separate the face sheets and resist shear loads",
+          "explanation": "The honeycomb core separates the face sheets, increases the section depth, carries shear loads, and helps prevent buckling while adding very little weight.\n\nDifferentiate Similar Concepts:\n• Face Sheet → Tension and compression.\n• Core → Shear and spacing.\n\n💡 Memory Hook:\nCore = Keeps the skins apart.\n\n🎯 Board Tip:\nThe core's greatest contribution is a high strength-to-weight ratio through increased panel stiffness.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which defect is characterized by the separation of bonded composite plies within a laminate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Disbonding",
+            "Delamination",
+            "Corrosion",
+            "Spalling"
+          ],
+          "answerIndex": 1,
+          "answerText": "Delamination",
+          "explanation": "Delamination is the separation of adjacent composite plies within the laminate. It weakens the structure by reducing its ability to transfer loads between layers.\n\nDifferentiate Similar Concepts:\n• Delamination → Ply-to-ply separation.\n• Disbonding → Separation between bonded components.\n\n💡 Memory Hook:\nDe-lamination = Layers separate.\n\n🎯 Board Tip:\nIf composite layers separate from one another, the answer is Delamination.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which defect refers to the failure of the adhesive bond between two bonded aircraft components?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Delamination",
+            "Disbonding",
+            "Buckling",
+            "Peeling"
+          ],
+          "answerIndex": 1,
+          "answerText": "Disbonding",
+          "explanation": "Disbonding is the separation of two bonded surfaces due to failure of the adhesive bond. Unlike delamination, the composite plies themselves remain intact.\n\nDifferentiate Similar Concepts:\n• Disbonding → Bond failure between components.\n• Delamination → Separation within the laminate.\n\n💡 Memory Hook:\nDisbond = Bond breaks.\n\n🎯 Board Tip:\nIf adhesive failure is mentioned, think Disbonding rather than Delamination.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which characteristic best explains why honeycomb sandwich construction is widely used in modern aircraft structures?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "High weight with excellent rigidity",
+            "High strength-to-weight ratio",
+            "Low manufacturing cost",
+            "Resistance to magnetic fields"
+          ],
+          "answerIndex": 1,
+          "answerText": "High strength-to-weight ratio",
+          "explanation": "Honeycomb sandwich construction provides excellent stiffness and strength while adding minimal weight, making it ideal for aircraft structures such as control surfaces, floors, fairings, and radomes.\n\nDifferentiate Similar Concepts:\n• Honeycomb Structure → Lightweight and stiff.\n• Solid Structure → Strong but heavier.\n\n💡 Memory Hook:\nHoneycomb = Strong without the weight.\n\n🎯 Board Tip:\nThe phrase 'high strength-to-weight ratio' is one of the most frequently associated characteristics of honeycomb sandwich construction.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of damage occurs when the honeycomb core is permanently deformed due to excessive compressive loading or impact?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Core Crush",
+            "Delamination",
+            "Disbonding",
+            "Fiber Fracture"
+          ],
+          "answerIndex": 0,
+          "answerText": "Core Crush",
+          "explanation": "Core crush is the permanent collapse or compression of the honeycomb core caused by excessive loads or impact. The damaged core can no longer adequately support the face sheets.\n\nDifferentiate Similar Concepts:\n• Core Crush → Damage to the honeycomb core.\n• Delamination → Separation of laminate plies.\n• Disbonding → Adhesive bond failure.\n\n💡 Memory Hook:\nCrush = Collapsed core.\n\n🎯 Board Tip:\nIf the honeycomb cells are crushed or collapsed, think Core Crush.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of composite damage is commonly produced by a localized object striking the structure, even though little or no surface damage may be visible?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Impact Damage",
+            "Core Crush",
+            "Corrosion",
+            "Heat Damage"
+          ],
+          "answerIndex": 0,
+          "answerText": "Impact Damage",
+          "explanation": "Impact damage may cause hidden internal defects such as delamination, disbonding, or core damage despite little visible damage on the composite surface.\n\nDifferentiate Similar Concepts:\n• Impact Damage → External event causing internal damage.\n• Delamination → Separation of laminate layers.\n\n💡 Memory Hook:\nImpact = Hidden damage.\n\n🎯 Board Tip:\nComposite structures may appear undamaged externally while sustaining significant internal damage after impact.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The presence of moisture inside a honeycomb sandwich structure primarily creates concern because it may:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Increase electrical conductivity",
+            "Reduce bond integrity and promote structural deterioration",
+            "Improve impact resistance",
+            "Increase tensile strength"
+          ],
+          "answerIndex": 1,
+          "answerText": "Reduce bond integrity and promote structural deterioration",
+          "explanation": "Moisture ingress can weaken adhesive bonds, promote corrosion in metallic honeycomb structures, and reduce the structural performance of composite sandwich panels.\n\nDifferentiate Similar Concepts:\n• Moisture Ingress → Weakens bonded structure.\n• Delamination → Separation of laminate plies.\n\n💡 Memory Hook:\nMoisture = Weak bond.\n\n🎯 Board Tip:\nWater inside a honeycomb panel is never desirable because it can damage both the adhesive bond and the core.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which composite defect primarily affects the outer skin while leaving the honeycomb core initially undamaged?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cracked Face Sheet",
+            "Core Crush",
+            "Disbonding",
+            "Core Separation"
+          ],
+          "answerIndex": 0,
+          "answerText": "Cracked Face Sheet",
+          "explanation": "A cracked face sheet involves damage to the composite skin itself. Although the core may initially remain intact, further operation can allow the damage to propagate into deeper structural layers.\n\nDifferentiate Similar Concepts:\n• Face Sheet Crack → Skin damage.\n• Core Crush → Core damage.\n\n💡 Memory Hook:\nFace Sheet = Outer skin.\n\n🎯 Board Tip:\nQuestions describing cracks limited to the composite skin usually indicate a cracked face sheet.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement best describes hidden damage in composite aircraft structures?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It is always visible during a visual inspection.",
+            "It may exist beneath an undamaged surface and requires specialized inspection methods for detection.",
+            "It only occurs in metallic structures.",
+            "It can only be detected after complete disassembly."
+          ],
+          "answerIndex": 1,
+          "answerText": "It may exist beneath an undamaged surface and requires specialized inspection methods for detection.",
+          "explanation": "Composite structures may sustain significant internal damage without obvious surface indications. Specialized inspection methods such as coin tap, ultrasonic testing, or radiography are often required.\n\nDifferentiate Similar Concepts:\n• Hidden Damage → Internal damage beneath an intact surface.\n• Visible Damage → Easily detected by visual inspection.\n\n💡 Memory Hook:\nComposite damage can hide beneath the skin.\n\n🎯 Board Tip:\nOne of the greatest challenges in composite maintenance is that serious internal damage may not be externally visible.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which inspection method is commonly used to detect delamination and disbonding in composite sandwich structures by listening for changes in sound produced by tapping the surface?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Radiographic Inspection",
+            "Coin Tap Inspection",
+            "Magnetic Particle Inspection",
+            "Liquid Penetrant Inspection"
+          ],
+          "answerIndex": 1,
+          "answerText": "Coin Tap Inspection",
+          "explanation": "Coin tap inspection is a simple nondestructive method used to detect delamination, disbonding, and other hidden defects in composite structures. Sound composite material produces a clear ringing sound, while damaged areas produce a dull or hollow sound.\n\nDifferentiate Similar Concepts:\n• Coin Tap → Delamination and disbonding in composites.\n• Ultrasonic → More accurate internal inspection.\n• Magnetic Particle → Ferromagnetic metals only.\n\n💡 Memory Hook:\nCoin Tap = Listen for the hollow sound.\n\n🎯 Board Tip:\nCoin tap inspection is one of the simplest methods for locating hidden composite damage.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which nondestructive inspection method provides a more accurate evaluation of internal defects within composite laminates than coin tap inspection?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Visual Inspection",
+            "Ultrasonic Inspection",
+            "Magnetic Particle Inspection",
+            "Dye Penetrant Inspection"
+          ],
+          "answerIndex": 1,
+          "answerText": "Ultrasonic Inspection",
+          "explanation": "Ultrasonic inspection uses high-frequency sound waves to detect internal defects such as delamination, voids, disbonding, and impact damage in composite structures.\n\nDifferentiate Similar Concepts:\n• Ultrasonic → Internal composite defects.\n• Coin Tap → Rapid field inspection.\n\n💡 Memory Hook:\nUltrasonic = See inside with sound.\n\n🎯 Board Tip:\nUltrasonic inspection is more sensitive and quantitative than coin tap inspection.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During coin tap inspection, a dull or hollow sound generally indicates:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Proper adhesive bonding",
+            "Delamination or disbonding",
+            "Acceptable structural condition",
+            "Properly cured resin"
+          ],
+          "answerIndex": 1,
+          "answerText": "Delamination or disbonding",
+          "explanation": "A dull or hollow sound suggests that the composite layers or bonded surfaces have separated, preventing the structure from transmitting sound normally.\n\nDifferentiate Similar Concepts:\n• Clear ringing sound → Sound structure.\n• Dull sound → Internal damage.\n\n💡 Memory Hook:\nDull = Damage.\n\n🎯 Board Tip:\nThe quality of the sound—not the force of the tap—is the important clue during coin tap inspection.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which inspection method is most appropriate for rapidly checking a large composite surface for possible disbonding during routine maintenance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Coin Tap Inspection",
+            "Magnetic Particle Inspection",
+            "Hardness Testing",
+            "Brinell Test"
+          ],
+          "answerIndex": 0,
+          "answerText": "Coin Tap Inspection",
+          "explanation": "Coin tap inspection is quick, inexpensive, and well suited for field inspections of large composite surfaces where disbonding or delamination is suspected.\n\nDifferentiate Similar Concepts:\n• Coin Tap → Rapid field inspection.\n• Ultrasonic → Detailed confirmation.\n\n💡 Memory Hook:\nTap first, verify later.\n\n🎯 Board Tip:\nMany maintenance organizations use coin tap inspection as the initial screening method before employing more advanced NDT techniques.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why is visual inspection alone often insufficient for evaluating impact damage in composite aircraft structures?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Composite materials cannot be visually inspected.",
+            "Internal damage may exist beneath an apparently undamaged surface.",
+            "Visual inspection is prohibited for composite materials.",
+            "Composite materials always change color after impact."
+          ],
+          "answerIndex": 1,
+          "answerText": "Internal damage may exist beneath an apparently undamaged surface.",
+          "explanation": "Composite structures can sustain significant internal damage, including delamination and core damage, while the external surface appears nearly undamaged. Additional nondestructive inspection methods are therefore often required.\n\nDifferentiate Similar Concepts:\n• Composite → Hidden internal damage possible.\n• Metallic skin → Damage is often more visible.\n\n💡 Memory Hook:\nLooks good ≠ Is good.\n\n🎯 Board Tip:\nOne of the defining characteristics of composite structures is that severe internal damage may not be obvious during visual inspection.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which composite repair process applies atmospheric pressure uniformly over a bonded repair during the curing process?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Potting",
+            "Vacuum Bagging",
+            "Coin Tap Inspection",
+            "Scarfing"
+          ],
+          "answerIndex": 1,
+          "answerText": "Vacuum Bagging",
+          "explanation": "Vacuum bagging removes trapped air and uses atmospheric pressure to apply a uniform clamping force over the repair during adhesive curing. This improves bond quality and minimizes void formation.\n\nDifferentiate Similar Concepts:\n• Vacuum Bagging → Uniform pressure during cure.\n• Potting → Filling a honeycomb core.\n• Scarfing → Preparing a tapered repair surface.\n\n💡 Memory Hook:\nVacuum = Even pressure.\n\n🎯 Board Tip:\nVacuum bagging is used to improve bond quality by eliminating trapped air and applying uniform pressure.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which material is placed over the repair laminate to prevent the vacuum bag from bonding to the repair during curing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Breather Cloth",
+            "Bleeder Cloth",
+            "Release Film",
+            "Peel Ply"
+          ],
+          "answerIndex": 2,
+          "answerText": "Release Film",
+          "explanation": "Release film prevents the vacuum bag and other consumable materials from adhering to the composite repair while still allowing excess resin to pass through when designed for that purpose.\n\nDifferentiate Similar Concepts:\n• Release Film → Prevents sticking.\n• Peel Ply → Provides a clean bondable surface.\n• Bleeder Cloth → Absorbs excess resin.\n\n💡 Memory Hook:\nRelease = Releases after curing.\n\n🎯 Board Tip:\nThe release film allows easy removal of consumable materials after the repair has cured.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which material is used during vacuum bagging to absorb excess resin expelled from the composite repair during curing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Release Film",
+            "Bleeder Cloth",
+            "Vacuum Bag",
+            "Peel Ply"
+          ],
+          "answerIndex": 1,
+          "answerText": "Bleeder Cloth",
+          "explanation": "Bleeder cloth absorbs excess resin during curing, helping achieve the proper resin-to-fiber ratio and reducing the possibility of resin-rich laminates.\n\nDifferentiate Similar Concepts:\n• Bleeder Cloth → Absorbs resin.\n• Breather Cloth → Allows air flow.\n\n💡 Memory Hook:\nBleeder = Bleeds resin away.\n\n🎯 Board Tip:\nRemember: bleeder deals with resin, while breather deals with air.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which material is placed beneath the vacuum bag to provide an air passage so vacuum is distributed uniformly throughout the repair area?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Breather Cloth",
+            "Bleeder Cloth",
+            "Release Film",
+            "Adhesive Film"
+          ],
+          "answerIndex": 0,
+          "answerText": "Breather Cloth",
+          "explanation": "Breather cloth provides continuous airflow beneath the vacuum bag so that vacuum pressure is evenly distributed across the entire repair during curing.\n\nDifferentiate Similar Concepts:\n• Breather → Air passage.\n• Bleeder → Resin absorption.\n\n💡 Memory Hook:\nBreather = Breathes air.\n\n🎯 Board Tip:\nIf the question mentions airflow or vacuum distribution, think Breather Cloth.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which consumable material is commonly applied over the composite laminate to produce a clean, textured surface suitable for secondary bonding after it is removed?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Release Film",
+            "Peel Ply",
+            "Breather Cloth",
+            "Vacuum Bag"
+          ],
+          "answerIndex": 1,
+          "answerText": "Peel Ply",
+          "explanation": "Peel ply is removed after curing, leaving behind a clean, textured surface that is ideal for secondary bonding or painting without extensive surface preparation.\n\nDifferentiate Similar Concepts:\n• Peel Ply → Surface preparation.\n• Release Film → Prevents sticking.\n\n💡 Memory Hook:\nPeel Ply = Peel it off.\n\n🎯 Board Tip:\nPeel ply is removed after cure to expose a fresh bonding surface.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Before performing a structural repair on an aircraft, the technician should first determine whether the damage is:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Visible from the cockpit",
+            "Within the allowable repair limits",
+            "Located near a rivet",
+            "Accessible from the interior"
+          ],
+          "answerIndex": 1,
+          "answerText": "Within the allowable repair limits",
+          "explanation": "The first step in structural repair is to determine whether the damage is within the manufacturer's allowable repair limits. This evaluation is normally made using the Structural Repair Manual (SRM).\n\nDifferentiate Similar Concepts:\n• Within limits → Repair per SRM.\n• Beyond limits → Approved engineering repair required.\n\n💡 Memory Hook:\nCheck the limits before the repair.\n\n🎯 Board Tip:\nNever begin a structural repair without first evaluating the damage against approved repair limits.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "If the damage exceeds the repair limits specified in the Structural Repair Manual (SRM), the technician should:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install a larger repair patch",
+            "Consult approved engineering repair data",
+            "Apply a temporary repair and continue operation indefinitely",
+            "Ignore the published limits if the repair appears satisfactory"
+          ],
+          "answerIndex": 1,
+          "answerText": "Consult approved engineering repair data",
+          "explanation": "Repairs beyond SRM limits require approved engineering data from the manufacturer or the appropriate aviation authority before the repair can be accomplished.\n\nDifferentiate Similar Concepts:\n• Within SRM → Follow SRM.\n• Beyond SRM → Engineering approval.\n\n💡 Memory Hook:\nBeyond SRM = Engineering required.\n\n🎯 Board Tip:\nThe SRM defines its own repair limits. Repairs outside those limits require additional approved data.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which repair is intended only to permit continued safe operation until a permanent repair can be accomplished?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Major Repair",
+            "Minor Repair",
+            "Temporary Repair",
+            "Flush Patch"
+          ],
+          "answerIndex": 2,
+          "answerText": "Temporary Repair",
+          "explanation": "A temporary repair is performed to permit safe operation for a limited period or to allow the aircraft to be flown to a maintenance facility where a permanent repair can be completed.\n\nDifferentiate Similar Concepts:\n• Temporary → Interim solution.\n• Permanent → Final restoration.\n\n💡 Memory Hook:\nTemporary = Travel to the repair base.\n\n🎯 Board Tip:\nTemporary repairs are never intended to permanently replace approved repairs.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of repair is intended to restore the aircraft to its original strength, function, and approved airworthy condition?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Temporary Repair",
+            "Permanent Repair",
+            "Emergency Repair",
+            "Field Repair"
+          ],
+          "answerIndex": 1,
+          "answerText": "Permanent Repair",
+          "explanation": "A permanent repair restores the aircraft to its approved airworthy condition using approved technical data and is intended to remain in service without requiring later replacement.\n\nDifferentiate Similar Concepts:\n• Permanent → Final repair.\n• Temporary → Interim repair.\n\n💡 Memory Hook:\nPermanent = Proper repair.\n\n🎯 Board Tip:\nThe objective of every permanent repair is to restore the original structural integrity of the aircraft.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The primary objective of every approved aircraft structural repair is to:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Reduce maintenance cost",
+            "Restore the original strength and airworthiness of the structure",
+            "Increase aircraft performance",
+            "Reduce aircraft weight"
+          ],
+          "answerIndex": 1,
+          "answerText": "Restore the original strength and airworthiness of the structure",
+          "explanation": "An approved structural repair should restore the original strength, function, and airworthiness of the aircraft without introducing new structural weaknesses.\n\nDifferentiate Similar Concepts:\n• Repair → Restore original design intent.\n• Alteration → Changes the original design.\n\n💡 Memory Hook:\nRepair = Restore airworthiness.\n\n🎯 Board Tip:\nWhen asked about the goal of a structural repair, always think restoration of strength and airworthiness.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why are the corners of a rectangular repair patch generally rounded instead of left square?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To improve the appearance of the repair",
+            "To reduce stress concentration at the corners",
+            "To reduce the number of rivets required",
+            "To simplify fabrication"
+          ],
+          "answerIndex": 1,
+          "answerText": "To reduce stress concentration at the corners",
+          "explanation": "Rounded corners reduce stress concentration and lessen the possibility of crack initiation at the repair patch. Sharp corners act as stress raisers and should be avoided.\n\nDifferentiate Similar Concepts:\n• Rounded Corners → Lower stress concentration.\n• Square Corners → Higher stress concentration.\n\n💡 Memory Hook:\nRound corners, reduce cracks.\n\n🎯 Board Tip:\nOne of the most common FAA repair principles is to eliminate stress concentrations whenever possible.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The primary purpose of installing a doubler during an aircraft skin repair is to:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Improve the appearance of the repair",
+            "Restore structural strength to the repaired area",
+            "Reduce aircraft drag",
+            "Protect the repair from corrosion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Restore structural strength to the repaired area",
+          "explanation": "A doubler reinforces the repaired structure by restoring strength lost because of damage or material removal.\n\nDifferentiate Similar Concepts:\n• Doubler → Structural reinforcement.\n• Flush Patch → Restores surface contour.\n\n💡 Memory Hook:\nDoubler = Double the strength.\n\n🎯 Board Tip:\nNever confuse the doubler with the repair patch itself.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why should a repair patch extend beyond the damaged area into sound material?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To reduce the overall weight of the repair",
+            "To distribute loads into undamaged structure",
+            "To minimize the number of fasteners required",
+            "To improve the cosmetic appearance"
+          ],
+          "answerIndex": 1,
+          "answerText": "To distribute loads into undamaged structure",
+          "explanation": "Repair patches must overlap sound material so structural loads can be transferred safely away from the damaged region.\n\nDifferentiate Similar Concepts:\n• Sound Material → Carries structural load.\n• Damaged Material → Cannot be relied upon.\n\n💡 Memory Hook:\nGood structure supports the repair.\n\n🎯 Board Tip:\nAircraft repairs are designed to transfer loads back into healthy structure, not damaged material.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why is it important to remove all cracked or damaged material before accomplishing a permanent structural repair?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To reduce repair time",
+            "To prevent further crack propagation and restore structural integrity",
+            "To reduce aircraft weight",
+            "To improve aerodynamic appearance"
+          ],
+          "answerIndex": 1,
+          "answerText": "To prevent further crack propagation and restore structural integrity",
+          "explanation": "Leaving cracked or damaged material beneath a repair can allow cracks to continue propagating and may compromise the effectiveness of the repair.\n\nDifferentiate Similar Concepts:\n• Permanent Repair → Removes damaged material.\n• Temporary Repair → May only arrest the damage until permanent repair is made.\n\n💡 Memory Hook:\nNever build on damaged metal.\n\n🎯 Board Tip:\nA permanent repair begins with complete removal of unacceptable damage.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which characteristic should an approved structural repair possess after completion?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Lower weight than the original structure",
+            "Greater flexibility than the original structure",
+            "Strength and stiffness comparable to the original structure",
+            "A larger repair area than necessary"
+          ],
+          "answerIndex": 2,
+          "answerText": "Strength and stiffness comparable to the original structure",
+          "explanation": "An approved structural repair should restore the strength, stiffness, and load-carrying capability of the original structure without introducing excessive weight or stress concentrations.\n\nDifferentiate Similar Concepts:\n• Good Repair → Restores original structural characteristics.\n• Poor Repair → Alters load distribution.\n\n💡 Memory Hook:\nRepair should behave like the original structure.\n\n🎯 Board Tip:\nThe objective is restoration—not overbuilding or underbuilding the structure.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/major-and-minor-modifications.json": {
+      "title": "Major and Minor Modifications",
+      "questions": [
+        {
+          "question": "Which term refers to a change made to the original type design of an aircraft, engine, propeller, or appliance after it has been manufactured?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Repair",
+            "Modification",
+            "Inspection",
+            "Overhaul"
+          ],
+          "answerIndex": 1,
+          "answerText": "Modification",
+          "explanation": "A modification changes the original approved design, configuration, or operating characteristics of an aircraft or one of its components.\n\nDifferentiate Similar Concepts:\n• Modification → Changes the design.\n• Repair → Restores the original design.\n\n💡 Memory Hook:\nModification = Modify the original.\n\n🎯 Board Tip:\nIf the original approved design is changed, think Modification.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which document approves a major modification to an aircraft's original type design without requiring a new type certificate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Structural Repair Manual (SRM)",
+            "Supplemental Type Certificate (STC)",
+            "Aircraft Maintenance Manual (AMM)",
+            "Illustrated Parts Catalog (IPC)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Supplemental Type Certificate (STC)",
+          "explanation": "A Supplemental Type Certificate (STC) is an approval issued for a major modification to an aircraft's certificated type design. It authorizes specific design changes while maintaining compliance with applicable airworthiness standards.\n\nDifferentiate Similar Concepts:\n• STC → Approved design modification.\n• SRM → Structural repair instructions.\n• AMM → Maintenance procedures.\n\n💡 Memory Hook:\nSTC = Supplement the Type Certificate.\n\n🎯 Board Tip:\nWhenever the question asks about an approved major design change, the answer is usually STC.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which classification applies to an alteration that appreciably affects structural strength, performance, powerplant operation, flight characteristics, or other qualities affecting airworthiness?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Minor Alteration",
+            "Temporary Alteration",
+            "Major Alteration",
+            "Field Alteration"
+          ],
+          "answerIndex": 2,
+          "answerText": "Major Alteration",
+          "explanation": "A major alteration is one that could appreciably affect structural strength, performance, powerplant operation, flight characteristics, or other qualities affecting airworthiness.\n\nDifferentiate Similar Concepts:\n• Major Alteration → Significant effect.\n• Minor Alteration → No appreciable effect.\n\n💡 Memory Hook:\nMajor = Major effect.\n\n🎯 Board Tip:\nThe phrase 'appreciably affect airworthiness' is one of the strongest clues for a Major Alteration.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A change that does not appreciably affect the structural strength, performance, powerplant operation, flight characteristics, or other qualities affecting airworthiness is classified as a:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Major Alteration",
+            "Minor Alteration",
+            "Major Repair",
+            "Temporary Repair"
+          ],
+          "answerIndex": 1,
+          "answerText": "Minor Alteration",
+          "explanation": "A minor alteration is a change that does not appreciably affect the aircraft's airworthiness or operating characteristics.\n\nDifferentiate Similar Concepts:\n• Minor Alteration → No appreciable effect.\n• Major Alteration → Significant effect.\n\n💡 Memory Hook:\nMinor = Minimal effect.\n\n🎯 Board Tip:\nMajor and Minor Alterations follow the same regulatory principle as Major and Minor Repairs.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following best distinguishes a modification from a repair?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A modification restores a damaged aircraft to its original condition.",
+            "A repair changes the original type design of the aircraft.",
+            "A modification changes the original approved design, while a repair restores the aircraft to its approved condition.",
+            "There is no practical difference between a repair and a modification."
+          ],
+          "answerIndex": 2,
+          "answerText": "A modification changes the original approved design, while a repair restores the aircraft to its approved condition.",
+          "explanation": "The essential distinction is that a repair restores the aircraft to its original approved condition, whereas a modification intentionally changes the original type design or approved configuration.\n\nDifferentiate Similar Concepts:\n• Repair → Restore.\n• Modification → Change.\n\n💡 Memory Hook:\nRepair restores. Modification modifies.\n\n🎯 Board Tip:\nThis is one of the most fundamental distinctions in aircraft maintenance and is frequently tested in regulatory questions.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which document provides the FAA-approved technical data for a major modification to an aircraft's certificated type design?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Maintenance Manual (AMM)",
+            "Structural Repair Manual (SRM)",
+            "Supplemental Type Certificate (STC)",
+            "Illustrated Parts Catalog (IPC)"
+          ],
+          "answerIndex": 2,
+          "answerText": "Supplemental Type Certificate (STC)",
+          "explanation": "A Supplemental Type Certificate (STC) approves a major modification to an aircraft's certificated type design. It provides the approved engineering data necessary to accomplish the modification.\n\nDifferentiate Similar Concepts:\n• STC → Approved design modification.\n• SRM → Approved structural repair.\n• AMM → Maintenance procedures.\n\n💡 Memory Hook:\nSTC = Supplement the Type Certificate.\n\n🎯 Board Tip:\nMajor design changes commonly require an STC or other approved engineering data.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement best describes the purpose of an aircraft modification?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To restore the aircraft after damage",
+            "To return worn components to serviceable condition",
+            "To change the aircraft from its original approved configuration",
+            "To perform routine scheduled maintenance"
+          ],
+          "answerIndex": 2,
+          "answerText": "To change the aircraft from its original approved configuration",
+          "explanation": "A modification changes the original approved configuration or type design of an aircraft, unlike a repair which restores the original condition.\n\nDifferentiate Similar Concepts:\n• Modification → Changes the design.\n• Repair → Restores the design.\n\n💡 Memory Hook:\nModification = Make it different.\n\n🎯 Board Tip:\nWhenever the original approved configuration changes, think Modification.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Before accomplishing a major aircraft modification, the maintenance personnel should ensure that the work is supported by:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Personal maintenance experience",
+            "Approved technical data",
+            "Previous repair records only",
+            "Operator preference"
+          ],
+          "answerIndex": 1,
+          "answerText": "Approved technical data",
+          "explanation": "Major modifications must be accomplished using approved technical data to ensure continued compliance with the applicable airworthiness requirements.\n\nDifferentiate Similar Concepts:\n• Approved Data → Legal basis for modification.\n• Acceptable Data → Guidance used only under appropriate circumstances.\n\n💡 Memory Hook:\nMajor modification = Approved data required.\n\n🎯 Board Tip:\nOne of the first questions to ask before a modification is: 'Where is the approved data?'",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of alteration generally requires approved engineering data because it appreciably affects the aircraft's airworthiness?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Minor Alteration",
+            "Cosmetic Alteration",
+            "Major Alteration",
+            "Temporary Alteration"
+          ],
+          "answerIndex": 2,
+          "answerText": "Major Alteration",
+          "explanation": "A major alteration appreciably affects structural strength, performance, powerplant operation, flight characteristics, or other qualities affecting airworthiness and therefore requires approved technical data.\n\nDifferentiate Similar Concepts:\n• Major Alteration → Approved engineering required.\n• Minor Alteration → Does not appreciably affect airworthiness.\n\n💡 Memory Hook:\nMajor = Major approval.\n\n🎯 Board Tip:\nIf airworthiness is significantly affected, expect the answer to involve a Major Alteration.",
+          "tags": [
+            "Repair and Modification",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "After a major modification has been properly accomplished, the aircraft must continue to comply with:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Only the manufacturer's recommendations",
+            "Applicable airworthiness requirements",
+            "Operator maintenance preferences",
+            "Previous inspection intervals only"
+          ],
+          "answerIndex": 1,
+          "answerText": "Applicable airworthiness requirements",
+          "explanation": "A modification must not compromise the aircraft's compliance with applicable airworthiness standards. The modified aircraft must remain airworthy before it can be returned to service.\n\nDifferentiate Similar Concepts:\n• Modification → Changes design but maintains compliance.\n• Repair → Restores compliance.\n\n💡 Memory Hook:\nModified—but still airworthy.\n\n🎯 Board Tip:\nA modification never removes the requirement for continued airworthiness.",
+          "tags": [
+            "Repair and Modification",
             "Recall"
           ],
           "expectedAnswer": null,
