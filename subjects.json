@@ -5,7 +5,7 @@
       "name": "ACRM",
       "quizType": "short_quiz",
       "schemaVersion": 1,
-      "selectedChapter": "Fasteners | Nuts",
+      "selectedChapter": "Fasteners | Screw",
       "chapters": [
         {
           "title": "Material Properties",
@@ -68,6 +68,10 @@
           "file": "chapters/fasteners-bolts.json"
         },
         {
+          "title": "Fasteners | Screw",
+          "file": "chapters/fasteners-screw.json"
+        },
+        {
           "title": "Fasteners | Nuts",
           "file": "chapters/fasteners-nuts.json"
         },
@@ -112,7 +116,7 @@
           "file": "chapters/major-and-minor-modifications.json"
         }
       ],
-      "updatedAt": "2026-07-10T12:27:12.941Z"
+      "updatedAt": "2026-07-11T03:59:07.336Z"
     },
     {
       "id": "aerodynamics",
@@ -17803,6 +17807,391 @@
           "answerIndex": 1,
           "answerText": "Clamp the connected parts securely together",
           "explanation": "An aircraft bolt and nut assembly develops clamping force that holds structural members together while transmitting applied loads safely through the joint.\n\nDifferentiate Similar Concepts:\n• Bolt → Provides clamping force.\n• Washer → Distributes bearing load.\n• Nut → Maintains bolt preload.\n\n💡 Memory Hook:\nBolt = Clamp.\n\n🎯 Board Tip:\nThe primary purpose of tightening a bolt is to develop the proper clamping force, not merely to hold parts in position.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/fasteners-screw.json": {
+      "title": "Fasteners | Screw",
+      "questions": [
+        {
+          "question": "Which aircraft screw is primarily intended for fastening relatively light-duty metal parts together using tapped holes or nuts?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Structural Screw",
+            "Machine Screw",
+            "Set Screw",
+            "Wood Screw"
+          ],
+          "answerIndex": 1,
+          "answerText": "Machine Screw",
+          "explanation": "Machine screws are designed for fastening relatively light-duty metal components such as inspection covers, instrument panels, and electrical equipment. They are commonly installed into tapped holes or used with nuts.\n\nDifferentiate Similar Concepts:\n• Machine Screw → Light-duty fastening.\n• Structural Screw → Structural applications.\n\n💡 Memory Hook:\nMachine = Metal.\n\n🎯 Board Tip:\nMachine screws are intended for light-duty applications and should not be substituted for aircraft bolts in primary structures.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft screw is approved for certain structural applications and may replace an aircraft bolt where specified by the manufacturer?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Machine Screw",
+            "Wood Screw",
+            "Structural Screw",
+            "Set Screw"
+          ],
+          "answerIndex": 2,
+          "answerText": "Structural Screw",
+          "explanation": "Structural screws are high-strength aircraft fasteners approved for specific structural applications. They may replace certain aircraft bolts only when specified in approved maintenance or manufacturer's data.\n\nDifferentiate Similar Concepts:\n• Structural Screw → Structural fastening.\n• Machine Screw → Light-duty fastening.\n\n💡 Memory Hook:\nStructural = Strength.\n\n🎯 Board Tip:\nNever substitute a machine screw for a structural screw simply because they appear similar.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which screw is designed primarily to prevent relative movement between a shaft and a mounted component such as a gear, collar, or pulley?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Machine Screw",
+            "Socket Screw",
+            "Set Screw",
+            "Thread-Cutting Screw"
+          ],
+          "answerIndex": 2,
+          "answerText": "Set Screw",
+          "explanation": "A set screw secures one component to another by bearing directly against the shaft. It is commonly used to lock gears, collars, and pulleys in position.\n\nDifferentiate Similar Concepts:\n• Set Screw → Shaft locking.\n• Machine Screw → Fastens separate components.\n\n💡 Memory Hook:\nSet = Set it on the shaft.\n\n🎯 Board Tip:\nA set screw locks components together rather than clamping two separate parts.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft screw is recognized by its internal hexagonal recess and is commonly selected where high tightening torque and limited wrench clearance are involved?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Machine Screw",
+            "Socket Screw",
+            "Wood Screw",
+            "Structural Screw"
+          ],
+          "answerIndex": 1,
+          "answerText": "Socket Screw",
+          "explanation": "Socket screws are driven using an Allen (hex) wrench. Their internal drive design allows the application of relatively high torque while occupying minimal external space.\n\nDifferentiate Similar Concepts:\n• Socket Screw → Internal hex drive.\n• Machine Screw → Conventional screwdriver recess.\n\n💡 Memory Hook:\nSocket = Allen Key.\n\n🎯 Board Tip:\nSocket screws are frequently selected when external wrench clearance is limited.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft screw is specifically designed to cut or form its own mating threads during installation into an untapped hole?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Machine Screw",
+            "Structural Screw",
+            "Thread-Cutting Screw",
+            "Set Screw"
+          ],
+          "answerIndex": 2,
+          "answerText": "Thread-Cutting Screw",
+          "explanation": "Thread-cutting screws are manufactured with cutting edges that create or form threads during installation, eliminating the need for a pre-tapped hole in many applications.\n\nDifferentiate Similar Concepts:\n• Thread-Cutting Screw → Creates threads.\n• Machine Screw → Requires existing threads or a nut.\n\n💡 Memory Hook:\nThread-Cutting = Makes its own threads.\n\n🎯 Board Tip:\nIf the stem mentions an untapped hole, consider a thread-cutting screw.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of screw is commonly used to fasten inspection plates, instrument panels, and other light-duty aircraft components?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Structural Screw",
+            "Machine Screw",
+            "Set Screw",
+            "Wood Screw"
+          ],
+          "answerIndex": 1,
+          "answerText": "Machine Screw",
+          "explanation": "Machine screws are primarily used for light-duty applications such as instrument panels, access covers, electrical equipment, and inspection plates. They are not intended for heavily loaded primary structures.\n\nDifferentiate Similar Concepts:\n• Machine Screw → Light-duty fastening.\n• Structural Screw → Structural applications.\n\n💡 Memory Hook:\nMachine = Maintenance covers.\n\n🎯 Board Tip:\nInspection covers and instrument panels are classic applications of machine screws.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of screw may be used in approved structural applications where specified by the aircraft manufacturer?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Machine Screw",
+            "Structural Screw",
+            "Thread-Cutting Screw",
+            "Set Screw"
+          ],
+          "answerIndex": 1,
+          "answerText": "Structural Screw",
+          "explanation": "Structural screws are high-strength fasteners intended for specific structural applications when approved by the aircraft manufacturer or maintenance data.\n\nDifferentiate Similar Concepts:\n• Structural Screw → Approved structural use.\n• Machine Screw → Light-duty use.\n\n💡 Memory Hook:\nStructural = Strength.\n\n🎯 Board Tip:\nNever substitute a machine screw where a structural screw is specified.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which screw develops its holding action by pressing directly against a shaft rather than clamping two separate parts together?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Machine Screw",
+            "Socket Screw",
+            "Set Screw",
+            "Structural Screw"
+          ],
+          "answerIndex": 2,
+          "answerText": "Set Screw",
+          "explanation": "A set screw secures collars, gears, pulleys, and similar components by pressing directly against the shaft, preventing relative movement.\n\nDifferentiate Similar Concepts:\n• Set Screw → Locks a shaft component.\n• Machine Screw → Clamps separate parts.\n\n💡 Memory Hook:\nSet = Set it on the shaft.\n\n🎯 Board Tip:\nThe phrase 'presses against the shaft' is a classic clue for a set screw.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which screw is preferred when high tightening torque must be applied in an area with limited external wrench clearance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Machine Screw",
+            "Wood Screw",
+            "Socket Screw",
+            "Thread-Cutting Screw"
+          ],
+          "answerIndex": 2,
+          "answerText": "Socket Screw",
+          "explanation": "Socket screws use an internal hexagonal recess that allows high tightening torque while requiring minimal external clearance.\n\nDifferentiate Similar Concepts:\n• Socket Screw → Internal hex drive.\n• Machine Screw → Conventional screwdriver drive.\n\n💡 Memory Hook:\nAllen Wrench = Socket Screw.\n\n🎯 Board Tip:\nQuestions mentioning confined spaces or limited wrench clearance usually point to a socket screw.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the principal advantage of a thread-cutting screw compared with a standard machine screw?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It develops greater tensile strength.",
+            "It may be installed without a screwdriver.",
+            "It cuts or forms its own mating threads during installation.",
+            "It requires a cotter pin for locking."
+          ],
+          "answerIndex": 2,
+          "answerText": "It cuts or forms its own mating threads during installation.",
+          "explanation": "Thread-cutting screws eliminate the need for pre-tapped threads by creating or forming their own mating threads as they are installed.\n\nDifferentiate Similar Concepts:\n• Thread-Cutting Screw → Creates threads.\n• Machine Screw → Requires existing threads or a nut.\n\n💡 Memory Hook:\nNo threads? Thread-Cutting Screw.\n\n🎯 Board Tip:\nWhenever the question mentions an untapped hole, think thread-cutting screw.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why are machine screws generally not used as primary structural fasteners in aircraft?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "They cannot carry tensile loads.",
+            "They are intended primarily for light-duty applications and generally do not have the strength of aircraft bolts or structural screws.",
+            "They are made only from aluminum.",
+            "They cannot be tightened to a specified torque."
+          ],
+          "answerIndex": 1,
+          "answerText": "They are intended primarily for light-duty applications and generally do not have the strength of aircraft bolts or structural screws.",
+          "explanation": "Machine screws are intended for relatively light-duty applications such as inspection covers, instrument panels, and electrical equipment. Primary aircraft structures require approved structural fasteners.\n\nDifferentiate Similar Concepts:\n• Machine Screw → Light-duty.\n• Structural Screw → Structural applications.\n\n💡 Memory Hook:\nMachine = Maintenance.\nStructural = Strength.\n\n🎯 Board Tip:\nIf the stem mentions a primary structural member, eliminate machine screw first.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A maintenance technician must fasten an inspection cover that is removed frequently during routine servicing. Which fastener is MOST appropriate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Machine Screw",
+            "Structural Screw",
+            "Set Screw",
+            "Close Tolerance Bolt"
+          ],
+          "answerIndex": 0,
+          "answerText": "Machine Screw",
+          "explanation": "Machine screws are commonly used for removable light-duty components such as inspection panels, access covers, and instrument panels where repeated removal is expected.\n\nDifferentiate Similar Concepts:\n• Machine Screw → Frequently removed components.\n• Structural Screw → Structural joints.\n\n💡 Memory Hook:\nMaintenance access = Machine screw.\n\n🎯 Board Tip:\nInspection panels are one of the most common applications of machine screws.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which screw is specifically intended to lock one component to another without using a nut?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Machine Screw",
+            "Socket Screw",
+            "Set Screw",
+            "Structural Screw"
+          ],
+          "answerIndex": 2,
+          "answerText": "Set Screw",
+          "explanation": "A set screw secures collars, gears, pulleys, and similar components by bearing directly against a shaft rather than clamping separate parts together.\n\nDifferentiate Similar Concepts:\n• Set Screw → Locks a shaft component.\n• Machine Screw → Clamps components together.\n\n💡 Memory Hook:\nSet = Secure the shaft.\n\n🎯 Board Tip:\nThe words 'shaft,' 'gear,' 'pulley,' or 'collar' are classic clues for a set screw.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which screw should be selected when an internal hex drive is preferred because external wrench clearance is limited?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wood Screw",
+            "Socket Screw",
+            "Machine Screw",
+            "Set Screw"
+          ],
+          "answerIndex": 1,
+          "answerText": "Socket Screw",
+          "explanation": "Socket screws use an internal hexagonal recess that allows installation with an Allen wrench. This design is especially useful in confined spaces where a conventional wrench or screwdriver cannot be easily used.\n\nDifferentiate Similar Concepts:\n• Socket Screw → Internal hex drive.\n• Machine Screw → Conventional drive recess.\n\n💡 Memory Hook:\nAllen key = Socket screw.\n\n🎯 Board Tip:\nQuestions mentioning confined spaces usually point toward socket screws.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A mechanic needs to install a screw into a metal component that has no pre-cut internal threads and where using a nut is impractical. Which screw is MOST appropriate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Machine Screw",
+            "Thread-Cutting Screw",
+            "Structural Screw",
+            "Set Screw"
+          ],
+          "answerIndex": 1,
+          "answerText": "Thread-Cutting Screw",
+          "explanation": "Thread-cutting screws are designed to create or form their own mating threads during installation, making them suitable where tapped threads are not available.\n\nDifferentiate Similar Concepts:\n• Thread-Cutting Screw → Creates threads.\n• Machine Screw → Requires existing threads or a nut.\n\n💡 Memory Hook:\nNo threads? Make threads.\n\n🎯 Board Tip:\nUntapped hole = Thread-cutting screw.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft screw should NOT be substituted for an aircraft bolt in a primary structural joint unless specifically approved by the manufacturer?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Structural Screw",
+            "Machine Screw",
+            "Socket Screw",
+            "Thread-Cutting Screw"
+          ],
+          "answerIndex": 1,
+          "answerText": "Machine Screw",
+          "explanation": "Machine screws are intended for relatively light-duty applications such as instrument panels, inspection covers, and electrical equipment. They should not replace aircraft bolts in primary structural joints unless specifically approved.\n\nDifferentiate Similar Concepts:\n• Machine Screw → Light-duty.\n• Structural Screw → Approved structural applications.\n\n💡 Memory Hook:\nMachine = Maintenance.\nStructural = Strength.\n\n🎯 Board Tip:\nWhen the stem mentions 'primary structure,' eliminate the machine screw first.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft screw requires pre-existing internal threads or the use of a nut for proper installation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Machine Screw",
+            "Thread-Cutting Screw",
+            "Set Screw",
+            "Wood Screw"
+          ],
+          "answerIndex": 0,
+          "answerText": "Machine Screw",
+          "explanation": "Machine screws are designed to be installed into tapped holes or used with nuts. Unlike thread-cutting screws, they do not create their own mating threads.\n\nDifferentiate Similar Concepts:\n• Machine Screw → Existing threads required.\n• Thread-Cutting Screw → Creates threads.\n\n💡 Memory Hook:\nMachine needs matching threads.\n\n🎯 Board Tip:\nIf the hole is already tapped, think machine screw.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft mechanic must secure a gear to a shaft without clamping two separate structural members together. Which screw is most appropriate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Structural Screw",
+            "Machine Screw",
+            "Set Screw",
+            "Socket Screw"
+          ],
+          "answerIndex": 2,
+          "answerText": "Set Screw",
+          "explanation": "Set screws are intended to lock one component, such as a gear, pulley, or collar, onto a shaft by bearing directly against it rather than clamping separate parts together.\n\nDifferentiate Similar Concepts:\n• Set Screw → Shaft locking.\n• Machine Screw → Fastens separate components.\n\n💡 Memory Hook:\nSet = Secure the shaft.\n\n🎯 Board Tip:\nWords like 'gear,' 'pulley,' 'collar,' and 'shaft' are strong clues for a set screw.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes a structural screw from a machine screw?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A structural screw is designed to cut its own threads during installation.",
+            "A structural screw is approved for certain structural applications, whereas a machine screw is intended primarily for light-duty fastening.",
+            "A structural screw is used only for securing pulleys and collars to shafts.",
+            "A structural screw always requires an Allen wrench for installation."
+          ],
+          "answerIndex": 1,
+          "answerText": "A structural screw is approved for certain structural applications, whereas a machine screw is intended primarily for light-duty fastening.",
+          "explanation": "Structural screws are high-strength fasteners used in approved structural applications. Machine screws are intended for lighter-duty service and should not be substituted for structural fasteners without approval.\n\nDifferentiate Similar Concepts:\n• Structural Screw → Structural use.\n• Machine Screw → Light-duty use.\n\n💡 Memory Hook:\nStructural = Strength.\nMachine = Maintenance.\n\n🎯 Board Tip:\nMany board questions simply compare these two fasteners.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft screw is specifically designed to eliminate the need for pre-tapped threads by forming or cutting its own mating threads during installation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Machine Screw",
+            "Socket Screw",
+            "Set Screw",
+            "Thread-Cutting Screw"
+          ],
+          "answerIndex": 3,
+          "answerText": "Thread-Cutting Screw",
+          "explanation": "Thread-cutting screws have cutting edges that create or form mating threads during installation. This makes them suitable where pre-cut threads are unavailable.\n\nDifferentiate Similar Concepts:\n• Thread-Cutting Screw → Creates threads.\n• Machine Screw → Uses existing threads.\n\n💡 Memory Hook:\nNo threads? Make threads.\n\n🎯 Board Tip:\nWhen the stem mentions an untapped hole, the answer is almost always a thread-cutting screw.",
           "tags": [
             "Aircraft Hardware",
             "Recall"
