@@ -1662,6 +1662,210 @@ function createAssessmentChart(segments, centerValue, centerLabel, ariaLabel) {
     return chartCard;
 }
 
+function createAccuracyAttemptChartCard(quizEntries, examEntries) {
+    const card = document.createElement("div");
+    card.className = "progress-summary-card progress-chart-card full-width";
+
+    const header = document.createElement("div");
+    header.className = "progress-summary-card-header";
+    const titleEl = document.createElement("h3");
+    titleEl.textContent = "Attempt History";
+    const metaEl = document.createElement("p");
+    metaEl.className = "progress-summary-card-meta";
+    metaEl.textContent = "Quiz and exam sessions";
+    header.append(titleEl, metaEl);
+
+    const legend = document.createElement("div");
+    legend.className = "accuracy-chart-legend";
+    legend.append(
+        Object.assign(document.createElement("span"), {
+            className: "accuracy-chart-legend-item",
+            innerHTML: '<span class="accuracy-chart-legend-swatch quiz"></span>Quiz'
+        }),
+        Object.assign(document.createElement("span"), {
+            className: "accuracy-chart-legend-item",
+            innerHTML: '<span class="accuracy-chart-legend-swatch exam"></span>Exam'
+        })
+    );
+
+    const chartWrap = document.createElement("div");
+    chartWrap.className = "accuracy-chart-wrapper";
+    chartWrap.appendChild(createAccuracyAttemptChart(quizEntries, examEntries));
+
+    const note = document.createElement("p");
+    note.className = "progress-summary-card-note";
+    note.textContent = "Each completed quiz or exam session contributes one point on the timeline.";
+
+    card.append(header, legend, chartWrap, note);
+    return card;
+}
+
+function createAccuracyAttemptChart(quizEntries, examEntries) {
+    const width = 760;
+    const height = 260;
+    const padding = { top: 24, right: 24, bottom: 64, left: 64 };
+    const chartHeight = height - padding.top - padding.bottom;
+    const barWidth = 34;
+    const barGap = 18;
+
+    const combinedEntries = [
+        ...(Array.isArray(quizEntries) ? quizEntries : []),
+        ...(Array.isArray(examEntries) ? examEntries : [])
+    ]
+        .filter(Boolean)
+        .map((entry) => {
+            const parsedTime = entry?.timestamp ? Date.parse(entry.timestamp) : Number.NaN;
+            return {
+                ...entry,
+                timestampValue: Number.isFinite(parsedTime) ? parsedTime : 0
+            };
+        })
+        .sort((left, right) => left.timestampValue - right.timestampValue || String(left?.id || "").localeCompare(String(right?.id || "")))
+        .map((entry, index) => ({
+            attempt: index + 1,
+            accuracy: Math.max(0, Math.min(100, Number(entry?.accuracy) || 0)),
+            mode: text(entry?.mode) === "exam" ? "exam" : "quiz"
+        }));
+
+    const totalPlotWidth = Math.max(
+        width,
+        padding.left + padding.right + combinedEntries.length * (barWidth + barGap)
+    );
+    const chartWidth = totalPlotWidth - padding.left - padding.right;
+    const buildBars = (entries) => entries.map((entry) => {
+        const x = padding.left + (entry.attempt - 1) * (barWidth + barGap);
+        const barHeight = (entry.accuracy / 100) * chartHeight;
+        const y = padding.top + chartHeight - barHeight;
+        return {
+            x,
+            y,
+            width: barWidth,
+            height: barHeight,
+            accuracy: entry.accuracy,
+            attempt: entry.attempt,
+            mode: entry.mode,
+            color: entry.mode === "exam" ? "#f59e0b" : "#3b82f6"
+        };
+    });
+
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", `0 0 ${totalPlotWidth} ${height}`);
+    svg.setAttribute("width", String(totalPlotWidth));
+    svg.setAttribute("height", String(height));
+    svg.setAttribute("class", "accuracy-chart-svg");
+    svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", "Accuracy by quiz and exam attempt");
+
+    const background = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    background.setAttribute("x", "0");
+    background.setAttribute("y", "0");
+    background.setAttribute("width", String(totalPlotWidth));
+    background.setAttribute("height", String(height));
+    background.setAttribute("rx", "18");
+    background.setAttribute("fill", "rgba(255,255,255,0.03)");
+    svg.appendChild(background);
+
+    const axisColor = "rgba(255,255,255,0.16)";
+    const textColor = "#94a3b8";
+    const yTicks = [0, 25, 50, 75, 100];
+    yTicks.forEach((tick) => {
+        const y = padding.top + chartHeight - (tick / 100) * chartHeight;
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", padding.left);
+        line.setAttribute("x2", totalPlotWidth - padding.right);
+        line.setAttribute("y1", y);
+        line.setAttribute("y2", y);
+        line.setAttribute("stroke", axisColor);
+        line.setAttribute("stroke-dasharray", "3 4");
+        svg.appendChild(line);
+
+        const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        label.setAttribute("x", padding.left - 10);
+        label.setAttribute("y", y + 4);
+        label.setAttribute("text-anchor", "end");
+        label.setAttribute("font-size", "10");
+        label.setAttribute("fill", textColor);
+        label.textContent = `${tick}`;
+        svg.appendChild(label);
+    });
+
+    const axisX = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    axisX.setAttribute("x1", padding.left);
+    axisX.setAttribute("x2", totalPlotWidth - padding.right);
+    axisX.setAttribute("y1", height - padding.bottom);
+    axisX.setAttribute("y2", height - padding.bottom);
+    axisX.setAttribute("stroke", "rgba(255,255,255,0.24)");
+    svg.appendChild(axisX);
+
+    const axisY = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    axisY.setAttribute("x1", padding.left);
+    axisY.setAttribute("x2", padding.left);
+    axisY.setAttribute("y1", padding.top);
+    axisY.setAttribute("y2", height - padding.bottom);
+    axisY.setAttribute("stroke", "rgba(255,255,255,0.24)");
+    svg.appendChild(axisY);
+
+    const axisTitle = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    const axisTitleX = 24;
+    const axisTitleY = padding.top + chartHeight / 2;
+    axisTitle.setAttribute("x", axisTitleX);
+    axisTitle.setAttribute("y", axisTitleY);
+    axisTitle.setAttribute("text-anchor", "middle");
+    axisTitle.setAttribute("dominant-baseline", "middle");
+    axisTitle.setAttribute("transform", `rotate(-90 ${axisTitleX} ${axisTitleY})`);
+    axisTitle.setAttribute("font-size", "11");
+    axisTitle.setAttribute("fill", textColor);
+    axisTitle.textContent = "Accuracy %";
+    svg.appendChild(axisTitle);
+
+    const xTitle = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    xTitle.setAttribute("x", totalPlotWidth / 2);
+    xTitle.setAttribute("y", height - 2);
+    xTitle.setAttribute("text-anchor", "middle");
+    xTitle.setAttribute("font-size", "10");
+    xTitle.setAttribute("fill", textColor);
+    xTitle.textContent = "Attempt";
+    svg.appendChild(xTitle);
+
+    const bars = buildBars(combinedEntries);
+    bars.forEach((bar) => {
+        const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+        rect.setAttribute("x", bar.x);
+        rect.setAttribute("y", bar.y);
+        rect.setAttribute("width", bar.width);
+        rect.setAttribute("height", Math.max(2, bar.height));
+        rect.setAttribute("rx", "8");
+        rect.setAttribute("fill", bar.color);
+        rect.setAttribute("opacity", "0.92");
+        rect.setAttribute("stroke", "rgba(255,255,255,0.2)");
+        rect.setAttribute("stroke-width", "1");
+        group.appendChild(rect);
+
+        const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        label.setAttribute("x", bar.x + bar.width / 2);
+        label.setAttribute("y", height - padding.bottom + 18);
+        label.setAttribute("text-anchor", "middle");
+        label.setAttribute("font-size", "10");
+        label.setAttribute("fill", textColor);
+        label.textContent = `${bar.attempt}`;
+        group.appendChild(label);
+
+        const valueLabel = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        valueLabel.setAttribute("x", bar.x + bar.width / 2);
+        valueLabel.setAttribute("y", Math.max(padding.top + 10, bar.y - 8));
+        valueLabel.setAttribute("text-anchor", "middle");
+        valueLabel.setAttribute("font-size", "9");
+        valueLabel.setAttribute("fill", textColor);
+        valueLabel.textContent = `${bar.accuracy}%`;
+        group.appendChild(valueLabel);
+
+        svg.appendChild(group);
+    });
+
+    return svg;
+}
+
 function createProgressSummaryCard(title, summary, description) {
     const card = document.createElement("div");
     card.className = "progress-summary-card";
@@ -3200,7 +3404,11 @@ export function initProgressPage() {
     if (summaryCards) {
         const quizSummary = getRecentModeSummary("quiz", 7);
         const examSummary = getRecentModeSummary("exam", 7);
+        const progressEntries = getProgressEntries().filter((entry) => text(entry.mode) === "quiz" || text(entry.mode) === "exam");
+        const quizAttempts = progressEntries.filter((entry) => text(entry.mode) === "quiz" && text(entry.summaryType) === "session");
+        const examAttempts = progressEntries.filter((entry) => text(entry.mode) === "exam" && text(entry.summaryType) === "session");
         summaryCards.replaceChildren(
+            createAccuracyAttemptChartCard(quizAttempts, examAttempts),
             createProgressSummaryCard("Quiz accuracy", quizSummary, "Recent quiz performance across the last 7 days."),
             createProgressSummaryCard("Exam accuracy", examSummary, "Recent exam performance across the last 7 days.")
         );

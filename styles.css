@@ -845,7 +845,7 @@ body.drawer-collapsed .mobile-only {
     display: grid;
     gap: 16px;
     margin: 24px 0;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
 
 .progress-summary-card {
@@ -855,6 +855,60 @@ body.drawer-collapsed .mobile-only {
     backdrop-filter: blur(18px);
     box-shadow: var(--shadow);
     padding: 24px;
+}
+
+.progress-chart-card {
+    display: grid;
+    gap: 12px;
+    grid-column: 1 / -1;
+}
+
+.progress-chart-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.accuracy-chart-legend {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.accuracy-chart-legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.accuracy-chart-legend-swatch {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    display: inline-block;
+}
+
+.accuracy-chart-legend-swatch.quiz {
+    background: #3b82f6;
+}
+
+.accuracy-chart-legend-swatch.exam {
+    background: #f59e0b;
+}
+
+.accuracy-chart-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+}
+
+.accuracy-chart-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-width: 0;
 }
 
 .progress-summary-card-header {
@@ -867,7 +921,7 @@ body.drawer-collapsed .mobile-only {
 
 .progress-summary-card-header h3 {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
 }
 
 .progress-summary-card-meta {
