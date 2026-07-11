@@ -4481,11 +4481,27 @@ export async function initModePage(mode) {
         startSession(mode);
     };
 
-    elements.refresh?.addEventListener("click", () => {
-        if (mode === "quiz") {
-            clearQuizSession();
+    elements.refresh?.addEventListener("click", async () => {
+        try {
+            if (mode === "quiz") {
+                clearQuizSession();
+            }
+
+            // Clear learn/flashcards sessions so refresh shows a fresh state
+            if (mode === "learn") {
+                clearReviewSession();
+                clearModeSession("learn");
+            }
+            if (mode === "flashcards") {
+                clearModeSession("flashcards");
+            }
+
+            await refresh();
+        } catch (err) {
+            // If something goes wrong (e.g. fetch failure), fall back to a full reload
+            console.error("Refresh failed:", err);
+            location.reload();
         }
-        refresh();
     });
 
     elements.modeButtons.forEach((button) => {
