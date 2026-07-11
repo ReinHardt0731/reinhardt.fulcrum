@@ -5,7 +5,7 @@
       "name": "ACRM",
       "quizType": "short_quiz",
       "schemaVersion": 1,
-      "selectedChapter": "Fasteners | Screw",
+      "selectedChapter": "Welding",
       "chapters": [
         {
           "title": "Material Properties",
@@ -80,6 +80,14 @@
           "file": "chapters/fasteners-washers.json"
         },
         {
+          "title": "Cables",
+          "file": "chapters/cables.json"
+        },
+        {
+          "title": "Welding",
+          "file": "chapters/welding.json"
+        },
+        {
           "title": "Fasteners | Locking Devices",
           "file": "chapters/fasteners-locking-devices.json"
         },
@@ -116,7 +124,7 @@
           "file": "chapters/major-and-minor-modifications.json"
         }
       ],
-      "updatedAt": "2026-07-11T03:59:07.336Z"
+      "updatedAt": "2026-07-11T08:15:31.573Z"
     },
     {
       "id": "aerodynamics",
@@ -18776,6 +18784,2182 @@
             "Aircraft Hardware",
             "Bolts",
             "Installation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/cables.json": {
+      "title": "Cables",
+      "questions": [
+        {
+          "question": "What is the primary function of aircraft control cables?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To support the aircraft structure",
+            "To transmit control forces from the cockpit to the flight control surfaces",
+            "To absorb engine vibration",
+            "To secure removable access panels"
+          ],
+          "answerIndex": 1,
+          "answerText": "To transmit control forces from the cockpit to the flight control surfaces",
+          "explanation": "Aircraft control cables transmit pilot control inputs from the cockpit to flight control surfaces such as the ailerons, elevators, and rudder. They provide a lightweight and reliable means of transmitting mechanical motion.\n\nDifferentiate Similar Concepts:\n• Control Cable → Transmits motion.\n• Structural Member → Supports loads.\n\n💡 Memory Hook:\nControl Cable = Control Motion.\n\n🎯 Board Tip:\nThe primary function is transmitting motion—not carrying structural loads.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following flight control surfaces is commonly operated through an aircraft control cable system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Engine Cowling",
+            "Aileron",
+            "Wing Rib",
+            "Firewall"
+          ],
+          "answerIndex": 1,
+          "answerText": "Aileron",
+          "explanation": "Aircraft control cables commonly operate primary flight controls such as the ailerons, elevators, and rudder. They are not used to support fixed structural components.\n\nDifferentiate Similar Concepts:\n• Aileron → Flight control.\n• Wing Rib → Structural component.\n\n💡 Memory Hook:\nCables move controls—not structures.\n\n🎯 Board Tip:\nRemember the three primary cable-operated flight controls: ailerons, elevators, and rudder.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why are steel cables widely used in aircraft flight control systems?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "They are the least expensive aircraft material.",
+            "They provide a high strength-to-weight ratio while remaining flexible.",
+            "They eliminate the need for pulleys.",
+            "They require no periodic inspection."
+          ],
+          "answerIndex": 1,
+          "answerText": "They provide a high strength-to-weight ratio while remaining flexible.",
+          "explanation": "Aircraft control cables combine high tensile strength with flexibility, allowing them to transmit control forces efficiently through pulleys and around structural members.\n\nDifferentiate Similar Concepts:\n• Control Cable → Strong and flexible.\n• Rigid Pushrod → Strong but not flexible.\n\n💡 Memory Hook:\nStrong + Flexible = Control Cable.\n\n🎯 Board Tip:\nThe combination of strength and flexibility is the principal advantage of aircraft control cables.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Compared with a rigid pushrod, an aircraft control cable offers the advantage of:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Supporting greater compressive loads",
+            "Being routed around pulleys and complex structural paths",
+            "Eliminating the need for turnbuckles",
+            "Requiring no tension adjustment"
+          ],
+          "answerIndex": 1,
+          "answerText": "Being routed around pulleys and complex structural paths",
+          "explanation": "Unlike rigid pushrods, flexible control cables can be routed around pulleys, allowing control systems to pass through complex aircraft structures while transmitting motion effectively.\n\nDifferentiate Similar Concepts:\n• Control Cable → Flexible routing.\n• Pushrod → Straight-line motion.\n\n💡 Memory Hook:\nCable bends. Pushrod doesn't.\n\n🎯 Board Tip:\nQuestions comparing pushrods and cables usually focus on routing flexibility.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Aircraft control cables are designed primarily to carry:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Compressive loads",
+            "Tensile loads",
+            "Bending loads",
+            "Torsional loads"
+          ],
+          "answerIndex": 1,
+          "answerText": "Tensile loads",
+          "explanation": "Control cables are designed to transmit forces in tension. They are not intended to carry compressive loads because flexible cables would buckle under compression.\n\nDifferentiate Similar Concepts:\n• Cable → Tension.\n• Pushrod → Compression and tension.\n\n💡 Memory Hook:\nCable = Tension only.\n\n🎯 Board Tip:\nWhenever 'compression' appears as an option for aircraft control cables, it is usually incorrect.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the smallest individual component of an aircraft control cable?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Strand",
+            "Core",
+            "Wire",
+            "Cable"
+          ],
+          "answerIndex": 2,
+          "answerText": "Wire",
+          "explanation": "An individual wire is the smallest component of an aircraft control cable. Multiple wires are twisted together to form a strand, multiple strands form a cable.\n\nDifferentiate Similar Concepts:\n• Wire → Smallest unit.\n• Strand → Group of wires.\n• Cable → Group of strands.\n\n💡 Memory Hook:\nWire → Strand → Cable.\n\n🎯 Board Tip:\nRemember the hierarchy: Wire → Strand → Cable.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft control cable consists primarily of:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Several wires twisted together to form one large wire",
+            "Several strands laid together around a center",
+            "Several rods joined by connectors",
+            "Several steel tubes welded together"
+          ],
+          "answerIndex": 1,
+          "answerText": "Several strands laid together around a center",
+          "explanation": "Aircraft control cables are constructed by laying several strands around a center. Each strand is itself composed of several individual wires.\n\nDifferentiate Similar Concepts:\n• Strand → Group of wires.\n• Cable → Group of strands.\n\n💡 Memory Hook:\nStrands make the cable.\n\n🎯 Board Tip:\nThe board often asks students to distinguish between wires, strands, and cables.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "In the designation 7×19, what does the number '7' represent?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The number of wires in each strand",
+            "The number of strands in the cable",
+            "The cable diameter in millimeters",
+            "The number of cable layers"
+          ],
+          "answerIndex": 1,
+          "answerText": "The number of strands in the cable",
+          "explanation": "In cable designation, the first number indicates the number of strands, while the second number indicates the number of wires contained in each strand.\n\nDifferentiate Similar Concepts:\n• First Number → Strands.\n• Second Number → Wires per strand.\n\n💡 Memory Hook:\nFirst = Strands.\nSecond = Wires.\n\n🎯 Board Tip:\nExpect questions asking what each number in the cable designation represents.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "In the cable designation 7×19, the number '19' refers to the:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Total number of strands",
+            "Total cable diameter",
+            "Number of wires in each strand",
+            "Number of cable fittings"
+          ],
+          "answerIndex": 2,
+          "answerText": "Number of wires in each strand",
+          "explanation": "The second number in a cable designation represents the number of wires contained within each individual strand.\n\nDifferentiate Similar Concepts:\n• First Number → Strands.\n• Second Number → Wires per strand.\n\n💡 Memory Hook:\nSecond number = Wires.\n\n🎯 Board Tip:\nDon't confuse the number of strands with the number of wires per strand.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft control cable construction provides greater flexibility?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1×7",
+            "7×7",
+            "7×19",
+            "1×19"
+          ],
+          "answerIndex": 2,
+          "answerText": "7×19",
+          "explanation": "A 7×19 cable contains more individual wires than a 7×7 cable, making it more flexible. Increased flexibility allows it to pass more easily around pulleys and curved routing paths.\n\nDifferentiate Similar Concepts:\n• 7×7 → Less flexible.\n• 7×19 → More flexible.\n\n💡 Memory Hook:\nMore wires = More flexible.\n\n🎯 Board Tip:\nWhen flexibility is emphasized, 7×19 is usually the correct answer.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is a strand in an aircraft control cable?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A group of cables twisted together",
+            "A group of individual wires twisted together",
+            "The center core of the cable",
+            "A swaged cable terminal"
+          ],
+          "answerIndex": 1,
+          "answerText": "A group of individual wires twisted together",
+          "explanation": "A strand is formed by twisting several individual wires together. Multiple strands are then laid together to form the complete aircraft control cable.\n\nDifferentiate Similar Concepts:\n• Wire → Smallest individual component.\n• Strand → Group of wires.\n• Cable → Group of strands.\n\n💡 Memory Hook:\nWires make a strand.\n\n🎯 Board Tip:\nDon't confuse a strand with the complete cable.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which sequence correctly shows the construction of an aircraft control cable from the smallest component to the completed cable?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cable → Strand → Wire",
+            "Wire → Cable → Strand",
+            "Wire → Strand → Cable",
+            "Strand → Wire → Cable"
+          ],
+          "answerIndex": 2,
+          "answerText": "Wire → Strand → Cable",
+          "explanation": "Aircraft control cables are constructed by twisting individual wires into strands, then laying several strands together to form the finished cable.\n\nDifferentiate Similar Concepts:\n• Wire → Basic element.\n• Strand → Intermediate component.\n• Cable → Finished assembly.\n\n💡 Memory Hook:\nWSC = Wire, Strand, Cable.\n\n🎯 Board Tip:\nThis hierarchy is a classic recall question in aircraft hardware.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the principal advantage of constructing a cable from many small wires instead of a few large wires?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Greater compressive strength",
+            "Greater flexibility while maintaining strength",
+            "Reduced electrical resistance",
+            "Higher resistance to bending fatigue because of increased stiffness"
+          ],
+          "answerIndex": 1,
+          "answerText": "Greater flexibility while maintaining strength",
+          "explanation": "Using many small wires allows the cable to bend more easily around pulleys while still providing high tensile strength. This combination of flexibility and strength is one of the main reasons stranded cables are used in aircraft control systems.\n\nDifferentiate Similar Concepts:\n• Many small wires → Flexible.\n• Few large wires → Less flexible.\n\n💡 Memory Hook:\nMore wires = More flexibility.\n\n🎯 Board Tip:\nWhenever flexibility is emphasized, think of multiple small wires rather than a single large wire.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Increasing the number of individual wires in an aircraft control cable primarily increases its:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Weight only",
+            "Flexibility",
+            "Compressive strength",
+            "Resistance to torque"
+          ],
+          "answerIndex": 1,
+          "answerText": "Flexibility",
+          "explanation": "As the number of individual wires increases, each wire becomes smaller in diameter, allowing the cable to bend more easily while retaining its tensile capability.\n\nDifferentiate Similar Concepts:\n• More wires → Greater flexibility.\n• Larger wires → Greater stiffness.\n\n💡 Memory Hook:\nMore wires, easier bends.\n\n🎯 Board Tip:\nThis concept explains why 7×19 cables are generally more flexible than 7×7 cables.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement best describes the relationship between wires, strands, and an aircraft control cable?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A cable consists of several wires, each containing multiple strands.",
+            "A strand consists of several cables twisted together.",
+            "Individual wires form strands, and multiple strands form a cable.",
+            "A cable is made by twisting several solid rods together."
+          ],
+          "answerIndex": 2,
+          "answerText": "Individual wires form strands, and multiple strands form a cable.",
+          "explanation": "The construction hierarchy begins with individual wires. These are twisted into strands, and several strands are then laid together to produce the finished aircraft control cable.\n\nDifferentiate Similar Concepts:\n• Wire → Smallest unit.\n• Strand → Group of wires.\n• Cable → Group of strands.\n\n💡 Memory Hook:\nWire → Strand → Cable.\n\n🎯 Board Tip:\nIf you remember this hierarchy, you'll be able to answer most cable construction questions with confidence.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does the cable designation 7×7 indicate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Seven cables, each containing seven strands",
+            "Seven strands, each containing seven wires",
+            "Seven wires twisted into seven cables",
+            "Seven layers with seven wires per layer"
+          ],
+          "answerIndex": 1,
+          "answerText": "Seven strands, each containing seven wires",
+          "explanation": "In aircraft cable designations, the first number represents the number of strands, while the second number represents the number of wires in each strand. Therefore, a 7×7 cable consists of seven strands with seven wires in each strand.\n\nDifferentiate Similar Concepts:\n• First Number → Strands.\n• Second Number → Wires per strand.\n\n💡 Memory Hook:\n7×7 = 7 strands × 7 wires.\n\n🎯 Board Tip:\nAlways interpret the first number as strands and the second as wires.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft control cable construction provides the greatest flexibility?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1×7",
+            "1×19",
+            "7×7",
+            "7×19"
+          ],
+          "answerIndex": 3,
+          "answerText": "7×19",
+          "explanation": "A 7×19 cable contains the greatest number of individual wires among the choices, making it the most flexible. More wires allow the cable to bend more easily around pulleys.\n\nDifferentiate Similar Concepts:\n• 7×19 → Maximum flexibility.\n• 7×7 → Moderate flexibility.\n• 1×7 → Least flexible.\n\n💡 Memory Hook:\nMore wires = More flexibility.\n\n🎯 Board Tip:\nIf flexibility is emphasized, 7×19 is usually the correct answer.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft control cable construction is the least flexible?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "7×19",
+            "7×7",
+            "1×19",
+            "1×7"
+          ],
+          "answerIndex": 3,
+          "answerText": "1×7",
+          "explanation": "A 1×7 cable consists of a single strand containing seven wires. Because it has the fewest strands and relatively few wires, it is the least flexible of the listed cable constructions.\n\nDifferentiate Similar Concepts:\n• 1×7 → Least flexible.\n• 7×19 → Most flexible.\n\n💡 Memory Hook:\nFewer strands = Stiffer cable.\n\n🎯 Board Tip:\nRemember the flexibility trend: 1×7 < 1×19 < 7×7 < 7×19.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Compared with a 7×7 cable of the same diameter, a 7×19 cable is generally:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Less flexible",
+            "More flexible",
+            "More rigid",
+            "Designed only for compression loads"
+          ],
+          "answerIndex": 1,
+          "answerText": "More flexible",
+          "explanation": "The greater number of individual wires in a 7×19 cable allows it to bend more easily than a 7×7 cable while still maintaining excellent tensile strength.\n\nDifferentiate Similar Concepts:\n• 7×7 → Moderate flexibility.\n• 7×19 → Greater flexibility.\n\n💡 Memory Hook:\n19 beats 7 in flexibility.\n\n🎯 Board Tip:\nWhen comparing cable constructions, remember that increasing the number of wires increases flexibility.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why does a 7×19 aircraft control cable exhibit greater flexibility than a 7×7 cable?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It has a larger overall diameter.",
+            "It contains more individual wires, allowing easier bending.",
+            "It is manufactured from a softer material.",
+            "It is designed to carry compressive loads."
+          ],
+          "answerIndex": 1,
+          "answerText": "It contains more individual wires, allowing easier bending.",
+          "explanation": "Flexibility is achieved by increasing the number of smaller individual wires within the cable. These smaller wires can bend more easily while maintaining the cable's tensile capability.\n\nDifferentiate Similar Concepts:\n• More wires → Greater flexibility.\n• Larger wires → Greater stiffness.\n\n💡 Memory Hook:\nMany small wires bend easier than a few large ones.\n\n🎯 Board Tip:\nDon't memorize only that 7×19 is more flexible—understand why.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary purpose of a cable end fitting in an aircraft control cable system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To lubricate the control cable",
+            "To provide a means of securely attaching the cable to flight control components",
+            "To reduce cable tension",
+            "To prevent corrosion of the cable"
+          ],
+          "answerIndex": 1,
+          "answerText": "To provide a means of securely attaching the cable to flight control components",
+          "explanation": "Cable end fittings provide the mechanical connection between the control cable and components such as bellcranks, control horns, turnbuckles, and other control system hardware.\n\nDifferentiate Similar Concepts:\n• Cable → Transmits force.\n• End Fitting → Connects the cable.\n\n💡 Memory Hook:\nCable moves. Fitting connects.\n\n🎯 Board Tip:\nEnd fittings are designed to transmit cable loads safely into the control system.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which cable end fitting forms a permanent attachment by compressing the fitting onto the cable using a swaging process?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fork Terminal",
+            "Ball Terminal",
+            "Swaged Terminal",
+            "Turnbuckle Barrel"
+          ],
+          "answerIndex": 2,
+          "answerText": "Swaged Terminal",
+          "explanation": "A swaged terminal is permanently attached by mechanically compressing the terminal onto the cable with an approved swaging tool, producing a strong and reliable connection.\n\nDifferentiate Similar Concepts:\n• Swaged Terminal → Permanently attached.\n• Turnbuckle → Adjustable connection.\n\n💡 Memory Hook:\nSwage = Squeeze permanently.\n\n🎯 Board Tip:\nWhenever the question mentions compression onto the cable, think swaged terminal.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which cable end fitting is commonly used when a pin connection is required between the control cable and another control system component?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fork Terminal",
+            "Ball Terminal",
+            "Nicopress Sleeve",
+            "Cable Guard"
+          ],
+          "answerIndex": 0,
+          "answerText": "Fork Terminal",
+          "explanation": "A fork terminal has a clevis-shaped end that accepts a pin, making it suitable for connecting cables to control horns, bellcranks, and turnbuckles.\n\nDifferentiate Similar Concepts:\n• Fork Terminal → Pin connection.\n• Ball Terminal → Fits into a socket.\n\n💡 Memory Hook:\nFork = Fits a pin.\n\n🎯 Board Tip:\nQuestions mentioning clevis pins or pin-connected control linkages usually indicate a fork terminal.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which cable end fitting is designed with a spherical head that fits into a mating socket or fitting?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Ball Terminal",
+            "Fork Terminal",
+            "Eye Terminal",
+            "Swaged Sleeve"
+          ],
+          "answerIndex": 0,
+          "answerText": "Ball Terminal",
+          "explanation": "A ball terminal has a spherical head that fits into a matching socket, allowing secure attachment while accommodating limited angular movement.\n\nDifferentiate Similar Concepts:\n• Ball Terminal → Spherical head.\n• Fork Terminal → Clevis-shaped end.\n\n💡 Memory Hook:\nBall fits a socket.\n\n🎯 Board Tip:\nThe word 'spherical' is the strongest clue for a ball terminal.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary purpose of a Nicopress sleeve in an aircraft cable assembly?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To adjust cable tension",
+            "To form a cable loop by permanently securing the cable after compression",
+            "To lubricate the cable strands",
+            "To guide the cable around a pulley"
+          ],
+          "answerIndex": 1,
+          "answerText": "To form a cable loop by permanently securing the cable after compression",
+          "explanation": "A Nicopress sleeve is compressed onto a cable to form a permanent loop or terminal connection. Proper installation requires the correct sleeve size, swaging tool, and inspection.\n\nDifferentiate Similar Concepts:\n• Nicopress Sleeve → Forms permanent cable loops.\n• Turnbuckle → Adjusts cable tension.\n\n💡 Memory Hook:\nNicopress = Permanent loop.\n\n🎯 Board Tip:\nDon't confuse a Nicopress sleeve with a swaged terminal. Both are permanent cable attachments, but a Nicopress sleeve is typically used to secure loops rather than being an integral manufactured terminal.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why is a turnbuckle installed in an aircraft control cable system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To change the direction of the cable",
+            "To adjust the cable to the specified tension during rigging",
+            "To lubricate the control cable",
+            "To reduce cable diameter"
+          ],
+          "answerIndex": 1,
+          "answerText": "To adjust the cable to the specified tension during rigging",
+          "explanation": "Turnbuckles provide a means of precisely adjusting cable tension during installation and maintenance to ensure proper operation of the flight control system.\n\nDifferentiate Similar Concepts:\n• Turnbuckle → Adjusts tension.\n• Pulley → Changes cable direction.\n\n💡 Memory Hook:\nTurnbuckle = Tune the cable.\n\n🎯 Board Tip:\nRigging almost always involves adjusting cable tension with a turnbuckle.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During turnbuckle adjustment, rotating the barrel causes the fork and eye terminals to:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rotate together with the barrel",
+            "Move inward or outward to change cable tension",
+            "Remain fixed while only the barrel moves",
+            "Separate from the control cable"
+          ],
+          "answerIndex": 1,
+          "answerText": "Move inward or outward to change cable tension",
+          "explanation": "The barrel contains opposite-hand internal threads. Rotating it moves both terminals simultaneously either toward or away from each other, increasing or decreasing cable tension.\n\nDifferentiate Similar Concepts:\n• Barrel rotates.\n• Terminals translate (move linearly).\n\n💡 Memory Hook:\nTurn the barrel, move the terminals.\n\n🎯 Board Tip:\nThe opposite-hand threads allow simultaneous movement of both terminal ends.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why are opposite-hand threads used in an aircraft turnbuckle barrel?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To prevent corrosion",
+            "To allow both terminal ends to move simultaneously during adjustment",
+            "To eliminate the need for safety wire",
+            "To increase cable flexibility"
+          ],
+          "answerIndex": 1,
+          "answerText": "To allow both terminal ends to move simultaneously during adjustment",
+          "explanation": "One end of the barrel has right-hand threads while the opposite end has left-hand threads. This allows both terminals to move together when the barrel is rotated, making cable tension adjustment efficient.\n\nDifferentiate Similar Concepts:\n• Opposite-hand threads → Simultaneous adjustment.\n• Same-hand threads → Would not provide proper turnbuckle action.\n\n💡 Memory Hook:\nOpposite threads work together.\n\n🎯 Board Tip:\nThis is one of the defining design features of a turnbuckle.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why is proper thread engagement important when adjusting an aircraft turnbuckle?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To reduce cable friction",
+            "To ensure the turnbuckle has adequate strength and prevents thread failure",
+            "To simplify lubrication",
+            "To reduce cable stretch"
+          ],
+          "answerIndex": 1,
+          "answerText": "To ensure the turnbuckle has adequate strength and prevents thread failure",
+          "explanation": "Adequate thread engagement is necessary to safely transmit the cable loads. Excessive thread exposure can weaken the assembly and may lead to failure.\n\nDifferentiate Similar Concepts:\n• Proper thread engagement → Safe load transfer.\n• Excessive exposed threads → Reduced strength.\n\n💡 Memory Hook:\nEnough threads = Enough strength.\n\n🎯 Board Tip:\nDuring inspection, exposed threads are an important clue to improper adjustment.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "After the correct cable tension has been obtained using a turnbuckle, the next maintenance step is to:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Lubricate the barrel with grease",
+            "Install the appropriate turnbuckle safetying device",
+            "Remove the turnbuckle barrel",
+            "Back off the adjustment one full turn"
+          ],
+          "answerIndex": 1,
+          "answerText": "Install the appropriate turnbuckle safetying device",
+          "explanation": "Once the turnbuckle has been adjusted to the specified cable tension, it must be secured using an approved safetying method, such as safety wire or a clip-lock device, to prevent it from rotating during service.\n\nDifferentiate Similar Concepts:\n• Adjustment → Establishes tension.\n• Safetying → Maintains the adjustment.\n\n💡 Memory Hook:\nAdjust first. Safety second.\n\n🎯 Board Tip:\nA properly adjusted turnbuckle is incomplete until it has been correctly safetied.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why must an aircraft turnbuckle be safetied after the correct cable tension has been established?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To increase the strength of the control cable",
+            "To prevent the turnbuckle barrel from rotating and changing the cable tension",
+            "To lubricate the turnbuckle threads",
+            "To reduce cable stretch during flight"
+          ],
+          "answerIndex": 1,
+          "answerText": "To prevent the turnbuckle barrel from rotating and changing the cable tension",
+          "explanation": "After a turnbuckle has been properly adjusted, it must be safetied to prevent the barrel from rotating due to vibration or operational loads, which could alter the cable tension.\n\nDifferentiate Similar Concepts:\n• Turnbuckle Adjustment → Establishes tension.\n• Turnbuckle Safetying → Preserves the adjustment.\n\n💡 Memory Hook:\nAdjust it. Then lock it.\n\n🎯 Board Tip:\nA properly adjusted turnbuckle is still considered improperly installed if it has not been safetied.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary purpose of safety wire installed on an aircraft turnbuckle?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To increase cable flexibility",
+            "To prevent accidental rotation of the turnbuckle barrel",
+            "To reduce corrosion of the cable",
+            "To support the control cable"
+          ],
+          "answerIndex": 1,
+          "answerText": "To prevent accidental rotation of the turnbuckle barrel",
+          "explanation": "Safety wire prevents the turnbuckle barrel from turning after the cable has been properly adjusted, thereby maintaining the specified cable tension.\n\nDifferentiate Similar Concepts:\n• Safety Wire → Prevents barrel rotation.\n• Barrel → Adjusts tension.\n\n💡 Memory Hook:\nWire locks the barrel.\n\n🎯 Board Tip:\nThe safety wire secures the adjustment—not the cable itself.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement best describes the relationship between turnbuckle adjustment and safetying?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Safetying is performed before adjusting cable tension.",
+            "Safetying replaces the need for proper cable tension adjustment.",
+            "The turnbuckle is adjusted first, then secured using an approved safetying method.",
+            "Safetying is required only when replacing the control cable."
+          ],
+          "answerIndex": 2,
+          "answerText": "The turnbuckle is adjusted first, then secured using an approved safetying method.",
+          "explanation": "Proper maintenance sequence requires adjusting the turnbuckle to obtain the specified cable tension before applying the approved safetying method.\n\nDifferentiate Similar Concepts:\n• Adjustment → First.\n• Safetying → Second.\n\n💡 Memory Hook:\nAdjust → Safety.\n\n🎯 Board Tip:\nSafetying never replaces proper rigging or adjustment.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft turnbuckle has been adjusted correctly but no safety wire or locking device has been installed. This condition is considered:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Acceptable if the cable tension is correct",
+            "Acceptable for temporary operation",
+            "An improper installation requiring correction",
+            "Acceptable provided the aircraft is not flown above maneuvering speed"
+          ],
+          "answerIndex": 2,
+          "answerText": "An improper installation requiring correction",
+          "explanation": "Proper cable tension alone is not sufficient. The turnbuckle must also be secured using an approved safetying method to prevent unintentional rotation during operation.\n\nDifferentiate Similar Concepts:\n• Proper Tension → One requirement.\n• Proper Safetying → Separate requirement.\n\n💡 Memory Hook:\nCorrect tension + Correct safety = Airworthy.\n\n🎯 Board Tip:\nA turnbuckle is not considered complete until it has been properly safetied.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The primary objective of turnbuckle safetying is to maintain:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cable lubrication",
+            "Cable flexibility",
+            "The adjusted cable tension during aircraft operation",
+            "The diameter of the control cable"
+          ],
+          "answerIndex": 2,
+          "answerText": "The adjusted cable tension during aircraft operation",
+          "explanation": "Safetying preserves the turnbuckle adjustment by preventing barrel rotation, thereby maintaining the specified cable tension throughout aircraft operation.\n\nDifferentiate Similar Concepts:\n• Turnbuckle → Sets tension.\n• Safetying → Maintains tension.\n\n💡 Memory Hook:\nSafety keeps the setting.\n\n🎯 Board Tip:\nRemember that the purpose of safetying is to preserve the rigging adjustment, not to strengthen the cable.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During inspection, a turnbuckle is found to have insufficient thread engagement between the barrel and terminal. The correct maintenance action is to:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Accept the installation if the cable tension is correct",
+            "Apply additional lubricant to the exposed threads",
+            "Readjust or replace the turnbuckle to obtain proper thread engagement",
+            "Install an additional safety wire"
+          ],
+          "answerIndex": 2,
+          "answerText": "Readjust or replace the turnbuckle to obtain proper thread engagement",
+          "explanation": "Proper thread engagement is essential to ensure the turnbuckle can safely transmit cable loads. Excessive exposed threads weaken the assembly and require corrective action.\n\nDifferentiate Similar Concepts:\n• Proper thread engagement → Structural integrity.\n• Safety wire → Prevents barrel rotation only.\n\n💡 Memory Hook:\nEnough threads = Enough strength.\n\n🎯 Board Tip:\nSafety wire cannot compensate for improper thread engagement.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During a preflight inspection, a turnbuckle is found without its required safetying device. The turnbuckle should be considered:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Airworthy if cable tension is correct",
+            "Acceptable until the next scheduled inspection",
+            "Unairworthy until properly safetied",
+            "Acceptable if no corrosion is present"
+          ],
+          "answerIndex": 2,
+          "answerText": "Unairworthy until properly safetied",
+          "explanation": "A turnbuckle that lacks its required safetying device may rotate during service, resulting in loss of proper cable tension. It must be correctly safetied before the aircraft is returned to service.\n\nDifferentiate Similar Concepts:\n• Correct tension → Not enough.\n• Correct tension + Safetying → Airworthy.\n\n💡 Memory Hook:\nNo safety = No flight.\n\n🎯 Board Tip:\nMissing safetying is a maintenance discrepancy even if the rigging appears correct.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which condition is an unacceptable defect in an aircraft turnbuckle assembly?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Properly safetied barrel",
+            "Bent fork terminal",
+            "Correct cable tension",
+            "Proper thread engagement"
+          ],
+          "answerIndex": 1,
+          "answerText": "Bent fork terminal",
+          "explanation": "A bent fork terminal may indicate overloading or mechanical damage and can compromise the strength and alignment of the control cable system. It requires corrective maintenance.\n\nDifferentiate Similar Concepts:\n• Bent terminal → Replace or repair as approved.\n• Properly aligned terminal → Serviceable.\n\n💡 Memory Hook:\nBent fitting = Bad fitting.\n\n🎯 Board Tip:\nPhysical deformation of any flight control component should never be ignored.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The discovery of cracked threads on a turnbuckle barrel during inspection requires:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cleaning and lubrication only",
+            "Installation of additional safety wire",
+            "Replacement of the damaged turnbuckle barrel",
+            "Readjustment of cable tension"
+          ],
+          "answerIndex": 2,
+          "answerText": "Replacement of the damaged turnbuckle barrel",
+          "explanation": "Cracks in the barrel or threads are structural defects that cannot be corrected by adjustment or lubrication. The damaged component must be replaced with an approved part.\n\nDifferentiate Similar Concepts:\n• Cracks → Replace.\n• Minor contamination → Clean.\n\n💡 Memory Hook:\nCracked barrel = Replace.\n\n🎯 Board Tip:\nStructural damage to turnbuckle components is not repairable in service.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary objective of inspecting an aircraft turnbuckle during routine maintenance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To verify proper adjustment, thread engagement, condition, and safetying",
+            "To determine cable diameter",
+            "To increase cable flexibility",
+            "To measure pulley alignment only"
+          ],
+          "answerIndex": 0,
+          "answerText": "To verify proper adjustment, thread engagement, condition, and safetying",
+          "explanation": "Routine turnbuckle inspection includes checking cable tension, thread engagement, condition of the barrel and terminals, and ensuring that the approved safetying method is correctly installed.\n\nDifferentiate Similar Concepts:\n• Turnbuckle Inspection → Adjustment, threads, condition, safety.\n• Cable Inspection → Broken wires, corrosion, kinks.\n\n💡 Memory Hook:\nThink ACTS: Adjustment, Condition, Threads, Safety.\n\n🎯 Board Tip:\nInspection questions often combine several acceptable conditions into one correct answer.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft control cable system component prevents the control cable from rubbing against surrounding aircraft structure?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Pulley",
+            "Pressure Seal",
+            "Fairlead",
+            "Bellcrank"
+          ],
+          "answerIndex": 2,
+          "answerText": "Fairlead",
+          "explanation": "Fairleads guide the control cable along its intended path and prevent it from contacting adjacent aircraft structure, thereby minimizing chafing and wear.\n\nDifferentiate Similar Concepts:\n• Fairlead → Prevents cable contact.\n• Pulley → Changes cable direction.\n\n💡 Memory Hook:\nFairlead = Fair path.\n\n🎯 Board Tip:\nWhenever the question mentions preventing cable chafing or rubbing, think Fairlead.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which component is installed when a control cable passes between a pressurized compartment and an unpressurized compartment?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Grommet",
+            "Pressure Seal",
+            "Fairlead",
+            "Guard Pin"
+          ],
+          "answerIndex": 1,
+          "answerText": "Pressure Seal",
+          "explanation": "A pressure seal allows a control cable to pass through a pressure bulkhead while minimizing air leakage between pressurized and unpressurized areas.\n\nDifferentiate Similar Concepts:\n• Pressure Seal → Maintains cabin pressure.\n• Grommet → Protects against sharp edges.\n\n💡 Memory Hook:\nPressure boundary = Pressure Seal.\n\n🎯 Board Tip:\nThe words 'pressurized' and 'unpressurized' are immediate clues for a pressure seal.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary purpose of a grommet in an aircraft control cable installation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To increase cable tension",
+            "To protect the cable from rough or sharp edges of a hole",
+            "To prevent pulley rotation",
+            "To secure the turnbuckle"
+          ],
+          "answerIndex": 1,
+          "answerText": "To protect the cable from rough or sharp edges of a hole",
+          "explanation": "Grommets are installed in holes through which a cable passes to prevent abrasion and damage caused by rough or sharp panel edges.\n\nDifferentiate Similar Concepts:\n• Grommet → Edge protection.\n• Fairlead → Cable guidance.\n\n💡 Memory Hook:\nHole = Grommet.\n\n🎯 Board Tip:\nWhenever a cable passes through a panel opening, think of a grommet.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft control cable system component changes the direction of motion within the flight control system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Torque Tube",
+            "Bellcrank",
+            "Push-Pull Rod",
+            "Pressure Seal"
+          ],
+          "answerIndex": 1,
+          "answerText": "Bellcrank",
+          "explanation": "A bellcrank is a lever mechanism that changes the direction of motion or force within a flight control linkage.\n\nDifferentiate Similar Concepts:\n• Bellcrank → Changes motion direction.\n• Pulley → Changes cable direction.\n\n💡 Memory Hook:\nBellcrank bends the motion.\n\n🎯 Board Tip:\nDon't confuse changing the direction of cable travel (pulley) with changing the direction of mechanical motion (bellcrank).",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft control system component provides the most direct transmission of motion with the least amount of backlash, but is generally limited to installations where air loads are not excessive?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Control Cable",
+            "Torque Tube",
+            "Bellcrank",
+            "Push-Pull Rod"
+          ],
+          "answerIndex": 1,
+          "answerText": "Torque Tube",
+          "explanation": "Torque tubes transmit rotary motion directly with very little backlash. Because of loading limitations, they are generally used only where aerodynamic loads are not excessive.\n\nDifferentiate Similar Concepts:\n• Torque Tube → Rotary motion with minimal backlash.\n• Control Cable → Flexible transmission.\n\n💡 Memory Hook:\nTorque Tube = Tight transmission.\n\n🎯 Board Tip:\nThe phrase 'least backlash' is one of the strongest clues for a torque tube.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary function of a pulley in an aircraft control cable system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To increase cable tension",
+            "To change the direction of cable travel",
+            "To connect the cable to the control surface",
+            "To prevent cable corrosion"
+          ],
+          "answerIndex": 1,
+          "answerText": "To change the direction of cable travel",
+          "explanation": "Pulleys guide control cables around structural members by changing the direction of cable travel while minimizing friction.\n\nDifferentiate Similar Concepts:\n• Pulley → Changes cable direction.\n• Bellcrank → Changes direction of mechanical motion.\n\n💡 Memory Hook:\nPulley = Path changer.\n\n🎯 Board Tip:\nDo not confuse a pulley with a bellcrank. A pulley redirects the cable, while a bellcrank redirects motion.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary purpose of pulley guard pins in an aircraft control cable system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To lubricate the pulley bearing",
+            "To prevent the control cable from jumping off the pulley groove",
+            "To adjust cable tension",
+            "To secure the pulley to its bracket"
+          ],
+          "answerIndex": 1,
+          "answerText": "To prevent the control cable from jumping off the pulley groove",
+          "explanation": "Pulley guard pins act as safety devices that prevent the control cable from leaving the pulley groove if slack develops, reducing the risk of cable jamming.\n\nDifferentiate Similar Concepts:\n• Guard Pin → Retains cable.\n• Pulley → Guides cable.\n\n💡 Memory Hook:\nGuard Pin = Guards the groove.\n\n🎯 Board Tip:\nA guard pin does not normally touch the cable; it serves as a safeguard if the cable becomes displaced.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which control system component connects a cable-driven bellcrank to the adjacent flight control surface?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Torque Tube",
+            "Push-Pull Rod",
+            "Turnbuckle",
+            "Pressure Seal"
+          ],
+          "answerIndex": 1,
+          "answerText": "Push-Pull Rod",
+          "explanation": "A push-pull rod transmits motion between a cable-operated bellcrank and the control surface. Unlike a cable, it can transmit both pushing and pulling forces.\n\nDifferentiate Similar Concepts:\n• Push-Pull Rod → Pushes and pulls.\n• Control Cable → Tension only.\n\n💡 Memory Hook:\nRod = Push + Pull.\n\n🎯 Board Tip:\nThe name itself identifies its function—it transmits both pushing and pulling loads.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes a pulley from a bellcrank?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A pulley changes the direction of cable travel, while a bellcrank changes the direction of mechanical motion.",
+            "A pulley adjusts cable tension, while a bellcrank changes cable direction.",
+            "A pulley prevents cable chafing, while a bellcrank prevents backlash.",
+            "A pulley supports the cable, while a bellcrank lubricates the cable."
+          ],
+          "answerIndex": 0,
+          "answerText": "A pulley changes the direction of cable travel, while a bellcrank changes the direction of mechanical motion.",
+          "explanation": "Although both redirect movement, a pulley redirects the cable itself, whereas a bellcrank redirects the motion or force transmitted through the control linkage.\n\nDifferentiate Similar Concepts:\n• Pulley → Cable path.\n• Bellcrank → Motion path.\n\n💡 Memory Hook:\nCable turns at the pulley. Motion turns at the bellcrank.\n\n🎯 Board Tip:\nThis distinction is frequently tested because both components change 'direction,' but they act on different parts of the system.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which component is correctly matched with its primary function?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Pressure Seal — Prevents cable from jumping off the pulley",
+            "Fairlead — Prevents cable contact with surrounding structure",
+            "Torque Tube — Adjusts cable tension",
+            "Turnbuckle — Protects cables passing through panel holes"
+          ],
+          "answerIndex": 1,
+          "answerText": "Fairlead — Prevents cable contact with surrounding structure",
+          "explanation": "Fairleads guide control cables and prevent them from rubbing against nearby aircraft structure. The other choices incorrectly describe the functions of their respective components.\n\nDifferentiate Similar Concepts:\n• Fairlead → Prevents chafing.\n• Turnbuckle → Adjusts tension.\n• Pressure Seal → Maintains pressure boundary.\n• Torque Tube → Transmits rotary motion.\n\n💡 Memory Hook:\nFairlead keeps the cable on a fair path.\n\n🎯 Board Tip:\nMatching questions are common in the AELE because they assess understanding of each component's primary function.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary objective of inspecting an aircraft control cable during routine maintenance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To determine the age of the cable",
+            "To verify that the cable remains airworthy and free from defects",
+            "To measure the diameter of the pulley",
+            "To adjust the control cable tension"
+          ],
+          "answerIndex": 1,
+          "answerText": "To verify that the cable remains airworthy and free from defects",
+          "explanation": "Routine inspection is performed to detect defects such as broken wires, corrosion, kinks, birdcaging, excessive wear, and other conditions that could affect the safe operation of the flight control system.\n\nDifferentiate Similar Concepts:\n• Inspection → Detects defects.\n• Rigging → Adjusts the system.\n\n💡 Memory Hook:\nInspect = Find defects.\n\n🎯 Board Tip:\nThe purpose of inspection is to determine continued airworthiness—not simply to adjust cable tension.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which defect is characterized by one or more broken individual wires within an aircraft control cable?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Birdcaging",
+            "Broken Wire",
+            "Pulley Wear",
+            "Flattening"
+          ],
+          "answerIndex": 1,
+          "answerText": "Broken Wire",
+          "explanation": "Broken wires are among the most common and serious cable defects. Even a small number of broken wires can reduce cable strength and may require replacement depending on maintenance limits.\n\nDifferentiate Similar Concepts:\n• Broken Wire → Individual wire failure.\n• Birdcaging → Strand separation.\n\n💡 Memory Hook:\nBroken wire = Broken strength.\n\n🎯 Board Tip:\nBroken wires are one of the first items checked during cable inspection.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Birdcaging in an aircraft control cable is best described as:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Surface corrosion of the cable",
+            "Separation or opening of the cable strands",
+            "Flattening caused by excessive tension",
+            "Wear produced by pulley misalignment"
+          ],
+          "answerIndex": 1,
+          "answerText": "Separation or opening of the cable strands",
+          "explanation": "Birdcaging occurs when the strands of a cable separate or open outward, giving the appearance of a bird cage. This condition significantly weakens the cable and generally requires replacement.\n\nDifferentiate Similar Concepts:\n• Birdcaging → Strands spread apart.\n• Broken Wire → Individual wire fracture.\n\n💡 Memory Hook:\nBirdcage = Strands spread out.\n\n🎯 Board Tip:\nBirdcaging is considered a major cable defect and is not an acceptable service condition.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which cable defect is most commonly caused by bending the cable sharply beyond its allowable radius?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Kink",
+            "Pressure Seal Failure",
+            "Pulley Misalignment",
+            "Thread Damage"
+          ],
+          "answerIndex": 0,
+          "answerText": "Kink",
+          "explanation": "A kink permanently deforms the cable by sharply bending it. This damages the internal wire structure and significantly reduces cable strength.\n\nDifferentiate Similar Concepts:\n• Kink → Permanent bend.\n• Birdcaging → Strand separation.\n\n💡 Memory Hook:\nKink = Never straighten and reuse.\n\n🎯 Board Tip:\nA kinked aircraft control cable is generally considered unserviceable.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which condition commonly indicates deterioration of an aircraft control cable due to environmental exposure?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Corrosion",
+            "Proper cable lay",
+            "Correct cable tension",
+            "Uniform wire spacing"
+          ],
+          "answerIndex": 0,
+          "answerText": "Corrosion",
+          "explanation": "Corrosion attacks the individual wires of the cable, reducing strength and flexibility. It is one of the principal conditions evaluated during cable inspection.\n\nDifferentiate Similar Concepts:\n• Corrosion → Chemical deterioration.\n• Wear → Mechanical deterioration.\n\n💡 Memory Hook:\nRust means reduced trust.\n\n🎯 Board Tip:\nCorrosion is a major reason for rejection of aircraft control cables.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft control cable defect is characterized by the wearing away of the outer wires due to continuous rubbing against another surface?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Corrosion",
+            "Birdcaging",
+            "Chafing",
+            "Kinking"
+          ],
+          "answerIndex": 2,
+          "answerText": "Chafing",
+          "explanation": "Chafing is mechanical wear caused by repeated rubbing of the cable against aircraft structure, fairleads, pulleys, or other components. If left uncorrected, it can weaken the cable.\n\nDifferentiate Similar Concepts:\n• Chafing → Mechanical rubbing.\n• Corrosion → Chemical attack.\n\n💡 Memory Hook:\nChafing = Cable rubbing.\n\n🎯 Board Tip:\nWhen the question mentions rubbing or abrasion, think chafing.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Flattening of an aircraft control cable usually indicates:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Proper cable tension",
+            "Mechanical damage caused by crushing or excessive pressure",
+            "Correct pulley alignment",
+            "Normal service wear"
+          ],
+          "answerIndex": 1,
+          "answerText": "Mechanical damage caused by crushing or excessive pressure",
+          "explanation": "Flattening occurs when the cable has been crushed or subjected to abnormal pressure, deforming its normal circular cross-section and reducing its strength.\n\nDifferentiate Similar Concepts:\n• Flattening → Crushing damage.\n• Kink → Sharp bend.\n\n💡 Memory Hook:\nFlat cable = Crushed cable.\n\n🎯 Board Tip:\nA control cable should maintain its normal round shape throughout its length.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A frozen pulley in an aircraft control cable system will most likely result in:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Reduced cable tension only",
+            "The cable sliding across the pulley instead of rolling properly",
+            "Improved cable flexibility",
+            "Automatic cable lubrication"
+          ],
+          "answerIndex": 1,
+          "answerText": "The cable sliding across the pulley instead of rolling properly",
+          "explanation": "If a pulley bearing seizes, the pulley cannot rotate freely. Instead, the cable slides across the pulley groove, increasing friction and accelerating cable wear.\n\nDifferentiate Similar Concepts:\n• Normal Pulley → Rolls with the cable.\n• Frozen Pulley → Cable slides.\n\n💡 Memory Hook:\nFrozen pulley = Sliding cable.\n\n🎯 Board Tip:\nPulley rotation is checked during inspection because seized bearings accelerate cable wear.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Excessive wear in a pulley groove is undesirable because it may:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Improve cable flexibility",
+            "Cause improper cable support and accelerated cable wear",
+            "Increase cable tensile strength",
+            "Reduce aircraft weight"
+          ],
+          "answerIndex": 1,
+          "answerText": "Cause improper cable support and accelerated cable wear",
+          "explanation": "A worn pulley groove may no longer properly support the control cable, allowing abnormal loading and accelerated wear of both the cable and pulley.\n\nDifferentiate Similar Concepts:\n• Good Pulley Groove → Proper cable support.\n• Worn Groove → Increased cable wear.\n\n💡 Memory Hook:\nBad groove = Bad guidance.\n\n🎯 Board Tip:\nPulley condition is inspected together with cable condition because the two components wear together.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why should aircraft control cables be inspected where they pass through fairleads and around pulleys?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Because these areas are common locations for wear and chafing",
+            "Because cable tension is highest only at these locations",
+            "Because corrosion cannot occur elsewhere",
+            "Because swaged terminals are located only at these points"
+          ],
+          "answerIndex": 0,
+          "answerText": "Because these areas are common locations for wear and chafing",
+          "explanation": "Areas where the cable changes direction or passes through supporting components are more susceptible to wear, chafing, and abrasion. These locations require careful inspection during maintenance.\n\nDifferentiate Similar Concepts:\n• Fairleads/Pulleys → High wear areas.\n• Straight cable sections → Lower wear.\n\n💡 Memory Hook:\nWhere the cable touches, inspect more.\n\n🎯 Board Tip:\nInspection should focus on locations where the cable contacts other components or changes direction.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During inspection, a control cable is found to have a kink. What is the proper maintenance action?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Straighten the cable and return it to service",
+            "Lubricate the damaged area",
+            "Replace the cable with an approved serviceable cable",
+            "Reduce the cable tension"
+          ],
+          "answerIndex": 2,
+          "answerText": "Replace the cable with an approved serviceable cable",
+          "explanation": "A kink permanently damages the internal wire structure of the cable and significantly reduces its strength. Straightening the cable does not restore its original strength or serviceability.\n\nDifferentiate Similar Concepts:\n• Kink → Permanent structural damage.\n• Temporary bend → May not permanently deform the cable.\n\n💡 Memory Hook:\nKink = Replace.\n\n🎯 Board Tip:\nAircraft control cables with kinks are generally considered unserviceable.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A control cable shows excessive chafing at the point where it passes through the aircraft structure. Which component should be inspected first for improper installation or damage?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Turnbuckle",
+            "Fairlead",
+            "Torque Tube",
+            "Bellcrank"
+          ],
+          "answerIndex": 1,
+          "answerText": "Fairlead",
+          "explanation": "Fairleads guide the control cable and prevent it from rubbing against surrounding aircraft structure. Excessive chafing often indicates a damaged, worn, or improperly positioned fairlead.\n\nDifferentiate Similar Concepts:\n• Fairlead → Prevents rubbing.\n• Grommet → Protects cable passing through holes.\n\n💡 Memory Hook:\nRubbing? Check the Fairlead.\n\n🎯 Board Tip:\nWhenever cable chafing is mentioned, inspect the routing components before adjusting the cable.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A control cable is found riding against the flange of a pulley during inspection. This condition most likely indicates:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Proper cable tension",
+            "Pulley or cable misalignment",
+            "Correct pulley operation",
+            "Normal service wear"
+          ],
+          "answerIndex": 1,
+          "answerText": "Pulley or cable misalignment",
+          "explanation": "A properly rigged cable should ride within the pulley groove. Contact with the pulley flange usually indicates pulley misalignment, improper cable routing, or an installation discrepancy.\n\nDifferentiate Similar Concepts:\n• Groove contact → Normal.\n• Flange contact → Misalignment.\n\n💡 Memory Hook:\nFlange = Fault.\n\n🎯 Board Tip:\nA cable should ride in the groove—not on the flange.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A turnbuckle has been adjusted to the correct cable tension but has not been secured with an approved safetying device. The turnbuckle is:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Airworthy because the cable tension is correct",
+            "Acceptable until the next scheduled inspection",
+            "Unairworthy because the adjustment is not secured",
+            "Acceptable if thread engagement is sufficient"
+          ],
+          "answerIndex": 2,
+          "answerText": "Unairworthy because the adjustment is not secured",
+          "explanation": "Correct cable tension alone is not sufficient. The turnbuckle must also be secured using an approved safetying method to prevent the barrel from rotating and changing the cable tension.\n\nDifferentiate Similar Concepts:\n• Correct tension → Required.\n• Correct safetying → Also required.\n\n💡 Memory Hook:\nAdjust + Safety = Airworthy.\n\n🎯 Board Tip:\nNever assume correct rigging alone makes a turnbuckle airworthy.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which inspection finding requires the greatest concern because it directly indicates deterioration of the cable's structural integrity?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Slight surface dirt",
+            "Broken individual wires",
+            "Minor lubricant residue",
+            "Correctly installed fairlead"
+          ],
+          "answerIndex": 1,
+          "answerText": "Broken individual wires",
+          "explanation": "Broken wires reduce the cable's load-carrying capability and are one of the primary rejection criteria during aircraft control cable inspection. Depending on the maintenance limits, replacement may be required.\n\nDifferentiate Similar Concepts:\n• Broken wires → Structural damage.\n• Dirt or lubricant → Maintenance condition.\n\n💡 Memory Hook:\nBroken wires = Broken strength.\n\n🎯 Board Tip:\nWhen choosing between cosmetic conditions and structural defects, structural defects always take priority.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/welding.json": {
+      "title": "Welding",
+      "questions": [
+        {
+          "question": "What is the primary purpose of filler metal in a welding operation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To cool the base metal",
+            "To fill the joint and help form a sound weld",
+            "To reduce oxygen pressure",
+            "To prevent electrical arcing"
+          ],
+          "answerIndex": 1,
+          "answerText": "To fill the joint and help form a sound weld",
+          "explanation": "Filler metal supplies additional material to the joint, helping produce a complete and properly shaped weld when required by the welding process.\n\nDifferentiate Similar Concepts:\n• Base Metal → Material being joined.\n• Filler Metal → Material added to the joint.\n\n💡 Memory Hook:\nFiller fills the gap.\n\n🎯 Board Tip:\nNot all welding processes require filler metal, but when used, its purpose is to complete the joint.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement best describes fusion welding?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The metals are joined by mechanical pressure only.",
+            "The base metals are melted to form the welded joint.",
+            "The metals are joined using adhesives.",
+            "The joint is produced without heat."
+          ],
+          "answerIndex": 1,
+          "answerText": "The base metals are melted to form the welded joint.",
+          "explanation": "Fusion welding joins metals by melting the base metal, with or without filler metal, allowing the molten materials to solidify into a single continuous joint.\n\nDifferentiate Similar Concepts:\n• Fusion Welding → Base metal melts.\n• Pressure Welding → Heat may be used, but joining relies primarily on pressure.\n\n💡 Memory Hook:\nFusion = Fuse by melting.\n\n🎯 Board Tip:\nThe word 'fusion' should immediately remind you of melting the base metal.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following is generally considered an advantage of welding over mechanical fastening?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It always allows easy disassembly.",
+            "It produces a permanent joint without requiring holes for fasteners.",
+            "It eliminates the need for inspection.",
+            "It prevents all forms of corrosion."
+          ],
+          "answerIndex": 1,
+          "answerText": "It produces a permanent joint without requiring holes for fasteners.",
+          "explanation": "Welded joints eliminate the need to drill holes for rivets or bolts, reducing stress concentrations and providing a continuous joint in many applications.\n\nDifferentiate Similar Concepts:\n• Welding → Permanent continuous joint.\n• Riveting → Requires drilled holes.\n\n💡 Memory Hook:\nNo holes. One piece.\n\n🎯 Board Tip:\nA common advantage of welding is eliminating fastener holes, but remember that welded joints still require inspection.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement best describes a limitation of welded joints in aircraft maintenance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Welded joints can always be disassembled without damage.",
+            "Welding may introduce heat that can alter the properties of the base metal.",
+            "Welding does not require skilled personnel.",
+            "Welded joints never require inspection after completion."
+          ],
+          "answerIndex": 1,
+          "answerText": "Welding may introduce heat that can alter the properties of the base metal.",
+          "explanation": "The heat generated during welding can produce a heat-affected zone (HAZ), altering the mechanical properties of the base metal. Proper procedures and inspection are therefore essential.\n\nDifferentiate Similar Concepts:\n• Heat-Affected Zone → Metallurgical changes.\n• Base Metal → Original parent material.\n\n💡 Memory Hook:\nHeat changes metal.\n\n🎯 Board Tip:\nQuestions about welding limitations often relate to the effects of heat on the surrounding material.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which oxyacetylene flame is produced when oxygen and acetylene are mixed in approximately equal proportions?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Oxidizing Flame",
+            "Carburizing Flame",
+            "Neutral Flame",
+            "Reducing Flame"
+          ],
+          "answerIndex": 2,
+          "answerText": "Neutral Flame",
+          "explanation": "A neutral flame is produced when oxygen and acetylene are supplied in approximately equal proportions. It provides complete combustion and is the most commonly used flame for general welding operations.\n\nDifferentiate Similar Concepts:\n• Neutral Flame → Equal oxygen and acetylene.\n• Oxidizing Flame → Excess oxygen.\n• Carburizing (Reducing) Flame → Excess acetylene.\n\n💡 Memory Hook:\nNeutral = Balanced mixture.\n\n🎯 Board Tip:\nWhenever the question mentions 'equal proportions' or 'balanced mixture,' the answer is almost always the neutral flame.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which oxyacetylene flame contains an excess supply of oxygen?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Neutral Flame",
+            "Carburizing Flame",
+            "Oxidizing Flame",
+            "Hydrogen Flame"
+          ],
+          "answerIndex": 2,
+          "answerText": "Oxidizing Flame",
+          "explanation": "An oxidizing flame is produced by supplying more oxygen than is required for complete combustion. It has a short, pointed inner cone and a higher flame temperature than a neutral flame.\n\nDifferentiate Similar Concepts:\n• Oxidizing → Excess oxygen.\n• Neutral → Balanced gases.\n\n💡 Memory Hook:\nOxidizing = Oxygen overload.\n\n🎯 Board Tip:\n'Excess oxygen' is the defining characteristic of an oxidizing flame.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which oxyacetylene flame is produced when acetylene is supplied in excess of the oxygen required for complete combustion?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Neutral Flame",
+            "Oxidizing Flame",
+            "Carburizing (Reducing) Flame",
+            "Atomic Hydrogen Flame"
+          ],
+          "answerIndex": 2,
+          "answerText": "Carburizing (Reducing) Flame",
+          "explanation": "A carburizing or reducing flame contains excess acetylene. It is identified by the presence of an acetylene feather extending beyond the inner cone.\n\nDifferentiate Similar Concepts:\n• Carburizing → Excess acetylene.\n• Oxidizing → Excess oxygen.\n\n💡 Memory Hook:\nCarburizing = Carbon-rich.\n\n🎯 Board Tip:\nIf the question mentions an 'acetylene feather,' think carburizing flame.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which oxyacetylene flame is most commonly used for general welding of mild steel?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Oxidizing Flame",
+            "Neutral Flame",
+            "Carburizing Flame",
+            "Reducing Flame with excess oxygen"
+          ],
+          "answerIndex": 1,
+          "answerText": "Neutral Flame",
+          "explanation": "The neutral flame provides complete combustion without adding oxygen or carbon to the weld, making it the preferred flame for welding most steels.\n\nDifferentiate Similar Concepts:\n• Neutral → General-purpose welding.\n• Oxidizing → Specialized applications.\n• Carburizing → Specialized applications.\n\n💡 Memory Hook:\nNeutral = Normal welding.\n\n🎯 Board Tip:\nWhen in doubt for general welding of steel, choose the neutral flame.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which flame is identified by the presence of a distinct acetylene feather extending beyond the inner cone?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Neutral Flame",
+            "Oxidizing Flame",
+            "Carburizing (Reducing) Flame",
+            "Plasma Flame"
+          ],
+          "answerIndex": 2,
+          "answerText": "Carburizing (Reducing) Flame",
+          "explanation": "The acetylene feather is the distinguishing visual feature of a carburizing flame, indicating that excess acetylene is present in the gas mixture.\n\nDifferentiate Similar Concepts:\n• Acetylene Feather → Carburizing flame.\n• Short pointed cone → Oxidizing flame.\n\n💡 Memory Hook:\nFeather = Fuel-rich.\n\n🎯 Board Tip:\nThe term 'acetylene feather' almost always identifies a carburizing flame in board questions.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which oxyacetylene flame is generally preferred for welding mild steel?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Oxidizing Flame",
+            "Neutral Flame",
+            "Carburizing (Reducing) Flame",
+            "Hydrogen Flame"
+          ],
+          "answerIndex": 1,
+          "answerText": "Neutral Flame",
+          "explanation": "The neutral flame provides complete combustion without introducing excess oxygen or carbon into the weld. It is the standard flame used for welding mild steel and most general-purpose welding operations.\n\nDifferentiate Similar Concepts:\n• Neutral → General welding.\n• Oxidizing → Excess oxygen.\n• Carburizing → Excess acetylene.\n\n💡 Memory Hook:\nNeutral = Normal welding.\n\n🎯 Board Tip:\nWhenever the question asks for the standard flame used for mild steel, choose the neutral flame.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which oxyacetylene flame is commonly used for welding brass because it helps reduce zinc loss from the base metal?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Neutral Flame",
+            "Carburizing (Reducing) Flame",
+            "Oxidizing Flame",
+            "Air-Acetylene Flame"
+          ],
+          "answerIndex": 2,
+          "answerText": "Oxidizing Flame",
+          "explanation": "A slightly oxidizing flame is commonly recommended for welding brass. The excess oxygen helps form a protective oxide layer that reduces zinc evaporation during welding.\n\nDifferentiate Similar Concepts:\n• Oxidizing → Brass.\n• Neutral → Mild steel.\n\n💡 Memory Hook:\nBrass likes a little oxygen.\n\n🎯 Board Tip:\n'Brass' is one of the classic clues pointing to an oxidizing flame.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which oxyacetylene flame is characterized by an excess supply of acetylene and is commonly used where a reducing atmosphere is desirable?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Neutral Flame",
+            "Oxidizing Flame",
+            "Carburizing (Reducing) Flame",
+            "Plasma Flame"
+          ],
+          "answerIndex": 2,
+          "answerText": "Carburizing (Reducing) Flame",
+          "explanation": "The carburizing flame contains excess acetylene, producing a reducing atmosphere that minimizes oxidation in certain welding and brazing applications.\n\nDifferentiate Similar Concepts:\n• Carburizing → Excess acetylene.\n• Oxidizing → Excess oxygen.\n\n💡 Memory Hook:\nExtra fuel = Carburizing flame.\n\n🎯 Board Tip:\nWhenever the question mentions a 'reducing atmosphere,' think carburizing flame.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why is an oxidizing flame generally NOT recommended for welding mild steel?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It produces insufficient heat.",
+            "It may oxidize the weld metal and reduce weld quality.",
+            "It cannot melt steel.",
+            "It contains excess acetylene."
+          ],
+          "answerIndex": 1,
+          "answerText": "It may oxidize the weld metal and reduce weld quality.",
+          "explanation": "The excess oxygen in an oxidizing flame promotes oxidation of the molten steel, which can adversely affect weld quality and mechanical properties.\n\nDifferentiate Similar Concepts:\n• Mild Steel → Neutral flame.\n• Brass → Slightly oxidizing flame.\n\n💡 Memory Hook:\nToo much oxygen hurts steel.\n\n🎯 Board Tip:\nThe AELE often asks not only which flame to use, but also which flame to avoid.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly matches the oxyacetylene flame with its common application?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Neutral Flame — General welding of mild steel",
+            "Oxidizing Flame — General welding of aluminum",
+            "Carburizing Flame — Standard flame for all steels",
+            "Oxidizing Flame — Used for all aircraft welding operations"
+          ],
+          "answerIndex": 0,
+          "answerText": "Neutral Flame — General welding of mild steel",
+          "explanation": "The neutral flame is the standard flame for general welding of mild steel because it neither oxidizes nor carburizes the weld. The other choices overgeneralize or incorrectly match flame types to applications.\n\nDifferentiate Similar Concepts:\n• Neutral → Mild steel.\n• Oxidizing → Brass.\n• Carburizing → Specialized reducing atmosphere.\n\n💡 Memory Hook:\nNeutral = Everyday welding.\n\n🎯 Board Tip:\nMixed matching questions are common because they test whether you truly understand the applications of each flame.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which oxyacetylene flame has the highest flame temperature?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Carburizing (Reducing) Flame",
+            "Neutral Flame",
+            "Oxidizing Flame",
+            "Air-Acetylene Flame"
+          ],
+          "answerIndex": 2,
+          "answerText": "Oxidizing Flame",
+          "explanation": "The oxidizing flame contains excess oxygen, producing the highest flame temperature among the three oxyacetylene flames. However, its use is limited because excessive oxygen can oxidize many base metals.\n\nDifferentiate Similar Concepts:\n• Oxidizing → Highest temperature.\n• Neutral → General-purpose welding.\n• Carburizing → Lowest temperature of the three.\n\n💡 Memory Hook:\nMore oxygen = More heat.\n\n🎯 Board Tip:\nQuestions asking for the hottest oxyacetylene flame usually point to the oxidizing flame.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which oxyacetylene flame is recognized by its short, sharp, and pointed inner cone accompanied by a distinct hissing sound?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Neutral Flame",
+            "Carburizing (Reducing) Flame",
+            "Oxidizing Flame",
+            "Hydrogen Flame"
+          ],
+          "answerIndex": 2,
+          "answerText": "Oxidizing Flame",
+          "explanation": "An oxidizing flame is identified by its short, pointed inner cone and characteristic hissing sound caused by excess oxygen in the mixture.\n\nDifferentiate Similar Concepts:\n• Oxidizing → Short pointed cone.\n• Carburizing → Acetylene feather.\n• Neutral → Well-defined inner cone without a feather.\n\n💡 Memory Hook:\nPointed and hissing = Oxidizing.\n\n🎯 Board Tip:\nVisual and sound descriptions are common clues in flame identification questions.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The presence of an acetylene feather beyond the inner cone is the identifying characteristic of which flame?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Neutral Flame",
+            "Oxidizing Flame",
+            "Carburizing (Reducing) Flame",
+            "Plasma Flame"
+          ],
+          "answerIndex": 2,
+          "answerText": "Carburizing (Reducing) Flame",
+          "explanation": "The acetylene feather is produced by excess acetylene and is the most recognizable feature of a carburizing flame.\n\nDifferentiate Similar Concepts:\n• Acetylene feather → Carburizing.\n• Short pointed cone → Oxidizing.\n• Clean inner cone → Neutral.\n\n💡 Memory Hook:\nFeather = Fuel-rich.\n\n🎯 Board Tip:\nWhenever 'acetylene feather' appears in the stem, the answer is almost certainly the carburizing flame.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which oxyacetylene flame has a well-defined inner cone with no acetylene feather and no excess oxygen?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Oxidizing Flame",
+            "Carburizing (Reducing) Flame",
+            "Neutral Flame",
+            "Air-Acetylene Flame"
+          ],
+          "answerIndex": 2,
+          "answerText": "Neutral Flame",
+          "explanation": "The neutral flame has balanced proportions of oxygen and acetylene. It has a clearly defined inner cone without an acetylene feather and without the short, pointed appearance of an oxidizing flame.\n\nDifferentiate Similar Concepts:\n• Neutral → Balanced flame.\n• Carburizing → Feather present.\n• Oxidizing → Pointed cone.\n\n💡 Memory Hook:\nNo feather. No excess. Neutral.\n\n🎯 Board Tip:\nThe neutral flame is identified by what it lacks—it has neither an acetylene feather nor excess oxygen characteristics.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly compares the three basic oxyacetylene flames?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Neutral flame has excess oxygen, oxidizing flame has excess acetylene, and carburizing flame is balanced.",
+            "Neutral flame is balanced, oxidizing flame has excess oxygen, and carburizing flame has excess acetylene.",
+            "All three flames contain equal proportions of oxygen and acetylene.",
+            "Only the carburizing flame is suitable for welding."
+          ],
+          "answerIndex": 1,
+          "answerText": "Neutral flame is balanced, oxidizing flame has excess oxygen, and carburizing flame has excess acetylene.",
+          "explanation": "The three flames are primarily distinguished by their oxygen-to-acetylene ratio: neutral (balanced), oxidizing (oxygen-rich), and carburizing (acetylene-rich).\n\nDifferentiate Similar Concepts:\n• Neutral → Balanced.\n• Oxidizing → Oxygen-rich.\n• Carburizing → Acetylene-rich.\n\n💡 Memory Hook:\nBalanced → Oxygen-rich → Fuel-rich.\n\n🎯 Board Tip:\nThis comparison is one of the most frequently tested recall concepts in oxyacetylene welding.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary function of the oxygen cylinder in an oxyacetylene welding outfit?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To provide the fuel gas for combustion",
+            "To support combustion by supplying oxygen",
+            "To cool the welding torch",
+            "To store compressed air"
+          ],
+          "answerIndex": 1,
+          "answerText": "To support combustion by supplying oxygen",
+          "explanation": "The oxygen cylinder supplies oxygen, which supports combustion during the oxyacetylene welding process. Oxygen itself is not a fuel but greatly increases the intensity of combustion.\n\nDifferentiate Similar Concepts:\n• Oxygen → Supports combustion.\n• Acetylene → Fuel gas.\n\n💡 Memory Hook:\nOxygen supports. Acetylene burns.\n\n🎯 Board Tip:\nOne of the most common misconceptions is that oxygen is the fuel—it is not.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which gas serves as the fuel in an oxyacetylene welding process?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Nitrogen",
+            "Argon",
+            "Acetylene",
+            "Oxygen"
+          ],
+          "answerIndex": 2,
+          "answerText": "Acetylene",
+          "explanation": "Acetylene (C₂H₂) is the fuel gas used in oxyacetylene welding. When mixed with oxygen and ignited, it produces a high-temperature flame suitable for welding and cutting.\n\nDifferentiate Similar Concepts:\n• Acetylene → Fuel.\n• Oxygen → Supports combustion.\n\n💡 Memory Hook:\nAcetylene = Fire.\n\n🎯 Board Tip:\nRemember the pairing: Oxygen supports combustion, acetylene provides the fuel.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary purpose of a pressure regulator in an oxyacetylene welding outfit?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To ignite the welding flame",
+            "To reduce the high cylinder pressure to a safe working pressure",
+            "To cool the welding torch",
+            "To filter impurities from the gas"
+          ],
+          "answerIndex": 1,
+          "answerText": "To reduce the high cylinder pressure to a safe working pressure",
+          "explanation": "Pressure regulators reduce the high pressure inside the cylinders to the lower, controlled pressure required for safe welding operations.\n\nDifferentiate Similar Concepts:\n• Cylinder → Stores high-pressure gas.\n• Regulator → Controls delivery pressure.\n\n💡 Memory Hook:\nCylinder stores. Regulator controls.\n\n🎯 Board Tip:\nThe regulator protects both the equipment and the operator by supplying gas at the proper working pressure.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary function of the welding torch in an oxyacetylene system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To store oxygen",
+            "To mix oxygen and acetylene in the proper proportions and deliver the flame",
+            "To regulate cylinder pressure",
+            "To cool the welded joint"
+          ],
+          "answerIndex": 1,
+          "answerText": "To mix oxygen and acetylene in the proper proportions and deliver the flame",
+          "explanation": "The welding torch mixes oxygen and acetylene in controlled amounts before the mixture is ignited at the tip to produce the desired welding flame.\n\nDifferentiate Similar Concepts:\n• Regulator → Controls pressure.\n• Torch → Mixes gases.\n\n💡 Memory Hook:\nTorch = Mix then burn.\n\n🎯 Board Tip:\nDo not confuse the function of the regulator with that of the torch.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The welding tip primarily serves to:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Reduce cylinder pressure",
+            "Mix oxygen and acetylene",
+            "Direct and control the welding flame onto the workpiece",
+            "Prevent flashback into the cylinder"
+          ],
+          "answerIndex": 2,
+          "answerText": "Direct and control the welding flame onto the workpiece",
+          "explanation": "The welding tip directs the mixed gases to produce the flame shape and size required for the welding operation. Different tip sizes are selected depending on the thickness of the material.\n\nDifferentiate Similar Concepts:\n• Torch → Mixes gases.\n• Tip → Shapes and directs the flame.\n\n💡 Memory Hook:\nTip aims the flame.\n\n🎯 Board Tip:\nThe tip influences flame size but does not regulate cylinder pressure.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which welding process uses a non-consumable tungsten electrode to produce the weld?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Gas Metal Arc Welding (GMAW/MIG)",
+            "Shielded Metal Arc Welding (SMAW)",
+            "Gas Tungsten Arc Welding (GTAW/TIG)",
+            "Resistance Spot Welding"
+          ],
+          "answerIndex": 2,
+          "answerText": "Gas Tungsten Arc Welding (GTAW/TIG)",
+          "explanation": "Gas Tungsten Arc Welding (GTAW), commonly known as TIG welding, uses a non-consumable tungsten electrode. Filler metal may be added separately when required.\n\nDifferentiate Similar Concepts:\n• GTAW (TIG) → Non-consumable tungsten electrode.\n• GMAW (MIG) → Consumable wire electrode.\n• SMAW → Consumable flux-coated electrode.\n\n💡 Memory Hook:\nTIG = Tungsten Is Golden.\n\n🎯 Board Tip:\nWhenever the stem mentions a non-consumable tungsten electrode, the answer is GTAW (TIG).",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which welding process continuously feeds a consumable wire electrode through a welding gun?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Gas Tungsten Arc Welding (GTAW/TIG)",
+            "Gas Metal Arc Welding (GMAW/MIG)",
+            "Shielded Metal Arc Welding (SMAW)",
+            "Forge Welding"
+          ],
+          "answerIndex": 1,
+          "answerText": "Gas Metal Arc Welding (GMAW/MIG)",
+          "explanation": "Gas Metal Arc Welding (GMAW), or MIG welding, uses a continuously fed consumable wire electrode protected by shielding gas, making it suitable for high-production welding.\n\nDifferentiate Similar Concepts:\n• MIG → Continuous wire.\n• TIG → Tungsten electrode.\n\n💡 Memory Hook:\nMIG = Moving wire.\n\n🎯 Board Tip:\nThe phrase 'continuous wire feed' almost always identifies MIG welding.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which welding process uses a consumable flux-coated electrode commonly referred to as a stick electrode?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Gas Metal Arc Welding (GMAW/MIG)",
+            "Gas Tungsten Arc Welding (GTAW/TIG)",
+            "Shielded Metal Arc Welding (SMAW)",
+            "Electron Beam Welding"
+          ],
+          "answerIndex": 2,
+          "answerText": "Shielded Metal Arc Welding (SMAW)",
+          "explanation": "Shielded Metal Arc Welding (SMAW), commonly called stick welding, uses a consumable electrode coated with flux. The flux provides shielding gas and slag to protect the molten weld.\n\nDifferentiate Similar Concepts:\n• SMAW → Flux-coated consumable electrode.\n• MIG → Bare wire with external shielding gas.\n\n💡 Memory Hook:\nStick = Flux stick.\n\n🎯 Board Tip:\nWhenever 'flux-coated electrode' appears, think SMAW.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which welding process joins metals primarily through the heat generated by electrical resistance combined with pressure?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Gas Tungsten Arc Welding (GTAW/TIG)",
+            "Shielded Metal Arc Welding (SMAW)",
+            "Resistance Welding",
+            "Oxyacetylene Welding"
+          ],
+          "answerIndex": 2,
+          "answerText": "Resistance Welding",
+          "explanation": "Resistance welding produces heat by passing electric current through the joint while pressure is applied. Spot welding and seam welding are common forms of resistance welding.\n\nDifferentiate Similar Concepts:\n• Resistance Welding → Heat + Pressure.\n• Arc Welding → Electric arc.\n\n💡 Memory Hook:\nResistance resists current to make heat.\n\n🎯 Board Tip:\nIf both electrical resistance and pressure are mentioned, think resistance welding.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which welding process uses a gas flame rather than an electric arc as its heat source?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Gas Metal Arc Welding (GMAW/MIG)",
+            "Shielded Metal Arc Welding (SMAW)",
+            "Gas Tungsten Arc Welding (GTAW/TIG)",
+            "Oxyacetylene Welding (OAW)"
+          ],
+          "answerIndex": 3,
+          "answerText": "Oxyacetylene Welding (OAW)",
+          "explanation": "Oxyacetylene welding produces heat by burning oxygen and acetylene gases. Unlike arc welding processes, it does not rely on electricity as the primary heat source.\n\nDifferentiate Similar Concepts:\n• OAW → Gas flame.\n• TIG, MIG, SMAW → Electric arc.\n\n💡 Memory Hook:\nOAW = Oxygen + Acetylene flame.\n\n🎯 Board Tip:\nQuestions contrasting gas welding and arc welding usually identify OAW as the process using a flame.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which resistance welding process joins sheet metals by making individual welds at specific locations?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Seam Welding",
+            "Spot Welding",
+            "Thermit Welding",
+            "Forge Welding"
+          ],
+          "answerIndex": 1,
+          "answerText": "Spot Welding",
+          "explanation": "Spot welding is a resistance welding process that joins overlapping sheet metals at discrete points by applying pressure and passing electric current through the joint.\n\nDifferentiate Similar Concepts:\n• Spot Welding → Individual weld spots.\n• Seam Welding → Continuous weld.\n\n💡 Memory Hook:\nSpot = One point at a time.\n\n🎯 Board Tip:\nSpot welding is extensively used in sheet metal fabrication because it produces localized welds quickly.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which resistance welding process produces a continuous weld by forming a series of overlapping spot welds?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Spot Welding",
+            "Seam Welding",
+            "Forge Welding",
+            "Gas Tungsten Arc Welding (GTAW)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Seam Welding",
+          "explanation": "Seam welding uses rotating wheel electrodes to produce overlapping spot welds, creating a continuous, leak-resistant joint.\n\nDifferentiate Similar Concepts:\n• Seam Welding → Continuous weld.\n• Spot Welding → Individual welds.\n\n💡 Memory Hook:\nSeam = Continuous line.\n\n🎯 Board Tip:\nQuestions mentioning leak-proof or continuous joints often point to seam welding.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which welding process produces heat through an exothermic chemical reaction between aluminum powder and iron oxide?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Forge Welding",
+            "Thermit Welding",
+            "Gas Metal Arc Welding (GMAW)",
+            "Resistance Welding"
+          ],
+          "answerIndex": 1,
+          "answerText": "Thermit Welding",
+          "explanation": "Thermit welding uses the thermite reaction, where aluminum powder reacts with iron oxide to produce molten steel and extremely high temperatures capable of joining heavy steel sections.\n\nDifferentiate Similar Concepts:\n• Thermit Welding → Chemical reaction.\n• Arc Welding → Electric arc.\n\n💡 Memory Hook:\nThermit = Chemistry makes the heat.\n\n🎯 Board Tip:\nIf the stem mentions iron oxide and aluminum powder, the answer is Thermit welding.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which welding process joins metals by heating them to a plastic state and then applying pressure, without melting the base metal?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Forge Welding",
+            "Gas Tungsten Arc Welding (GTAW)",
+            "Gas Metal Arc Welding (GMAW)",
+            "Oxyacetylene Welding"
+          ],
+          "answerIndex": 0,
+          "answerText": "Forge Welding",
+          "explanation": "Forge welding is one of the oldest welding processes. The metals are heated until they become plastic and are then joined by hammering or applying pressure rather than by melting.\n\nDifferentiate Similar Concepts:\n• Forge Welding → Heat + Pressure.\n• Fusion Welding → Melts the base metal.\n\n💡 Memory Hook:\nForge = Heat then hammer.\n\n🎯 Board Tip:\nForge welding is classified as a pressure welding process rather than a fusion welding process.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which welding process uses a highly focused beam of electrons, usually in a vacuum, to produce deep, precise welds?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Laser Beam Welding",
+            "Electron Beam Welding",
+            "Shielded Metal Arc Welding (SMAW)",
+            "Resistance Welding"
+          ],
+          "answerIndex": 1,
+          "answerText": "Electron Beam Welding",
+          "explanation": "Electron Beam Welding (EBW) uses high-velocity electrons as the heat source. The process is typically performed in a vacuum to prevent electron scattering and contamination, producing deep and precise welds.\n\nDifferentiate Similar Concepts:\n• Electron Beam Welding → Electron beam in a vacuum.\n• Laser Beam Welding → Focused laser light.\n\n💡 Memory Hook:\nElectrons need a vacuum.\n\n🎯 Board Tip:\nThe word 'vacuum' is one of the strongest clues for Electron Beam Welding.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which welding process uses a highly concentrated beam of laser light as its heat source to produce precise welds?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Electron Beam Welding (EBW)",
+            "Laser Beam Welding (LBW)",
+            "Gas Tungsten Arc Welding (GTAW)",
+            "Resistance Welding"
+          ],
+          "answerIndex": 1,
+          "answerText": "Laser Beam Welding (LBW)",
+          "explanation": "Laser Beam Welding (LBW) joins metals using a highly focused laser beam. It produces narrow, precise welds with a small heat-affected zone and is widely used in aerospace manufacturing.\n\nDifferentiate Similar Concepts:\n• LBW → Focused laser beam.\n• EBW → Electron beam, usually in a vacuum.\n\n💡 Memory Hook:\nLaser = Light.\n\n🎯 Board Tip:\nIf the stem mentions a 'laser' or 'focused light,' the answer is LBW.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which welding process produces heat by striking an electric arc between two tungsten electrodes in a hydrogen atmosphere?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Gas Tungsten Arc Welding (GTAW)",
+            "Atomic Hydrogen Welding (AHW)",
+            "Shielded Metal Arc Welding (SMAW)",
+            "Gas Metal Arc Welding (GMAW)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Atomic Hydrogen Welding (AHW)",
+          "explanation": "Atomic Hydrogen Welding generates heat from an electric arc between two tungsten electrodes in a hydrogen atmosphere. Although largely obsolete, it remains an important historical welding process and occasionally appears in board examinations.\n\nDifferentiate Similar Concepts:\n• AHW → Two tungsten electrodes + hydrogen.\n• GTAW → One tungsten electrode + shielding gas.\n\n💡 Memory Hook:\nAtomic Hydrogen = Hydrogen between two tungsten rods.\n\n🎯 Board Tip:\nThe mention of 'hydrogen atmosphere' is the key clue for Atomic Hydrogen Welding.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which welding process uses a consumable electrode?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Gas Tungsten Arc Welding (GTAW/TIG)",
+            "Electron Beam Welding (EBW)",
+            "Gas Metal Arc Welding (GMAW/MIG)",
+            "Laser Beam Welding (LBW)"
+          ],
+          "answerIndex": 2,
+          "answerText": "Gas Metal Arc Welding (GMAW/MIG)",
+          "explanation": "GMAW (MIG) uses a continuously fed consumable wire electrode. In contrast, GTAW (TIG) uses a non-consumable tungsten electrode.\n\nDifferentiate Similar Concepts:\n• GMAW → Consumable wire.\n• GTAW → Non-consumable tungsten.\n\n💡 Memory Hook:\nMIG melts its wire.\n\n🎯 Board Tip:\nWhen comparing TIG and MIG, electrode type is one of the most frequently tested differences.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which welding process is distinguished by the use of a non-consumable electrode?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Shielded Metal Arc Welding (SMAW)",
+            "Gas Metal Arc Welding (GMAW/MIG)",
+            "Gas Tungsten Arc Welding (GTAW/TIG)",
+            "Resistance Spot Welding"
+          ],
+          "answerIndex": 2,
+          "answerText": "Gas Tungsten Arc Welding (GTAW/TIG)",
+          "explanation": "Gas Tungsten Arc Welding (TIG) uses a non-consumable tungsten electrode to establish the arc. Filler metal, when required, is added separately.\n\nDifferentiate Similar Concepts:\n• TIG → Non-consumable tungsten.\n• MIG/SMAW → Consumable electrodes.\n\n💡 Memory Hook:\nTIG keeps its tungsten.\n\n🎯 Board Tip:\nThe phrase 'non-consumable electrode' almost always indicates GTAW.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following is classified as a pressure welding process rather than a fusion welding process?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Oxyacetylene Welding",
+            "Gas Metal Arc Welding (GMAW)",
+            "Forge Welding",
+            "Gas Tungsten Arc Welding (GTAW)"
+          ],
+          "answerIndex": 2,
+          "answerText": "Forge Welding",
+          "explanation": "Forge welding joins metals by heating them to a plastic state and applying pressure without melting the base metal. The other listed processes are fusion welding methods because they melt the base metal.\n\nDifferentiate Similar Concepts:\n• Forge Welding → Pressure welding.\n• OAW, GMAW, GTAW → Fusion welding.\n\n💡 Memory Hook:\nForge = Force.\n\n🎯 Board Tip:\nIf the process joins metals by pressure without melting, classify it as pressure welding.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which joining process melts the base metal to produce the joint?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Brazing",
+            "Soldering",
+            "Welding",
+            "Adhesive Bonding"
+          ],
+          "answerIndex": 2,
+          "answerText": "Welding",
+          "explanation": "Welding joins materials by melting the base metal, with or without the addition of filler metal. The molten base metal solidifies to form a permanent metallurgical bond.\n\nDifferentiate Similar Concepts:\n• Welding → Base metal melts.\n• Brazing/Soldering → Only the filler metal melts.\n\n💡 Memory Hook:\nWelding melts the workpiece.\n\n🎯 Board Tip:\nIf the stem asks which process melts the parent metal, the answer is welding.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which joining process uses a filler metal that melts above 450°C (840°F) while the base metal remains solid?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Soldering",
+            "Brazing",
+            "Fusion Welding",
+            "Resistance Welding"
+          ],
+          "answerIndex": 1,
+          "answerText": "Brazing",
+          "explanation": "Brazing joins metals by melting a filler metal with a liquidus temperature above 450°C (840°F), while the base metals are heated but do not melt.\n\nDifferentiate Similar Concepts:\n• Brazing → Filler >450°C.\n• Soldering → Filler <450°C.\n\n💡 Memory Hook:\nBrazing = Above 450.\n\n🎯 Board Tip:\nThe 450°C (840°F) temperature is the official dividing line between brazing and soldering.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which joining process uses a filler metal that melts below 450°C (840°F) while the base metal does not melt?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Brazing",
+            "Soldering",
+            "Gas Tungsten Arc Welding",
+            "Braze Welding"
+          ],
+          "answerIndex": 1,
+          "answerText": "Soldering",
+          "explanation": "Soldering joins metals using a low-melting filler metal with a liquidus temperature below 450°C (840°F). The base metals remain solid throughout the process.\n\nDifferentiate Similar Concepts:\n• Soldering → Below 450°C.\n• Brazing → Above 450°C.\n\n💡 Memory Hook:\nSolder = Small temperature.\n\n🎯 Board Tip:\nRemember the 450°C rule—it is one of the most frequently tested distinctions.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes brazing from welding?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Both processes melt the base metal.",
+            "Brazing melts only the filler metal, while welding melts the base metal.",
+            "Welding melts only the filler metal, while brazing melts the base metal.",
+            "Neither process requires heat."
+          ],
+          "answerIndex": 1,
+          "answerText": "Brazing melts only the filler metal, while welding melts the base metal.",
+          "explanation": "The defining difference is that welding produces a joint by melting the base metal, whereas brazing joins the parts by melting only the filler metal.\n\nDifferentiate Similar Concepts:\n• Welding → Parent metal melts.\n• Brazing → Parent metal remains solid.\n\n💡 Memory Hook:\nBraze = Bridge with filler.\n\n🎯 Board Tip:\nIf the question asks for the fundamental difference, always think about whether the base metal melts.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which joining process depends primarily on capillary action to draw the molten filler metal into the joint?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Shielded Metal Arc Welding",
+            "Brazing",
+            "Forge Welding",
+            "Resistance Welding"
+          ],
+          "answerIndex": 1,
+          "answerText": "Brazing",
+          "explanation": "In brazing, the molten filler metal flows into the close-fitting joint by capillary action, producing a strong metallurgical bond without melting the base metals.\n\nDifferentiate Similar Concepts:\n• Brazing → Capillary action.\n• Welding → Fusion of the base metal.\n\n💡 Memory Hook:\nBrazing = Capillary flow.\n\n🎯 Board Tip:\nThe phrase 'capillary action' is a classic clue for brazing.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement best describes braze welding?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The base metal is completely melted to form the joint.",
+            "The joint is formed by melting a filler metal while the base metal generally remains unmelted.",
+            "The metals are joined only by mechanical pressure.",
+            "The joint is produced without using filler metal."
+          ],
+          "answerIndex": 1,
+          "answerText": "The joint is formed by melting a filler metal while the base metal generally remains unmelted.",
+          "explanation": "In braze welding, the filler metal is melted and deposited onto the prepared joint while the base metal is heated but generally does not melt.\n\nDifferentiate Similar Concepts:\n• Braze Welding → Filler melts, base metal generally remains solid.\n• Fusion Welding → Base metal melts.\n\n💡 Memory Hook:\nBraze Welding = Weld appearance, brazing principle.\n\n🎯 Board Tip:\nBraze welding produces a weld-like bead, but the joint is formed without melting the parent metal.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The primary difference between brazing and braze welding is that:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Braze welding melts the base metal while brazing does not.",
+            "Brazing relies on capillary action, whereas braze welding does not.",
+            "Braze welding uses no filler metal.",
+            "Brazing is performed without heat."
+          ],
+          "answerIndex": 1,
+          "answerText": "Brazing relies on capillary action, whereas braze welding does not.",
+          "explanation": "Brazing depends on capillary action to draw molten filler into a close-fitting joint. Braze welding deposits the filler metal similarly to welding and does not rely primarily on capillary action.\n\nDifferentiate Similar Concepts:\n• Brazing → Capillary action.\n• Braze Welding → Deposited filler bead.\n\n💡 Memory Hook:\nBraze = Bridge by capillary.\nBraze Welding = Build a bead.\n\n🎯 Board Tip:\nCapillary action is the classic clue for brazing—not braze welding.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which joining process produces a weld-like bead while generally avoiding melting of the base metal?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fusion Welding",
+            "Braze Welding",
+            "Resistance Welding",
+            "Forge Welding"
+          ],
+          "answerIndex": 1,
+          "answerText": "Braze Welding",
+          "explanation": "Braze welding resembles fusion welding in appearance because filler metal is deposited as a bead. However, unlike fusion welding, the base metal generally remains unmelted.\n\nDifferentiate Similar Concepts:\n• Fusion Welding → Parent metal melts.\n• Braze Welding → Parent metal remains solid.\n\n💡 Memory Hook:\nLooks like welding, acts like brazing.\n\n🎯 Board Tip:\nThe appearance of the finished joint can be misleading—focus on whether the base metal melts.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly compares welding and braze welding?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Both processes melt the base metal.",
+            "Welding melts the base metal, while braze welding generally does not.",
+            "Braze welding melts the base metal, while welding does not.",
+            "Neither process uses filler metal."
+          ],
+          "answerIndex": 1,
+          "answerText": "Welding melts the base metal, while braze welding generally does not.",
+          "explanation": "Fusion welding forms the joint by melting the parent metal. In braze welding, the joint is formed by the deposited filler metal while the parent metal generally remains below its melting temperature.\n\nDifferentiate Similar Concepts:\n• Welding → Fusion.\n• Braze Welding → Filler deposition.\n\n💡 Memory Hook:\nWeld melts the work.\nBraze weld melts the filler.\n\n🎯 Board Tip:\nThe key distinction is whether the parent metal reaches its melting point.",
+          "tags": [
+            "Welding",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Braze welding is most closely related to which joining process because both generally avoid melting the base metal?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Shielded Metal Arc Welding",
+            "Resistance Spot Welding",
+            "Brazing",
+            "Electron Beam Welding"
+          ],
+          "answerIndex": 2,
+          "answerText": "Brazing",
+          "explanation": "Both brazing and braze welding generally keep the base metal below its melting temperature. The major difference is that brazing relies on capillary action, whereas braze welding uses a deposited filler bead.\n\nDifferentiate Similar Concepts:\n• Brazing → Capillary action.\n• Braze Welding → Deposited bead.\n\n💡 Memory Hook:\nBraze brothers: Same temperature principle, different joint formation.\n\n🎯 Board Tip:\nIf the question asks which process is most closely related to braze welding, the answer is usually brazing.",
+          "tags": [
+            "Welding",
+            "Recall"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
