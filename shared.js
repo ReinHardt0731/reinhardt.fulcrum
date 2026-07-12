@@ -2340,7 +2340,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 checkbox.type = "checkbox";
                 checkbox.value = chapterEntry.title;
                 checkbox.checked = state.session?.selectedChapterTitles?.includes(chapterEntry.title) || chapterEntry.title === state.activeChapter?.title;
-                label.append(checkbox, document.createTextNode(chapterEntry.title));
+                label.append(document.createTextNode(chapterEntry.title), checkbox);
                 chapterList.appendChild(label);
             });
 
