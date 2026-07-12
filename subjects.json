@@ -5,7 +5,7 @@
       "name": "ACRM",
       "quizType": "short_quiz",
       "schemaVersion": 1,
-      "selectedChapter": "Metal | Microstructure",
+      "selectedChapter": "ATA Chapters",
       "chapters": [
         {
           "title": "Material Properties",
@@ -88,16 +88,16 @@
           "file": "chapters/fasteners-washers.json"
         },
         {
+          "title": "Fasteners | Locking Devices",
+          "file": "chapters/fasteners-locking-devices.json"
+        },
+        {
           "title": "Cables",
           "file": "chapters/cables.json"
         },
         {
           "title": "Welding",
           "file": "chapters/welding.json"
-        },
-        {
-          "title": "Fasteners | Locking Devices",
-          "file": "chapters/fasteners-locking-devices.json"
         },
         {
           "title": "Testing and Inspection | Destructive Test",
@@ -130,9 +130,13 @@
         {
           "title": "Major and Minor Modifications",
           "file": "chapters/major-and-minor-modifications.json"
+        },
+        {
+          "title": "ATA Chapters",
+          "file": "chapters/ata-chapters.json"
         }
       ],
-      "updatedAt": "2026-07-11T10:37:34.294Z"
+      "updatedAt": "2026-07-12T05:01:12.328Z"
     },
     {
       "id": "aerodynamics",
@@ -19207,6 +19211,391 @@
         }
       ]
     },
+    "chapters/fasteners-locking-devices.json": {
+      "title": "Fasteners | Locking Devices",
+      "questions": [
+        {
+          "question": "What is the primary purpose of safetying a fastener in an aircraft?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To increase the strength of the fastener",
+            "To prevent the fastener from loosening during service",
+            "To improve corrosion resistance",
+            "To reduce installation torque"
+          ],
+          "answerIndex": 1,
+          "answerText": "To prevent the fastener from loosening during service",
+          "explanation": "Safetying devices are used to prevent fasteners from loosening due to vibration, cyclic loading, or operational stresses. They do not increase the strength of the fastener.\n\nDifferentiate Similar Concepts:\n• Safetying → Prevents loosening.\n• Torque → Produces clamping force.\n\n💡 Memory Hook:\nSafetying = Stay Tight.\n\n🎯 Board Tip:\nThe function of any safetying device is retention—not increased strength.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which safetying device is commonly used together with a castle nut and a drilled bolt?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Safety Wire",
+            "Cotter Pin",
+            "Lock Plate",
+            "Spring Washer"
+          ],
+          "answerIndex": 1,
+          "answerText": "Cotter Pin",
+          "explanation": "A cotter pin passes through the drilled bolt and the slots of a castle nut, providing positive mechanical locking against rotation.\n\nDifferentiate Similar Concepts:\n• Cotter Pin → Castle nut.\n• Safety Wire → Safety-wired fasteners.\n\n💡 Memory Hook:\nCastle = Cotter.\n\n🎯 Board Tip:\nWhenever a castle nut appears in the question, immediately think of a cotter pin.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which safetying method prevents two or more fasteners from loosening by connecting them with twisted wire?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cotter Pin",
+            "Safety Wire",
+            "Anchor Plate",
+            "Split Washer"
+          ],
+          "answerIndex": 1,
+          "answerText": "Safety Wire",
+          "explanation": "Safety wire secures one or more fasteners by routing twisted wire so that any tendency of one fastener to loosen increases the tension in the wire, resisting further rotation.\n\nDifferentiate Similar Concepts:\n• Safety Wire → Multiple fasteners.\n• Cotter Pin → Single castellated nut.\n\n💡 Memory Hook:\nWire connects, wire protects.\n\n🎯 Board Tip:\nSafety wire should always be installed so it tends to tighten the fastener, not loosen it.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement best describes the correct action of properly installed safety wire?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It should allow slight loosening before becoming effective.",
+            "It should apply tension in the direction that resists loosening.",
+            "It should be installed loosely to absorb vibration.",
+            "It should carry part of the structural load."
+          ],
+          "answerIndex": 1,
+          "answerText": "It should apply tension in the direction that resists loosening.",
+          "explanation": "Properly installed safety wire always tends to pull the fastener in the tightening direction. If the fastener begins to rotate toward loosening, the wire immediately resists that motion.\n\nDifferentiate Similar Concepts:\n• Correct Safety Wire → Pulls toward tightening.\n• Incorrect Safety Wire → Assists loosening.\n\n💡 Memory Hook:\nWire always fights loosening.\n\n🎯 Board Tip:\nOne of the most common FAA questions asks about the direction of pull of safety wire.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement about safetying devices is TRUE?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Safetying devices replace the need for proper torque.",
+            "Safetying devices increase bolt strength.",
+            "Safetying devices supplement proper torque by preventing loosening.",
+            "Safetying devices eliminate the need for locking nuts."
+          ],
+          "answerIndex": 2,
+          "answerText": "Safetying devices supplement proper torque by preventing loosening.",
+          "explanation": "Fasteners must first be tightened to the specified torque. Safetying devices are then installed to help prevent loosening during operation. They do not replace proper torque procedures.\n\nDifferentiate Similar Concepts:\n• Torque → Produces preload.\n• Safetying → Maintains the assembly.\n\n💡 Memory Hook:\nTorque first. Safety second.\n\n🎯 Board Tip:\nNever use a safetying device as a substitute for proper tightening.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "When properly installed, safety wire should always be routed so that it:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Allows slight loosening before becoming effective",
+            "Pulls the fastener in the tightening direction",
+            "Applies equal force in both tightening and loosening directions",
+            "Carries part of the structural load"
+          ],
+          "answerIndex": 1,
+          "answerText": "Pulls the fastener in the tightening direction",
+          "explanation": "The purpose of safety wire is to resist loosening. Therefore, it must always be installed so that any tension developed by the wire tends to tighten the fastener.\n\nDifferentiate Similar Concepts:\n• Correct Safety Wire → Pulls toward tightening.\n• Incorrect Safety Wire → Assists loosening.\n\n💡 Memory Hook:\nSafety wire should always 'fight' loosening.\n\n🎯 Board Tip:\nThis is one of the most frequently illustrated concepts in FAA AC 43.13.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why should excessive slack be avoided when installing safety wire?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It increases bolt preload",
+            "It allows the fastener to rotate before the wire becomes effective",
+            "It causes excessive corrosion",
+            "It makes future removal difficult"
+          ],
+          "answerIndex": 1,
+          "answerText": "It allows the fastener to rotate before the wire becomes effective",
+          "explanation": "Slack reduces the effectiveness of the safety wire because the fastener may begin to loosen before the wire develops sufficient tension to resist further movement.\n\nDifferentiate Similar Concepts:\n• Tight safety wire → Immediate resistance.\n• Loose safety wire → Delayed resistance.\n\n💡 Memory Hook:\nLoose wire = Loose fastener.\n\n🎯 Board Tip:\nProper safety wire should be taut, not excessively loose.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "After removing a cotter pin from a castellated nut during maintenance, the correct practice is to:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Straighten and reuse the cotter pin",
+            "Reuse the cotter pin if it is undamaged",
+            "Replace it with a new cotter pin during reassembly",
+            "Substitute safety wire for the cotter pin"
+          ],
+          "answerIndex": 2,
+          "answerText": "Replace it with a new cotter pin during reassembly",
+          "explanation": "Cotter pins are considered single-use safety devices. Once removed or bent during installation, they should not be reused because their locking reliability may be reduced.\n\nDifferentiate Similar Concepts:\n• Cotter Pin → Single-use.\n• Safety Wire → New wire installed each time.\n\n💡 Memory Hook:\nNew job = New cotter pin.\n\n🎯 Board Tip:\nAny question about reusing cotter pins should immediately suggest replacement.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary purpose of bending the ends of a cotter pin after installation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To increase bolt strength",
+            "To prevent the cotter pin from backing out during service",
+            "To improve corrosion resistance",
+            "To simplify future removal"
+          ],
+          "answerIndex": 1,
+          "answerText": "To prevent the cotter pin from backing out during service",
+          "explanation": "After insertion, the legs of the cotter pin are bent to secure it in place and prevent it from accidentally working loose due to vibration or movement.\n\nDifferentiate Similar Concepts:\n• Bent Legs → Retain the cotter pin.\n• Straight Legs → Cotter pin may fall out.\n\n💡 Memory Hook:\nBend it to keep it.\n\n🎯 Board Tip:\nA cotter pin is ineffective if it is not properly bent after installation.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The primary purpose of inspecting aircraft safety wire during maintenance is to verify that it:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Has increased the strength of the fastener",
+            "Is properly installed, secure, and free from damage",
+            "Has been lubricated before installation",
+            "Has reduced the required tightening torque"
+          ],
+          "answerIndex": 1,
+          "answerText": "Is properly installed, secure, and free from damage",
+          "explanation": "Inspection ensures that the safety wire remains correctly routed, properly tensioned, and free from broken strands, corrosion, or other damage that could compromise its locking function.\n\nDifferentiate Similar Concepts:\n• Safety Wire Inspection → Verify integrity and routing.\n• Torque Inspection → Verify preload.\n\n💡 Memory Hook:\nInspect the wire, protect the fastener.\n\n🎯 Board Tip:\nAlways think of three things during inspection: routing, tension, and condition.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which condition requires replacement of installed safety wire?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The wire has a uniform twist and proper tension.",
+            "The wire is free from corrosion and broken strands.",
+            "The wire has broken strands or visible damage.",
+            "The wire properly pulls the fastener in the tightening direction."
+          ],
+          "answerIndex": 2,
+          "answerText": "The wire has broken strands or visible damage.",
+          "explanation": "Safety wire must be replaced if it shows broken strands, corrosion, kinks, or any damage that could reduce its effectiveness.\n\nDifferentiate Similar Concepts:\n• Serviceable → Properly twisted, intact.\n• Unserviceable → Broken, corroded, or damaged.\n\n💡 Memory Hook:\nBroken wire = Broken safety.\n\n🎯 Board Tip:\nInspect safety wire for condition, routing, and tension—not just presence.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the principal purpose of twisting safety wire during installation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To increase the tensile strength of the wire",
+            "To maintain the wire under tension and resist fastener loosening",
+            "To reduce corrosion of the fastener",
+            "To simplify future removal"
+          ],
+          "answerIndex": 1,
+          "answerText": "To maintain the wire under tension and resist fastener loosening",
+          "explanation": "Twisting the wire keeps it under tension so that it effectively resists rotation of the fastener in the loosening direction.\n\nDifferentiate Similar Concepts:\n• Twisted Wire → Maintains tension.\n• Untwisted Wire → Less effective.\n\n💡 Memory Hook:\nTwist = Tension.\n\n🎯 Board Tip:\nThe twist is not for strength—it is for maintaining effective locking action.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement regarding aircraft safety wire installation is CORRECT?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Safety wire should be installed after the fastener has been properly torqued.",
+            "Safety wire replaces the need to torque the fastener.",
+            "Safety wire may be installed before tightening the fastener.",
+            "Safety wire should be left slightly loose to absorb vibration."
+          ],
+          "answerIndex": 0,
+          "answerText": "Safety wire should be installed after the fastener has been properly torqued.",
+          "explanation": "The fastener must first be tightened to the specified torque. Safety wire is then installed to prevent subsequent loosening during operation.\n\nDifferentiate Similar Concepts:\n• Torque → Produces preload.\n• Safety Wire → Retains preload.\n\n💡 Memory Hook:\nTorque first. Wire second.\n\n🎯 Board Tip:\nSafety wire supplements torque; it never replaces it.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following is NOT a function of aircraft safety wire?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Prevent fastener loosening",
+            "Maintain fastener security",
+            "Increase the structural strength of the bolt",
+            "Supplement proper torque"
+          ],
+          "answerIndex": 2,
+          "answerText": "Increase the structural strength of the bolt",
+          "explanation": "Safety wire has no effect on the strength of the bolt. Its sole purpose is to prevent loosening after the fastener has been properly tightened.\n\nDifferentiate Similar Concepts:\n• Bolt → Carries structural load.\n• Safety Wire → Prevents loosening.\n\n💡 Memory Hook:\nWire secures—it doesn't strengthen.\n\n🎯 Board Tip:\nQuestions asking about the 'purpose' of safety wire almost always point to preventing loosening.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During inspection, safety wire is found to pull a fastener in the loosening direction. The correct maintenance action is to:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Leave it unchanged if the fastener is tight.",
+            "Retorque the fastener only.",
+            "Remove and reinstall the safety wire correctly.",
+            "Install an additional piece of safety wire alongside the existing one."
+          ],
+          "answerIndex": 2,
+          "answerText": "Remove and reinstall the safety wire correctly.",
+          "explanation": "Safety wire installed in the wrong direction defeats its purpose. It must be removed and correctly reinstalled so that it tends to tighten the fastener.\n\nDifferentiate Similar Concepts:\n• Correct Installation → Pulls toward tightening.\n• Incorrect Installation → Assists loosening.\n\n💡 Memory Hook:\nWrong direction = Reinstall.\n\n🎯 Board Tip:\nDirection of pull is one of the most commonly tested safety wire concepts.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which combination of aircraft hardware provides a positive mechanical locking method for a bolted joint?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Elastic Stop Nut and AN960 Washer",
+            "Castle Nut and Cotter Pin",
+            "Plain Hex Nut and AN970 Washer",
+            "Anchor Nut and Safety Wire"
+          ],
+          "answerIndex": 1,
+          "answerText": "Castle Nut and Cotter Pin",
+          "explanation": "A castle nut used with a drilled bolt and cotter pin provides a positive mechanical locking method. Unlike self-locking nuts, this system does not rely on friction.\n\nDifferentiate Similar Concepts:\n• Castle Nut + Cotter Pin → Positive mechanical lock.\n• Elastic Stop Nut → Friction lock.\n\n💡 Memory Hook:\nCastle always has a Cotter.\n\n🎯 Board Tip:\nWhen the stem mentions 'positive mechanical locking,' immediately think Castle Nut + Cotter Pin.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which locking method depends primarily on friction between the nut and the bolt threads?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cotter Pin",
+            "Safety Wire",
+            "Elastic Stop Nut",
+            "Lock Plate"
+          ],
+          "answerIndex": 2,
+          "answerText": "Elastic Stop Nut",
+          "explanation": "An elastic stop nut uses a nonmetallic locking insert to develop friction against the bolt threads, resisting loosening due to vibration.\n\nDifferentiate Similar Concepts:\n• Elastic Stop Nut → Friction locking.\n• Castle Nut → Positive mechanical locking.\n\n💡 Memory Hook:\nElastic grips by friction.\n\n🎯 Board Tip:\nQuestions comparing locking methods often contrast friction locking with positive mechanical locking.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft bolt has been properly torqued and secured with safety wire. What is the primary purpose of the safety wire?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Increase the bolt's shear strength",
+            "Maintain the bolt's clamping force by resisting loosening",
+            "Replace the need for periodic inspections",
+            "Prevent corrosion between the joined members"
+          ],
+          "answerIndex": 1,
+          "answerText": "Maintain the bolt's clamping force by resisting loosening",
+          "explanation": "Safety wire does not strengthen the bolt or replace proper torque. Its purpose is to prevent the fastener from rotating loose after correct torque has been applied.\n\nDifferentiate Similar Concepts:\n• Torque → Creates preload.\n• Safety Wire → Preserves preload.\n\n💡 Memory Hook:\nTorque creates. Wire maintains.\n\n🎯 Board Tip:\nAlways separate the function of torque from the function of the locking device.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following aircraft hardware combinations is correctly matched with its primary purpose?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "AN970 Washer — Minor spacing adjustment",
+            "Close Tolerance Bolt — Precision structural fit",
+            "Clevis Bolt — High tensile loading",
+            "Elastic Stop Nut — Positive mechanical locking with cotter pin"
+          ],
+          "answerIndex": 1,
+          "answerText": "Close Tolerance Bolt — Precision structural fit",
+          "explanation": "Close tolerance bolts are manufactured for precision-fit structural joints. The other options are mismatched: AN970 washers provide a large bearing area, clevis bolts are primarily for shear and pivot applications, and elastic stop nuts rely on friction rather than cotter pins.\n\nDifferentiate Similar Concepts:\n• Close Tolerance Bolt → Precision fit.\n• AN970 → Large bearing area.\n• Clevis Bolt → Pivot.\n• Elastic Stop Nut → Friction lock.\n\n💡 Memory Hook:\nPrecision fit = Close tolerance.\n\n🎯 Board Tip:\nPRC-style questions often ask you to identify the only correctly matched pair.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft hardware is correctly paired with its principal application?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Castle Nut — Vibration resistance through a nylon insert",
+            "Anchor Nut — One-sided installation in inaccessible locations",
+            "AN960 Washer — Large bearing area on thin sheet metal",
+            "Safety Wire — Increases bolt tensile strength"
+          ],
+          "answerIndex": 1,
+          "answerText": "Anchor Nut — One-sided installation in inaccessible locations",
+          "explanation": "Anchor nuts are permanently attached to the structure, making them ideal where access to the back side is limited. The other choices are incorrect because they confuse the purposes of other hardware.\n\nDifferentiate Similar Concepts:\n• Anchor Nut → One-sided installation.\n• Castle Nut → Cotter pin.\n• AN960 → Standard washer.\n• Safety Wire → Prevents loosening.\n\n💡 Memory Hook:\nAnchor stays in place.\n\n🎯 Board Tip:\nMixed matching questions are common because they test whether you can distinguish similar hardware by function rather than appearance.",
+          "tags": [
+            "Aircraft Hardware",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
     "chapters/cables.json": {
       "title": "Cables",
       "questions": [
@@ -21376,391 +21765,6 @@
           "explanation": "Both brazing and braze welding generally keep the base metal below its melting temperature. The major difference is that brazing relies on capillary action, whereas braze welding uses a deposited filler bead.\n\nDifferentiate Similar Concepts:\n• Brazing → Capillary action.\n• Braze Welding → Deposited bead.\n\n💡 Memory Hook:\nBraze brothers: Same temperature principle, different joint formation.\n\n🎯 Board Tip:\nIf the question asks which process is most closely related to braze welding, the answer is usually brazing.",
           "tags": [
             "Welding",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        }
-      ]
-    },
-    "chapters/fasteners-locking-devices.json": {
-      "title": "Fasteners | Locking Devices",
-      "questions": [
-        {
-          "question": "What is the primary purpose of safetying a fastener in an aircraft?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "To increase the strength of the fastener",
-            "To prevent the fastener from loosening during service",
-            "To improve corrosion resistance",
-            "To reduce installation torque"
-          ],
-          "answerIndex": 1,
-          "answerText": "To prevent the fastener from loosening during service",
-          "explanation": "Safetying devices are used to prevent fasteners from loosening due to vibration, cyclic loading, or operational stresses. They do not increase the strength of the fastener.\n\nDifferentiate Similar Concepts:\n• Safetying → Prevents loosening.\n• Torque → Produces clamping force.\n\n💡 Memory Hook:\nSafetying = Stay Tight.\n\n🎯 Board Tip:\nThe function of any safetying device is retention—not increased strength.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which safetying device is commonly used together with a castle nut and a drilled bolt?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Safety Wire",
-            "Cotter Pin",
-            "Lock Plate",
-            "Spring Washer"
-          ],
-          "answerIndex": 1,
-          "answerText": "Cotter Pin",
-          "explanation": "A cotter pin passes through the drilled bolt and the slots of a castle nut, providing positive mechanical locking against rotation.\n\nDifferentiate Similar Concepts:\n• Cotter Pin → Castle nut.\n• Safety Wire → Safety-wired fasteners.\n\n💡 Memory Hook:\nCastle = Cotter.\n\n🎯 Board Tip:\nWhenever a castle nut appears in the question, immediately think of a cotter pin.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which safetying method prevents two or more fasteners from loosening by connecting them with twisted wire?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Cotter Pin",
-            "Safety Wire",
-            "Anchor Plate",
-            "Split Washer"
-          ],
-          "answerIndex": 1,
-          "answerText": "Safety Wire",
-          "explanation": "Safety wire secures one or more fasteners by routing twisted wire so that any tendency of one fastener to loosen increases the tension in the wire, resisting further rotation.\n\nDifferentiate Similar Concepts:\n• Safety Wire → Multiple fasteners.\n• Cotter Pin → Single castellated nut.\n\n💡 Memory Hook:\nWire connects, wire protects.\n\n🎯 Board Tip:\nSafety wire should always be installed so it tends to tighten the fastener, not loosen it.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which statement best describes the correct action of properly installed safety wire?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "It should allow slight loosening before becoming effective.",
-            "It should apply tension in the direction that resists loosening.",
-            "It should be installed loosely to absorb vibration.",
-            "It should carry part of the structural load."
-          ],
-          "answerIndex": 1,
-          "answerText": "It should apply tension in the direction that resists loosening.",
-          "explanation": "Properly installed safety wire always tends to pull the fastener in the tightening direction. If the fastener begins to rotate toward loosening, the wire immediately resists that motion.\n\nDifferentiate Similar Concepts:\n• Correct Safety Wire → Pulls toward tightening.\n• Incorrect Safety Wire → Assists loosening.\n\n💡 Memory Hook:\nWire always fights loosening.\n\n🎯 Board Tip:\nOne of the most common FAA questions asks about the direction of pull of safety wire.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which statement about safetying devices is TRUE?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Safetying devices replace the need for proper torque.",
-            "Safetying devices increase bolt strength.",
-            "Safetying devices supplement proper torque by preventing loosening.",
-            "Safetying devices eliminate the need for locking nuts."
-          ],
-          "answerIndex": 2,
-          "answerText": "Safetying devices supplement proper torque by preventing loosening.",
-          "explanation": "Fasteners must first be tightened to the specified torque. Safetying devices are then installed to help prevent loosening during operation. They do not replace proper torque procedures.\n\nDifferentiate Similar Concepts:\n• Torque → Produces preload.\n• Safetying → Maintains the assembly.\n\n💡 Memory Hook:\nTorque first. Safety second.\n\n🎯 Board Tip:\nNever use a safetying device as a substitute for proper tightening.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "When properly installed, safety wire should always be routed so that it:",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Allows slight loosening before becoming effective",
-            "Pulls the fastener in the tightening direction",
-            "Applies equal force in both tightening and loosening directions",
-            "Carries part of the structural load"
-          ],
-          "answerIndex": 1,
-          "answerText": "Pulls the fastener in the tightening direction",
-          "explanation": "The purpose of safety wire is to resist loosening. Therefore, it must always be installed so that any tension developed by the wire tends to tighten the fastener.\n\nDifferentiate Similar Concepts:\n• Correct Safety Wire → Pulls toward tightening.\n• Incorrect Safety Wire → Assists loosening.\n\n💡 Memory Hook:\nSafety wire should always 'fight' loosening.\n\n🎯 Board Tip:\nThis is one of the most frequently illustrated concepts in FAA AC 43.13.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Why should excessive slack be avoided when installing safety wire?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "It increases bolt preload",
-            "It allows the fastener to rotate before the wire becomes effective",
-            "It causes excessive corrosion",
-            "It makes future removal difficult"
-          ],
-          "answerIndex": 1,
-          "answerText": "It allows the fastener to rotate before the wire becomes effective",
-          "explanation": "Slack reduces the effectiveness of the safety wire because the fastener may begin to loosen before the wire develops sufficient tension to resist further movement.\n\nDifferentiate Similar Concepts:\n• Tight safety wire → Immediate resistance.\n• Loose safety wire → Delayed resistance.\n\n💡 Memory Hook:\nLoose wire = Loose fastener.\n\n🎯 Board Tip:\nProper safety wire should be taut, not excessively loose.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "After removing a cotter pin from a castellated nut during maintenance, the correct practice is to:",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Straighten and reuse the cotter pin",
-            "Reuse the cotter pin if it is undamaged",
-            "Replace it with a new cotter pin during reassembly",
-            "Substitute safety wire for the cotter pin"
-          ],
-          "answerIndex": 2,
-          "answerText": "Replace it with a new cotter pin during reassembly",
-          "explanation": "Cotter pins are considered single-use safety devices. Once removed or bent during installation, they should not be reused because their locking reliability may be reduced.\n\nDifferentiate Similar Concepts:\n• Cotter Pin → Single-use.\n• Safety Wire → New wire installed each time.\n\n💡 Memory Hook:\nNew job = New cotter pin.\n\n🎯 Board Tip:\nAny question about reusing cotter pins should immediately suggest replacement.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "What is the primary purpose of bending the ends of a cotter pin after installation?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "To increase bolt strength",
-            "To prevent the cotter pin from backing out during service",
-            "To improve corrosion resistance",
-            "To simplify future removal"
-          ],
-          "answerIndex": 1,
-          "answerText": "To prevent the cotter pin from backing out during service",
-          "explanation": "After insertion, the legs of the cotter pin are bent to secure it in place and prevent it from accidentally working loose due to vibration or movement.\n\nDifferentiate Similar Concepts:\n• Bent Legs → Retain the cotter pin.\n• Straight Legs → Cotter pin may fall out.\n\n💡 Memory Hook:\nBend it to keep it.\n\n🎯 Board Tip:\nA cotter pin is ineffective if it is not properly bent after installation.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "The primary purpose of inspecting aircraft safety wire during maintenance is to verify that it:",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Has increased the strength of the fastener",
-            "Is properly installed, secure, and free from damage",
-            "Has been lubricated before installation",
-            "Has reduced the required tightening torque"
-          ],
-          "answerIndex": 1,
-          "answerText": "Is properly installed, secure, and free from damage",
-          "explanation": "Inspection ensures that the safety wire remains correctly routed, properly tensioned, and free from broken strands, corrosion, or other damage that could compromise its locking function.\n\nDifferentiate Similar Concepts:\n• Safety Wire Inspection → Verify integrity and routing.\n• Torque Inspection → Verify preload.\n\n💡 Memory Hook:\nInspect the wire, protect the fastener.\n\n🎯 Board Tip:\nAlways think of three things during inspection: routing, tension, and condition.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which condition requires replacement of installed safety wire?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "The wire has a uniform twist and proper tension.",
-            "The wire is free from corrosion and broken strands.",
-            "The wire has broken strands or visible damage.",
-            "The wire properly pulls the fastener in the tightening direction."
-          ],
-          "answerIndex": 2,
-          "answerText": "The wire has broken strands or visible damage.",
-          "explanation": "Safety wire must be replaced if it shows broken strands, corrosion, kinks, or any damage that could reduce its effectiveness.\n\nDifferentiate Similar Concepts:\n• Serviceable → Properly twisted, intact.\n• Unserviceable → Broken, corroded, or damaged.\n\n💡 Memory Hook:\nBroken wire = Broken safety.\n\n🎯 Board Tip:\nInspect safety wire for condition, routing, and tension—not just presence.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "What is the principal purpose of twisting safety wire during installation?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "To increase the tensile strength of the wire",
-            "To maintain the wire under tension and resist fastener loosening",
-            "To reduce corrosion of the fastener",
-            "To simplify future removal"
-          ],
-          "answerIndex": 1,
-          "answerText": "To maintain the wire under tension and resist fastener loosening",
-          "explanation": "Twisting the wire keeps it under tension so that it effectively resists rotation of the fastener in the loosening direction.\n\nDifferentiate Similar Concepts:\n• Twisted Wire → Maintains tension.\n• Untwisted Wire → Less effective.\n\n💡 Memory Hook:\nTwist = Tension.\n\n🎯 Board Tip:\nThe twist is not for strength—it is for maintaining effective locking action.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which statement regarding aircraft safety wire installation is CORRECT?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Safety wire should be installed after the fastener has been properly torqued.",
-            "Safety wire replaces the need to torque the fastener.",
-            "Safety wire may be installed before tightening the fastener.",
-            "Safety wire should be left slightly loose to absorb vibration."
-          ],
-          "answerIndex": 0,
-          "answerText": "Safety wire should be installed after the fastener has been properly torqued.",
-          "explanation": "The fastener must first be tightened to the specified torque. Safety wire is then installed to prevent subsequent loosening during operation.\n\nDifferentiate Similar Concepts:\n• Torque → Produces preload.\n• Safety Wire → Retains preload.\n\n💡 Memory Hook:\nTorque first. Wire second.\n\n🎯 Board Tip:\nSafety wire supplements torque; it never replaces it.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which of the following is NOT a function of aircraft safety wire?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Prevent fastener loosening",
-            "Maintain fastener security",
-            "Increase the structural strength of the bolt",
-            "Supplement proper torque"
-          ],
-          "answerIndex": 2,
-          "answerText": "Increase the structural strength of the bolt",
-          "explanation": "Safety wire has no effect on the strength of the bolt. Its sole purpose is to prevent loosening after the fastener has been properly tightened.\n\nDifferentiate Similar Concepts:\n• Bolt → Carries structural load.\n• Safety Wire → Prevents loosening.\n\n💡 Memory Hook:\nWire secures—it doesn't strengthen.\n\n🎯 Board Tip:\nQuestions asking about the 'purpose' of safety wire almost always point to preventing loosening.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "During inspection, safety wire is found to pull a fastener in the loosening direction. The correct maintenance action is to:",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Leave it unchanged if the fastener is tight.",
-            "Retorque the fastener only.",
-            "Remove and reinstall the safety wire correctly.",
-            "Install an additional piece of safety wire alongside the existing one."
-          ],
-          "answerIndex": 2,
-          "answerText": "Remove and reinstall the safety wire correctly.",
-          "explanation": "Safety wire installed in the wrong direction defeats its purpose. It must be removed and correctly reinstalled so that it tends to tighten the fastener.\n\nDifferentiate Similar Concepts:\n• Correct Installation → Pulls toward tightening.\n• Incorrect Installation → Assists loosening.\n\n💡 Memory Hook:\nWrong direction = Reinstall.\n\n🎯 Board Tip:\nDirection of pull is one of the most commonly tested safety wire concepts.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which combination of aircraft hardware provides a positive mechanical locking method for a bolted joint?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Elastic Stop Nut and AN960 Washer",
-            "Castle Nut and Cotter Pin",
-            "Plain Hex Nut and AN970 Washer",
-            "Anchor Nut and Safety Wire"
-          ],
-          "answerIndex": 1,
-          "answerText": "Castle Nut and Cotter Pin",
-          "explanation": "A castle nut used with a drilled bolt and cotter pin provides a positive mechanical locking method. Unlike self-locking nuts, this system does not rely on friction.\n\nDifferentiate Similar Concepts:\n• Castle Nut + Cotter Pin → Positive mechanical lock.\n• Elastic Stop Nut → Friction lock.\n\n💡 Memory Hook:\nCastle always has a Cotter.\n\n🎯 Board Tip:\nWhen the stem mentions 'positive mechanical locking,' immediately think Castle Nut + Cotter Pin.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which locking method depends primarily on friction between the nut and the bolt threads?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Cotter Pin",
-            "Safety Wire",
-            "Elastic Stop Nut",
-            "Lock Plate"
-          ],
-          "answerIndex": 2,
-          "answerText": "Elastic Stop Nut",
-          "explanation": "An elastic stop nut uses a nonmetallic locking insert to develop friction against the bolt threads, resisting loosening due to vibration.\n\nDifferentiate Similar Concepts:\n• Elastic Stop Nut → Friction locking.\n• Castle Nut → Positive mechanical locking.\n\n💡 Memory Hook:\nElastic grips by friction.\n\n🎯 Board Tip:\nQuestions comparing locking methods often contrast friction locking with positive mechanical locking.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "An aircraft bolt has been properly torqued and secured with safety wire. What is the primary purpose of the safety wire?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Increase the bolt's shear strength",
-            "Maintain the bolt's clamping force by resisting loosening",
-            "Replace the need for periodic inspections",
-            "Prevent corrosion between the joined members"
-          ],
-          "answerIndex": 1,
-          "answerText": "Maintain the bolt's clamping force by resisting loosening",
-          "explanation": "Safety wire does not strengthen the bolt or replace proper torque. Its purpose is to prevent the fastener from rotating loose after correct torque has been applied.\n\nDifferentiate Similar Concepts:\n• Torque → Creates preload.\n• Safety Wire → Preserves preload.\n\n💡 Memory Hook:\nTorque creates. Wire maintains.\n\n🎯 Board Tip:\nAlways separate the function of torque from the function of the locking device.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which of the following aircraft hardware combinations is correctly matched with its primary purpose?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "AN970 Washer — Minor spacing adjustment",
-            "Close Tolerance Bolt — Precision structural fit",
-            "Clevis Bolt — High tensile loading",
-            "Elastic Stop Nut — Positive mechanical locking with cotter pin"
-          ],
-          "answerIndex": 1,
-          "answerText": "Close Tolerance Bolt — Precision structural fit",
-          "explanation": "Close tolerance bolts are manufactured for precision-fit structural joints. The other options are mismatched: AN970 washers provide a large bearing area, clevis bolts are primarily for shear and pivot applications, and elastic stop nuts rely on friction rather than cotter pins.\n\nDifferentiate Similar Concepts:\n• Close Tolerance Bolt → Precision fit.\n• AN970 → Large bearing area.\n• Clevis Bolt → Pivot.\n• Elastic Stop Nut → Friction lock.\n\n💡 Memory Hook:\nPrecision fit = Close tolerance.\n\n🎯 Board Tip:\nPRC-style questions often ask you to identify the only correctly matched pair.",
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which aircraft hardware is correctly paired with its principal application?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Castle Nut — Vibration resistance through a nylon insert",
-            "Anchor Nut — One-sided installation in inaccessible locations",
-            "AN960 Washer — Large bearing area on thin sheet metal",
-            "Safety Wire — Increases bolt tensile strength"
-          ],
-          "answerIndex": 1,
-          "answerText": "Anchor Nut — One-sided installation in inaccessible locations",
-          "explanation": "Anchor nuts are permanently attached to the structure, making them ideal where access to the back side is limited. The other choices are incorrect because they confuse the purposes of other hardware.\n\nDifferentiate Similar Concepts:\n• Anchor Nut → One-sided installation.\n• Castle Nut → Cotter pin.\n• AN960 → Standard washer.\n• Safety Wire → Prevents loosening.\n\n💡 Memory Hook:\nAnchor stays in place.\n\n🎯 Board Tip:\nMixed matching questions are common because they test whether you can distinguish similar hardware by function rather than appearance.",
-          "tags": [
-            "Aircraft Hardware",
             "Recall"
           ],
           "expectedAnswer": null,
@@ -26400,6 +26404,1650 @@
           "tags": [
             "Repair and Modification",
             "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/ata-chapters.json": {
+      "title": "ATA Chapters",
+      "questions": [
+        {
+          "question": "Which ATA chapter covers General information?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 01",
+            "ATA Chapter 02",
+            "ATA Chapter 03",
+            "ATA Chapter 04"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA Chapter 01",
+          "explanation": "ATA Chapter 01 covers General information.\n\n💡 Memory Hook:\n01 = One Beginning = General.\n\n🎯 Board Tip:\nDon't confuse ATA 01 (General) with ATA 02 (Operations).",
+          "tags": [
+            "ATA",
+            "ATA01",
+            "General",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Operations?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 01",
+            "ATA Chapter 02",
+            "ATA Chapter 03",
+            "ATA Chapter 05"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 02",
+          "explanation": "ATA Chapter 02 covers aircraft operations and operational procedures.\n\n💡 Memory Hook:\nAfter learning the General information (01), the aircraft begins Operations (02).\n\n🎯 Board Tip:\nATA 02 is often confused with ATA 03 (Support). Operations is what the aircraft does; Support is what helps it operate.",
+          "tags": [
+            "ATA",
+            "ATA02",
+            "Operations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Support?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 02",
+            "ATA Chapter 03",
+            "ATA Chapter 04",
+            "ATA Chapter 05"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 03",
+          "explanation": "ATA Chapter 03 covers Support activities and servicing information.\n\n💡 Memory Hook:\nOperations (02) always need Support (03).\n\n🎯 Board Tip:\nATA 03 is commonly confused with ATA 02. Remember: Operations perform the mission, Support keeps it going.",
+          "tags": [
+            "ATA",
+            "ATA03",
+            "Support"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Airworthiness Limitations?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 03",
+            "ATA Chapter 04",
+            "ATA Chapter 05",
+            "ATA Chapter 06"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 04",
+          "explanation": "ATA Chapter 04 contains Airworthiness Limitations established by the manufacturer and certification authority.\n\n💡 Memory Hook:\nImagine four walls creating LIMITS.\n\n🎯 Board Tip:\nAirworthiness Limitations are mandatory and must never be confused with scheduled maintenance in ATA 05.",
+          "tags": [
+            "ATA",
+            "ATA04",
+            "Airworthiness"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Time Limits and Maintenance Checks?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 04",
+            "ATA Chapter 05",
+            "ATA Chapter 06",
+            "ATA Chapter 07"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 05",
+          "explanation": "ATA Chapter 05 specifies time limits, life-limited parts, and scheduled maintenance checks.\n\n💡 Memory Hook:\nThink of your 5-year medical checkup—scheduled maintenance.\n\n🎯 Board Tip:\nATA 05 is one of the most frequently referenced chapters during maintenance planning.",
+          "tags": [
+            "ATA",
+            "ATA05",
+            "Maintenance"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Dimensions and Areas?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 05",
+            "ATA Chapter 06",
+            "ATA Chapter 07",
+            "ATA Chapter 08"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 06",
+          "explanation": "ATA Chapter 06 contains aircraft dimensions, station locations, and reference areas.\n\n💡 Memory Hook:\nA cube has six faces—think dimensions.\n\n🎯 Board Tip:\nQuestions involving aircraft stations and reference measurements often relate to ATA 06.",
+          "tags": [
+            "ATA",
+            "ATA06",
+            "Dimensions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Lifting and Shoring?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 06",
+            "ATA Chapter 07",
+            "ATA Chapter 08",
+            "ATA Chapter 09"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 07",
+          "explanation": "ATA Chapter 07 provides procedures for lifting, jacking, and shoring the aircraft safely.\n\n💡 Memory Hook:\nLucky number 7 lifts the airplane.\n\n🎯 Board Tip:\nDon't confuse lifting (ATA 07) with towing (ATA 09).",
+          "tags": [
+            "ATA",
+            "ATA07",
+            "Lifting"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Leveling and Weighing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 07",
+            "ATA Chapter 08",
+            "ATA Chapter 09",
+            "ATA Chapter 10"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 08",
+          "explanation": "ATA Chapter 08 contains procedures for aircraft leveling and weighing.\n\n💡 Memory Hook:\nThe number 8 is perfectly balanced.\n\n🎯 Board Tip:\nAircraft weighing procedures are categorized under ATA 08, not Weight and Balance computations in engineering subjects.",
+          "tags": [
+            "ATA",
+            "ATA08",
+            "Leveling",
+            "Weighing"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Towing and Taxiing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 07",
+            "ATA Chapter 08",
+            "ATA Chapter 09",
+            "ATA Chapter 10"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 09",
+          "explanation": "ATA Chapter 09 contains towing and taxiing procedures for aircraft movement on the ground.\n\n💡 Memory Hook:\nImagine the number 9 as a tow hook pulling the aircraft.\n\n🎯 Board Tip:\nGround movement procedures belong to ATA 09, while parking belongs to ATA 10.",
+          "tags": [
+            "ATA",
+            "ATA09",
+            "Towing",
+            "Taxiing"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Parking, Mooring, Storage, and Return to Service?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 08",
+            "ATA Chapter 09",
+            "ATA Chapter 10",
+            "ATA Chapter 11"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 10",
+          "explanation": "ATA Chapter 10 covers aircraft parking, mooring, storage procedures, and return to service after storage.\n\n💡 Memory Hook:\nA perfect 10 marks the end of the trip—park the aircraft.\n\n🎯 Board Tip:\nATA 09 gets the aircraft to the parking spot; ATA 10 tells you how to secure and store it.",
+          "tags": [
+            "ATA",
+            "ATA10",
+            "Parking",
+            "Storage"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Placards and Markings?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 10",
+            "ATA Chapter 11",
+            "ATA Chapter 12",
+            "ATA Chapter 20"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 11",
+          "explanation": "ATA Chapter 11 covers aircraft placards, markings, decals, and identification labels.\n\n💡 Memory Hook:\nImagine two '1's standing like sign posts → Placards.\n\n🎯 Board Tip:\nDo not confuse aircraft markings (ATA 11) with servicing procedures (ATA 12).",
+          "tags": [
+            "ATA",
+            "ATA11",
+            "Placards",
+            "Markings"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Servicing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 11",
+            "ATA Chapter 12",
+            "ATA Chapter 20",
+            "ATA Chapter 21"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 12",
+          "explanation": "ATA Chapter 12 covers routine servicing including replenishment of fluids and gases.\n\n💡 Memory Hook:\n12 months = Routine service every year.\n\n🎯 Board Tip:\nServicing includes refilling—not repairing. Repairs belong to other ATA chapters.",
+          "tags": [
+            "ATA",
+            "ATA12",
+            "Servicing"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter is intentionally reserved for future use?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 13",
+            "ATA Chapter 14",
+            "ATA Chapter 15",
+            "ATA Chapter 16"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA Chapter 13",
+          "explanation": "ATA Chapter 13 is reserved and has no assigned aircraft system.\n\n💡 Memory Hook:\n13 is 'unlucky'—nothing is assigned.\n\n🎯 Board Tip:\nReserved ATA chapters occasionally appear as trivia questions in review exams.",
+          "tags": [
+            "ATA",
+            "ATA13",
+            "Reserved"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Hardware?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 14",
+            "ATA Chapter 20",
+            "ATA Chapter 32",
+            "ATA Chapter 51"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 20",
+          "explanation": "ATA Chapter 20 covers standard practices including hardware, fasteners, safetying methods, and general maintenance procedures.\n\n💡 Memory Hook:\n20 = Toolbox.\n\n🎯 Board Tip:\nIf the question involves bolts, nuts, screws, rivets, cotter pins, lockwire, or standard maintenance practices, ATA 20 is a strong clue.",
+          "tags": [
+            "ATA",
+            "ATA20",
+            "Hardware",
+            "Standard Practices",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Air Conditioning?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 20",
+            "ATA Chapter 21",
+            "ATA Chapter 24",
+            "ATA Chapter 36"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 21",
+          "explanation": "ATA Chapter 21 covers air conditioning, cabin pressurization, heating, cooling, and ventilation systems.\n\n💡 Memory Hook:\n21°C is comfortable room temperature → Air Conditioning.\n\n🎯 Board Tip:\nATA 21 is frequently confused with ATA 36 (Pneumatic), since bleed air supplies many air-conditioning systems.",
+          "tags": [
+            "ATA",
+            "ATA21",
+            "Air Conditioning",
+            "Pressurization",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Auto Flight?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 22",
+            "ATA Chapter 27",
+            "ATA Chapter 31",
+            "ATA Chapter 34"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA Chapter 22",
+          "explanation": "ATA Chapter 22 covers autopilot, flight director, autothrottle, and other automatic flight systems.\n\n💡 Memory Hook:\n22 = Two pilots. Let the autopilot become the second pilot.\n\n🎯 Board Tip:\nAuto Flight controls the aircraft automatically, but Flight Controls themselves belong to ATA 27.",
+          "tags": [
+            "ATA",
+            "ATA22",
+            "Autopilot",
+            "Auto Flight"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Communications?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 22",
+            "ATA Chapter 23",
+            "ATA Chapter 24",
+            "ATA Chapter 34"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 23",
+          "explanation": "ATA Chapter 23 covers aircraft communication systems such as VHF, HF, SATCOM, and interphone systems.\n\n💡 Memory Hook:\n23 = 'Call me.' Think communication.\n\n🎯 Board Tip:\nCommunications (ATA 23) transmit voices and data. Navigation belongs to ATA 34.",
+          "tags": [
+            "ATA",
+            "ATA23",
+            "Communications"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Electrical Power?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 23",
+            "ATA Chapter 24",
+            "ATA Chapter 33",
+            "ATA Chapter 35"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 24",
+          "explanation": "ATA Chapter 24 covers electrical generation, distribution, batteries, generators, and AC/DC power systems.\n\n💡 Memory Hook:\n24 Hours = Electricity never sleeps.\n\n🎯 Board Tip:\nOne of the highest-yield ATA chapters in both maintenance and troubleshooting questions.",
+          "tags": [
+            "ATA",
+            "ATA24",
+            "Electrical Power",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Equipment and Furnishings?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 24",
+            "ATA Chapter 25",
+            "ATA Chapter 33",
+            "ATA Chapter 52"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 25",
+          "explanation": "ATA Chapter 25 covers cabin furnishings, emergency equipment, seats, galleys, lavatories, and miscellaneous cabin equipment.\n\n💡 Memory Hook:\nHotel Room 25 = Everything inside the cabin.\n\n🎯 Board Tip:\nATA 25 focuses on cabin equipment—not aircraft structure.",
+          "tags": [
+            "ATA",
+            "ATA25",
+            "Equipment",
+            "Furnishings"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Fire Protection?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 24",
+            "ATA Chapter 25",
+            "ATA Chapter 26",
+            "ATA Chapter 49"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 26",
+          "explanation": "ATA Chapter 26 covers aircraft fire detection, fire warning, and fire extinguishing systems.\n\n💡 Memory Hook:\n26 = Fire Brigade on standby.\n\n🎯 Board Tip:\nATA 26 is commonly paired with engine and APU fire detection questions during board examinations.",
+          "tags": [
+            "ATA",
+            "ATA26",
+            "Fire Protection",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Flight Controls?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 22",
+            "ATA Chapter 27",
+            "ATA Chapter 29",
+            "ATA Chapter 32"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 27",
+          "explanation": "ATA Chapter 27 covers the aircraft Flight Control System, including primary and secondary flight controls such as ailerons, elevators, rudders, spoilers, flaps, slats, trim systems, and their associated actuators.\n\n💡 Memory Hook:\n27 = Control Heaven.\nEverything that MOVES the airplane belongs here.\n\n🎯 Board Tip:\nDo not confuse ATA 27 (Flight Controls) with ATA 22 (Auto Flight). Autopilot commands the controls, but the control surfaces themselves belong to ATA 27.",
+          "tags": [
+            "ATA",
+            "ATA27",
+            "Flight Controls",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Fuel?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 28",
+            "ATA Chapter 29",
+            "ATA Chapter 36",
+            "ATA Chapter 47"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA Chapter 28",
+          "explanation": "ATA Chapter 28 covers the aircraft fuel storage, transfer, venting, jettison, indication, and distribution systems.\n\n💡 Memory Hook:\n28 = Fuel on the Gate.\nImagine refueling at Gate 28.\n\n🎯 Board Tip:\nFuel quantity indication is still part of ATA 28 even though instruments are discussed elsewhere.",
+          "tags": [
+            "ATA",
+            "ATA28",
+            "Fuel",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Hydraulic Power?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 27",
+            "ATA Chapter 28",
+            "ATA Chapter 29",
+            "ATA Chapter 36"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 29",
+          "explanation": "ATA Chapter 29 covers hydraulic reservoirs, pumps, accumulators, filters, actuators, control valves, and hydraulic distribution systems.\n\n💡 Memory Hook:\n29 = Hydraulic Line.\nThink of hydraulic fluid flowing through Line 29.\n\n🎯 Board Tip:\nMany aircraft systems use hydraulics, but the hydraulic system itself always belongs to ATA 29.",
+          "tags": [
+            "ATA",
+            "ATA29",
+            "Hydraulic",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Ice and Rain Protection?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 30",
+            "ATA Chapter 33",
+            "ATA Chapter 36",
+            "ATA Chapter 38"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA Chapter 30",
+          "explanation": "ATA Chapter 30 covers anti-icing, deicing, rain removal, windshield heating, and ice detection systems.\n\n💡 Memory Hook:\n30°C melts ice.\nThink of warm weather removing ice.\n\n🎯 Board Tip:\nWing anti-ice, engine anti-ice, and windshield anti-ice are all ATA 30.",
+          "tags": [
+            "ATA",
+            "ATA30",
+            "Ice Protection",
+            "Rain Protection"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Indicating and Recording Systems?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 31",
+            "ATA Chapter 33",
+            "ATA Chapter 34",
+            "ATA Chapter 45"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA Chapter 31",
+          "explanation": "ATA Chapter 31 covers cockpit displays, flight recorders, central warning systems, indicating systems, and recording equipment.\n\n💡 Memory Hook:\n31 = Dashboard.\nEverything you SEE inside the cockpit.\n\n🎯 Board Tip:\nFlight Data Recorder (FDR) and Cockpit Voice Recorder (CVR) belong to ATA 31.",
+          "tags": [
+            "ATA",
+            "ATA31",
+            "Displays",
+            "Recorder"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Landing Gear?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 29",
+            "ATA Chapter 30",
+            "ATA Chapter 32",
+            "ATA Chapter 52"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 32",
+          "explanation": "ATA Chapter 32 covers landing gear, wheels, brakes, tires, steering, extension and retraction mechanisms.\n\n💡 Memory Hook:\nLanding gear has 3 wheels... think 32.\n\n🎯 Board Tip:\nBrakes and nose wheel steering also belong to ATA 32—not ATA 29—even though hydraulics power them.",
+          "tags": [
+            "ATA",
+            "ATA32",
+            "Landing Gear",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Lights?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 24",
+            "ATA Chapter 31",
+            "ATA Chapter 33",
+            "ATA Chapter 34"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 33",
+          "explanation": "ATA Chapter 33 covers exterior and interior aircraft lighting systems including landing lights, taxi lights, navigation lights, strobe lights, beacon lights, and cabin lighting.\n\n💡 Memory Hook:\n33 = Let there be LIGHT.\n\n🎯 Board Tip:\nElectrical Power (ATA 24) supplies electricity, but the lighting equipment belongs to ATA 33.",
+          "tags": [
+            "ATA",
+            "ATA33",
+            "Lighting"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Navigation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 23",
+            "ATA Chapter 31",
+            "ATA Chapter 34",
+            "ATA Chapter 46"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 34",
+          "explanation": "ATA Chapter 34 covers navigation systems including VOR, ILS, GPS, DME, ADF, IRS, and weather radar.\n\n💡 Memory Hook:\n34 = Find the Way.\nThink of a map leading you home.\n\n🎯 Board Tip:\nNavigation (ATA 34) is often confused with Communications (ATA 23). Radios that talk belong to ATA 23; radios that guide belong to ATA 34.",
+          "tags": [
+            "ATA",
+            "ATA34",
+            "Navigation",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Oxygen?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 21",
+            "ATA Chapter 30",
+            "ATA Chapter 35",
+            "ATA Chapter 36"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 35",
+          "explanation": "ATA Chapter 35 covers crew and passenger oxygen systems including storage cylinders, masks, regulators, and distribution systems.\n\n💡 Memory Hook:\n35 = Take a Breath.\n\n🎯 Board Tip:\nCabin pressurization belongs to ATA 21, while emergency oxygen belongs to ATA 35.",
+          "tags": [
+            "ATA",
+            "ATA35",
+            "Oxygen"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Pneumatic?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 21",
+            "ATA Chapter 29",
+            "ATA Chapter 30",
+            "ATA Chapter 36"
+          ],
+          "answerIndex": 3,
+          "answerText": "ATA Chapter 36",
+          "explanation": "ATA Chapter 36 covers pneumatic systems including bleed air ducts, valves, pressure regulators, precoolers, and distribution piping.\n\n💡 Memory Hook:\n36 = Hot Air Highway.\nBleed air travels through pneumatic ducts.\n\n🎯 Board Tip:\nThis is one of the most commonly confused ATA chapters. Remember:\n• ATA 21 = Uses the air (Air Conditioning)\n• ATA 30 = Uses hot air for anti-ice\n• ATA 36 = Carries the bleed air itself.",
+          "tags": [
+            "ATA",
+            "ATA36",
+            "Pneumatic",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Vacuum systems?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 36",
+            "ATA Chapter 37",
+            "ATA Chapter 38",
+            "ATA Chapter 49"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 37",
+          "explanation": "ATA Chapter 37 covers aircraft vacuum systems, including vacuum pumps, regulators, filters, and distribution lines used to power vacuum-operated instruments.\n\n💡 Memory Hook:\n37 = Suck Heaven.\nVacuum systems suck air—not blow it.\n\n🎯 Board Tip:\nModern transport aircraft rarely use vacuum systems, but legacy aircraft still do. This chapter occasionally appears as a recall question.",
+          "tags": [
+            "ATA",
+            "ATA37",
+            "Vacuum"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Water and Waste?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 25",
+            "ATA Chapter 38",
+            "ATA Chapter 45",
+            "ATA Chapter 49"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 38",
+          "explanation": "ATA Chapter 38 covers potable water, waste disposal, lavatory systems, service panels, and drain systems.\n\n💡 Memory Hook:\n38 = Bathroom Gate.\nThink lavatories and water service.\n\n🎯 Board Tip:\nDo not confuse ATA 38 with ATA 25. Cabin furnishings belong to ATA 25, while the water and waste systems belong to ATA 38.",
+          "tags": [
+            "ATA",
+            "ATA38",
+            "Water",
+            "Waste"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Electrical and Electronic Panels?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 24",
+            "ATA Chapter 31",
+            "ATA Chapter 39",
+            "ATA Chapter 45"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 39",
+          "explanation": "ATA Chapter 39 covers electrical and electronic equipment panels, racks, and mounting installations.\n\n💡 Memory Hook:\n39 = Control Panel.\n\n🎯 Board Tip:\nATA 24 generates electrical power. ATA 39 houses much of the electrical and electronic equipment.",
+          "tags": [
+            "ATA",
+            "ATA39",
+            "Electrical Panels"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter is assigned to Standard Practices - Integrated Modular Avionics?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 20",
+            "ATA Chapter 39",
+            "ATA Chapter 42",
+            "ATA Chapter 46"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 42",
+          "explanation": "ATA Chapter 42 covers Integrated Modular Avionics (IMA), which consolidates multiple avionics functions into shared computing modules.\n\n💡 Memory Hook:\n42 = The Computer Brain.\n\n🎯 Board Tip:\nIMA is common in modern Airbus and Boeing aircraft and is becoming increasingly relevant in maintenance practice.",
+          "tags": [
+            "ATA",
+            "ATA42",
+            "IMA",
+            "Avionics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Central Maintenance System?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 31",
+            "ATA Chapter 42",
+            "ATA Chapter 45",
+            "ATA Chapter 46"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 45",
+          "explanation": "ATA Chapter 45 covers the Central Maintenance System (CMS), which records faults, assists troubleshooting, and supports aircraft maintenance diagnostics.\n\n💡 Memory Hook:\n45 = Maintenance Brain.\n\n🎯 Board Tip:\nCMS stores maintenance information—not flight data. Flight recorders belong to ATA 31.",
+          "tags": [
+            "ATA",
+            "ATA45",
+            "Central Maintenance",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Information Systems?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 23",
+            "ATA Chapter 31",
+            "ATA Chapter 45",
+            "ATA Chapter 46"
+          ],
+          "answerIndex": 3,
+          "answerText": "ATA Chapter 46",
+          "explanation": "ATA Chapter 46 covers aircraft information systems, including onboard information management, network services, and data communication between aircraft systems.\n\n💡 Memory Hook:\n46 = Information Highway.\n\n🎯 Board Tip:\nATA 46 deals with data management and information exchange, not radio communications (ATA 23).",
+          "tags": [
+            "ATA",
+            "ATA46",
+            "Information Systems"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Auxiliary Power Unit (APU)?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 26",
+            "ATA Chapter 36",
+            "ATA Chapter 47",
+            "ATA Chapter 49"
+          ],
+          "answerIndex": 3,
+          "answerText": "ATA Chapter 49",
+          "explanation": "ATA Chapter 49 covers the Auxiliary Power Unit (APU), including its installation, controls, starting system, and supporting components.\n\n💡 Memory Hook:\n49 = Little Engine.\nThe APU is the aircraft's 'mini-engine.'\n\n🎯 Board Tip:\nDo not confuse ATA 49 (APU) with ATA 26 (APU Fire Protection). The fire detection system belongs to ATA 26, while the APU itself belongs to ATA 49.",
+          "tags": [
+            "ATA",
+            "ATA49",
+            "APU",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Standard Structures?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 20",
+            "ATA Chapter 51",
+            "ATA Chapter 53",
+            "ATA Chapter 57"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 51",
+          "explanation": "ATA Chapter 51 covers Standard Structures and Structural Repair Practices. It includes identification methods, allowable damage limits, repair procedures, corrosion prevention, and standard structural practices applicable throughout the aircraft.\n\n💡 Memory Hook:\n51 = Foundation of Structural Repair.\nEverything starts here.\n\n🎯 Board Tip:\nATA 20 covers standard maintenance practices for hardware, while ATA 51 covers standard structural repair practices. This is a common board trap.",
+          "tags": [
+            "ATA",
+            "ATA51",
+            "Standard Structures",
+            "SRM",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Doors?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 25",
+            "ATA Chapter 52",
+            "ATA Chapter 53",
+            "ATA Chapter 56"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 52",
+          "explanation": "ATA Chapter 52 covers passenger doors, cargo doors, emergency exits, service doors, and their associated operating and locking mechanisms.\n\n💡 Memory Hook:\n52 = Front Door.\nImagine opening Door Number 52.\n\n🎯 Board Tip:\nIf the question involves door seals, hinges, latches, or emergency exits, think ATA 52.",
+          "tags": [
+            "ATA",
+            "ATA52",
+            "Doors"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers the Fuselage?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 51",
+            "ATA Chapter 52",
+            "ATA Chapter 53",
+            "ATA Chapter 57"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 53",
+          "explanation": "ATA Chapter 53 covers the fuselage structure, including frames, stringers, skin, pressure bulkheads, floor beams, and structural repairs associated with the fuselage.\n\n💡 Memory Hook:\n53 = Body of the Aircraft.\nThe fuselage is the aircraft's body.\n\n🎯 Board Tip:\nWhen structural repair manual questions mention fuselage skins, frames, or stringers, ATA 53 is usually the correct reference.",
+          "tags": [
+            "ATA",
+            "ATA53",
+            "Fuselage",
+            "Structure",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Nacelles and Pylons?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 54",
+            "ATA Chapter 55",
+            "ATA Chapter 57",
+            "ATA Chapter 71"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA Chapter 54",
+          "explanation": "ATA Chapter 54 covers engine nacelles, pylons, cowlings, thrust reverser structure, and supporting engine mounting structures.\n\n💡 Memory Hook:\n54 = Engine House.\nThe nacelle is the engine's home.\n\n🎯 Board Tip:\nDo not confuse ATA 54 (engine support structure) with ATA 71 (the engine itself).",
+          "tags": [
+            "ATA",
+            "ATA54",
+            "Nacelle",
+            "Pylon"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Stabilizers?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 27",
+            "ATA Chapter 55",
+            "ATA Chapter 56",
+            "ATA Chapter 57"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 55",
+          "explanation": "ATA Chapter 55 covers the horizontal stabilizer, vertical stabilizer, and their structural components.\n\n💡 Memory Hook:\n55 = Tail Section.\nThink of the aircraft's tail keeping it stable.\n\n🎯 Board Tip:\nFlight controls such as elevators and rudders belong to ATA 27, but the stabilizer structure belongs to ATA 55.",
+          "tags": [
+            "ATA",
+            "ATA55",
+            "Stabilizers",
+            "Empennage"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Windows?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 25",
+            "ATA Chapter 52",
+            "ATA Chapter 56",
+            "ATA Chapter 53"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 56",
+          "explanation": "ATA Chapter 56 covers cockpit windshields, cabin windows, inspection windows, and their installation and maintenance.\n\n💡 Memory Hook:\n56 = Window View.\nLook outside through ATA 56.\n\n🎯 Board Tip:\nWindshield anti-ice belongs to ATA 30, while the windshield structure itself belongs to ATA 56.",
+          "tags": [
+            "ATA",
+            "ATA56",
+            "Windows",
+            "Windshield"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Wings?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 53",
+            "ATA Chapter 54",
+            "ATA Chapter 55",
+            "ATA Chapter 57"
+          ],
+          "answerIndex": 3,
+          "answerText": "ATA Chapter 57",
+          "explanation": "ATA Chapter 57 covers the wing structure, including spars, ribs, stringers, skin, fuel tank structural areas, and wing repair procedures.\n\n💡 Memory Hook:\n57 = Wings to Fly.\nThink of the wings lifting the aircraft.\n\n🎯 Board Tip:\nIf the question mentions wing spars, ribs, or wing skin repairs, ATA 57 is the correct chapter. Flight controls mounted on the wing still belong to ATA 27.",
+          "tags": [
+            "ATA",
+            "ATA57",
+            "Wings",
+            "Structure",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Standard Practices - Propeller/Rotor?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 20",
+            "ATA Chapter 60",
+            "ATA Chapter 61",
+            "ATA Chapter 70"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 60",
+          "explanation": "ATA Chapter 60 covers standard practices applicable to propeller and rotor systems.\n\n💡 Memory Hook:\n60 = Starting point for propeller/rotor systems.\n\n🎯 Board Tip:\nATA 20 contains general aircraft standard practices, while ATA 60 contains standard practices specific to propellers and rotorcraft.",
+          "tags": [
+            "ATA",
+            "ATA60",
+            "Standard Practices",
+            "Propeller"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Propellers and Propulsors?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 60",
+            "ATA Chapter 61",
+            "ATA Chapter 71",
+            "ATA Chapter 72"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 61",
+          "explanation": "ATA Chapter 61 covers propellers, propeller hubs, blades, governors, and propeller control systems.\n\n💡 Memory Hook:\n61 = One Propeller.\n\n🎯 Board Tip:\nFor turboprop aircraft, propeller maintenance is found under ATA 61—not the engine chapters.",
+          "tags": [
+            "ATA",
+            "ATA61",
+            "Propeller",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Main Rotor(s)?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 61",
+            "ATA Chapter 62",
+            "ATA Chapter 64",
+            "ATA Chapter 67"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 62",
+          "explanation": "ATA Chapter 62 covers helicopter main rotor blades, hubs, dampers, and associated components.\n\n💡 Memory Hook:\n62 = Two main rotor blades spinning overhead.\n\n🎯 Board Tip:\nATA 62 applies primarily to helicopters and rotorcraft.",
+          "tags": [
+            "ATA",
+            "ATA62",
+            "Main Rotor",
+            "Helicopter"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Main Rotor Drive?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 62",
+            "ATA Chapter 63",
+            "ATA Chapter 64",
+            "ATA Chapter 67"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 63",
+          "explanation": "ATA Chapter 63 covers the transmission, gearboxes, drive shafts, and components that transmit power to the main rotor.\n\n💡 Memory Hook:\n63 = Drive the Main Rotor.\n\n🎯 Board Tip:\nATA 62 is the rotor itself; ATA 63 is what turns it.",
+          "tags": [
+            "ATA",
+            "ATA63",
+            "Main Rotor Drive",
+            "Helicopter"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Tail Rotor?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 63",
+            "ATA Chapter 64",
+            "ATA Chapter 65",
+            "ATA Chapter 67"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 64",
+          "explanation": "ATA Chapter 64 covers the helicopter tail rotor assembly, blades, hub, and associated components.\n\n💡 Memory Hook:\n64 = Tail Rotor at the back.\n\n🎯 Board Tip:\nDo not confuse ATA 64 (tail rotor) with ATA 65 (tail rotor drive).",
+          "tags": [
+            "ATA",
+            "ATA64",
+            "Tail Rotor",
+            "Helicopter"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Tail Rotor Drive?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 63",
+            "ATA Chapter 64",
+            "ATA Chapter 65",
+            "ATA Chapter 67"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 65",
+          "explanation": "ATA Chapter 65 covers the shafts, gearboxes, couplings, and components that transmit power to the tail rotor.\n\n💡 Memory Hook:\n65 = Drive the Tail.\n\n🎯 Board Tip:\nThink of ATA 65 as the helicopter equivalent of ATA 63, but for the tail rotor.",
+          "tags": [
+            "ATA",
+            "ATA65",
+            "Tail Rotor Drive",
+            "Helicopter"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Folding Blades and Pylon?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 64",
+            "ATA Chapter 65",
+            "ATA Chapter 66",
+            "ATA Chapter 67"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 66",
+          "explanation": "ATA Chapter 66 covers blade-folding systems and folding pylons used on certain helicopters, particularly naval rotorcraft.\n\n💡 Memory Hook:\n66 = Fold it for Storage.\n\n🎯 Board Tip:\nThis chapter is mainly encountered in military and shipboard helicopter maintenance.",
+          "tags": [
+            "ATA",
+            "ATA66",
+            "Folding Blades",
+            "Helicopter"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Rotors Flight Control?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 27",
+            "ATA Chapter 62",
+            "ATA Chapter 66",
+            "ATA Chapter 67"
+          ],
+          "answerIndex": 3,
+          "answerText": "ATA Chapter 67",
+          "explanation": "ATA Chapter 67 covers helicopter flight control systems including cyclic, collective, anti-torque controls, and associated linkages.\n\n💡 Memory Hook:\n67 = Control the Rotor.\n\n🎯 Board Tip:\nFixed-wing Flight Controls are ATA 27, while helicopter rotor flight controls are ATA 67.",
+          "tags": [
+            "ATA",
+            "ATA67",
+            "Rotor Flight Controls",
+            "Helicopter"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter serves as the Standard Practices chapter for Engine systems?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 60",
+            "ATA Chapter 70",
+            "ATA Chapter 71",
+            "ATA Chapter 72"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 70",
+          "explanation": "ATA Chapter 70 covers standard practices applicable to engine maintenance and serves as the introduction to the engine ATA chapters (71–80).\n\n💡 Memory Hook:\n70 = Before the Engine Begins.\n\n🎯 Board Tip:\nATA 70 contains engine-specific standard practices, while ATA 71 begins the Powerplant chapter itself.",
+          "tags": [
+            "ATA",
+            "ATA70",
+            "Engine Standard Practices",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers the Powerplant?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 71",
+            "ATA Chapter 72",
+            "ATA Chapter 73",
+            "ATA Chapter 79"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA Chapter 71",
+          "explanation": "ATA Chapter 71 covers the Powerplant as a whole, including engine installation, engine mounting, nacelle interfaces, and general powerplant information.\n\n💡 Memory Hook:\n71 = Engine Overview.\nThink of it as the table of contents for the powerplant.\n\n🎯 Board Tip:\nATA 71 is the overall powerplant chapter. The individual engine subsystems are covered in ATA 72 through ATA 80.",
+          "tags": [
+            "ATA",
+            "ATA71",
+            "Powerplant",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers the Engine?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 71",
+            "ATA Chapter 72",
+            "ATA Chapter 75",
+            "ATA Chapter 79"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 72",
+          "explanation": "ATA Chapter 72 covers the engine core, including compressor, combustion section, turbines, engine casing, and internal engine components.\n\n💡 Memory Hook:\n72 = The Heart of the Engine.\nEverything inside the engine lives here.\n\n🎯 Board Tip:\nIf the question involves compressor blades, combustion chambers, turbine blades, or engine rotors, think ATA 72.",
+          "tags": [
+            "ATA",
+            "ATA72",
+            "Engine",
+            "Gas Turbine",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Engine Fuel and Control?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 28",
+            "ATA Chapter 73",
+            "ATA Chapter 76",
+            "ATA Chapter 79"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 73",
+          "explanation": "ATA Chapter 73 covers engine fuel delivery, fuel metering, fuel control units, FADEC fuel scheduling, manifolds, and injectors.\n\n💡 Memory Hook:\n73 = Feed the Engine.\n\n🎯 Board Tip:\nATA 28 stores the aircraft's fuel. ATA 73 manages how fuel is delivered to the engine.",
+          "tags": [
+            "ATA",
+            "ATA73",
+            "Engine Fuel",
+            "Fuel Control",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Ignition?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 24",
+            "ATA Chapter 73",
+            "ATA Chapter 74",
+            "ATA Chapter 80"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 74",
+          "explanation": "ATA Chapter 74 covers ignition exciters, ignition leads, igniter plugs, and ignition control during engine starting.\n\n💡 Memory Hook:\n74 = Spark the Fire.\n\n🎯 Board Tip:\nIgnition is mainly required during engine start and relight. It is different from combustion, which belongs to ATA 72.",
+          "tags": [
+            "ATA",
+            "ATA74",
+            "Ignition"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Engine Air?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 21",
+            "ATA Chapter 30",
+            "ATA Chapter 36",
+            "ATA Chapter 75"
+          ],
+          "answerIndex": 3,
+          "answerText": "ATA Chapter 75",
+          "explanation": "ATA Chapter 75 covers engine airflow systems including compressor airflow management, cooling air, and active clearance control.\n\n💡 Memory Hook:\n75 = Air Goes In.\n\n🎯 Board Tip:\nDo not confuse ATA 75 (engine airflow) with ATA 36 (aircraft pneumatic system) even though both involve compressed air.",
+          "tags": [
+            "ATA",
+            "ATA75",
+            "Engine Air"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Engine Controls?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 22",
+            "ATA Chapter 27",
+            "ATA Chapter 73",
+            "ATA Chapter 76"
+          ],
+          "answerIndex": 3,
+          "answerText": "ATA Chapter 76",
+          "explanation": "ATA Chapter 76 covers throttle controls, engine control linkages, thrust levers, and engine control interfaces.\n\n💡 Memory Hook:\n76 = Pilot Controls the Engine.\n\n🎯 Board Tip:\nATA 73 controls fuel flow inside the engine. ATA 76 covers the pilot's engine control system.",
+          "tags": [
+            "ATA",
+            "ATA76",
+            "Engine Controls"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Engine Indicating?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 31",
+            "ATA Chapter 72",
+            "ATA Chapter 77",
+            "ATA Chapter 79"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 77",
+          "explanation": "ATA Chapter 77 covers engine indicating systems such as N1, N2, EGT, oil pressure, oil temperature, fuel flow, vibration, and engine instrumentation.\n\n💡 Memory Hook:\n77 = Engine Dashboard.\nEverything the pilot reads about the engine.\n\n🎯 Board Tip:\nEngine gauges belong to ATA 77, while the general cockpit display system belongs to ATA 31.",
+          "tags": [
+            "ATA",
+            "ATA77",
+            "Engine Indicating",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Exhaust?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 72",
+            "ATA Chapter 74",
+            "ATA Chapter 78",
+            "ATA Chapter 80"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 78",
+          "explanation": "ATA Chapter 78 covers engine exhaust systems including exhaust ducts, thrust reversers, exhaust nozzles, and associated components.\n\n💡 Memory Hook:\n78 = Smoke Goes Out.\n\n🎯 Board Tip:\nThrust reverser mechanisms are generally maintained under ATA 78 even though they are mounted on the nacelle.",
+          "tags": [
+            "ATA",
+            "ATA78",
+            "Exhaust",
+            "Thrust Reverser"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Oil?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 29",
+            "ATA Chapter 72",
+            "ATA Chapter 77",
+            "ATA Chapter 79"
+          ],
+          "answerIndex": 3,
+          "answerText": "ATA Chapter 79",
+          "explanation": "ATA Chapter 79 covers engine lubrication systems including oil tanks, pumps, filters, coolers, pressure regulation, and oil distribution.\n\n💡 Memory Hook:\n79 = Oil Keeps It Alive.\n\n🎯 Board Tip:\nIf the question involves oil pressure, oil pumps, or lubrication, ATA 79 is the correct chapter.",
+          "tags": [
+            "ATA",
+            "ATA79",
+            "Oil",
+            "Lubrication",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Starting?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 74",
+            "ATA Chapter 76",
+            "ATA Chapter 79",
+            "ATA Chapter 80"
+          ],
+          "answerIndex": 3,
+          "answerText": "ATA Chapter 80",
+          "explanation": "ATA Chapter 80 covers engine starting systems including air turbine starters, electric starters, starter generators, and starting controls.\n\n💡 Memory Hook:\n80 = Start the Engine.\nIt's the final chapter before takeoff.\n\n🎯 Board Tip:\nStudents often confuse ATA 74 (Ignition) with ATA 80 (Starting). Ignition creates the spark, while ATA 80 provides the mechanism that cranks or starts the engine.",
+          "tags": [
+            "ATA",
+            "ATA80",
+            "Starting",
+            "Engine Start",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Standard Practices – Multi-System?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 20",
+            "ATA Chapter 40",
+            "ATA Chapter 42",
+            "ATA Chapter 45"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 40",
+          "explanation": "ATA Chapter 40 covers Standard Practices that apply across multiple aircraft systems when they cannot be assigned to a single ATA chapter.\n\n💡 Memory Hook:\n40 = For Everyone.\nThink of Chapter 40 as the common toolbox shared by multiple systems.\n\n🎯 Board Tip:\nATA 20 contains standard mechanical practices (hardware, fasteners, etc.), while ATA 40 contains standard practices affecting multiple aircraft systems.",
+          "tags": [
+            "ATA",
+            "ATA40",
+            "Standard Practices",
+            "Multi-System"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Water Ballast?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 38",
+            "ATA Chapter 41",
+            "ATA Chapter 47",
+            "ATA Chapter 48"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 41",
+          "explanation": "ATA Chapter 41 covers Water Ballast systems used on aircraft equipped with ballast systems for weight and balance control.\n\n💡 Memory Hook:\n41 = Water for Weight.\n\n🎯 Board Tip:\nWater Ballast systems are uncommon on transport aircraft but may appear as direct ATA recall questions.",
+          "tags": [
+            "ATA",
+            "ATA41",
+            "Water Ballast"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Cabin Systems?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 25",
+            "ATA Chapter 43",
+            "ATA Chapter 44",
+            "ATA Chapter 46"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 43",
+          "explanation": "ATA Chapter 43 covers Cabin Systems such as passenger service functions and cabin-related system equipment.\n\n💡 Memory Hook:\n43 = Cabin Comfort.\n\n🎯 Board Tip:\nATA 25 covers cabin equipment and furnishings, while ATA 43 focuses on cabin systems.",
+          "tags": [
+            "ATA",
+            "ATA43",
+            "Cabin Systems"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Cabin Systems Information?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 31",
+            "ATA Chapter 43",
+            "ATA Chapter 44",
+            "ATA Chapter 46"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 44",
+          "explanation": "ATA Chapter 44 covers Cabin Systems Information, including information management associated with cabin systems.\n\n💡 Memory Hook:\n44 = Cabin Information.\n\n🎯 Board Tip:\nATA 44 is associated with cabin information functions, while ATA 46 covers aircraft-wide information systems.",
+          "tags": [
+            "ATA",
+            "ATA44",
+            "Cabin Information"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Inert Gas System?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 28",
+            "ATA Chapter 47",
+            "ATA Chapter 48",
+            "ATA Chapter 49"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 47",
+          "explanation": "ATA Chapter 47 covers the Inert Gas System used to reduce the flammability of fuel tank vapors by supplying inert gas.\n\n💡 Memory Hook:\n47 = Fuel Tank Protection.\n\n🎯 Board Tip:\nModern transport aircraft often use nitrogen-enriched air to inert fuel tanks. Do not confuse ATA 47 with the fuel system itself (ATA 28).",
+          "tags": [
+            "ATA",
+            "ATA47",
+            "Inert Gas",
+            "Fuel Tank Safety"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Integrated Fuel Systems?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 28",
+            "ATA Chapter 47",
+            "ATA Chapter 48",
+            "ATA Chapter 73"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA Chapter 48",
+          "explanation": "ATA Chapter 48 covers Integrated Fuel Systems, which coordinate and manage fuel-related functions across multiple aircraft systems.\n\n💡 Memory Hook:\n48 = Fuel Integration.\n\n🎯 Board Tip:\nATA 28 covers the aircraft fuel system itself, while ATA 48 addresses integrated fuel system functions.",
+          "tags": [
+            "ATA",
+            "ATA48",
+            "Integrated Fuel Systems"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA chapter covers Cargo and Accessory Compartments?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA Chapter 25",
+            "ATA Chapter 50",
+            "ATA Chapter 52",
+            "ATA Chapter 53"
+          ],
+          "answerIndex": 1,
+          "answerText": "ATA Chapter 50",
+          "explanation": "ATA Chapter 50 covers cargo compartments, baggage compartments, and accessory compartments, including their installations and maintenance.\n\n💡 Memory Hook:\n50 = Fifty Bags.\nThink of luggage and cargo storage.\n\n🎯 Board Tip:\nDo not confuse ATA 50 (cargo compartments) with ATA 52 (cargo doors). The compartment and the door are covered in different ATA chapters.",
+          "tags": [
+            "ATA",
+            "ATA50",
+            "Cargo Compartments",
+            "board favorite"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the status of ATA Chapter 13 in the ATA iSpec 2200 chapter system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Servicing",
+            "Reserved",
+            "Cabin Systems",
+            "Water Ballast"
+          ],
+          "answerIndex": 1,
+          "answerText": "Reserved",
+          "explanation": "ATA Chapter 13 is reserved and has no standard ATA system assignment.\n\n💡 Memory Hook:\n13 = Unlucky Number = Nothing Assigned.\n\n🎯 Board Tip:\nIf you encounter ATA 13 in a multiple-choice question asking for an aircraft system, 'Reserved' is the correct answer.",
+          "tags": [
+            "ATA",
+            "ATA13",
+            "Reserved"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the status of ATA Chapter 14 in the ATA iSpec 2200 chapter system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fire Protection",
+            "Reserved",
+            "Standard Practices",
+            "Engine"
+          ],
+          "answerIndex": 1,
+          "answerText": "Reserved",
+          "explanation": "ATA Chapter 14 is reserved for future use and has no standard ATA assignment.\n\n💡 Memory Hook:\n14 = Empty Slot.\n\n🎯 Board Tip:\nSeveral early ATA chapters are intentionally reserved. Memorize them as reserved rather than trying to assign a system.",
+          "tags": [
+            "ATA",
+            "ATA14",
+            "Reserved"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the status of ATA Chapter 15 in the ATA iSpec 2200 chapter system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Reserved",
+            "Hydraulic Power",
+            "Fuel",
+            "Landing Gear"
+          ],
+          "answerIndex": 0,
+          "answerText": "Reserved",
+          "explanation": "ATA Chapter 15 is reserved and does not correspond to a standard aircraft system.\n\n💡 Memory Hook:\n15 = Reserved.\n\n🎯 Board Tip:\nDo not invent a system assignment for reserved chapters.",
+          "tags": [
+            "ATA",
+            "ATA15",
+            "Reserved"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the status of ATA Chapter 16 in the ATA iSpec 2200 chapter system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Reserved",
+            "Navigation",
+            "Communications",
+            "Cabin Systems"
+          ],
+          "answerIndex": 0,
+          "answerText": "Reserved",
+          "explanation": "ATA Chapter 16 is reserved for future use.\n\n💡 Memory Hook:\n16 = Still Empty.\n\n🎯 Board Tip:\nATA Chapters 13 through 19 are commonly recognized as reserved in the standard ATA chapter numbering system.",
+          "tags": [
+            "ATA",
+            "ATA16",
+            "Reserved"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the status of ATA Chapter 17 in the ATA iSpec 2200 chapter system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Reserved",
+            "Oxygen",
+            "Electrical Power",
+            "Standard Structures"
+          ],
+          "answerIndex": 0,
+          "answerText": "Reserved",
+          "explanation": "ATA Chapter 17 is reserved and has no official ATA system assignment.\n\n💡 Memory Hook:\n17 = Reserved.\n\n🎯 Board Tip:\nIf 'Reserved' appears as an option for ATA 17, it is the correct answer.",
+          "tags": [
+            "ATA",
+            "ATA17",
+            "Reserved"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the status of ATA Chapter 18 in the ATA iSpec 2200 chapter system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Reserved",
+            "Engine Air",
+            "Oil",
+            "Information Systems"
+          ],
+          "answerIndex": 0,
+          "answerText": "Reserved",
+          "explanation": "ATA Chapter 18 remains reserved in the ATA chapter numbering system.\n\n💡 Memory Hook:\n18 = No Assignment.\n\n🎯 Board Tip:\nReserved chapters help preserve numbering consistency for future expansion.",
+          "tags": [
+            "ATA",
+            "ATA18",
+            "Reserved"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the status of ATA Chapter 19 in the ATA iSpec 2200 chapter system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Reserved",
+            "Propellers",
+            "Powerplant",
+            "Servicing"
+          ],
+          "answerIndex": 0,
+          "answerText": "Reserved",
+          "explanation": "ATA Chapter 19 is reserved and has no standard ATA system assignment.\n\n💡 Memory Hook:\n19 = Last Reserved Chapter before ATA 20.\n\n🎯 Board Tip:\nATA 20 begins the Standard Practices chapters used extensively in aircraft maintenance.",
+          "tags": [
+            "ATA",
+            "ATA19",
+            "Reserved"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the status of ATA Chapters 58 and 59 in the ATA iSpec 2200 chapter system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Landing Gear Systems",
+            "Reserved / Manufacturer-Specific",
+            "Cabin Systems",
+            "Engine Controls"
+          ],
+          "answerIndex": 1,
+          "answerText": "Reserved / Manufacturer-Specific",
+          "explanation": "ATA Chapters 58 and 59 are generally reserved in the standard ATA chapter system and may be assigned by specific manufacturers for specialized applications.\n\n💡 Memory Hook:\n58–59 = Save the Space.\n\n🎯 Board Tip:\nMost commercial aircraft maintenance manuals leave these chapters unassigned unless customized by the manufacturer.",
+          "tags": [
+            "ATA",
+            "ATA58",
+            "ATA59",
+            "Reserved"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the status of ATA Chapters 68 and 69 in the ATA iSpec 2200 chapter system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Reserved / Rotorcraft-Specific",
+            "Powerplant",
+            "Propeller Systems",
+            "Cabin Systems"
+          ],
+          "answerIndex": 0,
+          "answerText": "Reserved / Rotorcraft-Specific",
+          "explanation": "ATA Chapters 68 and 69 are generally reserved and may be used in specialized rotorcraft or manufacturer-specific documentation.\n\n💡 Memory Hook:\n68–69 = Pause Before the Engine Chapters.\n\n🎯 Board Tip:\nATA 70 begins the engine standard practices section immediately before the Powerplant chapters (71–80).",
+          "tags": [
+            "ATA",
+            "ATA68",
+            "ATA69",
+            "Reserved"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
