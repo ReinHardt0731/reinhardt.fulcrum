@@ -27,9 +27,15 @@ jobs:
       - name: Prepare site
         run: |
           mkdir -p public
-            find . -maxdepth 1 -mindepth 1 -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.json' -o -name '*.png' \) -exec cp {} public/ \;
+          # Copy root-level files
+          find . -maxdepth 1 -mindepth 1 -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.json' -o -name '*.png' \) -exec cp {} public/ \;
+          # Copy entire directories needed for the app
+          cp -r vendor public/ 2>/dev/null || true
+          cp -r chapters public/ 2>/dev/null || true
           echo "Contents of public:"
           ls -la public
+          [ -d public/vendor ] && echo "✓ vendor/ copied" || echo "✗ vendor/ missing"
+          [ -d public/chapters ] && echo "✓ chapters/ copied" || echo "✗ chapters/ missing"
 
           if [ ! -f public/index.html ]; then
             echo "ERROR: public/index.html missing — aborting upload"
