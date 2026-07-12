@@ -1316,6 +1316,57 @@ export async function storageSelectState() {
     };
 }
 
+// KaTeX math rendering helper
+export function renderMath(container = document.body, attempts = 6) {
+    try {
+        if (!window.renderMathInElement) {
+            // KaTeX auto-render not loaded yet — queue container and start poller
+            try {
+                globalThis.__katex_pending = globalThis.__katex_pending || new Set();
+                globalThis.__katex_pending.add(container);
+                if (!globalThis.__katex_polling) {
+                    globalThis.__katex_polling = true;
+                    const poll = () => {
+                        if (window.renderMathInElement) {
+                            try {
+                                const pending = Array.from(globalThis.__katex_pending || []);
+                                globalThis.__katex_pending = new Set();
+                                pending.forEach((elem) => {
+                                    try { renderMath(elem, 0); } catch (_) {}
+                                });
+                            } catch (_) {}
+                            globalThis.__katex_polling = false;
+                            return;
+                        }
+                        if (attempts > 0) {
+                            setTimeout(poll, 150);
+                        } else {
+                            globalThis.__katex_polling = false;
+                        }
+                    };
+                    setTimeout(poll, 150);
+                }
+            } catch (_) {}
+            return;
+        }
+
+        window.renderMathInElement(container, {
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false }
+            ],
+            throwOnError: false,
+            errorCallback: (err) => {
+                // Keep errors silent in production; log for debugging
+                try { console.warn('KaTeX render error', err && err.message ? err.message : err); } catch (_) {}
+            }
+        });
+    } catch (error) {
+        // No-op on render failures
+        try { console.warn('renderMath failed', error && error.message ? error.message : error); } catch (_) {}
+    }
+}
+
 export function syncSelection(subjectId, chapterTitle, mode) {
     if (subjectId) {
         storageSet(ACTIVE_SUBJECT_KEY, subjectId);
@@ -1579,6 +1630,7 @@ function appendLearnExplanation(container, result) {
     const explanation = createExplanationCallout(result);
     if (explanation) {
         container.appendChild(explanation);
+        try { renderMath(explanation); } catch (_) {}
     }
 }
 
@@ -2517,7 +2569,12 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                         choiceButton.type = "button";
                         choiceButton.className = "choice-button";
                         const label = choiceIndex < 26 ? String.fromCharCode(65 + choiceIndex) : String(choiceIndex + 1);
-                        choiceButton.textContent = `${label}. ${choice}`;
+                        if (typeof choice === 'string') {
+                            const escaped = escapeHtml(choice).replace(/\$\$/g, '$$').replace(/\$/g, '$');
+                            choiceButton.innerHTML = `${escapeHtml(label + '. ')}${escaped}`;
+                        } else {
+                            choiceButton.textContent = `${label}. ${String(choice)}`;
+                        }
                         if (result?.userAnswerIndex === choiceIndex) {
                             choiceButton.classList.add("is-selected");
                         }
@@ -2529,6 +2586,8 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                         });
                         choices.appendChild(choiceButton);
                     });
+                    // Render any math in the review choices
+                    try { renderMath(choices); } catch (_) {}
                     item.appendChild(choices);
                 }
 
@@ -2668,7 +2727,13 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 const button = document.createElement("button");
                 button.type = "button";
                 button.className = "choice-button";
-                button.textContent = choice;
+                const label = index < 26 ? String.fromCharCode(65 + index) : String(index + 1);
+                if (typeof choice === 'string') {
+                    const escapedChoice = escapeHtml(choice).replace(/\$\$/g, '$$').replace(/\$/g, '$');
+                    button.innerHTML = `${escapeHtml(label + '. ')}${escapedChoice}`;
+                } else {
+                    button.textContent = `${label}. ${String(choice)}`;
+                }
                 if (session.selectedChoice === index) {
                     button.classList.add("is-selected");
                 }
@@ -2679,6 +2744,8 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 });
                 choices.appendChild(button);
             });
+            // Ensure math is rendered for all newly-added choice buttons
+            try { renderMath(choices); } catch (_) {}
             answerArea.appendChild(choices);
         }
 
@@ -2733,6 +2800,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
         card.append(header, questionText, hint, answerArea, actions);
         stage.appendChild(card);
+        try { renderMath(card); } catch (_) {}
         renderProgress(progressFill, session);
         return;
     }
@@ -2837,6 +2905,8 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
         sheet.append(intro, reviewList, actions);
         stage.appendChild(sheet);
+        // Render any math expressions added to the sheet
+        try { renderMath(sheet); } catch (_) {}
         renderProgress(progressFill, session);
         return;
     }
@@ -3147,6 +3217,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         card.append(header, questionText, hint, answerArea);
     }
     stage.appendChild(card);
+    try { renderMath(card); } catch (_) {}
     renderProgress(progressFill, session);
 }
 
@@ -3313,6 +3384,7 @@ export async function initHomePage() {
     };
 
     await refresh();
+    try { renderMath(document.body); } catch (_) {}
 
     window.addEventListener("storage", async (event) => {
         if ([STORAGE_KEY, ACTIVE_SUBJECT_KEY, ACTIVE_CHAPTER_KEY, ACTIVE_MODE_KEY].includes(event.key)) {
@@ -4079,7 +4151,13 @@ export async function initModePage(mode) {
                 const button = document.createElement("button");
                 button.type = "button";
                 button.className = "choice-button";
-                button.textContent = choice;
+                const label = choiceIndex < 26 ? String.fromCharCode(65 + choiceIndex) : String(choiceIndex + 1);
+                if (typeof choice === 'string') {
+                    const escaped = escapeHtml(choice).replace(/\$\$/g, '$$').replace(/\$/g, '$');
+                    button.innerHTML = `${escapeHtml(label + '. ')}${escaped}`;
+                } else {
+                    button.textContent = `${label}. ${String(choice)}`;
+                }
                 button.disabled = answered;
 
                 if (answered) {
@@ -4094,6 +4172,8 @@ export async function initModePage(mode) {
                 button.addEventListener("click", () => submitQuizAnswer(index, question, choiceIndex));
                 choices.appendChild(button);
             });
+            // Render math for all choices once appended
+            try { renderMath(choices); } catch (_) {}
 
             answerArea.appendChild(choices);
         }
@@ -4113,6 +4193,8 @@ export async function initModePage(mode) {
 
         answerArea.appendChild(feedback);
         card.append(header, questionText, hint, answerArea);
+        try { renderMath(answerArea); } catch (_) {}
+        try { renderMath(feedback); } catch (_) {}
         return card;
     };
 
@@ -4252,6 +4334,7 @@ export async function initModePage(mode) {
         }
 
         stage.appendChild(sheet);
+        try { renderMath(sheet); } catch (_) {}
         renderProgress(progressFill, session);
     };
 

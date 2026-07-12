@@ -171,9 +171,14 @@
       "name": "MATH",
       "quizType": "short_quiz",
       "schemaVersion": 1,
-      "selectedChapter": "",
-      "chapters": [],
-      "updatedAt": "2026-07-09T04:52:35.762Z"
+      "selectedChapter": "Another Sample",
+      "chapters": [
+        {
+          "title": "Another Sample",
+          "file": "chapters/another-sample.json"
+        }
+      ],
+      "updatedAt": "2026-07-12T04:03:00.233Z"
     },
     {
       "id": "powerplant",
@@ -27375,6 +27380,59 @@
             "pd1570",
             "section34"
           ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/another-sample.json": {
+      "title": "Another Sample",
+      "questions": [
+        {
+          "question": "Which expression represents the integral of $x^2$ with respect to $x$?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "$\\frac{x^3}{3} + C$",
+            "$3x + C$",
+            "$\\frac{x^2}{2} + C$",
+            "$x^3 + C$"
+          ],
+          "answerIndex": 0,
+          "answerText": "$\\frac{x^3}{3} + C$",
+          "explanation": "Use the power rule: $\\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C$. For $n=2$, this becomes $\\frac{x^3}{3} + C$.",
+          "tags": [],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the sum of the first 4 positive integers?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "8",
+            "10",
+            "12",
+            "14"
+          ],
+          "answerIndex": 1,
+          "answerText": "10",
+          "explanation": "The sum is $1+2+3+4=10$.",
+          "tags": [],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which equation is the quadratic formula?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$",
+            "$x = \\frac{b \\pm \\sqrt{b^2 + 4ac}}{2a}$",
+            "$x = \\frac{-b \\pm \\sqrt{b^2 - 2ac}}{2a}$",
+            "$x = \\frac{-b \\pm \\sqrt{b^2 - 4a}}{2}$"
+          ],
+          "answerIndex": 0,
+          "answerText": "$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$",
+          "explanation": "The quadratic formula solves equations of the form $ax^2 + bx + c = 0$.",
+          "tags": [],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         }

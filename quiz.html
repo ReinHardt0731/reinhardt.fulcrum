@@ -14,6 +14,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PrepCore Quiz</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="vendor/katex/katex.min.css">
+    <script>
+    (function(){
+        const cdnBase = 'https://cdn.jsdelivr.net/npm/katex@0.16.4/';
+        function loadScript(src, onload){const s=document.createElement('script');s.src=src;s.onload=onload;s.onerror=onload;document.head.appendChild(s);} 
+        function loadCSS(href){const l=document.createElement('link');l.rel='stylesheet';l.href=href;document.head.appendChild(l);} 
+        loadCSS(cdnBase+'dist/katex.min.css');
+        loadScript(cdnBase+'dist/katex.min.js', function(){ loadScript(cdnBase+'contrib/auto-render.min.js', function(){}); });
+    })();
+    </script>
 </head>
 <body class="mode-page">
     <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
@@ -101,6 +111,14 @@
     </div>
 
     <script type="module" src="quiz.js"></script>
+    <script>
+    (function(){ if (!window.katex) { var s=document.createElement('script'); s.src='vendor/katex/katex.min.js'; document.head.appendChild(s);} if (!window.renderMathInElement) { var s2=document.createElement('script'); s2.src='vendor/katex/contrib/auto-render.min.js'; document.head.appendChild(s2);} })();
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        import('./shared.js').then((m) => m.renderMath(document.body));
+    });
+    </script>
 </body>
 </html>
 

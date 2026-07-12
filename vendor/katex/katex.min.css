@@ -1,0 +1,5 @@
+/* Minimal KaTeX CSS placeholder for offline setup.
+   Replace with production `katex.min.css` from KaTeX release for full fonts.
+*/
+.katex{font-family: "KaTeX_Main", serif;}
+.katex .katex-expression{display:inline-block}
