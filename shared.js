@@ -19,6 +19,15 @@ const MODE_SESSION_KEYS = {
     flashcards: FLASHCARDS_SESSION_KEY
 };
 
+const UPDATE_LOG_API = "/api/updates";
+const DEFAULT_UPDATE_LOG = [
+    { date: "2026-07-12", message: "Redo the Aluminum Chapter." },
+    { date: "2026-07-12", message: "Added ATA chapters and improved the assessment icon." },
+    { date: "2026-07-12", message: "Improved the exam mode experience." },
+    { date: "2026-07-12", message: "Fixed vendor workflow issues." },
+    { date: "2026-07-12", message: "Added KaTeX math rendering for equations." }
+];
+
 const text = (value) => String(value ?? "").trim();
 
 function shuffleArray(values) {
@@ -3342,6 +3351,44 @@ export async function initHomePage() {
         });
     }
 
+    const renderUpdateLog = () => {
+        if (!elements.updateLog) {
+            return;
+        }
+
+        const entries = Array.isArray(state.updateEntries) ? state.updateEntries : [];
+        elements.updateLog.replaceChildren();
+
+        if (!entries.length) {
+            const empty = document.createElement("p");
+            empty.className = "home-update-log-empty";
+            empty.textContent = "No recent updates are available yet.";
+            elements.updateLog.appendChild(empty);
+            return;
+        }
+
+        entries.slice(0, 6).forEach((entry) => {
+            const item = document.createElement("article");
+            item.className = "update-entry-card";
+
+            const heading = document.createElement("div");
+            heading.className = "update-entry-heading";
+
+            const date = document.createElement("span");
+            date.className = "update-entry-date";
+            date.textContent = entry.date || "Unknown date";
+
+            heading.appendChild(date);
+
+            const message = document.createElement("p");
+            message.className = "update-entry-message";
+            message.textContent = entry.message || entry.commit || "Update details unavailable.";
+
+            item.append(heading, message);
+            elements.updateLog.appendChild(item);
+        });
+    };
+
     const render = () => {
 
         if (elements.title) {
@@ -3355,6 +3402,7 @@ export async function initHomePage() {
         }
 
         renderModeLinks();
+        renderUpdateLog();
 
         if (elements.carousel) {
             renderHomeCarousel(elements.carousel, state.subjects, state.activeSubject?.id || "", (subjectId) => {
@@ -3373,6 +3421,26 @@ export async function initHomePage() {
         }
     };
 
+    const loadUpdateEntries = async () => {
+        try {
+            const response = await fetch(UPDATE_LOG_API, { cache: "no-store" });
+            if (response.ok) {
+                const payload = await response.json();
+                const entries = Array.isArray(payload.entries) ? payload.entries : [];
+                if (entries.length) {
+                    return entries.map((entry) => ({
+                        date: text(entry.date || entry.commitDate || entry.dateKey),
+                        hash: text(entry.hash || entry.id || ""),
+                        message: text(entry.message || entry.subject || "Update entry")
+                    }));
+                }
+            }
+        } catch {
+            // Fallback to built-in update log.
+        }
+        return DEFAULT_UPDATE_LOG;
+    };
+
     const refresh = async () => {
         const fresh = await storageSelectState();
 
@@ -3380,6 +3448,7 @@ export async function initHomePage() {
         state.activeSubject = fresh.activeSubject;
         state.activeChapter = fresh.activeChapter;
         state.mode = fresh.mode;
+        state.updateEntries = await loadUpdateEntries();
         render();
     };
 
