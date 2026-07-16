@@ -3251,7 +3251,8 @@ export async function initHomePage() {
         next: document.getElementById("home-carousel-next"),
         refresh: document.getElementById("refresh-button"),
         progress: document.getElementById("progress-button"),
-        modeLinks: document.querySelectorAll("[data-home-mode]")
+        modeLinks: document.querySelectorAll("[data-home-mode]"),
+        updateLog: document.getElementById("home-update-log")
     };
 
     const state = {
@@ -3368,23 +3369,18 @@ export async function initHomePage() {
         }
 
         entries.slice(0, 6).forEach((entry) => {
-            const item = document.createElement("article");
-            item.className = "update-entry-card";
-
-            const heading = document.createElement("div");
-            heading.className = "update-entry-heading";
+            const item = document.createElement("div");
+            item.className = "update-entry-row";
 
             const date = document.createElement("span");
             date.className = "update-entry-date";
             date.textContent = entry.date || "Unknown date";
 
-            heading.appendChild(date);
-
-            const message = document.createElement("p");
+            const message = document.createElement("span");
             message.className = "update-entry-message";
             message.textContent = entry.message || entry.commit || "Update details unavailable.";
 
-            item.append(heading, message);
+            item.append(date, message);
             elements.updateLog.appendChild(item);
         });
     };

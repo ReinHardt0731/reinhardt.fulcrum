@@ -59,34 +59,33 @@ body.home-page {
 
 .home-update-log {
     display: grid;
-    gap: 14px;
+    gap: 10px;
 }
 
-.update-entry-card {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 22px;
-    padding: 18px 20px;
-    background: rgba(255, 255, 255, 0.04);
+.update-entry-row {
+    display: grid;
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.update-entry-heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 8px;
+.update-entry-row:last-child {
+    border-bottom: none;
 }
 
 .update-entry-date {
     color: var(--secondary);
     font-weight: 700;
     font-size: 0.92rem;
+    white-space: nowrap;
 }
 
 .update-entry-message {
-    margin: 0;
     color: var(--text);
-    line-height: 1.5;
+    line-height: 1.6;
+    font-size: 0.98rem;
 }
 
 .home-update-log-empty {
