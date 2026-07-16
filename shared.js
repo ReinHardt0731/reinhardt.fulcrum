@@ -19,7 +19,7 @@ const MODE_SESSION_KEYS = {
     flashcards: FLASHCARDS_SESSION_KEY
 };
 
-const UPDATE_LOG_API = "/api/updates";
+const UPDATE_LOG_API = "./updates.json";
 const DEFAULT_UPDATE_LOG = [
     { date: "2026-07-12", message: "Redo the Aluminum Chapter." },
     { date: "2026-07-12", message: "Added ATA chapters and improved the assessment icon." },
@@ -3425,7 +3425,7 @@ export async function initHomePage() {
                 const entries = Array.isArray(payload.entries) ? payload.entries : [];
                 if (entries.length) {
                     return entries.map((entry) => ({
-                        date: text(entry.date || entry.commitDate || entry.dateKey),
+                        date: text(entry.date || entry.dateKey || ""),
                         hash: text(entry.hash || entry.id || ""),
                         message: text(entry.message || entry.subject || "Update entry")
                     }));
