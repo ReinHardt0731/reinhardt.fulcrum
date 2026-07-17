@@ -63,6 +63,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         chapterRenameInput: document.getElementById("admin-chapter-name"),
         chapterSaveButton: document.getElementById("admin-chapter-save"),
         chapterDeleteButton: document.getElementById("admin-chapter-delete")
+        ,notesUploadForm: document.getElementById("notes-upload-form")
+        ,notesFileInput: document.getElementById("notes-file-input")
+        ,notesPreviewButton: document.getElementById("notes-preview-button")
+        ,notesUploadButton: document.getElementById("notes-upload-button")
+        ,notesPreviewStatus: document.getElementById("notes-upload-status")
+        ,notesPreviewContent: document.getElementById("notes-preview-content")
     };
 
     if (!elements.lockForm || !elements.lockPanel || !elements.adminApp) {
@@ -489,6 +495,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (elements.chapterNext) {
             elements.chapterNext.disabled = !hasCarouselChapters;
         }
+        if (elements.notesFileInput) {
+            elements.notesFileInput.disabled = !hasSubject;
+        }
+        if (elements.notesPreviewButton) {
+            elements.notesPreviewButton.disabled = !hasSubject;
+        }
+        if (elements.notesUploadButton) {
+            elements.notesUploadButton.disabled = !hasSubject;
+        }
     };
 
     const renderAll = () => {
@@ -497,6 +512,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         renderSubjectEditor();
         renderChapterCarousel();
         renderChapterEditor();
+        renderNotesPreviewStatus();
+    };
+
+    const renderNotesPreviewStatus = () => {
+        const subject = getActiveSubject();
+        if (elements.notesPreviewStatus) {
+            elements.notesPreviewStatus.textContent = subject && subject.notesPath ? "Attached" : "No notes";
+        }
     };
 
     // Resize handler: compute branch/leaves distribution (40% / 60%) for desktop
@@ -694,6 +717,60 @@ document.addEventListener("DOMContentLoaded", async () => {
         previewContent.append(summary, chapterCards);
         return quiz;
     };
+
+    // Notes helpers
+    const parseMarkdownFile = (file) => new Promise((resolve, reject) => {
+        if (!file) return resolve("");
+        const reader = new FileReader();
+        reader.onload = () => resolve(String(reader.result || ""));
+        reader.onerror = () => reject(new Error("Unable to read markdown file."));
+        reader.readAsText(file, "utf-8");
+    });
+
+    elements.notesPreviewButton?.addEventListener("click", async () => {
+        try {
+            const subject = getActiveSubject();
+            if (!subject) throw new Error("Select a subject first.");
+            const file = elements.notesFileInput?.files?.[0];
+            if (!file) throw new Error("Choose a Markdown file first.");
+            const md = await parseMarkdownFile(file);
+            elements.notesPreviewContent.replaceChildren();
+            const pre = document.createElement("pre");
+            pre.textContent = md.slice(0, 10000);
+            elements.notesPreviewContent.appendChild(pre);
+            if (elements.notesPreviewStatus) elements.notesPreviewStatus.textContent = "Preview ready";
+        } catch (err) {
+            if (elements.notesPreviewContent) elements.notesPreviewContent.replaceChildren(emptyState("Could not preview notes", err.message));
+            if (elements.notesPreviewStatus) elements.notesPreviewStatus.textContent = "Preview failed";
+        }
+    });
+
+    elements.notesUploadForm?.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        try {
+            const subject = getActiveSubject();
+            if (!subject) throw new Error("Select a subject first.");
+            const file = elements.notesFileInput?.files?.[0];
+            if (!file) throw new Error("Choose a Markdown file first.");
+            const md = await parseMarkdownFile(file);
+            // Mark subject locally as having notes
+            const notesPath = `markdowns/${subject.id}.md`;
+            const nextSubjects = state.subjects.map((s) => s.id === subject.id ? { ...s, notesPath, updatedAt: now() } : s);
+            commitSubjects(nextSubjects, subject.id, state.activeChapterTitle);
+            // Persist notes to server via save-library API
+            const body = { subjects: saveSubjects(state.subjects), payload: serializeSubjects(state.subjects), notes: { [subject.id]: md } };
+            try {
+                await fetch("/api/save-library", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+            } catch (err) {
+                // ignore server errors; still attach locally
+            }
+            setStatus(`Attached notes to “${subject.name}”.`);
+            if (elements.notesPreviewStatus) elements.notesPreviewStatus.textContent = "Attached";
+        } catch (err) {
+            setStatus(err.message || "Unable to attach notes.");
+            if (elements.notesPreviewStatus) elements.notesPreviewStatus.textContent = "Attach failed";
+        }
+    });
 
     const renderChapterPreview = async () => {
         const subject = getActiveSubject();

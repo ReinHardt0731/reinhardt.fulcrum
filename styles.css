@@ -1480,6 +1480,35 @@ body.drawer-collapsed .mobile-only {
     padding: 22px;
 }
 
+.notes-view table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+}
+
+.notes-view th,
+.notes-view td {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0.85rem 0.9rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+.notes-view th {
+    background: rgba(255, 255, 255, 0.05);
+    font-weight: 700;
+}
+
+.notes-view tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.notes-view a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
 .learn-question-card.is-correct {
     border-color: rgba(94, 227, 160, 0.35);
     background: rgba(94, 227, 160, 0.08);

@@ -7,8 +7,9 @@ export const QUIZ_SESSION_KEY = "prepcore.web.quizSession.v1";
 export const PROGRESS_HISTORY_KEY = "prepcore.web.progressHistory.v1";
 export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
 export const ADMIN_PASSWORD = "prepcore";
+export const NOTES_PATH = "./markdowns";
 const SUBJECTS_PATH = "./subjects.json";
-const VALID_MODES = new Set(["quiz", "learn", "flashcards", "exam"]);
+const VALID_MODES = new Set(["quiz", "learn", "flashcards", "exam", "note"]);
 const SUBJECTS_CACHE_KEY = "prepcore.web.subjectsCache.v1";
 const CHAPTER_CACHE_KEY = "prepcore.web.chapterCache.v1";
 const LEARN_SESSION_KEY = "prepcore.web.learnSession.v1";
@@ -76,6 +77,19 @@ const slugify = (value) =>
 export function buildChapterFilePath(chapterTitle) {
     const base = slugify(chapterTitle || "chapter");
     return `chapters/${base}.json`;
+}
+
+export async function loadNotesForSubject(subjectId) {
+    if (!subjectId) return null;
+    const path = `${NOTES_PATH}/${subjectId}.md`;
+    try {
+        const res = await fetch(path, { cache: "no-store" });
+        if (!res.ok) return null;
+        const text = await res.text();
+        return text;
+    } catch {
+        return null;
+    }
 }
 
 const safeParse = (raw, fallback) => {
@@ -798,6 +812,8 @@ function coerceStoredSubject(entry, position, chapterLookup = {}) {
         .map((chapter, index) => coerceChapter(chapter, index + 1, chapterLookup))
         .filter(Boolean);
 
+    const notesPath = typeof entry.notesPath === "string" && text(entry.notesPath) ? text(entry.notesPath) : "";
+
     return {
         id: text(entry.id) || slugify(name),
         name,
@@ -805,6 +821,7 @@ function coerceStoredSubject(entry, position, chapterLookup = {}) {
         schemaVersion: Number(entry.schemaVersion || entry.schema_version || 1),
         selectedChapter: text(entry.selectedChapter || entry.selected_chapter || chapters[0]?.title || ""),
         chapters,
+        notesPath,
         updatedAt: text(entry.updatedAt || entry.updated_at || new Date().toISOString())
     };
 }
@@ -924,6 +941,10 @@ export async function loadSubjects() {
     }
 }
 
+export function slugForSubject(subject) {
+    return text(subject.id || slugify(subject.name));
+}
+
 export function saveSubjects(subjects) {
     return normalizeSubjectCollection(subjects);
 }
@@ -933,6 +954,7 @@ export function serializeSubjects(subjects) {
     const chapterData = {};
     const exportSubjects = normalizedSubjects.map((subject) => ({
         ...subject,
+        ...(subject.notesPath ? { notesPath: subject.notesPath } : {}),
         chapters: subject.chapters.map((chapter) => {
             const file = chapter.file || `chapters/${slugify(chapter.title || "chapter")}.json`;
             chapterData[file] = {
@@ -963,6 +985,10 @@ export function getChapterByTitle(subject, chapterTitle) {
         return null;
     }
     return subject.chapters.find((chapter) => chapter.title === chapterTitle) || subject.chapters[0] || null;
+}
+
+export function textValue(value) {
+    return String(value ?? "").trim();
 }
 
 export function tallyQuestionCount(subject) {
@@ -1387,11 +1413,25 @@ export function syncSelection(subjectId, chapterTitle, mode) {
 }
 
 export function setAdminUnlocked() {
-    sessionSet(ADMIN_UNLOCK_KEY, true);
+    // Prefer session storage, but also write to local storage as a fallback
+    try {
+        sessionSet(ADMIN_UNLOCK_KEY, true);
+    } catch (_) {}
+    try {
+        storageSet(ADMIN_UNLOCK_KEY, true);
+    } catch (_) {}
 }
 
 export function isAdminUnlocked() {
-    return sessionGet(ADMIN_UNLOCK_KEY, false);
+    try {
+        const sessionVal = sessionGet(ADMIN_UNLOCK_KEY, null);
+        if (sessionVal) return true;
+    } catch (_) {}
+    try {
+        return Boolean(storageGet(ADMIN_UNLOCK_KEY, false));
+    } catch (_) {
+        return false;
+    }
 }
 
 export function parseUploadedFile(file) {
@@ -1413,11 +1453,6 @@ export async function previewQuizFile(file, subjectOverride = "") {
     const raw = await parseUploadedFile(file);
     return normalizeQuizPayload(raw, subjectOverride);
 }
-
-export function textValue(value) {
-    return text(value);
-}
-
 function capitalize(value) {
     const raw = text(value);
     return raw ? `${raw.charAt(0).toUpperCase()}${raw.slice(1)}` : "";
@@ -1567,6 +1602,200 @@ function renderChapterStrip(subject, activeChapterTitle, strip, selectChapter) {
         }
         chip.addEventListener("click", () => selectChapter(chapter.title));
         strip.appendChild(chip);
+    });
+}
+
+function resolveSubjectNotesPath(subject) {
+    if (!subject || typeof subject !== "object") {
+        return null;
+    }
+    const trimmed = text(subject.notesPath);
+    if (trimmed) {
+        return trimmed;
+    }
+    if (!subject.id) {
+        return null;
+    }
+    return `${NOTES_PATH}/${subject.id}.md`;
+}
+
+async function loadSubjectMarkdown(subject) {
+    const path = resolveSubjectNotesPath(subject);
+    if (!path) {
+        return null;
+    }
+    try {
+        const response = await fetch(path, { cache: "no-store" });
+        if (!response.ok) {
+            return null;
+        }
+        return await response.text();
+    } catch {
+        return null;
+    }
+}
+
+function simpleMarkdownToHtml(md) {
+    const lines = String(md || "").split(/\r?\n/);
+    const out = [];
+
+    const renderInline = (text) => {
+        return String(text || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+            .replace(/`([^`]+)`/g, '<code>$1</code>')
+            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+            .replace(/__(.+?)__/g, '<strong>$1</strong>')
+            .replace(/\*(.+?)\*/g, '<em>$1</em>')
+            .replace(/_(.+?)_/g, '<em>$1</em>');
+    };
+
+    const parseTableRow = (row) => {
+        return row
+            .replace(/^(\||\s*)/, "")
+            .replace(/(\||\s*)$/, "")
+            .split("|")
+            .map((cell) => cell.trim());
+    };
+
+    const parseAlignment = (cell) => {
+        const trimmed = cell.trim();
+        if (/^:\s*-+\s*:$/.test(trimmed)) return "center";
+        if (/^:\s*-+\s*$/.test(trimmed)) return "left";
+        if (/^\s*-+\s*:$/.test(trimmed)) return "right";
+        return null;
+    };
+
+    const renderTableHtml = (headerCells, alignments, rows) => {
+        const ths = headerCells.map((cell, index) => {
+            const align = alignments[index];
+            const attrs = align ? ` align="${align}"` : "";
+            return `<th${attrs}>${renderInline(cell)}</th>`;
+        }).join("");
+
+        const tbody = rows.map((row) => {
+            const cells = row.map((cell, index) => {
+                const align = alignments[index];
+                const attrs = align ? ` align="${align}"` : "";
+                return `<td${attrs}>${renderInline(cell)}</td>`;
+            }).join("");
+            return `<tr>${cells}</tr>`;
+        }).join("\n");
+
+        return `<table><thead><tr>${ths}</tr></thead><tbody>${tbody}</tbody></table>`;
+    };
+
+    let index = 0;
+    while (index < lines.length) {
+        let line = lines[index];
+        const nextLine = lines[index + 1] || "";
+        const isTableHeader = /^\s*\|?[^|\n]+\|.+$/.test(line);
+        const isTableDivider = /^\s*\|?\s*[:\- ]+\s*(\|\s*[:\- ]+\s*)+\|?\s*$/.test(nextLine);
+
+        if (isTableHeader && isTableDivider) {
+            const headerCells = parseTableRow(line);
+            const alignCells = parseTableRow(nextLine).map(parseAlignment);
+            const rows = [];
+            index += 2;
+            while (index < lines.length && /^\s*\|?.+\|.*$/.test(lines[index]) && lines[index].trim() !== "") {
+                rows.push(parseTableRow(lines[index]));
+                index += 1;
+            }
+            out.push(renderTableHtml(headerCells, alignCells, rows));
+            continue;
+        }
+
+        line = line.trim();
+        if (/^(-{3,}|\*{3,}|_{3,})$/.test(line)) {
+            out.push("<hr>");
+        } else {
+            line = renderInline(line);
+            if (/^#{1}\s+(.*)/.test(line)) {
+                out.push(`<h1>${line.replace(/^#{1}\s+/, "")}</h1>`);
+            } else if (/^#{2}\s+(.*)/.test(line)) {
+                out.push(`<h2>${line.replace(/^#{2}\s+/, "")}</h2>`);
+            } else if (/^#{3}\s+(.*)/.test(line)) {
+                out.push(`<h3>${line.replace(/^#{3}\s+/, "")}</h3>`);
+            } else if (/^\*\s+/.test(line)) {
+                out.push(`<li>${line.replace(/^\*\s+/, "")}</li>`);
+            } else if (line === "") {
+                out.push(`<p></p>`);
+            } else {
+                out.push(`<p>${line}</p>`);
+            }
+        }
+        index += 1;
+    }
+
+    const html = out.join("\n").replace(/(<li>.*?<\/li>)(\s*<li>.*?<\/li>)+/gs, (match) => `<ul>${match}</ul>`);
+    return html;
+}
+
+function renderNoteStage(stage, subject, chapter, session) {
+    stage.replaceChildren();
+
+    if (!subject) {
+        const empty = document.createElement("div");
+        empty.className = "empty-state";
+        empty.append(
+            Object.assign(document.createElement("h4"), { textContent: "No subject selected." }),
+            Object.assign(document.createElement("p"), { textContent: "Select a subject to view notes." })
+        );
+        stage.appendChild(empty);
+        return;
+    }
+
+    const notesContainer = document.createElement("article");
+    notesContainer.className = "notes-view";
+    stage.appendChild(notesContainer);
+
+    loadSubjectMarkdown(subject).then((markdown) => {
+        notesContainer.replaceChildren();
+        if (!markdown) {
+            const empty = document.createElement("div");
+            empty.className = "empty-state";
+            empty.append(
+                Object.assign(document.createElement("h4"), { textContent: "No notes available." }),
+                Object.assign(document.createElement("p"), { textContent: "There are no notes attached to this subject yet." })
+            );
+            notesContainer.appendChild(empty);
+            return;
+        }
+
+        notesContainer.innerHTML = simpleMarkdownToHtml(markdown);
+        try {
+            renderMath(notesContainer);
+        } catch (_error) {
+            // ignore math render failures
+        }
+
+        if (chapter && chapter.title) {
+            const headingText = chapter.title.trim();
+            const heading = Array.from(notesContainer.querySelectorAll("h1, h2, h3, h4, h5, h6")).find((el) => el.textContent.trim() === headingText);
+            if (heading) {
+                heading.scrollIntoView({ behavior: "smooth", block: "start" });
+                heading.classList.add("highlight-target");
+            } else {
+                const notice = document.createElement("div");
+                notice.className = "empty-state compact";
+                notice.append(
+                    Object.assign(document.createElement("h4"), { textContent: "Chapter heading not found." }),
+                    Object.assign(document.createElement("p"), { textContent: "The notes file was loaded, but the current chapter heading was not found in the markdown." })
+                );
+                stage.insertBefore(notice, notesContainer);
+            }
+        }
+    }).catch(() => {
+        notesContainer.replaceChildren();
+        const empty = document.createElement("div");
+        empty.className = "empty-state";
+        empty.append(
+            Object.assign(document.createElement("h4"), { textContent: "Unable to load notes." }),
+            Object.assign(document.createElement("p"), { textContent: "Try again or check that the notes file exists in markdowns/." })
+        );
+        notesContainer.appendChild(empty);
     });
 }
 
@@ -2305,6 +2534,11 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
     if (session && !Array.isArray(session.unsureFlags)) {
         session.unsureFlags = session.questions.map(() => false);
+    }
+
+    if (session?.mode === "note") {
+        renderNoteStage(stage, subject, chapter, session);
+        return;
     }
 
     if (!subject || !chapter || !session) {
@@ -3240,7 +3474,8 @@ export async function initHomePage() {
         quiz: "quiz.html",
         learn: "learn.html",
         flashcards: "flashcards.html",
-        exam: "exam.html"
+        exam: "exam.html",
+        note: "note.html"
     };
 
     const elements = {
@@ -3644,7 +3879,8 @@ export async function initModePage(mode) {
         quiz: "quiz.html",
         learn: "learn.html",
         flashcards: "flashcards.html",
-        exam: "exam.html"
+        exam: "exam.html",
+        note: "note.html"
     };
 
     const elements = {

@@ -805,6 +805,9 @@
 
         if (session.mode === "flashcards") {
             renderFlashcardsMode(answerArea, question, session);
+        } else if (session.mode === "note") {
+            // In note mode, render a placeholder that links to the notes viewer
+            renderNoteMode(answerArea, question, session);
         } else if (question.questionType === "numeric") {
             renderNumericMode(answerArea, question, session);
         } else {
@@ -957,6 +960,106 @@
 
         card.append(face, explanation, controls);
         answerArea.appendChild(card);
+    }
+
+    async function renderNoteMode(answerArea, question, session) {
+        answerArea.replaceChildren();
+        const subject = getSubjectById(state.activeSubjectId);
+        if (!subject) {
+            answerArea.appendChild(Object.assign(document.createElement("p"), { textContent: "No subject loaded." }));
+            return;
+        }
+        // Provide a button to open notes viewer and scroll to chapter
+        const openNotes = document.createElement("button");
+        openNotes.type = "button";
+        openNotes.className = "primary-button";
+        openNotes.textContent = "Open notes for this chapter";
+        openNotes.addEventListener("click", () => {
+            renderNoteView();
+        });
+        answerArea.appendChild(openNotes);
+    }
+
+    async function renderNoteView() {
+        const container = document.getElementById("question-stage");
+        if (!container) return;
+        container.replaceChildren();
+        const subject = getSubjectById(state.activeSubjectId);
+        if (!subject) {
+            container.appendChild(Object.assign(document.createElement("div"), { className: "empty-state", textContent: "No subject selected." }));
+            return;
+        }
+        const md = await loadSubjectMarkdown(subject);
+        if (!md) {
+            const empty = document.createElement("div");
+            empty.className = "empty-state";
+            const h = document.createElement("h4");
+            h.textContent = "No notes available";
+            const p = document.createElement("p");
+            p.textContent = "There are no notes attached to this subject yet.";
+            empty.append(h, p);
+            container.appendChild(empty);
+            return;
+        }
+
+        const wrapper = document.createElement("article");
+        wrapper.className = "notes-view";
+        // simple markdown to HTML: only headings and paragraphs and links
+        const html = simpleMarkdownToHtml(md);
+        wrapper.innerHTML = html;
+        container.appendChild(wrapper);
+
+        // Scroll to chapter heading if exists (## Chapter Title)
+        const chapterHeading = Array.from(wrapper.querySelectorAll("h2,h3,h4")).find((el) => el.textContent.trim() === state.activeChapterTitle);
+        if (chapterHeading) {
+            chapterHeading.scrollIntoView({ behavior: "smooth", block: "start" });
+            chapterHeading.classList.add("highlight-target");
+        } else {
+            // show notice if chapter not found
+            const notice = document.createElement("div");
+            notice.className = "empty-state compact";
+            notice.append(Object.assign(document.createElement("h4"), { textContent: "No notes for this chapter" }), Object.assign(document.createElement("p"), { textContent: "The chapter heading was not found in the notes markdown." }));
+            container.insertBefore(notice, wrapper);
+        }
+    }
+
+    async function loadSubjectMarkdown(subject) {
+        try {
+            const id = subject.id || slugify(subject.name);
+            const path = `markdowns/${id}.md`;
+            const res = await fetch(path, { cache: "no-store" });
+            if (!res.ok) return null;
+            return await res.text();
+        } catch {
+            return null;
+        }
+    }
+
+    function simpleMarkdownToHtml(md) {
+        // Very small renderer: convert ## headings to <h2>, # to h1, and paragraphs, links
+        const lines = md.split(/\r?\n/);
+        const out = [];
+        for (let line of lines) {
+            line = line.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            if (/^#{1}\s+(.*)/.test(line)) {
+                out.push(`<h1>${line.replace(/^#{1}\s+/, "")}</h1>`);
+            } else if (/^#{2}\s+(.*)/.test(line)) {
+                out.push(`<h2>${line.replace(/^#{2}\s+/, "")}</h2>`);
+            } else if (/^#{3}\s+(.*)/.test(line)) {
+                out.push(`<h3>${line.replace(/^#{3}\s+/, "")}</h3>`);
+            } else if (/^\*\s+/.test(line)) {
+                out.push(`<li>${line.replace(/^\*\s+/, "")}</li>`);
+            } else if (line.trim() === "") {
+                out.push(`<p></p>`);
+            } else {
+                // simple link replacement [text](url)
+                const withLinks = line.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+                out.push(`<p>${withLinks}</p>`);
+            }
+        }
+        // wrap consecutive <li> into <ul>
+        const html = out.join("\n").replace(/(<li>.*?<\/li>)(\s*<li>.*?<\/li>)+/gs, (match) => `<ul>${match}</ul>`);
+        return html;
     }
 
     function buildFeedbackCardLegacy(question, isCorrect, userAnswer) {
@@ -1198,6 +1301,11 @@
         state.activeChapterTitle = chapter.title;
         storageSet(ACTIVE_CHAPTER_KEY, chapter.title);
         renderChapterStrip();
+        // If we're in note mode, directly render notes and scroll to chapter
+        if (state.mode === "note") {
+            renderNoteView();
+            return;
+        }
         startSession(state.mode);
     }
 

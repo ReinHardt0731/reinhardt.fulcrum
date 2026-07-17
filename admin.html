@@ -130,6 +130,40 @@
                             <div class="summary-pill" id="chapter-upload-status">Waiting for a file</div>
                         </div>
 
+                        <div class="mode-header">
+                            <div>
+                                <p class="section-label">Subject notes</p>
+                                <h3>Attach a Markdown notes file</h3>
+                            </div>
+                            <div class="summary-pill" id="notes-upload-status">No notes</div>
+                        </div>
+
+                        <form id="notes-upload-form" class="admin-form">
+                            <label>
+                                <span class="section-label">Notes Markdown file</span>
+                                <input id="notes-file-input" type="file" accept=".md,text/markdown" required>
+                            </label>
+                            <div class="admin-actions">
+                                <button class="ghost-button" id="notes-preview-button" type="button">Preview notes</button>
+                                <button class="primary-button" id="notes-upload-button" type="submit">Attach notes to subject</button>
+                            </div>
+                        </form>
+
+                        <section class="panel admin-preview-panel">
+                            <div class="mode-header">
+                                <div>
+                                    <p class="section-label">Notes preview</p>
+                                    <h3>Markdown preview</h3>
+                                </div>
+                            </div>
+                            <div id="notes-preview-content" class="preview-content">
+                                <div class="empty-state compact">
+                                    <h4>No notes previewed yet</h4>
+                                    <p>Choose a Markdown file to preview before attaching it to the selected subject.</p>
+                                </div>
+                            </div>
+                        </section>
+
                         <form id="chapter-import-form" class="admin-form">
                             <label>
                                 <span class="section-label">Chapter name</span>

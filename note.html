@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VYM342W34Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VYM342W34Z');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepCore Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="vendor/katex/katex.min.css">
+    <script>
+    (function(){
+        const cdnBase = 'https://cdn.jsdelivr.net/npm/katex@0.16.4/';
+        function loadScript(src, onload){const s=document.createElement('script');s.src=src;s.onload=onload;s.onerror=onload;document.head.appendChild(s);} 
+        function loadCSS(href){const l=document.createElement('link');l.rel='stylesheet';l.href=href;document.head.appendChild(l);} 
+        loadCSS(cdnBase+'dist/katex.min.css');
+        loadScript(cdnBase+'dist/katex.min.js', function(){ loadScript(cdnBase+'contrib/auto-render.min.js', function(){}); });
+    })();
+    </script>
+</head>
+<body class="mode-page">
+    <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+
+    <div class="app-shell">
+        <aside class="drawer panel" id="subject-drawer" aria-label="Subjects">
+            <div class="drawer-header">
+                <div>
+                    <p class="eyebrow">Subject drawer</p>
+                    <h1>Notes</h1>
+                </div>
+                <button class="icon-button drawer-close" id="drawer-close" type="button" aria-label="Close subject drawer">&times;</button>
+            </div>
+
+            <label class="drawer-fallback">
+                <span class="section-label">Choose subject</span>
+                <select id="subject-select" class="subject-select"></select>
+            </label>
+
+            <div id="subject-list" class="subject-list"></div>
+        </aside>
+
+        <main class="workspace">
+            <section class="hero-panel mode-topbar">
+                <div class="hero-copy">
+                    <p class="eyebrow">Notes mode</p>
+                    <div class="mode-topbar-row">
+                        <h2 id="subject-title">Upload a quiz to begin</h2>
+                        <div class="hero-actions mode-actions" aria-label="Quick actions">
+                            <button class="icon-button mobile-only" id="drawer-open" type="button" aria-label="Open subjects">&#9776;</button>
+                            <button class="icon-button" id="refresh-button" type="button" aria-label="Refresh page">&#8635;</button>
+                            <a class="icon-button" href="index.html" aria-label="Home">&#8962;</a>
+                        </div>
+                    </div>
+                    <p id="subject-meta" class="hero-meta">
+                        This GitHub Pages version loads subjects from the repository-backed subjects.json file.
+                    </p>
+                </div>
+            </section>
+
+            <div class="mode-buttons mode-switch-row" role="tablist" aria-label="Study mode selector">
+                <button class="mode-button" type="button" data-mode="quiz">Quiz</button>
+                <button class="mode-button" type="button" data-mode="learn">Learn mode</button>
+                <button class="mode-button" type="button" data-mode="flashcards">Flashcards</button>
+                <button class="mode-button" type="button" data-mode="exam">Exam</button>
+                <button class="mode-button is-active" type="button" data-mode="note">Notes</button>
+            </div>
+
+            <section class="panel quiz-panel" aria-live="polite">
+                <div class="quiz-panel-header">
+                    <div>
+                                <p class="section-label" id="mode-label">Notes mode</p>
+                    </div>
+                    <div class="progress-track" aria-hidden="true">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div id="question-stage" class="question-stage">
+                    <div class="empty-state">
+                        <h4>No subject loaded yet</h4>
+                        <p>Use the hidden admin page to add a quiz, then choose a subject to view notes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel assessment-panel" id="assessment-panel">
+                <div class="assessment-header">
+                    <div>
+                        <p class="section-label">Notes</p>
+                        <h3>Your subject notes appear here.</h3>
+                    </div>
+                    <div class="summary-pill" id="assessment-score">Ready</div>
+                </div>
+                <div id="assessment-content" class="assessment-content">
+                    <div class="empty-state compact">
+                        <h4>Activate a subject to load notes</h4>
+                        <p>Select a subject from the drawer to view markdown notes.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="note.js"></script>
+    <script>
+    (function(){ if (!window.katex) { var s=document.createElement('script'); s.src='vendor/katex/katex.min.js'; document.head.appendChild(s);} if (!window.renderMathInElement) { var s2=document.createElement('script'); s2.src='vendor/katex/contrib/auto-render.min.js'; document.head.appendChild(s2);} })();
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        import('./shared.js').then((m) => m.renderMath(document.body));
+    });
+    </script>
+</body>
+</html>
