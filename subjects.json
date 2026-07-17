@@ -140,7 +140,8 @@
           "file": "chapters/ata-chapters.json"
         }
       ],
-      "updatedAt": "2026-07-17T05:28:21.783Z"
+      "notesPath": "markdowns/acrm.md",
+      "updatedAt": "2026-07-17T07:31:07.727Z"
     },
     {
       "id": "aerodynamics",
@@ -149,6 +150,7 @@
       "schemaVersion": 1,
       "selectedChapter": "",
       "chapters": [],
+      "notesPath": "",
       "updatedAt": "2026-07-05T18:39:04.494Z"
     },
     {
@@ -158,6 +160,7 @@
       "schemaVersion": 1,
       "selectedChapter": "",
       "chapters": [],
+      "notesPath": "",
       "updatedAt": "2026-07-09T04:53:16.490Z"
     },
     {
@@ -172,6 +175,7 @@
           "file": "chapters/pd-1570.json"
         }
       ],
+      "notesPath": "",
       "updatedAt": "2026-07-06T02:22:14.266Z"
     },
     {
@@ -186,6 +190,7 @@
           "file": "chapters/another-sample.json"
         }
       ],
+      "notesPath": "",
       "updatedAt": "2026-07-12T04:03:00.233Z"
     },
     {
@@ -195,6 +200,7 @@
       "schemaVersion": 1,
       "selectedChapter": "",
       "chapters": [],
+      "notesPath": "",
       "updatedAt": "2026-07-09T04:52:14.930Z"
     }
   ],

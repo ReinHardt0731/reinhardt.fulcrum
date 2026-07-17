@@ -1609,13 +1609,19 @@ function resolveSubjectNotesPath(subject) {
     if (!subject || typeof subject !== "object") {
         return null;
     }
+
     const trimmed = text(subject.notesPath);
     if (trimmed) {
-        return trimmed;
+        if (trimmed.includes("/") || trimmed.startsWith("./") || trimmed.startsWith("../")) {
+            return trimmed;
+        }
+        return `${NOTES_PATH}/${trimmed}`;
     }
+
     if (!subject.id) {
         return null;
     }
+
     return `${NOTES_PATH}/${subject.id}.md`;
 }
 
@@ -1624,6 +1630,7 @@ async function loadSubjectMarkdown(subject) {
     if (!path) {
         return null;
     }
+
     try {
         const response = await fetch(path, { cache: "no-store" });
         if (!response.ok) {

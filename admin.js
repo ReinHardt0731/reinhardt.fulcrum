@@ -753,12 +753,12 @@ document.addEventListener("DOMContentLoaded", async () => {
             const file = elements.notesFileInput?.files?.[0];
             if (!file) throw new Error("Choose a Markdown file first.");
             const md = await parseMarkdownFile(file);
-            // Mark subject locally as having notes
+            // Mark subject locally as having a static notes path
             const notesPath = `markdowns/${subject.id}.md`;
             const nextSubjects = state.subjects.map((s) => s.id === subject.id ? { ...s, notesPath, updatedAt: now() } : s);
             commitSubjects(nextSubjects, subject.id, state.activeChapterTitle);
-            // Persist notes to server via save-library API
-            const body = { subjects: saveSubjects(state.subjects), payload: serializeSubjects(state.subjects), notes: { [subject.id]: md } };
+            // Persist notes and static path to server via save-library API
+            const body = { subjects: saveSubjects(nextSubjects), payload: serializeSubjects(nextSubjects), notes: { [subject.id]: md } };
             try {
                 await fetch("/api/save-library", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
             } catch (err) {
