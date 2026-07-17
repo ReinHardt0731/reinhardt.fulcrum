@@ -1025,8 +1025,14 @@
 
     async function loadSubjectMarkdown(subject) {
         try {
-            const id = subject.id || slugify(subject.name);
-            const path = `markdowns/${id}.md`;
+            const notesPath = subject && typeof subject.notesPath === "string" && subject.notesPath.trim()
+                ? subject.notesPath.trim()
+                : "";
+            const path = notesPath
+                ? (notesPath.includes("/") || notesPath.startsWith("./") || notesPath.startsWith("../")
+                    ? notesPath
+                    : `markdowns/${notesPath}`)
+                : `markdowns/${(subject.id || slugify(subject.name)).trim()}.md`;
             const res = await fetch(path, { cache: "no-store" });
             if (!res.ok) return null;
             return await res.text();
