@@ -652,13 +652,47 @@ document.addEventListener("DOMContentLoaded", async () => {
         state.expandedSubjectId = state.activeSubjectId;
     };
 
+    const resolveNotesPath = (notesPath) => {
+        if (!notesPath || typeof notesPath !== "string") {
+            return null;
+        }
+        const trimmed = notesPath.trim();
+        if (!trimmed) {
+            return null;
+        }
+        return (trimmed.includes("/") || trimmed.startsWith("./") || trimmed.startsWith("../"))
+            ? trimmed
+            : `markdowns/${trimmed}`;
+    };
+
     const persistLibraryToServer = async (subjects) => {
         const payload = serializeSubjects(subjects);
+        const notes = {};
+
+        await Promise.all(subjects.map(async (subject) => {
+            const path = resolveNotesPath(subject.notesPath);
+            if (!path) {
+                return;
+            }
+            try {
+                const response = await fetch(path, { cache: "no-store" });
+                if (!response.ok) {
+                    return;
+                }
+                const text = await response.text();
+                if (text.trim()) {
+                    notes[subject.id] = text;
+                }
+            } catch {
+                // ignore missing note files
+            }
+        }));
+
         try {
             const response = await fetch("/api/save-library", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ subjects: saveSubjects(subjects), payload })
+                body: JSON.stringify({ subjects: saveSubjects(subjects), payload, notes })
             });
             if (!response.ok) {
                 throw new Error(`Save failed with HTTP ${response.status}`);
@@ -753,8 +787,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             const file = elements.notesFileInput?.files?.[0];
             if (!file) throw new Error("Choose a Markdown file first.");
             const md = await parseMarkdownFile(file);
-            // Mark subject locally as having a static notes path
-            const notesPath = `markdowns/${subject.id}.md`;
+            const fileName = file.name.trim() || `${subject.id}.md`;
+            const notesPath = fileName.toLowerCase().endsWith(".md") ? fileName : `${fileName}.md`;
             const nextSubjects = state.subjects.map((s) => s.id === subject.id ? { ...s, notesPath, updatedAt: now() } : s);
             commitSubjects(nextSubjects, subject.id, state.activeChapterTitle);
             // Persist notes and static path to server via save-library API
