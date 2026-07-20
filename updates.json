@@ -2,53 +2,53 @@
   "entries": [
     {
       "date": "2026-07-17",
-      "hash": "f201925",
-      "message": "ADDED: Note Mode"
+      "hash": "cc6584c",
+      "message": "FIXED: Note button on quiz mode"
     },
     {
-      "date": "2026-07-16",
-      "hash": "bd6780c",
-      "message": "Fixed: Update Card Log to Render Static update.json"
+      "date": "2026-07-17",
+      "hash": "bd1b323",
+      "message": "FIXED: Bug on buttons"
     },
     {
-      "date": "2026-07-16",
-      "hash": "b63387a",
-      "message": "Fixed : Update Card Log"
+      "date": "2026-07-17",
+      "hash": "c9e133a",
+      "message": " Fix : Another BUGGG"
     },
     {
-      "date": "2026-07-16",
-      "hash": "357d0e0",
-      "message": "Added : Update Card Log in Home Page"
+      "date": "2026-07-17",
+      "hash": "aec1a44",
+      "message": "Fixed: Problem on Subject path (1)"
     },
     {
-      "date": "2026-07-12",
-      "hash": "3b1fd45",
-      "message": "Redo the Aluminum Chapter"
+      "date": "2026-07-17",
+      "hash": "60bca65",
+      "message": "Fixed: Problem on Subject path"
     },
     {
-      "date": "2026-07-12",
-      "hash": "12995c1",
-      "message": "added: ATA chapters ; Improved Assesment ICON"
+      "date": "2026-07-17",
+      "hash": "fdd650c",
+      "message": " Fix: Bug on MD render"
     },
     {
-      "date": "2026-07-12",
-      "hash": "5db0f73",
-      "message": "Improved the Exam mode"
+      "date": "2026-07-17",
+      "hash": "fdb4964",
+      "message": "Minor Fix (1)"
     },
     {
-      "date": "2026-07-12",
-      "hash": "dcc8c89",
-      "message": "Fix: Include vendors in workflow"
+      "date": "2026-07-17",
+      "hash": "9699345",
+      "message": "Minor Fixes"
     },
     {
-      "date": "2026-07-12",
-      "hash": "9160841",
-      "message": "Added Katex Rendering for math equations"
+      "date": "2026-07-17",
+      "hash": "28d1ee3",
+      "message": " FIX : Markdown Render"
     },
     {
-      "date": "2026-07-11",
-      "hash": "d0e7361",
-      "message": "Added Chapters: Microstructures, Steel Alloys (Reworked)and designation"
+      "date": "2026-07-17",
+      "hash": "9667416",
+      "message": "ADDED: Markdowns"
     }
   ]
 }
