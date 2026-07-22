@@ -2,6 +2,26 @@
   "entries": [
     {
       "date": "2026-07-22",
+      "hash": "a3cbc1d",
+      "message": "FIXED: workflow to include mardowns"
+    },
+    {
+      "date": "2026-07-22",
+      "hash": "716855e",
+      "message": "EDITED: Subjects.json"
+    },
+    {
+      "date": "2026-07-22",
+      "hash": "378ac06",
+      "message": "Rename ACRM notes file to lowercase"
+    },
+    {
+      "date": "2026-07-22",
+      "hash": "043dfb7",
+      "message": "ADDED: Updates info"
+    },
+    {
+      "date": "2026-07-22",
       "hash": "0a6f63f",
       "message": "FIXED: Structures Chapter Indexing"
     },
@@ -29,26 +49,6 @@
       "date": "2026-07-17",
       "hash": "aec1a44",
       "message": "Fixed: Problem on Subject path (1)"
-    },
-    {
-      "date": "2026-07-17",
-      "hash": "60bca65",
-      "message": "Fixed: Problem on Subject path"
-    },
-    {
-      "date": "2026-07-17",
-      "hash": "fdd650c",
-      "message": " Fix: Bug on MD render"
-    },
-    {
-      "date": "2026-07-17",
-      "hash": "fdb4964",
-      "message": "Minor Fix (1)"
-    },
-    {
-      "date": "2026-07-17",
-      "hash": "9699345",
-      "message": "Minor Fixes"
     }
   ]
 }
