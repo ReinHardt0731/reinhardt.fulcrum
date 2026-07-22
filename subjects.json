@@ -158,15 +158,15 @@
       "name": "AIRCRAFT STRUCTURE AND DESIGN",
       "quizType": "short_quiz",
       "schemaVersion": 1,
-      "selectedChapter": "Structures | Fundamentals",
+      "selectedChapter": "Structures | Fundamentals 2",
       "chapters": [
         {
           "title": "Structures | Fundamentals",
-          "file": "chapters/structures-fundamentals.json"
+          "file": "chapters/structures-fundamentals-2.json"
         }
       ],
       "notesPath": "",
-      "updatedAt": "2026-07-20T11:21:22.026Z"
+      "updatedAt": "2026-07-22T03:45:17.937Z"
     },
     {
       "id": "airlaw",
@@ -27558,7 +27558,7 @@
         }
       ]
     },
-    "chapters/structures-fundamentals.json": {
+    "chapters/structures-fundamentals-2.json": {
       "title": "Structures | Fundamentals",
       "questions": [
         {
@@ -27566,9 +27566,9 @@
           "questionType": "multiple_choice",
           "choices": [
             "A deformable solid body capable of carrying loads and transmitting them to other parts of the body",
+            "A group of flight control components connected by cables and pulleys",
             "A collection of aerodynamic surfaces used to generate lift",
-            "A mechanism that distributes engine thrust throughout the airframe",
-            "A group of flight control components connected by cables and pulleys"
+            "A mechanism that distributes engine thrust throughout the airframe"
           ],
           "answerIndex": 0,
           "answerText": "A deformable solid body capable of carrying loads and transmitting them to other parts of the body",
@@ -27584,12 +27584,12 @@
           "question": "Which structural element is classified as a one-dimensional member capable of carrying bending, shear, torsion, and axial loads?",
           "questionType": "multiple_choice",
           "choices": [
+            "Membrane",
             "Bar element",
-            "Plate element",
             "Shell element",
-            "Membrane"
+            "Plate element"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "Bar element",
           "explanation": "Bar elements are one-dimensional structural members capable of carrying bending, shear, torsion, axial loads, or a combination of these loads.\n\nDifferentiate Similar Concepts:\n• Bar → One-dimensional.\n• Plate → Two-dimensional.\n• Shell → Curved plate.\n\n💡 Memory Hook:\nBar = Beam.\n\n🎯 Board Tip:\nWhenever 'one-dimensional structural member' appears, immediately think Bar Element.",
           "tags": [
@@ -27603,12 +27603,12 @@
           "question": "What type of structural element is considered a two-dimensional extension of a bar element?",
           "questionType": "multiple_choice",
           "choices": [
+            "Frame",
             "Plate element",
             "Shell element",
-            "Truss",
-            "Frame"
+            "Truss"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "Plate element",
           "explanation": "Plate elements are two-dimensional extensions of bar elements and are commonly used where loads are distributed over an area.\n\nDifferentiate Similar Concepts:\n• Plate → Flat, two-dimensional.\n• Shell → Curved plate.\n• Bar → One-dimensional.\n\n💡 Memory Hook:\nPlate = Flat Surface.\n\n🎯 Board Tip:\nA shell is simply a curved plate, so don't confuse the two.",
           "tags": [
@@ -27622,12 +27622,12 @@
           "question": "Curved plate elements that occupy space, such as fuselages and pressure vessels, are known as:",
           "questionType": "multiple_choice",
           "choices": [
-            "Shell elements",
-            "Plate elements",
             "Bar elements",
-            "Membranes"
+            "Shell elements",
+            "Membranes",
+            "Plate elements"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "Shell elements",
           "explanation": "Shell elements are curved plates that occupy space. Aircraft fuselages are classic examples because they resist loads while enclosing volume.\n\nDifferentiate Similar Concepts:\n• Plate → Flat.\n• Shell → Curved.\n\n💡 Memory Hook:\nShell Surrounds Space.\n\n🎯 Board Tip:\nWhenever the stem mentions fuselage or pressure vessel, shell element is often the answer.",
           "tags": [
@@ -27641,12 +27641,12 @@
           "question": "Loads produced by direct surface contact, such as aerodynamic pressure, are classified as:",
           "questionType": "multiple_choice",
           "choices": [
-            "Surface loads",
-            "Body loads",
             "Thermal loads",
-            "Dynamic loads"
+            "Body loads",
+            "Dynamic loads",
+            "Surface loads"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "answerText": "Surface loads",
           "explanation": "Surface loads result from direct contact with a surface, such as aerodynamic pressure acting on a wing skin.\n\nDifferentiate Similar Concepts:\n• Surface Load → Acts on an area.\n• Body Load → Acts throughout the volume.\n\n💡 Memory Hook:\nSurface Touches Surface.\n\n🎯 Board Tip:\nAerodynamic pressure almost always indicates a surface load.",
           "tags": [
@@ -27661,8 +27661,8 @@
           "questionType": "multiple_choice",
           "choices": [
             "Body loads",
-            "Surface loads",
             "Thermal loads",
+            "Surface loads",
             "Concentrated loads"
           ],
           "answerIndex": 0,
@@ -27679,12 +27679,12 @@
           "question": "Which type of load changes with time?",
           "questionType": "multiple_choice",
           "choices": [
-            "Dynamic load",
             "Static load",
-            "Surface load",
-            "Body load"
+            "Body load",
+            "Dynamic load",
+            "Surface load"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "answerText": "Dynamic load",
           "explanation": "Dynamic loads vary with time and include loads caused by gusts, impacts, and vibrations.\n\nDifferentiate Similar Concepts:\n• Dynamic → Time-dependent.\n• Static → Time-independent.\n\n💡 Memory Hook:\nDynamic = Changing.\n\n🎯 Board Tip:\nIf the question mentions vibration, impact, or gusts, think dynamic load.",
           "tags": [
@@ -27698,12 +27698,12 @@
           "question": "Loads that remain essentially constant with time are known as:",
           "questionType": "multiple_choice",
           "choices": [
+            "Body loads",
             "Static loads",
             "Dynamic loads",
-            "Body loads",
             "Thermal loads"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "Static loads",
           "explanation": "Static loads do not vary with time and are treated as constant during analysis.\n\nDifferentiate Similar Concepts:\n• Static → Constant.\n• Dynamic → Variable.\n\n💡 Memory Hook:\nStatic = Still.\n\n🎯 Board Tip:\nPRC often contrasts static and dynamic loads in consecutive questions.",
           "tags": [
@@ -27717,12 +27717,12 @@
           "question": "Temperature changes that produce stresses in restrained structures create what type of load?",
           "questionType": "multiple_choice",
           "choices": [
-            "Thermal load",
             "Surface load",
             "Body load",
+            "Thermal load",
             "Axial load"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "answerText": "Thermal load",
           "explanation": "Thermal loads result from temperature changes that cause expansion or contraction in restrained structures.\n\nDifferentiate Similar Concepts:\n• Thermal → Temperature.\n• Dynamic → Time variation.\n\n💡 Memory Hook:\nHeat = Thermal.\n\n🎯 Board Tip:\nThermal loads exist only when expansion or contraction is restrained.",
           "tags": [
@@ -27736,12 +27736,12 @@
           "question": "A force acting perpendicular (normal) to the plane of a cut is called:",
           "questionType": "multiple_choice",
           "choices": [
-            "Axial load",
-            "Shear load",
             "Torque",
-            "Bending moment"
+            "Axial load",
+            "Bending moment",
+            "Shear load"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "Axial load",
           "explanation": "An axial load acts normal to the plane of the cut and produces either tension or compression.\n\nDifferentiate Similar Concepts:\n• Axial → Normal to the section.\n• Shear → Parallel to the section.\n\n💡 Memory Hook:\nAxis = Axial.\n\n🎯 Board Tip:\nNormal to the cut is one of the PRC's favorite wording patterns.",
           "tags": [
@@ -27755,12 +27755,12 @@
           "question": "Which internal load acts parallel to the plane of a cut?",
           "questionType": "multiple_choice",
           "choices": [
-            "Shear load",
             "Axial load",
             "Torque",
-            "Bending moment"
+            "Bending moment",
+            "Shear load"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "answerText": "Shear load",
           "explanation": "A shear load acts parallel to the plane of a cut and tends to cause adjacent portions of a material to slide past one another.\n\nDifferentiate Similar Concepts:\n• Axial Load → Normal to the cut.\n• Shear Load → Parallel to the cut.\n• Torque → Twisting action.\n• Bending Moment → Causes bending.\n\n💡 Memory Hook:\nShears Slide.\n\n🎯 Board Tip:\nIf the question uses the phrase 'parallel to the plane of the cut,' the answer is almost always Shear Load.",
           "tags": [
@@ -27774,12 +27774,12 @@
           "question": "Which internal action causes a structural member to twist about its longitudinal axis?",
           "questionType": "multiple_choice",
           "choices": [
-            "Torque",
-            "Axial load",
             "Shear load",
-            "Bending moment"
+            "Torque",
+            "Bending moment",
+            "Axial load"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "Torque",
           "explanation": "Torque is the twisting action produced by a moment acting about the longitudinal axis of a member.\n\nDifferentiate Similar Concepts:\n• Torque → Twisting.\n• Bending Moment → Bending.\n\n💡 Memory Hook:\nTorque = Twist.\n\n🎯 Board Tip:\nWhenever the stem mentions twisting or torsion, think Torque.",
           "tags": [
@@ -27793,12 +27793,12 @@
           "question": "Which internal action is primarily responsible for bending a structural member?",
           "questionType": "multiple_choice",
           "choices": [
-            "Bending moment",
             "Torque",
-            "Shear load",
-            "Axial load"
+            "Bending moment",
+            "Axial load",
+            "Shear load"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "Bending moment",
           "explanation": "A bending moment is an internal action that causes a member to curve or bend due to applied loads.\n\nDifferentiate Similar Concepts:\n• Bending Moment → Curves the member.\n• Torque → Twists the member.\n\n💡 Memory Hook:\nMoment Makes Members Bend.\n\n🎯 Board Tip:\nDon't confuse bending moment with torque—they are different internal actions.",
           "tags": [
@@ -27812,12 +27812,12 @@
           "question": "A structure whose support reactions and internal forces can be determined using only the equations of static equilibrium is called:",
           "questionType": "multiple_choice",
           "choices": [
-            "Statically determinate structure",
-            "Statically indeterminate structure",
+            "Redundant frame",
             "Semi-monocoque structure",
-            "Redundant frame"
+            "Statically determinate structure",
+            "Statically indeterminate structure"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "answerText": "Statically determinate structure",
           "explanation": "A statically determinate structure can be completely analyzed using only the equations of equilibrium.\n\nDifferentiate Similar Concepts:\n• Determinate → Equilibrium equations only.\n• Indeterminate → Requires compatibility equations.\n\n💡 Memory Hook:\nDetermine = Direct Solution.\n\n🎯 Board Tip:\nIf equilibrium equations alone are sufficient, the structure is statically determinate.",
           "tags": [
@@ -27832,9 +27832,9 @@
           "questionType": "multiple_choice",
           "choices": [
             "Redundant structure",
-            "Primary structure",
             "Monocoque structure",
-            "Determinate truss"
+            "Determinate truss",
+            "Primary structure"
           ],
           "answerIndex": 0,
           "answerText": "Redundant structure",
@@ -27850,12 +27850,12 @@
           "question": "The maximum anticipated load expected during the service life of an aircraft is called the:",
           "questionType": "multiple_choice",
           "choices": [
-            "Limit load",
             "Ultimate load",
-            "Proof load",
-            "Yield load"
+            "Yield load",
+            "Limit load",
+            "Proof load"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "answerText": "Limit load",
           "explanation": "The limit load is the maximum load expected during normal service. Structures must withstand this load without permanent deformation.\n\nDifferentiate Similar Concepts:\n• Limit Load → Maximum expected operational load.\n• Ultimate Load → Limit Load × Factor of Safety.\n\n💡 Memory Hook:\nLimit = Lifetime Operating Load.\n\n🎯 Board Tip:\nLimit load is NOT the failure load.",
           "tags": [
@@ -27869,12 +27869,12 @@
           "question": "The design load obtained by multiplying the limit load by the factor of safety is known as the:",
           "questionType": "multiple_choice",
           "choices": [
-            "Ultimate load",
             "Applied load",
-            "Dynamic load",
-            "Critical load"
+            "Ultimate load",
+            "Critical load",
+            "Dynamic load"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "Ultimate load",
           "explanation": "Ultimate load represents the maximum load the structure is designed to withstand before failure and equals the limit load multiplied by the factor of safety.\n\nDifferentiate Similar Concepts:\n• Limit Load → Expected service load.\n• Ultimate Load → Design load.\n\n💡 Memory Hook:\nUltimate = Limit × Safety.\n\n🎯 Board Tip:\nRemember the formula: Ultimate Load = Limit Load × FS.",
           "tags": [
@@ -27889,9 +27889,9 @@
           "questionType": "multiple_choice",
           "choices": [
             "Factor of Safety",
+            "Stress Ratio",
             "Load Factor",
-            "Safety Margin",
-            "Stress Ratio"
+            "Safety Margin"
           ],
           "answerIndex": 0,
           "answerText": "Factor of Safety",
@@ -27908,8 +27908,8 @@
           "questionType": "multiple_choice",
           "choices": [
             "Limit load factor",
-            "Dynamic load factor",
             "Gust load factor",
+            "Dynamic load factor",
             "Proof load factor"
           ],
           "answerIndex": 0,
@@ -27926,12 +27926,12 @@
           "question": "Which basic flight loading condition occurs during a pullout at the highest possible angle of attack?",
           "questionType": "multiple_choice",
           "choices": [
-            "Positive High Angle of Attack (PHAA)",
-            "Positive Low Angle of Attack (PLAA)",
             "Negative High Angle of Attack (NHAA)",
-            "Negative Low Angle of Attack (NLAA)"
+            "Negative Low Angle of Attack (NLAA)",
+            "Positive Low Angle of Attack (PLAA)",
+            "Positive High Angle of Attack (PHAA)"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "answerText": "Positive High Angle of Attack (PHAA)",
           "explanation": "The PHAA condition occurs during a pullout maneuver at the highest possible angle of attack and is one of the primary flight loading conditions considered during structural design.\n\nDifferentiate Similar Concepts:\n• PHAA → Pullout, highest positive angle of attack.\n• PLAA → Dive at maximum speed.\n• NHAA → Negative stall.\n• NLAA → Negative dive.\n\n💡 Memory Hook:\nPHAA = Pull High Angle.\n\n🎯 Board Tip:\nMemorize the four flight loading conditions exactly as presented in the reviewer because they are frequently tested as definitions.",
           "tags": [
@@ -27945,12 +27945,12 @@
           "question": "Which basic flight loading condition corresponds to the maximum indicated airspeed at which the airplane will dive while maintaining the required limit load?",
           "questionType": "multiple_choice",
           "choices": [
-            "Positive Low Angle of Attack (PLAA)",
-            "Positive High Angle of Attack (PHAA)",
             "Negative High Angle of Attack (NHAA)",
-            "Negative Low Angle of Attack (NLAA)"
+            "Positive High Angle of Attack (PHAA)",
+            "Negative Low Angle of Attack (NLAA)",
+            "Positive Low Angle of Attack (PLAA)"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "answerText": "Positive Low Angle of Attack (PLAA)",
           "explanation": "The Positive Low Angle of Attack (PLAA) condition occurs at the highest indicated airspeed where the wing develops the required limit load with the smallest positive angle of attack.\n\nDifferentiate Similar Concepts:\n• PHAA → Pullout, highest angle of attack.\n• PLAA → Dive, lowest positive angle of attack.\n\n💡 Memory Hook:\nPLAA = Positive, Low Angle, Airspeed.\n\n🎯 Board Tip:\nThe keyword 'maximum dive speed' is a strong clue for PLAA.",
           "tags": [
@@ -27965,9 +27965,9 @@
           "questionType": "multiple_choice",
           "choices": [
             "Negative High Angle of Attack (NHAA)",
-            "Positive High Angle of Attack (PHAA)",
             "Positive Low Angle of Attack (PLAA)",
-            "Negative Low Angle of Attack (NLAA)"
+            "Negative Low Angle of Attack (NLAA)",
+            "Positive High Angle of Attack (PHAA)"
           ],
           "answerIndex": 0,
           "answerText": "Negative High Angle of Attack (NHAA)",
@@ -27984,9 +27984,9 @@
           "questionType": "multiple_choice",
           "choices": [
             "Negative Low Angle of Attack (NLAA)",
+            "Positive High Angle of Attack (PHAA)",
             "Negative High Angle of Attack (NHAA)",
-            "Positive Low Angle of Attack (PLAA)",
-            "Positive High Angle of Attack (PHAA)"
+            "Positive Low Angle of Attack (PLAA)"
           ],
           "answerIndex": 0,
           "answerText": "Negative Low Angle of Attack (NLAA)",
@@ -28002,12 +28002,12 @@
           "question": "According to aircraft structural design principles, gust load factors are generally greater when the aircraft is at:",
           "questionType": "multiple_choice",
           "choices": [
-            "Minimum flying weight",
             "Maximum gross weight",
             "Maximum landing weight",
-            "Zero fuel weight"
+            "Zero fuel weight",
+            "Minimum flying weight"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "answerText": "Minimum flying weight",
           "explanation": "Aircraft experience greater gust load factors at minimum flying weight because lighter aircraft accelerate more readily in response to gusts.\n\nDifferentiate Similar Concepts:\n• Minimum Weight → Higher gust load factor.\n• Gross Weight → Lower gust load factor.\n\n💡 Memory Hook:\nLighter Aircraft, Larger Gust Response.\n\n🎯 Board Tip:\nThis is a favorite recall question because it seems counterintuitive.",
           "tags": [
@@ -28022,8 +28022,8 @@
           "questionType": "multiple_choice",
           "choices": [
             "A critical load-bearing structure whose failure prevents safe flight",
-            "A structure installed solely to improve appearance",
             "A removable structure used for maintenance access",
+            "A structure installed solely to improve appearance",
             "A structure that supports only electrical components"
           ],
           "answerIndex": 0,
@@ -28041,9 +28041,9 @@
           "questionType": "multiple_choice",
           "choices": [
             "Improve aerodynamic efficiency",
+            "Carry the aircraft landing loads",
             "Carry the main wing bending loads",
-            "Support the engine thrust loads",
-            "Carry the aircraft landing loads"
+            "Support the engine thrust loads"
           ],
           "answerIndex": 0,
           "answerText": "Improve aerodynamic efficiency",
@@ -28059,12 +28059,12 @@
           "question": "Which type of aircraft structure consists of a rigid framework made of members such as beams, struts, and bars?",
           "questionType": "multiple_choice",
           "choices": [
+            "Stressed-skin structure",
             "Truss structure",
             "Monocoque structure",
-            "Semi-monocoque structure",
-            "Stressed-skin structure"
+            "Semi-monocoque structure"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "Truss structure",
           "explanation": "A truss structure is composed of interconnected members arranged to efficiently resist applied loads through tension and compression.\n\nDifferentiate Similar Concepts:\n• Truss → Framework of members.\n• Monocoque → Skin carries load.\n\n💡 Memory Hook:\nTruss = Triangles and Members.\n\n🎯 Board Tip:\nOlder aircraft fuselages commonly used truss construction.",
           "tags": [
@@ -28078,12 +28078,12 @@
           "question": "In a monocoque structure, which component carries essentially all of the structural load?",
           "questionType": "multiple_choice",
           "choices": [
-            "Skin",
-            "Stringers",
+            "Bulkheads",
             "Longerons",
-            "Bulkheads"
+            "Skin",
+            "Stringers"
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "answerText": "Skin",
           "explanation": "In true monocoque construction, the skin is responsible for carrying nearly all structural loads, requiring it to be relatively thick.\n\nDifferentiate Similar Concepts:\n• Monocoque → Skin carries load.\n• Semi-monocoque → Skin and internal members share the load.\n\n💡 Memory Hook:\nMono = One Main Load Carrier.\n\n🎯 Board Tip:\nWhenever you see 'all the load,' think Monocoque.",
           "tags": [
@@ -28097,12 +28097,12 @@
           "question": "Which aircraft structural construction uses stiffening members to allow a thinner covering skin while sharing the applied loads?",
           "questionType": "multiple_choice",
           "choices": [
-            "Semi-monocoque",
+            "Space frame",
             "Monocoque",
             "Truss",
-            "Space frame"
+            "Semi-monocoque"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "answerText": "Semi-monocoque",
           "explanation": "Semi-monocoque construction combines the skin with frames, stringers, and longerons so that the loads are shared, resulting in a lighter and more efficient structure.\n\nDifferentiate Similar Concepts:\n• Monocoque → Skin alone.\n• Semi-monocoque → Skin plus stiffeners.\n\n💡 Memory Hook:\nSemi = Shared Load.\n\n🎯 Board Tip:\nMost modern aircraft use semi-monocoque construction because of its excellent strength-to-weight ratio.",
           "tags": [
@@ -28135,12 +28135,12 @@
           "question": "During a pull-up maneuver, an aircraft experiences a significant increase in positive lift. Which structural member primarily resists the resulting increase in wing bending loads?",
           "questionType": "multiple_choice",
           "choices": [
-            "Skin",
             "Spar",
-            "Rib",
-            "Fairing"
+            "Fairing",
+            "Skin",
+            "Rib"
           ],
-          "answerIndex": 1,
+          "answerIndex": 0,
           "answerText": "Spar",
           "explanation": "The spar is the principal load-carrying member of the wing. It primarily resists bending and axial loads generated during positive-G maneuvers such as pull-ups. The wing box formed by the spars also contributes significantly to torsional rigidity.\n\nWhy the Other Choices are Incorrect:\n• Skin mainly carries shear and torsional loads while transferring aerodynamic forces.\n• Ribs maintain the airfoil shape and transfer loads to the spars.\n• Fairings improve aerodynamics but are secondary structures.\n\nEngineering Insight:\nDuring certification load testing, pull-up maneuvers produce some of the highest bending moments experienced by the wing spars.\n\nDifferentiate Similar Concepts:\n• Spar → Bending.\n• Skin → Shear/Torsion.\n• Rib → Shape.\n\n💡 Memory Hook:\nPull Up → Spar Holds Up.\n\n🎯 Board Tip:\nWhenever the board mentions wing bending during flight, the spar is almost always the primary answer.",
           "tags": [
@@ -28155,8 +28155,8 @@
           "questionType": "multiple_choice",
           "choices": [
             "Frames and bulkheads",
-            "Wing ribs",
             "Fairings",
+            "Wing ribs",
             "Engine pylons"
           ],
           "answerIndex": 0,
@@ -28174,11 +28174,11 @@
           "questionType": "multiple_choice",
           "choices": [
             "Truss",
-            "Monocoque",
             "Semi-monocoque",
-            "Wire-braced"
+            "Wire-braced",
+            "Monocoque"
           ],
-          "answerIndex": 2,
+          "answerIndex": 1,
           "answerText": "Semi-monocoque",
           "explanation": "Semi-monocoque construction combines a thin stressed skin with internal stiffeners, allowing efficient distribution of loads while minimizing structural weight. It is the dominant construction method for modern aircraft.\n\nWhy the Other Choices are Incorrect:\n• Truss construction is heavier for modern high-speed aircraft.\n• Monocoque requires a thicker skin because the skin carries most of the load.\n• Wire-braced structures are obsolete for modern transport aircraft.\n\nEngineering Insight:\nAlmost all modern transport aircraft use semi-monocoque construction because it offers the best balance of weight, strength, fatigue resistance, and damage tolerance.\n\nDifferentiate Similar Concepts:\n• Monocoque → Skin carries nearly all load.\n• Semi-monocoque → Skin + stiffeners share loads.\n\n💡 Memory Hook:\nModern Aircraft = Semi-Monocoque.\n\n🎯 Board Tip:\nIf the question asks for the most efficient modern aircraft structure, semi-monocoque is usually correct.",
           "tags": [
@@ -28211,12 +28211,12 @@
           "question": "A maintenance engineer removes an external fairing during inspection. Which statement best describes the consequence if the fairing is not reinstalled?",
           "questionType": "multiple_choice",
           "choices": [
-            "Aerodynamic efficiency will decrease, but the aircraft can generally remain structurally intact.",
-            "The wing spar can no longer carry bending loads.",
             "The fuselage will immediately lose pressurization capability.",
+            "The wing spar can no longer carry bending loads.",
+            "Aerodynamic efficiency will decrease, but the aircraft can generally remain structurally intact.",
             "The aircraft becomes statically indeterminate."
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "answerText": "Aerodynamic efficiency will decrease, but the aircraft can generally remain structurally intact.",
           "explanation": "Fairings are classified as secondary structures whose primary purpose is to reduce aerodynamic drag. Although important for performance, they are not primary load-bearing members.\n\nWhy the Other Choices are Incorrect:\n• Spars remain the primary bending members.\n• Fairings are not pressure-retaining structural members.\n• Static determinacy is unrelated to fairing removal.\n\nEngineering Insight:\nMany secondary structures are installed primarily to improve aerodynamic efficiency, reduce drag, or protect components rather than carry major structural loads.\n\nDifferentiate Similar Concepts:\n• Primary structure → Flight-critical.\n• Secondary structure → Performance enhancement.\n\n💡 Memory Hook:\nFairings Improve Flight, Not Structural Strength.\n\n🎯 Board Tip:\nPRC questions often distinguish between load-bearing and aerodynamic components rather than asking for simple definitions.",
           "tags": [
@@ -28230,12 +28230,12 @@
           "question": "All of the following are primary aircraft structures EXCEPT:",
           "questionType": "multiple_choice",
           "choices": [
-            "Wing spar",
-            "Fuselage frame",
+            "Pressure bulkhead",
             "Fairing",
-            "Pressure bulkhead"
+            "Wing spar",
+            "Fuselage frame"
           ],
-          "answerIndex": 2,
+          "answerIndex": 1,
           "answerText": "Fairing",
           "explanation": "Fairings are secondary structures whose primary purpose is to improve aerodynamic efficiency by reducing drag. Unlike spars, frames, and pressure bulkheads, they are not critical load-bearing members.\n\nWhy the Other Choices are Incorrect:\n• Wing spar carries major bending loads.\n• Fuselage frames support structural loads and maintain fuselage shape.\n• Pressure bulkheads resist cabin pressurization loads.\n\nEngineering Insight:\nDamage to a fairing may reduce aircraft performance, while damage to a primary structure may compromise airworthiness.\n\nDifferentiate Similar Concepts:\n• Primary Structure → Required for safe flight.\n• Secondary Structure → Improves performance or protects components.\n\n💡 Memory Hook:\nNo Lift? Still Fly.\nNo Spar? Goodbye.\n\n🎯 Board Tip:\nThe PRC frequently asks candidates to distinguish between structural necessity and aerodynamic convenience.",
           "tags": [
@@ -28249,12 +28249,12 @@
           "question": "Which structural member is MOST responsible for increasing the buckling resistance of the aircraft skin?",
           "questionType": "multiple_choice",
           "choices": [
-            "Wing rib",
-            "Stringer",
             "Bulkhead",
-            "Fairing"
+            "Wing rib",
+            "Fairing",
+            "Stringer"
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "answerText": "Stringer",
           "explanation": "Stringers subdivide the skin into smaller panels, increasing its critical buckling stress while also sharing axial loads with the skin.\n\nWhy the Other Choices are Incorrect:\n• Ribs define the wing airfoil.\n• Bulkheads divide fuselage compartments and carry transverse loads.\n• Fairings are non-structural aerodynamic coverings.\n\nEngineering Insight:\nAircraft skins usually fail by buckling long before material failure if not properly stiffened.\n\nDifferentiate Similar Concepts:\n• Stringer → Buckling prevention.\n• Rib → Airfoil shape.\n\n💡 Memory Hook:\nStringers Make Skin Stronger.\n\n🎯 Board Tip:\nWhen 'buckling' appears, immediately think of stiffeners or stringers.",
           "tags": [
@@ -28269,8 +28269,8 @@
           "questionType": "multiple_choice",
           "choices": [
             "The skin carries nearly all of the structural load.",
-            "It contains no frames or bulkheads.",
             "It cannot withstand torsional loading.",
+            "It contains no frames or bulkheads.",
             "It is primarily composed of truss members."
           ],
           "answerIndex": 0,
@@ -28287,12 +28287,12 @@
           "question": "Which load is correctly matched with the structural action it primarily produces?",
           "questionType": "multiple_choice",
           "choices": [
-            "Torque — Normal to the plane of the cut",
             "Axial load — Parallel to the plane of the cut",
+            "Bending moment — Perpendicular to the plane of the cut",
             "Shear load — Normal to the plane of the cut",
-            "Bending moment — Perpendicular to the plane of the cut"
+            "Torque — Normal to the plane of the cut"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "answerText": "Torque — Normal to the plane of the cut",
           "explanation": "Torque acts normal to the plane of the cut, producing twisting. Shear acts parallel to the cut, axial loads act normal to the cut, and bending moments lie within the plane of the cut.\n\nWhy the Other Choices are Incorrect:\n• Axial loads act normal, not parallel.\n• Shear acts parallel.\n• Bending moments lie in the plane.\n\nEngineering Insight:\nThese definitions are fundamental for understanding internal structural loads and free-body diagrams.\n\nDifferentiate Similar Concepts:\n• Torque → Twist.\n• Bending → Curve.\n• Shear → Slide.\n• Axial → Pull/Push.\n\n💡 Memory Hook:\nTorque Twists.\nShear Slides.\nAxial Pulls.\n\n🎯 Board Tip:\nPRC often changes only one directional word ('parallel' vs. 'normal') to create distractors.",
           "tags": [
@@ -28306,12 +28306,12 @@
           "question": "All of the following statements regarding aircraft structural members are TRUE EXCEPT:",
           "questionType": "multiple_choice",
           "choices": [
-            "Spars primarily resist wing bending loads.",
-            "Skin carries shear and torsional loads.",
             "Stringers primarily define the wing airfoil shape.",
-            "Bulkheads may serve as pressure boundaries."
+            "Spars primarily resist wing bending loads.",
+            "Bulkheads may serve as pressure boundaries.",
+            "Skin carries shear and torsional loads."
           ],
-          "answerIndex": 2,
+          "answerIndex": 0,
           "answerText": "Stringers primarily define the wing airfoil shape.",
           "explanation": "Wing ribs—not stringers—maintain the airfoil contour. Stringers primarily stiffen the skin and increase buckling resistance.\n\nWhy the Other Choices are Incorrect:\n• Spars resist bending loads.\n• Skin reacts shear and torsion.\n• Pressure bulkheads retain cabin pressurization.\n\nEngineering Insight:\nConfusing ribs and stringers is one of the most common mistakes among beginning aeronautical engineering students.\n\nDifferentiate Similar Concepts:\n• Rib → Shape.\n• Stringer → Stiffness.\n• Spar → Strength.\n\n💡 Memory Hook:\nRibs Shape.\nStringers Stiffen.\nSpars Support.\n\n🎯 Board Tip:\nMany board questions test whether you know the primary function of each structural member rather than simply recognizing its name.",
           "tags": [
@@ -28325,12 +28325,12 @@
           "question": "During a 4.4-G pull-up maneuver, an aircraft wing experiences a significant increase in bending moment. Which structural member should an engineer inspect first for overload damage?",
           "questionType": "multiple_choice",
           "choices": [
-            "Wing spar",
             "Wing rib",
             "Wing tip fairing",
-            "Inspection panel"
+            "Inspection panel",
+            "Wing spar"
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "answerText": "Wing spar",
           "explanation": "The wing spar is the principal structural member responsible for resisting wing bending loads. During high positive-G maneuvers, bending moments increase substantially, making the spar the primary component to inspect for overload damage.\n\nWhy the Other Choices are Incorrect:\n• Wing ribs maintain the airfoil shape and distribute loads to the spar.\n• Wing tip fairings are secondary aerodynamic structures.\n• Inspection panels provide access and are not primary load-carrying members.\n\nEngineering Insight:\nPost-flight inspections following severe turbulence or overstress events often focus first on spars and their attachments because these members experience the highest bending stresses.\n\nDifferentiate Similar Concepts:\n• Spar → Primary bending member.\n• Rib → Airfoil shape.\n• Skin → Shear and torsion.\n\n💡 Memory Hook:\nHigh G = Check the Spar.\n\n🎯 PRC Board Tip:\nWhenever the question mentions pull-ups, turbulence, or high-G flight, think bending loads and inspect the spar first.",
           "tags": [
@@ -28345,9 +28345,9 @@
           "questionType": "multiple_choice",
           "choices": [
             "Fatigue caused by cyclic pressurization",
-            "Thermal buckling",
+            "Static loading",
             "Plastic deformation due to overload",
-            "Static loading"
+            "Thermal buckling"
           ],
           "answerIndex": 0,
           "answerText": "Fatigue caused by cyclic pressurization",
@@ -28363,12 +28363,12 @@
           "question": "While evaluating a proposed airframe design, an engineer recommends semi-monocoque construction instead of pure monocoque. What is the PRIMARY engineering reason for this recommendation?",
           "questionType": "multiple_choice",
           "choices": [
-            "Improved damage tolerance and more efficient load sharing",
             "Elimination of all internal structural members",
-            "Complete immunity to buckling",
-            "Lower manufacturing precision requirements"
+            "Improved damage tolerance and more efficient load sharing",
+            "Lower manufacturing precision requirements",
+            "Complete immunity to buckling"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "Improved damage tolerance and more efficient load sharing",
           "explanation": "Semi-monocoque construction distributes structural loads between the skin and internal stiffeners, improving damage tolerance while maintaining high strength-to-weight efficiency.\n\nWhy the Other Choices are Incorrect:\n• Semi-monocoque still contains frames, bulkheads, and stringers.\n• No aircraft structure is completely immune to buckling.\n• Manufacturing precision remains critical.\n\nEngineering Insight:\nModern transport aircraft overwhelmingly use semi-monocoque construction because it offers an excellent compromise between weight, structural efficiency, inspectability, and repairability.\n\nDifferentiate Similar Concepts:\n• Monocoque → Skin carries most loads.\n• Semi-monocoque → Skin and framework share loads.\n\n💡 Memory Hook:\nModern = Semi.\n\n🎯 PRC Board Tip:\nQuestions asking for the 'best overall structural design' often favor semi-monocoque because of its balanced engineering advantages.",
           "tags": [
@@ -28402,9 +28402,9 @@
           "questionType": "multiple_choice",
           "choices": [
             "Fail-safe design",
+            "Static determinacy",
             "Safe-life design",
-            "Monocoque construction",
-            "Static determinacy"
+            "Monocoque construction"
           ],
           "answerIndex": 0,
           "answerText": "Fail-safe design",
