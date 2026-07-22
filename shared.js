@@ -1698,6 +1698,28 @@ function simpleMarkdownToHtml(md) {
     while (index < lines.length) {
         let line = lines[index];
         const nextLine = lines[index + 1] || "";
+
+        // Fenced code block: ```lang\n...\n``` -> <pre><code class="language-lang">...</code></pre>
+        if (/^\s*```/.test(line)) {
+            const lang = (line.replace(/^\s*```/, "") || "").trim();
+            index += 1;
+            const codeLines = [];
+            while (index < lines.length && !/^\s*```/.test(lines[index])) {
+                codeLines.push(lines[index]);
+                index += 1;
+            }
+            // skip closing fence if present
+            if (index < lines.length && /^\s*```/.test(lines[index])) {
+                index += 1;
+            }
+            const code = String(codeLines.join("\n"))
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+            const cls = lang ? `language-${lang}` : "";
+            out.push(`<pre><code class="${cls}">${code}</code></pre>`);
+            continue;
+        }
         const isTableHeader = /^\s*\|?[^|\n]+\|.+$/.test(line);
         const isTableDivider = /^\s*\|?\s*[:\- ]+\s*(\|\s*[:\- ]+\s*)+\|?\s*$/.test(nextLine);
 
@@ -1711,6 +1733,36 @@ function simpleMarkdownToHtml(md) {
                 index += 1;
             }
             out.push(renderTableHtml(headerCells, alignCells, rows));
+            continue;
+        }
+
+        // Blockquote: consecutive lines starting with '>' form a blockquote
+        if (/^\s*>/.test(line)) {
+            const blockLines = [];
+            while (index < lines.length && /^\s*>/.test(lines[index])) {
+                blockLines.push(lines[index].replace(/^\s*>\s?/, ""));
+                index += 1;
+            }
+
+            const inner = [];
+            let bi = 0;
+            while (bi < blockLines.length) {
+                const raw = blockLines[bi].trim();
+                if (raw === "") {
+                    inner.push("<p></p>");
+                    bi += 1;
+                    continue;
+                }
+                const paraLines = [raw];
+                bi += 1;
+                while (bi < blockLines.length && blockLines[bi].trim() !== "") {
+                    paraLines.push(blockLines[bi].trim());
+                    bi += 1;
+                }
+                inner.push(`<p>${paraLines.map(renderInline).join(" ")}</p>`);
+            }
+
+            out.push(`<blockquote>${inner.join("")}</blockquote>`);
             continue;
         }
 
@@ -1776,6 +1828,15 @@ function renderNoteStage(stage, subject, chapter, session) {
             renderMath(notesContainer);
         } catch (_error) {
             // ignore math render failures
+        }
+
+        // Highlight code blocks if Prism is available
+        try {
+            if (window.Prism && typeof window.Prism.highlightAll === "function") {
+                window.Prism.highlightAll();
+            }
+        } catch (_e) {
+            // ignore highlighting failures
         }
 
         if (chapter && chapter.title) {
