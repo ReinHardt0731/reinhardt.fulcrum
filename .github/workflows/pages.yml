@@ -32,6 +32,7 @@ jobs:
           # Copy entire directories needed for the app
           cp -r vendor public/ 2>/dev/null || true
           cp -r chapters public/ 2>/dev/null || true
+          cp -r markdowns public/ 2>/dev/null || true
           echo "Contents of public:"
           ls -la public
           [ -d public/vendor ] && echo "✓ vendor/ copied" || echo "✗ vendor/ missing"
