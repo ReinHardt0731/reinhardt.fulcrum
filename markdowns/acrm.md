@@ -34,21 +34,6 @@
 
 ---
 
-### Famous Aircraft Steel Alloys
-
-| Alloy | Remember This | Typical Applications |
-|--------|---------------|----------------------|
-| **1025** | Mild Carbon Steel | Bolts, brackets, pins |
-| **1045** | Medium Carbon Steel | Shafts, axles |
-| **1095** | High Carbon Steel | Springs, cutting tools |
-| **4130** | Chrome-Moly Steel | Engine mounts, welded fuselage |
-| **4140** | Stronger Chrome-Moly | Shafts, gears, landing gear |
-| **4340** | Aircraft Alloy Steel | Landing gear, propeller shafts |
-| **52100** | Bearing Steel | Ball & roller bearings |
-| **6150** | Spring Steel | Springs, torsion bars |
-| **9310** | Gear Steel | Aircraft transmissions |
-
----
 
 ### Aircraft Steel Alloys - Signature Characteristics
 
@@ -67,40 +52,6 @@
 | **61XX (Chrome-Vanadium)** | Spring Steel | Excellent resilience and fatigue life | Springs |
 | **92XX (Silicon Steel)** | Elasticity | High resilience | Springs |
 | **93XX / 94XX (Gear Steel)** | Carburizing Steel | Hard surface with tough core | Aircraft gears |
-
----
-
-### Famous Aircraft Steel Alloys
-
-| Alloy | Instantly Think Of... | Signature Characteristics | Common Aircraft Applications |
-|--------|-----------------------|---------------------------|------------------------------|
-| **1025** | Mild Steel | Easy machining, moderate strength | General hardware |
-| **1045** | Medium Carbon Steel | Stronger and harder | Shafts |
-| **1095** | High Carbon Steel | Very hard, wear resistant | Springs |
-| **4130** | Chrome-Moly | Excellent weldability | Engine mounts, welded structures |
-| **4140** | Stronger Chrome-Moly | Higher hardness than 4130 | Gears, landing gear |
-| **4340** | Aircraft Alloy Steel | Outstanding toughness & fatigue strength | Landing gear, shafts |
-| **52100** | Bearing Steel | Excellent rolling fatigue resistance | Bearings |
-| **6150** | Spring Steel | High resilience | Springs |
-| **9310** | Gear Steel | Carburized wear-resistant surface | Aircraft transmissions |
-
----
-
-### Quick Recall Table
-
-| If the Question Mentions... | Think... |
-|-----------------------------|----------|
-| Welded Aircraft Structure | **4130** |
-| Engine Mount | **4130** |
-| Chrome-Moly | **4130 / 4140** |
-| Landing Gear | **4340** |
-| Highest Toughness | **4340** |
-| Excellent Fatigue Resistance | **4340** |
-| Bearings | **52100** |
-| Springs | **6150 / 92XX** |
-| Aircraft Gears | **9310** |
-| Plain Carbon Steel | **10XX** |
-| Free-Machining Steel | **11XX** |
 
 ---
 
@@ -175,19 +126,6 @@
 
 ---
 
-### Famous Aircraft Alloys
-
-| Alloy | Remember This | Typical Applications |
-|--------|---------------|----------------------|
-| **1100** | Pure Aluminum | Electrical conductors |
-| **2014** | High-strength forging alloy | Aircraft fittings |
-| **2024-T3** | Aircraft Skin Alloy | Wings, fuselage, ribs |
-| **5052** | Fuel Tank Alloy | Fuel & hydraulic tanks |
-| **6061-T6** | General Purpose Alloy | Tubing, fittings |
-| **7075-T6** | Strongest Aluminum | Wing spars, fittings |
-
----
-
 ### Aircraft Aluminum Alloys - Signature Characteristics
 
 | Alloy/Series | Well Known For | Key Characteristics | Typical Aircraft Applications |
@@ -200,19 +138,6 @@
 | **6XXX (Mg-Si)** | General Purpose Structural Alloy | Good strength, excellent corrosion resistance, excellent weldability, heat treatable | Tubing, fittings, general structures |
 | **7XXX (Zinc)** | Highest Strength Aluminum Alloy | Very high strength, heat treatable, good fatigue resistance, poor weldability | Wing spars, highly stressed fittings |
 | **8XXX (Others)** | Specialty Alloys | Contains Li, Fe, Sn, etc. for specialized properties | Aerospace specialty applications |
-
----
-
-### Famous Aircraft Aluminum Alloys
-
-| Alloy | Instantly Think Of... | Signature Characteristics | Common Aircraft Applications |
-|--------|-----------------------|---------------------------|------------------------------|
-| **1100** | Pure Aluminum | Excellent conductivity & corrosion resistance | Electrical conductors |
-| **2014** | Forging Alloy | High strength, excellent machinability | Forgings, fittings |
-| **2024-T3** | Aircraft Skin Alloy | Excellent fatigue resistance, high structural strength | Wing skins, fuselage, ribs |
-| **5052** | Fuel Tank Alloy | Excellent corrosion resistance, highly weldable | Fuel & hydraulic tanks |
-| **6061-T6** | General Purpose Alloy | Corrosion resistant, weldable, versatile | Tubing, fittings, homebuilt aircraft |
-| **7075-T6** | Spar Alloy | Highest strength aluminum alloy | Wing spars, fittings, landing gear components |
 
 ---
 
