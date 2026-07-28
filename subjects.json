@@ -158,7 +158,7 @@
       "name": "AIRCRAFT STRUCTURE AND DESIGN",
       "quizType": "short_quiz",
       "schemaVersion": 1,
-      "selectedChapter": "Structures | Structural Elements",
+      "selectedChapter": "Wing Configuration and Construction",
       "chapters": [
         {
           "title": "Structures | Fundamentals",
@@ -167,10 +167,14 @@
         {
           "title": "Structures | Structural Elements",
           "file": "chapters/structures-structural-elements.json"
+        },
+        {
+          "title": "Wing Configuration and Construction",
+          "file": "chapters/wing-configuration-and-construction.json"
         }
       ],
       "notesPath": "",
-      "updatedAt": "2026-07-22T10:00:48.321Z"
+      "updatedAt": "2026-07-28T10:23:03.801Z"
     },
     {
       "id": "airlaw",
@@ -30211,6 +30215,3180 @@
           "tags": [
             "Structural Elements",
             "Board Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/wing-configuration-and-construction.json": {
+      "title": "Wing Configuration and Construction",
+      "questions": [
+        {
+          "question": "What is the distance measured from one wingtip to the opposite wingtip called?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Area",
+            "Wing Chord",
+            "Wing Span",
+            "Aspect Ratio"
+          ],
+          "answerIndex": 2,
+          "answerText": "Wing Span",
+          "explanation": "Wing span is the straight-line distance from one wingtip to the other and is a primary geometric dimension of a wing.",
+          "tags": [
+            "Wing Geometry",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the projected surface area of an aircraft wing as viewed from above called?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Loading",
+            "Wing Area",
+            "Wing Span",
+            "Root Chord"
+          ],
+          "answerIndex": 1,
+          "answerText": "Wing Area",
+          "explanation": "Wing area is the planform area of the wing and is commonly used in lift and wing loading calculations.",
+          "tags": [
+            "Wing Geometry",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the straight-line distance from the leading edge to the trailing edge of a wing section called?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Mean Aerodynamic Chord",
+            "Wing Span",
+            "Wing Chord",
+            "Sweepback"
+          ],
+          "answerIndex": 2,
+          "answerText": "Wing Chord",
+          "explanation": "The wing chord is the straight-line distance between the leading and trailing edges of an airfoil section.",
+          "tags": [
+            "Wing Geometry",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the chord length measured where the wing joins the fuselage called?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Tip Chord",
+            "Mean Geometric Chord",
+            "Root Chord",
+            "Mean Aerodynamic Chord"
+          ],
+          "answerIndex": 2,
+          "answerText": "Root Chord",
+          "explanation": "The root chord is the chord length at the wing root where the wing is attached to the fuselage.",
+          "tags": [
+            "Wing Geometry",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the chord length measured at the outermost end of the wing called?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Mean Aerodynamic Chord",
+            "Tip Chord",
+            "Root Chord",
+            "Wing Span"
+          ],
+          "answerIndex": 1,
+          "answerText": "Tip Chord",
+          "explanation": "The tip chord is the chord length measured at the wingtip and is used in determining the wing's taper ratio.",
+          "tags": [
+            "Wing Geometry",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the average chord length obtained by dividing the wing area by the wing span called?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Mean Aerodynamic Chord",
+            "Mean Geometric Chord",
+            "Root Chord",
+            "Tip Chord"
+          ],
+          "answerIndex": 1,
+          "answerText": "Mean Geometric Chord",
+          "explanation": "The Mean Geometric Chord (MGC) is the average chord of a wing and is calculated by dividing the wing area by the wing span.",
+          "tags": [
+            "Wing Geometry",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing chord is commonly used as the reference length for stability and aerodynamic calculations?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Root Chord",
+            "Tip Chord",
+            "Wing Chord",
+            "Mean Aerodynamic Chord"
+          ],
+          "answerIndex": 3,
+          "answerText": "Mean Aerodynamic Chord",
+          "explanation": "The Mean Aerodynamic Chord (MAC) is the representative chord used in aircraft stability, control, and aerodynamic analyses.",
+          "tags": [
+            "Wing Geometry",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which parameter describes how long and slender a wing is?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Loading",
+            "Aspect Ratio",
+            "Sweepback",
+            "Taper Ratio"
+          ],
+          "answerIndex": 1,
+          "answerText": "Aspect Ratio",
+          "explanation": "Aspect ratio is the ratio of the wing span squared to the wing area and is an important indicator of aerodynamic efficiency.",
+          "tags": [
+            "Wing Geometry",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the ratio of the tip chord to the root chord of a wing called?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aspect Ratio",
+            "Wing Loading",
+            "Sweepback",
+            "Taper Ratio"
+          ],
+          "answerIndex": 3,
+          "answerText": "Taper Ratio",
+          "explanation": "Taper ratio compares the tip chord to the root chord and describes how much the wing narrows toward the tip.",
+          "tags": [
+            "Wing Geometry",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the rearward inclination of a wing relative to a line perpendicular to the aircraft's longitudinal axis called?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Dihedral",
+            "Wing Incidence",
+            "Sweepback",
+            "Anhedral"
+          ],
+          "answerIndex": 2,
+          "answerText": "Sweepback",
+          "explanation": "Sweepback is the angle at which a wing is inclined rearward and is commonly used to improve high-speed flight performance.",
+          "tags": [
+            "Wing Geometry",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing configuration has the wing mounted above the fuselage, providing good downward visibility and ground clearance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Low Wing",
+            "Mid Wing",
+            "Shoulder Wing",
+            "High Wing"
+          ],
+          "answerIndex": 3,
+          "answerText": "High Wing",
+          "explanation": "A high-wing configuration places the wing above the fuselage, improving ground clearance and downward visibility while contributing to inherent lateral stability.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing configuration has the wing attached approximately at the vertical midpoint of the fuselage?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Shoulder Wing",
+            "Mid Wing",
+            "Parasol Wing",
+            "High Wing"
+          ],
+          "answerIndex": 1,
+          "answerText": "Mid Wing",
+          "explanation": "A mid-wing configuration mounts the wing near the fuselage's vertical centerline, providing balanced aerodynamic characteristics.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing configuration has the wing attached to the lower portion of the fuselage?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Shoulder Wing",
+            "Low Wing",
+            "High Wing",
+            "Mid Wing"
+          ],
+          "answerIndex": 1,
+          "answerText": "Low Wing",
+          "explanation": "A low-wing configuration mounts the wing near the bottom of the fuselage and is commonly used on transport and high-performance aircraft.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing configuration has the wing mounted near the top of the fuselage but not completely above it?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Parasol Wing",
+            "Shoulder Wing",
+            "Low Wing",
+            "Mid Wing"
+          ],
+          "answerIndex": 1,
+          "answerText": "Shoulder Wing",
+          "explanation": "A shoulder-wing configuration places the wing near the upper portion of the fuselage while remaining attached directly to it.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing configuration supports the wing above the fuselage using struts or cabane structures?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "High Wing",
+            "Shoulder Wing",
+            "Parasol Wing",
+            "Mid Wing"
+          ],
+          "answerIndex": 2,
+          "answerText": "Parasol Wing",
+          "explanation": "A parasol wing is mounted above the fuselage and supported by struts or cabanes, leaving a clear gap between the wing and fuselage.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing structure carries flight loads without the use of external struts or wires?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Braced Wing",
+            "Semi-cantilever Wing",
+            "Cantilever Wing",
+            "Parasol Wing"
+          ],
+          "answerIndex": 2,
+          "answerText": "Cantilever Wing",
+          "explanation": "A cantilever wing supports all aerodynamic and structural loads internally without requiring external bracing.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing structure is supported by both internal structural members and external braces?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cantilever Wing",
+            "Braced Wing",
+            "Semi-cantilever Wing",
+            "Delta Wing"
+          ],
+          "answerIndex": 2,
+          "answerText": "Semi-cantilever Wing",
+          "explanation": "A semi-cantilever wing primarily relies on its internal structure but also uses limited external bracing to carry loads.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing structure depends on external struts or wires to support wing loads?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cantilever Wing",
+            "Semi-cantilever Wing",
+            "Braced Wing",
+            "Swept Wing"
+          ],
+          "answerIndex": 2,
+          "answerText": "Braced Wing",
+          "explanation": "A braced wing uses external struts or wires to reduce the structural loads carried by the wing itself.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is an aircraft with a single main wing called?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Sesquiplane",
+            "Monoplane",
+            "Biplane",
+            "Triplane"
+          ],
+          "answerIndex": 1,
+          "answerText": "Monoplane",
+          "explanation": "A monoplane has one main wing on each side of the fuselage and is the most common aircraft configuration today.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is an aircraft with two main wings stacked vertically called?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Triplane",
+            "Monoplane",
+            "Sesquiplane",
+            "Biplane"
+          ],
+          "answerIndex": 3,
+          "answerText": "Biplane",
+          "explanation": "A biplane has two main wings arranged one above the other, typically connected by struts and bracing wires.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is an aircraft with two main wings of unequal size, where one wing is significantly smaller than the other, called?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Biplane",
+            "Sesquiplane",
+            "Monoplane",
+            "Triplane"
+          ],
+          "answerIndex": 1,
+          "answerText": "Sesquiplane",
+          "explanation": "A sesquiplane has two wings, with one wing—usually the lower wing—being noticeably smaller than the other.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is an aircraft with three main wings stacked vertically called?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Triplane",
+            "Sesquiplane",
+            "Biplane",
+            "Monoplane"
+          ],
+          "answerIndex": 0,
+          "answerText": "Triplane",
+          "explanation": "A triplane has three vertically stacked wings, increasing lifting surface but also producing additional drag.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing planform has a constant chord from the root to the tip?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rectangular Wing",
+            "Swept Wing",
+            "Delta Wing",
+            "Elliptical Wing"
+          ],
+          "answerIndex": 0,
+          "answerText": "Rectangular Wing",
+          "explanation": "A rectangular wing has the same chord along its entire span, making it simple and economical to manufacture.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing planform gradually decreases in chord length from the root toward the tip?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Delta Wing",
+            "Elliptical Wing",
+            "Tapered Wing",
+            "Rectangular Wing"
+          ],
+          "answerIndex": 2,
+          "answerText": "Tapered Wing",
+          "explanation": "A tapered wing has a smaller tip chord than root chord, reducing weight and improving aerodynamic efficiency compared with a rectangular wing.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing planform is designed to approximate an elliptical lift distribution for improved aerodynamic efficiency?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rectangular Wing",
+            "Elliptical Wing",
+            "Swept Wing",
+            "Trapezoidal Wing"
+          ],
+          "answerIndex": 1,
+          "answerText": "Elliptical Wing",
+          "explanation": "An elliptical wing closely approximates the ideal lift distribution, minimizing induced drag, although it is more complex to manufacture.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing planform has straight leading and trailing edges that taper uniformly from the root to the tip, forming a trapezoidal shape?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rectangular Wing",
+            "Elliptical Wing",
+            "Trapezoidal Wing",
+            "Delta Wing"
+          ],
+          "answerIndex": 2,
+          "answerText": "Trapezoidal Wing",
+          "explanation": "A trapezoidal wing has a trapezoid-shaped planform and is commonly used because it provides a good balance between aerodynamic efficiency and ease of manufacture.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing configuration is characterized by wings angled rearward from the fuselage to improve high-speed flight performance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Delta Wing",
+            "Swept Wing",
+            "Rectangular Wing",
+            "Parasol Wing"
+          ],
+          "answerIndex": 1,
+          "answerText": "Swept Wing",
+          "explanation": "A swept wing has its leading edge inclined rearward, delaying the onset of compressibility effects at higher speeds.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft designed for supersonic flight commonly uses which wing planform with a triangular shape?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Delta Wing",
+            "Trapezoidal Wing",
+            "Elliptical Wing",
+            "Tapered Wing"
+          ],
+          "answerIndex": 0,
+          "answerText": "Delta Wing",
+          "explanation": "A delta wing has a triangular planform that provides good structural strength and favorable performance at high subsonic and supersonic speeds.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing configuration allows the sweep angle to be changed during flight to optimize performance at different speeds?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Variable-Sweep Wing",
+            "Cantilever Wing",
+            "High Wing",
+            "Braced Wing"
+          ],
+          "answerIndex": 0,
+          "answerText": "Variable-Sweep Wing",
+          "explanation": "A variable-sweep wing can change its sweep angle in flight, improving both low-speed and high-speed performance.",
+          "tags": [
+            "Wing Configurations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which structural member is the primary load-carrying component of an aircraft wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Skin",
+            "Rib",
+            "Wing Box",
+            "Spar"
+          ],
+          "answerIndex": 3,
+          "answerText": "Spar",
+          "explanation": "The spar is the principal structural member of the wing. It is designed to resist the major bending, shear, and torsional loads encountered during flight.",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing structural member primarily maintains the airfoil shape and transfers aerodynamic loads to the spars?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Skin",
+            "Rib",
+            "Stringer",
+            "Spar"
+          ],
+          "answerIndex": 1,
+          "answerText": "Rib",
+          "explanation": "Ribs preserve the airfoil contour and transmit aerodynamic loads from the wing covering to the spars.",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which component forms the outer aerodynamic covering of the wing and also contributes to carrying structural loads in modern stressed-skin construction?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Skin",
+            "False Spar",
+            "Wing Tip",
+            "Rib"
+          ],
+          "answerIndex": 0,
+          "answerText": "Wing Skin",
+          "explanation": "The wing skin provides the aerodynamic surface of the wing and, in stressed-skin construction, shares structural loads while helping resist torsion.",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which longitudinal structural member reinforces the wing skin and helps prevent buckling between ribs?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rib",
+            "Wing Box",
+            "Stringer",
+            "False Spar"
+          ],
+          "answerIndex": 2,
+          "answerText": "Stringer",
+          "explanation": "Stringers are spanwise stiffeners that reinforce the wing skin, improve longitudinal stiffness, and reduce skin buckling.",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing structure is formed primarily by the spars, wing skin, and associated structural members to provide high torsional rigidity?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Box",
+            "Rib Bay",
+            "Trailing Edge",
+            "Leading Edge"
+          ],
+          "answerIndex": 0,
+          "answerText": "Wing Box",
+          "explanation": "The wing box is the primary torsion-resisting structure of the wing, formed by the spars, skin, and connecting structural members.",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing structural member forms the forward edge of the wing and is the first part to contact the airflow?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Trailing Edge",
+            "False Spar",
+            "Leading Edge",
+            "Wing Tip"
+          ],
+          "answerIndex": 2,
+          "answerText": "Leading Edge",
+          "explanation": "The leading edge is the forward-most portion of the wing and is the first surface encountered by the oncoming airflow.",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing structural member forms the rear boundary of the wing and commonly supports control surfaces such as flaps and ailerons?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Skin",
+            "Leading Edge",
+            "Trailing Edge",
+            "Rib"
+          ],
+          "answerIndex": 2,
+          "answerText": "Trailing Edge",
+          "explanation": "The trailing edge is the rear portion of the wing where movable control surfaces such as ailerons and flaps are typically attached.",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which structural member is installed primarily to support the trailing edge and control surface attachments rather than carry the main wing bending loads?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "False Spar",
+            "Main Spar",
+            "Wing Box",
+            "Stringer"
+          ],
+          "answerIndex": 0,
+          "answerText": "False Spar",
+          "explanation": "A false spar provides structural support for the trailing edge and control surfaces but does not serve as the primary bending member of the wing.",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A wing that uses only one primary spar to carry the major structural loads is classified as what type of construction?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Multi-Spar Wing",
+            "Single-Spar Wing",
+            "Two-Spar Wing",
+            "Wing Box"
+          ],
+          "answerIndex": 1,
+          "answerText": "Single-Spar Wing",
+          "explanation": "A single-spar wing relies on one principal spar as its primary load-carrying member, with other structural members providing secondary support.",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing construction uses a front spar and a rear spar as its principal load-carrying members?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Single-Spar Wing",
+            "Wing Box",
+            "Two-Spar Wing",
+            "Cantilever Wing"
+          ],
+          "answerIndex": 2,
+          "answerText": "Two-Spar Wing",
+          "explanation": "A two-spar wing distributes structural loads between the front and rear spars, making it one of the most widely used wing construction arrangements. :contentReference[oaicite:0]{index=0}",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing construction uses more than two spars to distribute structural loads across the wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Single-Spar Wing",
+            "Two-Spar Wing",
+            "Multi-Spar Wing",
+            "Braced Wing"
+          ],
+          "answerIndex": 2,
+          "answerText": "Multi-Spar Wing",
+          "explanation": "A multi-spar wing uses three or more spars to distribute loads, improve structural rigidity, and provide redundancy in large or highly loaded aircraft.",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of wing covering is most widely used in modern transport aircraft because of its high strength and durability?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Composite",
+            "Metal",
+            "Fabric",
+            "Plywood"
+          ],
+          "answerIndex": 1,
+          "answerText": "Metal",
+          "explanation": "Metal wing coverings, primarily aluminum alloys, have long been the standard for transport aircraft because they provide an excellent balance of strength, durability, and manufacturability.",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing covering material offers a high strength-to-weight ratio and excellent corrosion resistance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Composite",
+            "Metal",
+            "Fabric",
+            "Wood"
+          ],
+          "answerIndex": 0,
+          "answerText": "Composite",
+          "explanation": "Composite materials provide high specific strength, excellent fatigue performance, and corrosion resistance, making them common in modern aircraft structures.",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing covering material is commonly used on light aircraft and vintage aircraft because of its low weight and ease of repair?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Composite",
+            "Titanium",
+            "Fabric",
+            "Steel"
+          ],
+          "answerIndex": 2,
+          "answerText": "Fabric",
+          "explanation": "Fabric covering is lightweight and relatively easy to repair, making it suitable for many light, homebuilt, and classic aircraft.",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of wing fuel tank is formed by sealing the interior of the wing structure itself to hold fuel?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Dry Wing",
+            "Bladder Tank",
+            "Integral Tank",
+            "Wet Wing"
+          ],
+          "answerIndex": 3,
+          "answerText": "Wet Wing",
+          "explanation": "A wet wing is an integral fuel tank in which the sealed wing structure itself stores fuel, eliminating the need for a separate fuel tank.",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type of wing fuel tank stores fuel in a separate removable tank installed within the wing rather than using the wing structure itself?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wet Wing",
+            "Dry Wing",
+            "Integral Tank",
+            "Center Tank"
+          ],
+          "answerIndex": 1,
+          "answerText": "Dry Wing",
+          "explanation": "A dry wing stores fuel in a separate fuel tank or bladder installed inside the wing. Unlike a wet wing, the wing structure itself is not sealed to contain fuel.",
+          "tags": [
+            "Wing Construction",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During flight, which structural effect causes the wing to curve upward as lift acts on it?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Torsion",
+            "Wing Shear",
+            "Wing Bending",
+            "Load Distribution"
+          ],
+          "answerIndex": 2,
+          "answerText": "Wing Bending",
+          "explanation": "Wing bending is the upward flexing of the wing caused by aerodynamic lift. The wing spar is the primary structural member that resists these bending loads.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which structural behavior refers to the internal forces that tend to cause adjacent sections of the wing to slide past one another?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Shear",
+            "Wing Torsion",
+            "Load Distribution",
+            "Wing Bending"
+          ],
+          "answerIndex": 0,
+          "answerText": "Wing Shear",
+          "explanation": "Wing shear is produced by transverse loads acting on the wing and is primarily resisted by the spar web.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which structural behavior involves the twisting of the wing about its longitudinal axis due to aerodynamic forces?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Bending",
+            "Lift Distribution",
+            "Wing Torsion",
+            "Wing Shear"
+          ],
+          "answerIndex": 2,
+          "answerText": "Wing Torsion",
+          "explanation": "Wing torsion is the twisting of the wing caused by aerodynamic moments. The wing box provides the primary resistance to torsional loads.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What term describes how aerodynamic and structural loads are spread along the span of a wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Load Distribution",
+            "Wing Bending",
+            "Wing Torsion",
+            "Aspect Ratio"
+          ],
+          "answerIndex": 0,
+          "answerText": "Load Distribution",
+          "explanation": "Load distribution describes how forces acting on the wing are distributed along its span and transferred through the structural members.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What term describes the manner in which lift varies from the wing root to the wing tip during flight?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Load Distribution",
+            "Lift Distribution",
+            "Wing Shear",
+            "Wing Bending"
+          ],
+          "answerIndex": 1,
+          "answerText": "Lift Distribution",
+          "explanation": "Lift distribution describes how lift is generated along the wingspan. An efficient lift distribution helps reduce induced drag and structural loading.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which leading-edge high-lift device consists of a fixed opening that allows high-energy air to flow over the upper surface of the wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Slat",
+            "Krueger Flap",
+            "Fixed Slot",
+            "Automatic Slot"
+          ],
+          "answerIndex": 2,
+          "answerText": "Fixed Slot",
+          "explanation": "A fixed slot is a permanent opening near the leading edge that directs high-energy airflow over the upper wing surface, delaying airflow separation and stall.",
+          "tags": [
+            "High-Lift Devices",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which leading-edge device automatically opens at high angles of attack to delay wing stall?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Automatic Slot",
+            "Fixed Slot",
+            "Slat",
+            "Krueger Flap"
+          ],
+          "answerIndex": 0,
+          "answerText": "Automatic Slot",
+          "explanation": "An automatic slot remains closed during normal flight and opens automatically at high angles of attack to improve airflow over the wing.",
+          "tags": [
+            "High-Lift Devices",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which leading-edge high-lift device moves forward to create a slot between itself and the wing during takeoff and landing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Krueger Flap",
+            "Slat",
+            "Automatic Slot",
+            "Fixed Slot"
+          ],
+          "answerIndex": 1,
+          "answerText": "Slat",
+          "explanation": "A slat is a movable leading-edge device that extends forward to form a slot, increasing maximum lift and delaying stall.",
+          "tags": [
+            "High-Lift Devices",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which leading-edge device deploys by rotating outward from the lower surface of the wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Slat",
+            "Automatic Slot",
+            "Krueger Flap",
+            "Fixed Slot"
+          ],
+          "answerIndex": 2,
+          "answerText": "Krueger Flap",
+          "explanation": "A Krueger flap deploys from the lower surface of the wing's leading edge, increasing wing camber and improving low-speed lift.",
+          "tags": [
+            "High-Lift Devices",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Where are slots, slats, and Krueger flaps installed on an aircraft wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Tip",
+            "Leading Edge",
+            "Wing Root",
+            "Trailing Edge"
+          ],
+          "answerIndex": 1,
+          "answerText": "Leading Edge",
+          "explanation": "Slots, slats, and Krueger flaps are all leading-edge high-lift devices used to improve low-speed aerodynamic performance and delay stall.",
+          "tags": [
+            "High-Lift Devices",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which trailing-edge high-lift device increases wing camber by simply hinging downward from the trailing edge?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Split Flap",
+            "Slotted Flap",
+            "Plain Flap",
+            "Fowler Flap"
+          ],
+          "answerIndex": 2,
+          "answerText": "Plain Flap",
+          "explanation": "A plain flap is the simplest flap design. It rotates downward from the trailing edge, increasing the wing's camber and lift during low-speed flight.",
+          "tags": [
+            "High-Lift Devices",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which trailing-edge flap deflects only its lower surface while the upper surface remains fixed?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Slotted Flap",
+            "Plain Flap",
+            "Fowler Flap",
+            "Split Flap"
+          ],
+          "answerIndex": 3,
+          "answerText": "Split Flap",
+          "explanation": "A split flap is formed by deflecting only the lower portion of the trailing edge, producing increased lift but also significant drag.",
+          "tags": [
+            "High-Lift Devices",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which trailing-edge flap forms a slot between the flap and the wing to improve airflow over the upper surface?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Split Flap",
+            "Slotted Flap",
+            "Plain Flap",
+            "Krueger Flap"
+          ],
+          "answerIndex": 1,
+          "answerText": "Slotted Flap",
+          "explanation": "A slotted flap creates a gap that allows high-energy air to flow over the upper surface of the flap, delaying flow separation and increasing lift.",
+          "tags": [
+            "High-Lift Devices",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which trailing-edge flap moves rearward before deflecting downward, increasing both wing area and camber?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Plain Flap",
+            "Split Flap",
+            "Slotted Flap",
+            "Fowler Flap"
+          ],
+          "answerIndex": 3,
+          "answerText": "Fowler Flap",
+          "explanation": "A Fowler flap first extends rearward to increase wing area and then deflects downward to increase camber, producing a large increase in lift.",
+          "tags": [
+            "High-Lift Devices",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Where are plain, split, slotted, and Fowler flaps installed on an aircraft wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Leading Edge",
+            "Wing Root",
+            "Trailing Edge",
+            "Wing Tip"
+          ],
+          "answerIndex": 2,
+          "answerText": "Trailing Edge",
+          "explanation": "Plain, split, slotted, and Fowler flaps are trailing-edge high-lift devices that improve low-speed performance during takeoff and landing.",
+          "tags": [
+            "High-Lift Devices",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wingtip device reduces induced drag by weakening the strength of wingtip vortices?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Fence",
+            "Winglet",
+            "Vortex Generator",
+            "Leading-Edge Extension"
+          ],
+          "answerIndex": 1,
+          "answerText": "Winglet",
+          "explanation": "A winglet is a wingtip device designed to reduce induced drag by minimizing the formation and strength of wingtip vortices.",
+          "tags": [
+            "Drag Reduction Devices",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which device consists of small vanes mounted on the wing surface to energize the boundary layer and delay airflow separation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Fence",
+            "Winglet",
+            "Vortex Generator",
+            "Krueger Flap"
+          ],
+          "answerIndex": 2,
+          "answerText": "Vortex Generator",
+          "explanation": "A vortex generator produces small vortices that mix high-energy airflow with the boundary layer, helping delay flow separation and maintain control effectiveness.",
+          "tags": [
+            "Drag Reduction Devices",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which vertical surface installed on a wing helps limit spanwise airflow and improves aerodynamic efficiency?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Fence",
+            "Winglet",
+            "Split Flap",
+            "Spoiler"
+          ],
+          "answerIndex": 0,
+          "answerText": "Wing Fence",
+          "explanation": "A wing fence is a vertical plate attached to the wing that reduces spanwise airflow, improving lift distribution and delaying tip stall.",
+          "tags": [
+            "Drag Reduction Devices",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Where is a winglet primarily installed on an aircraft wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Leading Edge",
+            "Wing Root",
+            "Wing Tip",
+            "Trailing Edge"
+          ],
+          "answerIndex": 2,
+          "answerText": "Wing Tip",
+          "explanation": "Winglets are installed at the wing tip where they reduce induced drag by decreasing the strength of wingtip vortices.",
+          "tags": [
+            "Drag Reduction Devices",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary aerodynamic benefit shared by winglets, wing fences, and vortex generators?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Increase engine thrust",
+            "Reduce aerodynamic drag or improve aerodynamic efficiency",
+            "Increase fuel capacity",
+            "Decrease aircraft weight"
+          ],
+          "answerIndex": 1,
+          "answerText": "Reduce aerodynamic drag or improve aerodynamic efficiency",
+          "explanation": "Although they operate differently, winglets, wing fences, and vortex generators all improve aerodynamic efficiency by reducing drag or maintaining smoother airflow over the wing.",
+          "tags": [
+            "Drag Reduction Devices",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing design consideration is primarily concerned with ensuring that the wing can safely withstand the loads encountered during flight?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Manufacturability",
+            "Structural Strength",
+            "Aerodynamic Efficiency",
+            "Weight Reduction"
+          ],
+          "answerIndex": 1,
+          "answerText": "Structural Strength",
+          "explanation": "Structural strength refers to the wing's ability to safely resist aerodynamic, inertial, and landing loads without structural failure.",
+          "tags": [
+            "Design Considerations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing design consideration focuses on producing the required lift while minimizing aerodynamic drag?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aerodynamic Efficiency",
+            "Structural Strength",
+            "Manufacturability",
+            "Cost"
+          ],
+          "answerIndex": 0,
+          "answerText": "Aerodynamic Efficiency",
+          "explanation": "Aerodynamic efficiency is achieved by generating the required lift with the least possible drag, improving aircraft performance and fuel economy.",
+          "tags": [
+            "Design Considerations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which wing design consideration aims to minimize the structural mass of the wing without compromising safety?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cost",
+            "Weight Reduction",
+            "Manufacturability",
+            "Structural Strength"
+          ],
+          "answerIndex": 1,
+          "answerText": "Weight Reduction",
+          "explanation": "Weight reduction seeks to lower the wing's mass while maintaining adequate structural integrity and performance.",
+          "tags": [
+            "Design Considerations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which design consideration evaluates how easily a wing can be fabricated, assembled, and maintained?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aerodynamic Efficiency",
+            "Weight Reduction",
+            "Structural Strength",
+            "Manufacturability"
+          ],
+          "answerIndex": 3,
+          "answerText": "Manufacturability",
+          "explanation": "Manufacturability considers the practicality of producing, assembling, inspecting, and maintaining the wing throughout its service life.",
+          "tags": [
+            "Design Considerations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which design consideration emphasizes minimizing production and operating expenses throughout the aircraft's life cycle?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cost",
+            "Weight Reduction",
+            "Aerodynamic Efficiency",
+            "Structural Strength"
+          ],
+          "answerIndex": 0,
+          "answerText": "Cost",
+          "explanation": "Cost considers both the expense of manufacturing the wing and the operational costs associated with its use and maintenance.",
+          "tags": [
+            "Design Considerations",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft designer wants to reduce the wing's bending stress without significantly increasing structural weight. Which structural member should primarily be strengthened?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Skin",
+            "Rib",
+            "Spar",
+            "Leading Edge"
+          ],
+          "answerIndex": 2,
+          "answerText": "Spar",
+          "explanation": "The spar is the primary load-carrying member of the wing and resists most of the bending loads generated during flight.",
+          "tags": [
+            "Wing Construction",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During takeoff from a short runway, an aircraft needs a significant increase in lift while minimizing the increase in stall speed. Which wing device provides the greatest improvement?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Winglet",
+            "Fowler Flap",
+            "Wing Fence",
+            "Spoiler"
+          ],
+          "answerIndex": 1,
+          "answerText": "Fowler Flap",
+          "explanation": "A Fowler flap increases both wing area and camber, producing one of the largest increases in lift among trailing-edge flap designs.",
+          "tags": [
+            "High-Lift Devices",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During a structural inspection, engineers discover twisting of a wing under aerodynamic loading. Which structural characteristic is primarily resisting this type of loading?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Box",
+            "Wing Rib",
+            "Trailing Edge",
+            "Stringer"
+          ],
+          "answerIndex": 0,
+          "answerText": "Wing Box",
+          "explanation": "The wing box forms a closed structural section that provides high torsional rigidity, allowing it to resist twisting loads effectively.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A designer wants to improve cruise fuel efficiency without changing the wing area. Which modification would most directly reduce induced drag?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install Winglets",
+            "Increase Flap Deflection",
+            "Add Spoilers",
+            "Increase Wing Incidence"
+          ],
+          "answerIndex": 0,
+          "answerText": "Install Winglets",
+          "explanation": "Winglets reduce induced drag by weakening wingtip vortices, improving aerodynamic efficiency during cruise.",
+          "tags": [
+            "Drag Reduction Devices",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A wing experiences excessive shear loads during flight. Which part of the spar primarily resists these loads?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Spar Web",
+            "Wing Skin",
+            "Spar Cap",
+            "Stringer"
+          ],
+          "answerIndex": 0,
+          "answerText": "Spar Web",
+          "explanation": "The spar web is designed to carry shear forces, while the spar caps primarily resist bending stresses.",
+          "tags": [
+            "Wing Construction",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During a hard landing, engineers are primarily concerned that the wing can safely withstand the resulting loads without structural failure. Which design consideration is being evaluated?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Manufacturability",
+            "Weight Reduction",
+            "Structural Strength",
+            "Aerodynamic Efficiency"
+          ],
+          "answerIndex": 2,
+          "answerText": "Structural Strength",
+          "explanation": "Structural strength ensures that the wing can safely withstand aerodynamic, landing, and inertial loads without failure.",
+          "tags": [
+            "Design Considerations",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A designer wants to reduce the aircraft's induced drag during cruise while keeping the wing span unchanged. Which modification would best achieve this objective?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install Winglets",
+            "Increase Flap Deflection",
+            "Increase Wing Incidence",
+            "Add Spoilers"
+          ],
+          "answerIndex": 0,
+          "answerText": "Install Winglets",
+          "explanation": "Winglets reduce the strength of wingtip vortices, thereby reducing induced drag and improving cruise efficiency.",
+          "tags": [
+            "Drag Reduction Devices",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft consistently stalls first near the wing tip during flight testing. Which drag-reduction device could help improve spanwise airflow and delay tip stall?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Winglet",
+            "Wing Fence",
+            "Vortex Generator",
+            "Krueger Flap"
+          ],
+          "answerIndex": 1,
+          "answerText": "Wing Fence",
+          "explanation": "A wing fence limits spanwise airflow across the wing, helping delay tip stall and improving lift distribution.",
+          "tags": [
+            "Drag Reduction Devices",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During takeoff, the pilot requires a significant increase in lift without permanently altering the wing. Which group of devices is specifically designed for this purpose?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Drag Reduction Devices",
+            "Primary Structures",
+            "High-Lift Devices",
+            "Control Surfaces"
+          ],
+          "answerIndex": 2,
+          "answerText": "High-Lift Devices",
+          "explanation": "High-lift devices are deployed during takeoff and landing to increase lift at low airspeeds while remaining retractable during cruise.",
+          "tags": [
+            "High-Lift Devices",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A structural engineer observes excessive upward flexing of a wing during a load test. Which structural behavior is primarily being demonstrated?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Shear",
+            "Wing Bending",
+            "Wing Torsion",
+            "Load Distribution"
+          ],
+          "answerIndex": 1,
+          "answerText": "Wing Bending",
+          "explanation": "Wing bending is the upward deflection of the wing caused by aerodynamic lift and is one of the primary structural loads acting on the wing.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft manufacturer wants to improve takeoff performance while keeping the aircraft's cruise configuration unchanged. Which type of wing device best satisfies this requirement?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "High-Lift Device",
+            "Winglet",
+            "Wing Fence",
+            "Fixed Slot"
+          ],
+          "answerIndex": 0,
+          "answerText": "High-Lift Device",
+          "explanation": "High-lift devices are deployed only during takeoff and landing to increase lift at low speeds and are retracted during cruise to minimize drag.",
+          "tags": [
+            "High-Lift Devices",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During wing inspection, engineers observe that the wing twists noticeably under aerodynamic loading. Which structural behavior is primarily responsible for this deformation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Bending",
+            "Load Distribution",
+            "Wing Shear",
+            "Wing Torsion"
+          ],
+          "answerIndex": 3,
+          "answerText": "Wing Torsion",
+          "explanation": "Wing torsion is the twisting of the wing about its longitudinal axis due to aerodynamic moments acting on the structure.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A designer chooses a Fowler flap instead of a plain flap because the aircraft requires the greatest possible lift during landing. Which characteristic of the Fowler flap supports this decision?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It reduces structural weight.",
+            "It increases both wing area and camber.",
+            "It eliminates induced drag.",
+            "It prevents all airflow separation."
+          ],
+          "answerIndex": 1,
+          "answerText": "It increases both wing area and camber.",
+          "explanation": "Unlike a plain flap, a Fowler flap extends rearward before deflecting downward, increasing both wing area and camber for a greater lift increase.",
+          "tags": [
+            "High-Lift Devices",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An engineer is evaluating how aerodynamic forces are transferred from the wing tip toward the fuselage. Which concept is most directly being analyzed?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Lift Distribution",
+            "Wing Shear",
+            "Load Distribution",
+            "Wing Torsion"
+          ],
+          "answerIndex": 2,
+          "answerText": "Load Distribution",
+          "explanation": "Load distribution describes how aerodynamic and structural loads are spread along the wing span and transmitted through the wing structure.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A new wing design meets all aerodynamic performance targets but is extremely difficult and expensive to produce. Which design consideration requires further improvement?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aerodynamic Efficiency",
+            "Structural Strength",
+            "Manufacturability",
+            "Weight Reduction"
+          ],
+          "answerIndex": 2,
+          "answerText": "Manufacturability",
+          "explanation": "Manufacturability considers how easily a wing can be fabricated, assembled, inspected, and maintained throughout its service life.",
+          "tags": [
+            "Design Considerations",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During flight testing, engineers observe that airflow separates near the leading edge at a high angle of attack. Which leading-edge device would most effectively delay stall by allowing high-energy air to flow over the upper surface of the wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Plain Flap",
+            "Slat",
+            "Split Flap",
+            "Spoiler"
+          ],
+          "answerIndex": 1,
+          "answerText": "Slat",
+          "explanation": "A slat extends forward from the leading edge to create a slot that directs high-energy airflow over the upper surface, delaying airflow separation and increasing maximum lift.",
+          "tags": [
+            "High-Lift Devices",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft designer wants to improve fuel efficiency during long-range cruise without affecting takeoff performance. Which modification best meets this objective?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Increase flap deflection",
+            "Install winglets",
+            "Deploy slats during cruise",
+            "Increase wing incidence"
+          ],
+          "answerIndex": 1,
+          "answerText": "Install winglets",
+          "explanation": "Winglets reduce induced drag during cruise by weakening wingtip vortices, improving fuel efficiency without affecting normal takeoff procedures.",
+          "tags": [
+            "Drag Reduction Devices",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During structural testing, the wing bends upward significantly but shows little twisting. Which structural behavior is primarily dominating the test results?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Shear",
+            "Wing Torsion",
+            "Wing Bending",
+            "Load Distribution"
+          ],
+          "answerIndex": 2,
+          "answerText": "Wing Bending",
+          "explanation": "Wing bending is characterized by the upward flexing of the wing due to lift. Since twisting is minimal, bending is the dominant structural response.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A manufacturing company develops a wing with excellent aerodynamic performance, but the design requires many complex fabrication steps that increase production time. Which design consideration should be improved?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Manufacturability",
+            "Structural Strength",
+            "Weight Reduction",
+            "Aerodynamic Efficiency"
+          ],
+          "answerIndex": 0,
+          "answerText": "Manufacturability",
+          "explanation": "Manufacturability evaluates how easily a wing can be produced, assembled, inspected, and maintained. Complex fabrication increases manufacturing difficulty and cost.",
+          "tags": [
+            "Design Considerations",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An engineer is selecting a wing configuration for a transport aircraft that requires large internal volume for fuel storage. Which wing component makes this possible while also serving as a major structural member?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Box",
+            "Trailing Edge",
+            "Leading Edge",
+            "Wing Tip"
+          ],
+          "answerIndex": 0,
+          "answerText": "Wing Box",
+          "explanation": "The wing box is the primary structural section of the wing and commonly houses integral fuel tanks while providing bending and torsional strength.",
+          "tags": [
+            "Wing Construction",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft is being designed for operation from short runways while maintaining efficient cruise performance. Which feature best satisfies both requirements?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Permanent increase in wing incidence",
+            "High-lift devices that can be retracted after takeoff",
+            "Larger fixed wing camber",
+            "Removal of wingtip devices"
+          ],
+          "answerIndex": 1,
+          "answerText": "High-lift devices that can be retracted after takeoff",
+          "explanation": "Retractable high-lift devices improve lift during takeoff and landing while allowing the wing to return to a low-drag cruise configuration.",
+          "tags": [
+            "High-Lift Devices",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A wing has excellent aerodynamic performance but is heavier than the design target. Which design consideration should engineers focus on improving without sacrificing structural safety?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Weight Reduction",
+            "Manufacturability",
+            "Cost",
+            "Aerodynamic Efficiency"
+          ],
+          "answerIndex": 0,
+          "answerText": "Weight Reduction",
+          "explanation": "Weight reduction aims to decrease structural mass while maintaining the required strength and performance.",
+          "tags": [
+            "Design Considerations",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft manufacturer wants to improve cruise efficiency by reducing induced drag but cannot increase the wing span because of airport gate limitations. Which solution is the most appropriate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install Winglets",
+            "Increase Flap Deflection",
+            "Install Split Flaps",
+            "Increase Wing Incidence"
+          ],
+          "answerIndex": 0,
+          "answerText": "Install Winglets",
+          "explanation": "Winglets reduce induced drag without requiring an increase in wing span, making them suitable when span is restricted.",
+          "tags": [
+            "Drag Reduction Devices",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During structural testing, engineers observe that aerodynamic loads are being safely transferred from the wing tip toward the fuselage without localized overstressing. Which structural concept is primarily being demonstrated?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Torsion",
+            "Load Distribution",
+            "Wing Shear",
+            "Wing Bending"
+          ],
+          "answerIndex": 1,
+          "answerText": "Load Distribution",
+          "explanation": "Load distribution describes how aerodynamic and structural loads are spread along the wing and transmitted through the primary structural members.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A design team is selecting materials and manufacturing methods that reduce production time while maintaining acceptable quality. Which design consideration is driving this decision?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Structural Strength",
+            "Aerodynamic Efficiency",
+            "Manufacturability",
+            "Weight Reduction"
+          ],
+          "answerIndex": 2,
+          "answerText": "Manufacturability",
+          "explanation": "Manufacturability focuses on producing, assembling, inspecting, and maintaining the aircraft efficiently and economically.",
+          "tags": [
+            "Design Considerations",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A transport aircraft is required to generate high lift during landing while maintaining good cruise efficiency after takeoff. Which combination of characteristics best satisfies this requirement?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fixed high-camber wing with no movable devices",
+            "Retractable high-lift devices that restore a clean wing during cruise",
+            "Large wing incidence angle throughout the flight",
+            "Permanent deployment of slats and flaps"
+          ],
+          "answerIndex": 1,
+          "answerText": "Retractable high-lift devices that restore a clean wing during cruise",
+          "explanation": "Retractable high-lift devices provide additional lift during takeoff and landing while allowing the wing to return to a low-drag configuration during cruise.",
+          "tags": [
+            "High-Lift Devices",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A wing structure safely withstands flight loads but is too heavy to meet the aircraft's performance requirements. Which design consideration should be improved while preserving structural integrity?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Weight Reduction",
+            "Cost",
+            "Manufacturability",
+            "Aerodynamic Efficiency"
+          ],
+          "answerIndex": 0,
+          "answerText": "Weight Reduction",
+          "explanation": "Weight reduction focuses on minimizing structural mass without compromising the required strength and safety of the wing.",
+          "tags": [
+            "Design Considerations",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Flight testing shows that the wing tip stalls before the wing root, reducing aileron effectiveness. Which device would most directly help control spanwise airflow and delay tip stall?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Fence",
+            "Winglet",
+            "Split Flap",
+            "Plain Flap"
+          ],
+          "answerIndex": 0,
+          "answerText": "Wing Fence",
+          "explanation": "Wing fences reduce spanwise airflow, promoting a more favorable lift distribution and helping delay wing-tip stall.",
+          "tags": [
+            "Drag Reduction Devices",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An engineer observes that a wing twists under aerodynamic loading while the amount of upward bending remains relatively small. Which structural behavior is primarily occurring?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Shear",
+            "Wing Bending",
+            "Load Distribution",
+            "Wing Torsion"
+          ],
+          "answerIndex": 3,
+          "answerText": "Wing Torsion",
+          "explanation": "Wing torsion is the twisting of the wing about its longitudinal axis due to aerodynamic moments acting on the wing.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During preliminary aircraft design, engineers evaluate how easily a wing can be produced using existing manufacturing processes. Which design consideration is primarily being assessed?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Structural Strength",
+            "Manufacturability",
+            "Weight Reduction",
+            "Aerodynamic Efficiency"
+          ],
+          "answerIndex": 1,
+          "answerText": "Manufacturability",
+          "explanation": "Manufacturability considers the practicality and efficiency of fabricating, assembling, inspecting, and maintaining the wing.",
+          "tags": [
+            "Design Considerations",
+            "Engineering Application"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which leading-edge device remains permanently open during all phases of flight?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Automatic Slot",
+            "Slat",
+            "Fixed Slot",
+            "Krueger Flap"
+          ],
+          "answerIndex": 2,
+          "answerText": "Fixed Slot",
+          "explanation": "A fixed slot is permanently open. A slat is movable, while an automatic slot opens only when required at high angles of attack.",
+          "tags": [
+            "High-Lift Devices",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which trailing-edge flap is distinguished by increasing both wing area and wing camber during deployment?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Plain Flap",
+            "Split Flap",
+            "Fowler Flap",
+            "Slotted Flap"
+          ],
+          "answerIndex": 2,
+          "answerText": "Fowler Flap",
+          "explanation": "A Fowler flap moves rearward before deflecting downward, increasing both wing area and camber. A slotted flap creates a slot to improve airflow but does not significantly increase wing area.",
+          "tags": [
+            "High-Lift Devices",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which structural behavior describes twisting of the wing about its longitudinal axis rather than upward flexing caused by lift?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Bending",
+            "Wing Torsion",
+            "Wing Shear",
+            "Load Distribution"
+          ],
+          "answerIndex": 1,
+          "answerText": "Wing Torsion",
+          "explanation": "Wing torsion is twisting about the longitudinal axis. Wing bending is the upward deflection of the wing caused primarily by lift.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A designer wants to reduce induced drag while maintaining essentially the same wing span. Which device is specifically intended for this purpose?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Fence",
+            "Winglet",
+            "Vortex Generator",
+            "Slotted Flap"
+          ],
+          "answerIndex": 1,
+          "answerText": "Winglet",
+          "explanation": "Winglets primarily reduce induced drag by weakening wingtip vortices. Wing fences mainly control spanwise airflow, while vortex generators energize the boundary layer.",
+          "tags": [
+            "Drag Reduction Devices",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes load distribution from lift distribution?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Load distribution describes only the variation of lift along the span.",
+            "Lift distribution describes all structural loads acting on the wing.",
+            "Load distribution describes how aerodynamic and structural loads are transmitted along the wing, while lift distribution refers specifically to how lift varies along the span.",
+            "The two terms have exactly the same meaning."
+          ],
+          "answerIndex": 2,
+          "answerText": "Load distribution describes how aerodynamic and structural loads are transmitted along the wing, while lift distribution refers specifically to how lift varies along the span.",
+          "explanation": "Lift distribution is concerned only with the spanwise variation of lift. Load distribution is broader and includes how all applied loads are distributed and carried through the wing structure.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which pair of wing planforms is most likely to be confused because both reduce wing area from root to tip, although only one has a continuously curved leading and trailing edge?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rectangular Wing and Delta Wing",
+            "Tapered Wing and Elliptical Wing",
+            "Swept Wing and Trapezoidal Wing",
+            "High Wing and Shoulder Wing"
+          ],
+          "answerIndex": 1,
+          "answerText": "Tapered Wing and Elliptical Wing",
+          "explanation": "Both tapered and elliptical wings decrease in chord toward the tip. However, an elliptical wing has continuously curved leading and trailing edges, while a tapered wing uses straight edges.",
+          "tags": [
+            "Wing Configurations",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes a high wing from a shoulder wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A shoulder wing is mounted above the fuselage, while a high wing is mounted below it.",
+            "A high wing is attached to the top of the fuselage, whereas a shoulder wing is attached slightly below the top of the fuselage.",
+            "Both terms describe exactly the same wing position.",
+            "A shoulder wing is always externally braced, while a high wing is always cantilever."
+          ],
+          "answerIndex": 1,
+          "answerText": "A high wing is attached to the top of the fuselage, whereas a shoulder wing is attached slightly below the top of the fuselage.",
+          "explanation": "Both are upper-mounted wings, but a shoulder wing is positioned slightly below the top of the fuselage rather than directly on top.",
+          "tags": [
+            "Wing Configurations",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes a wet wing from a dry wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A wet wing stores fuel directly within sealed wing cavities, whereas a dry wing uses separate fuel tanks installed inside the wing.",
+            "A dry wing stores fuel directly within the wing structure, whereas a wet wing uses removable tanks.",
+            "Both systems always use removable fuel tanks.",
+            "A wet wing cannot be used on transport aircraft."
+          ],
+          "answerIndex": 0,
+          "answerText": "A wet wing stores fuel directly within sealed wing cavities, whereas a dry wing uses separate fuel tanks installed inside the wing.",
+          "explanation": "A wet wing uses the sealed wing structure itself as the fuel tank. A dry wing carries fuel in separate tanks installed within the wing.",
+          "tags": [
+            "Wing Construction",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement best distinguishes a wing box from a spar?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A spar forms the entire closed structural section of the wing.",
+            "A wing box is a closed structural section composed of multiple members, while a spar is one of its principal load-carrying members.",
+            "A wing box and a spar are identical structural components.",
+            "A spar primarily supports fuel storage, while the wing box supports only the wing skin."
+          ],
+          "answerIndex": 1,
+          "answerText": "A wing box is a closed structural section composed of multiple members, while a spar is one of its principal load-carrying members.",
+          "explanation": "The wing box is an assembly consisting of spars, skins, and other structural members that together resist bending and torsion. A spar is one of the primary members within that assembly.",
+          "tags": [
+            "Wing Construction",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes aerodynamic efficiency from structural strength in wing design?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aerodynamic efficiency focuses on resisting structural loads, while structural strength minimizes drag.",
+            "Aerodynamic efficiency seeks to maximize lift while minimizing drag, whereas structural strength ensures the wing safely withstands applied loads.",
+            "Both terms describe the same design objective.",
+            "Structural strength is concerned only with manufacturing cost."
+          ],
+          "answerIndex": 1,
+          "answerText": "Aerodynamic efficiency seeks to maximize lift while minimizing drag, whereas structural strength ensures the wing safely withstands applied loads.",
+          "explanation": "Aerodynamic efficiency addresses flight performance, while structural strength addresses the wing's ability to resist operational loads safely. These objectives must be balanced during aircraft design.",
+          "tags": [
+            "Design Considerations",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes a slotted flap from a Fowler flap?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A slotted flap increases both wing area and camber, while a Fowler flap only increases camber.",
+            "A Fowler flap increases both wing area and camber, while a slotted flap primarily improves airflow by creating a slot.",
+            "Both devices operate identically and differ only in size.",
+            "A slotted flap is a leading-edge device, while a Fowler flap is a trailing-edge device."
+          ],
+          "answerIndex": 1,
+          "answerText": "A Fowler flap increases both wing area and camber, while a slotted flap primarily improves airflow by creating a slot.",
+          "explanation": "Both are trailing-edge high-lift devices. The Fowler flap translates rearward before deflecting, increasing wing area and camber. A slotted flap creates a slot to energize airflow but does not produce the same increase in wing area.",
+          "tags": [
+            "High-Lift Devices",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes a cantilever wing from a braced wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A cantilever wing relies entirely on external struts or wires for support.",
+            "A braced wing carries all loads internally without external support.",
+            "A cantilever wing carries its loads internally, whereas a braced wing uses external struts or wires to assist in supporting the wing.",
+            "Both wing types require external bracing during flight."
+          ],
+          "answerIndex": 2,
+          "answerText": "A cantilever wing carries its loads internally, whereas a braced wing uses external struts or wires to assist in supporting the wing.",
+          "explanation": "The defining difference is the method of structural support. Cantilever wings rely on internal structure, while braced wings use external members such as struts or wires.",
+          "tags": [
+            "Wing Configurations",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes wing bending from wing shear?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing bending is the twisting of the wing, while wing shear is the upward flexing caused by lift.",
+            "Wing bending is the upward flexing of the wing under lift, whereas wing shear involves internal forces that tend to cause adjacent sections to slide relative to one another.",
+            "Wing bending and wing shear describe the same structural behavior.",
+            "Wing shear occurs only during ground operations, while wing bending occurs only during flight."
+          ],
+          "answerIndex": 1,
+          "answerText": "Wing bending is the upward flexing of the wing under lift, whereas wing shear involves internal forces that tend to cause adjacent sections to slide relative to one another.",
+          "explanation": "Wing bending changes the wing's overall shape through flexure. Wing shear refers to internal shear forces acting within structural members.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An engineer states that increasing aspect ratio always reduces drag. Which response is the most technically accurate based on the concepts covered in this chapter?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Correct. Increasing aspect ratio reduces all forms of drag.",
+            "Incorrect. Aspect ratio is unrelated to aerodynamic drag.",
+            "Incorrect. A higher aspect ratio primarily reduces induced drag, not all drag.",
+            "Correct. Aspect ratio only affects parasite drag."
+          ],
+          "answerIndex": 2,
+          "answerText": "Incorrect. A higher aspect ratio primarily reduces induced drag, not all drag.",
+          "explanation": "A higher aspect ratio is associated with lower induced drag. It should not be generalized as reducing every type of aerodynamic drag.",
+          "tags": [
+            "Wing Geometry",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A student claims that every device mounted on a wing is intended to increase lift. Which statement best refutes this claim?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Correct. All wing-mounted devices are classified as high-lift devices.",
+            "Winglets and wing fences primarily improve aerodynamic efficiency, whereas high-lift devices are intended to increase lift during low-speed flight.",
+            "Winglets are installed only to increase structural strength.",
+            "High-lift devices are used only during cruise flight."
+          ],
+          "answerIndex": 1,
+          "answerText": "Winglets and wing fences primarily improve aerodynamic efficiency, whereas high-lift devices are intended to increase lift during low-speed flight.",
+          "explanation": "Not every wing-mounted device is a high-lift device. Winglets and wing fences are primarily used to improve aerodynamic efficiency by reducing induced drag or controlling airflow, while high-lift devices are deployed to improve low-speed performance.",
+          "tags": [
+            "Drag Reduction Devices",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes a slotted flap from a Fowler flap?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A slotted flap increases both wing area and camber, while a Fowler flap only increases camber.",
+            "A Fowler flap increases both wing area and camber, while a slotted flap primarily improves airflow by creating a slot.",
+            "Both devices operate identically and differ only in size.",
+            "A slotted flap is a leading-edge device, while a Fowler flap is a trailing-edge device."
+          ],
+          "answerIndex": 1,
+          "answerText": "A Fowler flap increases both wing area and camber, while a slotted flap primarily improves airflow by creating a slot.",
+          "explanation": "Both are trailing-edge high-lift devices. The Fowler flap translates rearward before deflecting, increasing wing area and camber. A slotted flap creates a slot to energize airflow but does not produce the same increase in wing area.",
+          "tags": [
+            "High-Lift Devices",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes a cantilever wing from a braced wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A cantilever wing relies entirely on external struts or wires for support.",
+            "A braced wing carries all loads internally without external support.",
+            "A cantilever wing carries its loads internally, whereas a braced wing uses external struts or wires to assist in supporting the wing.",
+            "Both wing types require external bracing during flight."
+          ],
+          "answerIndex": 2,
+          "answerText": "A cantilever wing carries its loads internally, whereas a braced wing uses external struts or wires to assist in supporting the wing.",
+          "explanation": "The defining difference is the method of structural support. Cantilever wings rely on internal structure, while braced wings use external members such as struts or wires.",
+          "tags": [
+            "Wing Configurations",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes wing bending from wing shear?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing bending is the twisting of the wing, while wing shear is the upward flexing caused by lift.",
+            "Wing bending is the upward flexing of the wing under lift, whereas wing shear involves internal forces that tend to cause adjacent sections to slide relative to one another.",
+            "Wing bending and wing shear describe the same structural behavior.",
+            "Wing shear occurs only during ground operations, while wing bending occurs only during flight."
+          ],
+          "answerIndex": 1,
+          "answerText": "Wing bending is the upward flexing of the wing under lift, whereas wing shear involves internal forces that tend to cause adjacent sections to slide relative to one another.",
+          "explanation": "Wing bending changes the wing's overall shape through flexure. Wing shear refers to internal shear forces acting within structural members.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An engineer states that increasing aspect ratio always reduces drag. Which response is the most technically accurate based on the concepts covered in this chapter?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Correct. Increasing aspect ratio reduces all forms of drag.",
+            "Incorrect. Aspect ratio is unrelated to aerodynamic drag.",
+            "Incorrect. A higher aspect ratio primarily reduces induced drag, not all drag.",
+            "Correct. Aspect ratio only affects parasite drag."
+          ],
+          "answerIndex": 2,
+          "answerText": "Incorrect. A higher aspect ratio primarily reduces induced drag, not all drag.",
+          "explanation": "A higher aspect ratio is associated with lower induced drag. It should not be generalized as reducing every type of aerodynamic drag.",
+          "tags": [
+            "Wing Geometry",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A student claims that every device mounted on a wing is intended to increase lift. Which statement best refutes this claim?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Correct. All wing-mounted devices are classified as high-lift devices.",
+            "Winglets and wing fences primarily improve aerodynamic efficiency, whereas high-lift devices are intended to increase lift during low-speed flight.",
+            "Winglets are installed only to increase structural strength.",
+            "High-lift devices are used only during cruise flight."
+          ],
+          "answerIndex": 1,
+          "answerText": "Winglets and wing fences primarily improve aerodynamic efficiency, whereas high-lift devices are intended to increase lift during low-speed flight.",
+          "explanation": "Not every wing-mounted device is a high-lift device. Winglets and wing fences are primarily used to improve aerodynamic efficiency by reducing induced drag or controlling airflow, while high-lift devices are deployed to improve low-speed performance.",
+          "tags": [
+            "Drag Reduction Devices",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes a slot from a slat?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A slot is a fixed opening that allows airflow to pass through the leading edge, whereas a slat is a movable leading-edge device that creates a slot when deployed.",
+            "A slat is permanently fixed, whereas a slot extends only during takeoff and landing.",
+            "Both terms describe the same leading-edge device.",
+            "A slot is installed on the trailing edge, whereas a slat is installed on the leading edge."
+          ],
+          "answerIndex": 0,
+          "answerText": "A slot is a fixed opening that allows airflow to pass through the leading edge, whereas a slat is a movable leading-edge device that creates a slot when deployed.",
+          "explanation": "A slot is an opening that permits high-energy airflow over the upper surface of the wing. A slat is the movable device that extends forward to create that slot. Students often confuse the opening with the device itself.",
+          "tags": [
+            "High-Lift Devices",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes lift distribution from load distribution?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Lift distribution refers only to the variation of lift along the wing span, whereas load distribution includes the overall distribution of aerodynamic and structural loads.",
+            "Load distribution refers only to lift, while lift distribution includes all structural loads.",
+            "The two terms are interchangeable.",
+            "Lift distribution applies only during takeoff, whereas load distribution applies only during cruise."
+          ],
+          "answerIndex": 0,
+          "answerText": "Lift distribution refers only to the variation of lift along the wing span, whereas load distribution includes the overall distribution of aerodynamic and structural loads.",
+          "explanation": "Lift distribution is one component of the broader concept of load distribution. Load distribution includes how all applied loads are carried throughout the wing structure.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes a monoplane from a cantilever wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A monoplane describes the number of wings, whereas a cantilever wing describes how the wing is structurally supported.",
+            "Both terms describe the same aircraft characteristic.",
+            "A cantilever wing always has two wings, whereas a monoplane has one.",
+            "A monoplane always uses external struts for support."
+          ],
+          "answerIndex": 0,
+          "answerText": "A monoplane describes the number of wings, whereas a cantilever wing describes how the wing is structurally supported.",
+          "explanation": "A monoplane is classified by having a single main wing, while a cantilever wing is classified by carrying its loads internally without external bracing. These describe different design characteristics.",
+          "tags": [
+            "Wing Configurations",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A student states that every flap creates a slot between the flap and the wing. Which response is the most accurate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Correct. All flaps create slots.",
+            "Incorrect. Only slotted and Fowler flaps are designed to create a slot, while plain and split flaps do not.",
+            "Incorrect. Only split flaps create slots.",
+            "Correct. Slots are created only by leading-edge devices."
+          ],
+          "answerIndex": 1,
+          "answerText": "Incorrect. Only slotted and Fowler flaps are designed to create a slot, while plain and split flaps do not.",
+          "explanation": "A slotted flap is specifically designed to form a slot. Fowler flaps also form a slot as they extend on tracks. Plain and split flaps do not create this airflow passage.",
+          "tags": [
+            "High-Lift Devices",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement best distinguishes aerodynamic efficiency from drag reduction?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aerodynamic efficiency and drag reduction always mean exactly the same thing.",
+            "Drag reduction is one way of improving aerodynamic efficiency, but aerodynamic efficiency also depends on producing the required lift effectively.",
+            "Aerodynamic efficiency concerns only structural weight.",
+            "Drag reduction applies only to winglets."
+          ],
+          "answerIndex": 1,
+          "answerText": "Drag reduction is one way of improving aerodynamic efficiency, but aerodynamic efficiency also depends on producing the required lift effectively.",
+          "explanation": "Reducing drag improves aerodynamic efficiency, but efficiency is a broader design objective involving the relationship between lift and drag rather than drag alone.",
+          "tags": [
+            "Design Considerations",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes a wing configuration from a wing planform?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A wing configuration describes the wing's position or structural arrangement, whereas a wing planform describes its shape when viewed from above.",
+            "A wing planform describes the wing's position on the fuselage, whereas a wing configuration describes only its airfoil shape.",
+            "Wing configuration and wing planform are interchangeable terms.",
+            "Wing configuration refers only to military aircraft, whereas wing planform applies only to civil aircraft."
+          ],
+          "answerIndex": 0,
+          "answerText": "A wing configuration describes the wing's position or structural arrangement, whereas a wing planform describes its shape when viewed from above.",
+          "explanation": "Wing configuration classifies how the wing is arranged (e.g., high wing, cantilever, monoplane), while wing planform refers to the outline or shape of the wing as seen from above (e.g., rectangular, tapered, elliptical).",
+          "tags": [
+            "Wing Configurations",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes a wing box from a wet wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A wing box is the structural assembly that resists bending and torsion, whereas a wet wing is a method of storing fuel within sealed portions of that structure.",
+            "A wet wing is the primary structural member of the wing, whereas a wing box stores fuel.",
+            "A wing box and a wet wing are identical terms.",
+            "A wet wing is found only in wooden aircraft."
+          ],
+          "answerIndex": 0,
+          "answerText": "A wing box is the structural assembly that resists bending and torsion, whereas a wet wing is a method of storing fuel within sealed portions of that structure.",
+          "explanation": "The wing box is the principal structural section of the wing. A wet wing refers to using sealed cavities within the wing structure—often within the wing box—as integral fuel tanks.",
+          "tags": [
+            "Wing Construction",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A student says that every leading-edge device functions in exactly the same way because they all delay stall. Which response is the most accurate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Correct. All leading-edge devices operate using the same mechanism.",
+            "Incorrect. Leading-edge devices share the objective of delaying stall, but they accomplish it using different designs and deployment methods.",
+            "Correct. The only difference among them is manufacturing cost.",
+            "Incorrect. Leading-edge devices are used only to reduce drag."
+          ],
+          "answerIndex": 1,
+          "answerText": "Incorrect. Leading-edge devices share the objective of delaying stall, but they accomplish it using different designs and deployment methods.",
+          "explanation": "Fixed slots, automatic slots, slats, and Krueger flaps all improve low-speed performance, but they differ in construction, operation, and deployment.",
+          "tags": [
+            "High-Lift Devices",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement correctly distinguishes a winglet from a vortex generator?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Both devices are installed at the wing tip to reduce induced drag.",
+            "A winglet reduces induced drag by weakening wingtip vortices, whereas a vortex generator energizes the boundary layer to delay airflow separation.",
+            "A vortex generator increases wing area, whereas a winglet increases wing camber.",
+            "Both devices are classified as trailing-edge high-lift devices."
+          ],
+          "answerIndex": 1,
+          "answerText": "A winglet reduces induced drag by weakening wingtip vortices, whereas a vortex generator energizes the boundary layer to delay airflow separation.",
+          "explanation": "Although both improve aerodynamic performance, they operate through different mechanisms. Winglets act primarily on wingtip vortices, while vortex generators control boundary-layer behavior.",
+          "tags": [
+            "Drag Reduction Devices",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement best distinguishes structural strength from weight reduction during wing design?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Structural strength and weight reduction always increase together without compromise.",
+            "Weight reduction seeks the lightest possible structure regardless of safety.",
+            "Structural strength ensures the wing withstands applied loads safely, whereas weight reduction aims to minimize mass while preserving the required strength.",
+            "Weight reduction concerns manufacturing cost rather than structural mass."
+          ],
+          "answerIndex": 2,
+          "answerText": "Structural strength ensures the wing withstands applied loads safely, whereas weight reduction aims to minimize mass while preserving the required strength.",
+          "explanation": "Aircraft wing design always involves balancing structural integrity with minimizing weight. Neither objective should be pursued at the expense of the other.",
+          "tags": [
+            "Design Considerations",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft is described as having a high wing and a cantilever wing. Which statement correctly interprets this description?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The terms are contradictory because a high wing must use external struts.",
+            "Both terms describe the wing's position on the fuselage.",
+            "A high wing describes the wing's location, whereas a cantilever wing describes how it is structurally supported.",
+            "Both terms describe the wing planform."
+          ],
+          "answerIndex": 2,
+          "answerText": "A high wing describes the wing's location, whereas a cantilever wing describes how it is structurally supported.",
+          "explanation": "A high wing is classified by its mounting position on the fuselage, while a cantilever wing is classified by carrying its loads internally without external bracing. A wing may be both high-wing and cantilever simultaneously.",
+          "tags": [
+            "Wing Configurations",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A student argues that a Fowler flap is simply a slotted flap with a different name because both create a slot. Which response is the most technically accurate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Correct. The two names refer to the same flap.",
+            "Incorrect. Both create a slot, but a Fowler flap also translates rearward to increase wing area before deflecting.",
+            "Incorrect. Fowler flaps are leading-edge devices.",
+            "Correct. The only difference is the angle of deflection."
+          ],
+          "answerIndex": 1,
+          "answerText": "Incorrect. Both create a slot, but a Fowler flap also translates rearward to increase wing area before deflecting.",
+          "explanation": "A Fowler flap combines slot formation with rearward translation, increasing both wing area and camber. A slotted flap primarily improves airflow by creating a slot.",
+          "tags": [
+            "High-Lift Devices",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement best distinguishes the roles of a wing rib and a wing spar?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A rib is the primary bending member, while a spar maintains the airfoil shape.",
+            "A spar carries the primary structural loads, whereas a rib primarily maintains the airfoil shape and transfers loads to the spar.",
+            "Both members perform identical structural functions.",
+            "A spar is installed only near the wing tip, whereas ribs are installed at the wing root."
+          ],
+          "answerIndex": 1,
+          "answerText": "A spar carries the primary structural loads, whereas a rib primarily maintains the airfoil shape and transfers loads to the spar.",
+          "explanation": "The spar is the principal load-carrying member of the wing. Ribs primarily preserve the airfoil contour and distribute aerodynamic loads into the primary structure.",
+          "tags": [
+            "Wing Construction",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A wing experiences an increase in lift while the distribution of that lift shifts toward the wing tip. Which concept describes the change in where lift is produced rather than how all loads are transmitted through the structure?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Load Distribution",
+            "Wing Shear",
+            "Lift Distribution",
+            "Wing Bending"
+          ],
+          "answerIndex": 2,
+          "answerText": "Lift Distribution",
+          "explanation": "Lift distribution refers specifically to how lift varies along the wing span. Load distribution is broader and includes how all aerodynamic and structural loads are carried through the wing.",
+          "tags": [
+            "Wing Structural Behavior",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement best explains why aerodynamic efficiency and structural strength are often considered together during wing design?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Improving one automatically guarantees improvement of the other.",
+            "They represent independent objectives that must be balanced because changes that improve one may influence the other.",
+            "Structural strength is considered only after aerodynamic design is complete.",
+            "Aerodynamic efficiency applies only to military aircraft."
+          ],
+          "answerIndex": 1,
+          "answerText": "They represent independent objectives that must be balanced because changes that improve one may influence the other.",
+          "explanation": "Aircraft wing design requires balancing aerodynamic performance with structural integrity. Optimizing one objective may introduce trade-offs affecting the other.",
+          "tags": [
+            "Design Considerations",
+            "Tricky Questions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During preliminary design, an aircraft manufacturer wants to improve cruise fuel efficiency without increasing the wingspan because the aircraft must remain compatible with existing airport gates. Which design modification is the MOST appropriate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install winglets",
+            "Increase wing incidence",
+            "Install fixed leading-edge slots",
+            "Use larger Fowler flaps during cruise"
+          ],
+          "answerIndex": 0,
+          "answerText": "Install winglets",
+          "explanation": "Winglets reduce induced drag by weakening wingtip vortices while maintaining essentially the same wingspan.\n\nWhy not B? Increasing wing incidence increases cruise drag.\nWhy not C? Fixed slots improve low-speed performance but increase drag during cruise.\nWhy not D? Fowler flaps are intended for takeoff and landing and would significantly increase cruise drag.\n\nEngineering Decision: When wingspan is constrained, winglets provide one of the most effective methods of improving cruise efficiency.",
+          "tags": [
+            "Board Challenge",
+            "Winglets",
+            "Design Considerations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During structural testing, engineers observe that the wing tips deflect upward under increasing load while remaining structurally intact. Which structural behavior is being demonstrated?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing bending",
+            "Wing torsion",
+            "Wing shear",
+            "Flutter"
+          ],
+          "answerIndex": 0,
+          "answerText": "Wing bending",
+          "explanation": "Wing bending is the upward flexure of the wing caused by lift-induced bending moments.\n\nWhy not B? Torsion is twisting about the spanwise axis.\nWhy not C? Shear refers to internal forces resisting sliding between adjacent sections.\nWhy not D? Flutter is a dynamic aeroelastic instability, not a static structural response.\n\nEngineering Decision: Static load tests commonly evaluate bending behavior to verify structural strength before certification.",
+          "tags": [
+            "Board Challenge",
+            "Wing Structural Behavior"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft is required to achieve lower stall speeds while maintaining efficient cruise performance. Which design approach BEST satisfies both requirements?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Use retractable leading-edge slats and Fowler flaps",
+            "Increase the fixed angle of incidence",
+            "Install permanent split flaps",
+            "Increase wing loading"
+          ],
+          "answerIndex": 0,
+          "answerText": "Use retractable leading-edge slats and Fowler flaps",
+          "explanation": "Retractable high-lift devices improve lift during takeoff and landing while retracting during cruise to minimize drag.\n\nWhy not B? A higher fixed incidence penalizes cruise efficiency.\nWhy not C? Permanent flap deployment creates excessive drag.\nWhy not D? Higher wing loading generally increases stall speed.\n\nEngineering Decision: Retractable high-lift devices allow designers to optimize the aircraft for multiple phases of flight rather than compromising for only one.",
+          "tags": [
+            "Board Challenge",
+            "High-Lift Devices"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A wing structure must carry large bending loads while preserving the designed airfoil contour. Which combination of structural members primarily fulfills these requirements?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Spars and ribs",
+            "Winglets and fences",
+            "Flaps and slats",
+            "Stringers and vortex generators"
+          ],
+          "answerIndex": 0,
+          "answerText": "Spars and ribs",
+          "explanation": "Spars carry the primary bending loads, while ribs maintain the airfoil shape and transfer aerodynamic loads to the spars.\n\nWhy not B? Winglets and fences improve aerodynamic performance rather than serving as primary structural members.\nWhy not C? Flaps and slats are high-lift devices.\nWhy not D? Stringers strengthen skin panels, while vortex generators improve boundary-layer behavior.\n\nEngineering Decision: Efficient wing structures rely on primary load-carrying members supported by shape-maintaining components.",
+          "tags": [
+            "Board Challenge",
+            "Wing Construction"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During conceptual design, engineers compare a tapered wing with an elliptical wing. Both provide favorable lift distribution, but the tapered wing is selected. What is the MOST likely engineering reason?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It offers a better balance between aerodynamic efficiency and manufacturing practicality.",
+            "It completely eliminates induced drag.",
+            "It requires no structural support.",
+            "It always produces more lift than an elliptical wing."
+          ],
+          "answerIndex": 0,
+          "answerText": "It offers a better balance between aerodynamic efficiency and manufacturing practicality.",
+          "explanation": "Although an elliptical wing provides an ideal lift distribution, tapered wings can achieve similar aerodynamic performance while being simpler and less expensive to manufacture.\n\nWhy not B? No wing completely eliminates induced drag.\nWhy not C? Every wing requires structural support.\nWhy not D? Lift depends on many factors besides planform.\n\nEngineering Decision: Aircraft design is usually driven by balanced trade-offs rather than maximizing a single performance parameter.",
+          "tags": [
+            "Board Challenge",
+            "Wing Planforms",
+            "Design Considerations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A transport aircraft must operate from relatively short runways while maintaining good cruise fuel efficiency. The design team wants to improve low-speed lift during takeoff and landing without increasing cruise drag. Which solution is the MOST appropriate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install retractable Fowler flaps",
+            "Increase the fixed wing incidence",
+            "Permanently deploy leading-edge slats",
+            "Replace the wing with a rectangular planform"
+          ],
+          "answerIndex": 0,
+          "answerText": "Install retractable Fowler flaps",
+          "explanation": "Fowler flaps provide a large increase in lift by increasing both wing area and camber during takeoff and landing, then retract during cruise to restore a low-drag configuration.\n\nWhy not B? Increasing fixed incidence increases cruise drag.\nWhy not C? Permanently deployed slats would increase drag during cruise.\nWhy not D? A rectangular wing does not specifically address the mission requirements.",
+          "tags": [
+            "Board Challenge",
+            "High-Lift Devices",
+            "Aircraft Design"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During conceptual design, an aircraft must operate efficiently during cruise while also maintaining acceptable low-speed handling for takeoff and landing. Which combination of design features BEST satisfies these conflicting requirements?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Winglets with retractable Fowler flaps",
+            "Fixed leading-edge slots with split flaps",
+            "High wing incidence with plain flaps",
+            "Rectangular wing with permanent slats"
+          ],
+          "answerIndex": 0,
+          "answerText": "Winglets with retractable Fowler flaps",
+          "explanation": "Winglets improve cruise efficiency by reducing induced drag, while retractable Fowler flaps provide substantial lift during takeoff and landing without compromising cruise performance.\n\nWhy not B? Fixed slots increase cruise drag.\nWhy not C? Higher fixed incidence penalizes cruise efficiency.\nWhy not D? Permanent slats create unnecessary drag during cruise.\n\nEngineering Decision: Modern transport aircraft often combine drag-reduction devices with retractable high-lift systems to optimize performance across different flight phases.",
+          "tags": [
+            "Board Challenge",
+            "Aircraft Design",
+            "High-Lift Devices",
+            "Winglets"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An engineer is evaluating two wing designs. Design A has superior aerodynamic efficiency but is significantly more difficult to manufacture. Design B provides slightly lower aerodynamic performance but is easier and less expensive to build. Assuming all certification requirements are met, which design is MOST likely to be selected for large-scale production?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Design B, because aircraft design balances performance with manufacturability and cost.",
+            "Design A, because aerodynamic efficiency is always the only design criterion.",
+            "Design A, because manufacturing complexity has no effect on production decisions.",
+            "Either design, since manufacturability is never considered during aircraft design."
+          ],
+          "answerIndex": 0,
+          "answerText": "Design B, because aircraft design balances performance with manufacturability and cost.",
+          "explanation": "Aircraft manufacturers rarely optimize only one parameter. Small aerodynamic gains may not justify substantial increases in manufacturing complexity or production cost.\n\nWhy not B? Design decisions involve many competing requirements.\nWhy not C? Manufacturing strongly influences feasibility and cost.\nWhy not D? Manufacturability is a major consideration throughout aircraft development.\n\nEngineering Decision: Good engineering seeks the optimum overall solution—not the maximum value of a single performance metric.",
+          "tags": [
+            "Board Challenge",
+            "Manufacturability",
+            "Design Considerations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During a static wing test, the applied load is gradually increased. Engineers observe upward wing deflection while the airfoil shape remains essentially unchanged. Which structural members are primarily responsible for these observations?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Spars resist the bending loads, while ribs maintain the airfoil shape.",
+            "Ribs resist the bending loads, while spars maintain the airfoil shape.",
+            "Winglets resist bending, while ribs maintain structural strength.",
+            "Flaps resist bending, while slats maintain the airfoil shape."
+          ],
+          "answerIndex": 0,
+          "answerText": "Spars resist the bending loads, while ribs maintain the airfoil shape.",
+          "explanation": "The spar is the principal load-carrying member of the wing. Ribs preserve the airfoil contour and transfer aerodynamic loads to the spar.\n\nWhy not B? The functions are reversed.\nWhy not C? Winglets are aerodynamic devices.\nWhy not D? Flaps and slats are high-lift devices rather than primary structural members.\n\nEngineering Decision: Effective wing structures rely on each structural component performing its specialized function.",
+          "tags": [
+            "Board Challenge",
+            "Wing Structure"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft designer wants to reduce induced drag without significantly increasing aircraft weight or changing the wing planform. Which modification is the MOST appropriate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install winglets.",
+            "Increase flap deflection during cruise.",
+            "Increase the fixed angle of incidence.",
+            "Replace the wing with a rectangular planform."
+          ],
+          "answerIndex": 0,
+          "answerText": "Install winglets.",
+          "explanation": "Winglets reduce induced drag by weakening wingtip vortices and generally require less structural redesign than replacing the entire wing.\n\nWhy not B? Flaps increase drag during cruise.\nWhy not C? Higher incidence increases drag.\nWhy not D? A rectangular wing is not intended as a drag-reduction measure.\n\nEngineering Decision: Incremental aerodynamic improvements are often preferred over complete structural redesign when they meet performance goals efficiently.",
+          "tags": [
+            "Board Challenge",
+            "Winglets",
+            "Aerodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A prototype aircraft demonstrates excellent cruise efficiency but consistently exceeds the allowable landing speed during certification testing. Which modification is the MOST appropriate while preserving cruise performance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install retractable high-lift devices.",
+            "Increase cruise angle of attack permanently.",
+            "Remove the winglets.",
+            "Increase wing loading."
+          ],
+          "answerIndex": 0,
+          "answerText": "Install retractable high-lift devices.",
+          "explanation": "Retractable high-lift devices increase lift during takeoff and landing, reducing stall and landing speeds while retracting during cruise to maintain aerodynamic efficiency.\n\nWhy not B? Permanent changes to incidence reduce cruise efficiency.\nWhy not C? Removing winglets may degrade cruise performance without solving the landing-speed issue.\nWhy not D? Increased wing loading generally raises stall and landing speeds.\n\nEngineering Decision: Certification deficiencies are ideally corrected with modifications that address the affected flight phase while minimizing penalties in other phases.",
+          "tags": [
+            "Board Challenge",
+            "Certification",
+            "High-Lift Devices"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A regional transport aircraft must operate from short runways, remain compatible with existing airport gates, and maintain low cruise fuel consumption. Which modification is the BEST solution without requiring a complete wing redesign?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install winglets together with retractable Fowler flaps.",
+            "Increase the wing's fixed angle of incidence.",
+            "Install permanent leading-edge slots.",
+            "Replace the wing with an elliptical planform."
+          ],
+          "answerIndex": 0,
+          "answerText": "Install winglets together with retractable Fowler flaps.",
+          "explanation": "Winglets improve cruise efficiency by reducing induced drag, while retractable Fowler flaps provide the additional lift required for short-field operations without increasing cruise drag.\n\nWhy not B? A higher fixed incidence improves low-speed lift but increases drag throughout cruise.\nWhy not C? Permanent slots improve stall characteristics but impose a continuous drag penalty.\nWhy not D? Replacing the wing planform requires extensive structural redesign and does not directly address all mission constraints.\n\nEngineering Decision: The best engineering solution often combines complementary technologies rather than relying on a single modification.",
+          "tags": [
+            "Board Challenge",
+            "Aircraft Design",
+            "Mission Requirements",
+            "High-Lift Devices",
+            "Winglets"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During preliminary wing design, engineers are comparing an elliptical wing and a tapered wing. Both satisfy aerodynamic requirements, but production cost and manufacturing time are major concerns. Which wing is MOST likely to be selected?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Tapered wing",
+            "Elliptical wing",
+            "Rectangular wing",
+            "Delta wing"
+          ],
+          "answerIndex": 0,
+          "answerText": "Tapered wing",
+          "explanation": "A tapered wing provides aerodynamic performance approaching that of an elliptical wing while being considerably easier and less expensive to manufacture.\n\nWhy not B? Although aerodynamically efficient, elliptical wings are generally more complex to manufacture.\nWhy not C? Rectangular wings are simpler but usually provide poorer aerodynamic efficiency.\nWhy not D? Delta wings are intended for different design requirements and are not selected solely for manufacturing convenience.\n\nEngineering Decision: Aircraft design seeks the optimum balance between performance and practical production constraints.",
+          "tags": [
+            "Board Challenge",
+            "Wing Planforms",
+            "Manufacturability"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During certification, a wing successfully withstands the required bending loads but experiences excessive twisting under aerodynamic loading. Which aspect of the wing structure requires the MOST attention?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Its torsional stiffness",
+            "Its bending strength",
+            "Its lift distribution",
+            "Its wing loading"
+          ],
+          "answerIndex": 0,
+          "answerText": "Its torsional stiffness",
+          "explanation": "The wing already satisfies the bending requirement. Excessive twisting indicates inadequate resistance to torsional loads, making torsional stiffness the primary concern.\n\nWhy not B? Bending strength has already been demonstrated as adequate.\nWhy not C? Lift distribution may influence loading, but the observed problem is structural twisting.\nWhy not D? Wing loading is an aerodynamic parameter rather than the direct cause of insufficient torsional resistance.\n\nEngineering Decision: Engineers must identify the actual failure mode instead of redesigning unrelated aspects of the aircraft.",
+          "tags": [
+            "Board Challenge",
+            "Wing Structural Behavior",
+            "Certification"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft consistently approaches stall first near the wing tips, reducing aileron effectiveness during landing. Which design modification is the MOST appropriate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install wing fences.",
+            "Increase flap deflection during cruise.",
+            "Increase the wing's fixed angle of incidence.",
+            "Replace the wing spars."
+          ],
+          "answerIndex": 0,
+          "answerText": "Install wing fences.",
+          "explanation": "Wing fences help control spanwise airflow, delaying tip stall and preserving aileron effectiveness at high angles of attack.\n\nWhy not B? Cruise flap deflection is unrelated to the stall problem.\nWhy not C? Increasing incidence affects the entire wing and may worsen cruise performance.\nWhy not D? Spar replacement addresses structural loads rather than aerodynamic stall behavior.\n\nEngineering Decision: The best solution directly addresses the aerodynamic cause of the problem while minimizing unnecessary design changes.",
+          "tags": [
+            "Board Challenge",
+            "Wing Fences",
+            "High-Lift Devices",
+            "Aircraft Handling"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A design team is tasked with reducing aircraft structural weight while maintaining compliance with certification load requirements. Which engineering principle BEST describes the objective?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Minimize structural weight without sacrificing required strength.",
+            "Reduce weight regardless of structural margins.",
+            "Maximize structural strength regardless of aircraft mass.",
+            "Prioritize manufacturing simplicity over structural integrity."
+          ],
+          "answerIndex": 0,
+          "answerText": "Minimize structural weight without sacrificing required strength.",
+          "explanation": "Aircraft structures are optimized to achieve the lightest practical design while safely carrying all required operational and certification loads.\n\nWhy not B? Safety requirements cannot be compromised.\nWhy not C? Excessive strength usually increases unnecessary weight.\nWhy not D? Manufacturing considerations are important but cannot override structural safety.\n\nEngineering Decision: Structural optimization is the process of balancing weight, strength, safety, and manufacturability rather than maximizing any single objective.",
+          "tags": [
+            "Board Challenge",
+            "Structural Optimization",
+            "Design Considerations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During flight testing, engineers observe that the aircraft meets cruise performance requirements but exhibits poor climb performance immediately after takeoff. The design team wants a solution that minimizes any penalty during cruise. Which modification is the MOST appropriate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install retractable leading-edge slats.",
+            "Increase the wing's fixed angle of incidence.",
+            "Deploy Fowler flaps throughout the entire flight.",
+            "Increase wing loading."
+          ],
+          "answerIndex": 0,
+          "answerText": "Install retractable leading-edge slats.",
+          "explanation": "Retractable leading-edge slats increase maximum lift during takeoff and climb while retracting during cruise to minimize drag.\n\nWhy not B? A higher fixed incidence improves low-speed performance but increases drag throughout the flight.\nWhy not C? Continuous flap deployment severely reduces cruise efficiency.\nWhy not D? Increased wing loading generally degrades climb performance.\n\nEngineering Decision: When only one phase of flight requires improvement, engineers favor solutions that can be activated only during that phase.",
+          "tags": [
+            "Board Challenge",
+            "High-Lift Devices",
+            "Flight Performance"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A wing passes all structural load tests but is found to have excessive manufacturing cost because of its complex geometry. Which redesign is MOST likely to preserve good aerodynamic performance while improving manufacturability?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Replace the elliptical wing with a tapered wing.",
+            "Replace the tapered wing with a rectangular wing.",
+            "Increase the wing's fixed angle of incidence.",
+            "Install permanent leading-edge slots."
+          ],
+          "answerIndex": 0,
+          "answerText": "Replace the elliptical wing with a tapered wing.",
+          "explanation": "A tapered wing offers aerodynamic performance approaching that of an elliptical wing while significantly simplifying manufacturing.\n\nWhy not B? A rectangular wing simplifies manufacturing but usually sacrifices more aerodynamic efficiency.\nWhy not C? Wing incidence does not address manufacturing complexity.\nWhy not D? Leading-edge slots solve a different aerodynamic problem.\n\nEngineering Decision: Designers often seek the smallest performance sacrifice that produces a substantial reduction in manufacturing complexity.",
+          "tags": [
+            "Board Challenge",
+            "Wing Planforms",
+            "Manufacturability"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During structural analysis, aerodynamic loads are found to be adequately resisted, but engineers discover localized twisting near the wing tip that could affect controllability. Which structural characteristic should be improved FIRST?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Torsional stiffness",
+            "Bending strength",
+            "Lift distribution",
+            "Wing loading"
+          ],
+          "answerIndex": 0,
+          "answerText": "Torsional stiffness",
+          "explanation": "Localized twisting is a torsional problem. Improving torsional stiffness helps resist twisting and maintains the intended aerodynamic shape.\n\nWhy not B? The problem is not insufficient bending resistance.\nWhy not C? Lift distribution influences loading but does not directly correct inadequate torsional rigidity.\nWhy not D? Wing loading is an aerodynamic design parameter rather than the structural deficiency.\n\nEngineering Decision: Engineers should first address the structural property directly responsible for the observed behavior.",
+          "tags": [
+            "Board Challenge",
+            "Wing Structural Behavior",
+            "Structural Analysis"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A manufacturer wants to improve cruise fuel efficiency using a modification that can be added to an existing aircraft without redesigning the primary wing structure. Which option is the BEST choice?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install winglets.",
+            "Replace the wing with an elliptical planform.",
+            "Increase the wing's fixed incidence.",
+            "Install permanent Fowler flaps."
+          ],
+          "answerIndex": 0,
+          "answerText": "Install winglets.",
+          "explanation": "Winglets are commonly added to existing aircraft to reduce induced drag and improve fuel efficiency without replacing the entire wing.\n\nWhy not B? Replacing the entire wing is a major redesign.\nWhy not C? Increased incidence raises drag.\nWhy not D? Permanent flap deployment increases drag instead of reducing it.\n\nEngineering Decision: Retrofit solutions are preferred when they provide measurable improvements with minimal structural modification.",
+          "tags": [
+            "Board Challenge",
+            "Winglets",
+            "Aircraft Modification"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During the conceptual design of a utility aircraft, engineers must minimize structural weight while ensuring the wing safely carries aerodynamic loads and maintains its aerodynamic shape. Which combination of structural members BEST satisfies these requirements?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Spars and ribs",
+            "Winglets and vortex generators",
+            "Flaps and slats",
+            "Wing fences and slots"
+          ],
+          "answerIndex": 0,
+          "answerText": "Spars and ribs",
+          "explanation": "Spars carry the primary structural loads, while ribs maintain the airfoil contour and distribute loads into the primary structure.\n\nWhy not B? These are aerodynamic devices rather than primary structural members.\nWhy not C? Flaps and slats increase lift but are not the wing's principal load-carrying members.\nWhy not D? Wing fences and slots improve aerodynamic behavior rather than structural strength.\n\nEngineering Decision: Effective wing design depends on assigning each structural component a specific load-bearing or shape-maintaining role.",
+          "tags": [
+            "Board Challenge",
+            "Wing Construction",
+            "Structural Design"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A regional transport aircraft is required to operate from short runways, maintain low cruise fuel consumption, fit within existing airport gate limitations, and avoid major structural redesign. Which modification BEST satisfies all of these requirements?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install winglets together with retractable Fowler flaps.",
+            "Increase the wing span by 15%.",
+            "Increase the fixed wing incidence.",
+            "Install permanent leading-edge slots."
+          ],
+          "answerIndex": 0,
+          "answerText": "Install winglets together with retractable Fowler flaps.",
+          "explanation": "Winglets improve cruise efficiency without significantly increasing wingspan, while retractable Fowler flaps improve takeoff and landing performance and retract during cruise to minimize drag.\n\nWhy not B? Increasing wingspan may violate airport gate limitations and require structural redesign.\nWhy not C? Fixed incidence increases drag throughout the flight envelope.\nWhy not D? Permanent slots improve low-speed performance but continuously increase drag.\n\nEngineering Decision: The best solution satisfies all mission requirements with the fewest operational penalties.",
+          "tags": [
+            "Board Challenge",
+            "Mission Requirements",
+            "Aircraft Design"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During certification testing, a prototype demonstrates satisfactory structural strength but repeatedly experiences early wing-tip stall that reduces roll control during landing. Which modification is the MOST appropriate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install wing fences.",
+            "Increase spar thickness.",
+            "Increase the wing's fixed angle of incidence.",
+            "Replace the ribs with additional spars."
+          ],
+          "answerIndex": 0,
+          "answerText": "Install wing fences.",
+          "explanation": "Wing fences reduce spanwise airflow and help delay wing-tip stall, preserving aileron effectiveness during high-angle-of-attack flight.\n\nWhy not B? Increasing spar thickness improves structural strength but does not solve the aerodynamic stall issue.\nWhy not C? A higher fixed incidence affects overall performance without directly addressing tip stall.\nWhy not D? Additional spars primarily influence structural characteristics rather than stall progression.\n\nEngineering Decision: Correct the subsystem responsible for the observed deficiency before redesigning unrelated structures.",
+          "tags": [
+            "Board Challenge",
+            "Wing Fences",
+            "Certification"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A design review concludes that an aircraft wing exceeds the required structural strength but is significantly heavier than its competitors, reducing payload capability. Which engineering approach BEST addresses this problem?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Optimize the structure to reduce unnecessary weight while maintaining required strength.",
+            "Increase structural strength further to improve safety margins.",
+            "Replace the wing with an elliptical planform regardless of manufacturing complexity.",
+            "Increase wing loading to compensate for the heavier structure."
+          ],
+          "answerIndex": 0,
+          "answerText": "Optimize the structure to reduce unnecessary weight while maintaining required strength.",
+          "explanation": "Aircraft structures should be designed to safely withstand required loads without unnecessary excess weight.\n\nWhy not B? Additional strength usually increases weight without solving the payload problem.\nWhy not C? Changing planform alone does not guarantee structural optimization.\nWhy not D? Higher wing loading does not eliminate unnecessary structural mass.\n\nEngineering Decision: Structural optimization seeks the lightest design that still satisfies all certification requirements.",
+          "tags": [
+            "Board Challenge",
+            "Structural Optimization",
+            "Design Considerations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft manufacturer wants to improve fuel efficiency by reducing induced drag but must avoid modifications that significantly affect manufacturing cost or certification. Which solution is the MOST practical?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Install winglets.",
+            "Replace the wing with an elliptical planform.",
+            "Increase wing span substantially.",
+            "Increase flap deflection during cruise."
+          ],
+          "answerIndex": 0,
+          "answerText": "Install winglets.",
+          "explanation": "Winglets provide measurable reductions in induced drag while requiring far less redesign than replacing the wing or increasing its span.\n\nWhy not B? An elliptical wing requires major redesign and manufacturing changes.\nWhy not C? Increasing wingspan affects structural loads and certification.\nWhy not D? Flaps increase drag rather than reduce it during cruise.\n\nEngineering Decision: Incremental improvements are often preferred when they provide substantial performance gains with limited development risk.",
+          "tags": [
+            "Board Challenge",
+            "Winglets",
+            "Aircraft Modification"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During preliminary aircraft design, engineers must select a wing planform that offers good aerodynamic efficiency, reasonable manufacturing cost, and practical structural construction for a production aircraft. Which planform is the BEST overall choice?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Tapered wing",
+            "Elliptical wing",
+            "Rectangular wing",
+            "Circular wing"
+          ],
+          "answerIndex": 0,
+          "answerText": "Tapered wing",
+          "explanation": "A tapered wing provides an effective compromise between aerodynamic efficiency, manufacturability, and structural practicality.\n\nWhy not B? Elliptical wings offer excellent aerodynamic performance but are more difficult and expensive to manufacture.\nWhy not C? Rectangular wings are simple to build but generally less aerodynamically efficient.\nWhy not D? Circular wings are not a conventional solution for transport aircraft.\n\nEngineering Decision: Production aircraft are typically designed around balanced trade-offs rather than maximizing a single performance metric.",
+          "tags": [
+            "Board Challenge",
+            "Wing Planforms",
+            "Design Trade-offs"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A manufacturer is developing a regional transport aircraft that must operate from short runways, maintain excellent cruise fuel efficiency, fit within existing airport gate limitations, and avoid excessive manufacturing costs. Which design strategy BEST satisfies all of these requirements?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Use a tapered wing equipped with winglets and retractable Fowler flaps.",
+            "Use an elliptical wing with permanent leading-edge slots.",
+            "Increase the wingspan and install fixed slots.",
+            "Use a rectangular wing with a higher fixed angle of incidence."
+          ],
+          "answerIndex": 0,
+          "answerText": "Use a tapered wing equipped with winglets and retractable Fowler flaps.",
+          "explanation": "A tapered wing provides an effective balance between aerodynamic efficiency and manufacturability. Winglets reduce induced drag without substantially increasing wingspan, and retractable Fowler flaps provide excellent low-speed performance while minimizing cruise drag.\n\nWhy not B? Elliptical wings are expensive to manufacture, and permanent slots increase cruise drag.\nWhy not C? Increasing wingspan may violate airport gate restrictions and require structural redesign.\nWhy not D? A rectangular wing offers lower aerodynamic efficiency, while higher fixed incidence increases drag.\n\nEngineering Decision: The best aircraft designs combine multiple complementary solutions to satisfy competing operational, structural, and economic requirements.",
+          "tags": [
+            "Board Challenge",
+            "Aircraft Design",
+            "Mission Requirements",
+            "Wing Planforms",
+            "High-Lift Devices"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During certification, a prototype wing successfully meets all strength requirements but exhibits excessive twisting at high lift coefficients, leading to degraded roll control and premature wing-tip stall. Which redesign is the MOST appropriate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Increase the wing's torsional stiffness while retaining the existing high-lift system.",
+            "Increase spar size solely to improve bending strength.",
+            "Increase the wing's fixed angle of incidence.",
+            "Replace the tapered wing with a rectangular wing."
+          ],
+          "answerIndex": 0,
+          "answerText": "Increase the wing's torsional stiffness while retaining the existing high-lift system.",
+          "explanation": "The aircraft already satisfies structural strength requirements. The observed deficiency is excessive twisting, indicating inadequate torsional stiffness. Correcting the specific structural weakness addresses the certification issue without unnecessarily redesigning other systems.\n\nWhy not B? Bending strength is not the limiting factor.\nWhy not C? A higher incidence does not solve torsional deformation and may reduce cruise efficiency.\nWhy not D? Changing the planform does not directly address the identified structural problem.\n\nEngineering Decision: Effective engineering focuses on correcting the root cause rather than redesigning unrelated portions of the aircraft.",
+          "tags": [
+            "Board Challenge",
+            "Certification",
+            "Wing Structural Behavior",
+            "Structural Analysis"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A design review compares two wing concepts. Design A provides the lowest induced drag but requires major manufacturing changes and increases production cost by 20%. Design B has slightly higher induced drag but satisfies production, certification, and cost targets. Which design should the engineering team recommend?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Design B, because it provides the best overall engineering compromise.",
+            "Design A, because aerodynamic efficiency should always be maximized.",
+            "Design A, because manufacturing cost should never influence engineering decisions.",
+            "Neither design until induced drag is completely eliminated."
+          ],
+          "answerIndex": 0,
+          "answerText": "Design B, because it provides the best overall engineering compromise.",
+          "explanation": "Aircraft design is an optimization problem involving aerodynamic performance, structural integrity, manufacturability, certification, and economics. The optimum design is rarely the one that maximizes only one parameter.\n\nWhy not B? Maximizing one performance metric may create unacceptable penalties elsewhere.\nWhy not C? Cost and manufacturability are fundamental engineering considerations.\nWhy not D? Induced drag cannot be completely eliminated in practical finite wings.\n\nEngineering Decision: Engineering optimization seeks the best balance among competing objectives rather than the maximum value of a single characteristic.",
+          "tags": [
+            "Board Challenge",
+            "Engineering Optimization",
+            "Design Trade-offs"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A new aircraft must satisfy the following design objectives: (1) low stall speed, (2) efficient cruise, (3) acceptable manufacturing cost, (4) compatibility with existing airport gates, and (5) compliance with structural certification requirements. Which overall design philosophy BEST reflects sound aircraft engineering practice?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Balance aerodynamic performance, structural integrity, manufacturability, operational requirements, and certification constraints to achieve the optimum overall design.",
+            "Prioritize maximum aerodynamic efficiency even if manufacturing and certification become significantly more difficult.",
+            "Minimize manufacturing cost regardless of aerodynamic penalties.",
+            "Maximize structural strength regardless of the resulting aircraft weight."
+          ],
+          "answerIndex": 0,
+          "answerText": "Balance aerodynamic performance, structural integrity, manufacturability, operational requirements, and certification constraints to achieve the optimum overall design.",
+          "explanation": "Aircraft design is a multidisciplinary optimization process. Successful aircraft meet performance, safety, manufacturing, operational, and certification requirements simultaneously rather than maximizing a single design objective.\n\nWhy not B? Superior aerodynamic performance alone does not guarantee a successful aircraft.\nWhy not C? Cost savings cannot justify unacceptable reductions in performance or safety.\nWhy not D? Excess structural weight reduces payload, efficiency, and overall performance.\n\nEngineering Decision: The role of an aircraft designer is to optimize the complete system—not to maximize one parameter at the expense of all others.",
+          "tags": [
+            "Board Challenge",
+            "Aircraft Design",
+            "Engineering Judgment",
+            "Systems Engineering"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
