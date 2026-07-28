@@ -1,6 +1,21 @@
 {
   "entries": [
     {
+      "date": "2026-07-28",
+      "hash": "c32be5b",
+      "message": "ADDED: Wing Configuration Chapter"
+    },
+    {
+      "date": "2026-07-22",
+      "hash": "39ec83f",
+      "message": "Minor update on markdown renderer"
+    },
+    {
+      "date": "2026-07-22",
+      "hash": "f47c29f",
+      "message": "ADDED: New Chapter for Structures and Design"
+    },
+    {
       "date": "2026-07-22",
       "hash": "1ec5056",
       "message": "UPDATE: Improved ACRM notes"
@@ -34,21 +49,6 @@
       "date": "2026-07-22",
       "hash": "0a6f63f",
       "message": "FIXED: Structures Chapter Indexing"
-    },
-    {
-      "date": "2026-07-20",
-      "hash": "8317c37",
-      "message": " ADDED: Structure Funda Chapter"
-    },
-    {
-      "date": "2026-07-17",
-      "hash": "cc6584c",
-      "message": "FIXED: Note button on quiz mode"
-    },
-    {
-      "date": "2026-07-17",
-      "hash": "bd1b323",
-      "message": "FIXED: Bug on buttons"
     }
   ]
 }
