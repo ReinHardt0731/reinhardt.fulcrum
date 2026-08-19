@@ -1,6 +1,21 @@
 {
   "entries": [
     {
+      "date": "2026-08-19",
+      "hash": "4900fef",
+      "message": "ALLOW Shuffled Choices"
+    },
+    {
+      "date": "2026-08-19",
+      "hash": "745b1c6",
+      "message": "ADDED: General Aerodynamics I"
+    },
+    {
+      "date": "2026-07-28",
+      "hash": "4961c4e",
+      "message": "DOCUMENT: Updates"
+    },
+    {
       "date": "2026-07-28",
       "hash": "c32be5b",
       "message": "ADDED: Wing Configuration Chapter"
@@ -34,21 +49,6 @@
       "date": "2026-07-22",
       "hash": "716855e",
       "message": "EDITED: Subjects.json"
-    },
-    {
-      "date": "2026-07-22",
-      "hash": "378ac06",
-      "message": "Rename ACRM notes file to lowercase"
-    },
-    {
-      "date": "2026-07-22",
-      "hash": "043dfb7",
-      "message": "ADDED: Updates info"
-    },
-    {
-      "date": "2026-07-22",
-      "hash": "0a6f63f",
-      "message": "FIXED: Structures Chapter Indexing"
     }
   ]
 }
