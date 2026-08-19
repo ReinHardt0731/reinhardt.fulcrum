@@ -40,6 +40,58 @@ function shuffleArray(values) {
     return next;
 }
 
+function normalizeChoiceOrder(choiceOrder, choiceCount) {
+    if (!Array.isArray(choiceOrder) || choiceOrder.length !== choiceCount || choiceCount < 2) {
+        return null;
+    }
+
+    const normalized = choiceOrder.map((value) => Number(value));
+    if (normalized.some((value) => !Number.isInteger(value) || value < 0 || value >= choiceCount)) {
+        return null;
+    }
+
+    const unique = new Set(normalized);
+    return unique.size === choiceCount ? normalized : null;
+}
+
+function buildChoiceOrder(choiceCount, shuffleChoices = false) {
+    const order = Array.from({ length: choiceCount }, (_, index) => index);
+    return shuffleChoices ? shuffleArray(order) : order;
+}
+
+function prepareQuestionForSession(entry, position, options = {}) {
+    const question = coerceQuestion(entry, position);
+    if (question.questionType !== "multiple_choice") {
+        return question;
+    }
+
+    const choiceCount = Array.isArray(question.choices) ? question.choices.length : 0;
+    const existingOrder = normalizeChoiceOrder(entry?.choiceOrder ?? question.choiceOrder, choiceCount);
+    const shuffleChoices = Boolean(options.shuffleChoices);
+    const choiceOrder = shuffleChoices
+        ? buildChoiceOrder(choiceCount, true)
+        : existingOrder || buildChoiceOrder(choiceCount, false);
+
+    return {
+        ...question,
+        choiceOrder
+    };
+}
+
+function getChoiceOrder(question) {
+    const choiceCount = Array.isArray(question?.choices) ? question.choices.length : 0;
+    return normalizeChoiceOrder(question?.choiceOrder, choiceCount) || buildChoiceOrder(choiceCount, false);
+}
+
+function getOrderedChoices(question) {
+    const order = getChoiceOrder(question);
+    return order.map((originalIndex, displayIndex) => ({
+        displayIndex,
+        originalIndex,
+        choice: Array.isArray(question?.choices) ? question.choices[originalIndex] : ""
+    }));
+}
+
 function shuffleSessionQuestions(session) {
     if (!session || !Array.isArray(session.questions) || session.questions.length < 2) {
         return false;
@@ -52,7 +104,7 @@ function shuffleSessionQuestions(session) {
     }));
     const shuffledEntries = shuffleArray(entries);
 
-    session.questions = shuffledEntries.map((entry) => entry.question);
+    session.questions = shuffledEntries.map((entry, index) => prepareQuestionForSession(entry.question, index + 1, { shuffleChoices: true }));
     session.answers = shuffledEntries.map((entry) => entry.answer ?? null);
     session.drafts = shuffledEntries.map((entry) => entry.draft ?? "");
     session.index = 0;
@@ -999,7 +1051,10 @@ export function createSession(subject, chapter, mode, options = {}) {
     const questionsSource = Array.isArray(options.questions) && options.questions.length
         ? options.questions
         : collectChapterQuestions(chapter);
-    const questions = questionsSource.map((question, index) => coerceQuestion(question, index + 1));
+    const shouldShuffleChoices = options.shuffleChoices ?? !Array.isArray(options.questions);
+    const questions = questionsSource.map((question, index) => prepareQuestionForSession(question, index + 1, {
+        shuffleChoices: shouldShuffleChoices
+    }));
     return {
         subjectId: subject.id,
         subjectName: subject.name,
@@ -1037,7 +1092,9 @@ export function createExamSession(subject, chapterTitles, questionCount, options
         }
         const chapterQuestions = collectChapterQuestions(chapter);
         chapterQuestions.forEach((question, index) => {
-            const normalizedQuestion = coerceQuestion(question, index + 1);
+            const normalizedQuestion = prepareQuestionForSession(question, index + 1, {
+                shuffleChoices: true
+            });
             questionPool.push({
                 ...normalizedQuestion,
                 chapterTitle: chapter.title
@@ -1047,16 +1104,19 @@ export function createExamSession(subject, chapterTitles, questionCount, options
 
     const questions = shuffleArray(questionPool)
         .slice(0, Math.max(1, Math.min(Number(questionCount) || 1, questionPool.length)));
+    const preparedQuestions = questions.map((question, index) => prepareQuestionForSession(question, index + 1, {
+        shuffleChoices: true
+    }));
 
     return {
         subjectId: subject.id,
         subjectName: subject.name,
         chapterTitle: text(options.chapterTitle || (selectedChapters[0] || subject.chapters[0]?.title || "Exam")),
         mode: "exam",
-        questions,
+        questions: preparedQuestions,
         index: 0,
         answers: [],
-        drafts: questions.map(() => ""),
+        drafts: preparedQuestions.map(() => ""),
         revealed: false,
         reviewed: false,
         busy: false,
@@ -1212,6 +1272,12 @@ function saveQuizSession(session) {
         index: Number(session.index) || 0,
         answers: Array.isArray(session.answers) ? session.answers : [],
         drafts: Array.isArray(session.drafts) ? session.drafts : [],
+        questions: Array.isArray(session.questions) ? session.questions.map((question) => ({
+            ...question,
+            choices: Array.isArray(question.choices) ? [...question.choices] : [],
+            tags: Array.isArray(question.tags) ? [...question.tags] : [],
+            choiceOrder: Array.isArray(question.choiceOrder) ? [...question.choiceOrder] : undefined
+        })) : [],
         complete: Boolean(session.complete),
         currentSummary: session.currentSummary || null,
         assessmentModalShown: Boolean(session.assessmentModalShown),
@@ -1236,7 +1302,10 @@ function restoreQuizSession(subject, chapter) {
         return null;
     }
 
-    const session = createSession(subject, chapter, "quiz");
+    const session = createSession(subject, chapter, "quiz", {
+        questions: Array.isArray(saved.questions) && saved.questions.length ? saved.questions : undefined,
+        shuffleChoices: false
+    });
     session.answers = Array.isArray(saved.answers)
         ? saved.answers.slice(0, session.questions.length).map((entry) => entry || null)
         : session.questions.map(() => null);
@@ -1309,7 +1378,8 @@ function restoreModeSession(subject, chapter, mode) {
         questions: Array.isArray(saved.questions) && saved.questions.length ? saved.questions : undefined,
         chapterTitle: saved.chapterTitle,
         reviewLabel: saved.reviewLabel,
-        reviewSource: saved.reviewSource
+        reviewSource: saved.reviewSource,
+        shuffleChoices: false
     });
 
     session.answers = Array.isArray(saved.answers)
@@ -2875,24 +2945,24 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 } else {
                     const choices = document.createElement("div");
                     choices.className = "choice-grid";
-                    question.choices.forEach((choice, choiceIndex) => {
+                    getOrderedChoices(question).forEach(({ displayIndex, originalIndex, choice }) => {
                         const choiceButton = document.createElement("button");
                         choiceButton.type = "button";
                         choiceButton.className = "choice-button";
-                        const label = choiceIndex < 26 ? String.fromCharCode(65 + choiceIndex) : String(choiceIndex + 1);
+                        const label = displayIndex < 26 ? String.fromCharCode(65 + displayIndex) : String(displayIndex + 1);
                         if (typeof choice === 'string') {
                             const escaped = escapeHtml(choice).replace(/\$\$/g, '$$').replace(/\$/g, '$');
                             choiceButton.innerHTML = `${escapeHtml(label + '. ')}${escaped}`;
                         } else {
                             choiceButton.textContent = `${label}. ${String(choice)}`;
                         }
-                        if (result?.userAnswerIndex === choiceIndex) {
+                        if (result?.userAnswerIndex === originalIndex) {
                             choiceButton.classList.add("is-selected");
                         }
                         choiceButton.addEventListener("click", (event) => {
                             event.preventDefault();
                             event.stopPropagation();
-                            updateReviewAnswer(question, index, choiceIndex);
+                            updateReviewAnswer(question, index, originalIndex);
                             buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
                         });
                         choices.appendChild(choiceButton);
@@ -3034,23 +3104,23 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         } else {
             const choices = document.createElement("div");
             choices.className = "choice-grid";
-            question.choices.forEach((choice, index) => {
+            getOrderedChoices(question).forEach(({ displayIndex, originalIndex, choice }) => {
                 const button = document.createElement("button");
                 button.type = "button";
                 button.className = "choice-button";
-                const label = index < 26 ? String.fromCharCode(65 + index) : String(index + 1);
+                const label = displayIndex < 26 ? String.fromCharCode(65 + displayIndex) : String(displayIndex + 1);
                 if (typeof choice === 'string') {
                     const escapedChoice = escapeHtml(choice).replace(/\$\$/g, '$$').replace(/\$/g, '$');
                     button.innerHTML = `${escapeHtml(label + '. ')}${escapedChoice}`;
                 } else {
                     button.textContent = `${label}. ${String(choice)}`;
                 }
-                if (session.selectedChoice === index) {
+                if (session.selectedChoice === originalIndex) {
                     button.classList.add("is-selected");
                 }
                 button.addEventListener("click", () => {
-                    session.selectedChoice = index;
-                    session.drafts[session.index] = String(index);
+                    session.selectedChoice = originalIndex;
+                    session.drafts[session.index] = String(originalIndex);
                     buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
                 });
                 choices.appendChild(button);
@@ -3460,32 +3530,32 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         } else {
             const choices = document.createElement("div");
             choices.className = "choice-grid";
-            question.choices.forEach((choice, index) => {
+            getOrderedChoices(question).forEach(({ displayIndex, originalIndex, choice }) => {
                 const button = document.createElement("button");
                 button.type = "button";
                 button.className = "choice-button";
-                const label = index < 26 ? String.fromCharCode(65 + index) : String(index);
+                const label = displayIndex < 26 ? String.fromCharCode(65 + displayIndex) : String(displayIndex);
                 button.textContent = `${label}. ${choice}`;
                 button.disabled = session.reviewed;
-                if (session.selectedChoice === index) {
+                if (session.selectedChoice === originalIndex) {
                     button.classList.add("is-selected");
                 }
                 if (session.reviewed && session.lastResult) {
-                    if (index === question.answerIndex) {
+                    if (originalIndex === question.answerIndex) {
                         button.classList.add("is-correct");
                     }
-                    if (Number(session.lastResult.userAnswerIndex) === index && !session.lastResult.correct) {
+                    if (Number(session.lastResult.userAnswerIndex) === originalIndex && !session.lastResult.correct) {
                         button.classList.add("is-wrong");
                     }
                 }
                 button.addEventListener("click", (event) => {
                     event.preventDefault();
                     event.stopPropagation();
-                    session.selectedChoice = index;
+                    session.selectedChoice = originalIndex;
                     submitCurrentQuestion();
                 });
                 choices.appendChild(button);
-        });
+            });
 
         const feedback = document.createElement("div");
         feedback.className = "feedback-block";
@@ -4516,11 +4586,11 @@ export async function initModePage(mode) {
             const choices = document.createElement("div");
             choices.className = "choice-grid";
 
-            question.choices.forEach((choice, choiceIndex) => {
+            getOrderedChoices(question).forEach(({ displayIndex, originalIndex, choice }) => {
                 const button = document.createElement("button");
                 button.type = "button";
                 button.className = "choice-button";
-                const label = choiceIndex < 26 ? String.fromCharCode(65 + choiceIndex) : String(choiceIndex + 1);
+                const label = displayIndex < 26 ? String.fromCharCode(65 + displayIndex) : String(displayIndex + 1);
                 if (typeof choice === 'string') {
                     const escaped = escapeHtml(choice).replace(/\$\$/g, '$$').replace(/\$/g, '$');
                     button.innerHTML = `${escapeHtml(label + '. ')}${escaped}`;
@@ -4530,15 +4600,15 @@ export async function initModePage(mode) {
                 button.disabled = answered;
 
                 if (answered) {
-                    if (choiceIndex === question.answerIndex) {
+                    if (originalIndex === question.answerIndex) {
                         button.classList.add("is-correct");
                     }
-                    if (Number(result.userAnswerIndex) === choiceIndex) {
+                    if (Number(result.userAnswerIndex) === originalIndex) {
                         button.classList.add(result.correct ? "is-correct" : "is-wrong");
                     }
                 }
 
-                button.addEventListener("click", () => submitQuizAnswer(index, question, choiceIndex));
+                button.addEventListener("click", () => submitQuizAnswer(index, question, originalIndex));
                 choices.appendChild(button);
             });
             // Render math for all choices once appended
