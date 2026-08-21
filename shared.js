@@ -1843,6 +1843,9 @@ function simpleMarkdownToHtml(md, options = {}) {
     const lines = String(md || "").split(/\r?\n/);
     const out = [];
 
+    const normalizeMarkdownEscapes = (value) => String(value || "")
+        .replace(/\\([\\`*_[\]()>#+.!-])/g, "$1");
+
     const escapeHtml = (value) => String(value || "")
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
@@ -1878,8 +1881,9 @@ function simpleMarkdownToHtml(md, options = {}) {
             return token;
         };
 
-        let source = String(text || "")
-            .replace(/!\[([^\]]*)\]\((\S+?)(?:\s+["']([^"']*)["'])?\)/g, (match, alt, url, title) => {
+        let source = normalizeMarkdownEscapes(text)
+            .replace(/!\[([^\]]*)\]\(\s*(?:<([^>]+)>|([^\s)]+))(?:\s+["']([^"']*)["'])?\s*\)/g, (match, alt, bracketedUrl, bareUrl, title) => {
+                const url = bracketedUrl || bareUrl;
                 const safeUrl = resolveSafeUrl(url);
                 if (!safeUrl) {
                     return escapeHtml(match);
@@ -2013,7 +2017,7 @@ function simpleMarkdownToHtml(md, options = {}) {
             continue;
         }
 
-        line = line.trim();
+        line = normalizeMarkdownEscapes(line).trim();
         if (/^(-{3,}|\*{3,}|_{3,})$/.test(line)) {
             out.push("<hr>");
         } else {
@@ -2024,8 +2028,8 @@ function simpleMarkdownToHtml(md, options = {}) {
                 out.push(`<h2>${line.replace(/^#{2}\s+/, "")}</h2>`);
             } else if (/^#{3}\s+(.*)/.test(line)) {
                 out.push(`<h3>${line.replace(/^#{3}\s+/, "")}</h3>`);
-            } else if (/^\*\s+/.test(line)) {
-                out.push(`<li>${line.replace(/^\*\s+/, "")}</li>`);
+            } else if (/^(?:\*|-)\s+/.test(line)) {
+                out.push(`<li>${line.replace(/^(?:\*|-)\s+/, "")}</li>`);
             } else if (line === "") {
                 out.push(`<p></p>`);
             } else {
@@ -2180,14 +2184,15 @@ function renderNoteStage(stage, subject, chapter, session) {
     notesWorkspace.appendChild(notesContainer);
     stage.appendChild(notesWorkspace);
 
+    const notesPath = resolveSubjectNotesPath(subject);
     loadSubjectMarkdown(subject).then((markdown) => {
         notesContainer.replaceChildren();
         if (!markdown) {
             const empty = document.createElement("div");
             empty.className = "empty-state";
             empty.append(
-                Object.assign(document.createElement("h4"), { textContent: "No notes available." }),
-                Object.assign(document.createElement("p"), { textContent: "There are no notes attached to this subject yet." })
+                Object.assign(document.createElement("h4"), { textContent: notesPath ? "Unable to load notes." : "No notes available." }),
+                Object.assign(document.createElement("p"), { textContent: notesPath ? `Could not load ${notesPath}. Check that the Markdown file is committed and its path is correct.` : "There are no notes attached to this subject yet." })
             );
             notesContainer.appendChild(empty);
             return;
@@ -2230,7 +2235,7 @@ function renderNoteStage(stage, subject, chapter, session) {
         empty.className = "empty-state";
         empty.append(
             Object.assign(document.createElement("h4"), { textContent: "Unable to load notes." }),
-            Object.assign(document.createElement("p"), { textContent: "Try again or check that the notes file exists in markdowns/." })
+            Object.assign(document.createElement("p"), { textContent: notesPath ? `Could not load ${notesPath}. Check that the Markdown file is committed and its path is correct.` : "Try again or check that the notes file exists in markdowns/." })
         );
         notesContainer.appendChild(empty);
     });
