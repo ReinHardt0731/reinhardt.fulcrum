@@ -39,6 +39,17 @@
                         <div class="hero-stat"><strong id="home-question-count">--</strong><span>questions</span></div>
                     </div>
                 </div>
+                <div class="home-exam-inline" id="home-exam-countdown" aria-label="Board Exam countdown">
+                    <div class="home-insight-heading">
+                        <div>
+                            <p class="section-label">Board Exam</p>
+                            <h3>Keep the finish line in sight</h3>
+                        </div>
+                    </div>
+                    <div class="home-countdown-value" id="home-exam-days">--</div>
+                    <p class="home-countdown-label" id="home-exam-countdown-label">Days Until the EXAM</p>
+                    <p class="home-countdown-date" id="home-exam-date">November 9–11, 2026</p>
+                </div>
                 <div class="hero-actions">
                     <button class="ghost-button icon-only" id="refresh-button" type="button" aria-label="Refresh subjects">&#8635;</button>
                     <button class="ghost-button icon-only" id="progress-button" type="button" aria-label="View progress">
@@ -79,6 +90,49 @@
                     <span class="mode-launch-copy">Pick chapters, set a question count, and time yourself.</span>
                 </button>
             </div>
+
+            <section class="home-progress-card panel" aria-labelledby="home-progress-heading">
+                <div class="home-insight-heading">
+                    <div>
+                        <p class="section-label">Your Progress</p>
+                        <h3 id="home-progress-heading">What you have covered</h3>
+                    </div>
+                </div>
+                <div class="home-progress-overview">
+                    <strong id="home-progress-overview-value">0%</strong>
+                    <span>of chapters covered</span>
+                </div>
+                <div class="home-progress-bar" aria-hidden="true"><span id="home-progress-bar-fill"></span></div>
+                <p class="home-progress-empty" id="home-progress-empty">Complete a quiz or exam session to see your progress here.</p>
+                <div class="home-subject-progress-list" id="home-subject-progress-list" aria-label="Progress by subject"></div>
+            </section>
+
+            <section class="home-continuation-card panel" aria-labelledby="home-continuation-heading">
+                <div class="home-insight-heading">
+                    <div>
+                        <p class="section-label">Continue Studying</p>
+                        <h3 id="home-continuation-heading">Pick up where you left off</h3>
+                    </div>
+                    <span class="home-continuation-mark" id="home-continuation-mark" aria-hidden="true">→</span>
+                </div>
+                <div id="home-continuation-content" class="home-continuation-content">
+                    <p class="home-continuation-subject">Loading recommendation...</p>
+                    <span class="home-continuation-status" id="home-continuation-status">Loading</span>
+                    <h4 class="home-continuation-chapter">Choose a chapter to continue.</h4>
+                    <p class="home-continuation-detail"></p>
+                    <div class="home-continuation-progress" id="home-continuation-progress" hidden>
+                        <div class="home-continuation-progress-label">
+                            <span id="home-continuation-progress-count">0 of 0 questions answered</span>
+                            <span id="home-continuation-remaining">0 remaining</span>
+                        </div>
+                        <div class="home-continuation-progress-track" aria-hidden="true"><span id="home-continuation-progress-fill"></span></div>
+                    </div>
+                    <div class="home-continuation-actions">
+                        <button class="primary-button home-continuation-action" id="home-continuation-action" type="button">Start Quiz</button>
+                        <button class="ghost-button home-continuation-browse" id="home-continuation-browse" type="button">Browse Chapters</button>
+                    </div>
+                </div>
+            </section>
 
             <div class="home-subjects">
                 <div>
