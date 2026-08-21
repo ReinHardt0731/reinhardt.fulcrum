@@ -1,6 +1,21 @@
 {
   "entries": [
     {
+      "date": "2026-08-21",
+      "hash": "5022a33",
+      "message": "IMPROVEMENTS on exam learn and exam modes visuals"
+    },
+    {
+      "date": "2026-08-21",
+      "hash": "e811487",
+      "message": "IMPROVEMENTS on Dashboard Visuals"
+    },
+    {
+      "date": "2026-08-19",
+      "hash": "2b708bf",
+      "message": "UPDATES"
+    },
+    {
       "date": "2026-08-19",
       "hash": "4900fef",
       "message": "ALLOW Shuffled Choices"
@@ -34,21 +49,6 @@
       "date": "2026-07-22",
       "hash": "1ec5056",
       "message": "UPDATE: Improved ACRM notes"
-    },
-    {
-      "date": "2026-07-22",
-      "hash": "ece56b8",
-      "message": "FIXED: Notes APP render"
-    },
-    {
-      "date": "2026-07-22",
-      "hash": "a3cbc1d",
-      "message": "FIXED: workflow to include mardowns"
-    },
-    {
-      "date": "2026-07-22",
-      "hash": "716855e",
-      "message": "EDITED: Subjects.json"
     }
   ]
 }
