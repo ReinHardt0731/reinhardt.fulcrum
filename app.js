@@ -1005,7 +1005,12 @@
         const wrapper = document.createElement("article");
         wrapper.className = "notes-view";
         // simple markdown to HTML: only headings and paragraphs and links
-        const html = simpleMarkdownToHtml(md);
+        const notesPath = subject && typeof subject.notesPath === "string" && subject.notesPath.trim()
+            ? (subject.notesPath.includes("/") || subject.notesPath.startsWith("./") || subject.notesPath.startsWith("../")
+                ? subject.notesPath.trim()
+                : `markdowns/${subject.notesPath.trim()}`)
+            : `markdowns/${(subject.id || slugify(subject.name)).trim()}.md`;
+        const html = simpleMarkdownToHtml(md, { basePath: notesPath });
         wrapper.innerHTML = html;
         container.appendChild(wrapper);
 
@@ -1041,20 +1046,59 @@
         }
     }
 
-    function simpleMarkdownToHtml(md) {
+    function simpleMarkdownToHtml(md, options = {}) {
         // Very small renderer: convert ## headings to <h2>, # to h1, and paragraphs, links
         const lines = md.split(/\r?\n/);
         const out = [];
+        const normalizeMarkdownEscapes = (value) => String(value || "")
+            .replace(/\\([\\`*_[\]()>#+.!-])/g, "$1");
+        const escapeHtml = (value) => String(value || "")
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#39;");
+        const resolveSafeUrl = (value) => {
+            const candidate = String(value || "").trim();
+            if (!candidate || /^\s*(javascript|vbscript|data):/i.test(candidate)) return null;
+            try {
+                const base = options.basePath
+                    ? new URL(options.basePath, window.location.href)
+                    : new URL(window.location.href);
+                const resolved = new URL(candidate, base);
+                return ["http:", "https:"].includes(resolved.protocol) ? resolved.href : null;
+            } catch {
+                return null;
+            }
+        };
+        const renderInline = (value) => {
+            const tokens = [];
+            const tokenise = (html) => {
+                const token = `\u0000${tokens.length}\u0000`;
+                tokens.push(html);
+                return token;
+            };
+            let source = normalizeMarkdownEscapes(value)
+                .replace(/!\[([^\]]*)\]\(\s*(?:<([^>]+)>|([^\s)]+))(?:\s+["']([^"']*)["'])?\s*\)/g, (match, alt, bracketedUrl, bareUrl, title) => {
+                    const safeUrl = resolveSafeUrl(bracketedUrl || bareUrl);
+                    if (!safeUrl) return escapeHtml(match);
+                    const titleAttr = title ? ` title="${escapeHtml(title)}"` : "";
+                    return tokenise(`<img src="${escapeHtml(safeUrl)}" alt="${escapeHtml(alt)}" loading="lazy"${titleAttr}>`);
+                });
+            source = escapeHtml(source);
+            return source.replace(/\u0000(\d+)\u0000/g, (_, index) => tokens[Number(index)] || "");
+        };
         for (let line of lines) {
-            line = line.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            line = normalizeMarkdownEscapes(line);
+            line = renderInline(line);
             if (/^#{1}\s+(.*)/.test(line)) {
                 out.push(`<h1>${line.replace(/^#{1}\s+/, "")}</h1>`);
             } else if (/^#{2}\s+(.*)/.test(line)) {
                 out.push(`<h2>${line.replace(/^#{2}\s+/, "")}</h2>`);
             } else if (/^#{3}\s+(.*)/.test(line)) {
                 out.push(`<h3>${line.replace(/^#{3}\s+/, "")}</h3>`);
-            } else if (/^\*\s+/.test(line)) {
-                out.push(`<li>${line.replace(/^\*\s+/, "")}</li>`);
+            } else if (/^(?:\*|-)\s+/.test(line)) {
+                out.push(`<li>${line.replace(/^(?:\*|-)\s+/, "")}</li>`);
             } else if (line.trim() === "") {
                 out.push(`<p></p>`);
             } else {
