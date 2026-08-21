@@ -27,11 +27,17 @@
         <section class="home-dashboard" id="home-dashboard" aria-label="Home dashboard">
             <div class="home-hero">
                 <div class="hero-copy">
+                    <div class="hero-kicker"><span class="hero-kicker-dot"></span> Your study cockpit</div>
                     <p class="eyebrow">Short quiz - learn mode - flashcards - exam</p>
                     <h2 id="subject-title">Upload a quiz to begin</h2>
                     <p id="subject-meta" class="hero-meta">
                         This GitHub Pages version loads subjects from the repository-backed subjects.json file.
                     </p>
+                    <div class="hero-stats" aria-label="Study library summary">
+                        <div class="hero-stat"><strong id="home-subject-count">--</strong><span>subjects</span></div>
+                        <div class="hero-stat"><strong id="home-chapter-count">--</strong><span>chapters</span></div>
+                        <div class="hero-stat"><strong id="home-question-count">--</strong><span>questions</span></div>
+                    </div>
                 </div>
                 <div class="hero-actions">
                     <button class="ghost-button icon-only" id="refresh-button" type="button" aria-label="Refresh subjects">&#8635;</button>
@@ -48,22 +54,27 @@
 
             <div class="mode-launcher" role="navigation" aria-label="Study mode launcher">
                 <button class="mode-launch-card is-active" type="button" data-home-mode="quiz">
+                    <span class="mode-launch-icon" aria-hidden="true">01</span>
                     <span class="mode-launch-title">Quiz</span>
                     <span class="mode-launch-copy">Instant feedback when you tap a choice.</span>
                 </button>
                 <button class="mode-launch-card" type="button" data-home-mode="note">
+                    <span class="mode-launch-icon" aria-hidden="true">02</span>
                     <span class="mode-launch-title">Notes</span>
                     <span class="mode-launch-copy">View subject notes and jump to chapters.</span>
                 </button>
                 <button class="mode-launch-card" type="button" data-home-mode="learn">
+                    <span class="mode-launch-icon" aria-hidden="true">03</span>
                     <span class="mode-launch-title">Learn mode</span>
                     <span class="mode-launch-copy">Review answers right after each question.</span>
                 </button>
                 <button class="mode-launch-card" type="button" data-home-mode="flashcards">
+                    <span class="mode-launch-icon" aria-hidden="true">04</span>
                     <span class="mode-launch-title">Flashcards</span>
                     <span class="mode-launch-copy">Reveal, recall, then move on.</span>
                 </button>
                 <button class="mode-launch-card" type="button" data-home-mode="exam">
+                    <span class="mode-launch-icon" aria-hidden="true">05</span>
                     <span class="mode-launch-title">Exam</span>
                     <span class="mode-launch-copy">Pick chapters, set a question count, and time yourself.</span>
                 </button>
@@ -89,6 +100,7 @@
                         <p class="section-label">Update Log</p>
                         <h3>Recent pushes and release notes</h3>
                     </div>
+                    <span class="update-live-pill"><span></span> Live archive</span>
                 </div>
                 <div id="home-update-log" class="home-update-log"></div>
             </section>

@@ -1551,6 +1551,14 @@ function renderHomeCarousel(track, subjects, activeSubjectId, selectSubject) {
         const title = document.createElement("h4");
         title.textContent = subject.name;
 
+        const index = document.createElement("span");
+        index.className = "subject-carousel-index";
+        index.textContent = String(subjects.indexOf(subject) + 1).padStart(2, "0");
+
+        const heading = document.createElement("div");
+        heading.className = "subject-carousel-heading";
+        heading.append(title, index);
+
         const meta = document.createElement("p");
         meta.className = "subject-carousel-meta";
         meta.textContent = `${subject.chapters.length} chapter${subject.chapters.length === 1 ? "" : "s"} • ${tallyQuestionCount(subject)} questions`;
@@ -1571,7 +1579,7 @@ function renderHomeCarousel(track, subjects, activeSubjectId, selectSubject) {
             selectSubject(subject.id);
         });
 
-        card.append(title, meta, actions);
+        card.append(heading, meta, actions);
         track.appendChild(card);
     });
 }
@@ -3627,6 +3635,11 @@ export async function initHomePage() {
         modeLinks: document.querySelectorAll("[data-home-mode]"),
         updateLog: document.getElementById("home-update-log")
     };
+    const summaryElements = {
+        subjects: document.getElementById("home-subject-count"),
+        chapters: document.getElementById("home-chapter-count"),
+        questions: document.getElementById("home-question-count")
+    };
 
     const state = {
         subjects: [],
@@ -3745,6 +3758,9 @@ export async function initHomePage() {
             const item = document.createElement("div");
             item.className = "update-entry-row";
 
+            const marker = document.createElement("span");
+            marker.className = "update-entry-marker";
+
             const date = document.createElement("span");
             date.className = "update-entry-date";
             date.textContent = entry.date || "Unknown date";
@@ -3753,12 +3769,18 @@ export async function initHomePage() {
             message.className = "update-entry-message";
             message.textContent = entry.message || entry.commit || "Update details unavailable.";
 
-            item.append(date, message);
+            item.append(marker, date, message);
             elements.updateLog.appendChild(item);
         });
     };
 
     const render = () => {
+
+        const chapterCount = state.subjects.reduce((total, subject) => total + subject.chapters.length, 0);
+        const questionCount = state.subjects.reduce((total, subject) => total + tallyQuestionCount(subject), 0);
+        if (summaryElements.subjects) summaryElements.subjects.textContent = state.subjects.length;
+        if (summaryElements.chapters) summaryElements.chapters.textContent = chapterCount;
+        if (summaryElements.questions) summaryElements.questions.textContent = questionCount;
 
         if (elements.title) {
             elements.title.textContent = state.activeSubject ? state.activeSubject.name : "Upload a quiz to begin";
