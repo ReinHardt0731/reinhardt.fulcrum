@@ -862,6 +862,17 @@ body.drawer-collapsed .mobile-only {
     overflow: hidden;
 }
 
+.home-hero > *,
+.home-insight-heading > *,
+.home-footer-copy,
+.home-dashboard > *,
+.progress-summary-card > *,
+.assessment-modal > *,
+.mode-topbar .hero-copy,
+.mode-topbar-row > * {
+    min-width: 0;
+}
+
 .home-exam-inline > * {
     min-width: 0;
     max-width: 100%;
@@ -1271,6 +1282,8 @@ body.drawer-collapsed .mobile-only {
 .home-subject-carousel {
     display: flex;
     gap: 16px;
+    width: 100%;
+    min-width: 0;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -1468,7 +1481,7 @@ body.drawer-collapsed .mobile-only {
     display: grid;
     gap: 16px;
     margin: 24px 0;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
 }
 
 .progress-summary-card {
@@ -1540,6 +1553,11 @@ body.drawer-collapsed .mobile-only {
     justify-content: space-between;
     gap: 16px;
     margin-bottom: 20px;
+    min-width: 0;
+}
+
+.progress-summary-card-header > * {
+    min-width: 0;
 }
 
 .progress-summary-card-header h3 {
@@ -1747,7 +1765,9 @@ body.drawer-collapsed .mobile-only {
 }
 
 .assessment-modal-header-copy {
-    min-width: 220px;
+    min-width: 0;
+    flex: 1 1 220px;
+    max-width: 100%;
 }
 
 .assessment-modal-header-copy h3 {
@@ -1755,7 +1775,9 @@ body.drawer-collapsed .mobile-only {
 }
 
 .assessment-modal-header-chart {
-    min-width: 140px;
+    min-width: 0;
+    flex: 0 1 140px;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1763,6 +1785,7 @@ body.drawer-collapsed .mobile-only {
 
 .assessment-modal-content {
     flex: 1;
+    min-width: 0;
     overflow-y: auto;
     padding: 24px;
     display: grid;
@@ -1776,6 +1799,7 @@ body.drawer-collapsed .mobile-only {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 12px;
     flex-shrink: 0;
+    min-width: 0;
 }
 
 .assessment-modal-actions button {
@@ -1872,11 +1896,13 @@ body.drawer-collapsed .mobile-only {
     align-items: center;
     justify-content: space-between;
     gap: 12px;
+    min-width: 0;
 }
 
 .mode-actions {
     flex: 0 0 auto;
     align-items: center;
+    min-width: 0;
 }
 
 .mode-switch-row {
@@ -3375,6 +3401,11 @@ body.drawer-collapsed .mobile-only {
 }
 
 @media (max-width: 900px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
     .app-shell {
         grid-template-columns: 1fr;
         width: min(100%, calc(100% - 20px));
@@ -3467,7 +3498,14 @@ body.drawer-collapsed .mobile-only {
         align-items: stretch;
     }
 
+    .mode-topbar-row h2 {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        font-size: clamp(1.8rem, 8vw, 2.6rem);
+    }
+
     .mode-actions {
+        width: 100%;
         justify-content: flex-start;
     }
 
@@ -3494,10 +3532,27 @@ body.drawer-collapsed .mobile-only {
         justify-content: flex-start;
     }
 
+    .home-footer-brand,
+    .home-footer-note {
+        overflow-wrap: anywhere;
+    }
+
     .home-hero {
         flex-direction: column;
         align-items: stretch;
         padding: 22px;
+    }
+
+    .home-hero h2 {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+        font-size: clamp(1.8rem, 8vw, 2.6rem);
+    }
+
+    .home-hero .hero-copy,
+    .home-hero .home-exam-inline {
+        width: 100%;
+        flex: 1 1 auto;
     }
 
     .home-exam-inline {
@@ -3527,6 +3582,11 @@ body.drawer-collapsed .mobile-only {
         align-self: flex-start;
     }
 
+    .home-updates-header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
     .mode-launcher {
         grid-template-columns: 1fr;
     }
@@ -3542,6 +3602,63 @@ body.drawer-collapsed .mobile-only {
 
     .home-continuation-actions {
         grid-template-columns: 1fr;
+    }
+
+    .progress-summary-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .progress-summary-card-header {
+        flex-wrap: wrap;
+    }
+
+    .progress-summary-card-meta {
+        text-align: left;
+    }
+
+    .assessment-card-header,
+    .assessment-info {
+        min-width: 0;
+        flex-wrap: wrap;
+    }
+
+    .assessment-card-header {
+        align-items: flex-start;
+    }
+
+    .assessment-accuracy {
+        margin-left: auto;
+    }
+
+    .assessment-chapter-item {
+        flex-wrap: wrap;
+    }
+
+    .assessment-chapter-name {
+        min-width: min(100%, 180px);
+    }
+
+    .assessment-chapter-stats {
+        flex-wrap: wrap;
+    }
+
+    .assessment-modal-header-copy,
+    .assessment-modal-header-chart {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .assessment-modal-header-chart {
+        justify-content: flex-start;
+    }
+
+    .assessment-modal-content {
+        padding: 18px;
+    }
+
+    .assessment-modal-actions {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 14px 18px;
     }
 
     .carousel-controls {
@@ -3594,9 +3711,23 @@ body.drawer-collapsed .mobile-only {
     }
 
     .mode-button {
-        flex: 1 1 auto;
+        min-width: 0;
+        flex: 1 1 130px;
         padding: 0 11px;
         font-size: 0.88rem;
+        overflow-wrap: anywhere;
+    }
+
+    .admin-list-row,
+    .admin-question-item {
+        flex-wrap: wrap;
+    }
+
+    .admin-list-content,
+    .admin-item-actions,
+    .admin-question-copy {
+        min-width: 0;
+        max-width: 100%;
     }
 
     .notes-section-content {

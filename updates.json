@@ -2,6 +2,21 @@
   "entries": [
     {
       "date": "2026-08-21",
+      "hash": "4949464",
+      "message": "IMPROVED : Dashboard Visuals"
+    },
+    {
+      "date": "2026-08-21",
+      "hash": "3775baf",
+      "message": "ADDED: Days Until Exam"
+    },
+    {
+      "date": "2026-08-21",
+      "hash": "ba89d8b",
+      "message": "IMPROVED modes by sticking the subject drawer"
+    },
+    {
+      "date": "2026-08-21",
       "hash": "5022a33",
       "message": "IMPROVEMENTS on exam learn and exam modes visuals"
     },
@@ -34,21 +49,6 @@
       "date": "2026-07-28",
       "hash": "c32be5b",
       "message": "ADDED: Wing Configuration Chapter"
-    },
-    {
-      "date": "2026-07-22",
-      "hash": "39ec83f",
-      "message": "Minor update on markdown renderer"
-    },
-    {
-      "date": "2026-07-22",
-      "hash": "f47c29f",
-      "message": "ADDED: New Chapter for Structures and Design"
-    },
-    {
-      "date": "2026-07-22",
-      "hash": "1ec5056",
-      "message": "UPDATE: Improved ACRM notes"
     }
   ]
 }
