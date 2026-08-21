@@ -399,6 +399,125 @@ export function getAssessmentsBySubject() {
     return bySubject;
 }
 
+export function getBoardExamCountdown(now = new Date()) {
+    const current = now instanceof Date ? new Date(now.getTime()) : new Date(now);
+    const start = new Date(2026, 10, 9);
+    const end = new Date(2026, 10, 11, 23, 59, 59, 999);
+    const currentDay = new Date(current.getFullYear(), current.getMonth(), current.getDate());
+    const daysUntilStart = Math.ceil((start - currentDay) / 86400000);
+
+    if (current > end) {
+        return { status: "ended", daysUntilStart: 0, daysLabel: "Exam window complete" };
+    }
+    if (current >= start) {
+        return { status: "active", daysUntilStart: 0, daysLabel: "Exam window is live" };
+    }
+    return {
+        status: "upcoming",
+        daysUntilStart: Math.max(0, daysUntilStart),
+        daysLabel: `${Math.max(0, daysUntilStart)} Day${daysUntilStart === 1 ? "" : "s"} Until the EXAM`
+    };
+}
+
+export function getDashboardProgress(subjects = [], entries = getProgressEntries()) {
+    const subjectProgress = subjects.map((subject) => ({
+        id: text(subject.id),
+        name: text(subject.name) || "Untitled subject",
+        totalChapters: Array.isArray(subject.chapters) ? subject.chapters.length : 0,
+        chapterTitles: new Set((Array.isArray(subject.chapters) ? subject.chapters : []).map((chapter) => text(chapter.title)).filter(Boolean)),
+        completedChapters: new Set(),
+        answered: 0,
+        correct: 0
+    }));
+    const byId = new Map(subjectProgress.filter((subject) => subject.id).map((subject) => [subject.id, subject]));
+    const byName = new Map(subjectProgress.map((subject) => [subject.name.toLowerCase(), subject]));
+
+    (Array.isArray(entries) ? entries : []).forEach((entry) => {
+        if (text(entry.summaryType) !== "session") {
+            return;
+        }
+        const progress = byId.get(text(entry.subjectId)) || byName.get(text(entry.subjectName).toLowerCase());
+        if (!progress) {
+            return;
+        }
+
+        progress.answered += Math.max(0, Number(entry.attempted || 0) || 0);
+        progress.correct += Math.max(0, Number(entry.correct || 0) || 0);
+        const chapters = Array.isArray(entry.selectedChapterTitles) && entry.selectedChapterTitles.length
+            ? entry.selectedChapterTitles
+            : [entry.chapterTitle];
+        chapters.map(text).filter((chapterTitle) => progress.chapterTitles.has(chapterTitle))
+            .forEach((chapterTitle) => progress.completedChapters.add(chapterTitle));
+    });
+
+    const progressBySubject = subjectProgress.map((subject) => {
+        const completedChapters = Math.min(subject.totalChapters, subject.completedChapters.size);
+        return {
+            id: subject.id,
+            name: subject.name,
+            totalChapters: subject.totalChapters,
+            completedChapters,
+            completedChapterTitles: [...subject.completedChapters],
+            answered: subject.answered,
+            correct: subject.correct,
+            complete: subject.totalChapters > 0 && completedChapters >= subject.totalChapters,
+            percent: subject.totalChapters ? Math.round((completedChapters / subject.totalChapters) * 100) : 0
+        };
+    });
+    const totalChapters = progressBySubject.reduce((sum, subject) => sum + subject.totalChapters, 0);
+    const completedChapters = progressBySubject.reduce((sum, subject) => sum + subject.completedChapters, 0);
+
+    return {
+        subjects: progressBySubject,
+        completedSubjects: progressBySubject.filter((subject) => subject.complete).length,
+        completedChapters,
+        totalChapters,
+        answered: progressBySubject.reduce((sum, subject) => sum + subject.answered, 0),
+        correct: progressBySubject.reduce((sum, subject) => sum + subject.correct, 0),
+        percent: totalChapters ? Math.round((completedChapters / totalChapters) * 100) : 0
+    };
+}
+
+export function getDashboardContinuation(subjects = [], progress = getDashboardProgress(subjects)) {
+    const savedQuiz = loadQuizSession();
+    if (savedQuiz && !savedQuiz.complete && text(savedQuiz.subjectId) && text(savedQuiz.chapterTitle)) {
+        const subject = subjects.find((entry) => text(entry.id) === text(savedQuiz.subjectId));
+        if (subject && subject.chapters.some((chapter) => text(chapter.title) === text(savedQuiz.chapterTitle))) {
+            const questionCount = Array.isArray(savedQuiz.questions) ? savedQuiz.questions.length : 0;
+            const answeredCount = Array.isArray(savedQuiz.answers)
+                ? savedQuiz.answers.filter((answer) => answer !== null && answer !== undefined).length
+                : Math.max(0, Number(savedQuiz.index) || 0);
+            return {
+                type: "resume",
+                status: "Resume Quiz",
+                subject,
+                chapter: subject.chapters.find((chapter) => text(chapter.title) === text(savedQuiz.chapterTitle)),
+                answeredCount: Math.min(answeredCount, questionCount),
+                questionCount,
+                remainingCount: Math.max(0, questionCount - Math.min(answeredCount, questionCount)),
+                percent: questionCount ? Math.round((Math.min(answeredCount, questionCount) / questionCount) * 100) : 0
+            };
+        }
+    }
+
+    const activeSubjectId = text(storageGet(ACTIVE_SUBJECT_KEY, ""));
+    const orderedProgress = [...progress.subjects].sort((left, right) => {
+        if (left.id === activeSubjectId) return -1;
+        if (right.id === activeSubjectId) return 1;
+        return 0;
+    });
+    for (const subjectProgress of orderedProgress) {
+        const subject = subjects.find((entry) => text(entry.id) === subjectProgress.id);
+        const completed = new Set(subjectProgress.completedChapterTitles || []);
+        const chapter = subject?.chapters?.find((entry) => !completed.has(text(entry.title)));
+        if (subject && chapter) {
+            return { type: "start", status: "Next Chapter", subject, chapter };
+        }
+    }
+
+    return { type: "complete", status: "All Chapters Complete" };
+}
+
 const sessionGet = (key, fallback) => {
     try {
         const raw = sessionStorage.getItem(key);
@@ -1720,21 +1839,71 @@ async function loadSubjectMarkdown(subject) {
     }
 }
 
-function simpleMarkdownToHtml(md) {
+function simpleMarkdownToHtml(md, options = {}) {
     const lines = String(md || "").split(/\r?\n/);
     const out = [];
 
+    const escapeHtml = (value) => String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+
+    const resolveSafeUrl = (value) => {
+        const candidate = String(value || "").trim();
+        if (!candidate || /^\s*(javascript|vbscript|data):/i.test(candidate)) {
+            return null;
+        }
+
+        try {
+            const base = options.basePath
+                ? new URL(options.basePath, window.location.href)
+                : new URL(window.location.href);
+            const resolved = new URL(candidate, base);
+            if (!["http:", "https:"].includes(resolved.protocol)) {
+                return null;
+            }
+            return resolved.href;
+        } catch {
+            return null;
+        }
+    };
+
     const renderInline = (text) => {
-        return String(text || "")
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+        const tokens = [];
+        const tokenise = (html) => {
+            const token = `\u0000${tokens.length}\u0000`;
+            tokens.push(html);
+            return token;
+        };
+
+        let source = String(text || "")
+            .replace(/!\[([^\]]*)\]\((\S+?)(?:\s+["']([^"']*)["'])?\)/g, (match, alt, url, title) => {
+                const safeUrl = resolveSafeUrl(url);
+                if (!safeUrl) {
+                    return escapeHtml(match);
+                }
+                const titleAttr = title ? ` title="${escapeHtml(title)}"` : "";
+                return tokenise(`<img src="${escapeHtml(safeUrl)}" alt="${escapeHtml(alt)}" loading="lazy"${titleAttr}>`);
+            })
+            .replace(/\[([^\]]+)\]\((\S+?)(?:\s+["']([^"']*)["'])?\)/g, (match, label, url, title) => {
+                const safeUrl = resolveSafeUrl(url);
+                if (!safeUrl) {
+                    return escapeHtml(match);
+                }
+                const titleAttr = title ? ` title="${escapeHtml(title)}"` : "";
+                return tokenise(`<a href="${escapeHtml(safeUrl)}" target="_blank" rel="noopener noreferrer"${titleAttr}>${escapeHtml(label)}</a>`);
+            });
+
+        source = escapeHtml(source)
             .replace(/`([^`]+)`/g, '<code>$1</code>')
             .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
             .replace(/__(.+?)__/g, '<strong>$1</strong>')
             .replace(/\*(.+?)\*/g, '<em>$1</em>')
             .replace(/_(.+?)_/g, '<em>$1</em>');
+
+        return source.replace(/\u0000(\d+)\u0000/g, (_, index) => tokens[Number(index)] || "");
     };
 
     const parseTableRow = (row) => {
@@ -1870,6 +2039,124 @@ function simpleMarkdownToHtml(md) {
     return html;
 }
 
+function noteHeadingLevel(node) {
+    if (!(node instanceof HTMLElement)) {
+        return 0;
+    }
+    const match = node.tagName.match(/^H([1-6])$/);
+    return match ? Number(match[1]) : 0;
+}
+
+function noteHeadingSlug(value, usedIds) {
+    const base = String(value || "")
+        .toLowerCase()
+        .normalize("NFKD")
+        .replace(/[^\w\s-]/g, "")
+        .trim()
+        .replace(/[\s_-]+/g, "-")
+        .replace(/^-+|-+$/g, "") || "section";
+
+    let id = base;
+    let suffix = 2;
+    while (usedIds.has(id)) {
+        id = `${base}-${suffix}`;
+        suffix += 1;
+    }
+    usedIds.add(id);
+    return id;
+}
+
+function wrapNoteSections(nodes, level, selectedTitle, usedIds) {
+    const fragment = document.createDocumentFragment();
+    let index = 0;
+
+    while (index < nodes.length) {
+        const node = nodes[index];
+        const headingLevel = noteHeadingLevel(node);
+
+        if (headingLevel !== level) {
+            fragment.appendChild(node);
+            index += 1;
+            continue;
+        }
+
+        const heading = node;
+        const sectionId = noteHeadingSlug(heading.textContent, usedIds);
+        heading.id = `note-${sectionId}`;
+
+        const details = document.createElement("details");
+        details.className = `notes-section notes-section-level-${level}`;
+        details.dataset.noteSectionId = sectionId;
+        details.dataset.noteHeading = heading.textContent.trim();
+
+        const summary = document.createElement("summary");
+        summary.className = "notes-section-summary";
+        summary.appendChild(heading);
+
+        const content = document.createElement("div");
+        content.className = "notes-section-content";
+
+        const bodyNodes = [];
+        index += 1;
+        while (index < nodes.length) {
+            const nextLevel = noteHeadingLevel(nodes[index]);
+            if (nextLevel > 0 && nextLevel <= level) {
+                break;
+            }
+            bodyNodes.push(nodes[index]);
+            index += 1;
+        }
+
+        bodyNodes.forEach((bodyNode) => content.appendChild(bodyNode));
+
+        details.append(summary, content);
+        details.open = level === 2 && heading.textContent.trim() === selectedTitle;
+        fragment.appendChild(details);
+    }
+
+    return fragment;
+}
+
+function enhanceNotesDocument(container, selectedTitle = "") {
+    const nodes = Array.from(container.childNodes);
+    const usedIds = new Set();
+    const transformed = wrapNoteSections(nodes, 2, selectedTitle, usedIds);
+    container.replaceChildren(transformed);
+
+    container.querySelectorAll("h1, h2, h3").forEach((heading) => {
+        if (!heading.id) {
+            heading.id = `note-${noteHeadingSlug(heading.textContent, usedIds)}`;
+        }
+    });
+}
+
+function activateNotesChapter(container, chapterTitle, shouldScroll = true) {
+    const headings = Array.from(container.querySelectorAll("h1, h2, h3, h4, h5, h6"));
+    const target = headings.find((heading) => heading.textContent.trim() === String(chapterTitle || "").trim());
+
+    container.querySelectorAll("details[data-note-section-id]").forEach((section) => {
+        section.dataset.noteSelected = "false";
+    });
+    container.querySelectorAll(".highlight-target").forEach((heading) => heading.classList.remove("highlight-target"));
+
+    if (!target) {
+        return null;
+    }
+
+    let section = target.closest("details");
+    while (section) {
+        section.open = true;
+        section.dataset.noteSelected = "true";
+        section = section.parentElement?.closest("details") || null;
+    }
+
+    target.classList.add("highlight-target");
+    if (shouldScroll) {
+        requestAnimationFrame(() => target.scrollIntoView({ behavior: "smooth", block: "start" }));
+    }
+    return target;
+}
+
 function renderNoteStage(stage, subject, chapter, session) {
     stage.replaceChildren();
 
@@ -1884,9 +2171,14 @@ function renderNoteStage(stage, subject, chapter, session) {
         return;
     }
 
+    const notesWorkspace = document.createElement("div");
+    notesWorkspace.className = "notes-workspace";
+
     const notesContainer = document.createElement("article");
     notesContainer.className = "notes-view";
-    stage.appendChild(notesContainer);
+
+    notesWorkspace.appendChild(notesContainer);
+    stage.appendChild(notesWorkspace);
 
     loadSubjectMarkdown(subject).then((markdown) => {
         notesContainer.replaceChildren();
@@ -1901,7 +2193,10 @@ function renderNoteStage(stage, subject, chapter, session) {
             return;
         }
 
-        notesContainer.innerHTML = simpleMarkdownToHtml(markdown);
+        notesContainer.innerHTML = simpleMarkdownToHtml(markdown, {
+            basePath: resolveSubjectNotesPath(subject)
+        });
+        enhanceNotesDocument(notesContainer, chapter?.title || "");
         try {
             renderMath(notesContainer);
         } catch (_error) {
@@ -1918,19 +2213,15 @@ function renderNoteStage(stage, subject, chapter, session) {
         }
 
         if (chapter && chapter.title) {
-            const headingText = chapter.title.trim();
-            const heading = Array.from(notesContainer.querySelectorAll("h1, h2, h3, h4, h5, h6")).find((el) => el.textContent.trim() === headingText);
-            if (heading) {
-                heading.scrollIntoView({ behavior: "smooth", block: "start" });
-                heading.classList.add("highlight-target");
-            } else {
+            const heading = activateNotesChapter(notesContainer, chapter.title, true);
+            if (!heading) {
                 const notice = document.createElement("div");
                 notice.className = "empty-state compact";
                 notice.append(
                     Object.assign(document.createElement("h4"), { textContent: "Chapter heading not found." }),
                     Object.assign(document.createElement("p"), { textContent: "The notes file was loaded, but the current chapter heading was not found in the markdown." })
                 );
-                stage.insertBefore(notice, notesContainer);
+                notesWorkspace.insertBefore(notice, notesContainer);
             }
         }
     }).catch(() => {
@@ -3633,7 +3924,27 @@ export async function initHomePage() {
         refresh: document.getElementById("refresh-button"),
         progress: document.getElementById("progress-button"),
         modeLinks: document.querySelectorAll("[data-home-mode]"),
-        updateLog: document.getElementById("home-update-log")
+        updateLog: document.getElementById("home-update-log"),
+        examDays: document.getElementById("home-exam-days"),
+        examCountdownLabel: document.getElementById("home-exam-countdown-label"),
+        examCountdownCard: document.getElementById("home-exam-countdown"),
+        progressOverviewValue: document.getElementById("home-progress-overview-value"),
+        progressBarFill: document.getElementById("home-progress-bar-fill"),
+        progressEmpty: document.getElementById("home-progress-empty"),
+        subjectProgressList: document.getElementById("home-subject-progress-list"),
+        continuationMark: document.getElementById("home-continuation-mark"),
+        continuationSubject: document.querySelector(".home-continuation-subject"),
+        continuationStatus: document.getElementById("home-continuation-status"),
+        continuationChapter: document.querySelector(".home-continuation-chapter"),
+        continuationDetail: document.querySelector(".home-continuation-detail"),
+        continuationProgress: document.getElementById("home-continuation-progress"),
+        continuationProgressCount: document.getElementById("home-continuation-progress-count"),
+        continuationRemaining: document.getElementById("home-continuation-remaining"),
+        continuationProgressFill: document.getElementById("home-continuation-progress-fill"),
+        continuationAction: document.getElementById("home-continuation-action"),
+        continuationBrowse: document.getElementById("home-continuation-browse"),
+        continuationCard: document.querySelector(".home-continuation-card"),
+        continuationContent: document.getElementById("home-continuation-content")
     };
     const summaryElements = {
         subjects: document.getElementById("home-subject-count"),
@@ -3774,6 +4085,122 @@ export async function initHomePage() {
         });
     };
 
+    const renderExamCountdown = () => {
+        const countdown = getBoardExamCountdown();
+        if (elements.examDays) {
+            elements.examDays.textContent = countdown.status === "upcoming" ? String(countdown.daysUntilStart) : "—";
+        }
+        if (elements.examCountdownLabel) {
+            elements.examCountdownLabel.textContent = countdown.daysLabel;
+        }
+        if (elements.examCountdownCard) {
+            elements.examCountdownCard.dataset.examStatus = countdown.status;
+        }
+    };
+
+    const renderDashboardProgress = () => {
+        const progress = getDashboardProgress(state.subjects);
+        const formatCount = (value) => Number(value || 0).toLocaleString();
+        if (elements.progressOverviewValue) elements.progressOverviewValue.textContent = `${progress.percent}%`;
+        if (elements.progressBarFill) elements.progressBarFill.style.width = `${progress.percent}%`;
+        if (elements.progressEmpty) elements.progressEmpty.hidden = progress.answered > 0 || progress.completedChapters > 0;
+        if (!elements.subjectProgressList) return;
+
+        elements.subjectProgressList.replaceChildren();
+        const activeId = state.activeSubject?.id || "";
+        const sortedSubjects = [...progress.subjects].sort((left, right) => {
+            if (left.id === activeId) return -1;
+            if (right.id === activeId) return 1;
+            return left.name.localeCompare(right.name);
+        });
+        sortedSubjects.forEach((subject) => {
+            const item = document.createElement("div");
+            item.className = "home-subject-progress";
+            if (subject.id === activeId) item.classList.add("is-active");
+
+            const heading = document.createElement("div");
+            heading.className = "home-subject-progress-heading";
+            const name = document.createElement("strong");
+            name.textContent = subject.name;
+            const percent = document.createElement("span");
+            percent.textContent = `${subject.percent}%`;
+            heading.append(name, percent);
+
+            const track = document.createElement("div");
+            track.className = "home-subject-progress-track";
+            const fill = document.createElement("span");
+            fill.style.width = `${subject.percent}%`;
+            track.appendChild(fill);
+
+            const detail = document.createElement("span");
+            detail.className = "home-subject-progress-detail";
+            detail.textContent = `${subject.completedChapters}/${subject.totalChapters} chapters • ${formatCount(subject.answered)} answered • ${formatCount(subject.correct)} correct`;
+            item.append(heading, track, detail);
+            elements.subjectProgressList.appendChild(item);
+        });
+
+        const continuation = getDashboardContinuation(state.subjects, progress);
+        if (elements.continuationAction) {
+            elements.continuationAction.onclick = null;
+        }
+        if (elements.continuationBrowse) {
+            elements.continuationBrowse.onclick = () => {
+                if (continuation.subject) {
+                    syncSelection(continuation.subject.id, continuation.chapter?.title || "", "quiz");
+                }
+                window.location.href = pageMap.quiz;
+            };
+        }
+        if (elements.continuationCard) {
+            elements.continuationCard.dataset.continuationState = continuation.type;
+        }
+        if (elements.continuationStatus) elements.continuationStatus.textContent = continuation.status;
+        if (continuation.type === "complete") {
+            if (elements.continuationMark) elements.continuationMark.textContent = "✓";
+            if (elements.continuationSubject) elements.continuationSubject.textContent = "All chapters complete";
+            if (elements.continuationChapter) elements.continuationChapter.textContent = "You have covered every available chapter.";
+            if (elements.continuationDetail) elements.continuationDetail.textContent = "Keep reviewing to maintain your progress.";
+            if (elements.continuationProgress) elements.continuationProgress.hidden = true;
+            if (elements.continuationAction) {
+                elements.continuationAction.hidden = true;
+            }
+            return;
+        }
+
+        const subjectName = continuation.subject.name || "Selected subject";
+        const chapterTitle = continuation.chapter.title || "Next chapter";
+        if (elements.continuationMark) elements.continuationMark.textContent = continuation.type === "resume" ? "↗" : "→";
+        if (elements.continuationSubject) elements.continuationSubject.textContent = subjectName;
+        if (elements.continuationChapter) elements.continuationChapter.textContent = chapterTitle;
+        if (elements.continuationDetail) {
+            elements.continuationDetail.textContent = continuation.type === "resume"
+                ? "Continue where you left off."
+                : "Next incomplete chapter for this subject.";
+        }
+        if (elements.continuationProgress) {
+            elements.continuationProgress.hidden = continuation.type !== "resume";
+        }
+        if (continuation.type === "resume") {
+            if (elements.continuationProgressCount) {
+                elements.continuationProgressCount.textContent = `${continuation.answeredCount} of ${continuation.questionCount} questions answered`;
+            }
+            if (elements.continuationRemaining) {
+                elements.continuationRemaining.textContent = `${continuation.remainingCount} remaining`;
+            }
+            if (elements.continuationProgressFill) {
+                elements.continuationProgressFill.style.width = `${continuation.percent}%`;
+            }
+        }
+        if (elements.continuationAction) {
+            elements.continuationAction.hidden = false;
+            elements.continuationAction.textContent = continuation.type === "resume" ? "Resume Quiz" : "Start Quiz";
+            elements.continuationAction.onclick = () => {
+                syncSelection(continuation.subject.id, continuation.chapter.title, "quiz");
+                window.location.href = pageMap.quiz;
+            };
+        }
+    };
+
     const render = () => {
 
         const chapterCount = state.subjects.reduce((total, subject) => total + subject.chapters.length, 0);
@@ -3794,6 +4221,8 @@ export async function initHomePage() {
 
         renderModeLinks();
         renderUpdateLog();
+        renderExamCountdown();
+        renderDashboardProgress();
 
         if (elements.carousel) {
             renderHomeCarousel(elements.carousel, state.subjects, state.activeSubject?.id || "", (subjectId) => {
