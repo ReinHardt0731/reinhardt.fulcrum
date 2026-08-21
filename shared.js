@@ -3962,7 +3962,7 @@ export async function initHomePage() {
 
     const renderModeLinks = () => {
         elements.modeLinks.forEach((button) => {
-            button.classList.toggle("is-active", button.dataset.homeMode === state.mode);
+            button.classList.remove("is-active");
         });
     };
 
@@ -4225,7 +4225,7 @@ export async function initHomePage() {
         renderDashboardProgress();
 
         if (elements.carousel) {
-            renderHomeCarousel(elements.carousel, state.subjects, state.activeSubject?.id || "", (subjectId) => {
+            renderHomeCarousel(elements.carousel, state.subjects, "", (subjectId) => {
                 state.activeSubject = getSubjectById(state.subjects, subjectId);
                 state.activeChapter = state.activeSubject ? getUsableChapter(state.activeSubject, state.activeSubject.selectedChapter || state.activeSubject.chapters[0]?.title || "") : null;
                 state.mode = "quiz";
