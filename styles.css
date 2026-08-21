@@ -2246,10 +2246,14 @@ body.drawer-collapsed .mobile-only {
 .notes-workspace {
     display: grid;
     gap: 14px;
+    width: 100%;
+    min-width: 0;
 }
 
 .notes-view {
-    max-width: 980px;
+    width: 100%;
+    min-width: 0;
+    max-width: 1120px;
     margin: 0 auto;
     line-height: 1.75;
     overflow-wrap: anywhere;
@@ -2276,6 +2280,9 @@ body.drawer-collapsed .mobile-only {
 }
 
 .notes-section {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
     margin: 0 0 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 18px;
@@ -2292,6 +2299,9 @@ body.drawer-collapsed .mobile-only {
     display: flex;
     align-items: center;
     gap: 12px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
     padding: 15px 18px;
     color: var(--text);
     cursor: pointer;
@@ -2318,13 +2328,16 @@ body.drawer-collapsed .mobile-only {
 .notes-section-summary h2,
 .notes-section-summary h3 {
     flex: 1;
+    min-width: 0;
     margin: 0;
     color: inherit;
     font-size: 1.16rem;
     line-height: 1.35;
+    overflow-wrap: anywhere;
 }
 
 .notes-section-content {
+    min-width: 0;
     padding: 0 20px 20px;
 }
 
@@ -2372,14 +2385,6 @@ body.drawer-collapsed .mobile-only {
     0% { text-shadow: 0 0 0 transparent; }
     35% { text-shadow: 0 0 18px rgba(255, 209, 102, 0.8); }
     100% { text-shadow: 0 0 0 transparent; }
-}
-
-.question-card-header::before {
-    content: "CURRENT PROMPT";
-    color: var(--mode-accent, var(--primary));
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
 }
 
 .question-card-meta {

@@ -567,7 +567,7 @@
         modeLabel.textContent = `${capitalize(state.mode)} mode`;
 
         if (state.session && !state.session.complete) {
-            counter.textContent = `Question ${state.session.index + 1} of ${state.session.questions.length}`;
+            counter.textContent = `Question ${state.session.index + 1} out of ${state.session.questions.length}`;
         } else if (state.session && state.session.complete) {
             counter.textContent = "Quiz complete";
         } else {
@@ -783,7 +783,7 @@
         header.className = "question-card-header";
         const counter = document.createElement("div");
         counter.className = "question-counter-inline";
-        counter.textContent = `Question ${session.index + 1} of ${session.questions.length}`;
+        counter.textContent = `Question ${session.index + 1} out of ${session.questions.length}`;
         const modeBadge = document.createElement("div");
         modeBadge.className = "mode-badge";
         modeBadge.textContent = `${capitalize(session.mode)} mode`;
@@ -1275,7 +1275,7 @@
             counter.textContent = "Quiz complete";
             return;
         }
-        counter.textContent = `Question ${state.session.index + 1} of ${state.session.questions.length}`;
+        counter.textContent = `Question ${state.session.index + 1} out of ${state.session.questions.length}`;
     }
 
     function setActiveSubject(subjectId) {

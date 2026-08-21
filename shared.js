@@ -3352,7 +3352,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         header.className = "question-card-header";
         const counterBadge = Object.assign(document.createElement("div"), {
             className: "question-counter-inline",
-            textContent: `Question ${session.index + 1} of ${session.questions.length}`
+            textContent: `Question ${session.index + 1} out of ${session.questions.length}`
         });
         const statusGroup = document.createElement("div");
         statusGroup.className = "question-card-meta";
@@ -3669,7 +3669,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
     const header = document.createElement("div");
     header.className = "question-card-header";
     header.append(
-        Object.assign(document.createElement("div"), { className: "question-counter-inline", textContent: `Question ${session.index + 1} of ${session.questions.length}` }),
+        Object.assign(document.createElement("div"), { className: "question-counter-inline", textContent: `Question ${session.index + 1} out of ${session.questions.length}` }),
         Object.assign(document.createElement("div"), { className: "mode-badge", textContent: `${capitalize(session.mode)} mode` })
     );
 
@@ -4848,7 +4848,7 @@ export async function initModePage(mode) {
                     const questionCount = tallyQuestionCount(subject);
                     elements.counter.textContent = `Available ${questionCount} question${questionCount === 1 ? "" : "s"}`;
                 } else {
-                    elements.counter.textContent = `Question ${state.session.index + 1} of ${state.session.questions.length}`;
+                    elements.counter.textContent = `Question ${state.session.index + 1} out of ${state.session.questions.length}`;
                 }
             } else if (state.session && state.session.complete) {
                 elements.counter.textContent = "Quiz complete";
@@ -4986,7 +4986,7 @@ export async function initModePage(mode) {
 
         const counter = document.createElement("div");
         counter.className = "question-counter-inline";
-        counter.textContent = `Question ${index + 1} of ${session.questions.length}`;
+        counter.textContent = `Question ${index + 1} out of ${session.questions.length}`;
 
         const status = document.createElement("div");
         status.className = "mode-badge quiz-status";
