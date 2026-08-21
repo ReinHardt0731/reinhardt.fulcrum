@@ -55,7 +55,8 @@ body.mode-page {
 body.mode-quiz { --mode-accent: var(--primary); --mode-accent-soft: rgba(97, 195, 255, 0.12); }
 body.mode-learn { --mode-accent: var(--tertiary); --mode-accent-soft: rgba(139, 247, 196, 0.11); }
 body.mode-flashcards { --mode-accent: var(--secondary); --mode-accent-soft: rgba(255, 209, 102, 0.12); }
-body.mode-exam { --mode-accent: var(--warning); --mode-accent-soft: rgba(255, 183, 77, 0.12); }
+body.mode-exam { --mode-accent: var(--danger); --mode-accent-soft: rgba(255, 124, 138, 0.12); }
+body.mode-note { --mode-accent: var(--accent); --mode-accent-soft: rgba(198, 130, 255, 0.12); }
 
 .home-updates {
     padding: 24px;
@@ -738,7 +739,7 @@ body.drawer-collapsed .mobile-only {
 .mode-launch-card:nth-child(2) { --mode-color: var(--accent); }
 .mode-launch-card:nth-child(3) { --mode-color: var(--tertiary); }
 .mode-launch-card:nth-child(4) { --mode-color: var(--secondary); }
-.mode-launch-card:nth-child(5) { --mode-color: var(--warning); }
+.mode-launch-card:nth-child(5) { --mode-color: var(--danger); }
 
 .mode-launch-card::before {
     content: "";
