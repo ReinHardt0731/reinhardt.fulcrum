@@ -33,8 +33,11 @@ jobs:
           cp -r vendor public/ 2>/dev/null || true
           cp -r chapters public/ 2>/dev/null || true
           cp -r markdowns public/ 2>/dev/null || true
+          cp -r asset public/ 2>/dev/null || true
           echo "Contents of public:"
           ls -la public
+          test -d public/asset && echo "asset/ copied" || echo "asset/ missing"
+          test -f public/asset/Capture.PNG && echo "Capture.PNG copied" || echo "Capture.PNG missing"
           [ -d public/vendor ] && echo "✓ vendor/ copied" || echo "✗ vendor/ missing"
           [ -d public/chapters ] && echo "✓ chapters/ copied" || echo "✗ chapters/ missing"
 
