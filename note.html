@@ -109,13 +109,14 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism.min.css">
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script type="module" src="vendor/model-viewer/model-viewer.min.js"></script>
     <script type="module" src="note.js"></script>
     <script>
     (function(){ if (!window.katex) { var s=document.createElement('script'); s.src='vendor/katex/katex.min.js'; document.head.appendChild(s);} if (!window.renderMathInElement) { var s2=document.createElement('script'); s2.src='vendor/katex/contrib/auto-render.min.js'; document.head.appendChild(s2);} })();
     </script>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
-        import('./shared.js?v=notes-images-1').then((m) => m.renderMath(document.body));
+        import('./shared.js?v=equation-math-2').then((m) => m.renderMath(document.body));
     });
     </script>
 </body>

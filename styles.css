@@ -2378,8 +2378,1523 @@ body.drawer-collapsed .mobile-only {
     background: rgba(255, 209, 102, 0.06);
 }
 
+.equation-card {
+    display: grid;
+    gap: 16px;
+    margin: 1.4rem 0;
+    padding: 20px;
+    border: 1px solid color-mix(in srgb, var(--mode-accent, var(--accent)) 28%, var(--line));
+    border-radius: 22px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.14);
+}
+
+.equation-card-header {
+    display: grid;
+    gap: 4px;
+}
+
+.equation-card-header h3,
+.equation-card-slide h4 {
+    margin: 0;
+}
+
+.equation-card-equation {
+    min-height: 56px;
+    padding: 16px;
+    overflow-x: auto;
+    border-radius: 16px;
+    color: var(--text);
+    background: rgba(3, 17, 29, 0.42);
+    text-align: center;
+}
+
+.equation-card-slides {
+    min-height: 160px;
+}
+
+.equation-card-slide {
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.equation-card-slide[hidden] {
+    display: none;
+}
+
+.equation-card-variable-symbol {
+    margin-bottom: 8px;
+    color: var(--mode-accent, var(--accent));
+    font-size: 1.3rem;
+}
+
+.equation-card-slide p {
+    margin: 6px 0 14px;
+    color: var(--muted);
+}
+
+.equation-card-slide dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4px 12px;
+    margin: 0;
+}
+
+.equation-card-slide dt {
+    color: var(--muted);
+    font-weight: 700;
+}
+
+.equation-card-slide dd {
+    margin: 0;
+}
+
+.equation-card-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: var(--muted);
+}
+
+.equation-card-graph-wrap {
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px 0 0;
+}
+
+.equation-card-graph {
+    display: block;
+    width: 100%;
+    min-width: 480px;
+    height: auto;
+    border-radius: 14px;
+    background: rgba(3, 17, 29, 0.32);
+}
+
+.equation-graph-axis {
+    stroke: rgba(238, 244, 255, 0.55);
+    stroke-width: 1.5;
+}
+
+.equation-graph-grid {
+    stroke: rgba(238, 244, 255, 0.1);
+    stroke-width: 1;
+}
+
+.equation-graph-line {
+    fill: none;
+    stroke: var(--mode-accent, var(--accent));
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+}
+
+.equation-graph-label {
+    fill: var(--muted);
+    font-size: 13px;
+}
+
+.equation-card-error {
+    margin: 0;
+    color: var(--danger);
+}
+
+.equation-card-error-state {
+    border-color: color-mix(in srgb, var(--danger) 42%, var(--line));
+}
+
+.equation-card-interactive {
+    gap: 18px;
+    padding: clamp(18px, 3vw, 30px);
+}
+
+.equation-card-interactive .equation-card-header > p:last-child {
+    max-width: 720px;
+    margin: 0;
+    color: var(--muted);
+}
+
+.equation-card-inputs {
+    display: grid;
+    gap: 12px;
+}
+
+.equation-card-variable {
+    padding: 14px 16px;
+    border: 1px solid color-mix(in srgb, var(--mode-accent, var(--accent)) 20%, var(--line));
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.equation-card-variable-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.equation-card-variable-heading strong {
+    color: var(--mode-accent, var(--accent));
+}
+
+.equation-card-variable-heading output {
+    color: var(--text);
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.equation-card-variable p {
+    margin: 6px 0 10px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.equation-card-range {
+    width: 100%;
+    accent-color: var(--mode-accent, var(--accent));
+    cursor: pointer;
+}
+
+.equation-card-fixed {
+    margin-bottom: 0 !important;
+    font-size: 0.78rem !important;
+}
+
+.equation-card-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.equation-card-metric {
+    display: grid;
+    gap: 3px;
+    min-width: 0;
+    padding: 14px;
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--mode-accent, var(--accent)) 9%, var(--panel));
+}
+
+.equation-card-metric > span {
+    color: var(--mode-accent, var(--accent));
+    font-weight: 800;
+}
+
+.equation-card-metric strong {
+    font-size: 1.2rem;
+}
+
+.equation-card-metric small {
+    color: var(--muted);
+}
+
+.equation-card-live-region {
+    min-height: 1.1em;
+    color: var(--danger);
+    font-size: 0.85rem;
+}
+
+.equation-card-graph-stage {
+    min-width: 0;
+}
+
+.equation-graph-marker {
+    fill: var(--mode-accent, var(--accent));
+    stroke: var(--text);
+    stroke-width: 2;
+}
+
+.equation-card-notes {
+    display: grid;
+    gap: 6px;
+    padding: 13px 16px;
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.equation-card-notes p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.84rem;
+}
+
+@media (max-width: 620px) {
+    .equation-card-variable-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .equation-card-variable-heading output {
+        white-space: normal;
+    }
+
+    .equation-card-graph-stage .equation-card-graph-wrap {
+        margin-inline: -4px;
+    }
+}
+
+/* Interactive equation cards use a light reading surface inside dark Notes mode. */
+.equation-card-interactive {
+    --equation-ink: #17232b;
+    --equation-muted: #607078;
+    --equation-surface: #f7f6f0;
+    --equation-panel: #ffffff;
+    --equation-formula: #edf3ee;
+    --equation-line: #d7dfda;
+    color: var(--equation-ink);
+    border-color: color-mix(in srgb, var(--mode-accent, var(--accent)) 44%, #d7dfda);
+    border-radius: 18px;
+    background: var(--equation-surface);
+    box-shadow: 0 22px 55px rgba(3, 10, 16, 0.24);
+}
+
+.equation-card-interactive .equation-card-header {
+    gap: 7px;
+}
+
+.equation-card-interactive .equation-card-header .section-label {
+    margin: 0;
+    color: #687a74;
+    letter-spacing: 0.16em;
+    font-size: 0.68rem;
+    font-weight: 800;
+}
+
+.equation-card-interactive .equation-card-header h3 {
+    color: var(--equation-ink);
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    letter-spacing: -0.035em;
+}
+
+.equation-card-interactive .equation-card-header > p:last-child {
+    color: var(--equation-muted);
+    font-size: 0.94rem;
+    line-height: 1.55;
+}
+
+.equation-card-interactive .equation-card-equation {
+    min-height: 64px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #dfe8e1;
+    border-radius: 13px;
+    background: var(--equation-formula);
+    color: var(--equation-ink);
+    font-weight: 800;
+}
+
+.equation-card-interactive .equation-card-equation .katex {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+}
+
+.equation-card-interactive .equation-card-variable {
+    border: 1px solid var(--equation-line);
+    border-radius: 13px;
+    background: var(--equation-panel);
+    box-shadow: 0 5px 15px rgba(30, 48, 43, 0.06);
+}
+
+.equation-card-interactive .equation-card-variable-heading {
+    color: var(--equation-ink);
+}
+
+.equation-card-interactive .equation-card-variable-heading strong,
+.equation-card-interactive .equation-card-metric > span {
+    color: var(--mode-accent, var(--accent));
+}
+
+.equation-card-interactive .equation-card-variable-heading output {
+    color: var(--equation-ink);
+    font-size: 0.94rem;
+}
+
+.equation-card-interactive .equation-card-variable p,
+.equation-card-interactive .equation-card-fixed {
+    color: var(--equation-muted);
+}
+
+.equation-card-interactive .equation-card-fixed {
+    padding-top: 3px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.equation-card-interactive .equation-card-range {
+    height: 6px;
+    margin-top: 3px;
+    border-radius: 999px;
+    background: #d8dedb;
+    appearance: none;
+}
+
+.equation-card-interactive .equation-card-range:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--mode-accent, var(--accent)) 35%, transparent);
+    outline-offset: 5px;
+}
+
+.equation-card-interactive .equation-card-range::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--mode-accent, var(--accent)), #d8dedb);
+}
+
+.equation-card-interactive .equation-card-range::-webkit-slider-thumb {
+    width: 17px;
+    height: 17px;
+    margin-top: -5px;
+    border: 3px solid var(--equation-surface);
+    border-radius: 50%;
+    background: var(--mode-accent, var(--accent));
+    box-shadow: 0 2px 7px rgba(40, 30, 60, 0.25);
+    appearance: none;
+}
+
+.equation-card-interactive .equation-card-range::-moz-range-track {
+    height: 6px;
+    border-radius: 999px;
+    background: #d8dedb;
+}
+
+.equation-card-interactive .equation-card-range::-moz-range-progress {
+    height: 6px;
+    border-radius: 999px;
+    background: var(--mode-accent, var(--accent));
+}
+
+.equation-card-interactive .equation-card-range::-moz-range-thumb {
+    width: 13px;
+    height: 13px;
+    border: 3px solid var(--equation-surface);
+    border-radius: 50%;
+    background: var(--mode-accent, var(--accent));
+}
+
+.equation-card-interactive .equation-card-metrics {
+    gap: 9px;
+}
+
+.equation-card-interactive .equation-card-metric {
+    border: 1px solid #e0e6e1;
+    background: #f1f4f0;
+    color: var(--equation-ink);
+}
+
+.equation-card-interactive .equation-card-metric strong {
+    color: var(--equation-ink);
+    font-size: 1.35rem;
+}
+
+.equation-card-interactive .equation-card-metric small {
+    color: var(--equation-muted);
+}
+
+.equation-card-interactive .equation-card-graph-wrap {
+    padding-top: 2px;
+}
+
+.equation-card-interactive .equation-card-graph {
+    min-width: 520px;
+    border: 1px solid #e1e8e3;
+    background: #f4f7f3;
+}
+
+.equation-card-interactive .equation-graph-axis {
+    stroke: #84928b;
+    stroke-width: 1.4;
+}
+
+.equation-card-interactive .equation-graph-grid {
+    stroke: #dce4de;
+    stroke-width: 1;
+}
+
+.equation-card-interactive .equation-graph-line {
+    stroke: var(--mode-accent, var(--accent));
+    stroke-width: 3.5;
+}
+
+.equation-card-interactive .equation-graph-label {
+    fill: #66756e;
+    font-size: 13px;
+}
+
+.equation-card-interactive .equation-graph-marker {
+    fill: var(--mode-accent, var(--accent));
+    stroke: #ffffff;
+    stroke-width: 2.5;
+}
+
+.equation-card-interactive .equation-card-notes {
+    border: 1px solid #e0e7e1;
+    background: #eef2ee;
+}
+
+.equation-card-interactive .equation-card-notes p {
+    color: var(--equation-muted);
+    line-height: 1.5;
+}
+
+@media (max-width: 620px) {
+    .equation-card-interactive {
+        padding: 16px;
+        border-radius: 15px;
+    }
+
+    .equation-card-interactive .equation-card-header h3 {
+        font-size: 1.45rem;
+    }
+
+    .equation-card-interactive .equation-card-graph {
+        min-width: 460px;
+    }
+}
+
+/* Compact dark control surface for the interactive card. */
+.equation-card-interactive {
+    --equation-ink: #edf2ff;
+    --equation-muted: #aab7cc;
+    --equation-surface: #0b1728;
+    --equation-panel: #12223a;
+    --equation-formula: #101f34;
+    --equation-line: rgba(173, 139, 255, 0.34);
+    gap: 15px;
+    padding: clamp(16px, 2.6vw, 26px);
+    color: var(--equation-ink);
+    border-color: color-mix(in srgb, var(--mode-accent, var(--accent)) 58%, var(--line));
+    border-radius: 16px;
+    background: linear-gradient(145deg, #0d1a2d, #081321);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.3);
+}
+
+.equation-card-interactive .equation-card-header {
+    gap: 5px;
+}
+
+.equation-card-interactive .equation-card-header .section-label {
+    color: #d0b7ff;
+    font-size: 0.63rem;
+}
+
+.equation-card-interactive .equation-card-header h3 {
+    color: var(--equation-ink);
+    font-size: clamp(1.15rem, 2.4vw, 1.65rem);
+    letter-spacing: -0.02em;
+}
+
+.equation-card-interactive .equation-card-equation {
+    min-height: 52px;
+    padding: 12px;
+    border-color: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    background: var(--equation-formula);
+    color: var(--equation-ink);
+}
+
+.equation-card-interactive .equation-card-equation .katex {
+    font-size: clamp(0.9rem, 1.7vw, 1.12rem);
+}
+
+.equation-card-interactive .equation-card-inputs {
+    gap: 0;
+    padding: 2px 0;
+}
+
+.equation-card-interactive .equation-card-variable {
+    display: grid;
+    gap: 6px;
+    padding: 12px 2px 13px;
+    border: 0;
+    border-bottom: 1px solid rgba(205, 190, 255, 0.18);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.equation-card-interactive .equation-card-variable:last-child {
+    border-bottom: 0;
+}
+
+.equation-card-interactive .equation-card-variable-heading {
+    align-items: baseline;
+    color: var(--equation-ink);
+}
+
+.equation-card-interactive .equation-card-variable-heading strong {
+    color: #d4b9ff;
+}
+
+.equation-card-interactive .equation-card-variable-heading output {
+    color: #ffffff;
+    font-size: 0.92rem;
+}
+
+.equation-card-interactive .equation-card-fixed {
+    margin: 0;
+    color: var(--equation-muted);
+    font-size: 0.7rem !important;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.equation-card-interactive .equation-card-range {
+    height: 6px;
+    margin-top: 2px;
+    border: 0;
+    border-radius: 999px;
+    background: #293243;
+}
+
+.equation-card-interactive .equation-card-range::-webkit-slider-runnable-track {
+    height: 6px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #a9d5ff 0%, #a9d5ff var(--equation-progress, 0%), #3c4653 var(--equation-progress, 0%), #3c4653 100%);
+}
+
+.equation-card-interactive .equation-card-range::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+    margin-top: -5px;
+    border: 0;
+    background: #a9d5ff;
+    box-shadow: 0 0 0 2px rgba(169, 213, 255, 0.22);
+}
+
+.equation-card-interactive .equation-card-range::-moz-range-track {
+    height: 6px;
+    border-radius: 999px;
+    background: #3c4653;
+}
+
+.equation-card-interactive .equation-card-range::-moz-range-progress {
+    height: 6px;
+    border-radius: 999px;
+    background: #a9d5ff;
+}
+
+.equation-card-interactive .equation-card-range::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #a9d5ff;
+    border-radius: 50%;
+    background: #a9d5ff;
+}
+
+.equation-card-interactive .equation-card-range:focus-visible {
+    outline: 3px solid rgba(198, 130, 255, 0.55);
+    outline-offset: 5px;
+}
+
+.equation-card-interactive .equation-card-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 9px;
+    padding-top: 2px;
+}
+
+.equation-card-interactive .equation-card-metric {
+    gap: 4px;
+    min-height: 68px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.07);
+    color: var(--equation-ink);
+}
+
+.equation-card-interactive .equation-card-metric > span {
+    color: #d4b9ff;
+    font-size: 0.78rem;
+}
+
+.equation-card-interactive .equation-card-metric strong {
+    color: #ffffff;
+    font-size: 1.08rem;
+}
+
+.equation-card-interactive .equation-card-metric small {
+    color: var(--equation-muted);
+    font-size: 0.7rem;
+}
+
+.equation-card-interactive .equation-card-graph-wrap {
+    padding-top: 0;
+}
+
+.equation-card-interactive .equation-card-graph {
+    min-width: 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    background: #102137;
+}
+
+.equation-card-interactive .equation-graph-axis {
+    stroke: rgba(222, 232, 255, 0.62);
+}
+
+.equation-card-interactive .equation-graph-grid {
+    stroke: rgba(222, 232, 255, 0.1);
+}
+
+.equation-card-interactive .equation-graph-line {
+    stroke: #c48dff;
+    stroke-width: 3;
+}
+
+.equation-card-interactive .equation-graph-label {
+    fill: #aab7cc;
+    font-size: 12px;
+}
+
+.equation-card-interactive .equation-graph-marker {
+    fill: #d7b2ff;
+    stroke: #ffffff;
+}
+
+.equation-card-explanation {
+    display: grid;
+    gap: 7px;
+    margin: 0 0 1.3rem;
+    padding: 2px 4px 0;
+    color: var(--muted);
+}
+
+.equation-card-explanation .section-label {
+    margin: 0;
+    color: var(--mode-accent, var(--accent));
+}
+
+.equation-card-explanation p {
+    margin: 0;
+    line-height: 1.55;
+}
+
+.equation-card-explanation-lead {
+    color: var(--text);
+}
+
+.equation-card-explanation strong {
+    color: var(--text);
+}
+
+@media (max-width: 620px) {
+    .equation-card-interactive .equation-card-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .equation-card-interactive .equation-card-variable-heading {
+        flex-direction: row;
+        align-items: baseline;
+    }
+}
+
+.equation-card-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 40fr) minmax(0, 60fr);
+    gap: 14px;
+    align-items: stretch;
+}
+
+.equation-card-control-panel,
+.equation-card-graph-panel {
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid rgba(205, 190, 255, 0.16);
+    border-radius: 12px;
+    background: rgba(6, 16, 30, 0.46);
+}
+
+.equation-card-control-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.equation-card-graph-panel {
+    display: flex;
+    min-height: 370px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.equation-card-section {
+    min-width: 0;
+}
+
+.equation-card-section + .equation-card-section {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(205, 190, 255, 0.16);
+}
+
+.equation-card-section-label {
+    margin: 0 0 9px;
+    color: #d0b7ff;
+    font-size: 0.63rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.equation-card-control-panel .equation-card-equation {
+    min-height: 74px;
+    padding: 10px 8px;
+}
+
+.equation-card-control-panel .equation-card-equation .katex {
+    font-size: clamp(0.74rem, 1.15vw, 0.98rem);
+}
+
+.equation-card-control-panel .equation-card-equation-compact .katex {
+    font-size: clamp(0.66rem, 1vw, 0.86rem);
+}
+
+.equation-card-control-panel .equation-card-equation-extra-compact .katex {
+    font-size: clamp(0.58rem, 0.88vw, 0.76rem);
+}
+
+.equation-card-control-panel .equation-card-equation {
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.equation-card-control-panel .equation-card-metrics {
+    grid-template-columns: 1fr;
+    gap: 7px;
+}
+
+.equation-card-control-panel .equation-card-metric {
+    min-height: 0;
+    padding: 9px 10px;
+}
+
+.equation-card-control-panel .equation-card-metric strong {
+    font-size: 1rem;
+}
+
+.equation-card-graph-panel > .equation-card-section-label {
+    flex: 0 0 auto;
+    margin-bottom: 0;
+}
+
+.equation-card-graph-panel .equation-card-graph-stage {
+    display: flex;
+    min-height: 0;
+    flex: 1;
+    align-items: center;
+}
+
+.equation-card-graph-panel .equation-card-graph-wrap {
+    display: flex;
+    width: 100%;
+    min-height: 0;
+    flex: 1;
+}
+
+.equation-card-graph-panel .equation-card-graph {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+}
+
+.equation-graph-tick-label {
+    fill: #91a0b6;
+    font-size: 11px;
+}
+
+@media (max-width: 860px) {
+    .equation-card-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .equation-card-graph-panel {
+        min-height: 300px;
+    }
+
+    .equation-card-graph-panel .equation-card-graph {
+        min-height: 320px;
+    }
+
+    .equation-card-control-panel .equation-card-metrics {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 620px) {
+    .equation-card-control-panel,
+    .equation-card-graph-panel {
+        padding: 12px;
+    }
+
+    .equation-card-control-panel .equation-card-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .equation-card-graph-panel {
+        min-height: 250px;
+    }
+
+    .equation-card-graph-panel .equation-card-graph {
+        height: auto;
+        min-height: 0;
+    }
+}
+
+.model-card {
+    display: grid;
+    gap: 12px;
+    margin: 1.4rem 0;
+    padding: 18px;
+    border: 1px solid color-mix(in srgb, var(--mode-accent, var(--accent)) 34%, var(--line));
+    border-radius: 18px;
+    background: linear-gradient(145deg, rgba(13, 28, 48, 0.96), rgba(7, 18, 32, 0.98));
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.2);
+}
+
+.model-card-header {
+    display: grid;
+    gap: 4px;
+}
+
+.model-card-header .section-label {
+    margin: 0;
+    color: var(--mode-accent, var(--accent));
+}
+
+.model-card-header h3 {
+    margin: 0;
+}
+
+.model-card-viewport {
+    position: relative;
+    min-height: 420px;
+    overflow: hidden;
+    border: 1px solid rgba(205, 190, 255, 0.2);
+    border-radius: 14px;
+    background: radial-gradient(circle at 50% 25%, rgba(198, 130, 255, 0.12), transparent 48%), #091525;
+}
+
+.model-card-viewport model-viewer {
+    display: block;
+    width: 100%;
+    height: 420px;
+    --poster-color: transparent;
+    --progress-bar-color: var(--mode-accent, var(--accent));
+    --progress-mask: transparent;
+}
+
+.model-card-loading,
+.model-card-error {
+    position: absolute;
+    inset: 50% 16px auto;
+    margin: 0;
+    transform: translateY(-50%);
+    color: var(--muted);
+    text-align: center;
+    pointer-events: none;
+}
+
+.model-card-error {
+    color: var(--danger);
+}
+
+.model-card-error-state {
+    border-color: color-mix(in srgb, var(--danger) 42%, var(--line));
+}
+
+.model-card-hotspot {
+    display: grid;
+    place-items: center;
+    min-width: 22px;
+    min-height: 22px;
+    padding: 4px 8px;
+    border: 2px solid #ffffff;
+    border-radius: 999px;
+    color: #ffffff;
+    background: var(--mode-accent, var(--accent));
+    box-shadow: 0 0 0 4px rgba(198, 130, 255, 0.22), 0 5px 16px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.72rem;
+    font-weight: 800;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.model-card-hotspot:hover,
+.model-card-hotspot:focus-visible,
+.model-card-hotspot.is-selected {
+    background: #f0dfff;
+    color: #25143d;
+    outline: none;
+    transform: scale(1.06);
+}
+
+.model-card-hotspot:focus-visible {
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.9), 0 0 0 8px rgba(198, 130, 255, 0.7);
+}
+
+.model-card-annotation-info {
+    display: grid;
+    gap: 5px;
+    padding: 12px 14px;
+    border: 1px solid rgba(205, 190, 255, 0.16);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.055);
+}
+
+.model-card-annotation-info strong {
+    color: var(--text);
+}
+
+.model-card-annotation-info p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.equation-card-interactive .equation-card-header,
+.model-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.card-fullscreen-button {
+    flex: 0 0 auto;
+    min-height: 34px;
+    padding: 6px 11px;
+    border: 1px solid color-mix(in srgb, var(--mode-accent, var(--accent)) 45%, var(--line));
+    border-radius: 9px;
+    color: var(--mode-accent, var(--accent));
+    background: color-mix(in srgb, var(--mode-accent, var(--accent)) 10%, transparent);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.card-fullscreen-button:hover,
+.card-fullscreen-button[aria-pressed="true"] {
+    border-color: var(--mode-accent, var(--accent));
+    background: color-mix(in srgb, var(--mode-accent, var(--accent)) 22%, transparent);
+    transform: translateY(-1px);
+}
+
+.card-fullscreen-button:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--mode-accent, var(--accent)) 55%, transparent);
+    outline-offset: 3px;
+}
+
+.equation-card-interactive:fullscreen,
+.model-card:fullscreen {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    max-height: none;
+    overflow: auto;
+    margin: 0;
+    border-radius: 0;
+}
+
+.model-card-fullscreen-status {
+    min-height: 1.2em;
+    margin: 8px 0 0;
+    color: var(--danger);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 620px) {
+    .model-card {
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .model-card-viewport,
+    .model-card-viewport model-viewer {
+        min-height: 300px;
+        height: 300px;
+    }
+
+    .model-card-hotspot {
+        max-width: 140px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .equation-card-interactive .equation-card-header,
+    .model-card-header {
+        gap: 10px;
+    }
+
+    .card-fullscreen-button {
+        padding-inline: 8px;
+        font-size: 0.66rem;
+    }
+}
+
 .notes-view .highlight-target {
     animation: notes-target-pulse 1.6s ease both;
+}
+
+/* Immersive presentation treatment for interactive card fullscreen mode. */
+.equation-card-interactive::backdrop,
+.model-card::backdrop {
+    background:
+        radial-gradient(circle at 18% 12%, rgba(198, 130, 255, 0.18), transparent 34%),
+        radial-gradient(circle at 84% 82%, rgba(97, 195, 255, 0.12), transparent 36%),
+        #030a14;
+}
+
+.equation-card-interactive:fullscreen,
+.model-card:fullscreen {
+    color-scheme: dark;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 2.5vh, 28px);
+    width: 100vw;
+    height: 100vh;
+    min-width: 0;
+    min-height: 0;
+    padding: max(22px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(22px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
+    overflow: auto;
+    border: 1px solid rgba(198, 130, 255, 0.52);
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at 10% 0%, rgba(198, 130, 255, 0.12), transparent 34%),
+        linear-gradient(145deg, #0b1729, #050d19 72%);
+    box-shadow: 0 28px 90px rgba(0, 0, 0, 0.52), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.equation-card-interactive:fullscreen .equation-card-header,
+.model-card:fullscreen .model-card-header {
+    flex: 0 0 auto;
+    align-items: center;
+    padding: 2px 2px 14px;
+    border-bottom: 1px solid rgba(205, 190, 255, 0.18);
+}
+
+.equation-card-interactive:fullscreen .equation-card-header h3,
+.model-card:fullscreen .model-card-header h3 {
+    font-size: clamp(1.35rem, 2.5vw, 2.2rem);
+}
+
+.equation-card-interactive:fullscreen .card-fullscreen-button,
+.model-card:fullscreen .card-fullscreen-button {
+    min-height: 40px;
+    padding: 8px 14px;
+    border-color: rgba(220, 196, 255, 0.5);
+    background: rgba(198, 130, 255, 0.12);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+.equation-card-interactive:fullscreen .equation-card-layout {
+    flex: 1 1 auto;
+    min-height: 0;
+    grid-template-columns: minmax(260px, 35fr) minmax(0, 65fr);
+    gap: clamp(16px, 2vw, 28px);
+}
+
+.equation-card-interactive:fullscreen .equation-card-control-panel,
+.equation-card-interactive:fullscreen .equation-card-graph-panel {
+    min-height: 0;
+    padding: clamp(16px, 2vw, 26px);
+    border-color: rgba(205, 190, 255, 0.2);
+    border-radius: 16px;
+    background: rgba(4, 13, 26, 0.64);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035), 0 16px 40px rgba(0, 0, 0, 0.16);
+}
+
+.equation-card-interactive:fullscreen .equation-card-control-panel {
+    overflow: auto;
+}
+
+.equation-card-interactive:fullscreen .equation-card-graph-panel {
+    min-height: 0;
+}
+
+.equation-card-interactive:fullscreen .equation-card-graph-stage,
+.equation-card-interactive:fullscreen .equation-card-graph-wrap,
+.equation-card-interactive:fullscreen .equation-card-graph {
+    min-height: 0;
+}
+
+.equation-card-interactive:fullscreen .equation-card-graph-stage {
+    flex: 1 1 auto;
+}
+
+.equation-card-interactive:fullscreen .equation-card-graph {
+    height: 100%;
+    min-height: 0;
+}
+
+.model-card:fullscreen {
+    display: flex;
+}
+
+.model-card:fullscreen .model-card-viewport {
+    flex: 1 1 auto;
+    min-height: 0;
+    height: auto;
+    border-color: rgba(205, 190, 255, 0.24);
+    border-radius: 18px;
+    background:
+        radial-gradient(circle at 50% 30%, rgba(198, 130, 255, 0.16), transparent 46%),
+        #061120;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.025), 0 18px 48px rgba(0, 0, 0, 0.24);
+}
+
+.model-card:fullscreen .model-card-viewport model-viewer {
+    height: 100%;
+    min-height: 0;
+}
+
+.model-card:fullscreen .model-card-annotation-info {
+    flex: 0 0 auto;
+    max-width: 960px;
+    width: min(100%, 960px);
+    align-self: center;
+    border-color: rgba(205, 190, 255, 0.22);
+    background: rgba(255, 255, 255, 0.065);
+}
+
+.model-card:fullscreen .model-card-fullscreen-status {
+    flex: 0 0 auto;
+    margin-top: -8px;
+}
+
+.equation-card-interactive:fullscreen ::-webkit-scrollbar,
+.model-card:fullscreen ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.equation-card-interactive:fullscreen ::-webkit-scrollbar-thumb,
+.model-card:fullscreen ::-webkit-scrollbar-thumb {
+    border: 3px solid transparent;
+    border-radius: 999px;
+    background: rgba(205, 190, 255, 0.32);
+    background-clip: padding-box;
+}
+
+@media (max-width: 900px) {
+    .equation-card-interactive:fullscreen .equation-card-layout {
+        grid-template-columns: 1fr;
+        overflow: visible;
+    }
+
+    .equation-card-interactive:fullscreen .equation-card-control-panel {
+        overflow: visible;
+    }
+
+    .equation-card-interactive:fullscreen .equation-card-graph-panel {
+        min-height: min(58vh, 600px);
+    }
+
+    .equation-card-interactive:fullscreen .equation-card-graph {
+        min-height: 360px;
+    }
+}
+
+@media (max-width: 620px) {
+    .equation-card-interactive:fullscreen,
+    .model-card:fullscreen {
+        gap: 14px;
+        padding: max(14px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) max(14px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+        border-radius: 0;
+    }
+
+    .equation-card-interactive:fullscreen .equation-card-header,
+    .model-card:fullscreen .model-card-header {
+        align-items: flex-start;
+        padding-bottom: 10px;
+    }
+
+    .equation-card-interactive:fullscreen .equation-card-header h3,
+    .model-card:fullscreen .model-card-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .equation-card-interactive:fullscreen .card-fullscreen-button,
+    .model-card:fullscreen .card-fullscreen-button {
+        min-height: 34px;
+        padding: 6px 9px;
+        font-size: 0.66rem;
+    }
+
+    .equation-card-interactive:fullscreen .equation-card-graph-panel {
+        min-height: 340px;
+    }
+
+    .equation-card-interactive:fullscreen .equation-card-graph {
+        min-height: 280px;
+    }
+
+    .model-card:fullscreen .model-card-viewport {
+        min-height: 52vh;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .equation-card-interactive:fullscreen,
+    .model-card:fullscreen,
+    .equation-card-interactive:fullscreen .card-fullscreen-button,
+    .model-card:fullscreen .card-fullscreen-button {
+        transition: none;
+    }
+}
+
+.equation-card-equation-wide {
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid rgba(205, 190, 255, 0.16);
+    border-radius: 12px;
+    background: rgba(6, 16, 30, 0.46);
+}
+
+.equation-card-equation-wide .equation-card-section-label {
+    margin-bottom: 10px;
+}
+
+.equation-card-equation-wide .equation-card-equation {
+    min-height: 72px;
+    display: grid;
+    place-items: center;
+    padding: 16px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    overflow-x: auto;
+    scrollbar-width: thin;
+}
+
+.equation-card-equation-wide .equation-card-equation .katex {
+    font-size: clamp(1rem, 2.1vw, 1.45rem);
+}
+
+.equation-card-equation-wide .equation-card-equation-compact .katex {
+    font-size: clamp(0.9rem, 1.75vw, 1.2rem);
+}
+
+.equation-card-equation-wide .equation-card-equation-extra-compact .katex {
+    font-size: clamp(0.78rem, 1.45vw, 1rem);
+}
+
+.equation-card-interactive:fullscreen .equation-card-equation-wide {
+    flex: 0 0 auto;
+    padding: clamp(16px, 2vw, 24px);
+    border-color: rgba(205, 190, 255, 0.2);
+    border-radius: 16px;
+    background: rgba(4, 13, 26, 0.64);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.035), 0 16px 40px rgba(0, 0, 0, 0.16);
+}
+
+.equation-card-interactive:fullscreen .equation-card-equation-wide .equation-card-equation {
+    min-height: clamp(82px, 12vh, 132px);
+}
+
+.equation-card-interactive:fullscreen .equation-card-equation-wide .equation-card-equation .katex {
+    font-size: clamp(1.15rem, 2.4vw, 1.8rem);
+}
+
+@media (max-width: 620px) {
+    .equation-card-equation-wide {
+        padding: 12px;
+    }
+
+    .equation-card-equation-wide .equation-card-equation {
+        min-height: 60px;
+        padding: 12px;
+    }
+
+    .equation-card-interactive:fullscreen .equation-card-equation-wide .equation-card-equation {
+        min-height: 68px;
+    }
+}
+
+/* Keep the graph proportional while using the responsive graph stage. */
+.equation-card-graph-panel .equation-card-graph-stage {
+    align-items: center;
+}
+
+.equation-card-graph-panel .equation-card-graph-wrap {
+    align-items: center;
+    overflow: visible;
+}
+
+.equation-card-graph-panel .equation-card-graph {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    object-fit: contain;
+}
+
+@media (max-width: 620px) {
+    .equation-card-graph-panel .equation-card-graph {
+        min-height: 0;
+    }
+}
+
+/* Fullscreen graph presentation overrides. */
+.equation-card-interactive:fullscreen .equation-card-graph-stage {
+    align-items: center;
+    overflow: hidden;
+}
+
+.equation-card-interactive:fullscreen .equation-card-graph-wrap {
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+.equation-card-interactive:fullscreen .equation-card-graph {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 0;
+}
+
+.equation-card-interactive:fullscreen .equation-card-section-label {
+    font-size: clamp(0.76rem, 1vw, 0.95rem);
+}
+
+.equation-card-interactive:fullscreen .equation-card-header h3 {
+    font-size: clamp(1.65rem, 3vw, 2.6rem);
+}
+
+.equation-card-interactive:fullscreen .equation-card-variable-heading {
+    font-size: clamp(1rem, 1.25vw, 1.3rem);
+}
+
+.equation-card-interactive:fullscreen .equation-card-variable-heading output {
+    font-size: clamp(1rem, 1.3vw, 1.35rem);
+}
+
+.equation-card-interactive:fullscreen .equation-card-fixed,
+.equation-card-interactive:fullscreen .equation-card-live-region,
+.equation-card-interactive:fullscreen .equation-card-error {
+    font-size: clamp(0.82rem, 1vw, 1rem) !important;
+}
+
+.equation-card-interactive:fullscreen .equation-card-metric {
+    padding: 14px;
+}
+
+.equation-card-interactive:fullscreen .equation-card-metric > span {
+    font-size: clamp(0.9rem, 1vw, 1.05rem);
+}
+
+.equation-card-interactive:fullscreen .equation-card-metric strong {
+    font-size: clamp(1.25rem, 1.8vw, 1.8rem);
+}
+
+.equation-card-interactive:fullscreen .equation-card-metric small {
+    font-size: clamp(0.78rem, 0.95vw, 0.98rem);
+}
+
+.equation-card-interactive:fullscreen .equation-graph-label {
+    font-size: clamp(14px, 1.35vw, 21px);
+    font-weight: 700;
+}
+
+.equation-card-interactive:fullscreen .equation-graph-tick-label {
+    font-size: clamp(13px, 1.1vw, 18px);
+    font-weight: 600;
+}
+
+.equation-card-interactive:fullscreen .equation-graph-line {
+    stroke-width: 4;
+}
+
+.equation-card-interactive:fullscreen .equation-graph-marker {
+    r: 7;
+    stroke-width: 3;
+}
+
+@media (max-width: 620px) {
+    .equation-card-interactive:fullscreen .equation-card-header h3 {
+        font-size: 1.45rem;
+    }
+
+    .equation-card-interactive:fullscreen .equation-graph-label {
+        font-size: 13px;
+    }
+
+    .equation-card-interactive:fullscreen .equation-graph-tick-label {
+        font-size: 12px;
+    }
+}
+
+.youtube-card {
+    display: grid;
+    gap: 12px;
+    margin: 1.4rem 0;
+    padding: 18px;
+    border: 1px solid color-mix(in srgb, var(--mode-accent, var(--accent)) 34%, var(--line));
+    border-radius: 18px;
+    background: linear-gradient(145deg, rgba(13, 28, 48, 0.96), rgba(7, 18, 32, 0.98));
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.2);
+}
+
+.youtube-card-header {
+    display: grid;
+    gap: 4px;
+}
+
+.youtube-card-header .section-label {
+    margin: 0;
+    color: var(--mode-accent, var(--accent));
+}
+
+.youtube-card-header h3 {
+    margin: 0;
+    color: var(--text);
+}
+
+.youtube-card-frame {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(205, 190, 255, 0.2);
+    border-radius: 14px;
+    background: #030a14;
+    aspect-ratio: 16 / 9;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.025), 0 14px 32px rgba(0, 0, 0, 0.22);
+}
+
+.youtube-card-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.youtube-card-error-state {
+    border-color: color-mix(in srgb, var(--danger) 42%, var(--line));
+}
+
+.youtube-card-error {
+    margin: 0;
+    color: var(--danger);
+}
+
+@media (max-width: 620px) {
+    .youtube-card {
+        gap: 10px;
+        margin: 1rem 0;
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .youtube-card-header h3 {
+        font-size: 1.05rem;
+    }
+
+    .youtube-card-frame {
+        border-radius: 10px;
+    }
 }
 
 @keyframes notes-target-pulse {

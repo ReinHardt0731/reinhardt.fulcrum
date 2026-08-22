@@ -1577,6 +1577,8 @@ export function renderMath(container = document.body, attempts = 6) {
         window.renderMathInElement(container, {
             delimiters: [
                 { left: '$$', right: '$$', display: true },
+                { left: '\\[', right: '\\]', display: true },
+                { left: '\\(', right: '\\)', display: false },
                 { left: '$', right: '$', display: false }
             ],
             throwOnError: false,
@@ -1839,6 +1841,638 @@ async function loadSubjectMarkdown(subject) {
     }
 }
 
+function equationText(value) {
+    return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+}
+
+function createEquationExpression(expression, constants = {}) {
+    const source = String(expression || "").trim();
+    const tokenPattern = /\s*(?:(\d+(?:\.\d+)?)|([A-Za-z_]\w*)|([()+\-*/^,]))\s*/y;
+    const tokens = [];
+    let offset = 0;
+    while (offset < source.length) {
+        tokenPattern.lastIndex = offset;
+        const match = tokenPattern.exec(source);
+        if (!match) {
+            throw new Error("Graph expression contains an unsupported character.");
+        }
+        tokens.push(match[1] ? { type: "number", value: Number(match[1]) } : match[2] ? { type: "name", value: match[2] } : { type: match[3] });
+        offset = tokenPattern.lastIndex;
+    }
+
+    const functions = { abs: Math.abs, cos: Math.cos, exp: Math.exp, log: Math.log, sin: Math.sin, sqrt: Math.sqrt, tan: Math.tan };
+    let currentX = 0;
+    let index = 0;
+    const peek = (type) => tokens[index]?.type === type;
+    const consume = (type) => {
+        if (!peek(type)) return false;
+        index += 1;
+        return true;
+    };
+    const parseExpression = () => {
+        let value = parseTerm();
+        while (peek("+") || peek("-")) {
+            const operator = tokens[index++].type;
+            const right = parseTerm();
+            value = operator === "+" ? value + right : value - right;
+        }
+        return value;
+    };
+    const parseTerm = () => {
+        let value = parsePower();
+        while (peek("*") || peek("/")) {
+            const operator = tokens[index++].type;
+            const right = parsePower();
+            value = operator === "*" ? value * right : value / right;
+        }
+        return value;
+    };
+    const parsePower = () => {
+        let value = parseUnary();
+        if (consume("^")) value = Math.pow(value, parsePower());
+        return value;
+    };
+    const parseUnary = () => {
+        if (consume("+")) return parseUnary();
+        if (consume("-")) return -parseUnary();
+        return parsePrimary();
+    };
+    const parsePrimary = () => {
+        const token = tokens[index++];
+        if (!token) throw new Error("Graph expression is incomplete.");
+        if (token.type === "number") return token.value;
+        if (token.type === "(") {
+            const value = parseExpression();
+            if (!consume(")")) throw new Error("Graph expression has an unmatched parenthesis.");
+            return value;
+        }
+        if (token.type !== "name") throw new Error("Graph expression expected a value.");
+        if (consume("(")) {
+            const fn = functions[token.value];
+            if (!fn) throw new Error(`Unsupported graph function: ${token.value}.`);
+            const value = fn(parseExpression());
+            if (!consume(")")) throw new Error("Graph function has an unmatched parenthesis.");
+            return value;
+        }
+        if (token.value === "x") return currentX;
+        if (token.value === "pi") return Math.PI;
+        if (Object.prototype.hasOwnProperty.call(constants, token.value)) return constants[token.value];
+        throw new Error(`Unsupported graph variable: ${token.value}.`);
+    };
+
+    return (x) => {
+        index = 0;
+        currentX = x;
+        const value = parseExpression();
+        if (index !== tokens.length || !Number.isFinite(value)) throw new Error("Graph expression produced an invalid value.");
+        return value;
+    };
+}
+
+function equationVariableNumber(value) {
+    const match = String(value ?? "").match(/[-+]?\d*\.?\d+(?:e[-+]?\d+)?/i);
+    return match ? Number(match[0]) : null;
+}
+
+const EQUATION_FUNCTIONS = {
+    abs: Math.abs,
+    acos: Math.acos,
+    asin: Math.asin,
+    atan: Math.atan,
+    cos: Math.cos,
+    exp: Math.exp,
+    log: Math.log,
+    sin: Math.sin,
+    sqrt: Math.sqrt,
+    tan: Math.tan
+};
+const EQUATION_CARD_CONFIGS = new Map();
+
+function createInteractiveEquationExpression(expression, constants = {}) {
+    const source = String(expression || "").trim();
+    const tokenPattern = /\s*(?:(\d+(?:\.\d+)?|\.\d+)|([A-Za-z_]\w*)|([()+\-*\/^,]))\s*/y;
+    const tokens = [];
+    let offset = 0;
+    while (offset < source.length) {
+        tokenPattern.lastIndex = offset;
+        const match = tokenPattern.exec(source);
+        if (!match) throw new Error("Expression contains an unsupported character.");
+        tokens.push(match[1] ? { type: "number", value: Number(match[1]) } : match[2] ? { type: "name", value: match[2] } : { type: match[3] });
+        offset = tokenPattern.lastIndex;
+    }
+    let currentX = 0;
+    let index = 0;
+    const peek = (type) => tokens[index]?.type === type;
+    const consume = (type) => peek(type) && (++index);
+    const parseExpression = () => {
+        let value = parseTerm();
+        while (peek("+") || peek("-")) {
+            const operator = tokens[index++].type;
+            const right = parseTerm();
+            value = operator === "+" ? value + right : value - right;
+        }
+        return value;
+    };
+    const parseTerm = () => {
+        let value = parsePower();
+        while (peek("*") || peek("/")) {
+            const operator = tokens[index++].type;
+            const right = parsePower();
+            value = operator === "*" ? value * right : value / right;
+        }
+        return value;
+    };
+    const parsePower = () => {
+        const value = parseUnary();
+        return consume("^") ? Math.pow(value, parsePower()) : value;
+    };
+    const parseUnary = () => {
+        if (consume("+")) return parseUnary();
+        if (consume("-")) return -parseUnary();
+        return parsePrimary();
+    };
+    const parsePrimary = () => {
+        const token = tokens[index++];
+        if (!token) throw new Error("Expression is incomplete.");
+        if (token.type === "number") return token.value;
+        if (token.type === "(") {
+            const value = parseExpression();
+            if (!consume(")")) throw new Error("Expression has an unmatched parenthesis.");
+            return value;
+        }
+        if (token.type !== "name") throw new Error("Expression expected a value.");
+        if (consume("(")) {
+            const fn = EQUATION_FUNCTIONS[token.value];
+            if (!fn) throw new Error(`Unsupported function: ${token.value}.`);
+            const value = fn(parseExpression());
+            if (!consume(")")) throw new Error("Function has an unmatched parenthesis.");
+            return value;
+        }
+        if (token.value === "x") return currentX;
+        if (token.value === "pi") return Math.PI;
+        if (Object.prototype.hasOwnProperty.call(constants, token.value)) return constants[token.value];
+        throw new Error(`Unknown variable: ${token.value}.`);
+    };
+    return (x = 0) => {
+        index = 0;
+        currentX = x;
+        const value = parseExpression();
+        if (index !== tokens.length || !Number.isFinite(value)) throw new Error("Expression produced an invalid value.");
+        return value;
+    };
+}
+
+function normalizeInteractiveEquationCard(config) {
+    if (!config || typeof config !== "object" || !text(config.equation)) throw new Error("An equation is required.");
+    const variables = (Array.isArray(config.variables) ? config.variables : []).map((variable, index) => {
+        const entry = variable && typeof variable === "object" ? variable : {};
+        const symbol = text(entry.symbol);
+        const value = equationVariableNumber(entry.value);
+        if (!/^[A-Za-z_]\w*$/.test(symbol) || value === null) throw new Error(`Variable ${index + 1} needs a valid symbol and numeric value.`);
+        const interactive = entry.interactive === true;
+        const min = Number(entry.min);
+        const max = Number(entry.max);
+        const step = Number(entry.step);
+        if (interactive && (!(max > min) || !Number.isFinite(step) || step <= 0)) throw new Error(`Variable ${symbol} needs valid min, max, and step values.`);
+        return { ...entry, symbol, value: interactive ? Math.min(max, Math.max(min, value)) : value, min, max, step, interactive, displaySymbol: text(entry.displaySymbol) || symbol };
+    });
+    const derived = (Array.isArray(config.derived) ? config.derived : []).map((item, index) => {
+        const entry = item && typeof item === "object" ? item : {};
+        const symbol = text(entry.symbol);
+        const hasExpression = Boolean(text(entry.expression));
+        const hasSolver = entry.solver && typeof entry.solver === "object";
+        if (!/^[A-Za-z_]\w*$/.test(symbol) || (!hasExpression && !hasSolver)) throw new Error(`Derived value ${index + 1} is invalid.`);
+        return { ...entry, symbol, expression: text(entry.expression), solver: hasSolver ? entry.solver : null, displaySymbol: text(entry.displaySymbol) || symbol };
+    });
+    const symbols = new Set();
+    [...variables, ...derived].forEach((item) => {
+        if (symbols.has(item.symbol)) throw new Error(`The symbol ${item.symbol} is declared more than once.`);
+        symbols.add(item.symbol);
+    });
+    return { ...config, variables, derived, graph: config.graph && typeof config.graph === "object" ? config.graph : null, notes: Array.isArray(config.notes) ? config.notes.map(text).filter(Boolean) : [] };
+}
+
+function solveThetaBetaM(thetaDegrees, mach, gamma, branch = "weak") {
+    const theta = Number(thetaDegrees) * Math.PI / 180;
+    const M = Number(mach);
+    const heatRatio = Number(gamma);
+    if (!Number.isFinite(theta) || theta < 0 || theta >= Math.PI / 2) throw new Error("Deflection angle must be between 0 and 90 degrees.");
+    if (!Number.isFinite(M) || M <= 1) throw new Error("Mach number must be greater than 1 for an attached shock.");
+    if (!Number.isFinite(heatRatio) || heatRatio <= 0) throw new Error("Specific heat ratio must be greater than zero.");
+
+    const machAngle = Math.asin(1 / M);
+    const lower = machAngle + 1e-7;
+    const upper = Math.PI / 2 - 1e-7;
+    const residual = (beta) => {
+        const sine = Math.sin(beta);
+        const denominator = M * M * (heatRatio + Math.cos(2 * beta)) + 2;
+        if (Math.abs(sine) < 1e-12 || Math.abs(denominator) < 1e-12) return NaN;
+        const right = (2 / Math.tan(beta)) * ((M * M * sine * sine - 1) / denominator);
+        return right - Math.tan(theta);
+    };
+    const roots = [];
+    const samples = 720;
+    let previousBeta = lower;
+    let previousValue = residual(previousBeta);
+    for (let index = 1; index <= samples; index += 1) {
+        const beta = lower + ((upper - lower) * index) / samples;
+        const value = residual(beta);
+        if (Number.isFinite(previousValue) && Number.isFinite(value)) {
+            if (Math.abs(previousValue) < 1e-8) {
+                roots.push(previousBeta);
+            } else if (previousValue * value < 0) {
+                let left = previousBeta;
+                let right = beta;
+                for (let iteration = 0; iteration < 60; iteration += 1) {
+                    const middle = (left + right) / 2;
+                    const middleValue = residual(middle);
+                    if (!Number.isFinite(middleValue)) break;
+                    if (Math.abs(middleValue) < 1e-10) {
+                        left = middle;
+                        right = middle;
+                        break;
+                    }
+                    if (previousValue * middleValue <= 0) {
+                        right = middle;
+                    } else {
+                        left = middle;
+                        previousValue = middleValue;
+                    }
+                }
+                roots.push((left + right) / 2);
+            }
+        }
+        previousBeta = beta;
+        previousValue = value;
+    }
+
+    const uniqueRoots = roots.filter((root, index) => index === 0 || Math.abs(root - roots[index - 1]) > 1e-5);
+    if (!uniqueRoots.length) throw new Error("No attached-shock solution exists for this deflection angle and Mach number.");
+    const selected = branch === "strong" ? uniqueRoots[uniqueRoots.length - 1] : uniqueRoots[0];
+    return selected * 180 / Math.PI;
+}
+
+function evaluateInteractiveEquationValues(config, values) {
+    const resolved = { ...values };
+    const pending = [...config.derived];
+    let attempts = 0;
+    while (pending.length && attempts <= config.derived.length) {
+        const unresolved = [];
+        pending.forEach((item) => {
+            try {
+                if (item.solver) {
+                    const solver = item.solver;
+                    if (text(solver.type) !== "theta-beta-m") throw new Error(`Unsupported solver: ${text(solver.type) || "unknown"}.`);
+                    const theta = text(solver.theta);
+                    const mach = text(solver.mach);
+                    const gamma = text(solver.gamma);
+                    if (!Object.prototype.hasOwnProperty.call(resolved, theta)) throw new Error(`Unknown variable: ${theta}.`);
+                    if (!Object.prototype.hasOwnProperty.call(resolved, mach)) throw new Error(`Unknown variable: ${mach}.`);
+                    if (!Object.prototype.hasOwnProperty.call(resolved, gamma)) throw new Error(`Unknown variable: ${gamma}.`);
+                    resolved[item.symbol] = solveThetaBetaM(resolved[theta], resolved[mach], resolved[gamma], text(solver.branch) || "weak");
+                } else {
+                    resolved[item.symbol] = createInteractiveEquationExpression(item.expression, resolved)(0);
+                }
+            } catch (error) {
+                if (/Unknown variable:/.test(error.message)) unresolved.push(item);
+                else throw new Error(`${item.symbol}: ${error.message}`);
+            }
+        });
+        if (unresolved.length === pending.length) throw new Error("Derived values contain an unknown or circular dependency.");
+        pending.splice(0, pending.length, ...unresolved);
+        attempts += 1;
+    }
+    return resolved;
+}
+
+function equationDisplayValue(value, unit = "") {
+    const number = Number(value);
+    const formatted = Number.isFinite(number) ? number.toFixed(2).replace(/\.00$/, "") : String(value ?? "");
+    return `${formatted}${unit ? ` ${unit}` : ""}`;
+}
+
+function getEquationTickStep(min, max, targetTicks = 6) {
+    const range = Math.abs(max - min);
+    if (!Number.isFinite(range) || range <= 0) return 1;
+    const raw = range / Math.max(2, targetTicks);
+    const power = Math.pow(10, Math.floor(Math.log10(raw)));
+    const fraction = raw / power;
+    const niceFraction = fraction <= 1 ? 1 : fraction <= 2 ? 2 : fraction <= 5 ? 5 : 10;
+    return niceFraction * power;
+}
+
+function getEquationTicks(min, max, targetTicks = 6) {
+    const step = getEquationTickStep(min, max, targetTicks);
+    const precision = Math.max(0, Math.ceil(-Math.log10(step)) + 2);
+    const values = [];
+    const first = Math.ceil(min / step) * step;
+    for (let value = first; value <= max + step * 0.0001 && values.length < 12; value += step) {
+        values.push(Number(value.toFixed(precision)));
+    }
+    [min, max].forEach((value) => {
+        if (!values.some((tick) => Math.abs(tick - value) < step * 0.0001)) values.push(value);
+    });
+    return [...new Set(values.map((value) => Number(value.toFixed(precision))))].sort((left, right) => left - right);
+}
+
+function formatEquationTick(value, step) {
+    if (!Number.isFinite(value)) return "";
+    if (Math.abs(value) >= 10000 || (Math.abs(value) > 0 && Math.abs(value) < 0.001)) return value.toExponential(1).replace("e+", "e");
+    const decimals = Math.max(0, Math.min(6, Math.ceil(-Math.log10(step)) + 1));
+    return Number(value.toFixed(decimals)).toString();
+}
+
+function renderInteractiveEquationGraph(graph, values) {
+    if (!graph || typeof graph !== "object") return "";
+    const xMin = Number(graph.xMin);
+    const xMax = Number(graph.xMax);
+    if (!Number.isFinite(xMin) || !Number.isFinite(xMax) || !(xMax > xMin)) return `<p class="equation-card-error">Graph error: xMax must be greater than xMin.</p>`;
+    let evaluate;
+    try {
+        evaluate = createInteractiveEquationExpression(graph.expression, values);
+    } catch (error) {
+        return `<p class="equation-card-error">Graph error: ${equationText(error.message)}</p>`;
+    }
+    const width = 640;
+    const height = 420;
+    const padding = { left: 62, right: 22, top: 22, bottom: 60 };
+    const points = [];
+    for (let sample = 0; sample <= 160; sample += 1) {
+        const x = xMin + ((xMax - xMin) * sample) / 160;
+        try {
+            const y = evaluate(x);
+            if (Number.isFinite(y)) points.push({ x, y });
+        } catch (_) {}
+    }
+    if (points.length < 2) return `<p class="equation-card-error">Graph error: the expression produced no plottable values.</p>`;
+    const yMin = Number.isFinite(Number(graph.yMin)) ? Number(graph.yMin) : Math.min(...points.map((point) => point.y));
+    const yMax = Number.isFinite(Number(graph.yMax)) ? Number(graph.yMax) : Math.max(...points.map((point) => point.y));
+    if (!(yMax > yMin)) return `<p class="equation-card-error">Graph error: yMax must be greater than yMin.</p>`;
+    const plotWidth = width - padding.left - padding.right;
+    const plotHeight = height - padding.top - padding.bottom;
+    const toSvgX = (x) => padding.left + ((x - xMin) / (xMax - xMin)) * plotWidth;
+    const toSvgY = (y) => padding.top + (1 - (y - yMin) / (yMax - yMin)) * plotHeight;
+    const clampX = (value) => Math.max(xMin, Math.min(xMax, value));
+    const clampY = (value) => Math.max(yMin, Math.min(yMax, value));
+    const path = points.map((point, index) => `${index ? "L" : "M"}${toSvgX(point.x).toFixed(2)} ${toSvgY(point.y).toFixed(2)}`).join(" ");
+    const xStep = getEquationTickStep(xMin, xMax);
+    const yStep = getEquationTickStep(yMin, yMax);
+    const xTicks = getEquationTicks(xMin, xMax);
+    const yTicks = getEquationTicks(yMin, yMax, 8);
+    const xGrid = xTicks.map((tick) => `<line class="equation-graph-grid" x1="${toSvgX(tick)}" y1="${padding.top}" x2="${toSvgX(tick)}" y2="${height - padding.bottom}"></line><text class="equation-graph-tick-label" x="${toSvgX(tick)}" y="${height - padding.bottom + 20}" text-anchor="middle">${formatEquationTick(tick, xStep)}</text>`).join("");
+    const yGrid = yTicks.map((tick) => `<line class="equation-graph-grid" x1="${padding.left}" y1="${toSvgY(tick)}" x2="${width - padding.right}" y2="${toSvgY(tick)}"></line><text class="equation-graph-tick-label" x="${padding.left - 10}" y="${toSvgY(tick) + 4}" text-anchor="end">${formatEquationTick(tick, yStep)}</text>`).join("");
+    const markerValue = Number(values[text(graph.xVariable)]);
+    const marker = Number.isFinite(markerValue) && markerValue >= xMin && markerValue <= xMax
+        ? `<circle class="equation-graph-marker" cx="${toSvgX(markerValue)}" cy="${toSvgY(evaluate(markerValue))}" r="5"></circle>`
+        : "";
+    return `<div class="equation-card-graph-wrap"><svg class="equation-card-graph" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Graph of ${equationText(graph.expression || "function")}">${xGrid}${yGrid}<line class="equation-graph-axis" x1="${padding.left}" y1="${toSvgY(clampY(0))}" x2="${width - padding.right}" y2="${toSvgY(clampY(0))}"></line><line class="equation-graph-axis" x1="${toSvgX(clampX(0))}" y1="${padding.top}" x2="${toSvgX(clampX(0))}" y2="${height - padding.bottom}"></line><path class="equation-graph-line" d="${path}"></path>${marker}<text class="equation-graph-label" x="${width / 2}" y="${height - 10}" text-anchor="middle">${equationText(graph.xLabel || "x")}</text><text class="equation-graph-label" x="16" y="${height / 2}" text-anchor="middle" transform="rotate(-90 16 ${height / 2})">${equationText(graph.yLabel || "y")}</text></svg></div>`;
+}
+
+function renderEquationGraph(graph, variables) {
+    if (!graph || typeof graph !== "object") return "";
+    const xMin = Number.isFinite(Number(graph.xMin)) ? Number(graph.xMin) : 0;
+    const xMax = Number.isFinite(Number(graph.xMax)) ? Number(graph.xMax) : 10;
+    if (!(xMax > xMin)) return `<p class="equation-card-error">Graph error: xMax must be greater than xMin.</p>`;
+    const constants = Object.fromEntries(variables.map((variable) => [String(variable.symbol || ""), equationVariableNumber(variable.value)]).filter((entry) => entry[0] && entry[1] !== null));
+    let evaluate;
+    try {
+        evaluate = createEquationExpression(graph.expression, constants);
+    } catch (error) {
+        return `<p class="equation-card-error">Graph error: ${equationText(error.message)}</p>`;
+    }
+    const width = 640;
+    const height = 320;
+    const padding = { left: 54, right: 18, top: 18, bottom: 42 };
+    const points = [];
+    for (let sample = 0; sample <= 120; sample += 1) {
+        const x = xMin + ((xMax - xMin) * sample) / 120;
+        try {
+            const y = evaluate(x);
+            if (Number.isFinite(y)) points.push({ x, y });
+        } catch (_) {}
+    }
+    if (points.length < 2) return `<p class="equation-card-error">Graph error: the expression produced no plottable values.</p>`;
+    const suppliedYMin = Number(graph.yMin);
+    const suppliedYMax = Number(graph.yMax);
+    const yMin = Number.isFinite(suppliedYMin) ? suppliedYMin : Math.min(...points.map((point) => point.y));
+    const yMax = Number.isFinite(suppliedYMax) ? suppliedYMax : Math.max(...points.map((point) => point.y));
+    if (!(yMax > yMin)) return `<p class="equation-card-error">Graph error: yMax must be greater than yMin.</p>`;
+    const plotWidth = width - padding.left - padding.right;
+    const plotHeight = height - padding.top - padding.bottom;
+    const toSvgX = (x) => padding.left + ((x - xMin) / (xMax - xMin)) * plotWidth;
+    const toSvgY = (y) => padding.top + (1 - (y - yMin) / (yMax - yMin)) * plotHeight;
+    const path = points.map((point, index) => `${index ? "L" : "M"}${toSvgX(point.x).toFixed(2)} ${toSvgY(point.y).toFixed(2)}`).join(" ");
+    const grid = Array.from({ length: 6 }, (_, index) => {
+        const ratio = index / 5;
+        const x = padding.left + ratio * plotWidth;
+        const y = padding.top + ratio * plotHeight;
+        return `<line class="equation-graph-grid" x1="${x}" y1="${padding.top}" x2="${x}" y2="${height - padding.bottom}"></line><line class="equation-graph-grid" x1="${padding.left}" y1="${y}" x2="${width - padding.right}" y2="${y}"></line>`;
+    }).join("");
+    const xLabel = equationText(graph.xLabel || "x");
+    const yLabel = equationText(graph.yLabel || "y");
+    return `<div class="equation-card-graph-wrap"><svg class="equation-card-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="Graph of ${equationText(graph.expression || "function")}">${grid}<line class="equation-graph-axis" x1="${padding.left}" y1="${toSvgY(0)}" x2="${width - padding.right}" y2="${toSvgY(0)}"></line><line class="equation-graph-axis" x1="${toSvgX(0)}" y1="${padding.top}" x2="${toSvgX(0)}" y2="${height - padding.bottom}"></line><path class="equation-graph-line" d="${path}"></path><text class="equation-graph-label" x="${width / 2}" y="${height - 8}" text-anchor="middle">${xLabel}</text><text class="equation-graph-label" x="14" y="${height / 2}" text-anchor="middle" transform="rotate(-90 14 ${height / 2})">${yLabel}</text></svg></div>`;
+}
+
+function renderEquationCard(config, cardIndex) {
+    const normalized = normalizeInteractiveEquationCard(config);
+    EQUATION_CARD_CONFIGS.set(String(cardIndex), normalized);
+    const variableRows = normalized.variables.map((variable) => {
+        const symbol = equationText(variable.symbol);
+        const label = equationText(variable.name || variable.symbol);
+        return `<div class="equation-card-variable" data-equation-variable="${symbol}"><div class="equation-card-variable-heading"><span><strong>$${equationText(variable.displaySymbol)}$</strong> ${label}</span><output data-equation-value="${symbol}">${equationText(equationDisplayValue(variable.value, variable.unit))}</output></div>${variable.interactive ? `<input class="equation-card-range" type="range" min="${variable.min}" max="${variable.max}" step="${variable.step}" value="${variable.value}" data-equation-input="${symbol}" aria-label="Adjust ${label}">` : `<p class="equation-card-fixed">Fixed value</p>`}</div>`;
+    }).join("");
+    const derivedRows = normalized.derived.map((item) => `<div class="equation-card-metric"><span>$${equationText(item.displaySymbol)}$</span><strong data-equation-derived="${equationText(item.symbol)}">--</strong><small>${equationText(item.name || item.symbol)}${item.unit ? ` · ${equationText(item.unit)}` : ""}</small></div>`).join("");
+    const explanationItems = normalized.variables
+        .filter((variable) => variable.description)
+        .map((variable) => `<p><strong>${equationText(variable.name || variable.symbol)}:</strong> ${equationText(variable.description)}</p>`)
+        .join("");
+    const explanation = normalized.subtitle || explanationItems || normalized.notes.length
+        ? `<section class="equation-card-explanation"><p class="section-label">About this relationship</p>${normalized.subtitle ? `<p class="equation-card-explanation-lead">${equationText(normalized.subtitle)}</p>` : ""}${explanationItems}${normalized.notes.map((note) => `<p>${equationText(note)}</p>`).join("")}</section>`
+        : "";
+    const initialValues = Object.fromEntries(normalized.variables.map((variable) => [variable.symbol, variable.value]));
+    let initialGraphValues = initialValues;
+    try {
+        initialGraphValues = evaluateInteractiveEquationValues(normalized, initialValues);
+    } catch (_) {
+        // Hydration will display a specific dependency error after insertion.
+    }
+    const equationLengthClass = normalized.equation.length > 130 ? " equation-card-equation-extra-compact" : normalized.equation.length > 82 ? " equation-card-equation-compact" : "";
+    const equationPanel = `<section class="equation-card-equation-wide"><p class="equation-card-section-label">Equation</p><div class="equation-card-equation${equationLengthClass}">$$${equationText(normalized.equation)}$$</div></section>`;
+    const controlPanel = `<section class="equation-card-control-panel"><div class="equation-card-section equation-card-variable-section"><p class="equation-card-section-label">Variables</p><div class="equation-card-inputs">${variableRows || `<p class="equation-card-error">No variables were provided.</p>`}</div></div>${derivedRows ? `<div class="equation-card-section equation-card-results-section"><p class="equation-card-section-label">Results</p><div class="equation-card-metrics" data-equation-metrics>${derivedRows}</div></div>` : ""}<div class="equation-card-live-region" data-equation-status aria-live="polite"></div></section>`;
+    const graphPanel = `<section class="equation-card-graph-panel"><p class="equation-card-section-label">Graph</p><div class="equation-card-graph-stage" data-equation-graph>${normalized.graph ? renderInteractiveEquationGraph(normalized.graph, initialGraphValues) : `<p class="equation-card-error">No graph was provided.</p>`}</div></section>`;
+    return `<article class="equation-card equation-card-interactive" data-equation-card="${equationText(cardIndex)}"><header class="equation-card-header"><div><p class="section-label">Interactive Relationship Card</p><h3>${equationText(normalized.title || "Equation")}</h3></div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for equation card" aria-pressed="false">Fullscreen</button></header>${equationPanel}<div class="equation-card-layout">${controlPanel}${graphPanel}</div></article>${explanation}`;
+}
+
+function syncEquationGraphSizing(card) {
+    if (!card?.matches("[data-equation-card]")) return;
+    card.querySelectorAll(".equation-card-graph").forEach((svg) => {
+        svg.setAttribute("preserveAspectRatio", "xMidYMid meet");
+    });
+}
+
+function hydrateFullscreenButtons(container) {
+    container.querySelectorAll("[data-card-fullscreen]").forEach((button) => {
+        const card = button.closest("[data-equation-card], [data-model-card]");
+        if (!card) return;
+        const status = card.querySelector("[data-fullscreen-status]");
+        const updateButton = () => {
+            const active = document.fullscreenElement === card;
+            button.textContent = active ? "Exit fullscreen" : "Fullscreen";
+            button.setAttribute("aria-label", active ? "Exit fullscreen" : "Enter fullscreen");
+            button.setAttribute("aria-pressed", String(active));
+            syncEquationGraphSizing(card);
+        };
+        button.addEventListener("click", async () => {
+            if (status) status.textContent = "";
+            try {
+                if (document.fullscreenElement === card) {
+                    await document.exitFullscreen();
+                } else if (typeof card.requestFullscreen === "function") {
+                    await card.requestFullscreen();
+                } else if (status) {
+                    status.textContent = "Fullscreen is not supported by this browser.";
+                }
+            } catch (_error) {
+                if (status) status.textContent = "Fullscreen could not be enabled. Check your browser permissions.";
+            }
+        });
+        document.addEventListener("fullscreenchange", updateButton);
+        updateButton();
+    });
+}
+
+function hydrateEquationCards(container) {
+    container.querySelectorAll("[data-equation-card]").forEach((card) => {
+        const config = EQUATION_CARD_CONFIGS.get(card.dataset.equationCard);
+        if (!config) return;
+        const values = Object.fromEntries(config.variables.map((variable) => [variable.symbol, variable.value]));
+        const update = () => {
+            try {
+                const allValues = evaluateInteractiveEquationValues(config, values);
+                config.variables.forEach((variable) => {
+                    const output = card.querySelector(`[data-equation-value="${variable.symbol}"]`);
+                    if (output) output.textContent = equationDisplayValue(values[variable.symbol], variable.unit);
+                    if (variable.interactive) {
+                        const input = card.querySelector(`[data-equation-input="${variable.symbol}"]`);
+                        const progress = ((values[variable.symbol] - variable.min) / (variable.max - variable.min)) * 100;
+                        if (input) input.style.setProperty("--equation-progress", `${Math.max(0, Math.min(100, progress))}%`);
+                    }
+                });
+                config.derived.forEach((item) => {
+                    const output = card.querySelector(`[data-equation-derived="${item.symbol}"]`);
+                    if (output) output.textContent = equationDisplayValue(allValues[item.symbol], item.unit);
+                });
+                const graph = card.querySelector("[data-equation-graph]");
+                if (graph && config.graph) graph.innerHTML = renderInteractiveEquationGraph(config.graph, allValues);
+                syncEquationGraphSizing(card);
+                const status = card.querySelector("[data-equation-status]");
+                if (status) status.textContent = "";
+            } catch (error) {
+                config.derived.forEach((item) => {
+                    const output = card.querySelector(`[data-equation-derived="${item.symbol}"]`);
+                    if (output) output.textContent = "Error";
+                });
+                const status = card.querySelector("[data-equation-status]");
+                if (status) status.textContent = error.message;
+            }
+        };
+        card.querySelectorAll("[data-equation-input]").forEach((input) => {
+            input.addEventListener("input", () => {
+                values[input.dataset.equationInput] = Number(input.value);
+                update();
+            });
+        });
+        update();
+    });
+    hydrateFullscreenButtons(container);
+}
+
+function renderModelCard(config, modelUrl, cardIndex) {
+    if (!config || typeof config !== "object" || !modelUrl) {
+        throw new Error("A safe model source is required.");
+    }
+    const annotations = Array.isArray(config.annotations) ? config.annotations.map((annotation, index) => {
+        const entry = annotation && typeof annotation === "object" ? annotation : {};
+        const id = text(entry.id);
+        const label = text(entry.label);
+        const description = text(entry.description);
+        const position = text(entry.position);
+        const normal = text(entry.normal);
+        const coordinate = /^\s*[-+]?(?:\d+(?:\.\d+)?|\.\d+)(?:m)?\s+[-+]?(?:\d+(?:\.\d+)?|\.\d+)(?:m)?\s+[-+]?(?:\d+(?:\.\d+)?|\.\d+)(?:m)?\s*$/.test(position);
+        const direction = /^\s*[-+]?(?:\d+(?:\.\d+)?|\.\d+)\s+[-+]?(?:\d+(?:\.\d+)?|\.\d+)\s+[-+]?(?:\d+(?:\.\d+)?|\.\d+)\s*$/.test(normal);
+        if (!/^[A-Za-z][A-Za-z0-9_-]*$/.test(id) || !label || !description || !coordinate || !direction) {
+            throw new Error(`Annotation ${index + 1} must have a valid id, label, description, position, and normal.`);
+        }
+        return { id, label, description, position, normal };
+    }) : [];
+    const annotationIds = new Set();
+    annotations.forEach((annotation) => {
+        if (annotationIds.has(annotation.id)) throw new Error(`Duplicate model annotation id: ${annotation.id}.`);
+        annotationIds.add(annotation.id);
+    });
+    const title = equationText(config.title || "Interactive 3D Model");
+    const alt = equationText(config.alt || config.title || "Interactive 3D model");
+    const cameraOrbit = config.cameraOrbit ? ` camera-orbit="${equationText(config.cameraOrbit)}"` : "";
+    const exposure = Number.isFinite(Number(config.exposure)) ? ` exposure="${Math.max(0, Math.min(5, Number(config.exposure)))}"` : "";
+    const controls = config.controls !== false ? " camera-controls" : "";
+    const autoRotate = config.autoRotate === true ? " auto-rotate" : "";
+    const hotspotMarkup = annotations.map((annotation) => `<button type="button" class="model-card-hotspot" slot="hotspot-${equationText(annotation.id)}" data-model-annotation="${equationText(annotation.id)}" data-position="${equationText(annotation.position)}" data-normal="${equationText(annotation.normal)}" data-annotation-label="${equationText(annotation.label)}" data-annotation-description="${equationText(annotation.description)}" aria-label="Show ${equationText(annotation.label)}" aria-selected="false"><span>${equationText(annotation.label)}</span></button>`).join("");
+    const annotationInfo = annotations.length ? `<div class="model-card-annotation-info" data-model-annotation-info aria-live="polite"><strong data-model-annotation-title>Select a marker</strong><p data-model-annotation-description>Choose a labeled point on the model to see its description.</p></div>` : "";
+    return `<article class="model-card" data-model-card="${equationText(cardIndex)}"><header class="model-card-header"><div><p class="section-label">Interactive 3D Model</p><h3>${title}</h3></div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for 3D model" aria-pressed="false">Fullscreen</button></header><div class="model-card-viewport"><model-viewer src="${equationText(modelUrl)}" alt="${alt}" loading="lazy"${controls}${autoRotate}${cameraOrbit}${exposure} shadow-intensity="1">${hotspotMarkup}</model-viewer><p class="model-card-loading" data-model-loading>Loading 3D model...</p><p class="model-card-error" data-model-error hidden>3D model could not be loaded.</p></div>${annotationInfo}<p class="model-card-fullscreen-status" data-fullscreen-status aria-live="polite"></p></article>`;
+}
+
+function hydrateModelCards(container) {
+    container.querySelectorAll("[data-model-card]").forEach((card) => {
+        const viewer = card.querySelector("model-viewer");
+        const loading = card.querySelector("[data-model-loading]");
+        const error = card.querySelector("[data-model-error]");
+        if (!viewer) return;
+        const showError = (message) => {
+            if (loading) loading.hidden = true;
+            if (error) {
+                error.hidden = false;
+                error.textContent = message;
+            }
+        };
+        viewer.addEventListener("load", () => {
+            if (loading) loading.hidden = true;
+        }, { once: true });
+        viewer.addEventListener("error", () => showError("3D model could not be loaded. Check that the GLB file is committed and its path is correct."), { once: true });
+        const annotationButtons = Array.from(card.querySelectorAll("[data-model-annotation]"));
+        const annotationTitle = card.querySelector("[data-model-annotation-title]");
+        const annotationDescription = card.querySelector("[data-model-annotation-description]");
+        const selectAnnotation = (button) => {
+            annotationButtons.forEach((candidate) => {
+                const selected = candidate === button;
+                candidate.setAttribute("aria-selected", String(selected));
+                candidate.classList.toggle("is-selected", selected);
+            });
+            if (annotationTitle) annotationTitle.textContent = button.dataset.annotationLabel || "Selected marker";
+            if (annotationDescription) annotationDescription.textContent = button.dataset.annotationDescription || "";
+            if (button.dataset.position && "cameraTarget" in viewer) {
+                try {
+                    // Recenter the camera without changing its current orbit or zoom.
+                    viewer.cameraTarget = button.dataset.position;
+                } catch (_error) {
+                    // Annotation selection remains useful when camera targeting is unavailable.
+                }
+            }
+        };
+        annotationButtons.forEach((button) => {
+            button.addEventListener("click", () => selectAnnotation(button));
+        });
+        if (!globalThis.customElements?.get("model-viewer")) {
+            showError("The local 3D viewer is unavailable in this browser.");
+        }
+    });
+    hydrateFullscreenButtons(container);
+}
+
 function simpleMarkdownToHtml(md, options = {}) {
     const lines = String(md || "").split(/\r?\n/);
     const out = [];
@@ -1945,6 +2579,67 @@ function simpleMarkdownToHtml(md, options = {}) {
         return `<table><thead><tr>${ths}</tr></thead><tbody>${tbody}</tbody></table>`;
     };
 
+    const renderYoutubeCard = (config) => {
+        if (!config || typeof config !== "object" || Array.isArray(config)) {
+            throw new Error("YouTube card configuration must be a JSON object.");
+        }
+        const source = String(config.url || "").trim();
+        if (!source) throw new Error("A YouTube URL is required.");
+
+        let parsed;
+        try {
+            parsed = new URL(source);
+        } catch {
+            throw new Error("The YouTube URL is invalid.");
+        }
+        const host = parsed.hostname.toLowerCase();
+        const allowedHosts = new Set([
+            "youtube.com",
+            "www.youtube.com",
+            "m.youtube.com",
+            "youtube-nocookie.com",
+            "www.youtube-nocookie.com",
+            "youtu.be",
+            "www.youtu.be"
+        ]);
+        if (parsed.protocol !== "https:" || !allowedHosts.has(host) || parsed.username || parsed.password || parsed.port) {
+            throw new Error("Only secure YouTube URLs are supported.");
+        }
+
+        let videoId = "";
+        if (host === "youtu.be" || host === "www.youtu.be") {
+            videoId = parsed.pathname.split("/").filter(Boolean)[0] || "";
+        } else if (parsed.pathname === "/watch") {
+            videoId = parsed.searchParams.get("v") || "";
+        } else if (/^\/(?:embed|shorts)\//.test(parsed.pathname)) {
+            videoId = parsed.pathname.split("/").filter(Boolean)[1] || "";
+        }
+        if (!/^[A-Za-z0-9_-]{6,20}$/.test(videoId)) {
+            throw new Error("The YouTube URL does not contain a valid video ID.");
+        }
+
+        const readTimestamp = (key) => {
+            if (!Object.prototype.hasOwnProperty.call(config, key)) return null;
+            if (!Number.isInteger(config[key]) || config[key] < 0) {
+                throw new Error(`${key} must be a non-negative whole number of seconds.`);
+            }
+            return config[key];
+        };
+        const start = readTimestamp("start");
+        const end = readTimestamp("end");
+        if (start !== null && end !== null && end < start) {
+            throw new Error("end must be greater than or equal to start.");
+        }
+
+        const embedUrl = new URL(`https://www.youtube-nocookie.com/embed/${videoId}`);
+        if (start !== null) embedUrl.searchParams.set("start", String(start));
+        if (end !== null) embedUrl.searchParams.set("end", String(end));
+        const title = String(config.title || "YouTube video").trim();
+        if (!title) throw new Error("The YouTube card title cannot be empty.");
+        const safeTitle = escapeHtml(title);
+        return `<article class="youtube-card"><header class="youtube-card-header"><p class="section-label">YouTube Video</p><h3>${safeTitle}</h3></header><div class="youtube-card-frame"><iframe src="${escapeHtml(embedUrl.href)}" title="${safeTitle}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div></article>`;
+    };
+
     let index = 0;
     while (index < lines.length) {
         let line = lines[index];
@@ -1962,6 +2657,33 @@ function simpleMarkdownToHtml(md, options = {}) {
             // skip closing fence if present
             if (index < lines.length && /^\s*```/.test(lines[index])) {
                 index += 1;
+            }
+            if (lang.toLowerCase() === "equation-card") {
+                try {
+                    out.push(renderEquationCard(JSON.parse(codeLines.join("\n")), index));
+                } catch (error) {
+                    out.push(`<article class="equation-card equation-card-error-state"><p class="equation-card-error">Equation card error: ${equationText(error.message || "Invalid JSON payload.")}</p></article>`);
+                }
+                continue;
+            }
+            if (lang.toLowerCase() === "model-card") {
+                try {
+                    const config = JSON.parse(codeLines.join("\n"));
+                    const modelUrl = resolveSafeUrl(config?.src);
+                    if (!modelUrl) throw new Error("The model source is missing or uses an unsafe URL.");
+                    out.push(renderModelCard(config, modelUrl, index));
+                } catch (error) {
+                    out.push(`<article class="model-card model-card-error-state"><p class="model-card-error">3D model card error: ${equationText(error.message || "Invalid JSON payload.")}</p></article>`);
+                }
+                continue;
+            }
+            if (lang.toLowerCase() === "youtube-card") {
+                try {
+                    out.push(renderYoutubeCard(JSON.parse(codeLines.join("\n"))));
+                } catch (error) {
+                    out.push(`<article class="youtube-card youtube-card-error-state"><p class="youtube-card-error">YouTube card error: ${equationText(error.message || "Invalid JSON payload.")}</p></article>`);
+                }
+                continue;
             }
             const code = String(codeLines.join("\n"))
                 .replace(/&/g, "&amp;")
@@ -2201,6 +2923,8 @@ function renderNoteStage(stage, subject, chapter, session) {
         notesContainer.innerHTML = simpleMarkdownToHtml(markdown, {
             basePath: resolveSubjectNotesPath(subject)
         });
+        hydrateEquationCards(notesContainer);
+        hydrateModelCards(notesContainer);
         enhanceNotesDocument(notesContainer, chapter?.title || "");
         try {
             renderMath(notesContainer);
