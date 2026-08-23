@@ -2352,13 +2352,40 @@ function renderParticleCard(config, cardIndex) {
     return `<article class="particle-card" data-particle-card="${equationText(cardIndex)}"><header class="particle-card-header"><div><p class="section-label">Interactive Gas Model</p><h3>${equationText(normalized.title)}</h3>${normalized.subtitle ? `<p>${equationText(normalized.subtitle)}</p>` : ""}</div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for particle card" aria-pressed="false">Fullscreen</button></header><div class="particle-card-layout"><section class="particle-card-simulation" aria-label="Animated two-dimensional gas container"><canvas class="particle-card-canvas" data-particle-canvas role="img" aria-label="Moving particles inside a resizable control volume"></canvas><div class="particle-card-canvas-caption">Particle speed represents temperature. Container area represents relative volume.</div></section><section class="particle-card-controls"><div class="particle-card-control"><div class="particle-card-control-heading"><label for="particle-temperature-${cardIndex}">Temperature</label><output data-particle-temperature-output>${equationText(particleDisplayValue(temperature.value, temperature))}</output></div><input id="particle-temperature-${cardIndex}" class="particle-card-range" type="range" min="${temperature.min}" max="${temperature.max}" step="${temperature.step}" value="${temperature.value}" data-particle-input="temperature" aria-label="Adjust temperature"></div><div class="particle-card-control"><div class="particle-card-control-heading"><label for="particle-volume-${cardIndex}">Relative volume</label><output data-particle-volume-output>${equationText(particleDisplayValue(volume.value, volume))}</output></div><input id="particle-volume-${cardIndex}" class="particle-card-range" type="range" min="${volume.min}" max="${volume.max}" step="${volume.step}" value="${volume.value}" data-particle-input="volume" aria-label="Adjust relative volume"></div><div class="particle-card-metrics"><div class="particle-card-metric"><span>Reference pressure</span><strong data-particle-ideal-pressure>1.00</strong><small>P/P₀ from ideal-gas behavior</small></div><div class="particle-card-metric"><span>Collision pressure</span><strong data-particle-collision-pressure>1.00</strong><small>P/P₀ from wall impacts</small></div></div><p class="particle-card-status" data-particle-status aria-live="polite"></p></section></div>${notes ? `<section class="particle-card-notes"><p class="section-label">About this model</p>${notes}</section>` : ""}</article>`;
 }
 
+function reportParticleCardIssue(card, message) {
+    if (!card) return;
+    card.classList.add("particle-card-error-state");
+    let status = card.querySelector("[data-particle-status]");
+    if (!status) {
+        status = document.createElement("p");
+        status.className = "particle-card-status";
+        card.appendChild(status);
+    }
+    if (status) {
+        status.textContent = `Particle card unavailable: ${message}`;
+        status.setAttribute("role", "alert");
+    }
+    console.error("Particle Card hydration failed:", message);
+}
+
 function hydrateParticleCards(container) {
     container.querySelectorAll("[data-particle-card]").forEach((card) => {
+        try {
         const config = PARTICLE_CARD_CONFIGS.get(card.dataset.particleCard);
         const canvas = card.querySelector("[data-particle-canvas]");
-        if (!config || !canvas) return;
+        if (!config) {
+            reportParticleCardIssue(card, "the card configuration is missing.");
+            return;
+        }
+        if (!canvas) {
+            reportParticleCardIssue(card, "the simulation canvas is missing.");
+            return;
+        }
         const context = canvas.getContext("2d");
-        if (!context) return;
+        if (!context) {
+            reportParticleCardIssue(card, "this browser could not create a 2D canvas context.");
+            return;
+        }
         const values = { temperature: config.temperature.value, volume: config.volume.value };
         const particles = [];
         const pulses = { top: 0, right: 0, bottom: 0, left: 0 };
@@ -2490,6 +2517,7 @@ function hydrateParticleCards(container) {
             if (status) status.textContent = "Higher pressure means more frequent or harder wall impacts.";
         };
         const frame = (timestamp) => {
+            try {
             if (state.stopped || !card.isConnected) {
                 state.stopped = true;
                 if (state.resizeObserver) state.resizeObserver.disconnect();
@@ -2509,6 +2537,10 @@ function hydrateParticleCards(container) {
             }
             draw();
             state.raf = requestAnimationFrame(frame);
+            } catch (error) {
+                state.stopped = true;
+                reportParticleCardIssue(card, error?.message || "the animation loop stopped unexpectedly.");
+            }
         };
         const inputHandlers = card.querySelectorAll("[data-particle-input]");
         inputHandlers.forEach((input) => input.addEventListener("input", () => {
@@ -2529,7 +2561,14 @@ function hydrateParticleCards(container) {
         state.resizeObserver = typeof ResizeObserver === "function" ? new ResizeObserver(() => { resize(); updateBox(); }) : null;
         state.resizeObserver?.observe(canvas);
         renderReadings();
+        if (typeof requestAnimationFrame !== "function") {
+            reportParticleCardIssue(card, "animation is unavailable in this browser.");
+            return;
+        }
         state.raf = requestAnimationFrame(frame);
+        } catch (error) {
+            reportParticleCardIssue(card, error?.message || "an unexpected hydration error occurred.");
+        }
     });
 }
 

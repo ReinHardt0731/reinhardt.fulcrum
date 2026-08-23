@@ -1,4 +1,4 @@
-import { initModePage } from "./shared.js";
+import { initModePage } from "./shared.js?v=particle-card-1";
 
 document.addEventListener("DOMContentLoaded", () => {
     initModePage("learn");

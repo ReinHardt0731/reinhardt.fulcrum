@@ -41,6 +41,15 @@ jobs:
           [ -d public/vendor ] && echo "✓ vendor/ copied" || echo "✗ vendor/ missing"
           [ -d public/chapters ] && echo "✓ chapters/ copied" || echo "✗ chapters/ missing"
 
+          test -f public/shared.js || { echo "ERROR: shared.js missing"; exit 1; }
+          test -f public/styles.css || { echo "ERROR: styles.css missing"; exit 1; }
+          test -f public/subjects.json || { echo "ERROR: subjects.json missing"; exit 1; }
+          test -f public/markdowns/aerodynamics.md || { echo "ERROR: aerodynamics notes missing"; exit 1; }
+          test -f public/vendor/katex/katex.min.js || { echo "ERROR: KaTeX runtime missing"; exit 1; }
+          grep -q 'particle-card' public/shared.js || { echo "ERROR: Particle Card renderer missing"; exit 1; }
+          grep -q '```particle-card' public/markdowns/aerodynamics.md || { echo "ERROR: Particle Card Markdown block missing"; exit 1; }
+          grep -q '"notesPath": "aerodynamics.md"' public/subjects.json || { echo "ERROR: Aerodynamics notes path missing"; exit 1; }
+
           if [ ! -f public/index.html ]; then
             echo "ERROR: public/index.html missing — aborting upload"
             exit 1
