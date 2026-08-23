@@ -1019,12 +1019,6 @@
         if (chapterHeading) {
             chapterHeading.scrollIntoView({ behavior: "smooth", block: "start" });
             chapterHeading.classList.add("highlight-target");
-        } else {
-            // show notice if chapter not found
-            const notice = document.createElement("div");
-            notice.className = "empty-state compact";
-            notice.append(Object.assign(document.createElement("h4"), { textContent: "No notes for this chapter" }), Object.assign(document.createElement("p"), { textContent: "The chapter heading was not found in the notes markdown." }));
-            container.insertBefore(notice, wrapper);
         }
     }
 

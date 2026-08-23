@@ -14,8 +14,11 @@ import {
     storageSelectState,
     syncSelection,
     tallyQuestionCount,
-    textValue
+    textValue,
+    hydrateMarkdownPreview,
+    renderMarkdownPreview
 } from "./shared.js";
+import { initAdminShell } from "./admin-shell.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
     console.log("admin.js start", {
@@ -38,6 +41,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         sidebarCard: document.getElementById("admin-sidebar-card"),
         sidebarBody: document.getElementById("admin-sidebar-body"),
         sidebarToggle: document.getElementById("admin-sidebar-toggle"),
+        subjectRail: document.getElementById("admin-subject-rail"),
+        drawerOpen: document.getElementById("admin-drawer-open"),
         subjectAddToggle: document.getElementById("admin-subject-add-toggle"),
         subjectCreateForm: document.getElementById("admin-subject-create-form"),
         subjectCreateName: document.getElementById("admin-subject-create-name"),
@@ -48,9 +53,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         subjectSaveButton: document.getElementById("admin-subject-save"),
         subjectDeleteButton: document.getElementById("admin-subject-delete"),
         activeSubjectTitle: document.getElementById("admin-active-subject-title"),
+        libraryQuestionSummary: document.getElementById("admin-library-question-summary"),
+        libraryNotesSummary: document.getElementById("admin-library-notes-summary"),
         exportButton: document.getElementById("admin-export-button"),
+        exportCard: document.getElementById("admin-export-card"),
         chapterSummary: document.getElementById("admin-chapter-summary"),
         chapterCarousel: document.getElementById("admin-chapter-carousel"),
+        chapterOrderList: document.getElementById("admin-chapter-order-list"),
+        chapterReorderAnnouncer: document.getElementById("admin-chapter-reorder-announcer"),
         chapterPrev: document.getElementById("admin-chapter-prev"),
         chapterNext: document.getElementById("admin-chapter-next"),
         chapterImportForm: document.getElementById("chapter-import-form"),
@@ -69,11 +79,55 @@ document.addEventListener("DOMContentLoaded", async () => {
         ,notesUploadButton: document.getElementById("notes-upload-button")
         ,notesPreviewStatus: document.getElementById("notes-upload-status")
         ,notesPreviewContent: document.getElementById("notes-preview-content")
+        ,contextSubject: document.getElementById("admin-context-subject")
+        ,contextChapter: document.getElementById("admin-context-chapter")
+        ,contextNotes: document.getElementById("admin-context-notes")
+        ,contextSave: document.getElementById("admin-context-save")
+        ,sectionNav: document.querySelectorAll("[data-admin-target]")
+        ,notesSourceEditor: document.getElementById("notes-source-editor")
+        ,notesLoadAttachedButton: document.getElementById("notes-load-attached-button")
+        ,notesEditorPreviewButton: document.getElementById("notes-editor-preview-button")
+        ,notesSaveButton: document.getElementById("notes-save-button")
+        ,notesEditorPreview: document.getElementById("notes-editor-preview")
+        ,notesPreviewModes: document.querySelectorAll("[data-notes-preview-mode]")
+        ,assistantForm: document.getElementById("equation-assistant-form")
+        ,assistantTitle: document.getElementById("assistant-title")
+        ,assistantSubtitle: document.getElementById("assistant-subtitle")
+        ,assistantDisplayEquation: document.getElementById("assistant-display-equation")
+        ,assistantDefinition: document.getElementById("assistant-definition")
+        ,assistantDefinitionField: document.querySelector(".assistant-definition-field")
+        ,assistantGraphXVariable: document.getElementById("assistant-graph-x-variable")
+        ,assistantGraphXLabel: document.getElementById("assistant-graph-x-label")
+        ,assistantGraphYLabel: document.getElementById("assistant-graph-y-label")
+        ,assistantGraphXMin: document.getElementById("assistant-graph-x-min")
+        ,assistantGraphXMax: document.getElementById("assistant-graph-x-max")
+        ,assistantGraphYMin: document.getElementById("assistant-graph-y-min")
+        ,assistantGraphYMax: document.getElementById("assistant-graph-y-max")
+        ,assistantNotes: document.getElementById("assistant-notes")
+        ,assistantViewMarkdownButton: document.getElementById("assistant-view-markdown-button")
+        ,assistantPreviewButton: document.getElementById("assistant-preview-button")
+        ,assistantResetButton: document.getElementById("assistant-reset-button")
+        ,assistantStatus: document.getElementById("assistant-status")
+        ,assistantPreview: document.getElementById("assistant-preview")
     };
 
     if (!elements.lockForm || !elements.lockPanel || !elements.adminApp) {
         return;
     }
+
+    if (!elements.drawerOpen) {
+        const openButton = document.createElement("button");
+        openButton.type = "button";
+        openButton.className = "icon-button admin-mobile-drawer-open mobile-only";
+        openButton.setAttribute("aria-label", "Open admin subjects");
+        openButton.textContent = "☰";
+        document.querySelector(".admin-main")?.prepend(openButton);
+        elements.drawerOpen = openButton;
+    }
+    const drawerBackdrop = document.createElement("div");
+    drawerBackdrop.className = "admin-drawer-backdrop";
+    drawerBackdrop.addEventListener("click", () => document.body.classList.remove("admin-drawer-open"));
+    document.body.appendChild(drawerBackdrop);
 
     const state = {
         subjects: [],
@@ -81,7 +135,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         activeChapterTitle: "",
         activeMode: "quiz",
         expandedSubjectId: "",
-        sidebarExpanded: true
+        sidebarExpanded: true,
+        notesSource: "",
+        notesDirty: false,
+        notesPreviewMode: "split",
+        drawerCollapsed: false,
+        chapterDrag: null
     };
 
     const now = () => new Date().toISOString();
@@ -199,8 +258,56 @@ document.addEventListener("DOMContentLoaded", async () => {
     const setStatus = (message) => {
         if (elements.statusLine) {
             elements.statusLine.textContent = message;
+            const value = String(message || "").toLowerCase();
+            const tone = value.includes("fail") || value.includes("unable") || value.includes("invalid") ? "failed"
+                : value.includes("saved") || value.includes("attached") || value.includes("created") ? "saved"
+                    : value.includes("saving") ? "saving" : "ready";
+            elements.statusLine.dataset.statusTone = tone;
+            elements.statusLine.classList.toggle("is-visible", Boolean(message));
         }
     };
+
+    const setSaveState = (message) => {
+        if (elements.contextSave) {
+            const value = String(message || "Ready");
+            const normalized = value.toLowerCase().includes("unsaved") ? "Unsaved"
+                : value.toLowerCase().includes("saving") ? "Saving"
+                    : value.toLowerCase().includes("fail") ? "Failed"
+                        : value.toLowerCase().includes("saved") ? "Saved" : value;
+            elements.contextSave.textContent = normalized;
+            elements.contextSave.dataset.saveState = normalized.toLowerCase();
+        }
+    };
+
+    const renderAdminContext = () => {
+        const subject = getActiveSubject();
+        const chapter = getActiveChapter();
+        if (elements.contextSubject) elements.contextSubject.textContent = subject?.name || "None selected";
+        if (elements.contextChapter) elements.contextChapter.textContent = chapter?.title || "None selected";
+        if (elements.contextNotes) elements.contextNotes.textContent = subject?.notesPath ? "Attached" : "No notes";
+        setSaveState(state.notesDirty ? "Unsaved" : "Ready");
+    };
+
+    initAdminShell({
+        elements,
+        state,
+        onNavigate: () => !state.notesDirty || window.confirm("You have unsaved Markdown changes. Leave this page and discard them?")
+    });
+
+    elements.sectionNav?.forEach((button) => {
+        button.addEventListener("click", () => {
+            elements.sectionNav.forEach((entry) => entry.classList.toggle("is-active", entry === button));
+            document.getElementById(button.dataset.adminTarget)?.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    });
+
+    document.querySelectorAll(".admin-page-nav a").forEach((link) => {
+        link.addEventListener("click", (event) => {
+            if (state.notesDirty && !window.confirm("You have unsaved Markdown changes. Leave this page and discard them?")) {
+                event.preventDefault();
+            }
+        });
+    });
 
     const showAdminApp = () => {
         elements.adminApp.hidden = false;
@@ -226,19 +333,31 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     };
 
-    const toggleSidebar = () => setSidebarExpanded(!state.sidebarExpanded);
-
-    if (elements.sidebarToggle) {
-        elements.sidebarToggle.addEventListener("click", toggleSidebar);
-    }
-    setSidebarExpanded(state.sidebarExpanded);
-
     const renderSummary = () => {
         if (elements.librarySummary) {
             const chapterCount = state.subjects.reduce((sum, subject) => sum + subject.chapters.length, 0);
             const questionCount = state.subjects.reduce((sum, subject) => sum + tallyQuestionCount(subject), 0);
             elements.librarySummary.textContent = `${state.subjects.length} subjects | ${chapterCount} chapters | ${questionCount} questions`;
+            const subject = getActiveSubject();
+            if (elements.libraryQuestionSummary) elements.libraryQuestionSummary.textContent = subject ? `${tallyQuestionCount(subject)} questions` : "Select a subject";
+            if (elements.libraryNotesSummary) elements.libraryNotesSummary.textContent = subject?.notesPath ? "Attached" : "No notes";
         }
+    };
+
+    const renderSubjectRail = () => {
+        if (!elements.subjectRail) return;
+        elements.subjectRail.replaceChildren();
+        state.subjects.forEach((subject) => {
+            const marker = document.createElement("button");
+            marker.type = "button";
+            marker.className = "admin-subject-rail-item";
+            marker.classList.toggle("is-active", subject.id === state.activeSubjectId);
+            marker.textContent = text(subject.name).slice(0, 1).toUpperCase() || "?";
+            marker.title = subject.name;
+            marker.setAttribute("aria-label", `Select ${subject.name}`);
+            marker.addEventListener("click", () => selectSubject(subject.id));
+            elements.subjectRail.appendChild(marker);
+        });
     };
 
     const renderSubjectList = () => {
@@ -302,7 +421,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             header.addEventListener("click", () => toggleSubject(subject.id));
             const headerShell = document.createElement("div");
             headerShell.className = "subject-item-shell";
-            headerShell.append(header, actionGroup);
+            headerShell.append(header);
             const chapterList = document.createElement("div");
             chapterList.className = "subject-chapters";
             chapterList.id = `admin-subject-chapters-${subject.id}`;
@@ -346,7 +465,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     moveChapter(subject.id, chapter.title, 1);
                 });
                 chapterActions.append(chapterMoveUp, chapterMoveDown);
-                chapterRow.append(chapterButton, chapterActions);
+                chapterRow.append(chapterButton);
                 chapterList.appendChild(chapterRow);
             });
             elements.subjectList.appendChild(card);
@@ -426,6 +545,179 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     };
 
+    const announceChapterReorder = (message) => {
+        if (elements.chapterReorderAnnouncer) {
+            elements.chapterReorderAnnouncer.textContent = message;
+        }
+        setStatus(message);
+    };
+
+    const clearChapterDrag = (announce = "") => {
+        const drag = state.chapterDrag;
+        if (!drag) return;
+        drag.row?.classList.remove("is-dragging", "is-keyboard-pickup");
+        drag.row?.querySelector(".admin-chapter-drag-handle")?.removeAttribute("aria-pressed");
+        elements.chapterOrderList?.querySelectorAll(".is-drop-target").forEach((item) => item.classList.remove("is-drop-target"));
+        drag.placeholder?.remove();
+        state.chapterDrag = null;
+        if (announce) announceChapterReorder(announce);
+    };
+
+    const reorderChapters = (subjectId, fromIndex, targetIndex) => {
+        const subject = getSubjectById(state.subjects, subjectId);
+        if (!subject || fromIndex < 0 || targetIndex < 0 || fromIndex >= subject.chapters.length || targetIndex >= subject.chapters.length) {
+            return false;
+        }
+        if (fromIndex === targetIndex) return false;
+        const nextChapters = [...subject.chapters];
+        const [movedChapter] = nextChapters.splice(fromIndex, 1);
+        nextChapters.splice(targetIndex, 0, movedChapter);
+        const nextSubjects = state.subjects.map((entry) => entry.id === subjectId
+            ? { ...entry, chapters: nextChapters, updatedAt: now() }
+            : entry);
+        commitSubjects(nextSubjects, subjectId, movedChapter.title);
+        announceChapterReorder(`Saved. ${movedChapter.title} is now chapter ${targetIndex + 1} of ${nextChapters.length}.`);
+        return true;
+    };
+
+    const renderChapterOrderList = () => {
+        const list = elements.chapterOrderList;
+        if (!list) return;
+        list.replaceChildren();
+        const listEmptyState = (heading, body) => {
+            const item = document.createElement("li");
+            item.className = "empty-state compact";
+            item.append(Object.assign(document.createElement("h4"), { textContent: heading }), Object.assign(document.createElement("p"), { textContent: body }));
+            return item;
+        };
+        const subject = getActiveSubject();
+        if (!subject) {
+            list.appendChild(listEmptyState("No subject selected", "Choose a subject from the drawer to arrange chapters."));
+            return;
+        }
+        if (!subject.chapters.length) {
+            list.appendChild(listEmptyState("No chapters yet", "Add a chapter from the Chapters workspace first."));
+            return;
+        }
+        list.setAttribute("aria-setsize", String(subject.chapters.length));
+        subject.chapters.forEach((chapter, index) => {
+            const row = document.createElement("li");
+            row.className = "admin-chapter-order-item";
+            row.tabIndex = 0;
+            row.dataset.chapterIndex = String(index);
+            row.dataset.chapterTitle = chapter.title;
+            row.setAttribute("aria-posinset", String(index + 1));
+            row.setAttribute("aria-setsize", String(subject.chapters.length));
+            row.classList.toggle("is-selected", chapter.title === state.activeChapterTitle);
+
+            const handle = document.createElement("button");
+            handle.type = "button";
+            handle.className = "admin-chapter-drag-handle";
+            handle.setAttribute("aria-label", `Drag to reorder ${chapter.title}`);
+            handle.title = "Drag to reorder chapter";
+            handle.textContent = "::";
+
+            const chapterButton = document.createElement("button");
+            chapterButton.type = "button";
+            chapterButton.className = "admin-chapter-order-main";
+            chapterButton.append(
+                Object.assign(document.createElement("strong"), { textContent: chapter.title }),
+                Object.assign(document.createElement("span"), { textContent: `${chapter.questions.length} question${chapter.questions.length === 1 ? "" : "s"}` })
+            );
+            chapterButton.addEventListener("click", () => selectChapter(chapter.title));
+
+            const position = document.createElement("span");
+            position.className = "admin-chapter-order-position";
+            position.textContent = `#${index + 1}`;
+            row.append(handle, chapterButton, position);
+
+            const startPointerDrag = (event) => {
+                if (!event.isPrimary || (event.button !== undefined && event.button !== 0) || state.chapterDrag) return;
+                event.preventDefault();
+                state.chapterDrag = { subjectId: subject.id, sourceIndex: index, targetIndex: index, pointerId: event.pointerId, row, handle, placeholder: null, keyboard: false };
+                row.classList.add("is-dragging");
+                handle.setAttribute("aria-pressed", "true");
+                if (handle.setPointerCapture) handle.setPointerCapture(event.pointerId);
+                announceChapterReorder(`Picked up ${chapter.title}, chapter ${index + 1} of ${subject.chapters.length}. Move over a position and release to save.`);
+            };
+            handle.addEventListener("pointerdown", startPointerDrag);
+            row.addEventListener("keydown", (event) => {
+                const drag = state.chapterDrag;
+                if (event.key === " " || event.key === "Spacebar") {
+                    event.preventDefault();
+                    if (!drag) {
+                        state.chapterDrag = { subjectId: subject.id, sourceIndex: index, targetIndex: index, row, handle, placeholder: null, keyboard: true };
+                        row.classList.add("is-keyboard-pickup");
+                        handle.setAttribute("aria-pressed", "true");
+                        announceChapterReorder(`Picked up ${chapter.title}, chapter ${index + 1} of ${subject.chapters.length}. Use ArrowUp or ArrowDown, then Space to drop.`);
+                    } else if (drag.keyboard && drag.row === row) {
+                        const saved = reorderChapters(drag.subjectId, drag.sourceIndex, drag.targetIndex);
+                        clearChapterDrag(saved ? "" : `Dropped ${chapter.title} without changing its position.`);
+                    }
+                    return;
+                }
+                if (!drag || !drag.keyboard || drag.row !== row) return;
+                if (event.key === "Escape") {
+                    event.preventDefault();
+                    clearChapterDrag(`Cancelled reordering ${chapter.title}.`);
+                    return;
+                }
+                if (event.key !== "ArrowUp" && event.key !== "ArrowDown") return;
+                event.preventDefault();
+                const nextIndex = Math.max(0, Math.min(subject.chapters.length - 1, drag.targetIndex + (event.key === "ArrowUp" ? -1 : 1)));
+                if (nextIndex === drag.targetIndex) return;
+                drag.targetIndex = nextIndex;
+                list.querySelectorAll(".is-drop-target").forEach((item) => item.classList.remove("is-drop-target"));
+                list.querySelector(`[data-chapter-index="${nextIndex}"]`)?.classList.add("is-drop-target");
+                announceChapterReorder(`${chapter.title} will be chapter ${nextIndex + 1} of ${subject.chapters.length}. Press Space to drop or Escape to cancel.`);
+            });
+            list.appendChild(row);
+        });
+    };
+
+    const getPointerTarget = (event, drag) => {
+        const rows = [...elements.chapterOrderList.querySelectorAll(".admin-chapter-order-item")].filter((item) => item !== drag.row);
+        const before = rows.find((item) => {
+            const rect = item.getBoundingClientRect();
+            return event.clientY < rect.top + rect.height / 2;
+        });
+        const insertPosition = before ? rows.indexOf(before) : rows.length;
+        const targetIndex = insertPosition < drag.sourceIndex ? insertPosition + 1 : insertPosition;
+        return { before, targetIndex: Math.max(0, Math.min(rows.length, targetIndex)) };
+    };
+
+    const updatePointerTarget = (event) => {
+        const drag = state.chapterDrag;
+        if (!drag || drag.keyboard || drag.pointerId !== event.pointerId || !elements.chapterOrderList) return;
+        const { before, targetIndex } = getPointerTarget(event, drag);
+        drag.targetIndex = Math.min(targetIndex, getActiveSubject()?.chapters.length - 1);
+        if (!drag.placeholder) {
+            drag.placeholder = document.createElement("li");
+            drag.placeholder.className = "chapter-drop-indicator";
+            drag.placeholder.setAttribute("aria-hidden", "true");
+        }
+        elements.chapterOrderList.insertBefore(drag.placeholder, before || null);
+        elements.chapterOrderList.querySelectorAll(".is-drop-target").forEach((item) => item.classList.remove("is-drop-target"));
+        before?.classList.add("is-drop-target");
+    };
+
+    const finishPointerDrag = (event, cancelled = false) => {
+        const drag = state.chapterDrag;
+        if (!drag || drag.keyboard || (event && drag.pointerId !== event.pointerId)) return;
+        if (cancelled) {
+            clearChapterDrag("Cancelled chapter reordering.");
+            return;
+        }
+        const subject = getActiveSubject();
+        const moved = subject?.id === drag.subjectId && reorderChapters(drag.subjectId, drag.sourceIndex, drag.targetIndex);
+        clearChapterDrag(moved ? "" : "Dropped without changing the chapter order.");
+    };
+
+    document.addEventListener("pointermove", updatePointerTarget);
+    document.addEventListener("pointerup", (event) => finishPointerDrag(event));
+    document.addEventListener("pointercancel", (event) => finishPointerDrag(event, true));
+    window.addEventListener("blur", () => finishPointerDrag(null, true));
+
     const moveChapterSelection = (direction) => {
         const subject = getActiveSubject();
         if (!subject || !subject.chapters.length) {
@@ -504,15 +796,30 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (elements.notesUploadButton) {
             elements.notesUploadButton.disabled = !hasSubject;
         }
+        if (elements.notesSourceEditor) {
+            elements.notesSourceEditor.disabled = !hasSubject;
+        }
+        if (elements.notesLoadAttachedButton) {
+            elements.notesLoadAttachedButton.disabled = !hasSubject;
+        }
+        if (elements.notesEditorPreviewButton) {
+            elements.notesEditorPreviewButton.disabled = !hasSubject;
+        }
+        if (elements.notesSaveButton) {
+            elements.notesSaveButton.disabled = !hasSubject || !state.notesDirty;
+        }
     };
 
     const renderAll = () => {
         renderSummary();
+        renderSubjectRail();
         renderSubjectList();
         renderSubjectEditor();
         renderChapterCarousel();
+        renderChapterOrderList();
         renderChapterEditor();
         renderNotesPreviewStatus();
+        renderAdminContext();
     };
 
     const renderNotesPreviewStatus = () => {
@@ -575,6 +882,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     applyCarouselCount(window.innerWidth);
 
     const selectSubject = (subjectId, chapterTitle = "") => {
+        if (state.notesDirty && !window.confirm("You have unsaved Markdown changes. Switch context and discard them?")) return;
+        if (state.chapterDrag) clearChapterDrag("Cancelled chapter reordering because the active subject changed.");
         const subject = getSubjectById(state.subjects, subjectId);
         if (!subject) {
             return;
@@ -586,9 +895,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         state.expandedSubjectId = subject.id;
         persistSelection();
         renderAll();
+        void loadAttachedNotes().catch(() => {});
     };
 
     const selectChapter = (chapterTitle) => {
+        if (state.notesDirty && !window.confirm("You have unsaved Markdown changes. Switch chapter and discard them?")) return;
+        if (state.chapterDrag) clearChapterDrag("Cancelled chapter reordering because the active chapter changed.");
         const subject = getActiveSubject();
         if (!subject) {
             return;
@@ -602,6 +914,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         state.expandedSubjectId = subject.id;
         persistSelection();
         renderAll();
+        void loadAttachedNotes().catch(() => {});
     };
 
     const toggleSubject = (subjectId) => {
@@ -761,6 +1074,109 @@ document.addEventListener("DOMContentLoaded", async () => {
         reader.readAsText(file, "utf-8");
     });
 
+    const renderNotesDocument = (markdown = state.notesSource) => {
+        if (!elements.notesEditorPreview) return;
+        const subject = getActiveSubject();
+        const basePath = resolveNotesPath(subject?.notesPath) || `markdowns/${subject?.id || "notes"}.md`;
+        elements.notesEditorPreview.replaceChildren();
+        if (state.notesPreviewMode === "source") {
+            const source = document.createElement("pre");
+            source.className = "admin-markdown-source-preview";
+            source.textContent = markdown;
+            elements.notesEditorPreview.appendChild(source);
+            return;
+        }
+        if (state.notesPreviewMode === "split") {
+            const sourcePanel = document.createElement("pre");
+            sourcePanel.className = "admin-markdown-source-preview";
+            sourcePanel.textContent = markdown;
+            const renderedPanel = document.createElement("article");
+            renderedPanel.className = "notes-view admin-rendered-preview";
+            renderedPanel.innerHTML = renderMarkdownPreview(markdown, { basePath });
+            elements.notesEditorPreview.append(sourcePanel, renderedPanel);
+            hydrateMarkdownPreview(renderedPanel);
+            return;
+        }
+        const rendered = document.createElement("article");
+        rendered.className = "notes-view admin-rendered-preview";
+        rendered.innerHTML = renderMarkdownPreview(markdown, { basePath });
+        elements.notesEditorPreview.appendChild(rendered);
+        hydrateMarkdownPreview(rendered);
+    };
+
+    const loadAttachedNotes = async () => {
+        const subject = getActiveSubject();
+        if (!subject) throw new Error("Select a subject first.");
+        const path = resolveNotesPath(subject.notesPath);
+        if (!path) {
+            state.notesSource = "";
+            state.notesDirty = false;
+            if (elements.notesSourceEditor) elements.notesSourceEditor.value = "";
+            if (elements.notesSaveButton) elements.notesSaveButton.disabled = true;
+            renderNotesDocument("");
+            setStatus("This subject has no attached Markdown file yet.");
+            return;
+        }
+        const response = await fetch(path, { cache: "no-store" });
+        if (!response.ok) throw new Error(`Could not load ${path}.`);
+        state.notesSource = await response.text();
+        state.notesDirty = false;
+        if (elements.notesSourceEditor) elements.notesSourceEditor.value = state.notesSource;
+        if (elements.notesSaveButton) elements.notesSaveButton.disabled = true;
+        renderNotesDocument();
+        renderAdminContext();
+        setSaveState("Loaded");
+    };
+
+    const saveNotesSource = async () => {
+        const subject = getActiveSubject();
+        if (!subject) throw new Error("Select a subject first.");
+        const markdown = String(elements.notesSourceEditor?.value || state.notesSource);
+        const notesPath = resolveNotesPath(subject.notesPath) || `markdowns/${subject.id}.md`;
+        const nextSubjects = state.subjects.map((entry) => entry.id === subject.id
+            ? { ...entry, notesPath, updatedAt: now() }
+            : entry);
+        setSaveState("Saving");
+        const response = await fetch("/api/save-library", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ subjects: saveSubjects(nextSubjects), payload: serializeSubjects(nextSubjects), notes: { [subject.id]: markdown } })
+        });
+        if (!response.ok) throw new Error(`Save failed with HTTP ${response.status}.`);
+        state.subjects = saveSubjects(nextSubjects);
+        state.notesSource = markdown;
+        state.notesDirty = false;
+        persistSelection();
+        renderAll();
+        renderNotesDocument(markdown);
+        setSaveState("Saved");
+        setStatus(`Saved Markdown notes for “${subject.name}”.`);
+    };
+
+    elements.notesSourceEditor?.addEventListener("input", () => {
+        state.notesSource = elements.notesSourceEditor.value;
+        state.notesDirty = true;
+        if (elements.notesSaveButton) elements.notesSaveButton.disabled = false;
+        renderAdminContext();
+        setSaveState("Unsaved changes");
+    });
+    elements.notesLoadAttachedButton?.addEventListener("click", async () => {
+        try { await loadAttachedNotes(); } catch (error) { setStatus(error.message); setSaveState("Load failed"); }
+    });
+    elements.notesEditorPreviewButton?.addEventListener("click", () => {
+        state.notesSource = String(elements.notesSourceEditor?.value || "");
+        renderNotesDocument();
+        setSaveState(state.notesDirty ? "Preview ready" : "Ready");
+    });
+    elements.notesSaveButton?.addEventListener("click", async () => {
+        try { await saveNotesSource(); } catch (error) { setStatus(error.message); setSaveState("Save failed"); }
+    });
+    elements.notesPreviewModes?.forEach((button) => button.addEventListener("click", () => {
+        state.notesPreviewMode = button.dataset.notesPreviewMode || "split";
+        elements.notesPreviewModes.forEach((entry) => entry.classList.toggle("is-active", entry === button));
+        renderNotesDocument();
+    }));
+
     elements.notesPreviewButton?.addEventListener("click", async () => {
         try {
             const subject = getActiveSubject();
@@ -768,10 +1184,16 @@ document.addEventListener("DOMContentLoaded", async () => {
             const file = elements.notesFileInput?.files?.[0];
             if (!file) throw new Error("Choose a Markdown file first.");
             const md = await parseMarkdownFile(file);
+            state.notesSource = md;
+            state.notesDirty = true;
+            if (elements.notesSourceEditor) elements.notesSourceEditor.value = md;
             elements.notesPreviewContent.replaceChildren();
-            const pre = document.createElement("pre");
-            pre.textContent = md.slice(0, 10000);
-            elements.notesPreviewContent.appendChild(pre);
+            const rendered = document.createElement("article");
+            rendered.className = "notes-view admin-rendered-preview";
+            rendered.innerHTML = renderMarkdownPreview(md, { basePath: `markdowns/${getActiveSubject()?.id || "notes"}.md` });
+            elements.notesPreviewContent.appendChild(rendered);
+            hydrateMarkdownPreview(rendered);
+            renderNotesDocument(md);
             if (elements.notesPreviewStatus) elements.notesPreviewStatus.textContent = "Preview ready";
         } catch (err) {
             if (elements.notesPreviewContent) elements.notesPreviewContent.replaceChildren(emptyState("Could not preview notes", err.message));
@@ -787,6 +1209,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             const file = elements.notesFileInput?.files?.[0];
             if (!file) throw new Error("Choose a Markdown file first.");
             const md = await parseMarkdownFile(file);
+            state.notesSource = md;
+            state.notesDirty = false;
+            if (elements.notesSourceEditor) elements.notesSourceEditor.value = md;
             const fileName = file.name.trim() || `${subject.id}.md`;
             const notesPath = fileName.toLowerCase().endsWith(".md") ? fileName : `${fileName}.md`;
             const nextSubjects = state.subjects.map((s) => s.id === subject.id ? { ...s, notesPath, updatedAt: now() } : s);
@@ -800,11 +1225,241 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
             setStatus(`Attached notes to “${subject.name}”.`);
             if (elements.notesPreviewStatus) elements.notesPreviewStatus.textContent = "Attached";
+            renderNotesDocument(md);
+            renderAdminContext();
         } catch (err) {
             setStatus(err.message || "Unable to attach notes.");
             if (elements.notesPreviewStatus) elements.notesPreviewStatus.textContent = "Attach failed";
         }
     });
+
+    const defaultAssistantDefinition = `F = 2Y**2 + 4X
+X(N,4,10,0,0.1) = (\\alpha)
+Y(N,5,10,2,0.2) = (\\gamma)
+F(derived) = (\\Omega)`;
+    const defaultAssistantDisplayEquation = "2Y^{2} + 4X";
+
+    const displaySymbol = (value) => {
+        const result = text(value);
+        return result.startsWith("(") && result.endsWith(")") ? result.slice(1, -1).trim() : result;
+    };
+
+    const parseAssistantDefinition = () => {
+        const source = String(elements.assistantDefinition?.value || "");
+        const lines = source.split(/\r?\n/).map((line, index) => ({ line: line.trim(), number: index + 1 })).filter((entry) => entry.line);
+        if (!lines.length) throw new Error("Enter an equation definition.");
+        const equationLines = lines.filter((entry) => !/^\s*[A-Za-z_]\w*\s*\(/.test(entry.line));
+        if (equationLines.length !== 1) throw new Error("Line 1: provide exactly one calculation equation.");
+        const equationMatch = equationLines[0].line.match(/^([A-Za-z_]\w*)\s*=\s*(.+)$/);
+        if (!equationMatch) throw new Error(`Line ${equationLines[0].number}: use <symbol> = <expression>.`);
+        const outputSymbol = equationMatch[1];
+        const executableExpression = equationMatch[2]
+            .replace(/\*\*/g, "^")
+            .replace(/(\d)\s*(?=[A-Za-z_])/g, "$1*")
+            .trim();
+        if (!executableExpression) throw new Error(`Line ${equationLines[0].number}: the calculation expression is required.`);
+        const variables = [];
+        let derived = null;
+        const symbols = new Set();
+        lines.filter((entry) => entry !== equationLines[0]).forEach((entry) => {
+            const match = entry.line.match(/^([A-Za-z_]\w*)\s*\(([^)]*)\)\s*=\s*(.+)$/);
+            if (!match) throw new Error(`Line ${entry.number}: use a parameter or derived declaration.`);
+            const symbol = match[1];
+            if (symbols.has(symbol)) throw new Error(`Line ${entry.number}: symbol ${symbol} is declared more than once.`);
+            symbols.add(symbol);
+            const fields = match[2].split(",").map((field) => field.trim());
+            const shown = displaySymbol(match[3]);
+            if (!shown) throw new Error(`Line ${entry.number}: a LaTeX display symbol is required.`);
+            const displaySymbolHidden = shown.toLowerCase() === "none";
+            if (fields.length === 1 && fields[0].toLowerCase() === "derived") {
+                if (symbol !== outputSymbol) throw new Error(`Line ${entry.number}: the derived symbol must match ${outputSymbol}.`);
+                derived = { symbol, displaySymbol: displaySymbolHidden ? "" : shown, displaySymbolHidden, name: symbol, expression: executableExpression };
+                return;
+            }
+            if (fields.length !== 5) throw new Error(`Line ${entry.number}: parameters require unit, initial, max, min, and step.`);
+            const [unit, initialText, maxText, minText, stepText] = fields;
+            const value = Number(initialText);
+            const max = Number(maxText);
+            const min = Number(minText);
+            const step = Number(stepText);
+            if (![value, max, min, step].every(Number.isFinite)) throw new Error(`Line ${entry.number}: parameter values must be numeric.`);
+            if (!(max > min) || !(step > 0)) throw new Error(`Line ${entry.number}: require Max > Min and Step > 0.`);
+            if (value < min || value > max) throw new Error(`Line ${entry.number}: InitialValue must be between Min and Max.`);
+            variables.push({ symbol, displaySymbol: displaySymbolHidden ? "" : shown, displaySymbolHidden, name: symbol, unit, value, min, max, step, interactive: true });
+        });
+        if (!derived) throw new Error(`Add a ${outputSymbol}(derived) declaration.`);
+        return { equation: executableExpression, variables, derived: [derived] };
+    };
+
+    const escapeEditorHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]));
+    const editorToken = (className, value) => `<span class="editor-token ${className}">${escapeEditorHtml(value)}</span>`;
+    const highlightExpression = (value) => {
+        const source = String(value || "");
+        const pattern = /\*\*|[+\-*/^=]|\b\d+(?:\.\d+)?\b|[A-Za-z_]\w*/g;
+        let result = "";
+        let cursor = 0;
+        for (const match of source.matchAll(pattern)) {
+            const token = match[0];
+            result += escapeEditorHtml(source.slice(cursor, match.index));
+            const className = /^\d/.test(token) ? "number" : /^[+\-*/^=]$|^\*\*$/.test(token) ? "operator" : "identifier";
+            result += editorToken(className, token);
+            cursor = match.index + token.length;
+        }
+        return result + escapeEditorHtml(source.slice(cursor));
+    };
+    const highlightDefinitionLine = (line) => {
+        const equation = line.match(/^(\s*)([A-Za-z_]\w*)(\s*)(=)(\s*)(.*)$/);
+        const declaration = line.match(/^(\s*)([A-Za-z_]\w*)(\s*)(\(([^)]*)\))(\s*)(=)(\s*)(.*)$/);
+        if (declaration) {
+            const fields = declaration[5].split(",");
+            const fieldMarkup = fields.map((field, index) => {
+                const trimmed = field.trim();
+                const spacing = escapeEditorHtml(field.slice(0, field.indexOf(trimmed) >= 0 ? field.indexOf(trimmed) : 0));
+                const className = index === 0 ? "unit" : /^\d/.test(trimmed) || /^-?\d/.test(trimmed) ? "number" : trimmed.toLowerCase() === "derived" ? "keyword" : "punctuation";
+                return `${spacing}${editorToken(className, trimmed)}`;
+            }).join(editorToken("punctuation", ","));
+            const display = declaration[9].trim();
+            const displayMarkup = display.toLowerCase() === "none" ? editorToken("keyword", display) : highlightExpression(display);
+            return `${escapeEditorHtml(declaration[1])}${editorToken("symbol", declaration[2])}${escapeEditorHtml(declaration[3])}${editorToken("punctuation", "(")}${fieldMarkup}${editorToken("punctuation", ")")}${escapeEditorHtml(declaration[6])}${editorToken("operator", "=")}${escapeEditorHtml(declaration[8])}${displayMarkup}`;
+        }
+        if (equation) return `${escapeEditorHtml(equation[1])}${editorToken("symbol", equation[2])}${escapeEditorHtml(equation[3])}${editorToken("operator", "=")}${escapeEditorHtml(equation[5])}${highlightExpression(equation[6])}`;
+        return highlightExpression(line);
+    };
+
+    const setupAssistantDefinitionEditor = () => {
+        const textarea = elements.assistantDefinition;
+        if (!textarea || textarea.dataset.editorReady === "true") return;
+        const field = elements.assistantDefinitionField || textarea.parentElement;
+        if (!field) return;
+        const shell = document.createElement("div");
+        shell.className = "assistant-code-editor";
+        const gutter = document.createElement("div");
+        gutter.className = "assistant-code-gutter";
+        gutter.setAttribute("aria-hidden", "true");
+        const mirror = document.createElement("pre");
+        mirror.className = "assistant-code-mirror";
+        mirror.setAttribute("aria-hidden", "true");
+        const diagnostic = document.createElement("div");
+        diagnostic.className = "assistant-definition-diagnostic";
+        diagnostic.id = "assistant-definition-diagnostic";
+        diagnostic.setAttribute("role", "status");
+        diagnostic.setAttribute("aria-live", "polite");
+        textarea.parentElement.insertBefore(shell, textarea);
+        shell.append(gutter, mirror, textarea);
+        textarea.dataset.editorReady = "true";
+        textarea.setAttribute("aria-describedby", "assistant-syntax-help assistant-definition-diagnostic");
+        document.querySelector(".assistant-syntax-help")?.setAttribute("id", "assistant-syntax-help");
+        field.appendChild(diagnostic);
+        field.classList.add("has-code-editor");
+        shell.classList.add("is-ready");
+
+        let timer;
+        let previousDiagnostic = "";
+        const renderEditor = () => {
+            const lines = String(textarea.value || "").split(/\r?\n/);
+            let errorLine = 0;
+            let errorMessage = "";
+            try {
+                parseAssistantDefinition();
+            } catch (error) {
+                const match = String(error.message || "").match(/^Line (\d+):\s*(.*)$/);
+                errorLine = match ? Number(match[1]) : 1;
+                errorMessage = error.message || "Invalid equation definition.";
+            }
+            mirror.innerHTML = lines.map((line, index) => `<span class="assistant-code-line${index + 1 === errorLine ? " is-error" : ""}">${highlightDefinitionLine(line) || " "}</span>`).join("");
+            gutter.innerHTML = lines.map((_, index) => `<span class="assistant-code-line-number${index + 1 === errorLine ? " is-error" : ""}">${index + 1}${index + 1 === errorLine ? " !" : ""}</span>`).join("");
+            diagnostic.textContent = errorMessage;
+            diagnostic.toggleAttribute("hidden", !errorMessage);
+            if (errorMessage && elements.assistantStatus) elements.assistantStatus.textContent = errorMessage;
+            if (!errorMessage && previousDiagnostic && elements.assistantStatus?.textContent === previousDiagnostic) elements.assistantStatus.textContent = "";
+            previousDiagnostic = errorMessage;
+        };
+        const scheduleRender = () => {
+            window.clearTimeout(timer);
+            timer = window.setTimeout(renderEditor, 120);
+        };
+        textarea.addEventListener("input", scheduleRender);
+        textarea.addEventListener("change", renderEditor);
+        textarea.addEventListener("scroll", () => {
+            mirror.scrollTop = textarea.scrollTop;
+            mirror.scrollLeft = textarea.scrollLeft;
+            gutter.scrollTop = textarea.scrollTop;
+        });
+        renderEditor();
+        return { render: renderEditor };
+    };
+    const assistantDefinitionEditor = setupAssistantDefinitionEditor();
+
+    const readAssistantConfig = () => {
+        const parsed = parseAssistantDefinition();
+        const graph = { expression: parsed.equation, xVariable: text(elements.assistantGraphXVariable?.value), xLabel: text(elements.assistantGraphXLabel?.value) || "x", yLabel: text(elements.assistantGraphYLabel?.value) || "y", xMin: Number(elements.assistantGraphXMin?.value), xMax: Number(elements.assistantGraphXMax?.value), yMin: Number(elements.assistantGraphYMin?.value), yMax: Number(elements.assistantGraphYMax?.value) };
+        if (graph && (!(graph.xMax > graph.xMin) || !(graph.yMax > graph.yMin))) throw new Error("Graph ranges must have maximum values greater than minimum values.");
+        return { title: text(elements.assistantTitle?.value) || "Equation", subtitle: text(elements.assistantSubtitle?.value), ...parsed, equation: text(elements.assistantDisplayEquation?.value) || parsed.equation, ...(graph ? { graph } : {}), notes: String(elements.assistantNotes?.value || "").split(/\r?\n/).map(text).filter(Boolean) };
+    };
+
+    let assistantPreviewMode = "empty";
+    const setAssistantPreviewMode = (mode) => {
+        assistantPreviewMode = mode;
+        elements.assistantViewMarkdownButton?.classList.toggle("is-active", mode === "markdown");
+        elements.assistantPreviewButton?.classList.toggle("is-active", mode === "card");
+    };
+    const assistantMarkdown = () => `\`\`\`equation-card\n${JSON.stringify(readAssistantConfig(), null, 2)}\n\`\`\``;
+    const renderAssistantMarkdown = () => {
+        const markdown = assistantMarkdown();
+        elements.assistantPreview?.replaceChildren();
+        const preview = document.createElement("pre");
+        preview.className = "admin-markdown-source-preview assistant-markdown-preview";
+        preview.textContent = markdown;
+        elements.assistantPreview?.appendChild(preview);
+        setAssistantPreviewMode("markdown");
+        if (elements.assistantStatus) elements.assistantStatus.textContent = "Markdown snippet ready.";
+        return markdown;
+    };
+    const renderAssistantPreview = () => {
+        const markdown = assistantMarkdown();
+        elements.assistantPreview?.replaceChildren();
+        const preview = document.createElement("article");
+        preview.className = "notes-view admin-rendered-preview";
+        preview.innerHTML = renderMarkdownPreview(markdown, { basePath: "markdowns/aerodynamics.md" });
+        elements.assistantPreview?.appendChild(preview);
+        hydrateMarkdownPreview(preview);
+        setAssistantPreviewMode("card");
+        if (elements.assistantStatus) elements.assistantStatus.textContent = "Card preview ready.";
+        return markdown;
+    };
+    document.querySelectorAll("[data-latex-insert]").forEach((button) => button.addEventListener("click", () => {
+        const input = elements.assistantDefinition;
+        if (!input) return;
+        const insertion = button.dataset.latexInsert || "";
+        const start = input.selectionStart ?? input.value.length;
+        const end = input.selectionEnd ?? input.value.length;
+        input.value = `${input.value.slice(0, start)}${insertion}${input.value.slice(end)}`;
+        input.focus();
+        input.setSelectionRange(start + insertion.length, start + insertion.length);
+        assistantDefinitionEditor?.render();
+    }));
+    elements.assistantPreviewButton?.addEventListener("click", () => {
+        try { renderAssistantPreview(); } catch (error) { if (elements.assistantStatus) elements.assistantStatus.textContent = error.message; }
+    });
+    elements.assistantViewMarkdownButton?.addEventListener("click", () => {
+        try { renderAssistantMarkdown(); } catch (error) { if (elements.assistantStatus) elements.assistantStatus.textContent = error.message; }
+    });
+    const resetAssistantDefaults = () => {
+        elements.assistantForm?.reset();
+        if (elements.assistantDisplayEquation) elements.assistantDisplayEquation.value = defaultAssistantDisplayEquation;
+        if (elements.assistantDefinition) elements.assistantDefinition.value = defaultAssistantDefinition;
+        if (elements.assistantGraphXVariable) elements.assistantGraphXVariable.value = "X";
+        if (elements.assistantGraphXLabel) elements.assistantGraphXLabel.value = "X (alpha)";
+        if (elements.assistantGraphYLabel) elements.assistantGraphYLabel.value = "F (Omega)";
+        if (elements.assistantGraphXMin) elements.assistantGraphXMin.value = "0";
+        if (elements.assistantGraphXMax) elements.assistantGraphXMax.value = "10";
+        if (elements.assistantGraphYMin) elements.assistantGraphYMin.value = "0";
+        if (elements.assistantGraphYMax) elements.assistantGraphYMax.value = "260";
+        assistantDefinitionEditor?.render();
+    };
+    elements.assistantResetButton?.addEventListener("click", () => { resetAssistantDefaults(); if (elements.assistantStatus) elements.assistantStatus.textContent = "Assistant reset."; });
+    elements.exportCard?.addEventListener("click", () => elements.exportButton?.click());
+    if (elements.assistantDefinition && !elements.assistantDefinition.value.trim()) resetAssistantDefaults();
 
     const renderChapterPreview = async () => {
         const subject = getActiveSubject();
@@ -826,7 +1481,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         hideAdminApp();
     }
 
-    elements.lockForm.addEventListener("submit", async (event) => {
+    elements.lockForm?.addEventListener("submit", async (event) => {
         event.preventDefault();
         try {
             const enteredPassword = textValue(elements.passwordInput.value);
@@ -847,7 +1502,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 
-    elements.subjectAddToggle.addEventListener("click", () => {
+    elements.subjectAddToggle?.addEventListener("click", () => {
         if (elements.subjectCreateForm?.hidden !== false) {
             openSubjectCreate();
             setStatus("Enter a subject name and create the branch.");
@@ -855,11 +1510,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
         elements.subjectCreateName?.focus();
     });
-    elements.subjectCreateCancel.addEventListener("click", () => {
+    elements.subjectCreateCancel?.addEventListener("click", () => {
         closeSubjectCreate();
         setStatus("Subject creation cancelled.");
     });
-    elements.subjectCreateForm.addEventListener("submit", async (event) => {
+    elements.subjectCreateForm?.addEventListener("submit", async (event) => {
         event.preventDefault();
         const subjectName = textValue(elements.subjectCreateName.value);
         if (!subjectName) {
@@ -871,7 +1526,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         closeSubjectCreate();
         setStatus(`Created subject “${subjectRecord.name}”.`);
     });
-    elements.subjectSaveButton.addEventListener("click", () => {
+    elements.subjectSaveButton?.addEventListener("click", () => {
         const subject = getActiveSubject();
         if (!subject) {
             return;
@@ -885,7 +1540,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         commitSubjects(nextSubjects, subject.id, state.activeChapterTitle);
         setStatus(`Renamed subject to “${nextName}”.`);
     });
-    elements.subjectDeleteButton.addEventListener("click", () => {
+    elements.subjectDeleteButton?.addEventListener("click", () => {
         const subject = getActiveSubject();
         if (!subject || state.subjects.length <= 1) {
             return;
@@ -894,14 +1549,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         commitSubjects(nextSubjects, nextSubjects[0]?.id || "", "");
         setStatus(`Deleted subject “${subject.name}”.`);
     });
-    elements.chapterPreviewButton.addEventListener("click", async () => {
+    elements.chapterPreviewButton?.addEventListener("click", async () => {
         try {
             await renderChapterPreview();
         } catch (error) {
             renderPreviewError(elements.chapterPreviewStatus, elements.chapterPreviewContent, error);
         }
     });
-    elements.chapterImportForm.addEventListener("submit", async (event) => {
+    elements.chapterImportForm?.addEventListener("submit", async (event) => {
         event.preventDefault();
         try {
             const subject = getActiveSubject();
@@ -927,7 +1582,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             renderPreviewError(elements.chapterPreviewStatus, elements.chapterPreviewContent, error);
         }
     });
-    elements.chapterSaveButton.addEventListener("click", () => {
+    elements.chapterSaveButton?.addEventListener("click", () => {
         const chapter = getActiveChapter();
         if (!chapter) {
             return;
@@ -941,16 +1596,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         commitSubjects(nextSubjects, state.activeSubjectId, nextName);
         setStatus(`Renamed chapter to “${nextName}”.`);
     });
-    elements.chapterDeleteButton.addEventListener("click", () => {
+    elements.chapterDeleteButton?.addEventListener("click", () => {
         const chapter = getActiveChapter();
-        if (!chapter) {
+        const subject = getActiveSubject();
+        if (!chapter || !subject || subject.chapters.length <= 1) {
+            setStatus("A subject must keep at least one chapter.");
             return;
         }
+        if (!window.confirm(`Delete chapter \"${chapter.title}\"?`)) return;
         const nextSubjects = state.subjects.map((subject) => subject.id === state.activeSubjectId ? { ...subject, chapters: subject.chapters.filter((entry) => entry.title !== chapter.title), updatedAt: now() } : subject);
         commitSubjects(nextSubjects, state.activeSubjectId, "");
         setStatus(`Deleted chapter “${chapter.title}”.`);
     });
-    elements.exportButton.addEventListener("click", async () => {
+    elements.exportButton?.addEventListener("click", async () => {
         const payload = serializeSubjects(state.subjects);
         const blob = new Blob([payload], { type: "application/json" });
         const link = document.createElement("a");
@@ -963,8 +1621,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         const saveResult = await persistLibraryToServer(state.subjects);
         setStatus(saveResult?.saved ? "Downloaded subjects.json and saved the repo-backed library." : "Downloaded subjects.json. Auto-save to the repo was not available.");
     });
-    elements.chapterPrev.addEventListener("click", () => moveChapterSelection(-1));
-    elements.chapterNext.addEventListener("click", () => moveChapterSelection(1));
+    elements.chapterPrev?.addEventListener("click", () => moveChapterSelection(-1));
+    elements.chapterNext?.addEventListener("click", () => moveChapterSelection(1));
 
     await loadState();
     renderAll();

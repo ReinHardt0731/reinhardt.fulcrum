@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PrepCore Learn</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=study-accent-3">
         <link rel="stylesheet" href="vendor/katex/katex.min.css">
         <script>
         // CDN-first KaTeX loader with local fallback
@@ -74,11 +74,11 @@
             </section>
 
             <div class="mode-buttons mode-switch-row" role="tablist" aria-label="Study mode selector">
-                <button class="mode-button" type="button" data-mode="quiz">Quiz</button>
-                <button class="mode-button is-active" type="button" data-mode="learn">Learn mode</button>
-                <button class="mode-button" type="button" data-mode="flashcards">Flashcards</button>
-                <button class="mode-button" type="button" data-mode="exam">Exam</button>
-                <button class="mode-button" type="button" data-mode="note">Notes</button>
+                <button class="mode-button" type="button" data-mode="quiz"><svg class="study-mode-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h10l4 4v14H5z"></path><path d="M14 3v5h5M8 12h7M8 16h5"></path></svg><span>Quiz</span></button>
+                <button class="mode-button is-active" type="button" data-mode="learn"><svg class="study-mode-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H12v17h5.5A2.5 2.5 0 0 1 20 22z"></path></svg><span>Learn mode</span></button>
+                <button class="mode-button" type="button" data-mode="flashcards"><svg class="study-mode-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 5 12 2-2 12-12-2z"></path><path d="m5 8-2 11 12 2M9 10l6 1M8 14l5 1"></path></svg><span>Flashcards</span></button>
+                <button class="mode-button" type="button" data-mode="exam"><svg class="study-mode-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v17H7zM9 2h6v4H9z"></path><path d="m9 11 1.5 1.5L13 10M9 16h6"></path></svg><span>Exam</span></button>
+                <button class="mode-button" type="button" data-mode="note"><svg class="study-mode-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5M9 12h6M9 16h6"></path></svg><span>Notes</span></button>
             </div>
 
             <section class="panel quiz-panel" aria-live="polite">

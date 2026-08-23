@@ -1542,6 +1542,15 @@ export async function storageSelectState() {
 
 // KaTeX math rendering helper
 export function renderMath(container = document.body, attempts = 6) {
+    const showMathFallback = () => {
+        container.querySelectorAll?.("[data-equation-card]").forEach((card) => {
+            if (card.querySelector(".equation-card-math-status")) return;
+            const status = document.createElement("p");
+            status.className = "equation-card-math-status";
+            status.textContent = "Math rendering is unavailable. The equation data and interactive controls remain available.";
+            card.prepend(status);
+        });
+    };
     try {
         if (!window.renderMathInElement) {
             // KaTeX auto-render not loaded yet — queue container and start poller
@@ -1565,6 +1574,7 @@ export function renderMath(container = document.body, attempts = 6) {
                         if (attempts > 0) {
                             setTimeout(poll, 150);
                         } else {
+                            showMathFallback();
                             globalThis.__katex_polling = false;
                         }
                     };
@@ -1850,6 +1860,12 @@ function equationText(value) {
         .replace(/'/g, "&#39;");
 }
 
+function graphLabelText(value, fallback) {
+    return String(value ?? fallback)
+        .replace(/\\([A-Za-z]+)/g, "$1")
+        .replace(/[{}]/g, "");
+}
+
 function createEquationExpression(expression, constants = {}) {
     const source = String(expression || "").trim();
     const tokenPattern = /\s*(?:(\d+(?:\.\d+)?)|([A-Za-z_]\w*)|([()+\-*/^,]))\s*/y;
@@ -2039,7 +2055,8 @@ function normalizeInteractiveEquationCard(config) {
         const max = Number(entry.max);
         const step = Number(entry.step);
         if (interactive && (!(max > min) || !Number.isFinite(step) || step <= 0)) throw new Error(`Variable ${symbol} needs valid min, max, and step values.`);
-        return { ...entry, symbol, value: interactive ? Math.min(max, Math.max(min, value)) : value, min, max, step, interactive, displaySymbol: text(entry.displaySymbol) || symbol };
+        const displaySymbolHidden = entry.displaySymbolHidden === true;
+        return { ...entry, symbol, value: interactive ? Math.min(max, Math.max(min, value)) : value, min, max, step, interactive, displaySymbolHidden, displaySymbol: displaySymbolHidden ? "" : text(entry.displaySymbol) || symbol };
     });
     const derived = (Array.isArray(config.derived) ? config.derived : []).map((item, index) => {
         const entry = item && typeof item === "object" ? item : {};
@@ -2047,7 +2064,8 @@ function normalizeInteractiveEquationCard(config) {
         const hasExpression = Boolean(text(entry.expression));
         const hasSolver = entry.solver && typeof entry.solver === "object";
         if (!/^[A-Za-z_]\w*$/.test(symbol) || (!hasExpression && !hasSolver)) throw new Error(`Derived value ${index + 1} is invalid.`);
-        return { ...entry, symbol, expression: text(entry.expression), solver: hasSolver ? entry.solver : null, displaySymbol: text(entry.displaySymbol) || symbol };
+        const displaySymbolHidden = entry.displaySymbolHidden === true;
+        return { ...entry, symbol, expression: text(entry.expression), solver: hasSolver ? entry.solver : null, displaySymbolHidden, displaySymbol: displaySymbolHidden ? "" : text(entry.displaySymbol) || symbol };
     });
     const symbols = new Set();
     [...variables, ...derived].forEach((item) => {
@@ -2192,12 +2210,18 @@ function renderInteractiveEquationGraph(graph, values) {
     const xMin = Number(graph.xMin);
     const xMax = Number(graph.xMax);
     if (!Number.isFinite(xMin) || !Number.isFinite(xMax) || !(xMax > xMin)) return `<p class="equation-card-error">Graph error: xMax must be greater than xMin.</p>`;
+    const graphValues = { ...(values || {}) };
+    const xVariable = text(graph.xVariable);
     let evaluate;
     try {
-        evaluate = createInteractiveEquationExpression(graph.expression, values);
+        evaluate = createInteractiveEquationExpression(graph.expression, graphValues);
     } catch (error) {
         return `<p class="equation-card-error">Graph error: ${equationText(error.message)}</p>`;
     }
+    const evaluateAt = (x) => {
+        if (xVariable) graphValues[xVariable] = x;
+        return evaluate(x);
+    };
     const width = 640;
     const height = 420;
     const padding = { left: 62, right: 22, top: 22, bottom: 60 };
@@ -2205,7 +2229,7 @@ function renderInteractiveEquationGraph(graph, values) {
     for (let sample = 0; sample <= 160; sample += 1) {
         const x = xMin + ((xMax - xMin) * sample) / 160;
         try {
-            const y = evaluate(x);
+            const y = evaluateAt(x);
             if (Number.isFinite(y)) points.push({ x, y });
         } catch (_) {}
     }
@@ -2226,11 +2250,11 @@ function renderInteractiveEquationGraph(graph, values) {
     const yTicks = getEquationTicks(yMin, yMax, 8);
     const xGrid = xTicks.map((tick) => `<line class="equation-graph-grid" x1="${toSvgX(tick)}" y1="${padding.top}" x2="${toSvgX(tick)}" y2="${height - padding.bottom}"></line><text class="equation-graph-tick-label" x="${toSvgX(tick)}" y="${height - padding.bottom + 20}" text-anchor="middle">${formatEquationTick(tick, xStep)}</text>`).join("");
     const yGrid = yTicks.map((tick) => `<line class="equation-graph-grid" x1="${padding.left}" y1="${toSvgY(tick)}" x2="${width - padding.right}" y2="${toSvgY(tick)}"></line><text class="equation-graph-tick-label" x="${padding.left - 10}" y="${toSvgY(tick) + 4}" text-anchor="end">${formatEquationTick(tick, yStep)}</text>`).join("");
-    const markerValue = Number(values[text(graph.xVariable)]);
+    const markerValue = Number(values[xVariable]);
     const marker = Number.isFinite(markerValue) && markerValue >= xMin && markerValue <= xMax
-        ? `<circle class="equation-graph-marker" cx="${toSvgX(markerValue)}" cy="${toSvgY(evaluate(markerValue))}" r="5"></circle>`
+        ? `<circle class="equation-graph-marker" cx="${toSvgX(markerValue)}" cy="${toSvgY(evaluateAt(markerValue))}" r="5"></circle>`
         : "";
-    return `<div class="equation-card-graph-wrap"><svg class="equation-card-graph" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Graph of ${equationText(graph.expression || "function")}">${xGrid}${yGrid}<line class="equation-graph-axis" x1="${padding.left}" y1="${toSvgY(clampY(0))}" x2="${width - padding.right}" y2="${toSvgY(clampY(0))}"></line><line class="equation-graph-axis" x1="${toSvgX(clampX(0))}" y1="${padding.top}" x2="${toSvgX(clampX(0))}" y2="${height - padding.bottom}"></line><path class="equation-graph-line" d="${path}"></path>${marker}<text class="equation-graph-label" x="${width / 2}" y="${height - 10}" text-anchor="middle">${equationText(graph.xLabel || "x")}</text><text class="equation-graph-label" x="16" y="${height / 2}" text-anchor="middle" transform="rotate(-90 16 ${height / 2})">${equationText(graph.yLabel || "y")}</text></svg></div>`;
+    return `<div class="equation-card-graph-wrap"><svg class="equation-card-graph" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Graph of ${equationText(graph.expression || "function")}">${xGrid}${yGrid}<line class="equation-graph-axis" x1="${padding.left}" y1="${toSvgY(clampY(0))}" x2="${width - padding.right}" y2="${toSvgY(clampY(0))}"></line><line class="equation-graph-axis" x1="${toSvgX(clampX(0))}" y1="${padding.top}" x2="${toSvgX(clampX(0))}" y2="${height - padding.bottom}"></line><path class="equation-graph-line" d="${path}"></path>${marker}<text class="equation-graph-label" x="${width / 2}" y="${height - 10}" text-anchor="middle">${equationText(graphLabelText(graph.xLabel, "x"))}</text><text class="equation-graph-label" x="16" y="${height / 2}" text-anchor="middle" transform="rotate(-90 16 ${height / 2})">${equationText(graphLabelText(graph.yLabel, "y"))}</text></svg></div>`;
 }
 
 function renderEquationGraph(graph, variables) {
@@ -2273,9 +2297,240 @@ function renderEquationGraph(graph, variables) {
         const y = padding.top + ratio * plotHeight;
         return `<line class="equation-graph-grid" x1="${x}" y1="${padding.top}" x2="${x}" y2="${height - padding.bottom}"></line><line class="equation-graph-grid" x1="${padding.left}" y1="${y}" x2="${width - padding.right}" y2="${y}"></line>`;
     }).join("");
-    const xLabel = equationText(graph.xLabel || "x");
-    const yLabel = equationText(graph.yLabel || "y");
+    const xLabel = equationText(graphLabelText(graph.xLabel, "x"));
+    const yLabel = equationText(graphLabelText(graph.yLabel, "y"));
     return `<div class="equation-card-graph-wrap"><svg class="equation-card-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="Graph of ${equationText(graph.expression || "function")}">${grid}<line class="equation-graph-axis" x1="${padding.left}" y1="${toSvgY(0)}" x2="${width - padding.right}" y2="${toSvgY(0)}"></line><line class="equation-graph-axis" x1="${toSvgX(0)}" y1="${padding.top}" x2="${toSvgX(0)}" y2="${height - padding.bottom}"></line><path class="equation-graph-line" d="${path}"></path><text class="equation-graph-label" x="${width / 2}" y="${height - 8}" text-anchor="middle">${xLabel}</text><text class="equation-graph-label" x="14" y="${height / 2}" text-anchor="middle" transform="rotate(-90 14 ${height / 2})">${yLabel}</text></svg></div>`;
+}
+
+const PARTICLE_CARD_CONFIGS = new Map();
+
+function normalizeParticleRange(config, key, defaults, label) {
+    const source = config?.[key] && typeof config[key] === "object" ? config[key] : {};
+    const min = Number(source.min ?? defaults.min);
+    const max = Number(source.max ?? defaults.max);
+    const step = Number(source.step ?? defaults.step);
+    const value = Number(source.value ?? defaults.value);
+    if (!(max > min) || !Number.isFinite(step) || step <= 0 || !Number.isFinite(value)) {
+        throw new Error(`${label} needs valid min, max, step, and value settings.`);
+    }
+    return {
+        value: Math.min(max, Math.max(min, value)),
+        min,
+        max,
+        step,
+        unit: text(source.unit) || defaults.unit
+    };
+}
+
+function normalizeParticleCard(config) {
+    if (!config || typeof config !== "object") throw new Error("A particle-card configuration is required.");
+    const particleCount = Number(config.particleCount ?? 36);
+    if (!Number.isInteger(particleCount) || particleCount < 8 || particleCount > 100) {
+        throw new Error("particleCount must be a whole number between 8 and 100.");
+    }
+    return {
+        title: text(config.title) || "Temperature, Volume, and Pressure",
+        subtitle: text(config.subtitle),
+        particleCount,
+        temperature: normalizeParticleRange(config, "temperature", { value: 300, min: 100, max: 900, step: 10, unit: "K" }, "Temperature"),
+        volume: normalizeParticleRange(config, "volume", { value: 1, min: 0.5, max: 2, step: 0.05, unit: "relative" }, "Volume"),
+        notes: Array.isArray(config.notes) ? config.notes.map(text).filter(Boolean) : []
+    };
+}
+
+function particleDisplayValue(value, range) {
+    const digits = range.step < 0.1 ? 2 : range.step < 1 ? 1 : 0;
+    return `${Number(value).toFixed(digits)}${range.unit ? ` ${range.unit}` : ""}`;
+}
+
+function renderParticleCard(config, cardIndex) {
+    const normalized = normalizeParticleCard(config);
+    PARTICLE_CARD_CONFIGS.set(String(cardIndex), normalized);
+    const temperature = normalized.temperature;
+    const volume = normalized.volume;
+    const notes = normalized.notes.map((note) => `<p>${equationText(note)}</p>`).join("");
+    return `<article class="particle-card" data-particle-card="${equationText(cardIndex)}"><header class="particle-card-header"><div><p class="section-label">Interactive Gas Model</p><h3>${equationText(normalized.title)}</h3>${normalized.subtitle ? `<p>${equationText(normalized.subtitle)}</p>` : ""}</div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for particle card" aria-pressed="false">Fullscreen</button></header><div class="particle-card-layout"><section class="particle-card-simulation" aria-label="Animated two-dimensional gas container"><canvas class="particle-card-canvas" data-particle-canvas role="img" aria-label="Moving particles inside a resizable control volume"></canvas><div class="particle-card-canvas-caption">Particle speed represents temperature. Container area represents relative volume.</div></section><section class="particle-card-controls"><div class="particle-card-control"><div class="particle-card-control-heading"><label for="particle-temperature-${cardIndex}">Temperature</label><output data-particle-temperature-output>${equationText(particleDisplayValue(temperature.value, temperature))}</output></div><input id="particle-temperature-${cardIndex}" class="particle-card-range" type="range" min="${temperature.min}" max="${temperature.max}" step="${temperature.step}" value="${temperature.value}" data-particle-input="temperature" aria-label="Adjust temperature"></div><div class="particle-card-control"><div class="particle-card-control-heading"><label for="particle-volume-${cardIndex}">Relative volume</label><output data-particle-volume-output>${equationText(particleDisplayValue(volume.value, volume))}</output></div><input id="particle-volume-${cardIndex}" class="particle-card-range" type="range" min="${volume.min}" max="${volume.max}" step="${volume.step}" value="${volume.value}" data-particle-input="volume" aria-label="Adjust relative volume"></div><div class="particle-card-metrics"><div class="particle-card-metric"><span>Reference pressure</span><strong data-particle-ideal-pressure>1.00</strong><small>P/P₀ from ideal-gas behavior</small></div><div class="particle-card-metric"><span>Collision pressure</span><strong data-particle-collision-pressure>1.00</strong><small>P/P₀ from wall impacts</small></div></div><p class="particle-card-status" data-particle-status aria-live="polite"></p></section></div>${notes ? `<section class="particle-card-notes"><p class="section-label">About this model</p>${notes}</section>` : ""}</article>`;
+}
+
+function hydrateParticleCards(container) {
+    container.querySelectorAll("[data-particle-card]").forEach((card) => {
+        const config = PARTICLE_CARD_CONFIGS.get(card.dataset.particleCard);
+        const canvas = card.querySelector("[data-particle-canvas]");
+        if (!config || !canvas) return;
+        const context = canvas.getContext("2d");
+        if (!context) return;
+        const values = { temperature: config.temperature.value, volume: config.volume.value };
+        const particles = [];
+        const pulses = { top: 0, right: 0, bottom: 0, left: 0 };
+        const state = { width: 0, height: 0, box: null, lastTime: 0, collisionPressure: 1, impulse: 0, sampleTime: 0, raf: 0, stopped: false };
+        const temperatureOutput = card.querySelector("[data-particle-temperature-output]");
+        const volumeOutput = card.querySelector("[data-particle-volume-output]");
+        const idealOutput = card.querySelector("[data-particle-ideal-pressure]");
+        const collisionOutput = card.querySelector("[data-particle-collision-pressure]");
+        const status = card.querySelector("[data-particle-status]");
+        const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+        const idealPressure = () => (values.temperature / config.temperature.value) * (config.volume.value / values.volume);
+        const resize = () => {
+            const rect = canvas.getBoundingClientRect();
+            const width = Math.max(280, rect.width || 640);
+            const height = Math.max(220, rect.height || 390);
+            const ratio = Math.min(2, Math.max(1, window.devicePixelRatio || 1));
+            canvas.width = Math.round(width * ratio);
+            canvas.height = Math.round(height * ratio);
+            state.width = width;
+            state.height = height;
+            context.setTransform(ratio, 0, 0, ratio, 0, 0);
+            particles.forEach((particle) => {
+                particle.x = clamp(particle.x, 20, width - 20);
+                particle.y = clamp(particle.y, 20, height - 20);
+            });
+        };
+        const updateBox = () => {
+            const scale = Math.sqrt(values.volume / config.volume.value);
+            const boxWidth = clamp(state.width * 0.78 * scale, 150, state.width - 28);
+            const boxHeight = clamp(state.height * 0.72 * scale, 120, state.height - 28);
+            state.box = { left: (state.width - boxWidth) / 2, top: (state.height - boxHeight) / 2, right: (state.width + boxWidth) / 2, bottom: (state.height + boxHeight) / 2 };
+            particles.forEach((particle) => {
+                particle.x = clamp(particle.x, state.box.left + particle.radius, state.box.right - particle.radius);
+                particle.y = clamp(particle.y, state.box.top + particle.radius, state.box.bottom - particle.radius);
+            });
+        };
+        const speedScale = () => Math.sqrt(values.temperature / config.temperature.value);
+        const resetParticleSpeed = () => {
+            const target = 64 * speedScale();
+            particles.forEach((particle) => {
+                const speed = Math.hypot(particle.vx, particle.vy) || 1;
+                particle.vx = (particle.vx / speed) * target;
+                particle.vy = (particle.vy / speed) * target;
+            });
+        };
+        const createParticles = () => {
+            for (let index = 0; index < config.particleCount; index += 1) {
+                const angle = (index * 2.399963) % (Math.PI * 2);
+                const speed = 64 * (0.78 + (index % 5) * 0.08);
+                particles.push({ x: 0, y: 0, vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed, radius: 5.5 });
+            }
+        };
+        const collideParticles = () => {
+            for (let first = 0; first < particles.length; first += 1) {
+                for (let second = first + 1; second < particles.length; second += 1) {
+                    const a = particles[first];
+                    const b = particles[second];
+                    const dx = b.x - a.x;
+                    const dy = b.y - a.y;
+                    const distance = Math.hypot(dx, dy);
+                    const minimum = a.radius + b.radius;
+                    if (!distance || distance >= minimum) continue;
+                    const nx = dx / distance;
+                    const ny = dy / distance;
+                    const overlap = (minimum - distance) / 2;
+                    a.x -= nx * overlap;
+                    a.y -= ny * overlap;
+                    b.x += nx * overlap;
+                    b.y += ny * overlap;
+                    const relative = (b.vx - a.vx) * nx + (b.vy - a.vy) * ny;
+                    if (relative > 0) continue;
+                    a.vx += relative * nx;
+                    a.vy += relative * ny;
+                    b.vx -= relative * nx;
+                    b.vy -= relative * ny;
+                }
+            }
+        };
+        const wallImpact = (wall, impulse) => {
+            state.impulse += impulse;
+            pulses[wall] = Math.min(1, pulses[wall] + 0.45);
+        };
+        const update = (delta) => {
+            if (!state.box) return;
+            particles.forEach((particle) => {
+                particle.x += particle.vx * delta;
+                particle.y += particle.vy * delta;
+                if (particle.x - particle.radius < state.box.left) { particle.x = state.box.left + particle.radius; particle.vx = Math.abs(particle.vx); wallImpact("left", Math.abs(particle.vx)); }
+                if (particle.x + particle.radius > state.box.right) { particle.x = state.box.right - particle.radius; particle.vx = -Math.abs(particle.vx); wallImpact("right", Math.abs(particle.vx)); }
+                if (particle.y - particle.radius < state.box.top) { particle.y = state.box.top + particle.radius; particle.vy = Math.abs(particle.vy); wallImpact("top", Math.abs(particle.vy)); }
+                if (particle.y + particle.radius > state.box.bottom) { particle.y = state.box.bottom - particle.radius; particle.vy = -Math.abs(particle.vy); wallImpact("bottom", Math.abs(particle.vy)); }
+            });
+            collideParticles();
+        };
+        const draw = () => {
+            if (!state.box) return;
+            context.clearRect(0, 0, state.width, state.height);
+            const pressure = clamp(state.collisionPressure, 0.5, 3);
+            const wallColor = `rgba(255, ${Math.round(210 - clamp(pressure - 1, 0, 1) * 120)}, 102, ${0.35 + clamp(pressure / 4, 0, 0.35)})`;
+            context.fillStyle = "rgba(3, 17, 29, 0.62)";
+            context.fillRect(state.box.left, state.box.top, state.box.right - state.box.left, state.box.bottom - state.box.top);
+            context.strokeStyle = wallColor;
+            context.lineWidth = 4 + clamp(pressure - 1, 0, 2) * 2;
+            context.strokeRect(state.box.left, state.box.top, state.box.right - state.box.left, state.box.bottom - state.box.top);
+            Object.entries(pulses).forEach(([wall, intensity]) => {
+                if (intensity <= 0.01) return;
+                context.fillStyle = `rgba(255, 209, 102, ${intensity * 0.45})`;
+                if (wall === "left") context.fillRect(state.box.left - 12, state.box.top, 12, state.box.bottom - state.box.top);
+                if (wall === "right") context.fillRect(state.box.right, state.box.top, 12, state.box.bottom - state.box.top);
+                if (wall === "top") context.fillRect(state.box.left, state.box.top - 12, state.box.right - state.box.left, 12);
+                if (wall === "bottom") context.fillRect(state.box.left, state.box.bottom, state.box.right - state.box.left, 12);
+                pulses[wall] *= 0.88;
+            });
+            particles.forEach((particle) => {
+                const speed = Math.hypot(particle.vx, particle.vy);
+                const color = `hsl(${clamp(205 - speed * 0.55, 20, 205)} 88% 67%)`;
+                context.beginPath();
+                context.fillStyle = color;
+                context.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+                context.fill();
+            });
+        };
+        const renderReadings = () => {
+            const ideal = idealPressure();
+            if (temperatureOutput) temperatureOutput.textContent = particleDisplayValue(values.temperature, config.temperature);
+            if (volumeOutput) volumeOutput.textContent = particleDisplayValue(values.volume, config.volume);
+            if (idealOutput) idealOutput.textContent = ideal.toFixed(2);
+            if (collisionOutput) collisionOutput.textContent = state.collisionPressure.toFixed(2);
+            if (status) status.textContent = "Higher pressure means more frequent or harder wall impacts.";
+        };
+        const frame = (timestamp) => {
+            if (state.stopped || !card.isConnected) {
+                state.stopped = true;
+                if (state.resizeObserver) state.resizeObserver.disconnect();
+                return;
+            }
+            const delta = Math.min(0.04, state.lastTime ? (timestamp - state.lastTime) / 1000 : 0.016);
+            state.lastTime = timestamp;
+            update(delta);
+            state.sampleTime += delta;
+            if (state.sampleTime >= 0.24) {
+                const perimeter = Math.max(1, 2 * ((state.box?.right || 1) - (state.box?.left || 0) + (state.box?.bottom || 1) - (state.box?.top || 0)));
+                const raw = (state.impulse / state.sampleTime / perimeter) / 0.08;
+                state.collisionPressure += (clamp(raw, 0.2, 4) - state.collisionPressure) * 0.35;
+                state.impulse = 0;
+                state.sampleTime = 0;
+                renderReadings();
+            }
+            draw();
+            state.raf = requestAnimationFrame(frame);
+        };
+        const inputHandlers = card.querySelectorAll("[data-particle-input]");
+        inputHandlers.forEach((input) => input.addEventListener("input", () => {
+            values[input.dataset.particleInput] = Number(input.value);
+            if (input.dataset.particleInput === "temperature") resetParticleSpeed();
+            if (input.dataset.particleInput === "volume") updateBox();
+            renderReadings();
+        }));
+        createParticles();
+        resize();
+        updateBox();
+        particles.forEach((particle, index) => {
+            const angle = (index * 2.399963) % (Math.PI * 2);
+            const radius = Math.min(state.box.right - state.box.left, state.box.bottom - state.box.top) * 0.42;
+            particle.x = (state.box.left + state.box.right) / 2 + Math.cos(angle) * radius * ((index % 4) / 4);
+            particle.y = (state.box.top + state.box.bottom) / 2 + Math.sin(angle) * radius * ((index % 5) / 5);
+        });
+        state.resizeObserver = typeof ResizeObserver === "function" ? new ResizeObserver(() => { resize(); updateBox(); }) : null;
+        state.resizeObserver?.observe(canvas);
+        renderReadings();
+        state.raf = requestAnimationFrame(frame);
+    });
 }
 
 function renderEquationCard(config, cardIndex) {
@@ -2284,9 +2539,10 @@ function renderEquationCard(config, cardIndex) {
     const variableRows = normalized.variables.map((variable) => {
         const symbol = equationText(variable.symbol);
         const label = equationText(variable.name || variable.symbol);
-        return `<div class="equation-card-variable" data-equation-variable="${symbol}"><div class="equation-card-variable-heading"><span><strong>$${equationText(variable.displaySymbol)}$</strong> ${label}</span><output data-equation-value="${symbol}">${equationText(equationDisplayValue(variable.value, variable.unit))}</output></div>${variable.interactive ? `<input class="equation-card-range" type="range" min="${variable.min}" max="${variable.max}" step="${variable.step}" value="${variable.value}" data-equation-input="${symbol}" aria-label="Adjust ${label}">` : `<p class="equation-card-fixed">Fixed value</p>`}</div>`;
+        const displayLabel = variable.displaySymbol ? `<strong>$${equationText(variable.displaySymbol)}$</strong> ` : "";
+        return `<div class="equation-card-variable" data-equation-variable="${symbol}"><div class="equation-card-variable-heading"><span>${displayLabel}${label}</span><output data-equation-value="${symbol}">${equationText(equationDisplayValue(variable.value, variable.unit))}</output></div>${variable.interactive ? `<input class="equation-card-range" type="range" min="${variable.min}" max="${variable.max}" step="${variable.step}" value="${variable.value}" data-equation-input="${symbol}" aria-label="Adjust ${label}">` : `<p class="equation-card-fixed">Fixed value</p>`}</div>`;
     }).join("");
-    const derivedRows = normalized.derived.map((item) => `<div class="equation-card-metric"><span>$${equationText(item.displaySymbol)}$</span><strong data-equation-derived="${equationText(item.symbol)}">--</strong><small>${equationText(item.name || item.symbol)}${item.unit ? ` · ${equationText(item.unit)}` : ""}</small></div>`).join("");
+    const derivedRows = normalized.derived.map((item) => `<div class="equation-card-metric"><span>${item.displaySymbol ? `$${equationText(item.displaySymbol)}$` : ""}</span><strong data-equation-derived="${equationText(item.symbol)}">--</strong><small>${equationText(item.name || item.symbol)}${item.unit ? ` · ${equationText(item.unit)}` : ""}</small></div>`).join("");
     const explanationItems = normalized.variables
         .filter((variable) => variable.description)
         .map((variable) => `<p><strong>${equationText(variable.name || variable.symbol)}:</strong> ${equationText(variable.description)}</p>`)
@@ -2317,7 +2573,7 @@ function syncEquationGraphSizing(card) {
 
 function hydrateFullscreenButtons(container) {
     container.querySelectorAll("[data-card-fullscreen]").forEach((button) => {
-        const card = button.closest("[data-equation-card], [data-model-card]");
+        const card = button.closest("[data-equation-card], [data-model-card], [data-particle-card]");
         if (!card) return;
         const status = card.querySelector("[data-fullscreen-status]");
         const updateButton = () => {
@@ -2677,6 +2933,14 @@ function simpleMarkdownToHtml(md, options = {}) {
                 }
                 continue;
             }
+            if (lang.toLowerCase() === "particle-card") {
+                try {
+                    out.push(renderParticleCard(JSON.parse(codeLines.join("\n")), index));
+                } catch (error) {
+                    out.push(`<article class="particle-card particle-card-error-state"><p class="particle-card-error">Particle card error: ${equationText(error.message || "Invalid JSON payload.")}</p></article>`);
+                }
+                continue;
+            }
             if (lang.toLowerCase() === "youtube-card") {
                 try {
                     out.push(renderYoutubeCard(JSON.parse(codeLines.join("\n"))));
@@ -2763,6 +3027,22 @@ function simpleMarkdownToHtml(md, options = {}) {
 
     const html = out.join("\n").replace(/(<li>.*?<\/li>)(\s*<li>.*?<\/li>)+/gs, (match) => `<ul>${match}</ul>`);
     return html;
+}
+
+export function renderMarkdownPreview(markdown, options = {}) {
+    return simpleMarkdownToHtml(markdown, options);
+}
+
+export function hydrateMarkdownPreview(container) {
+    if (!container) return;
+    hydrateEquationCards(container);
+    hydrateModelCards(container);
+    hydrateParticleCards(container);
+    try {
+        renderMath(container);
+    } catch (_) {
+        // Keep the preview usable when an optional math renderer is unavailable.
+    }
 }
 
 function noteHeadingLevel(node) {
@@ -2925,6 +3205,7 @@ function renderNoteStage(stage, subject, chapter, session) {
         });
         hydrateEquationCards(notesContainer);
         hydrateModelCards(notesContainer);
+        hydrateParticleCards(notesContainer);
         enhanceNotesDocument(notesContainer, chapter?.title || "");
         try {
             renderMath(notesContainer);
@@ -2942,16 +3223,7 @@ function renderNoteStage(stage, subject, chapter, session) {
         }
 
         if (chapter && chapter.title) {
-            const heading = activateNotesChapter(notesContainer, chapter.title, true);
-            if (!heading) {
-                const notice = document.createElement("div");
-                notice.className = "empty-state compact";
-                notice.append(
-                    Object.assign(document.createElement("h4"), { textContent: "Chapter heading not found." }),
-                    Object.assign(document.createElement("p"), { textContent: "The notes file was loaded, but the current chapter heading was not found in the markdown." })
-                );
-                notesWorkspace.insertBefore(notice, notesContainer);
-            }
+            activateNotesChapter(notesContainer, chapter.title, true);
         }
     }).catch(() => {
         notesContainer.replaceChildren();
@@ -4671,6 +4943,7 @@ export async function initHomePage() {
         continuationRemaining: document.getElementById("home-continuation-remaining"),
         continuationProgressFill: document.getElementById("home-continuation-progress-fill"),
         continuationAction: document.getElementById("home-continuation-action"),
+        continuationNotes: document.getElementById("home-continuation-notes"),
         continuationBrowse: document.getElementById("home-continuation-browse"),
         continuationCard: document.querySelector(".home-continuation-card"),
         continuationContent: document.getElementById("home-continuation-content")
@@ -4872,6 +5145,9 @@ export async function initHomePage() {
         if (elements.continuationAction) {
             elements.continuationAction.onclick = null;
         }
+        if (elements.continuationNotes) {
+            elements.continuationNotes.onclick = null;
+        }
         if (elements.continuationBrowse) {
             elements.continuationBrowse.onclick = () => {
                 if (continuation.subject) {
@@ -4892,6 +5168,9 @@ export async function initHomePage() {
             if (elements.continuationProgress) elements.continuationProgress.hidden = true;
             if (elements.continuationAction) {
                 elements.continuationAction.hidden = true;
+            }
+            if (elements.continuationNotes) {
+                elements.continuationNotes.hidden = true;
             }
             return;
         }
@@ -4926,6 +5205,13 @@ export async function initHomePage() {
             elements.continuationAction.onclick = () => {
                 syncSelection(continuation.subject.id, continuation.chapter.title, "quiz");
                 window.location.href = pageMap.quiz;
+            };
+        }
+        if (elements.continuationNotes) {
+            elements.continuationNotes.hidden = false;
+            elements.continuationNotes.onclick = () => {
+                syncSelection(continuation.subject.id, continuation.chapter.title, "note");
+                window.location.href = pageMap.note;
             };
         }
     };

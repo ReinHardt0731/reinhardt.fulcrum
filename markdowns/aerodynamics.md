@@ -1,8 +1,51 @@
-# Image Rendering Sample
+# Fundamentals of Aerodynamics
 
-This sample verifies that Notes Mode can render a picture from the repository assets folder.
+Aerodynamics is the study of motion of air and how thermodynamic properties changes as an object is being subjected to a moving air. Air is made up of
 
-## Repository Asset
+![Air](../asset/Air_composition.PNG)
+
+
+## Properties of Air
+Pressure Temperature and Density
+
+The particle card shows how temperature, relative volume, and pressure relate in a simplified ideal-gas model. Particle speed follows the square root of temperature, while wall pulses and wall color show measured collision pressure.
+
+```particle-card
+{
+  "title": "Temperature, Volume, and Pressure",
+  "subtitle": "Adjust temperature and relative volume to observe particle motion and wall pressure.",
+  "particleCount": 36,
+  "temperature": {
+    "value": 300,
+    "min": 100,
+    "max": 900,
+    "step": 10,
+    "unit": "K"
+  },
+  "volume": {
+    "value": 1,
+    "min": 0.5,
+    "max": 2,
+    "step": 0.05,
+    "unit": "relative"
+  },
+  "notes": [
+    "Higher temperature increases average particle speed.",
+    "At constant temperature, reducing volume increases pressure."
+  ]
+}
+```
+
+ASsumptions when dealing with aerodynamic problems
+### Incompressible
+### Inviscid
+### Adiabatic 
+### Isentropic
+
+
+
+
+## Atmosphere
 
 ![Repository capture](../asset/Capture.PNG)
 
@@ -11,7 +54,7 @@ The image path above is relative to this Markdown file:
 - Markdown file: `markdowns/image-rendering-sample.md`
 - Image asset: `asset/Capture.PNG`
 
-## Image Notes
+## Conservation of Mass, Energy and Momentum
 
 Images are rendered responsively and include alternative text for accessibility.
 
@@ -123,6 +166,8 @@ The card below demonstrates how Markdown can describe an equation, slider inputs
   ]
 }
 ```
+
+ 
 ```youtube-card
 {
   "url": "https://www.youtube.com/watch?v=E3i_XHlVCeU&t=1s",
@@ -131,3 +176,42 @@ The card below demonstrates how Markdown can describe an equation, slider inputs
   "end": 180
 }
 ```
+## Mach Number and Speed of Sound
+## Compressibility Effect on Stagnation
+## Viscous Effects
+### Flat Plate Theory
+## Coeffecient of Pressure
+### Cp Distribution on Subsonic to Supersonic
+### Cp Distribution During Stall
+## Critical Pressure and Velocity
+## Lift Due to Circulation
+
+SUMMARY:
+
+
+
+
+# Applied Aerodynamics
+
+### Steady Aircraft Assumption
+### Drag  Polar Equation
+
+## Thrust and Minimum Thrust Required
+## Power and Minimum Power Required
+## Excess Power and Rate of Climb
+## Time to Climb
+## Glide Performance
+## Service Ceiling and Absolute Ceiling
+## Range And Endurance Propeller Driven Aircraft
+## Range And Endurance of Jet Aircraft
+## Load Factor
+
+# High Speed Aerodynamics 
+
+### Assumptions
+
+## Normal Shock Wave
+## Oblique Shock Wave
+## Expansion Fan
+## Design Implications
+

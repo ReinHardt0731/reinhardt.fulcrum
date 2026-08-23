@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrepCore Chapter Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-polish.css">
+</head>
+<body class="admin-page admin-chapters-page" data-admin-page="chapters">
+    <main class="admin-shell">
+        <section class="panel admin-lock-panel" id="admin-lock-panel">
+            <p class="eyebrow">Hidden admin page</p>
+            <h1>Unlock quiz library</h1>
+            <p class="hero-meta">This page is protected by a browser-side password gate for local authoring.</p>
+            <form id="admin-lock-form" class="admin-lock-form">
+                <label><span class="section-label">Password</span><input id="admin-password" type="password" autocomplete="current-password" required></label>
+                <div class="admin-actions"><button class="primary-button" type="submit">Unlock admin tools</button><a class="ghost-button" href="index.html">Back to quiz site</a></div>
+                <p class="status-line" id="admin-lock-status" aria-live="polite"></p>
+            </form>
+        </section>
+        <section class="admin-app admin-mode-shell" id="admin-app" hidden>
+            <aside class="drawer admin-drawer" id="subject-drawer" aria-label="Admin subjects">
+                <section class="panel admin-sidebar-card" id="admin-sidebar-card">
+                    <div class="admin-sidebar-header"><div><p class="eyebrow">Admin subjects</p><h2>Library branches</h2></div><div class="admin-sidebar-actions"><button class="icon-button admin-sidebar-toggle" id="admin-sidebar-toggle" type="button" aria-expanded="true" aria-controls="admin-sidebar-body" aria-label="Collapse subject drawer">&lt;</button></div></div>
+                    <div class="admin-sidebar-body" id="admin-sidebar-body">
+                        <div class="subject-panel-divider"></div><div id="admin-subject-list" class="subject-list admin-subject-list"></div>
+                    </div>
+                    <div class="admin-subject-rail" id="admin-subject-rail" aria-label="Compact subject selector"></div>
+                </section>
+            </aside>
+            <main class="workspace admin-main">
+                <p class="status-line" id="admin-status" aria-live="polite"></p>
+                <nav class="mode-buttons mode-switch-row admin-page-nav" aria-label="Admin workspace navigation"><a class="mode-button" href="admin.html"><svg class="admin-nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5v-16Z"></path><path d="M4 5.5v16M8 7h8M8 11h8"></path></svg><span>Library</span></a><a class="mode-button is-active" href="chapters.html"><svg class="admin-nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v4H5zM5 11h14v4H5zM5 17h9"></path></svg><span>Chapters</span></a><a class="mode-button" href="notes.html"><svg class="admin-nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5M9 12h6M9 16h6"></path></svg><span>Notes</span></a></nav>
+                <header class="hero-panel mode-topbar admin-topbar">
+                    <div class="hero-copy"><p class="eyebrow">Chapter authoring</p><div class="mode-topbar-row"><h2>Chapter Manager</h2><div class="hero-actions mode-actions"><button class="ghost-button admin-topbar-export" id="admin-export-button" type="button">Export JSON</button><a class="icon-button" href="index.html" aria-label="Home">⌂</a></div></div><p class="hero-meta">Build and maintain the quiz chapters for the selected subject.</p></div>
+                    <div class="admin-context-grid" aria-label="Current chapter context"><span><small>Subject</small><strong id="admin-context-subject">None selected</strong></span><span><small>Chapter</small><strong id="admin-context-chapter">None selected</strong></span><span><small>Notes</small><strong id="admin-context-notes">No notes</strong></span><span><small>Save state</small><strong id="admin-context-save">Ready</strong></span></div>
+                </header>
+
+                <div class="admin-chapter-authoring-grid">
+                    <section class="panel admin-tool-panel admin-chapter-edit-panel" aria-labelledby="chapter-edit-title"><div class="mode-header"><div><p class="section-label">Selected chapter</p><h3 id="chapter-edit-title">Rename or remove</h3><p class="hero-meta">Choose a chapter above before editing its title or deleting it.</p></div><span class="admin-panel-marker">Edit</span></div><div id="admin-chapter-editor-shell" class="admin-chapter-editor-shell"><label class="admin-inline-field"><span class="section-label">Chapter name</span><input id="admin-chapter-name" type="text" placeholder="Select a chapter to edit" aria-describedby="chapter-edit-help"></label><p class="admin-field-help" id="chapter-edit-help">A subject must retain at least one valid chapter.</p><div class="admin-actions"><button class="primary-button" id="admin-chapter-save" type="button">Save rename</button><button class="danger-button ghost-button" id="admin-chapter-delete" type="button">Delete chapter</button></div></div></section>
+
+                    <section class="panel admin-tool-panel admin-chapter-import-panel" aria-labelledby="chapter-import-title"><div class="mode-header"><div><p class="section-label">Add chapter</p><h3 id="chapter-import-title">Attach a JSON quiz file</h3><p class="hero-meta">Name the chapter, choose its quiz file, and preview it before saving.</p></div><div class="summary-pill" id="chapter-upload-status">Waiting for a file</div></div><form id="chapter-import-form" class="admin-form"><label><span class="section-label">Chapter name</span><input id="chapter-name" type="text" placeholder="New chapter title"></label><label class="admin-file-field"><span class="section-label">Quiz JSON file</span><input id="chapter-quiz-file" type="file" accept=".json,application/json" required><small>Use a compatible quiz JSON file. Preview it before adding.</small></label><div class="admin-actions"><button class="ghost-button" id="chapter-preview-button" type="button">Preview file</button><button class="primary-button" type="submit">Add chapter</button></div></form><section class="panel admin-preview-panel" aria-labelledby="chapter-preview-title"><div class="mode-header"><div><p class="section-label">Preview</p><h4 id="chapter-preview-title">Chapter import details</h4></div></div><div id="chapter-preview-content" class="preview-content"><div class="empty-state compact"><h4>No file previewed yet</h4><p>Choose a JSON file to inspect the chapter before adding it.</p></div></div></section></section>
+                </div>
+            </main>
+        </section>
+    </main>
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
