@@ -127,10 +127,21 @@ $$ M = \frac{V}{a^2}$$
 
 ## Compressibility Effect on Stagnation
 $$c_pT_\infin + \frac{V^2_\infin}{2} =c_pT + \frac{V^2}{2} $$
-$$c_pT_\infin + \frac{V^2_\infin}{2} =c_pT + \frac{V^2}{2} $$
+$$\frac{P}{P_0}=\left[\frac{T}{T_0}\right]^\frac{\gamma}{\gamma-1} = \left[\frac{\rho}{\rho_0}\right]^{\gamma} $$
 ## Viscous Effects
-\m
-### Flat Plate Theory
+$$\mu = \nu\rho$$
+
+$$\mu_\infin = \mu_0 \left[\frac{T^{3/2}}{T_0 ^{3/2}}\right]\left[\frac{T_0 + S}{T + S}\right]$$
+
+## Flat Plate Theory
+### Laminar Flow
+$$C_f = \frac{1.328}{\sqrt{Re_L}} , $$
+$$\delta = \frac{5.2x}{\sqrt{Re_x}}$$
+
+### Turbulent Flow
+$$C_f = \frac{0.074}{{Re_L}^{0.2}}$$
+$$\delta = \frac{0.37x}{Re_x^{}0.2} $$
+
 ## Coeffecient of Pressure
 ### Cp Distribution on Subsonic to Supersonic
 ### Cp Distribution During Stall
