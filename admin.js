@@ -682,7 +682,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             return event.clientY < rect.top + rect.height / 2;
         });
         const insertPosition = before ? rows.indexOf(before) : rows.length;
-        const targetIndex = insertPosition < drag.sourceIndex ? insertPosition + 1 : insertPosition;
+        // The dragged row is already excluded, so the remaining-row insertion
+        // position is also the final array index in both directions.
+        const targetIndex = insertPosition;
         return { before, targetIndex: Math.max(0, Math.min(rows.length, targetIndex)) };
     };
 
@@ -709,7 +711,12 @@ document.addEventListener("DOMContentLoaded", async () => {
             return;
         }
         const subject = getActiveSubject();
-        const moved = subject?.id === drag.subjectId && reorderChapters(drag.subjectId, drag.sourceIndex, drag.targetIndex);
+        const validTarget = Number.isInteger(drag.targetIndex)
+            && drag.targetIndex >= 0
+            && drag.targetIndex < (subject?.chapters.length || 0);
+        const moved = subject?.id === drag.subjectId
+            && validTarget
+            && reorderChapters(drag.subjectId, drag.sourceIndex, drag.targetIndex);
         clearChapterDrag(moved ? "" : "Dropped without changing the chapter order.");
     };
 
