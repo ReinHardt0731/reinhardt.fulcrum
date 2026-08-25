@@ -78,7 +78,7 @@ Example: Problem Solving
 
 ## Atmosphere
 Atmosphere is Divided into Several Layers 
-![atmosphere,75](../asset/atmosphere.PNG)
+![atmosphere,75](../asset/atmosphere.png)
 
 ### Isentropic Layers
 
