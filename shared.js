@@ -6177,7 +6177,12 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
     }
 
     const card = document.createElement("article");
-    card.className = "question-card";
+    card.className = session.mode === "learn"
+        ? "question-card learn-question-card"
+        : "question-card";
+    if (session.mode === "learn" && session.reviewed && session.lastResult) {
+        card.classList.add(session.lastResult.correct ? "is-correct" : "is-wrong");
+    }
     const header = document.createElement("div");
     header.className = "question-card-header";
     header.append(
