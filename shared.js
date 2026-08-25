@@ -542,6 +542,48 @@ export function getDashboardContinuation(subjects = [], progress = getDashboardP
     return { type: "complete", status: "All Chapters Complete" };
 }
 
+export function getDashboardLearnContinuation(subjects = [], progress = getDashboardProgress(subjects)) {
+    const savedLearn = loadModeSession("learn");
+    if (savedLearn && !savedLearn.complete && text(savedLearn.subjectId) && text(savedLearn.chapterTitle)) {
+        const subject = subjects.find((entry) => text(entry.id) === text(savedLearn.subjectId));
+        const chapter = subject?.chapters?.find((entry) => text(entry.title) === text(savedLearn.chapterTitle));
+        if (subject && chapter) {
+            const questionCount = Array.isArray(savedLearn.questions) ? savedLearn.questions.length : 0;
+            const answeredCount = Array.isArray(savedLearn.answers)
+                ? savedLearn.answers.filter(Boolean).length
+                : Math.max(0, Number(savedLearn.index) || 0);
+            const safeAnsweredCount = Math.min(answeredCount, questionCount);
+            return {
+                type: "resume",
+                status: "Resume Learn",
+                subject,
+                chapter,
+                answeredCount: safeAnsweredCount,
+                questionCount,
+                remainingCount: Math.max(0, questionCount - safeAnsweredCount),
+                percent: questionCount ? Math.round((safeAnsweredCount / questionCount) * 100) : 0
+            };
+        }
+    }
+
+    const activeSubjectId = text(storageGet(ACTIVE_SUBJECT_KEY, ""));
+    const orderedProgress = [...progress.subjects].sort((left, right) => {
+        if (left.id === activeSubjectId) return -1;
+        if (right.id === activeSubjectId) return 1;
+        return 0;
+    });
+    for (const subjectProgress of orderedProgress) {
+        const subject = subjects.find((entry) => text(entry.id) === subjectProgress.id);
+        const completed = new Set(subjectProgress.completedChapterTitles || []);
+        const chapter = subject?.chapters?.find((entry) => !completed.has(text(entry.title)));
+        if (subject && chapter) {
+            return { type: "start", status: "Start Learn", subject, chapter };
+        }
+    }
+
+    return { type: "complete", status: "All Chapters Complete" };
+}
+
 const sessionGet = (key, fallback) => {
     try {
         const raw = sessionStorage.getItem(key);
@@ -6482,7 +6524,18 @@ export async function initHomePage() {
         continuationNotes: document.getElementById("home-continuation-notes"),
         continuationBrowse: document.getElementById("home-continuation-browse"),
         continuationCard: document.querySelector(".home-continuation-card"),
-        continuationContent: document.getElementById("home-continuation-content")
+        continuationContent: document.getElementById("home-continuation-content"),
+        learnContinuationContent: document.getElementById("home-continuation-learn-content"),
+        learnContinuationSubject: document.getElementById("home-learn-continuation-subject"),
+        learnContinuationStatus: document.getElementById("home-learn-continuation-status"),
+        learnContinuationChapter: document.getElementById("home-learn-continuation-chapter"),
+        learnContinuationDetail: document.getElementById("home-learn-continuation-detail"),
+        learnContinuationProgress: document.getElementById("home-learn-continuation-progress"),
+        learnContinuationProgressCount: document.getElementById("home-learn-continuation-progress-count"),
+        learnContinuationRemaining: document.getElementById("home-learn-continuation-remaining"),
+        learnContinuationProgressFill: document.getElementById("home-learn-continuation-progress-fill"),
+        learnContinuationAction: document.getElementById("home-learn-continuation-action"),
+        learnContinuationBrowse: document.getElementById("home-learn-continuation-browse")
     };
     const summaryElements = {
         subjects: document.getElementById("home-subject-count"),
@@ -6636,8 +6689,67 @@ export async function initHomePage() {
         }
     };
 
+    const renderLearnContinuation = (progress) => {
+        const continuation = getDashboardLearnContinuation(state.subjects, progress);
+        const learnElements = elements;
+        if (learnElements.learnContinuationContent) {
+            learnElements.learnContinuationContent.dataset.continuationState = continuation.type;
+        }
+        if (learnElements.learnContinuationStatus) {
+            learnElements.learnContinuationStatus.textContent = continuation.status;
+        }
+        if (learnElements.learnContinuationBrowse) {
+            learnElements.learnContinuationBrowse.onclick = () => {
+                if (continuation.subject) {
+                    syncSelection(continuation.subject.id, continuation.chapter?.title || "", "learn");
+                }
+                window.location.href = pageMap.learn;
+            };
+        }
+
+        if (continuation.type === "complete") {
+            if (learnElements.learnContinuationSubject) learnElements.learnContinuationSubject.textContent = "All chapters complete";
+            if (learnElements.learnContinuationChapter) learnElements.learnContinuationChapter.textContent = "Keep learning to maintain your progress.";
+            if (learnElements.learnContinuationDetail) learnElements.learnContinuationDetail.textContent = "Start a fresh Learn session whenever you want to revisit the material.";
+            if (learnElements.learnContinuationProgress) learnElements.learnContinuationProgress.hidden = true;
+            if (learnElements.learnContinuationAction) learnElements.learnContinuationAction.hidden = true;
+            return;
+        }
+
+        if (learnElements.learnContinuationSubject) learnElements.learnContinuationSubject.textContent = continuation.subject.name || "Selected subject";
+        if (learnElements.learnContinuationChapter) learnElements.learnContinuationChapter.textContent = continuation.chapter.title || "Next chapter";
+        if (learnElements.learnContinuationDetail) {
+            learnElements.learnContinuationDetail.textContent = continuation.type === "resume"
+                ? "Continue your spaced review where you left off."
+                : "Build understanding chapter by chapter in Learn mode.";
+        }
+        if (learnElements.learnContinuationProgress) {
+            learnElements.learnContinuationProgress.hidden = continuation.type !== "resume";
+        }
+        if (continuation.type === "resume") {
+            if (learnElements.learnContinuationProgressCount) {
+                learnElements.learnContinuationProgressCount.textContent = `${continuation.answeredCount} of ${continuation.questionCount} questions answered`;
+            }
+            if (learnElements.learnContinuationRemaining) {
+                learnElements.learnContinuationRemaining.textContent = `${continuation.remainingCount} remaining`;
+            }
+            if (learnElements.learnContinuationProgressFill) {
+                learnElements.learnContinuationProgressFill.style.width = `${continuation.percent}%`;
+            }
+        }
+        if (learnElements.learnContinuationAction) {
+            learnElements.learnContinuationAction.hidden = false;
+            learnElements.learnContinuationAction.textContent = continuation.type === "resume" ? "Resume Learn" : "Start Learn";
+            learnElements.learnContinuationAction.onclick = () => {
+                syncSelection(continuation.subject.id, continuation.chapter.title, "learn");
+                window.location.href = pageMap.learn;
+            };
+        }
+    };
+
     const renderDashboardProgress = () => {
         const progress = getDashboardProgress(state.subjects);
+        renderLearnContinuation(progress);
         const formatCount = (value) => Number(value || 0).toLocaleString();
         if (elements.progressOverviewValue) elements.progressOverviewValue.textContent = `${progress.percent}%`;
         if (elements.progressBarFill) elements.progressBarFill.style.width = `${progress.percent}%`;

@@ -975,6 +975,65 @@ body.drawer-collapsed .mobile-only {
     margin-top: 20px;
 }
 
+.home-continuation-divider {
+    margin: 22px 0 0;
+    border-top: 1px solid rgba(112, 160, 205, 0.22);
+}
+
+.home-continuation-mode-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.home-continuation-mode-heading .section-label {
+    margin: 0;
+    color: var(--tertiary);
+}
+
+.home-continuation-mode-mark {
+    display: inline-grid;
+    width: 28px;
+    height: 28px;
+    place-items: center;
+    border: 1px solid rgba(139, 247, 196, 0.4);
+    border-radius: 50%;
+    color: var(--tertiary);
+    font-size: 1.1rem;
+}
+
+.home-continuation-learn[data-continuation-state="resume"] {
+    border-radius: 16px;
+}
+
+.home-continuation-learn[data-continuation-state="resume"] .home-continuation-status {
+    border-color: rgba(139, 247, 196, 0.5);
+    background: rgba(139, 247, 196, 0.1);
+    color: var(--tertiary);
+}
+
+.home-continuation-learn-action {
+    min-height: 48px;
+    margin-top: 12px;
+    border-color: rgba(139, 247, 196, 0.56);
+    background: linear-gradient(135deg, var(--tertiary), #4dd6a0);
+    box-shadow: 0 10px 24px rgba(77, 214, 160, 0.18);
+    color: #081b1a;
+    font-size: 0.95rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.home-continuation-learn-action:hover,
+.home-continuation-learn-action:focus-visible {
+    border-color: #c1ffe1;
+    background: linear-gradient(135deg, #c1ffe1, var(--tertiary));
+    box-shadow: 0 14px 30px rgba(77, 214, 160, 0.28);
+    color: #081b1a;
+    transform: translateY(-2px);
+}
+
 .home-continuation-subject {
     margin: 0;
     color: var(--tertiary);
@@ -2750,9 +2809,10 @@ body.mode-page .workspace > .mode-topbar::before {
 
 .question-card {
     padding: 22px;
+    border-color: rgba(112, 160, 205, 0.34);
     box-shadow: 0 18px 44px rgba(0, 0, 0, 0.16);
     background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025)),
+        linear-gradient(145deg, rgba(20, 39, 64, 0.98), rgba(8, 23, 41, 0.98)),
         radial-gradient(circle at 100% 0%, var(--mode-accent-soft), transparent 30%);
 }
 
@@ -2765,19 +2825,19 @@ body.mode-page .workspace > .mode-topbar::before {
 
 .notes-view th,
 .notes-view td {
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(112, 160, 205, 0.28);
     padding: 0.85rem 0.9rem;
     text-align: left;
     vertical-align: top;
 }
 
 .notes-view th {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(20, 39, 64, 0.78);
     font-weight: 700;
 }
 
 .notes-view tr:nth-child(even) {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(20, 39, 64, 0.34);
 }
 
 .notes-view a {
@@ -2786,13 +2846,19 @@ body.mode-page .workspace > .mode-topbar::before {
 }
 
 .learn-question-card.is-correct {
-    border-color: rgba(94, 227, 160, 0.35);
-    background: rgba(94, 227, 160, 0.08);
+    border-color: rgba(94, 227, 160, 0.52);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(94, 227, 160, 0.28), transparent 30%),
+        linear-gradient(145deg, rgba(31, 105, 77, 0.12), rgba(8, 23, 41, 0.98)),
+        radial-gradient(circle at 100% 0%, var(--mode-accent-soft), transparent 30%);
 }
 
 .learn-question-card.is-wrong {
-    border-color: rgba(255, 124, 138, 0.35);
-    background: rgba(255, 124, 138, 0.08);
+    border-color: rgba(255, 124, 138, 0.52);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(255, 124, 138, 0.28), transparent 30%),
+        linear-gradient(145deg, rgba(116, 43, 59, 0.12), rgba(8, 23, 41, 0.98)),
+        radial-gradient(circle at 100% 0%, var(--mode-accent-soft), transparent 30%);
 }
 
 .learn-checkpoint-card {
@@ -2949,13 +3015,19 @@ body.mode-page .workspace > .mode-topbar::before {
 }
 
 .quiz-question-card.is-correct {
-    border-color: rgba(94, 227, 160, 0.35);
-    background: rgba(94, 227, 160, 0.08);
+    border-color: rgba(94, 227, 160, 0.52);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(94, 227, 160, 0.28), transparent 30%),
+        linear-gradient(145deg, rgba(31, 105, 77, 0.12), rgba(8, 23, 41, 0.98)),
+        radial-gradient(circle at 100% 0%, var(--mode-accent-soft), transparent 30%);
 }
 
 .quiz-question-card.is-wrong {
-    border-color: rgba(255, 124, 138, 0.35);
-    background: rgba(255, 124, 138, 0.08);
+    border-color: rgba(255, 124, 138, 0.52);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(255, 124, 138, 0.28), transparent 30%),
+        linear-gradient(145deg, rgba(116, 43, 59, 0.12), rgba(8, 23, 41, 0.98)),
+        radial-gradient(circle at 100% 0%, var(--mode-accent-soft), transparent 30%);
 }
 
 .quiz-status.is-correct {
@@ -3019,15 +3091,15 @@ body.mode-page .workspace > .mode-topbar::before {
     min-width: 0;
     box-sizing: border-box;
     margin: 0 0 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(112, 160, 205, 0.3);
     border-radius: 18px;
-    background: rgba(255, 255, 255, 0.025);
+    background: rgba(12, 29, 49, 0.9);
     overflow: hidden;
 }
 
 .notes-section[open] {
-    border-color: rgba(97, 195, 255, 0.2);
-    background: rgba(97, 195, 255, 0.035);
+    border-color: rgba(97, 195, 255, 0.48);
+    background: rgba(16, 42, 68, 0.94);
 }
 
 .notes-section-summary {
@@ -3102,9 +3174,9 @@ body.mode-page .workspace > .mode-topbar::before {
     max-width: 100%;
     overflow-x: auto;
     padding: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(112, 160, 205, 0.3);
     border-radius: 14px;
-    background: rgba(3, 17, 29, 0.7);
+    background: rgba(3, 17, 29, 0.94);
 }
 
 .notes-view blockquote {
@@ -3113,7 +3185,7 @@ body.mode-page .workspace > .mode-topbar::before {
     border-left: 3px solid var(--secondary);
     border-radius: 0 12px 12px 0;
     color: var(--muted);
-    background: rgba(255, 209, 102, 0.06);
+    background: rgba(90, 69, 27, 0.34);
 }
 
 .equation-card {
@@ -5822,13 +5894,13 @@ body.mode-page .workspace > .mode-topbar::before {
 }
 
 .choice-button.is-correct {
-    border-color: rgba(94, 227, 160, 0.38);
-    background: rgba(94, 227, 160, 0.12);
+    border-color: rgba(94, 227, 160, 0.56);
+    background: rgba(31, 105, 77, 0.14);
 }
 
 .choice-button.is-wrong {
-    border-color: rgba(255, 124, 138, 0.38);
-    background: rgba(255, 124, 138, 0.12);
+    border-color: rgba(255, 124, 138, 0.56);
+    background: rgba(116, 43, 59, 0.14);
 }
 
 .answer-form {
@@ -5852,13 +5924,17 @@ body.mode-page .workspace > .mode-topbar::before {
 }
 
 .feedback-card.is-correct {
-    border: 1px solid rgba(94, 227, 160, 0.34);
-    background: rgba(94, 227, 160, 0.14);
+    border: 1px solid rgba(94, 227, 160, 0.52);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(94, 227, 160, 0.24), transparent 34%),
+        rgba(31, 105, 77, 0.1);
 }
 
 .feedback-card.is-wrong {
-    border: 1px solid rgba(255, 124, 138, 0.34);
-    background: rgba(255, 124, 138, 0.14);
+    border: 1px solid rgba(255, 124, 138, 0.52);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(255, 124, 138, 0.24), transparent 34%),
+        rgba(116, 43, 59, 0.1);
 }
 
 .feedback-card p {
