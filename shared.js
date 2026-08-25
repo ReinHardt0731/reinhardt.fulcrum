@@ -14,6 +14,16 @@ const SUBJECTS_CACHE_KEY = "prepcore.web.subjectsCache.v1";
 const CHAPTER_CACHE_KEY = "prepcore.web.chapterCache.v1";
 const LEARN_SESSION_KEY = "prepcore.web.learnSession.v1";
 const FLASHCARDS_SESSION_KEY = "prepcore.web.flashcardsSession.v1";
+const LEARN_BATCH_SIZE = 10;
+const LEARN_AUTO_ADVANCE_MS = 1200;
+let learnAutoAdvanceTimer = null;
+
+function cancelLearnAutoAdvance() {
+    if (learnAutoAdvanceTimer !== null) {
+        clearTimeout(learnAutoAdvanceTimer);
+        learnAutoAdvanceTimer = null;
+    }
+}
 const MODE_SESSION_KEYS = {
     quiz: QUIZ_SESSION_KEY,
     learn: LEARN_SESSION_KEY,
@@ -206,6 +216,16 @@ export function recordStudyProgress(payload = {}) {
     if (payload.accuracy !== undefined) {
         entry.accuracy = Number(payload.accuracy) || 0;
     }
+    ["learningProgress", "masteryProgress", "firstAttemptCorrect", "mistakesReviewed", "checkpointNumber", "checkpointQuestionCount", "sessionQuestionCount"].forEach((key) => {
+        if (payload[key] !== undefined) {
+            entry[key] = Number(payload[key]) || 0;
+        }
+    });
+    ["sessionId", "checkpointId"].forEach((key) => {
+        if (payload[key] !== undefined) {
+            entry[key] = text(payload[key]);
+        }
+    });
     if (payload.questionCount !== undefined) {
         entry.questionCount = Math.max(0, Number(payload.questionCount) || 0);
     }
@@ -288,12 +308,16 @@ export function recordSessionProgress(session) {
         result = recordQuizSessionProgress(session);
     } else if (session.mode === "exam") {
         result = recordExamSessionProgress(session);
+    } else if (session.mode === "learn") {
+        result = recordLearnCheckpointProgress(session, true);
     }
 
     if (result) {
         session.progressRecorded = true;
         if (session.mode === "quiz") {
             saveQuizSession(session);
+        } else if (session.mode === "learn") {
+            saveModeSession(session);
         }
     }
 
@@ -334,7 +358,7 @@ export function getRecentModeSummary(mode, days = 7) {
     const entries = getProgressEntries().filter((entry) =>
         text(entry.mode) === text(mode)
         && text(entry.dateKey) >= cutoffKey
-        && text(entry.summaryType) === "session"
+        && (text(entry.summaryType) === "session" || (text(mode) === "learn" && text(entry.summaryType) === "learn-checkpoint"))
     );
     const attemptCount = entries.length;
     const attempted = entries.reduce((sum, entry) => sum + Math.max(0, Number(entry.attempted || 0)), 0);
@@ -354,7 +378,7 @@ export function getAssessmentsBySubject() {
     const entries = getProgressEntries();
     const bySubject = {};
 
-    entries.forEach((entry) => {
+    entries.filter((entry) => text(entry.mode) === "quiz" || text(entry.mode) === "exam").forEach((entry) => {
         const subjectName = text(entry.subjectName) || "Untitled";
         const chapterTitle = text(entry.chapterTitle) || "General";
 
@@ -1194,7 +1218,22 @@ export function createSession(subject, chapter, mode, options = {}) {
         assessmentModalShown: false,
         progressRecorded: false,
         reviewLabel: text(options.reviewLabel),
-        reviewSource: text(options.reviewSource)
+        reviewSource: text(options.reviewSource),
+        learnSessionId: text(options.learnSessionId) || `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+        learnBatchStart: 0,
+        learnBatchEnd: 0,
+        learnCheckpointNumber: 0,
+        learnCheckpointActive: false,
+        learnReviewQueue: [],
+        learnReviewPosition: 0,
+        learnReviewDrafts: {},
+        learnReviewResults: {},
+        learnReviewSubmittedIndexes: [],
+        learnReviewedMistakeIndexes: [],
+        learnFirstAttemptCorrectCount: 0,
+        learnMistakesReviewedCount: 0,
+        learnRecordedCheckpointIds: [],
+        learnSlideNext: false
     };
 }
 
@@ -1467,7 +1506,22 @@ function saveModeSession(session) {
         assessmentModalShown: Boolean(session.assessmentModalShown),
         progressRecorded: Boolean(session.progressRecorded),
         reviewLabel: text(session.reviewLabel),
-        reviewSource: text(session.reviewSource)
+        reviewSource: text(session.reviewSource),
+        learnSessionId: text(session.learnSessionId),
+        learnBatchStart: Number(session.learnBatchStart) || 0,
+        learnBatchEnd: Number(session.learnBatchEnd) || 0,
+        learnCheckpointNumber: Number(session.learnCheckpointNumber) || 0,
+        learnCheckpointActive: Boolean(session.learnCheckpointActive),
+        learnReviewQueue: Array.isArray(session.learnReviewQueue) ? session.learnReviewQueue : [],
+        learnReviewPosition: Number(session.learnReviewPosition) || 0,
+        learnReviewDrafts: session.learnReviewDrafts && typeof session.learnReviewDrafts === "object" ? session.learnReviewDrafts : {},
+        learnReviewResults: session.learnReviewResults && typeof session.learnReviewResults === "object" ? session.learnReviewResults : {},
+        learnReviewSubmittedIndexes: Array.isArray(session.learnReviewSubmittedIndexes) ? session.learnReviewSubmittedIndexes : [],
+        learnReviewedMistakeIndexes: Array.isArray(session.learnReviewedMistakeIndexes) ? session.learnReviewedMistakeIndexes : [],
+        learnFirstAttemptCorrectCount: Number(session.learnFirstAttemptCorrectCount) || 0,
+        learnMistakesReviewedCount: Number(session.learnMistakesReviewedCount) || 0,
+        learnRecordedCheckpointIds: Array.isArray(session.learnRecordedCheckpointIds) ? session.learnRecordedCheckpointIds : [],
+        learnSlideNext: Boolean(session.learnSlideNext)
     });
 }
 
@@ -1519,6 +1573,21 @@ function restoreModeSession(subject, chapter, mode) {
     session.progressRecorded = Boolean(saved.progressRecorded);
     session.reviewLabel = text(saved.reviewLabel);
     session.reviewSource = text(saved.reviewSource);
+    session.learnSessionId = text(saved.learnSessionId) || session.learnSessionId;
+    session.learnBatchStart = Math.max(0, Number(saved.learnBatchStart) || 0);
+    session.learnBatchEnd = Math.max(0, Number(saved.learnBatchEnd) || 0);
+    session.learnCheckpointNumber = Math.max(0, Number(saved.learnCheckpointNumber) || 0);
+    session.learnCheckpointActive = Boolean(saved.learnCheckpointActive);
+    session.learnReviewQueue = Array.isArray(saved.learnReviewQueue) ? saved.learnReviewQueue.map(Number).filter(Number.isInteger) : [];
+    session.learnReviewPosition = Math.max(0, Number(saved.learnReviewPosition) || 0);
+    session.learnReviewDrafts = saved.learnReviewDrafts && typeof saved.learnReviewDrafts === "object" ? saved.learnReviewDrafts : {};
+    session.learnReviewResults = saved.learnReviewResults && typeof saved.learnReviewResults === "object" ? saved.learnReviewResults : {};
+    session.learnReviewSubmittedIndexes = Array.isArray(saved.learnReviewSubmittedIndexes) ? saved.learnReviewSubmittedIndexes.map(Number).filter(Number.isInteger) : [];
+    session.learnReviewedMistakeIndexes = Array.isArray(saved.learnReviewedMistakeIndexes) ? saved.learnReviewedMistakeIndexes.map(Number).filter(Number.isInteger) : [];
+    session.learnFirstAttemptCorrectCount = Math.max(0, Number(saved.learnFirstAttemptCorrectCount) || 0);
+    session.learnMistakesReviewedCount = Math.max(0, Number(saved.learnMistakesReviewedCount) || 0);
+    session.learnRecordedCheckpointIds = Array.isArray(saved.learnRecordedCheckpointIds) ? saved.learnRecordedCheckpointIds.map(text) : [];
+    session.learnSlideNext = Boolean(saved.learnSlideNext);
 
     return session;
 }
@@ -2041,6 +2110,34 @@ function createInteractiveEquationExpression(expression, constants = {}) {
         const value = parseExpression();
         if (index !== tokens.length || !Number.isFinite(value)) throw new Error("Expression produced an invalid value.");
         return value;
+    };
+}
+
+export function getRecentLearnSummary(days = 7) {
+    const cutoff = new Date();
+    cutoff.setHours(0, 0, 0, 0);
+    cutoff.setDate(cutoff.getDate() - Math.max(0, days - 1));
+    const latestBySession = new Map();
+
+    getProgressEntries()
+        .filter((entry) => text(entry.mode) === "learn" && text(entry.dateKey) >= formatDateKey(cutoff))
+        .forEach((entry) => {
+            const key = text(entry.sessionId) || `${entry.subjectId}:${entry.chapterTitle}`;
+            const previous = latestBySession.get(key);
+            if (!previous || String(previous.timestamp) < String(entry.timestamp)) {
+                latestBySession.set(key, entry);
+            }
+        });
+
+    const entries = [...latestBySession.values()];
+    return {
+        mode: "learn",
+        attemptCount: entries.length,
+        entries,
+        learningProgress: entries.length ? Math.max(...entries.map((entry) => Number(entry.learningProgress) || 0)) : 0,
+        attempted: entries.reduce((sum, entry) => sum + Math.max(0, Number(entry.attempted) || 0), 0),
+        questionCount: entries.reduce((sum, entry) => sum + Math.max(0, Number(entry.questionCount) || 0), 0),
+        days: Math.max(0, Number(days) || 7)
     };
 }
 
@@ -2949,6 +3046,64 @@ function hydrateFullscreenButtons(container) {
         document.addEventListener("fullscreenchange", updateButton);
         updateButton();
     });
+}
+
+export function summarizeLearnProgress(session) {
+    const total = Array.isArray(session?.questions) ? session.questions.length : 0;
+    const answered = Array.isArray(session?.answers) ? session.answers.filter(Boolean).length : 0;
+    const firstAttemptCorrect = Math.max(0, Number(session?.learnFirstAttemptCorrectCount) || 0);
+    const mistakesReviewed = Math.max(0, Number(session?.learnMistakesReviewedCount) || 0);
+    const masteryPoints = firstAttemptCorrect + (mistakesReviewed * 0.5);
+
+    return {
+        total,
+        answered,
+        firstAttemptCorrect,
+        mistakesReviewed,
+        masteryPoints,
+        learningProgress: total ? Math.round((masteryPoints / total) * 100) : 0,
+        remaining: Math.max(0, total - answered),
+        checkpointsCompleted: Math.max(0, Number(session?.learnCheckpointNumber) || 0)
+    };
+}
+
+export function recordLearnCheckpointProgress(session, completed = false) {
+    if (!session || session.mode !== "learn") {
+        return null;
+    }
+
+    const summary = summarizeLearnProgress(session);
+    const checkpointNumber = Math.max(1, Number(session.learnCheckpointNumber) || 1);
+    const summaryType = completed ? "learn-session" : "learn-checkpoint";
+    const checkpointId = `${session.learnSessionId}:${checkpointNumber}:${summaryType}`;
+    if (Array.isArray(session.learnRecordedCheckpointIds) && session.learnRecordedCheckpointIds.includes(checkpointId)) {
+        return null;
+    }
+
+    const result = recordStudyProgress({
+        mode: "learn",
+        subjectId: session.subjectId,
+        subjectName: session.subjectName,
+        chapterTitle: session.chapterTitle,
+        attempted: summary.answered,
+        correct: summary.firstAttemptCorrect,
+        questionCount: summary.total,
+        learningProgress: summary.learningProgress,
+        masteryProgress: summary.learningProgress,
+        firstAttemptCorrect: summary.firstAttemptCorrect,
+        mistakesReviewed: summary.mistakesReviewed,
+        checkpointNumber,
+        checkpointQuestionCount: Math.max(0, Number(session.learnCheckpointEnd) || summary.answered),
+        sessionQuestionCount: summary.total,
+        sessionId: session.learnSessionId,
+        checkpointId,
+        summaryType
+    });
+
+    session.learnRecordedCheckpointIds = Array.isArray(session.learnRecordedCheckpointIds)
+        ? [...session.learnRecordedCheckpointIds, checkpointId]
+        : [checkpointId];
+    return result;
 }
 
 function normalizeParticlePhysicsRange(source, defaults, label) {
@@ -4217,12 +4372,14 @@ function renderProgress(fill, session) {
         return;
     }
 
-    const current = session.mode === "quiz" || session.mode === "exam"
+    const current = session.mode === "quiz" || session.mode === "exam" || session.mode === "learn"
         ? countAnsweredQuestions(session)
         : session.index;
     const percent = session.complete ? 100 : Math.round((current / session.questions.length) * 100);
     fill.style.width = `${Math.max(0, Math.min(100, percent))}%`;
 }
+
+let feedbackExplanationSequence = 0;
 
 function createFeedbackCard(result, options = {}) {
     const wrapper = document.createElement("div");
@@ -4249,6 +4406,30 @@ function createFeedbackCard(result, options = {}) {
 
         const explanation = createFormattedTextElement(explanationText, "feedback-explanation");
         wrapper.append(explanationLabel, explanation);
+    } else if (explanationText && options.explanationToggle === true) {
+        const explanationId = `quiz-explanation-${++feedbackExplanationSequence}`;
+        const toggle = document.createElement("button");
+        toggle.type = "button";
+        toggle.className = "feedback-explanation-toggle ghost-button";
+        toggle.textContent = "Show Explanation";
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-controls", explanationId);
+
+        const explanation = createFormattedTextElement(explanationText, "feedback-explanation");
+        explanation.id = explanationId;
+        explanation.hidden = true;
+
+        toggle.addEventListener("click", () => {
+            const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+            toggle.setAttribute("aria-expanded", String(!isExpanded));
+            toggle.textContent = isExpanded ? "Show Explanation" : "Hide Explanation";
+            explanation.hidden = isExpanded;
+            if (!isExpanded) {
+                try { renderMath(explanation); } catch (_) {}
+            }
+        });
+
+        wrapper.append(toggle, explanation);
     }
 
     return wrapper;
@@ -4617,6 +4798,37 @@ function createProgressSummaryCard(title, summary, description) {
     return card;
 }
 
+function createLearningProgressSummaryCard(summary) {
+    const card = document.createElement("div");
+    card.className = "progress-summary-card learn-progress-summary-card";
+
+    const header = document.createElement("div");
+    header.className = "progress-summary-card-header";
+    header.append(
+        Object.assign(document.createElement("h3"), { textContent: "Learning progress" }),
+        Object.assign(document.createElement("p"), { className: "progress-summary-card-meta", textContent: summary.attemptCount ? `${summary.attemptCount} active session${summary.attemptCount === 1 ? "" : "s"}` : "No Learn sessions yet" })
+    );
+
+    const chart = createAssessmentChart(
+        [
+            { label: "Mastery progress", value: summary.learningProgress, color: "var(--secondary)", fillPercent: summary.learningProgress, meta: `${summary.learningProgress}%` },
+            { label: "Remaining progress", value: Math.max(0, 100 - summary.learningProgress), color: "rgba(255,255,255,0.18)", fillPercent: Math.max(0, 100 - summary.learningProgress), meta: `${Math.max(0, 100 - summary.learningProgress)}%` }
+        ],
+        `${summary.learningProgress}%`,
+        "Learning Progress",
+        "Learn mastery progress"
+    );
+
+    const note = document.createElement("p");
+    note.className = "progress-summary-card-note";
+    note.textContent = summary.attemptCount
+        ? `${summary.attempted} questions completed across the latest Learn sessions.`
+        : "Complete Learn checkpoints to begin tracking mastery progress.";
+
+    card.append(header, chart, note);
+    return card;
+}
+
 function createQuizAssessmentModal(summary, session, state, selectChapter, startSession) {
     const backdrop = document.createElement("div");
     backdrop.className = "modal-backdrop";
@@ -4761,7 +4973,50 @@ function createQuizAssessmentModal(summary, session, state, selectChapter, start
     document.body.appendChild(backdrop);
 }
 
+function renderLearnAssessment(_summary, session, title, score, content, startSession) {
+    const summary = summarizeLearnProgress(session);
+    title.textContent = `Learning progress for ${session.chapterTitle}`;
+    score.textContent = `${summary.learningProgress}% • ${summary.answered}/${summary.total}`;
+    content.replaceChildren();
+
+    const card = document.createElement("div");
+    card.className = "assessment-score-card learn-assessment-card";
+    card.append(
+        Object.assign(document.createElement("h4"), { textContent: `${summary.learningProgress}% learning progress` }),
+        Object.assign(document.createElement("p"), { textContent: `${summary.answered} of ${summary.total} questions completed.` }),
+        createAssessmentChart(
+            [
+                { label: "First-try correct", value: summary.firstAttemptCorrect, color: "var(--success)", fillPercent: summary.total ? Math.round((summary.firstAttemptCorrect / summary.total) * 100) : 0, meta: `${summary.firstAttemptCorrect}` },
+                { label: "Mistakes reviewed", value: summary.mistakesReviewed, color: "var(--secondary)", fillPercent: summary.total ? Math.round((summary.mistakesReviewed / summary.total) * 100) : 0, meta: `${summary.mistakesReviewed}` },
+                { label: "Remaining", value: summary.remaining, color: "var(--muted)", fillPercent: summary.total ? Math.round((summary.remaining / summary.total) * 100) : 0, meta: `${summary.remaining}` }
+            ],
+            `${summary.learningProgress}%`,
+            "Learning Progress",
+            "Learn mastery breakdown"
+        )
+    );
+
+    const details = document.createElement("p");
+    details.className = "learn-assessment-details";
+    details.textContent = `${summary.checkpointsCompleted} checkpoint${summary.checkpointsCompleted === 1 ? "" : "s"} completed. First-try answers count as 1 point; reviewed mistakes count as 0.5 points.`;
+
+    const actions = document.createElement("div");
+    actions.className = "question-actions";
+    const retakeButton = document.createElement("button");
+    retakeButton.type = "button";
+    retakeButton.className = "primary-button";
+    retakeButton.textContent = "Restart Learn mode";
+    retakeButton.addEventListener("click", () => startSession(session.mode));
+    actions.appendChild(retakeButton);
+
+    content.append(card, details, actions);
+}
+
 function renderAssessment(summary, session, title, score, content, startSession) {
+    if (session?.mode === "learn") {
+        renderLearnAssessment(summary, session, title, score, content, startSession);
+        return;
+    }
     title.textContent = `Results for ${session.chapterTitle}`;
     score.textContent = `${summary.accuracy}% • ${summary.correctCount}/${summary.total}`;
     content.replaceChildren();
@@ -4924,6 +5179,172 @@ function parseMinutesSecondsInput(value) {
     return Math.max(0, Math.round(minutes * 60 + seconds));
 }
 
+function activateLearnCheckpoint(session, batchEnd) {
+    const start = Math.max(0, Number(session.learnBatchStart) || 0);
+    const end = Math.max(start, Math.min(Number(batchEnd) || 0, session.questions.length));
+    session.learnBatchEnd = end;
+    session.learnCheckpointNumber = Math.max(0, Number(session.learnCheckpointNumber) || 0) + 1;
+    session.learnCheckpointActive = true;
+    session.learnReviewQueue = session.answers
+        .slice(start, end)
+        .map((result, offset) => result && !result.correct ? start + offset : null)
+        .filter((index) => Number.isInteger(index));
+    session.learnReviewPosition = 0;
+}
+
+function renderLearnReviewControls(container, question, questionIndex, session, onSubmit) {
+    const form = document.createElement("form");
+    form.className = "answer-form learn-review-answer-form";
+    const storedAnswer = session.learnReviewDrafts?.[questionIndex];
+
+    if (question.questionType === "numeric") {
+        const input = document.createElement("input");
+        input.type = "number";
+        input.className = "answer-input";
+        input.placeholder = "Enter your answer again";
+        input.value = storedAnswer ?? "";
+        input.setAttribute("aria-label", "Review answer");
+        input.addEventListener("input", () => {
+            session.learnReviewDrafts[questionIndex] = input.value;
+        });
+        form.appendChild(input);
+    } else {
+        const choices = document.createElement("div");
+        choices.className = "choice-grid";
+        getOrderedChoices(question).forEach(({ displayIndex, originalIndex, choice }) => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "choice-button";
+            button.textContent = `${displayIndex < 26 ? String.fromCharCode(65 + displayIndex) : String(displayIndex + 1)}. ${choice}`;
+            button.setAttribute("aria-pressed", String(Number(storedAnswer) === originalIndex));
+            if (Number(storedAnswer) === originalIndex) {
+                button.classList.add("is-selected");
+            }
+            button.addEventListener("click", () => {
+                session.learnReviewDrafts[questionIndex] = originalIndex;
+                choices.querySelectorAll(".choice-button").forEach((entry) => {
+                    const selected = entry === button;
+                    entry.classList.toggle("is-selected", selected);
+                    entry.setAttribute("aria-pressed", String(selected));
+                });
+            });
+            choices.appendChild(button);
+        });
+        form.appendChild(choices);
+    }
+
+    const submit = document.createElement("button");
+    submit.type = "submit";
+    submit.className = "primary-button";
+    submit.textContent = "Check Review Answer";
+    form.appendChild(submit);
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const answer = session.learnReviewDrafts?.[questionIndex];
+        if (question.questionType === "numeric" && !text(answer)) {
+            return;
+        }
+        if (question.questionType !== "numeric" && (answer === undefined || answer === null || answer === "")) {
+            return;
+        }
+        onSubmit(questionIndex, answer);
+    });
+    container.appendChild(form);
+}
+
+function renderLearnCheckpointStage(stage, progressFill, session, onReviewSubmit, onNextReview, onContinue) {
+    const summary = summarizeLearnProgress(session);
+    const checkpoint = document.createElement("article");
+    checkpoint.className = "question-card learn-checkpoint-card";
+    checkpoint.setAttribute("aria-live", "polite");
+
+    const header = document.createElement("div");
+    header.className = "question-card-header";
+    header.append(
+        Object.assign(document.createElement("div"), {
+            className: "question-counter-inline",
+            textContent: `Checkpoint ${session.learnCheckpointNumber}`
+        }),
+        Object.assign(document.createElement("div"), {
+            className: "mode-badge",
+            textContent: `${summary.answered}/${summary.total} completed`
+        })
+    );
+
+    const title = document.createElement("h4");
+    title.textContent = session.learnReviewPosition < session.learnReviewQueue.length
+        ? "Review this mistake before continuing"
+        : "Checkpoint complete";
+
+    const stats = document.createElement("div");
+    stats.className = "learn-checkpoint-stats";
+    stats.append(
+        Object.assign(document.createElement("span"), { textContent: `${summary.firstAttemptCorrect} first-try correct` }),
+        Object.assign(document.createElement("span"), { textContent: `${session.learnReviewQueue.length} mistakes to review` }),
+        Object.assign(document.createElement("span"), { textContent: `${summary.learningProgress}% learning progress` })
+    );
+
+    const content = document.createElement("div");
+    content.className = "learn-checkpoint-content";
+    if (session.learnReviewPosition < session.learnReviewQueue.length) {
+        const questionIndex = session.learnReviewQueue[session.learnReviewPosition];
+        const question = session.questions[questionIndex];
+        const questionText = document.createElement("h5");
+        questionText.textContent = question.question;
+        const reviewResult = session.learnReviewResults?.[questionIndex];
+        content.appendChild(questionText);
+        if (reviewResult) {
+            const status = document.createElement("p");
+            status.className = "learn-review-status";
+            status.setAttribute("role", "status");
+            status.textContent = "Review answer submitted. Read the explanation before continuing.";
+            content.append(status, createFeedbackCard(reviewResult, { includeExplanation: true }));
+        } else {
+            const prompt = document.createElement("p");
+            prompt.className = "question-hint";
+            prompt.textContent = "Answer this review question to see the explanation.";
+            content.appendChild(prompt);
+            renderLearnReviewControls(content, question, questionIndex, session, onReviewSubmit);
+        }
+    } else {
+        const message = document.createElement("p");
+        message.textContent = session.learnReviewQueue.length
+            ? "You reviewed every mistake from this checkpoint."
+            : "No mistakes to review in this checkpoint.";
+        content.appendChild(message);
+    }
+
+    const actions = document.createElement("div");
+    actions.className = "question-actions";
+    const action = document.createElement("button");
+    action.type = "button";
+    action.className = "primary-button";
+    const currentReviewIndex = session.learnReviewQueue[session.learnReviewPosition];
+    if (session.learnReviewPosition < session.learnReviewQueue.length && session.learnReviewResults?.[currentReviewIndex]) {
+        action.textContent = "Next Review";
+        action.addEventListener("click", onNextReview);
+    } else if (session.learnReviewPosition >= session.learnReviewQueue.length) {
+        action.textContent = session.learnBatchEnd >= session.questions.length ? "Finish Learning" : "Continue Learning";
+        action.addEventListener("click", onContinue);
+    }
+    if (action.parentElement !== actions && action.textContent) {
+        actions.appendChild(action);
+    }
+
+    checkpoint.append(header, title, stats, content, actions);
+    stage.appendChild(checkpoint);
+    try { renderMath(checkpoint); } catch (_) {}
+    requestAnimationFrame(() => {
+        const focusTarget = checkpoint.querySelector(
+            session.learnReviewPosition < session.learnReviewQueue.length && !session.learnReviewResults?.[currentReviewIndex]
+                ? "input, .choice-button"
+                : ".question-actions button"
+        );
+        focusTarget?.focus();
+    });
+    renderProgress(progressFill, session);
+}
+
 function buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, submitExamAnswer = null) {
     const { stage, progressFill } = elements;
     const examStarter = typeof globalThis.__beginExamSession === "function" ? globalThis.__beginExamSession : null;
@@ -4942,6 +5363,53 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
     if (session && !Array.isArray(session.unsureFlags)) {
         session.unsureFlags = session.questions.map(() => false);
+    }
+
+    if (session?.mode === "learn" && session.learnCheckpointActive) {
+        renderLearnCheckpointStage(
+            stage,
+            progressFill,
+            session,
+            (questionIndex, answer) => {
+                const question = session.questions[questionIndex];
+                const correct = isQuestionCorrect(question, answer);
+                const reviewResult = buildQuestionResult(question, session, answer, correct);
+                session.learnReviewResults[questionIndex] = reviewResult;
+                if (!session.learnReviewSubmittedIndexes.includes(questionIndex)) {
+                    session.learnReviewSubmittedIndexes.push(questionIndex);
+                }
+                if (!session.learnReviewedMistakeIndexes.includes(questionIndex)) {
+                    session.learnReviewedMistakeIndexes.push(questionIndex);
+                    session.learnMistakesReviewedCount += 1;
+                }
+                saveModeSession(session);
+                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+            },
+            () => {
+                session.learnReviewPosition += 1;
+                saveModeSession(session);
+                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+            },
+            () => {
+                session.learnCheckpointActive = false;
+                session.learnBatchStart = session.learnBatchEnd;
+                session.learnReviewQueue = [];
+                session.learnReviewPosition = 0;
+                const isFinalCheckpoint = session.learnBatchEnd >= session.questions.length;
+                recordLearnCheckpointProgress(session, false);
+                if (isFinalCheckpoint) {
+                    recordLearnCheckpointProgress(session, true);
+                }
+                if (isFinalCheckpoint) {
+                    session.complete = true;
+                    session.currentSummary = summarizeLearnProgress(session);
+                    renderLearnAssessment(session.currentSummary, session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession);
+                }
+                saveModeSession(session);
+                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+            }
+        );
+        return;
     }
 
     if (session?.mode === "note") {
@@ -5633,10 +6101,6 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
     const card = document.createElement("article");
     card.className = "question-card";
-    if (session.mode === "learn" && session.reviewed && session.lastResult) {
-        card.classList.add("learn-question-card", session.lastResult.correct ? "is-correct" : "is-wrong");
-    }
-
     const header = document.createElement("div");
     header.className = "question-card-header";
     header.append(
@@ -5651,12 +6115,16 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
     hint.className = "question-hint";
     hint.textContent = question.questionType === "numeric"
         ? session.mode === "learn"
-            ? "Answer the question, then read the explanation before moving on."
+            ? session.learnTransitioning
+                ? "Next question will open automatically."
+                : "Answer the question; the next question will open automatically."
             : "Enter a number and submit your answer."
         : session.mode === "flashcards"
             ? "Reveal the answer, then mark whether you knew it."
             : session.mode === "learn"
-                ? "Choose an answer, then study the explanation before continuing."
+                ? session.learnTransitioning
+                    ? "Next question will open automatically."
+                    : "Choose an answer; the next question will open automatically."
                 : "Choose the best answer and check your result.";
 
     const answerArea = document.createElement("div");
@@ -5776,10 +6244,10 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         const feedback = document.createElement("div");
         feedback.className = "feedback-block";
         if (session.reviewed && session.lastResult) {
-            feedback.appendChild(createFeedbackCard(session.lastResult, { includeExplanation: false }));
-            if (session.mode === "learn") {
-                appendLearnExplanation(feedback, session.lastResult);
-            }
+            feedback.appendChild(createFeedbackCard(session.lastResult, {
+                includeExplanation: false,
+                explanationToggle: session.mode === "quiz"
+            }));
         }
 
         const button = document.createElement("button");
@@ -5795,6 +6263,15 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             submitCurrentQuestion();
         });
 
+        if (session.mode === "learn" && session.reviewed) {
+            const status = document.createElement("p");
+            status.className = "learn-transition-status";
+            status.setAttribute("role", "status");
+            status.textContent = session.learnTransitioning
+                ? "Answer recorded. Next question will open automatically."
+                : "Use Next question to continue.";
+            answerArea.appendChild(status);
+        }
         form.append(input, button);
         answerArea.append(form, feedback);
         } else {
@@ -5810,7 +6287,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 if (session.selectedChoice === originalIndex) {
                     button.classList.add("is-selected");
                 }
-                if (session.reviewed && session.lastResult) {
+                if (session.mode !== "learn" && session.reviewed && session.lastResult) {
                     if (originalIndex === question.answerIndex) {
                         button.classList.add("is-correct");
                     }
@@ -5830,10 +6307,10 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         const feedback = document.createElement("div");
         feedback.className = "feedback-block";
         if (session.reviewed && session.lastResult) {
-            feedback.appendChild(createFeedbackCard(session.lastResult, { includeExplanation: false }));
-            if (session.mode === "learn") {
-                appendLearnExplanation(feedback, session.lastResult);
-            }
+            feedback.appendChild(createFeedbackCard(session.lastResult, {
+                includeExplanation: false,
+                explanationToggle: session.mode === "quiz"
+            }));
         }
 
         const actions = document.createElement("div");
@@ -5854,8 +6331,11 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         if (session.mode === "learn" && session.reviewed) {
             answerArea.insertBefore(
                 Object.assign(document.createElement("p"), {
-                    className: "learn-note",
-                    textContent: "Read the explanation, lock in the correct answer, then continue."
+                    className: "learn-transition-status",
+                    role: "status",
+                    textContent: session.learnTransitioning
+                        ? "Answer recorded. Next question will open automatically."
+                        : "Use Next question to continue."
                 }),
                 feedback
             );
@@ -5866,6 +6346,10 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         card.append(header, answerArea);
     } else {
         card.append(header, questionText, hint, answerArea);
+    }
+    if (session.mode === "learn" && session.learnSlideNext) {
+        card.classList.add("learn-slide-left");
+        session.learnSlideNext = false;
     }
     stage.appendChild(card);
     try { renderMath(card); } catch (_) {}
@@ -6350,13 +6834,15 @@ export function initProgressPage() {
     if (summaryCards) {
         const quizSummary = getRecentModeSummary("quiz", 7);
         const examSummary = getRecentModeSummary("exam", 7);
+        const learnSummary = getRecentLearnSummary(7);
         const progressEntries = getProgressEntries().filter((entry) => text(entry.mode) === "quiz" || text(entry.mode) === "exam");
         const quizAttempts = progressEntries.filter((entry) => text(entry.mode) === "quiz" && text(entry.summaryType) === "session");
         const examAttempts = progressEntries.filter((entry) => text(entry.mode) === "exam" && text(entry.summaryType) === "session");
         summaryCards.replaceChildren(
             createAccuracyAttemptChartCard(quizAttempts, examAttempts),
             createProgressSummaryCard("Quiz accuracy", quizSummary, "Recent quiz performance across the last 7 days."),
-            createProgressSummaryCard("Exam accuracy", examSummary, "Recent exam performance across the last 7 days.")
+            createProgressSummaryCard("Exam accuracy", examSummary, "Recent exam performance across the last 7 days."),
+            createLearningProgressSummaryCard(learnSummary)
         );
     }
 
@@ -7056,7 +7542,10 @@ export async function initModePage(mode) {
         const feedback = document.createElement("div");
         feedback.className = "feedback-block";
         if (answered) {
-            feedback.appendChild(createFeedbackCard(result, { includeExplanation: false }));
+            feedback.appendChild(createFeedbackCard(result, {
+                includeExplanation: false,
+                explanationToggle: session.mode === "quiz"
+            }));
         } else {
             feedback.appendChild(Object.assign(document.createElement("p"), {
                 className: "answer-hint",
@@ -7214,6 +7703,7 @@ export async function initModePage(mode) {
     };
 
     const startSession = (nextMode = state.mode) => {
+        cancelLearnAutoAdvance();
         const subject = state.activeSubject;
         if (!subject) {
             state.session = null;
@@ -7292,6 +7782,11 @@ export async function initModePage(mode) {
             return;
         }
 
+        cancelLearnAutoAdvance();
+        const shouldSlideLearnQuestion = session.mode === "learn" && session.learnTransitioning;
+        session.learnTransitioning = false;
+        session.learnSlideNext = shouldSlideLearnQuestion;
+
         session.index += 1;
         session.selectedChoice = null;
         session.typedAnswer = "";
@@ -7325,10 +7820,46 @@ export async function initModePage(mode) {
             return;
         }
 
+        if (session.mode === "learn" && session.reviewed) {
+            advanceSession();
+            return;
+        }
+
         session.busy = true;
         const answer = getAnswerForQuestion(question, session);
         const correct = extra.correct !== undefined ? extra.correct : isQuestionCorrect(question, answer);
         const result = buildQuestionResult(question, session, answer, correct);
+
+        if (session.mode === "learn") {
+            session.answers[session.index] = result;
+            session.reviewed = true;
+            session.lastResult = result;
+            session.busy = false;
+            if (result.correct) {
+                session.learnFirstAttemptCorrectCount += 1;
+            }
+
+            const completedCount = session.index + 1;
+            const isCheckpoint = completedCount % LEARN_BATCH_SIZE === 0 || completedCount >= session.questions.length;
+            if (isCheckpoint) {
+                cancelLearnAutoAdvance();
+                activateLearnCheckpoint(session, completedCount);
+                saveModeSession(session);
+                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+            } else {
+                session.learnTransitioning = true;
+                saveModeSession(session);
+                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+                learnAutoAdvanceTimer = setTimeout(() => {
+                    learnAutoAdvanceTimer = null;
+                    if (state.session === session && session.mode === "learn" && session.learnTransitioning && !session.learnCheckpointActive) {
+                        advanceSession();
+                    }
+                }, LEARN_AUTO_ADVANCE_MS);
+            }
+            renderHeader();
+            return;
+        }
 
         if (extra.advanceImmediately || session.mode === "flashcards") {
             session.answers[session.index] = result;

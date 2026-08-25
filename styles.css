@@ -2762,6 +2762,80 @@ body.mode-page .workspace > .mode-topbar::before {
     background: rgba(255, 124, 138, 0.08);
 }
 
+.learn-checkpoint-card {
+    border-color: color-mix(in srgb, var(--secondary) 38%, var(--line));
+    background:
+        linear-gradient(145deg, rgba(189, 92, 255, 0.12), rgba(255, 255, 255, 0.035)),
+        radial-gradient(circle at 100% 0%, var(--mode-accent-soft), transparent 34%);
+}
+
+.learn-checkpoint-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.learn-checkpoint-stats span {
+    padding: 7px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 0.86rem;
+}
+
+.learn-checkpoint-content {
+    display: grid;
+    gap: 14px;
+    margin: 18px 0;
+}
+
+.learn-checkpoint-content h5 {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.learn-assessment-card,
+.learn-progress-summary-card {
+    border-color: color-mix(in srgb, var(--secondary) 30%, var(--line));
+}
+
+.learn-assessment-details {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.learn-slide-left {
+    animation: learn-slide-left 320ms ease both;
+}
+
+.learn-transition-status,
+.learn-review-status {
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.learn-review-answer-form {
+    gap: 14px;
+}
+
+@keyframes learn-slide-left {
+    from {
+        opacity: 0;
+        transform: translateX(28px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .learn-slide-left {
+        animation: none;
+    }
+}
+
 .quiz-sheet {
     display: grid;
     gap: 16px;
@@ -5737,6 +5811,21 @@ body.mode-page .workspace > .mode-topbar::before {
 
 .feedback-explanation {
     margin-top: 6px;
+}
+
+.feedback-explanation-toggle {
+    margin-top: 12px;
+    padding: 8px 12px;
+    font-size: 0.86rem;
+}
+
+.feedback-explanation-toggle:focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 3px;
+}
+
+.feedback-explanation[hidden] {
+    display: none;
 }
 
 .feedback-explanation,
