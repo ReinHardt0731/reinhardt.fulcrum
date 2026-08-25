@@ -1881,7 +1881,7 @@ function createEquationExpression(expression, constants = {}) {
         offset = tokenPattern.lastIndex;
     }
 
-    const functions = { abs: Math.abs, cos: Math.cos, exp: Math.exp, log: Math.log, sin: Math.sin, sqrt: Math.sqrt, tan: Math.tan };
+    const functions = { abs: Math.abs, cos: Math.cos, exp: Math.exp, ln: Math.log, log: Math.log, sin: Math.sin, sqrt: Math.sqrt, tan: Math.tan };
     let currentX = 0;
     let index = 0;
     const peek = (type) => tokens[index]?.type === type;
@@ -1962,6 +1962,7 @@ const EQUATION_FUNCTIONS = {
     atan: Math.atan,
     cos: Math.cos,
     exp: Math.exp,
+    ln: Math.log,
     log: Math.log,
     sin: Math.sin,
     sqrt: Math.sqrt,
@@ -1970,7 +1971,7 @@ const EQUATION_FUNCTIONS = {
 const EQUATION_CARD_CONFIGS = new Map();
 
 function createInteractiveEquationExpression(expression, constants = {}) {
-    const source = String(expression || "").trim();
+    const source = String(expression || "").replace(/\*\*/g, "^").trim();
     const tokenPattern = /\s*(?:(\d+(?:\.\d+)?|\.\d+)|([A-Za-z_]\w*)|([()+\-*\/^,]))\s*/y;
     const tokens = [];
     let offset = 0;
@@ -2043,6 +2044,57 @@ function createInteractiveEquationExpression(expression, constants = {}) {
     };
 }
 
+function normalizeVariableBehaviorGraph(graph, variables, behavior) {
+    if (!graph || typeof graph !== "object" || !["variable-behavior", "duct-particle"].includes(text(graph.type))) {
+        return null;
+    }
+    const graphType = text(graph.type);
+    const relationship = graph.relationship && typeof graph.relationship === "object" ? graph.relationship : {};
+    const left = text(relationship.left);
+    const right = text(relationship.right);
+    if (!left || !right) throw new Error("Conservation cards need left and right relationship expressions.");
+    const axes = graph.axes && typeof graph.axes === "object" ? graph.axes : {};
+    const normalizedAxes = ["left", "right"].reduce((result, axis) => {
+        const source = axes[axis] && typeof axes[axis] === "object" ? axes[axis] : {};
+        result[axis] = { label: text(source.label) || (axis === "left" ? "Left axis" : "Right axis"), unit: text(source.unit) };
+        return result;
+    }, {});
+    const variableSymbols = new Set(variables.map((variable) => variable.symbol));
+    const relationshipSymbols = new Set(`${left} ${right}`.match(/[A-Za-z_]\w*/g) || []);
+    const allowedNames = new Set(["e", "pi", ...Object.keys(EQUATION_FUNCTIONS)]);
+    const unknownSymbols = [...relationshipSymbols].filter((symbol) => !variableSymbols.has(symbol) && !allowedNames.has(symbol));
+    if (unknownSymbols.length) throw new Error(`Relationship contains undeclared variable(s): ${unknownSymbols.join(", ")}.`);
+    variables.forEach((variable, index) => {
+        if (variable.fixed) {
+            variable.interactive = false;
+            return;
+        }
+        const axis = text(variable.axis).toLowerCase();
+        if (!["left", "right"].includes(axis)) throw new Error(`Variable ${index + 1} must use axis \"left\" or \"right\".`);
+        if (!variable.interactive) throw new Error(`Variable ${variable.symbol} must be interactive or fixed in a variable-behavior card.`);
+        variable.axis = axis;
+    });
+    const requestedActive = Array.isArray(behavior?.activeVariables)
+        ? behavior.activeVariables
+        : [];
+    const interactiveSymbols = new Set(variables.filter((variable) => variable.interactive).map((variable) => variable.symbol));
+    const activeVariables = requestedActive.filter((symbol, index, list) => interactiveSymbols.has(text(symbol)) && list.indexOf(symbol) === index).map(text);
+    if (activeVariables.length !== 2) throw new Error("Variable-behavior cards need exactly two active variables.");
+    const particleSource = graph.particles && typeof graph.particles === "object" ? graph.particles : {};
+    const particles = graphType === "duct-particle" ? {
+        count: Number(particleSource.count ?? 24),
+        speedScale: Number(particleSource.speedScale ?? 1),
+        showTrails: particleSource.showTrails !== false,
+        showVectors: particleSource.showVectors !== false
+    } : null;
+    if (particles && (!Number.isInteger(particles.count) || particles.count < 8 || particles.count > 100 || !Number.isFinite(particles.speedScale) || particles.speedScale <= 0)) {
+        throw new Error("Duct particle settings need a count from 8 to 100 and a positive speed scale.");
+    }
+    if (graphType === "duct-particle" && variables.filter((variable) => variable.interactive && variable.axis === "left").length < 2) throw new Error("Duct particle cards need two adjustable area variables on the left axis.");
+    if (graphType === "duct-particle" && variables.filter((variable) => variable.interactive && variable.axis === "right").length < 2) throw new Error("Duct particle cards need two adjustable velocity variables on the right axis.");
+    return { ...graph, type: graphType, relationship: { left, right }, axes: normalizedAxes, activeVariables, ...(particles ? { particles } : {}) };
+}
+
 function normalizeInteractiveEquationCard(config) {
     if (!config || typeof config !== "object" || !text(config.equation)) throw new Error("An equation is required.");
     const variables = (Array.isArray(config.variables) ? config.variables : []).map((variable, index) => {
@@ -2050,15 +2102,18 @@ function normalizeInteractiveEquationCard(config) {
         const symbol = text(entry.symbol);
         const value = equationVariableNumber(entry.value);
         if (!/^[A-Za-z_]\w*$/.test(symbol) || value === null) throw new Error(`Variable ${index + 1} needs a valid symbol and numeric value.`);
-        const interactive = entry.interactive === true;
+        const fixed = entry.fixed === true;
+        const interactive = !fixed && entry.interactive === true;
         const min = Number(entry.min);
         const max = Number(entry.max);
         const step = Number(entry.step);
+        if (fixed && !text(entry.unit)) throw new Error(`Fixed variable ${symbol} needs a unit.`);
         if (interactive && (!(max > min) || !Number.isFinite(step) || step <= 0)) throw new Error(`Variable ${symbol} needs valid min, max, and step values.`);
         const displaySymbolHidden = entry.displaySymbolHidden === true;
-        return { ...entry, symbol, value: interactive ? Math.min(max, Math.max(min, value)) : value, min, max, step, interactive, displaySymbolHidden, displaySymbol: displaySymbolHidden ? "" : text(entry.displaySymbol) || symbol };
+        return { ...entry, symbol, value: interactive ? Math.min(max, Math.max(min, value)) : value, min, max, step, interactive, fixed, name: text(entry.name) || symbol, displaySymbolHidden, displaySymbol: displaySymbolHidden ? "" : text(entry.displaySymbol) || symbol };
     });
-    const derived = (Array.isArray(config.derived) ? config.derived : []).map((item, index) => {
+    const variableBehaviorGraph = normalizeVariableBehaviorGraph(config.graph, variables, config.behavior);
+    const derived = variableBehaviorGraph ? [] : (Array.isArray(config.derived) ? config.derived : []).map((item, index) => {
         const entry = item && typeof item === "object" ? item : {};
         const symbol = text(entry.symbol);
         const hasExpression = Boolean(text(entry.expression));
@@ -2072,7 +2127,16 @@ function normalizeInteractiveEquationCard(config) {
         if (symbols.has(item.symbol)) throw new Error(`The symbol ${item.symbol} is declared more than once.`);
         symbols.add(item.symbol);
     });
-    return { ...config, variables, derived, graph: config.graph && typeof config.graph === "object" ? config.graph : null, notes: Array.isArray(config.notes) ? config.notes.map(text).filter(Boolean) : [] };
+    return {
+        ...config,
+        variables,
+        derived,
+        graph: variableBehaviorGraph || (config.graph && typeof config.graph === "object" ? config.graph : null),
+        behaviorMode: variableBehaviorGraph ? variableBehaviorGraph.type : "standard",
+        behavior: variableBehaviorGraph ? { activeVariables: [...variableBehaviorGraph.activeVariables] } : null,
+        runtimeRanges: {},
+        notes: Array.isArray(config.notes) ? config.notes.map(text).filter(Boolean) : []
+    };
 }
 
 function solveThetaBetaM(thetaDegrees, mach, gamma, branch = "weak") {
@@ -2257,6 +2321,90 @@ function renderInteractiveEquationGraph(graph, values) {
     return `<div class="equation-card-graph-wrap"><svg class="equation-card-graph" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Graph of ${equationText(graph.expression || "function")}">${xGrid}${yGrid}<line class="equation-graph-axis" x1="${padding.left}" y1="${toSvgY(clampY(0))}" x2="${width - padding.right}" y2="${toSvgY(clampY(0))}"></line><line class="equation-graph-axis" x1="${toSvgX(clampX(0))}" y1="${padding.top}" x2="${toSvgX(clampX(0))}" y2="${height - padding.bottom}"></line><path class="equation-graph-line" d="${path}"></path>${marker}<text class="equation-graph-label" x="${width / 2}" y="${height - 10}" text-anchor="middle">${equationText(graphLabelText(graph.xLabel, "x"))}</text><text class="equation-graph-label" x="16" y="${height / 2}" text-anchor="middle" transform="rotate(-90 16 ${height / 2})">${equationText(graphLabelText(graph.yLabel, "y"))}</text></svg></div>`;
 }
 
+function solveVariableBehaviorPartner(config, values, sourceSymbol, targetSymbol) {
+    const solver = globalThis.nerdamer;
+    if (typeof solver !== "function") {
+        throw new Error("The symbolic equation solver is unavailable.");
+    }
+    const relationship = config.graph.relationship;
+    const equation = `${relationship.left}=(${relationship.right})`.replace(/\*\*/g, "^");
+    const equationExpression = solver(equation);
+    if (!equationExpression || typeof equationExpression.solveFor !== "function") throw new Error("The symbolic equation solver could not parse the relationship.");
+    const solutions = equationExpression.solveFor(targetSymbol);
+    const candidates = Array.isArray(solutions) ? solutions : [solutions];
+    const variable = config.variables.find((entry) => entry.symbol === targetSymbol);
+    const resolved = candidates.map((solution) => {
+        if (solution === null || solution === undefined) return null;
+        const evaluated = solver(String(solution)).evaluate(values);
+        const valueText = typeof evaluated.text === "function" ? evaluated.text("decimal") : String(evaluated);
+        if (/\bi\b|NaN|Infinity/i.test(valueText)) return null;
+        const value = Number(valueText);
+        if (!Number.isFinite(value)) return null;
+        if (Number.isFinite(variable?.min) && variable.min >= 0 && value < 0) return null;
+        return value;
+    }).filter((value, index, list) => value !== null && list.findIndex((candidate) => Math.abs(candidate - value) < 1e-8) === index);
+    if (resolved.length === 0) throw new Error(`No valid real value was found for ${targetSymbol}.`);
+    if (resolved.length !== 1) throw new Error(`The relationship has multiple valid values for ${targetSymbol}.`);
+    return resolved[0];
+}
+
+function variableBehaviorRange(config, variable, value) {
+    const existing = config.runtimeRanges[variable.symbol] || { min: variable.min, max: variable.max };
+    if (value < existing.min) existing.min = value;
+    if (value > existing.max) existing.max = value;
+    config.runtimeRanges[variable.symbol] = existing;
+    return existing;
+}
+
+function renderVariableBehaviorGraph(graph, variables, values, activeVariables = []) {
+    const width = 820;
+    const height = 430;
+    const padding = { left: 68, right: 68, top: 34, bottom: 94 };
+    const plotWidth = width - padding.left - padding.right;
+    const plotHeight = height - padding.top - padding.bottom;
+    const plotBottom = height - padding.bottom;
+    const axisValues = { left: [], right: [] };
+    const graphVariables = variables.filter((variable) => variable.interactive);
+    graphVariables.forEach((variable) => axisValues[variable.axis].push(Number(values[variable.symbol]) || 0));
+    const scales = {};
+    ["left", "right"].forEach((axis) => {
+        const entries = axisValues[axis];
+        const max = Math.max(1, ...entries, 0);
+        const min = Math.min(0, ...entries, 0);
+        scales[axis] = { min, max };
+    });
+    const yFor = (axis, value) => {
+        const scale = scales[axis];
+        const span = Math.max(1e-9, scale.max - scale.min);
+        return padding.top + (1 - (value - scale.min) / span) * plotHeight;
+    };
+    const tickMarkup = (axis, side) => {
+        const scale = scales[axis];
+        const ticks = Array.from({ length: 5 }, (_, index) => scale.min + ((scale.max - scale.min) * index) / 4);
+        const x = side === "left" ? padding.left - 10 : width - padding.right + 10;
+        const anchor = side === "left" ? "end" : "start";
+        return ticks.map((tick) => `<text class="equation-graph-tick-label" x="${x}" y="${yFor(axis, tick) + 4}" text-anchor="${anchor}">${equationText(formatEquationTick(tick, getEquationTickStep(scale.min, scale.max)))}</text>`).join("");
+    };
+    const grid = Array.from({ length: 5 }, (_, index) => {
+        const y = padding.top + (plotHeight * index) / 4;
+        return `<line class="equation-graph-grid" x1="${padding.left}" y1="${y}" x2="${width - padding.right}" y2="${y}"></line>`;
+    }).join("");
+    const slot = plotWidth / Math.max(1, graphVariables.length);
+    const bars = graphVariables.map((variable, index) => {
+        const value = Number(values[variable.symbol]) || 0;
+        const baseline = yFor(variable.axis, 0);
+        const y = yFor(variable.axis, value);
+        const x = padding.left + slot * index + slot * 0.2;
+        const barWidth = slot * 0.6;
+        const active = activeVariables.includes(variable.symbol);
+        const outsideRange = value < variable.min || value > variable.max;
+        const label = `${equationText(variable.name || variable.symbol)}${variable.displaySymbol && variable.displaySymbol !== variable.name ? ` (${equationText(variable.displaySymbol)})` : ""}`;
+        const unit = equationText(variable.unit || graph.axes[variable.axis].unit || "");
+        return `<g class="equation-variable-bar${active ? " is-active" : ""}${outsideRange ? " is-out-of-range" : ""}"><rect x="${x}" y="${Math.min(y, baseline)}" width="${barWidth}" height="${Math.max(2, Math.abs(baseline - y))}" rx="7"></rect><text class="equation-variable-bar-value" x="${x + barWidth / 2}" y="${Math.min(y, baseline) - 10}" text-anchor="middle">${equationText(equationDisplayValue(value))}</text><text class="equation-variable-bar-label" x="${x + barWidth / 2}" y="${plotBottom + 30}" text-anchor="middle">${label}</text><text class="equation-variable-bar-unit" x="${x + barWidth / 2}" y="${plotBottom + 51}" text-anchor="middle">${unit}</text></g>`;
+    }).join("");
+    return `<div class="equation-variable-behavior-graph-wrap"><svg class="equation-variable-behavior-graph" viewBox="0 0 ${width} ${height}" role="img" aria-label="Variable behavior graph"><text class="equation-graph-axis-label" x="${padding.left - 50}" y="${padding.top - 12}" text-anchor="start">${equationText(graph.axes.left.label)}${graph.axes.left.unit ? ` (${equationText(graph.axes.left.unit)})` : ""}</text><text class="equation-graph-axis-label" x="${width - padding.right + 50}" y="${padding.top - 12}" text-anchor="end">${equationText(graph.axes.right.label)}${graph.axes.right.unit ? ` (${equationText(graph.axes.right.unit)})` : ""}</text>${grid}<line class="equation-graph-axis" x1="${padding.left}" y1="${padding.top}" x2="${padding.left}" y2="${plotBottom}"></line><line class="equation-graph-axis" x1="${width - padding.right}" y1="${padding.top}" x2="${width - padding.right}" y2="${plotBottom}"></line><line class="equation-graph-axis" x1="${padding.left}" y1="${plotBottom}" x2="${width - padding.right}" y2="${plotBottom}"></line>${tickMarkup("left", "left")}${tickMarkup("right", "right")}${bars}</svg></div>`;
+}
+
 function renderEquationGraph(graph, variables) {
     if (!graph || typeof graph !== "object") return "";
     const xMin = Number.isFinite(Number(graph.xMin)) ? Number(graph.xMin) : 0;
@@ -2303,6 +2451,8 @@ function renderEquationGraph(graph, variables) {
 }
 
 const PARTICLE_CARD_CONFIGS = new Map();
+const PARTICLE_PHYSICS_CARD_CONFIGS = new Map();
+const FLUID_CONTROL_VOLUME_CONFIGS = new Map();
 
 function normalizeParticleRange(config, key, defaults, label) {
     const source = config?.[key] && typeof config[key] === "object" ? config[key] : {};
@@ -2328,12 +2478,26 @@ function normalizeParticleCard(config) {
     if (!Number.isInteger(particleCount) || particleCount < 8 || particleCount > 100) {
         throw new Error("particleCount must be a whole number between 8 and 100.");
     }
+    const modern = config.mass !== undefined || (config.gas && typeof config.gas === "object");
+    const temperature = normalizeParticleRange(config, "temperature", { value: modern ? 288.15 : 300, min: 100, max: 900, step: modern ? 1 : 10, unit: "K" }, "Temperature");
+    const volume = normalizeParticleRange(config, "volume", modern ? { value: 1, min: 0.1, max: 5, step: 0.01, unit: "m^3" } : { value: 1, min: 0.5, max: 2, step: 0.05, unit: "relative" }, "Volume");
+    if (modern && volume.min <= 0) throw new Error("Volume must have a positive minimum.");
+    const mass = modern ? normalizeParticleRange(config, "mass", { value: 1.225, min: 0.1, max: 5, step: 0.01, unit: "kg" }, "Mass") : null;
+    if (modern && mass.min <= 0) throw new Error("Mass must have a positive minimum.");
+    if (modern && config.mass && Number(config.mass.value) <= 0) throw new Error("Mass must be positive.");
+    if (modern && config.volume && Number(config.volume.value) <= 0) throw new Error("Volume must be positive.");
+    const gas = config.gas && typeof config.gas === "object" ? config.gas : {};
+    const gasConstant = modern ? Number(gas.R ?? 287) : null;
+    if (modern && (!Number.isFinite(gasConstant) || gasConstant <= 0)) throw new Error("The gas constant R must be positive.");
     return {
         title: text(config.title) || "Temperature, Volume, and Pressure",
         subtitle: text(config.subtitle),
         particleCount,
-        temperature: normalizeParticleRange(config, "temperature", { value: 300, min: 100, max: 900, step: 10, unit: "K" }, "Temperature"),
-        volume: normalizeParticleRange(config, "volume", { value: 1, min: 0.5, max: 2, step: 0.05, unit: "relative" }, "Volume"),
+        modern,
+        gas: modern ? { R: gasConstant, unit: text(gas.unit) || "J/(kg·K)" } : null,
+        temperature,
+        mass,
+        volume,
         notes: Array.isArray(config.notes) ? config.notes.map(text).filter(Boolean) : []
     };
 }
@@ -2347,9 +2511,18 @@ function renderParticleCard(config, cardIndex) {
     const normalized = normalizeParticleCard(config);
     PARTICLE_CARD_CONFIGS.set(String(cardIndex), normalized);
     const temperature = normalized.temperature;
+    const mass = normalized.mass;
     const volume = normalized.volume;
     const notes = normalized.notes.map((note) => `<p>${equationText(note)}</p>`).join("");
-    return `<article class="particle-card" data-particle-card="${equationText(cardIndex)}"><header class="particle-card-header"><div><p class="section-label">Interactive Gas Model</p><h3>${equationText(normalized.title)}</h3>${normalized.subtitle ? `<p>${equationText(normalized.subtitle)}</p>` : ""}</div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for particle card" aria-pressed="false">Fullscreen</button></header><div class="particle-card-layout"><section class="particle-card-simulation" aria-label="Animated two-dimensional gas container"><canvas class="particle-card-canvas" data-particle-canvas role="img" aria-label="Moving particles inside a resizable control volume"></canvas><div class="particle-card-canvas-caption">Particle speed represents temperature. Container area represents relative volume.</div></section><section class="particle-card-controls"><div class="particle-card-control"><div class="particle-card-control-heading"><label for="particle-temperature-${cardIndex}">Temperature</label><output data-particle-temperature-output>${equationText(particleDisplayValue(temperature.value, temperature))}</output></div><input id="particle-temperature-${cardIndex}" class="particle-card-range" type="range" min="${temperature.min}" max="${temperature.max}" step="${temperature.step}" value="${temperature.value}" data-particle-input="temperature" aria-label="Adjust temperature"></div><div class="particle-card-control"><div class="particle-card-control-heading"><label for="particle-volume-${cardIndex}">Relative volume</label><output data-particle-volume-output>${equationText(particleDisplayValue(volume.value, volume))}</output></div><input id="particle-volume-${cardIndex}" class="particle-card-range" type="range" min="${volume.min}" max="${volume.max}" step="${volume.step}" value="${volume.value}" data-particle-input="volume" aria-label="Adjust relative volume"></div><div class="particle-card-metrics"><div class="particle-card-metric"><span>Reference pressure</span><strong data-particle-ideal-pressure>1.00</strong><small>P/P₀ from ideal-gas behavior</small></div><div class="particle-card-metric"><span>Collision pressure</span><strong data-particle-collision-pressure>1.00</strong><small>P/P₀ from wall impacts</small></div></div><p class="particle-card-status" data-particle-status aria-live="polite"></p></section></div>${notes ? `<section class="particle-card-notes"><p class="section-label">About this model</p>${notes}</section>` : ""}</article>`;
+    const equationPanel = normalized.modern ? `<section class="particle-card-equation" aria-label="Ideal gas equation"><p class="section-label">Ideal Gas Relationship</p><div>$$P = \\rho R T$$</div></section>` : "";
+    const temperatureControl = `<div class="particle-card-control"><div class="particle-card-control-heading"><label for="particle-temperature-${cardIndex}">Temperature</label><output data-particle-temperature-output>${equationText(particleDisplayValue(temperature.value, temperature))}</output></div><input id="particle-temperature-${cardIndex}" class="particle-card-range" type="range" min="${temperature.min}" max="${temperature.max}" step="${temperature.step}" value="${temperature.value}" data-particle-input="temperature" aria-label="Adjust temperature"></div>`;
+    const volumeControl = `<div class="particle-card-control"><div class="particle-card-control-heading"><label for="particle-volume-${cardIndex}">Volume</label><output data-particle-volume-output>${equationText(particleDisplayValue(volume.value, volume))}</output></div><input id="particle-volume-${cardIndex}" class="particle-card-range" type="range" min="${volume.min}" max="${volume.max}" step="${volume.step}" value="${volume.value}" data-particle-input="volume" aria-label="Adjust volume in cubic meters"></div>`;
+    const modernControls = `<details class="particle-density-controls" open><summary>Density Controls</summary><div class="particle-density-control-body"><div class="particle-card-control"><div class="particle-card-control-heading"><label for="particle-mass-${cardIndex}">Mass</label><output data-particle-mass-output>${equationText(particleDisplayValue(mass.value, mass))}</output></div><input id="particle-mass-${cardIndex}" class="particle-card-range" type="range" min="${mass.min}" max="${mass.max}" step="${mass.step}" value="${mass.value}" data-particle-input="mass" aria-label="Adjust mass in kilograms"></div>${volumeControl}</div></details>`;
+    const legacyControls = volumeControl.replace(/Volume/g, "Relative volume").replace(/volume in cubic meters/g, "relative volume");
+    const metrics = normalized.modern ? `<div class="particle-card-metrics"><div class="particle-card-metric"><span>Pressure</span><strong data-particle-pressure>--</strong><small>Pa from P = rho R T</small></div><div class="particle-card-metric"><span>Density</span><strong data-particle-density>--</strong><small>kg/m^3 from m/V</small></div></div>` : `<div class="particle-card-metrics"><div class="particle-card-metric"><span>Reference pressure</span><strong data-particle-ideal-pressure>1.00</strong><small>P/P₀ from ideal-gas behavior</small></div><div class="particle-card-metric"><span>Collision pressure</span><strong data-particle-collision-pressure>1.00</strong><small>P/P₀ from wall impacts</small></div></div>`;
+    const controls = normalized.modern ? `${temperatureControl}${modernControls}` : `${temperatureControl}${legacyControls}`;
+    const caption = normalized.modern ? "Particle speed represents temperature. Container area represents physical volume." : "Particle speed represents temperature. Container area represents relative volume.";
+    return `<article class="particle-card${normalized.modern ? " particle-card-modern" : ""}" data-particle-card="${equationText(cardIndex)}"><header class="particle-card-header"><div><p class="section-label">Interactive Gas Model</p><h3>${equationText(normalized.title)}</h3>${normalized.subtitle ? `<p>${equationText(normalized.subtitle)}</p>` : ""}</div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for particle card" aria-pressed="false">Fullscreen</button></header>${equationPanel}<div class="particle-card-layout"><section class="particle-card-simulation" aria-label="Animated two-dimensional gas container"><canvas class="particle-card-canvas" data-particle-canvas role="img" aria-label="Moving particles inside a resizable control volume"></canvas><div class="particle-card-canvas-caption">${caption}</div></section><section class="particle-card-controls">${controls}${metrics}<p class="particle-card-status" data-particle-status aria-live="polite"></p></section></div>${notes ? `<section class="particle-card-notes"><p class="section-label">About this model</p>${notes}</section>` : ""}</article>`;
 }
 
 function reportParticleCardIssue(card, message) {
@@ -2386,17 +2559,21 @@ function hydrateParticleCards(container) {
             reportParticleCardIssue(card, "this browser could not create a 2D canvas context.");
             return;
         }
-        const values = { temperature: config.temperature.value, volume: config.volume.value };
+        const values = { temperature: config.temperature.value, volume: config.volume.value, ...(config.modern ? { mass: config.mass.value } : {}) };
         const particles = [];
         const pulses = { top: 0, right: 0, bottom: 0, left: 0 };
         const state = { width: 0, height: 0, box: null, lastTime: 0, collisionPressure: 1, impulse: 0, sampleTime: 0, raf: 0, stopped: false };
         const temperatureOutput = card.querySelector("[data-particle-temperature-output]");
         const volumeOutput = card.querySelector("[data-particle-volume-output]");
+        const massOutput = card.querySelector("[data-particle-mass-output]");
         const idealOutput = card.querySelector("[data-particle-ideal-pressure]");
+        const pressureOutput = card.querySelector("[data-particle-pressure]");
+        const densityOutput = card.querySelector("[data-particle-density]");
         const collisionOutput = card.querySelector("[data-particle-collision-pressure]");
         const status = card.querySelector("[data-particle-status]");
         const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
-        const idealPressure = () => (values.temperature / config.temperature.value) * (config.volume.value / values.volume);
+        const density = () => config.modern ? values.mass / values.volume : null;
+        const idealPressure = () => config.modern ? density() * config.gas.R * values.temperature : (values.temperature / config.temperature.value) * (config.volume.value / values.volume);
         const resize = () => {
             const rect = canvas.getBoundingClientRect();
             const width = Math.max(280, rect.width || 640);
@@ -2431,12 +2608,27 @@ function hydrateParticleCards(container) {
                 particle.vy = (particle.vy / speed) * target;
             });
         };
-        const createParticles = () => {
-            for (let index = 0; index < config.particleCount; index += 1) {
-                const angle = (index * 2.399963) % (Math.PI * 2);
-                const speed = 64 * (0.78 + (index % 5) * 0.08);
-                particles.push({ x: 0, y: 0, vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed, radius: 5.5 });
+        const particleCountForMass = () => config.modern ? clamp(Math.round(config.particleCount * values.mass / config.mass.value), 8, 100) : config.particleCount;
+        const makeParticle = (index) => {
+            const angle = (index * 2.399963) % (Math.PI * 2);
+            const speed = 64 * speedScale() * (0.78 + (index % 5) * 0.08);
+            return { x: 0, y: 0, vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed, radius: 5.5 };
+        };
+        const placeParticle = (particle, index) => {
+            if (!state.box) return;
+            const angle = (index * 2.399963) % (Math.PI * 2);
+            const radius = Math.min(state.box.right - state.box.left, state.box.bottom - state.box.top) * 0.42;
+            particle.x = clamp((state.box.left + state.box.right) / 2 + Math.cos(angle) * radius * ((index % 4) / 4), state.box.left + particle.radius, state.box.right - particle.radius);
+            particle.y = clamp((state.box.top + state.box.bottom) / 2 + Math.sin(angle) * radius * ((index % 5) / 5), state.box.top + particle.radius, state.box.bottom - particle.radius);
+        };
+        const syncParticleCount = () => {
+            const target = particleCountForMass();
+            while (particles.length < target) {
+                const particle = makeParticle(particles.length);
+                placeParticle(particle, particles.length);
+                particles.push(particle);
             }
+            if (particles.length > target) particles.splice(target);
         };
         const collideParticles = () => {
             for (let first = 0; first < particles.length; first += 1) {
@@ -2512,9 +2704,12 @@ function hydrateParticleCards(container) {
             const ideal = idealPressure();
             if (temperatureOutput) temperatureOutput.textContent = particleDisplayValue(values.temperature, config.temperature);
             if (volumeOutput) volumeOutput.textContent = particleDisplayValue(values.volume, config.volume);
+            if (massOutput) massOutput.textContent = particleDisplayValue(values.mass, config.mass);
             if (idealOutput) idealOutput.textContent = ideal.toFixed(2);
+            if (pressureOutput) pressureOutput.textContent = `${ideal.toFixed(0)} Pa`;
+            if (densityOutput) densityOutput.textContent = `${density().toFixed(3)} kg/m^3`;
             if (collisionOutput) collisionOutput.textContent = state.collisionPressure.toFixed(2);
-            if (status) status.textContent = "Higher pressure means more frequent or harder wall impacts.";
+            if (status) status.textContent = config.modern ? "Pressure follows density, temperature, and the gas constant." : "Higher pressure means more frequent or harder wall impacts.";
         };
         const frame = (timestamp) => {
             try {
@@ -2547,9 +2742,10 @@ function hydrateParticleCards(container) {
             values[input.dataset.particleInput] = Number(input.value);
             if (input.dataset.particleInput === "temperature") resetParticleSpeed();
             if (input.dataset.particleInput === "volume") updateBox();
+            if (input.dataset.particleInput === "mass") syncParticleCount();
             renderReadings();
         }));
-        createParticles();
+        syncParticleCount();
         resize();
         updateBox();
         particles.forEach((particle, index) => {
@@ -2572,14 +2768,128 @@ function hydrateParticleCards(container) {
     });
 }
 
+function renderDuctParticleVisualization(normalized, values) {
+    const areaVariables = normalized.variables.filter((variable) => variable.interactive && variable.axis === "left").slice(0, 2);
+    const velocityVariables = normalized.variables.filter((variable) => variable.interactive && variable.axis === "right").slice(0, 2);
+    const windows = [
+        { key: "inlet", label: "Inlet Control Volume", area: areaVariables[0], velocity: velocityVariables[0] },
+        { key: "outlet", label: "Outlet Control Volume", area: areaVariables[1], velocity: velocityVariables[1] }
+    ].map((window) => {
+        const areaSymbol = window.area.displaySymbol || window.area.symbol;
+        const velocitySymbol = window.velocity.displaySymbol || window.velocity.symbol;
+        const productLabel = `${areaSymbol} \\cdot ${velocitySymbol}`;
+        const productText = `${areaSymbol} · ${velocitySymbol}`;
+        const product = Number(values[window.area.symbol]) * Number(values[window.velocity.symbol]);
+        const control = (variable) => {
+            const symbol = equationText(variable.symbol);
+            const label = equationText(variable.name || variable.symbol);
+            const displayLabel = variable.displaySymbol ? ` <strong>$${equationText(variable.displaySymbol)}$</strong>` : "";
+            return `<div class="equation-card-variable duct-particle-variable-control" data-equation-variable="${symbol}"><div class="equation-card-variable-heading"><span><button type="button" class="equation-variable-select" data-equation-select-variable="${symbol}" aria-label="Toggle ${label} as an active variable" aria-pressed="false"></button>${label}${displayLabel}</span><output data-equation-control-value="${symbol}">${equationText(equationDisplayValue(variable.value, variable.unit))}</output></div><input class="equation-card-range" type="range" min="${variable.min}" max="${variable.max}" step="${variable.step}" value="${variable.value}" data-equation-input="${symbol}" aria-label="Adjust ${label}"></div>`;
+        };
+        return `<section class="duct-particle-window" data-duct-window="${window.key}"><header class="duct-particle-window-header"><div><p class="equation-card-section-label">${equationText(window.label)}</p><strong>$${equationText(areaSymbol)}$ · $${equationText(velocitySymbol)}$</strong></div></header><div class="duct-particle-window-values" aria-label="${equationText(window.label)} values"><span><b>Area</b><output data-duct-value="${window.key}-area">${equationText(equationDisplayValue(values[window.area.symbol], window.area.unit))}</output></span><span><b>Velocity</b><output data-duct-value="${window.key}-velocity">${equationText(equationDisplayValue(values[window.velocity.symbol], window.velocity.unit))}</output></span><span class="duct-particle-product"><b>${equationText(productText)}</b><output data-duct-value="${window.key}-product" aria-label="${equationText(productLabel)} product">${equationText(equationDisplayValue(product))} ${equationText(`${window.area.unit} · ${window.velocity.unit}`)}</output></span></div><div class="duct-particle-window-controls"><p class="equation-card-section-label">Adjust Variables</p>${control(window.area)}${control(window.velocity)}</div><canvas data-duct-canvas="${window.key}" role="img" aria-label="${equationText(window.label)} with moving fluid parcels"></canvas><p class="duct-particle-window-caption">Toggle a circle to make a variable active or calculated.</p></section>`;
+    }).join("");
+    return `<section class="duct-particle-visualization" data-duct-particle-visualization><div class="duct-particle-windows">${windows}</div><div class="duct-particle-connector" aria-hidden="true"><span>Flow direction</span><i></i></div></section>`;
+}
+
+function hydrateDuctParticleScene(card, config, values) {
+    const areaVariables = config.variables.filter((variable) => variable.interactive && variable.axis === "left").slice(0, 2);
+    const velocityVariables = config.variables.filter((variable) => variable.interactive && variable.axis === "right").slice(0, 2);
+    const windows = [
+        { key: "inlet", area: areaVariables[0], velocity: velocityVariables[0], canvas: card.querySelector('[data-duct-canvas="inlet"]') },
+        { key: "outlet", area: areaVariables[1], velocity: velocityVariables[1], canvas: card.querySelector('[data-duct-canvas="outlet"]') }
+    ];
+    const state = { particles: [], raf: 0, lastTime: 0, width: 0, height: 0, stopped: false };
+    const createParticleSet = () => windows.map(() => Array.from({ length: config.graph.particles.count }, (_, index) => ({ phase: index / config.graph.particles.count, y: 0.18 + ((index * 0.618) % 1) * 0.64, trail: [] })));
+    state.particles = createParticleSet();
+    const resizeCanvas = (canvas) => {
+        if (!canvas) return null;
+        const rect = canvas.getBoundingClientRect();
+        const width = Math.max(260, rect.width || 420);
+        const height = Math.max(210, rect.height || 270);
+        const ratio = Math.min(2, Math.max(1, window.devicePixelRatio || 1));
+        canvas.width = Math.round(width * ratio); canvas.height = Math.round(height * ratio);
+        const context = canvas.getContext("2d");
+        context?.setTransform(ratio, 0, 0, ratio, 0, 0);
+        return { context, width, height };
+    };
+    const drawWindow = (windowConfig, windowIndex, delta) => {
+        const metrics = resizeCanvas(windowConfig.canvas);
+        if (!metrics?.context) return;
+        const { context, width, height } = metrics;
+        state.width = width; state.height = height;
+        const maxArea = Math.max(...areaVariables.map((variable) => Number(variable.max) || 1), 1);
+        const area = Number(values[windowConfig.area.symbol]) || 0;
+        const velocity = Number(values[windowConfig.velocity.symbol]) || 0;
+        const maxVelocity = Math.max(...velocityVariables.map((variable) => Number(variable.max) || 1), 1);
+        const opening = Math.max(0.24, Math.min(0.82, 0.24 + (area / maxArea) * 0.58));
+        const left = 22; const right = width - 22; const top = (height * (1 - opening)) / 2; const bottom = height - top;
+        const center = (top + bottom) / 2;
+        const speed = (velocity / maxVelocity) * config.graph.particles.speedScale * 0.48;
+        context.clearRect(0, 0, width, height);
+        context.fillStyle = "rgba(3, 17, 29, 0.82)"; context.fillRect(0, 0, width, height);
+        context.strokeStyle = "rgba(77,184,255,.28)"; context.lineWidth = 1; context.strokeRect(10, 10, width - 20, height - 20);
+        context.fillStyle = "rgba(77,184,255,.13)"; context.fillRect(left, top, right - left, bottom - top);
+        context.strokeStyle = "#4db8ff"; context.lineWidth = 3; context.beginPath(); context.moveTo(left, top); context.lineTo(right, top); context.moveTo(left, bottom); context.lineTo(right, bottom); context.stroke();
+        context.fillStyle = "#91a0b6"; context.font = "12px sans-serif"; context.fillText(windowIndex === 0 ? "Flow enters" : "Flow exits", 16, 24);
+        state.particles[windowIndex].forEach((particle) => {
+            particle.phase = (particle.phase + speed * delta) % 1;
+            const x = left + particle.phase * (right - left);
+            const y = top + particle.y * (bottom - top);
+            if (config.graph.particles.showTrails) { particle.trail.push({ x, y }); if (particle.trail.length > 9) particle.trail.shift(); context.strokeStyle = "rgba(189,92,255,.3)"; context.lineWidth = 1; context.beginPath(); particle.trail.forEach((point, pointIndex) => pointIndex ? context.lineTo(point.x, point.y) : context.moveTo(point.x, point.y)); context.stroke(); } else particle.trail = [];
+            context.fillStyle = windowIndex === 0 ? "#4db8ff" : "#bd5cff"; context.beginPath(); context.arc(x, y, 4, 0, Math.PI * 2); context.fill();
+            if (config.graph.particles.showVectors) { context.strokeStyle = context.fillStyle; context.lineWidth = 1.5; context.beginPath(); context.moveTo(x, y); context.lineTo(Math.min(right - 2, x + 16 + speed * 16), y); context.stroke(); }
+        });
+        context.fillStyle = "#91a0b6"; context.fillText(`A = ${area.toFixed(2)} ${windowConfig.area.unit}`, 16, height - 26); context.fillText(`V = ${velocity.toFixed(2)} ${windowConfig.velocity.unit}`, 16, height - 11);
+        const product = area * velocity;
+        card.querySelector(`[data-duct-value="${windowConfig.key}-area"]`)?.replaceChildren(document.createTextNode(equationDisplayValue(area, windowConfig.area.unit)));
+        card.querySelector(`[data-duct-value="${windowConfig.key}-velocity"]`)?.replaceChildren(document.createTextNode(equationDisplayValue(velocity, windowConfig.velocity.unit)));
+        card.querySelector(`[data-duct-value="${windowConfig.key}-product"]`)?.replaceChildren(document.createTextNode(`${equationDisplayValue(product)} ${windowConfig.area.unit} · ${windowConfig.velocity.unit}`));
+    };
+    const draw = (delta = 0) => windows.forEach((windowConfig, index) => drawWindow(windowConfig, index, delta));
+    const frame = (timestamp) => { if (state.stopped || !card.isConnected) return; const delta = Math.min(0.04, state.lastTime ? (timestamp - state.lastTime) / 1000 : 0.016); state.lastTime = timestamp; draw(delta); state.raf = requestAnimationFrame(frame); };
+    const reset = () => { state.particles = createParticleSet(); state.lastTime = 0; draw(); };
+    draw();
+    if (typeof requestAnimationFrame === "function") state.raf = requestAnimationFrame(frame);
+    else throw new Error("Duct particle animation is unavailable in this browser.");
+    return { reset, draw: () => draw(), stop: () => { state.stopped = true; cancelAnimationFrame(state.raf); } };
+}
+
+function renderVariableBehaviorEquationCard(normalized, cardIndex) {
+    EQUATION_CARD_CONFIGS.set(String(cardIndex), normalized);
+    const variableRows = normalized.variables.filter((variable) => variable.interactive).map((variable) => {
+        const symbol = equationText(variable.symbol);
+        const label = equationText(variable.name || variable.symbol);
+        const displayLabel = variable.displaySymbol ? ` <strong>$${equationText(variable.displaySymbol)}$</strong>` : "";
+        return `<div class="equation-card-variable equation-variable-behavior-row" data-equation-variable="${symbol}"><div class="equation-card-variable-heading"><span><button type="button" class="equation-variable-select" data-equation-select-variable="${symbol}" aria-label="Select ${label} as an active variable" aria-pressed="false"></button>${label}${displayLabel}</span><output data-equation-value="${symbol}">${equationText(equationDisplayValue(variable.value, variable.unit))}</output></div><input class="equation-card-range" type="range" min="${variable.min}" max="${variable.max}" step="${variable.step}" value="${variable.value}" data-equation-input="${symbol}" aria-label="Adjust ${label}"></div>`;
+    }).join("");
+    const constantRows = normalized.variables.filter((variable) => variable.fixed).map((variable) => {
+        const symbol = variable.displaySymbol ? `<strong>$${equationText(variable.displaySymbol)}$</strong>` : "";
+        const label = equationText(variable.name || variable.symbol);
+        return `<div class="equation-card-constant" data-equation-variable="${equationText(variable.symbol)}"><span>${label} ${symbol}</span><strong data-equation-value="${equationText(variable.symbol)}">${equationText(equationDisplayValue(variable.value, variable.unit))}</strong></div>`;
+    }).join("");
+    const initialValues = Object.fromEntries(normalized.variables.map((variable) => [variable.symbol, variable.value]));
+    const isDuctParticle = normalized.graph.type === "duct-particle";
+    const equationPanel = `<section class="equation-card-equation-wide"><p class="equation-card-section-label">Equation</p><div class="equation-card-equation">$$${equationText(normalized.equation)}$$</div></section>`;
+    const constantsPanel = constantRows ? `<div class="equation-card-section equation-card-constants-section"><p class="equation-card-section-label">Fixed Constants</p><div class="equation-card-constants">${constantRows}</div></div>` : "";
+    const conservationPanel = isDuctParticle ? "" : `<div class="equation-card-section equation-card-conservation-results"><p class="equation-card-section-label">Conservation values</p><div class="equation-card-metrics"><div class="equation-card-metric"><span>Left side</span><strong data-equation-side="left">--</strong><small>${equationText(normalized.graph.relationship.left)}</small></div><div class="equation-card-metric"><span>Right side</span><strong data-equation-side="right">--</strong><small>${equationText(normalized.graph.relationship.right)}</small></div></div></div>`;
+    const controlPanel = `<section class="equation-card-control-panel"><div class="equation-card-section equation-card-variable-section"><p class="equation-card-section-label">${isDuctParticle ? "Variable Selection" : "Variables"}</p><div class="equation-card-inputs">${isDuctParticle ? "" : variableRows}</div><p class="equation-card-selection-help">${isDuctParticle ? "Turn off an active circle before selecting another variable." : "Select two circles to choose the active variables."}</p><div class="equation-card-legend"><span><i class="equation-legend-swatch adjustable"></i>Active</span><span><i class="equation-legend-swatch calculated"></i>Calculated</span></div></div>${constantsPanel}${conservationPanel}<div class="equation-card-live-region" data-equation-status aria-live="polite"></div></section>`;
+    const graphPanel = isDuctParticle ? renderDuctParticleVisualization(normalized, initialValues) : `<section class="equation-card-graph-panel"><p class="equation-card-section-label">Bar Graph — Relative Magnitudes</p><div class="equation-card-graph-stage" data-equation-graph>${renderVariableBehaviorGraph(normalized.graph, normalized.variables, initialValues, normalized.behavior.activeVariables)}</div></section>`;
+    const explanation = normalized.subtitle || normalized.notes.length
+        ? `<section class="equation-card-explanation"><p class="section-label">Relationship Insight</p>${normalized.subtitle ? `<p class="equation-card-explanation-lead">${equationText(normalized.subtitle)}</p>` : ""}${normalized.notes.map((note) => `<p>${equationText(note)}</p>`).join("")}</section>`
+        : "";
+    const body = isDuctParticle ? `${equationPanel}${graphPanel}${controlPanel}` : `${equationPanel}<div class="equation-card-layout">${controlPanel}${graphPanel}</div>`;
+    return `<article class="equation-card equation-card-interactive equation-card-variable-behavior${isDuctParticle ? " equation-card-duct-particle" : ""}" data-equation-card="${equationText(cardIndex)}"><header class="equation-card-header"><div><p class="section-label">${isDuctParticle ? "Duct Particle Conservation" : "Conservation Variable Behavior"}</p><h3>${equationText(normalized.title || "Equation")}</h3></div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for equation card" aria-pressed="false">Fullscreen</button></header>${body}</article>${explanation}`;
+}
+
 function renderEquationCard(config, cardIndex) {
     const normalized = normalizeInteractiveEquationCard(config);
+    if (normalized.behaviorMode === "variable-behavior" || normalized.behaviorMode === "duct-particle") return renderVariableBehaviorEquationCard(normalized, cardIndex);
     EQUATION_CARD_CONFIGS.set(String(cardIndex), normalized);
     const variableRows = normalized.variables.map((variable) => {
         const symbol = equationText(variable.symbol);
         const label = equationText(variable.name || variable.symbol);
-        const displayLabel = variable.displaySymbol ? `<strong>$${equationText(variable.displaySymbol)}$</strong> ` : "";
-        return `<div class="equation-card-variable" data-equation-variable="${symbol}"><div class="equation-card-variable-heading"><span>${displayLabel}${label}</span><output data-equation-value="${symbol}">${equationText(equationDisplayValue(variable.value, variable.unit))}</output></div>${variable.interactive ? `<input class="equation-card-range" type="range" min="${variable.min}" max="${variable.max}" step="${variable.step}" value="${variable.value}" data-equation-input="${symbol}" aria-label="Adjust ${label}">` : `<p class="equation-card-fixed">Fixed value</p>`}</div>`;
+        const displayLabel = variable.displaySymbol ? ` <strong>$${equationText(variable.displaySymbol)}$</strong>` : "";
+        return `<div class="equation-card-variable" data-equation-variable="${symbol}"><div class="equation-card-variable-heading"><span>${label}${displayLabel}</span><output data-equation-value="${symbol}">${equationText(equationDisplayValue(variable.value, variable.unit))}</output></div>${variable.interactive ? `<input class="equation-card-range" type="range" min="${variable.min}" max="${variable.max}" step="${variable.step}" value="${variable.value}" data-equation-input="${symbol}" aria-label="Adjust ${label}">` : `<p class="equation-card-fixed">Fixed value</p>`}</div>`;
     }).join("");
     const derivedRows = normalized.derived.map((item) => `<div class="equation-card-metric"><span>${item.displaySymbol ? `$${equationText(item.displaySymbol)}$` : ""}</span><strong data-equation-derived="${equationText(item.symbol)}">--</strong><small>${equationText(item.name || item.symbol)}${item.unit ? ` · ${equationText(item.unit)}` : ""}</small></div>`).join("");
     const explanationItems = normalized.variables
@@ -2612,7 +2922,7 @@ function syncEquationGraphSizing(card) {
 
 function hydrateFullscreenButtons(container) {
     container.querySelectorAll("[data-card-fullscreen]").forEach((button) => {
-        const card = button.closest("[data-equation-card], [data-model-card], [data-particle-card]");
+            const card = button.closest("[data-equation-card], [data-model-card], [data-particle-card], [data-particle-physics-card], [data-fluid-control-volume-card]");
         if (!card) return;
         const status = card.querySelector("[data-fullscreen-status]");
         const updateButton = () => {
@@ -2641,10 +2951,540 @@ function hydrateFullscreenButtons(container) {
     });
 }
 
+function normalizeParticlePhysicsRange(source, defaults, label) {
+    const valueSource = source && typeof source === "object" ? source : {};
+    const min = Number(valueSource.min ?? defaults.min);
+    const max = Number(valueSource.max ?? defaults.max);
+    const step = Number(valueSource.step ?? defaults.step);
+    const value = Number(valueSource.value ?? defaults.value);
+    if (!(max > min) || !Number.isFinite(step) || step <= 0 || !Number.isFinite(value) || value < min || value > max) {
+        throw new Error(`${label} needs a finite value within a valid range.`);
+    }
+    return { value, min, max, step, unit: text(valueSource.unit) || defaults.unit };
+}
+
+function normalizeParticlePhysicsCard(config) {
+    if (!config || typeof config !== "object") throw new Error("A particle-physics-card configuration is required.");
+    if (text(config.model) !== "two-body-collision") throw new Error("Particle physics cards must use the two-body-collision model.");
+    if (!Array.isArray(config.particles) || config.particles.length !== 2) throw new Error("Particle physics cards require exactly two particles.");
+    const restitution = normalizeParticlePhysicsRange(config.restitution, { value: 1, min: 0, max: 1, step: 0.05, unit: "" }, "Restitution");
+    if (restitution.min < 0 || restitution.max > 1 || restitution.value < 0 || restitution.value > 1) throw new Error("Restitution must be between 0 and 1.");
+    const ids = new Set();
+    const symbols = new Set();
+    const particles = config.particles.map((source, index) => {
+        const entry = source && typeof source === "object" ? source : {};
+        const id = text(entry.id);
+        const symbol = text(entry.symbol);
+        const position = Number(entry.position);
+        if (!/^[A-Za-z][A-Za-z0-9_-]*$/.test(id) || ids.has(id)) throw new Error(`Particle ${index + 1} needs a unique valid id.`);
+        if (!/^[A-Za-z_][A-Za-z0-9_]*$/.test(symbol) || symbols.has(symbol)) throw new Error(`Particle ${index + 1} needs a unique valid symbol.`);
+        if (!Number.isFinite(position)) throw new Error(`Particle ${id} needs a finite position.`);
+        ids.add(id);
+        symbols.add(symbol);
+        const mass = normalizeParticlePhysicsRange(entry.mass, { value: 1, min: 0.1, max: 5, step: 0.1, unit: "kg" }, `${id} mass`);
+        if (mass.min <= 0 || mass.value <= 0) throw new Error(`Particle ${id} mass must be positive.`);
+        const color = text(entry.color) || (index === 0 ? "#4db8ff" : "#bd5cff");
+        if (!/^#[0-9a-f]{6}$/i.test(color)) throw new Error(`Particle ${id} needs a six-digit hexadecimal color.`);
+        return {
+            id,
+            name: text(entry.name) || `Particle ${index + 1}`,
+            symbol,
+            mass,
+            velocity: normalizeParticlePhysicsRange(entry.velocity, { value: index === 0 ? 2 : 0, min: -10, max: 10, step: 0.1, unit: "m/s" }, `${id} velocity`),
+            position,
+            color
+        };
+    });
+    if (Math.abs(particles[0].position - particles[1].position) < 0.001) throw new Error("Particle positions must be separated.");
+    return {
+        title: text(config.title) || "Two-Body Collision Lab",
+        subtitle: text(config.subtitle),
+        model: "two-body-collision",
+        restitution,
+        particles,
+        notes: Array.isArray(config.notes) ? config.notes.map(text).filter(Boolean) : []
+    };
+}
+
+function particlePhysicsNumber(value, digits = 2) {
+    return Number.isFinite(Number(value)) ? Number(value).toFixed(digits).replace(/\.00$/, "").replace(/(\.\d)0$/, "$1") : "--";
+}
+
+function particlePhysicsMetrics(particles) {
+    const momentum = particles.reduce((sum, particle) => sum + particle.mass * particle.velocity, 0);
+    const energy = particles.reduce((sum, particle) => sum + 0.5 * particle.mass * particle.velocity ** 2, 0);
+    return { momentum, energy };
+}
+
+function particlePhysicsScene(state, config, cardIndex) {
+    const width = 760;
+    const height = 270;
+    const trackLeft = 54;
+    const trackRight = width - 54;
+    const trackY = 146;
+    const positions = config.particles.map((particle) => particle.position);
+    const span = Math.max(12, Math.abs(Math.max(...positions) - Math.min(...positions)) + 8);
+    const center = (Math.max(...positions) + Math.min(...positions)) / 2;
+    const minPosition = center - span / 2;
+    const toX = (position) => trackLeft + ((position - minPosition) / span) * (trackRight - trackLeft);
+    const particles = state.particles.map((particle, index) => {
+        const x = toX(particle.position);
+        const radius = 18 + Math.min(8, particle.mass * 2);
+        const arrowLength = Math.max(-90, Math.min(90, particle.velocity * 13));
+        const color = config.particles[index].color;
+        const arrowEnd = x + arrowLength;
+        const arrowDirection = arrowLength >= 0 ? 1 : -1;
+        return `<g class="particle-physics-body" aria-label="${equationText(config.particles[index].name)} at position ${particlePhysicsNumber(particle.position)}"><line class="particle-physics-vector" x1="${x}" y1="${trackY - 44}" x2="${arrowEnd}" y2="${trackY - 44}" stroke="${color}"></line><path class="particle-physics-vector-head" d="M ${arrowEnd} ${trackY - 44} l ${-8 * arrowDirection} -5 l 0 10 z" fill="${color}"></path><circle cx="${x}" cy="${trackY}" r="${radius}" fill="${color}"></circle><text class="particle-physics-label" x="${x}" y="${trackY + 5}" text-anchor="middle">${equationText(config.particles[index].symbol)}</text><text class="particle-physics-name" x="${x}" y="${trackY + 49}" text-anchor="middle">${equationText(config.particles[index].name)}</text><text class="particle-physics-velocity" x="${x}" y="${trackY - 61}" text-anchor="middle">${particlePhysicsNumber(particle.velocity)} m/s</text></g>`;
+    }).join("");
+    const collisionMarker = state.collided ? `<line class="particle-physics-collision-marker" x1="${toX(state.collisionPosition)}" y1="${trackY - 82}" x2="${toX(state.collisionPosition)}" y2="${trackY + 28}"></line><text class="particle-physics-collision-text" x="${toX(state.collisionPosition)}" y="${trackY - 91}" text-anchor="middle">Collision</text>` : "";
+    return `<svg class="particle-physics-scene" viewBox="0 0 ${width} ${height}" role="img" aria-label="Two-body collision track for ${equationText(config.title)}"><line class="particle-physics-track" x1="${trackLeft}" y1="${trackY}" x2="${trackRight}" y2="${trackY}"></line><line class="particle-physics-track-end" x1="${trackLeft}" y1="${trackY - 12}" x2="${trackLeft}" y2="${trackY + 12}"></line><line class="particle-physics-track-end" x1="${trackRight}" y1="${trackY - 12}" x2="${trackRight}" y2="${trackY + 12}"></line>${collisionMarker}${particles}</svg>`;
+}
+
+function renderParticlePhysicsCard(config, cardIndex) {
+    const normalized = normalizeParticlePhysicsCard(config);
+    PARTICLE_PHYSICS_CARD_CONFIGS.set(String(cardIndex), normalized);
+    const particleRows = normalized.particles.map((particle, index) => `<div class="particle-physics-control" data-particle-physics-control="${particle.id}"><div class="particle-physics-control-heading"><span><i class="particle-physics-color" style="--particle-color:${particle.color}"></i>${equationText(particle.name)} <strong>${equationText(particle.symbol)}</strong></span><output data-particle-physics-value="${particle.id}">${particlePhysicsNumber(particle.velocity.value)} ${equationText(particle.velocity.unit)}</output></div><label>Mass <input type="range" min="${particle.mass.min}" max="${particle.mass.max}" step="${particle.mass.step}" value="${particle.mass.value}" data-particle-physics-input="${index}:mass" aria-label="Adjust ${particle.name} mass"></label><label>Initial velocity <input type="range" min="${particle.velocity.min}" max="${particle.velocity.max}" step="${particle.velocity.step}" value="${particle.velocity.value}" data-particle-physics-input="${index}:velocity" aria-label="Adjust ${particle.name} initial velocity"></label><small data-particle-physics-summary="${particle.id}">Initial velocity: ${particlePhysicsNumber(particle.velocity.value)} ${equationText(particle.velocity.unit)} · Mass: ${particlePhysicsNumber(particle.mass.value)} ${equationText(particle.mass.unit)}</small></div>`).join("");
+    const notes = normalized.notes.map((note) => `<p>${equationText(note)}</p>`).join("");
+    return `<article class="particle-physics-card" data-particle-physics-card="${equationText(cardIndex)}"><header class="particle-physics-header"><div><p class="section-label">Particle Physics Collision Lab</p><h3>${equationText(normalized.title)}</h3>${normalized.subtitle ? `<p>${equationText(normalized.subtitle)}</p>` : ""}</div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for particle physics card" aria-pressed="false">Fullscreen</button></header><section class="particle-physics-simulation" data-particle-physics-scene>${particlePhysicsScene({ particles: normalized.particles.map((particle) => ({ position: particle.position, velocity: particle.velocity.value, mass: particle.mass.value })), collided: false, collisionPosition: 0 }, normalized, cardIndex)}</section><section class="particle-physics-toolbar" aria-label="Simulation controls"><button type="button" class="primary-button" data-particle-physics-play>Play</button><button type="button" class="ghost-button" data-particle-physics-pause>Pause</button><button type="button" class="ghost-button" data-particle-physics-step>Step</button><button type="button" class="ghost-button" data-particle-physics-reset>Reset</button><label>Restitution <output data-particle-physics-restitution>${particlePhysicsNumber(normalized.restitution.value, 2)}</output><input type="range" min="${normalized.restitution.min}" max="${normalized.restitution.max}" step="${normalized.restitution.step}" value="${normalized.restitution.value}" data-particle-physics-restitution-input aria-label="Adjust restitution"></label></section><div class="particle-physics-layout"><section class="particle-physics-controls"><p class="equation-card-section-label">Particle Controls</p>${particleRows}</section><section class="particle-physics-readout"><p class="equation-card-section-label">Conservation Readout</p><div class="particle-physics-metrics"><div><span>Momentum before</span><strong data-particle-physics-metric="momentum-before">--</strong></div><div><span>Momentum now</span><strong data-particle-physics-metric="momentum-now">--</strong></div><div><span>Energy before</span><strong data-particle-physics-metric="energy-before">--</strong></div><div><span>Energy now</span><strong data-particle-physics-metric="energy-now">--</strong></div></div><p data-particle-physics-status aria-live="polite">Ready to simulate.</p></section></div>${notes ? `<section class="particle-physics-notes"><p class="section-label">About this model</p>${notes}</section>` : ""}</article>`;
+}
+
+function hydrateParticlePhysicsCards(container) {
+    container.querySelectorAll("[data-particle-physics-card]").forEach((card) => {
+        try {
+            const config = PARTICLE_PHYSICS_CARD_CONFIGS.get(card.dataset.particlePhysicsCard);
+            if (!config) throw new Error("the card configuration is missing.");
+            const initialParticles = config.particles.map((particle) => ({ position: particle.position, velocity: particle.velocity.value, mass: particle.mass.value }));
+            const state = { particles: initialParticles.map((particle) => ({ ...particle })), initial: initialParticles.map((particle) => ({ ...particle })), restitution: config.restitution.value, collided: false, collisionPosition: 0, playing: false, raf: 0, lastTime: 0, elapsed: 0 };
+            const scene = card.querySelector("[data-particle-physics-scene]");
+            const status = card.querySelector("[data-particle-physics-status]");
+            const metric = (name) => card.querySelector(`[data-particle-physics-metric="${name}"]`);
+            const render = () => {
+                scene.innerHTML = particlePhysicsScene(state, config, card.dataset.particlePhysicsCard);
+                const before = particlePhysicsMetrics(state.initial);
+                const now = particlePhysicsMetrics(state.particles);
+                if (metric("momentum-before")) metric("momentum-before").textContent = `${particlePhysicsNumber(before.momentum)} kg·m/s`;
+                if (metric("momentum-now")) metric("momentum-now").textContent = `${particlePhysicsNumber(now.momentum)} kg·m/s`;
+                if (metric("energy-before")) metric("energy-before").textContent = `${particlePhysicsNumber(before.energy)} J`;
+                if (metric("energy-now")) metric("energy-now").textContent = `${particlePhysicsNumber(now.energy)} J`;
+                config.particles.forEach((particle, index) => {
+                    const output = card.querySelector(`[data-particle-physics-value="${particle.id}"]`);
+                    const summary = card.querySelector(`[data-particle-physics-summary="${particle.id}"]`);
+                    if (output) output.textContent = `${particlePhysicsNumber(state.particles[index].velocity)} ${particle.velocity.unit}`;
+                    if (summary) summary.textContent = `Initial velocity: ${particlePhysicsNumber(state.initial[index].velocity)} ${particle.velocity.unit} · Mass: ${particlePhysicsNumber(state.particles[index].mass)} ${particle.mass.unit}`;
+                });
+            };
+            const reset = () => {
+                state.particles = config.particles.map((particle) => ({ position: particle.position, velocity: particle.velocity.value, mass: particle.mass.value }));
+                state.initial = state.particles.map((particle) => ({ ...particle }));
+                state.restitution = config.restitution.value;
+                state.collided = false;
+                state.collisionPosition = 0;
+                state.elapsed = 0;
+                state.playing = false;
+                if (status) status.textContent = "Ready to simulate.";
+                render();
+            };
+            const collide = () => {
+                const [first, second] = state.particles;
+                const relative = first.velocity - second.velocity;
+                const approaching = relative * (first.position - second.position) < 0;
+                if (Math.abs(first.position - second.position) < 0.85 && approaching) {
+                    const collisionPosition = (first.position + second.position) / 2;
+                    const massTotal = first.mass + second.mass;
+                    const firstVelocity = (first.mass * first.velocity + second.mass * second.velocity - second.mass * state.restitution * relative) / massTotal;
+                    const secondVelocity = (first.mass * first.velocity + second.mass * second.velocity + first.mass * state.restitution * relative) / massTotal;
+                    first.velocity = firstVelocity;
+                    second.velocity = secondVelocity;
+                    const firstIsLeft = first.position < second.position;
+                    first.position = collisionPosition + (firstIsLeft ? -0.43 : 0.43);
+                    second.position = collisionPosition + (firstIsLeft ? 0.43 : -0.43);
+                    state.collided = true;
+                    state.collisionPosition = collisionPosition;
+                    state.playing = false;
+                    const before = particlePhysicsMetrics(state.initial);
+                    const after = particlePhysicsMetrics(state.particles);
+                    const momentumConserved = Math.abs(before.momentum - after.momentum) < 1e-7;
+                    const energyConserved = Math.abs(before.energy - after.energy) < 1e-7;
+                    if (status) status.textContent = `Collision complete. Momentum ${momentumConserved ? "conserved" : "changed"}; kinetic energy ${energyConserved ? "conserved" : "decreased"}.`;
+                }
+            };
+            const step = (delta = 0.016) => {
+                if (state.collided) return;
+                state.particles.forEach((particle) => { particle.position += particle.velocity * delta; });
+                state.elapsed += delta;
+                collide();
+                render();
+            };
+            const frame = (timestamp) => {
+                if (!state.playing || !card.isConnected) { state.raf = 0; return; }
+                const delta = Math.min(0.04, state.lastTime ? (timestamp - state.lastTime) / 1000 : 0.016);
+                state.lastTime = timestamp;
+                step(delta);
+                state.raf = requestAnimationFrame(frame);
+            };
+            card.querySelector("[data-particle-physics-play]")?.addEventListener("click", () => { if (!state.playing && !state.collided) { state.playing = true; state.lastTime = 0; state.raf = requestAnimationFrame(frame); } });
+            card.querySelector("[data-particle-physics-pause]")?.addEventListener("click", () => { state.playing = false; });
+            card.querySelector("[data-particle-physics-step]")?.addEventListener("click", () => { state.playing = false; step(); });
+            card.querySelector("[data-particle-physics-reset]")?.addEventListener("click", reset);
+            card.querySelector("[data-particle-physics-restitution-input]")?.addEventListener("input", (event) => { config.restitution.value = Number(event.target.value); const output = card.querySelector("[data-particle-physics-restitution]"); if (output) output.textContent = particlePhysicsNumber(config.restitution.value); reset(); });
+            card.querySelectorAll("[data-particle-physics-input]").forEach((input) => input.addEventListener("input", (event) => { const [indexText, field] = event.target.dataset.particlePhysicsInput.split(":"); const index = Number(indexText); config.particles[index][field].value = Number(event.target.value); reset(); }));
+            render();
+        } catch (error) {
+            const status = card.querySelector("[data-particle-physics-status]");
+            if (status) { status.textContent = `Particle physics card unavailable: ${error.message}`; status.setAttribute("role", "alert"); }
+            card.classList.add("particle-physics-error-state");
+        }
+    });
+}
+
+function normalizeFluidRange(source, fallback, label) {
+    const entry = source && typeof source === "object" ? source : {};
+    const min = Number(entry.min ?? fallback.min);
+    const max = Number(entry.max ?? fallback.max);
+    const step = Number(entry.step ?? fallback.step);
+    const value = Number(entry.value ?? fallback.value);
+    if (!(max > min) || !Number.isFinite(step) || step <= 0 || !Number.isFinite(value) || value < min || value > max) throw new Error(`${label} needs a valid value and range.`);
+    return { value, min, max, step, unit: text(entry.unit) || fallback.unit || "" };
+}
+
+function normalizeFluidControlVolumeCard(config) {
+    if (!config || typeof config !== "object" || text(config.model) !== "fluid-control-volume") throw new Error("A fluid-control-volume card requires model fluid-control-volume.");
+    const domain = config.domain && typeof config.domain === "object" ? config.domain : {};
+    const x = Array.isArray(domain.x) ? domain.x.map(Number) : [0, 1];
+    const y = Array.isArray(domain.y) ? domain.y.map(Number) : [0, 1];
+    if (x.length !== 2 || y.length !== 2 || !(x[1] > x[0]) || !(y[1] > y[0])) throw new Error("Fluid domain bounds must have two increasing values for x and y.");
+    const walls = domain.walls && typeof domain.walls === "object" ? domain.walls : {};
+    const wallModes = ["inlet", "outlet", "slip", "no-slip"];
+    const normalizedWalls = ["left", "right", "top", "bottom"].reduce((result, side) => {
+        const mode = text(walls[side]) || (side === "left" ? "inlet" : side === "right" ? "outlet" : "slip");
+        if (!wallModes.includes(mode)) throw new Error(`Unsupported ${side} wall mode: ${mode}.`);
+        result[side] = mode;
+        return result;
+    }, {});
+    const fieldSource = config.field && typeof config.field === "object" ? config.field : {};
+    const field = { u: text(fieldSource.u) || "0", v: text(fieldSource.v) || "0", P: text(fieldSource.P), T: text(fieldSource.T), scale: Number(fieldSource.scale ?? 1) };
+    if (!Number.isFinite(field.scale) || field.scale <= 0) throw new Error("Fluid field scale must be positive.");
+    const thermoSource = config.thermodynamics && typeof config.thermodynamics === "object" ? config.thermodynamics : {};
+    const thermoModel = text(thermoSource.model || "ideal-gas");
+    if (!["ideal-gas", "incompressible"].includes(thermoModel)) throw new Error("Unsupported fluid thermodynamic model.");
+    const R = Number(thermoSource.R ?? 287);
+    const gamma = Number(thermoSource.gamma ?? 1.4);
+    const cp = Number(thermoSource.cp ?? 1004.5);
+    if (!(R > 0) || !(gamma > 1) || !(cp > 0)) throw new Error("Fluid thermodynamic constants require R > 0, gamma > 1, and cp > 0.");
+    const referenceSource = thermoSource.reference && typeof thermoSource.reference === "object" ? thermoSource.reference : {};
+    const reference = { P: Number(referenceSource.P ?? 101325), T: Number(referenceSource.T ?? 288.15) };
+    if (!(reference.P > 0) || !(reference.T > 0)) throw new Error("Reference pressure and temperature must be positive.");
+    const rho = Number(thermoSource.rho ?? reference.P / (R * reference.T));
+    if (!(rho > 0) || !Number.isFinite(rho)) throw new Error("Fluid density must be positive and finite.");
+    const stateSource = config.state && typeof config.state === "object" ? config.state : {};
+    const rawInputs = stateSource.inputs && typeof stateSource.inputs === "object" ? stateSource.inputs : { P: 101325, T: 288.15, U0: 120 };
+    const ranges = stateSource.ranges && typeof stateSource.ranges === "object" ? stateSource.ranges : {};
+    const inputs = {};
+    Object.entries(rawInputs).forEach(([key, value]) => {
+        if (!/^[A-Za-z_][A-Za-z0-9_]*$/.test(key)) throw new Error(`Invalid fluid input symbol: ${key}.`);
+        inputs[key] = Number(value);
+        if (!Number.isFinite(inputs[key])) throw new Error(`Fluid input ${key} must be numeric.`);
+    });
+    if (!(inputs.P > 0) || !(inputs.T > 0)) throw new Error("Fluid pressure and temperature inputs must be positive.");
+    const inputRanges = {};
+    Object.entries(inputs).forEach(([key, value]) => { inputRanges[key] = normalizeFluidRange(ranges[key], { value, min: value * 0.5 || 0.1, max: value * 1.5 + 1, step: Math.max(Math.abs(value) / 100, 0.1), unit: key === "P" ? "Pa" : key === "T" ? "K" : "" }, `Fluid input ${key}`); });
+    const scenarioSource = config.scenario && typeof config.scenario === "object" ? config.scenario : {};
+    const geometrySource = config.geometry && typeof config.geometry === "object" ? config.geometry : {};
+    const geometryType = text(geometrySource.type);
+    const geometry = geometryType === "converging-pipe" ? {
+        type: geometryType,
+        inletHeight: Number(geometrySource.inletHeight ?? 1),
+        outletHeight: Number(geometrySource.outletHeight ?? 0.5),
+        center: Number(geometrySource.center ?? 0.5),
+        wallMode: text(geometrySource.wallMode) || "no-slip"
+    } : null;
+    if (geometry && (!(geometry.inletHeight > 0) || !(geometry.outletHeight > 0) || !Number.isFinite(geometry.center) || !["no-slip", "slip"].includes(geometry.wallMode))) throw new Error("Converging-pipe geometry needs positive heights, a finite center, and a valid wall mode.");
+    const presets = ["incompressible", "incompressible-converging-pipe", "bernoulli", "isobaric", "isentropic", "subsonic", "supersonic", "compressible-flow"];
+    const preset = text(scenarioSource.preset) || "compressible-flow";
+    if (!presets.includes(preset)) throw new Error(`Unsupported fluid scenario preset: ${preset}.`);
+    const solverSource = scenarioSource.solver && typeof scenarioSource.solver === "object" ? scenarioSource.solver : {};
+    const solver = { mode: text(solverSource.mode) || "target", target: text(solverSource.target), unknowns: Array.isArray(solverSource.unknowns) ? solverSource.unknowns.map(text).filter(Boolean) : [], equations: Array.isArray(solverSource.equations) ? solverSource.equations.map(text).filter(Boolean) : [], ranges: solverSource.ranges && typeof solverSource.ranges === "object" ? solverSource.ranges : {} };
+    if (!["target", "system"].includes(solver.mode)) throw new Error("Fluid solver mode must be target or system.");
+    if (solver.mode === "target" && solver.equations.length && !solver.target) throw new Error("Target-mode fluid solvers require a target variable.");
+    if (solver.mode === "target" && solver.equations.length > 1) throw new Error("Target-mode fluid solvers accept exactly one equation.");
+    if (solver.mode === "system" && (!solver.unknowns.length || solver.unknowns.length !== solver.equations.length)) throw new Error("System-mode fluid solvers require one equation per unknown.");
+    const displaySource = config.display && typeof config.display === "object" ? config.display : {};
+    const metrics = Array.isArray(displaySource.metrics) ? displaySource.metrics.map(text).filter(Boolean) : ["P", "T", "rho", "V", "Mach", "h", "s"];
+    const allowedColors = ["speed", "mach", "pressure", "temperature", "entropy"];
+    const colorBy = text(displaySource.colorBy) || "mach";
+    if (!allowedColors.includes(colorBy)) throw new Error(`Unsupported fluid color mode: ${colorBy}.`);
+    if (preset === "isentropic" && !solver.equations.length) { solver.mode = "target"; solver.target = "T"; solver.equations = ["T = T0 * (P/P0)^((gamma-1)/gamma)"]; }
+    if (preset === "incompressible-converging-pipe" && (!geometry || geometry.type !== "converging-pipe")) throw new Error("The incompressible-converging-pipe preset requires converging-pipe geometry.");
+    if (preset === "incompressible-converging-pipe" && thermoModel !== "incompressible") throw new Error("The incompressible-converging-pipe preset requires the incompressible thermodynamic model.");
+    return { title: text(config.title) || "Fluid Control Volume", subtitle: text(config.subtitle), model: "fluid-control-volume", domain: { x, y, walls: normalizedWalls }, geometry, field, thermodynamics: { model: thermoModel, R, gamma, cp, rho, reference }, state: { inputs, ranges: inputRanges }, scenario: { preset, solver }, display: { colorBy, metrics, showParticles: displaySource.showParticles !== false, showVectors: displaySource.showVectors !== false, showBoundaryLayer: displaySource.showBoundaryLayer !== false }, notes: Array.isArray(config.notes) ? config.notes.map(text).filter(Boolean) : [] };
+}
+
+function fluidExpression(expression, constants) {
+    return createInteractiveEquationExpression(String(expression || "0").replace(/\*\*/g, "^"), constants);
+}
+
+function fluidSolveSystem(config, values) {
+    const solver = config.scenario.solver;
+    if (!solver.equations.length) return values;
+    const unknowns = solver.mode === "target" ? [solver.target] : solver.unknowns;
+    const ranges = Object.fromEntries(unknowns.map((name) => [name, normalizeFluidRange(solver.ranges[name], config.state.ranges[name] || { value: values[name] ?? 0, min: -1e6, max: 1e6, step: 0.1, unit: "" }, `Solver variable ${name}`)]));
+    if (unknowns.some((name) => !name || (!Object.prototype.hasOwnProperty.call(values, name) && !solver.ranges[name] && !config.state.ranges[name]))) throw new Error("Fluid solver variables need an input or explicit range.");
+    const reference = config.thermodynamics.reference;
+    const sharedConstants = { ...values, R: config.thermodynamics.R, gamma: config.thermodynamics.gamma, cp: config.thermodynamics.cp, P0: reference.P, T0: reference.T, rho0: reference.P / (config.thermodynamics.R * reference.T), P_ref: reference.P, T_ref: reference.T };
+    const residual = (candidate) => solver.equations.map((equation) => {
+        const parts = equation.split("=");
+        if (parts.length !== 2) throw new Error("Fluid equations must contain exactly one equals sign.");
+        const constants = { ...sharedConstants, ...candidate };
+        return fluidExpression(parts[0], constants)(0) - fluidExpression(parts[1], constants)(0);
+    });
+    if (solver.mode === "target") {
+        const nerdamerSolver = globalThis.nerdamer;
+        if (typeof nerdamerSolver !== "function") throw new Error("The symbolic fluid solver is unavailable.");
+        const equation = solver.equations[0].replace(/\*\*/g, "^");
+        const solutions = nerdamerSolver(equation).solveFor(solver.target);
+        const candidates = Array.isArray(solutions) ? solutions : [solutions];
+        const resolved = candidates.map((solution) => {
+            const evaluated = nerdamerSolver(String(solution)).evaluate(sharedConstants);
+            const raw = typeof evaluated.text === "function" ? evaluated.text("decimal") : String(evaluated);
+            const number = Number(raw);
+            return Number.isFinite(number) && number >= ranges[solver.target].min && number <= ranges[solver.target].max ? number : null;
+        }).filter((value, index, list) => value !== null && list.indexOf(value) === index);
+        if (resolved.length !== 1) throw new Error(resolved.length ? "Fluid target equation has multiple valid solutions." : "Fluid target equation has no valid solution.");
+        return { ...values, [solver.target]: resolved[0] };
+    }
+    let candidate = Object.fromEntries(unknowns.map((name) => [name, Number(values[name] ?? ranges[name].value)]));
+    for (let iteration = 0; iteration < 40; iteration += 1) {
+        const base = residual(candidate);
+        if (base.every((value) => Number.isFinite(value) && Math.abs(value) < 1e-7)) return { ...values, ...candidate };
+        const matrix = base.map((_, row) => unknowns.map((name) => { const shifted = { ...candidate, [name]: candidate[name] + Math.max(1e-6, ranges[name].step / 10) }; return (residual(shifted)[row] - base[row]) / Math.max(1e-6, ranges[name].step / 10); }));
+        const augmented = matrix.map((row, index) => [...row, -base[index]]);
+        for (let pivot = 0; pivot < unknowns.length; pivot += 1) {
+            let best = pivot;
+            for (let row = pivot + 1; row < unknowns.length; row += 1) if (Math.abs(augmented[row][pivot]) > Math.abs(augmented[best][pivot])) best = row;
+            if (Math.abs(augmented[best][pivot]) < 1e-12) throw new Error("Fluid system is singular or ambiguous.");
+            [augmented[pivot], augmented[best]] = [augmented[best], augmented[pivot]];
+            const divisor = augmented[pivot][pivot];
+            for (let column = pivot; column <= unknowns.length; column += 1) augmented[pivot][column] /= divisor;
+            for (let row = 0; row < unknowns.length; row += 1) if (row !== pivot) { const factor = augmented[row][pivot]; for (let column = pivot; column <= unknowns.length; column += 1) augmented[row][column] -= factor * augmented[pivot][column]; }
+        }
+        unknowns.forEach((name, index) => { candidate[name] = Math.max(ranges[name].min, Math.min(ranges[name].max, candidate[name] + augmented[index][unknowns.length])); });
+    }
+    throw new Error("Fluid system did not converge to a valid solution.");
+}
+
+function fluidProperties(config, values, velocity) {
+    const { model, R, gamma, cp, rho: fixedRho, reference } = config.thermodynamics;
+    const P = Number(values.P);
+    const T = Number(values.T);
+    const rho = model === "incompressible" ? Number(values.rho ?? fixedRho) : P / (R * T);
+    const a = Math.sqrt(gamma * R * T);
+    const Mach = velocity / a;
+    const h = cp * T;
+    const s = model === "incompressible" ? 0 : cp * Math.log(T / reference.T) - R * Math.log(P / reference.P);
+    return { P, T, rho, V: velocity, DeltaV: velocity - Number(values.U0 || 0), a, Mach, h, s };
+}
+
+function fluidMetricLabel(metric) { return ({ P: "Pressure", T: "Temperature", rho: "Density", V: "Velocity", DeltaV: "Velocity difference", a: "Sound speed", Mach: "Mach number", h: "Enthalpy", s: "Entropy change" })[metric] || metric; }
+
+function fluidMetricUnit(metric) { return ({ P: "Pa", T: "K", rho: "kg/m^3", V: "m/s", DeltaV: "m/s", a: "m/s", Mach: "", h: "J/kg", s: "J/(kg·K)" })[metric] || ""; }
+
+function fluidConvergingHeight(config, x) {
+    const geometry = config.geometry;
+    const progress = Math.max(0, Math.min(1, (x - config.domain.x[0]) / (config.domain.x[1] - config.domain.x[0])));
+    return geometry.inletHeight + (geometry.outletHeight - geometry.inletHeight) * progress;
+}
+
+function fluidConvergingState(config, values, x) {
+    const height = fluidConvergingHeight(config, x);
+    const inletHeight = config.geometry.inletHeight;
+    const inletVelocity = Number(values.U0);
+    const inletPressure = Number(values.P);
+    const rho = Number(values.rho ?? config.thermodynamics.rho);
+    const velocity = inletVelocity * inletHeight / height;
+    const pressure = inletPressure + 0.5 * rho * (inletVelocity ** 2 - velocity ** 2);
+    return { height, V: velocity, P: pressure, T: Number(values.T), rho, DeltaV: velocity - inletVelocity, continuity: inletHeight * inletVelocity - height * velocity, bernoulli: pressure + 0.5 * rho * velocity ** 2 - (inletPressure + 0.5 * rho * inletVelocity ** 2) };
+}
+
+function renderFluidControlVolumeCard(config, cardIndex) {
+    const normalized = normalizeFluidControlVolumeCard(config);
+    FLUID_CONTROL_VOLUME_CONFIGS.set(String(cardIndex), normalized);
+    const inputs = Object.entries(normalized.state.ranges).map(([key, range]) => normalized.scenario.preset === "incompressible-converging-pipe" && key === "T" ? `<div class="fluid-control-input fluid-control-readonly-input"><span>Reference T</span><output>${equationText(String(range.value))} K</output><small>Temperature is fixed for this incompressible model.</small></div>` : `<label class="fluid-control-input"><span>${equationText(key)}</span><output data-fluid-input-output="${key}">${equationText(String(range.value))}</output><input type="range" min="${range.min}" max="${range.max}" step="${range.step}" value="${range.value}" data-fluid-input="${key}" aria-label="Adjust ${key}"></label>`).join("");
+    const metrics = normalized.display.metrics.map((metric) => `<div class="fluid-metric" data-fluid-metric-card="${metric}"><span>${equationText(fluidMetricLabel(metric))}</span><strong data-fluid-metric="${metric}">--</strong><small>${equationText(fluidMetricUnit(metric))}</small></div>`).join("");
+    const notes = normalized.notes.map((note) => `<p>${equationText(note)}</p>`).join("");
+    const relationship = normalized.scenario.preset === "incompressible-converging-pipe" ? `<section class="fluid-control-relationship"><p class="equation-card-section-label">Inlet / Outlet Relationship</p><div class="fluid-control-relationship-grid"><div><span>Inlet</span><strong data-fluid-inlet>--</strong></div><div><span>Outlet</span><strong data-fluid-outlet>--</strong></div><div><span>Delta P</span><strong data-fluid-delta-p>--</strong></div><div><span>Delta V</span><strong data-fluid-delta-v>--</strong></div></div><p data-fluid-conservation-check>Continuity and Bernoulli checks pending.</p></section>` : "";
+    return `<article class="fluid-control-volume-card${normalized.scenario.preset === "incompressible-converging-pipe" ? " fluid-control-converging-pipe" : ""}" data-fluid-control-volume-card="${equationText(cardIndex)}"><header class="fluid-control-header"><div><p class="section-label">Fluid Control Volume</p><h3>${equationText(normalized.title)}</h3>${normalized.subtitle ? `<p>${equationText(normalized.subtitle)}</p>` : ""}</div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for fluid control volume card" aria-pressed="false">Fullscreen</button></header><div class="fluid-control-layout"><section class="fluid-control-simulation"><div class="fluid-control-badge" data-fluid-scenario>${equationText(normalized.scenario.preset)}</div><canvas data-fluid-canvas role="img" aria-label="Animated fluid parcels moving through a two-dimensional control volume"></canvas><div class="fluid-control-toolbar"><button type="button" class="primary-button" data-fluid-play>Play</button><button type="button" class="ghost-button" data-fluid-pause>Pause</button><button type="button" class="ghost-button" data-fluid-reset>Reset</button></div></section><section class="fluid-control-panel"><p class="equation-card-section-label">Flow Inputs</p><div class="fluid-control-inputs">${inputs}</div><div class="fluid-control-property-grid">${metrics}</div>${relationship}<div class="fluid-control-differences"><strong>Reference differences</strong><span data-fluid-difference>--</span></div><p data-fluid-status aria-live="polite">Ready to simulate.</p></section></div>${notes ? `<section class="fluid-control-notes"><p class="section-label">About this model</p>${notes}</section>` : ""}</article>`;
+}
+
+function hydrateFluidControlVolumeCards(container) {
+    container.querySelectorAll("[data-fluid-control-volume-card]").forEach((card) => {
+        try {
+            const config = FLUID_CONTROL_VOLUME_CONFIGS.get(card.dataset.fluidControlVolumeCard);
+            if (!config) throw new Error("the card configuration is missing.");
+            const canvas = card.querySelector("[data-fluid-canvas]");
+            const context = canvas?.getContext("2d");
+            if (!canvas || !context) throw new Error("this browser could not create the fluid canvas.");
+            const values = { ...config.state.inputs };
+            const state = { parcels: [], playing: false, raf: 0, lastTime: 0, elapsed: 0, width: 0, height: 0 };
+            const fieldConstants = { ...values, R: config.thermodynamics.R, gamma: config.thermodynamics.gamma, cp: config.thermodynamics.cp, rho: values.rho ?? config.thermodynamics.rho, pi: Math.PI };
+            fieldConstants.y = 0;
+            fieldConstants.t = 0;
+            const uEval = fluidExpression(config.field.u, fieldConstants);
+            const vEval = fluidExpression(config.field.v, fieldConstants);
+            const pEval = fluidExpression(config.field.P || "P", fieldConstants);
+            const tEval = fluidExpression(config.field.T || "T", fieldConstants);
+            const resolveState = () => { const solved = config.scenario.preset === "incompressible-converging-pipe" ? values : fluidSolveSystem(config, values); if (!(Number(solved.P) > 0) || !(Number(solved.T) > 0)) throw new Error("Fluid pressure and temperature must remain positive."); if (config.scenario.preset === "incompressible-converging-pipe" && !(Number(solved.rho) > 0)) throw new Error("Fluid density must remain positive."); Object.assign(values, solved); Object.assign(fieldConstants, solved); fieldConstants.rho = values.rho ?? config.thermodynamics.rho; };
+            const resetParcels = () => { const startX = config.domain.x[0] + 0.01; const height = config.geometry ? fluidConvergingHeight(config, startX) : config.domain.y[1] - config.domain.y[0]; const center = config.geometry?.center ?? (config.domain.y[0] + config.domain.y[1]) / 2; state.parcels = Array.from({ length: 30 }, (_, index) => ({ x: startX, y: config.geometry ? center + (index / 29 - 0.5) * height * 0.82 : config.domain.y[0] + ((index + 0.5) / 30) * (config.domain.y[1] - config.domain.y[0]), age: index / 30 })); state.elapsed = 0; state.playing = false; };
+            const resize = () => { const rect = canvas.getBoundingClientRect(); state.width = Math.max(320, rect.width || 640); state.height = Math.max(250, rect.height || 360); const ratio = Math.min(2, Math.max(1, window.devicePixelRatio || 1)); canvas.width = Math.round(state.width * ratio); canvas.height = Math.round(state.height * ratio); context.setTransform(ratio, 0, 0, ratio, 0, 0); };
+            const evaluate = (parcel) => { fieldConstants.y = parcel.y; fieldConstants.t = state.elapsed; if (config.scenario.preset === "incompressible-converging-pipe") { const pipe = fluidConvergingState(config, values, parcel.x); const properties = fluidProperties(config, { ...values, P: pipe.P, T: values.T, rho: pipe.rho }, pipe.V); if (!(properties.P > 0) || ![properties.rho, properties.a, properties.Mach, properties.h, properties.s].every(Number.isFinite)) throw new Error("The converging-pipe state became nonphysical."); return { u: pipe.V, v: 0, ...properties, pipe }; } const u = uEval(parcel.x); const v = vEval(parcel.x); const speed = Math.hypot(u, v) * config.field.scale; const P = pEval(parcel.x); const T = tEval(parcel.x); if (!Number.isFinite(P) || !Number.isFinite(T) || P <= 0 || T <= 0) throw new Error("Fluid field pressure and temperature must remain positive and finite."); const properties = fluidProperties(config, { ...values, P, T }, speed); if (![properties.rho, properties.a, properties.Mach, properties.h, properties.s].every(Number.isFinite)) throw new Error("Fluid thermodynamic properties are invalid."); return { u: u * config.field.scale, v: v * config.field.scale, ...properties }; };
+            const colorFor = (properties) => { const value = config.display.colorBy === "mach" ? properties.Mach : config.display.colorBy === "pressure" ? properties.P / 200000 : config.display.colorBy === "temperature" ? properties.T / 500 : config.display.colorBy === "entropy" ? (properties.s + 1000) / 2000 : properties.V / 700; const hue = Math.max(0, Math.min(220, 220 - value * 220)); return `hsl(${hue} 85% 62%)`; };
+            const draw = () => {
+                const x0 = 40; const y0 = 28; const w = state.width - 80; const h = state.height - 70;
+                const mapX = (x) => x0 + ((x - config.domain.x[0]) / (config.domain.x[1] - config.domain.x[0])) * w;
+                const mapY = (y) => y0 + (1 - (y - config.domain.y[0]) / (config.domain.y[1] - config.domain.y[0])) * h;
+                const pipe = config.geometry?.type === "converging-pipe";
+                const wallTop = (x) => config.geometry ? config.geometry.center + fluidConvergingHeight(config, x) / 2 : config.domain.y[1];
+                const wallBottom = (x) => config.geometry ? config.geometry.center - fluidConvergingHeight(config, x) / 2 : config.domain.y[0];
+                context.clearRect(0, 0, state.width, state.height);
+                context.fillStyle = "rgba(3, 17, 29, 0.82)"; context.fillRect(x0, y0, w, h);
+                context.strokeStyle = "rgba(77,184,255,.75)"; context.lineWidth = 2;
+                if (pipe) {
+                    context.beginPath(); context.moveTo(mapX(config.domain.x[0]), mapY(wallTop(config.domain.x[0]))); context.lineTo(mapX(config.domain.x[1]), mapY(wallTop(config.domain.x[1]))); context.moveTo(mapX(config.domain.x[0]), mapY(wallBottom(config.domain.x[0]))); context.lineTo(mapX(config.domain.x[1]), mapY(wallBottom(config.domain.x[1]))); context.stroke();
+                    if (config.display.showBoundaryLayer) { context.fillStyle = "rgba(189,92,255,.12)"; context.beginPath(); context.moveTo(mapX(config.domain.x[0]), mapY(wallTop(config.domain.x[0]))); context.lineTo(mapX(config.domain.x[1]), mapY(wallTop(config.domain.x[1]))); context.lineTo(mapX(config.domain.x[1]), mapY(wallTop(config.domain.x[1]) - 0.06)); context.lineTo(mapX(config.domain.x[0]), mapY(wallTop(config.domain.x[0]) - 0.06)); context.fill(); context.beginPath(); context.moveTo(mapX(config.domain.x[0]), mapY(wallBottom(config.domain.x[0]))); context.lineTo(mapX(config.domain.x[1]), mapY(wallBottom(config.domain.x[1]))); context.lineTo(mapX(config.domain.x[1]), mapY(wallBottom(config.domain.x[1]) + 0.06)); context.lineTo(mapX(config.domain.x[0]), mapY(wallBottom(config.domain.x[0]) + 0.06)); context.fill(); }
+                } else { context.strokeRect(x0, y0, w, h); if (config.display.showBoundaryLayer) { context.fillStyle = "rgba(189,92,255,.12)"; if (config.domain.walls.bottom === "no-slip") context.fillRect(x0, y0 + h - 30, w, 30); if (config.domain.walls.top === "no-slip") context.fillRect(x0, y0, w, 30); } }
+                context.fillStyle = "#91a0b6"; context.font = "12px sans-serif"; context.fillText("Inlet", x0 + 4, y0 - 9); context.fillText("Outlet", x0 + w - 42, y0 - 9);
+                let firstProperties = null;
+                state.parcels.forEach((parcel) => { const properties = evaluate(parcel); firstProperties ||= properties; const px = mapX(parcel.x); const py = mapY(parcel.y); context.fillStyle = colorFor(properties); if (config.display.showParticles) { context.beginPath(); context.arc(px, py, 4, 0, Math.PI * 2); context.fill(); } if (config.display.showVectors) { context.strokeStyle = context.fillStyle; context.beginPath(); context.moveTo(px, py); context.lineTo(px + Math.max(-28, Math.min(28, properties.u * 0.12)), py); context.stroke(); } });
+                const readoutProperties = pipe ? evaluate({ x: config.domain.x[0] + (config.domain.x[1] - config.domain.x[0]) * 0.5, y: config.geometry.center }) : firstProperties;
+                if (readoutProperties) { config.display.metrics.forEach((metric) => { const output = card.querySelector(`[data-fluid-metric="${metric}"]`); if (output) output.textContent = `${Number(readoutProperties[metric] ?? 0).toFixed(metric === "Mach" ? 2 : 1)}`; }); const difference = card.querySelector("[data-fluid-difference]"); if (difference) difference.textContent = `Delta V ${readoutProperties.DeltaV.toFixed(2)} m/s · Mach ${readoutProperties.Mach.toFixed(2)}`; const status = card.querySelector("[data-fluid-status]"); if (status) status.textContent = readoutProperties.Mach < 1 ? "Subsonic flow" : Math.abs(readoutProperties.Mach - 1) < 0.02 ? "Sonic transition" : "Supersonic visualization"; if (pipe) { const inlet = fluidConvergingState(config, values, config.domain.x[0]); const outlet = fluidConvergingState(config, values, config.domain.x[1]); card.querySelector("[data-fluid-inlet]")?.replaceChildren(document.createTextNode(`${inlet.P.toFixed(0)} Pa · ${inlet.V.toFixed(1)} m/s`)); card.querySelector("[data-fluid-outlet]")?.replaceChildren(document.createTextNode(`${outlet.P.toFixed(0)} Pa · ${outlet.V.toFixed(1)} m/s`)); card.querySelector("[data-fluid-delta-p]")?.replaceChildren(document.createTextNode(`${(outlet.P - inlet.P).toFixed(1)} Pa`)); card.querySelector("[data-fluid-delta-v]")?.replaceChildren(document.createTextNode(`${(outlet.V - inlet.V).toFixed(1)} m/s`)); card.querySelector("[data-fluid-conservation-check]")?.replaceChildren(document.createTextNode(`Continuity residual ${inlet.continuity.toExponential(2)} · Bernoulli residual ${outlet.bernoulli.toExponential(2)}`)); } }
+            };
+            const updateInputs = () => { Object.entries(values).forEach(([key, value]) => { const input = card.querySelector(`[data-fluid-input="${key}"]`); const output = card.querySelector(`[data-fluid-input-output="${key}"]`); if (input) input.value = String(value); if (output) output.textContent = String(value); }); draw(); };
+            const step = (delta) => { state.elapsed += delta; state.parcels.forEach((parcel) => { const properties = evaluate(parcel); const pipe = config.geometry?.type === "converging-pipe"; const height = pipe ? fluidConvergingHeight(config, parcel.x) : config.domain.y[1] - config.domain.y[0]; const center = pipe ? config.geometry.center : (config.domain.y[0] + config.domain.y[1]) / 2; const distance = Math.abs(parcel.y - center) / Math.max(height / 2, 1e-6); const wallFactor = config.display.showBoundaryLayer && (pipe || config.domain.walls.bottom === "no-slip" || config.domain.walls.top === "no-slip") ? Math.max(0.08, Math.min(1, (1 - distance) / 0.18)) : 1; parcel.x += properties.u * wallFactor * delta * 0.01; if (pipe) { const nextHeight = fluidConvergingHeight(config, Math.min(config.domain.x[1], parcel.x)); parcel.y = Math.max(center - nextHeight * 0.46, Math.min(center + nextHeight * 0.46, parcel.y)); } else { parcel.y += properties.v * delta * 0.01 * wallFactor; if (parcel.y < config.domain.y[0]) parcel.y = config.domain.y[0] + 0.001; if (parcel.y > config.domain.y[1]) parcel.y = config.domain.y[1] - 0.001; } if (parcel.x > config.domain.x[1]) { const startX = config.domain.x[0] + 0.001; const startHeight = pipe ? fluidConvergingHeight(config, startX) : config.domain.y[1] - config.domain.y[0]; parcel.x = startX; parcel.y = pipe ? center + (Math.random() - 0.5) * startHeight * 0.82 : config.domain.y[0] + Math.random() * (config.domain.y[1] - config.domain.y[0]); } }); draw(); };
+            const frame = (timestamp) => { if (!state.playing || !card.isConnected) { state.raf = 0; return; } try { const delta = Math.min(0.04, state.lastTime ? (timestamp - state.lastTime) / 1000 : 0.016); state.lastTime = timestamp; step(delta); state.raf = requestAnimationFrame(frame); } catch (error) { state.playing = false; const status = card.querySelector("[data-fluid-status]"); if (status) { status.textContent = `Fluid simulation stopped: ${error.message}`; status.setAttribute("role", "alert"); } } };
+            card.querySelector("[data-fluid-play]")?.addEventListener("click", () => { if (!state.playing) { state.playing = true; state.lastTime = 0; state.raf = requestAnimationFrame(frame); } });
+            card.querySelector("[data-fluid-pause]")?.addEventListener("click", () => { state.playing = false; });
+            card.querySelector("[data-fluid-reset]")?.addEventListener("click", () => { resetParcels(); draw(); });
+            card.querySelectorAll("[data-fluid-input]").forEach((input) => input.addEventListener("input", () => { try { values[input.dataset.fluidInput] = Number(input.value); resolveState(); resetParcels(); updateInputs(); } catch (error) { const status = card.querySelector("[data-fluid-status]"); if (status) status.textContent = error.message; } }));
+            resize(); resolveState(); resetParcels(); updateInputs(); if (typeof ResizeObserver === "function") new ResizeObserver(resize).observe(canvas);
+        } catch (error) { const status = card.querySelector("[data-fluid-status]"); if (status) { status.textContent = `Fluid card unavailable: ${error.message}`; status.setAttribute("role", "alert"); } card.classList.add("fluid-control-error-state"); }
+    });
+}
+
+function hydrateVariableBehaviorCard(card, config) {
+    const values = Object.fromEntries(config.variables.map((variable) => [variable.symbol, variable.value]));
+    const activeVariables = config.behavior.activeVariables;
+    const ductScene = config.behaviorMode === "duct-particle" ? hydrateDuctParticleScene(card, config, values) : null;
+    const showSelectionError = () => {
+        config.variables.filter((variable) => variable.interactive).forEach((variable) => {
+            const symbol = variable.symbol;
+            const row = card.querySelector(`[data-equation-variable="${symbol}"]`);
+            const input = card.querySelector(`[data-equation-input="${symbol}"]`);
+            const selector = card.querySelector(`[data-equation-select-variable="${symbol}"]`);
+            const isActive = activeVariables.includes(symbol);
+            if (row) row.classList.toggle("is-active", isActive);
+            if (input) input.disabled = !isActive;
+            if (selector) {
+                selector.setAttribute("aria-pressed", String(isActive));
+                selector.classList.toggle("is-active", isActive);
+            }
+        });
+        const status = card.querySelector("[data-equation-status]");
+        if (status) {
+            status.textContent = "Select exactly two active variables.";
+            status.classList.add("is-selection-error");
+        }
+    };
+    const update = (sourceSymbol = activeVariables[0]) => {
+        try {
+            if (activeVariables.length !== 2) {
+                showSelectionError();
+                return;
+            }
+            const targetSymbol = activeVariables.find((symbol) => symbol !== sourceSymbol) || activeVariables[1];
+            values[targetSymbol] = solveVariableBehaviorPartner(config, values, sourceSymbol, targetSymbol);
+            const leftValue = createInteractiveEquationExpression(config.graph.relationship.left, values)(0);
+            const rightValue = createInteractiveEquationExpression(config.graph.relationship.right, values)(0);
+            if (!Number.isFinite(leftValue) || !Number.isFinite(rightValue)) throw new Error("The relationship produced an invalid conservation value.");
+            config.variables.forEach((variable) => {
+                const value = Number(values[variable.symbol]);
+                const output = card.querySelector(`[data-equation-value="${variable.symbol}"]`);
+                const controlOutput = card.querySelector(`[data-equation-control-value="${variable.symbol}"]`);
+                const row = card.querySelector(`[data-equation-variable="${variable.symbol}"]`);
+                const input = card.querySelector(`[data-equation-input="${variable.symbol}"]`);
+                const range = variable.interactive ? variableBehaviorRange(config, variable, value) : null;
+                const isActive = activeVariables.includes(variable.symbol);
+                const outsideRange = variable.interactive && (value < variable.min || value > variable.max);
+                if (output) output.textContent = equationDisplayValue(value, variable.unit);
+                if (controlOutput) controlOutput.textContent = equationDisplayValue(value, variable.unit);
+                if (row) row.classList.toggle("is-active", isActive);
+                if (row) row.classList.toggle("is-out-of-range", outsideRange);
+                if (input) {
+                    input.disabled = !isActive;
+                    input.min = String(range.min);
+                    input.max = String(range.max);
+                    input.value = String(value);
+                    const progress = ((value - range.min) / Math.max(1e-9, range.max - range.min)) * 100;
+                    input.style.setProperty("--equation-progress", `${Math.max(0, Math.min(100, progress))}%`);
+                }
+                const selector = card.querySelector(`[data-equation-select-variable="${variable.symbol}"]`);
+                if (selector) {
+                    selector.setAttribute("aria-pressed", String(isActive));
+                    selector.classList.toggle("is-active", isActive);
+                }
+            });
+            const leftOutput = card.querySelector('[data-equation-side="left"]');
+            const rightOutput = card.querySelector('[data-equation-side="right"]');
+            if (leftOutput) leftOutput.textContent = equationDisplayValue(leftValue);
+            if (rightOutput) rightOutput.textContent = equationDisplayValue(rightValue);
+            const graph = card.querySelector("[data-equation-graph]");
+            if (graph) graph.innerHTML = renderVariableBehaviorGraph(config.graph, config.variables, values, activeVariables);
+            if (ductScene) ductScene.draw();
+            const status = card.querySelector("[data-equation-status]");
+            if (status) {
+                status.textContent = "";
+                status.classList.remove("is-selection-error");
+            }
+        } catch (error) {
+            const status = card.querySelector("[data-equation-status]");
+            if (status) status.textContent = error.message || "Unable to solve the conservation relationship.";
+        }
+    };
+    card.querySelectorAll("[data-equation-select-variable]").forEach((button) => {
+        button.addEventListener("click", () => {
+            const symbol = button.dataset.equationSelectVariable;
+            const existingIndex = activeVariables.indexOf(symbol);
+            if (existingIndex >= 0) {
+                activeVariables.splice(existingIndex, 1);
+            } else {
+                if (activeVariables.length >= 2) {
+                    showSelectionError();
+                    return;
+                }
+                activeVariables.push(symbol);
+            }
+            if (ductScene) ductScene.reset();
+            update(activeVariables[0]);
+        });
+    });
+    card.querySelectorAll("[data-equation-input]").forEach((input) => {
+        input.addEventListener("input", () => {
+            const symbol = input.dataset.equationInput;
+            if (!activeVariables.includes(symbol)) return;
+            values[symbol] = Number(input.value);
+            if (ductScene) ductScene.reset();
+            update(symbol);
+        });
+    });
+    update(activeVariables[0]);
+}
+
 function hydrateEquationCards(container) {
     container.querySelectorAll("[data-equation-card]").forEach((card) => {
         const config = EQUATION_CARD_CONFIGS.get(card.dataset.equationCard);
         if (!config) return;
+        if (config.behaviorMode === "variable-behavior" || config.behaviorMode === "duct-particle") {
+            hydrateVariableBehaviorCard(card, config);
+            return;
+        }
         const values = Object.fromEntries(config.variables.map((variable) => [variable.symbol, variable.value]));
         const update = () => {
             try {
@@ -2817,8 +3657,13 @@ function simpleMarkdownToHtml(md, options = {}) {
                 if (!safeUrl) {
                     return escapeHtml(match);
                 }
+                const sizeMatch = String(alt).match(/^(.*?),\s*(\d+(?:\.\d+)?)\s*$/);
+                const requestedSize = sizeMatch ? Number(sizeMatch[2]) : null;
+                const hasValidSize = Number.isFinite(requestedSize) && requestedSize >= 1 && requestedSize <= 100;
+                const altText = hasValidSize ? sizeMatch[1].trim() : String(alt);
                 const titleAttr = title ? ` title="${escapeHtml(title)}"` : "";
-                return tokenise(`<img src="${escapeHtml(safeUrl)}" alt="${escapeHtml(alt)}" loading="lazy"${titleAttr}>`);
+                const sizeAttrs = hasValidSize ? ` class="markdown-sized-image" style="width: ${requestedSize}%;"` : "";
+                return tokenise(`<img src="${escapeHtml(safeUrl)}" alt="${escapeHtml(altText)}" loading="lazy"${sizeAttrs}${titleAttr}>`);
             })
             .replace(/\[([^\]]+)\]\((\S+?)(?:\s+["']([^"']*)["'])?\)/g, (match, label, url, title) => {
                 const safeUrl = resolveSafeUrl(url);
@@ -2837,6 +3682,31 @@ function simpleMarkdownToHtml(md, options = {}) {
             .replace(/_(.+?)_/g, '<em>$1</em>');
 
         return source.replace(/\u0000(\d+)\u0000/g, (_, index) => tokens[Number(index)] || "");
+    };
+
+    const isExampleDelimiter = (line) => /^\s*\\\\\s*$/.test(line);
+
+    const renderExampleProblem = (regionLines) => {
+        const headingPattern = /^\s*###\s+(.+?)\s*$/;
+        const solutionPattern = /^\s*###\s+solution\s*:?[ \t]*$/i;
+        const answerPattern = /^\s*###\s+answer\s*:?[ \t]*$/i;
+        const firstHeadingIndex = regionLines.findIndex((entry) => headingPattern.test(entry));
+        const solutionIndex = regionLines.findIndex((entry) => solutionPattern.test(entry));
+        const answerIndex = regionLines.findIndex((entry, entryIndex) => entryIndex > solutionIndex && answerPattern.test(entry));
+        const error = (message) => `<article class="notes-example-problem notes-example-error" role="alert"><p class="notes-example-error-message">Example problem error: ${escapeHtml(message)}</p></article>`;
+
+        if (firstHeadingIndex < 0) return error("Add a ### heading for the example problem.");
+        if (solutionIndex < 0) return error("Add a ### Solution: section before the closing delimiter.");
+        const title = regionLines[firstHeadingIndex].replace(headingPattern, "$1").replace(/\s*:\s*$/, "").trim();
+        const problemLines = regionLines.slice(firstHeadingIndex + 1, solutionIndex);
+        const solutionLines = regionLines.slice(solutionIndex + 1, answerIndex >= 0 ? answerIndex : regionLines.length);
+        if (!solutionLines.some((entry) => entry.trim())) return error("The Solution section cannot be empty.");
+        const answerLines = answerIndex >= 0 ? regionLines.slice(answerIndex + 1) : [];
+        const renderSection = (sectionLines) => simpleMarkdownToHtml(sectionLines.join("\n"), { ...options, disableExampleRegions: true });
+        const problem = problemLines.some((entry) => entry.trim()) ? `<section class="notes-example-question"><p class="notes-example-section-label">Problem</p>${renderSection(problemLines)}</section>` : "";
+        const solution = `<section class="notes-example-solution"><p class="notes-example-section-label">Solution</p>${renderSection(solutionLines)}</section>`;
+        const answer = answerIndex >= 0 ? `<details class="notes-example-answer"><summary>Show Answer</summary><div class="notes-example-answer-body">${renderSection(answerLines)}</div></details>` : "";
+        return `<article class="notes-example-problem"><header class="notes-example-header"><p class="section-label">Example Problem</p><h3>${renderInline(title)}</h3></header>${problem}${solution}${answer}</article>`;
     };
 
     const parseTableRow = (row) => {
@@ -2980,6 +3850,22 @@ function simpleMarkdownToHtml(md, options = {}) {
                 }
                 continue;
             }
+            if (lang.toLowerCase() === "particle-physics-card") {
+                try {
+                    out.push(renderParticlePhysicsCard(JSON.parse(codeLines.join("\n")), index));
+                } catch (error) {
+                    out.push(`<article class="particle-physics-card particle-physics-error-state"><p class="particle-physics-error">Particle physics card error: ${equationText(error.message || "Invalid JSON payload.")}</p></article>`);
+                }
+                continue;
+            }
+            if (lang.toLowerCase() === "fluid-control-volume-card") {
+                try {
+                    out.push(renderFluidControlVolumeCard(JSON.parse(codeLines.join("\n")), index));
+                } catch (error) {
+                    out.push(`<article class="fluid-control-volume-card fluid-control-error-state"><p class="fluid-control-error">Fluid control-volume card error: ${equationText(error.message || "Invalid JSON payload.")}</p></article>`);
+                }
+                continue;
+            }
             if (lang.toLowerCase() === "youtube-card") {
                 try {
                     out.push(renderYoutubeCard(JSON.parse(codeLines.join("\n"))));
@@ -2996,6 +3882,47 @@ function simpleMarkdownToHtml(md, options = {}) {
             out.push(`<pre><code class="${cls}">${code}</code></pre>`);
             continue;
         }
+
+        if (!options.disableExampleRegions && isExampleDelimiter(line)) {
+            let endIndex = index + 1;
+            let insideFence = false;
+            while (endIndex < lines.length) {
+                if (/^\s*```/.test(lines[endIndex])) insideFence = !insideFence;
+                if (!insideFence && isExampleDelimiter(lines[endIndex])) break;
+                endIndex += 1;
+            }
+            if (endIndex >= lines.length) {
+                out.push(`<article class="notes-example-problem notes-example-error" role="alert"><p class="notes-example-error-message">Example problem error: add a closing \\\\ delimiter on its own line.</p></article>`);
+                index = lines.length;
+                continue;
+            }
+            out.push(renderExampleProblem(lines.slice(index + 1, endIndex)));
+            index = endIndex + 1;
+            continue;
+        }
+
+        // Keep display-math delimiters together so KaTeX can parse multiline equations.
+        const trimmedLine = line.trim();
+        const singleLineMath = trimmedLine.match(/^\$\$([\s\S]+)\$\$$/);
+        if (singleLineMath) {
+            out.push(`<div class="markdown-math-block">$$${escapeHtml(singleLineMath[1])}$$</div>`);
+            index += 1;
+            continue;
+        }
+        if (trimmedLine === "$$") {
+            const mathLines = [];
+            let mathIndex = index + 1;
+            while (mathIndex < lines.length && lines[mathIndex].trim() !== "$$") {
+                mathLines.push(lines[mathIndex]);
+                mathIndex += 1;
+            }
+            if (mathIndex < lines.length) {
+                out.push(`<div class="markdown-math-block">$$${escapeHtml(mathLines.join("\n"))}$$</div>`);
+                index = mathIndex + 1;
+                continue;
+            }
+        }
+
         const isTableHeader = /^\s*\|?[^|\n]+\|.+$/.test(line);
         const isTableDivider = /^\s*\|?\s*[:\- ]+\s*(\|\s*[:\- ]+\s*)+\|?\s*$/.test(nextLine);
 
@@ -3077,6 +4004,8 @@ export function hydrateMarkdownPreview(container) {
     hydrateEquationCards(container);
     hydrateModelCards(container);
     hydrateParticleCards(container);
+    hydrateParticlePhysicsCards(container);
+    hydrateFluidControlVolumeCards(container);
     try {
         renderMath(container);
     } catch (_) {
@@ -3245,6 +4174,8 @@ function renderNoteStage(stage, subject, chapter, session) {
         hydrateEquationCards(notesContainer);
         hydrateModelCards(notesContainer);
         hydrateParticleCards(notesContainer);
+        hydrateParticlePhysicsCards(notesContainer);
+        hydrateFluidControlVolumeCards(notesContainer);
         enhanceNotesDocument(notesContainer, chapter?.title || "");
         try {
             renderMath(notesContainer);

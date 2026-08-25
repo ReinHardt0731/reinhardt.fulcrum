@@ -115,6 +115,81 @@ document.addEventListener("DOMContentLoaded", async () => {
         return;
     }
 
+    let loadFluidConvergingDefaults = null;
+    const ensureAssistantModeControls = () => {
+        const form = elements.assistantForm;
+        if (!form || form.querySelector("#assistant-card-mode")) return;
+        const modeLabel = document.createElement("label");
+        modeLabel.innerHTML = '<span class="section-label">Card mode</span><select id="assistant-card-mode"><option value="standard">Standard equation card</option><option value="variable-behavior">Conservation variable behavior</option><option value="particle-physics">Particle physics collision lab</option><option value="fluid-control-volume">Fluid control-volume thermodynamics</option></select>';
+        const settings = document.createElement("div");
+        settings.id = "assistant-conservation-settings";
+        settings.className = "admin-assistant-grid assistant-conservation-settings";
+        settings.innerHTML = '<label><span class="section-label">Active variables</span><input id="assistant-active-variables" type="text" value="A_1, V_2" placeholder="A_1, V_2"><small>Select exactly two adjustable symbols.</small></label><label><span class="section-label">Left axis label</span><input id="assistant-left-axis-label" type="text" value="Area"></label><label><span class="section-label">Left axis unit</span><input id="assistant-left-axis-unit" type="text" value="m^2"></label><label><span class="section-label">Right axis label</span><input id="assistant-right-axis-label" type="text" value="Velocity"></label><label><span class="section-label">Right axis unit</span><input id="assistant-right-axis-unit" type="text" value="m/s"></label><p class="hero-meta compact-note assistant-conservation-help">Use the first definition line as the relationship. Adjustable syntax is <code>A_1(m^2,5.8,10,1,0.1,left,Inlet Area) = (A_1)</code>; fixed constants use <code>rho(fixed,1.225,kg/m^3,Air density) = (rho)</code>.</p>';
+        const particleSettings = document.createElement("div");
+        settings.insertAdjacentHTML("beforeend", '<label><span class="section-label">Visualization</span><select id="assistant-conservation-visualization"><option value="variable-behavior">Bar Graph</option><option value="duct-particle">Duct Particle Windows</option></select></label>');
+        const ductSettings = document.createElement("div");
+        ductSettings.id = "assistant-duct-particle-settings";
+        ductSettings.className = "assistant-duct-particle-settings";
+        ductSettings.hidden = true;
+        ductSettings.innerHTML = '<div class="admin-assistant-grid"><label>Particle count<input id="assistant-duct-particle-count" type="number" min="8" max="100" step="1" value="24"></label><label>Speed scale<input id="assistant-duct-particle-speed" type="number" min="0.1" step="0.1" value="1"></label><label>Trails<select id="assistant-duct-particle-trails"><option value="true">Show</option><option value="false">Hide</option></select></label><label>Velocity vectors<select id="assistant-duct-particle-vectors"><option value="true">Show</option><option value="false">Hide</option></select></label></div><p class="hero-meta compact-note">Duct windows are a conceptual parcel-flow visualization, not a CFD simulation.</p>';
+        particleSettings.id = "assistant-particle-physics-settings";
+        particleSettings.className = "assistant-particle-physics-settings";
+        particleSettings.hidden = true;
+        particleSettings.innerHTML = '<div class="mode-header"><div><p class="section-label">Two-body collision</p><h4>Particle settings</h4></div></div><div class="admin-assistant-grid assistant-particle-global-grid"><label><span class="section-label">Restitution value</span><input id="assistant-particle-restitution-value" type="number" min="0" max="1" step="0.05" value="1"></label><label><span class="section-label">Restitution min</span><input id="assistant-particle-restitution-min" type="number" min="0" max="1" step="0.05" value="0"></label><label><span class="section-label">Restitution max</span><input id="assistant-particle-restitution-max" type="number" min="0" max="1" step="0.05" value="1"></label><label><span class="section-label">Restitution step</span><input id="assistant-particle-restitution-step" type="number" min="0.01" max="1" step="0.01" value="0.05"></label></div><div class="assistant-particle-authors"><div class="assistant-particle-author"><h4>Particle 1</h4><div class="admin-assistant-grid"><label>Name<input id="assistant-particle-p1-name" type="text" value="Particle 1"></label><label>Symbol<input id="assistant-particle-p1-symbol" type="text" value="m_1"></label><label>Color<input id="assistant-particle-p1-color" type="text" value="#4db8ff"></label><label>Position<input id="assistant-particle-p1-position" type="number" value="-4" step="0.1"></label><label>Mass value<input id="assistant-particle-p1-mass-value" type="number" value="2" step="0.1"></label><label>Mass min<input id="assistant-particle-p1-mass-min" type="number" value="0.5" step="0.1"></label><label>Mass max<input id="assistant-particle-p1-mass-max" type="number" value="5" step="0.1"></label><label>Mass step<input id="assistant-particle-p1-mass-step" type="number" value="0.1" step="0.1"></label><label>Velocity value<input id="assistant-particle-p1-velocity-value" type="number" value="3" step="0.1"></label><label>Velocity min<input id="assistant-particle-p1-velocity-min" type="number" value="-10" step="0.1"></label><label>Velocity max<input id="assistant-particle-p1-velocity-max" type="number" value="10" step="0.1"></label><label>Velocity step<input id="assistant-particle-p1-velocity-step" type="number" value="0.1" step="0.1"></label></div></div><div class="assistant-particle-author"><h4>Particle 2</h4><div class="admin-assistant-grid"><label>Name<input id="assistant-particle-p2-name" type="text" value="Particle 2"></label><label>Symbol<input id="assistant-particle-p2-symbol" type="text" value="m_2"></label><label>Color<input id="assistant-particle-p2-color" type="text" value="#bd5cff"></label><label>Position<input id="assistant-particle-p2-position" type="number" value="4" step="0.1"></label><label>Mass value<input id="assistant-particle-p2-mass-value" type="number" value="1" step="0.1"></label><label>Mass min<input id="assistant-particle-p2-mass-min" type="number" value="0.5" step="0.1"></label><label>Mass max<input id="assistant-particle-p2-mass-max" type="number" value="5" step="0.1"></label><label>Mass step<input id="assistant-particle-p2-mass-step" type="number" value="0.1" step="0.1"></label><label>Velocity value<input id="assistant-particle-p2-velocity-value" type="number" value="0" step="0.1"></label><label>Velocity min<input id="assistant-particle-p2-velocity-min" type="number" value="-10" step="0.1"></label><label>Velocity max<input id="assistant-particle-p2-velocity-max" type="number" value="10" step="0.1"></label><label>Velocity step<input id="assistant-particle-p2-velocity-step" type="number" value="0.1" step="0.1"></label></div></div></div><p class="hero-meta compact-note">Mass units are kg, velocity units are m/s, and restitution must be between 0 and 1. The exported card uses the built-in two-body collision model.</p>';
+        const fluidSettings = document.createElement("div");
+        fluidSettings.id = "assistant-fluid-settings";
+        fluidSettings.className = "assistant-fluid-settings";
+        fluidSettings.hidden = true;
+        fluidSettings.innerHTML = '<div class="mode-header"><div><p class="section-label">2D fluid field</p><h4>Control-volume settings</h4></div></div><div class="assistant-fluid-grid"><label>Scenario<select id="assistant-fluid-preset"><option>compressible-flow</option><option>incompressible</option><option>bernoulli</option><option>isobaric</option><option>isentropic</option><option>subsonic</option><option>supersonic</option></select></label><label>Color by<select id="assistant-fluid-color"><option>mach</option><option>speed</option><option>pressure</option><option>temperature</option><option>entropy</option></select></label><label>Solver mode<select id="assistant-fluid-solver-mode"><option>target</option><option>system</option></select></label><label>Target<input id="assistant-fluid-target" value="P"></label></div><div class="assistant-fluid-grid"><label>X min<input id="assistant-fluid-x-min" type="number" value="0"></label><label>X max<input id="assistant-fluid-x-max" type="number" value="1"></label><label>Y min<input id="assistant-fluid-y-min" type="number" value="0"></label><label>Y max<input id="assistant-fluid-y-max" type="number" value="1"></label></div><div class="assistant-fluid-grid"><label>u(x,y,t)<input id="assistant-fluid-u" value="U0 * (1 - 0.5 * y^2)"></label><label>v(x,y,t)<input id="assistant-fluid-v" value="0"></label><label>P field, optional<input id="assistant-fluid-p-field" placeholder="P"></label><label>T field, optional<input id="assistant-fluid-t-field" placeholder="T"></label></div><div class="assistant-fluid-grid"><label>R (J/kg·K)<input id="assistant-fluid-r" type="number" value="287"></label><label>Gamma<input id="assistant-fluid-gamma" type="number" value="1.4" step="0.01"></label><label>cp (J/kg·K)<input id="assistant-fluid-cp" type="number" value="1004.5" step="0.1"></label><label>Reference P (Pa)<input id="assistant-fluid-ref-p" type="number" value="101325"></label><label>Reference T (K)<input id="assistant-fluid-ref-t" type="number" value="288.15" step="0.01"></label></div><div class="assistant-fluid-grid"><label>Input P<input id="assistant-fluid-input-p" type="number" value="101325"></label><label>Input T<input id="assistant-fluid-input-t" type="number" value="288.15" step="0.01"></label><label>Input U0<input id="assistant-fluid-input-u0" type="number" value="120"></label><label>Boundary layer<select id="assistant-fluid-boundary"><option value="true">Show</option><option value="false">Hide</option></select></label></div><div class="assistant-fluid-grid"><label>Equations<textarea id="assistant-fluid-equations" placeholder="P = P0\nT = T0"></textarea></label><label>System unknowns<textarea id="assistant-fluid-unknowns" placeholder="P\nT"></textarea></label><label>Metrics<textarea id="assistant-fluid-metrics">P, T, rho, V, Mach, h, s</textarea></label><label>Walls<textarea id="assistant-fluid-walls">left:inlet\nright:outlet\ntop:slip\nbottom:no-slip</textarea></label></div><p class="hero-meta compact-note">Use safe arithmetic and approved functions only. Coordinates are normalized x, y, with time t. SI units are used internally.</p>';
+        fluidSettings.querySelector("#assistant-fluid-preset").insertAdjacentHTML("beforeend", '<option>incompressible-converging-pipe</option>');
+        fluidSettings.insertAdjacentHTML("beforeend", '<div class="assistant-fluid-grid assistant-fluid-converging-fields"><label>Density rho (kg/m^3)<input id="assistant-fluid-rho" type="number" value="1.225" step="0.001"></label><label>Inlet height<input id="assistant-fluid-inlet-height" type="number" value="1" min="0.01" step="0.05"></label><label>Outlet height<input id="assistant-fluid-outlet-height" type="number" value="0.5" min="0.01" step="0.05"></label><label>Pipe center<input id="assistant-fluid-center" type="number" value="0.5" step="0.01"></label></div><p class="hero-meta compact-note assistant-fluid-converging-help">The converging-pipe preset uses fixed-density continuity and Bernoulli calculations. Height is proportional to cross-sectional area in this 2D visualization.</p>');
+        form.prepend(fluidSettings, particleSettings, ductSettings, settings, modeLabel);
+        elements.assistantCardMode = modeLabel.querySelector("#assistant-card-mode");
+        elements.assistantConservationSettings = settings;
+        elements.assistantDuctParticleSettings = ductSettings;
+        elements.assistantConservationVisualization = settings.querySelector("#assistant-conservation-visualization");
+        elements.assistantActiveVariables = settings.querySelector("#assistant-active-variables");
+        elements.assistantLeftAxisLabel = settings.querySelector("#assistant-left-axis-label");
+        elements.assistantLeftAxisUnit = settings.querySelector("#assistant-left-axis-unit");
+        elements.assistantRightAxisLabel = settings.querySelector("#assistant-right-axis-label");
+        elements.assistantRightAxisUnit = settings.querySelector("#assistant-right-axis-unit");
+        elements.assistantParticleSettings = particleSettings;
+        elements.assistantFluidSettings = fluidSettings;
+        loadFluidConvergingDefaults = () => {
+            const defaults = { "assistant-title": "Incompressible Flow Through a Converging Pipe", "assistant-subtitle": "Observe velocity increase and static-pressure decrease as an air-like incompressible flow enters a narrower section.", "assistant-notes": "The outlet area is half the inlet area, so ideal incompressible velocity doubles.\nBernoulli pressure decreases as velocity increases.\nThis is an idealized steady-flow visualization without viscous losses, turbulence, shocks, or separation.", "assistant-fluid-preset": "incompressible-converging-pipe", "assistant-fluid-color": "speed", "assistant-fluid-solver-mode": "target", "assistant-fluid-target": "outletPressure", "assistant-fluid-u": "U0", "assistant-fluid-v": "0", "assistant-fluid-p-field": "", "assistant-fluid-t-field": "", "assistant-fluid-input-p": "101325", "assistant-fluid-input-t": "288.15", "assistant-fluid-input-u0": "20", "assistant-fluid-rho": "1.225", "assistant-fluid-inlet-height": "1", "assistant-fluid-outlet-height": "0.5", "assistant-fluid-center": "0.5", "assistant-fluid-metrics": "P, V, DeltaV, rho, Mach, h, s", "assistant-fluid-walls": "left:inlet\nright:outlet\ntop:no-slip\nbottom:no-slip", "assistant-fluid-equations": "", "assistant-fluid-unknowns": "" };
+            Object.entries(defaults).forEach(([id, value]) => { const input = document.getElementById(id); if (input) input.value = value; });
+        };
+        const standardDefinition = "F = 2Y**2 + 4X\nX(N,4,10,0,0.1) = (\\alpha)\nY(N,5,10,2,0.2) = (\\gamma)\nF(derived) = (\\Omega)";
+        const conservationDefinition = "A_1 * V_1 = A_2 * V_2\nA_1(m^2,5.8,10,1,0.1,left,Inlet area) = (A_1)\nA_2(m^2,5.8,10,1,0.1,left,Outlet area) = (A_2)\nV_1(m/s,29.2,50,2,0.2,right,Inlet velocity) = (V_1)\nV_2(m/s,29.2,50,2,0.2,right,Outlet velocity) = (V_2)";
+        const updateVisibility = () => {
+            const mode = elements.assistantCardMode.value;
+            settings.hidden = mode !== "variable-behavior";
+            ductSettings.hidden = mode !== "variable-behavior" || elements.assistantConservationVisualization?.value !== "duct-particle";
+            particleSettings.hidden = mode !== "particle-physics";
+            fluidSettings.hidden = mode !== "fluid-control-volume";
+            elements.assistantDisplayEquation?.closest(".assistant-display-equation-field")?.toggleAttribute("hidden", mode === "particle-physics" || mode === "fluid-control-volume");
+            elements.assistantDefinitionField?.toggleAttribute("hidden", mode === "particle-physics" || mode === "fluid-control-volume");
+            document.querySelector(".assistant-graph-section")?.toggleAttribute("hidden", mode !== "standard");
+            document.querySelector(".assistant-syntax-help")?.toggleAttribute("hidden", mode === "particle-physics" || mode === "fluid-control-volume");
+        };
+        elements.assistantConservationVisualization?.addEventListener("change", updateVisibility);
+        elements.assistantCardMode.addEventListener("change", () => {
+            const mode = elements.assistantCardMode.value;
+            if (mode === "fluid-control-volume") loadFluidConvergingDefaults?.();
+            if (mode === "variable-behavior" && (elements.assistantDefinition?.value === standardDefinition || !elements.assistantDefinition?.value.trim())) {
+                elements.assistantDefinition.value = conservationDefinition;
+                if (elements.assistantDisplayEquation) elements.assistantDisplayEquation.value = "A_1 V_1 = A_2 V_2";
+            } else if (mode === "standard" && (elements.assistantDefinition?.value === conservationDefinition || !elements.assistantDefinition?.value.trim())) {
+                elements.assistantDefinition.value = standardDefinition;
+                if (elements.assistantDisplayEquation) elements.assistantDisplayEquation.value = "2Y^{2} + 4X";
+            }
+            updateVisibility();
+            assistantDefinitionEditor?.render?.();
+        });
+        updateVisibility();
+    };
+    ensureAssistantModeControls();
+
     if (!elements.drawerOpen) {
         const openButton = document.createElement("button");
         openButton.type = "button";
@@ -1255,6 +1330,53 @@ F(derived) = (\\Omega)`;
         const source = String(elements.assistantDefinition?.value || "");
         const lines = source.split(/\r?\n/).map((line, index) => ({ line: line.trim(), number: index + 1 })).filter((entry) => entry.line);
         if (!lines.length) throw new Error("Enter an equation definition.");
+        if (elements.assistantCardMode?.value === "variable-behavior") {
+            const declarationPattern = /^([A-Za-z_]\w*)\s*\(([^)]*)\)\s*=\s*(.+)$/;
+            const equationLines = lines.filter((entry) => !declarationPattern.test(entry.line));
+            if (equationLines.length !== 1) throw new Error("Provide exactly one relationship equation.");
+            const equalsIndex = equationLines[0].line.indexOf("=");
+            if (equalsIndex <= 0 || equalsIndex >= equationLines[0].line.length - 1) throw new Error(`Line ${equationLines[0].number}: use <left expression> = <right expression>.`);
+            const relationship = { left: equationLines[0].line.slice(0, equalsIndex).trim(), right: equationLines[0].line.slice(equalsIndex + 1).trim() };
+            const variables = [];
+            const symbols = new Set();
+            lines.filter((entry) => entry !== equationLines[0]).forEach((entry) => {
+                const match = entry.line.match(declarationPattern);
+                if (!match) throw new Error(`Line ${entry.number}: use a variable declaration.`);
+                const symbol = match[1];
+                if (symbols.has(symbol)) throw new Error(`Line ${entry.number}: symbol ${symbol} is declared more than once.`);
+                symbols.add(symbol);
+                const fields = match[2].split(",").map((field) => field.trim());
+                if (fields[0].toLowerCase() === "fixed") {
+                    if (fields.length !== 3 && fields.length !== 4) throw new Error(`Line ${entry.number}: fixed variables require fixed, value, unit, and optional name.`);
+                    const value = Number(fields[1]);
+                    if (!fields[2] || !Number.isFinite(value)) throw new Error(`Line ${entry.number}: fixed variables require a unit and numeric value.`);
+                    const shown = displaySymbol(match[3]);
+                    if (!shown || shown.toLowerCase() === "none") throw new Error(`Line ${entry.number}: a display symbol is required.`);
+                    variables.push({ symbol, displaySymbol: shown, name: fields[3] || symbol, unit: fields[2], value, interactive: false, fixed: true });
+                    return;
+                }
+                if (fields.length < 5 || fields.length > 7) throw new Error(`Line ${entry.number}: variables require unit, initial, max, min, step, optional axis, and optional name.`);
+                const [unit, initialText, maxText, minText, stepText, axisText = "left", name = symbol] = fields;
+                const value = Number(initialText);
+                const max = Number(maxText);
+                const min = Number(minText);
+                const step = Number(stepText);
+                const axis = axisText.toLowerCase();
+                if (!unit || ![value, max, min, step].every(Number.isFinite) || !(max > min) || !(step > 0) || value < min || value > max) throw new Error(`Line ${entry.number}: variable unit or range values are invalid.`);
+                if (!["left", "right"].includes(axis)) throw new Error(`Line ${entry.number}: axis must be left or right.`);
+                const shown = displaySymbol(match[3]);
+                if (!shown || shown.toLowerCase() === "none") throw new Error(`Line ${entry.number}: a display symbol is required.`);
+                variables.push({ symbol, displaySymbol: shown, name: name || symbol, unit, axis, value, min, max, step, interactive: true });
+            });
+            const activeVariables = String(elements.assistantActiveVariables?.value || "").split(",").map((value) => value.trim()).filter(Boolean);
+            const interactiveSymbols = new Set(variables.filter((variable) => variable.interactive).map((variable) => variable.symbol));
+            if (activeVariables.length !== 2 || new Set(activeVariables).size !== 2 || activeVariables.some((symbol) => !interactiveSymbols.has(symbol))) throw new Error("Select exactly two declared adjustable variables.");
+            const relationshipSymbols = new Set(`${relationship.left} ${relationship.right}`.match(/[A-Za-z_]\w*/g) || []);
+            const allowedNames = new Set(["e", "pi", "abs", "acos", "asin", "atan", "cos", "exp", "log", "sin", "sqrt", "tan"]);
+            const unknownSymbols = [...relationshipSymbols].filter((symbol) => !symbols.has(symbol) && !allowedNames.has(symbol));
+            if (unknownSymbols.length) throw new Error(`Relationship contains undeclared variable(s): ${unknownSymbols.join(", ")}.`);
+            return { mode: "variable-behavior", equation: `${relationship.left} = ${relationship.right}`, relationship, variables, derived: [], activeVariables };
+        }
         const equationLines = lines.filter((entry) => !/^\s*[A-Za-z_]\w*\s*\(/.test(entry.line));
         if (equationLines.length !== 1) throw new Error("Line 1: provide exactly one calculation equation.");
         const equationMatch = equationLines[0].line.match(/^([A-Za-z_]\w*)\s*=\s*(.+)$/);
@@ -1283,16 +1405,16 @@ F(derived) = (\\Omega)`;
                 derived = { symbol, displaySymbol: displaySymbolHidden ? "" : shown, displaySymbolHidden, name: symbol, expression: executableExpression };
                 return;
             }
-            if (fields.length !== 5) throw new Error(`Line ${entry.number}: parameters require unit, initial, max, min, and step.`);
-            const [unit, initialText, maxText, minText, stepText] = fields;
+            if (fields.length !== 5 && fields.length !== 6) throw new Error(`Line ${entry.number}: parameters require unit, initial, max, min, step, and optional name.`);
+            const [unit, initialText, maxText, minText, stepText, name = symbol] = fields;
             const value = Number(initialText);
             const max = Number(maxText);
             const min = Number(minText);
             const step = Number(stepText);
-            if (![value, max, min, step].every(Number.isFinite)) throw new Error(`Line ${entry.number}: parameter values must be numeric.`);
+            if (!unit || ![value, max, min, step].every(Number.isFinite)) throw new Error(`Line ${entry.number}: parameter unit and values must be valid.`);
             if (!(max > min) || !(step > 0)) throw new Error(`Line ${entry.number}: require Max > Min and Step > 0.`);
             if (value < min || value > max) throw new Error(`Line ${entry.number}: InitialValue must be between Min and Max.`);
-            variables.push({ symbol, displaySymbol: displaySymbolHidden ? "" : shown, displaySymbolHidden, name: symbol, unit, value, min, max, step, interactive: true });
+            variables.push({ symbol, displaySymbol: displaySymbolHidden ? "" : shown, displaySymbolHidden, name: name || symbol, unit, value, min, max, step, interactive: true });
         });
         if (!derived) throw new Error(`Add a ${outputSymbol}(derived) declaration.`);
         return { equation: executableExpression, variables, derived: [derived] };
@@ -1398,7 +1520,86 @@ F(derived) = (\\Omega)`;
     const assistantDefinitionEditor = setupAssistantDefinitionEditor();
 
     const readAssistantConfig = () => {
+        const mode = elements.assistantCardMode?.value || "standard";
+        if (mode === "particle-physics") {
+            const field = (id) => document.getElementById(id);
+            const number = (id, label) => {
+                const value = Number(field(id)?.value);
+                if (!Number.isFinite(value)) throw new Error(`${label} must be numeric.`);
+                return value;
+            };
+            const range = (prefix, label, unit) => {
+                const value = number(`${prefix}-value`, `${label} value`);
+                const min = number(`${prefix}-min`, `${label} minimum`);
+                const max = number(`${prefix}-max`, `${label} maximum`);
+                const step = number(`${prefix}-step`, `${label} step`);
+                if (!(max > min) || step <= 0 || value < min || value > max) throw new Error(`${label} needs Value within Min/Max and Max > Min.`);
+                return { value, min, max, step, unit };
+            };
+            const particles = ["p1", "p2"].map((id, index) => {
+                const prefix = `assistant-particle-${id}`;
+                const symbol = text(field(`${prefix}-symbol`)?.value);
+                const color = text(field(`${prefix}-color`)?.value);
+                const position = number(`${prefix}-position`, `${id} position`);
+                if (!/^[A-Za-z_][A-Za-z0-9_]*$/.test(symbol)) throw new Error(`${id} needs a valid symbol.`);
+                if (!/^#[0-9a-f]{6}$/i.test(color)) throw new Error(`${id} needs a six-digit hexadecimal color.`);
+                const mass = range(`${prefix}-mass`, `${id} mass`, "kg");
+                if (mass.min <= 0 || mass.value <= 0) throw new Error(`${id} mass must be positive.`);
+                return { id, name: text(field(`${prefix}-name`)?.value) || `Particle ${index + 1}`, symbol, mass, velocity: range(`${prefix}-velocity`, `${id} velocity`, "m/s"), position, color };
+            });
+            if (particles[0].symbol === particles[1].symbol || particles[0].id === particles[1].id) throw new Error("Particles need unique ids and symbols.");
+            if (Math.abs(particles[0].position - particles[1].position) < 0.001) throw new Error("Particle positions must be separated.");
+            const restitution = {
+                value: number("assistant-particle-restitution-value", "Restitution value"),
+                min: number("assistant-particle-restitution-min", "Restitution minimum"),
+                max: number("assistant-particle-restitution-max", "Restitution maximum"),
+                step: number("assistant-particle-restitution-step", "Restitution step"),
+                unit: ""
+            };
+            if (restitution.min < 0 || restitution.max > 1 || !(restitution.max > restitution.min) || restitution.step <= 0 || restitution.value < restitution.min || restitution.value > restitution.max) throw new Error("Restitution must be between 0 and 1 with a valid range.");
+            return { title: text(elements.assistantTitle?.value) || "Two-Body Collision Lab", subtitle: text(elements.assistantSubtitle?.value), model: "two-body-collision", restitution, particles, notes: String(elements.assistantNotes?.value || "").split(/\r?\n/).map(text).filter(Boolean) };
+        }
+        if (mode === "fluid-control-volume") {
+            const field = (id) => document.getElementById(id);
+            const number = (id, label) => { const value = Number(field(id)?.value); if (!Number.isFinite(value)) throw new Error(`${label} must be numeric.`); return value; };
+            const parseWalls = String(field("assistant-fluid-walls")?.value || "").split(/\r?\n/).map((line) => line.split(":" ).map(text)).filter((entry) => entry.length === 2).reduce((result, entry) => { result[entry[0]] = entry[1]; return result; }, {});
+            const ranges = { P: { value: number("assistant-fluid-input-p", "Pressure"), min: 50000, max: 200000, step: 100, unit: "Pa" }, T: { value: number("assistant-fluid-input-t", "Temperature"), min: 200, max: 500, step: 1, unit: "K" }, U0: { value: number("assistant-fluid-input-u0", "Velocity"), min: 0, max: 700, step: 1, unit: "m/s" } };
+            const preset = text(field("assistant-fluid-preset")?.value) || "compressible-flow";
+            if (preset === "incompressible-converging-pipe") ranges.rho = { value: number("assistant-fluid-rho", "Density"), min: 0.05, max: 20, step: 0.001, unit: "kg/m^3" };
+            const solverMode = text(field("assistant-fluid-solver-mode")?.value) || "target";
+            const equations = String(field("assistant-fluid-equations")?.value || "").split(/\r?\n/).map(text).filter(Boolean);
+            const unknowns = String(field("assistant-fluid-unknowns")?.value || "").split(/\r?\n/).map(text).filter(Boolean);
+            const solver = { mode: solverMode, target: text(field("assistant-fluid-target")?.value), unknowns, equations, ranges: {} };
+            if (solverMode === "target" && equations.length && !solver.target) throw new Error("Fluid target mode requires a target variable.");
+            if (solverMode === "system" && equations.length !== unknowns.length) throw new Error("Fluid system mode requires one equation per unknown.");
+            const converging = preset === "incompressible-converging-pipe";
+            return { title: text(elements.assistantTitle?.value) || (converging ? "Incompressible Flow Through a Converging Pipe" : "Fluid Control Volume"), subtitle: text(elements.assistantSubtitle?.value), model: "fluid-control-volume", domain: { x: [number("assistant-fluid-x-min", "X minimum"), number("assistant-fluid-x-max", "X maximum")], y: [number("assistant-fluid-y-min", "Y minimum"), number("assistant-fluid-y-max", "Y maximum")], walls: parseWalls }, geometry: converging ? { type: "converging-pipe", inletHeight: number("assistant-fluid-inlet-height", "Inlet height"), outletHeight: number("assistant-fluid-outlet-height", "Outlet height"), center: number("assistant-fluid-center", "Pipe center"), wallMode: "no-slip" } : undefined, field: { u: text(field("assistant-fluid-u")?.value) || "0", v: text(field("assistant-fluid-v")?.value) || "0", P: text(field("assistant-fluid-p-field")?.value), T: text(field("assistant-fluid-t-field")?.value), scale: 1 }, thermodynamics: { model: converging ? "incompressible" : "ideal-gas", R: number("assistant-fluid-r", "R"), gamma: number("assistant-fluid-gamma", "Gamma"), cp: number("assistant-fluid-cp", "cp"), rho: converging ? ranges.rho.value : undefined, reference: { P: number("assistant-fluid-ref-p", "Reference pressure"), T: number("assistant-fluid-ref-t", "Reference temperature") } }, state: { inputs: { P: ranges.P.value, T: ranges.T.value, U0: ranges.U0.value, ...(converging ? { rho: ranges.rho.value } : {}) }, ranges }, scenario: { preset, solver }, display: { colorBy: text(field("assistant-fluid-color")?.value) || "mach", showParticles: true, showVectors: true, showBoundaryLayer: field("assistant-fluid-boundary")?.value !== "false", metrics: String(field("assistant-fluid-metrics")?.value || "P,T,rho,V,Mach,h,s").split(",").map(text).filter(Boolean) }, notes: String(elements.assistantNotes?.value || "").split(/\r?\n/).map(text).filter(Boolean) };
+        }
         const parsed = parseAssistantDefinition();
+        if (parsed.mode === "variable-behavior") {
+            const visualization = elements.assistantConservationVisualization?.value || "variable-behavior";
+            const graph = {
+                type: visualization,
+                relationship: parsed.relationship,
+                axes: {
+                    left: { label: text(elements.assistantLeftAxisLabel?.value) || "Left axis", unit: text(elements.assistantLeftAxisUnit?.value) },
+                    right: { label: text(elements.assistantRightAxisLabel?.value) || "Right axis", unit: text(elements.assistantRightAxisUnit?.value) }
+                }
+            };
+            if (visualization === "duct-particle") {
+                const count = Number(document.getElementById("assistant-duct-particle-count")?.value);
+                const speedScale = Number(document.getElementById("assistant-duct-particle-speed")?.value);
+                if (!Number.isInteger(count) || count < 8 || count > 100) throw new Error("Duct particle count must be an integer from 8 to 100.");
+                if (!Number.isFinite(speedScale) || speedScale <= 0) throw new Error("Duct particle speed scale must be positive.");
+                graph.particles = {
+                    count,
+                    speedScale,
+                    showTrails: document.getElementById("assistant-duct-particle-trails")?.value !== "false",
+                    showVectors: document.getElementById("assistant-duct-particle-vectors")?.value !== "false"
+                };
+            }
+            return { title: text(elements.assistantTitle?.value) || "Conservation Relationship", subtitle: text(elements.assistantSubtitle?.value), equation: text(elements.assistantDisplayEquation?.value) || parsed.equation, variables: parsed.variables, behavior: { activeVariables: parsed.activeVariables }, graph, notes: String(elements.assistantNotes?.value || "").split(/\r?\n/).map(text).filter(Boolean) };
+        }
         const graph = { expression: parsed.equation, xVariable: text(elements.assistantGraphXVariable?.value), xLabel: text(elements.assistantGraphXLabel?.value) || "x", yLabel: text(elements.assistantGraphYLabel?.value) || "y", xMin: Number(elements.assistantGraphXMin?.value), xMax: Number(elements.assistantGraphXMax?.value), yMin: Number(elements.assistantGraphYMin?.value), yMax: Number(elements.assistantGraphYMax?.value) };
         if (graph && (!(graph.xMax > graph.xMin) || !(graph.yMax > graph.yMin))) throw new Error("Graph ranges must have maximum values greater than minimum values.");
         return { title: text(elements.assistantTitle?.value) || "Equation", subtitle: text(elements.assistantSubtitle?.value), ...parsed, equation: text(elements.assistantDisplayEquation?.value) || parsed.equation, ...(graph ? { graph } : {}), notes: String(elements.assistantNotes?.value || "").split(/\r?\n/).map(text).filter(Boolean) };
@@ -1410,7 +1611,11 @@ F(derived) = (\\Omega)`;
         elements.assistantViewMarkdownButton?.classList.toggle("is-active", mode === "markdown");
         elements.assistantPreviewButton?.classList.toggle("is-active", mode === "card");
     };
-    const assistantMarkdown = () => `\`\`\`equation-card\n${JSON.stringify(readAssistantConfig(), null, 2)}\n\`\`\``;
+    const assistantMarkdown = () => {
+        const mode = elements.assistantCardMode?.value || "standard";
+        const fence = mode === "particle-physics" ? "particle-physics-card" : mode === "fluid-control-volume" ? "fluid-control-volume-card" : "equation-card";
+        return `\`\`\`${fence}\n${JSON.stringify(readAssistantConfig(), null, 2)}\n\`\`\``;
+    };
     const renderAssistantMarkdown = () => {
         const markdown = assistantMarkdown();
         elements.assistantPreview?.replaceChildren();
@@ -1452,9 +1657,27 @@ F(derived) = (\\Omega)`;
         try { renderAssistantMarkdown(); } catch (error) { if (elements.assistantStatus) elements.assistantStatus.textContent = error.message; }
     });
     const resetAssistantDefaults = () => {
+        const selectedMode = elements.assistantCardMode?.value || "standard";
         elements.assistantForm?.reset();
-        if (elements.assistantDisplayEquation) elements.assistantDisplayEquation.value = defaultAssistantDisplayEquation;
-        if (elements.assistantDefinition) elements.assistantDefinition.value = defaultAssistantDefinition;
+        if (elements.assistantCardMode) elements.assistantCardMode.value = selectedMode;
+        if (elements.assistantConservationSettings) elements.assistantConservationSettings.hidden = true;
+        if (elements.assistantDuctParticleSettings) elements.assistantDuctParticleSettings.hidden = true;
+        if (elements.assistantParticleSettings) elements.assistantParticleSettings.hidden = true;
+        if (elements.assistantFluidSettings) elements.assistantFluidSettings.hidden = true;
+        elements.assistantDisplayEquation?.closest(".assistant-display-equation-field")?.removeAttribute("hidden");
+        elements.assistantDefinitionField?.removeAttribute("hidden");
+        document.querySelector(".assistant-graph-section")?.removeAttribute("hidden");
+        document.querySelector(".assistant-syntax-help")?.removeAttribute("hidden");
+        if (elements.assistantActiveVariables) elements.assistantActiveVariables.value = "A_1, V_2";
+        if (elements.assistantLeftAxisLabel) elements.assistantLeftAxisLabel.value = "Area";
+        if (elements.assistantLeftAxisUnit) elements.assistantLeftAxisUnit.value = "m^2";
+        if (elements.assistantRightAxisLabel) elements.assistantRightAxisLabel.value = "Velocity";
+        if (elements.assistantRightAxisUnit) elements.assistantRightAxisUnit.value = "m/s";
+        if (elements.assistantConservationVisualization) elements.assistantConservationVisualization.value = "variable-behavior";
+        const ductDefaults = { "assistant-duct-particle-count": "24", "assistant-duct-particle-speed": "1", "assistant-duct-particle-trails": "true", "assistant-duct-particle-vectors": "true" };
+        Object.entries(ductDefaults).forEach(([id, value]) => { const input = document.getElementById(id); if (input) input.value = value; });
+        if (elements.assistantDisplayEquation) elements.assistantDisplayEquation.value = selectedMode === "variable-behavior" ? "A_1 V_1 = A_2 V_2" : defaultAssistantDisplayEquation;
+        if (elements.assistantDefinition) elements.assistantDefinition.value = selectedMode === "variable-behavior" ? "A_1 * V_1 = A_2 * V_2\nA_1(m^2,5.8,10,1,0.1,left,Inlet area) = (A_1)\nA_2(m^2,5.8,10,1,0.1,left,Outlet area) = (A_2)\nV_1(m/s,29.2,50,2,0.2,right,Inlet velocity) = (V_1)\nV_2(m/s,29.2,50,2,0.2,right,Outlet velocity) = (V_2)" : defaultAssistantDefinition;
         if (elements.assistantGraphXVariable) elements.assistantGraphXVariable.value = "X";
         if (elements.assistantGraphXLabel) elements.assistantGraphXLabel.value = "X (alpha)";
         if (elements.assistantGraphYLabel) elements.assistantGraphYLabel.value = "F (Omega)";
@@ -1462,6 +1685,8 @@ F(derived) = (\\Omega)`;
         if (elements.assistantGraphXMax) elements.assistantGraphXMax.value = "10";
         if (elements.assistantGraphYMin) elements.assistantGraphYMin.value = "0";
         if (elements.assistantGraphYMax) elements.assistantGraphYMax.value = "260";
+        if (selectedMode === "fluid-control-volume") loadFluidConvergingDefaults?.();
+        elements.assistantCardMode?.dispatchEvent(new Event("change"));
         assistantDefinitionEditor?.render();
     };
     elements.assistantResetButton?.addEventListener("click", () => { resetAssistantDefaults(); if (elements.assistantStatus) elements.assistantStatus.textContent = "Assistant reset."; });

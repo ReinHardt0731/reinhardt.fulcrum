@@ -1,4 +1,4 @@
-import { initModePage } from "./shared.js?v=equation-math-2";
+import { initModePage } from "./shared.js?v=equation-math-3";
 
 document.addEventListener("DOMContentLoaded", () => {
     initModePage("note");

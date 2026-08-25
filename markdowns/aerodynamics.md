@@ -8,30 +8,43 @@ Aerodynamics is the study of motion of air and how thermodynamic properties chan
 ## Properties of Air
 Pressure Temperature and Density
 
-The particle card shows how temperature, relative volume, and pressure relate in a simplified ideal-gas model. Particle speed follows the square root of temperature, while wall pulses and wall color show measured collision pressure.
+The particle card shows how temperature, density, and pressure relate in a simplified ideal-gas model. Particle speed follows the square root of temperature, while the animation provides a visual model of moving gas particles.
 
 ```particle-card
 {
-  "title": "Temperature, Volume, and Pressure",
-  "subtitle": "Adjust temperature and relative volume to observe particle motion and wall pressure.",
+  "title": "Temperature, Mass, Volume, and Pressure",
+  "subtitle": "Adjust temperature, mass, and volume to observe ideal-gas behavior.",
+  "model": "ideal-gas",
   "particleCount": 36,
+  "gas": {
+    "R": 287,
+    "unit": "J/(kg·K)"
+  },
   "temperature": {
-    "value": 300,
+    "value": 288.15,
     "min": 100,
     "max": 900,
-    "step": 10,
+    "step": 1,
     "unit": "K"
+  },
+  "mass": {
+    "value": 1.225,
+    "min": 0.1,
+    "max": 5,
+    "step": 0.01,
+    "unit": "kg"
   },
   "volume": {
     "value": 1,
-    "min": 0.5,
-    "max": 2,
-    "step": 0.05,
-    "unit": "relative"
+    "min": 0.1,
+    "max": 5,
+    "step": 0.01,
+    "unit": "m^3"
   },
   "notes": [
-    "Higher temperature increases average particle speed.",
-    "At constant temperature, reducing volume increases pressure."
+    "Increasing temperature increases pressure when mass and volume remain constant.",
+    "Increasing mass increases density and pressure.",
+    "Increasing volume decreases density and pressure."
   ]
 }
 ```
@@ -65,7 +78,7 @@ Example: Problem Solving
 
 ## Atmosphere
 Atmosphere is Divided into Several Layers 
-![atmosphere](../asset/atmosphere.PNG)
+![atmosphere,75](../asset/atmosphere.PNG)
 
 ### Isentropic Layers
 
@@ -90,35 +103,40 @@ Thus
 
 $$A_1 V_1 =  A_2 V_2$$
 
+
 ```equation-card
 {
   "title": "Continuity Equation",
-  "subtitle": "Adjust two variables and observe how the remaining active variable follows while volumetric flow is preserved.",
+  "subtitle": "Observe how fluid speed changes through a duct.",
   "equation": "A_1 V_1 = A_2 V_2",
-  "behavior": {"activeVariables": ["A_1", "V_2"]},
+  "behavior": { "activeVariables": ["A_1", "V_2"] },
   "variables": [
-    {"symbol": "A_1", "displaySymbol": "A_1", "name": "Area 1", "unit": "m^2", "axis": "left", "value": 5.8, "min": 1, "max": 10, "step": 0.1, "interactive": true},
-    {"symbol": "A_2", "displaySymbol": "A_2", "name": "Area 2", "unit": "m^2", "axis": "left", "value": 5.8, "min": 1, "max": 10, "step": 0.1, "interactive": true},
-    {"symbol": "V_1", "displaySymbol": "V_1", "name": "Velocity 1", "unit": "m/s", "axis": "right", "value": 29.2, "min": 2, "max": 50, "step": 0.2, "interactive": true},
-    {"symbol": "V_2", "displaySymbol": "V_2", "name": "Velocity 2", "unit": "m/s", "axis": "right", "value": 29.2, "min": 2, "max": 50, "step": 0.2, "interactive": true}
+    { "symbol": "A_1", "name": "Inlet Area", "unit": "m^2", "axis": "left", "value": 5.8, "min": 1, "max": 10, "step": 0.1, "interactive": true },
+    { "symbol": "A_2", "name": "Outlet Area", "unit": "m^2", "axis": "left", "value": 5.8, "min": 1, "max": 10, "step": 0.1, "interactive": true },
+    { "symbol": "V_1", "name": "Inlet Velocity", "unit": "m/s", "axis": "right", "value": 29.2, "min": 2, "max": 50, "step": 0.2, "interactive": true },
+    { "symbol": "V_2", "name": "Outlet Velocity", "unit": "m/s", "axis": "right", "value": 29.2, "min": 2, "max": 50, "step": 0.2, "interactive": true }
   ],
   "graph": {
-    "type": "variable-behavior",
-    "relationship": {"left": "A_1 * V_1", "right": "A_2 * V_2"},
-    "axes": {
-      "left": {"label": "Area", "unit": "m^2"},
-      "right": {"label": "Velocity", "unit": "m/s"}
-    }
+    "type": "duct-particle",
+    "relationship": { "left": "A_1 * V_1", "right": "A_2 * V_2" },
+    "axes": { "left": { "label": "Area", "unit": "m^2" }, "right": { "label": "Velocity", "unit": "m/s" } },
+    "particles": { "count": 24, "speedScale": 1, "showTrails": true, "showVectors": true }
   },
-  "notes": [
-    "Area variables use the left axis.",
-    "Velocity variables use the right axis.",
-    "Select two circles to choose the active variables.",
-    "Assumes steady, incompressible flow."
-  ]
+  "notes": ["The windows are synchronized conceptual samples of flow at the inlet and outlet."]
 }
 ```
-Example:
+
+
+\\
+### Example 1: A plane is flying at a given altitude
+Determine the required velocity.
+### Solution:
+$$A + B = C$$
+asdsadad
+### Answer:
+$$C = 3$$
+asdsadasd
+\\
 
 ## Mach Number and Speed of Sound
 
@@ -148,7 +166,7 @@ $$\delta = \frac{0.37x}{Re_x^{}0.2} $$
 ## Critical Pressure and Velocity
 ## Lift Due to Circulation
 
-SUMMARY:
+
 
 
 

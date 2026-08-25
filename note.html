@@ -14,15 +14,9 @@
     <title>PrepCore Notes</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="vendor/katex/katex.min.css">
-    <script>
-    (function(){
-        const cdnBase = 'https://cdn.jsdelivr.net/npm/katex@0.16.4/';
-        function loadScript(src, onload){const s=document.createElement('script');s.src=src;s.onload=onload;s.onerror=onload;document.head.appendChild(s);} 
-        function loadCSS(href){const l=document.createElement('link');l.rel='stylesheet';l.href=href;document.head.appendChild(l);} 
-        loadCSS(cdnBase+'dist/katex.min.css');
-        loadScript(cdnBase+'dist/katex.min.js', function(){ loadScript(cdnBase+'contrib/auto-render.min.js', function(){}); });
-    })();
-    </script>
+    <script src="vendor/katex/katex.min.js"></script>
+    <script src="vendor/katex/contrib/auto-render.min.js"></script>
+    <script src="vendor/nerdamer.all.min.js"></script>
 </head>
 <body class="mode-page mode-note">
     <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
@@ -111,13 +105,5 @@
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
     <script type="module" src="vendor/model-viewer/model-viewer.min.js"></script>
     <script type="module" src="note.js"></script>
-    <script>
-    (function(){ if (!window.katex) { var s=document.createElement('script'); s.src='vendor/katex/katex.min.js'; document.head.appendChild(s);} if (!window.renderMathInElement) { var s2=document.createElement('script'); s2.src='vendor/katex/contrib/auto-render.min.js'; document.head.appendChild(s2);} })();
-    </script>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        import('./shared.js?v=equation-math-2').then((m) => m.renderMath(document.body));
-    });
-    </script>
 </body>
 </html>

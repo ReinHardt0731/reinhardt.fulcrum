@@ -2954,6 +2954,10 @@ body.mode-page .workspace > .mode-topbar::before {
     box-shadow: 0 18px 38px rgba(0, 0, 0, 0.2);
 }
 
+.notes-view img.markdown-sized-image {
+    max-width: 100%;
+}
+
 .notes-view pre {
     max-width: 100%;
     overflow-x: auto;
@@ -3165,6 +3169,27 @@ body.mode-page .workspace > .mode-topbar::before {
 .equation-card-fixed {
     margin-bottom: 0 !important;
     font-size: 0.78rem !important;
+}
+
+.equation-card-constants {
+    display: grid;
+    gap: 8px;
+}
+
+.equation-card-constant {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    border: 1px solid color-mix(in srgb, var(--line) 75%, transparent);
+    border-radius: 10px;
+    color: var(--muted);
+}
+
+.equation-card-constant strong {
+    color: var(--text);
+    white-space: nowrap;
 }
 
 .equation-card-metrics {
@@ -3802,6 +3827,323 @@ body.mode-page .workspace > .mode-topbar::before {
     min-height: 420px;
 }
 
+.equation-variable-behavior-graph-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.equation-variable-behavior-graph {
+    display: block;
+    width: 100%;
+    min-width: 620px;
+    height: auto;
+    min-height: 380px;
+    border-radius: 14px;
+    background: rgba(3, 17, 29, 0.32);
+}
+
+.equation-variable-bar rect {
+    fill: #3aaef0;
+    transition: y 160ms ease, height 160ms ease, fill 160ms ease, opacity 160ms ease;
+}
+
+.equation-variable-bar.is-active rect {
+    fill: #bd5cff;
+}
+
+.equation-variable-bar.is-out-of-range rect {
+    fill: #ffb84d;
+}
+
+.equation-variable-bar-value,
+.equation-variable-bar-label,
+.equation-variable-bar-unit,
+.equation-graph-axis-label {
+    fill: var(--text);
+    font-family: inherit;
+}
+
+.equation-variable-bar-value {
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.equation-variable-bar-label {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.equation-variable-bar-unit,
+.equation-graph-axis-label {
+    fill: var(--muted);
+    font-size: 12px;
+}
+
+.equation-variable-select {
+    width: 19px;
+    height: 19px;
+    margin: 0 9px 0 0;
+    padding: 0;
+    border: 2px solid #7588a3;
+    border-radius: 50%;
+    background: transparent;
+    vertical-align: -3px;
+    cursor: pointer;
+}
+
+.equation-variable-select.is-active {
+    border-color: #bd5cff;
+    box-shadow: inset 0 0 0 4px rgba(189, 92, 255, 0.16);
+    background: #bd5cff;
+}
+
+.equation-variable-behavior-row.is-out-of-range output {
+    color: #ffcc73;
+}
+
+.equation-card-selection-help,
+.equation-card-legend {
+    color: var(--muted);
+    font-size: 0.78rem;
+}
+
+.equation-card-selection-help {
+    margin: 12px 0 8px;
+}
+
+.equation-card-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.equation-card-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.equation-legend-swatch {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #bd5cff;
+}
+
+.equation-legend-swatch.calculated {
+    background: #3aaef0;
+}
+
+.assistant-conservation-settings {
+    margin: 12px 0;
+    padding: 14px;
+    border: 1px solid rgba(189, 92, 255, 0.28);
+    border-radius: 14px;
+    background: rgba(189, 92, 255, 0.06);
+}
+
+.assistant-conservation-settings[hidden] {
+    display: none;
+}
+
+.assistant-conservation-help {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.assistant-duct-particle-settings[hidden] {
+    display: none;
+}
+
+.assistant-duct-particle-settings {
+    margin: 0 0 12px;
+    padding: 12px 14px;
+    border: 1px solid rgba(77, 184, 255, 0.24);
+    border-radius: 12px;
+    background: rgba(77, 184, 255, 0.06);
+}
+
+.equation-card-duct-particle .duct-particle-visualization {
+    position: relative;
+    margin: 8px 0;
+    padding: 10px;
+    border: 1px solid rgba(205, 190, 255, 0.16);
+    border-radius: 12px;
+    background: rgba(6, 16, 30, 0.46);
+}
+
+.duct-particle-windows {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.duct-particle-window {
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid rgba(77, 184, 255, 0.24);
+    border-radius: 10px;
+    background: rgba(3, 17, 29, 0.72);
+}
+
+.duct-particle-window-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.duct-particle-window-header strong {
+    color: var(--text);
+    font-size: 0.9rem;
+}
+
+.duct-particle-window-values {
+    display: grid;
+    gap: 2px;
+    margin-top: 6px;
+    color: #91a0b6;
+    font-size: 0.72rem;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.duct-particle-window-values span {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.duct-particle-window-values b {
+    color: var(--muted);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.duct-particle-window-values output {
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+}
+
+.duct-particle-window-values .duct-particle-product {
+    margin-top: 2px;
+    padding-top: 4px;
+    border-top: 1px solid rgba(205, 190, 255, 0.14);
+}
+
+.duct-particle-window-values .duct-particle-product output {
+    color: #d0b7ff;
+    font-weight: 800;
+}
+
+.duct-particle-window-controls {
+    margin-top: 8px;
+    padding-top: 7px;
+    border-top: 1px solid rgba(205, 190, 255, 0.12);
+}
+
+.duct-particle-window-controls .equation-card-section-label {
+    margin-bottom: 5px;
+}
+
+.duct-particle-variable-control {
+    padding: 5px 0 7px;
+}
+
+.duct-particle-variable-control + .duct-particle-variable-control {
+    border-top: 1px solid rgba(205, 190, 255, 0.1);
+}
+
+.duct-particle-variable-control .equation-card-variable-heading {
+    font-size: 0.76rem;
+}
+
+.duct-particle-variable-control .equation-card-range {
+    margin-top: 5px;
+}
+
+.duct-particle-window canvas {
+    display: block;
+    width: 100%;
+    height: 220px;
+    margin-top: 7px;
+    border-radius: 8px;
+}
+
+.duct-particle-window-caption {
+    margin: 5px 0 0;
+    color: var(--muted);
+    font-size: 0.72rem;
+}
+
+.duct-particle-connector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 6px auto 0;
+    color: #91a0b6;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.duct-particle-connector i {
+    display: block;
+    width: 72px;
+    height: 2px;
+    background: linear-gradient(90deg, #4db8ff, #bd5cff);
+}
+
+.equation-card-duct-particle .equation-card-control-panel {
+    width: 100%;
+    margin-top: 0;
+}
+
+.equation-card-duct-particle .equation-card-equation-wide {
+    margin-bottom: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.equation-card-duct-particle .equation-card-control-panel,
+.equation-card-duct-particle .equation-card-control-panel .equation-card-section {
+    padding-top: 8px;
+}
+
+.equation-card-duct-particle .equation-card-control-panel .equation-card-section + .equation-card-section {
+    margin-top: 8px;
+}
+
+.equation-card-duct-particle .equation-card-selection-help {
+    margin: 7px 0 5px;
+}
+
+.equation-card-live-region.is-selection-error {
+    margin-top: 6px;
+    color: #ffcc73;
+    font-size: 0.68rem;
+}
+
+@media (max-width: 700px) {
+    .duct-particle-windows {
+        grid-template-columns: 1fr;
+    }
+
+    .duct-particle-window canvas {
+        height: 190px;
+    }
+
+    .duct-particle-connector {
+        transform: rotate(90deg);
+        margin: 2px auto;
+    }
+}
+
 .equation-graph-tick-label {
     fill: #91a0b6;
     font-size: 11px;
@@ -3873,6 +4215,29 @@ body.mode-page .workspace > .mode-topbar::before {
     color: var(--muted);
 }
 
+.particle-card-equation {
+    display: grid;
+    gap: 5px;
+    padding: 12px 16px;
+    border: 1px solid rgba(189, 92, 255, 0.28);
+    border-radius: 14px;
+    background: rgba(189, 92, 255, 0.08);
+    text-align: center;
+}
+
+.particle-card-equation .section-label {
+    margin: 0;
+}
+
+.particle-card-equation > div {
+    color: var(--text);
+    font-size: clamp(1.2rem, 2.4vw, 1.8rem);
+}
+
+.particle-card-equation small {
+    color: var(--muted);
+}
+
 .particle-card-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.35fr) minmax(240px, 0.65fr);
@@ -3917,6 +4282,41 @@ body.mode-page .workspace > .mode-topbar::before {
     display: grid;
     align-content: start;
     gap: 16px;
+}
+
+.particle-density-controls {
+    border: 1px solid rgba(77, 184, 255, 0.2);
+    border-radius: 12px;
+    background: rgba(77, 184, 255, 0.05);
+}
+
+.particle-density-controls summary {
+    padding: 10px 12px;
+    color: var(--text);
+    font-weight: 800;
+    cursor: pointer;
+    list-style-position: inside;
+}
+
+.particle-density-controls summary:focus-visible {
+    outline: 3px solid rgba(198, 130, 255, 0.55);
+    outline-offset: 3px;
+}
+
+.particle-density-controls summary span {
+    float: right;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.particle-density-control-body {
+    display: grid;
+    gap: 14px;
+    padding: 0 12px 12px;
+}
+
+.particle-card-modern .particle-card-metrics {
+    grid-template-columns: 1fr;
 }
 
 .particle-card-control {
@@ -4022,6 +4422,419 @@ body.mode-page .workspace > .mode-topbar::before {
     .particle-card-controls {
         padding: 12px;
     }
+}
+
+.particle-physics-card {
+    display: grid;
+    gap: 16px;
+    margin: 1.4rem 0;
+    padding: clamp(16px, 3vw, 26px);
+    border: 1px solid color-mix(in srgb, #4db8ff 30%, var(--line));
+    border-radius: 22px;
+    background: linear-gradient(145deg, rgba(77, 184, 255, 0.08), rgba(255, 255, 255, 0.025));
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.14);
+}
+
+.particle-physics-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.particle-physics-header h3 {
+    margin: 0;
+}
+
+.particle-physics-header p:last-child {
+    max-width: 720px;
+    margin: 6px 0 0;
+    color: var(--muted);
+}
+
+.particle-physics-simulation,
+.particle-physics-controls,
+.particle-physics-readout {
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid rgba(77, 184, 255, 0.2);
+    border-radius: 16px;
+    background: rgba(6, 16, 30, 0.46);
+}
+
+.particle-physics-simulation {
+    overflow-x: auto;
+}
+
+.particle-physics-scene {
+    display: block;
+    width: 100%;
+    min-width: 620px;
+    height: auto;
+    min-height: 230px;
+}
+
+.particle-physics-track {
+    stroke: #7e94ae;
+    stroke-width: 4;
+    stroke-linecap: round;
+}
+
+.particle-physics-track-end {
+    stroke: #bd5cff;
+    stroke-width: 3;
+}
+
+.particle-physics-vector {
+    stroke-width: 4;
+    stroke-linecap: round;
+}
+
+.particle-physics-label,
+.particle-physics-name,
+.particle-physics-velocity,
+.particle-physics-collision-text {
+    fill: var(--text);
+    font-family: inherit;
+}
+
+.particle-physics-label {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.particle-physics-name,
+.particle-physics-velocity {
+    font-size: 12px;
+}
+
+.particle-physics-velocity {
+    fill: var(--muted);
+}
+
+.particle-physics-collision-marker {
+    stroke: #ffcc73;
+    stroke-width: 2;
+    stroke-dasharray: 5 5;
+}
+
+.particle-physics-collision-text {
+    fill: #ffcc73;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.particle-physics-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.particle-physics-toolbar label {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.particle-physics-toolbar label input {
+    grid-column: 1 / -1;
+    width: min(240px, 32vw);
+    accent-color: #bd5cff;
+}
+
+.particle-physics-toolbar output {
+    color: var(--text);
+    font-weight: 800;
+}
+
+.particle-physics-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+    gap: 14px;
+}
+
+.particle-physics-controls {
+    display: grid;
+    gap: 10px;
+}
+
+.particle-physics-control {
+    display: grid;
+    gap: 7px;
+    padding: 12px;
+    border: 1px solid rgba(77, 184, 255, 0.14);
+    border-radius: 13px;
+}
+
+.particle-physics-control-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.particle-physics-control-heading strong,
+.particle-physics-control-heading output {
+    color: var(--text);
+    font-weight: 800;
+}
+
+.particle-physics-control label {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    align-items: center;
+    gap: 10px;
+    color: var(--muted);
+    font-size: 0.82rem;
+}
+
+.particle-physics-control input {
+    width: 100%;
+    accent-color: #4db8ff;
+}
+
+.particle-physics-control small,
+.particle-physics-readout > p:last-child,
+.particle-physics-notes p {
+    color: var(--muted);
+}
+
+.particle-physics-color {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 7px;
+    border-radius: 50%;
+    background: var(--particle-color);
+}
+
+.particle-physics-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+}
+
+.particle-physics-metrics > div {
+    display: grid;
+    gap: 4px;
+    padding: 12px;
+    border-radius: 12px;
+    background: color-mix(in srgb, #4db8ff 9%, var(--panel));
+}
+
+.particle-physics-metrics span {
+    color: var(--muted);
+    font-size: 0.76rem;
+}
+
+.particle-physics-metrics strong {
+    color: var(--text);
+    font-size: 1.08rem;
+}
+
+.particle-physics-readout > p:last-child {
+    min-height: 1.2em;
+    margin-bottom: 0;
+    font-size: 0.84rem;
+}
+
+.particle-physics-notes {
+    padding-top: 4px;
+    border-top: 1px solid rgba(77, 184, 255, 0.16);
+}
+
+.particle-physics-notes p {
+    margin: 5px 0;
+}
+
+.particle-physics-error-state {
+    border-color: var(--danger);
+}
+
+.particle-physics-error {
+    color: var(--danger);
+}
+
+.assistant-particle-physics-settings {
+    display: none;
+    margin: 12px 0;
+    padding: 14px;
+    border: 1px solid rgba(77, 184, 255, 0.24);
+    border-radius: 14px;
+    background: rgba(77, 184, 255, 0.06);
+}
+
+.assistant-particle-physics-settings:not([hidden]) {
+    display: block;
+}
+
+.assistant-particle-global-grid {
+    margin: 12px 0;
+}
+
+.assistant-particle-authors {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.assistant-particle-author {
+    padding: 12px;
+    border: 1px solid rgba(77, 184, 255, 0.16);
+    border-radius: 12px;
+}
+
+.assistant-particle-author h4 {
+    margin-top: 0;
+}
+
+@media (max-width: 860px) {
+    .particle-physics-layout,
+    .assistant-particle-authors {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 620px) {
+    .particle-physics-header {
+        display: grid;
+    }
+
+    .particle-physics-toolbar label {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .particle-physics-toolbar label input {
+        width: 100%;
+    }
+
+    .particle-physics-control label {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+}
+
+.fluid-control-volume-card {
+    display: grid;
+    gap: 16px;
+    margin: 1.4rem 0;
+    padding: clamp(16px, 3vw, 26px);
+    border: 1px solid color-mix(in srgb, #4db8ff 30%, var(--line));
+    border-radius: 22px;
+    background: linear-gradient(145deg, rgba(77, 184, 255, 0.08), rgba(255, 255, 255, 0.025));
+}
+
+.fluid-control-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.fluid-control-header h3 { margin: 0; }
+.fluid-control-header p:last-child { max-width: 720px; margin: 6px 0 0; color: var(--muted); }
+
+.fluid-control-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+    gap: 14px;
+}
+
+.fluid-control-simulation,
+.fluid-control-panel {
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid rgba(77, 184, 255, 0.2);
+    border-radius: 16px;
+    background: rgba(6, 16, 30, 0.46);
+}
+
+.fluid-control-simulation { position: relative; display: grid; gap: 12px; }
+.fluid-control-simulation canvas { display: block; width: 100%; height: clamp(280px, 38vw, 470px); border-radius: 12px; }
+
+.fluid-control-badge {
+    position: absolute;
+    z-index: 1;
+    top: 24px;
+    left: 24px;
+    padding: 5px 9px;
+    border: 1px solid rgba(255, 204, 115, 0.45);
+    border-radius: 999px;
+    color: #ffcc73;
+    background: rgba(3, 17, 29, 0.72);
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.fluid-control-toolbar { display: flex; flex-wrap: wrap; gap: 8px; }
+.fluid-control-panel { display: grid; align-content: start; gap: 14px; }
+.fluid-control-inputs { display: grid; gap: 10px; }
+
+.fluid-control-input {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 6px 12px;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.fluid-control-input input { grid-column: 1 / -1; width: 100%; accent-color: #4db8ff; }
+.fluid-control-input output { color: var(--text); font-weight: 800; }
+.fluid-control-readonly-input { grid-template-columns: 1fr auto; padding: 9px; border: 1px solid rgba(77, 184, 255, 0.14); border-radius: 10px; background: rgba(77, 184, 255, 0.04); }
+.fluid-control-readonly-input small { grid-column: 1 / -1; color: var(--muted); font-size: 0.72rem; }
+
+.fluid-control-property-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.fluid-metric { display: grid; gap: 3px; padding: 10px; border-radius: 12px; background: color-mix(in srgb, #4db8ff 9%, var(--panel)); }
+.fluid-metric span, .fluid-metric small { color: var(--muted); font-size: 0.73rem; }
+.fluid-metric strong { color: var(--text); font-size: 1.05rem; }
+.fluid-control-differences { display: grid; gap: 4px; padding-top: 10px; border-top: 1px solid rgba(77, 184, 255, 0.16); color: var(--muted); font-size: 0.8rem; }
+.fluid-control-differences strong { color: #4db8ff; }
+.fluid-control-relationship { display: grid; gap: 8px; padding-top: 10px; border-top: 1px solid rgba(77, 184, 255, 0.16); }
+.fluid-control-relationship-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.fluid-control-relationship-grid > div { display: grid; gap: 3px; padding: 9px; border: 1px solid rgba(77, 184, 255, 0.16); border-radius: 10px; background: rgba(77, 184, 255, 0.05); }
+.fluid-control-relationship-grid span, .fluid-control-relationship p { color: var(--muted); font-size: 0.73rem; }
+.fluid-control-relationship-grid strong { color: var(--text); font-size: 0.92rem; }
+.fluid-control-relationship > p { margin: 0; color: var(--muted); font-size: 0.76rem; }
+.fluid-control-converging-pipe .fluid-control-badge { color: #8fe3ff; border-color: rgba(77, 184, 255, 0.5); }
+.assistant-fluid-converging-fields, .assistant-fluid-converging-help { display: none; }
+.assistant-fluid-settings:has(#assistant-fluid-preset option:last-child:checked) .assistant-fluid-converging-fields,
+.assistant-fluid-settings:has(#assistant-fluid-preset option:last-child:checked) .assistant-fluid-converging-help { display: grid; }
+.fluid-control-panel > p:last-child { min-height: 1.2em; margin: 0; color: var(--muted); font-size: 0.82rem; }
+.fluid-control-notes { padding-top: 4px; border-top: 1px solid rgba(77, 184, 255, 0.16); color: var(--muted); }
+.fluid-control-notes p { margin: 5px 0; }
+.fluid-control-error-state { border-color: var(--danger); }
+.fluid-control-error { color: var(--danger); }
+
+.assistant-fluid-settings {
+    display: none;
+    margin: 12px 0;
+    padding: 14px;
+    border: 1px solid rgba(77, 184, 255, 0.24);
+    border-radius: 14px;
+    background: rgba(77, 184, 255, 0.06);
+}
+
+.assistant-fluid-settings:not([hidden]) { display: grid; gap: 12px; }
+.assistant-fluid-settings textarea { min-height: 74px; font-family: var(--mono, monospace); }
+.assistant-fluid-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.assistant-fluid-grid label { display: grid; gap: 5px; color: var(--muted); font-size: 0.8rem; }
+.assistant-fluid-grid input, .assistant-fluid-grid select { min-width: 0; }
+
+@media (max-width: 860px) {
+    .fluid-control-layout { grid-template-columns: 1fr; }
+    .assistant-fluid-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 620px) {
+    .fluid-control-header { display: grid; }
+    .fluid-control-property-grid, .fluid-control-relationship-grid, .assistant-fluid-grid { grid-template-columns: 1fr; }
+    .fluid-control-simulation, .fluid-control-panel { padding: 12px; }
 }
 
 .model-card {
@@ -4221,6 +5034,106 @@ body.mode-page .workspace > .mode-topbar::before {
 
 .notes-view .highlight-target {
     animation: notes-target-pulse 1.6s ease both;
+}
+
+.notes-example-problem {
+    display: grid;
+    gap: 14px;
+    margin: 1.5rem 0;
+    padding: clamp(16px, 3vw, 26px);
+    border: 1px solid color-mix(in srgb, #ffcc73 52%, var(--line));
+    border-left: 5px solid #ffcc73;
+    border-radius: 16px;
+    background: linear-gradient(145deg, rgba(255, 204, 115, 0.11), rgba(255, 255, 255, 0.025));
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
+}
+
+.notes-example-header {
+    display: grid;
+    gap: 5px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 204, 115, 0.22);
+}
+
+.notes-example-header .section-label,
+.notes-example-section-label {
+    margin: 0;
+    color: #ffcc73;
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.notes-example-header h3 {
+    margin: 0;
+    color: var(--text);
+}
+
+.notes-example-question,
+.notes-example-solution {
+    display: grid;
+    gap: 8px;
+}
+
+.notes-example-question > :last-child,
+.notes-example-solution > :last-child,
+.notes-example-answer-body > :last-child {
+    margin-bottom: 0;
+}
+
+.notes-example-solution {
+    padding: 14px;
+    border: 1px solid rgba(77, 184, 255, 0.24);
+    border-radius: 12px;
+    background: rgba(77, 184, 255, 0.06);
+}
+
+.notes-example-answer {
+    overflow: hidden;
+    border: 1px solid rgba(189, 92, 255, 0.34);
+    border-radius: 12px;
+    background: rgba(189, 92, 255, 0.07);
+}
+
+.notes-example-answer summary {
+    padding: 12px 14px;
+    color: #d9adff;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.notes-example-answer summary:focus-visible {
+    outline: 3px solid rgba(189, 92, 255, 0.7);
+    outline-offset: -3px;
+}
+
+.notes-example-answer-body {
+    padding: 0 14px 14px;
+    border-top: 1px solid rgba(189, 92, 255, 0.2);
+}
+
+.notes-example-error {
+    border-color: var(--danger);
+    border-left-color: var(--danger);
+    background: color-mix(in srgb, var(--danger) 9%, var(--panel));
+}
+
+.notes-example-error-message {
+    margin: 0;
+    color: var(--danger);
+    font-weight: 700;
+}
+
+.notes-example-help {
+    margin: 10px 0 0;
+    color: var(--muted);
+    font-size: 0.8rem;
+    line-height: 1.55;
+}
+
+.notes-example-help code {
+    color: var(--text);
 }
 
 /* Immersive presentation treatment for interactive card fullscreen mode. */
