@@ -126,7 +126,6 @@ $$A_1 V_1 =  A_2 V_2$$
 }
 ```
 
-
 \\
 ### Example 1: A plane is flying at a given altitude
 Determine the required velocity.
@@ -161,9 +160,19 @@ $$C_f = \frac{0.074}{{Re_L}^{0.2}}$$
 $$\delta = \frac{0.37x}{Re_x^{}0.2} $$
 
 ## Coeffecient of Pressure
+
+$$C_p = \frac{P_1 - P_\infin}{\frac{1}{2} \rho V^2}$$
+$$C_p = \frac{C_{p0}}{\sqrt{1-M^2}}$$
+
 ### Cp Distribution on Subsonic to Supersonic
 ### Cp Distribution During Stall
+
+### Lift form Cp Distribution
+
+$$\frac{1}{c}\int_{p_{upper}}^{p_{lower}} (C_{p,l} - C_{p,u})\,dx$$
+
 ## Critical Pressure and Velocity
+
 ## Lift Due to Circulation
 
 
@@ -174,10 +183,29 @@ $$\delta = \frac{0.37x}{Re_x^{}0.2} $$
 # Applied Aerodynamics
 
 ### Steady Aircraft Assumption
+
 ### Drag  Polar Equation
+$$C_D = C_{D0} + C_{Di}$$
+$$ C_{Di} = kC_L^2 $$
 
 ## Thrust and Minimum Thrust Required
+$$D = T$$
+$$\frac{C_L}{C_D}_{max} = \frac{C_L^2}{C_{D0}+kC_L^2}$$
+$$C_{D0} = C_{Di}$$
+
+\\
+### Example 1: A Plane Weighing 2000 N having a Velocity of 100 m/s is flying at an altittude of 1000 m. Its Coeffecient of Drag at zero lift condition is 0.03. Find the Thrust Requred of the Aircraft to sustain a steady flight.
+### Solution:
+$$A + B = C$$
+asdsadad
+### Answer:
+$$C = 3$$
+asdsadasd
+\\
+
+
 ## Power and Minimum Power Required
+
 ## Excess Power and Rate of Climb
 ## Time to Climb
 ## Glide Performance

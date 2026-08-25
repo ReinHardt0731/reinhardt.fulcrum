@@ -16,3 +16,6 @@
 ### Part 2
 
 # Economics
+## Simple and COmpound Interest
+## Ordinary and Due Annuity
+## Perpetual
