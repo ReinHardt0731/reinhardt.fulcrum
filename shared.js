@@ -1224,6 +1224,7 @@ export function createSession(subject, chapter, mode, options = {}) {
         learnBatchEnd: 0,
         learnCheckpointNumber: 0,
         learnCheckpointActive: false,
+        learnCheckpointSummarySeen: false,
         learnReviewQueue: [],
         learnReviewPosition: 0,
         learnReviewDrafts: {},
@@ -1512,6 +1513,7 @@ function saveModeSession(session) {
         learnBatchEnd: Number(session.learnBatchEnd) || 0,
         learnCheckpointNumber: Number(session.learnCheckpointNumber) || 0,
         learnCheckpointActive: Boolean(session.learnCheckpointActive),
+        learnCheckpointSummarySeen: Boolean(session.learnCheckpointSummarySeen),
         learnReviewQueue: Array.isArray(session.learnReviewQueue) ? session.learnReviewQueue : [],
         learnReviewPosition: Number(session.learnReviewPosition) || 0,
         learnReviewDrafts: session.learnReviewDrafts && typeof session.learnReviewDrafts === "object" ? session.learnReviewDrafts : {},
@@ -1578,6 +1580,7 @@ function restoreModeSession(subject, chapter, mode) {
     session.learnBatchEnd = Math.max(0, Number(saved.learnBatchEnd) || 0);
     session.learnCheckpointNumber = Math.max(0, Number(saved.learnCheckpointNumber) || 0);
     session.learnCheckpointActive = Boolean(saved.learnCheckpointActive);
+    session.learnCheckpointSummarySeen = Boolean(saved.learnCheckpointSummarySeen);
     session.learnReviewQueue = Array.isArray(saved.learnReviewQueue) ? saved.learnReviewQueue.map(Number).filter(Number.isInteger) : [];
     session.learnReviewPosition = Math.max(0, Number(saved.learnReviewPosition) || 0);
     session.learnReviewDrafts = saved.learnReviewDrafts && typeof saved.learnReviewDrafts === "object" ? saved.learnReviewDrafts : {};
@@ -4367,6 +4370,9 @@ function countAnsweredQuestions(session) {
 }
 
 function renderProgress(fill, session) {
+    const track = fill?.parentElement;
+    track?.querySelectorAll(".learn-checkpoint-marker").forEach((marker) => marker.remove());
+
     if (!session || session.questions.length === 0) {
         fill.style.width = "0%";
         return;
@@ -4377,6 +4383,25 @@ function renderProgress(fill, session) {
         : session.index;
     const percent = session.complete ? 100 : Math.round((current / session.questions.length) * 100);
     fill.style.width = `${Math.max(0, Math.min(100, percent))}%`;
+
+    if (session.mode === "learn" && track) {
+        const checkpointCount = Math.ceil(session.questions.length / LEARN_BATCH_SIZE);
+        for (let checkpoint = 1; checkpoint <= checkpointCount; checkpoint += 1) {
+            const questionCount = Math.min(checkpoint * LEARN_BATCH_SIZE, session.questions.length);
+            const marker = document.createElement("span");
+            marker.className = "learn-checkpoint-marker";
+            if (checkpoint === checkpointCount) {
+                marker.classList.add("is-final");
+            }
+            marker.style.left = `${(questionCount / session.questions.length) * 100}%`;
+            marker.title = `Checkpoint ${checkpoint}`;
+            marker.setAttribute("aria-label", `Checkpoint ${checkpoint}`);
+            if (questionCount <= current || session.complete) {
+                marker.classList.add("is-reached");
+            }
+            track.appendChild(marker);
+        }
+    }
 }
 
 let feedbackExplanationSequence = 0;
@@ -5185,6 +5210,7 @@ function activateLearnCheckpoint(session, batchEnd) {
     session.learnBatchEnd = end;
     session.learnCheckpointNumber = Math.max(0, Number(session.learnCheckpointNumber) || 0) + 1;
     session.learnCheckpointActive = true;
+    session.learnCheckpointSummarySeen = false;
     session.learnReviewQueue = session.answers
         .slice(start, end)
         .map((result, offset) => result && !result.correct ? start + offset : null)
@@ -5252,7 +5278,7 @@ function renderLearnReviewControls(container, question, questionIndex, session, 
     container.appendChild(form);
 }
 
-function renderLearnCheckpointStage(stage, progressFill, session, onReviewSubmit, onNextReview, onContinue) {
+function renderLearnCheckpointStage(stage, progressFill, session, onReviewSubmit, onNextReview, onContinue, onContinueReview) {
     const summary = summarizeLearnProgress(session);
     const checkpoint = document.createElement("article");
     checkpoint.className = "question-card learn-checkpoint-card";
@@ -5270,6 +5296,53 @@ function renderLearnCheckpointStage(stage, progressFill, session, onReviewSubmit
             textContent: `${summary.answered}/${summary.total} completed`
         })
     );
+
+    if (!session.learnCheckpointSummarySeen) {
+        const batchStart = Math.max(0, Number(session.learnBatchStart) || 0);
+        const batchEnd = Math.max(batchStart, Number(session.learnBatchEnd) || 0);
+        const batchResults = session.answers.slice(batchStart, batchEnd).filter(Boolean);
+        const batchCorrect = batchResults.filter((result) => result.correct).length;
+        const batchTotal = Math.max(0, batchEnd - batchStart);
+        const summaryCard = document.createElement("div");
+        summaryCard.className = "learn-checkpoint-summary-card";
+        summaryCard.append(
+            Object.assign(document.createElement("p"), { className: "section-label", textContent: "Checkpoint summary" }),
+            Object.assign(document.createElement("h4"), { textContent: `${batchCorrect}/${batchTotal} correct on this checkpoint` }),
+            Object.assign(document.createElement("p"), { className: "learn-summary-lead", textContent: `${summary.firstAttemptCorrect} first-try correct across ${summary.answered} completed questions.` })
+        );
+
+        const summaryStats = document.createElement("div");
+        summaryStats.className = "learn-checkpoint-summary-stats";
+        summaryStats.append(
+            Object.assign(document.createElement("span"), { textContent: `${summary.learningProgress}% overall progress` }),
+            Object.assign(document.createElement("span"), { textContent: `${session.learnReviewQueue.length} mistake${session.learnReviewQueue.length === 1 ? "" : "s"} to review` }),
+            Object.assign(document.createElement("span"), { textContent: `${summary.remaining} question${summary.remaining === 1 ? "" : "s"} remaining` })
+        );
+        summaryCard.appendChild(summaryStats);
+
+        const summaryActions = document.createElement("div");
+        summaryActions.className = "question-actions";
+        const continueButton = document.createElement("button");
+        continueButton.type = "button";
+        continueButton.className = "primary-button";
+        if (session.learnReviewQueue.length) {
+            continueButton.textContent = `Review ${session.learnReviewQueue.length} mistake${session.learnReviewQueue.length === 1 ? "" : "s"}`;
+            continueButton.addEventListener("click", () => {
+                session.learnCheckpointSummarySeen = true;
+                onContinueReview();
+            });
+        } else {
+            continueButton.textContent = session.learnBatchEnd >= session.questions.length ? "Finish Learning" : "Continue Learning";
+            continueButton.addEventListener("click", onContinue);
+        }
+        summaryActions.appendChild(continueButton);
+        checkpoint.append(header, summaryCard, summaryActions);
+        stage.appendChild(checkpoint);
+        try { renderMath(checkpoint); } catch (_) {}
+        requestAnimationFrame(() => continueButton.focus());
+        renderProgress(progressFill, session);
+        return;
+    }
 
     const title = document.createElement("h4");
     title.textContent = session.learnReviewPosition < session.learnReviewQueue.length
@@ -5405,6 +5478,10 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                     session.currentSummary = summarizeLearnProgress(session);
                     renderLearnAssessment(session.currentSummary, session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession);
                 }
+                saveModeSession(session);
+                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+            },
+            () => {
                 saveModeSession(session);
                 buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
             }
