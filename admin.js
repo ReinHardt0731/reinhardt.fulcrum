@@ -111,6 +111,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         ,assistantPreview: document.getElementById("assistant-preview")
     };
 
+    if (!elements.exportButton && document.body.dataset.adminPage === "notes") {
+        const notesHeaderActions = document.querySelector(".admin-notes-page .hero-actions");
+        if (notesHeaderActions) {
+            const notesExportButton = document.createElement("button");
+            notesExportButton.type = "button";
+            notesExportButton.id = "admin-export-button";
+            notesExportButton.className = "ghost-button admin-topbar-export";
+            notesExportButton.textContent = "Export JSON";
+            notesHeaderActions.prepend(notesExportButton);
+            elements.exportButton = notesExportButton;
+        }
+    }
+
     if (!elements.lockForm || !elements.lockPanel || !elements.adminApp) {
         return;
     }
