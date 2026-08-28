@@ -16,7 +16,8 @@ import {
     tallyQuestionCount,
     textValue,
     hydrateMarkdownPreview,
-    renderMarkdownPreview
+    renderMarkdownPreview,
+    renderForceSystemModelCard
 } from "./shared.js";
 import { initAdminShell } from "./admin-shell.js";
 
@@ -109,6 +110,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         ,assistantResetButton: document.getElementById("assistant-reset-button")
         ,assistantStatus: document.getElementById("assistant-status")
         ,assistantPreview: document.getElementById("assistant-preview")
+        ,forceSystemModelJson: document.getElementById("force-system-model-json")
+        ,forceSystemModelPreviewButton: document.getElementById("force-system-model-preview-button")
+        ,forceSystemModelStatus: document.getElementById("force-system-model-status")
+        ,forceSystemModelPreview: document.getElementById("force-system-model-preview")
     };
 
     if (!elements.exportButton && document.body.dataset.adminPage === "notes") {
@@ -1705,6 +1710,32 @@ F(derived) = (\\Omega)`;
     elements.assistantResetButton?.addEventListener("click", () => { resetAssistantDefaults(); if (elements.assistantStatus) elements.assistantStatus.textContent = "Assistant reset."; });
     elements.exportCard?.addEventListener("click", () => elements.exportButton?.click());
     if (elements.assistantDefinition && !elements.assistantDefinition.value.trim()) resetAssistantDefaults();
+
+    const defaultForceSystemModel = {
+        type: "force_system",
+        title: "Simply Supported Beam",
+        subtitle: "A point load acts downward at the beam midpoint.",
+        geometry: {
+            points: [{ id: "P1", x: 0, y: 0 }, { id: "P2", x: 8, y: 0 }, { id: "P3", x: 4, y: 0 }],
+            beams: [{ id: "B1", start: "P1", end: "P2" }]
+        },
+        forces: [{ id: "F1", type: "point", point: "P3", beam: "B1", magnitude: 10, unit: "kN", direction: 270 }],
+        supports: [{ id: "A", type: "pin", point: "P1" }, { id: "B", type: "roller", point: "P2" }]
+    };
+    if (elements.forceSystemModelJson && !elements.forceSystemModelJson.value.trim()) {
+        elements.forceSystemModelJson.value = JSON.stringify(defaultForceSystemModel, null, 2);
+    }
+    elements.forceSystemModelPreviewButton?.addEventListener("click", () => {
+        try {
+            const config = JSON.parse(elements.forceSystemModelJson.value);
+            elements.forceSystemModelPreview.innerHTML = renderForceSystemModelCard(config, "admin-preview");
+            hydrateMarkdownPreview(elements.forceSystemModelPreview);
+            elements.forceSystemModelStatus.textContent = "Preview ready.";
+        } catch (error) {
+            elements.forceSystemModelPreview.replaceChildren(emptyState("Could not preview model", error.message || "Invalid JSON payload."));
+            elements.forceSystemModelStatus.textContent = "Invalid model.";
+        }
+    });
 
     const renderChapterPreview = async () => {
         const subject = getActiveSubject();

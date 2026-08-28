@@ -91,6 +91,8 @@ $$P = $$
 
 ## Conservation of Mass, Energy and Momentum
 
+
+
 Images are rendered responsively and include alternative text for accessibility.
 
 $$\rho_1 A_1 V_1 = \rho_2 A_2 V_1$$
@@ -174,7 +176,7 @@ $$\frac{1}{c}\int_{p_{upper}}^{p_{lower}} (C_{p,l} - C_{p,u})\,dx$$
 ## Critical Pressure and Velocity
 
 ## Lift Due to Circulation
-
+## Airfoil and Wing
 
 
 
@@ -194,15 +196,32 @@ $$\frac{C_L}{C_D}_{max} = \frac{C_L^2}{C_{D0}+kC_L^2}$$
 $$C_{D0} = C_{Di}$$
 
 \\
-### Example 1: A Plane Weighing 2000 N having a Velocity of 100 m/s is flying at an altittude of 1000 m. Its Coeffecient of Drag at zero lift condition is 0.03. Find the Thrust Requred of the Aircraft to sustain a steady flight.
+### Example 1: A Plane Weighing 6500 N , Wing Area of $16.2\,\mathrm{m}^{2}$ , WingSpan of 11 m and Osswalt Effeciency of 0.85 having a Velocity of 25 m/s is flying at an altittude of 1000 m. Its Coeffecient of Drag at zero lift condition is 0.03. Find the Thrust Requred of the Aircraft to sustain a steady flight.
 ### Solution:
-$$A + B = C$$
-asdsadad
-### Answer:
-$$C = 3$$
-asdsadasd
+$$C_L = \frac{2W}{\rho V^2S}$$
+$$ \rho = \rho_1 \left[1+\frac{ah}{T_0}\right]^{4.26}$$
+$$\rho = 1.225\, \frac {kg}{m^3}\left[1+\frac{-0.00651 \frac {K}{m} \cdot 1000 \,m}{288.2 \,K}\right]^{4.26}$$
+$$\rho = 1.1114  \, \frac{kg}{m^3}$$
+We could now Solve for the CL:
+$$C_L = \frac{2 \,\cdot6500\,N}{1.1114\,\frac{kg}{m^3}\,\cdot 25^2 \,\frac{m^2}{s^2}\,\cdot\,16.2 \, m^2}$$
+$$C_L =1.1553 $$
+Solve for CD:
+$$C_D = C_{D0} + \frac{C_L^2}{\pi e AR}$$
+$$AR = \frac{b^2}{S} = \frac{11^2}{16.2} = 7.469 $$
+$$C_D = 0.03 + \frac{1.1553^2}{\pi\cdot0.85\,\cdot 7.469}$$
+$$C_D = 0.0969 $$
+$$T_R = \frac{W}{C_L/C_D} = \frac{6500}{1.1553/0.0969} $$
+
+### Answer: 
+$$T_R = 545.2 \,N$$
+We could Also Use The Drag Formula which yields the same answer
+$$D = T_R$$
+$$T_R = \frac{1}{2}\rho V^2 S C_D$$
+$$T_R= \frac{1}{2}\cdot  1.1114  \, \frac{kg}{m^3} \cdot 25^2 m/s \cdot16.2 \,m^2 \cdot 0.0969 = 545.2 \, N$$
 \\
 
+### Minimum Thrust Required
+$$C_{Di} = C_{D0}$$
 
 ## Power and Minimum Power Required
 

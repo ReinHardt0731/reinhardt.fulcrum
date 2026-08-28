@@ -806,6 +806,7 @@ function createFormattedTextElement(value, className) {
     }
     element.style.whiteSpace = "pre-wrap";
     element.appendChild(createFormattedTextNode(value));
+    renderQuestionMath(element);
     return element;
 }
 
@@ -1717,6 +1718,15 @@ export function renderMath(container = document.body, attempts = 6) {
     }
 }
 
+function renderQuestionMath(container) {
+    if (!container) return;
+    try {
+        renderMath(container);
+    } catch (_) {
+        // Keep question text usable if an optional math renderer fails.
+    }
+}
+
 export function syncSelection(subjectId, chapterTitle, mode) {
     if (subjectId) {
         storageSet(ACTIVE_SUBJECT_KEY, subjectId);
@@ -2595,6 +2605,8 @@ function renderEquationGraph(graph, variables) {
 const PARTICLE_CARD_CONFIGS = new Map();
 const PARTICLE_PHYSICS_CARD_CONFIGS = new Map();
 const FLUID_CONTROL_VOLUME_CONFIGS = new Map();
+const FORCE_SYSTEM_CARD_CONFIGS = new Map();
+const SINGLE_VECTOR_CARD_CONFIGS = new Map();
 
 function normalizeParticleRange(config, key, defaults, label) {
     const source = config?.[key] && typeof config[key] === "object" ? config[key] : {};
@@ -2933,6 +2945,776 @@ function renderDuctParticleVisualization(normalized, values) {
     return `<section class="duct-particle-visualization" data-duct-particle-visualization><div class="duct-particle-windows">${windows}</div><div class="duct-particle-connector" aria-hidden="true"><span>Flow direction</span><i></i></div></section>`;
 }
 
+function normalizeForceSystemCard(config) {
+    if (!config || typeof config !== "object") throw new Error("A force-system-card configuration is required.");
+    const normalizeComponent = (value, fallback) => {
+        const source = value && typeof value === "object" ? value : {};
+        const min = Number.isFinite(Number(source.min)) ? Number(source.min) : -100;
+        const max = Number.isFinite(Number(source.max)) ? Math.max(min, Number(source.max)) : 100;
+        const step = Number.isFinite(Number(source.step)) && Number(source.step) > 0 ? Number(source.step) : 1;
+        const initial = Number.isFinite(Number(source.value)) ? Number(source.value) : fallback;
+        return { min, max, step, value: Math.max(min, Math.min(max, initial)) };
+    };
+    const sourceForces = config.forces && typeof config.forces === "object" ? config.forces : {};
+    const vector = (name, fallback) => {
+        const source = sourceForces[name] && typeof sourceForces[name] === "object" ? sourceForces[name] : {};
+        return {
+            x: normalizeComponent(source.x, fallback.x),
+            y: normalizeComponent(source.y, fallback.y)
+        };
+    };
+    const massSource = config.mass && typeof config.mass === "object" ? config.mass : {};
+    const mass = normalizeComponent({ ...massSource, min: massSource.min ?? 1, max: massSource.max ?? 30 }, 10);
+    return {
+        title: text(config.title || "Balanced and Unbalanced Forces"),
+        subtitle: text(config.subtitle),
+        mass,
+        forces: { P: vector("P", { x: 50, y: 50 }), Q: vector("Q", { x: -50, y: -50 }) },
+        notes: Array.isArray(config.notes) ? config.notes.map(text).filter(Boolean) : []
+    };
+}
+
+function normalizeForceSystemModelCard(config) {
+    if (!config || typeof config !== "object" || Array.isArray(config)) throw new Error("A force_system model must be a JSON object.");
+    if (config.type !== "force_system") throw new Error('The model type must be "force_system".');
+    const geometry = config.geometry;
+    if (!geometry || typeof geometry !== "object" || Array.isArray(geometry)) throw new Error("The force_system model needs a geometry object.");
+    const points = Array.isArray(geometry.points) ? geometry.points : [];
+    const beams = Array.isArray(geometry.beams) ? geometry.beams : [];
+    const forces = Array.isArray(config.forces) ? config.forces : [];
+    const supports = Array.isArray(config.supports) ? config.supports : [];
+    const uniqueIds = (items, label) => {
+        const ids = new Set();
+        items.forEach((item, index) => {
+            const id = text(item?.id);
+            if (!id) throw new Error(`${label} ${index + 1} needs an id.`);
+            if (ids.has(id)) throw new Error(`${label} id "${id}" is duplicated.`);
+            ids.add(id);
+        });
+        return ids;
+    };
+    if (!points.length) throw new Error("The geometry needs at least one point.");
+    const pointIds = uniqueIds(points, "Each point");
+    const beamIds = uniqueIds(beams, "Each beam");
+    uniqueIds(forces, "Each force");
+    uniqueIds(supports, "Each support");
+    const normalizedPoints = points.map((point) => {
+        if (!Number.isFinite(Number(point?.x)) || !Number.isFinite(Number(point?.y))) throw new Error(`Point "${text(point?.id)}" needs finite x and y coordinates.`);
+        return { id: text(point.id), x: Number(point.x), y: Number(point.y) };
+    });
+    const pointMap = Object.fromEntries(normalizedPoints.map((point) => [point.id, point]));
+    const normalizedBeams = beams.map((beam) => {
+        const start = pointMap[text(beam.start)]; const end = pointMap[text(beam.end)];
+        if (!start || !end) throw new Error(`Beam "${text(beam.id)}" references an unknown point.`);
+        if (start.id === end.id) throw new Error(`Beam "${text(beam.id)}" needs two different points.`);
+        const dx = end.x - start.x; const dy = end.y - start.y;
+        return { id: text(beam.id), start: start.id, end: end.id, length: Math.hypot(dx, dy), dx, dy };
+    });
+    const beamMap = Object.fromEntries(normalizedBeams.map((beam) => [beam.id, beam]));
+    const projection = (point, beam) => {
+        const start = pointMap[beam.start]; const denominator = beam.length ** 2;
+        const ratio = Math.max(0, Math.min(1, ((point.x - start.x) * beam.dx + (point.y - start.y) * beam.dy) / denominator));
+        return { ratio, distance: ratio * beam.length };
+    };
+    const nearestBeam = (point) => normalizedBeams.reduce((nearest, beam) => {
+        const projected = projection(point, beam); const start = pointMap[beam.start];
+        const x = start.x + beam.dx * projected.ratio; const y = start.y + beam.dy * projected.ratio;
+        const distance = Math.hypot(point.x - x, point.y - y);
+        return !nearest || distance < nearest.offset ? { beam, ...projected, offset: distance } : nearest;
+    }, null);
+    const normalizedForces = forces.map((force) => {
+        if (!["point", "distributed"].includes(force?.type)) throw new Error(`Force "${text(force?.id)}" has an unsupported type.`);
+        if (!Number.isFinite(Number(force.magnitude)) || !Number.isFinite(Number(force.direction))) throw new Error(`Force "${text(force?.id)}" needs finite magnitude and direction values.`);
+        if (force.type === "distributed" && !beamMap[text(force.beam)]) throw new Error(`Distributed force "${text(force.id)}" references an unknown beam.`);
+        if (force.type === "point" && !pointMap[text(force.point)]) throw new Error(`Point force "${text(force.id)}" references an unknown point.`);
+        const point = force.type === "point" ? pointMap[text(force.point)] : null;
+        const selected = force.type === "point" ? (force.beam ? beamMap[text(force.beam)] : nearestBeam(point)) : beamMap[text(force.beam)];
+        if (force.type === "point" && force.beam && !selected) throw new Error(`Point force "${text(force.id)}" references an unknown beam.`);
+        return { ...force, id: text(force.id), type: force.type, magnitude: Number(force.magnitude), direction: Number(force.direction), unit: text(force.unit) || "N", point: text(force.point), beam: selected?.id || "", distribution: text(force.distribution) || "uniform", location: selected && point ? projection(point, selected) : null };
+    });
+    const normalizedSupports = supports.map((support) => {
+        if (!["pin", "roller", "fixed"].includes(support?.type)) throw new Error(`Support "${text(support?.id)}" has an unsupported type.`);
+        if (!pointMap[text(support.point)]) throw new Error(`Support "${text(support.id)}" references an unknown point.`);
+        return { id: text(support.id), type: support.type, point: text(support.point) };
+    });
+    return { type: "force_system", title: text(config.title) || "Free-Body Force System", subtitle: text(config.subtitle), geometry: { points: normalizedPoints, beams: normalizedBeams }, forces: normalizedForces, supports: normalizedSupports };
+}
+
+function forceSystemModelNumber(value) {
+    const number = Number(value);
+    return Number.isInteger(number) ? String(number) : number.toFixed(2).replace(/0+$/, "").replace(/\.$/, "");
+}
+
+export function renderForceSystemModelCard(config, cardIndex = "model") {
+    const normalized = normalizeForceSystemModelCard(config);
+    const width = 760; const height = 500; const plot = { left: 78, right: 682, top: 150, bottom: 300 };
+    const xs = normalized.geometry.points.map((point) => point.x); const ys = normalized.geometry.points.map((point) => point.y);
+    const minX = Math.min(...xs); const maxX = Math.max(...xs); const minY = Math.min(...ys); const maxY = Math.max(...ys);
+    const xRange = Math.max(1, maxX - minX); const yRange = Math.max(1, maxY - minY);
+    const toX = (value) => plot.left + (value - minX) * (plot.right - plot.left) / xRange;
+    const toY = (value) => plot.bottom - (value - minY) * (plot.bottom - plot.top) / yRange;
+    const points = Object.fromEntries(normalized.geometry.points.map((point) => [point.id, point]));
+    const beamProjection = (point, beam) => {
+        const start = points[beam.start]; const denominator = beam.length ** 2;
+        const ratio = Math.max(0, Math.min(1, ((point.x - start.x) * beam.dx + (point.y - start.y) * beam.dy) / denominator));
+        return { ratio, distance: ratio * beam.length };
+    };
+    const markerId = `force-model-arrow-${String(cardIndex).replace(/[^a-z0-9_-]/gi, "-")}`;
+    const arrow = (x, y, direction, className = "") => {
+        const radians = Number(direction) * Math.PI / 180; const length = 108;
+        return { markup: `<line class="force-system-model-force ${className}" x1="${x.toFixed(2)}" y1="${y.toFixed(2)}" x2="${(x + Math.cos(radians) * length).toFixed(2)}" y2="${(y - Math.sin(radians) * length).toFixed(2)}" marker-end="url(#${markerId})"></line>`, x: x + Math.cos(radians) * length, y: y - Math.sin(radians) * length };
+    };
+    const forceLabelPosition = (anchor, direction) => {
+        const radians = Number(direction) * Math.PI / 180;
+        const screenX = Math.cos(radians); const screenY = -Math.sin(radians);
+        const midpointX = anchor.x + screenX * 54; const midpointY = anchor.y + screenY * 54;
+        return { x: midpointX - screenY * 15, y: midpointY + screenX * 15, textAnchor: screenX < -0.2 ? "end" : "start" };
+    };
+    const beamMarkup = normalized.geometry.beams.map((beam) => {
+        const start = points[beam.start]; const end = points[beam.end]; const x1 = toX(start.x); const y1 = toY(start.y); const x2 = toX(end.x); const y2 = toY(end.y);
+        return `<g><line class="force-system-model-beam" x1="${x1.toFixed(2)}" y1="${y1.toFixed(2)}" x2="${x2.toFixed(2)}" y2="${y2.toFixed(2)}"></line></g>`;
+    }).join("");
+    const forceMarkup = normalized.forces.map((force) => {
+        const beam = force.beam ? normalized.geometry.beams.find((entry) => entry.id === force.beam) : null;
+        const point = force.type === "point" ? points[force.point] : points[beam.start];
+        const anchor = force.type === "point" ? { x: toX(point.x), y: toY(point.y) } : (() => { const end = points[beam.end]; const start = points[beam.start]; const ratio = 0.5; return { x: toX(start.x + (end.x - start.x) * ratio), y: toY(start.y + (end.y - start.y) * ratio) }; })();
+        const arrows = force.type === "point" ? [arrow(anchor.x, anchor.y, force.direction)] : Array.from({ length: 6 }, (_, index) => { const start = points[beam.start]; const end = points[beam.end]; const ratio = (index + 1) / 7; return arrow(toX(start.x + (end.x - start.x) * ratio), toY(start.y + (end.y - start.y) * ratio), force.direction, "is-distributed"); });
+        const label = force.type === "point" ? `${force.id} = ${forceSystemModelNumber(force.magnitude)} ${force.unit}` : `${force.id} = ${forceSystemModelNumber(force.magnitude)} ${force.unit} (${force.distribution})`;
+        const labelPosition = forceLabelPosition(anchor, force.direction);
+        return `<g class="force-system-model-force-group">${arrows.map((entry) => entry.markup).join("")}<text class="force-system-model-force-label" x="${labelPosition.x.toFixed(2)}" y="${labelPosition.y.toFixed(2)}" text-anchor="${labelPosition.textAnchor}">${equationText(label)}</text></g>`;
+    }).join("");
+    const dimensionMarkerId = `force-model-dimension-${String(cardIndex).replace(/[^a-z0-9_-]/gi, "-")}`;
+    const dimensionMarkup = normalized.forces.filter((force) => force.type === "point" && force.beam && force.location).map((force, forceIndex) => {
+        const beam = normalized.geometry.beams.find((entry) => entry.id === force.beam);
+        const start = points[beam.start]; const end = points[beam.end];
+        const supports = normalized.supports.map((support) => ({ support, point: points[support.point] }))
+            .map((entry) => ({ ...entry, position: beamProjection(entry.point, beam) }))
+            .filter((entry) => entry.point.id === beam.start || entry.point.id === beam.end)
+            .sort((left, right) => left.position.ratio - right.position.ratio);
+        const location = force.location;
+        const pointAt = (position) => ({ x: toX(start.x + beam.dx * position.ratio), y: toY(start.y + beam.dy * position.ratio) });
+        const forcePoint = pointAt(location);
+        const screenStart = pointAt({ ratio: 0 }); const screenEnd = pointAt({ ratio: 1 });
+        const beamScreenLength = Math.hypot(screenEnd.x - screenStart.x, screenEnd.y - screenStart.y) || 1;
+        const directionX = (screenEnd.x - screenStart.x) / beamScreenLength; const directionY = (screenEnd.y - screenStart.y) / beamScreenLength;
+        let normalX = -directionY; let normalY = directionX;
+        if (normalY < 0 || (Math.abs(normalY) < 0.2 && normalX < 0)) { normalX *= -1; normalY *= -1; }
+        const dimensionOffset = 82 + (forceIndex % 3) * 26;
+        const offsetPoint = (point) => ({ x: point.x + normalX * dimensionOffset, y: point.y + normalY * dimensionOffset });
+        const dimension = (firstPoint, secondPoint, label) => {
+            const firstDimensionPoint = offsetPoint(firstPoint); const secondDimensionPoint = offsetPoint(secondPoint);
+            const midpoint = { x: (firstDimensionPoint.x + secondDimensionPoint.x) / 2, y: (firstDimensionPoint.y + secondDimensionPoint.y) / 2 };
+            return `<line class="force-system-model-extension" x1="${firstPoint.x.toFixed(2)}" y1="${firstPoint.y.toFixed(2)}" x2="${firstDimensionPoint.x.toFixed(2)}" y2="${firstDimensionPoint.y.toFixed(2)}"></line><line class="force-system-model-extension" x1="${secondPoint.x.toFixed(2)}" y1="${secondPoint.y.toFixed(2)}" x2="${secondDimensionPoint.x.toFixed(2)}" y2="${secondDimensionPoint.y.toFixed(2)}"></line><line class="force-system-model-dimension" x1="${firstDimensionPoint.x.toFixed(2)}" y1="${firstDimensionPoint.y.toFixed(2)}" x2="${secondDimensionPoint.x.toFixed(2)}" y2="${secondDimensionPoint.y.toFixed(2)}" marker-start="url(#${dimensionMarkerId})" marker-end="url(#${dimensionMarkerId})"></line><text class="force-system-model-dimension-label" x="${midpoint.x.toFixed(2)}" y="${(midpoint.y - 9).toFixed(2)}" text-anchor="middle">${equationText(label)}</text>`;
+        };
+        if (supports.length < 2) {
+            const reference = supports[0];
+            const referencePosition = reference ? reference.position : { ratio: 0, distance: 0 };
+            const referencePoint = pointAt(referencePosition);
+            const distance = Math.abs(location.distance - referencePosition.distance);
+            const label = reference ? `x = ${forceSystemModelNumber(distance)}` : `x = ${forceSystemModelNumber(location.distance)}`;
+            const referenceName = reference ? reference.support.id : "beam start";
+            return `<g class="force-system-model-dimensions" aria-label="Distance from ${equationText(referenceName)} to force">${dimension(referencePoint, forcePoint, label)}</g>`;
+        }
+        const first = supports[0].position; const last = supports[supports.length - 1].position;
+        const firstPoint = pointAt(first); const lastPoint = pointAt(last);
+        const leftDistance = Math.max(0, Math.min(beam.length, location.distance - first.distance));
+        const rightDistance = Math.max(0, Math.min(beam.length, last.distance - location.distance));
+        return `<g class="force-system-model-dimensions" aria-label="Dimensions from supports to force">${dimension(firstPoint, forcePoint, `a = ${forceSystemModelNumber(leftDistance)}`)}${dimension(forcePoint, lastPoint, `b = ${forceSystemModelNumber(rightDistance)}`)}</g>`;
+    }).join("");
+    const hatch = (x, y, count = 7) => Array.from({ length: count }, (_, index) => `<line class="force-system-model-hatch" x1="${(x + index * 8 - count * 4).toFixed(2)}" y1="${y.toFixed(2)}" x2="${(x + index * 8 - count * 4 - 8).toFixed(2)}" y2="${(y + 10).toFixed(2)}"></line>`).join("");
+    const supportMarkup = normalized.supports.map((support) => {
+        const point = points[support.point]; const x = toX(point.x); const y = toY(point.y);
+        let symbol;
+        if (support.type === "fixed") {
+            symbol = `<rect class="force-system-model-fixed" x="${(x + 10).toFixed(2)}" y="${(y - 32).toFixed(2)}" width="10" height="64" rx="2"></rect>${hatch(x + 20, y - 28, 7)}`;
+        } else {
+            const roller = support.type === "roller" ? `<circle class="force-system-model-roller" cx="${(x - 9).toFixed(2)}" cy="${(y + 32).toFixed(2)}" r="5"></circle><circle class="force-system-model-roller" cx="${(x + 9).toFixed(2)}" cy="${(y + 32).toFixed(2)}" r="5"></circle>` : "";
+            symbol = `<path class="force-system-model-support" d="M${x.toFixed(2)} ${(y + 5).toFixed(2)} L${(x + 22).toFixed(2)} ${(y + 30).toFixed(2)} L${(x - 22).toFixed(2)} ${(y + 30).toFixed(2)} Z"></path>${roller}<line class="force-system-model-ground" x1="${(x - 30).toFixed(2)}" y1="${(y + (support.type === "roller" ? 42 : 34)).toFixed(2)}" x2="${(x + 30).toFixed(2)}" y2="${(y + (support.type === "roller" ? 42 : 34)).toFixed(2)}"></line>${hatch(x, y + (support.type === "roller" ? 42 : 34), 8)}`;
+        }
+        return `<g class="force-system-model-support-group"><circle class="force-system-model-point" cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="6"></circle>${symbol}<text class="force-system-model-support-label" x="${(x + (support.type === "fixed" ? 30 : 38)).toFixed(2)}" y="${(y + 23).toFixed(2)}">${equationText(support.id)}</text></g>`;
+    }).join("");
+    const forceList = normalized.forces.map((force) => `<li><strong>${equationText(force.id)} = ${forceSystemModelNumber(force.magnitude)} ${equationText(force.unit)}</strong> ${equationText(force.type)}${force.type === "distributed" ? ` · ${equationText(force.distribution)}` : ""}${force.type === "point" && force.location ? ` · x = ${forceSystemModelNumber(force.location.distance)}` : ""}</li>`).join("");
+    const supportList = normalized.supports.map((support) => `<li><strong>${equationText(support.id)}</strong> ${equationText(support.type)}</li>`).join("");
+    const panCardId = String(cardIndex).replace(/[^a-z0-9_-]/gi, "-");
+    const panControls = `<div class="force-system-model-pan-controls" role="group" aria-label="Diagram navigation"><button type="button" class="force-system-model-pan-toggle" data-force-system-model-pan-toggle aria-pressed="false">Pan</button><button type="button" class="force-system-model-pan-reset" data-force-system-model-pan-reset>Reset position</button><span class="force-system-model-pan-status" data-force-system-model-pan-status aria-live="polite">Pan off</span></div>`;
+    return `<article class="force-system-model-card" data-force-system-model-card="${equationText(panCardId)}"><header class="force-system-model-header"><div><p class="section-label">Static Free-Body Model</p><h3>${equationText(normalized.title)}</h3>${normalized.subtitle ? `<p>${equationText(normalized.subtitle)}</p>` : ""}</div>${panControls}</header><div class="force-system-model-layout"><section class="force-system-model-scene" aria-label="Static free-body diagram"><svg data-force-system-model-svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Free-body diagram of ${equationText(normalized.title)}"><defs><marker id="${markerId}" markerWidth="5" markerHeight="5" refX="4.25" refY="2.5" orient="auto"><path fill="#ff8b6b" d="M0,0 L5,2.5 L0,5 Z"></path></marker><marker id="${dimensionMarkerId}" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse"><path fill="#ffd166" d="M0,0 L8,4 L0,8 Z"></path></marker></defs><g data-force-system-model-pan-layer><line class="force-system-model-axis" x1="${plot.left}" y1="${plot.bottom + 76}" x2="${plot.right}" y2="${plot.bottom + 76}"></line>${beamMarkup}${forceMarkup}${supportMarkup}${dimensionMarkup}</g></svg></section><section class="force-system-model-summary"><div><p class="equation-card-section-label">Model</p><p>${normalized.geometry.points.length} points · ${normalized.geometry.beams.length} beams</p></div><div><p class="equation-card-section-label">Forces</p><ul>${forceList || "<li>None specified</li>"}</ul></div><div><p class="equation-card-section-label">Supports</p><ul>${supportList || "<li>None specified</li>"}</ul></div></section></div></article>`;
+}
+
+function hydrateForceSystemModelCards(container) {
+    container.querySelectorAll("[data-force-system-model-card]").forEach((card) => {
+        const svg = card.querySelector("[data-force-system-model-svg]");
+        const layer = card.querySelector("[data-force-system-model-pan-layer]");
+        const toggle = card.querySelector("[data-force-system-model-pan-toggle]");
+        const reset = card.querySelector("[data-force-system-model-pan-reset]");
+        const status = card.querySelector("[data-force-system-model-pan-status]");
+        if (!svg || !layer || !toggle || !reset) return;
+
+        const state = { enabled: false, dragging: false, x: 0, y: 0, pointerId: null, startX: 0, startY: 0, originX: 0, originY: 0 };
+        const clamp = (value, limit) => Math.max(-limit, Math.min(limit, value));
+        const applyPosition = () => {
+            layer.setAttribute("transform", `translate(${state.x.toFixed(2)} ${state.y.toFixed(2)})`);
+        };
+        const setEnabled = (enabled) => {
+            state.enabled = enabled;
+            toggle.setAttribute("aria-pressed", String(enabled));
+            toggle.classList.toggle("is-active", enabled);
+            svg.classList.toggle("is-pan-enabled", enabled);
+            if (status) status.textContent = enabled ? "Pan on" : "Pan off";
+        };
+        const pointerPosition = (event) => {
+            const rect = svg.getBoundingClientRect();
+            return { x: (event.clientX - rect.left) * 760 / Math.max(1, rect.width), y: (event.clientY - rect.top) * 500 / Math.max(1, rect.height) };
+        };
+        const finishDrag = (event) => {
+            if (!state.dragging || (state.pointerId !== null && event.pointerId !== state.pointerId)) return;
+            state.dragging = false;
+            if (state.pointerId !== null && svg.hasPointerCapture?.(state.pointerId)) svg.releasePointerCapture(state.pointerId);
+            state.pointerId = null;
+            svg.classList.remove("is-panning");
+        };
+
+        toggle.addEventListener("click", () => setEnabled(!state.enabled));
+        reset.addEventListener("click", () => { state.x = 0; state.y = 0; applyPosition(); });
+        svg.addEventListener("pointerdown", (event) => {
+            if (!state.enabled || event.button > 0) return;
+            const position = pointerPosition(event);
+            state.dragging = true; state.pointerId = event.pointerId; state.startX = position.x; state.startY = position.y; state.originX = state.x; state.originY = state.y;
+            svg.setPointerCapture?.(event.pointerId);
+            svg.classList.add("is-panning");
+            event.preventDefault();
+        });
+        svg.addEventListener("pointermove", (event) => {
+            if (!state.dragging || event.pointerId !== state.pointerId) return;
+            const position = pointerPosition(event);
+            state.x = clamp(state.originX + position.x - state.startX, 260);
+            state.y = clamp(state.originY + position.y - state.startY, 160);
+            applyPosition();
+            event.preventDefault();
+        });
+        svg.addEventListener("pointerup", finishDrag);
+        svg.addEventListener("pointercancel", finishDrag);
+        svg.addEventListener("lostpointercapture", () => { state.dragging = false; state.pointerId = null; svg.classList.remove("is-panning"); });
+        applyPosition();
+    });
+}
+
+function forceSystemNumber(value, digits = 1) {
+    const rounded = Math.abs(value) < 0.0005 ? 0 : value;
+    return Number(rounded).toFixed(digits);
+}
+
+function normalizeSingleVectorCard(config) {
+    if (!config || typeof config !== "object") throw new Error("A single-vector-card configuration is required.");
+    const vector = config.vector && typeof config.vector === "object" ? config.vector : config;
+    const limits = config.limits && typeof config.limits === "object" ? config.limits : {};
+    const min = Number.isFinite(Number(limits.min)) ? Number(limits.min) : -100;
+    const max = Number.isFinite(Number(limits.max)) ? Number(limits.max) : 100;
+    const step = Number.isFinite(Number(limits.step)) && Number(limits.step) > 0 ? Number(limits.step) : 1;
+    if (!(min < 0 && max > 0 && max > min)) throw new Error("Vector limits must span zero with max greater than min.");
+    const clamp = (value) => Math.max(min, Math.min(max, value));
+    return {
+        title: text(config.title || "Single Force Vector"),
+        subtitle: text(config.subtitle),
+        x: clamp(Number.isFinite(Number(vector.x)) ? Number(vector.x) : 50),
+        y: clamp(Number.isFinite(Number(vector.y)) ? Number(vector.y) : 35),
+        min,
+        max,
+        step,
+        notes: Array.isArray(config.notes) ? config.notes.map(text).filter(Boolean) : []
+    };
+}
+
+function singleVectorNumber(value, digits = 1) {
+    return (Math.abs(value) < 0.0005 ? 0 : value).toFixed(digits);
+}
+
+function renderSingleVectorCard(config, cardIndex) {
+    const normalized = normalizeSingleVectorCard(config);
+    SINGLE_VECTOR_CARD_CONFIGS.set(String(cardIndex), normalized);
+    const width = 720;
+    const height = 560;
+    const plot = { left: 150, right: 570, top: 70, bottom: 490 };
+    const scale = (plot.right - plot.left) / (normalized.max - normalized.min);
+    const toX = (value) => plot.left + (value - normalized.min) * scale;
+    const toY = (value) => plot.bottom - (value - normalized.min) * scale;
+    const originX = toX(0);
+    const originY = toY(0);
+    const tickCount = 10;
+    const ticks = Array.from({ length: tickCount + 1 }, (_, index) => normalized.min + (normalized.max - normalized.min) * index / tickCount);
+    const grid = ticks.map((value) => `<line class="single-vector-grid-line" x1="${toX(value)}" y1="${plot.top}" x2="${toX(value)}" y2="${plot.bottom}"></line><line class="single-vector-grid-line" x1="${plot.left}" y1="${toY(value)}" x2="${plot.right}" y2="${toY(value)}"></line>`).join("");
+    const tickLabels = ticks.filter((_, index) => index % 2 === 0).map((value) => `<text class="single-vector-tick" x="${toX(value)}" y="${originY + 20}" text-anchor="middle">${singleVectorNumber(value, 0)}</text><text class="single-vector-tick" x="${originX - 10}" y="${toY(value) + 4}" text-anchor="end">${singleVectorNumber(value, 0)}</text>`).join("");
+    const endpointX = toX(normalized.x);
+    const endpointY = toY(normalized.y);
+    const vectorMarker = `<marker id="single-vector-marker-${cardIndex}" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path fill="#55c7f2" d="M0,0 L8,4 L0,8 Z"></path></marker>`;
+    const notes = normalized.notes.map((note) => `<p>${equationText(note)}</p>`).join("");
+    const svg = `<svg class="single-vector-svg" data-single-vector-svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Cartesian plane with a draggable force vector"><defs>${vectorMarker}</defs><g class="single-vector-grid">${grid}</g><line class="single-vector-axis" x1="${plot.left}" y1="${originY}" x2="${plot.right}" y2="${originY}"></line><line class="single-vector-axis" x1="${originX}" y1="${plot.bottom}" x2="${originX}" y2="${plot.top}"></line><path class="single-vector-axis-arrow" d="M${plot.right},${originY} l-10,-5 v10 z M${originX},${plot.top} l-5,10 h10 z"></path>${tickLabels}<text class="single-vector-axis-label" x="${plot.right - 4}" y="${originY - 12}" text-anchor="end">+X</text><text class="single-vector-axis-label" x="${originX + 12}" y="${plot.top + 12}">+Y</text><line class="single-vector-component single-vector-component-x" data-single-vector-component-x></line><line class="single-vector-component single-vector-component-y" data-single-vector-component-y></line><text class="single-vector-component-label" data-single-vector-component-x-label></text><text class="single-vector-component-label" data-single-vector-component-y-label></text><path class="single-vector-angle-arc" data-single-vector-angle-arc></path><text class="single-vector-angle-label" data-single-vector-angle-label></text><g class="single-vector-force" data-single-vector-force role="slider" tabindex="0" aria-label="Drag force vector" aria-valuemin="${normalized.min}" aria-valuemax="${normalized.max}" aria-valuenow="${normalized.x}, ${normalized.y}" aria-valuetext="Force vector components ${normalized.x} by ${normalized.y} newtons"><line data-single-vector-line marker-end="url(#single-vector-marker-${cardIndex})"></line><circle class="single-vector-handle" data-single-vector-handle cx="${endpointX}" cy="${endpointY}" r="11"></circle><text class="single-vector-label" data-single-vector-label>R</text></g><circle class="single-vector-origin" cx="${originX}" cy="${originY}" r="5"></circle></svg>`;
+    return `<article class="single-vector-card" data-single-vector-card="${equationText(cardIndex)}"><header class="single-vector-header"><div><p class="section-label">Vector Components</p><h3>${equationText(normalized.title)}</h3>${normalized.subtitle ? `<p>${equationText(normalized.subtitle)}</p>` : ""}</div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for single vector card" aria-pressed="false">Fullscreen</button></header><section class="single-vector-scene-panel"><div class="single-vector-scene">${svg}<p class="single-vector-hint">Drag the arrowhead to change the vector. Use the arrow keys when focused.</p></div></section><section class="single-vector-readout" aria-live="polite"><div><span>Fx</span><strong data-single-vector-result="x">${singleVectorNumber(normalized.x)} N</strong></div><div><span>Fy</span><strong data-single-vector-result="y">${singleVectorNumber(normalized.y)} N</strong></div><div><span>|R|</span><strong data-single-vector-result="magnitude">-- N</strong><small>√(Fx² + Fy²)</small></div><div><span>Angle</span><strong data-single-vector-result="angle">--°</strong><small>from +X</small></div></section>${notes ? `<section class="single-vector-notes"><p class="section-label">Remember</p>${notes}</section>` : ""}</article>`;
+}
+
+function hydrateSingleVectorCards(container) {
+    container.querySelectorAll("[data-single-vector-card]").forEach((card) => {
+        try {
+            const config = SINGLE_VECTOR_CARD_CONFIGS.get(card.dataset.singleVectorCard);
+            if (!config) throw new Error("the card configuration is missing.");
+            const svg = card.querySelector("[data-single-vector-svg]");
+            const force = card.querySelector("[data-single-vector-force]");
+            const line = card.querySelector("[data-single-vector-line]");
+            const handle = card.querySelector("[data-single-vector-handle]");
+            const componentX = card.querySelector("[data-single-vector-component-x]");
+            const componentY = card.querySelector("[data-single-vector-component-y]");
+            const componentXLabel = card.querySelector("[data-single-vector-component-x-label]");
+            const componentYLabel = card.querySelector("[data-single-vector-component-y-label]");
+            const angleArc = card.querySelector("[data-single-vector-angle-arc]");
+            const angleLabel = card.querySelector("[data-single-vector-angle-label]");
+            const results = Object.fromEntries(["x", "y", "magnitude", "angle"].map((name) => [name, card.querySelector(`[data-single-vector-result="${name}"]`)]));
+            if (!svg || !force || !line || !handle) throw new Error("the vector scene is incomplete.");
+            const width = 720;
+            const height = 560;
+            const plot = { left: 150, right: 570, top: 70, bottom: 490 };
+            const scale = (plot.right - plot.left) / (config.max - config.min);
+            const originX = plot.left + (0 - config.min) * scale;
+            const originY = plot.bottom - (0 - config.min) * scale;
+            const values = { x: config.x, y: config.y };
+            const clamp = (value) => Math.max(config.min, Math.min(config.max, value));
+            const snap = (value) => Math.round(value / config.step) * config.step;
+            const toSvgX = (value) => plot.left + (value - config.min) * scale;
+            const toSvgY = (value) => plot.bottom - (value - config.min) * scale;
+            const pointerToValues = (event) => {
+                const point = svg.createSVGPoint();
+                const matrix = svg.getScreenCTM();
+                if (!matrix) return values;
+                point.x = event.clientX;
+                point.y = event.clientY;
+                const local = point.matrixTransform(matrix.inverse());
+                return { x: clamp(snap(config.min + (local.x - plot.left) / scale)), y: clamp(snap(config.min + (plot.bottom - local.y) / scale)) };
+            };
+            const render = () => {
+                const endpointX = toSvgX(values.x);
+                const endpointY = toSvgY(values.y);
+                const magnitude = Math.hypot(values.x, values.y);
+                const angle = magnitude < 0.0005 ? 0 : (Math.atan2(values.y, values.x) * 180 / Math.PI + 360) % 360;
+                line.setAttribute("x1", String(originX)); line.setAttribute("y1", String(originY)); line.setAttribute("x2", endpointX.toFixed(2)); line.setAttribute("y2", endpointY.toFixed(2));
+                handle.setAttribute("cx", endpointX.toFixed(2)); handle.setAttribute("cy", endpointY.toFixed(2));
+                const labelX = Math.max(18, Math.min(width - 18, endpointX + (values.x >= 0 ? 14 : -14)));
+                const labelY = Math.max(20, Math.min(height - 16, endpointY + (values.y >= 0 ? -12 : 22)));
+                const vectorLabel = card.querySelector("[data-single-vector-label]");
+                if (vectorLabel) { vectorLabel.setAttribute("x", labelX.toFixed(2)); vectorLabel.setAttribute("y", labelY.toFixed(2)); vectorLabel.setAttribute("text-anchor", values.x >= 0 ? "start" : "end"); vectorLabel.textContent = `R (${singleVectorNumber(values.x, 0)}, ${singleVectorNumber(values.y, 0)} N)`; }
+                componentX?.setAttribute("x1", String(endpointX)); componentX?.setAttribute("y1", String(endpointY)); componentX?.setAttribute("x2", String(endpointX)); componentX?.setAttribute("y2", String(originY));
+                componentY?.setAttribute("x1", String(endpointX)); componentY?.setAttribute("y1", String(endpointY)); componentY?.setAttribute("x2", String(originX)); componentY?.setAttribute("y2", String(endpointY));
+                componentXLabel?.setAttribute("x", String(endpointX + 8)); componentXLabel?.setAttribute("y", String(originY - 8)); if (componentXLabel) componentXLabel.textContent = `Fx = ${singleVectorNumber(values.x, 0)} N`;
+                componentYLabel?.setAttribute("x", String(originX + 8)); componentYLabel?.setAttribute("y", String(endpointY - 8)); if (componentYLabel) componentYLabel.textContent = `Fy = ${singleVectorNumber(values.y, 0)} N`;
+                if (angleArc && angleLabel) {
+                    const radius = 44;
+                    if (magnitude < 0.0005 || angle < 0.5) {
+                        angleArc.setAttribute("d", "");
+                        angleLabel.textContent = "";
+                    } else {
+                        const radians = angle * Math.PI / 180;
+                        const arcEndX = originX + Math.cos(radians) * radius;
+                        const arcEndY = originY - Math.sin(radians) * radius;
+                        const largeArc = angle > 180 ? 1 : 0;
+                        const sweep = 0;
+                        angleArc.setAttribute("d", `M ${originX + radius} ${originY} A ${radius} ${radius} 0 ${largeArc} ${sweep} ${arcEndX.toFixed(2)} ${arcEndY.toFixed(2)}`);
+                        const labelRadians = (angle / 2) * Math.PI / 180;
+                        const labelRadius = radius + 16;
+                        const labelX = Math.max(28, Math.min(width - 28, originX + Math.cos(labelRadians) * labelRadius));
+                        const labelY = Math.max(24, Math.min(height - 22, originY - Math.sin(labelRadians) * labelRadius));
+                        angleLabel.setAttribute("x", labelX.toFixed(2));
+                        angleLabel.setAttribute("y", labelY.toFixed(2));
+                        angleLabel.setAttribute("text-anchor", labelX >= originX ? "start" : "end");
+                        angleLabel.textContent = `θ = ${singleVectorNumber(angle)}°`;
+                    }
+                }
+                if (results.x) results.x.textContent = `${singleVectorNumber(values.x)} N`;
+                if (results.y) results.y.textContent = `${singleVectorNumber(values.y)} N`;
+                if (results.magnitude) results.magnitude.textContent = `${singleVectorNumber(magnitude)} N`;
+                if (results.angle) results.angle.textContent = `${singleVectorNumber(angle)}°`;
+                force.setAttribute("aria-valuenow", `${singleVectorNumber(values.x, 0)}, ${singleVectorNumber(values.y, 0)}`);
+                force.setAttribute("aria-valuetext", `Force vector components ${singleVectorNumber(values.x, 0)} by ${singleVectorNumber(values.y, 0)} newtons, magnitude ${singleVectorNumber(magnitude)} newtons, angle ${singleVectorNumber(angle)} degrees`);
+            };
+            let dragging = false;
+            const updateFromPointer = (event) => { const next = pointerToValues(event); values.x = next.x; values.y = next.y; render(); };
+            force.addEventListener("pointerdown", (event) => { dragging = true; force.setPointerCapture?.(event.pointerId); updateFromPointer(event); event.preventDefault(); });
+            force.addEventListener("pointermove", (event) => { if (dragging) updateFromPointer(event); });
+            force.addEventListener("pointerup", (event) => { dragging = false; force.releasePointerCapture?.(event.pointerId); });
+            force.addEventListener("pointercancel", () => { dragging = false; });
+            force.addEventListener("keydown", (event) => {
+                const amount = config.step * (event.shiftKey ? 10 : 1);
+                if (event.key === "Home") { values.x = 0; values.y = 0; }
+                else if (event.key === "End") { const dominant = Math.abs(values.x) >= Math.abs(values.y) ? "x" : "y"; values[dominant] = (values[dominant] < 0 ? -1 : 1) * config.max; }
+                else if (event.key === "ArrowRight") values.x = clamp(values.x + amount);
+                else if (event.key === "ArrowLeft") values.x = clamp(values.x - amount);
+                else if (event.key === "ArrowUp") values.y = clamp(values.y + amount);
+                else if (event.key === "ArrowDown") values.y = clamp(values.y - amount);
+                else return;
+                render(); event.preventDefault();
+            });
+            render();
+        } catch (error) {
+            card.classList.add("single-vector-error-state");
+            card.textContent = `Single vector card unavailable: ${error?.message || "unexpected hydration error"}`;
+            console.error("Single Vector Card hydration failed:", error);
+        }
+    });
+}
+
+function renderForceSystemVectorCard(config, cardIndex) {
+    const normalized = normalizeForceSystemCard(config);
+    FORCE_SYSTEM_CARD_CONFIGS.set(String(cardIndex), normalized);
+    const sceneWidth = 720;
+    const sceneHeight = 560;
+    const centerX = sceneWidth / 2;
+    const centerY = sceneHeight / 2;
+    const box = { x: centerX - 55, y: centerY - 45, width: 110, height: 90 };
+    const components = ["Px", "Py", "Qx", "Qy"];
+    const labels = { Px: "Pₓ", Py: "Pᵧ", Qx: "Qₓ", Qy: "Qᵧ" };
+    const colors = { P: "#55c7f2", Q: "#c58cff", resultant: "#ffd166" };
+    const controls = components.map((name) => {
+        const vector = name[0] === "P" ? normalized.forces.P : normalized.forces.Q;
+        const component = vector[name[1].toLowerCase()];
+        return `<div class="force-system-control"><div class="force-system-control-heading"><label for="force-system-${name}-${cardIndex}">${labels[name]}</label><output data-force-output="${name}">${forceSystemNumber(component.value, 0)} N</output></div><input id="force-system-${name}-${cardIndex}" class="force-system-range" type="range" min="${component.min}" max="${component.max}" step="${component.step}" value="${component.value}" data-force-input="${name}" aria-label="Adjust ${labels[name]} component"></div>`;
+    }).join("");
+    const marker = (name) => `<marker id="force-vector-${name}-${cardIndex}" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path fill="${colors[name]}" d="M0,0 L8,4 L0,8 Z"></path></marker>`;
+    const vectorArrows = ["P", "Q"].map((name) => `<g class="force-system-vector force-system-vector-${name}" data-force-vector="${name}" stroke="${colors[name]}" fill="${colors[name]}"><line data-force-vector-line marker-end="url(#force-vector-${name}-${cardIndex})"></line><text data-force-vector-label>${name}</text></g>`).join("");
+    const windLines = Array.from({ length: 56 }, (_, index) => {
+        const column = index % 8;
+        const row = Math.floor(index / 8);
+        const x = 28 + column * 94;
+        const y = 26 + row * 84;
+        return `<line data-force-wind-particle="${index}" x1="${x}" y1="${y}" x2="${x + 80}" y2="${y}"></line>`;
+    }).join("");
+    const stateOverlay = `<div class="force-system-state-overlay" role="group" aria-label="Current force state"><span class="force-system-state is-current" data-force-state="balanced"><i aria-hidden="true"></i>Balanced<small>ΣF = 0</small></span><span class="force-system-state" data-force-state="unbalanced"><i aria-hidden="true"></i>Unbalanced<small>ΣF ≠ 0</small></span></div>`;
+    const svg = `<svg class="force-system-svg" viewBox="0 0 ${sceneWidth} ${sceneHeight}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Box with two adjustable force vectors P and Q"><defs>${["P", "Q"].map(marker).join("")}<marker id="force-resultant-arrow-${cardIndex}" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path fill="${colors.resultant}" d="M0,0 L8,4 L0,8 Z"></path></marker></defs><g class="force-wind-lines" aria-hidden="true">${windLines}</g><rect class="force-system-box" x="${box.x}" y="${box.y}" width="${box.width}" height="${box.height}" rx="12"></rect><g class="force-system-arrows">${vectorArrows}</g><g class="force-system-resultant" data-force-resultant><line data-force-resultant-line marker-end="url(#force-resultant-arrow-${cardIndex})"></line><text data-force-resultant-label>R = 0 N</text></g><circle class="force-system-center" cx="${centerX}" cy="${centerY}" r="5"></circle></svg>`;
+    return `<article class="force-system-card" data-force-vector-card="${equationText(cardIndex)}"><header class="force-system-header"><div><p class="section-label">Concurrent Force System</p><h3>${equationText(normalized.title)}</h3>${normalized.subtitle ? `<p>${equationText(normalized.subtitle)}</p>` : ""}</div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for force system card" aria-pressed="false">Fullscreen</button></header><div class="force-system-layout"><section class="force-system-scene-panel"><div class="force-system-scene" data-force-scene>${svg}${stateOverlay}</div></section><section class="force-system-panel"><div class="force-system-controls"><p class="equation-card-section-label">Adjust Vector Components</p>${controls}<div class="force-system-control"><div class="force-system-control-heading"><label for="force-system-mass-${cardIndex}">Mass of box</label><output data-force-output="mass">${forceSystemNumber(normalized.mass.value, 1)} kg</output></div><input id="force-system-mass-${cardIndex}" class="force-system-range" type="range" min="${normalized.mass.min}" max="${normalized.mass.max}" step="${normalized.mass.step}" value="${normalized.mass.value}" data-force-input="mass" aria-label="Adjust box mass"></div></div><div class="force-system-readout"><p class="equation-card-section-label">Vector Resultant</p><div class="force-system-metric-grid"><div><span>ΣFx</span><strong data-force-result="x">0 N</strong><small>Px + Qx</small></div><div><span>ΣFy</span><strong data-force-result="y">0 N</strong><small>Py + Qy</small></div><div><span>|F|</span><strong data-force-result="magnitude">0 N</strong><small>√(ΣFx² + ΣFy²)</small></div><div><span>a</span><strong data-force-result="acceleration">0 m/s²</strong><small>|F| ÷ m</small></div></div><p class="force-system-result-message" data-force-result-message>ΣF = 0, so there is no acceleration.</p></div></section></div>${normalized.notes.length ? `<section class="force-system-notes"><p class="section-label">Key idea</p>${normalized.notes.map((note) => `<p>${equationText(note)}</p>`).join("")}</section>` : ""}</article>`;
+}
+
+function hydrateForceSystemVectorCards(container) {
+    container.querySelectorAll("[data-force-vector-card]").forEach((card) => {
+        try {
+            const config = FORCE_SYSTEM_CARD_CONFIGS.get(card.dataset.forceVectorCard);
+            if (!config) throw new Error("the card configuration is missing.");
+            const sceneWidth = 720;
+            const sceneHeight = 560;
+            const centerX = sceneWidth / 2;
+            const centerY = sceneHeight / 2;
+            const values = { Px: config.forces.P.x.value, Py: config.forces.P.y.value, Qx: config.forces.Q.x.value, Qy: config.forces.Q.y.value, mass: config.mass.value };
+            const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+            const resultOutputs = Object.fromEntries(["x", "y", "magnitude", "acceleration"].map((name) => [name, card.querySelector(`[data-force-result="${name}"]`)]));
+            const stateIndicators = Object.fromEntries(["balanced", "unbalanced"].map((name) => [name, card.querySelector(`[data-force-state="${name}"]`)]));
+            const message = card.querySelector("[data-force-result-message]");
+            const resultant = card.querySelector("[data-force-resultant]");
+            const resultantLine = card.querySelector("[data-force-resultant-line]");
+            const resultantLabel = card.querySelector("[data-force-resultant-label]");
+            const windParticles = Array.from(card.querySelectorAll("[data-force-wind-particle]")).map((line, index) => {
+                const seed = (index * 37 + 17) % 101;
+                const length = 64 + ((index * 19) % 49);
+                const opacity = 0.48 + (seed / 100) * 0.34;
+                line.style.opacity = String(opacity);
+                return {
+                    line,
+                    length,
+                    index,
+                    flowDistance: 0,
+                    crossOffset: 0
+                };
+            });
+            const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches === true;
+            const windState = { x: 1, y: 0, speed: 0, lastTime: 0, stopped: false, directionKey: "" };
+            const seededOffset = (index, salt) => (((index * 29 + salt * 17) % 101) / 100) - 0.5;
+            const flowBounds = (particle, padding = particle.length + 20) => {
+                let lower = -Infinity;
+                let upper = Infinity;
+                const constraints = [
+                    { origin: centerX, direction: windState.x, offset: -windState.y * particle.crossOffset, minimum: -padding, maximum: sceneWidth + padding },
+                    { origin: centerY, direction: windState.y, offset: windState.x * particle.crossOffset, minimum: -padding, maximum: sceneHeight + padding }
+                ];
+                constraints.forEach(({ origin, direction, offset, minimum, maximum }) => {
+                    const base = origin + offset;
+                    if (Math.abs(direction) < 0.0001) return;
+                    const first = (minimum - base) / direction;
+                    const second = (maximum - base) / direction;
+                    lower = Math.max(lower, Math.min(first, second));
+                    upper = Math.min(upper, Math.max(first, second));
+                });
+                return { lower, upper };
+            };
+            const positionParticle = (particle) => {
+                const x = centerX + windState.x * particle.flowDistance - windState.y * particle.crossOffset;
+                const y = centerY + windState.y * particle.flowDistance + windState.x * particle.crossOffset;
+                particle.line.setAttribute("x1", x.toFixed(2));
+                particle.line.setAttribute("y1", y.toFixed(2));
+                particle.line.setAttribute("x2", (x + windState.x * particle.length).toFixed(2));
+                particle.line.setAttribute("y2", (y + windState.y * particle.length).toFixed(2));
+            };
+            const resetWindField = () => {
+                const columns = 8;
+                const rows = Math.ceil(windParticles.length / columns);
+                const flowExtent = (Math.abs(windState.x) * sceneWidth + Math.abs(windState.y) * sceneHeight) / 2;
+                const crossExtent = (Math.abs(windState.y) * sceneWidth + Math.abs(windState.x) * sceneHeight) / 2;
+                windParticles.forEach((particle) => {
+                    const column = particle.index % columns;
+                    const row = Math.floor(particle.index / columns);
+                    particle.flowDistance = (((column + 0.5) / columns) * 2 - 1 + seededOffset(particle.index, 3) * 0.12) * flowExtent;
+                    particle.crossOffset = (((row + 0.5) / rows) * 2 - 1 + seededOffset(particle.index, 7) * 0.12) * crossExtent;
+                    const x = centerX + windState.x * particle.flowDistance - windState.y * particle.crossOffset;
+                    const y = centerY + windState.y * particle.flowDistance + windState.x * particle.crossOffset;
+                    const scale = Math.max(1, Math.abs(x - centerX) / (sceneWidth / 2), Math.abs(y - centerY) / (sceneHeight / 2));
+                    particle.flowDistance /= scale;
+                    particle.crossOffset /= scale;
+                    positionParticle(particle);
+                });
+            };
+            const syncWind = (delta = 0) => {
+                windParticles.forEach((particle) => {
+                    particle.flowDistance += windState.speed * delta;
+                    const bounds = flowBounds(particle);
+                    if (particle.flowDistance > bounds.upper) particle.flowDistance = bounds.lower;
+                    positionParticle(particle);
+                });
+            };
+            const animate = (timestamp) => {
+                if (windState.stopped || !card.isConnected) { windState.stopped = true; return; }
+                const delta = Math.min(0.05, windState.lastTime ? (timestamp - windState.lastTime) / 1000 : 0.016);
+                windState.lastTime = timestamp;
+                if (!reducedMotion && windState.speed > 0) syncWind(delta);
+                windState.raf = requestAnimationFrame(animate);
+            };
+            const render = () => {
+                const sumX = values.Px + values.Qx;
+                const sumY = values.Py + values.Qy;
+                const magnitude = Math.hypot(sumX, sumY);
+                const acceleration = magnitude / Math.max(0.001, values.mass);
+                const balanced = magnitude < 0.0005;
+                const flowLength = Math.max(0.0001, magnitude);
+                windState.x = balanced ? 1 : -sumX / flowLength;
+                windState.y = balanced ? 0 : sumY / flowLength;
+                const directionKey = `${windState.x.toFixed(3)}:${windState.y.toFixed(3)}`;
+                if (windState.directionKey !== directionKey) {
+                    windState.directionKey = directionKey;
+                    resetWindField();
+                }
+                windState.speed = balanced ? 0 : clamp(42 + acceleration * 18, 42, 300);
+                card.classList.toggle("is-moving", !balanced);
+                card.style.setProperty("--wind-opacity", String(balanced ? 0.04 : clamp(0.25 + acceleration * 0.035, 0.25, 0.82)));
+                Object.entries(stateIndicators).forEach(([name, indicator]) => { const current = (name === "balanced") === balanced; indicator?.classList.toggle("is-current", current); indicator?.setAttribute("aria-current", current ? "true" : "false"); });
+                if (resultOutputs.x) resultOutputs.x.textContent = `${forceSystemNumber(sumX)} N`;
+                if (resultOutputs.y) resultOutputs.y.textContent = `${forceSystemNumber(sumY)} N`;
+                if (resultOutputs.magnitude) resultOutputs.magnitude.textContent = `${forceSystemNumber(magnitude)} N`;
+                if (resultOutputs.acceleration) resultOutputs.acceleration.textContent = `${forceSystemNumber(acceleration)} m/s²`;
+                if (message) message.textContent = balanced ? "ΣF = 0, so there is no acceleration." : `The box accelerates in the direction of the resultant (${forceSystemNumber(magnitude)} N).`;
+                const maxVectorMagnitude = Math.hypot(100, 100);
+                const maxVectorLength = 210;
+                const clampSceneLabel = (value, minimum, maximum) => Math.max(minimum, Math.min(maximum, value));
+                ["P", "Q"].forEach((name) => {
+                    const x = values[`${name}x`];
+                    const y = values[`${name}y`];
+                    const vectorMagnitude = Math.hypot(x, y);
+                    const group = card.querySelector(`[data-force-vector="${name}"]`);
+                    const line = group?.querySelector("[data-force-vector-line]");
+                    const label = group?.querySelector("[data-force-vector-label]");
+                    if (!group || !line || !label) return;
+                    const length = vectorMagnitude < 0.0005 ? 0 : clamp(30 + (vectorMagnitude / maxVectorMagnitude) * 180, 30, maxVectorLength);
+                    const unitX = vectorMagnitude ? x / vectorMagnitude : 0;
+                    const unitY = vectorMagnitude ? -y / vectorMagnitude : 0;
+                    const endX = centerX + unitX * length;
+                    const endY = centerY + unitY * length;
+                    group.style.display = vectorMagnitude ? "" : "none";
+                    line.setAttribute("x1", String(centerX)); line.setAttribute("y1", String(centerY)); line.setAttribute("x2", endX.toFixed(2)); line.setAttribute("y2", endY.toFixed(2));
+                    const labelX = clampSceneLabel(endX + (unitX >= 0 ? 12 : -12), 18, sceneWidth - 18);
+                    const labelY = clampSceneLabel(endY + (unitY >= 0 ? 18 : -10), 18, sceneHeight - 12);
+                    label.setAttribute("x", labelX.toFixed(2)); label.setAttribute("y", labelY.toFixed(2)); label.setAttribute("text-anchor", unitX >= 0 ? "start" : "end"); label.textContent = `${name} (${forceSystemNumber(x, 0)}, ${forceSystemNumber(y, 0)} N)`;
+                });
+                if (resultant && resultantLine && resultantLabel) {
+                    const length = balanced ? 0 : clamp(34 + (magnitude / (maxVectorMagnitude * 2)) * 176, 34, maxVectorLength);
+                    const endX = centerX + (balanced ? 0 : sumX / magnitude * length);
+                    const endY = centerY + (balanced ? 0 : -sumY / magnitude * length);
+                    resultant.style.display = balanced ? "none" : "";
+                    resultantLine.setAttribute("x1", String(centerX)); resultantLine.setAttribute("y1", String(centerY)); resultantLine.setAttribute("x2", endX.toFixed(2)); resultantLine.setAttribute("y2", endY.toFixed(2));
+                    const resultantLabelX = clampSceneLabel(endX + (sumX >= 0 ? 12 : -12), 18, sceneWidth - 18);
+                    const resultantLabelY = clampSceneLabel(endY + (sumY >= 0 ? 18 : -10), 18, sceneHeight - 12);
+                    resultantLabel.setAttribute("x", resultantLabelX.toFixed(2)); resultantLabel.setAttribute("y", resultantLabelY.toFixed(2)); resultantLabel.setAttribute("text-anchor", sumX >= 0 ? "start" : "end"); resultantLabel.textContent = `R = ${forceSystemNumber(magnitude)} N`;
+                }
+                syncWind();
+            };
+            card.querySelectorAll("[data-force-input]").forEach((input) => input.addEventListener("input", () => { values[input.dataset.forceInput] = Number(input.value); const output = card.querySelector(`[data-force-output="${input.dataset.forceInput}"]`); if (output) output.textContent = `${forceSystemNumber(values[input.dataset.forceInput], input.dataset.forceInput === "mass" ? 1 : 0)} ${input.dataset.forceInput === "mass" ? "kg" : "N"}`; render(); }));
+            render();
+            if (typeof requestAnimationFrame === "function") windState.raf = requestAnimationFrame(animate);
+        } catch (error) { card.classList.add("force-system-error-state"); card.textContent = `Force system card unavailable: ${error?.message || "unexpected hydration error"}`; console.error("Force System Card hydration failed:", error); }
+    });
+}
+
+function renderForceSystemCard(config, cardIndex) {
+    return renderForceSystemVectorCard(config, cardIndex);
+    /* Legacy directional renderer retained below for compatibility with cached callers. */
+    const normalized = normalizeForceSystemCard(config);
+    FORCE_SYSTEM_CARD_CONFIGS.set(String(cardIndex), normalized);
+    const vectorNames = ["P", "Q"];
+    const componentNames = ["Px", "Py", "Qx", "Qy"];
+    const sceneWidth = 720;
+    const sceneHeight = 560;
+    const centerX = sceneWidth / 2;
+    const centerY = sceneHeight / 2;
+    const box = { x: centerX - 55, y: centerY - 45, width: 110, height: 90 };
+    const labels = { Px: "Pₓ", Py: "Pᵧ", Qx: "Qₓ", Qy: "Qᵧ" };
+    const colors = { P: "#55c7f2", Q: "#c58cff", resultant: "#ffd166" };
+    const controls = componentNames.map((name) => {
+        const vector = name.startsWith("P") ? normalized.forces.P : normalized.forces.Q;
+        const force = vector[name.endsWith("x") ? "x" : "y"];
+        return `<div class="force-system-control"><div class="force-system-control-heading"><label for="force-system-${name}-${cardIndex}">${labels[name]}</label><output data-force-output="${name}">${forceSystemNumber(force.value, 0)} N</output></div><input id="force-system-${name}-${cardIndex}" class="force-system-range" type="range" min="${force.min}" max="${force.max}" step="${force.step}" value="${force.value}" data-force-input="${name}" aria-label="Adjust ${labels[name]} component"></div>`;
+    }).join("");
+    const arrows = vectorNames.map((name) => `<g class="force-system-arrow force-system-arrow-${name}" data-force-vector="${name}" stroke="${colors[name]}" fill="${colors[name]}"><line data-force-vector-line x1="0" y1="0" x2="0" y2="0" marker-end="url(#force-vector-${name}-${cardIndex})"></line><text data-force-vector-label text-anchor="middle">${name}</text></g>`).join("");
+    const notes = normalized.notes.map((note) => `<p>${equationText(note)}</p>`).join("");
+    const marker = (name) => `<marker id="force-vector-${name}-${cardIndex}" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path fill="${colors[name]}" d="M0,0 L7,3.5 L0,7 Z"></path></marker>`;
+    const windLines = Array.from({ length: 42 }, (_, index) => {
+        const column = index % 6;
+        const row = Math.floor(index / 6);
+        const x = 20 + column * 125;
+        const y = 24 + row * 84;
+        return `<line data-force-wind-particle="${index}" x1="${x}" y1="${y}" x2="${x + 88}" y2="${y}"></line>`;
+    }).join("");
+    const resultantMarker = `<marker id="force-resultant-arrow-${cardIndex}" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path fill="${colors.resultant}" d="M0,0 L8,4 L0,8 Z"></path></marker>`;
+    const stateOverlay = `<div class="force-system-state-overlay" role="group" aria-label="Current force state"><span class="force-system-state is-current" data-force-state="balanced"><i aria-hidden="true"></i>Balanced<small>ΣF = 0</small></span><span class="force-system-state" data-force-state="unbalanced"><i aria-hidden="true"></i>Unbalanced<small>ΣF ≠ 0</small></span></div>`;
+    return `<article class="force-system-card" data-force-system-card="${equationText(cardIndex)}"><header class="force-system-header"><div><p class="section-label">Concurrent Force System</p><h3>${equationText(normalized.title)}</h3>${normalized.subtitle ? `<p>${equationText(normalized.subtitle)}</p>` : ""}</div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for force system card" aria-pressed="false">Fullscreen</button></header><div class="force-system-layout"><section class="force-system-scene-panel"><div class="force-system-scene" data-force-scene><svg class="force-system-svg" viewBox="0 0 ${sceneWidth} ${sceneHeight}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Box with adjustable concurrent force arrows"><defs>${forceNames.map(marker).join("")}${resultantMarker}</defs><g class="force-wind-lines" aria-hidden="true">${windLines}</g><g class="force-system-arrows">${arrows}</g><g class="force-system-resultant" data-force-resultant><line data-force-resultant-line x1="${centerX}" y1="${centerY}" x2="${centerX}" y2="${centerY}" marker-end="url(#force-resultant-arrow-${cardIndex})"></line><text data-force-resultant-label x="${centerX}" y="${centerY}">R = 0 N</text></g><rect class="force-system-box" x="${box.x}" y="${box.y}" width="${box.width}" height="${box.height}" rx="12"></rect><circle class="force-system-center" cx="${centerX}" cy="${centerY}" r="5"></circle></svg>${stateOverlay}</div></section><section class="force-system-panel"><div class="force-system-controls"><p class="equation-card-section-label">Adjust Forces</p>${controls}<div class="force-system-control"><div class="force-system-control-heading"><label for="force-system-mass-${cardIndex}">Mass of box</label><output data-force-output="mass">${forceSystemNumber(normalized.mass.value, 1)} kg</output></div><input id="force-system-mass-${cardIndex}" class="force-system-range" type="range" min="${normalized.mass.min}" max="${normalized.mass.max}" step="${normalized.mass.step}" value="${normalized.mass.value}" data-force-input="mass" aria-label="Adjust box mass"></div></div><div class="force-system-readout"><p class="equation-card-section-label">Resultant Force</p><div class="force-system-metric-grid"><div><span>ΣFx</span><strong data-force-result="x">0 N</strong><small>Fright − Fleft</small></div><div><span>ΣFy</span><strong data-force-result="y">0 N</strong><small>Fup − Fdown</small></div><div><span>|F|</span><strong data-force-result="magnitude">0 N</strong><small>√(ΣFx² + ΣFy²)</small></div><div><span>a</span><strong data-force-result="acceleration">0 m/s²</strong><small>|F| ÷ m</small></div></div><p class="force-system-result-message" data-force-result-message>ΣF = 0, so there is no acceleration.</p></div></section></div>${notes ? `<section class="force-system-notes"><p class="section-label">Key idea</p>${notes}</section>` : ""}</article>`;
+}
+
+function hydrateForceSystemCards(container) {
+    return hydrateForceSystemVectorCards(container);
+    /* Legacy directional hydrator retained below for compatibility with cached callers. */
+    container.querySelectorAll("[data-force-system-card]").forEach((card) => {
+        try {
+            const config = FORCE_SYSTEM_CARD_CONFIGS.get(card.dataset.forceSystemCard);
+            if (!config) throw new Error("the card configuration is missing.");
+            const sceneWidth = 720;
+            const sceneHeight = 560;
+            const centerX = sceneWidth / 2;
+            const centerY = sceneHeight / 2;
+            const values = Object.fromEntries(["up", "down", "left", "right"].map((name) => [name, config.forces[name].value]));
+            values.mass = config.mass.value;
+            const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+            const message = card.querySelector("[data-force-result-message]");
+            const stateIndicators = Object.fromEntries(["balanced", "unbalanced"].map((name) => [name, card.querySelector(`[data-force-state="${name}"]`)]));
+            const resultOutputs = Object.fromEntries(["x", "y", "magnitude", "acceleration"].map((name) => [name, card.querySelector(`[data-force-result="${name}"]`)]));
+            const resultant = card.querySelector("[data-force-resultant]");
+            const resultantLine = card.querySelector("[data-force-resultant-line]");
+            const resultantLabel = card.querySelector("[data-force-resultant-label]");
+            const windParticles = Array.from(card.querySelectorAll("[data-force-wind-particle]")).map((line) => ({
+                line,
+                x: Number(line.getAttribute("x1")) || 0,
+                y: Number(line.getAttribute("y1")) || 0,
+                length: Math.max(24, (Number(line.getAttribute("x2")) || 0) - (Number(line.getAttribute("x1")) || 0))
+            }));
+            const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches === true;
+            const windState = { x: 0, y: 0, speed: 0, lastTime: 0, raf: 0, stopped: false };
+            const maxForce = Math.max(1, ...Object.values(config.forces).map((force) => force.max));
+            const syncWindParticles = (delta = 0) => {
+                const distance = windState.speed * delta;
+                windParticles.forEach((particle) => {
+                    particle.x += windState.x * distance;
+                    particle.y += windState.y * distance;
+                    const margin = particle.length + 18;
+                    if (particle.x < -margin || particle.x > sceneWidth + margin || particle.y < -margin || particle.y > sceneHeight + margin) {
+                        if (Math.abs(windState.x) >= Math.abs(windState.y)) {
+                            particle.x = windState.x >= 0 ? -particle.length : sceneWidth + particle.length;
+                            particle.y = Math.random() * sceneHeight;
+                        } else {
+                            particle.y = windState.y >= 0 ? -particle.length : sceneHeight + particle.length;
+                            particle.x = Math.random() * sceneWidth;
+                        }
+                    }
+                    const x2 = particle.x + windState.x * particle.length;
+                    const y2 = particle.y + windState.y * particle.length;
+                    particle.line.setAttribute("x1", particle.x.toFixed(2));
+                    particle.line.setAttribute("y1", particle.y.toFixed(2));
+                    particle.line.setAttribute("x2", x2.toFixed(2));
+                    particle.line.setAttribute("y2", y2.toFixed(2));
+                });
+            };
+            const animateWind = (timestamp) => {
+                if (windState.stopped || !card.isConnected) {
+                    windState.stopped = true;
+                    return;
+                }
+                const delta = Math.min(0.05, windState.lastTime ? (timestamp - windState.lastTime) / 1000 : 0.016);
+                windState.lastTime = timestamp;
+                if (!reducedMotion && windState.speed > 0) syncWindParticles(delta);
+                windState.raf = requestAnimationFrame(animateWind);
+            };
+            const render = () => {
+                const sumX = values.right - values.left;
+                const sumY = values.up - values.down;
+                const magnitude = Math.hypot(sumX, sumY);
+                const acceleration = magnitude / Math.max(0.001, values.mass);
+                const balanced = magnitude < 0.0005;
+                card.classList.toggle("is-moving", !balanced);
+                const relativeFlowX = -sumX;
+                const relativeFlowY = sumY;
+                const flowLength = Math.hypot(relativeFlowX, relativeFlowY);
+                const flowX = balanced ? 0 : relativeFlowX / flowLength;
+                const flowY = balanced ? 0 : relativeFlowY / flowLength;
+                windState.x = balanced ? 1 : flowX;
+                windState.y = balanced ? 0 : flowY;
+                windState.speed = balanced ? 0 : clamp(42 + acceleration * 18, 42, 300);
+                card.style.setProperty("--wind-opacity", `${balanced ? 0.04 : clamp(0.25 + acceleration * 0.035, 0.25, 0.82)}`);
+                Object.entries(stateIndicators).forEach(([name, indicator]) => {
+                    if (!indicator) return;
+                    const current = (name === "balanced") === balanced;
+                    indicator.classList.toggle("is-current", current);
+                    indicator.setAttribute("aria-current", current ? "true" : "false");
+                });
+                if (resultOutputs.x) resultOutputs.x.textContent = `${forceSystemNumber(sumX)} N`;
+                if (resultOutputs.y) resultOutputs.y.textContent = `${forceSystemNumber(sumY)} N`;
+                if (resultOutputs.magnitude) resultOutputs.magnitude.textContent = `${forceSystemNumber(magnitude)} N`;
+                if (resultOutputs.acceleration) resultOutputs.acceleration.textContent = `${forceSystemNumber(acceleration)} m/s²`;
+                if (message) message.textContent = balanced ? "ΣF = 0, so there is no acceleration." : `The box accelerates in the direction of the net force (${forceSystemNumber(magnitude)} N).`;
+                if (resultant && resultantLine && resultantLabel) {
+                    const resultantLength = balanced ? 0 : clamp(34 + (magnitude / maxForce) * 112, 34, 146);
+                    const resultX = centerX + (balanced ? 0 : (sumX / magnitude) * resultantLength);
+                    const resultY = centerY + (balanced ? 0 : (-sumY / magnitude) * resultantLength);
+                    resultant.style.display = balanced ? "none" : "";
+                    resultantLine.setAttribute("x1", String(centerX));
+                    resultantLine.setAttribute("y1", String(centerY));
+                    resultantLine.setAttribute("x2", resultX.toFixed(2));
+                    resultantLine.setAttribute("y2", resultY.toFixed(2));
+                    resultantLabel.setAttribute("x", (resultX + (sumX >= 0 ? 12 : -12)).toFixed(2));
+                    resultantLabel.setAttribute("y", (resultY + (sumY >= 0 ? 18 : -10)).toFixed(2));
+                    resultantLabel.setAttribute("text-anchor", sumX >= 0 ? "start" : "end");
+                    resultantLabel.textContent = `R = ${forceSystemNumber(magnitude)} N`;
+                }
+                syncWindParticles();
+                ["up", "down", "left", "right"].forEach((name) => {
+                    const force = values[name];
+                    const arrow = card.querySelector(`[data-force-arrow="${name}"]`);
+                    const line = arrow?.querySelector("[data-force-line]");
+                    const label = arrow?.querySelector("[data-force-label]");
+                    const length = 42 + (force / maxForce) * 92;
+                    const visible = force > 0;
+                    if (!arrow || !line || !label) return;
+                    arrow.style.display = visible ? "" : "none";
+                    if (name === "up") { line.setAttribute("x1", String(centerX)); line.setAttribute("y1", String(centerY - 45)); line.setAttribute("x2", String(centerX)); line.setAttribute("y2", String(centerY - 45 - length)); label.setAttribute("x", String(centerX)); label.setAttribute("y", String(centerY - 62 - length)); }
+                    if (name === "down") { line.setAttribute("x1", String(centerX)); line.setAttribute("y1", String(centerY + 45)); line.setAttribute("x2", String(centerX)); line.setAttribute("y2", String(centerY + 45 + length)); label.setAttribute("x", String(centerX)); label.setAttribute("y", String(centerY + 67 + length)); }
+                    if (name === "left") { line.setAttribute("x1", String(centerX - 55)); line.setAttribute("y1", String(centerY)); line.setAttribute("x2", String(centerX - 55 - length)); line.setAttribute("y2", String(centerY)); label.setAttribute("x", String(centerX - 72 - length)); label.setAttribute("y", String(centerY - 8)); }
+                    if (name === "right") { line.setAttribute("x1", String(centerX + 55)); line.setAttribute("y1", String(centerY)); line.setAttribute("x2", String(centerX + 55 + length)); line.setAttribute("y2", String(centerY)); label.setAttribute("x", String(centerX + 72 + length)); label.setAttribute("y", String(centerY - 8)); }
+                    label.textContent = `${forceSystemNumber(force, 0)} N`;
+                });
+            };
+            card.querySelectorAll("[data-force-input]").forEach((input) => input.addEventListener("input", () => {
+                values[input.dataset.forceInput] = Number(input.value);
+                const output = card.querySelector(`[data-force-output="${input.dataset.forceInput}"]`);
+                if (output) output.textContent = `${forceSystemNumber(values[input.dataset.forceInput], input.dataset.forceInput === "mass" ? 1 : 0)} ${input.dataset.forceInput === "mass" ? "kg" : "N"}`;
+                render();
+            }));
+            render();
+            if (typeof requestAnimationFrame === "function") {
+                windState.raf = requestAnimationFrame(animateWind);
+            }
+        } catch (error) {
+            card.classList.add("force-system-error-state");
+            card.textContent = `Force system card unavailable: ${error?.message || "unexpected hydration error"}`;
+            console.error("Force System Card hydration failed:", error);
+        }
+    });
+}
+
 function hydrateDuctParticleScene(card, config, values) {
     const areaVariables = config.variables.filter((variable) => variable.interactive && variable.axis === "left").slice(0, 2);
     const velocityVariables = config.variables.filter((variable) => variable.interactive && variable.axis === "right").slice(0, 2);
@@ -3064,7 +3846,7 @@ function syncEquationGraphSizing(card) {
 
 function hydrateFullscreenButtons(container) {
     container.querySelectorAll("[data-card-fullscreen]").forEach((button) => {
-            const card = button.closest("[data-equation-card], [data-model-card], [data-particle-card], [data-particle-physics-card], [data-fluid-control-volume-card]");
+            const card = button.closest("[data-equation-card], [data-model-card], [data-particle-card], [data-particle-physics-card], [data-fluid-control-volume-card], [data-force-system-card], [data-force-vector-card], [data-single-vector-card]");
         if (!card) return;
         const status = card.querySelector("[data-fullscreen-status]");
         const updateButton = () => {
@@ -4066,6 +4848,30 @@ function simpleMarkdownToHtml(md, options = {}) {
                 }
                 continue;
             }
+            if (lang.toLowerCase() === "force-system-card") {
+                try {
+                    out.push(renderForceSystemVectorCard(JSON.parse(codeLines.join("\n")), index));
+                } catch (error) {
+                    out.push(`<article class="force-system-card force-system-error-state"><p class="force-system-error">Force system card error: ${equationText(error.message || "Invalid JSON payload.")}</p></article>`);
+                }
+                continue;
+            }
+            if (lang.toLowerCase() === "force-system-model-card") {
+                try {
+                    out.push(renderForceSystemModelCard(JSON.parse(codeLines.join("\n")), index));
+                } catch (error) {
+                    out.push(`<article class="force-system-model-card force-system-model-error-state"><p class="force-system-model-error">Free-body model error: ${equationText(error.message || "Invalid JSON payload.")}</p></article>`);
+                }
+                continue;
+            }
+            if (lang.toLowerCase() === "single-vector-card") {
+                try {
+                    out.push(renderSingleVectorCard(JSON.parse(codeLines.join("\n")), index));
+                } catch (error) {
+                    out.push(`<article class="single-vector-card single-vector-error-state"><p class="single-vector-error">Single vector card error: ${equationText(error.message || "Invalid JSON payload.")}</p></article>`);
+                }
+                continue;
+            }
             if (lang.toLowerCase() === "youtube-card") {
                 try {
                     out.push(renderYoutubeCard(JSON.parse(codeLines.join("\n"))));
@@ -4206,6 +5012,9 @@ export function hydrateMarkdownPreview(container) {
     hydrateParticleCards(container);
     hydrateParticlePhysicsCards(container);
     hydrateFluidControlVolumeCards(container);
+    hydrateForceSystemModelCards(container);
+    hydrateForceSystemVectorCards(container);
+    hydrateSingleVectorCards(container);
     try {
         renderMath(container);
     } catch (_) {
@@ -4376,6 +5185,9 @@ function renderNoteStage(stage, subject, chapter, session) {
         hydrateParticleCards(notesContainer);
         hydrateParticlePhysicsCards(notesContainer);
         hydrateFluidControlVolumeCards(notesContainer);
+        hydrateForceSystemModelCards(notesContainer);
+        hydrateForceSystemVectorCards(notesContainer);
+        hydrateSingleVectorCards(notesContainer);
         enhanceNotesDocument(notesContainer, chapter?.title || "");
         try {
             renderMath(notesContainer);
@@ -4499,6 +5311,7 @@ function createFeedbackCard(result, options = {}) {
         wrapper.append(toggle, explanation);
     }
 
+    renderQuestionMath(wrapper);
     return wrapper;
 }
 
@@ -5380,7 +6193,7 @@ function renderLearnCheckpointStage(stage, progressFill, session, onReviewSubmit
         summaryActions.appendChild(continueButton);
         checkpoint.append(header, summaryCard, summaryActions);
         stage.appendChild(checkpoint);
-        try { renderMath(checkpoint); } catch (_) {}
+        renderQuestionMath(checkpoint);
         requestAnimationFrame(() => continueButton.focus());
         renderProgress(progressFill, session);
         return;
@@ -5448,7 +6261,7 @@ function renderLearnCheckpointStage(stage, progressFill, session, onReviewSubmit
 
     checkpoint.append(header, title, stats, content, actions);
     stage.appendChild(checkpoint);
-    try { renderMath(checkpoint); } catch (_) {}
+    renderQuestionMath(checkpoint);
     requestAnimationFrame(() => {
         const focusTarget = checkpoint.querySelector(
             session.learnReviewPosition < session.learnReviewQueue.length && !session.learnReviewResults?.[currentReviewIndex]
@@ -5807,12 +6620,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                         choiceButton.type = "button";
                         choiceButton.className = "choice-button";
                         const label = displayIndex < 26 ? String.fromCharCode(65 + displayIndex) : String(displayIndex + 1);
-                        if (typeof choice === 'string') {
-                            const escaped = escapeHtml(choice).replace(/\$\$/g, '$$').replace(/\$/g, '$');
-                            choiceButton.innerHTML = `${escapeHtml(label + '. ')}${escaped}`;
-                        } else {
-                            choiceButton.textContent = `${label}. ${String(choice)}`;
-                        }
+                        choiceButton.textContent = `${label}. ${String(choice)}`;
                         if (result?.userAnswerIndex === originalIndex) {
                             choiceButton.classList.add("is-selected");
                         }
@@ -5825,7 +6633,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                         choices.appendChild(choiceButton);
                     });
                     // Render any math in the review choices
-                    try { renderMath(choices); } catch (_) {}
+                    renderQuestionMath(choices);
                     item.appendChild(choices);
                 }
 
@@ -5966,12 +6774,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 button.type = "button";
                 button.className = "choice-button";
                 const label = displayIndex < 26 ? String.fromCharCode(65 + displayIndex) : String(displayIndex + 1);
-                if (typeof choice === 'string') {
-                    const escapedChoice = escapeHtml(choice).replace(/\$\$/g, '$$').replace(/\$/g, '$');
-                    button.innerHTML = `${escapeHtml(label + '. ')}${escapedChoice}`;
-                } else {
-                    button.textContent = `${label}. ${String(choice)}`;
-                }
+                button.textContent = `${label}. ${String(choice)}`;
                 if (session.selectedChoice === originalIndex) {
                     button.classList.add("is-selected");
                 }
@@ -5983,7 +6786,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 choices.appendChild(button);
             });
             // Ensure math is rendered for all newly-added choice buttons
-            try { renderMath(choices); } catch (_) {}
+            renderQuestionMath(choices);
             answerArea.appendChild(choices);
         }
 
@@ -6038,7 +6841,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
         card.append(header, questionText, hint, answerArea, actions);
         stage.appendChild(card);
-        try { renderMath(card); } catch (_) {}
+        renderQuestionMath(card);
         renderProgress(progressFill, session);
         return;
     }
@@ -6476,7 +7279,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         session.learnSlideNext = false;
     }
     stage.appendChild(card);
-    try { renderMath(card); } catch (_) {}
+    renderQuestionMath(card);
     renderProgress(progressFill, session);
 }
 
@@ -7707,12 +8510,7 @@ export async function initModePage(mode) {
                 button.type = "button";
                 button.className = "choice-button";
                 const label = displayIndex < 26 ? String.fromCharCode(65 + displayIndex) : String(displayIndex + 1);
-                if (typeof choice === 'string') {
-                    const escaped = escapeHtml(choice).replace(/\$\$/g, '$$').replace(/\$/g, '$');
-                    button.innerHTML = `${escapeHtml(label + '. ')}${escaped}`;
-                } else {
-                    button.textContent = `${label}. ${String(choice)}`;
-                }
+                button.textContent = `${label}. ${String(choice)}`;
                 button.disabled = answered;
 
                 if (answered) {
@@ -7728,7 +8526,7 @@ export async function initModePage(mode) {
                 choices.appendChild(button);
             });
             // Render math for all choices once appended
-            try { renderMath(choices); } catch (_) {}
+            renderQuestionMath(choices);
 
             answerArea.appendChild(choices);
         }
@@ -7751,8 +8549,7 @@ export async function initModePage(mode) {
 
         answerArea.appendChild(feedback);
         card.append(header, questionText, hint, answerArea);
-        try { renderMath(answerArea); } catch (_) {}
-        try { renderMath(feedback); } catch (_) {}
+        renderQuestionMath(card);
         return card;
     };
 

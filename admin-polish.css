@@ -1162,6 +1162,41 @@
     order: -2;
 }
 
+.force-system-model-authoring {
+    display: grid;
+    gap: 14px;
+}
+
+.force-system-model-authoring > label {
+    display: grid;
+    gap: 8px;
+}
+
+#force-system-model-json {
+    width: 100%;
+    min-height: 300px;
+    padding: 16px;
+    border: 1px solid color-mix(in srgb, var(--accent) 34%, var(--line));
+    border-radius: 16px;
+    color: var(--text);
+    background: rgba(3, 17, 29, 0.82);
+    font: 0.88rem/1.6 "Cascadia Code", Consolas, monospace;
+    resize: vertical;
+}
+
+#force-system-model-json:focus-visible {
+    outline: 2px solid var(--secondary);
+    outline-offset: 3px;
+}
+
+.force-system-model-authoring .force-system-model-card {
+    margin: 0;
+}
+
+.force-system-model-authoring .force-system-model-pan-controls {
+    margin-top: 2px;
+}
+
 .admin-notes-page .admin-main > .admin-page-nav {
     order: -1;
 }

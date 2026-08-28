@@ -243,3 +243,334 @@
 - **6XXX** → Mg + Si, General Structures
 - **7XXX** → Zinc, Highest Strength
 - **8XXX** → Other Elements
+
+## Fasteners | Blind Rivets
+
+---
+
+### Common Blind Rivet Types
+
+| Rivet | Locking Mechanism | Memory Hook | Typical Applications |
+|--------|-------------------|-------------|----------------------|
+| **Cherry Rivet** | Friction Lock | **Basic Blind Rivet** | General repairs |
+| **CherryLOCK** | Mechanical Lock | **Locked Stem** | Structural repairs |
+| **CherryMAX** | Mechanical Lock | **Maximum Strength** | Primary aircraft structures |
+| **Olympic-Lok** | Mechanical Lock | **Large Bulb** | Sheet metal repairs |
+| **Huck Rivet** | Swaged Collar | **Heavy-Duty Fastener** | High-strength aircraft structures |
+| **Pop Rivet** | Friction Lock | **Commercial Rivet** | Non-structural repairs only |
+
+---
+
+### Blind Rivet Categories
+
+| Type | Characteristic | Typical Use |
+|------|----------------|-------------|
+| **Friction-Lock** | Stem held by friction | Temporary or light-duty repairs |
+| **Mechanical-Lock** | Stem mechanically locked | Structural aircraft repairs |
+
+### Memory Hook
+
+> **Friction = Light**  
+> **Mechanical = Flight**
+
+---
+
+### Aircraft Blind Rivets
+
+| Rivet | Well Known For | Typical Applications |
+|--------|---------------|----------------------|
+| **Cherry Rivet** | Easy installation | Secondary structures |
+| **CherryLOCK** | Positive stem locking | Structural repairs |
+| **CherryMAX** | Highest-strength blind rivet | Primary structures |
+| **Olympic-Lok** | Excellent hole fill | Sheet metal repairs |
+| **Huck Rivet** | Heavy-duty fastening | Landing gear, transport aircraft |
+
+---
+
+### Signature Characteristics
+
+| Rivet | Well Known For | Key Characteristics | Aircraft Applications |
+|--------|---------------|---------------------|-----------------------|
+| **Cherry** | Simple Blind Rivet | Friction-lock stem | General repairs |
+| **CherryLOCK** | Structural Blind Rivet | Mechanical stem lock | Aircraft structural repairs |
+| **CherryMAX** | Premium Blind Rivet | High shear & tensile strength, flush or protruding head | Primary aircraft structures |
+| **Olympic-Lok** | Oversized Bulb | Excellent hole filling, vibration resistant | Thin sheet repairs |
+| **Huck** | Permanent Structural Fastener | Swaged collar, very high strength | Transport aircraft, landing gear |
+
+---
+
+### Head Styles
+
+| Head | Typical Use |
+|-------|-------------|
+| Universal | General repairs |
+| Countersunk | Flush aerodynamic surfaces |
+
+---
+
+### Blind Rivet Selection
+
+| Situation | Rivet |
+|-----------|--------|
+| Only one side accessible | Blind Rivet |
+| Structural blind repair | CherryMAX |
+| Large damaged hole | Olympic-Lok |
+| Maximum blind rivet strength | CherryMAX |
+| Heavy-duty aircraft fastening | Huck |
+
+---
+
+### Advantages
+
+| Advantage | Why It Matters |
+|------------|----------------|
+| One-sided installation | Access to only one side required |
+| Fast installation | Reduced repair time |
+| No bucking bar needed | Easier field repairs |
+| Suitable for enclosed structures | Ideal for inaccessible areas |
+
+---
+
+### Limitations
+
+| Limitation | Remember |
+|------------|----------|
+| Usually weaker than solid rivets | Do not replace solid rivets unless approved |
+| Some types are non-structural | Verify aircraft maintenance manual |
+| Hole preparation is critical | Improper fit reduces strength |
+
+---
+
+
+
+## Testing and Inspection | Corrosion Prevention and Control
+
+---
+
+### Types of Corrosion
+
+| Corrosion Type | Primary Cause | Well Known For | Key Characteristics | Common Aircraft Locations |
+|----------------|---------------|----------------|---------------------|---------------------------|
+| **Uniform (Surface)** | General atmospheric exposure (oxygen + moisture) | Most Common | Even metal loss over the entire surface | Aluminum skins, steel structures |
+| **Galvanic (Dissimilar Metal)** | Electrical contact between dissimilar metals in the presence of an electrolyte | Two Dissimilar Metals | More active metal corrodes first | Steel fasteners in aluminum, magnesium assemblies |
+| **Pitting** | Breakdown of the protective oxide film, often by chlorides or salt contamination | Small Deep Holes | Localized attack that penetrates deeply | Aluminum skins, magnesium components |
+| **Crevice (Concentration Cell)** | Trapped moisture and oxygen concentration differences | Hidden Areas | Corrosion confined to tight spaces | Lap joints, under washers, gaskets, rivet heads |
+| **Intergranular** | Improper heat treatment or sensitization causing attack along grain boundaries | Grain Boundary Attack | Internal attack between metal grains | Heat-treated aluminum alloys (2XXX, 7XXX) |
+| **Exfoliation** | Advanced intergranular corrosion in rolled or extruded metals | Layers Peeling | Surface lifts into thin flakes or layers | Extruded aluminum spars, stringers, longerons |
+| **Stress Corrosion Cracking (SCC)** | Sustained tensile stress combined with a corrosive environment | Cracks Under Stress | Fine cracks that propagate rapidly | Landing gear, highly stressed fittings, 7XXX alloys |
+| **Fretting** | Repeated vibration or slight movement between tightly fitted surfaces | Vibration Wear | Oxidized wear debris at contact surfaces | Riveted joints, bolted joints, bearings |
+| **Filiform** | Moisture penetration beneath damaged or poorly adhered paint | Under Paint | Thread-like corrosion beneath coatings | Painted aluminum skins |
+| **Microbiologically Influenced Corrosion (MIC)** | Bacteria, fungi, or microorganisms in the presence of water | Biological Corrosion | Localized corrosion caused by microbial activity | Fuel tanks, bilges, water systems |
+
+---
+
+### Corrosion Characteristics
+
+| Corrosion Type | Instantly Think Of... |
+|----------------|-----------------------|
+| Uniform | Even metal loss |
+| Galvanic | Two different metals |
+| Pitting | Pinholes |
+| Crevice | Moisture trapped |
+| Intergranular | Grain boundaries |
+| Exfoliation | Layers peel |
+| SCC | Cracks under stress |
+| Fretting | Vibration |
+| Filiform | Paint blister |
+| MIC | Bacteria |
+
+---
+
+### Causes of Corrosion
+
+| Cause | Typical Corrosion |
+|--------|-------------------|
+| Salt Water | Galvanic, Pitting |
+| Moisture | Uniform |
+| Trapped Water | Crevice |
+| Dissimilar Metals | Galvanic |
+| Residual Stress | SCC |
+| Vibration | Fretting |
+| Damaged Paint | Filiform |
+| Bacteria | MIC |
+
+---
+### Corrosion Recognition Guide
+
+| Observation | Think... |
+|-------------|----------|
+| Even rust or corrosion over the entire surface | Uniform Corrosion |
+| Two different metals touching with corrosion around the joint | Galvanic Corrosion |
+| Tiny deep holes | Pitting Corrosion |
+| Corrosion hidden under lap joints or washers | Crevice Corrosion |
+| Grain boundaries attacked after improper heat treatment | Intergranular Corrosion |
+| Layers lifting like pages of a book | Exfoliation Corrosion |
+| Fine cracks in a highly stressed part | Stress Corrosion Cracking |
+| Black or reddish powder between rubbing parts | Fretting Corrosion |
+| Thread-like lines beneath paint | Filiform Corrosion |
+| Corrosion associated with bacteria or stagnant water | MIC |
+
+### Most Susceptible Materials
+
+| Material | Common Corrosion Type |
+|----------|-----------------------|
+| Aluminum | Pitting, Intergranular, Exfoliation |
+| Magnesium | Galvanic, Pitting |
+| Steel | Uniform (Rust) |
+| Stainless Steel | Crevice, SCC |
+| Copper Alloys | Galvanic |
+| Titanium | Excellent Corrosion Resistance |
+
+---
+
+### Prevention Methods
+
+| Method | Prevents |
+|---------|----------|
+| Protective Coatings | Uniform, Filiform |
+| Sealants | Crevice |
+| Insulating Washers | Galvanic |
+| Proper Drainage | Crevice |
+| Corrosion Inhibitors | General Corrosion |
+| Regular Inspection | All Types |
+| Stress Relief | SCC |
+
+---
+
+### Inspection Methods
+
+| Method | Detects |
+|---------|----------|
+| Visual Inspection | Surface corrosion |
+| Dye Penetrant | Surface cracks from SCC |
+| Eddy Current | Hidden corrosion |
+| Ultrasonic | Internal corrosion |
+| Tap Test | Delamination due to corrosion (composites) |
+
+---
+
+## Welding
+
+---
+
+### Common Welding Processes
+
+| Process | Heat Source | Memory Hook | Typical Applications |
+|----------|-------------|-------------|----------------------|
+| **Oxyacetylene (OAW)** | Oxygen + Acetylene Flame | **Gas Welding** | Thin steel tubes, aircraft repair |
+| **SMAW (Stick)** | Consumable Electrode | **Stick = Simple** | Heavy steel fabrication |
+| **GMAW (MIG)** | Continuous Wire Electrode | **Machine Gun Wire** | Production welding |
+| **GTAW (TIG)** | Tungsten Electrode | **Tungsten = Precision** | Aircraft aluminum, stainless steel, titanium |
+| **Resistance Welding** | Electrical Resistance | **Spot Weld** | Thin sheet metals |
+| **Electron Beam Welding** | Electron Beam | **Vacuum Precision** | Aerospace manufacturing |
+| **Laser Welding** | Laser Beam | **High-Tech Welding** | Precision aerospace components |
+
+---
+
+### Aircraft Welding Applications
+
+| Process | Well Known For | Common Aircraft Applications |
+|----------|----------------|------------------------------|
+| **Oxyacetylene** | Steel Tube Repair | 4130 engine mounts, fuselage trusses |
+| **TIG** | Precision Welding | Aluminum, stainless steel, titanium |
+| **MIG** | Fast Production | Sheet metal fabrication |
+| **Resistance** | Spot Welding | Thin sheet assemblies |
+| **Laser** | Precision Manufacturing | Engine components |
+| **Electron Beam** | Deep Penetration | Turbine components |
+
+---
+
+#### Signature Characteristics
+
+| Welding Process | Well Known For | Advantages | Limitations |
+|-----------------|---------------|------------|-------------|
+| **Oxyacetylene** | Portable Repair | Simple equipment, inexpensive | Slower, larger heat affected zone |
+| **TIG** | Highest Quality Weld | Clean, precise, excellent control | Slow, requires skill |
+| **MIG** | High Production Rate | Fast, easy to learn | Less precise |
+| **Resistance** | No Filler Metal | Fast, repeatable | Thin materials only |
+| **Laser** | Precision | Minimal distortion | Expensive |
+| **Electron Beam** | Deep Welds | Excellent penetration | Requires vacuum |
+
+---
+
+### Oxyacetylene Flames
+
+| Flame | Oxygen : Acetylene | Characteristics | Typical Use |
+|--------|--------------------|-----------------|-------------|
+| **Neutral** | 1 : 1 | Sharp blue inner cone | General welding |
+| **Carburizing (Reducing)** | Excess Acetylene | Feathered inner cone | Aluminum, lead |
+| **Oxidizing** | Excess Oxygen | Short, pointed cone | Brass, bronze |
+
+#### Memory Hook
+
+> **Neutral = Normal**
+
+> **Carburizing = Carbon**
+
+> **Oxidizing = Oxygen**
+
+---
+
+### TIG Current Selection
+
+| Material | Current |
+|----------|---------|
+| Aluminum | **AC** |
+| Magnesium | **AC** |
+| Steel | **DCEN** |
+| Stainless Steel | **DCEN** |
+| Titanium | **DCEN** |
+
+#### Memory Hook
+
+> **Aluminum Alternates**
+
+> **Steel Direct**
+
+---
+
+### Electrode Types
+
+| Electrode | Used For |
+|------------|----------|
+| Consumable | SMAW, MIG |
+| Non-Consumable | TIG |
+
+---
+
+### Aircraft Metals & Preferred Welding
+
+| Material | Preferred Welding Process |
+|----------|---------------------------|
+| 4130 Steel | Oxyacetylene / TIG |
+| Aluminum | TIG |
+| Stainless Steel | TIG |
+| Titanium | TIG |
+| Magnesium | TIG (AC) |
+
+---
+
+### Welding Defects
+
+| Defect | Cause |
+|---------|-------|
+| Porosity | Gas contamination |
+| Undercut | Excessive current |
+| Cracks | Rapid cooling / stress |
+| Lack of Fusion | Low heat input |
+| Slag Inclusion | Poor cleaning |
+| Burn Through | Excessive heat |
+
+---
+
+### Weld Inspection
+
+| Inspection Method | Detects |
+|-------------------|----------|
+| Visual Inspection | Surface defects |
+| Dye Penetrant | Surface cracks |
+| Magnetic Particle | Surface & near-surface cracks (Ferrous only) |
+| Ultrasonic | Internal defects |
+| Radiography (X-ray) | Internal discontinuities |
+
+---
