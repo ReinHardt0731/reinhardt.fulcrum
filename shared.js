@@ -4654,7 +4654,8 @@ function simpleMarkdownToHtml(md, options = {}) {
                 }
                 const titleAttr = title ? ` title="${escapeHtml(title)}"` : "";
                 return tokenise(`<a href="${escapeHtml(safeUrl)}" target="_blank" rel="noopener noreferrer"${titleAttr}>${escapeHtml(label)}</a>`);
-            });
+            })
+            .replace(/(\$\$(?!\$)[\s\S]+?\$\$|\$(?!\$)[^$\n]+?\$(?!\$)|\\\([\s\S]+?\\\)|\\\[[\s\S]+?\\\])/g, (match) => tokenise(escapeHtml(match)));
 
         source = escapeHtml(source)
             .replace(/`([^`]+)`/g, '<code>$1</code>')
@@ -4976,9 +4977,17 @@ function simpleMarkdownToHtml(md, options = {}) {
         }
 
         line = normalizeMarkdownEscapes(line).trim();
-        if (/^(-{3,}|\*{3,}|_{3,})$/.test(line)) {
-            out.push("<hr>");
-        } else {
+        const thematicBreak = line.match(/^(-{3,}|\*{3,}|_{3,})$/);
+        if (thematicBreak) {
+            const ruleType = thematicBreak[1][0] === "_"
+                ? "underscore"
+                : thematicBreak[1][0] === "-" ? "dash" : "asterisk";
+            out.push(`<hr class="markdown-rule markdown-rule-${ruleType}">`);
+            index += 1;
+            continue;
+        }
+
+        {
             line = renderInline(line);
             if (/^#{1}\s+(.*)/.test(line)) {
                 out.push(`<h1>${line.replace(/^#{1}\s+/, "")}</h1>`);

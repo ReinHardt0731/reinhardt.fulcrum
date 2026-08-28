@@ -3296,10 +3296,12 @@ body.mode-page .workspace > .mode-topbar::before {
     min-width: 0;
     max-width: 1120px;
     margin: 0 auto;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-weight: 400;
     padding: 22px 24px;
-    border: 1px solid rgba(139, 247, 196, 0.2);
+    border: 1px solid rgba(139, 247, 196, 0.28);
     border-radius: 16px;
-    background: rgba(5, 18, 32, 0.72);
+    background: rgba(7, 24, 41, 0.96);
     line-height: 1.75;
     overflow-wrap: anywhere;
 }
@@ -3329,15 +3331,32 @@ body.mode-page .workspace > .mode-topbar::before {
     min-width: 0;
     box-sizing: border-box;
     margin: 0 0 12px;
-    border: 1px solid rgba(112, 160, 205, 0.3);
+    border: 1px solid rgba(112, 160, 205, 0.52);
     border-radius: 18px;
-    background: rgba(12, 29, 49, 0.9);
+    background: rgba(5, 18, 32, 0.72);
+    box-shadow: 0 0 0 1px rgba(97, 195, 255, 0.08), 0 14px 30px rgba(0, 0, 0, 0.12);
     overflow: hidden;
 }
 
+.notes-section + .notes-section {
+    position: relative;
+    margin-top: 28px;
+}
+
+.notes-section + .notes-section::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 12%;
+    left: 12%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(198, 130, 255, 0.58), transparent);
+}
+
 .notes-section[open] {
-    border-color: rgba(97, 195, 255, 0.48);
-    background: rgba(16, 42, 68, 0.94);
+    border-color: rgba(97, 195, 255, 0.72);
+    box-shadow: 0 0 0 1px rgba(97, 195, 255, 0.16), 0 16px 34px rgba(0, 0, 0, 0.18);
+    background: rgba(5, 18, 32, 0.88);
 }
 
 .notes-section-summary {
@@ -3376,9 +3395,18 @@ body.mode-page .workspace > .mode-topbar::before {
     min-width: 0;
     margin: 0;
     color: inherit;
-    font-size: 1.16rem;
-    line-height: 1.35;
+    line-height: 1.2;
     overflow-wrap: anywhere;
+}
+
+.notes-section-summary h2 {
+    font-size: 1.5rem;
+    font-weight: 750;
+}
+
+.notes-section-summary h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 .notes-section-content {
@@ -3392,6 +3420,24 @@ body.mode-page .workspace > .mode-topbar::before {
 
 .notes-section-content > :last-child {
     margin-bottom: 0;
+}
+
+.notes-view hr {
+    height: 2px;
+    margin: 2rem 0;
+    border: 0;
+    background: linear-gradient(90deg, transparent, var(--mode-accent, var(--primary)), transparent);
+}
+
+.notes-view hr.markdown-rule-dash {
+    background: var(--mode-accent, var(--primary));
+}
+
+.notes-view hr.markdown-rule-asterisk {
+    height: 4px;
+    border-top: 2px solid var(--mode-accent, var(--primary));
+    border-bottom: 2px solid var(--mode-accent, var(--primary));
+    background: transparent;
 }
 
 .notes-view img {
@@ -3422,7 +3468,8 @@ body.mode-page .workspace > .mode-topbar::before {
     padding: 12px 18px;
     border-left: 3px solid var(--secondary);
     border-radius: 0 12px 12px 0;
-    color: var(--muted);
+    color: var(--text);
+    font-weight: 500;
     background: rgba(90, 69, 27, 0.34);
 }
 
