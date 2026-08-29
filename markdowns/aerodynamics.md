@@ -140,9 +140,15 @@ asdsadasd
 \\
 
 ## Mach Number and Speed of Sound
+___
+
+Sound Travels through a medium by creating wavs. The medium in this case would be air. The Speed of Sound can then be thought of the Speed of Disturbance on the medium. Since this disturbance highly dependent on a medium in which the medium itself have thermodynamic properties which vairies in this case air with altitude. It can be expressed as:
+$$a^2 = \left(\frac{\partial p}{\partial\rho}\right)_s$$
+The propagation of time occurs so quickly that there is no occurence of heat transfer. Therefore we assume that the process is isentropic
 
 $$a^2 = \gamma RT$$
 $$ M = \frac{V}{a^2}$$
+
 
 ## Compressibility Effect on Stagnation
 $$c_pT_\infin + \frac{V^2_\infin}{2} =c_pT + \frac{V^2}{2} $$

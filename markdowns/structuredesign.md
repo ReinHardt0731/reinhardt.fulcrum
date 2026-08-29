@@ -1,31 +1,83 @@
 # Aircraft Design and Structure
 ## Aircraft Design Pipeline
+***
+
+
 ## Aircraft Structural Elements
+___
+
+
+
 ## Tail Design and Configurations
+___
 ### Stability
-### Elevator 
+---
+
+```model-card
+{
+  "title": "Dutch Roll Oscillation",
+  "src": "../asset/BlendTutorial.glb",
+  "cameraOrbit": "45deg 75deg 3m",
+  "controls": true,
+  "animations": ["Empty", "propeller"],
+  "autoplay": true,
+  "loop": true,
+  "animationSpeed": 1,
+  "playbackControls": false
+}
+```
+```model-card
+{
+  "title": "SPiral Dive",
+  "src": "../asset/spiral_dive.glb",
+  "cameraOrbit": "45deg 75deg 3m",
+  "controls": true,
+  "animations": ["Empty", "propeller"],
+  "autoplay": true,
+  "loop": true,
+  "animationSpeed": 1,
+  "playbackControls": false
+}
+```
+
+### Elevator
 ### Rudder
 ### Conventional
 ### T Tail
+```model-card
+{
+  "title": "T Tail Configuration",
+  "src": "../asset/T_tail.glb",
+  "alt": "T Tail",
+  "controls": true,
+  "autoRotate": true,
+  "cameraOrbit": "45deg 65deg 2.5m",
+  "exposure": 1
+}
+```
 ### V Tail
 ### H Tail
-## Wing Design and Configurations
+
+## Wing Configuration and Construction
 ### Wing Parameters
 ### High Wing
 ### Mid Wing
 ### Low Wing
 ### Multi Wing
 ### Full and Semi Cantilever
+
 ## Primary and  Secondary Control Surfaces
 ### Aeleron, Rudder and Elevator
 ### Flaps
 ### Trim Tab, Servo Tab
+
 ## PowerPlant Placement and Configuration
 ## Landing Gear Structure and Configuration
 
 
 
 # Aircraft Systems
+
 ## ATA Chapters
 ## Environmental Control System
 ## Ice and Rain Protection
@@ -228,7 +280,7 @@ $$\theta=\tan^{-1}\left(\frac{F_y}{F_x}\right)$$
 
 When determining the angle from components, the signs of $F_x$ and $F_y$ determine the quadrant. In computation, 
 $$atan2(Fy, Fx)$$
-or if expresed in calculator use ```SHIFT``` ```+``` to get the ```POL``` then input the Fx and Fy.
+or if expresed in calculator use `SHIFT` `+` to get the `POL` then input the Fx and Fy.
  $$\text{Pol}(\,F_x,\,F_y)$$
 
 ### Resultant of Multiple Forces

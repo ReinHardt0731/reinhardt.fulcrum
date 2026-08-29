@@ -5854,6 +5854,132 @@ body.mode-page .workspace > .mode-topbar::before {
     line-height: 1.5;
 }
 
+.model-card-animation-controls-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 12px;
+}
+
+.animation-toggle-btn {
+    align-self: flex-start;
+    flex: 0 0 auto;
+    width: 32px;
+    height: 32px;
+    padding: 6px 8px;
+    border: 1px solid rgba(205, 190, 255, 0.3);
+    border-radius: 6px;
+    background: rgba(205, 190, 255, 0.1);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    margin-bottom: 8px;
+}
+
+.animation-toggle-btn:hover {
+    background: rgba(205, 190, 255, 0.2);
+    border-color: rgba(205, 190, 255, 0.5);
+}
+
+.animation-toggle-btn:active {
+    transform: scale(0.95);
+}
+
+.model-card-animation-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 14px;
+    border: 1px solid rgba(205, 190, 255, 0.16);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.055);
+    transition: all 0.3s ease;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.model-card-animation-controls.hidden {
+    display: none;
+    max-height: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.animation-play-btn,
+.animation-pause-btn {
+    flex: 0 0 auto;
+    min-width: 32px;
+    min-height: 32px;
+    padding: 6px 8px;
+    border: 1px solid rgba(205, 190, 255, 0.3);
+    border-radius: 6px;
+    background: rgba(205, 190, 255, 0.1);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.animation-play-btn:hover,
+.animation-pause-btn:hover {
+    background: rgba(205, 190, 255, 0.2);
+    border-color: rgba(205, 190, 255, 0.5);
+}
+
+.animation-play-btn:active,
+.animation-pause-btn:active {
+    transform: scale(0.95);
+}
+
+.animation-slider {
+    min-width: 100px;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(205, 190, 255, 0.2);
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.animation-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent, #b69aff);
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.animation-slider::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent, #b69aff);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.animation-time {
+    flex: 0 0 auto;
+    min-width: 50px;
+    text-align: right;
+    font-size: 12px;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+}
+
 .equation-card-interactive .equation-card-header,
 .model-card-header {
     display: flex;

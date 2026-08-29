@@ -4538,9 +4538,36 @@ function renderModelCard(config, modelUrl, cardIndex) {
     const exposure = Number.isFinite(Number(config.exposure)) ? ` exposure="${Math.max(0, Math.min(5, Number(config.exposure)))}"` : "";
     const controls = config.controls !== false ? " camera-controls" : "";
     const autoRotate = config.autoRotate === true ? " auto-rotate" : "";
+    
+    // Animation support - handle both single animation and multiple animations
+    let animationNames = [];
+    if (config.animations) {
+        // Support array or comma-separated string
+        if (Array.isArray(config.animations)) {
+            animationNames = config.animations.map(a => String(a || "").trim()).filter(Boolean);
+        } else {
+            animationNames = String(config.animations).split(",").map(a => a.trim()).filter(Boolean);
+        }
+    } else if (config.animation) {
+        // Backward compatibility with single animation
+        animationNames = [String(config.animation).trim()];
+    }
+    
+    const primaryAnimation = animationNames[0] || "";
+    const autoplay = config.autoplay === true && primaryAnimation ? " autoplay" : "";
+    const animationLoop = config.loop !== false && primaryAnimation ? " animation-loop" : "";
+    const animationNameAttr = primaryAnimation ? ` animation-name="${equationText(primaryAnimation)}"` : "";
+    const animationSpeed = Number.isFinite(Number(config.animationSpeed)) ? ` animation-speed="${Math.max(0.25, Math.min(4, Number(config.animationSpeed)))}"` : "";
+    const animationNamesData = animationNames.length > 0 ? ` data-animation-names="${equationText(animationNames.join(","))}"` : "";
+    const showPlaybackControls = config.playbackControls !== false && primaryAnimation;
+    
     const hotspotMarkup = annotations.map((annotation) => `<button type="button" class="model-card-hotspot" slot="hotspot-${equationText(annotation.id)}" data-model-annotation="${equationText(annotation.id)}" data-position="${equationText(annotation.position)}" data-normal="${equationText(annotation.normal)}" data-annotation-label="${equationText(annotation.label)}" data-annotation-description="${equationText(annotation.description)}" aria-label="Show ${equationText(annotation.label)}" aria-selected="false"><span>${equationText(annotation.label)}</span></button>`).join("");
     const annotationInfo = annotations.length ? `<div class="model-card-annotation-info" data-model-annotation-info aria-live="polite"><strong data-model-annotation-title>Select a marker</strong><p data-model-annotation-description>Choose a labeled point on the model to see its description.</p></div>` : "";
-    return `<article class="model-card" data-model-card="${equationText(cardIndex)}"><header class="model-card-header"><div><p class="section-label">Interactive 3D Model</p><h3>${title}</h3></div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for 3D model" aria-pressed="false">Fullscreen</button></header><div class="model-card-viewport"><model-viewer src="${equationText(modelUrl)}" alt="${alt}" loading="lazy"${controls}${autoRotate}${cameraOrbit}${exposure} shadow-intensity="1">${hotspotMarkup}</model-viewer><p class="model-card-loading" data-model-loading>Loading 3D model...</p><p class="model-card-error" data-model-error hidden>3D model could not be loaded.</p></div>${annotationInfo}<p class="model-card-fullscreen-status" data-fullscreen-status aria-live="polite"></p></article>`;
+    
+    // Animation controls
+    const animationControls = showPlaybackControls ? `<div class="model-card-animation-controls-wrapper" data-animation-controls-wrapper><button type="button" class="animation-toggle-btn" data-animation-toggle aria-label="Toggle animation controls" aria-expanded="true" title="Hide controls">▼</button><div class="model-card-animation-controls" data-animation-controls><button type="button" class="animation-play-btn" data-animation-play aria-label="Play animation" title="Play">▶</button><button type="button" class="animation-pause-btn" data-animation-pause aria-label="Pause animation" title="Pause" hidden>⏸</button><input type="range" class="animation-slider" data-animation-slider min="0" max="100" value="0" aria-label="Animation progress" style="flex: 1; margin: 0 0.5rem;"><span class="animation-time" data-animation-time>0s</span></div></div>` : "";
+    
+    return `<article class="model-card" data-model-card="${equationText(cardIndex)}" data-has-animation="${primaryAnimation ? 'true' : 'false'}"${animationNamesData}><header class="model-card-header"><div><p class="section-label">Interactive 3D Model</p><h3>${title}</h3></div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for 3D model" aria-pressed="false">Fullscreen</button></header><div class="model-card-viewport"><model-viewer src="${equationText(modelUrl)}" alt="${alt}" loading="lazy"${controls}${autoRotate}${cameraOrbit}${exposure}${autoplay}${animationNameAttr}${animationLoop}${animationSpeed} shadow-intensity="1">${hotspotMarkup}</model-viewer><p class="model-card-loading" data-model-loading>Loading 3D model...</p><p class="model-card-error" data-model-error hidden>3D model could not be loaded.</p></div>${animationControls}${annotationInfo}<p class="model-card-fullscreen-status" data-fullscreen-status aria-live="polite"></p></article>`;
 }
 
 function hydrateModelCards(container) {
@@ -4560,6 +4587,110 @@ function hydrateModelCards(container) {
             if (loading) loading.hidden = true;
         }, { once: true });
         viewer.addEventListener("error", () => showError("3D model could not be loaded. Check that the GLB file is committed and its path is correct."), { once: true });
+        
+        // Animation controls setup
+        const hasAnimation = card.dataset.hasAnimation === "true";
+        if (hasAnimation) {
+            const playBtn = card.querySelector("[data-animation-play]");
+            const pauseBtn = card.querySelector("[data-animation-pause]");
+            const slider = card.querySelector("[data-animation-slider]");
+            const timeDisplay = card.querySelector("[data-animation-time]");
+            let isPlaying = viewer.hasAttribute("autoplay");
+            
+            const updatePlayPauseButtons = () => {
+                if (playBtn) playBtn.hidden = isPlaying;
+                if (pauseBtn) pauseBtn.hidden = !isPlaying;
+            };
+            
+            const updateTimeDisplay = () => {
+                if (slider && timeDisplay && viewer.currentTime !== undefined) {
+                    const duration = viewer.duration || 0;
+                    slider.max = Math.max(100, Math.ceil(duration * 100));
+                    slider.value = duration > 0 ? (viewer.currentTime / duration) * 100 : 0;
+                    timeDisplay.textContent = `${viewer.currentTime?.toFixed(2) || '0.00'}s`;
+                }
+            };
+            
+            if (playBtn) {
+                playBtn.addEventListener("click", () => {
+                    if (viewer.playAnimation) {
+                        // Get all animation names from data attribute
+                        const allAnimNames = (card.dataset.animationNames || "").split(",").map(n => n.trim()).filter(Boolean);
+                        if (allAnimNames.length > 0) {
+                            // Play all animations simultaneously
+                            allAnimNames.forEach(animName => {
+                                if (viewer.availableAnimations?.includes(animName)) {
+                                    viewer.playAnimation(animName);
+                                }
+                            });
+                            isPlaying = true;
+                            updatePlayPauseButtons();
+                        }
+                    }
+                });
+            }
+            
+            if (pauseBtn) {
+                pauseBtn.addEventListener("click", () => {
+                    if (viewer.pauseAnimation) {
+                        viewer.pauseAnimation();
+                        isPlaying = false;
+                        updatePlayPauseButtons();
+                    }
+                });
+            }
+            
+            if (slider) {
+                slider.addEventListener("input", () => {
+                    if (viewer.currentTime !== undefined) {
+                        const duration = viewer.duration || 0;
+                        viewer.currentTime = (Number(slider.value) / 100) * duration;
+                        updateTimeDisplay();
+                    }
+                });
+            }
+            
+            // Update progress periodically
+            const updateInterval = setInterval(() => {
+                if (!card.isConnected) {
+                    clearInterval(updateInterval);
+                    return;
+                }
+                updateTimeDisplay();
+            }, 50);
+            
+            updatePlayPauseButtons();
+            
+            // Animation controls toggle
+            const toggleBtn = card.querySelector("[data-animation-toggle]");
+            const controlsContainer = card.querySelector("[data-animation-controls]");
+            if (toggleBtn && controlsContainer) {
+                toggleBtn.addEventListener("click", () => {
+                    const isExpanded = toggleBtn.getAttribute("aria-expanded") === "true";
+                    toggleBtn.setAttribute("aria-expanded", String(!isExpanded));
+                    controlsContainer.classList.toggle("hidden", isExpanded);
+                    toggleBtn.textContent = isExpanded ? "▶" : "▼";
+                    toggleBtn.title = isExpanded ? "Show controls" : "Hide controls";
+                });
+            }
+            
+            // Auto-play all animations if autoplay is enabled
+            if (viewer.hasAttribute("autoplay")) {
+                viewer.addEventListener("load", () => {
+                    const allAnimNames = (card.dataset.animationNames || "").split(",").map(n => n.trim()).filter(Boolean);
+                    if (allAnimNames.length > 0) {
+                        allAnimNames.forEach(animName => {
+                            if (viewer.availableAnimations?.includes(animName)) {
+                                viewer.playAnimation(animName);
+                            }
+                        });
+                        isPlaying = true;
+                        updatePlayPauseButtons();
+                    }
+                }, { once: true });
+            }
+        }
+        
         const annotationButtons = Array.from(card.querySelectorAll("[data-model-annotation]"));
         const annotationTitle = card.querySelector("[data-model-annotation-title]");
         const annotationDescription = card.querySelector("[data-model-annotation-description]");
