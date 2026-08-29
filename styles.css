@@ -3319,11 +3319,24 @@ body.mode-page .workspace > .mode-topbar::before {
     scroll-margin-top: 28px;
 }
 
+.notes-view strong,
+.notes-view b {
+    color: var(--secondary);
+}
+
 .notes-view h1 {
     margin: 0 0 1.4rem;
     color: var(--text);
     font-size: clamp(1.7rem, 3vw, 2.5rem);
     line-height: 1.1;
+}
+
+.notes-view h2,
+.notes-view h3,
+.notes-view h4,
+.notes-view h5,
+.notes-view h6 {
+    margin: 0 0 0.4rem;
 }
 
 .notes-section {
@@ -3424,7 +3437,7 @@ body.mode-page .workspace > .mode-topbar::before {
 
 .notes-view hr {
     height: 2px;
-    margin: 2rem 0;
+    margin: 0.2rem 0;
     border: 0;
     background: linear-gradient(90deg, transparent, var(--mode-accent, var(--primary)), transparent);
 }
