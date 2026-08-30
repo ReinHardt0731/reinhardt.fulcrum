@@ -3372,6 +3372,17 @@ body.mode-page .workspace > .mode-topbar::before {
     background: rgba(5, 18, 32, 0.88);
 }
 
+.key-takeaways-card {
+    border-color: rgba(52, 155, 104, 0.8) !important;
+    background: rgba(5, 18, 32, 0.72);
+}
+
+.key-takeaways-card[open] {
+    border-color: rgba(72, 185, 130, 1) !important;
+    box-shadow: 0 0 0 1px rgba(72, 185, 130, 0.3), 0 16px 34px rgba(0, 0, 0, 0.18);
+    background: rgba(5, 18, 32, 0.88);
+}
+
 .notes-section-summary {
     display: flex;
     align-items: center;
@@ -6638,6 +6649,60 @@ body.mode-page .workspace > .mode-topbar::before {
     .youtube-card-frame {
         border-radius: 10px;
     }
+}
+
+.flowchart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 1.4rem 0;
+    padding: 24px;
+    border: 1px solid color-mix(in srgb, var(--primary) 42%, var(--line));
+    border-radius: 18px;
+    background: linear-gradient(145deg, rgba(13, 28, 48, 0.96), rgba(7, 18, 32, 0.98));
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.2);
+}
+
+.flowchart-step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    min-width: 200px;
+    padding: 12px 20px;
+    border: 1.5px solid var(--primary);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(26, 159, 255, 0.15), rgba(97, 195, 255, 0.08));
+    color: var(--primary);
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(97, 195, 255, 0.15);
+    transition: all 200ms ease;
+}
+
+.flowchart-step:hover {
+    border-color: var(--primary-strong);
+    background: linear-gradient(135deg, rgba(26, 159, 255, 0.25), rgba(97, 195, 255, 0.15));
+    box-shadow: 0 6px 16px rgba(97, 195, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.flowchart-arrow {
+    height: 28px;
+    line-height: 28px;
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.flowchart-error {
+    padding: 12px;
+    border: 1px solid var(--danger);
+    border-radius: 8px;
+    background: rgba(255, 124, 138, 0.1);
+    color: var(--danger);
+    font-size: 0.9rem;
 }
 
 @keyframes notes-target-pulse {

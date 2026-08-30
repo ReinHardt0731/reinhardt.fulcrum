@@ -4721,6 +4721,36 @@ function hydrateModelCards(container) {
     hydrateFullscreenButtons(container);
 }
 
+function renderFlowChart(flowText) {
+    const lines = String(flowText || "")
+        .split(/\r?\n/)
+        .map(l => l.trim())
+        .filter(l => l.length > 0);
+    
+    const steps = [];
+    for (const line of lines) {
+        // Skip arrow lines
+        if (/^[↓↑←→\-|]+$/.test(line)) continue;
+        // Collect step text
+        if (line) steps.push(line);
+    }
+    
+    if (steps.length === 0) {
+        return `<div class="flowchart-error">No steps found in flowchart</div>`;
+    }
+    
+    // Build HTML flowchart
+    const flowHtml = steps
+        .map((step, idx) => {
+            const stepHtml = `<div class="flowchart-step">${step}</div>`;
+            const arrow = idx < steps.length - 1 ? `<div class="flowchart-arrow">↓</div>` : "";
+            return stepHtml + arrow;
+        })
+        .join("");
+    
+    return `<div class="flowchart-container">${flowHtml}</div>`;
+}
+
 function simpleMarkdownToHtml(md, options = {}) {
     const lines = String(md || "").split(/\r?\n/);
     const out = [];
@@ -5012,12 +5042,53 @@ function simpleMarkdownToHtml(md, options = {}) {
                 }
                 continue;
             }
+            if (lang.toLowerCase() === "flow-chart") {
+                try {
+                    out.push(renderFlowChart(codeLines.join("\n")));
+                } catch (error) {
+                    out.push(`<article class="flowchart-error">Flowchart error: ${escapeHtml(error.message || "Invalid flowchart format")}</article>`);
+                }
+                continue;
+            }
             const code = String(codeLines.join("\n"))
                 .replace(/&/g, "&amp;")
                 .replace(/</g, "&lt;")
                 .replace(/>/g, "&gt;");
             const cls = lang ? `language-${lang}` : "";
             out.push(`<pre><code class="${cls}">${code}</code></pre>`);
+            continue;
+        }
+
+        // Collapsible card: ~~##\n...\n~~## -> <details class="notes-section">...</details>
+        if (/^\s*~~##\s*$/.test(line)) {
+            index += 1;
+            const cardLines = [];
+            let titleLine = null;
+            
+            // First line should be a heading (##)
+            if (index < lines.length && /^\s*##\s+(.*)/.test(lines[index])) {
+                titleLine = lines[index].trim().replace(/^\s*##\s+/, "");
+                index += 1;
+            }
+            
+            // Collect content until closing ~~##
+            while (index < lines.length && !/^\s*~~##\s*$/.test(lines[index])) {
+                cardLines.push(lines[index]);
+                index += 1;
+            }
+            
+            // Skip closing delimiter if present
+            if (index < lines.length && /^\s*~~##\s*$/.test(lines[index])) {
+                index += 1;
+            }
+            
+            if (titleLine) {
+                const cardContent = simpleMarkdownToHtml(cardLines.join("\n"), { ...options, disableExampleRegions: true });
+                // Add special class for Key Takeaways cards
+                const isKeyTakeaways = titleLine.toLowerCase().includes("takeaway");
+                const cardClass = isKeyTakeaways ? "notes-section key-takeaways-card" : "notes-section";
+                out.push(`<details class="${cardClass}" open><summary class="notes-section-summary"><h2>${renderInline(titleLine)}</h2></summary><div class="notes-section-content">${cardContent}</div></details>`);
+            }
             continue;
         }
 
