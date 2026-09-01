@@ -1,6 +1,21 @@
 {
   "entries": [
     {
+      "date": "2026-08-30",
+      "hash": "bda4b9d",
+      "message": "UPDATE: Added Notes on Structures and Design"
+    },
+    {
+      "date": "2026-08-30",
+      "hash": "31f0f53",
+      "message": "ADDED: Markdown Rendering Options"
+    },
+    {
+      "date": "2026-08-29",
+      "hash": "22f57e5",
+      "message": "DOCUMENTATION on Updates"
+    },
+    {
       "date": "2026-08-29",
       "hash": "5d2e278",
       "message": "UPDATE: GLB Animation RENDER!!"
@@ -34,21 +49,6 @@
       "date": "2026-08-25",
       "hash": "1d96bc2",
       "message": "IMPROVED: UI VISUALS"
-    },
-    {
-      "date": "2026-08-25",
-      "hash": "2f21231",
-      "message": "IMPROVED: Learn Mode Visuals"
-    },
-    {
-      "date": "2026-08-25",
-      "hash": "6cb31d7",
-      "message": "IMPROVED: LEARN MODE"
-    },
-    {
-      "date": "2026-08-25",
-      "hash": "2250d1f",
-      "message": " FIXED: Rendering of Atmosphere.png"
     }
   ]
 }

@@ -4247,6 +4247,186 @@ body.mode-page .workspace > .mode-topbar::before {
     align-items: stretch;
 }
 
+.equation-card-static {
+    --equation-static-ink: #edf2ff;
+    --equation-static-muted: #aab7cc;
+    --equation-static-surface: #0b1728;
+    --equation-static-panel: rgba(17, 30, 47, 0.8);
+    --equation-static-formula: rgba(15, 30, 47, 0.9);
+    --equation-static-line: rgba(205, 190, 255, 0.18);
+    gap: 14px;
+    padding: 18px 18px 16px;
+    border: 1px solid color-mix(in srgb, var(--mode-accent, var(--accent)) 42%, var(--line));
+    border-radius: 16px;
+    background: linear-gradient(145deg, #0d1a2d, #081321);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+}
+
+.equation-card-static .equation-card-header {
+    gap: 5px;
+}
+
+.equation-card-static .equation-card-header .section-label {
+    margin: 0;
+    color: #d0b7ff;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.equation-card-static .equation-card-header h3 {
+    color: var(--equation-static-ink);
+    margin: 0;
+    font-size: clamp(1.15rem, 2.6vw, 1.7rem);
+    letter-spacing: -0.02em;
+}
+
+.equation-card-static .equation-card-header p:last-child {
+    margin: 0;
+    color: var(--equation-static-muted);
+    line-height: 1.5;
+}
+
+.equation-card-static .equation-card-equation-wide {
+    display: grid;
+    gap: 8px;
+}
+
+.equation-card-static .equation-card-equation {
+    min-height: 58px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    background: var(--equation-static-formula);
+    color: var(--equation-static-ink);
+    text-align: center;
+}
+
+.equation-card-static .equation-card-equation .katex {
+    font-size: clamp(0.9rem, 1.8vw, 1.15rem);
+}
+
+.equation-card-static-layout {
+    display: grid;
+    grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
+    gap: 14px;
+    align-items: stretch;
+}
+
+.equation-card-static-sidebar,
+.equation-card-static-graph-panel {
+    min-width: 0;
+    padding: 12px 12px 10px;
+    border: 1px solid var(--equation-static-line);
+    border-radius: 12px;
+    background: var(--equation-static-panel);
+}
+
+.equation-card-static-sidebar {
+    display: grid;
+    gap: 10px;
+}
+
+.equation-card-static-sidebar .equation-card-section-label,
+.equation-card-static-graph-panel .equation-card-section-label {
+    margin: 0 0 6px;
+    color: #d0b7ff;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.equation-card-static-variable {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 10px;
+    padding: 8px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.equation-card-static-symbol {
+    display: grid;
+    place-items: center;
+    min-height: 42px;
+    border-radius: 8px;
+    background: rgba(153, 116, 255, 0.18);
+    color: #d9c6ff;
+    font-weight: 700;
+}
+
+.equation-card-static-symbol .katex {
+    font-size: 0.82rem;
+}
+
+.equation-card-static-meta {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+}
+
+.equation-card-static-meta strong {
+    color: var(--equation-static-ink);
+    font-size: 0.92rem;
+}
+
+.equation-card-static-meta span {
+    color: var(--equation-static-muted);
+    font-size: 0.72rem;
+    line-height: 1.4;
+}
+
+.equation-card-static-meta em {
+    color: #ffffff;
+    font-style: normal;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.equation-card-static-graph-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.equation-card-static-graph-panel .equation-card-graph-wrap {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    padding: 0;
+}
+
+.equation-card-static-graph-panel .equation-card-graph {
+    width: 100%;
+    min-width: 0;
+    min-height: 260px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    background: #102137;
+}
+
+.equation-card-static .equation-card-notes {
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    background: rgba(9, 18, 29, 0.6);
+}
+
+.equation-card-static .equation-card-notes .section-label {
+    margin: 0 0 6px;
+    color: #d0b7ff;
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.equation-card-static .equation-card-notes p {
+    margin: 0;
+    color: var(--equation-static-muted);
+    line-height: 1.5;
+}
+
 .equation-card-control-panel,
 .equation-card-graph-panel {
     min-width: 0;

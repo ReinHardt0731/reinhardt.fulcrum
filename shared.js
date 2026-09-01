@@ -3837,6 +3837,53 @@ function renderEquationCard(config, cardIndex) {
     return `<article class="equation-card equation-card-interactive" data-equation-card="${equationText(cardIndex)}"><header class="equation-card-header"><div><p class="section-label">Interactive Relationship Card</p><h3>${equationText(normalized.title || "Equation")}</h3></div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for equation card" aria-pressed="false">Fullscreen</button></header>${equationPanel}<div class="equation-card-layout">${controlPanel}${graphPanel}</div></article>${explanation}`;
 }
 
+function normalizeStaticEquationCard(config) {
+    if (!config || typeof config !== "object") throw new Error("A equation-card-static configuration is required.");
+    const variables = Array.isArray(config.variables) ? config.variables : [];
+    if (!variables.length) throw new Error("The static equation card needs at least one variable definition.");
+    const normalizedVariables = variables.map((variable, index) => {
+        const symbol = text(variable?.symbol || `v${index + 1}`);
+        const value = Number(variable?.value);
+        if (!Number.isFinite(value)) throw new Error(`Variable "${symbol}" needs a numeric value.`);
+        return {
+            symbol,
+            displaySymbol: text(variable?.displaySymbol || variable?.symbol || symbol),
+            name: text(variable?.name || symbol),
+            description: text(variable?.description || ""),
+            unit: text(variable?.unit || ""),
+            value,
+            fixed: true
+        };
+    });
+    return {
+        title: text(config.title || "Static Graph"),
+        subtitle: text(config.subtitle),
+        equation: text(config.equation || ""),
+        variables: normalizedVariables,
+        graph: config.graph && typeof config.graph === "object" ? config.graph : null,
+        notes: Array.isArray(config.notes) ? config.notes.map(text).filter(Boolean) : []
+    };
+}
+
+function renderStaticEquationCard(config, cardIndex) {
+    const normalized = normalizeStaticEquationCard(config);
+    if (!normalized.equation) throw new Error("The equation is missing.");
+    const values = Object.fromEntries(normalized.variables.map((variable) => [variable.symbol, variable.value]));
+    const graphMarkup = normalized.graph ? renderInteractiveEquationGraph(normalized.graph, values) : `<p class="equation-card-error">No graph was provided.</p>`;
+    const variableDefinitions = normalized.variables.map((variable) => {
+        const name = equationText(variable.name || variable.symbol);
+        const symbol = variable.displaySymbol ? `$${equationText(variable.displaySymbol)}$` : `${equationText(variable.symbol)}`;
+        const displayValue = equationText(equationDisplayValue(variable.value, variable.unit));
+        const description = variable.description ? `<span>${equationText(variable.description)}</span>` : "";
+        return `<div class="equation-card-static-variable"><div class="equation-card-static-symbol">${symbol}</div><div class="equation-card-static-meta"><strong>${name}</strong>${description}<em>${displayValue}</em></div></div>`;
+    }).join("");
+    const notes = normalized.notes.length
+        ? `<section class="equation-card-notes"><p class="section-label">Notes</p>${normalized.notes.map((note) => `<p>${equationText(note)}</p>`).join("")}</section>`
+        : "";
+    const equationPanel = `<section class="equation-card-equation-wide"><p class="equation-card-section-label">Equation</p><div class="equation-card-equation">$$${equationText(normalized.equation)}$$</div></section>`;
+    return `<article class="equation-card equation-card-static" data-equation-card="${equationText(cardIndex)}"><header class="equation-card-header"><div><p class="section-label">Static Relationship</p><h3>${equationText(normalized.title || "Static Graph")}</h3>${normalized.subtitle ? `<p>${equationText(normalized.subtitle)}</p>` : ""}</div></header>${equationPanel}<div class="equation-card-static-layout"><aside class="equation-card-static-sidebar"><p class="equation-card-section-label">Variable Definitions</p>${variableDefinitions}</aside><section class="equation-card-static-graph-panel"><p class="equation-card-section-label">Graph</p>${graphMarkup}</section></div>${notes}</article>`;
+}
+
 function syncEquationGraphSizing(card) {
     if (!card?.matches("[data-equation-card]")) return;
     card.querySelectorAll(".equation-card-graph").forEach((svg) => {
@@ -4972,6 +5019,14 @@ function simpleMarkdownToHtml(md, options = {}) {
                     out.push(renderEquationCard(JSON.parse(codeLines.join("\n")), index));
                 } catch (error) {
                     out.push(`<article class="equation-card equation-card-error-state"><p class="equation-card-error">Equation card error: ${equationText(error.message || "Invalid JSON payload.")}</p></article>`);
+                }
+                continue;
+            }
+            if (lang.toLowerCase() === "equation-card-static") {
+                try {
+                    out.push(renderStaticEquationCard(JSON.parse(codeLines.join("\n")), index));
+                } catch (error) {
+                    out.push(`<article class="equation-card equation-card-static equation-card-error-state"><p class="equation-card-error">Static equation card error: ${equationText(error.message || "Invalid JSON payload.")}</p></article>`);
                 }
                 continue;
             }
