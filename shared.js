@@ -6077,7 +6077,7 @@ function createQuizAssessmentModal(summary, session, state, selectChapter, start
     retakeBtn.textContent = "Retake Chapter";
     retakeBtn.addEventListener("click", () => {
         backdrop.remove();
-        startSession(session.mode);
+        startSession(session.mode, true);
     });
     
     const learnBtn = document.createElement("button");
@@ -6152,7 +6152,7 @@ function renderLearnAssessment(_summary, session, title, score, content, startSe
     retakeButton.type = "button";
     retakeButton.className = "primary-button";
     retakeButton.textContent = "Restart Learn mode";
-    retakeButton.addEventListener("click", () => startSession(session.mode));
+    retakeButton.addEventListener("click", () => startSession(session.mode, true));
     actions.appendChild(retakeButton);
 
     content.append(card, details, actions);
@@ -6240,7 +6240,7 @@ function renderAssessment(summary, session, title, score, content, startSession)
     retakeButton.type = "button";
     retakeButton.className = "primary-button";
     retakeButton.textContent = "Retake chapter";
-    retakeButton.addEventListener("click", () => startSession(session.mode));
+    retakeButton.addEventListener("click", () => startSession(session.mode, true));
     actions.appendChild(retakeButton);
 
     if (session.mode === "quiz" && summary.missed.length) {
@@ -7266,7 +7266,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         retakeButton.type = "button";
         retakeButton.className = "primary-button";
         retakeButton.textContent = "Retake chapter";
-        retakeButton.addEventListener("click", () => startSession(session.mode));
+        retakeButton.addEventListener("click", () => startSession(session.mode, true));
         const nextButton = document.createElement("button");
         nextButton.type = "button";
         nextButton.className = "ghost-button";
@@ -7291,6 +7291,14 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
     card.className = session.mode === "learn"
         ? "question-card learn-question-card"
         : "question-card";
+    if (session.mode === "flashcards") {
+        card.classList.add("flashcard-question-card");
+        const advanceDirection = session.flashcardAdvanceDirection;
+        if (advanceDirection) {
+            card.classList.add(`flashcard-enter-from-${advanceDirection}`);
+        }
+        session.flashcardAdvanceDirection = "";
+    }
     if (session.mode === "learn" && session.reviewed && session.lastResult) {
         card.classList.add(session.lastResult.correct ? "is-correct" : "is-wrong");
     }
@@ -7326,6 +7334,8 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
     if (session.mode === "flashcards") {
         const flashcard = document.createElement("div");
         flashcard.className = "flashcard";
+        flashcard.tabIndex = 0;
+        flashcard.setAttribute("aria-label", "Flashcard. Press Enter to flip, Left arrow for I knew it, or Right arrow to review later.");
         const flashcardInner = document.createElement("div");
         flashcardInner.className = "flashcard-inner";
         const flashcardTransition = session.flashcardTransition || "";
@@ -7372,6 +7382,29 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
         });
 
+        flashcard.addEventListener("keydown", (event) => {
+            if (!["ArrowLeft", "ArrowUp", "ArrowRight", "Enter"].includes(event.key)) {
+                return;
+            }
+
+            if (event.key === "Enter" && event.target.closest("button")) {
+                return;
+            }
+
+            event.preventDefault();
+            event.stopPropagation();
+            if (event.key === "Enter" || event.key === "ArrowUp") {
+                session.flashcardTransition = session.revealed ? "hide" : "reveal";
+                session.revealed = !session.revealed;
+                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+                return;
+            }
+
+            session.flashcardAdvanceDirection = event.key === "ArrowLeft" ? "left" : "right";
+            submitCurrentQuestion({ correct: event.key === "ArrowLeft", advanceImmediately: true });
+        });
+        requestAnimationFrame(() => flashcard.focus({ preventScroll: true }));
+
         const controls = document.createElement("div");
         controls.className = "flashcard-controls";
         if (!session.revealed) {
@@ -7388,12 +7421,6 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             });
             controls.appendChild(revealButton);
         } else {
-            const knewButton = document.createElement("button");
-            knewButton.type = "button";
-            knewButton.className = "primary-button";
-            knewButton.textContent = "I knew it";
-            knewButton.addEventListener("click", () => submitCurrentQuestion({ correct: true, advanceImmediately: true }));
-
             const flipBackButton = document.createElement("button");
             flipBackButton.type = "button";
             flipBackButton.className = "ghost-button";
@@ -7405,18 +7432,29 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 session.revealed = false;
                 buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
             });
-
-            const reviewButton = document.createElement("button");
-            reviewButton.type = "button";
-            reviewButton.className = "ghost-button";
-            reviewButton.textContent = "Review later";
-            reviewButton.addEventListener("click", (event) => {
-                event.preventDefault();
-                event.stopPropagation();
-                submitCurrentQuestion({ correct: false, advanceImmediately: true });
-            });
-            controls.append(knewButton, flipBackButton, reviewButton);
+            controls.appendChild(flipBackButton);
         }
+
+        const knewButton = document.createElement("button");
+        knewButton.type = "button";
+        knewButton.className = "primary-button";
+        knewButton.textContent = "I knew it";
+        knewButton.addEventListener("click", () => {
+            session.flashcardAdvanceDirection = "left";
+            submitCurrentQuestion({ correct: true, advanceImmediately: true });
+        });
+
+        const reviewButton = document.createElement("button");
+        reviewButton.type = "button";
+        reviewButton.className = "ghost-button";
+        reviewButton.textContent = "Review later";
+        reviewButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            session.flashcardAdvanceDirection = "right";
+            submitCurrentQuestion({ correct: false, advanceImmediately: true });
+        });
+        controls.append(knewButton, reviewButton);
 
         flashcard.appendChild(controls);
         answerArea.appendChild(flashcard);
@@ -8959,7 +8997,7 @@ export async function initModePage(mode) {
         renderProgress(progressFill, session);
     };
 
-    const startSession = (nextMode = state.mode) => {
+    const startSession = (nextMode = state.mode, forceRestart = false) => {
         cancelLearnAutoAdvance();
         const subject = state.activeSubject;
         if (!subject) {
@@ -8989,7 +9027,7 @@ export async function initModePage(mode) {
             state.session.setupError = "";
         } else {
             if (nextMode === "quiz") {
-                const restored = restoreQuizSession(subject, chapter);
+                const restored = forceRestart ? null : restoreQuizSession(subject, chapter);
                 if (restored) {
                     state.session = restored;
                 } else {
@@ -9014,7 +9052,7 @@ export async function initModePage(mode) {
                         clearReviewSession();
                     }
 
-                    const restored = restoreModeSession(subject, chapter, nextMode);
+                    const restored = forceRestart ? null : restoreModeSession(subject, chapter, nextMode);
                     if (restored) {
                         state.session = restored;
                     } else {
