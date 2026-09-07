@@ -658,7 +658,7 @@ body.drawer-collapsed .mobile-only {
     }
 
     .home-intro {
-        display: none;
+        display: grid;
     }
 }
 
