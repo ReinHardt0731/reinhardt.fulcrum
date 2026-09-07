@@ -810,6 +810,14 @@ function createFormattedTextElement(value, className) {
     return element;
 }
 
+function createChoiceContentElement(value) {
+    const element = document.createElement("span");
+    element.className = "choice-content";
+    element.textContent = String(value ?? "");
+    renderQuestionMath(element);
+    return element;
+}
+
 export function normalizeQuestion(entry, position) {
     if (!entry || typeof entry !== "object" || Array.isArray(entry)) {
         throw new Error(`Question ${position} must be an object.`);
@@ -6362,7 +6370,7 @@ function renderLearnReviewControls(container, question, questionIndex, session, 
             const button = document.createElement("button");
             button.type = "button";
             button.className = "choice-button";
-            button.textContent = `${displayIndex < 26 ? String.fromCharCode(65 + displayIndex) : String(displayIndex + 1)}. ${choice}`;
+            button.appendChild(createChoiceContentElement(choice));
             button.setAttribute("aria-pressed", String(Number(storedAnswer) === originalIndex));
             if (Number(storedAnswer) === originalIndex) {
                 button.classList.add("is-selected");
@@ -6885,8 +6893,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                         const choiceButton = document.createElement("button");
                         choiceButton.type = "button";
                         choiceButton.className = "choice-button";
-                        const label = displayIndex < 26 ? String.fromCharCode(65 + displayIndex) : String(displayIndex + 1);
-                        choiceButton.textContent = `${label}. ${String(choice)}`;
+                        choiceButton.appendChild(createChoiceContentElement(choice));
                         if (result?.userAnswerIndex === originalIndex) {
                             choiceButton.classList.add("is-selected");
                         }
@@ -7040,7 +7047,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 button.type = "button";
                 button.className = "choice-button";
                 const label = displayIndex < 26 ? String.fromCharCode(65 + displayIndex) : String(displayIndex + 1);
-                button.textContent = `${label}. ${String(choice)}`;
+                button.appendChild(createChoiceContentElement(choice));
                 if (session.selectedChoice === originalIndex) {
                     button.classList.add("is-selected");
                 }
@@ -7513,7 +7520,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 button.type = "button";
                 button.className = "choice-button";
                 const label = displayIndex < 26 ? String.fromCharCode(65 + displayIndex) : String(displayIndex);
-                button.textContent = `${label}. ${choice}`;
+                button.appendChild(createChoiceContentElement(choice));
                 button.disabled = session.reviewed;
                 if (session.selectedChoice === originalIndex) {
                     button.classList.add("is-selected");
@@ -8814,7 +8821,7 @@ export async function initModePage(mode) {
                 button.type = "button";
                 button.className = "choice-button";
                 const label = displayIndex < 26 ? String.fromCharCode(65 + displayIndex) : String(displayIndex + 1);
-                button.textContent = `${label}. ${String(choice)}`;
+                button.appendChild(createChoiceContentElement(choice));
                 button.disabled = answered;
 
                 if (answered) {
