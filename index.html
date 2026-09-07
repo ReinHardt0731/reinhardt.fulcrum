@@ -15,9 +15,13 @@
     <title>Fulcrum | Board Exam Prep</title>
     <script>
         if ("scrollRestoration" in history) history.scrollRestoration = "manual";
-        window.scrollTo(0, 0);
+        const resetHomeViewport = () => window.scrollTo(0, 0);
+        resetHomeViewport();
+        window.addEventListener("pageshow", resetHomeViewport);
+        window.addEventListener("load", resetHomeViewport);
+        [0, 50, 150, 350, 700, 1200, 2000].forEach((delay) => window.setTimeout(resetHomeViewport, delay));
     </script>
-    <link rel="stylesheet" href="styles.css?v=home-intro-20260907-2">
+    <link rel="stylesheet" href="styles.css?v=home-intro-20260907-3">
 </head>
 <body class="home-page">
     <main class="home-shell">
