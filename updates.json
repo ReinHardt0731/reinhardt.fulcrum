@@ -1,6 +1,21 @@
 {
   "entries": [
     {
+      "date": "2026-09-07",
+      "hash": "942bd20",
+      "message": "ADDED: Airlaw Quiz"
+    },
+    {
+      "date": "2026-09-06",
+      "hash": "60d855f",
+      "message": "IMPROVED: Flashcards Interface"
+    },
+    {
+      "date": "2026-09-01",
+      "hash": "fbdd4d3",
+      "message": "ADDED: Static graph cards, NEW Chapter GEN AERO III, Fixed answer regarding ground effect on GEN AERO II"
+    },
+    {
       "date": "2026-08-30",
       "hash": "bda4b9d",
       "message": "UPDATE: Added Notes on Structures and Design"
@@ -34,21 +49,6 @@
       "date": "2026-08-25",
       "hash": "270f117",
       "message": "ADDED: Aerody Notes Update"
-    },
-    {
-      "date": "2026-08-25",
-      "hash": "6edd232",
-      "message": " ADDED: Subjects Notes"
-    },
-    {
-      "date": "2026-08-25",
-      "hash": "f27f5f9",
-      "message": "IMPROVE: Dashboard and Question Card Visuals"
-    },
-    {
-      "date": "2026-08-25",
-      "hash": "1d96bc2",
-      "message": "IMPROVED: UI VISUALS"
     }
   ]
 }
