@@ -756,6 +756,234 @@ function parseNumericAnswer(entry) {
     return null;
 }
 
+const CALCULATION_FUNCTIONS = {
+    abs: Math.abs,
+    cos: Math.cos,
+    exp: Math.exp,
+    log: Math.log,
+    max: Math.max,
+    min: Math.min,
+    sin: Math.sin,
+    sqrt: Math.sqrt,
+    tan: Math.tan
+};
+
+function evaluateCalculationExpression(expression, values) {
+    const tokens = String(expression).match(/(?:\d*\.\d+|\d+\.?\d*)|[A-Za-z_]\w*|\*\*|[()+\-*/^,]/g);
+    if (!tokens || tokens.join("") !== String(expression).replace(/\s+/g, "")) {
+        throw new Error("Calculation expressions may only contain numbers, variables, operators, and approved functions.");
+    }
+
+    let index = 0;
+    const peek = () => tokens[index];
+    const consume = (token) => {
+        if (peek() !== token) throw new Error(`Expected '${token}' in calculation expression.`);
+        index += 1;
+    };
+    const parsePrimary = () => {
+        const token = peek();
+        if (token === "(") {
+            consume("(");
+            const value = parseAdditive();
+            consume(")");
+            return value;
+        }
+        if (/^\d/.test(token || "")) {
+            index += 1;
+            return Number(token);
+        }
+        if (/^[A-Za-z_]\w*$/.test(token || "")) {
+            index += 1;
+            if (peek() === "(") {
+                const fn = CALCULATION_FUNCTIONS[token];
+                if (!fn) throw new Error(`Unsupported calculation function '${token}'.`);
+                consume("(");
+                const args = [];
+                if (peek() !== ")") {
+                    args.push(parseAdditive());
+                    while (peek() === ",") {
+                        consume(",");
+                        args.push(parseAdditive());
+                    }
+                }
+                consume(")");
+                return fn(...args);
+            }
+            if (!Object.prototype.hasOwnProperty.call(values, token)) {
+                throw new Error(`Calculation variable '${token}' has no value.`);
+            }
+            return Number(values[token]);
+        }
+        throw new Error("Invalid calculation expression.");
+    };
+    const parseUnary = () => {
+        if (peek() === "+") { consume("+"); return parseUnary(); }
+        if (peek() === "-") { consume("-"); return -parseUnary(); }
+        return parsePrimary();
+    };
+    const parsePower = () => {
+        const base = parseUnary();
+        if (peek() === "**" || peek() === "^") {
+            index += 1;
+            return base ** parsePower();
+        }
+        return base;
+    };
+    const parseMultiplicative = () => {
+        let value = parsePower();
+        while (peek() === "*" || peek() === "/") {
+            const operator = peek();
+            index += 1;
+            const right = parsePower();
+            value = operator === "*" ? value * right : value / right;
+        }
+        return value;
+    };
+    const parseAdditive = () => {
+        let value = parseMultiplicative();
+        while (peek() === "+" || peek() === "-") {
+            const operator = peek();
+            index += 1;
+            const right = parseMultiplicative();
+            value = operator === "+" ? value + right : value - right;
+        }
+        return value;
+    };
+
+    const result = parseAdditive();
+    if (index !== tokens.length || !Number.isFinite(result)) {
+        throw new Error("Calculation expression did not produce a finite number.");
+    }
+    return result;
+}
+
+function randomCalculationValue(config) {
+    const min = Number(config?.min);
+    const max = Number(config?.max);
+    const decimals = Number.isInteger(Number(config?.decimals)) ? Math.max(0, Number(config.decimals)) : 2;
+    if (!Number.isFinite(min) || !Number.isFinite(max) || min >= max) {
+        throw new Error("Calculation variable ranges must have finite minimum and maximum values.");
+    }
+    const value = min + Math.random() * (max - min);
+    return Number(value.toFixed(decimals));
+}
+
+function formatCalculationNumber(value, decimals = 2) {
+    return Number(value).toFixed(Math.max(0, Number(decimals) || 0));
+}
+
+function calculationExpressionToLatex(expression) {
+    let result = text(expression)
+        .replace(/\b(rho)\b/g, "\\rho")
+        .replace(/\b(Cl)\b/g, "C_l")
+        .replace(/\bpi\b/g, "\\pi")
+        .replace(/\s*\*\*\s*([A-Za-z_][A-Za-z0-9_]*|[-+]?\d+(?:\.\d+)?)/g, "^{$1}")
+        .replace(/\s*\^\s*([A-Za-z_][A-Za-z0-9_]*|[-+]?\d+(?:\.\d+)?)/g, "^{$1}")
+        .replace(/\s*\*\s*/g, " \\times ")
+        .replace(/\s*\/\s*/g, " / ")
+        .replace(/\s*\+\s*/g, " + ")
+        .replace(/\s*-\s*/g, " - ");
+
+    const fraction = result.match(/^(.+?)\s*\/\s*\((.+)\)$/);
+    if (fraction) {
+        result = `\\frac{${fraction[1].trim()}}{${fraction[2].trim()}}`;
+    }
+    return result.replace(/\(([^()]*)\)/g, "\\left($1\\right)");
+}
+
+function calculationChoice(value, unit, decimals) {
+    return `$${formatCalculationNumber(value, decimals)}\\,\\mathrm{${unit}}$`;
+}
+
+function generateCalculationQuestion(entry, position) {
+    const variables = Object.fromEntries(
+        Object.entries(entry.variables || {}).map(([name, config]) => [name, randomCalculationValue(config)])
+    );
+    const formulas = Array.isArray(entry.formulas) ? entry.formulas : Array.isArray(entry.formula) ? entry.formula : [];
+    if (!formulas.length) throw new Error(`Question ${position} needs an ordered formula list.`);
+    const steps = formulas.map((step, stepIndex) => {
+        const target = text(step?.solveFor || step?.variable);
+        const expression = text(step?.expression || step?.equation);
+        if (!target || !expression) throw new Error(`Question ${position} has an incomplete formula at step ${stepIndex + 1}.`);
+        const value = evaluateCalculationExpression(expression, variables);
+        if (!Number.isFinite(value)) throw new Error(`Question ${position} produced an invalid value at step ${stepIndex + 1}.`);
+        variables[target] = value;
+        return { target, expression, display: text(step.display || `${target} = ${expression}`), value };
+    });
+    const lastStep = steps[steps.length - 1];
+    const calculator = { formula: lastStep.display, derivedEquation: lastStep.display };
+    const answerConfig = entry.answer && typeof entry.answer === "object" ? entry.answer : {};
+    const answerDecimals = Number.isInteger(Number(answerConfig.decimals)) ? Math.max(0, Number(answerConfig.decimals)) : 2;
+    const answerVariable = text(answerConfig.variable || lastStep.target);
+    const exactAnswer = Number(variables[answerVariable]);
+    const intermediate = variables;
+    const roundedAnswer = Number(formatCalculationNumber(exactAnswer, answerDecimals));
+    if (!Number.isFinite(roundedAnswer) || roundedAnswer <= 0) {
+        throw new Error(`Question ${position} produced an invalid calculated answer.`);
+    }
+
+    const distractorConfig = entry.distractors && typeof entry.distractors === "object" ? entry.distractors : {};
+    const minimumPercent = Math.max(0.01, Number(distractorConfig.minimumPercent ?? 5) / 100);
+    const maximumPercent = Math.max(minimumPercent, Number(distractorConfig.maximumPercent ?? 20) / 100);
+    const distractors = [];
+    for (let attempt = 0; distractors.length < 3 && attempt < 30; attempt += 1) {
+        const direction = distractors.length % 2 === 0 ? -1 : 1;
+        const change = minimumPercent + Math.random() * (maximumPercent - minimumPercent);
+        const candidate = Number(formatCalculationNumber(roundedAnswer * (1 + direction * change), answerDecimals));
+        if (candidate > 0 && candidate !== roundedAnswer && !distractors.includes(candidate)) {
+            distractors.push(candidate);
+        }
+    }
+    while (distractors.length < 3) {
+        const fallback = Number(formatCalculationNumber(roundedAnswer * (1 + (distractors.length + 1) * 0.05), answerDecimals));
+        if (fallback > 0 && fallback !== roundedAnswer && !distractors.includes(fallback)) {
+            distractors.push(fallback);
+        }
+    }
+
+    const valueText = Object.fromEntries(Object.entries(variables).map(([name, value]) => [name, String(value)]));
+    const questionText = text(entry.question).replace(/\{([A-Za-z][A-Za-z0-9_]*)\}/g, (_, name) => valueText[name] ?? `{${name}}`);
+    const unit = text(answerConfig.unit || "m^2");
+    const given = Object.entries(variables)
+        .filter(([name]) => Object.prototype.hasOwnProperty.call(entry.variables || {}, name))
+        .map(([name, value]) => `${name} = ${value}`)
+        .join("\\n");
+    const explanation = [
+        "Given:",
+        given,
+        "",
+        ...steps.flatMap((step, stepIndex) => [
+            `Step ${stepIndex + 1}: Calculate ${step.target}`,
+            "Formula:",
+            `$$${calculationExpressionToLatex(step.display)}$$`,
+            "Substitution:",
+            `$$${calculationExpressionToLatex(`${step.target} = ${step.expression.replace(/\b[A-Za-z_]\w*\b/g, (name) => Object.prototype.hasOwnProperty.call(variables, name) ? formatCalculationNumber(variables[name], 6) : name)}`)}$$`,
+            "Result:",
+            `$$${step.target} = ${formatCalculationNumber(step.value, step.target === answerVariable ? answerDecimals : 6)}$$`,
+            ""
+        ]),
+        "Derived Equation:",
+        `$$${calculationExpressionToLatex(calculator.derivedEquation)}$$`,
+        "",
+        "",
+        "Answer:",
+        `$$${answerVariable} = ${formatCalculationNumber(roundedAnswer, answerDecimals)}\\,\\mathrm{${unit}}$$`
+    ].join("\\n");
+
+    return {
+        question: questionText,
+        questionType: "multiple_choice",
+        choices: [roundedAnswer, ...distractors].map((value) => calculationChoice(value, unit, answerDecimals)),
+        answerIndex: 0,
+        answerText: calculationChoice(roundedAnswer, unit, answerDecimals),
+        explanation,
+        tags: normalizeTags(entry.tags),
+        expectedAnswer: roundedAnswer,
+        acceptedDeviation: Number.isFinite(Number(answerConfig.acceptedDeviation)) ? Number(answerConfig.acceptedDeviation) : 0,
+        calculation: { formulas, variables, exactAnswer, intermediate, answerUnit: unit }
+    };
+}
+
 function formatExplanationText(value) {
     const normalized = text(value)
         .replace(/\\r\\n/g, "\n")
@@ -814,7 +1042,6 @@ function createChoiceContentElement(value) {
     const element = document.createElement("span");
     element.className = "choice-content";
     element.textContent = String(value ?? "");
-    renderQuestionMath(element);
     return element;
 }
 
@@ -836,6 +1063,10 @@ export function normalizeQuestion(entry, position) {
 
     const explanation = formatExplanationText(entry.explanation || entry.explaination);
     const tags = normalizeTags(entry.tags);
+
+    if (questionType === "calculation") {
+        return generateCalculationQuestion(entry, position);
+    }
 
     if (questionType === "numeric") {
         const expectedAnswer = parseNumericAnswer(entry);
@@ -2436,49 +2667,156 @@ function renderInteractiveEquationGraph(graph, values) {
     if (!Number.isFinite(xMin) || !Number.isFinite(xMax) || !(xMax > xMin)) return `<p class="equation-card-error">Graph error: xMax must be greater than xMin.</p>`;
     const graphValues = { ...(values || {}) };
     const xVariable = text(graph.xVariable);
-    let evaluate;
+    const curveDefinitions = Array.isArray(graph.expressions)
+        ? graph.expressions.map((entry) => typeof entry === "string" ? { expression: entry } : entry).filter((entry) => entry && typeof entry === "object" && text(entry.expression))
+        : [{ expression: graph.expression }];
+    const isCurveActive = (definition) => Object.entries(definition.when || {}).every(([symbol, bounds]) => {
+        const current = Number(graphValues[symbol]);
+        if (!Number.isFinite(current)) return false;
+        if (typeof bounds === "number") return current === bounds;
+        if (Number.isFinite(Number(bounds?.min)) && current < Number(bounds.min)) return false;
+        if (Number.isFinite(Number(bounds?.max)) && current > Number(bounds.max)) return false;
+        return true;
+    });
+    const activeDefinitions = curveDefinitions.filter(isCurveActive);
+    const expressions = activeDefinitions.map((definition) => text(definition.expression)).filter(Boolean);
+    if (!expressions.length) return `<p class="equation-card-error">Graph error: no active expression was provided.</p>`;
+    let evaluators;
     try {
-        evaluate = createInteractiveEquationExpression(graph.expression, graphValues);
+        evaluators = expressions.map((expression) => createInteractiveEquationExpression(expression, graphValues));
     } catch (error) {
         return `<p class="equation-card-error">Graph error: ${equationText(error.message)}</p>`;
     }
-    const evaluateAt = (x) => {
+    const evaluateAt = (x, curveIndex = 0) => {
         if (xVariable) graphValues[xVariable] = x;
-        return evaluate(x);
+        return evaluators[curveIndex](x);
     };
     const width = 640;
-    const height = 420;
+    const height = 640;
     const padding = { left: 62, right: 22, top: 22, bottom: 60 };
-    const points = [];
-    for (let sample = 0; sample <= 160; sample += 1) {
-        const x = xMin + ((xMax - xMin) * sample) / 160;
-        try {
-            const y = evaluateAt(x);
-            if (Number.isFinite(y)) points.push({ x, y });
-        } catch (_) {}
-    }
-    if (points.length < 2) return `<p class="equation-card-error">Graph error: the expression produced no plottable values.</p>`;
-    const yMin = Number.isFinite(Number(graph.yMin)) ? Number(graph.yMin) : Math.min(...points.map((point) => point.y));
-    const yMax = Number.isFinite(Number(graph.yMax)) ? Number(graph.yMax) : Math.max(...points.map((point) => point.y));
+    const curves = evaluators.map((_, curveIndex) => {
+        const points = [];
+        const evaluatePoint = (x) => {
+            try {
+                const y = evaluateAt(x, curveIndex);
+                return Number.isFinite(y) ? { x, y } : null;
+            } catch (_) {
+                return null;
+            }
+        };
+        const refineBoundary = (left, right, leftPoint, rightPoint) => {
+            let finiteX = leftPoint ? left : right;
+            let undefinedX = leftPoint ? right : left;
+            let finitePoint = leftPoint || rightPoint;
+            for (let iteration = 0; iteration < 24; iteration += 1) {
+                const middle = (finiteX + undefinedX) / 2;
+                const middlePoint = evaluatePoint(middle);
+                if (middlePoint) {
+                    finiteX = middle;
+                    finitePoint = middlePoint;
+                } else {
+                    undefinedX = middle;
+                }
+            }
+            return finitePoint;
+        };
+        let previousX = null;
+        let previousPoint = null;
+        for (let sample = 0; sample <= 160; sample += 1) {
+            const x = xMin + ((xMax - xMin) * sample) / 160;
+            const point = evaluatePoint(x);
+            if (graph.closeFiniteBranches && previousX !== null && Boolean(previousPoint) !== Boolean(point)) {
+                const boundaryPoint = refineBoundary(previousX, x, previousPoint, point);
+                if (boundaryPoint) points.push(boundaryPoint);
+            }
+            points.push(point);
+            previousX = x;
+            previousPoint = point;
+        }
+        return points;
+    });
+    const finitePoints = curves.flat().filter(Boolean);
+    if (finitePoints.length < 2) return `<p class="equation-card-error">Graph error: the expression produced no plottable values.</p>`;
+    const yMin = Number.isFinite(Number(graph.yMin)) ? Number(graph.yMin) : Math.min(...finitePoints.map((point) => point.y));
+    const yMax = Number.isFinite(Number(graph.yMax)) ? Number(graph.yMax) : Math.max(...finitePoints.map((point) => point.y));
     if (!(yMax > yMin)) return `<p class="equation-card-error">Graph error: yMax must be greater than yMin.</p>`;
-    const plotWidth = width - padding.left - padding.right;
-    const plotHeight = height - padding.top - padding.bottom;
-    const toSvgX = (x) => padding.left + ((x - xMin) / (xMax - xMin)) * plotWidth;
-    const toSvgY = (y) => padding.top + (1 - (y - yMin) / (yMax - yMin)) * plotHeight;
+    const availableWidth = width - padding.left - padding.right;
+    const availableHeight = height - padding.top - padding.bottom;
+    const unitScale = Math.min(availableWidth / (xMax - xMin), availableHeight / (yMax - yMin));
+    const plotWidth = unitScale * (xMax - xMin);
+    const plotHeight = unitScale * (yMax - yMin);
+    const plotLeft = padding.left + (availableWidth - plotWidth) / 2;
+    const plotTop = padding.top + (availableHeight - plotHeight) / 2;
+    const plotRight = plotLeft + plotWidth;
+    const plotBottom = plotTop + plotHeight;
+    const toSvgX = (x) => plotLeft + ((x - xMin) / (xMax - xMin)) * plotWidth;
+    const toSvgY = (y) => plotTop + (1 - (y - yMin) / (yMax - yMin)) * plotHeight;
     const clampX = (value) => Math.max(xMin, Math.min(xMax, value));
     const clampY = (value) => Math.max(yMin, Math.min(yMax, value));
-    const path = points.map((point, index) => `${index ? "L" : "M"}${toSvgX(point.x).toFixed(2)} ${toSvgY(point.y).toFixed(2)}`).join(" ");
+    const paths = curves.map((points) => {
+        let path = "";
+        let connected = false;
+        points.forEach((point) => {
+            if (!point) {
+                connected = false;
+                return;
+            }
+            path += `${connected ? "L" : "M"}${toSvgX(point.x).toFixed(2)} ${toSvgY(point.y).toFixed(2)} `;
+            connected = true;
+        });
+        return path.trim();
+    }).filter(Boolean).map((path) => `<path class="equation-graph-line" d="${path}"></path>`).join("");
     const xStep = getEquationTickStep(xMin, xMax);
     const yStep = getEquationTickStep(yMin, yMax);
     const xTicks = getEquationTicks(xMin, xMax);
-    const yTicks = getEquationTicks(yMin, yMax, 8);
-    const xGrid = xTicks.map((tick) => `<line class="equation-graph-grid" x1="${toSvgX(tick)}" y1="${padding.top}" x2="${toSvgX(tick)}" y2="${height - padding.bottom}"></line><text class="equation-graph-tick-label" x="${toSvgX(tick)}" y="${height - padding.bottom + 20}" text-anchor="middle">${formatEquationTick(tick, xStep)}</text>`).join("");
-    const yGrid = yTicks.map((tick) => `<line class="equation-graph-grid" x1="${padding.left}" y1="${toSvgY(tick)}" x2="${width - padding.right}" y2="${toSvgY(tick)}"></line><text class="equation-graph-tick-label" x="${padding.left - 10}" y="${toSvgY(tick) + 4}" text-anchor="end">${formatEquationTick(tick, yStep)}</text>`).join("");
+    const yTicks = getEquationTicks(yMin, yMax, Number(graph.yTickTarget) || 12);
+    const xGrid = xTicks.map((tick) => `<line class="equation-graph-grid" x1="${toSvgX(tick)}" y1="${plotTop}" x2="${toSvgX(tick)}" y2="${plotBottom}"></line><text class="equation-graph-tick-label" x="${toSvgX(tick)}" y="${plotBottom + 20}" text-anchor="middle">${formatEquationTick(tick, xStep)}</text>`).join("");
+    const yGrid = yTicks.map((tick) => `<line class="equation-graph-grid" x1="${plotLeft}" y1="${toSvgY(tick)}" x2="${plotRight}" y2="${toSvgY(tick)}"></line><text class="equation-graph-tick-label" x="${plotLeft - 10}" y="${toSvgY(tick) + 4}" text-anchor="end">${formatEquationTick(tick, yStep)}</text>`).join("");
     const markerValue = Number(values[xVariable]);
-    const marker = Number.isFinite(markerValue) && markerValue >= xMin && markerValue <= xMax
-        ? `<circle class="equation-graph-marker" cx="${toSvgX(markerValue)}" cy="${toSvgY(evaluateAt(markerValue))}" r="5"></circle>`
+    const markerY = Number.isFinite(markerValue) && markerValue >= xMin && markerValue <= xMax ? evaluateAt(markerValue) : NaN;
+    const marker = Number.isFinite(markerValue) && markerValue >= xMin && markerValue <= xMax && Number.isFinite(markerY)
+        ? `<circle class="equation-graph-marker" cx="${toSvgX(markerValue)}" cy="${toSvgY(markerY)}" r="5"></circle>`
         : "";
-    return `<div class="equation-card-graph-wrap"><svg class="equation-card-graph" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Graph of ${equationText(graph.expression || "function")}">${xGrid}${yGrid}<line class="equation-graph-axis" x1="${padding.left}" y1="${toSvgY(clampY(0))}" x2="${width - padding.right}" y2="${toSvgY(clampY(0))}"></line><line class="equation-graph-axis" x1="${toSvgX(clampX(0))}" y1="${padding.top}" x2="${toSvgX(clampX(0))}" y2="${height - padding.bottom}"></line><path class="equation-graph-line" d="${path}"></path>${marker}<text class="equation-graph-label" x="${width / 2}" y="${height - 10}" text-anchor="middle">${equationText(graphLabelText(graph.xLabel, "x"))}</text><text class="equation-graph-label" x="16" y="${height / 2}" text-anchor="middle" transform="rotate(-90 16 ${height / 2})">${equationText(graphLabelText(graph.yLabel, "y"))}</text></svg></div>`;
+    const annotations = Array.isArray(graph.annotations) ? graph.annotations : [];
+    const annotationMarkup = annotations.map((annotation) => {
+        const label = equationText(annotation.label || "");
+        if (!label) return "";
+        if (annotation.type === "point") {
+            const x = Number(annotation.x);
+            const y = Number(annotation.y);
+            if (!Number.isFinite(x) || !Number.isFinite(y) || x < xMin || x > xMax || y < yMin || y > yMax) return "";
+            const pointX = toSvgX(x);
+            const pointY = toSvgY(y);
+            return `<circle class="equation-graph-annotation-point" cx="${pointX}" cy="${pointY}" r="5"></circle><text class="equation-graph-annotation-label" x="${pointX + 9}" y="${pointY - 9}">${label}</text>`;
+        }
+        if (annotation.type === "line") {
+            if (annotation.orientation === "diagonal") {
+                const x1 = Number(annotation.x1);
+                const y1 = Number(annotation.y1);
+                const x2 = Number(annotation.x2);
+                const y2 = Number(annotation.y2);
+                if (![x1, y1, x2, y2].every(Number.isFinite)) return "";
+                const startX = toSvgX(Math.max(xMin, Math.min(xMax, x1)));
+                const startY = toSvgY(Math.max(yMin, Math.min(yMax, y1)));
+                const endX = toSvgX(Math.max(xMin, Math.min(xMax, x2)));
+                const endY = toSvgY(Math.max(yMin, Math.min(yMax, y2)));
+                return `<line class="equation-graph-annotation-line" x1="${startX}" y1="${startY}" x2="${endX}" y2="${endY}"></line><text class="equation-graph-annotation-label" x="${endX - 8}" y="${endY - 8}" text-anchor="end">${label}</text>`;
+            }
+            const orientation = annotation.orientation === "horizontal" ? "horizontal" : "vertical";
+            const value = Number(annotation.value);
+            if (!Number.isFinite(value)) return "";
+            if (orientation === "horizontal") {
+                if (value < yMin || value > yMax) return "";
+                const lineY = toSvgY(value);
+                return `<line class="equation-graph-annotation-line" x1="${plotLeft}" y1="${lineY}" x2="${plotRight}" y2="${lineY}"></line><text class="equation-graph-annotation-label" x="${plotRight - 6}" y="${lineY - 8}" text-anchor="end">${label}</text>`;
+            }
+            if (value < xMin || value > xMax) return "";
+            const lineX = toSvgX(value);
+            return `<line class="equation-graph-annotation-line" x1="${lineX}" y1="${plotTop}" x2="${lineX}" y2="${plotBottom}"></line><text class="equation-graph-annotation-label" x="${lineX + 7}" y="${plotTop + 16}">${label}</text>`;
+        }
+        return "";
+    }).join("");
+    return `<div class="equation-card-graph-wrap"><svg class="equation-card-graph" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Graph of ${equationText(expressions.join(" and "))}">${xGrid}${yGrid}<line class="equation-graph-axis" x1="${plotLeft}" y1="${toSvgY(clampY(0))}" x2="${plotRight}" y2="${toSvgY(clampY(0))}"></line><line class="equation-graph-axis" x1="${toSvgX(clampX(0))}" y1="${plotTop}" x2="${toSvgX(clampX(0))}" y2="${plotBottom}"></line>${annotationMarkup}${paths}${marker}<text class="equation-graph-label" x="${width / 2}" y="${height - 10}" text-anchor="middle">${equationText(graphLabelText(graph.xLabel, "x"))}</text><text class="equation-graph-label" x="16" y="${height / 2}" text-anchor="middle" transform="rotate(-90 16 ${height / 2})">${equationText(graphLabelText(graph.yLabel, "y"))}</text></svg></div>`;
 }
 
 function solveVariableBehaviorPartner(config, values, sourceSymbol, targetSymbol) {

@@ -43,6 +43,11 @@ body.home-page {
     min-height: 100vh;
 }
 
+html.home-intro-active,
+body.home-intro-active {
+    overflow: hidden;
+}
+
 body.mode-page {
     --mode-accent: var(--primary);
     --mode-accent-soft: rgba(97, 195, 255, 0.12);
@@ -516,15 +521,36 @@ body.drawer-collapsed .mobile-only {
 }
 
 .home-intro {
-    position: relative;
+    position: fixed;
+    inset: 0;
+    z-index: 20;
     display: grid;
     place-items: center;
-    min-height: calc(100vh - 52px);
+    min-height: 100vh;
     padding: clamp(72px, 12vw, 160px) 0 clamp(32px, 6vw, 56px);
     overflow: hidden;
+    pointer-events: none;
+    background-color: var(--bg);
     background:
         radial-gradient(circle at 50% 38%, rgba(97, 195, 255, 0.16), transparent 34%),
-        radial-gradient(circle at 50% 70%, rgba(255, 209, 102, 0.09), transparent 30%);
+        radial-gradient(circle at 50% 70%, rgba(255, 209, 102, 0.09), transparent 30%),
+        linear-gradient(135deg, var(--bg), var(--bg-accent));
+    animation: home-intro-dismiss 0.8s 1.25s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.home-intro::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    opacity: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 209, 102, 0.9), rgba(97, 195, 255, 0.95), transparent);
+    box-shadow: 0 0 18px rgba(97, 195, 255, 0.7);
+    pointer-events: none;
+    animation: home-intro-scan 1.8s 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .home-intro > * {
@@ -549,6 +575,95 @@ body.drawer-collapsed .mobile-only {
     height: auto;
     display: block;
     margin: 0 auto;
+    opacity: 0;
+    transform: translateY(28px) scale(0.86);
+    clip-path: inset(0 0 100% 0);
+    filter: drop-shadow(0 0 0 rgba(97, 195, 255, 0));
+    animation: home-logo-reveal 0.75s 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.home-dashboard,
+.home-boundary {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: home-content-rise 0.6s 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.home-boundary {
+    transform: translateY(10px) scaleX(0.5);
+    animation-name: home-boundary-arrive;
+    animation-delay: 0.8s;
+}
+
+@keyframes home-logo-reveal {
+    0% {
+        opacity: 0;
+        clip-path: inset(0 0 100% 0);
+        transform: translateY(28px) scale(0.86);
+        filter: drop-shadow(0 0 0 rgba(97, 195, 255, 0));
+    }
+    58% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+        transform: translateY(-4px) scale(1.015);
+        filter: drop-shadow(0 0 24px rgba(97, 195, 255, 0.32));
+    }
+    100% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+        transform: translateY(0) scale(1);
+        filter: drop-shadow(0 0 10px rgba(97, 195, 255, 0.16));
+    }
+}
+
+@keyframes home-intro-scan {
+    0% { top: 8%; opacity: 0; }
+    12% { opacity: 1; }
+    100% { top: 92%; opacity: 0; }
+}
+
+@keyframes home-intro-dismiss {
+    from {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        visibility: hidden;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes home-content-rise {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes home-boundary-arrive {
+    from { opacity: 0; transform: translateY(10px) scaleX(0.5); }
+    to { opacity: 1; transform: translateY(0) scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-intro::before,
+    .home-logo img,
+    .home-dashboard,
+    .home-boundary {
+        opacity: 1;
+        transform: none;
+        clip-path: none;
+        animation: none;
+        filter: none;
+    }
+
+    .home-intro {
+        display: none;
+    }
+}
+
+.home-page .home-boundary {
+    display: none;
 }
 
 .home-boundary {
@@ -3339,6 +3454,13 @@ body.mode-page .workspace > .mode-topbar::before {
     margin: 0 0 1rem;
 }
 
+.notes-view .katex-display {
+    margin: 0.45rem 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.05rem 0;
+}
+
 .notes-view h1,
 .notes-view h2,
 .notes-view h3,
@@ -3608,7 +3730,9 @@ body.mode-page .workspace > .mode-topbar::before {
 }
 
 .equation-card-graph-wrap {
+    display: flex;
     width: 100%;
+    min-height: clamp(360px, 46vw, 560px);
     overflow-x: auto;
     padding: 10px 0 0;
 }
@@ -3617,7 +3741,7 @@ body.mode-page .workspace > .mode-topbar::before {
     display: block;
     width: 100%;
     min-width: 480px;
-    height: auto;
+    height: clamp(360px, 46vw, 560px);
     border-radius: 14px;
     background: rgba(3, 17, 29, 0.32);
 }
@@ -3638,6 +3762,24 @@ body.mode-page .workspace > .mode-topbar::before {
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-width: 3;
+}
+
+.equation-graph-annotation-line {
+    stroke: var(--secondary, #ffd166);
+    stroke-dasharray: 7 5;
+    stroke-width: 2;
+}
+
+.equation-graph-annotation-point {
+    fill: var(--secondary, #ffd166);
+    stroke: var(--bg, #08111f);
+    stroke-width: 2;
+}
+
+.equation-graph-annotation-label {
+    fill: var(--text);
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .equation-graph-label {
@@ -4422,6 +4564,7 @@ body.mode-page .workspace > .mode-topbar::before {
 .equation-card-static-graph-panel .equation-card-graph-wrap {
     display: flex;
     width: 100%;
+    min-height: clamp(360px, 46vw, 560px);
     flex: 1;
     padding: 0;
 }
@@ -4429,7 +4572,8 @@ body.mode-page .workspace > .mode-topbar::before {
 .equation-card-static-graph-panel .equation-card-graph {
     width: 100%;
     min-width: 0;
-    min-height: 260px;
+    height: clamp(360px, 46vw, 560px);
+    min-height: 360px;
     border: 1px solid rgba(255, 255, 255, 0.06);
     border-radius: 10px;
     background: #102137;
@@ -4472,7 +4616,7 @@ body.mode-page .workspace > .mode-topbar::before {
 
 .equation-card-graph-panel {
     display: flex;
-    min-height: 370px;
+    min-height: clamp(460px, 54vw, 640px);
     flex-direction: column;
     gap: 10px;
 }
@@ -4554,7 +4698,7 @@ body.mode-page .workspace > .mode-topbar::before {
 .equation-card-graph-panel .equation-card-graph {
     width: 100%;
     height: 100%;
-    min-height: 420px;
+    min-height: clamp(460px, 54vw, 640px);
 }
 
 .equation-variable-behavior-graph-wrap {
