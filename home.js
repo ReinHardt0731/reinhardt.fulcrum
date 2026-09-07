@@ -29,6 +29,7 @@ function scrollHomeToTop() {
 }
 
 window.addEventListener("pageshow", () => window.setTimeout(scrollHomeToTop, 120));
+window.addEventListener("load", () => window.setTimeout(() => window.scrollTo(0, 0), 0));
 
 document.addEventListener("DOMContentLoaded", () => {
     window.setTimeout(scrollHomeToTop, 120);
