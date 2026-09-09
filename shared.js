@@ -3002,12 +3002,76 @@ function normalizeParticleCard(config) {
     };
 }
 
+function normalizeEntropyParticleCard(config) {
+    if (!config || typeof config !== "object") throw new Error("An entropy particle-card configuration is required.");
+    const particleCount = Number(config.particleCount ?? 36);
+    if (!Number.isInteger(particleCount) || particleCount < 8 || particleCount > 100) {
+        throw new Error("particleCount must be a whole number between 8 and 100.");
+    }
+    const referenceTemperature = Number(config.referenceTemperature ?? 300);
+    const referenceVolume = Number(config.referenceVolume ?? 1);
+    const cv = Number(config.cv ?? 20.8);
+    const gasConstant = Number(config.R ?? 8.314);
+    const legacyTemperatureRatio = normalizeParticleRange(config, "temperatureRatio", { value: 1, min: 0, max: 4, step: 0.01, unit: "ratio" }, "Temperature ratio");
+    const legacyVolumeRatio = normalizeParticleRange(config, "volumeRatio", { value: 1, min: 0, max: 4, step: 0.01, unit: "ratio" }, "Volume ratio");
+    const temperatureInitial = normalizeParticleRange({ temperatureInitial: config.temperatureInitial || { value: referenceTemperature, min: 1, max: 1000, step: 1, unit: "K" } }, "temperatureInitial", { value: referenceTemperature, min: 1, max: 1000, step: 1, unit: "K" }, "Initial temperature");
+    const temperatureFinal = normalizeParticleRange({ temperatureFinal: config.temperatureFinal || { value: referenceTemperature * legacyTemperatureRatio.value, min: 0, max: 1000, step: 1, unit: "K" } }, "temperatureFinal", { value: referenceTemperature, min: 0, max: 1000, step: 1, unit: "K" }, "Final temperature");
+    const volumeInitial = normalizeParticleRange({ volumeInitial: config.volumeInitial || { value: referenceVolume, min: 0.1, max: 10, step: 0.01, unit: "m^3" } }, "volumeInitial", { value: referenceVolume, min: 0.1, max: 10, step: 0.01, unit: "m^3" }, "Initial volume");
+    const volumeFinal = normalizeParticleRange({ volumeFinal: config.volumeFinal || { value: referenceVolume * legacyVolumeRatio.value, min: 0.1, max: 10, step: 0.01, unit: "m^3" } }, "volumeFinal", { value: referenceVolume, min: 0.1, max: 10, step: 0.01, unit: "m^3" }, "Final volume");
+    const duration = normalizeParticleRange(config, "duration", { value: 2, min: 0, max: 5, step: 0.1, unit: "s" }, "Transition duration");
+    const moles = normalizeParticleRange(config, "moles", { value: 1, min: 0, max: 5, step: 0.01, unit: "mol" }, "Moles");
+    if (!(referenceTemperature > 0) || !(referenceVolume > 0) || !(temperatureInitial.value > 0) || !(volumeInitial.value > 0) || !(volumeFinal.value > 0) || !Number.isFinite(cv) || !Number.isFinite(gasConstant)) {
+        throw new Error("Entropy card needs a positive reference temperature and volume with finite cv and R values.");
+    }
+    return {
+        title: text(config.title) || "Entropy and Molecular Distribution",
+        subtitle: text(config.subtitle),
+        model: "entropy",
+        particleCount,
+        referenceTemperature,
+        referenceVolume,
+        temperatureInitial,
+        temperatureFinal,
+        volumeInitial,
+        volumeFinal,
+        duration,
+        moles,
+        cv,
+        R: gasConstant,
+        notes: Array.isArray(config.notes) ? config.notes.map(text).filter(Boolean) : []
+    };
+}
+
 function particleDisplayValue(value, range) {
     const digits = range.step < 0.1 ? 2 : range.step < 1 ? 1 : 0;
     return `${Number(value).toFixed(digits)}${range.unit ? ` ${range.unit}` : ""}`;
 }
 
+function renderEntropyParticleCard(config, cardIndex) {
+    const normalized = normalizeEntropyParticleCard(config);
+    PARTICLE_CARD_CONFIGS.set(String(cardIndex), normalized);
+    const temperatureInitial = normalized.temperatureInitial;
+    const temperatureFinal = normalized.temperatureFinal;
+    const volumeInitial = normalized.volumeInitial;
+    const volumeFinal = normalized.volumeFinal;
+    const duration = normalized.duration;
+    const moles = normalized.moles;
+    const notes = normalized.notes.map((note) => `<p>${equationText(note)}</p>`).join("");
+    const equationPanel = `<section class="particle-card-equation" aria-label="Entropy equation"><p class="section-label">Entropy Relationship</p><div>${String.raw`$$\Delta S = N c_v \ln\left(\frac{T_2}{T_1}\right) + N R \ln\left(\frac{V_2}{V_1}\right)$$`}</div></section>`;
+    const stateControl = (label, name, range) => `<div class="particle-card-control"><div class="particle-card-control-heading"><label for="particle-${name}-${cardIndex}">${label}</label><output data-particle-output="${name}">${equationText(particleDisplayValue(range.value, range))}</output></div><input id="particle-${name}-${cardIndex}" class="particle-card-range" type="range" min="${range.min}" max="${range.max}" step="${range.step}" value="${range.value}" data-particle-input="${name}" aria-label="Adjust ${label}"></div>`;
+    const temperatureControls = `<details class="particle-state-controls" open><summary>Temperature states</summary><div class="particle-state-control-body">${stateControl("T₁ · Initial temperature", "temperatureInitial", temperatureInitial)}${stateControl("T₂ · Final temperature", "temperatureFinal", temperatureFinal)}</div></details>`;
+    const volumeControls = `<details class="particle-state-controls" open><summary>Volume states</summary><div class="particle-state-control-body">${stateControl("V₁ · Initial volume", "volumeInitial", volumeInitial)}${stateControl("V₂ · Final volume", "volumeFinal", volumeFinal)}</div></details>`;
+    const durationControl = stateControl("Transition duration", "duration", duration);
+    const molesControl = `<div class="particle-card-control"><div class="particle-card-control-heading"><label for="particle-moles-${cardIndex}">N</label><output data-particle-moles-output>${equationText(particleDisplayValue(moles.value, moles))}</output></div><input id="particle-moles-${cardIndex}" class="particle-card-range" type="range" min="${moles.min}" max="${moles.max}" step="${moles.step}" value="${moles.value}" data-particle-input="moles" aria-label="Adjust the number of moles"></div>`;
+    const metrics = `<div class="particle-card-metrics"><div class="particle-card-metric"><span>Entropy change</span><strong data-particle-entropy-value>0.00</strong><small>J/K at final state</small></div><div class="particle-card-metric"><span>Current temperature</span><strong data-particle-actual-temperature>${temperatureInitial.value.toFixed(2)} K</strong><small data-particle-temperature-state>State 1 · T₁</small></div><div class="particle-card-metric"><span>Current volume</span><strong data-particle-actual-volume>${volumeInitial.value.toFixed(2)} m³</strong><small data-particle-volume-state>State 1 · V₁</small></div></div>`;
+    const transitionControls = `<div class="particle-card-transition-controls" role="group" aria-label="State transition controls"><button type="button" class="primary-button" data-particle-transition-start>Start transition</button><button type="button" class="secondary-button" data-particle-transition-reset>Reset</button><output data-particle-transition-progress>Ready at state 1</output></div>`;
+    return `<article class="particle-card particle-card-modern particle-card-entropy" data-particle-kind="entropy" data-particle-card="${equationText(cardIndex)}"><header class="particle-card-header"><div><p class="section-label">Interactive Entropy Model</p><h3>${equationText(normalized.title)}</h3>${normalized.subtitle ? `<p>${equationText(normalized.subtitle)}</p>` : ""}</div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for entropy card" aria-pressed="false">Fullscreen</button></header>${equationPanel}<div class="particle-card-layout"><section class="particle-card-simulation" aria-label="Animated entropy simulation"><canvas class="particle-card-canvas" data-particle-canvas role="img" aria-label="Particles evolving from initial to final temperature and volume states"></canvas><div class="particle-card-canvas-caption">Particles evolve from state 1 to state 2 over the selected duration. At zero temperature, motion stops.</div></section><section class="particle-card-controls">${temperatureControls}${volumeControls}${durationControl}${molesControl}${transitionControls}${metrics}<p class="particle-card-status" data-particle-status aria-live="polite"></p></section></div>${notes ? `<section class="particle-card-notes"><p class="section-label">About this model</p>${notes}</section>` : ""}</article>`;
+}
+
 function renderParticleCard(config, cardIndex) {
+    if (config && typeof config === "object" && (config.model === "entropy" || config.type === "entropy")) {
+        return renderEntropyParticleCard(config, cardIndex);
+    }
     const normalized = normalizeParticleCard(config);
     PARTICLE_CARD_CONFIGS.set(String(cardIndex), normalized);
     const temperature = normalized.temperature;
@@ -3041,10 +3105,271 @@ function reportParticleCardIssue(card, message) {
     console.error("Particle Card hydration failed:", message);
 }
 
+function hydrateEntropyParticleCard(card, config) {
+    const canvas = card.querySelector("[data-particle-canvas]");
+    if (!canvas) {
+        reportParticleCardIssue(card, "the entropy simulation canvas is missing.");
+        return;
+    }
+    const context = canvas.getContext("2d");
+    if (!context) {
+        reportParticleCardIssue(card, "this browser could not create a 2D canvas context for the entropy simulation.");
+        return;
+    }
+    const values = { temperatureInitial: config.temperatureInitial.value, temperatureFinal: config.temperatureFinal.value, volumeInitial: config.volumeInitial.value, volumeFinal: config.volumeFinal.value, duration: config.duration.value, moles: config.moles.value };
+    const particles = [];
+    const transition = { progress: 0, playing: false, startedAt: 0 };
+    const state = { width: 0, height: 0, box: null, lastTime: 0, raf: 0, stopped: false };
+    const temperatureOutput = card.querySelector('[data-particle-output="temperatureInitial"]');
+    const volumeOutput = card.querySelector('[data-particle-output="volumeInitial"]');
+    const molesOutput = card.querySelector("[data-particle-moles-output]");
+    const durationOutput = card.querySelector('[data-particle-output="duration"]');
+    const entropyOutput = card.querySelector("[data-particle-entropy-value]");
+    const actualTemperatureOutput = card.querySelector("[data-particle-actual-temperature]");
+    const actualVolumeOutput = card.querySelector("[data-particle-actual-volume]");
+    const temperatureStateOutput = card.querySelector("[data-particle-temperature-state]");
+    const volumeStateOutput = card.querySelector("[data-particle-volume-state]");
+    const transitionStart = card.querySelector("[data-particle-transition-start]");
+    const transitionReset = card.querySelector("[data-particle-transition-reset]");
+    const transitionProgress = card.querySelector("[data-particle-transition-progress]");
+    const status = card.querySelector("[data-particle-status]");
+    const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+    const currentTemperature = () => values.temperatureInitial + (values.temperatureFinal - values.temperatureInitial) * transition.progress;
+    const currentVolume = () => values.volumeInitial + (values.volumeFinal - values.volumeInitial) * transition.progress;
+    const temperatureRatio = () => currentTemperature() / Math.max(values.temperatureInitial, 0.000001);
+    const volumeRatio = () => currentVolume() / Math.max(values.volumeInitial, 0.000001);
+    const entropyChange = () => {
+        const tRatio = Math.max(values.temperatureFinal, 0) / Math.max(values.temperatureInitial, 0.000001);
+        const vRatio = Math.max(values.volumeFinal, 0) / Math.max(values.volumeInitial, 0.000001);
+        const safeTRatio = tRatio > 0 ? tRatio : 0.000001;
+        const safeVRatio = vRatio > 0 ? vRatio : 0.000001;
+        const tTerm = values.moles * config.cv * Math.log(safeTRatio);
+        const vTerm = values.moles * config.R * Math.log(safeVRatio);
+        if (tRatio === 0 && vRatio === 0) return 0;
+        return tTerm + vTerm;
+    };
+    const particleRadius = 3.5;
+    const setParticleSpeed = () => {
+        const temperature = Math.max(currentTemperature(), 0);
+        const targetSpeed = temperature <= 0 ? 0 : 18 + Math.sqrt(temperature / Math.max(values.temperatureInitial, 0.000001)) * 28;
+        particles.forEach((particle, index) => {
+            const angle = (index * 2.399963) % (Math.PI * 2);
+            particle.vx = Math.cos(angle) * targetSpeed;
+            particle.vy = Math.sin(angle) * targetSpeed;
+        });
+    };
+    const syncParticles = () => {
+        const target = Math.max(8, Math.round(config.particleCount * (0.6 + values.moles / Math.max(config.moles.max, 1e-6))));
+        while (particles.length < target) {
+            particles.push({ x: 0, y: 0, vx: 0, vy: 0, radius: particleRadius });
+        }
+        while (particles.length > target) particles.pop();
+        setParticleSpeed();
+    };
+    const updateBox = (reposition = true) => {
+        const boxScale = Math.max(0.12, Math.sqrt(Math.max(volumeRatio(), 0.12)));
+        const boxWidth = clamp(state.width * 0.74 * boxScale, 110, state.width - 26);
+        const boxHeight = clamp(state.height * 0.7 * boxScale, 90, state.height - 26);
+        state.box = { left: (state.width - boxWidth) / 2, top: (state.height - boxHeight) / 2, right: (state.width + boxWidth) / 2, bottom: (state.height + boxHeight) / 2 };
+        if (!reposition) {
+            particles.forEach((particle) => {
+                particle.x = clamp(particle.x, state.box.left + particle.radius, state.box.right - particle.radius);
+                particle.y = clamp(particle.y, state.box.top + particle.radius, state.box.bottom - particle.radius);
+            });
+            return;
+        }
+        const columns = Math.max(1, Math.ceil(Math.sqrt(particles.length * (state.box.right - state.box.left) / Math.max(1, state.box.bottom - state.box.top))));
+        const rows = Math.max(1, Math.ceil(particles.length / columns));
+        particles.forEach((particle, index) => {
+            const column = index % columns;
+            const row = Math.floor(index / columns);
+            particle.x = state.box.left + ((column + 0.5) / columns) * (state.box.right - state.box.left);
+            particle.y = state.box.top + ((row + 0.5) / rows) * (state.box.bottom - state.box.top);
+        });
+    };
+    const resize = () => {
+        const rect = canvas.getBoundingClientRect();
+        const width = Math.max(280, rect.width || 640);
+        const height = Math.max(220, rect.height || 390);
+        const ratio = Math.min(2, Math.max(1, window.devicePixelRatio || 1));
+        canvas.width = Math.round(width * ratio);
+        canvas.height = Math.round(height * ratio);
+        state.width = width;
+        state.height = height;
+        context.setTransform(ratio, 0, 0, ratio, 0, 0);
+    };
+    const draw = () => {
+        if (!state.box) return;
+        context.clearRect(0, 0, state.width, state.height);
+        context.fillStyle = "rgba(3, 17, 29, 0.62)";
+        context.fillRect(state.box.left, state.box.top, state.box.right - state.box.left, state.box.bottom - state.box.top);
+        const currentTemp = currentTemperature();
+        const currentTemperatureRatio = temperatureRatio();
+        context.strokeStyle = currentTemp <= 0 ? "rgba(255, 220, 120, 0.8)" : "rgba(255, 196, 112, 0.9)";
+        context.lineWidth = 3;
+        context.strokeRect(state.box.left, state.box.top, state.box.right - state.box.left, state.box.bottom - state.box.top);
+        particles.forEach((particle) => {
+            const color = currentTemp <= 0 ? "rgba(255, 219, 129, 0.9)" : `hsl(${clamp(215 - currentTemperatureRatio * 18, 24, 205)} 82% 70%)`;
+            context.beginPath();
+            context.fillStyle = color;
+            context.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+            context.fill();
+        });
+    };
+    const renderReadings = () => {
+        const change = entropyChange();
+        const currentTemp = currentTemperature();
+        const currentVolumeValue = currentVolume();
+        card.querySelector('[data-particle-output="temperatureInitial"]')?.replaceChildren(document.createTextNode(particleDisplayValue(values.temperatureInitial, config.temperatureInitial)));
+        card.querySelector('[data-particle-output="temperatureFinal"]')?.replaceChildren(document.createTextNode(particleDisplayValue(values.temperatureFinal, config.temperatureFinal)));
+        card.querySelector('[data-particle-output="volumeInitial"]')?.replaceChildren(document.createTextNode(particleDisplayValue(values.volumeInitial, config.volumeInitial)));
+        card.querySelector('[data-particle-output="volumeFinal"]')?.replaceChildren(document.createTextNode(particleDisplayValue(values.volumeFinal, config.volumeFinal)));
+        if (temperatureOutput) temperatureOutput.textContent = particleDisplayValue(values.temperatureInitial, config.temperatureInitial);
+        if (volumeOutput) volumeOutput.textContent = particleDisplayValue(values.volumeInitial, config.volumeInitial);
+        if (durationOutput) durationOutput.textContent = particleDisplayValue(values.duration, config.duration);
+        if (molesOutput) molesOutput.textContent = particleDisplayValue(values.moles, config.moles);
+        if (entropyOutput) entropyOutput.textContent = `${change.toFixed(2)} J/K`;
+        if (actualTemperatureOutput) actualTemperatureOutput.textContent = `${currentTemp.toFixed(2)} K`;
+        if (actualVolumeOutput) actualVolumeOutput.textContent = `${currentVolumeValue.toFixed(2)} m³`;
+        if (temperatureStateOutput) temperatureStateOutput.textContent = transition.progress >= 1 ? "State 2 · T₂" : transition.progress <= 0 ? "State 1 · T₁" : `Transition · ${Math.round(transition.progress * 100)}%`;
+        if (volumeStateOutput) volumeStateOutput.textContent = transition.progress >= 1 ? "State 2 · V₂" : transition.progress <= 0 ? "State 1 · V₁" : `Transition · ${Math.round(transition.progress * 100)}%`;
+        if (transitionProgress) transitionProgress.textContent = transition.playing ? `Transition ${Math.round(transition.progress * 100)}%` : transition.progress >= 1 ? "At state 2" : transition.progress <= 0 ? "Ready at state 1" : "Paused";
+        if (transitionStart) transitionStart.textContent = transition.playing ? "Pause transition" : transition.progress >= 1 ? "Replay transition" : "Start transition";
+        if (status) {
+            if (currentTemp <= 0) {
+                status.textContent = "Zero-motion limit: the current temperature is 0 K, so the gas is effectively frozen.";
+            } else if (transition.playing) {
+                status.textContent = "The gas is evolving from state 1 toward state 2.";
+            } else if (transition.progress >= 1) {
+                status.textContent = "State 2 reached. Entropy change is calculated between the two endpoint states.";
+            } else if (change > 0) {
+                status.textContent = "Ready to transition: the final state has greater accessible energy or volume.";
+            } else if (change < 0) {
+                status.textContent = "Ready to transition: the final state is cooler, more compressed, or both.";
+            } else {
+                status.textContent = "Ready to transition: the endpoint ratio terms cancel in the ideal-gas relation.";
+            }
+        }
+    };
+    const update = (delta) => {
+        if (!state.box) return;
+        particles.forEach((particle) => {
+            if (currentTemperature() <= 0) {
+                particle.vx = 0;
+                particle.vy = 0;
+                return;
+            }
+            particle.x += particle.vx * delta;
+            particle.y += particle.vy * delta;
+            if (particle.x - particle.radius < state.box.left) { particle.x = state.box.left + particle.radius; particle.vx = Math.abs(particle.vx); }
+            if (particle.x + particle.radius > state.box.right) { particle.x = state.box.right - particle.radius; particle.vx = -Math.abs(particle.vx); }
+            if (particle.y - particle.radius < state.box.top) { particle.y = state.box.top + particle.radius; particle.vy = Math.abs(particle.vy); }
+            if (particle.y + particle.radius > state.box.bottom) { particle.y = state.box.bottom - particle.radius; particle.vy = -Math.abs(particle.vy); }
+        });
+        for (let pass = 0; pass < 2; pass += 1) {
+            for (let first = 0; first < particles.length; first += 1) {
+                for (let second = first + 1; second < particles.length; second += 1) {
+                    const a = particles[first];
+                    const b = particles[second];
+                    const dx = b.x - a.x;
+                    const dy = b.y - a.y;
+                    const distance = Math.hypot(dx, dy);
+                    const minimum = a.radius + b.radius;
+                    if (!distance || distance >= minimum) continue;
+                    const nx = dx / distance;
+                    const ny = dy / distance;
+                    const overlap = (minimum - distance) / 2;
+                    a.x -= nx * overlap;
+                    a.y -= ny * overlap;
+                    b.x += nx * overlap;
+                    b.y += ny * overlap;
+                    const relative = (b.vx - a.vx) * nx + (b.vy - a.vy) * ny;
+                    if (relative <= 0) {
+                        a.vx += relative * nx;
+                        a.vy += relative * ny;
+                        b.vx -= relative * nx;
+                        b.vy -= relative * ny;
+                    }
+                }
+            }
+        }
+        particles.forEach((particle) => {
+            particle.x = clamp(particle.x, state.box.left + particle.radius, state.box.right - particle.radius);
+            particle.y = clamp(particle.y, state.box.top + particle.radius, state.box.bottom - particle.radius);
+        });
+    };
+    const frame = (timestamp) => {
+        if (state.stopped || !card.isConnected) {
+            state.stopped = true;
+            return;
+        }
+        const delta = Math.min(0.04, state.lastTime ? (timestamp - state.lastTime) / 1000 : 0.016);
+        state.lastTime = timestamp;
+        if (transition.playing) {
+            if (values.duration <= 0) {
+                transition.progress = 1;
+                transition.playing = false;
+            } else {
+                transition.progress = clamp((timestamp - transition.startedAt) / (values.duration * 1000), 0, 1);
+                if (transition.progress >= 1) transition.playing = false;
+            }
+            setParticleSpeed();
+            updateBox(false);
+            renderReadings();
+        }
+        update(delta);
+        draw();
+        state.raf = requestAnimationFrame(frame);
+    };
+    card.querySelectorAll("[data-particle-input]").forEach((input) => input.addEventListener("input", () => {
+        const nextValue = Number(input.value);
+        values[input.dataset.particleInput] = nextValue;
+        if (input.dataset.particleInput !== "moles") {
+            transition.progress = 0;
+            transition.playing = false;
+        }
+        setParticleSpeed();
+        syncParticles();
+        updateBox(true);
+        renderReadings();
+    }));
+    transitionStart?.addEventListener("click", () => {
+        if (transition.playing) {
+            transition.playing = false;
+            renderReadings();
+            return;
+        }
+        if (transition.progress >= 1) transition.progress = 0;
+        transition.startedAt = performance.now() - transition.progress * values.duration * 1000;
+        transition.playing = true;
+        renderReadings();
+    });
+    transitionReset?.addEventListener("click", () => {
+        transition.progress = 0;
+        transition.playing = false;
+        setParticleSpeed();
+        updateBox(true);
+        renderReadings();
+    });
+    resize();
+    syncParticles();
+    updateBox(true);
+    renderReadings();
+    if (typeof requestAnimationFrame !== "function") {
+        reportParticleCardIssue(card, "animation is unavailable in this browser.");
+        return;
+    }
+    state.raf = requestAnimationFrame(frame);
+}
+
 function hydrateParticleCards(container) {
     container.querySelectorAll("[data-particle-card]").forEach((card) => {
         try {
         const config = PARTICLE_CARD_CONFIGS.get(card.dataset.particleCard);
+        if (config && config.model === "entropy") {
+            hydrateEntropyParticleCard(card, config);
+            return;
+        }
         const canvas = card.querySelector("[data-particle-canvas]");
         if (!config) {
             reportParticleCardIssue(card, "the card configuration is missing.");
@@ -3099,7 +3424,10 @@ function hydrateParticleCards(container) {
                 particle.y = clamp(particle.y, state.box.top + particle.radius, state.box.bottom - particle.radius);
             });
         };
-        const speedScale = () => Math.sqrt(values.temperature / config.temperature.value);
+        const speedScale = () => {
+            const baselineTemperature = Math.max(Number(config.temperature.value) || 1, 1e-6);
+            return Math.sqrt(Math.max(values.temperature, 0) / baselineTemperature);
+        };
         const resetParticleSpeed = () => {
             const target = 64 * speedScale();
             particles.forEach((particle) => {
@@ -3209,7 +3537,15 @@ function hydrateParticleCards(container) {
             if (pressureOutput) pressureOutput.textContent = `${ideal.toFixed(0)} Pa`;
             if (densityOutput) densityOutput.textContent = `${density().toFixed(3)} kg/m^3`;
             if (collisionOutput) collisionOutput.textContent = state.collisionPressure.toFixed(2);
-            if (status) status.textContent = config.modern ? "Pressure follows density, temperature, and the gas constant." : "Higher pressure means more frequent or harder wall impacts.";
+            if (status) {
+                if (values.temperature <= 0) {
+                    status.textContent = "Absolute zero limit: particle motion stops and the gas reaches its theoretical minimum thermal energy.";
+                } else if (config.modern) {
+                    status.textContent = "Pressure follows density, temperature, and the gas constant.";
+                } else {
+                    status.textContent = "Higher pressure means more frequent or harder wall impacts.";
+                }
+            }
         };
         const frame = (timestamp) => {
             try {
