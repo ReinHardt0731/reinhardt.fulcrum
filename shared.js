@@ -4,6 +4,7 @@ export const ACTIVE_CHAPTER_KEY = "prepcore.web.activeChapter.v1";
 export const ACTIVE_MODE_KEY = "prepcore.web.activeMode.v1";
 export const REVIEW_SESSION_KEY = "prepcore.web.reviewSession.v1";
 export const QUIZ_SESSION_KEY = "prepcore.web.quizSession.v1";
+export const QUIZ_PROGRESS_KEY = "prepcore.web.quizProgress.v1";
 export const PROGRESS_HISTORY_KEY = "prepcore.web.progressHistory.v1";
 export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
 export const ADMIN_PASSWORD = "prepcore";
@@ -1727,6 +1728,50 @@ function saveQuizSession(session) {
         typedAnswer: session.typedAnswer ?? "",
         lastResult: session.lastResult || null
     });
+    saveQuizChapterProgress(session);
+}
+
+function getQuizProgressKey(subjectId, chapterTitle) {
+    return `${text(subjectId)}::${text(chapterTitle)}`;
+}
+
+function loadQuizProgress() {
+    const progress = storageGet(QUIZ_PROGRESS_KEY, {});
+    return progress && typeof progress === "object" && !Array.isArray(progress) ? progress : {};
+}
+
+function saveQuizChapterProgress(session) {
+    if (!session?.subjectId || !session?.chapterTitle || !Array.isArray(session.questions)) {
+        return;
+    }
+
+    const progress = loadQuizProgress();
+    const answered = countAnsweredQuestions(session);
+    progress[getQuizProgressKey(session.subjectId, session.chapterTitle)] = {
+        answered,
+        total: session.questions.length,
+        complete: Boolean(session.complete) || answered >= session.questions.length
+    };
+    storageSet(QUIZ_PROGRESS_KEY, progress);
+}
+
+function clearQuizChapterProgress(subjectId, chapterTitle) {
+    const progress = loadQuizProgress();
+    delete progress[getQuizProgressKey(subjectId, chapterTitle)];
+    storageSet(QUIZ_PROGRESS_KEY, progress);
+}
+
+function getQuizChapterProgress(subjectId, chapter) {
+    const total = collectChapterQuestions(chapter).length;
+    const saved = loadQuizProgress()[getQuizProgressKey(subjectId, chapter?.title)];
+    const answered = Math.min(total, Math.max(0, Number(saved?.answered) || 0));
+    const complete = Boolean(saved?.complete) || (total > 0 && answered >= total);
+    return {
+        answered: complete ? total : answered,
+        total,
+        complete,
+        percent: total ? Math.round(((complete ? total : answered) / total) * 100) : 0
+    };
 }
 
 function loadQuizSession() {
@@ -1761,6 +1806,7 @@ function restoreQuizSession(subject, chapter) {
     session.selectedChoice = saved.selectedChoice ?? null;
     session.typedAnswer = saved.typedAnswer ?? "";
     session.lastResult = saved.lastResult || null;
+    saveQuizChapterProgress(session);
 
     return session;
 }
@@ -2078,7 +2124,7 @@ function renderHomeCarousel(track, subjects, activeSubjectId, selectSubject) {
     });
 }
 
-function renderSubjectDrawer(subjects, activeSubjectId, activeChapterTitle, expandedSubjectId, subjectList, subjectSelect, selectSubject, toggleSubject, dismissSubjectDrawer) {
+function renderSubjectDrawer(subjects, activeSubjectId, activeChapterTitle, expandedSubjectId, subjectList, subjectSelect, selectSubject, toggleSubject, dismissSubjectDrawer, mode = "") {
     subjectList.replaceChildren();
     subjectSelect.replaceChildren();
 
@@ -2129,10 +2175,29 @@ function renderSubjectDrawer(subjects, activeSubjectId, activeChapterTitle, expa
             const chapterButton = document.createElement("button");
             chapterButton.type = "button";
             chapterButton.className = "subject-chapter-item";
+            const quizProgress = mode === "quiz" ? getQuizChapterProgress(subject.id, chapter) : null;
             if (isActiveSubject && chapter.title === activeChapterTitle) {
                 chapterButton.classList.add("is-active");
             }
-            chapterButton.textContent = chapter.title;
+            if (quizProgress?.complete) {
+                chapterButton.classList.add("is-complete");
+            } else if (quizProgress?.answered > 0) {
+                chapterButton.classList.add("is-started");
+            }
+            if (quizProgress) {
+                chapterButton.style.setProperty("--chapter-progress", `${quizProgress.percent}%`);
+                chapterButton.setAttribute("aria-label", `${chapter.title}: ${quizProgress.percent}% complete`);
+            }
+            const chapterLabel = document.createElement("span");
+            chapterLabel.className = "subject-chapter-label";
+            chapterLabel.textContent = chapter.title;
+            chapterButton.appendChild(chapterLabel);
+            if (quizProgress) {
+                const chapterProgress = document.createElement("span");
+                chapterProgress.className = "subject-chapter-progress";
+                chapterProgress.textContent = `${quizProgress.percent}%`;
+                chapterButton.appendChild(chapterProgress);
+            }
             chapterButton.addEventListener("click", (event) => {
                 event.stopPropagation();
                 selectSubject(subject.id, chapter.title);
@@ -9323,7 +9388,8 @@ export async function initModePage(mode) {
             elements.subjectSelect,
             (subjectId, chapterTitle = "") => selectSubject(subjectId, chapterTitle),
             (subjectId) => toggleSubject(subjectId),
-            dismissDrawerOverlay
+            dismissDrawerOverlay,
+            state.mode
         );
     };
 
@@ -9419,6 +9485,7 @@ export async function initModePage(mode) {
         session.currentSummary = session.complete ? summarizeResults(session) : null;
 
         saveQuizSession(session);
+        renderDrawer();
         renderHeader();
         buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
     };
@@ -9709,6 +9776,9 @@ export async function initModePage(mode) {
         } else {
             if (nextMode === "quiz") {
                 const restored = forceRestart ? null : restoreQuizSession(subject, chapter);
+                if (forceRestart) {
+                    clearQuizChapterProgress(subject.id, chapter.title);
+                }
                 if (restored) {
                     state.session = restored;
                 } else {
@@ -9745,6 +9815,7 @@ export async function initModePage(mode) {
         }
         syncSelection(subject.id, chapter.title, nextMode);
         renderModeSwitcher();
+        renderDrawer();
         renderHeader();
         buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
         if (nextMode !== "quiz") {

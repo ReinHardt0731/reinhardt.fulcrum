@@ -485,6 +485,13 @@ body.drawer-collapsed .mobile-only {
 }
 
 .subject-chapter-item {
+    --chapter-progress: 0%;
+    --chapter-progress-color: rgba(97, 195, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px 12px;
     border-radius: 12px;
     text-align: left;
@@ -492,7 +499,44 @@ body.drawer-collapsed .mobile-only {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid transparent;
     cursor: pointer;
-    transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+    transition: transform 140ms ease, border-color 140ms ease, background 220ms ease;
+}
+
+.subject-chapter-item::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: var(--chapter-progress);
+    background: var(--chapter-progress-color);
+    pointer-events: none;
+    transition: width 220ms ease, background 220ms ease;
+}
+
+.subject-chapter-label {
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.subject-chapter-progress {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 auto;
+    margin-left: 12px;
+    color: var(--secondary);
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.subject-chapter-item.is-started {
+    --chapter-progress-color: rgba(97, 195, 255, 0.5);
+}
+
+.subject-chapter-item.is-complete {
+    --chapter-progress-color: rgba(111, 219, 153, 0.55);
 }
 
 .subject-chapter-item:hover,
