@@ -1,4 +1,4 @@
-import { initModePage } from "./shared.js?v=calculation-render-2";
+import { initModePage } from "./shared.js?v=quiz-progress-1";
 
 document.addEventListener("DOMContentLoaded", () => {
     initModePage("quiz");
