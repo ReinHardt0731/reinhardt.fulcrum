@@ -6,6 +6,7 @@ export const REVIEW_SESSION_KEY = "prepcore.web.reviewSession.v1";
 export const QUIZ_SESSION_KEY = "prepcore.web.quizSession.v1";
 export const QUIZ_PROGRESS_KEY = "prepcore.web.quizProgress.v1";
 export const PROGRESS_HISTORY_KEY = "prepcore.web.progressHistory.v1";
+export const POMODORO_HISTORY_KEY = "prepcore.web.pomodoroHistory.v1";
 export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
 export const ADMIN_PASSWORD = "prepcore";
 export const NOTES_PATH = "./markdowns";
@@ -199,6 +200,11 @@ const formatDateKey = (value = new Date()) => {
 function getProgressEntries() {
     const entries = storageGet(PROGRESS_HISTORY_KEY, []);
     return Array.isArray(entries) ? entries : [];
+}
+
+function getPomodoroDailySeconds() {
+    const history = storageGet(POMODORO_HISTORY_KEY, {});
+    return history && typeof history === "object" && !Array.isArray(history) ? history : {};
 }
 
 export function recordStudyProgress(payload = {}) {
@@ -8835,6 +8841,60 @@ function generatePieChartSVG(percentage, size = 100) {
     `;
 }
 
+function createPomodoroTimeCard() {
+    const card = document.createElement("div");
+    card.className = "progress-summary-card pomodoro-progress-card";
+
+    const history = getPomodoroDailySeconds();
+    const today = new Date();
+    const days = Array.from({ length: 7 }, (_, index) => {
+        const date = new Date(today);
+        date.setDate(today.getDate() - (6 - index));
+        return formatDateKey(date);
+    });
+    const values = days.map((dateKey) => Math.max(0, Number(history[dateKey]) || 0));
+    const maxSeconds = Math.max(...values, 60);
+    const todaySeconds = values[values.length - 1];
+
+    const header = document.createElement("div");
+    header.className = "progress-summary-card-header";
+    const title = document.createElement("h3");
+    title.textContent = "Pomodoro time";
+    const meta = document.createElement("p");
+    meta.className = "progress-summary-card-meta";
+    meta.textContent = "Focus time by day";
+    header.append(title, meta);
+
+    const total = document.createElement("strong");
+    total.className = "pomodoro-progress-total";
+    total.textContent = `${Math.round(todaySeconds / 60)} min today`;
+
+    const chart = document.createElement("div");
+    chart.className = "pomodoro-day-list";
+    days.forEach((dateKey, index) => {
+        const row = document.createElement("div");
+        row.className = "pomodoro-day-row";
+        const label = document.createElement("span");
+        const date = new Date(`${dateKey}T12:00:00`);
+        label.textContent = index === days.length - 1
+            ? "Today"
+            : date.toLocaleDateString(undefined, { weekday: "short" });
+        const track = document.createElement("span");
+        track.className = "pomodoro-day-track";
+        const fill = document.createElement("span");
+        fill.className = "pomodoro-day-fill";
+        fill.style.width = `${values[index] ? Math.max(4, (values[index] / maxSeconds) * 100) : 0}%`;
+        track.appendChild(fill);
+        const value = document.createElement("strong");
+        value.textContent = `${Math.round(values[index] / 60)}m`;
+        row.append(label, track, value);
+        chart.appendChild(row);
+    });
+
+    card.append(header, total, chart);
+    return card;
+}
+
 export function initProgressPage() {
     if (!document.body.classList.contains("progress-page")) {
         return;
@@ -8852,6 +8912,7 @@ export function initProgressPage() {
         elements.reset.addEventListener("click", () => {
             if (confirm("Are you sure you want to reset all assessment data? This cannot be undone.")) {
                 storageRemove(PROGRESS_HISTORY_KEY);
+                storageRemove(POMODORO_HISTORY_KEY);
                 location.reload();
             }
         });
@@ -8889,7 +8950,8 @@ export function initProgressPage() {
             createAccuracyAttemptChartCard(quizAttempts, examAttempts),
             createProgressSummaryCard("Quiz accuracy", quizSummary, "Recent quiz performance across the last 7 days."),
             createProgressSummaryCard("Exam accuracy", examSummary, "Recent exam performance across the last 7 days."),
-            createLearningProgressSummaryCard(learnSummary)
+            createLearningProgressSummaryCard(learnSummary),
+            createPomodoroTimeCard()
         );
     }
 
