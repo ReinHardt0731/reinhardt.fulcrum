@@ -198,35 +198,71 @@
       "name": "AIRLAW",
       "quizType": "short_quiz",
       "schemaVersion": 1,
-      "selectedChapter": "PD 1570",
+      "selectedChapter": "PCAR | Part 4.1",
       "chapters": [
         {
           "title": "LOCAL | History",
           "file": "chapters/local-history.json"
         },
         {
-          "title": "RA 776",
+          "title": "Civil Aeronautics Act | RA 776",
           "file": "chapters/ra-776.json"
         },
         {
-          "title": "RA 776 | Statutory",
+          "title": "Civil Aeronautics Act  |  RA 776 Statutory",
           "file": "chapters/ra-776-statutory.json"
         },
         {
-          "title": "RA 9497",
+          "title": "Civil Aviation Authority Act | RA 9497",
           "file": "chapters/ra-9497.json"
         },
         {
-          "title": "PD 1570",
+          "title": "PCAR | Part 1",
+          "file": "chapters/pcar-part-1.json"
+        },
+        {
+          "title": "PCAR | Part 2",
+          "file": "chapters/pcar-part-2.json"
+        },
+        {
+          "title": "PCAR | Part 3",
+          "file": "chapters/pcar-part-3.json"
+        },
+        {
+          "title": "PCAR | Part 3.1",
+          "file": "chapters/pcar-part-3-1.json"
+        },
+        {
+          "title": "PCAR | Part 4",
+          "file": "chapters/pcar-part-4.json"
+        },
+        {
+          "title": "PCAR | Part 4.1",
+          "file": "chapters/pcar-part-4-1.json"
+        },
+        {
+          "title": "Philippine Aeronautical Engineering Decree | PD 1570",
           "file": "chapters/pd-1570.json"
         },
         {
           "title": "Lift Equation Practice",
           "file": "chapters/lift-equation-practice.json"
+        },
+        {
+          "title": "INTERNATIONAL | Conventions",
+          "file": "chapters/international-conventions.json"
+        },
+        {
+          "title": "INTERNATIONAL | Conventions II",
+          "file": "chapters/international-conventions-ii.json"
+        },
+        {
+          "title": "ICAO Annexes",
+          "file": "chapters/icao-annexes.json"
         }
       ],
       "notesPath": "airlaw.md",
-      "updatedAt": "2026-09-06T10:01:06.931Z"
+      "updatedAt": "2026-09-25T08:39:31.280Z"
     },
     {
       "id": "math",
@@ -40674,7 +40710,7 @@
       ]
     },
     "chapters/ra-776.json": {
-      "title": "RA 776",
+      "title": "Civil Aeronautics Act | RA 776",
       "questions": [
         {
           "question": "What is the official title of Republic Act No. 776?",
@@ -44019,7 +44055,7 @@
       ]
     },
     "chapters/ra-776-statutory.json": {
-      "title": "RA 776 | Statutory",
+      "title": "Civil Aeronautics Act  |  RA 776 Statutory",
       "questions": [
         {
           "question": "When was Republic Act No. 776, otherwise known as the Civil Aeronautics Act of the Philippines, approved?",
@@ -46333,7 +46369,7 @@
       ]
     },
     "chapters/ra-9497.json": {
-      "title": "RA 9497",
+      "title": "Civil Aviation Authority Act | RA 9497",
       "questions": [
         {
           "question": "What is the declared policy underlying RA 9497?",
@@ -51742,8 +51778,2531 @@
         }
       ]
     },
+    "chapters/pcar-part-1.json": {
+      "title": "PCAR | Part 1",
+      "questions": [
+        {
+          "question": "What does the term SHALL mean in PCAR Part 1?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Optional action",
+            "Mandatory requirement",
+            "Recommended practice",
+            "Authority discretion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Mandatory requirement",
+          "explanation": "SHALL indicates a mandatory requirement under PCAR regulations.",
+          "tags": [
+            "pcar1",
+            "definitions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which term refers to a recommended practice in PCAR Part 1?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "MAY",
+            "APPROVED",
+            "SHOULD",
+            "PRESCRIBED"
+          ],
+          "answerIndex": 2,
+          "answerText": "SHOULD",
+          "explanation": "SHOULD refers to a recommended practice.",
+          "tags": [
+            "pcar1",
+            "definitions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does MAY indicate in PCAR Part 1?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Mandatory compliance",
+            "Authority approval",
+            "Discretionary action",
+            "Prohibited act"
+          ],
+          "answerIndex": 2,
+          "answerText": "Discretionary action",
+          "explanation": "MAY means discretion can be used when performing an act.",
+          "tags": [
+            "pcar1",
+            "definitions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "How often does the PCAR amendment cycle occur?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Monthly",
+            "Quarterly",
+            "Twice yearly",
+            "Annually"
+          ],
+          "answerIndex": 2,
+          "answerText": "Twice yearly",
+          "explanation": "The amendment cycle occurs every January and July.",
+          "tags": [
+            "pcar1",
+            "amendments"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During which months are PCAR amendments normally issued?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "March and September",
+            "January and July",
+            "February and August",
+            "April and October"
+          ],
+          "answerIndex": 1,
+          "answerText": "January and July",
+          "explanation": "PCAR amendments are scheduled every January and July.",
+          "tags": [
+            "pcar1",
+            "amendments"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which document must be displayed in the aircraft cabin or flight deck entrance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Pilot license",
+            "Medical certificate",
+            "Certificate of Airworthiness",
+            "Journey logbook"
+          ],
+          "answerIndex": 2,
+          "answerText": "Certificate of Airworthiness",
+          "explanation": "The Certificate of Airworthiness must be displayed in the cabin or flight deck entrance.",
+          "tags": [
+            "pcar1",
+            "documents"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which certificate must always be carried onboard the aircraft?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Certificate of Registration",
+            "AMO Certificate",
+            "ATO Certificate",
+            "Radio License"
+          ],
+          "answerIndex": 0,
+          "answerText": "Certificate of Registration",
+          "explanation": "The Certificate of Registration must always be carried onboard.",
+          "tags": [
+            "pcar1",
+            "documents"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Within how many days must a change of address be reported to the Authority?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "15 days",
+            "30 days",
+            "45 days",
+            "60 days"
+          ],
+          "answerIndex": 1,
+          "answerText": "30 days",
+          "explanation": "License holders must notify the Authority within 30 days.",
+          "tags": [
+            "pcar1",
+            "administration"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "For how many days may a facsimile copy temporarily replace a lost license?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "30 days",
+            "45 days",
+            "60 days",
+            "90 days"
+          ],
+          "answerIndex": 2,
+          "answerText": "60 days",
+          "explanation": "A facsimile copy may be used for up to 60 days.",
+          "tags": [
+            "pcar1",
+            "documents"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Who may issue exemptions under PCAR Part 1?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Any inspector",
+            "Chief pilot",
+            "Director General",
+            "AMO manager"
+          ],
+          "answerIndex": 2,
+          "answerText": "Director General",
+          "explanation": "Only the Director General may issue exemptions.",
+          "tags": [
+            "pcar1",
+            "exemptions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "How many days in advance should exemption applications normally be submitted?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "15 days",
+            "30 days",
+            "45 days",
+            "60 days"
+          ],
+          "answerIndex": 3,
+          "answerText": "60 days",
+          "explanation": "Applications for exemptions should be submitted at least 60 days in advance.",
+          "tags": [
+            "pcar1",
+            "exemptions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the minimum condition before granting an exemption?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It reduces maintenance costs",
+            "It is approved by the operator",
+            "It is not prejudicial to flight safety",
+            "It benefits commercial operations"
+          ],
+          "answerIndex": 2,
+          "answerText": "It is not prejudicial to flight safety",
+          "explanation": "Exemptions may only be granted if flight safety is not compromised.",
+          "tags": [
+            "pcar1",
+            "exemptions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which category of MEL has a deferral period of 3 days?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Category A",
+            "Category B",
+            "Category C",
+            "Category D"
+          ],
+          "answerIndex": 1,
+          "answerText": "Category B",
+          "explanation": "Category B MEL items have a deferral period of 3 days.",
+          "tags": [
+            "pcar1",
+            "mel"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which MEL category allows a 10-day deferral?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Category A",
+            "Category B",
+            "Category C",
+            "Category D"
+          ],
+          "answerIndex": 2,
+          "answerText": "Category C",
+          "explanation": "Category C items may be deferred for 10 days.",
+          "tags": [
+            "pcar1",
+            "mel"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which MEL category allows the longest deferral period?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Category A",
+            "Category B",
+            "Category C",
+            "Category D"
+          ],
+          "answerIndex": 3,
+          "answerText": "Category D",
+          "explanation": "Category D items may be deferred for up to 120 days.",
+          "tags": [
+            "pcar1",
+            "mel"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the deferral period for MEL Category D?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "30 days",
+            "60 days",
+            "90 days",
+            "120 days"
+          ],
+          "answerIndex": 3,
+          "answerText": "120 days",
+          "explanation": "Category D MEL items may be deferred for 120 days.",
+          "tags": [
+            "pcar1",
+            "mel"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which authority normally approves the first extension for Category B or C MEL items?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Director General",
+            "Quality Department",
+            "PIC",
+            "CAB"
+          ],
+          "answerIndex": 1,
+          "answerText": "Quality Department",
+          "explanation": "The first extension is usually approved by the Quality Department.",
+          "tags": [
+            "pcar1",
+            "mel"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Who approves the second extension for MEL Category B or C items?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Chief mechanic",
+            "Quality Department",
+            "Authority",
+            "Airport manager"
+          ],
+          "answerIndex": 2,
+          "answerText": "Authority",
+          "explanation": "The second extension requires Authority approval.",
+          "tags": [
+            "pcar1",
+            "mel"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which term means approved by or on behalf of Civil Aviation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Acceptable",
+            "Prescribed",
+            "Approved",
+            "Mandatory"
+          ],
+          "answerIndex": 2,
+          "answerText": "Approved",
+          "explanation": "Approved means approved by or on behalf of Civil Aviation.",
+          "tags": [
+            "pcar1",
+            "definitions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does ACCEPTABLE mean in PCAR Part 1?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Mandatory procedure",
+            "Approved procedure",
+            "Reviewed without objection",
+            "Suspended operation"
+          ],
+          "answerIndex": 2,
+          "answerText": "Reviewed without objection",
+          "explanation": "Acceptable means the Authority reviewed it without objection or formal approval.",
+          "tags": [
+            "pcar1",
+            "definitions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which document confirms maintenance was completed according to standards?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "MEL",
+            "Maintenance Release",
+            "NOTAM",
+            "Certificate of Registration"
+          ],
+          "answerIndex": 1,
+          "answerText": "Maintenance Release",
+          "explanation": "A Maintenance Release certifies maintenance compliance.",
+          "tags": [
+            "pcar1",
+            "maintenance"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does NOTAM stand for?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Notice of Technical Airworthiness Manual",
+            "Notice to Air Maintenance",
+            "Notice distributed by telecommunication",
+            "Navigation Operational Technical Air Manual"
+          ],
+          "answerIndex": 2,
+          "answerText": "Notice distributed by telecommunication",
+          "explanation": "NOTAM is a notice distributed by telecommunication regarding flight operations.",
+          "tags": [
+            "pcar1",
+            "definitions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft has priority over all others?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Glider",
+            "Airship",
+            "Aircraft in distress",
+            "Powered aircraft"
+          ],
+          "answerIndex": 2,
+          "answerText": "Aircraft in distress",
+          "explanation": "Aircraft in distress have highest priority.",
+          "tags": [
+            "pcar1",
+            "operations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft category derives lift mainly from fixed surfaces?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Helicopter",
+            "Airplane",
+            "Gyroplane",
+            "Airship"
+          ],
+          "answerIndex": 1,
+          "answerText": "Airplane",
+          "explanation": "Airplanes derive lift mainly from fixed aerodynamic surfaces.",
+          "tags": [
+            "pcar1",
+            "definitions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the purpose of a Warning Notice?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Revoke a license immediately",
+            "Confirm corrective action",
+            "Indicate a possible violation",
+            "Authorize maintenance"
+          ],
+          "answerIndex": 2,
+          "answerText": "Indicate a possible violation",
+          "explanation": "A Warning Notice advises about a possible violation.",
+          "tags": [
+            "pcar1",
+            "administrative"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What administrative action confirms corrective actions taken?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Warning Notice",
+            "Letter of Confirmation",
+            "Revocation Order",
+            "Exemption Letter"
+          ],
+          "answerIndex": 1,
+          "answerText": "Letter of Confirmation",
+          "explanation": "The Letter of Confirmation confirms corrective actions.",
+          "tags": [
+            "pcar1",
+            "administrative"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/pcar-part-2.json": {
+      "title": "PCAR | Part 2",
+      "questions": [
+        {
+          "question": "Which ICAO Annex is the basis of PCAR Part 2?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 2",
+            "Annex 6",
+            "Annex 1",
+            "Annex 8"
+          ],
+          "answerIndex": 2,
+          "answerText": "Annex 1",
+          "explanation": "PCAR Part 2 is based on ICAO Annex 1 — Personnel Licensing.",
+          "tags": [
+            "pcar2",
+            "icao"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary focus of PCAR Part 2?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft maintenance",
+            "Personnel licensing",
+            "Dangerous goods",
+            "Aerodrome operations"
+          ],
+          "answerIndex": 1,
+          "answerText": "Personnel licensing",
+          "explanation": "PCAR Part 2 governs personnel licensing requirements.",
+          "tags": [
+            "pcar2",
+            "general"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which article of the Chicago Convention requires States to issue or validate licenses?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Article 17",
+            "Article 37",
+            "Article 32",
+            "Article 44"
+          ],
+          "answerIndex": 2,
+          "answerText": "Article 32",
+          "explanation": "Article 32 requires Contracting States to issue or validate licenses.",
+          "tags": [
+            "pcar2",
+            "chicago"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which license allows an individual to act as a private pilot?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATPL",
+            "CPL",
+            "PPL",
+            "MPL"
+          ],
+          "answerIndex": 2,
+          "answerText": "PPL",
+          "explanation": "PPL stands for Private Pilot License.",
+          "tags": [
+            "pcar2",
+            "licenses"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does CPL stand for?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Certified Pilot License",
+            "Commercial Pilot License",
+            "Civil Pilot License",
+            "Cargo Pilot License"
+          ],
+          "answerIndex": 1,
+          "answerText": "Commercial Pilot License",
+          "explanation": "CPL means Commercial Pilot License.",
+          "tags": [
+            "pcar2",
+            "licenses"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which pilot license is the highest level of pilot certification?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "GPL",
+            "MPL",
+            "ATPL",
+            "PPL"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATPL",
+          "explanation": "ATPL stands for Airline Transport Pilot License.",
+          "tags": [
+            "pcar2",
+            "licenses"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does MPL stand for?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Multi-Purpose License",
+            "Multi-Crew Pilot License",
+            "Master Pilot License",
+            "Military Pilot License"
+          ],
+          "answerIndex": 1,
+          "answerText": "Multi-Crew Pilot License",
+          "explanation": "MPL means Multi-Crew Pilot License.",
+          "tags": [
+            "pcar2",
+            "licenses"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which license is specifically for glider pilots?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "GPL",
+            "FBPL",
+            "PPL",
+            "ATPL"
+          ],
+          "answerIndex": 0,
+          "answerText": "GPL",
+          "explanation": "GPL stands for Glider Pilot License.",
+          "tags": [
+            "pcar2",
+            "licenses"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does FBPL stand for?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Free Balloon Pilot License",
+            "Flight Balloon Pilot License",
+            "Federal Balloon Pilot License",
+            "Fixed Balloon Pilot License"
+          ],
+          "answerIndex": 0,
+          "answerText": "Free Balloon Pilot License",
+          "explanation": "FBPL means Free Balloon Pilot License.",
+          "tags": [
+            "pcar2",
+            "licenses"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which license is issued to flight engineers?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "FNL",
+            "FEL",
+            "AMS",
+            "ATCO"
+          ],
+          "answerIndex": 1,
+          "answerText": "FEL",
+          "explanation": "FEL stands for Flight Engineer License.",
+          "tags": [
+            "pcar2",
+            "licenses"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does FNL stand for?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Flight Navigator License",
+            "Federal Navigation License",
+            "Flight Navigation Limitation",
+            "Flight Navigation Level"
+          ],
+          "answerIndex": 0,
+          "answerText": "Flight Navigator License",
+          "explanation": "FNL means Flight Navigator License.",
+          "tags": [
+            "pcar2",
+            "licenses"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which license is issued to air traffic controllers?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATSEP",
+            "FD",
+            "ATCO",
+            "AMS"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATCO",
+          "explanation": "ATCO stands for Air Traffic Controller.",
+          "tags": [
+            "pcar2",
+            "licenses"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which category rating is NOT listed under PCAR Part 2?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Airplane",
+            "Helicopter",
+            "Gyroplane",
+            "Glider"
+          ],
+          "answerIndex": 2,
+          "answerText": "Gyroplane",
+          "explanation": "Gyroplane is not listed as a pilot category rating.",
+          "tags": [
+            "pcar2",
+            "ratings"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does SELA stand for?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Single Engine Light Aircraft",
+            "Single Engine Land Airplane",
+            "Sea Engine Land Aircraft",
+            "Special Engine Land Airplane"
+          ],
+          "answerIndex": 1,
+          "answerText": "Single Engine Land Airplane",
+          "explanation": "SELA means Single-Engine Land Airplane.",
+          "tags": [
+            "pcar2",
+            "ratings"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which class rating refers to Multi-Engine Sea Airplane?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "MELA",
+            "SESA",
+            "MESA",
+            "SELA"
+          ],
+          "answerIndex": 2,
+          "answerText": "MESA",
+          "explanation": "MESA stands for Multi-Engine Sea Airplane.",
+          "tags": [
+            "pcar2",
+            "ratings"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Instrument ratings may be issued for which aircraft?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Airplanes and helicopters",
+            "Gliders only",
+            "Airships only",
+            "Balloons only"
+          ],
+          "answerIndex": 0,
+          "answerText": "Airplanes and helicopters",
+          "explanation": "Instrument ratings are available for airplanes and helicopters.",
+          "tags": [
+            "pcar2",
+            "ratings"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which instructor rating is recognized under PCAR Part 2?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cabin Instructor",
+            "Flight Instructor",
+            "Safety Instructor",
+            "Weather Instructor"
+          ],
+          "answerIndex": 1,
+          "answerText": "Flight Instructor",
+          "explanation": "Flight Instructor is an official instructor rating.",
+          "tags": [
+            "pcar2",
+            "ratings"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What medical certificate class is required for ATPL holders?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Class 1",
+            "Class 2",
+            "Class 3",
+            "Validation only"
+          ],
+          "answerIndex": 0,
+          "answerText": "Class 1",
+          "explanation": "ATPL holders require a Class 1 Medical Certificate.",
+          "tags": [
+            "pcar2",
+            "medical"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which medical certificate class applies to PPL holders?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Class 1",
+            "Class 2",
+            "Class 3",
+            "Special Class"
+          ],
+          "answerIndex": 1,
+          "answerText": "Class 2",
+          "explanation": "PPL holders require a Class 2 Medical Certificate.",
+          "tags": [
+            "pcar2",
+            "medical"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which personnel require a Class 3 Medical Certificate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATPL holders",
+            "PPL holders",
+            "ATCO and ATSEP",
+            "CPL holders"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATCO and ATSEP",
+          "explanation": "ATCO and ATSEP personnel require Class 3 Medical Certificates.",
+          "tags": [
+            "pcar2",
+            "medical"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does AMT stand for?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Maintenance Technician",
+            "Airframe Mechanical Technician",
+            "Aviation Mechanical Trainer",
+            "Aircraft Management Technician"
+          ],
+          "answerIndex": 0,
+          "answerText": "Aircraft Maintenance Technician",
+          "explanation": "AMT means Aircraft Maintenance Technician.",
+          "tags": [
+            "pcar2",
+            "maintenance"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which AMT rating combines both major maintenance areas?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Airframe only",
+            "Powerplant only",
+            "Electrical",
+            "Airframe and Powerplant"
+          ],
+          "answerIndex": 3,
+          "answerText": "Airframe and Powerplant",
+          "explanation": "Airframe and Powerplant is a combined AMT rating.",
+          "tags": [
+            "pcar2",
+            "maintenance"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which AMS category includes welding?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Avionics",
+            "Limited Powerplant",
+            "Specialized Services",
+            "Limited Airframe"
+          ],
+          "answerIndex": 2,
+          "answerText": "Specialized Services",
+          "explanation": "Welding is categorized under Specialized Services.",
+          "tags": [
+            "pcar2",
+            "maintenance"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does NDT stand for?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Non-Destructive Testing",
+            "National Design Test",
+            "Navigation Diagnostic Tool",
+            "Normal Defect Testing"
+          ],
+          "answerIndex": 0,
+          "answerText": "Non-Destructive Testing",
+          "explanation": "NDT means Non-Destructive Testing.",
+          "tags": [
+            "pcar2",
+            "maintenance"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Who may receive a Student Pilot Authorization?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Only examiners",
+            "Applicants",
+            "ATCOs",
+            "AMTs"
+          ],
+          "answerIndex": 1,
+          "answerText": "Applicants",
+          "explanation": "Student Pilot Authorization is given to applicants.",
+          "tags": [
+            "pcar2",
+            "authorizations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/pcar-part-3.json": {
+      "title": "PCAR | Part 3",
+      "questions": [
+        {
+          "question": "What is the primary subject of PCAR Part 3?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft operations",
+            "Approved Training Organizations",
+            "Dangerous goods",
+            "Aircraft maintenance"
+          ],
+          "answerIndex": 1,
+          "answerText": "Approved Training Organizations",
+          "explanation": "PCAR Part 3 governs Approved Training Organizations (ATOs).",
+          "tags": [
+            "pcar3",
+            "general"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does ATO stand for?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft Training Office",
+            "Authorized Training Operator",
+            "Approved Training Organization",
+            "Aviation Training Operation"
+          ],
+          "answerIndex": 2,
+          "answerText": "Approved Training Organization",
+          "explanation": "ATO means Approved Training Organization.",
+          "tags": [
+            "pcar3",
+            "definitions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Who approves an ATO in the Philippines?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ICAO",
+            "CAB",
+            "CAAP",
+            "DOTr"
+          ],
+          "answerIndex": 2,
+          "answerText": "CAAP",
+          "explanation": "CAAP approves and regulates ATOs.",
+          "tags": [
+            "pcar3",
+            "regulations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following is NOT normally a function of an ATO?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Pilot training",
+            "Dispatcher training",
+            "Aircraft manufacturing",
+            "Maintenance personnel training"
+          ],
+          "answerIndex": 2,
+          "answerText": "Aircraft manufacturing",
+          "explanation": "ATOs conduct aviation training, not aircraft manufacturing.",
+          "tags": [
+            "pcar3",
+            "operations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which management position has overall responsibility for the ATO?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Ground Instructor",
+            "Quality Manager",
+            "Chief Mechanic",
+            "Accountable Manager"
+          ],
+          "answerIndex": 3,
+          "answerText": "Accountable Manager",
+          "explanation": "The Accountable Manager has overall organizational responsibility.",
+          "tags": [
+            "pcar3",
+            "management"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Who supervises flight instruction within an ATO?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Safety Officer",
+            "Chief Flight Instructor",
+            "Ground Instructor",
+            "Dispatcher"
+          ],
+          "answerIndex": 1,
+          "answerText": "Chief Flight Instructor",
+          "explanation": "The Chief Flight Instructor supervises flight instruction activities.",
+          "tags": [
+            "pcar3",
+            "management"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What system ensures training effectiveness and compliance within an ATO?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATS",
+            "MEL",
+            "Quality System",
+            "NOTAM"
+          ],
+          "answerIndex": 2,
+          "answerText": "Quality System",
+          "explanation": "ATOs implement a quality system to ensure compliance and effectiveness.",
+          "tags": [
+            "pcar3",
+            "quality"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following is required for ATO approval?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Naval operations",
+            "Weapon systems",
+            "Approved curriculum",
+            "Cargo terminal"
+          ],
+          "answerIndex": 2,
+          "answerText": "Approved curriculum",
+          "explanation": "An approved curriculum is required for ATO certification.",
+          "tags": [
+            "pcar3",
+            "requirements"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does FSTD stand for?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Flight Simulation Training Device",
+            "Flight Safety Training Division",
+            "Flight Systems Technical Device",
+            "Federal Simulation Training Department"
+          ],
+          "answerIndex": 0,
+          "answerText": "Flight Simulation Training Device",
+          "explanation": "FSTD means Flight Simulation Training Device.",
+          "tags": [
+            "pcar3",
+            "definitions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following may be used by ATOs for training?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "FSTD",
+            "MEL",
+            "NOTAM",
+            "ASDA"
+          ],
+          "answerIndex": 0,
+          "answerText": "FSTD",
+          "explanation": "ATOs may use Flight Simulation Training Devices.",
+          "tags": [
+            "pcar3",
+            "training"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What must instructors possess before conducting instruction?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Airport permit only",
+            "Appropriate licenses and ratings",
+            "Aircraft ownership",
+            "Military background"
+          ],
+          "answerIndex": 1,
+          "answerText": "Appropriate licenses and ratings",
+          "explanation": "Instructors must hold appropriate licenses and ratings.",
+          "tags": [
+            "pcar3",
+            "instructors"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following must be maintained by an ATO?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Passenger manifests",
+            "Student records",
+            "Customs declarations",
+            "Military logs"
+          ],
+          "answerIndex": 1,
+          "answerText": "Student records",
+          "explanation": "ATOs are required to maintain student training records.",
+          "tags": [
+            "pcar3",
+            "records"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which document contains training procedures and syllabus information?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Journey Logbook",
+            "Training Manual",
+            "Certificate of Registration",
+            "MEL"
+          ],
+          "answerIndex": 1,
+          "answerText": "Training Manual",
+          "explanation": "The Training Manual contains training procedures and syllabi.",
+          "tags": [
+            "pcar3",
+            "manuals"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What manual contains safety policies and SMS procedures?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Operations Manual",
+            "Training Manual",
+            "Quality Manual",
+            "Safety Manual"
+          ],
+          "answerIndex": 3,
+          "answerText": "Safety Manual",
+          "explanation": "The Safety Manual contains SMS and safety policies.",
+          "tags": [
+            "pcar3",
+            "manuals"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does SMS stand for?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Safety Management System",
+            "Standard Maintenance System",
+            "Safety Monitoring Section",
+            "Simulation Management Service"
+          ],
+          "answerIndex": 0,
+          "answerText": "Safety Management System",
+          "explanation": "SMS means Safety Management System.",
+          "tags": [
+            "pcar3",
+            "safety"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following is part of SMS?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Hazard identification",
+            "Aircraft painting",
+            "Fuel taxation",
+            "Passenger immigration"
+          ],
+          "answerIndex": 0,
+          "answerText": "Hazard identification",
+          "explanation": "Hazard identification is a core element of SMS.",
+          "tags": [
+            "pcar3",
+            "safety"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following is NOT part of SMS?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Risk management",
+            "Safety assurance",
+            "Customs inspection",
+            "Safety promotion"
+          ],
+          "answerIndex": 2,
+          "answerText": "Customs inspection",
+          "explanation": "Customs inspection is not part of SMS.",
+          "tags": [
+            "pcar3",
+            "safety"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following may CAAP conduct on ATOs?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Military deployment",
+            "Inspections and audits",
+            "Aircraft manufacturing",
+            "Tax investigations"
+          ],
+          "answerIndex": 1,
+          "answerText": "Inspections and audits",
+          "explanation": "CAAP conducts inspections and audits for oversight.",
+          "tags": [
+            "pcar3",
+            "oversight"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following may cause suspension of ATO approval?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Excellent training performance",
+            "Compliance with regulations",
+            "Safety violations",
+            "Modern classrooms"
+          ],
+          "answerIndex": 2,
+          "answerText": "Safety violations",
+          "explanation": "Safety violations may result in suspension or revocation.",
+          "tags": [
+            "pcar3",
+            "enforcement"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary goal of PCAR Part 3?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Military standardization",
+            "Aircraft manufacturing",
+            "Safe and standardized aviation training",
+            "Airport taxation"
+          ],
+          "answerIndex": 2,
+          "answerText": "Safe and standardized aviation training",
+          "explanation": "PCAR Part 3 ensures safe and standardized aviation training.",
+          "tags": [
+            "pcar3",
+            "general"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/pcar-part-3-1.json": {
+      "title": "PCAR | Part 3.1",
+      "questions": [
+        {
+          "question": "Which PCAR Part governs aviation training organizations?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Part 1",
+            "Part 2",
+            "Part 3",
+            "Part 5"
+          ],
+          "answerIndex": 2,
+          "answerText": "Part 3",
+          "explanation": "PCAR Part 3 governs Approved Training Organizations.",
+          "tags": [
+            "pcar3",
+            "general"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An ATO primarily exists to provide what?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Airport security",
+            "Aircraft leasing",
+            "Aviation training",
+            "Aircraft registration"
+          ],
+          "answerIndex": 2,
+          "answerText": "Aviation training",
+          "explanation": "ATOs are established to provide aviation training programs.",
+          "tags": [
+            "pcar3",
+            "operations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which personnel may be trained under an ATO?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Pilots",
+            "Dispatchers",
+            "Maintenance personnel",
+            "All of the above"
+          ],
+          "answerIndex": 3,
+          "answerText": "All of the above",
+          "explanation": "ATOs may train various aviation personnel.",
+          "tags": [
+            "pcar3",
+            "training"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following is required for ATO facilities?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Missile storage",
+            "Briefing rooms",
+            "Passenger immigration counters",
+            "Seaport terminals"
+          ],
+          "answerIndex": 1,
+          "answerText": "Briefing rooms",
+          "explanation": "ATOs require briefing rooms and training facilities.",
+          "tags": [
+            "pcar3",
+            "facilities"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which document outlines operational procedures of an ATO?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Operations Manual",
+            "Passenger Manifest",
+            "NOTAM",
+            "Certificate of Airworthiness"
+          ],
+          "answerIndex": 0,
+          "answerText": "Operations Manual",
+          "explanation": "The Operations Manual contains operational procedures.",
+          "tags": [
+            "pcar3",
+            "manuals"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What must training aircraft be?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Military-owned",
+            "Airworthy",
+            "Experimental only",
+            "Foreign registered only"
+          ],
+          "answerIndex": 1,
+          "answerText": "Airworthy",
+          "explanation": "Training aircraft must be airworthy and safe for operation.",
+          "tags": [
+            "pcar3",
+            "aircraft"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following is part of student evaluation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Skill assessment",
+            "Customs clearance",
+            "Immigration interview",
+            "Cargo weighing"
+          ],
+          "answerIndex": 0,
+          "answerText": "Skill assessment",
+          "explanation": "Skill assessments are part of student evaluations.",
+          "tags": [
+            "pcar3",
+            "evaluation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "ATOs are required to monitor what aspect of students?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Political affiliation",
+            "Flight progress",
+            "Family history",
+            "Passport validity"
+          ],
+          "answerIndex": 1,
+          "answerText": "Flight progress",
+          "explanation": "Student progress monitoring is part of training oversight.",
+          "tags": [
+            "pcar3",
+            "training"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Who ensures compliance and standardization within the ATO?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Dispatcher",
+            "Quality Manager",
+            "Passenger agent",
+            "Ramp officer"
+          ],
+          "answerIndex": 1,
+          "answerText": "Quality Manager",
+          "explanation": "The Quality Manager oversees compliance and standardization.",
+          "tags": [
+            "pcar3",
+            "management"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following is considered training equipment?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Flight simulator",
+            "Baggage carousel",
+            "Customs scanner",
+            "Jet bridge"
+          ],
+          "answerIndex": 0,
+          "answerText": "Flight simulator",
+          "explanation": "Flight simulators are approved training devices.",
+          "tags": [
+            "pcar3",
+            "equipment"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the purpose of a quality assurance system in an ATO?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Increase ticket sales",
+            "Monitor airline profits",
+            "Ensure training effectiveness",
+            "Reduce airport congestion"
+          ],
+          "answerIndex": 2,
+          "answerText": "Ensure training effectiveness",
+          "explanation": "Quality assurance ensures training quality and compliance.",
+          "tags": [
+            "pcar3",
+            "quality"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following may be inspected by CAAP?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATO facilities",
+            "Training records",
+            "Aircraft",
+            "All of the above"
+          ],
+          "answerIndex": 3,
+          "answerText": "All of the above",
+          "explanation": "CAAP may inspect all aspects of ATO operations.",
+          "tags": [
+            "pcar3",
+            "oversight"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What must ATO instructors maintain aside from licenses?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Political clearance",
+            "Instructional proficiency",
+            "Military rank",
+            "Customs permit"
+          ],
+          "answerIndex": 1,
+          "answerText": "Instructional proficiency",
+          "explanation": "Instructors must maintain proficiency in instruction.",
+          "tags": [
+            "pcar3",
+            "instructors"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the main purpose of progress monitoring?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Track student competency",
+            "Monitor fuel usage",
+            "Control airport traffic",
+            "Measure runway length"
+          ],
+          "answerIndex": 0,
+          "answerText": "Track student competency",
+          "explanation": "Progress monitoring evaluates student development.",
+          "tags": [
+            "pcar3",
+            "evaluation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following is a requirement for ATO personnel?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Qualified instructors",
+            "Cruise ship experience",
+            "Customs authority",
+            "Port management license"
+          ],
+          "answerIndex": 0,
+          "answerText": "Qualified instructors",
+          "explanation": "Qualified personnel are required for ATO approval.",
+          "tags": [
+            "pcar3",
+            "requirements"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following may be grounds for ATO revocation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Regulatory violations",
+            "Excellent student performance",
+            "Modernized classrooms",
+            "Additional instructors"
+          ],
+          "answerIndex": 0,
+          "answerText": "Regulatory violations",
+          "explanation": "Regulatory violations may lead to revocation.",
+          "tags": [
+            "pcar3",
+            "enforcement"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which area is intended for operational control and supervision?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Student cafeteria",
+            "Operational control area",
+            "Passenger terminal",
+            "Cargo bay"
+          ],
+          "answerIndex": 1,
+          "answerText": "Operational control area",
+          "explanation": "Operational control areas support supervision and coordination.",
+          "tags": [
+            "pcar3",
+            "facilities"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary purpose of lesson plans?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Standardize instruction",
+            "Track airport fees",
+            "Control passengers",
+            "Inspect cargo"
+          ],
+          "answerIndex": 0,
+          "answerText": "Standardize instruction",
+          "explanation": "Lesson plans help standardize aviation instruction.",
+          "tags": [
+            "pcar3",
+            "training"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which manual focuses on compliance monitoring procedures?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Quality Manual",
+            "Passenger Manual",
+            "Immigration Manual",
+            "Cargo Manual"
+          ],
+          "answerIndex": 0,
+          "answerText": "Quality Manual",
+          "explanation": "The Quality Manual covers compliance and monitoring.",
+          "tags": [
+            "pcar3",
+            "manuals"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the overall goal of CAAP oversight of ATOs?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Increase tourism",
+            "Ensure safe and compliant training",
+            "Expand military aviation",
+            "Promote airport shopping"
+          ],
+          "answerIndex": 1,
+          "answerText": "Ensure safe and compliant training",
+          "explanation": "CAAP oversight ensures safe and standardized aviation training.",
+          "tags": [
+            "pcar3",
+            "oversight"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/pcar-part-4.json": {
+      "title": "PCAR | Part 4",
+      "questions": [
+        {
+          "question": "Under PCAR Part 4, what is the standard width of a registration marking character relative to its height?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1/2 of the height",
+            "1/3 of the height",
+            "2/3 of the height",
+            "3/4 of the height"
+          ],
+          "answerIndex": 2,
+          "answerText": "2/3 of the height",
+          "explanation": "The standard character width is 2/3 of the character height.",
+          "tags": [
+            "pcar4",
+            "markings",
+            "dimensions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the standard stroke thickness of aircraft registration markings?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1/8 of the height",
+            "1/6 of the height",
+            "1/4 of the height",
+            "1/2 of the height"
+          ],
+          "answerIndex": 1,
+          "answerText": "1/6 of the height",
+          "explanation": "Character thickness should be 1/6 of the character height.",
+          "tags": [
+            "pcar4",
+            "markings",
+            "dimensions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The standard hyphen length in aircraft registration markings should be:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1/6 of character height",
+            "1/4 of character height",
+            "1/2 of character height",
+            "2/3 of character height"
+          ],
+          "answerIndex": 2,
+          "answerText": "1/2 of character height",
+          "explanation": "The hyphen length is normally 1/2 of the character height.",
+          "tags": [
+            "pcar4",
+            "markings"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the minimum spacing between registration marking characters?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1/6 of character width",
+            "1/4 of character width",
+            "1/2 of character width",
+            "Equal to character thickness"
+          ],
+          "answerIndex": 1,
+          "answerText": "1/4 of character width",
+          "explanation": "Characters should be spaced at least 1/4 of the character width apart.",
+          "tags": [
+            "pcar4",
+            "markings"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "If the character height is 30 cm, what should be the approximate character width?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "10 cm",
+            "15 cm",
+            "20 cm",
+            "25 cm"
+          ],
+          "answerIndex": 2,
+          "answerText": "20 cm",
+          "explanation": "Width = 2/3 × 30 cm = 20 cm.",
+          "tags": [
+            "pcar4",
+            "computation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "If the registration marking height is 30 cm, what should be the approximate stroke thickness?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "3 cm",
+            "5 cm",
+            "10 cm",
+            "15 cm"
+          ],
+          "answerIndex": 1,
+          "answerText": "5 cm",
+          "explanation": "Thickness = 1/6 × 30 cm = 5 cm.",
+          "tags": [
+            "pcar4",
+            "computation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A registration mark has a character height of 50 cm. What should be its approximate width?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "20 cm",
+            "25 cm",
+            "33.3 cm",
+            "40 cm"
+          ],
+          "answerIndex": 2,
+          "answerText": "33.3 cm",
+          "explanation": "Width = 2/3 × 50 cm = 33.3 cm.",
+          "tags": [
+            "pcar4",
+            "computation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "If the character height is 50 cm, what should be the approximate stroke thickness?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "5 cm",
+            "6.5 cm",
+            "8.3 cm",
+            "10 cm"
+          ],
+          "answerIndex": 2,
+          "answerText": "8.3 cm",
+          "explanation": "Thickness = 1/6 × 50 cm = 8.3 cm.",
+          "tags": [
+            "pcar4",
+            "computation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the minimum marking height for heavier-than-air aircraft markings on wings?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "20 cm",
+            "30 cm",
+            "40 cm",
+            "50 cm"
+          ],
+          "answerIndex": 3,
+          "answerText": "50 cm",
+          "explanation": "Wing markings for heavier-than-air aircraft must be at least 50 cm high.",
+          "tags": [
+            "pcar4",
+            "dimensions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the minimum marking height for fuselage or tail markings on heavier-than-air aircraft?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "20 cm",
+            "30 cm",
+            "40 cm",
+            "50 cm"
+          ],
+          "answerIndex": 1,
+          "answerText": "30 cm",
+          "explanation": "Fuselage and tail markings must be at least 30 cm high.",
+          "tags": [
+            "pcar4",
+            "dimensions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ICAO Annex governs aircraft nationality and registration markings?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 1",
+            "Annex 6",
+            "Annex 7",
+            "Annex 14"
+          ],
+          "answerIndex": 2,
+          "answerText": "Annex 7",
+          "explanation": "ICAO Annex 7 governs aircraft nationality and registration markings.",
+          "tags": [
+            "pcar4",
+            "icao"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the Philippine nationality mark for aircraft?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "PI",
+            "PH",
+            "RP",
+            "PR"
+          ],
+          "answerIndex": 2,
+          "answerText": "RP",
+          "explanation": "The nationality mark assigned to the Philippines is RP.",
+          "tags": [
+            "pcar4",
+            "registration"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following is a valid example of a Philippine aircraft registration?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "PH-1234",
+            "RP-C1234",
+            "PI-A789",
+            "PR-5678"
+          ],
+          "answerIndex": 1,
+          "answerText": "RP-C1234",
+          "explanation": "Philippine aircraft registrations begin with RP.",
+          "tags": [
+            "pcar4",
+            "registration"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Registration markings must be:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Decorative",
+            "Temporary",
+            "Clearly visible and legible",
+            "Optional on small aircraft"
+          ],
+          "answerIndex": 2,
+          "answerText": "Clearly visible and legible",
+          "explanation": "Aircraft markings must be visible and legible at all times.",
+          "tags": [
+            "pcar4",
+            "requirements"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Aircraft registration markings should normally use:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Italic letters",
+            "Roman capital letters",
+            "Cursive lettering",
+            "Decorative symbols"
+          ],
+          "answerIndex": 1,
+          "answerText": "Roman capital letters",
+          "explanation": "Roman capital letters are the standard style.",
+          "tags": [
+            "pcar4",
+            "requirements"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following is prohibited regarding aircraft markings?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Proper spacing",
+            "Contrasting colors",
+            "Decorative distortion",
+            "Permanent attachment"
+          ],
+          "answerIndex": 2,
+          "answerText": "Decorative distortion",
+          "explanation": "Decorative distortion that affects readability is prohibited.",
+          "tags": [
+            "pcar4",
+            "prohibited"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Where are registration markings commonly displayed?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Passenger seats only",
+            "Fuselage and tail",
+            "Inside cargo compartment only",
+            "Engine nacelles only"
+          ],
+          "answerIndex": 1,
+          "answerText": "Fuselage and tail",
+          "explanation": "Registration markings are commonly displayed on the fuselage and tail.",
+          "tags": [
+            "pcar4",
+            "placement"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft area may also display markings depending on aircraft type?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing surfaces",
+            "Landing gear",
+            "Cockpit windows",
+            "Cabin ceiling"
+          ],
+          "answerIndex": 0,
+          "answerText": "Wing surfaces",
+          "explanation": "Wing surfaces may display registration markings depending on aircraft type.",
+          "tags": [
+            "pcar4",
+            "placement"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What primarily establishes the nationality of an aircraft?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Manufacturer",
+            "Airworthiness certificate",
+            "Aircraft registration",
+            "Operator preference"
+          ],
+          "answerIndex": 2,
+          "answerText": "Aircraft registration",
+          "explanation": "Aircraft registration establishes nationality and jurisdiction.",
+          "tags": [
+            "pcar4",
+            "registration"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The Certificate of Registration serves as:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A maintenance release",
+            "Official proof of registration",
+            "A flight plan",
+            "An insurance certificate"
+          ],
+          "answerIndex": 1,
+          "answerText": "Official proof of registration",
+          "explanation": "The Certificate of Registration is official proof of aircraft registration.",
+          "tags": [
+            "pcar4",
+            "documents"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/pcar-part-4-1.json": {
+      "title": "PCAR | Part 4.1",
+      "questions": [
+        {
+          "question": "Which ratio represents the standard relationship between character width and height in aircraft registration markings?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1/6",
+            "1/2",
+            "2/3",
+            "3/4"
+          ],
+          "answerIndex": 2,
+          "answerText": "2/3",
+          "explanation": "The width of the character should be 2/3 of its height.",
+          "tags": [
+            "pcar4",
+            "markings",
+            "ratios"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ratio represents the standard stroke thickness of registration markings?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1/8",
+            "1/6",
+            "1/4",
+            "2/3"
+          ],
+          "answerIndex": 1,
+          "answerText": "1/6",
+          "explanation": "Stroke thickness should be 1/6 of the character height.",
+          "tags": [
+            "pcar4",
+            "markings",
+            "ratios"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The hyphen separating nationality and registration marks should have a length equal to:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1/4 of the height",
+            "1/3 of the height",
+            "1/2 of the height",
+            "2/3 of the height"
+          ],
+          "answerIndex": 2,
+          "answerText": "1/2 of the height",
+          "explanation": "The standard hyphen length is 1/2 of the character height.",
+          "tags": [
+            "pcar4",
+            "markings"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "If a registration marking has a height of 60 cm, what should be its approximate width?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "20 cm",
+            "30 cm",
+            "40 cm",
+            "50 cm"
+          ],
+          "answerIndex": 2,
+          "answerText": "40 cm",
+          "explanation": "Width = 2/3 × 60 = 40 cm.",
+          "tags": [
+            "pcar4",
+            "computation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A character marking has a height of 48 cm. What should be its approximate stroke thickness?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "4 cm",
+            "6 cm",
+            "8 cm",
+            "12 cm"
+          ],
+          "answerIndex": 2,
+          "answerText": "8 cm",
+          "explanation": "Thickness = 1/6 × 48 = 8 cm.",
+          "tags": [
+            "pcar4",
+            "computation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "If the registration marking height is 42 cm, what is the approximate hyphen length?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "14 cm",
+            "18 cm",
+            "21 cm",
+            "28 cm"
+          ],
+          "answerIndex": 2,
+          "answerText": "21 cm",
+          "explanation": "Hyphen length = 1/2 × 42 = 21 cm.",
+          "tags": [
+            "pcar4",
+            "computation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement about registration marking spacing is correct?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Characters may overlap slightly",
+            "Spacing is optional",
+            "Characters must not touch",
+            "Hyphens may replace spacing entirely"
+          ],
+          "answerIndex": 2,
+          "answerText": "Characters must not touch",
+          "explanation": "Registration marking characters must not touch each other.",
+          "tags": [
+            "pcar4",
+            "markings"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the minimum spacing between characters based on standard specifications?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1/8 of character width",
+            "1/6 of character width",
+            "1/4 of character width",
+            "1/2 of character width"
+          ],
+          "answerIndex": 2,
+          "answerText": "1/4 of character width",
+          "explanation": "The minimum spacing is 1/4 of the character width.",
+          "tags": [
+            "pcar4",
+            "spacing"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft type may have reduced marking sizes if visibility is maintained?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Military aircraft",
+            "Large transport aircraft",
+            "Small aircraft",
+            "Airliners only"
+          ],
+          "answerIndex": 2,
+          "answerText": "Small aircraft",
+          "explanation": "Small aircraft may use reduced markings with CAAP approval.",
+          "tags": [
+            "pcar4",
+            "specialcases"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "On helicopters, registration markings are commonly placed on the:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rotor blades",
+            "Fuselage or tail boom",
+            "Cockpit windshield",
+            "Landing skids only"
+          ],
+          "answerIndex": 1,
+          "answerText": "Fuselage or tail boom",
+          "explanation": "Helicopter markings are commonly displayed on the fuselage or tail boom.",
+          "tags": [
+            "pcar4",
+            "placement"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary reason for requiring contrasting colors in aircraft markings?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Decorative appearance",
+            "Fuel efficiency",
+            "Visibility and legibility",
+            "Manufacturer preference"
+          ],
+          "answerIndex": 2,
+          "answerText": "Visibility and legibility",
+          "explanation": "Contrasting colors improve visibility and readability.",
+          "tags": [
+            "pcar4",
+            "requirements"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following best describes a nationality mark?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A maintenance code",
+            "A State-identifying symbol",
+            "An airport identifier",
+            "A flight number"
+          ],
+          "answerIndex": 1,
+          "answerText": "A State-identifying symbol",
+          "explanation": "Nationality marks identify the State of registry.",
+          "tags": [
+            "pcar4",
+            "definitions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which document serves as evidence of aircraft nationality?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Journey logbook",
+            "Maintenance release",
+            "Certificate of Registration",
+            "Flight dispatch release"
+          ],
+          "answerIndex": 2,
+          "answerText": "Certificate of Registration",
+          "explanation": "The Certificate of Registration serves as evidence of nationality.",
+          "tags": [
+            "pcar4",
+            "documents"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What may happen if aircraft ownership changes?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The registration may become invalid",
+            "The aircraft automatically changes nationality",
+            "The airworthiness certificate expires immediately",
+            "The operator loses pilot privileges"
+          ],
+          "answerIndex": 0,
+          "answerText": "The registration may become invalid",
+          "explanation": "A change of ownership may invalidate registration until updated.",
+          "tags": [
+            "pcar4",
+            "registration"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following may cause cancellation of registration?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aircraft exportation",
+            "Fraudulent registration",
+            "Aircraft destruction",
+            "All of the above"
+          ],
+          "answerIndex": 3,
+          "answerText": "All of the above",
+          "explanation": "Registration may be cancelled for all listed reasons.",
+          "tags": [
+            "pcar4",
+            "registration"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Who has the authority to revoke aircraft registration certificates?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ICAO",
+            "CAAP",
+            "CAB",
+            "IATA"
+          ],
+          "answerIndex": 1,
+          "answerText": "CAAP",
+          "explanation": "CAAP may suspend or revoke aircraft registration.",
+          "tags": [
+            "pcar4",
+            "authority"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ICAO Annex specifically covers aircraft nationality and registration marks?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 1",
+            "Annex 6",
+            "Annex 7",
+            "Annex 14"
+          ],
+          "answerIndex": 2,
+          "answerText": "Annex 7",
+          "explanation": "Annex 7 governs nationality and registration marks.",
+          "tags": [
+            "pcar4",
+            "icao"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What should registration markings NEVER be?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Visible",
+            "Legible",
+            "Permanent",
+            "Obstructed"
+          ],
+          "answerIndex": 3,
+          "answerText": "Obstructed",
+          "explanation": "Registration markings must remain unobstructed.",
+          "tags": [
+            "pcar4",
+            "requirements"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement about aircraft markings is TRUE?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "They may be temporarily attached",
+            "They should use decorative fonts",
+            "They must be permanently affixed",
+            "They are optional for gliders"
+          ],
+          "answerIndex": 2,
+          "answerText": "They must be permanently affixed",
+          "explanation": "Markings must be permanent and legible.",
+          "tags": [
+            "pcar4",
+            "requirements"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the main purpose of aircraft registration markings?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Advertising",
+            "Identification and nationality recognition",
+            "Fuel monitoring",
+            "Passenger information"
+          ],
+          "answerIndex": 1,
+          "answerText": "Identification and nationality recognition",
+          "explanation": "Markings primarily identify the aircraft and its nationality.",
+          "tags": [
+            "pcar4",
+            "general"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
     "chapters/pd-1570.json": {
-      "title": "PD 1570",
+      "title": "Philippine Aeronautical Engineering Decree | PD 1570",
       "questions": [
         {
           "question": "When was Presidential Decree No. 1570, otherwise known as the Philippine Aeronautical Decree, enacted?",
@@ -52590,6 +55149,1376 @@
             "Sections 22-24",
             "comparison",
             "permit"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/lift-equation-practice.json": {
+      "title": "Lift Equation Practice",
+      "questions": [
+        {
+          "question": "An aircraft weighing 23167 N is travelling at 134.6 m/s at an altitude of 3581 m with a coefficient of lift of 0.98. What wing area is required?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "$3.05\\,\\mathrm{m^2}$",
+            "$2.48\\,\\mathrm{m^2}$",
+            "$3.34\\,\\mathrm{m^2}$",
+            "$2.74\\,\\mathrm{m^2}$"
+          ],
+          "answerIndex": 0,
+          "answerText": "$3.05\\,\\mathrm{m^2}$",
+          "explanation": "Given:\nL = 23167\nV = 134.6\nh = 3581\nCl = 0.98\n\nStep 1: Calculate rho\nFormula:\n$$\\rho = 1.225 \\times \\left(1 - 0.0000225577 \\times h\\right)^{4.2561}$$\nSubstitution:\n$$\\rho = 1.225 \\times \\left(1 - 0.0000225577 \\times 3581.000000\\right)^{4.2561}$$\nResult:\n$$rho = 0.855948$$\n\nStep 2: Calculate S\nFormula:\n$$\\frac{S = L}{C_l \\times 0.5 \\times \\rho \\times V^{2}}$$\nSubstitution:\n$$\\frac{S = 23167.000000}{0.980000 \\times 0.5 \\times 0.855948 \\times 134.600000^{2}}$$\nResult:\n$$S = 3.05$$\n\nDerived Equation:\n$$\\frac{S = L}{C_l \\times 0.5 \\times \\rho \\times V^{2}}$$\n\nAnswer:\n$$S = 3.05\\,\\mathrm{m^2}$$",
+          "tags": [
+            "lift",
+            "aerodynamics",
+            "calculation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/international-conventions.json": {
+      "title": "INTERNATIONAL | Conventions",
+      "questions": [
+        {
+          "question": "Which convention first recognized complete and exclusive sovereignty over a state's airspace?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Warsaw Convention",
+            "Paris Convention",
+            "Chicago Convention",
+            "Havana Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Paris Convention",
+          "explanation": "The Paris Convention of 1919 first established the principle of state sovereignty over airspace.",
+          "tags": [
+            "conventions",
+            "paris"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention established the International Commission on Air Navigation (ICAN)?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Chicago Convention",
+            "Paris Convention",
+            "Tokyo Convention",
+            "Rome Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Paris Convention",
+          "explanation": "The Paris Convention created ICAN, the predecessor of ICAO.",
+          "tags": [
+            "conventions",
+            "ican"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention applied mainly to commercial aviation in the Americas?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Havana Convention",
+            "Warsaw Convention",
+            "Geneva Convention",
+            "Montreal Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Havana Convention",
+          "explanation": "The Havana Convention of 1928 focused on Pan-American commercial aviation.",
+          "tags": [
+            "conventions",
+            "havana"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention standardized airline liability for passengers, baggage, and cargo?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Chicago Convention",
+            "Warsaw Convention",
+            "Tokyo Convention",
+            "Geneva Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Warsaw Convention",
+          "explanation": "The Warsaw Convention unified rules relating to international carriage by air.",
+          "tags": [
+            "conventions",
+            "warsaw"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention required carriers to arrange third-party insurance?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Brussels Convention",
+            "Rome Convention",
+            "Tokyo Convention",
+            "Cape Town Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Brussels Convention",
+          "explanation": "The Brussels Convention focused on liability for third-party surface damage and insurance.",
+          "tags": [
+            "conventions",
+            "brussels"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention is considered the foundation of modern international civil aviation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Warsaw Convention",
+            "Chicago Convention",
+            "Tokyo Convention",
+            "Montreal Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Chicago Convention",
+          "explanation": "The Chicago Convention of 1944 established ICAO and modern aviation standards.",
+          "tags": [
+            "conventions",
+            "chicago"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which organization was created by the Chicago Convention?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "IATA",
+            "FAA",
+            "ICAO",
+            "EASA"
+          ],
+          "answerIndex": 2,
+          "answerText": "ICAO",
+          "explanation": "The Chicago Convention established the International Civil Aviation Organization (ICAO).",
+          "tags": [
+            "icao",
+            "conventions"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention facilitated aircraft financing and protection of secured creditors?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Geneva Convention",
+            "Rome Convention",
+            "Tokyo Convention",
+            "Hague Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Geneva Convention",
+          "explanation": "The Geneva Convention of 1948 protected rights in aircraft and financing interests.",
+          "tags": [
+            "conventions",
+            "geneva"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention deals with damage caused by foreign aircraft to third parties on the surface?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Warsaw Convention",
+            "Rome Convention",
+            "Montreal Convention",
+            "Tokyo Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Rome Convention",
+          "explanation": "The Rome Convention recognized carrier liability for ground damage.",
+          "tags": [
+            "conventions",
+            "rome"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which protocol amended the Warsaw Convention and increased passenger compensation limits?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Montreal Protocol",
+            "Hague Protocol",
+            "Beijing Protocol",
+            "Cyprus Protocol"
+          ],
+          "answerIndex": 1,
+          "answerText": "Hague Protocol",
+          "explanation": "The Hague Protocol of 1955 modernized the Warsaw liability system.",
+          "tags": [
+            "conventions",
+            "hague"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention clarified liability between contracting and actual carriers in charter or wet-lease operations?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Tokyo Convention",
+            "Guadalajara Convention",
+            "Rome Convention",
+            "Cape Town Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Guadalajara Convention",
+          "explanation": "The Guadalajara Convention addressed charter services and wet leasing.",
+          "tags": [
+            "conventions",
+            "guadalajara"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention addresses crimes and offenses committed onboard aircraft?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Tokyo Convention",
+            "Hague Convention",
+            "Warsaw Convention",
+            "Rome Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Tokyo Convention",
+          "explanation": "The Tokyo Convention grants authority over onboard offenses to the State of Registry.",
+          "tags": [
+            "conventions",
+            "tokyo"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention specifically focuses on aircraft hijacking?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Montreal Convention",
+            "Hague Convention",
+            "Tokyo Convention",
+            "Rome Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Hague Convention",
+          "explanation": "The Hague Convention of 1970 suppresses unlawful seizure of aircraft.",
+          "tags": [
+            "conventions",
+            "hijacking"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention criminalized acts such as aircraft bombings and destruction of navigation aids?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Tokyo Convention",
+            "Montreal Convention",
+            "Warsaw Convention",
+            "Chicago Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Montreal Convention",
+          "explanation": "The Montreal Convention of 1971 addressed unlawful acts against aviation safety.",
+          "tags": [
+            "conventions",
+            "montreal"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What did the Montreal Protocols of 1975 introduce into aviation compensation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Gold Standard",
+            "Digital Currency",
+            "Special Drawing Rights",
+            "Crypto Payments"
+          ],
+          "answerIndex": 2,
+          "answerText": "Special Drawing Rights",
+          "explanation": "The Montreal Protocols replaced gold-based compensation with SDRs.",
+          "tags": [
+            "conventions",
+            "montreal"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention extended territorial waters to 12 nautical miles?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rome Convention",
+            "Montego Bay Convention",
+            "Chicago Convention",
+            "Tokyo Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Montego Bay Convention",
+          "explanation": "The Montego Bay Convention defined territorial waters and EEZs.",
+          "tags": [
+            "conventions",
+            "montego_bay"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which protocol criminalized acts of violence at international airports?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Beijing Protocol",
+            "Montreal Protocol 1988",
+            "Hague Protocol",
+            "Tokyo Protocol"
+          ],
+          "answerIndex": 1,
+          "answerText": "Montreal Protocol 1988",
+          "explanation": "The 1988 Montreal Protocol expanded protections to airport facilities.",
+          "tags": [
+            "conventions",
+            "airport_security"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention modernized and largely replaced the Warsaw System?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Chicago Convention",
+            "Montreal Convention 1999",
+            "Cape Town Convention",
+            "Beijing Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Montreal Convention 1999",
+          "explanation": "The Montreal Convention of 1999 updated international airline liability rules.",
+          "tags": [
+            "conventions",
+            "montreal1999"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention created an international registry for aircraft financing interests?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cape Town Convention",
+            "Geneva Convention",
+            "Rome Convention",
+            "Tokyo Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Cape Town Convention",
+          "explanation": "The Cape Town Convention improved legal security for aircraft financing.",
+          "tags": [
+            "conventions",
+            "cape_town"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention expanded aviation security laws to include the use of aircraft as weapons?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Montreal Convention",
+            "Beijing Convention",
+            "Tokyo Convention",
+            "Warsaw Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Beijing Convention",
+          "explanation": "The Beijing Convention of 2010 addressed post-9/11 aviation terrorism threats.",
+          "tags": [
+            "conventions",
+            "beijing"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which protocol expanded the definition of hijacking and criminalized conspiracy related to hijacking?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Hague Protocol",
+            "Beijing Protocol",
+            "Montreal Protocol",
+            "Rome Protocol"
+          ],
+          "answerIndex": 1,
+          "answerText": "Beijing Protocol",
+          "explanation": "The Beijing Protocol supplemented the Hague Convention with expanded anti-hijacking provisions.",
+          "tags": [
+            "conventions",
+            "beijing"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention is often called the 'constitution of international civil aviation'?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Tokyo Convention",
+            "Chicago Convention",
+            "Warsaw Convention",
+            "Paris Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Chicago Convention",
+          "explanation": "The Chicago Convention established the legal and technical framework for modern aviation.",
+          "tags": [
+            "conventions",
+            "chicago"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention first required aircraft to carry nationality and registration marks?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Paris Convention",
+            "Chicago Convention",
+            "Havana Convention",
+            "Tokyo Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Paris Convention",
+          "explanation": "The Paris Convention required aircraft registration and nationality markings.",
+          "tags": [
+            "conventions",
+            "paris"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention granted jurisdiction primarily to the State of Registry for onboard offenses?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Warsaw Convention",
+            "Tokyo Convention",
+            "Rome Convention",
+            "Montreal Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Tokyo Convention",
+          "explanation": "The Tokyo Convention grants jurisdiction to the State of Registry.",
+          "tags": [
+            "conventions",
+            "tokyo"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention specifically addressed unlawful acts against civil aviation safety beyond hijacking?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Hague Convention",
+            "Montreal Convention",
+            "Tokyo Convention",
+            "Rome Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Montreal Convention",
+          "explanation": "The Montreal Convention expanded protections against sabotage and terrorism.",
+          "tags": [
+            "conventions",
+            "security"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/international-conventions-ii.json": {
+      "title": "INTERNATIONAL | Conventions II",
+      "questions": [
+        {
+          "question": "How many states originally signed the Chicago Convention in 1944?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "32",
+            "45",
+            "52",
+            "71"
+          ],
+          "answerIndex": 2,
+          "answerText": "52",
+          "explanation": "The Chicago Convention was signed by 52 states in 1944.",
+          "tags": [
+            "conventions",
+            "chicago"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention was considered the forerunner of ICAO?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ICAN",
+            "IATA",
+            "EASA",
+            "FAA"
+          ],
+          "answerIndex": 0,
+          "answerText": "ICAN",
+          "explanation": "The International Commission on Air Navigation (ICAN) preceded ICAO.",
+          "tags": [
+            "ican",
+            "icao"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention had no annexes and placed all rules directly within the treaty itself?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Chicago Convention",
+            "Havana Convention",
+            "Tokyo Convention",
+            "Warsaw Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Havana Convention",
+          "explanation": "The Havana Convention contained all rules within the treaty and had no annexes.",
+          "tags": [
+            "conventions",
+            "havana"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention applies to gratuitous carriage performed by an air transport undertaking?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Warsaw Convention",
+            "Tokyo Convention",
+            "Geneva Convention",
+            "Cape Town Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Warsaw Convention",
+          "explanation": "The Warsaw Convention applies to international carriage for reward and gratuitous carriage by air transport undertakings.",
+          "tags": [
+            "conventions",
+            "warsaw"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention eventually contributed to the downfall of Pan Am due to third-party insurance obligations?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Brussels Convention",
+            "Rome Convention",
+            "Chicago Convention",
+            "Montreal Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Brussels Convention",
+          "explanation": "The Brussels Convention required third-party insurance, increasing financial burdens on carriers.",
+          "tags": [
+            "conventions",
+            "brussels"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention established the Five Freedoms of the Air?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Paris Convention",
+            "Chicago Convention",
+            "Warsaw Convention",
+            "Hague Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Chicago Convention",
+          "explanation": "The Chicago Convention led to the creation of the Five Freedoms Agreements.",
+          "tags": [
+            "conventions",
+            "freedoms"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention protects third parties dealing with aircraft against hidden charges?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Geneva Convention",
+            "Tokyo Convention",
+            "Rome Convention",
+            "Montreal Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Geneva Convention",
+          "explanation": "The Geneva Convention protects third parties against hidden claims or charges involving aircraft.",
+          "tags": [
+            "conventions",
+            "geneva"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention replaced the 1933 Convention regarding damage caused by aircraft on the surface?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Warsaw Convention",
+            "Rome Convention",
+            "Tokyo Convention",
+            "Chicago Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Rome Convention",
+          "explanation": "The Rome Convention of 1952 replaced the earlier 1933 Convention.",
+          "tags": [
+            "conventions",
+            "rome"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Under the Hague Protocol, what happens if a carrier fails to issue proper ticket documentation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Flight cancellation",
+            "Unlimited liability exposure",
+            "Aircraft grounding",
+            "License suspension"
+          ],
+          "answerIndex": 1,
+          "answerText": "Unlimited liability exposure",
+          "explanation": "Failure to issue proper documentation removes the carrier’s liability limitation protections.",
+          "tags": [
+            "conventions",
+            "hague"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention officially defined the liability of carriers in wet-lease operations?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Guadalajara Convention",
+            "Tokyo Convention",
+            "Rome Convention",
+            "Cape Town Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Guadalajara Convention",
+          "explanation": "The Guadalajara Convention clarified carrier liability in charter and wet-lease situations.",
+          "tags": [
+            "conventions",
+            "guadalajara"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention allows the aircraft commander to request assistance from passengers in restraining offenders?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Tokyo Convention",
+            "Hague Convention",
+            "Montreal Convention",
+            "Warsaw Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Tokyo Convention",
+          "explanation": "The Tokyo Convention authorizes commanders to seek assistance from crew and passengers.",
+          "tags": [
+            "conventions",
+            "tokyo"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention defines when an aircraft is considered 'in flight' for hijacking cases?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Hague Convention",
+            "Chicago Convention",
+            "Rome Convention",
+            "Geneva Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Hague Convention",
+          "explanation": "The Hague Convention established definitions related to unlawful seizure and flight status.",
+          "tags": [
+            "conventions",
+            "hijacking"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention criminalized interference with navigational aids?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Montreal Convention",
+            "Tokyo Convention",
+            "Warsaw Convention",
+            "Havana Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Montreal Convention",
+          "explanation": "The Montreal Convention criminalized destruction or interference with navigational aids.",
+          "tags": [
+            "conventions",
+            "montreal"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What monetary system replaced gold-based compensation in the Montreal Protocols?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "USD",
+            "Euro",
+            "Special Drawing Rights",
+            "Bitcoin"
+          ],
+          "answerIndex": 2,
+          "answerText": "Special Drawing Rights",
+          "explanation": "SDRs became the standard unit for compensation calculations.",
+          "tags": [
+            "conventions",
+            "sdr"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention reinforced freedom to overfly economic zones extending 200 nautical miles?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Montego Bay Convention",
+            "Chicago Convention",
+            "Tokyo Convention",
+            "Rome Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Montego Bay Convention",
+          "explanation": "The Montego Bay Convention recognized 200 NM EEZs while preserving overflight freedoms.",
+          "tags": [
+            "conventions",
+            "law_of_the_sea"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which protocol entered into force in 1989 to address violence at international airports?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Montreal Protocol 1988",
+            "Hague Protocol",
+            "Beijing Protocol",
+            "Tokyo Protocol"
+          ],
+          "answerIndex": 0,
+          "answerText": "Montreal Protocol 1988",
+          "explanation": "The Montreal Protocol addressing airport violence entered into force in 1989.",
+          "tags": [
+            "conventions",
+            "airport_security"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention introduced legal recognition of electronic tickets?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Warsaw Convention",
+            "Montreal Convention 1999",
+            "Tokyo Convention",
+            "Geneva Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Montreal Convention 1999",
+          "explanation": "The Montreal Convention 1999 recognized electronic ticketing systems.",
+          "tags": [
+            "conventions",
+            "montreal1999"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention established the International Registry for aircraft interests?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cape Town Convention",
+            "Chicago Convention",
+            "Geneva Convention",
+            "Rome Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Cape Town Convention",
+          "explanation": "The Cape Town Convention created an international registry for aircraft financing interests.",
+          "tags": [
+            "conventions",
+            "cape_town"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention expanded aviation crimes to include transporting biological, chemical, and nuclear weapons?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Montreal Convention",
+            "Beijing Convention",
+            "Tokyo Convention",
+            "Warsaw Convention"
+          ],
+          "answerIndex": 1,
+          "answerText": "Beijing Convention",
+          "explanation": "The Beijing Convention expanded aviation security laws to modern terrorism threats.",
+          "tags": [
+            "conventions",
+            "beijing"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which protocol supplemented the Hague Convention with anti-terrorism provisions?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Montreal Protocol",
+            "Beijing Protocol",
+            "Tokyo Protocol",
+            "Cyprus Protocol"
+          ],
+          "answerIndex": 1,
+          "answerText": "Beijing Protocol",
+          "explanation": "The Beijing Protocol expanded the Hague Convention’s anti-hijacking measures.",
+          "tags": [
+            "conventions",
+            "beijing"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention established the Joint Aviation Authorities (JAA)?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cyprus Convention",
+            "Chicago Convention",
+            "Geneva Convention",
+            "Warsaw Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Cyprus Convention",
+          "explanation": "The Cyprus Convention established the Joint Aviation Authorities.",
+          "tags": [
+            "conventions",
+            "cyprus"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention recognized the authority of the Hamburg Court over overflying disputes?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Montego Bay Convention",
+            "Rome Convention",
+            "Chicago Convention",
+            "Tokyo Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Montego Bay Convention",
+          "explanation": "The Montego Bay Convention established legal mechanisms for maritime and overflight disputes.",
+          "tags": [
+            "conventions",
+            "montego_bay"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention formally addressed unlawful acts against airport facilities and aircraft not in service?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Montreal Protocol 1988",
+            "Warsaw Convention",
+            "Tokyo Convention",
+            "Geneva Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Montreal Protocol 1988",
+          "explanation": "The protocol expanded aviation security protections to airports and inactive aircraft.",
+          "tags": [
+            "conventions",
+            "security"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention was signed in Jamaica?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Montego Bay Convention",
+            "Rome Convention",
+            "Geneva Convention",
+            "Cape Town Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Montego Bay Convention",
+          "explanation": "The Montego Bay Convention was signed in Jamaica in 1982.",
+          "tags": [
+            "conventions",
+            "jamaica"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which convention modernized aviation security laws following the events of 9/11?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Beijing Convention",
+            "Tokyo Convention",
+            "Warsaw Convention",
+            "Hague Convention"
+          ],
+          "answerIndex": 0,
+          "answerText": "Beijing Convention",
+          "explanation": "The Beijing Convention updated aviation terrorism laws after 9/11.",
+          "tags": [
+            "conventions",
+            "terrorism"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/icao-annexes.json": {
+      "title": "ICAO Annexes",
+      "questions": [
+        {
+          "question": "Which ICAO Annex covers Personnel Licensing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 1",
+            "Annex 2",
+            "Annex 6",
+            "Annex 8"
+          ],
+          "answerIndex": 0,
+          "answerText": "Annex 1",
+          "explanation": "Annex 1 contains standards related to Personnel Licensing.",
+          "tags": [
+            "icao",
+            "annexes"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ICAO Annex contains the Rules of the Air?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 5",
+            "Annex 2",
+            "Annex 11",
+            "Annex 14"
+          ],
+          "answerIndex": 1,
+          "answerText": "Annex 2",
+          "explanation": "Annex 2 establishes the Rules of the Air for international aviation.",
+          "tags": [
+            "icao",
+            "annexes"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Meteorological services for international air navigation are covered under:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 3",
+            "Annex 4",
+            "Annex 10",
+            "Annex 12"
+          ],
+          "answerIndex": 0,
+          "answerText": "Annex 3",
+          "explanation": "Annex 3 deals with Meteorological Services for International Air Navigation.",
+          "tags": [
+            "icao",
+            "meteorology"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ICAO Annex governs Aeronautical Charts?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 6",
+            "Annex 4",
+            "Annex 15",
+            "Annex 7"
+          ],
+          "answerIndex": 1,
+          "answerText": "Annex 4",
+          "explanation": "Annex 4 standardizes Aeronautical Charts used in aviation.",
+          "tags": [
+            "icao",
+            "charts"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which Annex standardizes aviation units of measurement?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 5",
+            "Annex 9",
+            "Annex 16",
+            "Annex 18"
+          ],
+          "answerIndex": 0,
+          "answerText": "Annex 5",
+          "explanation": "Annex 5 establishes standard units of measurement in aviation.",
+          "tags": [
+            "icao",
+            "measurements"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Operation of Aircraft is primarily governed by which Annex?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 6",
+            "Annex 8",
+            "Annex 11",
+            "Annex 14"
+          ],
+          "answerIndex": 0,
+          "answerText": "Annex 6",
+          "explanation": "Annex 6 contains standards for the operation of aircraft.",
+          "tags": [
+            "icao",
+            "operations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Aircraft nationality and registration markings are found under:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 1",
+            "Annex 7",
+            "Annex 9",
+            "Annex 13"
+          ],
+          "answerIndex": 1,
+          "answerText": "Annex 7",
+          "explanation": "Annex 7 governs Aircraft Nationality and Registration Marks.",
+          "tags": [
+            "icao",
+            "registration"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ICAO Annex focuses on Airworthiness of Aircraft?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 8",
+            "Annex 6",
+            "Annex 10",
+            "Annex 14"
+          ],
+          "answerIndex": 0,
+          "answerText": "Annex 8",
+          "explanation": "Annex 8 contains standards related to aircraft airworthiness.",
+          "tags": [
+            "icao",
+            "airworthiness"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Facilitation in international aviation is addressed in:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 9",
+            "Annex 17",
+            "Annex 15",
+            "Annex 5"
+          ],
+          "answerIndex": 0,
+          "answerText": "Annex 9",
+          "explanation": "Annex 9 deals with Facilitation procedures such as customs and immigration.",
+          "tags": [
+            "icao",
+            "facilitation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Aeronautical Telecommunications are standardized under:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 10",
+            "Annex 11",
+            "Annex 3",
+            "Annex 4"
+          ],
+          "answerIndex": 0,
+          "answerText": "Annex 10",
+          "explanation": "Annex 10 covers Aeronautical Telecommunications.",
+          "tags": [
+            "icao",
+            "communications"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ICAO Annex governs Air Traffic Services?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 11",
+            "Annex 12",
+            "Annex 13",
+            "Annex 14"
+          ],
+          "answerIndex": 0,
+          "answerText": "Annex 11",
+          "explanation": "Annex 11 contains standards for Air Traffic Services.",
+          "tags": [
+            "icao",
+            "ats"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Search and Rescue operations are covered by:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 10",
+            "Annex 11",
+            "Annex 12",
+            "Annex 13"
+          ],
+          "answerIndex": 2,
+          "answerText": "Annex 12",
+          "explanation": "Annex 12 establishes Search and Rescue procedures.",
+          "tags": [
+            "icao",
+            "sar"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Aircraft Accident and Incident Investigation falls under:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 13",
+            "Annex 14",
+            "Annex 18",
+            "Annex 19"
+          ],
+          "answerIndex": 0,
+          "answerText": "Annex 13",
+          "explanation": "Annex 13 governs aircraft accident and incident investigations.",
+          "tags": [
+            "icao",
+            "investigation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Aerodrome standards are found in which Annex?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 6",
+            "Annex 11",
+            "Annex 14",
+            "Annex 16"
+          ],
+          "answerIndex": 2,
+          "answerText": "Annex 14",
+          "explanation": "Annex 14 contains standards for Aerodromes.",
+          "tags": [
+            "icao",
+            "aerodrome"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Aeronautical Information Services are covered under:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 15",
+            "Annex 10",
+            "Annex 4",
+            "Annex 5"
+          ],
+          "answerIndex": 0,
+          "answerText": "Annex 15",
+          "explanation": "Annex 15 standardizes Aeronautical Information Services.",
+          "tags": [
+            "icao",
+            "ais"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Environmental Protection in aviation is governed by:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 16",
+            "Annex 17",
+            "Annex 18",
+            "Annex 19"
+          ],
+          "answerIndex": 0,
+          "answerText": "Annex 16",
+          "explanation": "Annex 16 focuses on Environmental Protection in aviation.",
+          "tags": [
+            "icao",
+            "environment"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ICAO Annex addresses aviation Security?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 17",
+            "Annex 16",
+            "Annex 18",
+            "Annex 19"
+          ],
+          "answerIndex": 0,
+          "answerText": "Annex 17",
+          "explanation": "Annex 17 establishes aviation Security standards.",
+          "tags": [
+            "icao",
+            "security"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Safe Transport of Dangerous Goods by Air is regulated under:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 18",
+            "Annex 17",
+            "Annex 16",
+            "Annex 14"
+          ],
+          "answerIndex": 0,
+          "answerText": "Annex 18",
+          "explanation": "Annex 18 governs the Safe Transport of Dangerous Goods by Air.",
+          "tags": [
+            "icao",
+            "dangerous_goods"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Safety Management systems are covered by:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 19",
+            "Annex 13",
+            "Annex 12",
+            "Annex 9"
+          ],
+          "answerIndex": 0,
+          "answerText": "Annex 19",
+          "explanation": "Annex 19 focuses on Safety Management systems and principles.",
+          "tags": [
+            "icao",
+            "safety_management"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which Annex is associated with customs, immigration, and passenger processing simplification?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Annex 9",
+            "Annex 11",
+            "Annex 17",
+            "Annex 18"
+          ],
+          "answerIndex": 0,
+          "answerText": "Annex 9",
+          "explanation": "Annex 9 facilitates international air transport procedures including customs and immigration.",
+          "tags": [
+            "icao",
+            "facilitation"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
