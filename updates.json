@@ -1,54 +1,54 @@
 {
   "entries": [
     {
+      "date": "2026-09-25",
+      "hash": "f0a6fcb",
+      "message": "ADD: Airlaw Quiz"
+    },
+    {
+      "date": "2026-09-17",
+      "hash": "4bba46e",
+      "message": "Refresh Pomodoro script cache"
+    },
+    {
+      "date": "2026-09-17",
+      "hash": "ad09192",
+      "message": "Include Pomodor.js"
+    },
+    {
+      "date": "2026-09-17",
+      "hash": "591f407",
+      "message": "Minor Fix"
+    },
+    {
+      "date": "2026-09-17",
+      "hash": "39e6fdb",
+      "message": "Added Pomodoro"
+    },
+    {
+      "date": "2026-09-09",
+      "hash": "aac4345",
+      "message": "FIX: Cache Busting"
+    },
+    {
+      "date": "2026-09-09",
+      "hash": "e83af16",
+      "message": "ADDED: Progress Bar on Quiz"
+    },
+    {
+      "date": "2026-09-09",
+      "hash": "5c04738",
+      "message": "ADDED: Entropy Card"
+    },
+    {
       "date": "2026-09-07",
-      "hash": "942bd20",
-      "message": "ADDED: Airlaw Quiz"
+      "hash": "65a8c48",
+      "message": "FIX: Make home scroll reset runtime independent"
     },
     {
-      "date": "2026-09-06",
-      "hash": "60d855f",
-      "message": "IMPROVED: Flashcards Interface"
-    },
-    {
-      "date": "2026-09-01",
-      "hash": "fbdd4d3",
-      "message": "ADDED: Static graph cards, NEW Chapter GEN AERO III, Fixed answer regarding ground effect on GEN AERO II"
-    },
-    {
-      "date": "2026-08-30",
-      "hash": "bda4b9d",
-      "message": "UPDATE: Added Notes on Structures and Design"
-    },
-    {
-      "date": "2026-08-30",
-      "hash": "31f0f53",
-      "message": "ADDED: Markdown Rendering Options"
-    },
-    {
-      "date": "2026-08-29",
-      "hash": "22f57e5",
-      "message": "DOCUMENTATION on Updates"
-    },
-    {
-      "date": "2026-08-29",
-      "hash": "5d2e278",
-      "message": "UPDATE: GLB Animation RENDER!!"
-    },
-    {
-      "date": "2026-08-29",
-      "hash": "66e3950",
-      "message": "IMPROVE: UI on notes"
-    },
-    {
-      "date": "2026-08-28",
-      "hash": "76d6736",
-      "message": "UPDATE : Minor Improvements"
-    },
-    {
-      "date": "2026-08-25",
-      "hash": "270f117",
-      "message": "ADDED: Aerody Notes Update"
+      "date": "2026-09-07",
+      "hash": "ddb594f",
+      "message": "FIX: Reset home scroll before render"
     }
   ]
 }
