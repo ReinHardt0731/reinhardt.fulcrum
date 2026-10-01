@@ -167,7 +167,9 @@
         const questionTypeRaw = text(
             entry.questionType
                 || entry.question_type
-                || (entry.expectedAnswer !== undefined || entry.expected_answer !== undefined || entry.numeric_answer !== undefined ? "numeric" : "multiple_choice")
+                || (entry.expectedAnswer !== undefined || entry.expected_answer !== undefined || entry.numeric_answer !== undefined
+                    ? "numeric"
+                    : Array.isArray(entry.choices) && entry.choices.length >= 2 ? "multiple_choice" : "short_answer")
         ).toLowerCase();
         const explanation = text(entry.explanation);
         const tags = normalizeTags(entry.tags);
@@ -190,6 +192,25 @@
                 acceptedDeviation: Number.isInteger(Number(entry.acceptedDeviation ?? entry.accepted_deviation ?? entry.deviation))
                     ? Number(entry.acceptedDeviation ?? entry.accepted_deviation ?? entry.deviation)
                     : 0
+            };
+        }
+
+        if (["short_answer", "short answer", "text", "free_response", "free response"].includes(questionTypeRaw)) {
+            const answerText = text(entry.answerText || entry.answer_text || entry.answer);
+            if (!answerText) {
+                throw new Error(`Question ${position} needs an answer.`);
+            }
+
+            return {
+                question,
+                questionType: "short_answer",
+                choices: [],
+                answerIndex: -1,
+                answerText,
+                explanation,
+                tags,
+                expectedAnswer: null,
+                acceptedDeviation: 0
             };
         }
 
@@ -442,9 +463,12 @@
     }
 
     function getAnswerForQuestion(question, session) {
-        if (question.questionType === "numeric") {
+        if (question.questionType === "numeric" || question.questionType === "short_answer") {
             const value = text(session.typedAnswer);
-            return value ? Number(value) : null;
+            if (!value) {
+                return null;
+            }
+            return question.questionType === "numeric" ? Number(value) : value;
         }
         return session.selectedChoice;
     }
@@ -459,6 +483,26 @@
                 return false;
             }
             return Math.abs(numericAnswer - Number(question.expectedAnswer)) <= Number(question.acceptedDeviation || 0);
+        }
+
+        if (question.questionType === "short_answer") {
+            if (answer === null || answer === undefined || !text(answer)) {
+                return false;
+            }
+            const normalizeAnswer = (value) => text(value)
+                .toLocaleLowerCase()
+                .normalize("NFKC")
+                .replace(/[\p{P}\p{S}]/gu, " ")
+                .replace(/\s+/g, " ")
+                .trim();
+            const userAnswer = normalizeAnswer(answer);
+            const expectedAnswer = normalizeAnswer(question.answerText);
+            const userNumber = Number(userAnswer);
+            const expectedNumber = Number(expectedAnswer);
+            if (userAnswer && Number.isFinite(userNumber) && Number.isFinite(expectedNumber)) {
+                return userNumber === expectedNumber;
+            }
+            return userAnswer === expectedAnswer;
         }
 
         return Number(answer) === Number(question.answerIndex);
@@ -794,8 +838,8 @@
 
         const hint = document.createElement("p");
         hint.className = "question-hint";
-        hint.textContent = question.questionType === "numeric"
-            ? "Enter a number and submit your answer."
+        hint.textContent = question.questionType === "numeric" || question.questionType === "short_answer"
+            ? "Type your answer and submit it."
             : session.mode === "flashcards"
                 ? "Reveal the answer, then mark whether you knew it."
                 : "Choose the best answer and check your result.";
@@ -808,8 +852,8 @@
         } else if (session.mode === "note") {
             // In note mode, render a placeholder that links to the notes viewer
             renderNoteMode(answerArea, question, session);
-        } else if (question.questionType === "numeric") {
-            renderNumericMode(answerArea, question, session);
+        } else if (question.questionType === "numeric" || question.questionType === "short_answer") {
+            renderInputAnswerMode(answerArea, question, session);
         } else {
             renderChoiceMode(answerArea, question, session);
         }
@@ -875,12 +919,15 @@
         }
     }
 
-    function renderNumericMode(answerArea, question, session) {
+    function renderInputAnswerMode(answerArea, question, session) {
         const form = document.createElement("form");
         form.className = "answer-form";
 
         const input = document.createElement("input");
-        input.type = "number";
+        input.type = question.questionType === "numeric" ? "number" : "text";
+        if (question.questionType === "numeric") {
+            input.step = "any";
+        }
         input.className = "answer-input";
         input.placeholder = "Enter your answer";
         input.value = session.typedAnswer;

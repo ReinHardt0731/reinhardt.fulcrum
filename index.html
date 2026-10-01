@@ -21,7 +21,7 @@
         window.addEventListener("load", resetHomeViewport);
         [0, 50, 150, 350, 700, 1200, 2000].forEach((delay) => window.setTimeout(resetHomeViewport, delay));
     </script>
-    <link rel="stylesheet" href="styles.css?v=home-intro-20260907-3">
+    <link rel="stylesheet" href="styles.css?v=planner-v1-20260930">
 </head>
 <body class="home-page">
     <main class="home-shell">
@@ -96,6 +96,11 @@
                     <span class="mode-launch-icon" aria-hidden="true">05</span>
                     <span class="mode-launch-title">Exam</span>
                     <span class="mode-launch-copy">Pick chapters, set a question count, and time yourself.</span>
+                </button>
+                <button class="mode-launch-card" type="button" data-home-mode="planner">
+                    <span class="mode-launch-icon" aria-hidden="true">06</span>
+                    <span class="mode-launch-title">Planner</span>
+                    <span class="mode-launch-copy">Follow the AELE Last Blast schedule, daily checklist, and focus timer.</span>
                 </button>
             </div>
 
@@ -210,6 +215,6 @@
         </footer>
     </main>
 
-    <script type="module" src="home.js?v=home-intro-20260907-2"></script>
+    <script type="module" src="home.js?v=planner-v1-20260930"></script>
 </body>
 </html>

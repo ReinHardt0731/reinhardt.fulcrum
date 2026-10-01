@@ -1,4 +1,4 @@
-import { initHomePage } from "./shared.js";
+import { initHomePage } from "./shared.js?v=planner-v1-20260930";
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";

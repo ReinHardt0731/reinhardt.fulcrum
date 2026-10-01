@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fulcrum | Planner</title>
+    <link rel="stylesheet" href="styles.css?v=planner-v2-20260930">
+</head>
+<body class="planner-page">
+    <main class="planner-shell">
+        <header class="planner-hero panel">
+            <div class="planner-hero-copy">
+                <div class="planner-title-row">
+                    <div>
+                        <p class="section-label">AELE Last Blast · Sep 28–Nov 8, 2026</p>
+                        <h1>Study Planner</h1>
+                        <p class="hero-meta">A daily schedule based on the supplied five-week AELE review plan. Check off study blocks and habits as you go.</p>
+                    </div>
+                    <a class="ghost-button planner-home-link" href="index.html">← Home</a>
+                </div>
+                <a class="planner-source-link" href="AELE-Last-Blast-Review-Schedule-1.pdf" target="_blank" rel="noopener noreferrer">Open the AELE Last Blast schedule PDF ↗</a>
+            </div>
+            <section class="planner-pomodoro panel" data-pomodoro aria-label="Pomodoro focus timer">
+                <div class="pomodoro-face"><span class="pomodoro-phase" data-pomodoro-phase>Focus</span><strong class="pomodoro-time" data-pomodoro-time>25:00</strong></div>
+                <div class="pomodoro-actions">
+                    <button class="pomodoro-button" data-pomodoro-toggle type="button">Start</button>
+                    <button class="pomodoro-reset" data-pomodoro-reset type="button" aria-label="Reset Pomodoro timer">Reset</button>
+                    <button class="pomodoro-settings-button" data-pomodoro-settings type="button" aria-label="Timer settings" aria-expanded="false">Settings</button>
+                </div>
+                <form class="pomodoro-settings-panel" data-pomodoro-settings-panel hidden>
+                    <label>Focus <input data-pomodoro-focus type="number" min="1" max="120" inputmode="numeric"></label>
+                    <label>Break <input data-pomodoro-break type="number" min="1" max="120" inputmode="numeric"></label>
+                    <div><button class="pomodoro-button" data-pomodoro-save type="submit">Save</button><button class="pomodoro-reset" data-pomodoro-cancel type="button">Cancel</button></div>
+                </form>
+            </section>
+        </header>
+
+        <section class="planner-stats" aria-label="Planner habits">
+            <div class="planner-stat panel"><span>Plan days complete</span><strong id="planner-days-complete">0</strong></div>
+            <div class="planner-stat panel"><span>Current checklist streak</span><strong id="planner-streak">0 days</strong></div>
+            <div class="planner-stat panel"><span>Pomodoro focus today</span><strong id="planner-focus-today">0 min</strong></div>
+        </section>
+
+        <section class="planner-calendar-panel panel" aria-labelledby="planner-calendar-heading">
+            <div class="planner-section-heading">
+                <div>
+                    <p class="section-label">Six-week overview</p>
+                    <h2 id="planner-calendar-heading">Choose a day</h2>
+                </div>
+                <div class="planner-calendar-legend" aria-label="Subject color legend">
+                    <span><i class="planner-legend-dot color-setup"></i>Setup</span>
+                    <span><i class="planner-legend-dot color-mathematics"></i>Mathematics</span>
+                    <span><i class="planner-legend-dot color-aerodynamics"></i>Aerodynamics</span>
+                    <span><i class="planner-legend-dot color-structures-powerplant"></i>Structures &amp; Powerplant</span>
+                    <span><i class="planner-legend-dot color-acrm-air-laws"></i>ACRM &amp; Air Laws</span>
+                    <span><i class="planner-legend-dot color-final-review"></i>Math &amp; Aero review</span>
+                    <span><i class="planner-legend-dot is-complete"></i>Complete</span>
+                    <span><i class="planner-legend-dot is-today"></i>Today</span>
+                </div>
+            </div>
+            <div class="planner-calendar" id="planner-calendar" aria-label="Last Blast calendar"></div>
+        </section>
+
+        <section class="planner-selected-day panel" aria-labelledby="planner-day-heading">
+            <div class="planner-section-heading planner-day-heading">
+                <div>
+                    <p class="section-label" id="planner-day-kicker">Selected day</p>
+                    <h2 id="planner-day-heading">Loading schedule…</h2>
+                    <p class="planner-day-subtitle" id="planner-day-subtitle"></p>
+                </div>
+                <div class="planner-day-navigation">
+                    <button class="ghost-button" id="planner-previous-day" type="button" aria-label="Previous day">←</button>
+                    <button class="ghost-button" id="planner-today" type="button">Today</button>
+                    <button class="ghost-button" id="planner-next-day" type="button" aria-label="Next day">→</button>
+                </div>
+            </div>
+            <div class="planner-day-progress" aria-label="Selected day checklist progress">
+                <div class="planner-day-progress-label"><span id="planner-day-progress-text">0 of 0 tasks</span><span id="planner-day-progress-percent">0%</span></div>
+                <div class="planner-day-progress-track"><span id="planner-day-progress-fill"></span></div>
+            </div>
+            <div class="planner-day-grid">
+                <section class="planner-gantt-panel" aria-labelledby="planner-gantt-heading">
+                    <div class="planner-subheading">
+                        <p class="section-label">Time blocks</p>
+                        <h3 id="planner-gantt-heading">Daily Gantt chart</h3>
+                    </div>
+                    <div class="planner-gantt-axis" aria-hidden="true"><span>6 AM</span><span>12 PM</span><span>6 PM</span><span>10:30 PM</span></div>
+                    <div class="planner-gantt" id="planner-gantt"></div>
+                </section>
+                <section class="planner-checklist-panel" aria-labelledby="planner-checklist-heading">
+                    <div class="planner-subheading">
+                        <p class="section-label">Build the habit</p>
+                        <h3 id="planner-checklist-heading">Daily checklist</h3>
+                    </div>
+                    <div class="planner-checklist" id="planner-checklist"></div>
+                </section>
+            </div>
+        </section>
+
+        <footer class="planner-footer">
+            <span>AELE Last Blast · Nov 9–11, 2026 exam</span>
+            <span>Your checklist and focus time are saved in this browser.</span>
+        </footer>
+    </main>
+    <script src="pomodoro.js?v=planner-1" defer></script>
+    <script type="module" src="planner.js?v=planner-v2-20260930"></script>
+</body>
+</html>

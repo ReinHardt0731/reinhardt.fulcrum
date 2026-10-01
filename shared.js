@@ -1045,6 +1045,51 @@ function createFormattedTextElement(value, className) {
     return element;
 }
 
+function normalizeExplanationImages(entry) {
+    const rawImages = entry?.explanationImages
+        ?? entry?.explanation_images
+        ?? entry?.explanationImage
+        ?? entry?.explanation_image
+        ?? [];
+    const images = Array.isArray(rawImages) ? rawImages : [rawImages];
+    return images.map((image) => {
+        if (typeof image === "string") {
+            return { src: text(image), alt: "", caption: "" };
+        }
+        return {
+            src: text(image?.src || image?.path || image?.url),
+            alt: text(image?.alt),
+            caption: text(image?.caption)
+        };
+    }).filter((image) => image.src);
+}
+
+function createExplanationImagesElement(images) {
+    const normalizedImages = Array.isArray(images) ? images : [];
+    if (!normalizedImages.length) {
+        return null;
+    }
+
+    const gallery = document.createElement("div");
+    gallery.className = "feedback-explanation-figures";
+    normalizedImages.forEach((imageData) => {
+        const figure = document.createElement("figure");
+        figure.className = "feedback-explanation-figure";
+        const image = document.createElement("img");
+        image.src = imageData.src;
+        image.alt = imageData.alt || imageData.caption || "Explanation diagram";
+        image.loading = "lazy";
+        figure.appendChild(image);
+        if (imageData.caption) {
+            const caption = document.createElement("figcaption");
+            caption.textContent = imageData.caption;
+            figure.appendChild(caption);
+        }
+        gallery.appendChild(figure);
+    });
+    return gallery;
+}
+
 function createChoiceContentElement(value) {
     const element = document.createElement("span");
     element.className = "choice-content";
@@ -1062,14 +1107,21 @@ export function normalizeQuestion(entry, position) {
         throw new Error(`Question ${position} is missing text.`);
     }
 
-    const questionType = text(
-        entry.questionType
-            || entry.question_type
-            || (entry.expectedAnswer !== undefined || entry.expected_answer !== undefined || entry.numeric_answer !== undefined ? "numeric" : "multiple_choice")
-    ).toLowerCase();
+    const rawChoices = (Array.isArray(entry.choices) ? entry.choices : []).map((choice) => text(choice)).filter(Boolean);
+    const hasPlaceholderChoices = rawChoices.length >= 2
+        && rawChoices.every((choice, index) => choice.toLowerCase() === `option ${index + 1}`);
+    const choices = hasPlaceholderChoices ? [] : rawChoices;
+    const questionTypeHint = text(entry.questionType || entry.question_type).toLowerCase();
+    const hasNumericAnswer = entry.expectedAnswer !== undefined
+        || entry.expected_answer !== undefined
+        || entry.numeric_answer !== undefined;
+    const questionType = questionTypeHint === "multiple_choice" && choices.length < 2
+        ? (hasNumericAnswer ? "numeric" : "short_answer")
+        : questionTypeHint || (hasNumericAnswer ? "numeric" : choices.length >= 2 ? "multiple_choice" : "short_answer");
 
     const explanation = formatExplanationText(entry.explanation || entry.explaination);
     const tags = normalizeTags(entry.tags);
+    const explanationImages = normalizeExplanationImages(entry);
 
     if (questionType === "calculation") {
         return generateCalculationQuestion(entry, position);
@@ -1088,6 +1140,7 @@ export function normalizeQuestion(entry, position) {
             answerIndex: -1,
             answerText: text(entry.answerText || entry.answer_text) || formatNumericAnswer(expectedAnswer),
             explanation,
+            explanationImages,
             tags,
             expectedAnswer,
             acceptedDeviation: Number.isInteger(Number(entry.acceptedDeviation ?? entry.accepted_deviation ?? entry.deviation))
@@ -1096,7 +1149,26 @@ export function normalizeQuestion(entry, position) {
         };
     }
 
-    const choices = (Array.isArray(entry.choices) ? entry.choices : []).map((choice) => text(choice)).filter(Boolean);
+    if (["short_answer", "short answer", "text", "free_response", "free response"].includes(questionType)) {
+        const answerText = text(entry.answerText || entry.answer_text || entry.answer);
+        if (!answerText) {
+            throw new Error(`Question ${position} needs an answer.`);
+        }
+
+        return {
+            question,
+            questionType: "short_answer",
+            choices: [],
+            answerIndex: -1,
+            answerText,
+            explanation,
+            explanationImages,
+            tags,
+            expectedAnswer: null,
+            acceptedDeviation: 0
+        };
+    }
+
     if (choices.length < 2) {
         throw new Error(`Question ${position} needs at least two choices.`);
     }
@@ -1123,6 +1195,7 @@ export function normalizeQuestion(entry, position) {
         answerIndex,
         answerText: text(entry.answerText || entry.answer_text || entry.answer) || choices[answerIndex],
         explanation,
+        explanationImages,
         tags,
         expectedAnswer: null,
         acceptedDeviation: 0
@@ -1137,7 +1210,10 @@ function coerceQuestion(entry, position) {
         const question = text(entry?.question || entry?.question_text || entry?.prompt || entry?.text || rawQuestionText || `Question ${position}`);
         const explanation = formatExplanationText(entry?.explanation || entry?.explaination);
         const tags = normalizeTags(entry?.tags);
-        const choices = (Array.isArray(entry?.choices) ? entry.choices : []).map((choice) => text(choice)).filter(Boolean);
+        const rawChoices = (Array.isArray(entry?.choices) ? entry.choices : []).map((choice) => text(choice)).filter(Boolean);
+        const hasPlaceholderChoices = rawChoices.length >= 2
+            && rawChoices.every((choice, index) => choice.toLowerCase() === `option ${index + 1}`);
+        const choices = hasPlaceholderChoices ? [] : rawChoices;
         const questionTypeHint = text(entry?.questionType || entry?.question_type).toLowerCase();
         const hasNumericHints = questionTypeHint === "numeric"
             || entry?.expectedAnswer !== undefined
@@ -1158,6 +1234,21 @@ function coerceQuestion(entry, position) {
                 acceptedDeviation: Number.isInteger(Number(entry?.acceptedDeviation ?? entry?.accepted_deviation ?? entry?.deviation))
                     ? Number(entry?.acceptedDeviation ?? entry?.accepted_deviation ?? entry?.deviation)
                     : 0
+            };
+        }
+
+        const answerText = text(entry?.answerText || entry?.answer_text || entry?.answer);
+        if (answerText && (questionTypeHint !== "multiple_choice" || hasPlaceholderChoices || choices.length < 2)) {
+            return {
+                question,
+                questionType: "short_answer",
+                choices: [],
+                answerIndex: -1,
+                answerText,
+                explanation,
+                tags,
+                expectedAnswer: null,
+                acceptedDeviation: 0
             };
         }
 
@@ -1609,14 +1700,18 @@ export function buildQuestionResult(question, session, answer, correct, isUnsure
         correct,
         isUnsure,
         explanation: formatExplanationText(question.explanation || question.explaination),
+        explanationImages: question.explanationImages || [],
         tags: question.tags
     };
 }
 
 export function getAnswerForQuestion(question, session) {
-    if (question.questionType === "numeric") {
+    if (question.questionType === "numeric" || question.questionType === "short_answer") {
         const value = text(session.typedAnswer);
-        return value ? Number(value) : null;
+        if (!value) {
+            return null;
+        }
+        return question.questionType === "numeric" ? Number(value) : value;
     }
     return session.selectedChoice;
 }
@@ -1631,6 +1726,26 @@ export function isQuestionCorrect(question, answer) {
             return false;
         }
         return Math.abs(numericAnswer - Number(question.expectedAnswer)) <= Number(question.acceptedDeviation || 0);
+    }
+
+    if (question.questionType === "short_answer") {
+        if (answer === null || answer === undefined || !text(answer)) {
+            return false;
+        }
+        const normalizeAnswer = (value) => text(value)
+            .toLocaleLowerCase()
+            .normalize("NFKC")
+            .replace(/[\p{P}\p{S}]/gu, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+        const userAnswer = normalizeAnswer(answer);
+        const expectedAnswer = normalizeAnswer(question.answerText);
+        const userNumber = Number(userAnswer);
+        const expectedNumber = Number(expectedAnswer);
+        if (userAnswer && Number.isFinite(userNumber) && Number.isFinite(expectedNumber)) {
+            return userNumber === expectedNumber;
+        }
+        return userAnswer === expectedAnswer;
     }
 
     return Number(answer) === Number(question.answerIndex);
@@ -6297,14 +6412,20 @@ function createFeedbackCard(result, options = {}) {
     wrapper.append(title, answer, details);
 
     const explanationText = formatExplanationText(result.explanation || result.explaination);
-    if (explanationText && options.includeExplanation !== false) {
+    const explanationImages = createExplanationImagesElement(result.explanationImages);
+    if ((explanationText || explanationImages) && options.includeExplanation !== false) {
         const explanationLabel = document.createElement("strong");
         explanationLabel.className = "feedback-explanation-label";
         explanationLabel.textContent = "Explanation";
 
-        const explanation = createFormattedTextElement(explanationText, "feedback-explanation");
-        wrapper.append(explanationLabel, explanation);
-    } else if (explanationText && options.explanationToggle === true) {
+        wrapper.appendChild(explanationLabel);
+        if (explanationText) {
+            wrapper.appendChild(createFormattedTextElement(explanationText, "feedback-explanation"));
+        }
+        if (explanationImages) {
+            wrapper.appendChild(explanationImages);
+        }
+    } else if ((explanationText || explanationImages) && options.explanationToggle === true) {
         const explanationId = `quiz-explanation-${++feedbackExplanationSequence}`;
         const toggle = document.createElement("button");
         toggle.type = "button";
@@ -6313,21 +6434,28 @@ function createFeedbackCard(result, options = {}) {
         toggle.setAttribute("aria-expanded", "false");
         toggle.setAttribute("aria-controls", explanationId);
 
-        const explanation = createFormattedTextElement(explanationText, "feedback-explanation");
-        explanation.id = explanationId;
-        explanation.hidden = true;
+        const explanationContent = document.createElement("div");
+        explanationContent.className = "feedback-explanation-content";
+        explanationContent.id = explanationId;
+        explanationContent.hidden = true;
+        if (explanationText) {
+            explanationContent.appendChild(createFormattedTextElement(explanationText, "feedback-explanation"));
+        }
+        if (explanationImages) {
+            explanationContent.appendChild(explanationImages);
+        }
 
         toggle.addEventListener("click", () => {
             const isExpanded = toggle.getAttribute("aria-expanded") === "true";
             toggle.setAttribute("aria-expanded", String(!isExpanded));
             toggle.textContent = isExpanded ? "Show Explanation" : "Hide Explanation";
-            explanation.hidden = isExpanded;
+            explanationContent.hidden = isExpanded;
             if (!isExpanded) {
-                try { renderMath(explanation); } catch (_) {}
+                try { renderMath(explanationContent); } catch (_) {}
             }
         });
 
-        wrapper.append(toggle, explanation);
+        wrapper.append(toggle, explanationContent);
     }
 
     renderQuestionMath(wrapper);
@@ -6336,7 +6464,8 @@ function createFeedbackCard(result, options = {}) {
 
 function createExplanationCallout(result) {
     const explanationText = formatExplanationText(result?.explanation || result?.explaination);
-    if (!explanationText) {
+    const explanationImages = createExplanationImagesElement(result?.explanationImages);
+    if (!explanationText && !explanationImages) {
         return null;
     }
 
@@ -6346,9 +6475,13 @@ function createExplanationCallout(result) {
     const title = document.createElement("strong");
     title.textContent = "Why this matters";
 
-    const body = createFormattedTextElement(explanationText);
-
-    callout.append(title, body);
+    callout.appendChild(title);
+    if (explanationText) {
+        callout.appendChild(createFormattedTextElement(explanationText));
+    }
+    if (explanationImages) {
+        callout.appendChild(explanationImages);
+    }
     return callout;
 }
 
@@ -7097,9 +7230,9 @@ function renderLearnReviewControls(container, question, questionIndex, session, 
     form.className = "answer-form learn-review-answer-form";
     const storedAnswer = session.learnReviewDrafts?.[questionIndex];
 
-    if (question.questionType === "numeric") {
+    if (question.questionType === "numeric" || question.questionType === "short_answer") {
         const input = document.createElement("input");
-        input.type = "number";
+        input.type = question.questionType === "numeric" ? "number" : "text";
         input.className = "answer-input";
         input.placeholder = "Enter your answer again";
         input.value = storedAnswer ?? "";
@@ -7141,10 +7274,10 @@ function renderLearnReviewControls(container, question, questionIndex, session, 
     form.addEventListener("submit", (event) => {
         event.preventDefault();
         const answer = session.learnReviewDrafts?.[questionIndex];
-        if (question.questionType === "numeric" && !text(answer)) {
+        if ((question.questionType === "numeric" || question.questionType === "short_answer") && !text(answer)) {
             return;
         }
-        if (question.questionType !== "numeric" && (answer === undefined || answer === null || answer === "")) {
+        if (question.questionType === "multiple_choice" && (answer === undefined || answer === null || answer === "")) {
             return;
         }
         onSubmit(questionIndex, answer);
@@ -7606,12 +7739,12 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                     Object.assign(document.createElement("h5"), { textContent: question.question })
                 );
 
-                if (question.questionType === "numeric") {
+                if (question.questionType === "numeric" || question.questionType === "short_answer") {
                     const reviewInput = document.createElement("input");
-                    reviewInput.type = "number";
+                    reviewInput.type = question.questionType === "numeric" ? "number" : "text";
                     reviewInput.className = "answer-input";
                     reviewInput.value = result?.userAnswer || "";
-                    reviewInput.placeholder = "Enter numeric answer";
+                    reviewInput.placeholder = question.questionType === "numeric" ? "Enter numeric answer" : "Enter your answer";
                     reviewInput.addEventListener("input", () => {
                         session.drafts[index] = reviewInput.value;
                     });
@@ -7766,16 +7899,16 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
         const hint = document.createElement("p");
         hint.className = "question-hint";
-        hint.textContent = question.questionType === "numeric"
+        hint.textContent = question.questionType === "numeric" || question.questionType === "short_answer"
             ? "Enter your answer and submit it to move on. No feedback is shown until the end."
             : "Choose the best answer, then submit it to move on. No feedback is shown until the end.";
 
         const answerArea = document.createElement("div");
         answerArea.className = "answer-area";
 
-        if (question.questionType === "numeric") {
+        if (question.questionType === "numeric" || question.questionType === "short_answer") {
             const input = document.createElement("input");
-            input.type = "number";
+            input.type = question.questionType === "numeric" ? "number" : "text";
             input.className = "answer-input";
             input.placeholder = "Enter your answer";
             input.value = session.drafts?.[session.index] || "";
@@ -8066,12 +8199,12 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
     const hint = document.createElement("p");
     hint.className = "question-hint";
-    hint.textContent = question.questionType === "numeric"
+    hint.textContent = question.questionType === "numeric" || question.questionType === "short_answer"
         ? session.mode === "learn"
             ? session.learnTransitioning
                 ? "Next question will open automatically."
                 : "Answer the question; the next question will open automatically."
-            : "Enter a number and submit your answer."
+            : "Type your answer and submit it."
         : session.mode === "flashcards"
             ? "Reveal the answer, then mark whether you knew it."
             : session.mode === "learn"
@@ -8210,12 +8343,12 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
         flashcard.appendChild(controls);
         answerArea.appendChild(flashcard);
-    } else if (question.questionType === "numeric") {
+    } else if (question.questionType === "numeric" || question.questionType === "short_answer") {
         const form = document.createElement("form");
         form.className = "answer-form";
 
         const input = document.createElement("input");
-        input.type = "number";
+        input.type = question.questionType === "numeric" ? "number" : "text";
         input.className = "answer-input";
         input.placeholder = "Enter your answer";
         input.value = session.typedAnswer;
@@ -8350,7 +8483,8 @@ export async function initHomePage() {
         learn: "learn.html",
         flashcards: "flashcards.html",
         exam: "exam.html",
-        note: "note.html"
+        note: "note.html",
+        planner: "planner.html"
     };
 
     const elements = {
@@ -9049,7 +9183,8 @@ export async function initModePage(mode) {
         learn: "learn.html",
         flashcards: "flashcards.html",
         exam: "exam.html",
-        note: "note.html"
+        note: "note.html",
+        planner: "planner.html"
     };
 
     const elements = {
@@ -9059,6 +9194,7 @@ export async function initModePage(mode) {
         subjectSelect: document.getElementById("subject-select"),
         subjectList: document.getElementById("subject-list"),
         title: document.getElementById("subject-title"),
+        heroChapterTitle: document.getElementById("hero-chapter-title"),
         meta: document.getElementById("subject-meta"),
         summaryPill: document.getElementById("summary-pill"),
         chapterTitle: document.getElementById("chapter-title"),
@@ -9256,11 +9392,11 @@ export async function initModePage(mode) {
             return;
         }
 
-        const answer = question.questionType === "numeric"
+        const answer = question.questionType === "numeric" || question.questionType === "short_answer"
             ? text(session.typedAnswer)
             : session.selectedChoice;
 
-        if (question.questionType === "numeric") {
+        if (question.questionType === "numeric" || question.questionType === "short_answer") {
             if (!text(answer)) {
                 session.setupError = "Enter an answer before submitting.";
                 buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
@@ -9281,7 +9417,7 @@ export async function initModePage(mode) {
             session.unsureFlags[session.index]
         );
         session.answers[session.index] = result;
-        session.drafts[session.index] = text(question.questionType === "numeric" ? session.typedAnswer : answer);
+        session.drafts[session.index] = text(question.questionType === "numeric" || question.questionType === "short_answer" ? session.typedAnswer : answer);
         session.selectedChoice = null;
         session.typedAnswer = "";
         session.busy = false;
@@ -9361,6 +9497,9 @@ export async function initModePage(mode) {
             if (elements.title) {
                 elements.title.textContent = "Upload a quiz to begin";
             }
+            if (elements.heroChapterTitle) {
+                elements.heroChapterTitle.textContent = "";
+            }
             if (elements.meta) {
                 elements.meta.textContent = "Open the hidden admin page to edit subjects.json or load a new quiz file into the repo-backed library.";
 
@@ -9387,6 +9526,9 @@ export async function initModePage(mode) {
         const questionCount = tallyQuestionCount(subject);
         if (elements.title) {
             elements.title.textContent = subject.name;
+        }
+        if (elements.heroChapterTitle) {
+            elements.heroChapterTitle.textContent = chapter?.title || "No chapter selected";
         }
         if (elements.meta) {
             elements.meta.textContent = `${chapterCount} chapter${chapterCount === 1 ? "" : "s"} • ${questionCount} question${questionCount === 1 ? "" : "s"} loaded from subjects.json.`;
@@ -9534,7 +9676,7 @@ export async function initModePage(mode) {
             return;
         }
 
-        if (question.questionType === "numeric" && !text(answer)) {
+        if ((question.questionType === "numeric" || question.questionType === "short_answer") && !text(answer)) {
             return;
         }
 
@@ -9581,19 +9723,19 @@ export async function initModePage(mode) {
 
         const hint = document.createElement("p");
         hint.className = "question-hint";
-        hint.textContent = question.questionType === "numeric"
+        hint.textContent = question.questionType === "numeric" || question.questionType === "short_answer"
             ? "Type your answer and press Check."
             : "Tap a choice for instant feedback.";
 
         const answerArea = document.createElement("div");
         answerArea.className = "answer-area quiz-answer-area";
 
-        if (question.questionType === "numeric") {
+        if (question.questionType === "numeric" || question.questionType === "short_answer") {
             const form = document.createElement("form");
             form.className = "answer-form";
 
             const input = document.createElement("input");
-            input.type = "number";
+            input.type = question.questionType === "numeric" ? "number" : "text";
             input.className = "answer-input";
             input.placeholder = "Enter your answer";
             input.value = session.drafts?.[index] || "";
@@ -9655,7 +9797,7 @@ export async function initModePage(mode) {
         } else {
             feedback.appendChild(Object.assign(document.createElement("p"), {
                 className: "answer-hint",
-                textContent: question.questionType === "numeric"
+                textContent: question.questionType === "numeric" || question.questionType === "short_answer"
                     ? "You can answer this row whenever you’re ready."
                     : "Choose one option to lock in feedback for this row."
             }));
@@ -10115,7 +10257,6 @@ export async function initModePage(mode) {
     });
 
     await refresh();
-
     window.addEventListener("storage", async (event) => {
         if ([STORAGE_KEY, ACTIVE_SUBJECT_KEY, ACTIVE_CHAPTER_KEY, ACTIVE_MODE_KEY].includes(event.key)) {
             await refresh();
