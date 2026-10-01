@@ -1,6 +1,21 @@
 {
   "entries": [
     {
+      "date": "2026-10-01",
+      "hash": "b5c5057",
+      "message": "Small FIxes on The Planer"
+    },
+    {
+      "date": "2026-10-01",
+      "hash": "3d27a5f",
+      "message": "ADDED Planner and Chapters For Aerodynamics and Airlaw"
+    },
+    {
+      "date": "2026-09-25",
+      "hash": "840f1dc",
+      "message": "ADDED: Updates Documentation"
+    },
+    {
       "date": "2026-09-25",
       "hash": "f0a6fcb",
       "message": "ADD: Airlaw Quiz"
@@ -34,21 +49,6 @@
       "date": "2026-09-09",
       "hash": "e83af16",
       "message": "ADDED: Progress Bar on Quiz"
-    },
-    {
-      "date": "2026-09-09",
-      "hash": "5c04738",
-      "message": "ADDED: Entropy Card"
-    },
-    {
-      "date": "2026-09-07",
-      "hash": "65a8c48",
-      "message": "FIX: Make home scroll reset runtime independent"
-    },
-    {
-      "date": "2026-09-07",
-      "hash": "ddb594f",
-      "message": "FIX: Reset home scroll before render"
     }
   ]
 }
