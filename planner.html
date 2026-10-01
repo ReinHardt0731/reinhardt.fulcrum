@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fulcrum | Planner</title>
-    <link rel="stylesheet" href="styles.css?v=planner-v2-20260930">
+    <link rel="stylesheet" href="styles.css?v=planner-mode-nav-20261001">
 </head>
 <body class="planner-page">
     <main class="planner-shell">
+        <nav class="mode-buttons mode-switch-row planner-mode-nav" aria-label="Study mode navigation">
+            <a class="mode-button" href="quiz.html"><svg class="study-mode-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h10l4 4v14H5z"></path><path d="M14 3v5h5M8 12h7M8 16h5"></path></svg><span>Quiz</span></a>
+            <a class="mode-button" href="learn.html"><svg class="study-mode-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v17H6.5A2.5 2.5 0 0 0 4 22zM20 5.5A2.5 2.5 0 0 0 17.5 3H12v17h5.5A2.5 2.5 0 0 1 20 22z"></path></svg><span>Learn mode</span></a>
+            <a class="mode-button" href="flashcards.html"><svg class="study-mode-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 5 12 2-2 12-12-2z"></path><path d="m5 8-2 11 12 2M9 10l6 1M8 14l5 1"></path></svg><span>Flashcards</span></a>
+            <a class="mode-button" href="exam.html"><svg class="study-mode-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v17H7zM9 2h6v4H9z"></path><path d="m9 11 1.5 1.5L13 10M9 16h6"></path></svg><span>Exam</span></a>
+            <a class="mode-button" href="note.html"><svg class="study-mode-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5M9 12h6M9 16h6"></path></svg><span>Notes</span></a>
+            <a class="mode-button is-active" href="planner.html" aria-current="page"><svg class="study-mode-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M8 2v4M16 2v4M3 9h18M8 13h3v3H8z"></path></svg><span>Planner</span></a>
+        </nav>
         <header class="planner-hero panel">
             <div class="planner-hero-copy">
                 <div class="planner-title-row">
@@ -18,9 +26,9 @@
                     </div>
                     <a class="ghost-button planner-home-link" href="index.html">← Home</a>
                 </div>
-                <a class="planner-source-link" href="AELE-Last-Blast-Review-Schedule-1.pdf" target="_blank" rel="noopener noreferrer">Open the AELE Last Blast schedule PDF ↗</a>
             </div>
             <section class="planner-pomodoro panel" data-pomodoro aria-label="Pomodoro focus timer">
+                <div class="pomodoro-icon-tile" aria-hidden="true"><svg class="pomodoro-clock-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div>
                 <div class="pomodoro-face"><span class="pomodoro-phase" data-pomodoro-phase>Focus</span><strong class="pomodoro-time" data-pomodoro-time>25:00</strong></div>
                 <div class="pomodoro-actions">
                     <button class="pomodoro-button" data-pomodoro-toggle type="button">Start</button>

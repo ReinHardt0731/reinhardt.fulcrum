@@ -21,7 +21,7 @@
         window.addEventListener("load", resetHomeViewport);
         [0, 50, 150, 350, 700, 1200, 2000].forEach((delay) => window.setTimeout(resetHomeViewport, delay));
     </script>
-    <link rel="stylesheet" href="styles.css?v=planner-v1-20260930">
+    <link rel="stylesheet" href="styles.css?v=scheduler-credit-20261001">
 </head>
 <body class="home-page">
     <main class="home-shell">
@@ -213,6 +213,19 @@
                 </a>
             </div>
         </footer>
+
+        <section class="scheduler-credit-card panel" aria-label="Aero Blast Scheduler credit">
+            <div class="scheduler-credit-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            </div>
+            <div class="scheduler-credit-copy">
+                <p class="section-label">Aero Blast Scheduler</p>
+                <h2>Schedule credit</h2>
+                <p>Review schedule credited to</p>
+                <strong>Engr. Calvin JhonLabial</strong>
+            </div>
+            <span class="scheduler-credit-stamp">AELE LAST BLAST</span>
+        </section>
     </main>
 
     <script type="module" src="home.js?v=planner-v1-20260930"></script>

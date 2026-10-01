@@ -9173,18 +9173,11 @@ body.admin-drawer-collapsed .admin-subject-rail { display: flex; }
     flex: 0 0 auto;
     text-decoration: none;
 }
-.planner-source-link {
-    display: inline-block;
-    margin-top: 14px;
-    color: #8fe9df;
-    font-weight: 700;
-    text-decoration: none;
-}
-.planner-source-link:hover { text-decoration: underline; }
 .planner-pomodoro {
     position: relative;
     display: grid;
-    justify-items: center;
+    grid-template-columns: 58px minmax(0, 1fr);
+    align-items: center;
     gap: 12px;
     padding: 18px;
     border: 1px solid rgba(148, 163, 184, .18);
@@ -9195,6 +9188,20 @@ body.admin-drawer-collapsed .admin-subject-rail { display: flex; }
     display: grid;
     justify-items: center;
     gap: 2px;
+}
+.planner-pomodoro .pomodoro-icon-tile {
+    display: grid;
+    width: 58px;
+    height: 58px;
+    place-items: center;
+    border: 1px solid rgba(255, 209, 102, .3);
+    border-radius: 18px;
+    color: var(--secondary);
+    background: rgba(255, 209, 102, .07);
+}
+.planner-pomodoro .pomodoro-icon-tile .pomodoro-clock-icon {
+    width: 24px;
+    height: 24px;
 }
 .planner-pomodoro .pomodoro-time {
     font-size: clamp(2rem, 4vw, 2.65rem);
@@ -9508,4 +9515,109 @@ body.admin-drawer-collapsed .admin-subject-rail { display: flex; }
     .planner-gantt-label span { font-size: .56rem; }
     .planner-gantt-bar { font-size: .52rem; padding: 0 3px; }
     .planner-footer { flex-direction: column; }
+}
+
+/* Planner mode navigation mirrors the study pages and stays available while scrolling. */
+.planner-mode-nav {
+    position: sticky;
+    top: 12px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 2px;
+    padding: 6px;
+    border: 1px solid rgba(175, 205, 255, .14);
+    border-radius: 18px;
+    background: rgba(8, 17, 31, .94);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .14);
+}
+.planner-mode-nav .mode-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-width: 0;
+    flex: 1 1 0;
+    text-decoration: none;
+}
+.planner-mode-nav .mode-button:hover {
+    border-color: rgba(97, 195, 255, .28);
+    background: rgba(255, 255, 255, .1);
+}
+.planner-mode-nav .mode-button.is-active:hover { background: var(--mode-accent-soft); }
+.planner-pomodoro .pomodoro-actions { grid-column: 1 / -1; }
+.pomodoro-clock-icon {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Scheduler attribution card at the bottom of the home dashboard. */
+.scheduler-credit-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 18px;
+    overflow: hidden;
+    padding: 22px 26px;
+    border-color: rgba(255, 209, 102, .2);
+    background:
+        radial-gradient(circle at 92% 12%, rgba(255, 209, 102, .16), transparent 32%),
+        linear-gradient(125deg, rgba(20, 43, 72, .84), rgba(10, 22, 39, .8));
+}
+.scheduler-credit-mark {
+    display: grid;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    border: 1px solid rgba(255, 209, 102, .3);
+    border-radius: 16px;
+    color: var(--secondary);
+    background: rgba(255, 209, 102, .08);
+}
+.scheduler-credit-mark svg {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+.scheduler-credit-copy .section-label { margin: 0 0 5px; }
+.scheduler-credit-copy h2 {
+    margin: 0;
+    color: var(--text);
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+}
+.scheduler-credit-copy p:not(.section-label) {
+    margin: 5px 0 2px;
+    color: var(--muted);
+    font-size: .82rem;
+}
+.scheduler-credit-copy > strong { color: var(--text); font-size: .98rem; }
+.scheduler-credit-stamp {
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 209, 102, .2);
+    border-radius: 999px;
+    color: var(--secondary);
+    font-size: .65rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    white-space: nowrap;
+}
+@media (max-width: 900px) {
+    .planner-mode-nav { position: static; overflow-x: auto; }
+    .planner-mode-nav .mode-button { flex: 1 0 116px; }
+}
+@media (max-width: 700px) {
+    .scheduler-credit-card { grid-template-columns: auto minmax(0, 1fr); padding: 18px; }
+    .scheduler-credit-stamp { grid-column: 2; justify-self: start; }
 }
