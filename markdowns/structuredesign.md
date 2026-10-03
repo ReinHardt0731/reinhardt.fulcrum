@@ -625,6 +625,7 @@ The reinforced shell provides:
 | **Milling** | Unnecessary material is mechanically removed while retaining material needed for strength and rigidity. |
 | **Chemical Etching** | Material is selectively removed while retaining material needed for strength and rigidity. |
 ___
+
 ## Tail Design and Configurations
 ___
 
@@ -734,6 +735,8 @@ $$
 
 **Roll subsidence** is a non-oscillatory lateral mode in which the aircraft's roll rate gradually decreases after a rolling disturbance due to aerodynamic roll damping.
 
+***
+
 ### Elevator
 
 **The elevator** is the primary conventional longitudinal control surface. It produces a **pitching moment** about the aircraft's lateral axis and is used to control pitch attitude, angle of attack, and longitudinal trim.
@@ -748,25 +751,22 @@ The elevator is commonly used for:
 
 **A canard** is a horizontal aerodynamic surface located **forward of the main wing**. Depending on the aircraft configuration, the canard may perform functions similar to a conventional horizontal tail while also contributing to lift and longitudinal stability or control.
 
+![cannard,75](../asset/cannard.png)
+
 Canards may be:
 
 - **Fixed**
 - **Fully movable**
 - **Integrated with a foreplane control system**
 
-**Advantages of canards:**
+| **Advantages of Canards** | **Disadvantages of Canards** |
+|---|---|
+| Can contribute to lift | Can affect airflow reaching the main wing |
+| Provides longitudinal control | Requires careful longitudinal stability design |
+| Can improve maneuverability | May introduce additional aerodynamic and structural complexity |
+| Can be integrated into the aircraft's overall aerodynamic design | — |
 
-- Can contribute to lift
-- Provides longitudinal control
-- Can improve maneuverability
-- Can be integrated into the aircraft's overall aerodynamic design
-
-**Disadvantages of canards:**
-
-- Can affect airflow reaching the main wing
-- Requires careful longitudinal stability design
-- May introduce additional aerodynamic and structural complexity
-
+***
 ### Rudder
 
 **The rudder** is the primary directional control surface. It produces a **yawing moment** about the aircraft's vertical axis.
@@ -783,108 +783,63 @@ The rudder is commonly used for:
 
 **A dorsal fin** is a small aerodynamic surface extending from the upper portion of the fuselage into the base or forward portion of the vertical stabilizer.
 
-Its functions include:
+**A ventral fin** is a vertical aerodynamic surface extending downward from the fuselage. It provides additional directional stability and can supplement the vertical stabilizer. A major disadvantage is that a ventral fin can reduce **ground clearance**, which must be considered during takeoff, landing, and ground operations.
 
-- Increasing effective vertical-tail area
-- Improving directional stability
-- Improving directional control at high angles of attack
-- Helping delay airflow separation from the vertical tail
+![rudder,75](../asset/rudder.png)
 
-**A ventral fin** is a vertical aerodynamic surface extending downward from the fuselage. It provides additional directional stability and can supplement the vertical stabilizer.
-
-Its functions include:
-
-- Increasing directional stability
-- Providing additional vertical surface area
-- Improving yaw stability at high angles of attack
-- Helping maintain directional control when the main vertical tail becomes less effective
-
-A major disadvantage is that a ventral fin can reduce **ground clearance**, which must be considered during takeoff, landing, and ground operations.
-
+***
 ### Conventional Tail
 
 **The conventional tail** consists of a horizontal stabilizer and elevator mounted on the aft portion of the fuselage, together with a vertical stabilizer and rudder.
+![conventional,75](../asset/conventional_tail.png)
 
-**Advantages:**
+| **Advantages** | **Disadvantages** |
+|---|---|
+| Simple and well-established configuration | Horizontal tail may be affected by fuselage and wing wake |
+| Relatively straightforward structural design | Tail surfaces may experience disturbed airflow |
+| Easy maintenance and inspection | Requires sufficient ground clearance depending on aircraft geometry |
+| Good overall aerodynamic effectiveness | — |
 
-- Simple and well-established configuration
-- Relatively straightforward structural design
-- Easy maintenance and inspection
-- Good overall aerodynamic effectiveness
-
-**Disadvantages:**
-
-- Horizontal tail may be affected by fuselage and wing wake
-- Tail surfaces may experience disturbed airflow
-- Requires sufficient ground clearance depending on aircraft geometry
-
+---
+ 
 ### T-Tail
 
 **A T-tail** places the horizontal stabilizer on top of the vertical stabilizer, forming a "T" shape.
+![T Tail,75](../asset/t_tail.png)
 
-```model-card
-{
-  "title": "T Tail Configuration",
-  "src": "../asset/T_tail.glb",
-  "alt": "T Tail",
-  "controls": true,
-  "autoRotate": true,
-  "cameraOrbit": "45deg 65deg 2.5m",
-  "exposure": 1
-}
-```
+| **Advantages** | **Disadvantages** |
+|---|---|
+| Horizontal tail is positioned above much of the fuselage and wing wake | Heavier vertical stabilizer structure |
+| Provides good ground clearance for the horizontal tail | Increased structural loads at the vertical tail |
+| Useful for aircraft with rear-mounted engines | More difficult maintenance access |
+| Can provide favorable airflow at certain flight conditions | Potential for **deep-stall** behavior at high angles of attack |
 
-**Advantages:**
-
-- Horizontal tail is positioned above much of the fuselage and wing wake
-- Provides good ground clearance for the horizontal tail
-- Useful for aircraft with rear-mounted engines
-- Can provide favorable airflow at certain flight conditions
-
-**Disadvantages:**
-
-- Heavier vertical stabilizer structure
-- Increased structural loads at the vertical tail
-- More difficult maintenance access
-- Potential for **deep-stall** behavior at high angles of attack
+---
 
 ### V-Tail
 
-**A V-tail** combines the functions of the horizontal and vertical tail surfaces into two surfaces arranged in a V configuration.
-
-The control system must combine elevator and rudder commands through **control mixing**.
-
-**Advantages:**
-
-- Fewer tail surfaces
-- Potential reduction in wetted area
-- Distinct aerodynamic and structural arrangement
-- Can reduce the number of separate tail surfaces
-
-**Disadvantages:**
-
-- Requires control mixing
-- Pitch and yaw control are coupled
-- More complex control-system design
-- Aerodynamic interactions between control inputs must be considered
+**A V-tail** combines the functions of the horizontal and vertical tail surfaces into two surfaces arranged in a V configuration. The control system must combine elevator and rudder commands through **control mixing**.
+![V Tail,75](../asset/v_tail.png)
+| **Advantages** | **Disadvantages** |
+|---|---|
+| Fewer tail surfaces | Requires control mixing |
+| Potential reduction in wetted area | Pitch and yaw control are coupled |
+| Distinct aerodynamic and structural arrangement | More complex control-system design |
+| Can reduce the number of separate tail surfaces | Aerodynamic interactions between control inputs must be considered |
+---
 
 ### H-Tail
 
 **An H-tail** uses two vertical stabilizers connected by a horizontal stabilizer, producing an arrangement resembling the letter "H".
 
-**Advantages:**
+![V Tail,75](../asset/h_tail.png)
 
-- Can provide good directional stability
-- Useful for aircraft requiring multiple vertical tails
-- Can provide redundancy in directional-control surfaces
-- Useful where engine, propeller, or fuselage geometry influences tail placement
-
-**Disadvantages:**
-
-- Additional structural weight
-- Increased aerodynamic drag
-- More components to manufacture and maintain
-- More complex structural and aerodynamic interactions
+| **Advantages** | **Disadvantages** |
+|---|---|
+| Can provide good directional stability | Additional structural weight |
+| Useful for aircraft requiring multiple vertical tails | Increased aerodynamic drag |
+| Can provide redundancy in directional-control surfaces | More components to manufacture and maintain |
+| Useful where engine, propeller, or fuselage geometry influences tail placement | More complex structural and aerodynamic interactions |
 
 ### Tail Configuration Considerations
 
@@ -902,6 +857,11 @@ The control system must combine elevator and rudder commands through **control m
 
 ## Wing Configuration and Construction
 ### Wing Parameters
+**Aspect Ratio**
+**Taper Ratio**
+**Sweep Angle**
+**Dihedral Angle**
+
 ### High Wing
 ### Mid Wing
 ### Low Wing
@@ -910,8 +870,10 @@ The control system must combine elevator and rudder commands through **control m
 
 ## Primary and  Secondary Control Surfaces
 ### Aeleron, Rudder and Elevator
+
 ### Flaps
-### Trim Tab, Servo Tab
+### Trim Tab
+
 
 ## PowerPlant Placement and Configuration
 ## Landing Gear Structure and Configuration

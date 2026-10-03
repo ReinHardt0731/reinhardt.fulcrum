@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 270" role="img" aria-labelledby="title desc">
+  <title id="title">Open box with a square base</title>
+  <desc id="desc">An open-top box has a square base of side x and height h.</desc>
+  <rect width="420" height="270" rx="18" fill="#f5f9fc"/>
+  <path d="M112 105 210 62 310 105 210 149Z" fill="#dff3ff" stroke="#168bd2" stroke-width="4"/>
+  <path d="M112 105V205L210 248V149M310 105V205L210 248" fill="#b8e6fb" fill-opacity=".55" stroke="#168bd2" stroke-width="4"/>
+  <path d="M112 205 210 162 310 205" fill="none" stroke="#168bd2" stroke-width="3" stroke-dasharray="7 5"/>
+  <text x="211" y="94" fill="#17334a" font-family="system-ui,sans-serif" font-size="17" text-anchor="middle">square base x × x</text>
+  <text x="88" y="160" fill="#a95016" font-family="system-ui,sans-serif" font-size="17">h</text>
+  <text x="208" y="229" fill="#a95016" font-family="system-ui,sans-serif" font-size="17">h</text>
+</svg>

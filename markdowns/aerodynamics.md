@@ -1,14 +1,22 @@
 # Fundamentals of Aerodynamics
+___
+When an object moves through the atmosphere, it interacts with the surrounding air. How the air responds depends on the geometry of the object and its operating conditions, particularly its velocity, altitude, and orientation. Understanding this behavior is complex because air is a fluid—a substance that continuously deforms when subjected to an applied shear stress. Air is primarily a mixture of nitrogen and oxygen, with smaller amounts of other gases.
 
-Aerodynamics is the study of motion of air and how thermodynamic properties changes as an object is being subjected to a moving air. Air is made up of
+![Air,75](../asset/Air_composition.PNG)
 
-![Air](../asset/Air_composition.PNG)
+> Aerodynamics is the study of the motion of air and its interaction with objects moving through it. It allows us to understand how the properties of airflow vary with position and time. These properties include pressure, density, temperature, and velocity
 
+Forces acting on an Aircraft when subjected to an airflow can be discretized into two:
+- Normal Force which is a force acting normal to the surface
+- Shear Force which is a force acting tangential to the surface
 
+Understanding how these two
 ## Properties of Air
-Pressure Temperature and Density
+___
+Pressure describes the normal force exerted by the fluid per unit area. Density is the mass of fluid per unit volume. Temperature is a measure related to the average microscopic kinetic energy of the molecules. Velocity describes the speed and direction of the bulk motion of the fluid.
 
-The particle card shows how temperature, density, and pressure relate in a simplified ideal-gas model. Particle speed follows the square root of temperature, while the animation provides a visual model of moving gas particles.
+By studying how these properties change as air flows around an object, we can understand the forces and moments produced by the airflow and ultimately predict the aerodynamic behavior and performance of the object.
+
 
 ```particle-card
 {
@@ -48,19 +56,9 @@ The particle card shows how temperature, density, and pressure relate in a simpl
   ]
 }
 ```
-
-Assumptions when dealing with aerodynamic problems involves
-### Incompressibility
-This implies a condition where density is constant along the flow field.
-
-(Put a compressibility MAP or range)
-
-### Inviscid
-Inviscid Implies a condition where 
-### Adiabatic 
-### Isentropic
-
 ## Geopotential and Geomtric Altitude
+___
+As an object increases its altitude it experiences a decrease of gravity, thus for a given value of altitude comes with a relative value of acceleration due to gravity which is expressed as:
 
 $$g = g_0\left[\frac{r}{h_a}\right]^2$$
 
@@ -68,11 +66,39 @@ where
 
 $$h_a = r + h_G$$
 
+$h_a$ = absolute altitude
+$r$ = radius of the earth
+$h_G$ = altitude measured from sea level;
+
 Therefore
 
 $$g = g_0\left[\frac{r}{ r + h_G}\right]^2$$
 
-Example: Problem Solving
+\\
+### Example 1:
+### Solution:
+$$C_L = \frac{2W}{\rho V^2S}$$
+$$ \rho = \rho_1 \left[1+\frac{ah}{T_0}\right]^{4.26}$$
+$$\rho = 1.225\, \frac {kg}{m^3}\left[1+\frac{-0.00651 \frac {K}{m} \cdot 1000 \,m}{288.2 \,K}\right]^{4.26}$$
+$$\rho = 1.1114  \, \frac{kg}{m^3}$$
+We could now Solve for the CL:
+$$C_L = \frac{2 \,\cdot6500\,N}{1.1114\,\frac{kg}{m^3}\,\cdot 25^2 \,\frac{m^2}{s^2}\,\cdot\,16.2 \, m^2}$$
+$$C_L =1.1553 $$
+Solve for CD:
+$$C_D = C_{D0} + \frac{C_L^2}{\pi e AR}$$
+$$AR = \frac{b^2}{S} = \frac{11^2}{16.2} = 7.469 $$
+$$C_D = 0.03 + \frac{1.1553^2}{\pi\cdot0.85\,\cdot 7.469}$$
+$$C_D = 0.0969 $$
+$$T_R = \frac{W}{C_L/C_D} = \frac{6500}{1.1553/0.0969} $$
+
+### Answer: 
+$$T_R = 545.2 \,N$$
+We could Also Use The Drag Formula which yields the same answer
+$$D = T_R$$
+$$T_R = \frac{1}{2}\rho V^2 S C_D$$
+$$T_R= \frac{1}{2}\cdot  1.1114  \, \frac{kg}{m^3} \cdot 25^2 m/s \cdot16.2 \,m^2 \cdot 0.0969 = 545.2 \, N$$
+\\
+
 
 
 
@@ -90,9 +116,6 @@ $$ \frac{\rho}{\rho_0} = \left[1 + \frac{ah}{T_0} \right]^{4.26}$$
 $$P = $$
 
 ## Conservation of Mass, Energy and Momentum
-
-
-
 Images are rendered responsively and include alternative text for accessibility.
 
 $$\rho_1 A_1 V_1 = \rho_2 A_2 V_1$$
@@ -128,16 +151,16 @@ $$A_1 V_1 =  A_2 V_2$$
 }
 ```
 
-\\
-### Example 1: A plane is flying at a given altitude
-Determine the required velocity.
-### Solution:
-$$A + B = C$$
-asdsadad
-### Answer:
-$$C = 3$$
-asdsadasd
-\\
+
+## Assumptions
+### Incompressibility
+
+
+### Inviscid
+Inviscid Implies a condition where 
+### Adiabatic 
+### Isentropic
+
 
 ## Mach Number and Speed of Sound
 ___

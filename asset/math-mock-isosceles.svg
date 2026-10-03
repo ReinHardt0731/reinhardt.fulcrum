@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 270" role="img" aria-labelledby="title desc">
+  <title id="title">Isosceles triangle with altitude</title>
+  <desc id="desc">The altitude divides the isosceles triangle into two right triangles with equal half-bases.</desc>
+  <rect width="420" height="270" rx="18" fill="#f5f9fc"/>
+  <path d="M85 220 210 48 335 220Z" fill="#dff3ff" stroke="#168bd2" stroke-width="4"/>
+  <path d="M210 48V220" stroke="#ed8b35" stroke-width="4" stroke-dasharray="8 6"/>
+  <path d="M210 204H226V220" fill="none" stroke="#526b7d" stroke-width="2.5"/>
+  <path d="M140 132 151 140M269 140 280 132" stroke="#17334a" stroke-width="3" stroke-linecap="round"/>
+  <text x="220" y="136" fill="#a95016" font-family="system-ui,sans-serif" font-size="17">h</text>
+  <text x="139" y="239" fill="#17334a" font-family="system-ui,sans-serif" font-size="16">b / 2</text>
+  <text x="261" y="239" fill="#17334a" font-family="system-ui,sans-serif" font-size="16">b / 2</text>
+  <text x="116" y="116" fill="#17334a" font-family="system-ui,sans-serif" font-size="16">s</text>
+  <text x="291" y="116" fill="#17334a" font-family="system-ui,sans-serif" font-size="16">s</text>
+</svg>

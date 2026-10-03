@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 250" role="img" aria-labelledby="title desc">
+  <title id="title">Rectangular enclosure beside a wall</title>
+  <desc id="desc">A three-sided fence forms a rectangle against a wall; two widths and one length use the fencing.</desc>
+  <rect width="420" height="250" rx="18" fill="#f5f9fc"/>
+  <path d="M72 57H348" stroke="#526b7d" stroke-width="9" stroke-linecap="round"/>
+  <text x="210" y="39" fill="#526b7d" font-family="system-ui,sans-serif" font-size="15" text-anchor="middle">building wall</text>
+  <path d="M112 57V190H308V57" fill="#dff3ff" fill-opacity=".7" stroke="#168bd2" stroke-width="5"/>
+  <path d="M112 207H308" stroke="#ed8b35" stroke-width="2.5"/>
+  <path d="M112 200V214M308 200V214" stroke="#ed8b35" stroke-width="2.5"/>
+  <text x="210" y="232" fill="#a95016" font-family="system-ui,sans-serif" font-size="17" text-anchor="middle">length y</text>
+  <text x="83" y="127" fill="#17334a" font-family="system-ui,sans-serif" font-size="16" transform="rotate(-90 83 127)">width x</text>
+  <text x="338" y="127" fill="#17334a" font-family="system-ui,sans-serif" font-size="16" transform="rotate(90 338 127)">width x</text>
+</svg>
