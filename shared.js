@@ -1064,6 +1064,25 @@ function normalizeExplanationImages(entry) {
     }).filter((image) => image.src);
 }
 
+function normalizeQuestionImages(entry) {
+    const rawImages = entry?.questionImages
+        ?? entry?.question_images
+        ?? entry?.questionImage
+        ?? entry?.question_image
+        ?? [];
+    const images = Array.isArray(rawImages) ? rawImages : [rawImages];
+    return images.map((image) => {
+        if (typeof image === "string") {
+            return { src: text(image), alt: "", caption: "" };
+        }
+        return {
+            src: text(image?.src || image?.path || image?.url),
+            alt: text(image?.alt),
+            caption: text(image?.caption)
+        };
+    }).filter((image) => image.src);
+}
+
 function createExplanationImagesElement(images) {
     const normalizedImages = Array.isArray(images) ? images : [];
     if (!normalizedImages.length) {
@@ -1078,6 +1097,32 @@ function createExplanationImagesElement(images) {
         const image = document.createElement("img");
         image.src = imageData.src;
         image.alt = imageData.alt || imageData.caption || "Explanation diagram";
+        image.loading = "lazy";
+        figure.appendChild(image);
+        if (imageData.caption) {
+            const caption = document.createElement("figcaption");
+            caption.textContent = imageData.caption;
+            figure.appendChild(caption);
+        }
+        gallery.appendChild(figure);
+    });
+    return gallery;
+}
+
+function createQuestionImagesElement(images) {
+    const normalizedImages = Array.isArray(images) ? images : [];
+    if (!normalizedImages.length) {
+        return null;
+    }
+
+    const gallery = document.createElement("div");
+    gallery.className = "question-figures";
+    normalizedImages.forEach((imageData) => {
+        const figure = document.createElement("figure");
+        figure.className = "question-figure";
+        const image = document.createElement("img");
+        image.src = imageData.src;
+        image.alt = imageData.alt || imageData.caption || "Question diagram";
         image.loading = "lazy";
         figure.appendChild(image);
         if (imageData.caption) {
@@ -1122,9 +1167,10 @@ export function normalizeQuestion(entry, position) {
     const explanation = formatExplanationText(entry.explanation || entry.explaination);
     const tags = normalizeTags(entry.tags);
     const explanationImages = normalizeExplanationImages(entry);
+    const questionImages = normalizeQuestionImages(entry);
 
     if (questionType === "calculation") {
-        return generateCalculationQuestion(entry, position);
+        return { ...generateCalculationQuestion(entry, position), questionImages };
     }
 
     if (questionType === "numeric") {
@@ -1141,6 +1187,7 @@ export function normalizeQuestion(entry, position) {
             answerText: text(entry.answerText || entry.answer_text) || formatNumericAnswer(expectedAnswer),
             explanation,
             explanationImages,
+            questionImages,
             tags,
             expectedAnswer,
             acceptedDeviation: Number.isInteger(Number(entry.acceptedDeviation ?? entry.accepted_deviation ?? entry.deviation))
@@ -1163,6 +1210,7 @@ export function normalizeQuestion(entry, position) {
             answerText,
             explanation,
             explanationImages,
+            questionImages,
             tags,
             expectedAnswer: null,
             acceptedDeviation: 0
@@ -1196,6 +1244,7 @@ export function normalizeQuestion(entry, position) {
         answerText: text(entry.answerText || entry.answer_text || entry.answer) || choices[answerIndex],
         explanation,
         explanationImages,
+        questionImages,
         tags,
         expectedAnswer: null,
         acceptedDeviation: 0
@@ -1210,6 +1259,7 @@ function coerceQuestion(entry, position) {
         const question = text(entry?.question || entry?.question_text || entry?.prompt || entry?.text || rawQuestionText || `Question ${position}`);
         const explanation = formatExplanationText(entry?.explanation || entry?.explaination);
         const tags = normalizeTags(entry?.tags);
+        const questionImages = normalizeQuestionImages(entry);
         const rawChoices = (Array.isArray(entry?.choices) ? entry.choices : []).map((choice) => text(choice)).filter(Boolean);
         const hasPlaceholderChoices = rawChoices.length >= 2
             && rawChoices.every((choice, index) => choice.toLowerCase() === `option ${index + 1}`);
@@ -1229,6 +1279,7 @@ function coerceQuestion(entry, position) {
                 answerIndex: -1,
                 answerText: text(entry?.answerText || entry?.answer_text) || formatNumericAnswer(numericAnswer),
                 explanation,
+                questionImages,
                 tags,
                 expectedAnswer: numericAnswer,
                 acceptedDeviation: Number.isInteger(Number(entry?.acceptedDeviation ?? entry?.accepted_deviation ?? entry?.deviation))
@@ -1246,6 +1297,7 @@ function coerceQuestion(entry, position) {
                 answerIndex: -1,
                 answerText,
                 explanation,
+                questionImages,
                 tags,
                 expectedAnswer: null,
                 acceptedDeviation: 0
@@ -1272,6 +1324,7 @@ function coerceQuestion(entry, position) {
             answerIndex: answerIndex >= 0 && answerIndex < safeChoices.length ? answerIndex : 0,
             answerText: text(entry?.answerText || entry?.answer_text || entry?.answer) || safeChoices[Math.max(0, answerIndex)] || safeChoices[0],
             explanation,
+            questionImages,
             tags,
             expectedAnswer: null,
             acceptedDeviation: 0
@@ -7373,6 +7426,10 @@ function renderLearnCheckpointStage(stage, progressFill, session, onReviewSubmit
         questionText.textContent = question.question;
         const reviewResult = session.learnReviewResults?.[questionIndex];
         content.appendChild(questionText);
+        const questionImages = createQuestionImagesElement(question.questionImages);
+        if (questionImages) {
+            content.appendChild(questionImages);
+        }
         if (reviewResult) {
             const status = document.createElement("p");
             status.className = "learn-review-status";
@@ -7896,6 +7953,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
         const questionText = document.createElement("h4");
         questionText.textContent = question.question;
+        const questionImages = createQuestionImagesElement(question.questionImages);
 
         const hint = document.createElement("p");
         hint.className = "question-hint";
@@ -7990,7 +8048,11 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             answerArea.appendChild(Object.assign(document.createElement("p"), { className: "answer-hint", textContent: session.setupError }));
         }
 
-        card.append(header, questionText, hint, answerArea, actions);
+        card.append(header, questionText);
+        if (questionImages) {
+            card.appendChild(questionImages);
+        }
+        card.append(hint, answerArea, actions);
         stage.appendChild(card);
         renderQuestionMath(card);
         renderProgress(progressFill, session);
@@ -8233,10 +8295,12 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
         const flashcardFront = document.createElement("div");
         flashcardFront.className = "flashcard-face flashcard-front";
-        flashcardFront.append(
-            Object.assign(document.createElement("span"), { className: "flashcard-side-label", textContent: "Question" }),
-            Object.assign(document.createElement("div"), { className: "flashcard-face-text", textContent: question.question })
-        );
+        flashcardFront.appendChild(Object.assign(document.createElement("span"), { className: "flashcard-side-label", textContent: "Question" }));
+        const flashcardQuestionImages = createQuestionImagesElement(question.questionImages);
+        if (flashcardQuestionImages) {
+            flashcardFront.appendChild(flashcardQuestionImages);
+        }
+        flashcardFront.appendChild(Object.assign(document.createElement("div"), { className: "flashcard-face-text", textContent: question.question }));
 
         const flashcardBack = document.createElement("div");
         flashcardBack.className = "flashcard-face flashcard-back";
@@ -8458,10 +8522,15 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         }
     }
 
+    const questionImages = createQuestionImagesElement(question.questionImages);
     if (session.mode === "flashcards") {
         card.append(header, answerArea);
     } else {
-        card.append(header, questionText, hint, answerArea);
+        card.append(header, questionText);
+        if (questionImages) {
+            card.appendChild(questionImages);
+        }
+        card.append(hint, answerArea);
     }
     if (session.mode === "learn" && session.learnSlideNext) {
         card.classList.add("learn-slide-left");
@@ -9720,6 +9789,7 @@ export async function initModePage(mode) {
 
         const questionText = document.createElement("h4");
         questionText.textContent = question.question;
+        const questionImages = createQuestionImagesElement(question.questionImages);
 
         const hint = document.createElement("p");
         hint.className = "question-hint";
@@ -9804,7 +9874,11 @@ export async function initModePage(mode) {
         }
 
         answerArea.appendChild(feedback);
-        card.append(header, questionText, hint, answerArea);
+        card.append(header, questionText);
+        if (questionImages) {
+            card.appendChild(questionImages);
+        }
+        card.append(hint, answerArea);
         renderQuestionMath(card);
         return card;
     };
