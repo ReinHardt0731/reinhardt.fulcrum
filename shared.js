@@ -1414,7 +1414,7 @@ async function resolveChapterData(entry, chapterLookup = {}) {
         }
 
         try {
-            const response = await fetch(file, { cache: "no-store" });
+            const response = await fetch(file);
             if (response.ok) {
                 const payload = await response.json();
                 const resolved = Array.isArray(payload)
@@ -1533,7 +1533,7 @@ export function normalizeQuizPayload(payload, subjectOverride = "") {
 
 export async function loadSubjects() {
     try {
-        const response = await fetch(SUBJECTS_PATH, { cache: "no-store" });
+        const response = await fetch(SUBJECTS_PATH);
         if (!response.ok) {
             return [];
         }
@@ -8625,7 +8625,11 @@ export async function initHomePage() {
         activeSubject: null,
         activeChapter: null,
         mode: "quiz",
-        carouselIndex: 0
+        carouselIndex: 0,
+        loading: false,
+        refreshing: false,
+        loadError: false,
+        updateEntries: DEFAULT_UPDATE_LOG
     };
 
     const renderModeLinks = () => {
@@ -8650,6 +8654,12 @@ export async function initHomePage() {
     if (elements.progress) {
         elements.progress.addEventListener("click", () => {
             window.location.href = "progress.html";
+        });
+    }
+
+    if (elements.refresh) {
+        elements.refresh.addEventListener("click", () => {
+            void refresh();
         });
     }
 
@@ -8825,6 +8835,31 @@ export async function initHomePage() {
     };
 
     const renderDashboardProgress = () => {
+        if (state.loading || state.loadError) {
+            if (elements.progressOverviewValue) elements.progressOverviewValue.textContent = state.loading ? "…" : "—";
+            if (elements.progressBarFill) elements.progressBarFill.style.width = "0%";
+            if (elements.progressEmpty) elements.progressEmpty.hidden = true;
+            if (elements.subjectProgressList) elements.subjectProgressList.replaceChildren();
+            if (elements.continuationSubject) elements.continuationSubject.textContent = state.loading ? "Loading your study library…" : "Study library unavailable";
+            if (elements.continuationStatus) elements.continuationStatus.textContent = state.loading ? "Loading" : "Retry available";
+            if (elements.continuationChapter) elements.continuationChapter.textContent = state.loading
+                ? "Loading chapter recommendations…"
+                : "Check your connection, then use the refresh button above.";
+            if (elements.continuationDetail) elements.continuationDetail.textContent = "";
+            if (elements.continuationProgress) elements.continuationProgress.hidden = true;
+            if (elements.continuationAction) elements.continuationAction.hidden = true;
+            if (elements.continuationNotes) elements.continuationNotes.hidden = true;
+            if (elements.learnContinuationSubject) elements.learnContinuationSubject.textContent = state.loading ? "Loading your study library…" : "Study library unavailable";
+            if (elements.learnContinuationStatus) elements.learnContinuationStatus.textContent = state.loading ? "Loading" : "Retry available";
+            if (elements.learnContinuationChapter) elements.learnContinuationChapter.textContent = state.loading
+                ? "Loading chapter recommendations…"
+                : "Check your connection, then use the refresh button above.";
+            if (elements.learnContinuationDetail) elements.learnContinuationDetail.textContent = "";
+            if (elements.learnContinuationProgress) elements.learnContinuationProgress.hidden = true;
+            if (elements.learnContinuationAction) elements.learnContinuationAction.hidden = true;
+            return;
+        }
+
         const progress = getDashboardProgress(state.subjects);
         renderLearnContinuation(progress);
         const formatCount = (value) => Number(value || 0).toLocaleString();
@@ -8945,17 +8980,26 @@ export async function initHomePage() {
 
         const chapterCount = state.subjects.reduce((total, subject) => total + subject.chapters.length, 0);
         const questionCount = state.subjects.reduce((total, subject) => total + tallyQuestionCount(subject), 0);
-        if (summaryElements.subjects) summaryElements.subjects.textContent = state.subjects.length;
-        if (summaryElements.chapters) summaryElements.chapters.textContent = chapterCount;
-        if (summaryElements.questions) summaryElements.questions.textContent = questionCount;
+        const summaryValue = state.loading ? "…" : state.loadError ? "—" : null;
+        if (summaryElements.subjects) summaryElements.subjects.textContent = summaryValue ?? state.subjects.length;
+        if (summaryElements.chapters) summaryElements.chapters.textContent = summaryValue ?? chapterCount;
+        if (summaryElements.questions) summaryElements.questions.textContent = summaryValue ?? questionCount;
 
         if (elements.title) {
-            elements.title.textContent = state.activeSubject ? state.activeSubject.name : "Upload a quiz to begin";
+            elements.title.textContent = state.loading
+                ? "Loading your study library…"
+                : state.loadError
+                    ? "Couldn’t load the study library"
+                    : state.activeSubject ? state.activeSubject.name : "Upload a quiz to begin";
         }
         if (elements.meta) {
-            elements.meta.textContent = state.activeSubject
-                ? `${state.activeSubject.chapters.length} chapter${state.activeSubject.chapters.length === 1 ? "" : "s"} • ${tallyQuestionCount(state.activeSubject)} questions loaded from subjects.json.`
-                : "This GitHub Pages version loads subjects from subjects.json.";
+            elements.meta.textContent = state.loading
+                ? "Loading subjects and chapters…"
+                : state.loadError
+                    ? "Check your connection, then select the refresh button to try again."
+                    : state.activeSubject
+                        ? `${state.activeSubject.chapters.length} chapter${state.activeSubject.chapters.length === 1 ? "" : "s"} • ${tallyQuestionCount(state.activeSubject)} questions loaded from subjects.json.`
+                        : "This GitHub Pages version loads subjects from subjects.json.";
 
         }
 
@@ -9002,14 +9046,43 @@ export async function initHomePage() {
     };
 
     const refresh = async () => {
-        const fresh = await storageSelectState();
-
-        state.subjects = fresh.subjects;
-        state.activeSubject = fresh.activeSubject;
-        state.activeChapter = fresh.activeChapter;
-        state.mode = fresh.mode;
-        state.updateEntries = await loadUpdateEntries();
+        if (state.refreshing) return;
+        state.refreshing = true;
+        state.loading = !state.subjects.length;
+        state.loadError = false;
+        if (elements.refresh) {
+            elements.refresh.disabled = true;
+            elements.refresh.setAttribute("aria-busy", "true");
+        }
         render();
+
+        const updateEntriesPromise = loadUpdateEntries();
+        try {
+            const fresh = await storageSelectState();
+            if (fresh.subjects.length) {
+                state.subjects = fresh.subjects;
+                state.activeSubject = fresh.activeSubject;
+                state.activeChapter = fresh.activeChapter;
+                state.mode = fresh.mode;
+                state.updateEntries = DEFAULT_UPDATE_LOG;
+            }
+            state.loadError = !state.subjects.length;
+        } catch {
+            state.loadError = !state.subjects.length;
+        } finally {
+            state.loading = false;
+            state.refreshing = false;
+            if (elements.refresh) {
+                elements.refresh.disabled = false;
+                elements.refresh.removeAttribute("aria-busy");
+            }
+            render();
+        }
+
+        updateEntriesPromise.then((entries) => {
+            state.updateEntries = entries;
+            renderUpdateLog();
+        });
     };
 
     await refresh();
