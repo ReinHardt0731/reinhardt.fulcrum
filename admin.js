@@ -18,7 +18,7 @@ import {
     hydrateMarkdownPreview,
     renderMarkdownPreview,
     renderForceSystemModelCard
-} from "./shared.js";
+} from "./shared.js?v=feedback-dashboard-icon-20261003";
 import { initAdminShell } from "./admin-shell.js";
 
 document.addEventListener("DOMContentLoaded", async () => {

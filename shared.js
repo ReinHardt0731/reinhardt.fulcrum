@@ -43,6 +43,19 @@ const DEFAULT_UPDATE_LOG = [
 
 const text = (value) => String(value ?? "").trim();
 
+export function ensureFeedbackLink() {
+    if (!document.body || document.querySelector(".site-feedback-link")) return;
+
+    const link = document.createElement("a");
+    link.className = "site-feedback-link";
+    link.href = "https://forms.gle/r6tUxqWEdxaevJmR7";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 4.75h16a1.75 1.75 0 0 1 1.75 1.75v9A1.75 1.75 0 0 1 20 17.25h-8.1l-4.6 3.5v-3.5H4a1.75 1.75 0 0 1-1.75-1.75v-9A1.75 1.75 0 0 1 4 4.75Zm0 1.5a.25.25 0 0 0-.25.25v9a.25.25 0 0 0 .25.25h4.8v1.97l2.6-1.97H20a.25.25 0 0 0 .25-.25v-9a.25.25 0 0 0-.25-.25H4Z"/></svg><span class="site-feedback-label">Feedback / Report</span>';
+    link.setAttribute("aria-label", "Send a suggestion, feedback, or report an issue");
+    document.body.appendChild(link);
+}
+
 function shuffleArray(values) {
     const next = [...values];
     for (let index = next.length - 1; index > 0; index -= 1) {
@@ -8546,6 +8559,8 @@ export async function initHomePage() {
     if (!document.body.classList.contains("home-page")) {
         return;
     }
+
+    ensureFeedbackLink();
 
     const pageMap = {
         quiz: "quiz.html",

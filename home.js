@@ -1,4 +1,4 @@
-import { initHomePage } from "./shared.js?v=planner-v1-20260930";
+import { initHomePage } from "./shared.js?v=feedback-dashboard-icon-20261003";
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
