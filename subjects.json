@@ -48364,6 +48364,210 @@
           ],
           "expectedAnswer": 2.88,
           "acceptedDeviation": 0.01
+        },
+        {
+          "question": "A cargo aircraft begins a cruise mission at 32,000 lb gross weight and carries 2,800 lb of supplies. Its drag polar is $C_D=0.022+0.048C_L^2$, propeller efficiency is 0.86, BSFC is 0.46 lb/(BHP-hr), wing area is 320 ft^2, and cruise density is 0.001 slug/ft^3. It flies 1,300 mi to the delivery point, drops the supplies, then returns the same distance. Assume it cruises at the $C_L$ for maximum $L/D$ on both legs and ignore climb, descent, reserve fuel, and non-cruise fuel.\n\nDetermine (a) total cruise fuel consumed and (b) total cruise flying time. Enter the fuel in lb; the solution also shows the time.",
+          "questionType": "numeric",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "6536 lb",
+          "explanation": "Given: Initial gross weight = 32,000 lb; payload dropped at destination = 2,800 lb; $C_D=0.022+0.048C_L^2$; $\\eta_p=0.86$; BSFC = 0.46 lb/(BHP-hr); $S=320$ ft^2; $rho=0.001$ slug/ft^3; each leg = 1,300 mi\n\nFormula: $C_{L,opt}=\\sqrt{C_{D0}/k}$; $(L/D)_{max}=C_{L,opt}/C_{D,opt}$. For each leg, $R=(1,980,000\\eta_p/BSFC)(L/D)\\ln(W_i/W_f)$, with range in ft. At fixed $C_L$, $V=\\sqrt{2W/(rho S C_L)}$ and $t=2/(aV_i)[e^{aR/2}-1]$, where $a=BSFC/[1,980,000\\eta_p(L/D)]$.\n\nSolution: $C_{L,opt}=\\sqrt{0.022/0.048}=0.6770$; $C_{D,opt}=0.022+0.048(0.6770)^2=0.0440$, so $(L/D)_{max}=15.386$. Convert each leg: $1,300(5,280)=6,864,000$ ft. The Breguet weight ratio for one leg is $r=\\exp[R\\,BSFC/(1,980,000\\eta_p(L/D))]=1.12808$.\n\nOutbound final weight is $32,000/1.12808=28,366.9$ lb, so outbound fuel is $32,000-28,366.9=3,633.1$ lb. After dropping the 2,800 lb payload, return-start weight is $25,566.9$ lb. Return final weight is $25,566.9/1.12808=22,664.2$ lb, so return fuel is 2,902.7 lb. Total cruise fuel is $3,633.1+2,902.7=6,535.8$ lb.\n\nFor time, the initial outbound speed is $\\sqrt{2(32,000)/[(0.001)(320)(0.6770)]}=543.5$ ft/s. Applying the time integral at the fixed lift coefficient gives 3.62 h outbound. The return begins at 25,566.9 lb, giving an initial return speed of 485.8 ft/s and a return time of 4.05 h. Total cruise time is 7.66 h.\n\nPart (b): Total cruise time = 3.62 h + 4.05 h = 7.66 h.\n\nAnswer: 6536 lb",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "performance revision",
+            "range and endurance",
+            "worked problem"
+          ],
+          "expectedAnswer": 6536.0,
+          "acceptedDeviation": 1
+        },
+        {
+          "question": "A cargo aircraft flies 1,500 mi outbound at 250 mi/h carrying a load. Its average cruise fuel flow is 520 lb/h on that leg. It delivers the load and returns 1,500 mi at the same speed with an average fuel flow of 430 lb/h. Ignore climb and reserve fuel. Determine (a) total cruise fuel and (b) total cruise time. Enter total fuel in lb.",
+          "questionType": "numeric",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "5700 lb",
+          "explanation": "Given: Outbound and return distance = 1,500 mi each; speed = 250 mi/h; outbound fuel flow = 520 lb/h; return fuel flow = 430 lb/h\n\nFormula: $t=R/V$; $m_f=\\dot m_f t$\n\nSolution: Each leg takes $1,500/250=6$ h. Outbound fuel is $520(6)=3,120$ lb; return fuel is $430(6)=2,580$ lb. Total fuel is $3,120+2,580=5,700$ lb. Total cruise time is $6+6=12$ h.\n\nPart (b): Total cruise time = 12 h.\n\nAnswer: 5700 lb",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "performance revision",
+            "range and endurance",
+            "worked problem"
+          ],
+          "expectedAnswer": 5700,
+          "acceptedDeviation": 1
+        },
+        {
+          "question": "An ideal jet cruises at 780 km/h with $L/D=17$. Its thrust-specific fuel consumption is $c_T=0.75$ h$^{-1}$, and its initial-to-final weight ratio for the cruise segment is 1.25. Estimate (a) Breguet range and (b) cruise time. Enter range in km.",
+          "questionType": "numeric",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "3945 km",
+          "explanation": "Given: $V=780$ km/h; $L/D=17$; $c_T=0.75$ h$^{-1}$; $W_i/W_f=1.25$\n\nFormula: $R=(V/c_T)(L/D)\\ln(W_i/W_f)$; $t=R/V$\n\nSolution: $R=(780/0.75)(17)\\ln(1.25)=3,945.18$ km. Then $t=3,945.18/780=5.06$ h.\n\nPart (b): Cruise time is approximately 5.06 h.\n\nAnswer: 3945 km",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "performance revision",
+            "jet range",
+            "worked problem"
+          ],
+          "expectedAnswer": 3945.0,
+          "acceptedDeviation": 1
+        },
+        {
+          "question": "An ideal jet starts a cruise segment at 60,000 kg. It flies 2,000 km at 750 km/h with $L/D=16$ and $c_T=0.80$ h$^{-1}$. Estimate (a) fuel mass burned and (b) final mass, using the ideal Breguet relation. Enter fuel burned in kg.",
+          "questionType": "numeric",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "7490 kg",
+          "explanation": "Given: $m_i=60,000$ kg; $R=2,000$ km; $V=750$ km/h; $L/D=16$; $c_T=0.80$ h$^{-1}$\n\nFormula: $R=(V/c_T)(L/D)\\ln(W_i/W_f)$; $m_f=m_i/(W_i/W_f)$\n\nSolution: $\\ln(W_i/W_f)=Rc_T/[V(L/D)]=(2,000)(0.80)/[(750)(16)]=0.13333$. Thus $W_i/W_f=e^{0.13333}=1.14263$, and final mass is $60,000/1.14263=52,510.4$ kg. Fuel burned is $60,000-52,510.4=7,489.6$ kg.\n\nPart (b): Final mass is approximately 52510.4 kg.\n\nAnswer: 7490 kg",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "performance revision",
+            "jet range and fuel",
+            "worked problem"
+          ],
+          "expectedAnswer": 7490.0,
+          "acceptedDeviation": 1
+        },
+        {
+          "question": "A propeller aircraft weighs 120,000 N. At its climb speed, the engine supplies 520 kW while the aircraft needs 360 kW to maintain level flight. Estimate (a) steady rate of climb and (b) time to gain 1,500 m, assuming the excess power stays constant. Enter rate of climb in m/s.",
+          "questionType": "numeric",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "1.3 m/s",
+          "explanation": "Given: $W=120,000$ N; $P_{available}=520$ kW; $P_{required}=360$ kW; altitude gain = 1,500 m\n\nFormula: $ROC=(P_{available}-P_{required})/W$; $t=h/ROC$\n\nSolution: $P_{excess}=520-360=160$ kW = 160,000 W. Therefore $ROC=160,000/120,000=1.333$ m/s. Time to gain 1,500 m is $1,500/1.333=1,125$ s = 18.75 min.\n\nPart (b): Time to gain 1,500 m is approximately 18.75 min.\n\nAnswer: 1.3 m/s",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "performance revision",
+            "rate of climb",
+            "worked problem"
+          ],
+          "expectedAnswer": 1.3,
+          "acceptedDeviation": 0.1
+        },
+        {
+          "question": "A jet flies at 700 km/h and weighs 300,000 N. At the selected climb condition, thrust available exceeds thrust required by 45,000 N. Estimate (a) its shallow-angle rate of climb and (b) climb gradient. Enter rate of climb in m/s.",
+          "questionType": "numeric",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "29.2 m/s",
+          "explanation": "Given: $V=700$ km/h; $W=300,000$ N; excess thrust = 45,000 N\n\nFormula: $ROC approximately V(T_a-T_r)/W$; $gradient approximately ROC/V$\n\nSolution: Convert speed: $700/3.6=194.44$ m/s. Then $ROC approximately(194.44)(45,000)/300,000=29.17$ m/s. The approximate climb gradient is $29.17/194.44=0.150$, or 15.0%.\n\nPart (b): Climb gradient is approximately 15.0%.\n\nAnswer: 29.2 m/s",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "performance revision",
+            "rate of climb and gradient",
+            "worked problem"
+          ],
+          "expectedAnswer": 29.2,
+          "acceptedDeviation": 0.1
+        },
+        {
+          "question": "A flight-test record gives maximum rate of climb as 3.2 m/s at 6,000 m and 1.0 m/s at 8,000 m. Assuming a linear change between those points, estimate the altitude where maximum rate of climb falls to the service-ceiling criterion of 1.5 m/s. Also state whether the aircraft still has positive climb at 8,000 m. Enter altitude in m.",
+          "questionType": "numeric",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "7545 m",
+          "explanation": "Given: Maximum ROC = 3.2 m/s at 6,000 m; maximum ROC = 1.0 m/s at 8,000 m; criterion = 1.5 m/s\n\nFormula: Linear interpolation: $h=h_1+[(ROC_1-ROC_t)/(ROC_1-ROC_2)](h_2-h_1)$\n\nSolution: $h=6,000+[(3.2-1.5)/(3.2-1.0)](8,000-6,000)=7,545.45$ m. At 8,000 m the recorded rate is still positive at 1.0 m/s, but it is below the specified 1.5 m/s service-ceiling criterion.\n\nAt 8,000 m the aircraft can still climb at the recorded condition, but it is below the stated service-ceiling rate criterion.\n\nAnswer: 7545 m",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "performance revision",
+            "service ceiling",
+            "worked problem"
+          ],
+          "expectedAnswer": 7545.0,
+          "acceptedDeviation": 1
+        },
+        {
+          "question": "An aircraft needs 60 m/s airspeed to lift off. A 10 m/s headwind is aligned with the runway. Its mean runway acceleration is 2.5 m/s^2, and it needs a further 220 m after lift-off to reach the specified obstacle height. Estimate (a) ground roll and (b) total distance to that height. Enter total distance in m.",
+          "questionType": "numeric",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "720 m",
+          "explanation": "Given: Lift-off airspeed = 60 m/s; headwind = 10 m/s; mean acceleration = 2.5 m/s^2; airborne distance to obstacle height = 220 m\n\nFormula: $V_g=V_a-V_{headwind}$; $s_g=V_g^2/(2a)$; $s_{total}=s_g+s_{air}$\n\nSolution: Lift-off groundspeed is $60-10=50$ m/s. Ground roll is $50^2/[2(2.5)]=500$ m. Total distance to the specified height is $500+220=720$ m.\n\nPart (a): Ground roll = 500 m.\n\nAnswer: 720 m",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "performance revision",
+            "takeoff performance",
+            "worked problem"
+          ],
+          "expectedAnswer": 720,
+          "acceptedDeviation": 1
+        },
+        {
+          "question": "At a given airport and configuration, an aircraft has a takeoff ground roll of 900 m at 50,000 kg. Estimate the ground roll at 56,000 kg if maximum lift coefficient and mean acceleration are unchanged. For this estimate, use $V_{LO}\\propto\\sqrt{W}$ and $s\\propto V_{LO}^2$. Enter the new ground roll in m.",
+          "questionType": "numeric",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "1008 m",
+          "explanation": "Given: Original mass = 50,000 kg; new mass = 56,000 kg; original ground roll = 900 m; same configuration and mean acceleration\n\nFormula: $V_{LO,2}/V_{LO,1}=\\sqrt{W_2/W_1}$; $s_2/s_1=(V_{LO,2}/V_{LO,1})^2=W_2/W_1$\n\nSolution: $s_2=900(56,000/50,000)=1,008$ m. The corresponding lift-off speed ratio is $\\sqrt{1.12}=1.0583$, about a 5.8% increase.\n\nThe lift-off speed increases by about 5.8% under the stated assumptions (from 55 m/s to about 58.2 m/s ).\n\nAnswer: 1008 m",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "performance revision",
+            "takeoff weight effect",
+            "worked problem"
+          ],
+          "expectedAnswer": 1008.0,
+          "acceptedDeviation": 1
+        },
+        {
+          "question": "An aircraft approaches at 65 m/s airspeed with an 8 m/s headwind. After crossing the reference height, it travels 300 m through the air before touchdown. Its touchdown deceleration is 3.0 m/s^2. Estimate (a) touchdown groundspeed, (b) landing ground roll, and (c) total distance from the reference height to a stop. Enter total distance in m.",
+          "questionType": "numeric",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "842 m",
+          "explanation": "Given: Approach airspeed = 65 m/s; headwind = 8 m/s; air distance to touchdown = 300 m; mean ground deceleration = 3.0 m/s^2\n\nFormula: $V_g=V_a-V_{headwind}$; $s_g=V_g^2/(2a)$; $s_{total}=s_{air}+s_g$\n\nSolution: Touchdown groundspeed is $65-8=57$ m/s. Ground roll is $57^2/[2(3.0)]=541.5$ m. Total distance from the reference height to a stop is $300+541.5=841.5$ m, or 842 m to the nearest metre.\n\nPart (a): Touchdown groundspeed = 57 m/s. Part (b): Ground roll = 541.5 m.\n\nAnswer: 842 m",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "performance revision",
+            "landing distance",
+            "worked problem"
+          ],
+          "expectedAnswer": 842.0,
+          "acceptedDeviation": 1
+        },
+        {
+          "question": "A clean glider has $C_D=0.030+0.050C_L^2$, weight 14,000 N, wing area 24 m^2, and flies in air of density 1.00 kg/m^3. It begins 1,400 m above a landing site. Estimate (a) the speed for maximum $L/D$ and (b) still-air glide range, assuming a shallow glide and no wind. Enter range in km.",
+          "questionType": "numeric",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "18.1 km",
+          "explanation": "Given: $C_{D0}=0.030$; $k=0.050$; $W=14,000$ N; $S=24$ m^2; $rho=1.00$ kg/m^3; altitude = 1,400 m\n\nFormula: $C_{L,opt}=\\sqrt{C_{D0}/k}$; $V=\\sqrt{2W/(rho S C_{L,opt})}$; $R approximately(L/D)h$\n\nSolution: $C_{L,opt}=\\sqrt{0.030/0.050}=0.7746$. At this condition $C_D=0.0600$, giving $L/D=0.7746/0.0600=12.91$. Best-glide speed is $\\sqrt{2(14,000)/[(1.00)(24)(0.7746)]}=38.81$ m/s. Glide range is $12.91(1,400)=18,074$ m = 18.07 km.\n\nPart (a): Best-glide speed is approximately 38.8 m/s.\n\nAnswer: 18.1 km",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "performance revision",
+            "best glide",
+            "worked problem"
+          ],
+          "expectedAnswer": 18.1,
+          "acceptedDeviation": 0.1
+        },
+        {
+          "question": "An aircraft flies a coordinated, level turn at 65 m/s with a bank angle of 45 degrees. Use $g=9.81$ m/s^2. Estimate (a) turn radius and (b) load factor. Enter turn radius in m.",
+          "questionType": "numeric",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "431 m",
+          "explanation": "Given: $V=65$ m/s; bank angle $\\phi=45 degrees$; $g=9.81$ m/s^2\n\nFormula: $R=V^2/[g tan(\\phi)]$; $n=1/\\cos(\\phi)$\n\nSolution: $R=65^2/[9.81tan(45 degrees)]=430.7$ m. The level-turn load factor is $n=1/\\cos(45 degrees)=1.414$. The turn rate is $V/R=0.151$ rad/s, or about 8.66 degrees/s.\n\nPart (b): Load factor = 1.414. Turn rate is approximately 8.65 degrees/s.\n\nAnswer: 431 m",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "performance revision",
+            "turn performance",
+            "worked problem"
+          ],
+          "expectedAnswer": 431.0,
+          "acceptedDeviation": 1
         }
       ]
     },
