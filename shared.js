@@ -10,7 +10,7 @@ export const POMODORO_HISTORY_KEY = "prepcore.web.pomodoroHistory.v1";
 export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
 export const ADMIN_PASSWORD = "prepcore";
 export const NOTES_PATH = "./markdowns";
-const SUBJECTS_PATH = "./subjects.json";
+const SUBJECTS_PATH = "./subjects.json?v=bearings-20261004";
 const VALID_MODES = new Set(["quiz", "learn", "flashcards", "exam", "note"]);
 const SUBJECTS_CACHE_KEY = "prepcore.web.subjectsCache.v1";
 const CHAPTER_CACHE_KEY = "prepcore.web.chapterCache.v1";
@@ -8308,7 +8308,13 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
         const flashcardFront = document.createElement("div");
         flashcardFront.className = "flashcard-face flashcard-front";
-        flashcardFront.appendChild(Object.assign(document.createElement("span"), { className: "flashcard-side-label", textContent: "Question" }));
+        const flashcardTags = new Set(Array.isArray(question.tags) ? question.tags : []);
+        const flashcardSection = flashcardTags.has("chapter-identification")
+            ? "Part 1 · Chapter Identification"
+            : flashcardTags.has("random-quiz")
+                ? "Part 2 · Random Quiz"
+                : "Question";
+        flashcardFront.appendChild(Object.assign(document.createElement("span"), { className: "flashcard-side-label", textContent: flashcardSection }));
         const flashcardQuestionImages = createQuestionImagesElement(question.questionImages);
         if (flashcardQuestionImages) {
             flashcardFront.appendChild(flashcardQuestionImages);
