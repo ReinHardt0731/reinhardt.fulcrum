@@ -1181,9 +1181,10 @@ export function normalizeQuestion(entry, position) {
     const tags = normalizeTags(entry.tags);
     const explanationImages = normalizeExplanationImages(entry);
     const questionImages = normalizeQuestionImages(entry);
+    const explanationCard = entry.explanationCard && typeof entry.explanationCard === "object" ? entry.explanationCard : null;
 
     if (questionType === "calculation") {
-        return { ...generateCalculationQuestion(entry, position), questionImages };
+        return { ...generateCalculationQuestion(entry, position), questionImages, explanationCard };
     }
 
     if (questionType === "numeric") {
@@ -1201,6 +1202,7 @@ export function normalizeQuestion(entry, position) {
             explanation,
             explanationImages,
             questionImages,
+            explanationCard,
             tags,
             expectedAnswer,
             acceptedDeviation: Number.isInteger(Number(entry.acceptedDeviation ?? entry.accepted_deviation ?? entry.deviation))
@@ -1224,6 +1226,7 @@ export function normalizeQuestion(entry, position) {
             explanation,
             explanationImages,
             questionImages,
+            explanationCard,
             tags,
             expectedAnswer: null,
             acceptedDeviation: 0
@@ -1258,6 +1261,7 @@ export function normalizeQuestion(entry, position) {
         explanation,
         explanationImages,
         questionImages,
+        explanationCard,
         tags,
         expectedAnswer: null,
         acceptedDeviation: 0
@@ -1767,6 +1771,7 @@ export function buildQuestionResult(question, session, answer, correct, isUnsure
         isUnsure,
         explanation: formatExplanationText(question.explanation || question.explaination),
         explanationImages: question.explanationImages || [],
+        explanationCard: question.explanationCard || null,
         tags: question.tags
     };
 }
@@ -4146,11 +4151,16 @@ function normalizeSingleVectorCard(config) {
     const step = Number.isFinite(Number(limits.step)) && Number(limits.step) > 0 ? Number(limits.step) : 1;
     if (!(min < 0 && max > 0 && max > min)) throw new Error("Vector limits must span zero with max greater than min.");
     const clamp = (value) => Math.max(min, Math.min(max, value));
+    const angleMode = config.angleMode === "bearing" ? "bearing" : "cartesian";
     return {
-        title: text(config.title || "Single Force Vector"),
+        title: text(config.title || (angleMode === "bearing" ? "Single Vector" : "Single Force Vector")),
         subtitle: text(config.subtitle),
         x: clamp(Number.isFinite(Number(vector.x)) ? Number(vector.x) : 50),
         y: clamp(Number.isFinite(Number(vector.y)) ? Number(vector.y) : 35),
+        unit: text(config.unit || "N"),
+        xLabel: text(config.xLabel || (angleMode === "bearing" ? "East" : "Fx")),
+        yLabel: text(config.yLabel || (angleMode === "bearing" ? "North" : "Fy")),
+        angleMode,
         min,
         max,
         step,
@@ -4181,8 +4191,52 @@ function renderSingleVectorCard(config, cardIndex) {
     const endpointY = toY(normalized.y);
     const vectorMarker = `<marker id="single-vector-marker-${cardIndex}" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path fill="#55c7f2" d="M0,0 L8,4 L0,8 Z"></path></marker>`;
     const notes = normalized.notes.map((note) => `<p>${equationText(note)}</p>`).join("");
-    const svg = `<svg class="single-vector-svg" data-single-vector-svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Cartesian plane with a draggable force vector"><defs>${vectorMarker}</defs><g class="single-vector-grid">${grid}</g><line class="single-vector-axis" x1="${plot.left}" y1="${originY}" x2="${plot.right}" y2="${originY}"></line><line class="single-vector-axis" x1="${originX}" y1="${plot.bottom}" x2="${originX}" y2="${plot.top}"></line><path class="single-vector-axis-arrow" d="M${plot.right},${originY} l-10,-5 v10 z M${originX},${plot.top} l-5,10 h10 z"></path>${tickLabels}<text class="single-vector-axis-label" x="${plot.right - 4}" y="${originY - 12}" text-anchor="end">+X</text><text class="single-vector-axis-label" x="${originX + 12}" y="${plot.top + 12}">+Y</text><line class="single-vector-component single-vector-component-x" data-single-vector-component-x></line><line class="single-vector-component single-vector-component-y" data-single-vector-component-y></line><text class="single-vector-component-label" data-single-vector-component-x-label></text><text class="single-vector-component-label" data-single-vector-component-y-label></text><path class="single-vector-angle-arc" data-single-vector-angle-arc></path><text class="single-vector-angle-label" data-single-vector-angle-label></text><g class="single-vector-force" data-single-vector-force role="slider" tabindex="0" aria-label="Drag force vector" aria-valuemin="${normalized.min}" aria-valuemax="${normalized.max}" aria-valuenow="${normalized.x}, ${normalized.y}" aria-valuetext="Force vector components ${normalized.x} by ${normalized.y} newtons"><line data-single-vector-line marker-end="url(#single-vector-marker-${cardIndex})"></line><circle class="single-vector-handle" data-single-vector-handle cx="${endpointX}" cy="${endpointY}" r="11"></circle><text class="single-vector-label" data-single-vector-label>R</text></g><circle class="single-vector-origin" cx="${originX}" cy="${originY}" r="5"></circle></svg>`;
-    return `<article class="single-vector-card" data-single-vector-card="${equationText(cardIndex)}"><header class="single-vector-header"><div><p class="section-label">Vector Components</p><h3>${equationText(normalized.title)}</h3>${normalized.subtitle ? `<p>${equationText(normalized.subtitle)}</p>` : ""}</div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for single vector card" aria-pressed="false">Fullscreen</button></header><section class="single-vector-scene-panel"><div class="single-vector-scene">${svg}<p class="single-vector-hint">Drag the arrowhead to change the vector. Use the arrow keys when focused.</p></div></section><section class="single-vector-readout" aria-live="polite"><div><span>Fx</span><strong data-single-vector-result="x">${singleVectorNumber(normalized.x)} N</strong></div><div><span>Fy</span><strong data-single-vector-result="y">${singleVectorNumber(normalized.y)} N</strong></div><div><span>|R|</span><strong data-single-vector-result="magnitude">-- N</strong><small>√(Fx² + Fy²)</small></div><div><span>Angle</span><strong data-single-vector-result="angle">--°</strong><small>from +X</small></div></section>${notes ? `<section class="single-vector-notes"><p class="section-label">Remember</p>${notes}</section>` : ""}</article>`;
+    const bearing = normalized.angleMode === "bearing";
+    const axisX = bearing ? "East" : "+X";
+    const axisY = bearing ? "North" : "+Y";
+    const svg = `<svg class="single-vector-svg" data-single-vector-svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Coordinate plane with a draggable vector"><defs>${vectorMarker}</defs><g class="single-vector-grid">${grid}</g><line class="single-vector-axis" x1="${plot.left}" y1="${originY}" x2="${plot.right}" y2="${originY}"></line><line class="single-vector-axis" x1="${originX}" y1="${plot.bottom}" x2="${originX}" y2="${plot.top}"></line><path class="single-vector-axis-arrow" d="M${plot.right},${originY} l-10,-5 v10 z M${originX},${plot.top} l-5,10 h10 z"></path>${tickLabels}<text class="single-vector-axis-label" x="${plot.right - 4}" y="${originY - 12}" text-anchor="end">${axisX}</text><text class="single-vector-axis-label" x="${originX + 12}" y="${plot.top + 12}">${axisY}</text><line class="single-vector-component single-vector-component-x" data-single-vector-component-x></line><line class="single-vector-component single-vector-component-y" data-single-vector-component-y></line><text class="single-vector-component-label" data-single-vector-component-x-label></text><text class="single-vector-component-label" data-single-vector-component-y-label></text><path class="single-vector-angle-arc" data-single-vector-angle-arc></path><text class="single-vector-angle-label" data-single-vector-angle-label></text><g class="single-vector-force" data-single-vector-force role="slider" tabindex="0" aria-label="Drag vector" aria-valuemin="${normalized.min}" aria-valuemax="${normalized.max}" aria-valuenow="${normalized.x}, ${normalized.y}" aria-valuetext="Vector components ${normalized.x} ${normalized.xLabel} and ${normalized.y} ${normalized.yLabel}"><line data-single-vector-line marker-end="url(#single-vector-marker-${cardIndex})"></line><circle class="single-vector-handle" data-single-vector-handle cx="${endpointX}" cy="${endpointY}" r="11"></circle><text class="single-vector-label" data-single-vector-label>R</text></g><circle class="single-vector-origin" cx="${originX}" cy="${originY}" r="5"></circle></svg>`;
+    const angleHint = bearing ? "clockwise from north" : "from +X";
+    const squaredTerms = `${normalized.xLabel}² + ${normalized.yLabel}²`;
+    return `<article class="single-vector-card" data-single-vector-card="${equationText(cardIndex)}"><header class="single-vector-header"><div><p class="section-label">Vector Components</p><h3>${equationText(normalized.title)}</h3>${normalized.subtitle ? `<p>${equationText(normalized.subtitle)}</p>` : ""}</div><button type="button" class="card-fullscreen-button" data-card-fullscreen aria-label="Enter fullscreen for single vector card" aria-pressed="false">Fullscreen</button></header><section class="single-vector-scene-panel"><div class="single-vector-scene">${svg}<p class="single-vector-hint">Drag the arrowhead to change the vector. Use the arrow keys when focused.</p></div></section><section class="single-vector-readout" aria-live="polite"><div><span>${equationText(normalized.xLabel)}</span><strong data-single-vector-result="x">${singleVectorNumber(normalized.x)} ${equationText(normalized.unit)}</strong></div><div><span>${equationText(normalized.yLabel)}</span><strong data-single-vector-result="y">${singleVectorNumber(normalized.y)} ${equationText(normalized.unit)}</strong></div><div><span>|R|</span><strong data-single-vector-result="magnitude">-- ${equationText(normalized.unit)}</strong><small>√(${equationText(squaredTerms)})</small></div><div><span>${bearing ? "Bearing" : "Angle"}</span><strong data-single-vector-result="angle">--°</strong><small>${angleHint}</small></div></section>${notes ? `<section class="single-vector-notes"><p class="section-label">Remember</p>${notes}</section>` : ""}</article>`;
+}
+
+function renderStaticBearingVectorFigure(config, figureIndex) {
+    const vector = normalizeSingleVectorCard({ ...config, angleMode: "bearing" });
+    const width = 720;
+    const height = 560;
+    const plot = { left: 150, right: 570, top: 70, bottom: 490 };
+    const scale = (plot.right - plot.left) / (vector.max - vector.min);
+    const toX = (value) => plot.left + (value - vector.min) * scale;
+    const toY = (value) => plot.bottom - (value - vector.min) * scale;
+    const originX = toX(0);
+    const originY = toY(0);
+    const endpointX = toX(vector.x);
+    const endpointY = toY(vector.y);
+    const magnitude = Math.hypot(vector.x, vector.y);
+    const bearing = magnitude < 0.0005 ? 0 : (Math.atan2(vector.x, vector.y) * 180 / Math.PI + 360) % 360;
+    const ticks = Array.from({ length: 11 }, (_, index) => vector.min + (vector.max - vector.min) * index / 10);
+    const grid = ticks.map((value) => `<line class="single-vector-grid-line" x1="${toX(value)}" y1="${plot.top}" x2="${toX(value)}" y2="${plot.bottom}"></line><line class="single-vector-grid-line" x1="${plot.left}" y1="${toY(value)}" x2="${plot.right}" y2="${toY(value)}"></line>`).join("");
+    const tickLabels = ticks.filter((_, index) => index % 2 === 0).map((value) => `<text class="single-vector-tick" x="${toX(value)}" y="${originY + 20}" text-anchor="middle">${singleVectorNumber(value, 0)}</text><text class="single-vector-tick" x="${originX - 10}" y="${toY(value) + 4}" text-anchor="end">${singleVectorNumber(value, 0)}</text>`).join("");
+    const markerId = `static-bearing-vector-${figureIndex}`;
+    const vectorLabelX = Math.max(18, Math.min(width - 18, endpointX + (vector.x >= 0 ? 14 : -14)));
+    const vectorLabelY = Math.max(20, Math.min(height - 16, endpointY + (vector.y >= 0 ? -12 : 22)));
+    let arc = "";
+    let angleLabel = "";
+    if (bearing > 0.5 && magnitude >= 0.0005) {
+        const radians = bearing * Math.PI / 180;
+        const radius = 44;
+        const arcEndX = originX + Math.sin(radians) * radius;
+        const arcEndY = originY - Math.cos(radians) * radius;
+        const largeArc = bearing > 180 ? 1 : 0;
+        const labelRadians = (90 - bearing / 2) * Math.PI / 180;
+        const labelRadius = radius + 16;
+        const labelX = Math.max(28, Math.min(width - 28, originX + Math.cos(labelRadians) * labelRadius));
+        const labelY = Math.max(24, Math.min(height - 22, originY - Math.sin(labelRadians) * labelRadius));
+        arc = `<path class="single-vector-angle-arc" d="M ${originX} ${originY - radius} A ${radius} ${radius} 0 ${largeArc} 1 ${arcEndX.toFixed(2)} ${arcEndY.toFixed(2)}"></path>`;
+        angleLabel = `<text class="single-vector-angle-label" x="${labelX.toFixed(2)}" y="${labelY.toFixed(2)}" text-anchor="${labelX >= originX ? "start" : "end"}">θ = ${singleVectorNumber(bearing)}°</text>`;
+    }
+    const svg = `<svg class="single-vector-svg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Static vector diagram showing east and north components and bearing"><defs><marker id="${markerId}" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path fill="#55c7f2" d="M0,0 L8,4 L0,8 Z"></path></marker></defs><g class="single-vector-grid">${grid}</g><line class="single-vector-axis" x1="${plot.left}" y1="${originY}" x2="${plot.right}" y2="${originY}"></line><line class="single-vector-axis" x1="${originX}" y1="${plot.bottom}" x2="${originX}" y2="${plot.top}"></line><path class="single-vector-axis-arrow" d="M${plot.right},${originY} l-10,-5 v10 z M${originX},${plot.top} l-5,10 h10 z"></path>${tickLabels}<text class="single-vector-axis-label" x="${plot.right - 4}" y="${originY - 12}" text-anchor="end">East</text><text class="single-vector-axis-label" x="${originX + 12}" y="${plot.top + 12}">North</text><line class="single-vector-component single-vector-component-x" x1="${endpointX}" y1="${endpointY}" x2="${endpointX}" y2="${originY}"></line><line class="single-vector-component single-vector-component-y" x1="${endpointX}" y1="${endpointY}" x2="${originX}" y2="${endpointY}"></line><text class="single-vector-component-label" x="${endpointX + 8}" y="${originY - 8}">E = ${singleVectorNumber(vector.x)} ${equationText(vector.unit)}</text><text class="single-vector-component-label" x="${originX + 8}" y="${endpointY - 8}">N = ${singleVectorNumber(vector.y)} ${equationText(vector.unit)}</text>${arc}${angleLabel}<g class="single-vector-force" style="cursor:default;pointer-events:none"><line x1="${originX}" y1="${originY}" x2="${endpointX}" y2="${endpointY}" marker-end="url(#${markerId})"></line><circle class="single-vector-handle" cx="${endpointX}" cy="${endpointY}" r="9"></circle><text class="single-vector-label" x="${vectorLabelX.toFixed(2)}" y="${vectorLabelY.toFixed(2)}" text-anchor="${vector.x >= 0 ? "start" : "end"}">R (${singleVectorNumber(vector.x, 0)}, ${singleVectorNumber(vector.y, 0)} ${equationText(vector.unit)})</text></g><circle class="single-vector-origin" cx="${originX}" cy="${originY}" r="5"></circle></svg>`;
+    return `<article class="single-vector-card single-vector-static-card"><header class="single-vector-header"><div><p class="section-label">Vector Diagram</p><h3>${equationText(vector.title)}</h3>${vector.subtitle ? `<p>${equationText(vector.subtitle)}</p>` : ""}</div></header><section class="single-vector-scene-panel"><div class="single-vector-scene">${svg}<p class="single-vector-hint">East is +x; north is +y. Bearing is measured clockwise from north.</p></div></section><section class="single-vector-readout"><div><span>East</span><strong>${singleVectorNumber(vector.x)} ${equationText(vector.unit)}</strong></div><div><span>North</span><strong>${singleVectorNumber(vector.y)} ${equationText(vector.unit)}</strong></div><div><span>|R|</span><strong>${singleVectorNumber(magnitude)} ${equationText(vector.unit)}</strong><small>√(E² + N²)</small></div><div><span>Bearing</span><strong>${singleVectorNumber(bearing)}°</strong><small>clockwise from north</small></div></section></article>`;
 }
 
 function hydrateSingleVectorCards(container) {
@@ -4226,17 +4280,19 @@ function hydrateSingleVectorCards(container) {
                 const endpointX = toSvgX(values.x);
                 const endpointY = toSvgY(values.y);
                 const magnitude = Math.hypot(values.x, values.y);
-                const angle = magnitude < 0.0005 ? 0 : (Math.atan2(values.y, values.x) * 180 / Math.PI + 360) % 360;
+                const angle = magnitude < 0.0005 ? 0 : config.angleMode === "bearing"
+                    ? (Math.atan2(values.x, values.y) * 180 / Math.PI + 360) % 360
+                    : (Math.atan2(values.y, values.x) * 180 / Math.PI + 360) % 360;
                 line.setAttribute("x1", String(originX)); line.setAttribute("y1", String(originY)); line.setAttribute("x2", endpointX.toFixed(2)); line.setAttribute("y2", endpointY.toFixed(2));
                 handle.setAttribute("cx", endpointX.toFixed(2)); handle.setAttribute("cy", endpointY.toFixed(2));
                 const labelX = Math.max(18, Math.min(width - 18, endpointX + (values.x >= 0 ? 14 : -14)));
                 const labelY = Math.max(20, Math.min(height - 16, endpointY + (values.y >= 0 ? -12 : 22)));
                 const vectorLabel = card.querySelector("[data-single-vector-label]");
-                if (vectorLabel) { vectorLabel.setAttribute("x", labelX.toFixed(2)); vectorLabel.setAttribute("y", labelY.toFixed(2)); vectorLabel.setAttribute("text-anchor", values.x >= 0 ? "start" : "end"); vectorLabel.textContent = `R (${singleVectorNumber(values.x, 0)}, ${singleVectorNumber(values.y, 0)} N)`; }
+                if (vectorLabel) { vectorLabel.setAttribute("x", labelX.toFixed(2)); vectorLabel.setAttribute("y", labelY.toFixed(2)); vectorLabel.setAttribute("text-anchor", values.x >= 0 ? "start" : "end"); vectorLabel.textContent = `R (${singleVectorNumber(values.x, 0)}, ${singleVectorNumber(values.y, 0)} ${config.unit})`; }
                 componentX?.setAttribute("x1", String(endpointX)); componentX?.setAttribute("y1", String(endpointY)); componentX?.setAttribute("x2", String(endpointX)); componentX?.setAttribute("y2", String(originY));
                 componentY?.setAttribute("x1", String(endpointX)); componentY?.setAttribute("y1", String(endpointY)); componentY?.setAttribute("x2", String(originX)); componentY?.setAttribute("y2", String(endpointY));
-                componentXLabel?.setAttribute("x", String(endpointX + 8)); componentXLabel?.setAttribute("y", String(originY - 8)); if (componentXLabel) componentXLabel.textContent = `Fx = ${singleVectorNumber(values.x, 0)} N`;
-                componentYLabel?.setAttribute("x", String(originX + 8)); componentYLabel?.setAttribute("y", String(endpointY - 8)); if (componentYLabel) componentYLabel.textContent = `Fy = ${singleVectorNumber(values.y, 0)} N`;
+                componentXLabel?.setAttribute("x", String(endpointX + 8)); componentXLabel?.setAttribute("y", String(originY - 8)); if (componentXLabel) componentXLabel.textContent = `${config.xLabel} = ${singleVectorNumber(values.x, 0)} ${config.unit}`;
+                componentYLabel?.setAttribute("x", String(originX + 8)); componentYLabel?.setAttribute("y", String(endpointY - 8)); if (componentYLabel) componentYLabel.textContent = `${config.yLabel} = ${singleVectorNumber(values.y, 0)} ${config.unit}`;
                 if (angleArc && angleLabel) {
                     const radius = 44;
                     if (magnitude < 0.0005 || angle < 0.5) {
@@ -4244,12 +4300,14 @@ function hydrateSingleVectorCards(container) {
                         angleLabel.textContent = "";
                     } else {
                         const radians = angle * Math.PI / 180;
-                        const arcEndX = originX + Math.cos(radians) * radius;
-                        const arcEndY = originY - Math.sin(radians) * radius;
+                        const arcStartX = config.angleMode === "bearing" ? originX : originX + radius;
+                        const arcStartY = config.angleMode === "bearing" ? originY - radius : originY;
+                        const arcEndX = config.angleMode === "bearing" ? originX + Math.sin(radians) * radius : originX + Math.cos(radians) * radius;
+                        const arcEndY = config.angleMode === "bearing" ? originY - Math.cos(radians) * radius : originY - Math.sin(radians) * radius;
                         const largeArc = angle > 180 ? 1 : 0;
-                        const sweep = 0;
-                        angleArc.setAttribute("d", `M ${originX + radius} ${originY} A ${radius} ${radius} 0 ${largeArc} ${sweep} ${arcEndX.toFixed(2)} ${arcEndY.toFixed(2)}`);
-                        const labelRadians = (angle / 2) * Math.PI / 180;
+                        const sweep = config.angleMode === "bearing" ? 1 : 0;
+                        angleArc.setAttribute("d", `M ${arcStartX} ${arcStartY} A ${radius} ${radius} 0 ${largeArc} ${sweep} ${arcEndX.toFixed(2)} ${arcEndY.toFixed(2)}`);
+                        const labelRadians = (config.angleMode === "bearing" ? 90 - angle / 2 : angle / 2) * Math.PI / 180;
                         const labelRadius = radius + 16;
                         const labelX = Math.max(28, Math.min(width - 28, originX + Math.cos(labelRadians) * labelRadius));
                         const labelY = Math.max(24, Math.min(height - 22, originY - Math.sin(labelRadians) * labelRadius));
@@ -4259,12 +4317,12 @@ function hydrateSingleVectorCards(container) {
                         angleLabel.textContent = `θ = ${singleVectorNumber(angle)}°`;
                     }
                 }
-                if (results.x) results.x.textContent = `${singleVectorNumber(values.x)} N`;
-                if (results.y) results.y.textContent = `${singleVectorNumber(values.y)} N`;
-                if (results.magnitude) results.magnitude.textContent = `${singleVectorNumber(magnitude)} N`;
+                if (results.x) results.x.textContent = `${singleVectorNumber(values.x)} ${config.unit}`;
+                if (results.y) results.y.textContent = `${singleVectorNumber(values.y)} ${config.unit}`;
+                if (results.magnitude) results.magnitude.textContent = `${singleVectorNumber(magnitude)} ${config.unit}`;
                 if (results.angle) results.angle.textContent = `${singleVectorNumber(angle)}°`;
                 force.setAttribute("aria-valuenow", `${singleVectorNumber(values.x, 0)}, ${singleVectorNumber(values.y, 0)}`);
-                force.setAttribute("aria-valuetext", `Force vector components ${singleVectorNumber(values.x, 0)} by ${singleVectorNumber(values.y, 0)} newtons, magnitude ${singleVectorNumber(magnitude)} newtons, angle ${singleVectorNumber(angle)} degrees`);
+                force.setAttribute("aria-valuetext", `Vector components ${singleVectorNumber(values.x, 0)} ${config.xLabel} and ${singleVectorNumber(values.y, 0)} ${config.yLabel}, magnitude ${singleVectorNumber(magnitude)} ${config.unit}, ${config.angleMode === "bearing" ? "bearing" : "angle"} ${singleVectorNumber(angle)} degrees`);
             };
             let dragging = false;
             const updateFromPointer = (event) => { const next = pointerToValues(event); values.x = next.x; values.y = next.y; render(); };
@@ -6459,6 +6517,20 @@ function renderProgress(fill, session) {
 }
 
 let feedbackExplanationSequence = 0;
+let explanationVectorCardSequence = 0;
+
+function createExplanationVectorCard(config) {
+    if (!config || typeof config !== "object") return null;
+    const wrapper = document.createElement("div");
+    wrapper.className = "explanation-vector-card-wrap";
+    try {
+        wrapper.innerHTML = renderStaticBearingVectorFigure(config, ++explanationVectorCardSequence);
+        return wrapper;
+    } catch (error) {
+        console.error("Explanation vector card could not be rendered:", error);
+        return null;
+    }
+}
 
 function createFeedbackCard(result, options = {}) {
     const wrapper = document.createElement("div");
@@ -6479,7 +6551,10 @@ function createFeedbackCard(result, options = {}) {
 
     const explanationText = formatExplanationText(result.explanation || result.explaination);
     const explanationImages = createExplanationImagesElement(result.explanationImages);
-    if ((explanationText || explanationImages) && options.includeExplanation !== false) {
+    const explanationCard = createExplanationVectorCard(result.explanationCard);
+    const hasExplanation = Boolean(explanationText || explanationImages || explanationCard);
+    const shouldShowExplanation = options.includeExplanation !== false || options.explanationToggle !== true;
+    if (hasExplanation && shouldShowExplanation) {
         const explanationLabel = document.createElement("strong");
         explanationLabel.className = "feedback-explanation-label";
         explanationLabel.textContent = "Explanation";
@@ -6491,7 +6566,8 @@ function createFeedbackCard(result, options = {}) {
         if (explanationImages) {
             wrapper.appendChild(explanationImages);
         }
-    } else if ((explanationText || explanationImages) && options.explanationToggle === true) {
+        if (explanationCard) wrapper.appendChild(explanationCard);
+    } else if (hasExplanation && options.explanationToggle === true) {
         const explanationId = `quiz-explanation-${++feedbackExplanationSequence}`;
         const toggle = document.createElement("button");
         toggle.type = "button";
@@ -6510,6 +6586,7 @@ function createFeedbackCard(result, options = {}) {
         if (explanationImages) {
             explanationContent.appendChild(explanationImages);
         }
+        if (explanationCard) explanationContent.appendChild(explanationCard);
 
         toggle.addEventListener("click", () => {
             const isExpanded = toggle.getAttribute("aria-expanded") === "true";
@@ -6531,7 +6608,8 @@ function createFeedbackCard(result, options = {}) {
 function createExplanationCallout(result) {
     const explanationText = formatExplanationText(result?.explanation || result?.explaination);
     const explanationImages = createExplanationImagesElement(result?.explanationImages);
-    if (!explanationText && !explanationImages) {
+    const explanationCard = createExplanationVectorCard(result?.explanationCard);
+    if (!explanationText && !explanationImages && !explanationCard) {
         return null;
     }
 
@@ -6548,6 +6626,7 @@ function createExplanationCallout(result) {
     if (explanationImages) {
         callout.appendChild(explanationImages);
     }
+    if (explanationCard) callout.appendChild(explanationCard);
     return callout;
 }
 
@@ -10565,6 +10644,3 @@ export function initAdminPage() {
         }
     });
 }
-
-
-
