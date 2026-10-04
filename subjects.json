@@ -93165,7 +93165,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "2.5",
-          "explanation": "Hooke's law gives $k = 80$ N/m. The work from extension 0 to 0.25 m is W = ∫₀^0.25 80x $dx = 40(0.25)$² = 2.5 J.",
+          "explanation": "Given:\nThe spring force is 80 N at an extension of 1 m. Find work from x = 0 to x = 0.25 m.\n\nFormula:\nHooke's law is F = kx, so k = 80 N/m. Work is W = integral(kx) dx.\n\nSolution:\nW = (1/2)kx^2 evaluated from 0 to 0.25 = 40(0.25^2) = 2.5 J.\n\nAnswer:\nThe required work is 2.5 J.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93183,7 +93183,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "4.8",
-          "explanation": "The force at extension x is $F = kx$. Thus W = ∫₀.₁^₀.₃ 120x $dx = 60(0.30^{2} - 0.10^{2}) = 4.8$ J.",
+          "explanation": "Given:\nThe spring constant is k = 120 N/m; stretch from x = 0.10 m to x = 0.30 m.\n\nFormula:\nThe work is W = integral(kx) dx = (1/2)k(x_2^2-x_1^2).\n\nSolution:\nW = 60(0.30^2 - 0.10^2) = 60(0.08) = 4.8 J.\n\nAnswer:\nThe required work is 4.8 J.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93201,7 +93201,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "58.8",
-          "explanation": "A thin layer at height y has volume 3dy, weight 9800(3dy), and must be lifted 2 - y meters. $W = 29400$∫₀²(2 - y)$dy = 58$,800 $J = 58.8$ kJ.",
+          "explanation": "Given:\nThe tank has horizontal area A = 3 m^2, water depth h = 2 m, and weight density 9800 N/m^3.\n\nFormula:\nA water slice of thickness dy at height y weighs gamma A dy and is lifted h-y. Thus W = gamma A integral(h-y)dy.\n\nSolution:\nW = 9800(3) integral from 0 to 2 of (2-y)dy = 58,800 J = 58.8 kJ.\n\nAnswer:\nThe pumping work is 58.8 kJ.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93219,7 +93219,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "58860",
-          "explanation": "The gate area is 3 $m^{2}$ and its centroid is 2 m below the surface. For a plane surface, the resultant force is weight density times area times centroid depth: $F = 9810·3·2 = 58$,860 N.",
+          "explanation": "Given:\nThe gate is 1.5 m wide and 2 m high; its top is 1 m below the water surface.\n\nFormula:\nHydrostatic force on a vertical plane is F = gamma A y_bar.\n\nSolution:\nThe gate area is 3 m^2 and its centroid is at depth 1+2/2 = 2 m. Therefore F = 9810(3)(2) = 58,860 N.\n\nAnswer:\nThe total force is 58,860 N.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93236,7 +93236,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "2.67",
-          "explanation": "The area is A = ∫₀⁴2x $dx = 16$. Its first moment about the y-axis is ∫₀⁴x(2x)$dx = 128/3$. Therefore x̄ = ($128/3$)/$16 = 8/3 \\approx    2.67$.",
+          "explanation": "Given:\nThe region is under y = 2x from x = 0 to x = 4.\n\nFormula:\nArea A = integral y dx and x-coordinate x_bar = (integral x y dx)/A.\n\nSolution:\nA = integral 2x dx = 16. The first moment is integral 2x^2 dx = 128/3. Hence x_bar = (128/3)/16 = 8/3 = 2.67.\n\nAnswer:\nThe x-coordinate is 2.67.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93253,7 +93253,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "1.2",
-          "explanation": "The area is A = ∫₀²$x^{2}dx = 8/3$. The first moment about the x-axis is ($1/2$)∫₀²($x^{2}$)²$dx = 16/5$. Thus ȳ = ($16/5$)/($8/3$) = 6/$5 = 1.2$.",
+          "explanation": "Given:\nThe region is under y = x^2 from x = 0 to x = 2.\n\nFormula:\nA = integral y dx and y_bar = (1/(2A)) integral y^2 dx.\n\nSolution:\nA = integral x^2 dx = 8/3. Then y_bar = [integral x^4 dx]/[2(8/3)] = (32/5)/(16/3) = 1.2.\n\nAnswer:\nThe y-coordinate is 1.2.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93270,7 +93270,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "8",
-          "explanation": "For a rectangle about its base, $I = bh^{3}/3$. With $b = 3$ m and $h = 2$ m, $I = 3(2^{3})/3 = 8$ $m^{4}$.",
+          "explanation": "Given:\nThe rectangle is b = 3 m wide and h = 2 m high; find the area moment of inertia about its horizontal base.\n\nFormula:\nFor a rectangle about its base, I = bh^3/3.\n\nSolution:\nI = 3(2^3)/3 = 8 m^4.\n\nAnswer:\nThe moment of inertia is 8 m^4.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93287,7 +93287,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "2.55",
-          "explanation": "The centroid of a semicircle lies (4r/(3pi)) from its diameter. With (r=6,mathrm{cm}), the distance is (8/piapprox2.55,mathrm{cm}).",
+          "explanation": "Given:\nThe lamina is a semicircle with radius r = 6 cm.\n\nFormula:\nThe centroid distance from the diameter is y_bar = 4r/(3pi).\n\nSolution:\ny_bar = 4(6)/(3pi) = 8/pi = 2.55 cm approximately.\n\nAnswer:\nThe centroid is 2.55 cm from the diameter.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93304,7 +93304,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "9800",
-          "explanation": "The chain's mass is 5·$20 = 100$ kg, so its weight is 980 N. Its center of mass rises 10 m when the whole chain is lifted onto the platform. The work is the increase in gravitational potential energy: 980·$10 = 9$,800 J.",
+          "explanation": "Given:\nThe hanging chain is 20 m long with mass density 5 kg/m. Use g = 9.8 m/s^2.\n\nFormula:\nA chain slice at distance y below the platform must be lifted y. Weight per metre is 5g = 49 N/m.\n\nSolution:\nW = integral from 0 to 20 of 49y dy = 49(20^2/2) = 9,800 J.\n\nAnswer:\nThe lifting work is 9,800 J.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93322,7 +93322,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "30.82",
-          "explanation": "The centroid of the circle is 1 m below the surface, and its area is π $m^{2}$. The resultant force is 9810·π·$1 = 9810\\pi$ $N \\approx    30$,819 $N = 30.82$ kN.",
+          "explanation": "Given:\nThe vertical circular plate has radius 1 m, its top edge is at the water surface, and gamma = 9810 N/m^3.\n\nFormula:\nFor a plane surface, F = gamma A y_bar.\n\nSolution:\nThe area is pi m^2 and its centroid is 1 m below the surface. Thus F = 9810pi N = 30.82 kN approximately.\n\nAnswer:\nThe hydrostatic force is 30.82 kN.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93330,6 +93330,658 @@
             "circular plate",
             "hydrostatic pressure",
             "oct 8"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A spring has constant k = 200 N/m. How much work is needed to stretch it from 0.10 m to 0.30 m? Give joules.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "8",
+          "explanation": "Given:\nSpring constant k = 200 N/m; extension changes from 0.10 m to 0.30 m.\n\nFormula:\nHooke work: W = (1/2)k(x_2^2-x_1^2).\n\nSolution:\nW = 100(0.09-0.01) = 8 J.\n\nAnswer:\nThe required work is 8 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "work",
+            "spring"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A variable force F(x)=4x+2 N acts from x=0 to x=3 m. Find the work.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "24",
+          "explanation": "Given:\nF(x)=4x+2 N, over displacement 0 <= x <= 3 m.\n\nFormula:\nWork is W = integral F(x) dx.\n\nSolution:\nW = integral(4x+2)dx from 0 to 3 = [2x^2+2x] from 0 to 3 = 24 J.\n\nAnswer:\nThe work is 24 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "work",
+            "variable force"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A force F(x)=3x^2 N stretches a material from x=0 to x=2 m. Find the work.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "8",
+          "explanation": "Given:\nF(x)=3x^2 N and displacement runs from 0 m to 2 m.\n\nFormula:\nW = integral F(x) dx.\n\nSolution:\nW = integral(3x^2)dx from 0 to 2 = [x^3] from 0 to 2 = 8 J.\n\nAnswer:\nThe work is 8 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "work",
+            "variable force"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A 20 kg load is lifted vertically by 5 m at constant speed. Find the work against gravity using g=9.8 m/s^2.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "980",
+          "explanation": "Given:\nMass = 20 kg, lift height = 5 m, g = 9.8 m/s^2.\n\nFormula:\nWork against gravity is W = mgh.\n\nSolution:\nW = 20(9.8)(5) = 980 J.\n\nAnswer:\nThe lifting work is 980 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "work",
+            "gravity"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A 10 m chain has mass density 2 kg/m and hangs from a platform. Find the work needed to lift it entirely to the platform. Use g=9.8 m/s^2.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "980",
+          "explanation": "Given:\nLength = 10 m; mass density = 2 kg/m; weight density = 19.6 N/m.\n\nFormula:\nA segment y metres below the platform is lifted y metres: W = integral(19.6y)dy.\n\nSolution:\nW = 19.6 integral from 0 to 10 of y dy = 19.6(50) = 980 J.\n\nAnswer:\nThe lifting work is 980 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "work",
+            "chain"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A rectangular tank has horizontal water area 6 m^2 and depth 4 m. Find the work to pump all water to the top. Use gamma=9800 N/m^3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "470400",
+          "explanation": "Given:\nTank cross-sectional area = 6 m^2, water depth = 4 m, weight density gamma = 9800 N/m^3.\n\nFormula:\nA slice at height y weighs gamma A dy and moves 4-y metres.\n\nSolution:\nW = 9800(6) integral from 0 to 4 of (4-y)dy = 58,800(8) = 470,400 J.\n\nAnswer:\nThe pumping work is 470,400 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "work",
+            "pumping"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A 12 m cable weighs 10 N/m and hangs from a ledge. How much work is needed to raise the entire cable by 4 m?",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "480",
+          "explanation": "Given:\nCable length = 12 m, weight density = 10 N/m, and the whole cable is raised 4 m.\n\nFormula:\nWork = total weight times vertical displacement.\n\nSolution:\nTotal weight = 10(12)=120 N, so W=120(4)=480 J.\n\nAnswer:\nThe work is 480 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "work",
+            "cable"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A force F(x)=5+2x N moves an object from x=0 to x=4 m. Find the work.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "36",
+          "explanation": "Given:\nF(x)=5+2x N over x from 0 m to 4 m.\n\nFormula:\nW = integral F(x) dx.\n\nSolution:\nW = integral(5+2x)dx from 0 to 4 = [5x+x^2] from 0 to 4 = 36 J.\n\nAnswer:\nThe work is 36 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "work",
+            "variable force"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A spring has k=60 N/m. Find the work to stretch it from 0.20 m to 0.50 m.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "6.3",
+          "explanation": "Given:\nSpring constant k=60 N/m; extensions x_1=0.20 m and x_2=0.50 m.\n\nFormula:\nW=(1/2)k(x_2^2-x_1^2).\n\nSolution:\nW=30(0.25-0.04)=6.3 J.\n\nAnswer:\nThe required work is 6.3 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "work",
+            "spring"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A cylindrical tank has horizontal water area 2 m^2 and depth 3 m. Find the work to pump all water to the top. Use gamma=9800 N/m^3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "88200",
+          "explanation": "Given:\nArea = 2 m^2, depth = 3 m, water weight density = 9800 N/m^3.\n\nFormula:\nEach slice at height y is lifted 3-y metres: W=gamma A integral(3-y)dy.\n\nSolution:\nW=9800(2) integral from 0 to 3 of (3-y)dy = 19,600(4.5)=88,200 J.\n\nAnswer:\nThe pumping work is 88,200 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "work",
+            "pumping"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A constant 50 N force moves an object 8 m in the direction of the force. Find the work.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "400",
+          "explanation": "Given:\nForce = 50 N and displacement = 8 m in the force direction.\n\nFormula:\nFor constant parallel force, W=Fd.\n\nSolution:\nW=50(8)=400 J.\n\nAnswer:\nThe work is 400 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "work",
+            "constant force"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A 6 m rope weighs 15 N/m and is lifted vertically onto a platform 2 m above its starting position. Find the work.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "180",
+          "explanation": "Given:\nRope length = 6 m, weight density = 15 N/m, and every part rises 2 m.\n\nFormula:\nWork = total rope weight times lift distance.\n\nSolution:\nTotal weight=15(6)=90 N, so W=90(2)=180 J.\n\nAnswer:\nThe work is 180 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "work",
+            "rope"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Water has weight density 9800 N/m^3. Find the pressure at depth 4 m.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "39200",
+          "explanation": "Given:\nDepth h=4 m; water weight density gamma=9800 N/m^3.\n\nFormula:\nGauge pressure at depth h is p=gamma h.\n\nSolution:\np=9800(4)=39,200 N/m^2 = 39,200 Pa.\n\nAnswer:\nThe gauge pressure is 39,200 Pa.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "forces",
+            "hydrostatic pressure"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A vertical rectangular gate is 2 m wide and 3 m high. Its top is 2 m below the water surface. Find the hydrostatic force using gamma=9800 N/m^3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "205800",
+          "explanation": "Given:\nWidth=2 m, height=3 m, top depth=2 m; area=6 m^2.\n\nFormula:\nFor a vertical plane, F=gamma A y_bar.\n\nSolution:\nThe centroid depth is 2+3/2=3.5 m. Thus F=9800(6)(3.5)=205,800 N.\n\nAnswer:\nThe resultant force is 205,800 N.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "forces",
+            "hydrostatic force",
+            "rectangle"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A vertical triangular gate has width 0 at the water surface and width 2 m at depth 3 m. Find the hydrostatic force using gamma=9800 N/m^3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "58800",
+          "explanation": "Given:\nThe triangle tip is at the surface; its width grows linearly to 2 m at depth 3 m.\n\nFormula:\nAt depth y, width w(y)=2y/3. Force F=gamma integral(y w(y))dy.\n\nSolution:\nF=9800 integral from 0 to 3 of 2y^2/3 dy=9800(6)=58,800 N.\n\nAnswer:\nThe hydrostatic force is 58,800 N.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "forces",
+            "hydrostatic force",
+            "triangle"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A vertical triangular plate has width 4 m at the water surface and narrows linearly to a point 2 m below it. Find the force using gamma=9800 N/m^3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "26133.33",
+          "explanation": "Given:\nTop width=4 m at depth 0; width decreases linearly to zero at depth 2 m.\n\nFormula:\nw(y)=4(1-y/2). The force is gamma integral y w(y)dy.\n\nSolution:\nF=9800 integral from 0 to 2 of 4y(1-y/2)dy=9800(8/3)=26,133.33 N.\n\nAnswer:\nThe force is 26,133.33 N.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "forces",
+            "hydrostatic force",
+            "triangle"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A vertical circular plate of radius 2 m has its top edge at the water surface. Find the force on one side using gamma=9800 N/m^3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "246300.86",
+          "explanation": "Given:\nRadius=2 m, area=4pi m^2; the centroid is 2 m below the surface.\n\nFormula:\nF=gamma A y_bar.\n\nSolution:\nF=9800(4pi)(2)=78,400pi=246,300.86 N approximately.\n\nAnswer:\nThe force is approximately 246,300.86 N.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "forces",
+            "hydrostatic force",
+            "circle"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A vertical rectangular plate is 3 m wide and 2 m high. Its top is 1.5 m below the surface. Find the force using gamma=9800 N/m^3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "147000",
+          "explanation": "Given:\nArea=3(2)=6 m^2; centroid depth=1.5+1=2.5 m.\n\nFormula:\nF=gamma A y_bar.\n\nSolution:\nF=9800(6)(2.5)=147,000 N.\n\nAnswer:\nThe force is 147,000 N.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "forces",
+            "hydrostatic force",
+            "rectangle"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A square vertical plate of area 4 m^2 is centered at depth 5 m. Find the hydrostatic force using gamma=9800 N/m^3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "196000",
+          "explanation": "Given:\nArea=4 m^2 and centroid depth=5 m.\n\nFormula:\nF=gamma A y_bar.\n\nSolution:\nF=9800(4)(5)=196,000 N.\n\nAnswer:\nThe force is 196,000 N.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "forces",
+            "hydrostatic force"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Find the gauge pressure 12 m below the surface of seawater with weight density 10,250 N/m^3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "123000",
+          "explanation": "Given:\nDepth=12 m; seawater weight density=10,250 N/m^3.\n\nFormula:\np=gamma h.\n\nSolution:\np=10,250(12)=123,000 Pa.\n\nAnswer:\nThe gauge pressure is 123,000 Pa.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "forces",
+            "hydrostatic pressure"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Find water pressure at depth 8 ft if its weight density is 62.4 lb/ft^3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "499.2",
+          "explanation": "Given:\nDepth=8 ft; weight density=62.4 lb/ft^3.\n\nFormula:\nGauge pressure p=gamma h.\n\nSolution:\np=62.4(8)=499.2 lb/ft^2.\n\nAnswer:\nThe pressure is 499.2 lb/ft^2.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "forces",
+            "hydrostatic pressure"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A vertical gate is 2 m wide and 4 m high, with its top 2 m below water. Find the force using gamma=9800 N/m^3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "313600",
+          "explanation": "Given:\nArea=2(4)=8 m^2; centroid depth=2+2=4 m.\n\nFormula:\nF=gamma A y_bar.\n\nSolution:\nF=9800(8)(4)=313,600 N.\n\nAnswer:\nThe force is 313,600 N.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "forces",
+            "hydrostatic force",
+            "rectangle"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A vertical triangular dam face is 6 m wide at the surface and narrows linearly to a point 5 m deep. Find the water force using gamma=9800 N/m^3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "245000",
+          "explanation": "Given:\nAt depth y, width is w(y)=6(1-y/5), for 0 <= y <= 5.\n\nFormula:\nF=gamma integral(y w(y))dy.\n\nSolution:\nThe depth integral is 6 integral from 0 to 5 of (y-y^2/5)dy = 25 m^3. Thus F=9800(25)=245,000 N.\n\nAnswer:\nThe hydrostatic force is 245,000 N.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "forces",
+            "hydrostatic force",
+            "triangle"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A vertical wall panel is 4 m wide and spans depths 3 m to 5 m. Find the water force using gamma=9800 N/m^3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "313600",
+          "explanation": "Given:\nPanel area=4(2)=8 m^2; centroid depth=(3+5)/2=4 m.\n\nFormula:\nF=gamma A y_bar.\n\nSolution:\nF=9800(8)(4)=313,600 N.\n\nAnswer:\nThe force is 313,600 N.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "forces",
+            "hydrostatic force",
+            "rectangle"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A vertical square plate has side 2 m and its top is 1 m below the surface. Find the force using gamma=9800 N/m^3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "78400",
+          "explanation": "Given:\nArea=2^2=4 m^2; centroid depth=1+1=2 m.\n\nFormula:\nF=gamma A y_bar.\n\nSolution:\nF=9800(4)(2)=78,400 N.\n\nAnswer:\nThe force is 78,400 N.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "forces",
+            "hydrostatic force",
+            "square"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A vertical triangular plate is 3 m wide at the surface and narrows linearly to a point 4 m deep. Find the water force using gamma=9800 N/m^3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "78400",
+          "explanation": "Given:\nAt depth y, width w(y)=3(1-y/4), over 0 <= y <= 4.\n\nFormula:\nF=gamma integral(y w(y))dy.\n\nSolution:\nThe depth integral is 3 integral from 0 to 4 of (y-y^2/4)dy = 8 m^3. Hence F=9800(8)=78,400 N.\n\nAnswer:\nThe force is 78,400 N.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "forces",
+            "hydrostatic force",
+            "triangle"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Find the x-coordinate of the centroid of the region under y=3x from x=0 to x=2.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "1.33",
+          "explanation": "Given:\nThe region is under y=3x on 0 <= x <= 2.\n\nFormula:\nA=integral y dx and x_bar=(integral xy dx)/A.\n\nSolution:\nA=integral 3x dx=6. The first moment is integral 3x^2 dx=8. Thus x_bar=8/6=4/3=1.33.\n\nAnswer:\nThe x-coordinate is 1.33.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "centroid",
+            "lamina"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Find the y-coordinate of the centroid of the region under y=3x from x=0 to x=2.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "2",
+          "explanation": "Given:\nThe region is a triangle with base 2 and maximum height 6.\n\nFormula:\nThe centroid of a triangle is one-third of its height from the base.\n\nSolution:\ny_bar=6/3=2.\n\nAnswer:\nThe y-coordinate is 2.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "centroid",
+            "triangle"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Find the x-coordinate of the centroid of the region under y=x from x=0 to x=4.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "2.67",
+          "explanation": "Given:\nThe region is under y=x on 0 <= x <= 4.\n\nFormula:\nA=integral y dx and x_bar=(integral xy dx)/A.\n\nSolution:\nA=8; the first moment is integral x^2 dx=64/3. Thus x_bar=(64/3)/8=8/3=2.67.\n\nAnswer:\nThe x-coordinate is 2.67.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "centroid",
+            "lamina"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Find the y-coordinate of the centroid of the triangular region under y=x from x=0 to x=4.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "1.33",
+          "explanation": "Given:\nThe triangle has height 4 above the x-axis.\n\nFormula:\nFor a triangle, its centroid is one-third of the height above the base.\n\nSolution:\ny_bar=4/3=1.33.\n\nAnswer:\nThe y-coordinate is 1.33.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "centroid",
+            "triangle"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Find the x-coordinate of the centroid of the region under y=x^2 from x=0 to x=2.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "1.5",
+          "explanation": "Given:\nThe region is under y=x^2 for 0 <= x <= 2.\n\nFormula:\nA=integral y dx; x_bar=(integral xy dx)/A.\n\nSolution:\nA=8/3 and the first moment is integral x^3 dx=4. Therefore x_bar=4/(8/3)=1.5.\n\nAnswer:\nThe x-coordinate is 1.5.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "centroid",
+            "lamina"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Find the y-coordinate of the centroid of the region under y=x^2 from x=0 to x=2.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "1.2",
+          "explanation": "Given:\nThe region is under y=x^2 on 0 <= x <= 2; its area is 8/3.\n\nFormula:\nFor a region under y=f(x), y_bar=(1/(2A)) integral f(x)^2 dx.\n\nSolution:\ny_bar=(1/(2(8/3))) integral x^4 dx = (32/5)/(16/3)=1.2.\n\nAnswer:\nThe y-coordinate is 1.2.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "centroid",
+            "lamina"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Find the distance of a semicircle centroid from its diameter when radius is 9 cm. Give cm to 2 decimals.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "3.82",
+          "explanation": "Given:\nSemicircle radius r=9 cm.\n\nFormula:\nCentroid distance from the diameter is y_bar=4r/(3pi).\n\nSolution:\ny_bar=4(9)/(3pi)=12/pi=3.82 cm approximately.\n\nAnswer:\nThe centroid is 3.82 cm from the diameter.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "centroid",
+            "semicircle"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Find the x-coordinate of the centroid of a quarter-circle lamina of radius 3 cm, with its straight sides on the coordinate axes.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "1.27",
+          "explanation": "Given:\nQuarter-circle radius r=3 cm; it lies in the first quadrant.\n\nFormula:\nThe centroid coordinate from either straight side is 4r/(3pi).\n\nSolution:\nx_bar=4(3)/(3pi)=4/pi=1.27 cm approximately.\n\nAnswer:\nThe x-coordinate is 1.27 cm.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "centroid",
+            "quarter circle"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A 4 m by 3 m rectangle occupies 0<=x<=4, 0<=y<=3. A 2 m by 1 m rectangle is attached from x=4 to 6 and y=2 to 3. Find the composite x-centroid.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "2.43",
+          "explanation": "Given:\nRectangle 1: area 12, centroid x=2. Rectangle 2: area 2, centroid x=5.\n\nFormula:\nComposite centroid: x_bar=sum(A_i x_i)/sum(A_i).\n\nSolution:\nx_bar=(12(2)+2(5))/(12+2)=34/14=2.43 m approximately.\n\nAnswer:\nThe composite x-coordinate is 2.43 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "centroid",
+            "composite area"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A T-section has a centered web 2 m wide and 4 m high, with a centered flange 8 m wide and 1 m thick on top. Find its y-centroid measured from the bottom.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "3.25",
+          "explanation": "Given:\nWeb area=8 with centroid y=2; flange area=8 with centroid y=4.5.\n\nFormula:\ny_bar=sum(A_i y_i)/sum(A_i).\n\nSolution:\ny_bar=(8(2)+8(4.5))/16=3.25 m.\n\nAnswer:\nThe centroid is 3.25 m above the bottom.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "centroid",
+            "composite area"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Find the x-coordinate of the centroid of a triangle with vertices (0,0), (8,0), and (2,6).",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "3.33",
+          "explanation": "Given:\nThe triangle vertices have x-coordinates 0, 8, and 2.\n\nFormula:\nA triangle centroid has coordinates equal to the averages of its vertices.\n\nSolution:\nx_bar=(0+8+2)/3=10/3=3.33.\n\nAnswer:\nThe x-coordinate is 3.33.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "centroid",
+            "coordinate geometry"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Find the y-coordinate of the centroid of the triangle with vertices (0,0), (8,0), and (2,6).",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "2",
+          "explanation": "Given:\nThe triangle vertices have y-coordinates 0, 0, and 6.\n\nFormula:\nA triangle centroid coordinate is the average of the three vertex coordinates.\n\nSolution:\ny_bar=(0+0+6)/3=2.\n\nAnswer:\nThe y-coordinate is 2.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "centroid",
+            "coordinate geometry"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Find the area moment of inertia of a 4 m wide by 6 m high rectangle about its horizontal centroidal axis.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "72",
+          "explanation": "Given:\nRectangle width b=4 m and height h=6 m.\n\nFormula:\nCentroidal horizontal-axis formula: I_x=bh^3/12.\n\nSolution:\nI_x=4(6^3)/12=72 m^4.\n\nAnswer:\nThe area moment of inertia is 72 m^4.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "centroid",
+            "area moment of inertia",
+            "rectangle"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A circular lamina has radius 2 m. Find its area moment of inertia about a diameter divided by pi.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "4",
+          "explanation": "Given:\nThe circle radius is r=2 m.\n\nFormula:\nFor a circle about a diameter, I=pi r^4/4.\n\nSolution:\nI/pi=2^4/4=4 m^4 per pi.\n\nAnswer:\nThe moment divided by pi is 4.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "centroid",
+            "area moment of inertia",
+            "circle"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -93345,7 +93997,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "9",
-          "explanation": "Velocity is the derivative of position: $v(t) = 3t^{2} - 12t + 9$. At $t = 4$, $v = 48 - 48 + 9 = 9$ m/s.",
+          "explanation": "Given:\ns(t)=t^3-6t^2+9t m and t=4 s.\n\nFormula:\nVelocity is v=ds/dt.\n\nSolution:\nv(t)=3t^2-12t+9. At t=4, v=48-48+9=9 m/s.\n\nAnswer:\nThe velocity is 9 m/s.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93363,7 +94015,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "18",
-          "explanation": "Velocity is $v = ds/dt = 6t^{2} - 18t + 12$, and acceleration is $a = dv/dt = 12t - 18$. At $t = 3$, $a = 36 - 18 = 18$ m/$s^{2}$.",
+          "explanation": "Given:\ns(t)=2t^3-9t^2+12t m and t=3 s.\n\nFormula:\nAcceleration is the second derivative of position: a=d^2s/dt^2.\n\nSolution:\nv=6t^2-18t+12 and a=12t-18. At t=3, a=18 m/s^2.\n\nAnswer:\nThe acceleration is 18 m/s^2.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93381,7 +94033,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "6.67",
-          "explanation": "Displacement is the signed integral ∫₀⁵($t^{2}$ - 6t + 8)dt = [$t^{3}$/3 - 3t² + 8t]₀⁵ = 20/$3 \\approx    6.67$ m.",
+          "explanation": "Given:\nv(t)=t^2-6t+8 m/s on 0<=t<=5 s.\n\nFormula:\nDisplacement is the signed integral of velocity: Delta s=integral v(t)dt.\n\nSolution:\nDelta s=[t^3/3-3t^2+8t] from 0 to 5=20/3=6.67 m.\n\nAnswer:\nThe displacement is 6.67 m.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93399,7 +94051,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "4",
-          "explanation": "The velocity factors as (t - 1)(t - 3), so direction changes at $t = 1$ and $t = 3$. An antiderivative is $F(t) = t^{3}/3 - 2t^{2} + 3t$. Summing the absolute displacements on [0,1], [1,3], and [3,4] gives 4 m.",
+          "explanation": "Given:\nv(t)=t^2-4t+3 m/s on 0<=t<=4 s.\n\nFormula:\nTotal distance is the sum of the absolute displacements on intervals where velocity keeps one sign.\n\nSolution:\nv=(t-1)(t-3), so direction changes at 1 and 3. Integrating on [0,1], [1,3], and [3,4] and adding magnitudes gives 4 m.\n\nAnswer:\nThe total distance is 4 m.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93417,7 +94069,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "10",
-          "explanation": "The velocity components are dx/$dt = -10sin(2t)$ and dy/$dt = 10cos(2t)$. Speed is √[100sin²(2t) + 100cos²(2t)] = 10 m/s.",
+          "explanation": "Given:\nx(t)=5cos(2t) m and y(t)=5sin(2t) m.\n\nFormula:\nSpeed is sqrt((dx/dt)^2+(dy/dt)^2).\n\nSolution:\nThe velocity components are -10sin(2t) and 10cos(2t). Their squared sum is 100, so speed is 10 m/s.\n\nAnswer:\nThe constant speed is 10 m/s.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93435,7 +94087,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "8",
-          "explanation": "Velocity is ds/$dt = 8t + 3$, so acceleration is dv/$dt = 8$ m/$s^{2}$.",
+          "explanation": "Given:\ns(t)=4t^2+3t m.\n\nFormula:\nAcceleration is the second derivative of position.\n\nSolution:\nv=8t+3, therefore a=dv/dt=8 m/s^2.\n\nAnswer:\nThe constant acceleration is 8 m/s^2.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93453,7 +94105,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "9.6",
-          "explanation": "The separation is \\(r=\\sqrt{40^2+30^2}=50\\,\\mathrm{m}\\). Differentiating \\(r^2=x^2+y^2\\) gives \\(r(dr/dt)=x(dx/dt)+y(dy/dt)\\). Thus \\(dr/dt=(40\\cdot6+30\\cdot8)/50=9.6\\,\\mathrm{m/s}\\).",
+          "explanation": "Given:\nAt an instant, x=40 m, y=30 m, dx/dt=6 m/s, and dy/dt=8 m/s on perpendicular roads.\n\nFormula:\nr^2=x^2+y^2, so r(dr/dt)=x(dx/dt)+y(dy/dt).\n\nSolution:\nr=sqrt(40^2+30^2)=50 m. Thus dr/dt=(40(6)+30(8))/50=9.6 m/s.\n\nAnswer:\nThe separation is increasing at 9.6 m/s.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93471,7 +94123,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "2.45",
-          "explanation": "At maximum height the velocity is zero. Since $v(t) = ds/dt = 24 - 9.8t$, set 24 - 9.8t = 0 to get $t = 24/9.8 \\approx    2.45$ s.",
+          "explanation": "Given:\nA ball height is s(t)=24t-4.9t^2 m.\n\nFormula:\nAt maximum height, vertical velocity ds/dt is zero.\n\nSolution:\nv=24-9.8t. Setting v=0 gives t=24/9.8=2.45 s approximately.\n\nAnswer:\nIt reaches maximum height at 2.45 s.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93484,12 +94136,12 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "A particle has velocity $v(t) = 3t(t - 4)$ m/s for $0 \\le    t \\le    4$. Find the total distance traveled. Enter the distance in meters.",
+          "question": "A particle moves with position s(t)=t^3-3t^2-9t m. Find its acceleration at t=2 s.",
           "questionType": "short_answer",
           "choices": [],
           "answerIndex": -1,
-          "answerText": "32",
-          "explanation": "On $0 < t < 4$, the velocity is negative, so total distance is the absolute value of the displacement. Integrating gives ∫₀⁴3t(t - 4)dt = [$t^{3}$ - 6t²]₀⁴ = -32 m. The distance is 32 m.",
+          "answerText": "6",
+          "explanation": "Given:\ns(t)=t^3-3t^2-9t m and t=2 s.\n\nFormula:\nAcceleration is a=d^2s/dt^2.\n\nSolution:\nv=3t^2-6t-9, so a=6t-6. At t=2, a=6 m/s^2.\n\nAnswer:\nThe acceleration is 6 m/s^2.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93507,7 +94159,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "17",
-          "explanation": "Integrate acceleration to get $v(t) = 3t^{2} - 4t + C$. Since $v(0) = 2$, $C = 2$. Therefore $v(3) = 27 - 12 + 2 = 17$ m/s.",
+          "explanation": "Given:\na(t)=6t-4 m/s^2 and v(0)=2 m/s.\n\nFormula:\nVelocity is the integral of acceleration plus a constant set by the initial velocity.\n\nSolution:\nv(t)=3t^2-4t+C. Since v(0)=2, C=2. Therefore v(3)=27-12+2=17 m/s.\n\nAnswer:\nThe velocity at 3 s is 17 m/s.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93515,6 +94167,679 @@
             "initial conditions",
             "integration",
             "oct 9"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A particle has position s(t)=t^4-3t^2+2 m. Find its velocity at t=2 s.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "20",
+          "explanation": "Given:\ns(t)=t^4-3t^2+2 m and t=2 s.\n\nFormula:\nVelocity is v=ds/dt.\n\nSolution:\nv=4t^3-6t. At t=2, v=32-12=20 m/s.\n\nAnswer:\nThe velocity is 20 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "position",
+            "velocity"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A particle position is s(t)=2t^3-5t^2+4t m. Find its acceleration at t=2 s.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "14",
+          "explanation": "Given:\ns(t)=2t^3-5t^2+4t m and t=2 s.\n\nFormula:\nAcceleration is a=d^2s/dt^2.\n\nSolution:\nv=6t^2-10t+4, so a=12t-10. At t=2, a=14 m/s^2.\n\nAnswer:\nThe acceleration is 14 m/s^2.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "position",
+            "acceleration"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An object has position s(t)=t^2+2t m. Find its average velocity from t=1 s to t=4 s.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "7",
+          "explanation": "Given:\ns(t)=t^2+2t m; interval [1,4] s.\n\nFormula:\nAverage velocity is (s(4)-s(1))/(4-1).\n\nSolution:\ns(4)=24 m and s(1)=3 m, so average velocity=21/3=7 m/s.\n\nAnswer:\nThe average velocity is 7 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "average velocity"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A particle velocity is v(t)=6t-4 m/s. Find its displacement from 0 to 3 s.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "15",
+          "explanation": "Given:\nv(t)=6t-4 m/s on 0<=t<=3 s.\n\nFormula:\nDisplacement is the signed integral of velocity.\n\nSolution:\nDelta s=integral(6t-4)dt from 0 to 3=[3t^2-4t] from 0 to 3=15 m.\n\nAnswer:\nThe displacement is 15 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "displacement",
+            "integration"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A particle has velocity v(t)=3t^2-12t+9 m/s. At what earliest positive time is it momentarily at rest?",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "1",
+          "explanation": "Given:\nv(t)=3t^2-12t+9 m/s.\n\nFormula:\nAt rest, v(t)=0.\n\nSolution:\nFactor: 3(t-1)(t-3)=0. The earliest positive root is t=1 s.\n\nAnswer:\nIt is first at rest at 1 s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "velocity",
+            "turning point"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A particle has velocity v(t)=2t-5 m/s from t=0 to t=4 s. Find its displacement.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "-4",
+          "explanation": "Given:\nv(t)=2t-5 m/s on [0,4] s.\n\nFormula:\nDisplacement is integral v(t)dt.\n\nSolution:\nDelta s=[t^2-5t] from 0 to 4=16-20=-4 m.\n\nAnswer:\nThe displacement is -4 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "displacement",
+            "integration"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "For v(t)=2t-5 m/s on 0<=t<=4 s, find the total distance traveled.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "8.5",
+          "explanation": "Given:\nVelocity changes sign when 2t-5=0, at t=2.5 s.\n\nFormula:\nTotal distance is the integral of |v(t)| over the time interval.\n\nSolution:\nDistance from 0 to 2.5 is 6.25 m; distance from 2.5 to 4 is 2.25 m. Their sum is 8.5 m.\n\nAnswer:\nThe total distance is 8.5 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "total distance"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A particle position is s(t)=t^2-8t+12 m. When does its direction change?",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "4",
+          "explanation": "Given:\ns(t)=t^2-8t+12 m.\n\nFormula:\nDirection changes when velocity is zero and changes sign; v=ds/dt.\n\nSolution:\nv=2t-8. Setting v=0 gives t=4 s.\n\nAnswer:\nThe direction changes at 4 s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "velocity",
+            "direction"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A particle has position s(t)=t^2-8t+12 m. Find the time when it is momentarily at rest.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "4",
+          "explanation": "Given:\nThe position is s(t)=t^2-8t+12 m.\n\nFormula:\nv=ds/dt; rest occurs when v=0.\n\nSolution:\nv=2t-8, so 2t-8=0 and t=4 s.\n\nAnswer:\nIt is momentarily at rest at 4 s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "velocity"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An object has velocity v(t)=4t m/s and position s(0)=10 m. Find its position at t=3 s.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "28",
+          "explanation": "Given:\nv(t)=4t m/s and initial position s(0)=10 m.\n\nFormula:\nChange in position is the integral of velocity.\n\nSolution:\ns(3)=10+integral(4t) from 0 to 3=10+18=28 m.\n\nAnswer:\nThe position is 28 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "position",
+            "integration"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An object has acceleration a(t)=6t-2 m/s^2 and v(0)=5 m/s. Find v(3).",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "26",
+          "explanation": "Given:\na(t)=6t-2 m/s^2, v(0)=5 m/s.\n\nFormula:\nv(t)=v(0)+integral from 0 to t of a(u)du.\n\nSolution:\nv(3)=5+[3u^2-2u] from 0 to 3=5+27-6=26 m/s.\n\nAnswer:\nThe velocity is 26 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "acceleration",
+            "velocity"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A particle velocity is v(t)=5t^2 m/s. Find its displacement from t=0 to t=2 s.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "13.33",
+          "explanation": "Given:\nv(t)=5t^2 m/s on [0,2] s.\n\nFormula:\nDisplacement is integral v(t)dt.\n\nSolution:\nDelta s=5[t^3/3] from 0 to 2=40/3=13.33 m.\n\nAnswer:\nThe displacement is 13.33 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "displacement",
+            "integration"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A ball is thrown vertically upward with initial velocity 19.6 m/s. Its height is s(t)=19.6t-4.9t^2. When does it reach maximum height?",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "2",
+          "explanation": "Given:\ns(t)=19.6t-4.9t^2 m.\n\nFormula:\nAt the peak v=ds/dt=0.\n\nSolution:\nv=19.6-9.8t. Set it to zero: t=2 s.\n\nAnswer:\nThe ball reaches maximum height at 2 s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "projectile motion",
+            "maximum height"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A ball is thrown upward from ground level at 20 m/s. Find its maximum height using g=9.8 m/s^2.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "20.41",
+          "explanation": "Given:\nInitial speed v0=20 m/s and acceleration a=-9.8 m/s^2.\n\nFormula:\nAt the peak v=0; use v^2=v0^2+2a Delta s.\n\nSolution:\n0=20^2-2(9.8)h, so h=400/19.6=20.41 m approximately.\n\nAnswer:\nThe maximum height is 20.41 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "projectile motion",
+            "maximum height"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An object is dropped from rest from a height of 80 m. How long until it reaches the ground? Use g=9.8 m/s^2.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "4.04",
+          "explanation": "Given:\nInitial height=80 m, initial vertical velocity=0, g=9.8 m/s^2.\n\nFormula:\nFor a dropped object, fall distance d=(1/2)gt^2.\n\nSolution:\n80=4.9t^2, so t=sqrt(80/4.9)=4.04 s approximately.\n\nAnswer:\nIt reaches the ground after 4.04 s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "projectile motion",
+            "free fall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A ball is thrown upward from a 20 m platform at 14.7 m/s. When does it hit the ground? Use g=9.8 m/s^2.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "4.02",
+          "explanation": "Given:\nHeight is s(t)=20+14.7t-4.9t^2 m.\n\nFormula:\nImpact occurs when s(t)=0.\n\nSolution:\nSolving 4.9t^2-14.7t-20=0 gives the positive root (14.7+sqrt(608.09))/9.8=4.02 s approximately.\n\nAnswer:\nIt hits the ground after 4.02 s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "projectile motion",
+            "free fall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A car starts from rest and accelerates at 2.5 m/s^2 for 8 s. How far does it travel?",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "80",
+          "explanation": "Given:\nInitial velocity=0, acceleration=2.5 m/s^2, time=8 s.\n\nFormula:\nFor constant acceleration, d=v0t+(1/2)at^2.\n\nSolution:\nd=0+(1/2)(2.5)(8^2)=80 m.\n\nAnswer:\nThe car travels 80 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "constant acceleration",
+            "distance"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A car moving at 30 m/s brakes uniformly at -6 m/s^2. Find its stopping distance.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "75",
+          "explanation": "Given:\nInitial velocity=30 m/s, final velocity=0, acceleration=-6 m/s^2.\n\nFormula:\nUse v^2=v0^2+2ad.\n\nSolution:\n0=30^2+2(-6)d, so d=900/12=75 m.\n\nAnswer:\nThe stopping distance is 75 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "constant acceleration",
+            "stopping distance"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A particle has v(t)=t^2-4t m/s on 0<=t<=4 s. Find its total distance.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "10.67",
+          "explanation": "Given:\nv(t)=t(t-4), which is nonpositive on [0,4].\n\nFormula:\nTotal distance is integral |v(t)|dt.\n\nSolution:\nThe signed displacement is [t^3/3-2t^2] from 0 to 4=-32/3 m. Its magnitude is 10.67 m.\n\nAnswer:\nThe total distance is 10.67 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "total distance",
+            "integration"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "For v(t)=6-2t m/s on 0<=t<=5 s, find total distance traveled.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "13",
+          "explanation": "Given:\nVelocity is zero at t=3 s and changes from positive to negative there.\n\nFormula:\nTotal distance is the sum of absolute displacements on [0,3] and [3,5].\n\nSolution:\nThe first interval contributes 9 m and the second contributes 4 m, giving 13 m.\n\nAnswer:\nThe total distance is 13 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "total distance"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A car starts from rest and accelerates at 3 m/s^2 for 5 s. Find its final velocity.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "15",
+          "explanation": "Given:\nInitial velocity=0, acceleration=3 m/s^2, time=5 s.\n\nFormula:\nFor constant acceleration, v=v0+at.\n\nSolution:\nv=0+3(5)=15 m/s.\n\nAnswer:\nThe final velocity is 15 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "constant acceleration",
+            "velocity"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An object position is s(t)=5t+2t^2 m. Find its average velocity from t=0 to t=3 s.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "11",
+          "explanation": "Given:\ns(t)=5t+2t^2 m over 0<=t<=3 s.\n\nFormula:\nAverage velocity is (s(3)-s(0))/3.\n\nSolution:\ns(3)=33 m and s(0)=0, so average velocity=33/3=11 m/s.\n\nAnswer:\nThe average velocity is 11 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "average velocity"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A car slows from 20 m/s to 5 m/s in 3 s. Find its average acceleration.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "-5",
+          "explanation": "Given:\nInitial velocity=20 m/s, final velocity=5 m/s, elapsed time=3 s.\n\nFormula:\nAverage acceleration is (v_f-v_i)/Delta t.\n\nSolution:\na_avg=(5-20)/3=-5 m/s^2.\n\nAnswer:\nThe average acceleration is -5 m/s^2.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "average acceleration"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An object has position s(t)=10t-2.5t^2 m. Find its velocity at t=2 s.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "0",
+          "explanation": "Given:\ns(t)=10t-2.5t^2 m and t=2 s.\n\nFormula:\nInstantaneous velocity is ds/dt.\n\nSolution:\nv=10-5t, so v(2)=0 m/s.\n\nAnswer:\nThe velocity is 0 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "position",
+            "velocity"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A vehicle travels 150 km in 2.5 hours at constant speed. Find its speed.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "60",
+          "explanation": "Given:\nDistance=150 km and time=2.5 h.\n\nFormula:\nAverage speed=distance/time.\n\nSolution:\n150/2.5=60 km/h.\n\nAnswer:\nThe speed is 60 km/h.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "average speed"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A point moves as x=3t and y=4t, with distances in metres. Find its speed.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "5",
+          "explanation": "Given:\nThe coordinates are x=3t and y=4t.\n\nFormula:\nSpeed=sqrt((dx/dt)^2+(dy/dt)^2).\n\nSolution:\nThe velocity components are 3 and 4, so speed=sqrt(3^2+4^2)=5 m/s.\n\nAnswer:\nThe speed is 5 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "planar motion",
+            "speed"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A point moves on x=5cos(2t), y=5sin(2t) metres. Find its constant speed.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "10",
+          "explanation": "Given:\nThe coordinates are x=5cos(2t), y=5sin(2t).\n\nFormula:\nSpeed=sqrt((dx/dt)^2+(dy/dt)^2).\n\nSolution:\nThe velocity components are -10sin(2t) and 10cos(2t); their squared sum is 100, so speed=10 m/s.\n\nAnswer:\nThe constant speed is 10 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "circular motion",
+            "speed"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A point moves on a circle of radius 6 m at angular speed 3 rad/s. Find its linear speed.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "18",
+          "explanation": "Given:\nRadius r=6 m and angular speed omega=3 rad/s.\n\nFormula:\nTangential speed is v=r omega.\n\nSolution:\nv=6(3)=18 m/s.\n\nAnswer:\nThe linear speed is 18 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "circular motion",
+            "speed"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A point has coordinates x=3t^2 and y=4t^2 metres. Find its speed at t=2 s.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "20",
+          "explanation": "Given:\nx=3t^2, y=4t^2, and t=2 s.\n\nFormula:\nSpeed=sqrt((dx/dt)^2+(dy/dt)^2).\n\nSolution:\nvx=6t=12 and vy=8t=16 at t=2. Speed=sqrt(12^2+16^2)=20 m/s.\n\nAnswer:\nThe speed is 20 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "planar motion",
+            "speed"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A vehicle moves with coordinates x=12t and y=5t metres. How far is it from the origin at t=3 s?",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "39",
+          "explanation": "Given:\nAt time t, x=12t and y=5t.\n\nFormula:\nDistance from origin r=sqrt(x^2+y^2).\n\nSolution:\nAt t=3, (x,y)=(36,15), so r=sqrt(36^2+15^2)=39 m.\n\nAnswer:\nIt is 39 m from the origin.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "planar motion",
+            "distance"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft flies horizontally at 4 km/min. Its altitude is 12 km and its horizontal distance from a radar station is 9 km. How fast is its distance from the station changing?",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "2.4",
+          "explanation": "Given:\nHorizontal distance x=9 km, dx/dt=4 km/min; altitude y=12 km is constant.\n\nFormula:\nr^2=x^2+y^2, so r(dr/dt)=x(dx/dt)+y(dy/dt).\n\nSolution:\nr=15 km and dy/dt=0. Thus dr/dt=9(4)/15=2.4 km/min.\n\nAnswer:\nThe distance increases at 2.4 km/min.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "related rates",
+            "aircraft"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Two vehicles are 100 m east and 60 m north of an intersection. The east vehicle moves toward it at 5 m/s; the north vehicle moves away at 2 m/s. Find the rate of change of their separation.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "-3.26",
+          "explanation": "Given:\nx=100 m, y=60 m, dx/dt=-5 m/s, dy/dt=2 m/s.\n\nFormula:\nr^2=x^2+y^2; r(dr/dt)=x(dx/dt)+y(dy/dt).\n\nSolution:\nr=sqrt(13600)=116.62 m. Then dr/dt=[100(-5)+60(2)]/116.62=-3.26 m/s.\n\nAnswer:\nTheir separation is decreasing at 3.26 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "related rates",
+            "moving objects"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A cyclist travels around a circular track of radius 50 m at 2 m/s. Find the angular speed in rad/s.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "0.04",
+          "explanation": "Given:\nTrack radius r=50 m and tangential speed v=2 m/s.\n\nFormula:\nAngular speed omega=v/r.\n\nSolution:\nomega=2/50=0.04 rad/s.\n\nAnswer:\nThe angular speed is 0.04 rad/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "circular motion",
+            "angular speed"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A wheel of radius 0.3 m rotates at 10 rad/s. Find the speed of a point on its rim.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "3",
+          "explanation": "Given:\nRadius=0.3 m and angular speed=10 rad/s.\n\nFormula:\nTangential speed v=r omega.\n\nSolution:\nv=0.3(10)=3 m/s.\n\nAnswer:\nThe rim speed is 3 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "circular motion",
+            "speed"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A boat travels east at 3 m/s while a current carries it north at 4 m/s. Find its resultant speed relative to shore.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "5",
+          "explanation": "Given:\nThe perpendicular velocity components are 3 m/s east and 4 m/s north.\n\nFormula:\nResultant speed=sqrt(v_x^2+v_y^2).\n\nSolution:\nsqrt(3^2+4^2)=5 m/s.\n\nAnswer:\nThe boat speed relative to shore is 5 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "relative motion",
+            "speed"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A point moves with x=t^2 and y=2t metres. Find its speed at t=3 s.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "6.32",
+          "explanation": "Given:\nx=t^2, y=2t, and t=3 s.\n\nFormula:\nSpeed=sqrt((dx/dt)^2+(dy/dt)^2).\n\nSolution:\nvx=2t=6 and vy=2. Speed=sqrt(36+4)=sqrt(40)=6.32 m/s approximately.\n\nAnswer:\nThe speed is 6.32 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "planar motion",
+            "speed"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "For x=t^2 and y=2t metres, find the magnitude of acceleration.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "2",
+          "explanation": "Given:\nThe coordinates are x=t^2 and y=2t.\n\nFormula:\nAcceleration components are the second derivatives: ax=d^2x/dt^2, ay=d^2y/dt^2.\n\nSolution:\nax=2 and ay=0, so acceleration magnitude=sqrt(2^2+0^2)=2 m/s^2.\n\nAnswer:\nThe acceleration magnitude is 2 m/s^2.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "planar motion",
+            "acceleration"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Two objects move on perpendicular roads. At an instant they are x=30 m and y=40 m from the intersection; dx/dt=3 m/s and dy/dt=-2 m/s. Find how fast their separation changes.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "0.2",
+          "explanation": "Given:\nx=30 m, y=40 m, dx/dt=3 m/s, dy/dt=-2 m/s.\n\nFormula:\nr^2=x^2+y^2; r(dr/dt)=x(dx/dt)+y(dy/dt).\n\nSolution:\nr=50 m. Thus dr/dt=[30(3)+40(-2)]/50=10/50=0.2 m/s.\n\nAnswer:\nTheir separation is increasing at 0.2 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "related rates",
+            "moving objects"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A spotlight is 50 m from a straight road. A car moves along the road at 10 m/s and is 40 m from the closest point. Find the spotlight angular rate in rad/s.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "0.122",
+          "explanation": "Given:\nPerpendicular distance=50 m, x=40 m, dx/dt=10 m/s.\n\nFormula:\ntan(theta)=x/50 gives d(theta)/dt=50(dx/dt)/(2500+x^2).\n\nSolution:\nd(theta)/dt=50(10)/(2500+1600)=500/4100=0.122 rad/s approximately.\n\nAnswer:\nThe spotlight angle changes at 0.122 rad/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "related rates",
+            "angle"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A runner follows a circular track of radius 80 m at 20 m/s. Find the runner angular speed in rad/s.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "0.25",
+          "explanation": "Given:\nTrack radius=80 m and tangential speed=20 m/s.\n\nFormula:\nAngular speed omega=v/r.\n\nSolution:\nomega=20/80=0.25 rad/s.\n\nAnswer:\nThe angular speed is 0.25 rad/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "motion and time rates",
+            "circular motion",
+            "angular speed"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -93535,7 +94860,7 @@
           ],
           "answerIndex": 0,
           "answerText": "Order 2, degree 2",
-          "explanation": "The highest derivative present is y'', so the order is 2. The equation is polynomial in its derivatives, and the highest-order derivative y'' is squared, so the degree is 2.",
+          "explanation": "Given:\nThe equation is (y'')^2+(y')^3=x.\n\nFormula:\nOrder is the highest derivative order present. Degree is the power of the highest-order derivative when polynomial in derivatives.\n\nSolution:\nThe highest derivative is y'', so order=2. That derivative is squared, so degree=2.\n\nAnswer:\nOrder 2, degree 2.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93552,7 +94877,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "4.12",
-          "explanation": "Separate variables: (y,dy=2x,dx). Integrating gives (y^2/2=x^2+C), or (y^2=2x^2+C). The initial condition gives (C=9), so (y(2)=sqrt{17}approx4.12), taking the positive branch specified by (y(0)=3).",
+          "explanation": "Given:\ndy/dx=2x/y, y(0)=3; find positive y at x=2.\n\nFormula:\nSeparate variables: y dy=2x dx.\n\nSolution:\nIntegration gives y^2=x^2*2+C. Since y(0)=3, C=9. Thus y(2)=sqrt(17)=4.12 approximately.\n\nAnswer:\ny(2)=4.12.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93570,7 +94895,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "4",
-          "explanation": "The solution is $y = 4 + Ce^(-2x)$. The initial condition gives $C = -3$, so $y = 4 - 3e^(-2x)$. As x approaches infinity, the exponential term approaches zero and y approaches 4.",
+          "explanation": "Given:\ny'+2y=8 and y(0)=1.\n\nFormula:\nThe equilibrium solves 2y=8.\n\nSolution:\ny=4-3e^(-2x); as x grows, the exponential term tends to zero.\n\nAnswer:\ny approaches 4.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93588,7 +94913,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "611",
-          "explanation": "Exponential growth gives $P(t) = 500e^(0.04t)$. At $t = 5$, $P = 500e^{0}$.$2 \\approx    610.70$, which rounds to 611 bacteria.",
+          "explanation": "Given:\ndP/dt=0.04P and P(0)=500; find P(5).\n\nFormula:\nFor proportional growth, P=P0e^(kt).\n\nSolution:\nP(5)=500e^0.2=610.70, which rounds to 611.\n\nAnswer:\nAbout 611 bacteria are present.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93605,7 +94930,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "5.78",
-          "explanation": "For exponential decay, $A = A_{0}e^(-0.12t)$. At half-life, 1/$2 = e^(-0.12t)$, so $t = ln(2)/0.12 \\approx    5.78$ hours.",
+          "explanation": "Given:\nThe decay constant is k=0.12 per hour.\n\nFormula:\nHalf-life T=ln(2)/k.\n\nSolution:\nT=0.693147/0.12=5.78 hours approximately.\n\nAnswer:\nThe half-life is 5.78 hours.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93623,7 +94948,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "0.0693",
-          "explanation": "The temperature excess above ambient falls from 70°C to 35°C, exactly half, in 10 minutes. Thus 1/$2 = e^(-10k)$, so $k = ln(2)/10 \\approx    0.0693$ min⁻¹.",
+          "explanation": "Given:\nAmbient temperature is 20 C; temperature falls from 90 C to 55 C in 10 min.\n\nFormula:\nT-20=(T0-20)e^(-kt).\n\nSolution:\n35=70e^(-10k), so k=ln(2)/10=0.0693 min^-1.\n\nAnswer:\nThe cooling constant is 0.0693 min^-1.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93641,7 +94966,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "35",
-          "explanation": "The excess temperature above room temperature drops from 60°C to 30°C in 5 minutes, so it halves every 5 minutes. After 10 minutes the excess is 15°C, giving a coffee temperature of 20 + $15 = 35$°C.",
+          "explanation": "Given:\nCoffee starts at 80 C in a 20 C room and reaches 50 C after 5 min.\n\nFormula:\nT-20=60e^(-kt).\n\nSolution:\nAfter 5 min, the excess temperature has halved. After 10 min it is 15 C, so the coffee is at 20+15=35 C.\n\nAnswer:\nThe temperature after 10 min is 35 C.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93659,7 +94984,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "50",
-          "explanation": "At equilibrium, salt enters at 4·$0.5 = 2$ kg/min and leaves at the same rate. If S is the salt amount, the outflow rate at equilibrium is ($4/100$)S. Setting $2 = 0.04S$ gives $S = 50$ kg.",
+          "explanation": "Given:\nThe tank holds 100 L. Brine enters at 4 L/min and 0.5 kg/L; it leaves at 4 L/min.\n\nFormula:\nS'=inflow-outflow=2-(4/100)S.\n\nSolution:\nAt equilibrium, 0=2-0.04S, hence S=50 kg.\n\nAnswer:\nThe equilibrium salt amount is 50 kg.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93677,7 +95002,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "63.21",
-          "explanation": "The volume stays at 100 L. If S(t) is salt in kg, then dS/$dt = 2 - (2/100)S = 2 - 0.02S$, with $S(0) = 0$. The solution is $S(t) = 100$(1 - e^(-0.02t)). At $t = 50$, $S = 100(1 - e^-1) \\approx    63.21$ kg.",
+          "explanation": "Given:\nA 100 L tank starts pure. Brine concentration is 1 kg/L, with inflow/outflow 2 L/min.\n\nFormula:\nS'=2-0.02S and S(0)=0.\n\nSolution:\nS=100(1-e^(-0.02t)). At t=50, S=100(1-e^-1)=63.21 kg.\n\nAnswer:\nThe tank contains 63.21 kg of salt.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -93695,13 +95020,672 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "2700",
-          "explanation": "The growth model is $P(t) = 2000e^(0.03t)$. At $t = 10$, $P = 2000e^{0}$.$3 \\approx    2699.72$, which rounds to 2,700.",
+          "explanation": "Given:\ndP/dt=0.03P and P(0)=2000; find P(10).\n\nFormula:\nP=P0e^(kt).\n\nSolution:\nP(10)=2000e^0.3=2699.72, rounding to 2700.\n\nAnswer:\nThe estimated population is 2700.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
             "differential equations",
             "exponential growth",
             "oct 10"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "For (D^3 y)^2+(D^2 y)^4=x, what are the order and degree?",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "Order 3, degree 2",
+          "explanation": "Given:\nThe equation contains the third derivative squared and the second derivative to the fourth power.\n\nFormula:\nOrder is the highest derivative order; degree is the power of that highest derivative.\n\nSolution:\nThe highest derivative is D^3 y and its power is 2.\n\nAnswer:\nOrder 3, degree 2.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "order and degree"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve dy/dx=3x^2 with y(0)=2. Find y(2).",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "10",
+          "explanation": "Given:\ndy/dx=3x^2 and y(0)=2.\n\nFormula:\nIntegrate dy/dx with respect to x.\n\nSolution:\ny=x^3+C. The initial value gives C=2, so y(2)=8+2=10.\n\nAnswer:\ny(2)=10.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "separable equations",
+            "initial value"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve dy/dx=y with y(0)=2. Find y when x=ln(2).",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "4",
+          "explanation": "Given:\ndy/dx=y and y(0)=2.\n\nFormula:\nThe solution of y'=y is y=Ce^x.\n\nSolution:\nC=2 from the initial value. Thus y(ln2)=2e^(ln2)=4.\n\nAnswer:\ny=4.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "exponential equations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve dy/dx=x/y with y(0)=2. Find positive y at x=3, to 2 decimals.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "3.61",
+          "explanation": "Given:\ndy/dx=x/y and y(0)=2.\n\nFormula:\nSeparate: y dy=x dx.\n\nSolution:\nIntegration gives y^2=x^2+C. The initial condition gives C=4, so y(3)=sqrt(13)=3.61.\n\nAnswer:\nThe positive value is 3.61.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "separable equations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve dy/dx=2xy with y(0)=1. Find y(1), to 2 decimals.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "2.72",
+          "explanation": "Given:\ndy/dx=2xy and y(0)=1.\n\nFormula:\nSeparate: dy/y=2x dx.\n\nSolution:\nIntegration gives ln|y|=x^2+C. The initial value gives y=e^(x^2); hence y(1)=e=2.72.\n\nAnswer:\ny(1)=2.72.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "separable equations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "For dP/dt=0.2P(1-P/10), find the positive equilibrium population.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "10",
+          "explanation": "Given:\nThe population model is dP/dt=0.2P(1-P/10).\n\nFormula:\nAt equilibrium dP/dt=0.\n\nSolution:\nThe factors give P=0 or P=10; the positive equilibrium is 10.\n\nAnswer:\nThe positive equilibrium is 10.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "logistic growth",
+            "equilibrium"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y'+2y=0 with y(0)=6. Find y at x=ln(2)/2.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "3",
+          "explanation": "Given:\ny'+2y=0 and y(0)=6.\n\nFormula:\nThe solution is y=Ce^(-2x).\n\nSolution:\nC=6. At x=ln(2)/2, y=6e^(-ln2)=3.\n\nAnswer:\ny=3.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "linear equations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y'+4y=12 with y(0)=0. What value does y approach as x increases?",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "3",
+          "explanation": "Given:\ny'+4y=12 with y(0)=0.\n\nFormula:\nThe steady value solves 4y=12.\n\nSolution:\nThe solution is y=3-3e^(-4x); the exponential term tends to zero.\n\nAnswer:\ny approaches 3.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "linear equations",
+            "equilibrium"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y'+y=2 with y(0)=0. Find its limiting value.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "2",
+          "explanation": "Given:\ny'+y=2 and y(0)=0.\n\nFormula:\nAt equilibrium y'=0, so y=2.\n\nSolution:\nThe solution y=2-2e^(-x) tends to 2.\n\nAnswer:\nThe limit is 2.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "linear equations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y'+3y=6 with y(0)=0. Find y at x=ln(2)/3.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "1",
+          "explanation": "Given:\ny'+3y=6 and y(0)=0.\n\nFormula:\nThe equilibrium is 2; y=2(1-e^(-3x)).\n\nSolution:\nAt x=ln(2)/3, e^(-3x)=1/2, so y=2(1-1/2)=1.\n\nAnswer:\ny=1.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "linear equations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A culture follows dP/dt=0.05P with P(0)=100. Estimate P after 10 h.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "165",
+          "explanation": "Given:\nGrowth constant k=0.05 h^-1 and initial population is 100.\n\nFormula:\nP=P0e^(kt).\n\nSolution:\nP(10)=100e^0.5=164.87, rounded to 165.\n\nAnswer:\nAbout 165 organisms are present.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "exponential growth"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A substance decays with k=0.1 per day. If it starts at 500 g, how much remains after 5 days?",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "303.27",
+          "explanation": "Given:\nP0=500 g, k=0.1 day^-1, t=5 days.\n\nFormula:\nDecay model: P=P0e^(-kt).\n\nSolution:\nP(5)=500e^-0.5=303.27 g.\n\nAnswer:\nAbout 303.27 g remains.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "exponential decay"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A population grows continuously at k=0.07 per year. Find its doubling time to 2 decimals.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "9.90",
+          "explanation": "Given:\nThe growth constant is k=0.07 yr^-1.\n\nFormula:\nDoubling time T=ln(2)/k.\n\nSolution:\nT=0.693147/0.07=9.90 years.\n\nAnswer:\nThe doubling time is 9.90 years.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "exponential growth",
+            "doubling time"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A radioactive sample has half-life 6 hours and initial mass 160 g. How much remains after 18 hours?",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "20",
+          "explanation": "Given:\nInitial mass=160 g and 18 h is three half-lives.\n\nFormula:\nM=M0(1/2)^(t/T).\n\nSolution:\nM=160(1/2)^3=20 g.\n\nAnswer:\n20 g remains.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "exponential decay",
+            "half-life"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An object cools in a 20 C room from 100 C to 60 C in 5 min. Find k in min^-1 to 4 decimals.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "0.1386",
+          "explanation": "Given:\nThe excess temperature drops from 80 C to 40 C in 5 min.\n\nFormula:\nT-Ta=(T0-Ta)e^(-kt).\n\nSolution:\n40=80e^(-5k), so k=ln(2)/5=0.1386 min^-1.\n\nAnswer:\nThe cooling constant is 0.1386 min^-1.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "Newton cooling"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An object at 100 C cools in a 20 C room with k=0.1 min^-1. Find its temperature after 10 min.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "49.43",
+          "explanation": "Given:\nT0=100 C, Ta=20 C, k=0.1 min^-1, t=10 min.\n\nFormula:\nT-Ta=(T0-Ta)e^(-kt).\n\nSolution:\nT=20+80e^-1=49.43 C.\n\nAnswer:\nThe temperature is 49.43 C.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "Newton cooling"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A 100 C object cools in a 20 C room with k=ln(2)/5 min^-1. Find its temperature after 15 min.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "30",
+          "explanation": "Given:\nThe initial excess is 80 C and its half-life is 5 min.\n\nFormula:\nT=Ta+(T0-Ta)e^(-kt).\n\nSolution:\nThree half-lives pass in 15 min, so T=20+80/8=30 C.\n\nAnswer:\nThe temperature is 30 C.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "Newton cooling"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A logistic population satisfies dP/dt=0.4P(1-P/500). Find its positive equilibrium.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "500",
+          "explanation": "Given:\nThe model is dP/dt=0.4P(1-P/500).\n\nFormula:\nEquilibrium occurs when dP/dt=0.\n\nSolution:\nThe factors give P=0 or P=500; the positive equilibrium is 500.\n\nAnswer:\nThe carrying capacity is 500.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "logistic growth",
+            "equilibrium"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Salt enters a well-mixed tank at 3 kg/min and leaves at 0.05S kg/min. Find the equilibrium amount.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "60",
+          "explanation": "Given:\nSalt inflow=3 kg/min; outflow=0.05S kg/min.\n\nFormula:\nAt equilibrium S'=3-0.05S=0.\n\nSolution:\nSolving gives S=3/0.05=60 kg.\n\nAnswer:\nThe equilibrium amount is 60 kg.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "mixing",
+            "equilibrium"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A 100 L tank starts with pure water. Brine of concentration 1 kg/L enters and leaves at 2 L/min. Find salt after 50 min.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "63.21",
+          "explanation": "Given:\nInflow salt rate=2 kg/min; outflow rate=(2/100)S kg/min.\n\nFormula:\nS'=2-0.02S, S(0)=0.\n\nSolution:\nS=100(1-e^(-0.02t)); at t=50, S=100(1-e^-1)=63.21 kg.\n\nAnswer:\nThe tank contains 63.21 kg.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "mixing"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A tank obeys S'=4-0.2S and starts with 10 kg of salt. Find S after 5 min.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "16.32",
+          "explanation": "Given:\nS'=4-0.2S and S(0)=10 kg.\n\nFormula:\nEquilibrium S*=4/0.2=20; S(t)=S*+(S0-S*)e^(-0.2t).\n\nSolution:\nS(5)=20-10e^-1=16.32 kg.\n\nAnswer:\nThe tank contains 16.32 kg.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "mixing"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A tank obeys S'=2-0.04S and S(0)=0. Find S after 25 min.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "31.61",
+          "explanation": "Given:\nS'=2-0.04S and S(0)=0.\n\nFormula:\nEquilibrium is 50; S(t)=50(1-e^(-0.04t)).\n\nSolution:\nS(25)=50(1-e^-1)=31.61 kg.\n\nAnswer:\nThe amount is 31.61 kg.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "mixing"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A solution amount obeys S'=1-0.1S and S(0)=5 kg. Find S(10).",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "8.16",
+          "explanation": "Given:\nS'=1-0.1S and S(0)=5 kg.\n\nFormula:\nEquilibrium is 10; S(t)=10+(5-10)e^(-0.1t).\n\nSolution:\nS(10)=10-5e^-1=8.16 kg.\n\nAnswer:\nThe amount is 8.16 kg.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "mixing"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A 200 L tank receives salt at 3 kg/min. Solution leaves at 5 L/min; inlet concentration is 0.6 kg/L. Find the equilibrium salt amount.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "120",
+          "explanation": "Given:\nSalt enters at 5(0.6)=3 kg/min; outflow is 5(S/200)=0.025S kg/min.\n\nFormula:\nAt equilibrium 0=3-0.025S.\n\nSolution:\nS=3/0.025=120 kg.\n\nAnswer:\nThe equilibrium amount is 120 kg.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "mixing",
+            "equilibrium"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Find the characteristic roots of y''-5y'+6y=0.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "2, 3",
+          "explanation": "Given:\nThe equation is y''-5y'+6y=0.\n\nFormula:\nSet y=e^(rx) to obtain r^2-5r+6=0.\n\nSolution:\nFactor: (r-2)(r-3)=0.\n\nAnswer:\nThe roots are 2 and 3.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "second order",
+            "characteristic equation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y''+4y=0 with y(0)=2 and y'(0)=0. Find y(pi/4).",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "0",
+          "explanation": "Given:\nThe equation is y''+4y=0 with y(0)=2 and y'(0)=0.\n\nFormula:\nThe solution is y=A cos(2x)+B sin(2x).\n\nSolution:\nThe initial values give A=2 and B=0. Then y(pi/4)=2cos(pi/2)=0.\n\nAnswer:\ny(pi/4)=0.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "second order",
+            "oscillation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y''-y=0 with y(0)=0 and y'(0)=2. Find y(ln2).",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "1.5",
+          "explanation": "Given:\ny''-y=0, y(0)=0, y'(0)=2.\n\nFormula:\nThe solution is y=2sinh(x).\n\nSolution:\nsinh(ln2)=(2-1/2)/2=0.75, so y(ln2)=1.5.\n\nAnswer:\ny(ln2)=1.5.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "second order"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y''+2y'+y=0 with y(0)=1 and y'(0)=0. Find y(1) to 2 decimals.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "0.74",
+          "explanation": "Given:\nThe characteristic root is -1 repeated; y(0)=1 and y'(0)=0.\n\nFormula:\nFor a repeated root, y=(C1+C2x)e^(-x).\n\nSolution:\nThe initial values give C1=1,C2=1. Thus y(1)=2/e=0.74.\n\nAnswer:\ny(1)=0.74.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "second order",
+            "repeated roots"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y''-4y'+4y=0 with y(0)=1 and y'(0)=2. Find y(ln2).",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "4",
+          "explanation": "Given:\nThe characteristic root is 2 repeated; y(0)=1 and y'(0)=2.\n\nFormula:\nThe general solution is y=(C1+C2x)e^(2x).\n\nSolution:\nThe initial values give C1=1 and C2=0, so y=e^(2x); y(ln2)=4.\n\nAnswer:\ny(ln2)=4.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "second order",
+            "repeated roots"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y''+9y=0 with y(0)=0 and y'(0)=6. Find y(pi/6).",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "2",
+          "explanation": "Given:\nThe equation is y''+9y=0; y(0)=0 and y'(0)=6.\n\nFormula:\nThe solution is y=A cos(3x)+B sin(3x).\n\nSolution:\nThe initial values give A=0,B=2. Therefore y(pi/6)=2sin(pi/2)=2.\n\nAnswer:\ny(pi/6)=2.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "second order",
+            "oscillation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y''+y=0 with y(0)=0 and y'(0)=1. Find y(pi/2).",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "1",
+          "explanation": "Given:\nThe equation is y''+y=0 with initial values y(0)=0,y'(0)=1.\n\nFormula:\nThe solution has form y=A cos(x)+B sin(x).\n\nSolution:\nThe initial values give A=0,B=1; thus y(pi/2)=1.\n\nAnswer:\ny(pi/2)=1.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "second order",
+            "oscillation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y''+6y'+9y=0 with y(0)=2 and y'(0)=0. Find y(1) to 2 decimals.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "0.40",
+          "explanation": "Given:\nThe characteristic root -3 is repeated; y(0)=2 and y'(0)=0.\n\nFormula:\nThe solution is y=(C1+C2x)e^(-3x).\n\nSolution:\nC1=2 and C2=6, so y(1)=8e^-3=0.40.\n\nAnswer:\ny(1)=0.40.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "second order",
+            "repeated roots"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y''=-1 with y(0)=0 and y'(0)=2. Find y(3).",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "1.5",
+          "explanation": "Given:\ny''=-1, y(0)=0, and y'(0)=2.\n\nFormula:\nIntegrate twice: y'=-x+C1 and y=-x^2/2+C1x+C2.\n\nSolution:\nThe initial conditions give C1=2,C2=0. Thus y(3)=-9/2+6=1.5.\n\nAnswer:\ny(3)=1.5.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "second order",
+            "initial value"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y''-2y'+y=0 with y(0)=1 and y'(0)=1. Find y(ln2).",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "2",
+          "explanation": "Given:\nThe characteristic equation is (r-1)^2=0; y(0)=1 and y'(0)=1.\n\nFormula:\nFor a repeated root 1, y=(C1+C2x)e^x.\n\nSolution:\nInitial values give C1=1,C2=0, so y=e^x and y(ln2)=2.\n\nAnswer:\ny(ln2)=2.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "second order",
+            "repeated roots"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y''+16y=0 with y(0)=0 and y'(0)=8. Find y(pi/8).",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "2",
+          "explanation": "Given:\nThe equation is y''+16y=0 with y(0)=0 and y'(0)=8.\n\nFormula:\nThe solution is y=A cos(4x)+B sin(4x).\n\nSolution:\nThe initial values give A=0,B=2. Hence y(pi/8)=2sin(pi/2)=2.\n\nAnswer:\ny(pi/8)=2.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "second order",
+            "oscillation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y''-4y=0 with y(0)=3 and y'(0)=0. Find y(ln2) to 2 decimals.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "6.38",
+          "explanation": "Given:\nThe equation is y''-4y=0, y(0)=3, y'(0)=0.\n\nFormula:\nThe solution is y=3cosh(2x).\n\nSolution:\nAt x=ln2, cosh(2ln2)=(4+1/4)/2=2.125, so y=6.375, or 6.38.\n\nAnswer:\ny(ln2)=6.38.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "second order"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y'+2y=4 with y(0)=0. Find y at x=ln2/2.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "1",
+          "explanation": "Given:\ny'+2y=4 and y(0)=0.\n\nFormula:\nThe equilibrium is 2 and y=2(1-e^(-2x)).\n\nSolution:\nAt x=ln2/2, e^(-2x)=1/2, so y=1.\n\nAnswer:\ny=1.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "linear equations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve dy/dx=xy with y(0)=3. Find y(1) to 2 decimals.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "4.95",
+          "explanation": "Given:\ndy/dx=xy and y(0)=3.\n\nFormula:\nSeparate variables: dy/y=x dx.\n\nSolution:\nIntegration gives y=3e^(x^2/2). Thus y(1)=3sqrt(e)=4.95.\n\nAnswer:\ny(1)=4.95.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "separable equations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve dy/dx=(1+x)y with y(0)=1. Find y(1) to 2 decimals.",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "4.48",
+          "explanation": "Given:\ndy/dx=(1+x)y with y(0)=1.\n\nFormula:\nSeparate: dy/y=(1+x)dx.\n\nSolution:\nIntegration gives y=e^(x+x^2/2). At x=1, y=e^1.5=4.48.\n\nAnswer:\ny(1)=4.48.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "separable equations"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve y''+4y=0 with y(0)=0 and y'(0)=4. Find y(pi/4).",
+          "questionType": "short_answer",
+          "choices": [],
+          "answerIndex": -1,
+          "answerText": "2",
+          "explanation": "Given:\nThe equation is y''+4y=0 with y(0)=0,y'(0)=4.\n\nFormula:\nThe solution is y=Acos(2x)+Bsin(2x).\n\nSolution:\nThe initial values give A=0,B=2. Thus y(pi/4)=2sin(pi/2)=2.\n\nAnswer:\ny(pi/4)=2.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "differential equations",
+            "second order",
+            "oscillation"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
