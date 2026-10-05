@@ -7478,11 +7478,56 @@ function renderAssessment(summary, session, title, score, content, startSession)
         timingSummary.textContent = `Average time per viewed question: ${formatQuestionTime(averageQuestionTimeMs)} · Total question time: ${formatQuestionTime(totalQuestionTimeMs)}`;
         scoreCard.appendChild(timingSummary);
 
-        questionTimesCard = document.createElement("details");
+        questionTimesCard = document.createElement("section");
         questionTimesCard.className = "assessment-block exam-question-times";
-        questionTimesCard.appendChild(Object.assign(document.createElement("summary"), { textContent: "Time per question" }));
+        questionTimesCard.appendChild(Object.assign(document.createElement("h4"), { textContent: "Time per question" }));
+
+        const maxQuestionTimeMs = Math.max(0, ...questionTimesMs.map((milliseconds) => Math.max(0, Number(milliseconds) || 0)));
+        const chart = document.createElement("div");
+        chart.className = "exam-time-chart";
+        chart.setAttribute("role", "group");
+        chart.setAttribute("aria-label", `Horizontal bar chart showing time spent on each of ${session.questions.length} exam questions. The longest time was ${formatQuestionTime(maxQuestionTimeMs)}.`);
         const questionTimesList = document.createElement("div");
-        questionTimesList.className = "exam-question-times-list";
+        questionTimesList.className = "exam-time-chart-rows";
+        questionTimesList.setAttribute("role", "list");
+        session.questions.forEach((_, index) => {
+            const row = document.createElement("div");
+            row.className = "exam-time-chart-row";
+            row.setAttribute("role", "listitem");
+            const questionTimeMs = Math.max(0, Number(questionTimesMs[index]) || 0);
+            const percent = maxQuestionTimeMs ? questionTimeMs / maxQuestionTimeMs * 100 : 0;
+            row.setAttribute("aria-label", `Question ${index + 1}: ${formatQuestionTime(questionTimeMs)}`);
+            const track = document.createElement("span");
+            track.className = "exam-time-chart-track";
+            track.setAttribute("aria-hidden", "true");
+            track.title = `Question ${index + 1}: ${formatQuestionTime(questionTimeMs)}`;
+            const fill = document.createElement("span");
+            fill.className = "exam-time-chart-fill";
+            fill.style.width = `${percent}%`;
+            track.appendChild(fill);
+            row.append(
+                Object.assign(document.createElement("span"), { className: "exam-time-chart-question", textContent: `Q${index + 1}` }),
+                track,
+                Object.assign(document.createElement("span"), { className: "exam-time-chart-value", textContent: formatQuestionTime(questionTimeMs) })
+            );
+            questionTimesList.appendChild(row);
+        });
+        chart.appendChild(questionTimesList);
+        const axis = document.createElement("div");
+        axis.className = "exam-time-chart-axis";
+        axis.append(
+            Object.assign(document.createElement("span"), { textContent: "0" }),
+            Object.assign(document.createElement("span"), { className: "exam-time-chart-axis-label", textContent: "Time" }),
+            Object.assign(document.createElement("span"), { textContent: formatQuestionTime(maxQuestionTimeMs) })
+        );
+        chart.appendChild(axis);
+        questionTimesCard.appendChild(chart);
+
+        const exactTimes = document.createElement("details");
+        exactTimes.className = "exam-question-times-details";
+        exactTimes.appendChild(Object.assign(document.createElement("summary"), { textContent: "Show exact times" }));
+        const exactTimesList = document.createElement("div");
+        exactTimesList.className = "exam-question-times-list";
         session.questions.forEach((_, index) => {
             const row = document.createElement("div");
             row.className = "exam-question-time-row";
@@ -7490,9 +7535,10 @@ function renderAssessment(summary, session, title, score, content, startSession)
                 Object.assign(document.createElement("span"), { textContent: `Question ${index + 1}` }),
                 Object.assign(document.createElement("span"), { textContent: formatQuestionTime(questionTimesMs[index] || 0) })
             );
-            questionTimesList.appendChild(row);
+            exactTimesList.appendChild(row);
         });
-        questionTimesCard.appendChild(questionTimesList);
+        exactTimes.appendChild(exactTimesList);
+        questionTimesCard.appendChild(exactTimes);
     }
 
     const weakCard = document.createElement("div");
@@ -7906,11 +7952,19 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 const answerLetter = selectedOrderedChoice
                     ? String.fromCharCode(65 + selectedOrderedChoice.displayIndex)
                     : "";
+                const isTypedQuestion = question.questionType !== "multiple_choice";
+                const typedAnswerRecorded = Boolean(result && (
+                    isLearn || session.submitted || isExamAnswerSaved(session, index)
+                ));
+                const typedAnswer = typedAnswerRecorded ? text(result.userAnswer) : "";
 
                 const row = document.createElement("button");
                 row.type = "button";
                 row.className = "exam-map-row";
-                row.setAttribute("aria-label", `Question ${index + 1}${answerLetter ? `, answer ${answerLetter}` : ""}${isLearn && result ? `, ${result.correct ? "correct" : "incorrect"}` : ""}${session.unsureFlags?.[index] ? ", flagged" : ""}`);
+                const accessibleAnswer = isTypedQuestion
+                    ? (typedAnswer || "typed answer not recorded")
+                    : answerLetter ? `answer ${answerLetter}` : "unanswered";
+                row.setAttribute("aria-label", `Question ${index + 1}, ${accessibleAnswer}${isLearn && result ? `, ${result.correct ? "correct" : "incorrect"}` : ""}${session.unsureFlags?.[index] ? ", flagged" : ""}`);
                 if (session.index === index) {
                     row.classList.add("is-current");
                     row.setAttribute("aria-current", "step");
@@ -7943,9 +7997,14 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                     }
                     choiceList.appendChild(choiceBubble);
                 });
+                const typedAnswerNode = Object.assign(document.createElement("span"), {
+                    className: "exam-map-typed-answer",
+                    textContent: typedAnswer || "________"
+                });
+                typedAnswerNode.title = typedAnswer || "Typed-answer question";
                 row.append(
                     Object.assign(document.createElement("span"), { className: "exam-map-number", textContent: String(index + 1) }),
-                    choiceList,
+                    isTypedQuestion ? typedAnswerNode : choiceList,
                     Object.assign(document.createElement("span"), { className: "exam-map-flag", textContent: session.unsureFlags?.[index] ? "⚑" : "" })
                 );
                 row.addEventListener("click", (event) => {

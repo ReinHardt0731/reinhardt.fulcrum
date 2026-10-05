@@ -322,8 +322,10 @@ body.drawer-collapsed .mobile-only {
 
 .subject-list,
 .exam-question-map-list {
+    color-scheme: dark;
     scrollbar-color: rgba(97, 195, 255, 0.45) rgba(18, 31, 54, 0.6);
     scrollbar-width: thin;
+    scrollbar-gutter: stable;
 }
 
 .subject-list {
@@ -349,7 +351,7 @@ body.drawer-collapsed .mobile-only {
 
 .subject-list::-webkit-scrollbar-thumb,
 .exam-question-map-list::-webkit-scrollbar-thumb {
-    background: rgba(97, 195, 255, 0.35);
+    background-color: rgba(97, 195, 255, 0.35);
     border-radius: 999px;
     border: 2px solid transparent;
     background-clip: content-box;
@@ -357,7 +359,7 @@ body.drawer-collapsed .mobile-only {
 
 .subject-list::-webkit-scrollbar-thumb:hover,
 .exam-question-map-list::-webkit-scrollbar-thumb:hover {
-    background: rgba(97, 195, 255, 0.55);
+    background-color: rgba(97, 195, 255, 0.55);
 }
 
 .drawer .subject-list {
@@ -1648,6 +1650,8 @@ body.exam-map-collapsed.mode-learn .exam-question-map {
     min-height: 0;
     overflow: auto;
     padding-right: 2px;
+    background-color: rgba(13, 23, 41, 0.35);
+    scrollbar-color: rgba(97, 195, 255, 0.45) rgba(18, 31, 54, 0.72);
 }
 
 .exam-map-row {
@@ -1674,6 +1678,17 @@ button.exam-map-row { cursor: pointer; }
 .exam-map-row.is-flagged .exam-map-flag { color: var(--warning, #ffd166); }
 .exam-map-number { font-variant-numeric: tabular-nums; }
 .exam-map-choice-list { display: flex; align-items: center; justify-content: center; gap: 5px; min-width: 0; }
+.exam-map-typed-answer {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    color: inherit;
+    font-size: 0.82rem;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 .exam-map-choice {
     position: relative;
     display: inline-block;
@@ -8118,7 +8133,71 @@ body.mode-page .workspace > .mode-topbar::before {
     margin-bottom: 0;
 }
 
-.exam-question-times > summary {
+.exam-question-times > h4 {
+    margin: 0;
+}
+
+.exam-time-chart {
+    min-width: 0;
+}
+
+.exam-time-chart-rows {
+    display: grid;
+    gap: 7px;
+}
+
+.exam-time-chart-row {
+    display: grid;
+    grid-template-columns: minmax(76px, auto) minmax(56px, 1fr) 62px;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+    color: var(--muted);
+    font-size: 0.84rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.exam-time-chart-question {
+    white-space: nowrap;
+}
+
+.exam-time-chart-track {
+    display: block;
+    min-width: 0;
+    height: 9px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: repeating-linear-gradient(90deg, rgba(156, 178, 207, 0.15) 0 1px, transparent 1px 25%), rgba(18, 31, 54, 0.9);
+}
+
+.exam-time-chart-fill {
+    display: block;
+    height: 100%;
+    min-width: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--primary-strong), var(--tertiary));
+}
+
+.exam-time-chart-value {
+    color: var(--text);
+    text-align: right;
+    white-space: nowrap;
+}
+
+.exam-time-chart-axis {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin: 5px 71px 0 85px;
+    color: var(--muted);
+    font-size: 0.72rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.exam-time-chart-axis span:last-child { text-align: right; }
+.exam-time-chart-axis-label { text-align: center; }
+
+.exam-question-times-details > summary {
     cursor: pointer;
     color: var(--text);
     font-weight: 600;
@@ -8141,6 +8220,19 @@ body.mode-page .workspace > .mode-topbar::before {
 
 .exam-question-time-row span:last-child {
     color: var(--text);
+}
+
+@media (max-width: 520px) {
+    .exam-time-chart-row {
+        grid-template-columns: 42px minmax(40px, 1fr) 54px;
+        gap: 6px;
+        font-size: 0.78rem;
+    }
+
+    .exam-time-chart-axis {
+        margin-right: 60px;
+        margin-left: 48px;
+    }
 }
 
 .assessment-score-card,
