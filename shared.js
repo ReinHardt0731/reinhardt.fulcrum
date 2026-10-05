@@ -8199,6 +8199,43 @@ function renderAssessment(summary, session, title, score, content, startSession,
         actions.appendChild(reviewButton);
     }
 
+    if (session.mode === "exam") {
+        const startLearnReview = (indexes, label) => {
+            const questions = indexes.map((index) => session.questions[index]).filter(Boolean).map((question) => ({
+                ...question,
+                choices: Array.isArray(question.choices) ? [...question.choices] : [],
+                tags: Array.isArray(question.tags) ? [...question.tags] : []
+            }));
+            if (!questions.length) return;
+            const payload = {
+                subjectId: session.subjectId,
+                subjectName: session.subjectName,
+                chapterTitle: session.chapterTitle,
+                reviewLabel: label,
+                reviewSource: "exam",
+                questions,
+                createdAt: new Date().toISOString()
+            };
+            saveReviewSession(payload);
+            syncSelection(session.subjectId, session.chapterTitle, "learn");
+            window.location.href = "learn.html";
+        };
+        const flaggedIndexes = session.questions.map((_, index) => index).filter((index) => session.unsureFlags?.[index]);
+        const mistakeIndexes = session.questions.map((_, index) => index).filter((index) => session.answers[index] && !session.answers[index].correct);
+        [
+            { label: "Retry flagged in Learn mode", reviewLabel: "Flagged exam questions", indexes: flaggedIndexes },
+            { label: "Retry mistakes in Learn mode", reviewLabel: "Exam mistakes", indexes: mistakeIndexes }
+        ].forEach(({ label, reviewLabel, indexes }) => {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.className = "ghost-button";
+            button.textContent = `${label} (${indexes.length})`;
+            button.disabled = indexes.length === 0;
+            button.addEventListener("click", () => startLearnReview(indexes, reviewLabel));
+            actions.appendChild(button);
+        });
+    }
+
     content.append(scoreCard, weakCard);
     if (questionTimesCard) {
         content.appendChild(questionTimesCard);
@@ -8549,7 +8586,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             const flaggedCount = session.unsureFlags?.filter(Boolean).length || 0;
             if (elements.examMapSummary) {
                 elements.examMapSummary.textContent = isLearn
-                    ? `${answeredCount}/${session.questions.length} completed`
+                    ? `${answeredCount}/${session.questions.length} completed · ${flaggedCount} flagged`
                     : `${answeredCount}/${session.questions.length} answered · ${flaggedCount} flagged`;
             }
             elements.examMapList.replaceChildren();
@@ -9438,6 +9475,52 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         retakeButton.className = "primary-button";
         retakeButton.textContent = "Retake chapter";
         retakeButton.addEventListener("click", () => startSession(session.mode, true));
+        actions.appendChild(retakeButton);
+        if (session.mode === "learn") {
+            const restartSubset = (indexes, label) => {
+                const questions = indexes.map((index) => session.questions[index]).filter(Boolean).map((question) => ({
+                    ...question,
+                    choices: Array.isArray(question.choices) ? [...question.choices] : [],
+                    tags: Array.isArray(question.tags) ? [...question.tags] : []
+                }));
+                if (!questions.length) return;
+                const payload = {
+                    subjectId: session.subjectId,
+                    subjectName: session.subjectName,
+                    chapterTitle: session.chapterTitle,
+                    reviewLabel: label,
+                    reviewSource: "learn",
+                    questions,
+                    createdAt: new Date().toISOString()
+                };
+                state.reviewSession = payload;
+                saveReviewSession(payload);
+                startSession("learn", true);
+            };
+            const retryOptions = [
+                {
+                    label: "Retry unanswered",
+                    indexes: session.questions.map((_, index) => index).filter((index) => !session.answers[index])
+                },
+                {
+                    label: "Retry flagged",
+                    indexes: session.questions.map((_, index) => index).filter((index) => session.unsureFlags?.[index])
+                },
+                {
+                    label: "Retry mistakes",
+                    indexes: session.questions.map((_, index) => index).filter((index) => session.answers[index] && !session.answers[index].correct)
+                }
+            ];
+            retryOptions.forEach(({ label, indexes }) => {
+                const button = document.createElement("button");
+                button.type = "button";
+                button.className = "ghost-button";
+                button.textContent = `${label} (${indexes.length})`;
+                button.disabled = indexes.length === 0;
+                button.addEventListener("click", () => restartSubset(indexes, capitalize(label.replace(/^Retry /, ""))));
+                actions.appendChild(button);
+            });
+        }
         const nextButton = document.createElement("button");
         nextButton.type = "button";
         nextButton.className = "ghost-button";
@@ -9447,7 +9530,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             const nextChapter = subject.chapters[(currentIndex + 1) % subject.chapters.length];
             selectChapter(nextChapter.title);
         });
-        actions.append(retakeButton, nextButton);
+        actions.appendChild(nextButton);
         completeCard.appendChild(actions);
         stage.appendChild(completeCard);
         return;
@@ -9475,10 +9558,32 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
     }
     const header = document.createElement("div");
     header.className = "question-card-header";
-    header.append(
-        Object.assign(document.createElement("div"), { className: "question-counter-inline", textContent: `Question ${session.index + 1} out of ${session.questions.length}` }),
-        Object.assign(document.createElement("div"), { className: "mode-badge", textContent: `${capitalize(session.mode)} mode` })
-    );
+    const counter = Object.assign(document.createElement("div"), {
+        className: "question-counter-inline",
+        textContent: `Question ${session.index + 1} out of ${session.questions.length}`
+    });
+    const statusGroup = document.createElement("div");
+    statusGroup.className = "question-card-meta";
+    statusGroup.appendChild(Object.assign(document.createElement("div"), {
+        className: "mode-badge",
+        textContent: `${capitalize(session.mode)} mode`
+    }));
+    if (session.mode === "learn") {
+        const flagButton = document.createElement("button");
+        flagButton.type = "button";
+        flagButton.className = "ghost-button learn-flag-button";
+        flagButton.textContent = session.unsureFlags[session.index] ? "⚑ Flagged" : "⚑ Flag";
+        flagButton.setAttribute("aria-pressed", String(Boolean(session.unsureFlags[session.index])));
+        flagButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            session.unsureFlags[session.index] = !session.unsureFlags[session.index];
+            saveModeSession(session);
+            buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
+        });
+        statusGroup.appendChild(flagButton);
+    }
+    header.append(counter, statusGroup);
 
     const questionText = document.createElement("h4");
     questionText.textContent = question.question;
@@ -9698,7 +9803,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 if (session.selectedChoice === originalIndex) {
                     button.classList.add("is-selected");
                 }
-                if (session.mode !== "learn" && session.reviewed && session.lastResult) {
+                if (session.reviewed && session.lastResult) {
                     if (originalIndex === question.answerIndex) {
                         button.classList.add("is-correct");
                     }
@@ -11475,6 +11580,7 @@ export async function initModePage(mode) {
                 const reviewSession = nextMode === "learn" ? state.reviewSession : null;
                 const reviewQuestions = Array.isArray(reviewSession?.questions) && reviewSession.questions.length ? reviewSession.questions : null;
                 if (nextMode === "learn" && reviewQuestions) {
+                    if (forceRestart) clearModeSession(nextMode, subject, chapter);
                     state.session = createSession(subject, chapter, nextMode, {
                         questions: reviewQuestions,
                         chapterTitle: reviewSession.chapterTitle || chapter.title,
@@ -11483,6 +11589,9 @@ export async function initModePage(mode) {
                     });
                     state.session.reviewLabel = reviewSession.reviewLabel || "Missed questions";
                     state.session.reviewSource = reviewSession.reviewSource || "quiz";
+                    state.reviewSession = null;
+                    clearReviewSession();
+                    saveModeSession(state.session);
                 } else {
                     if (nextMode !== "learn" || (reviewSession && !reviewQuestions)) {
                         state.reviewSession = null;

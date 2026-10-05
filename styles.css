@@ -1718,6 +1718,7 @@ button.exam-map-row { cursor: pointer; }
 .exam-map-flag { justify-self: end; font-size: 1rem; line-height: 1; }
 .exam-map-toggle { flex: 0 0 auto; }
 .exam-flag-button { flex: 0 0 auto; min-height: 34px; padding: 0 10px; }
+.learn-flag-button { flex: 0 0 auto; min-height: 34px; padding: 0 10px; }
 
 .weak-exam-builder {
     display: grid;
