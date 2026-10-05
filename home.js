@@ -1,4 +1,4 @@
-import { initHomePage } from "./shared.js?v=feedback-dashboard-icon-20261003";
+import { initHomePage } from "./shared.js?v=inscribed-diagrams-20261005";
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";

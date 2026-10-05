@@ -9822,6 +9822,10 @@ body.admin-drawer-collapsed .admin-subject-rail { display: flex; }
         radial-gradient(circle at 10% 0%, rgba(45, 212, 191, .12), transparent 36%),
         linear-gradient(145deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, .025));
 }
+.planner-hero:has(.pomodoro-settings-panel:not([hidden])) {
+    position: relative;
+    z-index: 2;
+}
 .planner-title-row,
 .planner-section-heading {
     display: flex;
