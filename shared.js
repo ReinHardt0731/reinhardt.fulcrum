@@ -6,6 +6,7 @@ export const REVIEW_SESSION_KEY = "prepcore.web.reviewSession.v1";
 export const QUIZ_SESSION_KEY = "prepcore.web.quizSession.v1";
 export const QUIZ_PROGRESS_KEY = "prepcore.web.quizProgress.v1";
 export const PROGRESS_HISTORY_KEY = "prepcore.web.progressHistory.v1";
+const EXAM_START_CONFIG_KEY = "prepcore.web.examStartConfig.v1";
 export const POMODORO_HISTORY_KEY = "prepcore.web.pomodoroHistory.v1";
 export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
 export const ADMIN_PASSWORD = "prepcore";
@@ -23,6 +24,50 @@ const MODE_SESSION_KEYS = {
     flashcards: FLASHCARDS_SESSION_KEY,
     exam: "prepcore.web.examSession.v1"
 };
+const EXAM_RECORD_DB = "PrepCoreStudyRecords";
+const EXAM_RECORD_STORE = "examRecords";
+
+function openExamRecordDatabase() {
+    if (!globalThis.indexedDB) return Promise.reject(new Error("IndexedDB is unavailable."));
+    return new Promise((resolve, reject) => {
+        const request = indexedDB.open(EXAM_RECORD_DB, 1);
+        request.onupgradeneeded = () => {
+            const db = request.result;
+            if (!db.objectStoreNames.contains(EXAM_RECORD_STORE)) {
+                const store = db.createObjectStore(EXAM_RECORD_STORE, { keyPath: "id" });
+                store.createIndex("subjectId", "subjectId", { unique: false });
+                store.createIndex("completedAt", "completedAt", { unique: false });
+            }
+        };
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error || new Error("Could not open exam history."));
+    });
+}
+
+function examRecordRequest(operation, mode = "readonly") {
+    return openExamRecordDatabase().then((db) => new Promise((resolve, reject) => {
+        const transaction = db.transaction(EXAM_RECORD_STORE, mode);
+        const request = operation(transaction.objectStore(EXAM_RECORD_STORE));
+        let result;
+        request.onsuccess = () => { result = request.result; };
+        request.onerror = () => reject(request.error || new Error("Exam history request failed."));
+        transaction.oncomplete = () => { db.close(); resolve(result); };
+        transaction.onerror = () => { db.close(); reject(transaction.error || new Error("Exam history transaction failed.")); };
+        transaction.onabort = () => { db.close(); reject(transaction.error || new Error("Exam history transaction was aborted.")); };
+    }));
+}
+
+function saveExamRecord(record) {
+    return examRecordRequest((store) => store.put(record), "readwrite");
+}
+
+function loadExamRecords() {
+    return examRecordRequest((store) => store.getAll());
+}
+
+function deleteExamRecord(id) {
+    return examRecordRequest((store) => store.delete(id), "readwrite");
+}
 
 const UPDATE_LOG_API = "./updates.json";
 const DEFAULT_UPDATE_LOG = [
@@ -268,6 +313,9 @@ export function recordStudyProgress(payload = {}) {
     if (payload.summaryType !== undefined) {
         entry.summaryType = text(payload.summaryType);
     }
+    if (payload.examRecordId !== undefined) {
+        entry.examRecordId = text(payload.examRecordId);
+    }
     if (payload.timeLimitSeconds !== undefined) {
         entry.timeLimitSeconds = Math.max(0, Number(payload.timeLimitSeconds) || 0);
     }
@@ -325,7 +373,8 @@ export function recordExamSessionProgress(session) {
         averageQuestionTimeSeconds: timedQuestionCount ? totalQuestionTimeMs / timedQuestionCount / 1000 : 0,
         questionTimesSeconds,
         selectedChapterTitles: session.selectedChapterTitles,
-        summaryType: "session"
+        summaryType: "session",
+        examRecordId: session.examRecordId
     });
 }
 
@@ -1744,8 +1793,13 @@ export function createExamSession(subject, chapterTitles, questionCount, options
         });
     });
 
-    const questions = shuffleArray(questionPool)
-        .slice(0, Math.max(1, Math.min(Number(questionCount) || 1, questionPool.length)));
+    const selectedTags = normalizeTags(options.tags);
+    const filteredPool = selectedTags.length
+        ? questionPool.filter((question) => question.tags.some((tag) => selectedTags.includes(tag)))
+        : questionPool;
+
+    const questions = shuffleArray(filteredPool)
+        .slice(0, Math.max(0, Math.min(Number(questionCount) || 1, filteredPool.length)));
     const preparedQuestions = questions.map((question, index) => prepareQuestionForSession(question, index + 1, {
         shuffleChoices: true
     }));
@@ -1753,6 +1807,7 @@ export function createExamSession(subject, chapterTitles, questionCount, options
     return {
         subjectId: subject.id,
         subjectName: subject.name,
+        examRecordId: globalThis.crypto?.randomUUID?.() || `exam-${Date.now()}-${Math.random().toString(36).slice(2)}`,
         chapterTitle: text(options.chapterTitle || (selectedChapters[0] || subject.chapters[0]?.title || "Exam")),
         mode: "exam",
         questions: preparedQuestions,
@@ -1774,6 +1829,7 @@ export function createExamSession(subject, chapterTitles, questionCount, options
         reviewLabel: "Exam review",
         reviewSource: "exam",
         selectedChapterTitles: selectedChapters.filter(Boolean),
+        selectedTags,
         questionCount: questions.length,
         timeLimitSeconds: Number(options.timeLimitSeconds) || 0,
         timeRemainingSeconds: Number(options.timeLimitSeconds) || 0,
@@ -2237,7 +2293,11 @@ function saveModeSession(session) {
         submitted: Boolean(session.submitted),
         timerStarted: false,
         reviewingAnswers: Boolean(session.reviewingAnswers),
-        selectedChapterTitles: Array.isArray(session.selectedChapterTitles) ? session.selectedChapterTitles : []
+        selectedChapterTitles: Array.isArray(session.selectedChapterTitles) ? session.selectedChapterTitles : [],
+        selectedTags: Array.isArray(session.selectedTags) ? session.selectedTags : [],
+        examRecordId: text(session.examRecordId),
+        startedAt: Number(session.startedAt) || null,
+        recordSaved: Boolean(session.recordSaved)
     });
 }
 
@@ -2329,6 +2389,10 @@ function restoreModeSession(subject, chapter, mode) {
         session.startedAt = null;
         session.reviewingAnswers = Boolean(saved.reviewingAnswers);
         session.selectedChapterTitles = Array.isArray(saved.selectedChapterTitles) ? saved.selectedChapterTitles : [saved.chapterTitle];
+        session.selectedTags = normalizeTags(saved.selectedTags);
+        session.examRecordId = text(saved.examRecordId);
+        session.startedAt = Number(saved.startedAt) || null;
+        session.recordSaved = Boolean(saved.recordSaved);
         session.questionCount = session.questions.length;
     }
 
@@ -6970,7 +7034,7 @@ function createAccuracyAttemptChartCard(quizEntries, examEntries) {
 
     const note = document.createElement("p");
     note.className = "progress-summary-card-note";
-    note.textContent = "Each completed quiz or exam session contributes one point on the timeline.";
+    note.textContent = "Hover an Exam bar for weak areas. Select a bar to open its saved questions, timings, and explanations.";
 
     card.append(header, legend, chartWrap, note);
     return card;
@@ -6993,6 +7057,7 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
             const parsedTime = entry?.timestamp ? Date.parse(entry.timestamp) : Number.NaN;
             return {
                 ...entry,
+                recordId: text(entry?.examRecordId),
                 timestampValue: Number.isFinite(parsedTime) ? parsedTime : 0
             };
         })
@@ -7000,7 +7065,10 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
         .map((entry, index) => ({
             attempt: index + 1,
             accuracy: Math.max(0, Math.min(100, Number(entry?.accuracy) || 0)),
-            mode: text(entry?.mode) === "exam" ? "exam" : "quiz"
+            mode: text(entry?.mode) === "exam" ? "exam" : "quiz",
+            recordId: entry.recordId,
+            subjectId: entry.subjectId,
+            timestamp: entry.timestamp
         }));
 
     const totalPlotWidth = Math.max(
@@ -7020,6 +7088,9 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
             accuracy: entry.accuracy,
             attempt: entry.attempt,
             mode: entry.mode,
+            recordId: entry.recordId,
+            subjectId: entry.subjectId,
+            timestamp: entry.timestamp,
             color: entry.mode === "exam" ? "#f59e0b" : "#3b82f6"
         };
     });
@@ -7106,6 +7177,20 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
     const bars = buildBars(combinedEntries);
     bars.forEach((bar) => {
         const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        group.setAttribute("data-attempt-mode", bar.mode);
+        group.setAttribute("data-attempt-accuracy", String(bar.accuracy));
+        group.setAttribute("data-attempt-subject-id", text(bar.subjectId));
+        group.setAttribute("data-attempt-timestamp", text(bar.timestamp));
+        if (bar.recordId) {
+            group.setAttribute("data-exam-record-id", bar.recordId);
+            group.setAttribute("role", "button");
+            group.setAttribute("tabindex", "0");
+            group.setAttribute("aria-label", `Exam attempt ${bar.attempt}, ${bar.accuracy}% accuracy. Open saved review.`);
+            group.setAttribute("class", "accuracy-chart-attempt is-exam-attempt");
+        } else {
+            group.setAttribute("class", "accuracy-chart-attempt");
+            group.setAttribute("aria-label", `${bar.mode === "exam" ? "Exam" : "Quiz"} attempt ${bar.attempt}, ${bar.accuracy}% accuracy`);
+        }
         const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
         rect.setAttribute("x", bar.x);
         rect.setAttribute("y", bar.y);
@@ -7140,6 +7225,222 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
     });
 
     return svg;
+}
+
+function createWeakAreaHoverPreview(record) {
+    const summary = record.currentSummary || summarizeResults(record);
+    const weakAreas = Array.isArray(summary.weakAreas) ? summary.weakAreas : [];
+    const colors = ["var(--success)", "var(--primary)", "var(--warning)", "var(--danger)", "var(--secondary)"];
+    const total = weakAreas.reduce((sum, area) => sum + Math.max(0, Number(area.count) || 0), 0);
+    const segments = weakAreas.map((area, index) => ({
+        label: area.name,
+        value: area.count,
+        color: colors[index % colors.length],
+        fillPercent: total ? Math.round(area.count / total * 100) : 0,
+        meta: `${area.count} missed`
+    }));
+    const preview = document.createElement("div");
+    preview.className = "progress-attempt-hover-card";
+    preview.setAttribute("role", "tooltip");
+    preview.appendChild(Object.assign(document.createElement("strong"), { textContent: "Weak areas in this attempt" }));
+    preview.appendChild(segments.length
+        ? createAssessmentChart(segments, String(total), "Missed", `Weak area pie chart: ${segments.map((item) => `${item.label}, ${item.value} missed`).join("; ")}`)
+        : Object.assign(document.createElement("p"), { textContent: "No weak areas recorded." }));
+    return preview;
+}
+
+function renderProgressExamHistory(container, records, subjectState) {
+    if (!container) return;
+    const subjects = Array.isArray(subjectState?.subjects) ? subjectState.subjects : [];
+    const sortedRecords = [...records].sort((a, b) => (Number(b.completedAt) || 0) - (Number(a.completedAt) || 0));
+    let selectedSubject = subjectState?.activeSubject || subjects[0] || null;
+    const builderSlot = document.createElement("div");
+    let subjectPicker = null;
+    const renderBuilder = () => {
+        builderSlot.replaceChildren();
+        if (!selectedSubject) return;
+        if (subjectPicker) builderSlot.appendChild(subjectPicker);
+        const latestAttempt = sortedRecords.find((record) => text(record.subjectId) === text(selectedSubject.id))
+            || { questions: [], answers: [], selectedChapterTitles: [] };
+        const startCustomExam = (config) => {
+            const chapterTitle = config.chapters?.[0] || selectedSubject.chapters[0]?.title || "";
+            storageSet(EXAM_START_CONFIG_KEY, { ...config, subjectId: selectedSubject.id });
+            syncSelection(selectedSubject.id, chapterTitle, "exam");
+            window.location.href = "exam.html";
+        };
+        const builder = createWeakExamBuilder(selectedSubject, latestAttempt, startCustomExam);
+        if (builder) builderSlot.appendChild(builder);
+    };
+
+    if (subjects.length > 1) {
+        subjectPicker = document.createElement("label");
+        subjectPicker.className = "assessment-attempt-subject-picker";
+        subjectPicker.append("Practice subject", Object.assign(document.createElement("select"), { className: "assessment-attempt-subject" }));
+        const select = subjectPicker.querySelector("select");
+        subjects.forEach((subject) => {
+            select.appendChild(Object.assign(document.createElement("option"), {
+                value: subject.id,
+                textContent: subject.name,
+                selected: subject.id === selectedSubject?.id
+            }));
+        });
+        select.addEventListener("change", () => {
+            selectedSubject = subjects.find((subject) => text(subject.id) === select.value) || subjects[0];
+            renderBuilder();
+        });
+    }
+    renderBuilder();
+
+    const recordsBySubject = new Map();
+    const detailsByRecordId = new Map();
+    sortedRecords.forEach((record) => {
+        const details = createSavedExamReviewDetails(record, async (deletedRecord, detailsElement, button) => {
+            button.disabled = true;
+            try {
+                await deleteExamRecord(deletedRecord.id);
+                const progressEntries = getProgressEntries();
+                let removed = false;
+                const progress = progressEntries.filter((entry) => {
+                    if (!removed && entry.examRecordId === deletedRecord.id) {
+                        removed = true;
+                        return false;
+                    }
+                    return true;
+                });
+                if (!removed) {
+                    const recordTime = Number(deletedRecord.completedAt) || 0;
+                    let closestIndex = -1;
+                    let closestDistance = Infinity;
+                    progress.forEach((entry, index) => {
+                        if (text(entry.mode) !== "exam" || text(entry.subjectId) !== text(deletedRecord.subjectId)) return;
+                        const entryAccuracy = Number(entry.accuracy) || 0;
+                        const recordAccuracy = Number(deletedRecord.currentSummary?.accuracy ?? summarizeResults(deletedRecord).accuracy) || 0;
+                        if (entryAccuracy !== recordAccuracy) return;
+                        const entryTime = Date.parse(entry.timestamp || "") || 0;
+                        const distance = Math.abs(entryTime - recordTime);
+                        if (distance < closestDistance) {
+                            closestDistance = distance;
+                            closestIndex = index;
+                        }
+                    });
+                    if (closestIndex >= 0 && closestDistance < 10 * 60 * 1000) progress.splice(closestIndex, 1);
+                }
+                storageSet(PROGRESS_HISTORY_KEY, progress);
+                window.location.reload();
+            } catch (error) {
+                console.warn("Exam record could not be deleted.", error);
+                button.disabled = false;
+                button.textContent = "Could not delete";
+            }
+        });
+        const subjectId = text(record.subjectId);
+        if (!recordsBySubject.has(subjectId)) {
+            const list = document.createElement("div");
+            list.className = "assessment-attempt-record-list saved-exam-history";
+            list.dataset.subjectName = text(record.subjectName);
+            recordsBySubject.set(subjectId, list);
+        }
+        recordsBySubject.get(subjectId).appendChild(details);
+        detailsByRecordId.set(text(record.id), details);
+    });
+
+    const assessmentContainer = document.getElementById("assessment-container");
+    const subjectCards = [...(assessmentContainer?.querySelectorAll(".assessment-card") || [])];
+    recordsBySubject.forEach((list, subjectId) => {
+        const card = subjectCards.find((item) => {
+            const ids = JSON.parse(item.dataset.subjectIds || "[]");
+            return ids.includes(subjectId) || (!subjectId && item.dataset.subjectName === list.dataset.subjectName);
+        });
+        if (!card) return;
+        const attempts = document.createElement("details");
+        attempts.className = "assessment-subject-attempts";
+        attempts.append(
+            Object.assign(document.createElement("summary"), {
+                textContent: `Saved Exam attempts · ${list.childElementCount}`
+            }),
+            list
+        );
+        card.appendChild(attempts);
+    });
+
+    const unmatchedRecords = [...recordsBySubject.entries()].filter(([subjectId, list]) =>
+        !subjectCards.some((card) => JSON.parse(card.dataset.subjectIds || "[]").includes(subjectId)
+            || (!subjectId && card.dataset.subjectName === list.dataset.subjectName))
+    );
+    if (unmatchedRecords.length && assessmentContainer) {
+        const unmatched = document.createElement("section");
+        unmatched.className = "assessment-unmatched-exam-history";
+        unmatched.appendChild(Object.assign(document.createElement("h4"), { textContent: "Saved attempts for other subjects" }));
+        unmatchedRecords.forEach(([, list]) => unmatched.appendChild(list));
+        assessmentContainer.appendChild(unmatched);
+    }
+
+    const history = document.createElement("section");
+    history.className = "assessment-attempt-history";
+    history.appendChild(Object.assign(document.createElement("h4"), { textContent: "Build a weak-area Exam" }));
+    history.appendChild(builderSlot);
+    assessmentContainer?.appendChild(history);
+
+    const recordsById = new Map(sortedRecords.map((record) => [record.id, record]));
+    const matchedRecordIds = new Set();
+    const hover = (record, event) => {
+        document.querySelector(".progress-attempt-hover-card")?.remove();
+        const preview = createWeakAreaHoverPreview(record);
+        document.body.appendChild(preview);
+        const left = Math.max(12, Math.min(window.innerWidth - 350, event.clientX + 16));
+        const top = Math.max(12, Math.min(window.innerHeight - 270, event.clientY + 14));
+        preview.style.left = `${left}px`;
+        preview.style.top = `${top}px`;
+    };
+    container.closest(".progress-chart-card")?.querySelectorAll("[data-attempt-mode='exam']").forEach((bar) => {
+        let record = recordsById.get(bar.getAttribute("data-exam-record-id"));
+        if (!record) {
+            const timestamp = Date.parse(bar.getAttribute("data-attempt-timestamp") || "") || 0;
+            const accuracy = Number(bar.getAttribute("data-attempt-accuracy")) || 0;
+            const subjectId = bar.getAttribute("data-attempt-subject-id") || "";
+            record = sortedRecords
+                .filter((entry) => !matchedRecordIds.has(entry.id)
+                    && text(entry.subjectId) === text(subjectId)
+                    && Number(entry.currentSummary?.accuracy ?? summarizeResults(entry).accuracy) === accuracy)
+                .sort((a, b) => Math.abs((Number(a.completedAt) || 0) - timestamp) - Math.abs((Number(b.completedAt) || 0) - timestamp))[0];
+        }
+        if (!record) return;
+        matchedRecordIds.add(record.id);
+        bar.setAttribute("role", "button");
+        bar.setAttribute("tabindex", "0");
+        bar.classList.add("is-exam-attempt");
+        bar.setAttribute("aria-label", `Exam attempt, ${Number(bar.getAttribute("data-attempt-accuracy")) || 0}% accuracy. Open saved review.`);
+        bar.addEventListener("pointerenter", (event) => hover(record, event));
+        bar.addEventListener("pointermove", (event) => {
+            const preview = document.querySelector(".progress-attempt-hover-card");
+            if (!preview) return;
+            preview.style.left = `${Math.max(12, Math.min(window.innerWidth - 350, event.clientX + 16))}px`;
+            preview.style.top = `${Math.max(12, Math.min(window.innerHeight - 270, event.clientY + 14))}px`;
+        });
+        bar.addEventListener("pointerleave", () => document.querySelector(".progress-attempt-hover-card")?.remove());
+        bar.addEventListener("focus", () => hover(record, { clientX: 24, clientY: 24 }));
+        bar.addEventListener("blur", () => document.querySelector(".progress-attempt-hover-card")?.remove());
+        const openRecord = () => {
+            const detail = detailsByRecordId.get(text(record.id));
+            if (!detail) return;
+            const card = detail.closest(".assessment-card");
+            if (card) {
+                card.classList.add("expanded");
+                card.querySelector(".assessment-chapters")?.classList.add("expanded");
+            }
+            const attempts = detail.closest(".assessment-subject-attempts");
+            if (attempts) attempts.open = true;
+            detail.open = true;
+            detail.scrollIntoView({ behavior: "smooth", block: "center" });
+            detail.querySelector("summary")?.focus({ preventScroll: true });
+        };
+        bar.addEventListener("click", openRecord);
+        bar.addEventListener("keydown", (event) => {
+            if (event.key !== "Enter" && event.key !== " ") return;
+            event.preventDefault();
+            openRecord();
+        });
+    });
 }
 
 function createProgressSummaryCard(title, summary, description) {
@@ -7409,7 +7710,301 @@ function renderLearnAssessment(_summary, session, title, score, content, startSe
     content.append(card, details, actions);
 }
 
-function renderAssessment(summary, session, title, score, content, startSession) {
+function createWeakExamBuilder(subject, attempt, startCustomExam) {
+    if (!subject || typeof startCustomExam !== "function") return null;
+    const builder = document.createElement("section");
+    builder.className = "weak-exam-builder";
+    builder.append(
+        Object.assign(document.createElement("h5"), { textContent: "Build a weak-area exam" }),
+        Object.assign(document.createElement("p"), { textContent: "Choose tags to practice. Questions matching any selected tag will be included." })
+    );
+    const tagCounts = new Map();
+    subject.chapters.forEach((chapter) => collectChapterQuestions(chapter).forEach((entry, index) => {
+        const question = coerceQuestion(entry, index + 1);
+        [...new Set(normalizeTags(question.tags))].forEach((tag) => tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1));
+    }));
+    const tagDisclosure = document.createElement("details");
+    tagDisclosure.className = "weak-exam-tag-disclosure";
+    tagDisclosure.open = false;
+    const tagSummary = Object.assign(document.createElement("summary"), { className: "weak-exam-tag-summary" });
+    tagDisclosure.appendChild(tagSummary);
+    const tagField = document.createElement("fieldset");
+    tagField.className = "weak-exam-tags";
+    tagField.appendChild(Object.assign(document.createElement("legend"), { textContent: "Tags in this subject" }));
+    const missedTags = new Set();
+    attempt.questions.forEach((question, index) => {
+        if (attempt.answers?.[index]?.correct) return;
+        normalizeTags(question.tags).forEach((tag) => missedTags.add(tag));
+    });
+    const selected = new Set([...missedTags].filter((tag) => tagCounts.has(tag)));
+    const checkboxes = [];
+    [...tagCounts.entries()].sort((a, b) => a[0].localeCompare(b[0])).forEach(([tag, count]) => {
+        const label = document.createElement("label");
+        label.className = "weak-exam-tag";
+        const input = document.createElement("input");
+        input.type = "checkbox";
+        input.value = tag;
+        input.checked = selected.has(tag);
+        const name = document.createElement("span");
+        name.textContent = tag;
+        const tally = document.createElement("span");
+        tally.className = "weak-exam-tag-count";
+        tally.textContent = `${count} questions`;
+        label.append(input, name, tally);
+        tagField.appendChild(label);
+        checkboxes.push(input);
+    });
+    if (!checkboxes.length) {
+        tagField.appendChild(Object.assign(document.createElement("p"), { textContent: "No tagged questions are available in this subject." }));
+    }
+    tagDisclosure.appendChild(tagField);
+    const controls = document.createElement("div");
+    controls.className = "weak-exam-controls";
+    const countLabel = document.createElement("label");
+    countLabel.append("Number of questions", Object.assign(document.createElement("input"), { type: "number", min: "1", step: "1", value: "10", className: "weak-exam-count" }));
+    const countInput = countLabel.querySelector("input");
+    const timeLabel = document.createElement("label");
+    timeLabel.append("Time limit (hh:mm:ss, optional)", Object.assign(document.createElement("input"), {
+        type: "text", inputMode: "numeric", placeholder: "00:20:00", pattern: "[0-9]+:[0-5][0-9]:[0-5][0-9]", className: "weak-exam-time"
+    }));
+    const timeInput = timeLabel.querySelector("input");
+    controls.append(countLabel, timeLabel);
+    const poolInfo = Object.assign(document.createElement("p"), { className: "weak-exam-pool", "aria-live": "polite" });
+    const startButton = Object.assign(document.createElement("button"), { type: "button", className: "primary-button", textContent: "Start custom exam" });
+    const updatePool = () => {
+        const tags = checkboxes.filter((input) => input.checked).map((input) => input.value);
+        const matching = tags.length ? subject.chapters.reduce((total, chapter) => total + collectChapterQuestions(chapter).filter((entry, index) => {
+            const question = coerceQuestion(entry, index + 1);
+            return normalizeTags(question.tags).some((tag) => tags.includes(tag));
+        }).length, 0) : 0;
+        const max = matching;
+        countInput.max = String(Math.max(1, max));
+        countInput.value = String(Math.max(1, Math.min(Math.floor(Number(countInput.value) || 10), Math.max(1, max))));
+        poolInfo.textContent = `${matching} matching questions. Maximum possible items: ${matching}.`;
+        tagSummary.textContent = `Choose tags (${tags.length} selected)`;
+        startButton.disabled = matching === 0;
+        return { tags, matching };
+    };
+    checkboxes.forEach((input) => input.addEventListener("change", updatePool));
+    countInput.addEventListener("input", updatePool);
+    updatePool();
+    startButton.addEventListener("click", () => {
+        const { tags, matching } = updatePool();
+        if (!matching || !tags.length) return;
+        const count = Math.max(1, Math.min(Math.floor(Number(countInput.value) || 1), matching));
+        let timeLimitSeconds = 0;
+        if (text(timeInput.value)) {
+            const match = text(timeInput.value).match(/^(\d+):([0-5]\d):([0-5]\d)$/);
+            if (!match) {
+                timeInput.setCustomValidity("Enter time as hh:mm:ss, such as 00:20:00.");
+                timeInput.reportValidity();
+                return;
+            }
+            timeInput.setCustomValidity("");
+            timeLimitSeconds = Number(match[1]) * 3600 + Number(match[2]) * 60 + Number(match[3]);
+            if (!timeLimitSeconds) {
+                timeInput.setCustomValidity("Enter a time greater than 00:00:00.");
+                timeInput.reportValidity();
+                return;
+            }
+        }
+        startCustomExam({ chapters: subject.chapters.map((chapter) => chapter.title), tags, questionCount: count, maxQuestions: matching, timeLimitSeconds });
+    });
+    builder.append(tagDisclosure, controls, poolInfo, startButton);
+    return builder;
+}
+
+function createSavedExamTimeChart(record) {
+    const times = Array.isArray(record.questionTimesMs) ? record.questionTimesMs : [];
+    const questions = Array.isArray(record.questions) ? record.questions : [];
+    const maxMs = Math.max(0, ...questions.map((_, index) => Math.max(0, Number(times[index]) || 0)));
+    const section = document.createElement("section");
+    section.className = "assessment-block saved-exam-time-chart";
+    section.appendChild(Object.assign(document.createElement("h5"), { textContent: "Time per question" }));
+    const rows = document.createElement("div");
+    rows.className = "exam-time-chart-rows";
+    rows.setAttribute("role", "list");
+    questions.forEach((_, index) => {
+        const value = Math.max(0, Number(times[index]) || 0);
+        const row = document.createElement("div");
+        row.className = "exam-time-chart-row";
+        row.setAttribute("role", "listitem");
+        row.setAttribute("aria-label", `Question ${index + 1}: ${formatQuestionTime(value)}`);
+        const track = document.createElement("span");
+        track.className = "exam-time-chart-track";
+        track.title = `Question ${index + 1}: ${formatQuestionTime(value)}`;
+        const fill = document.createElement("span");
+        fill.className = "exam-time-chart-fill";
+        fill.style.width = `${maxMs ? value / maxMs * 100 : 0}%`;
+        track.appendChild(fill);
+        row.append(
+            Object.assign(document.createElement("span"), { className: "exam-time-chart-question", textContent: `Q${index + 1}` }),
+            track,
+            Object.assign(document.createElement("span"), { className: "exam-time-chart-value", textContent: formatQuestionTime(value) })
+        );
+        rows.appendChild(row);
+    });
+    section.appendChild(rows);
+    const axis = document.createElement("div");
+    axis.className = "exam-time-chart-axis";
+    axis.append(
+        Object.assign(document.createElement("span"), { textContent: "0" }),
+        Object.assign(document.createElement("span"), { className: "exam-time-chart-axis-label", textContent: "Time" }),
+        Object.assign(document.createElement("span"), { textContent: formatQuestionTime(maxMs) })
+    );
+    section.appendChild(axis);
+    return section;
+}
+
+function createSavedExamReviewDetails(record, onDelete = null) {
+    const details = document.createElement("details");
+    details.className = "saved-exam-record";
+    details.dataset.examRecordId = record.id;
+    const summary = record.currentSummary || summarizeResults(record);
+    const date = new Date(Number(record.completedAt) || Date.now()).toLocaleString();
+    const summaryLine = document.createElement("summary");
+    summaryLine.append(
+        Object.assign(document.createElement("strong"), { textContent: `${record.subjectName || "Exam"} · ${record.chapterTitle || "Exam"} · ${summary.accuracy}%` }),
+        Object.assign(document.createElement("span"), { textContent: `${date} · ${summary.correctCount}/${summary.total} correct` })
+    );
+    details.appendChild(summaryLine);
+
+    const weakAreas = Array.isArray(summary.weakAreas) ? summary.weakAreas : [];
+    const weakTotal = weakAreas.reduce((total, area) => total + Math.max(0, Number(area.count) || 0), 0);
+    const colors = ["var(--success)", "var(--primary)", "var(--warning)", "var(--danger)", "var(--secondary)"];
+    const weakSegments = weakAreas.map((area, index) => ({
+        label: area.name,
+        value: area.count,
+        color: colors[index % colors.length],
+        fillPercent: weakTotal ? Math.round(area.count / weakTotal * 100) : 0,
+        meta: `${area.count} missed`
+    }));
+    const hoverChart = document.createElement("div");
+    hoverChart.className = "saved-exam-hover-chart";
+    hoverChart.setAttribute("role", "tooltip");
+    hoverChart.appendChild(Object.assign(document.createElement("strong"), { textContent: "Weak areas in this attempt" }));
+    hoverChart.appendChild(weakSegments.length
+        ? createAssessmentChart(weakSegments, String(weakTotal), "Missed", `Weak areas: ${weakSegments.map((area) => `${area.label}, ${area.value} missed`).join("; ")}`)
+        : Object.assign(document.createElement("p"), { textContent: "No weak areas recorded." }));
+    details.appendChild(hoverChart);
+
+    const timeSpent = (record.questionTimesMs || []).reduce((sum, value) => sum + Math.max(0, Number(value) || 0), 0);
+    const meta = document.createElement("p");
+    meta.className = "saved-exam-meta";
+    meta.textContent = `${(record.selectedChapterTitles || [record.chapterTitle]).join(", ")}${record.selectedTags?.length ? ` · Tags: ${record.selectedTags.join(", ")}` : ""} · ${formatQuestionTime(timeSpent)} total`;
+    details.append(meta, createSavedExamTimeChart(record));
+
+    const map = document.createElement("div");
+    map.className = "saved-exam-map";
+    map.setAttribute("role", "group");
+    map.setAttribute("aria-label", "Saved exam question map");
+    const misses = document.createElement("div");
+    misses.className = "review-list saved-exam-misses";
+    (record.questions || []).forEach((question, index) => {
+        const answer = record.answers?.[index] || null;
+        const row = document.createElement("button");
+        row.type = "button";
+        row.className = `exam-map-row${answer ? answer.correct ? " is-correct" : " is-wrong" : ""}${record.unsureFlags?.[index] ? " is-flagged" : ""}`;
+        const orderedChoices = question.questionType === "multiple_choice" ? getOrderedChoices(question) : [];
+        const selectedDisplayIndex = orderedChoices.findIndex((choice) => choice.originalIndex === answer?.userAnswerIndex);
+        const answerLabel = question.questionType === "multiple_choice"
+            ? (selectedDisplayIndex < 0 ? "unanswered" : `answer ${String.fromCharCode(65 + selectedDisplayIndex)}`)
+            : text(answer?.userAnswer) || "typed answer not recorded";
+        row.setAttribute("aria-label", `Question ${index + 1}, ${answerLabel}${answer ? answer.correct ? ", correct" : ", incorrect" : ", unanswered"}${record.unsureFlags?.[index] ? ", flagged" : ""}`);
+        const choices = document.createElement("span");
+        choices.className = "exam-map-choice-list";
+        if (question.questionType === "multiple_choice") {
+            choices.setAttribute("aria-hidden", "true");
+            orderedChoices.forEach(({ displayIndex, originalIndex }) => {
+                const bubble = document.createElement("span");
+                bubble.className = "exam-map-choice";
+                if (answer?.userAnswerIndex === originalIndex) bubble.classList.add("is-selected");
+                if (answer && originalIndex === question.answerIndex) bubble.classList.add("is-correct");
+                if (answer && answer.userAnswerIndex === originalIndex && !answer.correct) bubble.classList.add("is-wrong");
+                bubble.appendChild(Object.assign(document.createElement("span"), { className: "exam-map-choice-label", textContent: String.fromCharCode(65 + displayIndex) }));
+                choices.appendChild(bubble);
+            });
+        } else {
+            const typed = Object.assign(document.createElement("span"), { className: "exam-map-typed-answer", textContent: text(answer?.userAnswer) || "________" });
+            typed.title = text(answer?.userAnswer) || "Typed-answer question";
+            choices.appendChild(typed);
+        }
+        row.append(
+            Object.assign(document.createElement("span"), { className: "exam-map-number", textContent: String(index + 1) }),
+            choices,
+            Object.assign(document.createElement("span"), { className: "exam-map-flag", textContent: record.unsureFlags?.[index] ? "⚑" : "" })
+        );
+        const missed = answer && !answer.correct;
+        if (missed) {
+            row.addEventListener("click", () => {
+                misses.querySelectorAll(".is-map-focused").forEach((node) => node.classList.remove("is-map-focused"));
+                const target = misses.querySelector(`[data-saved-miss-index="${index}"]`);
+                target?.classList.add("is-map-focused");
+                if (target) {
+                    const containerRect = misses.getBoundingClientRect();
+                    const targetRect = target.getBoundingClientRect();
+                    misses.scrollBy({
+                        top: targetRect.top - containerRect.top - (containerRect.height - targetRect.height) / 2,
+                        behavior: "smooth"
+                    });
+                }
+                target?.focus({ preventScroll: true });
+            });
+        } else {
+            row.disabled = true;
+        }
+        map.appendChild(row);
+    });
+    const reviewLayout = document.createElement("div");
+    reviewLayout.className = "saved-exam-review-layout";
+    const mapPanel = document.createElement("section");
+    mapPanel.className = "saved-exam-map-panel";
+    mapPanel.append(
+        Object.assign(document.createElement("h5"), { textContent: "Question map" }),
+        map
+    );
+
+    (record.answers || []).forEach((answer, index) => {
+        if (!answer || answer.correct) return;
+        const item = document.createElement("article");
+        item.className = "review-item exam-missed-question";
+        item.dataset.savedMissIndex = String(index);
+        item.tabIndex = -1;
+        const explanation = document.createElement("p");
+        explanation.textContent = formatExplanationText(answer.explanation || answer.explaination || "Revisit this topic in the chapter list.");
+        explanation.style.whiteSpace = "pre-wrap";
+        item.append(
+            Object.assign(document.createElement("h5"), { className: "exam-missed-question-prompt", textContent: answer.questionText || record.questions?.[index]?.question || `Question ${index + 1}` }),
+            Object.assign(document.createElement("p"), { className: "exam-missed-question-answer", textContent: `Correct answer: ${answer.correctAnswer || "Not recorded"} · Your answer: ${answer.userAnswer || "No answer"}` }),
+            Object.assign(document.createElement("p"), { className: "exam-missed-question-time", textContent: `Time spent: ${formatQuestionTime(record.questionTimesMs?.[index] || 0)}` }),
+            explanation
+        );
+        misses.appendChild(item);
+    });
+    if (misses.childElementCount) {
+        const missPanel = document.createElement("section");
+        missPanel.className = "saved-exam-miss-panel";
+        missPanel.append(
+            Object.assign(document.createElement("h5"), { textContent: "Missed questions" }),
+            misses
+        );
+        reviewLayout.classList.add("has-misses");
+        reviewLayout.append(mapPanel, missPanel);
+    } else {
+        reviewLayout.appendChild(mapPanel);
+    }
+    details.appendChild(reviewLayout);
+
+    if (typeof onDelete === "function") {
+        const deleteButton = Object.assign(document.createElement("button"), { type: "button", className: "ghost-button saved-exam-delete", textContent: "Delete record" });
+        deleteButton.addEventListener("click", () => onDelete(record, details, deleteButton));
+        details.appendChild(deleteButton);
+    }
+    renderQuestionMath(details);
+    return details;
+}
+
+function renderAssessment(summary, session, title, score, content, startSession, subject = null, startCustomExam = null) {
     if (session?.mode === "learn") {
         renderLearnAssessment(summary, session, title, score, content, startSession);
         return;
@@ -7468,6 +8063,12 @@ function renderAssessment(summary, session, title, score, content, startSession)
                 : `Accuracy breakdown: ${summary.correctCount} correct and ${summary.missed.length} missed.`
         )
     );
+    if (session.mode === "exam") {
+        scoreCard.appendChild(Object.assign(document.createElement("p"), {
+            className: "saved-exam-meta",
+            textContent: "Completed Exam records are saved in this browser for later review."
+        }));
+    }
     if (session.mode === "exam") {
         const questionTimesMs = Array.isArray(session.questionTimesMs) ? session.questionTimesMs : [];
         const totalQuestionTimeMs = questionTimesMs.reduce((total, milliseconds) => total + Math.max(0, Number(milliseconds) || 0), 0);
@@ -7568,8 +8169,20 @@ function renderAssessment(summary, session, title, score, content, startSession)
     const retakeButton = document.createElement("button");
     retakeButton.type = "button";
     retakeButton.className = "primary-button";
-    retakeButton.textContent = "Retake chapter";
-    retakeButton.addEventListener("click", () => startSession(session.mode, true));
+    retakeButton.textContent = session.mode === "exam" && session.selectedTags?.length ? "Retake this custom exam" : "Retake chapter";
+    retakeButton.addEventListener("click", () => {
+        if (session.mode === "exam" && session.selectedTags?.length && typeof startCustomExam === "function") {
+            startCustomExam({
+                chapters: session.selectedChapterTitles,
+                tags: session.selectedTags,
+                questionCount: session.questions.length,
+                maxQuestions: session.questions.length,
+                timeLimitSeconds: session.timeLimitSeconds
+            });
+        } else {
+            startSession(session.mode, true);
+        }
+    });
     actions.appendChild(retakeButton);
 
     if (session.mode === "quiz" && summary.missed.length) {
@@ -7644,9 +8257,10 @@ function renderAssessmentPlaceholder(title, score, content, message = "Your resu
 
 function formatMinutesSeconds(value) {
     const totalSeconds = Math.max(0, Number(value) || 0);
-    const minutes = Math.floor(totalSeconds / 60);
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
     const seconds = totalSeconds % 60;
-    return `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+    return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 }
 
 function parseMinutesSecondsInput(value) {
@@ -7658,12 +8272,14 @@ function parseMinutesSecondsInput(value) {
     const parts = raw.split(":").map((part) => part.trim());
     if (parts.length === 1) {
         const parsed = Number(parts[0]);
-        return Number.isFinite(parsed) ? Math.max(0, Math.round(parsed)) : 0;
+        return Number.isFinite(parsed) && parsed >= 0 ? Math.round(parsed) : null;
     }
-
-    const minutes = Number(parts[0]) || 0;
-    const seconds = Number(parts[1]) || 0;
-    return Math.max(0, Math.round(minutes * 60 + seconds));
+    if (parts.length !== 2 && parts.length !== 3) return null;
+    if (parts.some((part) => !/^\d+$/.test(part))) return null;
+    const values = parts.map(Number);
+    if (values.slice(1).some((part) => part > 59)) return null;
+    if (parts.length === 3) return values[0] * 3600 + values[1] * 60 + values[2];
+    return values[0] * 60 + values[1];
 }
 
 function activateLearnCheckpoint(session, questionIndexes) {
@@ -8187,6 +8803,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 Array.from(chapterList.querySelectorAll("input[type='checkbox']")).forEach((checkbox) => {
                     checkbox.checked = true;
                 });
+                updateQuestionLimit();
             });
 
             const chapterHeader = document.createElement("div");
@@ -8203,17 +8820,21 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 className: "answer-input",
                 type: "number",
                 min: "1",
-                max: "100",
                 value: session.questionCount || 10,
                 placeholder: "Number of questions"
             });
             const timeInput = Object.assign(document.createElement("input"), {
                 className: "answer-input",
                 type: "text",
-                inputMode: "numeric",
+                inputMode: "text",
                 value: formatMinutesSeconds(session.timeLimitSeconds || 600),
-                placeholder: "mm:ss"
+                placeholder: "hh:mm:ss",
+                title: "Enter hh:mm:ss or mm:ss, for example 02:30:00 or 10:00"
             });
+            const availableCount = Object.assign(document.createElement("p"), {
+                className: "question-hint"
+            });
+            availableCount.setAttribute("aria-live", "polite");
 
             const actionRow = document.createElement("div");
             actionRow.className = "question-actions";
@@ -8223,15 +8844,52 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             startButton.textContent = "Start exam";
             actionRow.appendChild(startButton);
 
+            const getCheckedChapterTitles = () => Array.from(chapterList.querySelectorAll("input[type='checkbox']:checked"))
+                .map((entry) => entry.value)
+                .filter(Boolean);
+            const updateQuestionLimit = () => {
+                const selectedTitles = getCheckedChapterTitles();
+                const available = selectedTitles.reduce((total, title) => {
+                    const selectedChapter = subject.chapters.find((entry) => entry.title === title);
+                    return total + (selectedChapter ? collectChapterQuestions(selectedChapter).length : 0);
+                }, 0);
+                countInput.max = String(Math.max(1, available));
+                if (available > 0) {
+                    const requested = Math.floor(Number(countInput.value) || 10);
+                    countInput.value = String(Math.max(1, Math.min(requested, available)));
+                    availableCount.textContent = `${available} questions available in the selected chapters.`;
+                } else {
+                    countInput.value = "1";
+                    availableCount.textContent = "Select at least one chapter to see available questions.";
+                }
+                startButton.disabled = available === 0;
+                return available;
+            };
+
+            chapterList.querySelectorAll("input[type='checkbox']").forEach((checkbox) => {
+                checkbox.addEventListener("change", updateQuestionLimit);
+            });
+            timeInput.addEventListener("input", () => timeInput.setCustomValidity(""));
+            updateQuestionLimit();
+
             form.addEventListener("submit", (event) => {
                 event.preventDefault();
-                const selected = Array.from(chapterList.querySelectorAll("input[type='checkbox']:checked")).map((entry) => entry.value).filter(Boolean);
-                const questionCount = Math.max(1, Math.min(Number(countInput.value) || 10, 100));
+                const selected = getCheckedChapterTitles();
+                const maxQuestions = updateQuestionLimit();
+                if (!selected.length || maxQuestions === 0) return;
+                const questionCount = Math.max(1, Math.min(Math.floor(Number(countInput.value) || 10), maxQuestions));
                 const timeLimitSeconds = parseMinutesSecondsInput(timeInput.value);
+                if (timeLimitSeconds === null) {
+                    timeInput.setCustomValidity("Enter time as hh:mm:ss or mm:ss, such as 02:30:00 or 10:00.");
+                    timeInput.reportValidity();
+                    return;
+                }
+                timeInput.setCustomValidity("");
                 if (typeof examStarter === "function") {
                     examStarter({
-                        chapters: selected.length ? selected : [state.activeChapter?.title || subject.chapters[0]?.title || ""],
+                        chapters: selected,
                         questionCount,
+                        maxQuestions,
                         timeLimitSeconds
                     });
                 }
@@ -8242,7 +8900,8 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 chapterList,
                 Object.assign(document.createElement("p"), { className: "section-label", textContent: "Question count" }),
                 countInput,
-                Object.assign(document.createElement("p"), { className: "section-label", textContent: "Timer (mm:ss, optional)" }),
+                availableCount,
+                Object.assign(document.createElement("p"), { className: "section-label", textContent: "Timer (hh:mm:ss, optional)" }),
                 timeInput,
                 actionRow
             );
@@ -9801,6 +10460,21 @@ export function initProgressPage() {
             createLearningProgressSummaryCard(learnSummary),
             createPomodoroTimeCard()
         );
+        const attemptHistoryCard = summaryCards.querySelector(".progress-chart-card");
+        if (attemptHistoryCard) {
+            Promise.all([
+                loadExamRecords().catch((error) => {
+                    console.warn("Saved Exam attempts could not be loaded.", error);
+                    return [];
+                }),
+                storageSelectState().catch((error) => {
+                    console.warn("The active subject could not be loaded for custom Exam setup.", error);
+                    return { subjects: [], activeSubject: null };
+                })
+            ]).then(([records, subjectState]) => {
+                renderProgressExamHistory(attemptHistoryCard, records, subjectState);
+            });
+        }
     }
 
     if (elements.container) {
@@ -9820,6 +10494,8 @@ export function initProgressPage() {
             const subject = assessments[subjectName];
             const card = document.createElement("div");
             card.className = "assessment-card";
+            card.dataset.subjectIds = JSON.stringify([...new Set(subject.entries.map((entry) => text(entry.subjectId)).filter(Boolean))]);
+            card.dataset.subjectName = subjectName;
             
             const chapterNames = Object.keys(subject.chapters).sort();
             const isExpandable = chapterNames.length > 0;
@@ -9874,6 +10550,7 @@ export function initProgressPage() {
                 const chaptersDiv = card.querySelector(".assessment-chapters");
                 card.style.cursor = "pointer";
                 card.addEventListener("click", (event) => {
+                    if (event.target.closest(".assessment-subject-attempts")) return;
                     event.preventDefault();
                     chaptersDiv.classList.toggle("expanded");
                     card.classList.toggle("expanded");
@@ -9961,6 +10638,33 @@ export async function initModePage(mode) {
 
     let examTimerId = null;
     globalThis.__beginExamSession = null;
+
+    const persistCompletedExam = async (session) => {
+        if (!session?.examRecordId || session.recordSaved) return;
+        const record = {
+            ...session,
+            id: session.examRecordId,
+            completedAt: Number(session.completedAt) || Date.now(),
+            submitted: true,
+            complete: true,
+            timerStarted: false,
+            currentSummary: session.currentSummary || summarizeResults(session)
+        };
+        try {
+            await saveExamRecord(record);
+            session.recordSaved = true;
+            saveModeSession(session);
+        } catch (error) {
+            console.warn("Completed Exam record could not be saved.", error);
+            if (state.session === session && mode === "exam") {
+                const warning = document.createElement("p");
+                warning.className = "saved-exam-storage-warning";
+                warning.textContent = "This result is visible now, but this browser could not save it for later review.";
+                elements.assessmentContent.querySelector(".saved-exam-storage-warning")?.remove();
+                elements.assessmentContent.appendChild(warning);
+            }
+        }
+    };
 
     const createExamPlaceholderSession = (subject) => ({
         subjectId: subject?.id || "",
@@ -10053,14 +10757,28 @@ export async function initModePage(mode) {
                 ? [state.activeChapter.title]
                 : subject.chapters.map((chapter) => chapter.title);
 
-        const questionCount = Math.max(1, Math.min(Number(config.questionCount) || 10, 100));
+        const chapterQuestionCount = selectedChapters.reduce((total, title) => {
+            const chapter = getChapterByTitle(subject, title);
+            return total + (chapter ? collectChapterQuestions(chapter).length : 0);
+        }, 0);
+        const configuredMaximum = config.maxQuestions === undefined || config.maxQuestions === null
+            ? chapterQuestionCount
+            : Math.max(0, Math.floor(Number(config.maxQuestions) || 0));
+        const maxQuestions = Math.min(chapterQuestionCount, configuredMaximum);
+        const questionCount = Math.max(1, Math.min(Math.floor(Number(config.questionCount) || 10), Math.max(1, maxQuestions)));
         const timeLimitSeconds = Math.max(0, Number(config.timeLimitSeconds) || 0);
         const chapterTitles = selectedChapters.filter(Boolean);
 
         state.session = createExamSession(subject, chapterTitles, questionCount, {
             chapterTitle: chapterTitles[0] || state.activeChapter?.title || subject.chapters[0]?.title || "Exam",
-            timeLimitSeconds
+            timeLimitSeconds,
+            tags: config.tags
         });
+        if (!state.session.questions.length) {
+            state.session.setupError = "No questions match the selected tags.";
+            buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+            return;
+        }
         state.session.startedAt = Date.now();
         state.session.timerStarted = false;
         state.session.submitted = false;
@@ -10076,6 +10794,7 @@ export async function initModePage(mode) {
         clearExamTimer();
         startExamTimer();
         buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+        renderAssessmentPlaceholder(elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, "Exam in progress");
     };
 
     globalThis.__beginExamSession = beginExamSession;
@@ -10095,13 +10814,16 @@ export async function initModePage(mode) {
 
         session.submitted = true;
         session.complete = true;
+        session.examRecordId ||= globalThis.crypto?.randomUUID?.() || `exam-${Date.now()}-${Math.random().toString(36).slice(2)}`;
         syncExamQuestionTiming(session);
         session.currentSummary = summarizeResults(session);
+        session.completedAt = session.completedAt || Date.now();
         recordSessionProgress(session);
         saveModeSession(session);
+        persistCompletedExam(session);
         clearExamTimer();
         renderHeader();
-        renderAssessment(session.currentSummary, session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession);
+        renderAssessment(session.currentSummary, session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession, state.activeSubject, beginExamSession);
         buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
     };
 
@@ -10726,7 +11448,7 @@ export async function initModePage(mode) {
                 && (savedExam.answers?.some(Boolean) || savedExam.drafts?.some((draft) => text(draft)));
             if (shouldResumeExam && window.confirm("A saved Exam attempt exists for this subject and chapter. Choose OK to resume it, or Cancel to restart.")) {
                 state.session = savedExam;
-                startExamTimer();
+                if (!savedExam.submitted) startExamTimer();
             } else {
                 if (savedExam || forceRestart) clearModeSession("exam", subject, chapter);
                 state.session = createExamPlaceholderSession(subject);
@@ -10785,7 +11507,9 @@ export async function initModePage(mode) {
         renderDrawer();
         renderHeader();
         buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
-        if (nextMode !== "quiz") {
+        if (nextMode === "exam" && state.session?.submitted && state.session.currentSummary) {
+            renderAssessment(state.session.currentSummary, state.session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession, state.activeSubject, beginExamSession);
+        } else if (nextMode !== "quiz") {
             renderAssessmentPlaceholder(elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent);
         }
     };
@@ -10825,7 +11549,11 @@ export async function initModePage(mode) {
         if (["quiz", "learn", "flashcards", "exam"].includes(session.mode)) saveModeSession(session);
 
         if (session.complete) {
-            renderAssessment(session.currentSummary, session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession);
+            if (session.mode === "exam") {
+                renderAssessment(session.currentSummary, session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession, state.activeSubject, beginExamSession);
+            } else {
+                renderAssessment(session.currentSummary, session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession);
+            }
         }
 
         buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
@@ -11042,7 +11770,10 @@ export async function initModePage(mode) {
         }
         syncSelection(state.activeSubject?.id || "", state.activeChapter?.title || "", state.mode);
         renderAll();
-        startSession(mode);
+        const pendingCustomExam = mode === "exam" ? storageGet(EXAM_START_CONFIG_KEY, null) : null;
+        if (pendingCustomExam?.subjectId !== state.activeSubject?.id) {
+            startSession(mode);
+        }
     };
 
     elements.refresh?.addEventListener("click", async () => {
@@ -11081,6 +11812,11 @@ export async function initModePage(mode) {
     });
 
     await refresh();
+    const pendingCustomExam = mode === "exam" ? storageGet(EXAM_START_CONFIG_KEY, null) : null;
+    if (pendingCustomExam && pendingCustomExam.subjectId === state.activeSubject?.id) {
+        storageRemove(EXAM_START_CONFIG_KEY);
+        beginExamSession(pendingCustomExam);
+    }
     window.addEventListener("storage", async (event) => {
         if ([STORAGE_KEY, ACTIVE_SUBJECT_KEY, ACTIVE_CHAPTER_KEY, ACTIVE_MODE_KEY].includes(event.key)) {
             await refresh();
