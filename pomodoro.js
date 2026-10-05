@@ -3,6 +3,7 @@
     const DAILY_HISTORY_KEY = "prepcore.web.pomodoroHistory.v1";
     const DEFAULT_FOCUS_SECONDS = 25 * 60;
     const DEFAULT_BREAK_SECONDS = 5 * 60;
+    const isExamPage = document.body.classList.contains("mode-exam");
     const widgets = document.querySelectorAll("[data-pomodoro]");
     if (!widgets.length) {
         return;
@@ -17,7 +18,8 @@
         breakSeconds: DEFAULT_BREAK_SECONDS,
         remaining: DEFAULT_FOCUS_SECONDS,
         running: false,
-        lastTick: null
+        lastTick: null,
+        resumeAfterExam: false
     };
     let state = { ...defaults };
     let intervalId = null;
@@ -31,7 +33,8 @@
                 breakSeconds: Math.min(120, Math.max(1, Number(saved.breakSeconds) || DEFAULT_BREAK_SECONDS / 60)) * 60,
                 remaining: Math.max(0, Number(saved.remaining) || 0),
                 running: Boolean(saved.running),
-                lastTick: Number(saved.lastTick) || null
+                lastTick: Number(saved.lastTick) || null,
+                resumeAfterExam: Boolean(saved.resumeAfterExam)
             };
         }
     } catch {
@@ -214,7 +217,35 @@
         widget.querySelector("[data-pomodoro-cancel]").addEventListener("click", () => closeSettings(widget));
     });
 
-    if (state.running) {
+    if (isExamPage && state.running) {
+        const now = Date.now();
+        const elapsed = Math.min(
+            Math.max(0, Math.floor((now - (state.lastTick || now)) / 1000)),
+            state.remaining
+        );
+        recordFocusElapsed(state.lastTick || now, elapsed);
+        state.remaining = Math.max(0, state.remaining - elapsed);
+        state.resumeAfterExam = state.remaining > 0;
+        state.running = false;
+        state.lastTick = null;
+        if (state.remaining <= 0) {
+            state.resumeAfterExam = false;
+            switchPhase(false);
+        } else {
+            save();
+        }
+    } else if (isExamPage) {
+        // If the exam page reloads while paused, keep the resume marker intact.
+        state.running = false;
+        state.lastTick = null;
+        save();
+    } else if (state.resumeAfterExam) {
+        state.resumeAfterExam = false;
+        state.running = true;
+        state.lastTick = Date.now();
+        save();
+        intervalId = window.setInterval(tick, 1000);
+    } else if (state.running) {
         const elapsed = Math.floor((Date.now() - (state.lastTick || Date.now())) / 1000);
         recordFocusElapsed(state.lastTick || Date.now(), elapsed);
         state.remaining -= elapsed;

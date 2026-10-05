@@ -17,15 +17,6 @@ const CHAPTER_CACHE_KEY = "prepcore.web.chapterCache.v1";
 const LEARN_SESSION_KEY = "prepcore.web.learnSession.v1";
 const FLASHCARDS_SESSION_KEY = "prepcore.web.flashcardsSession.v1";
 const LEARN_BATCH_SIZE = 10;
-const LEARN_AUTO_ADVANCE_MS = 1200;
-let learnAutoAdvanceTimer = null;
-
-function cancelLearnAutoAdvance() {
-    if (learnAutoAdvanceTimer !== null) {
-        clearTimeout(learnAutoAdvanceTimer);
-        learnAutoAdvanceTimer = null;
-    }
-}
 const MODE_SESSION_KEYS = {
     quiz: QUIZ_SESSION_KEY,
     learn: LEARN_SESSION_KEY,
@@ -261,6 +252,14 @@ export function recordStudyProgress(payload = {}) {
     if (payload.elapsedSeconds !== undefined) {
         entry.elapsedSeconds = Math.max(0, Number(payload.elapsedSeconds) || 0);
     }
+    if (payload.averageQuestionTimeSeconds !== undefined) {
+        entry.averageQuestionTimeSeconds = Math.max(0, Number(payload.averageQuestionTimeSeconds) || 0);
+    }
+    if (payload.questionTimesSeconds !== undefined) {
+        entry.questionTimesSeconds = Array.isArray(payload.questionTimesSeconds)
+            ? payload.questionTimesSeconds.map((value) => Math.max(0, Number(value) || 0))
+            : [];
+    }
     if (payload.selectedChapterTitles !== undefined) {
         entry.selectedChapterTitles = Array.isArray(payload.selectedChapterTitles)
             ? payload.selectedChapterTitles.map(text)
@@ -281,6 +280,10 @@ export function recordExamSessionProgress(session) {
     const elapsedSeconds = session.startedAt
         ? Math.max(0, Math.floor((Date.now() - Number(session.startedAt)) / 1000))
         : 0;
+    const questionTimesMs = Array.isArray(session.questionTimesMs) ? session.questionTimesMs : [];
+    const timedQuestionCount = questionTimesMs.filter((milliseconds) => milliseconds > 0).length;
+    const questionTimesSeconds = questionTimesMs.map((milliseconds) => Math.round(milliseconds / 1000));
+    const totalQuestionTimeMs = questionTimesMs.reduce((total, milliseconds) => total + Math.max(0, Number(milliseconds) || 0), 0);
 
     return recordStudyProgress({
         mode: "exam",
@@ -294,6 +297,8 @@ export function recordExamSessionProgress(session) {
         timeLimitSeconds: session.timeLimitSeconds,
         timeRemainingSeconds: session.timeRemainingSeconds,
         elapsedSeconds,
+        averageQuestionTimeSeconds: timedQuestionCount ? totalQuestionTimeMs / timedQuestionCount / 1000 : 0,
+        questionTimesSeconds,
         selectedChapterTitles: session.selectedChapterTitles,
         summaryType: "session"
     });
@@ -1672,6 +1677,9 @@ export function createSession(subject, chapter, mode, options = {}) {
         learnSessionId: text(options.learnSessionId) || `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
         learnBatchStart: 0,
         learnBatchEnd: 0,
+        learnAnsweredOrder: [],
+        learnCheckpointedQuestionCount: 0,
+        learnCheckpointQuestionIndexes: [],
         learnCheckpointNumber: 0,
         learnCheckpointActive: false,
         learnCheckpointSummarySeen: false,
@@ -1724,6 +1732,9 @@ export function createExamSession(subject, chapterTitles, questionCount, options
         mode: "exam",
         questions: preparedQuestions,
         index: 0,
+        questionTimesMs: preparedQuestions.map(() => 0),
+        questionTimingStartedAt: null,
+        questionTimingIndex: null,
         answers: [],
         drafts: preparedQuestions.map(() => ""),
         revealed: false,
@@ -1774,6 +1785,104 @@ export function buildQuestionResult(question, session, answer, correct, isUnsure
         explanationCard: question.explanationCard || null,
         tags: question.tags
     };
+}
+
+function isExamAnswerSaved(session, index) {
+    const result = session?.answers?.[index];
+    const question = session?.questions?.[index];
+    if (!result || !question) {
+        return false;
+    }
+    const draft = session.drafts?.[index];
+    if (question.questionType === "multiple_choice") {
+        return draft !== undefined && draft !== "" && Number(draft) === result.userAnswerIndex;
+    }
+    return String(draft ?? "").trim() !== ""
+        && String(draft ?? "") === String(result.userAnswer ?? "");
+}
+
+function syncExamQuestionTiming(session) {
+    if (!session || session.mode !== "exam") {
+        return;
+    }
+    if (!Array.isArray(session.questionTimesMs)) {
+        session.questionTimesMs = session.questions.map(() => 0);
+    }
+
+    const shouldTimeQuestion = !session.submitted
+        && !session.complete
+        && !session.reviewingAnswers
+        && Boolean(session.questions[session.index]);
+    const activeIndex = Number.isInteger(session.questionTimingIndex) ? session.questionTimingIndex : null;
+    const startedAt = Number(session.questionTimingStartedAt) || 0;
+
+    if (startedAt && (!shouldTimeQuestion || activeIndex !== session.index)) {
+        if (activeIndex !== null && activeIndex >= 0 && activeIndex < session.questionTimesMs.length) {
+            session.questionTimesMs[activeIndex] += Math.max(0, Date.now() - startedAt);
+        }
+        session.questionTimingStartedAt = null;
+        session.questionTimingIndex = null;
+    }
+
+    if (shouldTimeQuestion && !session.questionTimingStartedAt) {
+        session.questionTimingIndex = session.index;
+        session.questionTimingStartedAt = Date.now();
+    }
+}
+
+function formatQuestionTime(milliseconds) {
+    const totalSeconds = Math.max(0, Number(milliseconds) || 0) / 1000;
+    if (totalSeconds >= 60) {
+        const roundedSeconds = Math.round(totalSeconds);
+        const minutes = Math.floor(roundedSeconds / 60);
+        const seconds = roundedSeconds % 60;
+        return `${minutes}m ${seconds}s`;
+    }
+    return `${totalSeconds.toFixed(1)}s`;
+}
+
+function restoreExamDraft(session, index) {
+    const question = session?.questions?.[index];
+    const result = session?.answers?.[index];
+    const draft = session?.drafts?.[index];
+    if (question?.questionType === "multiple_choice") {
+        session.selectedChoice = draft !== undefined && draft !== ""
+            ? Number(draft)
+            : result?.userAnswerIndex ?? null;
+        session.typedAnswer = "";
+    } else {
+        session.selectedChoice = null;
+        session.typedAnswer = String(draft ?? result?.userAnswer ?? "");
+    }
+}
+
+function commitExamDraft(session, index) {
+    const question = session?.questions?.[index];
+    if (!question) {
+        return false;
+    }
+    const draft = session.drafts?.[index];
+    const isMultipleChoice = question.questionType === "multiple_choice";
+    const answer = isMultipleChoice
+        ? (draft !== undefined && draft !== "" ? Number(draft) : session.selectedChoice)
+        : text(draft ?? session.typedAnswer);
+    if (isMultipleChoice) {
+        if (!Number.isInteger(answer) || answer < 0 || answer >= (question.choices?.length || 0)) {
+            return false;
+        }
+    } else if (!text(answer)) {
+        return false;
+    }
+
+    session.answers[index] = buildQuestionResult(
+        question,
+        session,
+        answer,
+        isQuestionCorrect(question, answer),
+        session.unsureFlags?.[index] || false
+    );
+    session.drafts[index] = String(answer);
+    return true;
 }
 
 export function getAnswerForQuestion(question, session) {
@@ -2031,6 +2140,9 @@ function saveModeSession(session) {
         learnSessionId: text(session.learnSessionId),
         learnBatchStart: Number(session.learnBatchStart) || 0,
         learnBatchEnd: Number(session.learnBatchEnd) || 0,
+        learnAnsweredOrder: Array.isArray(session.learnAnsweredOrder) ? session.learnAnsweredOrder : [],
+        learnCheckpointedQuestionCount: Number(session.learnCheckpointedQuestionCount) || 0,
+        learnCheckpointQuestionIndexes: Array.isArray(session.learnCheckpointQuestionIndexes) ? session.learnCheckpointQuestionIndexes : [],
         learnCheckpointNumber: Number(session.learnCheckpointNumber) || 0,
         learnCheckpointActive: Boolean(session.learnCheckpointActive),
         learnCheckpointSummarySeen: Boolean(session.learnCheckpointSummarySeen),
@@ -2098,6 +2210,16 @@ function restoreModeSession(subject, chapter, mode) {
     session.learnSessionId = text(saved.learnSessionId) || session.learnSessionId;
     session.learnBatchStart = Math.max(0, Number(saved.learnBatchStart) || 0);
     session.learnBatchEnd = Math.max(0, Number(saved.learnBatchEnd) || 0);
+    session.learnAnsweredOrder = Array.isArray(saved.learnAnsweredOrder)
+        ? saved.learnAnsweredOrder.map(Number).filter((index) => Number.isInteger(index) && index >= 0 && index < session.questions.length)
+        : session.answers.map((answer, index) => answer ? index : null).filter(Number.isInteger);
+    session.learnCheckpointedQuestionCount = Math.max(0, Number(saved.learnCheckpointedQuestionCount ?? session.learnBatchStart) || 0);
+    session.learnCheckpointQuestionIndexes = Array.isArray(saved.learnCheckpointQuestionIndexes)
+        ? saved.learnCheckpointQuestionIndexes.map(Number).filter((index) => Number.isInteger(index) && index >= 0 && index < session.questions.length)
+        : Array.from(
+            { length: Math.max(0, session.learnBatchEnd - session.learnBatchStart) },
+            (_, offset) => session.learnBatchStart + offset
+        );
     session.learnCheckpointNumber = Math.max(0, Number(saved.learnCheckpointNumber) || 0);
     session.learnCheckpointActive = Boolean(saved.learnCheckpointActive);
     session.learnCheckpointSummarySeen = Boolean(saved.learnCheckpointSummarySeen);
@@ -4959,7 +5081,7 @@ export function recordLearnCheckpointProgress(session, completed = false) {
         firstAttemptCorrect: summary.firstAttemptCorrect,
         mistakesReviewed: summary.mistakesReviewed,
         checkpointNumber,
-        checkpointQuestionCount: Math.max(0, Number(session.learnCheckpointEnd) || summary.answered),
+        checkpointQuestionCount: Math.max(0, Number(session.learnBatchEnd) - Number(session.learnBatchStart) || summary.answered),
         sessionQuestionCount: summary.total,
         sessionId: session.learnSessionId,
         checkpointId,
@@ -7200,6 +7322,7 @@ function renderAssessment(summary, session, title, score, content, startSession)
 
     const scoreCard = document.createElement("div");
     scoreCard.className = "assessment-score-card";
+    let questionTimesCard = null;
 
     const chartColors = [
         "var(--success)",
@@ -7247,23 +7370,54 @@ function renderAssessment(summary, session, title, score, content, startSession)
                 : `Accuracy breakdown: ${summary.correctCount} correct and ${summary.missed.length} missed.`
         )
     );
+    if (session.mode === "exam") {
+        const questionTimesMs = Array.isArray(session.questionTimesMs) ? session.questionTimesMs : [];
+        const totalQuestionTimeMs = questionTimesMs.reduce((total, milliseconds) => total + Math.max(0, Number(milliseconds) || 0), 0);
+        const timedQuestionCount = questionTimesMs.filter((milliseconds) => milliseconds > 0).length;
+        const averageQuestionTimeMs = timedQuestionCount ? totalQuestionTimeMs / timedQuestionCount : 0;
+        const timingSummary = document.createElement("p");
+        timingSummary.className = "exam-timing-summary";
+        timingSummary.textContent = `Average time per viewed question: ${formatQuestionTime(averageQuestionTimeMs)} · Total question time: ${formatQuestionTime(totalQuestionTimeMs)}`;
+        scoreCard.appendChild(timingSummary);
+
+        questionTimesCard = document.createElement("details");
+        questionTimesCard.className = "assessment-block exam-question-times";
+        questionTimesCard.appendChild(Object.assign(document.createElement("summary"), { textContent: "Time per question" }));
+        const questionTimesList = document.createElement("div");
+        questionTimesList.className = "exam-question-times-list";
+        session.questions.forEach((_, index) => {
+            const row = document.createElement("div");
+            row.className = "exam-question-time-row";
+            row.append(
+                Object.assign(document.createElement("span"), { textContent: `Question ${index + 1}` }),
+                Object.assign(document.createElement("span"), { textContent: formatQuestionTime(questionTimesMs[index] || 0) })
+            );
+            questionTimesList.appendChild(row);
+        });
+        questionTimesCard.appendChild(questionTimesList);
+    }
 
     const weakCard = document.createElement("div");
     weakCard.className = "assessment-block";
     weakCard.appendChild(Object.assign(document.createElement("h4"), { textContent: "Weak areas" }));
-    const weakList = document.createElement("div");
-    weakList.className = "tag-row";
     if (summary.weakAreas.length) {
-        summary.weakAreas.forEach((weakArea) => {
-            const pill = document.createElement("span");
-            pill.className = "tag-pill";
-            pill.textContent = `${weakArea.name} (${weakArea.count})`;
-            weakList.appendChild(pill);
-        });
+        const weakTotal = summary.weakAreas.reduce((total, area) => total + area.count, 0);
+        const weakSegments = summary.weakAreas.map((weakArea, index) => ({
+            label: weakArea.name,
+            value: weakArea.count,
+            color: chartColors[index % chartColors.length],
+            fillPercent: weakTotal ? Math.round((weakArea.count / weakTotal) * 100) : 0,
+            meta: `${weakArea.count} missed`
+        }));
+        weakCard.appendChild(createAssessmentChart(
+            weakSegments,
+            String(weakTotal),
+            "Missed",
+            `Weak area breakdown: ${weakSegments.map((area) => `${area.label}, ${area.value} missed`).join("; ")}`
+        ));
     } else {
-        weakList.appendChild(Object.assign(document.createElement("span"), { className: "tag-pill", textContent: "No weak areas recorded" }));
+        weakCard.appendChild(Object.assign(document.createElement("p"), { textContent: "No weak areas recorded." }));
     }
-    weakCard.appendChild(weakList);
 
     const actions = document.createElement("div");
     actions.className = "question-actions";
@@ -7288,7 +7442,11 @@ function renderAssessment(summary, session, title, score, content, startSession)
         actions.appendChild(reviewButton);
     }
 
-    content.append(scoreCard, weakCard, actions);
+    content.append(scoreCard, weakCard);
+    if (questionTimesCard) {
+        content.appendChild(questionTimesCard);
+    }
+    content.appendChild(actions);
 
     if (session.mode === "exam") {
         const reviewCard = document.createElement("div");
@@ -7301,13 +7459,20 @@ function renderAssessment(summary, session, title, score, content, startSession)
             list.className = "review-list";
             summary.missed.forEach((entry) => {
                 const item = document.createElement("article");
-                item.className = "review-item";
+                item.className = "review-item exam-missed-question";
+                const questionIndex = session.answers.indexOf(entry);
+                item.dataset.examQuestionIndex = String(questionIndex);
+                item.tabIndex = -1;
+                const questionTime = Array.isArray(session.questionTimesMs) && questionIndex >= 0
+                    ? session.questionTimesMs[questionIndex] || 0
+                    : 0;
                 const explanation = document.createElement("p");
                 explanation.textContent = formatExplanationText(entry.explanation || entry.explaination || "Revisit this topic in the chapter list.");
                 explanation.style.whiteSpace = "pre-wrap";
                 item.append(
-                    Object.assign(document.createElement("h5"), { textContent: entry.questionText }),
-                    Object.assign(document.createElement("p"), { textContent: `Correct answer: ${entry.correctAnswer}` }),
+                    Object.assign(document.createElement("h5"), { className: "exam-missed-question-prompt", textContent: entry.questionText }),
+                    Object.assign(document.createElement("p"), { className: "exam-missed-question-answer", textContent: `Correct answer: ${entry.correctAnswer}` }),
+                    Object.assign(document.createElement("p"), { className: "exam-missed-question-time", textContent: `Time spent on this question: ${formatQuestionTime(questionTime)}` }),
                     explanation
                 );
                 list.appendChild(item);
@@ -7315,6 +7480,7 @@ function renderAssessment(summary, session, title, score, content, startSession)
             reviewCard.appendChild(list);
         }
         content.appendChild(reviewCard);
+        renderQuestionMath(reviewCard);
     }
 }
 
@@ -7356,16 +7522,19 @@ function parseMinutesSecondsInput(value) {
     return Math.max(0, Math.round(minutes * 60 + seconds));
 }
 
-function activateLearnCheckpoint(session, batchEnd) {
-    const start = Math.max(0, Number(session.learnBatchStart) || 0);
-    const end = Math.max(start, Math.min(Number(batchEnd) || 0, session.questions.length));
-    session.learnBatchEnd = end;
+function activateLearnCheckpoint(session, questionIndexes) {
+    const indexes = Array.isArray(questionIndexes)
+        ? questionIndexes.map(Number).filter((index) => Number.isInteger(index) && index >= 0 && index < session.questions.length)
+        : [];
+    const start = Math.max(0, Number(session.learnCheckpointedQuestionCount) || 0);
+    session.learnCheckpointQuestionIndexes = indexes;
+    session.learnBatchStart = start;
+    session.learnBatchEnd = start + indexes.length;
     session.learnCheckpointNumber = Math.max(0, Number(session.learnCheckpointNumber) || 0) + 1;
     session.learnCheckpointActive = true;
     session.learnCheckpointSummarySeen = false;
-    session.learnReviewQueue = session.answers
-        .slice(start, end)
-        .map((result, offset) => result && !result.correct ? start + offset : null)
+    session.learnReviewQueue = indexes
+        .map((index) => session.answers[index] && !session.answers[index].correct ? index : null)
         .filter((index) => Number.isInteger(index));
     session.learnReviewPosition = 0;
 }
@@ -7450,11 +7619,12 @@ function renderLearnCheckpointStage(stage, progressFill, session, onReviewSubmit
     );
 
     if (!session.learnCheckpointSummarySeen) {
-        const batchStart = Math.max(0, Number(session.learnBatchStart) || 0);
-        const batchEnd = Math.max(batchStart, Number(session.learnBatchEnd) || 0);
-        const batchResults = session.answers.slice(batchStart, batchEnd).filter(Boolean);
+        const batchIndexes = Array.isArray(session.learnCheckpointQuestionIndexes)
+            ? session.learnCheckpointQuestionIndexes
+            : [];
+        const batchResults = batchIndexes.map((index) => session.answers[index]).filter(Boolean);
         const batchCorrect = batchResults.filter((result) => result.correct).length;
-        const batchTotal = Math.max(0, batchEnd - batchStart);
+        const batchTotal = batchIndexes.length;
         const summaryCard = document.createElement("div");
         summaryCard.className = "learn-checkpoint-summary-card";
         summaryCard.append(
@@ -7589,9 +7759,162 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
     const subject = state.activeSubject;
     const chapter = state.activeChapter;
     const session = state.session;
+    syncExamQuestionTiming(session);
 
-    if (session && !Array.isArray(session.unsureFlags)) {
+        if (session && !Array.isArray(session.unsureFlags)) {
         session.unsureFlags = session.questions.map(() => false);
+    }
+
+    if (elements.examMap && elements.examMapList) {
+        const isExam = session?.mode === "exam";
+        const isLearn = session?.mode === "learn";
+        const hasMap = (isExam && Array.isArray(session.questions) && session.questions.length > 0)
+            || (isLearn && Array.isArray(session.questions) && session.questions.length > 0 && !session.complete && !session.learnCheckpointActive);
+        elements.examMap.hidden = !hasMap;
+        document.body.classList.toggle("exam-map-visible", Boolean(hasMap && isExam));
+        document.body.classList.toggle("learn-map-visible", Boolean(hasMap && isLearn));
+        if (!hasMap) {
+            document.body.classList.remove("exam-map-open");
+            if (elements.examMapBackdrop) {
+                elements.examMapBackdrop.hidden = true;
+            }
+        }
+        if (elements.examMapOpen) {
+            elements.examMapOpen.hidden = !hasMap;
+        }
+        if (hasMap) {
+            const answeredCount = isLearn
+                ? session.answers.filter(Boolean).length
+                : session.questions.filter((_, index) => isExamAnswerSaved(session, index)).length;
+            const flaggedCount = session.unsureFlags?.filter(Boolean).length || 0;
+            if (elements.examMapSummary) {
+                elements.examMapSummary.textContent = isLearn
+                    ? `${answeredCount}/${session.questions.length} completed`
+                    : `${answeredCount}/${session.questions.length} answered · ${flaggedCount} flagged`;
+            }
+            elements.examMapList.replaceChildren();
+            session.questions.forEach((question, index) => {
+                const result = session.answers[index] || null;
+                const draft = session.drafts?.[index];
+                const orderedChoices = question.questionType === "multiple_choice" ? getOrderedChoices(question) : [];
+                const choiceIndex = isLearn
+                    ? result?.userAnswerIndex ?? (draft !== undefined && draft !== "" ? Number(draft) : null)
+                    : session.submitted
+                    ? result?.userAnswerIndex
+                    : draft !== undefined && draft !== ""
+                        ? Number(draft)
+                        : result?.userAnswerIndex;
+                const selectedOrderedChoice = orderedChoices.find((entry) => entry.originalIndex === choiceIndex);
+                const answerLetter = selectedOrderedChoice
+                    ? String.fromCharCode(65 + selectedOrderedChoice.displayIndex)
+                    : "";
+
+                const row = document.createElement("button");
+                row.type = "button";
+                row.className = "exam-map-row";
+                row.setAttribute("aria-label", `Question ${index + 1}${answerLetter ? `, answer ${answerLetter}` : ""}${isLearn && result ? `, ${result.correct ? "correct" : "incorrect"}` : ""}${session.unsureFlags?.[index] ? ", flagged" : ""}`);
+                if (session.index === index) {
+                    row.classList.add("is-current");
+                    row.setAttribute("aria-current", "step");
+                }
+                if ((session.submitted || isLearn) && result) {
+                    row.classList.add(result.correct ? "is-correct" : "is-wrong");
+                }
+                if (session.unsureFlags?.[index]) {
+                    row.classList.add("is-flagged");
+                }
+                row.disabled = Boolean((session.submitted && (!result || result.correct)) || (isLearn && session.learnCheckpointActive));
+                const choiceList = document.createElement("span");
+                choiceList.className = "exam-map-choice-list";
+                choiceList.setAttribute("aria-hidden", "true");
+                orderedChoices.forEach(({ displayIndex, originalIndex }) => {
+                    const choiceBubble = document.createElement("span");
+                    choiceBubble.className = "exam-map-choice";
+                    const choiceLabel = document.createElement("span");
+                    choiceLabel.className = "exam-map-choice-label";
+                    choiceLabel.textContent = String.fromCharCode(65 + displayIndex);
+                    choiceBubble.appendChild(choiceLabel);
+                    if (choiceIndex === originalIndex) {
+                        choiceBubble.classList.add("is-selected");
+                    }
+                    if ((session.submitted || isLearn) && result && originalIndex === question.answerIndex) {
+                        choiceBubble.classList.add("is-correct");
+                    }
+                    if ((session.submitted || isLearn) && result && choiceIndex === originalIndex && !result.correct) {
+                        choiceBubble.classList.add("is-wrong");
+                    }
+                    choiceList.appendChild(choiceBubble);
+                });
+                row.append(
+                    Object.assign(document.createElement("span"), { className: "exam-map-number", textContent: String(index + 1) }),
+                    choiceList,
+                    Object.assign(document.createElement("span"), { className: "exam-map-flag", textContent: session.unsureFlags?.[index] ? "⚑" : "" })
+                );
+                row.addEventListener("click", (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    if (session.submitted) {
+                        if (!result || result.correct) {
+                            return;
+                        }
+                        const reviewItem = document.querySelector(`[data-exam-question-index="${index}"]`);
+                        if (reviewItem) {
+                            document.querySelectorAll(".review-item.is-map-focused").forEach((item) => item.classList.remove("is-map-focused"));
+                            reviewItem.classList.add("is-map-focused");
+                            reviewItem.scrollIntoView({ behavior: "smooth", block: "center" });
+                            reviewItem.focus({ preventScroll: true });
+                        }
+                        return;
+                    }
+                    if (isLearn) {
+                        session.drafts[session.index] = session.typedAnswer ?? session.drafts[session.index] ?? "";
+                        session.index = index;
+                        const savedResult = session.answers[index] || null;
+                        session.reviewed = Boolean(savedResult);
+                        session.lastResult = savedResult;
+                        session.selectedChoice = savedResult?.userAnswerIndex ?? null;
+                        session.typedAnswer = savedResult
+                            ? String(savedResult.userAnswer ?? "")
+                            : String(session.drafts[index] ?? "");
+                        session.learnTransitioning = false;
+                        session.busy = false;
+                    } else {
+                        if (!session.reviewingAnswers) {
+                            commitExamDraft(session, session.index);
+                        }
+                        session.index = index;
+                        session.reviewingAnswers = false;
+                        session.setupError = "";
+                        restoreExamDraft(session, index);
+                    }
+                    if (typeof renderHeaderRenderer === "function") {
+                        renderHeaderRenderer();
+                    }
+                    if (!(document.fullscreenElement || window.innerWidth > 900)) {
+                        document.body.classList.remove("exam-map-open");
+                        if (elements.examMapBackdrop) {
+                            elements.examMapBackdrop.hidden = true;
+                        }
+                        if (elements.examMapOpen) {
+                            elements.examMapOpen.setAttribute("aria-expanded", "false");
+                        }
+                    }
+                    buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
+                });
+                elements.examMapList.appendChild(row);
+            });
+        }
+    } else if (elements.examMap) {
+        elements.examMap.hidden = true;
+        document.body.classList.remove("exam-map-visible");
+        document.body.classList.remove("learn-map-visible");
+        document.body.classList.remove("exam-map-open");
+        if (elements.examMapBackdrop) {
+            elements.examMapBackdrop.hidden = true;
+        }
+        if (elements.examMapOpen) {
+            elements.examMapOpen.hidden = true;
+        }
     }
 
     if (session?.mode === "learn" && session.learnCheckpointActive) {
@@ -7621,6 +7944,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             },
             () => {
                 session.learnCheckpointActive = false;
+                session.learnCheckpointedQuestionCount = session.learnAnsweredOrder.length;
                 session.learnBatchStart = session.learnBatchEnd;
                 session.learnReviewQueue = [];
                 session.learnReviewPosition = 0;
@@ -7810,7 +8134,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             timerPill.setAttribute("data-exam-timer-badge", "true");
             introHeader.append(introCopy, timerPill);
 
-            const flaggedCount = session.answers.filter(Boolean).filter((entry) => entry.isUnsure).length;
+            const flaggedCount = session.unsureFlags.filter(Boolean).length;
             const introMeta = document.createElement("div");
             introMeta.className = "quiz-sheet-meta";
             introMeta.append(
@@ -7824,13 +8148,13 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 }),
                 Object.assign(document.createElement("div"), {
                     className: "summary-pill",
-                    textContent: `${flaggedCount} unsure`
+                    textContent: `${flaggedCount} flagged`
                 })
             );
             const filterButton = document.createElement("button");
             filterButton.type = "button";
             filterButton.className = `ghost-button ${session.reviewOnlyUnsure ? "is-active" : ""}`.trim();
-            filterButton.textContent = session.reviewOnlyUnsure ? "Showing unsure only" : "Show unsure only";
+            filterButton.textContent = session.reviewOnlyUnsure ? "Showing flagged only" : "Show flagged only";
             filterButton.addEventListener("click", (event) => {
                 event.preventDefault();
                 event.stopPropagation();
@@ -7860,7 +8184,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             const visibleQuestions = session.reviewOnlyUnsure
                 ? session.questions
                     .map((question, index) => ({ question, index, result: session.answers[index] || null }))
-                    .filter((entry) => entry.result?.isUnsure)
+                    .filter((entry) => session.unsureFlags[entry.index])
                 : session.questions.map((question, index) => ({ question, index, result: session.answers[index] || null }));
 
             visibleQuestions.forEach(({ question, index, result }) => {
@@ -7875,11 +8199,11 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                         textContent: `Question ${index + 1}`
                     })
                 );
-                if (result?.isUnsure) {
+                if (session.unsureFlags[index]) {
                     itemHeader.append(
                         Object.assign(document.createElement("div"), {
                             className: "summary-pill",
-                            textContent: "Unsure"
+                            textContent: "Flagged"
                         })
                     );
                 }
@@ -7957,7 +8281,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 const flagButton = document.createElement("button");
                 flagButton.type = "button";
                 flagButton.className = "ghost-button";
-                flagButton.textContent = result?.isUnsure ? "Unmark unsure" : "Mark unsure";
+                flagButton.textContent = session.unsureFlags[index] ? "Unflag question" : "Flag question";
                 flagButton.addEventListener("click", (event) => {
                     event.preventDefault();
                     event.stopPropagation();
@@ -8033,14 +8357,18 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             timerBadge.setAttribute("data-exam-timer-badge", "true");
             statusGroup.append(timerBadge);
         }
-        if (session.unsureFlags[session.index]) {
-            statusGroup.append(
-                Object.assign(document.createElement("div"), {
-                    className: "mode-badge",
-                    textContent: "Unsure"
-                })
-            );
-        }
+        const flagButton = document.createElement("button");
+        flagButton.type = "button";
+        flagButton.className = "ghost-button exam-flag-button";
+        flagButton.textContent = session.unsureFlags[session.index] ? "⚑ Flagged" : "⚑ Flag";
+        flagButton.setAttribute("aria-pressed", String(Boolean(session.unsureFlags[session.index])));
+        flagButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            session.unsureFlags[session.index] = !session.unsureFlags[session.index];
+            buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
+        });
+        statusGroup.append(flagButton);
         header.append(counterBadge, statusGroup);
 
         const questionText = document.createElement("h4");
@@ -8050,8 +8378,8 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         const hint = document.createElement("p");
         hint.className = "question-hint";
         hint.textContent = question.questionType === "numeric" || question.questionType === "short_answer"
-            ? "Enter your answer and submit it to move on. No feedback is shown until the end."
-            : "Choose the best answer, then submit it to move on. No feedback is shown until the end.";
+            ? "Enter your answer, then use Next, Back, or the question map to move around. Feedback appears after final submission."
+            : "Choose an answer, then use Next, Back, or the question map to move around. Feedback appears after final submission.";
 
         const answerArea = document.createElement("div");
         answerArea.className = "answer-area";
@@ -8093,48 +8421,31 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
         const actions = document.createElement("div");
         actions.className = "question-actions";
-        if (session.index > 0) {
-            const backButton = document.createElement("button");
-            backButton.type = "button";
-            backButton.className = "ghost-button";
-            backButton.textContent = "Back";
-            backButton.addEventListener("click", (event) => {
-                event.preventDefault();
-                event.stopPropagation();
-                if (session.index > 0) {
-                    session.reviewingAnswers = false;
-                    session.index -= 1;
-                    if (typeof renderHeaderRenderer === "function") {
-                        renderHeaderRenderer();
-                    }
-                    buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
-                }
-            });
-            actions.appendChild(backButton);
-        }
-        const unsureButton = document.createElement("button");
-        unsureButton.type = "button";
-        unsureButton.className = "ghost-button";
-        unsureButton.textContent = session.unsureFlags[session.index] ? "Unmark unsure" : "Mark unsure";
-        unsureButton.addEventListener("click", (event) => {
-            event.preventDefault();
-            event.stopPropagation();
-            session.unsureFlags[session.index] = !session.unsureFlags[session.index];
-            buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
-        });
-
-        const submitButton = document.createElement("button");
-        submitButton.type = "button";
-        submitButton.className = "primary-button";
-        submitButton.textContent = session.index + 1 >= session.questions.length ? "Finish exam" : "Submit answer";
-        submitButton.addEventListener("click", (event) => {
+        const backButton = document.createElement("button");
+        backButton.type = "button";
+        backButton.className = "ghost-button";
+        backButton.textContent = "Back";
+        backButton.disabled = session.index <= 0;
+        backButton.addEventListener("click", (event) => {
             event.preventDefault();
             event.stopPropagation();
             if (typeof examSubmitter === "function") {
-                examSubmitter();
+                examSubmitter(-1);
             }
         });
-        actions.append(unsureButton, submitButton);
+
+        const nextButton = document.createElement("button");
+        nextButton.type = "button";
+        nextButton.className = "primary-button";
+        nextButton.textContent = "Next";
+        nextButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            if (typeof examSubmitter === "function") {
+                examSubmitter(1);
+            }
+        });
+        actions.append(backButton, nextButton);
 
         if (session.setupError) {
             answerArea.appendChild(Object.assign(document.createElement("p"), { className: "answer-hint", textContent: session.setupError }));
@@ -8356,15 +8667,15 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
     hint.textContent = question.questionType === "numeric" || question.questionType === "short_answer"
         ? session.mode === "learn"
             ? session.learnTransitioning
-                ? "Next question will open automatically."
-                : "Answer the question; the next question will open automatically."
+                ? "Your answer is recorded. Use Next question when you’re ready."
+                : "Answer the question, then use Next question to continue."
             : "Type your answer and submit it."
         : session.mode === "flashcards"
             ? "Reveal the answer, then mark whether you knew it."
             : session.mode === "learn"
                 ? session.learnTransitioning
-                    ? "Next question will open automatically."
-                    : "Choose an answer; the next question will open automatically."
+                    ? "Your answer is recorded. Use Next question when you’re ready."
+                    : "Choose an answer, then use Next question to continue."
                 : "Choose the best answer and check your result.";
 
     const answerArea = document.createElement("div");
@@ -8545,9 +8856,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             const status = document.createElement("p");
             status.className = "learn-transition-status";
             status.setAttribute("role", "status");
-            status.textContent = session.learnTransitioning
-                ? "Answer recorded. Next question will open automatically."
-                : "Use Next question to continue.";
+            status.textContent = "Answer recorded. Use Next question when you’re ready.";
             answerArea.appendChild(status);
         }
         form.append(input, button);
@@ -8597,7 +8906,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             const submitButton = document.createElement("button");
             submitButton.type = "button";
             submitButton.className = "primary-button";
-            submitButton.textContent = session.mode === "learn" ? "Continue" : "Next question";
+            submitButton.textContent = "Next question";
             submitButton.addEventListener("click", () => submitCurrentQuestion());
             actions.appendChild(submitButton);
         } else {
@@ -8611,9 +8920,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 Object.assign(document.createElement("p"), {
                     className: "learn-transition-status",
                     role: "status",
-                    textContent: session.learnTransitioning
-                        ? "Answer recorded. Next question will open automatically."
-                        : "Use Next question to continue."
+                    textContent: "Answer recorded. Use Next question when you’re ready."
                 }),
                 feedback
             );
@@ -9433,6 +9740,12 @@ export async function initModePage(mode) {
         backdrop: document.getElementById("drawer-backdrop"),
         drawerOpen: document.getElementById("drawer-open"),
         drawerClose: document.getElementById("drawer-close"),
+        examMap: document.getElementById("exam-question-map"),
+        examMapList: document.getElementById("exam-map-list"),
+        examMapSummary: document.getElementById("exam-map-summary"),
+        examMapOpen: document.getElementById("exam-map-open"),
+        examMapClose: document.getElementById("exam-map-close"),
+        examMapBackdrop: document.getElementById("exam-map-backdrop"),
         subjectSelect: document.getElementById("subject-select"),
         subjectList: document.getElementById("subject-list"),
         title: document.getElementById("subject-title"),
@@ -9604,7 +9917,7 @@ export async function initModePage(mode) {
             return;
         }
 
-        const unanswered = session.questions.some((_, index) => !session.answers[index]);
+        const unanswered = session.questions.some((_, index) => !isExamAnswerSaved(session, index));
         if (unanswered && !force) {
             session.setupError = "Answer every question before you finish the exam.";
             buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
@@ -9613,6 +9926,7 @@ export async function initModePage(mode) {
 
         session.submitted = true;
         session.complete = true;
+        syncExamQuestionTiming(session);
         session.currentSummary = summarizeResults(session);
         recordSessionProgress(session);
         clearExamTimer();
@@ -9623,60 +9937,40 @@ export async function initModePage(mode) {
 
     globalThis.__finishExamSession = finishExamSession;
 
-    const submitExamAnswer = () => {
+    const submitExamAnswer = (direction = 1) => {
         const session = state.session;
         if (!session || session.mode !== "exam" || session.busy) {
             return;
         }
 
-        const question = session.questions[session.index];
-        if (!question) {
-            return;
-        }
-
-        const answer = question.questionType === "numeric" || question.questionType === "short_answer"
-            ? text(session.typedAnswer)
-            : session.selectedChoice;
-
-        if (question.questionType === "numeric" || question.questionType === "short_answer") {
-            if (!text(answer)) {
-                session.setupError = "Enter an answer before submitting.";
-                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
-                return;
-            }
-        } else if (answer === null || answer === undefined) {
-            session.setupError = "Pick an answer before submitting.";
-            buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+        if (!session.questions[session.index]) {
             return;
         }
 
         session.busy = true;
-        const result = buildQuestionResult(
-            question,
-            session,
-            answer,
-            isQuestionCorrect(question, answer),
-            session.unsureFlags[session.index]
-        );
-        session.answers[session.index] = result;
-        session.drafts[session.index] = text(question.questionType === "numeric" || question.questionType === "short_answer" ? session.typedAnswer : answer);
-        session.selectedChoice = null;
-        session.typedAnswer = "";
+        commitExamDraft(session, session.index);
         session.busy = false;
         session.setupError = "";
 
-        if (session.index + 1 >= session.questions.length) {
-            if (session.timeLimitSeconds > 0 && session.timeRemainingSeconds <= 0) {
-                finishExamSession();
-            } else {
+        let nextIndex = session.index;
+        if (direction < 0) {
+            nextIndex = Math.max(0, session.index - 1);
+        } else if (session.index < session.questions.length - 1) {
+            nextIndex = session.index + 1;
+        } else {
+            const unansweredIndex = session.questions.findIndex((_, index) => !isExamAnswerSaved(session, index));
+            if (unansweredIndex < 0) {
                 session.reviewingAnswers = true;
                 renderHeader();
                 buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+                return;
             }
-            return;
+            nextIndex = unansweredIndex;
+            session.setupError = `Question ${unansweredIndex + 1} is still unanswered.`;
         }
 
-        session.index += 1;
+        session.index = nextIndex;
+        restoreExamDraft(session, session.index);
         renderHeader();
         buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
     };
@@ -9684,6 +9978,41 @@ export async function initModePage(mode) {
     globalThis.__submitExamAnswer = submitExamAnswer;
 
     const isDesktopDrawerMode = () => document.fullscreenElement || window.innerWidth > 900;
+
+    let examMapCollapsed = false;
+    const setExamMapBackdropHidden = (hidden) => {
+        if (elements.examMapBackdrop) {
+            elements.examMapBackdrop.hidden = hidden;
+        }
+    };
+
+    const closeExamMap = () => {
+        document.body.classList.remove("exam-map-open");
+        setExamMapBackdropHidden(true);
+        if (elements.examMapOpen && !isDesktopDrawerMode()) {
+            elements.examMapOpen.setAttribute("aria-expanded", "false");
+        }
+    };
+
+    const syncExamMapVisibility = () => {
+        if (!elements.examMap) {
+            return;
+        }
+        if (isDesktopDrawerMode()) {
+            closeExamMap();
+            document.body.classList.toggle("exam-map-collapsed", examMapCollapsed);
+        } else {
+            document.body.classList.remove("exam-map-collapsed");
+            setExamMapBackdropHidden(!document.body.classList.contains("exam-map-open"));
+        }
+        if (elements.examMapOpen) {
+            const expanded = isDesktopDrawerMode()
+                ? !examMapCollapsed
+                : document.body.classList.contains("exam-map-open");
+            elements.examMapOpen.setAttribute("aria-expanded", String(expanded));
+            elements.examMapOpen.textContent = isDesktopDrawerMode() && expanded ? "Hide map" : "Question map";
+        }
+    };
 
     const setDrawerBackdropHidden = (hidden) => {
         if (elements.backdrop) {
@@ -9697,6 +10026,7 @@ export async function initModePage(mode) {
     };
 
     const openDrawer = () => {
+        closeExamMap();
         if (isDesktopDrawerMode()) {
             document.body.classList.remove("drawer-collapsed");
             document.body.classList.remove("drawer-open");
@@ -10197,7 +10527,6 @@ export async function initModePage(mode) {
     };
 
     const startSession = (nextMode = state.mode, forceRestart = false) => {
-        cancelLearnAutoAdvance();
         const subject = state.activeSubject;
         if (!subject) {
             state.session = null;
@@ -10280,12 +10609,19 @@ export async function initModePage(mode) {
             return;
         }
 
-        cancelLearnAutoAdvance();
         const shouldSlideLearnQuestion = session.mode === "learn" && session.learnTransitioning;
         session.learnTransitioning = false;
         session.learnSlideNext = shouldSlideLearnQuestion;
 
-        session.index += 1;
+        if (session.mode === "learn") {
+            const nextUnanswered = session.questions.findIndex((_, index) => index > session.index && !session.answers[index]);
+            const firstUnanswered = nextUnanswered >= 0
+                ? nextUnanswered
+                : session.questions.findIndex((_, index) => !session.answers[index]);
+            session.index = firstUnanswered >= 0 ? firstUnanswered : session.questions.length;
+        } else {
+            session.index += 1;
+        }
         session.selectedChoice = null;
         session.typedAnswer = "";
         session.revealed = false;
@@ -10329,31 +10665,31 @@ export async function initModePage(mode) {
         const result = buildQuestionResult(question, session, answer, correct);
 
         if (session.mode === "learn") {
+            const isFirstAnswer = !session.answers[session.index];
             session.answers[session.index] = result;
+            session.drafts[session.index] = String(answer ?? "");
             session.reviewed = true;
             session.lastResult = result;
             session.busy = false;
-            if (result.correct) {
+            if (isFirstAnswer && !session.learnAnsweredOrder.includes(session.index)) {
+                session.learnAnsweredOrder.push(session.index);
+            }
+            if (isFirstAnswer && result.correct) {
                 session.learnFirstAttemptCorrectCount += 1;
             }
 
-            const completedCount = session.index + 1;
-            const isCheckpoint = completedCount % LEARN_BATCH_SIZE === 0 || completedCount >= session.questions.length;
+            const checkpointStart = Math.max(0, Number(session.learnCheckpointedQuestionCount) || 0);
+            const pendingCheckpointIndexes = session.learnAnsweredOrder.slice(checkpointStart);
+            const isCheckpoint = pendingCheckpointIndexes.length >= LEARN_BATCH_SIZE
+                || session.learnAnsweredOrder.length >= session.questions.length;
             if (isCheckpoint) {
-                cancelLearnAutoAdvance();
-                activateLearnCheckpoint(session, completedCount);
+                activateLearnCheckpoint(session, pendingCheckpointIndexes);
                 saveModeSession(session);
                 buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
             } else {
                 session.learnTransitioning = true;
                 saveModeSession(session);
                 buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
-                learnAutoAdvanceTimer = setTimeout(() => {
-                    learnAutoAdvanceTimer = null;
-                    if (state.session === session && session.mode === "learn" && session.learnTransitioning && !session.learnCheckpointActive) {
-                        advanceSession();
-                    }
-                }, LEARN_AUTO_ADVANCE_MS);
             }
             renderHeader();
             return;
@@ -10450,6 +10786,26 @@ export async function initModePage(mode) {
     elements.drawerOpen?.addEventListener("click", openDrawer);
     elements.drawerClose?.addEventListener("click", closeDrawer);
     elements.backdrop?.addEventListener("click", closeDrawer);
+    elements.examMapOpen?.addEventListener("click", () => {
+        if (isDesktopDrawerMode()) {
+            examMapCollapsed = !examMapCollapsed;
+            syncExamMapVisibility();
+            return;
+        }
+        dismissDrawerOverlay();
+        document.body.classList.add("exam-map-open");
+        setExamMapBackdropHidden(false);
+        syncExamMapVisibility();
+    });
+    elements.examMapClose?.addEventListener("click", () => {
+        if (isDesktopDrawerMode()) {
+            examMapCollapsed = true;
+            syncExamMapVisibility();
+        } else {
+            closeExamMap();
+        }
+    });
+    elements.examMapBackdrop?.addEventListener("click", closeExamMap);
     elements.subjectSelect?.addEventListener("change", (event) => selectSubject(event.target.value));
     const refresh = async () => {
         const fresh = await storageSelectState();
@@ -10511,9 +10867,16 @@ export async function initModePage(mode) {
         }
     });
 
-    window.addEventListener("resize", syncDrawerVisibility);
-    document.addEventListener("fullscreenchange", syncDrawerVisibility);
+    window.addEventListener("resize", () => {
+        syncDrawerVisibility();
+        syncExamMapVisibility();
+    });
+    document.addEventListener("fullscreenchange", () => {
+        syncDrawerVisibility();
+        syncExamMapVisibility();
+    });
     syncDrawerVisibility();
+    syncExamMapVisibility();
 }
 
 export function initAdminPage() {

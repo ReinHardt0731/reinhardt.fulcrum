@@ -21,6 +21,7 @@
 </head>
 <body class="mode-page mode-learn">
     <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+    <div class="exam-map-backdrop" id="exam-map-backdrop" hidden></div>
 
     <div class="app-shell">
         <aside class="drawer panel" id="subject-drawer" aria-label="Subjects">
@@ -40,6 +41,18 @@
             <div id="subject-list" class="subject-list"></div>
         </aside>
 
+        <aside class="exam-question-map panel" id="exam-question-map" aria-label="Question map" hidden>
+            <div class="exam-question-map-header">
+                <div>
+                    <p class="section-label">Learn mode</p>
+                    <h2>Questions</h2>
+                </div>
+                <button class="icon-button" id="exam-map-close" type="button" aria-label="Collapse question map">&times;</button>
+            </div>
+            <div class="exam-question-map-summary" id="exam-map-summary"></div>
+            <div class="exam-question-map-list" id="exam-map-list"></div>
+        </aside>
+
         <main class="workspace">
             <section class="hero-panel mode-topbar">
                 <div class="hero-copy">
@@ -48,6 +61,7 @@
                         <h2 id="subject-title">Upload a quiz to begin</h2>
                         <div class="hero-actions mode-actions" aria-label="Quick actions">
                             <button class="icon-button mobile-only" id="drawer-open" type="button" aria-label="Open subjects">&#9776;</button>
+                            <button class="ghost-button exam-map-toggle" id="exam-map-open" type="button" aria-controls="exam-question-map" aria-expanded="true" hidden>Question map</button>
                             <button class="icon-button" id="shuffle-button" type="button" aria-label="Shuffle questions">⇄</button>
                             <button class="icon-button" id="refresh-button" type="button" aria-label="Refresh page">&#8635;</button>
                             <a class="icon-button" href="index.html" aria-label="Home">&#8962;</a>

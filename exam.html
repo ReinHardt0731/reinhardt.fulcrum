@@ -21,6 +21,7 @@
 </head>
 <body class="mode-page mode-exam">
     <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+    <div class="exam-map-backdrop" id="exam-map-backdrop" hidden></div>
 
     <div class="app-shell">
         <aside class="drawer panel" id="subject-drawer" aria-label="Subjects">
@@ -38,6 +39,18 @@
             </label>
 
             <div id="subject-list" class="subject-list"></div>
+        </aside>
+
+        <aside class="exam-question-map panel" id="exam-question-map" aria-label="Question map" hidden>
+            <div class="exam-question-map-header">
+                <div>
+                    <p class="section-label">Exam</p>
+                    <h2>Questions</h2>
+                </div>
+                <button class="icon-button" id="exam-map-close" type="button" aria-label="Collapse question map">&times;</button>
+            </div>
+            <div class="exam-question-map-summary" id="exam-map-summary"></div>
+            <div class="exam-question-map-list" id="exam-map-list"></div>
         </aside>
 
         <main class="workspace">
@@ -74,6 +87,7 @@
                         <p class="section-label" id="mode-label">Exam mode</p>
                         <h3 id="question-counter">Waiting for a subject</h3>
                     </div>
+                    <button class="ghost-button exam-map-toggle" id="exam-map-open" type="button" aria-controls="exam-question-map" aria-expanded="true" hidden>Question map</button>
                     <div class="progress-track" aria-hidden="true">
                         <div class="progress-fill" id="progress-fill"></div>
                     </div>
@@ -106,6 +120,6 @@
     </div>
 
 <script type="module" src="exam.js?v=feedback-dashboard-icon-20261003"></script>
-    <script src="pomodoro.js?v=2" defer></script>
+    <script src="pomodoro.js?v=exam-pause-1" defer></script>
 </body>
 </html>
