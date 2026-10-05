@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" role="img" aria-labelledby="title desc">
+  <title id="title">Maximum-volume cylinder inscribed in a sphere</title>
+  <desc id="desc">In the sphere's cross-section, the cylinder is a rectangle. The sphere radius is 9 centimeters, the cylinder height is 6 square root 3 centimeters, the radius is 3 square root 6 centimeters, and height divided by radius is square root 2.</desc>
+  <defs><style>.sphere{fill:#63c9ff;fill-opacity:.05;stroke:#63c9ff;stroke-width:3}.cyl{fill:#38d6a3;fill-opacity:.22;stroke:#56e3b5;stroke-width:3}.dim{stroke:#f7b84b;stroke-width:2}.label{fill:#e7eefb;font:20px system-ui,sans-serif}.accent{fill:#7cebc7;font:600 19px system-ui,sans-serif}.gold{fill:#ffd06a;font:600 19px system-ui,sans-serif}</style></defs>
+  <circle class="sphere" cx="265" cy="190" r="135"/><rect class="cyl" x="155" y="112" width="220" height="156" rx="2"/>
+  <circle cx="265" cy="190" r="4" fill="#ffd06a"/><path class="dim" d="M265 190L400 190"/><text class="gold" x="315" y="180">R = 9 cm</text>
+  <path class="dim" d="M355 112V268M347 112H364M347 268H364"/><text class="accent" x="380" y="188">h = 6 sqrt(3) cm</text>
+  <path class="dim" d="M265 190H375"/><text class="accent" x="190" y="300">r = 3 sqrt(6) cm</text><text class="gold" x="405" y="315">h/r = sqrt(2)</text>
+</svg>

@@ -96497,7 +96497,7 @@
             "All three critical numbers"
           ],
           "answerIndex": 1,
-          "answerText": "\\(x=\\pm\\sqrt{2}\\)",
+          "answerText": "$x = 0$",
           "explanation": "f''(x) = 12x^{2} - 8. At $x = 0$, f''(0) = -8 < 0, indicating a local maximum. At x = ±$\\sqrt{2}$, f''(x) > 0, indicating local minima.",
           "explanationImages": [],
           "questionImages": [],
@@ -96839,7 +96839,7 @@
           "answerIndex": 0,
           "answerText": "4 × 8",
           "explanation": "Let x be the half-width of the rectangle. Its width is 2x and its height is 12 - $x^{2}$. Thus $A = 2x(12 - x^{2}) = 24x - 2x^{3}$. Differentiating gives $A' = 24 - 6x^{2}$. Setting $A' = 0$ gives $x = 2$. Therefore the width is 4 and the height is 8.",
-          "explanationImages": [],
+          "explanationImages": [{"src": "asset/inscribed-parabola-12.svg", "alt": "Maximum-area rectangle: width 4 and height 8 under y = 12 - x^2.", "caption": "Maximum-area rectangle: width 4 and height 8 under y = 12 - x^2."}],
           "questionImages": [],
           "tags": [
             "maxima-minima",
@@ -96886,7 +96886,7 @@
           "answerIndex": 2,
           "answerText": "$4/9$",
           "explanation": "If the cylinder has height h, similar triangles give $r = R(1 - h/H)$. Its volume is $V = \\pi R^{2}h(1 - h/H)$². Differentiating and setting the derivative equal to zero gives $h = H/3$ and $r = 2R/3$. Substitution gives V_cylinder = $4/9$ V_cone.",
-          "explanationImages": [],
+          "explanationImages": [{"src": "asset/inscribed-cylinder-cone.svg", "alt": "At maximum volume, the cylinder has height H/3 and radius 2R/3.", "caption": "At maximum volume, the cylinder has height H/3 and radius 2R/3."}],
           "questionImages": [],
           "tags": [
             "maxima-minima",
@@ -96969,7 +96969,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "The total cost of producing x units of a product is $C(x) = x^{2} - 600x + 10000$. How many units should be produced to minimize the total cost?",
+          "question": "The total cost of producing x units of a product is $C(x) = x^{2} - 600x + 100000$. How many units should be produced to minimize the total cost?",
           "questionType": "multiple_choice",
           "choices": [
             "200",
@@ -96979,7 +96979,7 @@
           ],
           "answerIndex": 2,
           "answerText": "300",
-          "explanation": "Differentiate the cost function: $C'(x) = 2x - 600$. Setting $C'(x) = 0$ gives $x = 300$. Since $C''(x) = 2 > 0$, the critical point corresponds to a minimum. Therefore, total cost is minimized when 300 units are produced.",
+          "explanation": "Differentiate the cost function: $C'(x) = 2x - 600$. Setting $C'(x) = 0$ gives $x = 300$. Completing the square gives $C(x) = (x - 300)^{2} + 10000$, so the minimum total cost is $10,000$ at 300 units. Equivalently, $C''(x) = 2 > 0$ confirms this is a minimum.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -97026,7 +97026,7 @@
           "answerIndex": 2,
           "answerText": "200 $m^{2}$",
           "explanation": "For a rectangle inscribed in a circle, its diagonal equals the diameter, which is \\(20\\,\\mathrm{m}\\). If the sides are \\(x\\) and \\(y\\), then \\(x^2+y^2=400\\). The area is maximized when \\(x=y\\), making the rectangle a square. Thus \\(2x^2=400\\), so \\(x=10\\sqrt{2}\\). The maximum area is \\(x^2=200\\,\\mathrm{m}^2\\).",
-          "explanationImages": [],
+          "explanationImages": [{"src": "asset/inscribed-rectangle-circle.svg", "alt": "The maximum rectangle is a square with side 10 sqrt(2) m and diagonal 20 m.", "caption": "The maximum rectangle is a square with side 10 sqrt(2) m and diagonal 20 m."}],
           "questionImages": [],
           "tags": [
             "maxima-minima",
@@ -97072,7 +97072,7 @@
           ],
           "answerIndex": 1,
           "answerText": "85.86 m",
-          "explanation": "Let \\(x\\) be the distance the lifeguard runs along the beach. The total time is \\(T=x/6+\\sqrt{(100-x)^2+40^2}/2\\). Differentiating and setting \\(T'=0\\) gives \\((100-x)/\\sqrt{(100-x)^2+1600}=1/3\\). Solving gives \\(x=100-10\\sqrt{2}\u0007pprox85.86\\,\\mathrm{m}\\). This gives the minimum travel time.",
+          "explanation": "Let \\(x\\) be the distance the lifeguard runs along the beach. The total time is \\(T=x/6+\\sqrt{(100-x)^2+40^2}/2\\). Differentiating and setting \\(T'=0\\) gives \\((100-x)/\\sqrt{(100-x)^2+1600}=1/3\\). Solving gives \\(x=100-10\\sqrt{2}\\approx85.86\\,\\mathrm{m}\\). This gives the minimum travel time.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -97095,7 +97095,7 @@
           ],
           "answerIndex": 2,
           "answerText": "2√5 m",
-          "explanation": "Let \\(x\\) be the horizontal distance from the observer to the object. The angle subtended is \\(\theta=\u0007rctan(10/x)-\u0007rctan(2/x)\\). Differentiating gives \\(\theta'=-10/(x^2+100)+2/(x^2+4)\\). Setting \\(\theta'=0\\) gives \\(2/(x^2+4)=10/(x^2+100)\\). Solving yields \\(x^2=20\\), so \\(x=2\\sqrt{5}\\,\\mathrm{m}\\). This is the distance that maximizes the angle.",
+          "explanation": "Let \\(x\\) be the horizontal distance from the observer to the object. The angle subtended is \\(\\theta=\\arctan(10/x)-\\arctan(2/x)\\). Differentiating gives \\(\\theta'=-10/(x^2+100)+2/(x^2+4)\\). Setting \\(\\theta'=0\\) gives \\(2/(x^2+4)=10/(x^2+100)\\). Solving yields \\(x^2=20\\), so \\(x=2\\sqrt{5}\\,\\mathrm{m}\\). This is the distance that maximizes the angle.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -97164,8 +97164,8 @@
           ],
           "answerIndex": 2,
           "answerText": "256/(3√3) $units^{2}$",
-          "explanation": "Let \\(x\\) be the half-width of the rectangle. Its width is \\(2x\\) and its height is \\(16-x^2\\), so \\(A=2x(16-x^2)=32x-2x^3\\). Differentiating gives \\(A'=32-6x^2\\). Setting \\(A'=0\\) gives \\(x^2=16/3\\), so \\(x=4/\\sqrt{3}\\). The corresponding height is \\(16-16/3=32/3\\). Therefore \\(A_{\\max}=2(4/\\sqrt{3})(32/3)=256/(3\\sqrt{3})\u0007pprox49.27\\) square units.",
-          "explanationImages": [],
+          "explanation": "Let \\(x\\) be the half-width of the rectangle. Its width is \\(2x\\) and its height is \\(16-x^2\\), so \\(A=2x(16-x^2)=32x-2x^3\\). Differentiating gives \\(A'=32-6x^2\\). Setting \\(A'=0\\) gives \\(x^2=16/3\\), so \\(x=4/\\sqrt{3}\\). The corresponding height is \\(16-16/3=32/3\\). Therefore \\(A_{\\max}=2(4/\\sqrt{3})(32/3)=256/(3\\sqrt{3})\\approx49.27\\) square units.",
+          "explanationImages": [{"src": "asset/inscribed-parabola-16.svg", "alt": "At maximum area, width = 8/sqrt(3) and height = 32/3.", "caption": "At maximum area, width = 8/sqrt(3) and height = 32/3."}],
           "questionImages": [],
           "tags": [
             "maxima-minima",
@@ -97223,18 +97223,18 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "A rectangle is inscribed under the parabola $y = 16 - x^{2}$ and above the x-axis, with its upper vertices on the parabola. What is the maximum possible area of the rectangle?",
+          "question": "A rectangle is inscribed under the parabola $y = 9 - x^{2}$ and above the x-axis, with its upper vertices on the parabola. What is the maximum possible area of the rectangle?",
           "questionType": "multiple_choice",
           "choices": [
-            "64 $units^{2}$",
-            "128 $units^{2}$",
-            "256/(3√3) $units^{2}$",
-            "32 $units^{2}$"
+            "6√3 $units^{2}$",
+            "12√3 $units^{2}$",
+            "18 $units^{2}$",
+            "27 $units^{2}$"
           ],
-          "answerIndex": 2,
-          "answerText": "256/(3√3) $units^{2}$",
-          "explanation": "Let \\(x\\) be the half-width. The rectangle has width \\(2x\\) and height \\(16-x^2\\). Therefore \\(A=2x(16-x^2)=32x-2x^3\\). Differentiating gives \\(A'=32-6x^2\\). Setting \\(A'=0\\) gives \\(x^2=16/3\\), so \\(x=4/\\sqrt{3}\\). Substituting into the area gives \\(A_{\\max}=2(4/\\sqrt{3})(32/3)=256/(3\\sqrt{3})\u0007pprox49.27\\) square units.",
-          "explanationImages": [],
+          "answerIndex": 1,
+          "answerText": "12√3 $units^{2}$",
+          "explanation": "Let \\(x\\) be half the rectangle's width. Its width is \\(2x\\) and its height is \\(9-x^2\\), so \\(A=2x(9-x^2)=18x-2x^3\\). Differentiating gives \\(A'=18-6x^2\\), so the interior critical point is \\(x=\\sqrt{3}\\). The corresponding width is \\(2\\sqrt{3}\\) and height is \\(6\\), giving maximum area \\(A=12\\sqrt{3}\\) square units. The area is zero at both endpoints, confirming this interior value is the maximum.",
+          "explanationImages": [{"src": "asset/inscribed-parabola-9.svg", "alt": "At maximum area, width = 2 sqrt(3) and height = 6.", "caption": "At maximum area, width = 2 sqrt(3) and height = 6."}],
           "questionImages": [],
           "tags": [
             "maxima-minima",
@@ -97256,7 +97256,7 @@
           ],
           "answerIndex": 2,
           "answerText": "707 units",
-          "explanation": "The average cost is \\(AC=C(x)/x=0.01x+40+5000/x\\). Differentiating gives \\(AC'=0.01-5000/x^2\\). Setting \\(AC'=0\\) gives \\(x^2=500000\\), so the continuous optimum is \\(x=\\sqrt{500000}\u0007pprox707.11\\). If production must be a whole number, 707 units gives the minimum average cost.",
+          "explanation": "The average cost is \\(AC=C(x)/x=0.01x+40+5000/x\\). Differentiating gives \\(AC'=0.01-5000/x^2\\). Setting \\(AC'=0\\) gives \\(x^2=500000\\), so the continuous optimum is \\(x=\\sqrt{500000}\\approx707.11\\). If production must be a whole number, 707 units gives the minimum average cost.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -97306,7 +97306,7 @@
             "optimization",
             "book-inspired"
           ],
-          "expectedAnswer": 0,
+          "expectedAnswer": 1764,
           "acceptedDeviation": 0
         },
         {
@@ -97324,7 +97324,7 @@
             "fencing",
             "book-inspired"
           ],
-          "expectedAnswer": 0,
+          "expectedAnswer": 7200,
           "acceptedDeviation": 0
         },
         {
@@ -97342,7 +97342,7 @@
             "cylinder",
             "book-inspired"
           ],
-          "expectedAnswer": 0,
+          "expectedAnswer": 3,
           "acceptedDeviation": 0
         },
         {
@@ -97360,7 +97360,7 @@
             "box",
             "book-inspired"
           ],
-          "expectedAnswer": 0,
+          "expectedAnswer": 5,
           "acceptedDeviation": 0
         },
         {
@@ -97378,7 +97378,7 @@
             "poster",
             "book-inspired"
           ],
-          "expectedAnswer": 0,
+          "expectedAnswer": 2,
           "acceptedDeviation": 0
         },
         {
@@ -97396,7 +97396,7 @@
             "window",
             "book-inspired"
           ],
-          "expectedAnswer": 0,
+          "expectedAnswer": 1,
           "acceptedDeviation": 0
         },
         {
@@ -97414,7 +97414,7 @@
             "speed-optimization",
             "book-inspired"
           ],
-          "expectedAnswer": 0,
+          "expectedAnswer": 40,
           "acceptedDeviation": 0
         },
         {
@@ -97423,8 +97423,8 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "96.23",
-          "explanation": "Let \\(x\\) be half the rectangle's width. Its area is \\(A=2x(25-x^2)\\). Then \\(A'=50-6x^2\\), so the maximizing value is \\(x=5/\\sqrt{3}\\). The height is \\(25-25/3=50/3\\), and the width is \\(10/\\sqrt{3}\\). Thus \\(A=500/(3\\sqrt{3})\u0007pprox96.23\\) square units.",
-          "explanationImages": [],
+          "explanation": "Let \\(x\\) be half the rectangle's width. Its area is \\(A=2x(25-x^2)\\). Then \\(A'=50-6x^2\\), so the maximizing value is \\(x=5/\\sqrt{3}\\). The height is \\(25-25/3=50/3\\), and the width is \\(10/\\sqrt{3}\\). Thus \\(A=500/(3\\sqrt{3})\\approx96.23\\) square units.",
+          "explanationImages": [{"src": "asset/inscribed-parabola-25.svg", "alt": "At maximum area, width = 10/sqrt(3) and height = 50/3.", "caption": "At maximum area, width = 10/sqrt(3) and height = 50/3."}],
           "questionImages": [],
           "tags": [
             "maxima-minima",
@@ -97432,8 +97432,8 @@
             "parabola",
             "book-inspired"
           ],
-          "expectedAnswer": 0,
-          "acceptedDeviation": 0
+          "expectedAnswer": 96.23,
+          "acceptedDeviation": 0.005
         },
         {
           "question": "A closed rectangular tank has a square base and must hold 64 $m^{3}$. What base side length, in meters, minimizes the material used? Enter the side length.",
@@ -97450,7 +97450,7 @@
             "tank",
             "book-inspired"
           ],
-          "expectedAnswer": 0,
+          "expectedAnswer": 4,
           "acceptedDeviation": 0
         },
         {
@@ -97459,8 +97459,8 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "1.414",
-          "explanation": "Let \\(h\\) and \\(r\\) be the cylinder's height and radius. The sphere constraint is \\(r^2+(h/2)^2=9^2\\). Its volume is \\(V=\\pi r^2h=\\pi h(81-h^2/4)\\). Differentiating gives \\(V'=\\pi(81-3h^2/4)\\), so \\(h=18/\\sqrt{3}\\). Substituting into the constraint gives \\(r=9\\sqrt{2/3}\\). Therefore \\(h/r=\\sqrt{2}\u0007pprox1.414\\).",
-          "explanationImages": [],
+          "explanation": "Let \\(h\\) and \\(r\\) be the cylinder's height and radius. The sphere constraint is \\(r^2+(h/2)^2=9^2\\). Its volume is \\(V=\\pi r^2h=\\pi h(81-h^2/4)\\). Differentiating gives \\(V'=\\pi(81-3h^2/4)\\), so \\(h=18/\\sqrt{3}\\). Substituting into the constraint gives \\(r=9\\sqrt{2/3}\\). Therefore \\(h/r=\\sqrt{2}\\approx1.414\\).",
+          "explanationImages": [{"src": "asset/inscribed-cylinder-sphere.svg", "alt": "The maximum-volume cylinder has height/radius = sqrt(2).", "caption": "The maximum-volume cylinder has height/radius = sqrt(2)."}],
           "questionImages": [],
           "tags": [
             "maxima-minima",
@@ -97469,8 +97469,8 @@
             "sphere",
             "book-inspired"
           ],
-          "expectedAnswer": 0,
-          "acceptedDeviation": 0
+          "expectedAnswer": 1.414,
+          "acceptedDeviation": 0.0005
         },
         {
           "question": "A company's total daily cost is $C(x) = 0.02x^{2} + 30x + 7200$ dollars for x units. At what production level is the average cost per unit minimized? Enter the number of units.",
@@ -97487,7 +97487,7 @@
             "economics",
             "book-inspired"
           ],
-          "expectedAnswer": 0,
+          "expectedAnswer": 600,
           "acceptedDeviation": 0
         },
         {
@@ -97505,7 +97505,7 @@
             "economics",
             "book-inspired"
           ],
-          "expectedAnswer": 0,
+          "expectedAnswer": 300,
           "acceptedDeviation": 0
         },
         {
@@ -97514,7 +97514,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "2.89",
-          "explanation": "Let \\(x\\) be the landing distance from the nearest shoreline point toward the destination. Travel time is \\(T=\\sqrt{25+x^2}/5+(12-x)/10\\). Setting \\(T'=0\\) gives \\(x/(5\\sqrt{25+x^2})=1/10\\), so \\(2x=\\sqrt{25+x^2}\\). Thus \\(3x^2=25\\) and \\(x=5/\\sqrt{3}\u0007pprox2.89\\,\\mathrm{km}\\). This critical point minimizes travel time on \\(0\\le x\\le12\\).",
+          "explanation": "Let \\(x\\) be the landing distance from the nearest shoreline point toward the destination. Travel time is \\(T=\\sqrt{25+x^2}/5+(12-x)/10\\). Setting \\(T'=0\\) gives \\(x/(5\\sqrt{25+x^2})=1/10\\), so \\(2x=\\sqrt{25+x^2}\\). Thus \\(3x^2=25\\) and \\(x=5/\\sqrt{3}\\approx2.89\\,\\mathrm{km}\\). This critical point minimizes travel time on \\(0\\le x\\le12\\).",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -97523,8 +97523,8 @@
             "optimization",
             "book-inspired"
           ],
-          "expectedAnswer": 0,
-          "acceptedDeviation": 0
+          "expectedAnswer": 2.89,
+          "acceptedDeviation": 0.005
         }
       ]
     },

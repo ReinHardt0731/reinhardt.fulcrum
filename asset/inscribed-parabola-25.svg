@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Maximum-area rectangle under y equals 25 minus x squared</title>
+  <desc id="desc">The rectangle's upper corners are at x equals plus or minus 5 over square root 3, giving width 10 over square root 3 and height 50 over 3.</desc>
+  <defs><style>.axis{stroke:#8093ad;stroke-width:2}.curve{fill:none;stroke:#63c9ff;stroke-width:4}.shape{fill:#38d6a3;fill-opacity:.2;stroke:#56e3b5;stroke-width:3}.guide{stroke:#91a7c4;stroke-width:2;stroke-dasharray:6 6}.label{fill:#e7eefb;font:20px system-ui,sans-serif}.accent{fill:#7cebc7;font:600 20px system-ui,sans-serif}</style></defs>
+  <path class="axis" d="M70 300H575M320 30V310"/><path class="curve" d="M145 300Q320 -35 495 300"/><path class="shape" d="M219 300V188H421V300Z"/>
+  <path class="guide" d="M219 188H421M219 300V322M421 300V322"/><text class="accent" x="430" y="225">y = 25 - x^2</text>
+  <text class="accent" x="250" y="183">height = 50/3</text><text class="accent" x="250" y="348">width = 10/sqrt(3)</text><text class="label" x="158" y="329">-5/sqrt(3)</text><text class="label" x="430" y="329">5/sqrt(3)</text>
+</svg>

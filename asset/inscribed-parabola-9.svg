@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Maximum-area rectangle under y equals 9 minus x squared</title>
+  <text class="accent" x="277" y="195">height 6</text><text class="accent" x="266" y="348">width = 2 sqrt(3)</text><text class="label" x="170" y="329">-sqrt(3)</text><text class="label" x="440" y="329">sqrt(3)</text>
+  <defs><style>.axis{stroke:#8093ad;stroke-width:2}.curve{fill:none;stroke:#63c9ff;stroke-width:4}.shape{fill:#38d6a3;fill-opacity:.2;stroke:#56e3b5;stroke-width:3}.guide{stroke:#91a7c4;stroke-width:2;stroke-dasharray:6 6}.label{fill:#e7eefb;font:20px system-ui,sans-serif}.accent{fill:#7cebc7;font:600 20px system-ui,sans-serif}</style></defs>
+  <path class="axis" d="M70 300H575M320 40V310"/><path class="curve" d="M120 300Q320 15 520 300"/><path class="shape" d="M204 300V205H436V300Z"/>
+  <path class="guide" d="M204 205H436M204 300V322M436 300V322"/><text class="accent" x="440" y="202">y = 9 - x^2</text>
+  <text class="accent" x="277" y="195">height 6</text><text class="accent" x="266" y="348">width = 2 sqrt(3)</text><text class="label" x="170" y="329">-sqrt(3)</text><text class="label" x="440" y="329">sqrt(3)</text>
+</svg>

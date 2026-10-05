@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" role="img" aria-labelledby="title desc">
+  <title id="title">Maximum-volume cylinder inscribed in a cone</title>
+  <desc id="desc">A coaxial cylinder rests on the cone base. Its height is one third of cone height H and its radius is two thirds of cone radius R.</desc>
+  <defs><style>.cone{fill:#63c9ff;fill-opacity:.08;stroke:#63c9ff;stroke-width:3}.cyl{fill:#38d6a3;fill-opacity:.18;stroke:#56e3b5;stroke-width:3}.back{fill:none;stroke:#56e3b5;stroke-width:3;stroke-dasharray:6 5}.dim{stroke:#a2b4cd;stroke-width:2}.label{fill:#e7eefb;font:20px system-ui,sans-serif}.accent{fill:#7cebc7;font:600 20px system-ui,sans-serif}</style></defs>
+  <path class="cone" d="M320 35L105 320Q320 375 535 320Z"/><path class="dim" d="M320 35V320"/>
+  <path class="cyl" d="M177 225V320A143 25 0 0 0 463 320V225Z"/><path class="back" d="M177 225A143 25 0 0 1 463 225"/><path class="cyl" d="M177 225A143 25 0 0 0 463 225A143 25 0 0 0 177 225Z"/>
+  <path class="dim" d="M482 225V320M472 225H492M472 320H492"/><text class="accent" x="495" y="278">h = H/3</text>
+  <path class="dim" d="M320 346H463"/><text class="accent" x="330" y="374">r = 2R/3</text><text class="label" x="334" y="56">H</text><text class="label" x="530" y="347">R</text>
+</svg>

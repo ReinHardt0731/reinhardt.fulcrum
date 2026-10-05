@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Maximum-area rectangle inscribed in a circle</title>
+  <desc id="desc">The maximum rectangle is a square with side 10 square root 2 meters and diagonal equal to the circle's 20-meter diameter.</desc>
+  <defs><style>.circle{fill:#63c9ff;fill-opacity:.05;stroke:#63c9ff;stroke-width:3}.square{fill:#38d6a3;fill-opacity:.16;stroke:#56e3b5;stroke-width:3}.radius{stroke:#f7b84b;stroke-width:3}.label{fill:#e7eefb;font:20px system-ui,sans-serif}.accent{fill:#7cebc7;font:600 20px system-ui,sans-serif}.gold{fill:#ffd06a;font:600 20px system-ui,sans-serif}</style></defs>
+  <circle class="circle" cx="300" cy="175" r="125"/><path class="square" d="M300 50L425 175 300 300 175 175Z"/><path class="radius" d="M300 175L425 175"/>
+  <circle cx="300" cy="175" r="5" fill="#ffd06a"/><text class="gold" x="310" y="165">R = 10 m</text>
+  <text class="accent" x="390" y="115">side = 10 sqrt(2) m</text><text class="label" x="230" y="338">Diagonal = diameter = 20 m</text>
+</svg>

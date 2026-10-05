@@ -7332,7 +7332,7 @@ function renderProgressExamHistory(container, records, subjectState) {
                 button.disabled = false;
                 button.textContent = "Could not delete";
             }
-        });
+        }, subjects);
         const subjectId = text(record.subjectId);
         if (!recordsBySubject.has(subjectId)) {
             const list = document.createElement("div");
@@ -7613,6 +7613,12 @@ function createQuizAssessmentModal(summary, session, state, selectChapter, start
                 <h5>${entry.questionText}</h5>
                 <p><strong>Correct:</strong> ${entry.correctAnswer}</p>
             `;
+            const explanation = document.createElement("p");
+            explanation.textContent = formatExplanationText(entry.explanation || entry.explaination || "Revisit this topic in the chapter list.");
+            explanation.style.whiteSpace = "pre-wrap";
+            item.appendChild(explanation);
+            const explanationImages = createExplanationImagesElement(entry.explanationImages || []);
+            if (explanationImages) item.appendChild(explanationImages);
             list.appendChild(item);
         });
         reviewCard.appendChild(list);
@@ -7929,7 +7935,31 @@ function createSavedExamTimeChart(record) {
     return section;
 }
 
-function createSavedExamReviewDetails(record, onDelete = null) {
+function resolveSavedExamQuestionImages(question, record, subjects) {
+    const storedImages = normalizeExplanationImages(question || {});
+    if (storedImages.length) return storedImages;
+
+    const subject = (Array.isArray(subjects) ? subjects : []).find((entry) => text(entry.id) === text(record.subjectId));
+    if (!subject) return [];
+    const questionText = text(question?.question || question?.questionText).replace(/\s+/g, " ").trim();
+    if (!questionText) return [];
+    const selectedChapters = new Set((record.selectedChapterTitles || [record.chapterTitle]).map((title) => text(title)));
+    const chapters = [...subject.chapters].sort((left, right) => {
+        const leftSelected = selectedChapters.has(text(left.title));
+        const rightSelected = selectedChapters.has(text(right.title));
+        return Number(rightSelected) - Number(leftSelected);
+    });
+    for (const chapter of chapters) {
+        const match = collectChapterQuestions(chapter).find((candidate) =>
+            text(candidate?.question || candidate?.questionText).replace(/\s+/g, " ").trim() === questionText
+        );
+        const images = normalizeExplanationImages(match || {});
+        if (images.length) return images;
+    }
+    return [];
+}
+
+function createSavedExamReviewDetails(record, onDelete = null, subjects = []) {
     const details = document.createElement("details");
     details.className = "saved-exam-record";
     details.dataset.examRecordId = record.id;
@@ -8052,6 +8082,8 @@ function createSavedExamReviewDetails(record, onDelete = null) {
             Object.assign(document.createElement("p"), { className: "exam-missed-question-time", textContent: `Time spent: ${formatQuestionTime(record.questionTimesMs?.[index] || 0)}` }),
             explanation
         );
+        const explanationImages = createExplanationImagesElement(resolveSavedExamQuestionImages(record.questions?.[index], record, subjects));
+        if (explanationImages) item.appendChild(explanationImages);
         misses.appendChild(item);
     });
     if (misses.childElementCount) {
@@ -8342,6 +8374,8 @@ function renderAssessment(summary, session, title, score, content, startSession,
                     Object.assign(document.createElement("p"), { className: "exam-missed-question-time", textContent: `Time spent on this question: ${formatQuestionTime(questionTime)}` }),
                     explanation
                 );
+                const explanationImages = createExplanationImagesElement(entry.explanationImages || session.questions[questionIndex]?.explanationImages || []);
+                if (explanationImages) item.appendChild(explanationImages);
                 list.appendChild(item);
             });
             reviewCard.appendChild(list);

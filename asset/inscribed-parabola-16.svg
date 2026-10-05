@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Maximum-area rectangle under y equals 16 minus x squared</title>
+  <desc id="desc">The rectangle's upper corners are at x equals plus or minus 4 over square root 3, its width is 8 over square root 3, and its height is 32 over 3.</desc>
+  <defs><style>.axis{stroke:#8093ad;stroke-width:2}.curve{fill:none;stroke:#63c9ff;stroke-width:4}.shape{fill:#38d6a3;fill-opacity:.2;stroke:#56e3b5;stroke-width:3}.guide{stroke:#91a7c4;stroke-width:2;stroke-dasharray:6 6}.label{fill:#e7eefb;font:20px system-ui,sans-serif}.accent{fill:#7cebc7;font:600 20px system-ui,sans-serif}</style></defs>
+  <path class="axis" d="M70 300H575M320 35V310"/><path class="curve" d="M130 300Q320 -25 510 300"/><path class="shape" d="M210 300V192H430V300Z"/>
+  <path class="guide" d="M210 192H430M210 300V322M430 300V322"/><text class="accent" x="440" y="220">y = 16 - x^2</text>
+  <text class="accent" x="258" y="182">height = 32/3</text><text class="accent" x="260" y="348">width = 8/sqrt(3)</text><text class="label" x="168" y="329">-4/sqrt(3)</text><text class="label" x="435" y="329">4/sqrt(3)</text>
+</svg>
