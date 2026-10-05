@@ -1,4 +1,4 @@
-import { initHomePage } from "./shared.js?v=inscribed-diagrams-20261005";
+import { initHomePage } from "./shared.js?v=math2-word-problems-20261005";
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";

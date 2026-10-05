@@ -96846,7 +96846,8 @@
             "maximum-area",
             "rectangle",
             "parabola",
-            "geometric-optimization"
+            "geometric-optimization",
+            "inscribed"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -96893,7 +96894,8 @@
             "maximum-volume",
             "cylinder",
             "cone",
-            "solid-geometry"
+            "solid-geometry",
+            "inscribed"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -97033,7 +97035,8 @@
             "maximum-area",
             "rectangle",
             "circle",
-            "geometric-optimization"
+            "geometric-optimization",
+            "inscribed"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -97171,7 +97174,8 @@
             "maxima-minima",
             "maximum-area",
             "parabola",
-            "geometric-optimization"
+            "geometric-optimization",
+            "inscribed"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -97240,7 +97244,8 @@
             "maxima-minima",
             "maximum-area",
             "parabola",
-            "geometric-optimization"
+            "geometric-optimization",
+            "inscribed"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -97423,14 +97428,15 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "96.23",
-          "explanation": "Let \\(x\\) be half the rectangle's width. Its area is \\(A=2x(25-x^2)\\). Then \\(A'=50-6x^2\\), so the maximizing value is \\(x=5/\\sqrt{3}\\). The height is \\(25-25/3=50/3\\), and the width is \\(10/\\sqrt{3}\\). Thus \\(A=500/(3\\sqrt{3})\\approx96.23\\) square units.",
+          "explanation": "Let \\(x\\) be half the rectangle's width. Its area is \\(A=2x(25-x^2)\\). Then \\(A'=50-6x^2\\), so the maximizing value is \\(x=5/\\sqrt{3}\\). The height is \\(25-25/3=50/3\\), and the width is \\(10/\\sqrt{3}\\). Substituting these dimensions gives a maximum area of about 96.23 square units.",
           "explanationImages": [{"src": "asset/inscribed-parabola-25.svg", "alt": "At maximum area, width = 10/sqrt(3) and height = 50/3.", "caption": "At maximum area, width = 10/sqrt(3) and height = 50/3."}],
           "questionImages": [],
           "tags": [
             "maxima-minima",
             "maximum-area",
             "parabola",
-            "book-inspired"
+            "book-inspired",
+            "inscribed"
           ],
           "expectedAnswer": 96.23,
           "acceptedDeviation": 0.005
@@ -97459,7 +97465,7 @@
           "choices": [],
           "answerIndex": -1,
           "answerText": "1.414",
-          "explanation": "Let \\(h\\) and \\(r\\) be the cylinder's height and radius. The sphere constraint is \\(r^2+(h/2)^2=9^2\\). Its volume is \\(V=\\pi r^2h=\\pi h(81-h^2/4)\\). Differentiating gives \\(V'=\\pi(81-3h^2/4)\\), so \\(h=18/\\sqrt{3}\\). Substituting into the constraint gives \\(r=9\\sqrt{2/3}\\). Therefore \\(h/r=\\sqrt{2}\\approx1.414\\).",
+          "explanation": "Let \\(h\\) and \\(r\\) be the cylinder's height and radius. The sphere constraint is \\(r^2+(h/2)^2=9^2\\). Its volume is \\(V=\\pi r^2h=\\pi h(81-h^2/4)\\). Differentiating gives \\(V'=\\pi(81-3h^2/4)\\), so \\(h=18/\\sqrt{3}\\). Substituting into the constraint gives \\(r=9\\sqrt{2/3}\\). The height-to-radius ratio is approximately 1.414.",
           "explanationImages": [{"src": "asset/inscribed-cylinder-sphere.svg", "alt": "The maximum-volume cylinder has height/radius = sqrt(2).", "caption": "The maximum-volume cylinder has height/radius = sqrt(2)."}],
           "questionImages": [],
           "tags": [
@@ -97467,7 +97473,8 @@
             "maximum-volume",
             "cylinder",
             "sphere",
-            "book-inspired"
+            "book-inspired",
+            "inscribed"
           ],
           "expectedAnswer": 1.414,
           "acceptedDeviation": 0.0005
@@ -103693,49 +103700,45 @@
       "title": "General Math 2",
       "questions": [
         {
-          "question": "A lab has 15 L of 10% acid solution. How many liters of 30% solution must be added to obtain a 15% mixture?",
+          "question": "A training aircraft departs with 180 L of fuel. Its planned cruise burns 36 L per hour for 2 h 15 min, taxiing uses 12 L, and dispatch requires a 45-minute reserve at the cruise burn rate. How much fuel remains after the trip, taxi, and required reserve are accounted for?",
           "questionType": "multiple_choice",
           "choices": [
-            "10 L",
-            "5 L",
-            "4 L",
-            "6 L"
+            "60 L",
+            "45 L",
+            "87 L",
+            "120 L"
           ],
-          "answerIndex": 1,
-          "answerText": "5 L",
-          "explanation": "Let x be the added volume. The acid balance is 0.10(15) + 0.30x = 0.15(15 + x). Solving gives $x = 5$ L.",
+          "answerIndex": 0,
+          "answerText": "60 L",
+          "explanation": "Convert the cruise time to 2.25 h and the reserve to 0.75 h. Cruise fuel is 36(2.25) = 81 L and reserve fuel is 36(0.75) = 27 L. Including taxi, the planned total is 81 + 27 + 12 = 120 L, so 180 - 120 = 60 L remains.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "mixture problems"
+            "fuel planning",
+            "unit rates"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "For a square-base open-top box at its maximum-volume proportions, the base side is 13 cm. What is the corresponding height?",
+          "question": "Two actuator-test benches process 18 and 12 units per hour. They run together for 2 hours, then the faster bench must be shut down. If the batch contains 96 actuators, how many more hours will the remaining bench need?",
           "questionType": "multiple_choice",
           "choices": [
-            "26 cm",
-            "6.5 cm",
-            "3.25 cm",
-            "13 cm"
+            "2 h",
+            "3 h",
+            "4 h",
+            "5 h"
           ],
           "answerIndex": 1,
-          "answerText": "6.5 cm",
-          "explanation": "With base side x and height h, the open-box area constraint is $A = x^{2} + 4xh$, so $V = x^{2}h = (Ax - x^{3})/4$. Differentiating and setting $V′ = 0$ gives $A = 3x^{2}$ and $h = x/2$. For $x = 13$ cm, $h = 6.5$ cm.",
-          "explanationImages": [
-            {
-              "src": "asset/math-mock-open-box.svg",
-              "alt": "An open-top box with a square base of side x and height h.",
-              "caption": "The material constraint is x² + 4xh when the top is open."
-            }
-          ],
+          "answerText": "3 h",
+          "explanation": "In the first 2 hours the benches complete (18 + 12)(2) = 60 actuators. There are 96 - 60 = 36 left. The remaining bench processes 12 per hour, so it needs 36 / 12 = 3 more hours.",
+          "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "optimization"
+            "staged work rates",
+            "maintenance planning"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -103783,70 +103786,67 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "A bag contains 5 red counters and 9 blue counters. One counter is drawn at random. What is the probability it is red?",
+          "question": "A caliper reads 12.48 mm. Its calibration certificate says to apply a correction of -0.06 mm to each reading. The acceptable range for a bracket pin is 12.35 mm through 12.45 mm. What is the corrected reading, and does the pin pass?",
           "questionType": "multiple_choice",
           "choices": [
-            "$9/14$",
-            "$5/14$",
-            "$1/14$",
-            "$3/7$"
+            "12.42 mm; pass",
+            "12.54 mm; pass",
+            "12.42 mm; fail",
+            "12.54 mm; fail"
           ],
-          "answerIndex": 1,
-          "answerText": "$5/14$",
-          "explanation": "There are 14 counters in total and 5 are red. Thus $P(red) = 5/14 = 5/14$.",
+          "answerIndex": 0,
+          "answerText": "12.42 mm; pass",
+          "explanation": "Apply the signed correction: 12.48 + (-0.06) = 12.42 mm. Since 12.35 ≤ 12.42 ≤ 12.45, the corrected measurement is inside the specified range and passes.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "probability"
+            "measurement correction",
+            "tolerance checks"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "A fair coin is tossed 4 times and a fair six-sided die is rolled once. What is the probability of at least one head and an odd die result?",
+          "question": "A floor plan uses a scale of 1:200. A rectangular service bay measures 4.8 cm by 3.1 cm on the plan. If the flooring order should include 8% extra for cuts, how many square metres should be ordered, rounded to the nearest tenth?",
           "questionType": "multiple_choice",
           "choices": [
-            "$1/2$",
-            "$15/32$",
-            "$15/16$",
-            "$1/16$"
-          ],
-          "answerIndex": 1,
-          "answerText": "$15/32$",
-          "explanation": "The probability of at least one head is 1 - ($1/2$)^$4 = 15/16$. The die is odd with probability $1/2$. Multiply the independent probabilities to get $15/32$.",
-          "explanationImages": [],
-          "questionImages": [],
-          "tags": [
-            "mixed mock",
-            "probability"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "An aircraft flies 9 km east, then 12 km north. How far is it from its starting point?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "21 km",
-            "18 km",
-            "15 km",
-            "12 km"
+            "59.5 m²",
+            "63.2 m²",
+            "64.3 m²",
+            "71.4 m²"
           ],
           "answerIndex": 2,
-          "answerText": "15 km",
-          "explanation": "The legs are perpendicular, so the displacement is √[(9)² + (12)²] = 5(3) = 15 km.",
-          "explanationImages": [
-            {
-              "src": "asset/math-mock-vector.svg",
-              "alt": "A right triangle showing perpendicular east and north components and their resultant.",
-              "caption": "Perpendicular travel components combine by the Pythagorean theorem."
-            }
-          ],
+          "answerText": "64.3 m²",
+          "explanation": "At 1:200, the actual dimensions are 4.8(200) = 960 cm = 9.6 m and 3.1(200) = 620 cm = 6.2 m. The bay area is 9.6(6.2) = 59.52 m². Including 8% extra gives 59.52(1.08) = 64.2816 m², or 64.3 m² to the nearest tenth.",
+          "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "vectors and displacement"
+            "scale drawings",
+            "area and percent"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Seven engine-start checks recorded the times 18, 20, 21, 23, 24, 26, and 42 seconds for oil pressure to stabilize. Because the last start followed a cold soak, the crew compares the mean with the median. By how many seconds is the median lower than the mean, to the nearest hundredth?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1.14 s",
+            "1.86 s",
+            "3.00 s",
+            "4.14 s"
+          ],
+          "answerIndex": 1,
+          "answerText": "1.86 s",
+          "explanation": "The mean is (18 + 20 + 21 + 23 + 24 + 26 + 42) / 7 = 174 / 7 ≈ 24.86 s. The ordered middle value is the median, 23 s. The median is 24.86 - 23 = 1.86 s lower (to the nearest hundredth).",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "mixed mock",
+            "mean and median",
+            "maintenance data"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -103873,22 +103873,23 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "Two people are now in the age ratio 2:3. In 5 years, their ages will total 40. Find their present ages, from younger to older.",
+          "question": "A sealed carton contains 3 cracked indicator lenses and 9 serviceable lenses. An inspector selects 2 lenses at random without replacement. What is the probability that exactly one selected lens is cracked?",
           "questionType": "multiple_choice",
           "choices": [
-            "11 and 19 years",
-            "12 and 18 years",
-            "13 and 19 years",
-            "18 and 12 years"
+            "1/22 (4.55%)",
+            "9/22 (40.91%)",
+            "6/11 (54.55%)",
+            "3/11 (27.27%)"
           ],
           "answerIndex": 1,
-          "answerText": "12 and 18 years",
-          "explanation": "Represent their present ages as 2k and 3k. Then 2k + 5 + 3k + $5 = 40$, so $k = 6$. Their present ages are 12 and 18.",
+          "answerText": "9/22 (40.91%)",
+          "explanation": "There are 3(9) = 27 ways to choose one cracked and one serviceable lens. There are C(12, 2) = 66 equally likely pairs, so the probability is 27/66 = 9/22 ≈ 40.91%.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "age word problems"
+            "sampling without replacement",
+            "probability"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -103915,22 +103916,23 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "Water enters a vertical cylindrical tank of radius 5 m. If the water level rises at 3 m/min, what is dV/dt?",
+          "question": "Two repair shops quote for the same inspection. Shop A charges a ₱900 setup fee plus ₱48 per labour-hour; Shop B charges ₱600 plus ₱63 per labour-hour. At how many labour-hours do the quotes cost the same?",
           "questionType": "multiple_choice",
           "choices": [
-            "150π $m^{3}$/min",
-            "76π $m^{3}$/min",
-            "77π $m^{3}$/min",
-            "75π $m^{3}$/min"
+            "15 h",
+            "20 h",
+            "25 h",
+            "30 h"
           ],
-          "answerIndex": 3,
-          "answerText": "75π $m^{3}$/min",
-          "explanation": "Since $V = \\pi r^{2}h$ and r is constant, dV/$dt = \\pi r^{2}(dh/dt) = \\pi(5^{2})(3) = 75\\pi$ $m^{3}$/min.",
+          "answerIndex": 1,
+          "answerText": "20 h",
+          "explanation": "Set the quotes equal: 900 + 48h = 600 + 63h. Subtract 600 and 48h to get 300 = 15h, so h = 20. At 20 hours, both quotes are ₱1,860.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "related rates"
+            "linear models",
+            "cost comparison"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -103957,28 +103959,23 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "A vessel travels 12 km north and then 9 km east. What is its displacement bearing measured east of north?",
+          "question": "Surveyors mark points A and B 70 m apart on a hangar floor. A temporary mast at C is 65 m from A and 80 m from B. What is the angle at A between the lines to B and C, to the nearest tenth of a degree?",
           "questionType": "multiple_choice",
           "choices": [
-            "53.13° E of N",
-            "36.87° E of N",
-            "36.87° W of N",
-            "53.13° W of N"
+            "53.4°",
+            "72.6°",
+            "87.4°",
+            "107.4°"
           ],
           "answerIndex": 1,
-          "answerText": "36.87° E of N",
-          "explanation": "The bearing angle satisfies tan $\\theta = east/north = 9/12 = 3/4$. Thus $\\theta = arctan(3/4) \\approx    36.87$° east of north.",
-          "explanationImages": [
-            {
-              "src": "asset/math-mock-vector.svg",
-              "alt": "A right triangle showing perpendicular east and north components and their resultant.",
-              "caption": "Perpendicular travel components combine by the Pythagorean theorem."
-            }
-          ],
+          "answerText": "72.6°",
+          "explanation": "The side opposite angle A is BC = 80 m. By the cosine law, cos A = (70² + 65² - 80²) / (2·70·65) = 2725/9100. Thus A = cos⁻¹(2725/9100) ≈ 72.6°.",
+          "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "bearings and vectors"
+            "survey geometry",
+            "cosine law"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -104005,43 +104002,45 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "Two trains start 500 km apart and travel toward each other at 40 km/h and 60 km/h. How long until they meet?",
+          "question": "A trainee adds four diagnostic checks to the debrief checklist after each session. The first session has 10 checks. How many checks are completed across the first 8 sessions if the checklist grows this way each time?",
           "questionType": "multiple_choice",
           "choices": [
-            "10 h",
-            "6 h",
-            "5 h",
-            "4 h"
+            "136",
+            "160",
+            "192",
+            "224"
           ],
           "answerIndex": 2,
-          "answerText": "5 h",
-          "explanation": "The closing speed is 40 + $60 = 100$ km/h. $Time = distance/speed = 500/100 = 5$ h.",
+          "answerText": "192",
+          "explanation": "The session counts form an arithmetic sequence with a₁ = 10, d = 4, and n = 8. The last count is a₈ = 10 + 7(4) = 38. The total is S₈ = 8(10 + 38)/2 = 192 checks.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "relative motion"
+            "arithmetic sequences",
+            "training plan"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Two vehicles move on perpendicular roads. At an instant they are 9 km and 12 km from the intersection, moving outward at 6 km/h and 9 km/h. How fast is their separation increasing?",
+          "question": "A small drive gear with 18 teeth turns at 240 rpm and drives a 72-tooth gear. Assuming no slip, how fast does the larger gear turn?",
           "questionType": "multiple_choice",
           "choices": [
-            "15 km/h",
-            "11.8 km/h",
-            "9.8 km/h",
-            "10.8 km/h"
+            "60 rpm",
+            "90 rpm",
+            "240 rpm",
+            "960 rpm"
           ],
-          "answerIndex": 3,
-          "answerText": "10.8 km/h",
-          "explanation": "The separation is $r = 5(3)$ km. Differentiate $r^{2} = x^{2} + y^{2}$: dr/$dt = (x·dx/dt + y·dy/dt)/r = (6 + 12)(3)/5 = 10.8$ km/h.",
+          "answerIndex": 0,
+          "answerText": "60 rpm",
+          "explanation": "Gear speeds are inversely proportional to tooth counts. The driven speed is 240(18/72) = 60 rpm. The larger gear turns more slowly because it has four times as many teeth.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "related rates"
+            "gear ratios",
+            "inverse proportion"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -104110,97 +104109,89 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "An observer is 180√3 m horizontally from a tower. The angle of elevation to its top is 30°. Find the tower height.",
+          "question": "A conical settling hopper has a radius of 1.2 m and a depth of 2 m. The crew limits filling to 80% of its capacity. Approximately how many litres can it hold at that level? Use π ≈ 3.1416.",
           "questionType": "multiple_choice",
           "choices": [
-            "180 m",
-            "190 m",
-            "360 m",
-            "170 m"
-          ],
-          "answerIndex": 0,
-          "answerText": "180 m",
-          "explanation": "Using \\(\\tan30^\\circ=1/\\sqrt{3}\\), height \\(=180\\sqrt{3}\\tan30^\\circ=180\\,\\mathrm{m}\\).",
-          "explanationImages": [],
-          "questionImages": [],
-          "tags": [
-            "mixed mock",
-            "right-triangle trigonometry"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "A group has 11 students. In how many ways can a 4-student committee be selected if order does not matter?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "7920",
-            "331",
-            "330",
-            "329"
-          ],
-          "answerIndex": 2,
-          "answerText": "330",
-          "explanation": "Because order does not matter, use combinations: $C(11, 4) = 330$.",
-          "explanationImages": [],
-          "questionImages": [],
-          "tags": [
-            "mixed mock",
-            "combinatorics"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Two identical cables each carry tension 130 N and meet above a load. Each cable makes a 30° angle with the horizontal. Find the total upward component of the two tensions.",
-          "questionType": "multiple_choice",
-          "choices": [
-            "65 N",
-            "130 N",
-            "130√2 N",
-            "260 N"
+            "1,508 L",
+            "2,413 L",
+            "3,016 L",
+            "3,770 L"
           ],
           "answerIndex": 1,
-          "answerText": "130 N",
-          "explanation": "The horizontal components cancel. The upward components add: 2(130) sin 30° = 130 N.",
-          "explanationImages": [
-            {
-              "src": "asset/math-mock-cables.svg",
-              "alt": "Two equal cable tensions support a load symmetrically; their horizontal components cancel.",
-              "caption": "Resolve each cable tension into horizontal and vertical components."
-            }
-          ],
+          "answerText": "2,413 L",
+          "explanation": "The full cone volume is V = (1/3)π(1.2²)(2) ≈ 3.0159 m³. At 80%, the volume is 0.8(3.0159) ≈ 2.4127 m³. Since 1 m³ = 1,000 L, the hopper holds about 2,413 L.",
+          "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "vector components"
+            "cone volume",
+            "capacity conversion"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "A plane flies 180 km due north and then 240 km due east. Find its straight-line distance from the starting point.",
+          "question": "A hydraulic service lift has an output-to-input piston area ratio of 6:1 and operates at 80% efficiency. What input force is required to raise a 7,200 N aircraft component at constant speed?",
           "questionType": "multiple_choice",
           "choices": [
-            "280 km",
-            "320 km",
-            "300 km",
-            "420 km"
+            "960 N",
+            "1,200 N",
+            "1,500 N",
+            "1,800 N"
           ],
           "answerIndex": 2,
-          "answerText": "300 km",
-          "explanation": "Use the right-triangle relation: \\(d=\\sqrt{180^2+240^2}=300\\,\\mathrm{km}\\).",
-          "explanationImages": [
-            {
-              "src": "asset/math-mock-vector.svg",
-              "alt": "A right triangle showing perpendicular east and north components and their resultant.",
-              "caption": "Perpendicular travel components combine by the Pythagorean theorem."
-            }
-          ],
+          "answerText": "1,500 N",
+          "explanation": "At 80% efficiency, output force = 0.80(6F), where F is the input force. Set 0.80(6F) = 7,200 N. Then F = 7,200/4.8 = 1,500 N.",
+          "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "vectors and displacement"
+            "ratios and efficiency",
+            "hydraulics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A portable battery is at 48% charge. A charger adds 16 percentage points per hour for 1.5 hours; a subsequent equipment test consumes 9 percentage points per hour for 2 hours. What charge remains after both stages?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "45%",
+            "54%",
+            "63%",
+            "72%"
+          ],
+          "answerIndex": 1,
+          "answerText": "54%",
+          "explanation": "Charging adds 16(1.5) = 24 percentage points, raising the level to 72%. The test uses 9(2) = 18 points, leaving 72% - 18% = 54%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "mixed mock",
+            "piecewise rates",
+            "battery planning"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Three brackets have nominal lengths of 240 mm, 175 mm, and 90 mm, with tolerances of ±0.4 mm, ±0.3 mm, and ±0.2 mm. Using a worst-case stack-up, what is the maximum total length, and will it fit a 506 mm bay?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "505.0 mm; fits by 1.0 mm",
+            "505.9 mm; fits by 0.1 mm",
+            "505.9 mm; exceeds by 0.1 mm",
+            "506.8 mm; exceeds by 0.8 mm"
+          ],
+          "answerIndex": 1,
+          "answerText": "505.9 mm; fits by 0.1 mm",
+          "explanation": "The nominal total is 240 + 175 + 90 = 505 mm. In the worst case all three dimensions are high, adding 0.4 + 0.3 + 0.2 = 0.9 mm. The maximum is 505.9 mm, which is 0.1 mm below the 506 mm limit.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "mixed mock",
+            "tolerance stack-up",
+            "manufacturing"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -104227,22 +104218,23 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "An aircraft travels at 120 km/h for 3 h and then at 180 km/h for 4 h. Find the total distance.",
+          "question": "A rectangular inspection panel is 14 m long and 8 m wide. A cable must cross it diagonally, and the installer adds 7% length for routing slack. How much cable should be cut, to the nearest tenth of a metre?",
           "questionType": "multiple_choice",
           "choices": [
-            "840 km",
-            "1140 km",
-            "1080 km",
-            "1020 km"
+            "16.1 m",
+            "17.3 m",
+            "18.0 m",
+            "22.0 m"
           ],
-          "answerIndex": 2,
-          "answerText": "1080 km",
-          "explanation": "Distance equals speed times time on each leg. Total $distance = 120$(3) + 180(4) = 1080 km.",
+          "answerIndex": 1,
+          "answerText": "17.3 m",
+          "explanation": "The diagonal is √(14² + 8²) = √260 ≈ 16.12 m. Adding 7% slack gives 16.12(1.07) ≈ 17.25 m, which rounds to 17.3 m.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "distance rate time"
+            "right-triangle geometry",
+            "installation allowance"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -104332,49 +104324,45 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "How many different teams of 3 can be selected from 15 eligible players?",
+          "question": "A tool-crib keypad uses a four-digit code made from distinct digits 0 through 9. The first digit may be zero. How many different codes are possible?",
           "questionType": "multiple_choice",
           "choices": [
-            "455",
-            "2730",
-            "456",
-            "454"
+            "210",
+            "3,024",
+            "5,040",
+            "10,000"
           ],
-          "answerIndex": 0,
-          "answerText": "455",
-          "explanation": "Team order does not matter, so use combinations: $C(15, 3) = 455$.",
+          "answerIndex": 2,
+          "answerText": "5,040",
+          "explanation": "There are 10 choices for the first digit, then 9, 8, and 7 choices for the remaining positions because digits cannot repeat. The number of codes is 10·9·8·7 = 5,040.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "combinatorics"
+            "permutations",
+            "access codes"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "A rectangular enclosure uses 36 m of fencing along three sides; a building forms the fourth side. What is the greatest possible enclosed area?",
+          "question": "An aircraft weighs 790 kg with its centre of gravity at 2.35 m from the datum. A 110 kg engine at arm 3.60 m is removed, and a 35 kg unit at arm 3.20 m is installed. What is the new centre of gravity, to the nearest hundredth of a metre?",
           "questionType": "multiple_choice",
           "choices": [
-            "126 $m^{2}$",
-            "324 $m^{2}$",
-            "162 $m^{2}$",
-            "198 $m^{2}$"
+            "2.20 m",
+            "2.35 m",
+            "2.55 m",
+            "3.40 m"
           ],
-          "answerIndex": 2,
-          "answerText": "162 $m^{2}$",
-          "explanation": "If x is each width, the front length is 36 - 2x. Thus $A(x) = x(36 - 2x)$, a downward-opening quadratic. Its vertex gives $x = 9$ m and maximum area 162 $m^{2}$.",
-          "explanationImages": [
-            {
-              "src": "asset/math-mock-rectangle.svg",
-              "alt": "Three-sided rectangular enclosure built against a wall.",
-              "caption": "Only the two widths and the front length use fencing."
-            }
-          ],
+          "answerIndex": 0,
+          "answerText": "2.20 m",
+          "explanation": "Initial moment = 790(2.35) = 1,856.5 kg·m. New weight is 790 - 110 + 35 = 715 kg; new moment is 1,856.5 - 110(3.60) + 35(3.20) = 1,572.5 kg·m. The new centre of gravity is 1,572.5/715 ≈ 2.20 m from the datum.",
+          "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "optimization"
+            "weighted averages",
+            "aircraft balance"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -104422,22 +104410,23 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "A radiator contains 40 L of a 35% antifreeze mixture. How many liters of pure antifreeze should be added to make the result 50% antifreeze?",
+          "question": "A wing fuel tank is shaped like a triangular prism with a cross-section 0.9 m wide and 0.5 m high, extending 4.2 m along the wing. If only 85% of its geometric volume is usable, approximately how many litres are usable?",
           "questionType": "multiple_choice",
           "choices": [
-            "6 L",
-            "12 L",
-            "24 L",
-            "14 L"
+            "80.3 L",
+            "803.3 L",
+            "945 L",
+            "1,114 L"
           ],
           "answerIndex": 1,
-          "answerText": "12 L",
-          "explanation": "Let x be the pure antifreeze added. Then 0.35(40) + $x = 0.50(40 + x)$. Solving gives $x = 12$ L.",
+          "answerText": "803.3 L",
+          "explanation": "The triangular cross-section is (1/2)(0.9)(0.5) = 0.225 m². Full volume is 0.225(4.2) = 0.945 m³. Usable volume is 0.85(0.945) = 0.80325 m³ = 803.25 L, or about 803.3 L.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "mixture problems"
+            "prism volume",
+            "fuel capacity"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -104464,22 +104453,23 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "If 6 people complete a job in 4 hours at the same rate, how long will 8 people take to complete the job?",
+          "question": "A data logger records a baseline sample at the start of a 5-hour test and then records once every 7.5 minutes, including a sample exactly at the end. How many samples are recorded in total?",
           "questionType": "multiple_choice",
           "choices": [
-            "4.00 h",
-            "24.00 h",
-            "2.00 h",
-            "3.00 h"
+            "40",
+            "41",
+            "42",
+            "48"
           ],
-          "answerIndex": 3,
-          "answerText": "3.00 h",
-          "explanation": "The job requires 6·$4 = 24$ person-hours. Divide by 8 people: $time = 24/8 \\approx    3.00$ h.",
+          "answerIndex": 1,
+          "answerText": "41",
+          "explanation": "Five hours is 300 minutes, which contains 300/7.5 = 40 sampling intervals. Including the baseline at time zero means the sample count is one more than the number of intervals: 40 + 1 = 41.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "work-rate problems"
+            "interval counting",
+            "data logging"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -104527,49 +104517,45 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "An isosceles triangle has altitude 36 in and perimeter 108 in. Its equal sides are each 39 in. Find its area.",
+          "question": "A six-step inspection sequence contains four other distinct checks, a torque check, and an engine run. The engine run must be last, and the torque check must occur immediately before it. How many valid orders are possible for the six steps?",
           "questionType": "multiple_choice",
           "choices": [
-            "1080 $in^{2}$",
-            "528 $in^{2}$",
-            "540 $in^{2}$",
-            "552 $in^{2}$"
+            "24",
+            "60",
+            "120",
+            "720"
           ],
-          "answerIndex": 2,
-          "answerText": "540 $in^{2}$",
-          "explanation": "The perimeter leaves a base of 30 in. The area is ($1/2$)(30)(36) = 540 $in^{2}$.",
-          "explanationImages": [
-            {
-              "src": "asset/math-mock-isosceles.svg",
-              "alt": "An altitude divides an isosceles triangle into two right triangles.",
-              "caption": "The altitude bisects the base, producing a 5–12–13 right triangle at unit scale."
-            }
-          ],
+          "answerIndex": 0,
+          "answerText": "24",
+          "explanation": "The final two positions are fixed as torque check followed by engine run. The four remaining distinct checks can be arranged in the first four positions in 4! = 4·3·2·1 = 24 ways.",
+          "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "plane geometry"
+            "constrained permutations",
+            "inspection sequencing"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Each bolt has a 95% chance of being within specification. For a sample of 4 independent bolts, what is the probability that all are within specification? Give a percentage to 2 decimal places.",
+          "question": "A safety marking follows three-quarters of the circular edge of an access hatch with diameter 1.6 m, leaving a 0.2 m gap at each end. How much marking is needed, to the nearest hundredth of a metre?",
           "questionType": "multiple_choice",
           "choices": [
-            "95.00%",
-            "81.45%",
-            "86.45%",
-            "76.45%"
+            "3.37 m",
+            "3.77 m",
+            "4.63 m",
+            "5.03 m"
           ],
-          "answerIndex": 1,
-          "answerText": "81.45%",
-          "explanation": "Assuming independent outcomes, multiply the probabilities: (0.95)^$4 = 0.814506$, or 81.45%.",
+          "answerIndex": 0,
+          "answerText": "3.37 m",
+          "explanation": "The hatch circumference is π(1.6) ≈ 5.0265 m. Three-quarters is about 3.7699 m. Subtract the two 0.2 m gaps: 3.7699 - 0.4 ≈ 3.37 m.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "probability"
+            "circumference",
+            "material estimate"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -104617,22 +104603,23 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "A daily profit model is $P(x) = 32x - 2x^{2}$. What is the maximum possible profit?",
+          "question": "A parts order is listed at ₱7,500. The supplier applies a 12% discount first, then adds 8% VAT to the discounted price. What is the final amount?",
           "questionType": "multiple_choice",
           "choices": [
-            "132 units",
-            "124 units",
-            "256 units",
-            "128 units"
+            "₱7,080",
+            "₱7,128",
+            "₱7,260",
+            "₱8,100"
           ],
-          "answerIndex": 3,
-          "answerText": "128 units",
-          "explanation": "The downward-opening quadratic reaches its maximum at $x = -b/(2a) = 32/4 = 8$. Substitution gives $P = 128$ units.",
+          "answerIndex": 1,
+          "answerText": "₱7,128",
+          "explanation": "After the 12% discount, the price is 7,500(0.88) = ₱6,600. VAT is 0.08(6,600) = ₱528, so the final amount is ₱6,600 + ₱528 = ₱7,128.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "quadratic optimization"
+            "successive percentages",
+            "parts purchasing"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -104659,22 +104646,23 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "Two fair dice numbered 1 through 9 are rolled. What is the probability that their sum is 10?",
+          "question": "An 18-hour maintenance window reserves 4 hours for inspection and final testing. The remaining hours are divided between removal and installation in a 5:2 ratio. How many hours are assigned to installation?",
           "questionType": "multiple_choice",
           "choices": [
-            "$11/81$",
-            "$1/9$",
-            "$10/81$",
-            "$8/81$"
+            "2 h",
+            "4 h",
+            "5 h",
+            "10 h"
           ],
           "answerIndex": 1,
-          "answerText": "$1/9$",
-          "explanation": "There are 9² equally likely ordered outcomes. Exactly 9 outcomes sum to 10, so the probability is $9/9$² = $1/9$.",
+          "answerText": "4 h",
+          "explanation": "After reserving 4 hours, 18 - 4 = 14 hours remain. The 5:2 ratio contains 7 parts, so each part is 14/7 = 2 hours. Installation receives 2 parts, or 4 hours.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "probability"
+            "ratio allocation",
+            "maintenance scheduling"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -104743,49 +104731,45 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "Two perpendicular acceleration vectors have magnitudes 9 m/$s^{2}$ and 12 m/$s^{2}$. Find the magnitude of their resultant.",
+          "question": "A triangular doubler plate has side lengths 68 mm, 75 mm, and 100 mm. Without calculating its angles, classify the triangle as acute, right, or obtuse.",
           "questionType": "multiple_choice",
           "choices": [
-            "21 m/$s^{2}$",
-            "18 m/$s^{2}$",
-            "15 m/$s^{2}$",
-            "12 m/$s^{2}$"
+            "Acute",
+            "Right",
+            "Obtuse",
+            "The sides cannot form a triangle"
           ],
-          "answerIndex": 2,
-          "answerText": "15 m/$s^{2}$",
-          "explanation": "For perpendicular vectors, R = √[(9)² + (12)²] = 15 m/$s^{2}$.",
-          "explanationImages": [
-            {
-              "src": "asset/math-mock-vector.svg",
-              "alt": "A right triangle showing perpendicular east and north components and their resultant.",
-              "caption": "Perpendicular travel components combine by the Pythagorean theorem."
-            }
-          ],
+          "answerIndex": 0,
+          "answerText": "Acute",
+          "explanation": "The largest side is 100 mm. Compare its square with the sum of the other two squares: 100² = 10,000, while 68² + 75² = 4,624 + 5,625 = 10,249. Because 10,000 < 10,249, the triangle is acute.",
+          "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "vectors"
+            "triangle classification",
+            "structural geometry"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "A parent is three times as old as their child. In 5 years, their ages will total 54 years. How old is the child now?",
+          "question": "A diagnostic flags a component as faulty with 90% probability when it truly is faulty, and gives a false alert 10% of the time for a healthy component. If 8% of components are faulty before testing, what is the probability a flagged component is actually faulty?",
           "questionType": "multiple_choice",
           "choices": [
-            "9",
-            "12",
-            "14",
-            "11"
+            "8.0%",
+            "43.9%",
+            "72.0%",
+            "90.0%"
           ],
-          "answerIndex": 3,
-          "answerText": "11",
-          "explanation": "Let the child's present age be x. The parent's age is 3x. In 5 years, (x + 5) + (3x + 5) = 54. Solving gives $x = 11$.",
+          "answerIndex": 1,
+          "answerText": "43.9%",
+          "explanation": "Out of a representative 10,000 components, 800 are faulty and 90% of them (720) are flagged. Of the 9,200 healthy components, 10% (920) are also flagged. Thus 720 of 720 + 920 flagged components are faulty: 720/1,640 ≈ 43.9%.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
             "mixed mock",
-            "linear equations"
+            "conditional probability",
+            "diagnostic testing"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
