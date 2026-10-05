@@ -7731,6 +7731,34 @@ function createWeakExamBuilder(subject, attempt, startCustomExam) {
     const tagField = document.createElement("fieldset");
     tagField.className = "weak-exam-tags";
     tagField.appendChild(Object.assign(document.createElement("legend"), { textContent: "Tags in this subject" }));
+    const selectedField = document.createElement("fieldset");
+    selectedField.className = "weak-exam-selected-tags";
+    selectedField.appendChild(Object.assign(document.createElement("legend"), { textContent: "Selected tags" }));
+    const selectedList = document.createElement("div");
+    selectedList.className = "weak-exam-selected-list";
+    selectedList.setAttribute("aria-live", "polite");
+    selectedField.appendChild(selectedList);
+    const tagSearchRow = document.createElement("div");
+    tagSearchRow.className = "weak-exam-tag-search-row";
+    const searchButton = Object.assign(document.createElement("button"), {
+        type: "button",
+        className: "ghost-button weak-exam-tag-search-button",
+        textContent: "Search tags"
+    });
+    searchButton.setAttribute("aria-expanded", "false");
+    const searchInput = Object.assign(document.createElement("input"), {
+        type: "search",
+        className: "weak-exam-tag-search-input",
+        placeholder: "Search available tags"
+    });
+    searchInput.setAttribute("aria-label", "Search available tags");
+    searchInput.hidden = true;
+    const noSearchResults = Object.assign(document.createElement("p"), {
+        className: "weak-exam-tag-no-results",
+        textContent: "No available tags match your search."
+    });
+    noSearchResults.hidden = true;
+    tagSearchRow.append(searchButton, searchInput);
     const missedTags = new Set();
     attempt.questions.forEach((question, index) => {
         if (attempt.answers?.[index]?.correct) return;
@@ -7752,12 +7780,16 @@ function createWeakExamBuilder(subject, attempt, startCustomExam) {
         tally.textContent = `${count} questions`;
         label.append(input, name, tally);
         tagField.appendChild(label);
+        input.dataset.tagName = tag;
         checkboxes.push(input);
     });
     if (!checkboxes.length) {
         tagField.appendChild(Object.assign(document.createElement("p"), { textContent: "No tagged questions are available in this subject." }));
     }
     tagDisclosure.appendChild(tagField);
+    tagDisclosure.insertBefore(selectedField, tagField);
+    tagDisclosure.insertBefore(tagSearchRow, tagField);
+    tagDisclosure.insertBefore(noSearchResults, tagField);
     const controls = document.createElement("div");
     controls.className = "weak-exam-controls";
     const countLabel = document.createElement("label");
@@ -7773,6 +7805,36 @@ function createWeakExamBuilder(subject, attempt, startCustomExam) {
     const startButton = Object.assign(document.createElement("button"), { type: "button", className: "primary-button", textContent: "Start custom exam" });
     const updatePool = () => {
         const tags = checkboxes.filter((input) => input.checked).map((input) => input.value);
+        const searchTerm = text(searchInput.value).trim().toLocaleLowerCase();
+        selectedList.replaceChildren();
+        const selectedTags = checkboxes.filter((input) => input.checked);
+        if (!selectedTags.length) {
+            selectedList.appendChild(Object.assign(document.createElement("span"), {
+                className: "weak-exam-no-selected",
+                textContent: "No tags selected yet."
+            }));
+        } else {
+            selectedTags.forEach((input) => {
+                const selectedTag = document.createElement("button");
+                selectedTag.type = "button";
+                selectedTag.className = "weak-exam-selected-tag";
+                selectedTag.textContent = `${input.value} ×`;
+                selectedTag.setAttribute("aria-label", `Remove selected tag: ${input.value}`);
+                selectedTag.addEventListener("click", () => {
+                    input.checked = false;
+                    updatePool();
+                });
+                selectedList.appendChild(selectedTag);
+            });
+        }
+        let visibleAvailableTags = 0;
+        checkboxes.forEach((input) => {
+            const label = input.closest(".weak-exam-tag");
+            const visible = !input.checked && (!searchTerm || input.value.toLocaleLowerCase().includes(searchTerm));
+            label.hidden = !visible;
+            if (visible) visibleAvailableTags += 1;
+        });
+        noSearchResults.hidden = !searchTerm || visibleAvailableTags > 0;
         const matching = tags.length ? subject.chapters.reduce((total, chapter) => total + collectChapterQuestions(chapter).filter((entry, index) => {
             const question = coerceQuestion(entry, index + 1);
             return normalizeTags(question.tags).some((tag) => tags.includes(tag));
@@ -7785,7 +7847,18 @@ function createWeakExamBuilder(subject, attempt, startCustomExam) {
         startButton.disabled = matching === 0;
         return { tags, matching };
     };
+    searchButton.addEventListener("click", () => {
+        searchInput.hidden = !searchInput.hidden;
+        searchButton.setAttribute("aria-expanded", String(!searchInput.hidden));
+        searchButton.textContent = searchInput.hidden ? "Search tags" : "Hide search";
+        if (!searchInput.hidden) searchInput.focus();
+        else {
+            searchInput.value = "";
+            updatePool();
+        }
+    });
     checkboxes.forEach((input) => input.addEventListener("change", updatePool));
+    searchInput.addEventListener("input", updatePool);
     countInput.addEventListener("input", updatePool);
     updatePool();
     startButton.addEventListener("click", () => {
