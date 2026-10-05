@@ -20,7 +20,8 @@ const LEARN_BATCH_SIZE = 10;
 const MODE_SESSION_KEYS = {
     quiz: QUIZ_SESSION_KEY,
     learn: LEARN_SESSION_KEY,
-    flashcards: FLASHCARDS_SESSION_KEY
+    flashcards: FLASHCARDS_SESSION_KEY,
+    exam: "prepcore.web.examSession.v1"
 };
 
 const UPDATE_LOG_API = "./updates.json";
@@ -113,24 +114,48 @@ function shuffleSessionQuestions(session) {
         return false;
     }
 
+    const currentIndex = session.index;
+    const activeState = {
+        reviewed: Boolean(session.reviewed),
+        revealed: Boolean(session.revealed),
+        lastResult: session.lastResult || null,
+        selectedChoice: session.selectedChoice ?? null,
+        typedAnswer: session.typedAnswer ?? "",
+        complete: Boolean(session.complete),
+        currentSummary: session.currentSummary || null
+    };
     const entries = session.questions.map((question, index) => ({
+        originalIndex: index,
         question,
         answer: Array.isArray(session.answers) ? session.answers[index] : null,
         draft: Array.isArray(session.drafts) ? session.drafts[index] : ""
     }));
     const shuffledEntries = shuffleArray(entries);
+    const oldToNew = new Map(shuffledEntries.map((entry, newIndex) => [entry.originalIndex, newIndex]));
 
     session.questions = shuffledEntries.map((entry, index) => prepareQuestionForSession(entry.question, index + 1, { shuffleChoices: true }));
     session.answers = shuffledEntries.map((entry) => entry.answer ?? null);
     session.drafts = shuffledEntries.map((entry) => entry.draft ?? "");
-    session.index = 0;
-    session.reviewed = false;
-    session.revealed = false;
-    session.lastResult = null;
-    session.selectedChoice = null;
-    session.typedAnswer = "";
-    session.complete = false;
-    session.currentSummary = null;
+    ["unsureFlags", "questionTimesMs"].forEach((key) => {
+        if (Array.isArray(session[key])) {
+            session[key] = shuffledEntries.map((entry) => session[key][entry.originalIndex] ?? (key === "unsureFlags" ? false : 0));
+        }
+    });
+    ["learnAnsweredOrder", "learnCheckpointQuestionIndexes", "learnReviewQueue", "learnReviewSubmittedIndexes", "learnReviewedMistakeIndexes"].forEach((key) => {
+        if (Array.isArray(session[key])) {
+            session[key] = session[key].map((index) => oldToNew.get(Number(index))).filter(Number.isInteger);
+        }
+    });
+    ["learnReviewDrafts", "learnReviewResults"].forEach((key) => {
+        if (session[key] && typeof session[key] === "object" && !Array.isArray(session[key])) {
+            session[key] = Object.fromEntries(Object.entries(session[key]).map(([index, value]) => [oldToNew.get(Number(index)), value]).filter(([index]) => Number.isInteger(index)));
+        }
+    });
+    session.index = oldToNew.get(currentIndex) ?? 0;
+    if (Number.isInteger(session.questionTimingIndex)) {
+        session.questionTimingIndex = oldToNew.get(session.questionTimingIndex) ?? session.index;
+    }
+    Object.assign(session, activeState);
     return true;
 }
 
@@ -2009,7 +2034,8 @@ function saveQuizSession(session) {
         return;
     }
 
-    storageSet(QUIZ_SESSION_KEY, {
+    const saved = {
+        mode: "quiz",
         subjectId: session.subjectId,
         chapterTitle: session.chapterTitle,
         index: Number(session.index) || 0,
@@ -2028,8 +2054,56 @@ function saveQuizSession(session) {
         selectedChoice: session.selectedChoice ?? null,
         typedAnswer: session.typedAnswer ?? "",
         lastResult: session.lastResult || null
-    });
+    };
+    saveScopedSession(QUIZ_SESSION_KEY, saved);
     saveQuizChapterProgress(session);
+}
+
+function sessionScopeKey(session) {
+    return `${text(session?.mode)}::${text(session?.subjectId)}::${text(session?.chapterTitle)}`;
+}
+
+function loadSessionBucket(storageKey) {
+    const stored = storageGet(storageKey, null);
+    if (stored?.sessions && typeof stored.sessions === "object") {
+        return stored;
+    }
+    if (stored?.subjectId && stored?.chapterTitle) {
+        const legacy = { ...stored, mode: stored.mode || (storageKey === QUIZ_SESSION_KEY ? "quiz" : "") };
+        if (legacy.mode) {
+            return { sessions: { [sessionScopeKey(legacy)]: legacy }, activeScope: sessionScopeKey(legacy) };
+        }
+    }
+    return { sessions: {}, activeScope: "" };
+}
+
+function saveScopedSession(storageKey, session) {
+    const bucket = loadSessionBucket(storageKey);
+    const scope = sessionScopeKey(session);
+    bucket.sessions[scope] = session;
+    bucket.activeScope = scope;
+    storageSet(storageKey, bucket);
+}
+
+function getScopedSession(storageKey, mode, subject, chapter) {
+    const bucket = loadSessionBucket(storageKey);
+    if (subject && chapter) {
+        return bucket.sessions[`${text(mode)}::${text(subject.id)}::${text(chapter.title)}`] || null;
+    }
+    return bucket.sessions[bucket.activeScope] || null;
+}
+
+function removeScopedSession(storageKey, mode, subject, chapter) {
+    const bucket = loadSessionBucket(storageKey);
+    if (subject && chapter) {
+        delete bucket.sessions[`${text(mode)}::${text(subject.id)}::${text(chapter.title)}`];
+    } else {
+        Object.keys(bucket.sessions).forEach((scope) => {
+            if (scope.startsWith(`${text(mode)}::`)) delete bucket.sessions[scope];
+        });
+    }
+    bucket.activeScope = Object.keys(bucket.sessions).at(-1) || "";
+    storageSet(storageKey, bucket);
 }
 
 function getQuizProgressKey(subjectId, chapterTitle) {
@@ -2076,15 +2150,15 @@ function getQuizChapterProgress(subjectId, chapter) {
 }
 
 function loadQuizSession() {
-    return storageGet(QUIZ_SESSION_KEY, null);
+    return getScopedSession(QUIZ_SESSION_KEY, "quiz");
 }
 
-function clearQuizSession() {
-    storageRemove(QUIZ_SESSION_KEY);
+function clearQuizSession(subject, chapter) {
+    removeScopedSession(QUIZ_SESSION_KEY, "quiz", subject, chapter);
 }
 
 function restoreQuizSession(subject, chapter) {
-    const saved = loadQuizSession();
+    const saved = getScopedSession(QUIZ_SESSION_KEY, "quiz", subject, chapter);
     if (!saved || !subject || !chapter || saved.subjectId !== subject.id || saved.chapterTitle !== chapter.title) {
         return null;
     }
@@ -2118,7 +2192,7 @@ function saveModeSession(session) {
     }
 
     const key = MODE_SESSION_KEYS[session.mode];
-    storageSet(key, {
+    saveScopedSession(key, {
         subjectId: session.subjectId,
         chapterTitle: session.chapterTitle,
         mode: session.mode,
@@ -2155,19 +2229,27 @@ function saveModeSession(session) {
         learnFirstAttemptCorrectCount: Number(session.learnFirstAttemptCorrectCount) || 0,
         learnMistakesReviewedCount: Number(session.learnMistakesReviewedCount) || 0,
         learnRecordedCheckpointIds: Array.isArray(session.learnRecordedCheckpointIds) ? session.learnRecordedCheckpointIds : [],
-        learnSlideNext: Boolean(session.learnSlideNext)
+        learnSlideNext: Boolean(session.learnSlideNext),
+        questionTimesMs: Array.isArray(session.questionTimesMs) ? session.questionTimesMs : [],
+        unsureFlags: Array.isArray(session.unsureFlags) ? session.unsureFlags : [],
+        timeLimitSeconds: Number(session.timeLimitSeconds) || 0,
+        timeRemainingSeconds: Number(session.timeRemainingSeconds) || 0,
+        submitted: Boolean(session.submitted),
+        timerStarted: false,
+        reviewingAnswers: Boolean(session.reviewingAnswers),
+        selectedChapterTitles: Array.isArray(session.selectedChapterTitles) ? session.selectedChapterTitles : []
     });
 }
 
-function loadModeSession(mode) {
+function loadModeSession(mode, subject, chapter) {
     const key = MODE_SESSION_KEYS[mode];
-    return key ? storageGet(key, null) : null;
+    return key ? getScopedSession(key, mode, subject, chapter) : null;
 }
 
-function clearModeSession(mode) {
+function clearModeSession(mode, subject, chapter) {
     const key = MODE_SESSION_KEYS[mode];
     if (key) {
-        storageRemove(key);
+        removeScopedSession(key, mode, subject, chapter);
     }
 }
 
@@ -2176,7 +2258,7 @@ function restoreModeSession(subject, chapter, mode) {
         return restoreQuizSession(subject, chapter);
     }
 
-    const saved = loadModeSession(mode);
+    const saved = loadModeSession(mode, subject, chapter);
     if (!saved || !subject || !chapter || saved.subjectId !== subject.id || saved.chapterTitle !== chapter.title) {
         return null;
     }
@@ -2233,6 +2315,22 @@ function restoreModeSession(subject, chapter, mode) {
     session.learnMistakesReviewedCount = Math.max(0, Number(saved.learnMistakesReviewedCount) || 0);
     session.learnRecordedCheckpointIds = Array.isArray(saved.learnRecordedCheckpointIds) ? saved.learnRecordedCheckpointIds.map(text) : [];
     session.learnSlideNext = Boolean(saved.learnSlideNext);
+    session.unsureFlags = Array.isArray(saved.unsureFlags)
+        ? saved.unsureFlags.slice(0, session.questions.length).map(Boolean)
+        : session.questions.map(() => false);
+    session.questionTimesMs = Array.isArray(saved.questionTimesMs)
+        ? saved.questionTimesMs.slice(0, session.questions.length).map((value) => Math.max(0, Number(value) || 0))
+        : session.questions.map(() => 0);
+    if (mode === "exam") {
+        session.timeLimitSeconds = Math.max(0, Number(saved.timeLimitSeconds) || 0);
+        session.timeRemainingSeconds = Math.max(0, Math.min(session.timeLimitSeconds || Infinity, Number(saved.timeRemainingSeconds) || 0));
+        session.submitted = Boolean(saved.submitted);
+        session.timerStarted = false;
+        session.startedAt = null;
+        session.reviewingAnswers = Boolean(saved.reviewingAnswers);
+        session.selectedChapterTitles = Array.isArray(saved.selectedChapterTitles) ? saved.selectedChapterTitles : [saved.chapterTitle];
+        session.questionCount = session.questions.length;
+    }
 
     return session;
 }
@@ -7887,6 +7985,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                         session.setupError = "";
                         restoreExamDraft(session, index);
                     }
+                    if (["learn", "exam"].includes(session.mode)) saveModeSession(session);
                     if (typeof renderHeaderRenderer === "function") {
                         renderHeaderRenderer();
                     }
@@ -8290,6 +8389,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                         result.isUnsure = session.unsureFlags[index];
                         session.answers[index] = result;
                     }
+                    saveModeSession(session);
                     buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
                 });
                 reviewActions.appendChild(flagButton);
@@ -8366,6 +8466,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             event.preventDefault();
             event.stopPropagation();
             session.unsureFlags[session.index] = !session.unsureFlags[session.index];
+            saveModeSession(session);
             buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage, examSubmitter);
         });
         statusGroup.append(flagButton);
@@ -8393,6 +8494,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             input.addEventListener("input", () => {
                 session.drafts[session.index] = input.value;
                 session.typedAnswer = input.value;
+                saveModeSession(session);
             });
             answerArea.appendChild(input);
         } else {
@@ -8410,6 +8512,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                 button.addEventListener("click", () => {
                     session.selectedChoice = originalIndex;
                     session.drafts[session.index] = String(originalIndex);
+                    saveModeSession(session);
                     buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
                 });
                 choices.appendChild(button);
@@ -8828,6 +8931,9 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         input.disabled = session.reviewed;
         input.addEventListener("input", () => {
             session.typedAnswer = input.value;
+            session.drafts[session.index] = input.value;
+            if (session.mode === "quiz") saveQuizSession(session);
+            else if (session.mode === "learn") saveModeSession(session);
         });
 
         const feedback = document.createElement("div");
@@ -9783,6 +9889,7 @@ export async function initModePage(mode) {
             return;
         }
 
+        syncExamQuestionTiming(state.session);
         const shuffled = shuffleSessionQuestions(state.session);
         if (!shuffled) {
             return;
@@ -9854,7 +9961,8 @@ export async function initModePage(mode) {
             return;
         }
         session.timerStarted = true;
-        session.startedAt = session.startedAt || Date.now();
+        const elapsedBeforeResume = Math.max(0, session.timeLimitSeconds - Math.max(0, session.timeRemainingSeconds));
+        session.startedAt = Date.now() - elapsedBeforeResume * 1000;
         examTimerId = window.setInterval(() => {
             const activeSession = state.session;
             if (!activeSession || activeSession.mode !== "exam" || activeSession.complete || activeSession.submitted) {
@@ -9863,6 +9971,7 @@ export async function initModePage(mode) {
             }
             const elapsed = Math.max(0, Math.floor((Date.now() - (activeSession.startedAt || Date.now())) / 1000));
             activeSession.timeRemainingSeconds = Math.max(0, activeSession.timeLimitSeconds - elapsed);
+            if (activeSession.timeRemainingSeconds % 10 === 0) saveModeSession(activeSession);
             renderHeader();
             updateExamTimerBadge();
             if (activeSession.timeRemainingSeconds <= 0) {
@@ -9901,6 +10010,7 @@ export async function initModePage(mode) {
         state.session.setupError = "";
         state.activeChapter = getChapterByTitle(subject, chapterTitles[0]) || state.activeChapter || subject.chapters[0] || null;
         syncSelection(subject.id, state.activeChapter?.title || "", "exam");
+        saveModeSession(state.session);
         renderModeSwitcher();
         renderHeader();
         renderChapters();
@@ -9929,6 +10039,7 @@ export async function initModePage(mode) {
         syncExamQuestionTiming(session);
         session.currentSummary = summarizeResults(session);
         recordSessionProgress(session);
+        saveModeSession(session);
         clearExamTimer();
         renderHeader();
         renderAssessment(session.currentSummary, session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession);
@@ -9951,6 +10062,7 @@ export async function initModePage(mode) {
         commitExamDraft(session, session.index);
         session.busy = false;
         session.setupError = "";
+        saveModeSession(session);
 
         let nextIndex = session.index;
         if (direction < 0) {
@@ -9971,6 +10083,7 @@ export async function initModePage(mode) {
 
         session.index = nextIndex;
         restoreExamDraft(session, session.index);
+        saveModeSession(session);
         renderHeader();
         buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
     };
@@ -10549,20 +10662,32 @@ export async function initModePage(mode) {
         state.activeChapter = chapter;
         if (nextMode === "exam") {
             clearExamTimer();
-            state.session = createExamPlaceholderSession(subject);
-            state.session.chapterTitle = chapter.title;
-            state.session.selectedChapterTitles = [chapter.title];
-            state.session.setupError = "";
+            const savedExam = forceRestart ? null : restoreModeSession(subject, chapter, "exam");
+            const shouldResumeExam = savedExam
+                && (savedExam.answers?.some(Boolean) || savedExam.drafts?.some((draft) => text(draft)));
+            if (shouldResumeExam && window.confirm("A saved Exam attempt exists for this subject and chapter. Choose OK to resume it, or Cancel to restart.")) {
+                state.session = savedExam;
+                startExamTimer();
+            } else {
+                if (savedExam || forceRestart) clearModeSession("exam", subject, chapter);
+                state.session = createExamPlaceholderSession(subject);
+                state.session.chapterTitle = chapter.title;
+                state.session.selectedChapterTitles = [chapter.title];
+                state.session.setupError = "";
+            }
         } else {
             if (nextMode === "quiz") {
                 const restored = forceRestart ? null : restoreQuizSession(subject, chapter);
+                const shouldResume = restored
+                    && (restored.answers?.some(Boolean) || restored.drafts?.some((draft) => text(draft)));
+                const resume = shouldResume && window.confirm("A saved Quiz attempt exists for this subject and chapter. Choose OK to resume it, or Cancel to restart.");
                 if (forceRestart) {
                     clearQuizChapterProgress(subject.id, chapter.title);
                 }
-                if (restored) {
+                if (resume) {
                     state.session = restored;
                 } else {
-                    clearQuizSession();
+                    clearQuizSession(subject, chapter);
                     state.session = createSession(subject, chapter, nextMode, {});
                 }
             } else {
@@ -10584,10 +10709,13 @@ export async function initModePage(mode) {
                     }
 
                     const restored = forceRestart ? null : restoreModeSession(subject, chapter, nextMode);
-                    if (restored) {
+                    const shouldResume = restored
+                        && (restored.answers?.some(Boolean) || restored.drafts?.some((draft) => text(draft)));
+                    const resume = shouldResume && window.confirm(`A saved ${nextMode === "learn" ? "Learn" : "Flashcards"} attempt exists for this subject and chapter. Choose OK to resume it, or Cancel to restart.`);
+                    if (resume) {
                         state.session = restored;
                     } else {
-                        clearModeSession(nextMode);
+                        if (restored || forceRestart) clearModeSession(nextMode, subject, chapter);
                         state.session = createSession(subject, chapter, nextMode, {});
                     }
                 }
@@ -10635,9 +10763,7 @@ export async function initModePage(mode) {
             recordSessionProgress(session);
         }
 
-        if (["quiz", "learn", "flashcards"].includes(session.mode)) {
-            saveModeSession(session);
-        }
+        if (["quiz", "learn", "flashcards", "exam"].includes(session.mode)) saveModeSession(session);
 
         if (session.complete) {
             renderAssessment(session.currentSummary, session, elements.assessmentTitle, elements.assessmentScore, elements.assessmentContent, startSession);
@@ -10717,14 +10843,49 @@ export async function initModePage(mode) {
         advanceSession();
     };
 
+    const hasAttemptProgress = (session) => Boolean(session && (
+        session.answers?.some(Boolean)
+        || session.drafts?.some((draft) => text(draft))
+    ));
+
+    const protectAttemptBeforeSwitch = (nextSubject, nextChapter) => {
+        const session = state.session;
+        if (!session || !hasAttemptProgress(session)) return true;
+        const sameScope = session.subjectId === nextSubject?.id && session.chapterTitle === nextChapter?.title;
+        if (sameScope) return true;
+        if (!window.confirm("You have progress in this attempt. Choose OK to save it and switch subjects or chapters, or Cancel to stay here.")) {
+            return false;
+        }
+
+        syncExamQuestionTiming(session);
+        if (session.mode === "exam" && !session.submitted) {
+            if (session.timerStarted && session.timeLimitSeconds > 0 && session.startedAt) {
+                const elapsed = Math.max(0, Math.floor((Date.now() - session.startedAt) / 1000));
+                session.timeRemainingSeconds = Math.max(0, session.timeLimitSeconds - elapsed);
+            }
+            session.timerStarted = false;
+            session.startedAt = null;
+            clearExamTimer();
+        }
+        if (session.mode === "quiz") saveQuizSession(session);
+        else if (["learn", "flashcards", "exam"].includes(session.mode)) saveModeSession(session);
+        return true;
+    };
+
     function selectSubject(subjectId, chapterTitle = "") {
         const subject = getSubjectById(state.subjects, subjectId);
         if (!subject) {
             return;
         }
 
-        state.activeSubject = subject;
         const nextChapterTitle = text(chapterTitle || subject.selectedChapter || subject.chapters[0]?.title || "");
+        const nextChapter = getUsableChapter(subject, nextChapterTitle) || subject.chapters[0] || null;
+        if (!protectAttemptBeforeSwitch(subject, nextChapter)) {
+            if (elements.subjectSelect) elements.subjectSelect.value = state.activeSubject?.id || "";
+            return;
+        }
+
+        state.activeSubject = subject;
         state.activeChapter = getUsableChapter(subject, nextChapterTitle) || subject.chapters[0] || null;
 
         state.drawerExpandedSubjectId = subject.id;
@@ -10747,6 +10908,7 @@ export async function initModePage(mode) {
         if (!chapter) {
             return;
         }
+        if (!protectAttemptBeforeSwitch(subject, chapter)) return;
 
         state.activeChapter = chapter;
 
@@ -10870,6 +11032,19 @@ export async function initModePage(mode) {
     window.addEventListener("resize", () => {
         syncDrawerVisibility();
         syncExamMapVisibility();
+    });
+    window.addEventListener("pagehide", () => {
+        const session = state.session;
+        if (!session || session.mode !== "exam" || session.submitted || !session.timerStarted) return;
+        syncExamQuestionTiming(session);
+        if (session.timeLimitSeconds > 0 && session.startedAt) {
+            const elapsed = Math.max(0, Math.floor((Date.now() - session.startedAt) / 1000));
+            session.timeRemainingSeconds = Math.max(0, session.timeLimitSeconds - elapsed);
+        }
+        session.timerStarted = false;
+        session.startedAt = null;
+        clearExamTimer();
+        saveModeSession(session);
     });
     document.addEventListener("fullscreenchange", () => {
         syncDrawerVisibility();
