@@ -7034,7 +7034,29 @@ function createAccuracyAttemptChartCard(quizEntries, examEntries) {
     chartWrap.setAttribute("aria-label", "Scrollable Quiz and Exam attempt history chart");
     chartWrap.setAttribute("tabindex", "0");
     chartWrap.appendChild(createAccuracyAttemptChart(quizEntries, examEntries));
+    const fitChartCanvas = () => {
+        const svg = chartWrap.querySelector(".accuracy-chart-svg");
+        if (!svg) return;
+        const baseWidth = Number(svg.dataset.plotWidth) || Number(svg.getAttribute("width")) || 760;
+        const plotWidth = Math.max(baseWidth, chartWrap.clientWidth);
+        if (Number(svg.getAttribute("width")) === plotWidth) return;
+        svg.setAttribute("viewBox", `0 0 ${plotWidth} ${svg.getAttribute("height") || 260}`);
+        svg.setAttribute("width", String(plotWidth));
+        svg.style.width = `${plotWidth}px`;
+        svg.querySelector(".accuracy-chart-background")?.setAttribute("width", String(plotWidth));
+        svg.querySelectorAll(".accuracy-chart-gridline, .accuracy-chart-axis-x").forEach((line) => {
+            line.setAttribute("x2", String(plotWidth - 24));
+        });
+        const xTitle = svg.querySelector(".accuracy-chart-x-title");
+        xTitle?.setAttribute("x", String(plotWidth / 2));
+    };
+    if (typeof ResizeObserver === "function") {
+        new ResizeObserver(fitChartCanvas).observe(chartWrap);
+    } else {
+        window.addEventListener("resize", fitChartCanvas);
+    }
     requestAnimationFrame(() => {
+        fitChartCanvas();
         chartWrap.scrollLeft = chartWrap.scrollWidth;
     });
 
@@ -7119,8 +7141,10 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
     svg.setAttribute("role", "group");
     svg.setAttribute("aria-label", "Accuracy by quiz and exam attempt");
     svg.style.width = `${totalPlotWidth}px`;
+    svg.dataset.plotWidth = String(totalPlotWidth);
 
     const background = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    background.setAttribute("class", "accuracy-chart-background");
     background.setAttribute("x", "0");
     background.setAttribute("y", "0");
     background.setAttribute("width", String(totalPlotWidth));
@@ -7135,6 +7159,7 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
     yTicks.forEach((tick) => {
         const y = padding.top + chartHeight - (tick / 100) * chartHeight;
         const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("class", "accuracy-chart-gridline");
         line.setAttribute("x1", padding.left);
         line.setAttribute("x2", totalPlotWidth - padding.right);
         line.setAttribute("y1", y);
@@ -7154,6 +7179,7 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
     });
 
     const axisX = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    axisX.setAttribute("class", "accuracy-chart-axis-x");
     axisX.setAttribute("x1", padding.left);
     axisX.setAttribute("x2", totalPlotWidth - padding.right);
     axisX.setAttribute("y1", height - padding.bottom);
@@ -7183,6 +7209,7 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
     svg.appendChild(axisTitle);
 
     const xTitle = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    xTitle.setAttribute("class", "accuracy-chart-x-title");
     xTitle.setAttribute("x", totalPlotWidth / 2);
     xTitle.setAttribute("y", height - 2);
     xTitle.setAttribute("text-anchor", "middle");
