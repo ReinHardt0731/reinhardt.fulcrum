@@ -98029,7 +98029,7 @@
           ]
         },
         {
-          "question": "An aircraft flies horizontally at 240 km/h, 5 km from a radar station. When its horizontal distance is 12 km and increasing, find its distance rate from the station.",
+          "question": "An aircraft flies horizontally at 240 km/h at a constant altitude of 5 km above a ground-based radar station. When its horizontal distance from the station is 12 km and increasing, how fast is its straight-line distance from the station increasing?",
           "questionType": "multiple_choice",
           "choices": [
             "221.55",
@@ -98039,7 +98039,7 @@
           ],
           "answerIndex": 3,
           "answerText": "221.54",
-          "explanation": "Given:\nGiven: y = 5 km is fixed, x = 12 km, dx/dt = 240 km/h.\n\nFormula:\nFormula: r^2 = x^2+y^2; r(dr/dt)=x(dx/dt)+y(dy/dt).\n\nSolution:\nr = 13 km and dy/dt = 0, so dr/dt = 12(240)/13 = 221.54 km/h approximately.\n\nAnswer:\nThe distance increases at 221.54 km/h.",
+          "explanation": "Given:\nThe aircraft's vertical distance above the ground is fixed at y = 5 km. Its horizontal distance is x = 12 km and is increasing at dx/dt = 240 km/h.\n\nFormula:\nThe straight-line distance r from the radar station satisfies r^2 = x^2+y^2, so r(dr/dt)=x(dx/dt)+y(dy/dt).\n\nSolution:\nSince the altitude is constant, dy/dt = 0. At this instant r = 13 km, so dr/dt = 12(240)/13 = 221.54 km/h approximately.\n\nAnswer:\nThe straight-line distance from the station increases at 221.54 km/h.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
