@@ -526,6 +526,10 @@
         {
           "title": "Bearings",
           "file": "chapters/bearings.json"
+        },
+        {
+          "title": "Probability",
+          "file": "chapters/probability.json"
         }
       ],
       "notesPath": "math.md",
@@ -130129,6 +130133,615 @@
         }
       ],
       "file": "chapters/bearings.json"
+    },
+    "chapters/probability.json": {
+      "title": "Probability",
+      "questions": [
+        {
+          "question": "A fair coin is tossed 5 times. How many total possible outcomes are there?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "10",
+            "16",
+            "25",
+            "32"
+          ],
+          "answerIndex": 3,
+          "answerText": "32",
+          "explanation": "Each toss has 2 possible outcomes: heads or tails. There are 5 independent tosses, so the total number of possible sequences is 2^5 = 32.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "probability",
+            "counting",
+            "total outcomes",
+            "coin toss"
+          ]
+        },
+        {
+          "question": "A fair die is rolled 4 times. How many total possible outcomes are there?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "24",
+            "64",
+            "1296",
+            "256"
+          ],
+          "answerIndex": 2,
+          "answerText": "1296",
+          "explanation": "Each roll has 6 possible outcomes. With 4 independent rolls, the total number of possible sequences is 6^4 = 1296.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "probability",
+            "counting",
+            "total outcomes",
+            "dice"
+          ]
+        },
+        {
+          "question": "What does 7C3 represent?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The number of ways to arrange 3 objects from 7 when order matters",
+            "The number of ways to choose 3 objects from 7 when order does not matter",
+            "The probability of choosing 3 objects from 7",
+            "The total number of outcomes when 7 trials are performed"
+          ],
+          "answerIndex": 1,
+          "answerText": "The number of ways to choose 3 objects from 7 when order does not matter",
+          "explanation": "nCr means 'n choose r.' It counts selections where order does not matter. For example, choosing A, B, C is the same selection as C, B, A.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "nCr",
+            "combinations",
+            "counting"
+          ]
+        },
+        {
+          "question": "What does 7P3 represent?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The number of ways to choose 3 objects from 7 when order does not matter",
+            "The number of ways to arrange 3 objects from 7 when order matters",
+            "The probability of exactly 3 successes",
+            "The total number of outcomes in 7 trials"
+          ],
+          "answerIndex": 1,
+          "answerText": "The number of ways to arrange 3 objects from 7 when order matters",
+          "explanation": "nPr counts arrangements where order matters. For example, assigning President, Vice President, and Secretary produces different outcomes when the people switch positions.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "nPr",
+            "permutations",
+            "counting"
+          ]
+        },
+        {
+          "question": "How many ways can exactly 2 tails occur in 5 coin tosses?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "5",
+            "10",
+            "15",
+            "20"
+          ],
+          "answerIndex": 1,
+          "answerText": "10",
+          "explanation": "We need to choose which 2 of the 5 positions contain tails. Since the order of choosing the positions does not matter, use 5C2 = 10.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "nCr",
+            "favorable outcomes",
+            "coin toss",
+            "exactly"
+          ]
+        },
+        {
+          "question": "A fair coin is tossed 5 times. What is the probability of getting exactly 2 tails?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "15.625%",
+            "31.25%",
+            "50%",
+            "62.5%"
+          ],
+          "answerIndex": 1,
+          "answerText": "31.25%",
+          "explanation": "There are 2^5 = 32 total outcomes. The number of favorable outcomes is 5C2 = 10. Therefore P(exactly 2 tails) = 10/32 = 0.3125 = 31.25%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial probability",
+            "exactly",
+            "nCr",
+            "coin toss"
+          ]
+        },
+        {
+          "question": "A fair coin is tossed 6 times. What are the values of n and r when finding the probability of exactly 3 heads?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "n = 3, r = 6",
+            "n = 6, r = 3",
+            "n = 3, r = 3",
+            "n = 6, r = 6"
+          ],
+          "answerIndex": 1,
+          "answerText": "n = 6, r = 3",
+          "explanation": "n is the total number of trials, so n = 6. r is the number of successes being counted, so r = 3 heads.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial",
+            "n",
+            "r",
+            "exactly"
+          ]
+        },
+        {
+          "question": "A fair coin is tossed 8 times. What is the probability of getting exactly 3 heads?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "10.94%",
+            "21.88%",
+            "27.34%",
+            "31.25%"
+          ],
+          "answerIndex": 1,
+          "answerText": "21.88%",
+          "explanation": "Use P(X = r) = nCr p^r(1-p)^(n-r). Here n = 8, r = 3, and p = 1/2. Thus P(X=3) = 8C3(1/2)^3(1/2)^5 = 56/256 = 0.21875 = 21.88%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial distribution",
+            "exactly",
+            "coin toss"
+          ]
+        },
+        {
+          "question": "A fair die is rolled 5 times. What is the probability of getting exactly two 6s?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "8.04%",
+            "16.08%",
+            "20.00%",
+            "24.11%"
+          ],
+          "answerIndex": 1,
+          "answerText": "16.08%",
+          "explanation": "Given:\nThere are 5 independent rolls. The probability of rolling a 6 is 1/6, and the probability of not rolling a 6 is 5/6.\n\nFormula:\nFor exactly r successes in n trials, P(X=r) = nCr(p^r)(1-p)^(n-r).\n\nSolution:\nP(X=2) = 5C2(1/6)^2(5/6)^3 = 1250/7776 ? 0.1608 = 16.08%.\n\nAnswer:\nThe probability of rolling exactly two 6s is approximately 16.08%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial distribution",
+            "dice",
+            "exactly"
+          ]
+        },
+        {
+          "question": "In a binomial experiment, which conditions must be satisfied?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "There must be a fixed number of independent trials, two possible outcomes per trial, and a constant probability of success",
+            "The trials must always have different probabilities",
+            "There must be more than two outcomes on every trial",
+            "The number of trials must be unknown"
+          ],
+          "answerIndex": 0,
+          "answerText": "There must be a fixed number of independent trials, two possible outcomes per trial, and a constant probability of success",
+          "explanation": "A binomial experiment has a fixed number of independent trials, exactly two categories of outcome (success/failure), and the same probability of success on each trial.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial distribution",
+            "conditions",
+            "concept"
+          ]
+        },
+        {
+          "question": "Which expression represents the binomial probability of exactly r successes in n trials when the probability of success is p?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "nPr p^r(1-p)^(n-r)",
+            "nCr p^r(1-p)^(n-r)",
+            "nCr p^n(1-p)^r",
+            "nCr p(1-p)"
+          ],
+          "answerIndex": 1,
+          "answerText": "nCr p^r(1-p)^(n-r)",
+          "explanation": "The binomial probability formula is P(X=r) = nCr p^r(1-p)^(n-r). nCr counts the possible positions of the successes, while the probability terms account for the successes and failures.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial formula",
+            "formula recognition"
+          ]
+        },
+        {
+          "question": "A fair coin is tossed 5 times. What does 'at least 2 tails' mean?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Exactly 2 tails only",
+            "0 or 1 tail",
+            "2, 3, 4, or 5 tails",
+            "Fewer than 2 tails"
+          ],
+          "answerIndex": 2,
+          "answerText": "2, 3, 4, or 5 tails",
+          "explanation": "At least means greater than or equal to. Therefore, at least 2 tails means 2 or more tails: 2, 3, 4, or 5.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "at least",
+            "probability wording"
+          ]
+        },
+        {
+          "question": "A fair coin is tossed 8 times. What does 'at most 2 tails' mean?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Exactly 2 tails",
+            "2, 3, 4, 5, 6, 7, or 8 tails",
+            "0, 1, or 2 tails",
+            "Only 0 tails"
+          ],
+          "answerIndex": 2,
+          "answerText": "0, 1, or 2 tails",
+          "explanation": "At most means less than or equal to. Therefore, at most 2 tails means 0, 1, or 2 tails.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "at most",
+            "probability wording"
+          ]
+        },
+        {
+          "question": "A fair coin is tossed 5 times. What is the probability of getting at least 2 tails?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "18.75%",
+            "31.25%",
+            "68.75%",
+            "81.25%"
+          ],
+          "answerIndex": 3,
+          "answerText": "81.25%",
+          "explanation": "At least 2 means 2 or more. The complement is 0 or 1 tail. P(0) = 5C0(1/2)^5 = 1/32. P(1) = 5C1(1/2)^5 = 5/32. Therefore P(X≥2) = 1 - (1/32 + 5/32) = 26/32 = 81.25%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "at least",
+            "complement",
+            "binomial"
+          ]
+        },
+        {
+          "question": "A fair coin is tossed 8 times. What is the probability of getting at most 2 tails?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "14.45%",
+            "21.88%",
+            "28.91%",
+            "35.16%"
+          ],
+          "answerIndex": 0,
+          "answerText": "14.45%",
+          "explanation": "At most 2 means 0, 1, or 2 tails. P(X≤2) = [8C0 + 8C1 + 8C2]/2^8 = (1+8+28)/256 = 37/256 ≈ 14.45%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "at most",
+            "binomial",
+            "cumulative probability"
+          ]
+        },
+        {
+          "question": "A fair die is rolled 6 times. What is the probability of getting at least one 6?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "33.49%",
+            "49.21%",
+            "66.51%",
+            "83.33%"
+          ],
+          "answerIndex": 2,
+          "answerText": "66.51%",
+          "explanation": "The complement of at least one 6 is no 6s. The probability of not rolling a 6 on one roll is 5/6. Therefore P(at least one 6) = 1 - (5/6)^6 ≈ 0.6651 = 66.51%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "complement",
+            "at least one",
+            "dice",
+            "binomial"
+          ]
+        },
+        {
+          "question": "Which phrase is usually a strong signal to consider using the complement rule?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Exactly 3",
+            "At least one",
+            "Exactly 5",
+            "Exactly half"
+          ],
+          "answerIndex": 1,
+          "answerText": "At least one",
+          "explanation": "At least one is often easiest through its complement. The opposite of 'at least one' is 'none.' Thus P(at least one) = 1 - P(none).",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "complement rule",
+            "at least one"
+          ]
+        },
+        {
+          "question": "A fair coin is tossed 10 times. What is the probability of getting exactly 4 heads?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "20.51%",
+            "24.61%",
+            "30.47%",
+            "37.50%"
+          ],
+          "answerIndex": 0,
+          "answerText": "20.51%",
+          "explanation": "P(X=4) = 10C4(1/2)^4(1/2)^6 = 210/1024 ≈ 20.51%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial",
+            "exactly",
+            "coin toss"
+          ]
+        },
+        {
+          "question": "A fair coin is tossed 10 times. What is the probability of getting at least 8 heads?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "5.47%",
+            "10.94%",
+            "17.19%",
+            "21.48%"
+          ],
+          "answerIndex": 0,
+          "answerText": "5.47%",
+          "explanation": "At least 8 means 8, 9, or 10 heads. Therefore P(X≥8) = [10C8 + 10C9 + 10C10]/2^10 = (45+10+1)/1024 = 56/1024 ≈ 5.47%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "at least",
+            "binomial",
+            "coin toss"
+          ]
+        },
+        {
+          "question": "A fair coin is tossed 20 times. What is the probability of getting at least one tail?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "0.000095%",
+            "50%",
+            "99.9999%",
+            "95%"
+          ],
+          "answerIndex": 2,
+          "answerText": "99.9999%",
+          "explanation": "Use the complement. The only way to have no tails is to get 20 heads. P(no tails) = (1/2)^20. Therefore P(at least one tail) = 1 - (1/2)^20 ≈ 99.9999%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "complement",
+            "at least one",
+            "binomial"
+          ]
+        },
+        {
+          "question": "A fair die is rolled 8 times. What is the probability that exactly 3 rolls show an even number?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "21.88%",
+            "27.34%",
+            "31.25%",
+            "35.16%"
+          ],
+          "answerIndex": 0,
+          "answerText": "21.88%",
+          "explanation": "A die has 3 even faces and 3 odd faces, so P(even)=1/2. With n=8 and r=3, P(X=3)=8C3(1/2)^3(1/2)^5 = 56/256 = 21.875%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial",
+            "dice",
+            "even",
+            "exactly"
+          ]
+        },
+        {
+          "question": "A manufacturing process produces defective items with probability 0.02. If 10 items are selected independently, what is the probability that exactly 1 is defective?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "14.94%",
+            "16.67%",
+            "18.00%",
+            "20.00%"
+          ],
+          "answerIndex": 1,
+          "answerText": "16.67%",
+          "explanation": "Given:\nThe probability that one item is defective is p = 0.02, and the probability that it is not defective is 0.98. There are n = 10 independent items.\n\nFormula:\nP(X=1) = 10C1(0.02)^1(0.98)^9.\n\nSolution:\nP(X=1) = 10(0.02)(0.98)^9 ? 0.16675 = 16.67%.\n\nAnswer:\nThe probability that exactly one item is defective is approximately 16.67%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial",
+            "real-world application",
+            "defective items"
+          ]
+        },
+        {
+          "question": "A student has a 70% probability of answering a particular type of question correctly. If the student answers 5 independent questions of this type, what is the probability of getting exactly 4 correct?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "16.84%",
+            "30.87%",
+            "36.02%",
+            "42.03%"
+          ],
+          "answerIndex": 2,
+          "answerText": "36.02%",
+          "explanation": "Use n=5, r=4, p=0.70. P(X=4)=5C4(0.70)^4(0.30)^1 = 5(0.2401)(0.30) = 0.36015 ≈ 36.02%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial",
+            "application",
+            "exactly"
+          ]
+        },
+        {
+          "question": "A basketball player makes a free throw with probability 0.8. If she takes 6 independent free throws, what is the probability she makes at least 5?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "26.21%",
+            "39.32%",
+            "65.54%",
+            "73.73%"
+          ],
+          "answerIndex": 2,
+          "answerText": "65.54%",
+          "explanation": "At least 5 means exactly 5 or exactly 6. P(X≥5)=6C5(0.8)^5(0.2)+6C6(0.8)^6 = 0.393216+0.262144 = 0.65536 = 65.54%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial",
+            "at least",
+            "application"
+          ]
+        },
+        {
+          "question": "A fair coin is tossed 12 times. What is the probability of getting between 4 and 7 tails, inclusive?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "54.05%",
+            "61.28%",
+            "68.88%",
+            "73.32%"
+          ],
+          "answerIndex": 3,
+          "answerText": "73.32%",
+          "explanation": "Given:\nA fair coin is tossed 12 times, so n = 12 and p = 1/2.\n\nFormula:\nFor each number r of tails, P(X=r) = 12Cr(1/2)^12.\n\nSolution:\nBetween 4 and 7 tails, inclusive, means 4, 5, 6, or 7 tails. Add those probabilities: [12C4 + 12C5 + 12C6 + 12C7]/2^12 = (495 + 792 + 924 + 792)/4096 = 3003/4096 ? 0.73315 = 73.32%.\n\nAnswer:\nThe probability is approximately 73.32%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial",
+            "inclusive",
+            "range"
+          ]
+        },
+        {
+          "question": "A machine has a 5% probability of producing a defective part. In a batch of 20 independently produced parts, what is the probability of producing no defective parts?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "35.85%",
+            "64.15%",
+            "95%",
+            "99.99%"
+          ],
+          "answerIndex": 0,
+          "answerText": "35.85%",
+          "explanation": "No defective parts means X=0. P(X=0)=20C0(0.05)^0(0.95)^20=(0.95)^20≈0.3585 = 35.85%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial",
+            "none",
+            "real-world application"
+          ]
+        },
+        {
+          "question": "A fair die is rolled 10 times. What is the probability of getting at most 2 sixes?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "77.52%",
+            "84.85%",
+            "91.47%",
+            "95.21%"
+          ],
+          "answerIndex": 0,
+          "answerText": "77.52%",
+          "explanation": "At most 2 means 0, 1, or 2 sixes. Use p=1/6 and q=5/6. P(X≤2)=Σ from r=0 to 2 of 10Cr(1/6)^r(5/6)^(10-r) ≈ 0.7752. Therefore the correct result is approximately 77.52%.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial",
+            "at most",
+            "dice"
+          ]
+        },
+        {
+          "question": "A fair coin is tossed 100 times. Which expression correctly represents the probability of getting at least 2 tails?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1 - [100C0 + 100C1](1/2)^100",
+            "[100C0 + 100C1](1/2)^100",
+            "100C2(1/2)^2",
+            "1 - (1/2)^100"
+          ],
+          "answerIndex": 0,
+          "answerText": "1 - [100C0 + 100C1](1/2)^100",
+          "explanation": "At least 2 tails is the complement of 0 or 1 tail. Thus P(X≥2)=1-[P(X=0)+P(X=1)] = 1-[100C0+100C1](1/2)^100.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial",
+            "large n",
+            "complement",
+            "expression"
+          ]
+        },
+        {
+          "question": "Which situation is NOT appropriately modeled by a binomial distribution?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Counting the number of heads in 20 independent coin tosses",
+            "Counting the number of defective products in 50 independently selected products when the defect probability is constant",
+            "Counting the number of students who pass an exam when each student's pass probability is approximately constant and independent",
+            "Counting the number of rolls needed until a die shows its first 6"
+          ],
+          "answerIndex": 3,
+          "answerText": "Counting the number of rolls needed until a die shows its first 6",
+          "explanation": "Binomial distributions use a fixed number of trials and count the number of successes. Counting how many trials are needed until the first success is a geometric distribution instead.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial",
+            "geometric distribution",
+            "concept"
+          ]
+        },
+        {
+          "question": "A fair coin is tossed 20 times. Which approach is usually easiest for finding the probability of getting at least 19 heads?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Calculate probabilities for 0 through 18 heads",
+            "Add the probabilities of getting exactly 19 heads and exactly 20 heads",
+            "Calculate only P(19) and ignore P(20)",
+            "Use 20P19"
+          ],
+          "answerIndex": 1,
+          "answerText": "Add the probabilities of getting exactly 19 heads and exactly 20 heads",
+          "explanation": "At least 19 heads means exactly 19 heads or exactly 20 heads. Add those two probabilities: P(X?19) = 20C19(1/2)^20 + 20C20(1/2)^20. Only two outcomes need to be included, so this is the simplest approach.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "binomial",
+            "strategy",
+            "complement"
+          ]
+        }
+      ]
     }
   }
 }

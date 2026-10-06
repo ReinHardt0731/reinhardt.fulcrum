@@ -11,7 +11,7 @@ export const POMODORO_HISTORY_KEY = "prepcore.web.pomodoroHistory.v1";
 export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
 export const ADMIN_PASSWORD = "prepcore";
 export const NOTES_PATH = "./markdowns";
-const SUBJECTS_PATH = "./subjects.json?v=math-multiple-choice-20261006";
+const SUBJECTS_PATH = "./subjects.json?v=subjects-probability-20261006";
 const VALID_MODES = new Set(["quiz", "learn", "flashcards", "exam", "note"]);
 const SUBJECTS_CACHE_KEY = "prepcore.web.subjectsCache.v1";
 const CHAPTER_CACHE_KEY = "prepcore.web.chapterCache.v1";
