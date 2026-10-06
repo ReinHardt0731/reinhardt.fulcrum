@@ -7030,11 +7030,17 @@ function createAccuracyAttemptChartCard(quizEntries, examEntries) {
 
     const chartWrap = document.createElement("div");
     chartWrap.className = "accuracy-chart-wrapper";
+    chartWrap.setAttribute("role", "region");
+    chartWrap.setAttribute("aria-label", "Scrollable Quiz and Exam attempt history chart");
+    chartWrap.setAttribute("tabindex", "0");
     chartWrap.appendChild(createAccuracyAttemptChart(quizEntries, examEntries));
+    requestAnimationFrame(() => {
+        chartWrap.scrollLeft = chartWrap.scrollWidth;
+    });
 
     const note = document.createElement("p");
     note.className = "progress-summary-card-note";
-    note.textContent = "Hover an Exam bar for weak areas. Select a bar to open its saved questions, timings, and explanations.";
+    note.textContent = "Scroll horizontally to explore attempts. Hover or focus a bar for details; select an Exam bar to open its saved review.";
 
     card.append(header, legend, chartWrap, note);
     return card;
@@ -7068,14 +7074,22 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
             mode: text(entry?.mode) === "exam" ? "exam" : "quiz",
             recordId: entry.recordId,
             subjectId: entry.subjectId,
-            timestamp: entry.timestamp
+            timestamp: entry.timestamp,
+            correct: Math.max(0, Number(entry?.correct) || 0),
+            attempted: Math.max(0, Number(entry?.attempted ?? entry?.questionCount) || 0)
         }));
+
+    if (!combinedEntries.length) {
+        const empty = document.createElement("div");
+        empty.className = "accuracy-chart-empty";
+        empty.textContent = "No attempts yet. Complete a Quiz or Exam to see your history.";
+        return empty;
+    }
 
     const totalPlotWidth = Math.max(
         width,
         padding.left + padding.right + combinedEntries.length * (barWidth + barGap)
     );
-    const chartWidth = totalPlotWidth - padding.left - padding.right;
     const buildBars = (entries) => entries.map((entry) => {
         const x = padding.left + (entry.attempt - 1) * (barWidth + barGap);
         const barHeight = (entry.accuracy / 100) * chartHeight;
@@ -7091,6 +7105,8 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
             recordId: entry.recordId,
             subjectId: entry.subjectId,
             timestamp: entry.timestamp,
+            correct: entry.correct,
+            attempted: entry.attempted,
             color: entry.mode === "exam" ? "#f59e0b" : "#3b82f6"
         };
     });
@@ -7100,8 +7116,9 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
     svg.setAttribute("width", String(totalPlotWidth));
     svg.setAttribute("height", String(height));
     svg.setAttribute("class", "accuracy-chart-svg");
-    svg.setAttribute("role", "img");
+    svg.setAttribute("role", "group");
     svg.setAttribute("aria-label", "Accuracy by quiz and exam attempt");
+    svg.style.width = `${totalPlotWidth}px`;
 
     const background = document.createElementNS("http://www.w3.org/2000/svg", "rect");
     background.setAttribute("x", "0");
@@ -7181,15 +7198,24 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
         group.setAttribute("data-attempt-accuracy", String(bar.accuracy));
         group.setAttribute("data-attempt-subject-id", text(bar.subjectId));
         group.setAttribute("data-attempt-timestamp", text(bar.timestamp));
+        group.setAttribute("data-attempt-number", String(bar.attempt));
+        group.setAttribute("data-attempt-correct", String(bar.correct));
+        group.setAttribute("data-attempt-total", String(bar.attempted));
+        group.setAttribute("tabindex", "0");
+        const modeLabel = bar.mode === "exam" ? "Exam" : "Quiz";
+        const timestampValue = Date.parse(bar.timestamp || "");
+        const dateLabel = Number.isFinite(timestampValue) ? new Date(timestampValue).toLocaleString() : "Date unavailable";
+        const scoreLabel = bar.attempted ? `, ${bar.correct} of ${bar.attempted} correct` : "";
+        const accessibleLabel = `${modeLabel} attempt ${bar.attempt}, ${dateLabel}, ${bar.accuracy}% accuracy${scoreLabel}`;
         if (bar.recordId) {
             group.setAttribute("data-exam-record-id", bar.recordId);
             group.setAttribute("role", "button");
-            group.setAttribute("tabindex", "0");
-            group.setAttribute("aria-label", `Exam attempt ${bar.attempt}, ${bar.accuracy}% accuracy. Open saved review.`);
+            group.setAttribute("aria-label", accessibleLabel);
             group.setAttribute("class", "accuracy-chart-attempt is-exam-attempt");
         } else {
+            group.setAttribute("role", "img");
             group.setAttribute("class", "accuracy-chart-attempt");
-            group.setAttribute("aria-label", `${bar.mode === "exam" ? "Exam" : "Quiz"} attempt ${bar.attempt}, ${bar.accuracy}% accuracy`);
+            group.setAttribute("aria-label", accessibleLabel);
         }
         const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
         rect.setAttribute("x", bar.x);
@@ -7227,10 +7253,28 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
     return svg;
 }
 
-function createWeakAreaHoverPreview(record) {
+function createAttemptHoverPreview(record, attempt) {
+    const colors = ["var(--success)", "var(--primary)", "var(--warning)", "var(--danger)", "var(--secondary)"];
+    const preview = document.createElement("div");
+    preview.className = "progress-attempt-hover-card";
+    preview.setAttribute("role", "tooltip");
+    const mode = text(attempt?.getAttribute("data-attempt-mode")) === "exam" ? "Exam" : "Quiz";
+    const attemptNumber = Number(attempt?.getAttribute("data-attempt-number")) || 0;
+    const accuracy = Number(attempt?.getAttribute("data-attempt-accuracy")) || 0;
+    const timestamp = Date.parse(attempt?.getAttribute("data-attempt-timestamp") || "");
+    const correct = Number(attempt?.getAttribute("data-attempt-correct")) || 0;
+    const attemptTotal = Number(attempt?.getAttribute("data-attempt-total")) || 0;
+    preview.appendChild(Object.assign(document.createElement("strong"), {
+        textContent: `${mode} attempt ${attemptNumber}`
+    }));
+    const meta = document.createElement("p");
+    meta.className = "progress-attempt-hover-meta";
+    meta.textContent = `${Number.isFinite(timestamp) ? new Date(timestamp).toLocaleString() : "Date unavailable"} · ${accuracy}% accuracy${attemptTotal ? ` · ${correct}/${attemptTotal} correct` : ""}`;
+    preview.appendChild(meta);
+
+    if (!record) return preview;
     const summary = record.currentSummary || summarizeResults(record);
     const weakAreas = Array.isArray(summary.weakAreas) ? summary.weakAreas : [];
-    const colors = ["var(--success)", "var(--primary)", "var(--warning)", "var(--danger)", "var(--secondary)"];
     const total = weakAreas.reduce((sum, area) => sum + Math.max(0, Number(area.count) || 0), 0);
     const segments = weakAreas.map((area, index) => ({
         label: area.name,
@@ -7239,10 +7283,7 @@ function createWeakAreaHoverPreview(record) {
         fillPercent: total ? Math.round(area.count / total * 100) : 0,
         meta: `${area.count} missed`
     }));
-    const preview = document.createElement("div");
-    preview.className = "progress-attempt-hover-card";
-    preview.setAttribute("role", "tooltip");
-    preview.appendChild(Object.assign(document.createElement("strong"), { textContent: "Weak areas in this attempt" }));
+    preview.appendChild(Object.assign(document.createElement("strong"), { textContent: "Weak areas" }));
     preview.appendChild(segments.length
         ? createAssessmentChart(segments, String(total), "Missed", `Weak area pie chart: ${segments.map((item) => `${item.label}, ${item.value} missed`).join("; ")}`)
         : Object.assign(document.createElement("p"), { textContent: "No weak areas recorded." }));
@@ -7383,18 +7424,24 @@ function renderProgressExamHistory(container, records, subjectState) {
 
     const recordsById = new Map(sortedRecords.map((record) => [record.id, record]));
     const matchedRecordIds = new Set();
-    const hover = (record, event) => {
-        document.querySelector(".progress-attempt-hover-card")?.remove();
-        const preview = createWeakAreaHoverPreview(record);
-        document.body.appendChild(preview);
-        const left = Math.max(12, Math.min(window.innerWidth - 350, event.clientX + 16));
-        const top = Math.max(12, Math.min(window.innerHeight - 270, event.clientY + 14));
-        preview.style.left = `${left}px`;
-        preview.style.top = `${top}px`;
+    const positionHoverPreview = (preview, clientX, clientY) => {
+        preview.style.left = "12px";
+        preview.style.top = "12px";
+        const bounds = preview.getBoundingClientRect();
+        preview.style.left = `${Math.max(12, Math.min(window.innerWidth - bounds.width - 12, clientX + 16))}px`;
+        preview.style.top = `${Math.max(12, Math.min(window.innerHeight - bounds.height - 12, clientY + 14))}px`;
     };
-    container.closest(".progress-chart-card")?.querySelectorAll("[data-attempt-mode='exam']").forEach((bar) => {
-        let record = recordsById.get(bar.getAttribute("data-exam-record-id"));
-        if (!record) {
+    const hover = (bar, record, event) => {
+        document.querySelector(".progress-attempt-hover-card")?.remove();
+        const preview = createAttemptHoverPreview(record, bar);
+        document.body.appendChild(preview);
+        positionHoverPreview(preview, event.clientX, event.clientY);
+    };
+    container.closest(".progress-chart-card")?.querySelectorAll(".accuracy-chart-attempt").forEach((bar) => {
+        let record = text(bar.getAttribute("data-attempt-mode")) === "exam"
+            ? recordsById.get(bar.getAttribute("data-exam-record-id"))
+            : null;
+        if (text(bar.getAttribute("data-attempt-mode")) === "exam" && !record) {
             const timestamp = Date.parse(bar.getAttribute("data-attempt-timestamp") || "") || 0;
             const accuracy = Number(bar.getAttribute("data-attempt-accuracy")) || 0;
             const subjectId = bar.getAttribute("data-attempt-subject-id") || "";
@@ -7404,22 +7451,28 @@ function renderProgressExamHistory(container, records, subjectState) {
                     && Number(entry.currentSummary?.accuracy ?? summarizeResults(entry).accuracy) === accuracy)
                 .sort((a, b) => Math.abs((Number(a.completedAt) || 0) - timestamp) - Math.abs((Number(b.completedAt) || 0) - timestamp))[0];
         }
-        if (!record) return;
-        matchedRecordIds.add(record.id);
-        bar.setAttribute("role", "button");
-        bar.setAttribute("tabindex", "0");
-        bar.classList.add("is-exam-attempt");
-        bar.setAttribute("aria-label", `Exam attempt, ${Number(bar.getAttribute("data-attempt-accuracy")) || 0}% accuracy. Open saved review.`);
-        bar.addEventListener("pointerenter", (event) => hover(record, event));
+        if (record) {
+            matchedRecordIds.add(record.id);
+            bar.setAttribute("role", "button");
+            bar.setAttribute("aria-label", `${bar.getAttribute("aria-label")}. Open saved review.`);
+            bar.classList.add("is-exam-attempt");
+        } else {
+            bar.setAttribute("role", "img");
+            bar.classList.remove("is-exam-attempt");
+        }
+        bar.addEventListener("pointerenter", (event) => hover(bar, record, event));
         bar.addEventListener("pointermove", (event) => {
             const preview = document.querySelector(".progress-attempt-hover-card");
             if (!preview) return;
-            preview.style.left = `${Math.max(12, Math.min(window.innerWidth - 350, event.clientX + 16))}px`;
-            preview.style.top = `${Math.max(12, Math.min(window.innerHeight - 270, event.clientY + 14))}px`;
+            positionHoverPreview(preview, event.clientX, event.clientY);
         });
         bar.addEventListener("pointerleave", () => document.querySelector(".progress-attempt-hover-card")?.remove());
-        bar.addEventListener("focus", () => hover(record, { clientX: 24, clientY: 24 }));
+        bar.addEventListener("focus", () => {
+            const bounds = bar.getBoundingClientRect();
+            hover(bar, record, { clientX: bounds.right, clientY: bounds.top });
+        });
         bar.addEventListener("blur", () => document.querySelector(".progress-attempt-hover-card")?.remove());
+        if (!record) return;
         const openRecord = () => {
             const detail = detailsByRecordId.get(text(record.id));
             if (!detail) return;
@@ -8100,11 +8153,77 @@ function createSavedExamReviewDetails(record, onDelete = null, subjects = []) {
     }
     details.appendChild(reviewLayout);
 
+    const recordQuestions = Array.isArray(record.questions) ? record.questions : [];
+    const recordAnswers = Array.isArray(record.answers) ? record.answers : [];
+    const hasSavedAnswer = (index) => {
+        if (Array.isArray(record.drafts) && index < record.drafts.length) return isExamAnswerSaved(record, index);
+        return Boolean(recordAnswers[index]);
+    };
+    const retryGroups = [
+        {
+            label: "Retry flagged",
+            reviewLabel: "Flagged exam questions",
+            indexes: recordQuestions.map((_, index) => index).filter((index) => Boolean(record.unsureFlags?.[index]))
+        },
+        {
+            label: "Retry missed",
+            reviewLabel: "Missed exam questions",
+            indexes: recordQuestions.map((_, index) => index).filter((index) => Boolean(recordAnswers[index] && !recordAnswers[index].correct))
+        },
+        {
+            label: "Retry unanswered",
+            reviewLabel: "Unanswered exam questions",
+            indexes: recordQuestions.map((_, index) => index).filter((index) => !hasSavedAnswer(index))
+        }
+    ];
+    const retrySubject = subjects.find((subject) => text(subject.id) === text(record.subjectId));
+    const recordChapterTitles = [record.chapterTitle, ...(record.selectedChapterTitles || []), recordQuestions[0]?.chapterTitle]
+        .map(text)
+        .filter(Boolean);
+    const retryChapterTitle = text(
+        recordChapterTitles.find((chapterTitle) => retrySubject?.chapters?.some((chapter) => chapter.title === chapterTitle))
+        || retrySubject?.chapters?.[0]?.title
+    );
+    const retryActions = document.createElement("div");
+    retryActions.className = "saved-exam-actions";
+    retryActions.setAttribute("role", "group");
+    retryActions.setAttribute("aria-label", "Retry questions in Learn mode");
+    retryGroups.forEach(({ label, reviewLabel, indexes }) => {
+        const button = Object.assign(document.createElement("button"), {
+            type: "button",
+            className: "ghost-button saved-exam-retry",
+            textContent: `${label} (${indexes.length})`
+        });
+        button.disabled = indexes.length === 0 || !retrySubject || !retryChapterTitle;
+        button.addEventListener("click", () => {
+            if (button.disabled) return;
+            const questions = indexes.map((index) => recordQuestions[index]).filter(Boolean).map((question) => ({
+                ...question,
+                choices: Array.isArray(question.choices) ? [...question.choices] : [],
+                tags: Array.isArray(question.tags) ? [...question.tags] : []
+            }));
+            if (!questions.length) return;
+            saveReviewSession({
+                subjectId: retrySubject.id,
+                subjectName: retrySubject.name || record.subjectName || "",
+                chapterTitle: retryChapterTitle,
+                reviewLabel,
+                reviewSource: "exam",
+                questions,
+                createdAt: new Date().toISOString()
+            });
+            syncSelection(retrySubject.id, retryChapterTitle, "learn");
+            window.location.href = "learn.html";
+        });
+        retryActions.appendChild(button);
+    });
+
     if (typeof onDelete === "function") {
         const deleteButton = Object.assign(document.createElement("button"), { type: "button", className: "ghost-button saved-exam-delete", textContent: "Delete record" });
         deleteButton.addEventListener("click", () => onDelete(record, details, deleteButton));
-        details.appendChild(deleteButton);
+        retryActions.appendChild(deleteButton);
     }
+    details.appendChild(retryActions);
     renderQuestionMath(details);
     return details;
 }
@@ -8327,9 +8446,11 @@ function renderAssessment(summary, session, title, score, content, startSession,
         };
         const flaggedIndexes = session.questions.map((_, index) => index).filter((index) => session.unsureFlags?.[index]);
         const mistakeIndexes = session.questions.map((_, index) => index).filter((index) => session.answers[index] && !session.answers[index].correct);
+        const unansweredIndexes = session.questions.map((_, index) => index).filter((index) => !isExamAnswerSaved(session, index));
         [
             { label: "Retry flagged in Learn mode", reviewLabel: "Flagged exam questions", indexes: flaggedIndexes },
-            { label: "Retry mistakes in Learn mode", reviewLabel: "Exam mistakes", indexes: mistakeIndexes }
+            { label: "Retry missed in Learn mode", reviewLabel: "Missed exam questions", indexes: mistakeIndexes },
+            { label: "Retry unanswered in Learn mode", reviewLabel: "Unanswered exam questions", indexes: unansweredIndexes }
         ].forEach(({ label, reviewLabel, indexes }) => {
             const button = document.createElement("button");
             button.type = "button";

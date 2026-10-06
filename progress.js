@@ -1,4 +1,4 @@
-import { initProgressPage } from "./shared.js?v=math2-word-problems-20261005";
+import { initProgressPage } from "./shared.js?v=attempt-history-scroll-20261006";
 
 document.addEventListener("DOMContentLoaded", () => {
     initProgressPage();

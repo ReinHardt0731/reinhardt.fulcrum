@@ -1887,7 +1887,14 @@ button.exam-map-row { cursor: pointer; }
 .saved-exam-misses::-webkit-scrollbar-thumb { border: 2px solid rgba(18, 31, 54, 0.72); border-radius: 999px; background: rgba(97, 195, 255, 0.45); }
 .saved-exam-map::-webkit-scrollbar-thumb:hover,
 .saved-exam-misses::-webkit-scrollbar-thumb:hover { background: rgba(97, 195, 255, 0.68); }
-.saved-exam-delete { margin-top: 12px; }
+.saved-exam-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+.saved-exam-actions .saved-exam-delete { margin-top: 0; margin-left: auto; }
 .assessment-attempt-history {
     display: grid;
     gap: 12px;
@@ -1921,6 +1928,7 @@ button.exam-map-row { cursor: pointer; }
     pointer-events: none;
 }
 .progress-attempt-hover-card > strong { display: block; margin-bottom: 8px; }
+.progress-attempt-hover-meta { margin: 0 0 10px; color: var(--muted); font-size: 0.82rem; line-height: 1.45; }
 .progress-attempt-hover-card .assessment-chart-card { gap: 0; padding: 8px; }
 .progress-attempt-hover-card .assessment-chart-panel { grid-template-columns: 96px minmax(0, 1fr); gap: 10px; }
 .progress-attempt-hover-card .assessment-chart { width: 96px; }
@@ -1929,7 +1937,6 @@ button.exam-map-row { cursor: pointer; }
 .progress-attempt-hover-card .assessment-legend { gap: 5px; }
 .progress-attempt-hover-card .assessment-legend-item { padding: 5px; font-size: 0.74rem; }
 .accuracy-chart-attempt.is-exam-attempt { cursor: pointer; }
-.accuracy-chart-attempt.is-exam-attempt:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
 
 @media (max-width: 640px) {
     .weak-exam-controls { grid-template-columns: 1fr; }
@@ -2982,14 +2989,47 @@ body.admin-drawer-collapsed .admin-subject-rail {
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    padding-bottom: 8px;
+    padding: 0 0 8px;
+    border-radius: 18px;
+    overscroll-behavior-x: contain;
+    scrollbar-color: rgba(97, 195, 255, 0.5) rgba(18, 31, 54, 0.72);
+    scrollbar-width: thin;
 }
+.accuracy-chart-wrapper:focus-visible { outline: 2px solid var(--primary); outline-offset: 3px; }
 
 .accuracy-chart-svg {
-    width: 100%;
+    width: auto;
     height: auto;
     display: block;
-    min-width: 0;
+    max-width: none;
+}
+
+.accuracy-chart-empty {
+    display: grid;
+    min-height: 260px;
+    place-items: center;
+    padding: 20px;
+    border-radius: 18px;
+    color: var(--muted);
+    background: rgba(255, 255, 255, 0.03);
+    text-align: center;
+}
+
+.accuracy-chart-attempt {
+    cursor: help;
+    outline: none;
+}
+
+.accuracy-chart-attempt rect {
+    transition: opacity 140ms ease, filter 140ms ease, stroke 140ms ease;
+}
+
+.accuracy-chart-attempt:hover rect,
+.accuracy-chart-attempt:focus-visible rect {
+    opacity: 1;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.32));
+    stroke: rgba(255, 255, 255, 0.9);
+    stroke-width: 2;
 }
 
 .progress-summary-card-header {
@@ -3068,6 +3108,11 @@ body.admin-drawer-collapsed .admin-subject-rail {
     color: var(--muted);
     font-size: 0.95rem;
 }
+
+.accuracy-chart-wrapper::-webkit-scrollbar { height: 9px; }
+.accuracy-chart-wrapper::-webkit-scrollbar-track { border-radius: 999px; background: rgba(18, 31, 54, 0.72); }
+.accuracy-chart-wrapper::-webkit-scrollbar-thumb { border: 2px solid rgba(18, 31, 54, 0.72); border-radius: 999px; background: rgba(97, 195, 255, 0.5); }
+.accuracy-chart-wrapper::-webkit-scrollbar-thumb:hover { background: rgba(97, 195, 255, 0.75); }
 
 .assessment-card {
     border: 1px solid var(--line);
