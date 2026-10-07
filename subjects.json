@@ -530,10 +530,14 @@
         {
           "title": "Probability",
           "file": "chapters/probability.json"
+        },
+        {
+          "title": "Applied Math Review",
+          "file": "chapters/applied-math-review.json"
         }
       ],
       "notesPath": "math.md",
-      "updatedAt": "2026-10-04T02:09:55.441Z"
+      "updatedAt": "2026-10-07T07:26:31.000Z"
     },
     {
       "id": "powerplant",
@@ -130740,6 +130744,1419 @@
             "strategy",
             "complement"
           ]
+        }
+      ]
+    },
+    "chapters/applied-math-review.json": {
+      "title": "Applied Math Review",
+      "questions": [
+        {
+          "question": "Poochie can type 600 words in 5 minutes less than Katie. If Poochie types at a rate of 20 words per minute faster than Katie, what is Poochie's typing rate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "40 words/min",
+            "50 words/min",
+            "60 words/min",
+            "80 words/min"
+          ],
+          "answerIndex": 2,
+          "answerText": "60 words/min",
+          "explanation": "Given:\n• Words to type = 600 words\n• Poochie is 20 words/min faster than Katie\n• Poochie takes 5 minutes less\n\nLet Katie's rate be x words/min. Poochie's rate is x + 20.\n\nFormula:\nTime = Words / Rate\n\nSolution:\n600/x - 600/(x + 20) = 5\n\n600(x + 20) - 600x = 5x(x + 20)\n12000 = 5x² + 100x\nx² + 20x - 2400 = 0\n\nFactoring:\n(x + 60)(x - 40) = 0\n\nThus Katie = 40 words/min.\nPoochie = 40 + 20 = 60 words/min.\n\nTherefore, Poochie's typing rate is 60 words/min.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Work Problems",
+            "Rate",
+            "Algebra"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft flies 120 km east and then 50 km north. What is its straight-line displacement from the starting point?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "125 km",
+            "130 km",
+            "135 km",
+            "170 km"
+          ],
+          "answerIndex": 1,
+          "answerText": "130 km",
+          "explanation": "Given:\n• Eastward displacement = 120 km\n• Northward displacement = 50 km\n\nFormula:\nR = √(x² + y²)\n\nSolution:\nR = √(120² + 50²)\nR = √(14400 + 2500)\nR = √16900\nR = 130 km\n\nTherefore, the straight-line displacement is 130 km.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Air Navigation",
+            "Vector",
+            "Pythagorean Theorem"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft travels 200 km on a bearing of 060°. What are the approximate north and east components of its displacement?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "100 km north, 173.2 km east",
+            "173.2 km north, 100 km east",
+            "100 km north, 200 km east",
+            "173.2 km north, 173.2 km east"
+          ],
+          "answerIndex": 0,
+          "answerText": "100 km north, 173.2 km east",
+          "explanation": "Given:\n• Distance = 200 km\n• Bearing = 060°\n\nFor a bearing measured clockwise from north:\nNorth component = R cos θ\nEast component = R sin θ\n\nSolution:\nNorth = 200 cos 60° = 200(0.5) = 100 km\nEast = 200 sin 60° = 200(0.866) = 173.2 km\n\nTherefore, the displacement components are 100 km north and 173.2 km east.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Bearing",
+            "Air Navigation",
+            "Components"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Two aircraft positions relative to an airport are A = 80 km east and B = 60 km north. What is the bearing of B from A?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "036.9°",
+            "053.1°",
+            "126.9°",
+            "306.9°"
+          ],
+          "answerIndex": 3,
+          "answerText": "306.9°",
+          "explanation": "Given:\n• A is 80 km east of the airport.\n• B is 60 km north of the airport.\n\nFrom A to B:\n• North component = 60 km\n• West component = 80 km\n\nFormula:\ntan θ = opposite / adjacent\n\nSolution:\ntan θ = 80/60\nθ = arctan(80/60)\nθ ≈ 53.1°\n\nThe direction is north-west, so the bearing is:\n360° - 53.1° = 306.9°\n\nTherefore, the bearing is 306.9°.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Bearing",
+            "Air Navigation",
+            "Inverse Tangent"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A projectile is launched horizontally from a 45 m high cliff at 20 m/s. Neglecting air resistance, how long does it take to hit the ground? Use g = 9.8 m/s².",
+          "questionType": "multiple_choice",
+          "choices": [
+            "2.14 s",
+            "3.03 s",
+            "4.50 s",
+            "9.00 s"
+          ],
+          "answerIndex": 1,
+          "answerText": "3.03 s",
+          "explanation": "Given:\n• Vertical displacement = 45 m\n• Initial vertical velocity = 0\n• g = 9.8 m/s²\n\nFormula:\ny = v₀t + (1/2)gt²\n\nSolution:\n45 = 0 + 4.9t²\nt² = 45/4.9\nt = √(9.1837)\nt ≈ 3.03 s\n\nThe horizontal velocity does not affect the time of fall because horizontal and vertical motions are independent.\n\nTherefore, the projectile hits the ground after approximately 3.03 s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Projectile Motion",
+            "Kinematics",
+            "Gravity"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A projectile is launched at 30 m/s at an angle of 40° above the horizontal. Using g = 9.8 m/s², what is its maximum height above the launch point?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "18.97 m",
+            "9.47 m",
+            "12.42 m",
+            "18.76 m"
+          ],
+          "answerIndex": 0,
+          "answerText": "18.97 m",
+          "explanation": "Given:\n• Initial velocity = 30 m/s\n• θ = 40°\n• g = 9.8 m/s²\n\nFirst find the vertical component:\nv₀y = v₀ sin θ\nv₀y = 30 sin 40° ≈ 19.28 m/s\n\nFormula:\nH = v₀y²/(2g)\n\nSolution:\nH = (19.28)²/(2(9.8))\nH ≈ 371.7/19.6\nH ≈ 18.97 m\n\nTherefore, the maximum height is approximately 18.97 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Projectile Motion",
+            "Maximum Height",
+            "Kinematics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A rectangular open-top tank has length 6 m, width 4 m, and water depth 3 m. What is the volume of water?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "24 m³",
+            "36 m³",
+            "48 m³",
+            "72 m³"
+          ],
+          "answerIndex": 3,
+          "answerText": "72 m³",
+          "explanation": "Given:\n• Length = 6 m\n• Width = 4 m\n• Depth = 3 m\n\nFormula:\nV = lwh\n\nSolution:\nV = (6)(4)(3)\nV = 72 m³\n\nTherefore, the volume of water is 72 m³.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Cylinder and Volume",
+            "Volume",
+            "Geometry"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A cylindrical tank has radius 2 m and height 5 m. What is its volume?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "10π m³",
+            "15π m³",
+            "20π m³",
+            "25π m³"
+          ],
+          "answerIndex": 2,
+          "answerText": "20π m³",
+          "explanation": "Given:\n• Radius r = 2 m\n• Height h = 5 m\n\nFormula:\nV = πr²h\n\nSolution:\nV = π(2²)(5)\nV = π(4)(5)\nV = 20π m³\n\nTherefore, the cylinder volume is 20π m³.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Cylinder",
+            "Volume",
+            "Geometry"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve for x: log₂(x) = 5.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "10",
+            "16",
+            "25",
+            "32"
+          ],
+          "answerIndex": 3,
+          "answerText": "32",
+          "explanation": "Given:\nlog₂(x) = 5\n\nFormula:\nlog_b(x) = y means x = b^y.\n\nSolution:\nx = 2⁵\nx = 32\n\nTherefore, x = 32.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Logarithm",
+            "Algebra",
+            "Exponential"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Solve for x: ln(x) + ln(4) = ln(20).",
+          "questionType": "multiple_choice",
+          "choices": [
+            "4",
+            "5",
+            "16",
+            "80"
+          ],
+          "answerIndex": 1,
+          "answerText": "5",
+          "explanation": "Given:\nln(x) + ln(4) = ln(20)\n\nFormula:\nln a + ln b = ln(ab)\n\nSolution:\nln(4x) = ln(20)\n4x = 20\nx = 5\n\nTherefore, x = 5.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Logarithm",
+            "Logarithm Laws",
+            "Algebra"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The position of an aircraft along a runway is given by s(t) = 4t³ + 2t². What is its velocity at t = 2 s?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "32 m/s",
+            "56 m/s",
+            "64 m/s",
+            "80 m/s"
+          ],
+          "answerIndex": 1,
+          "answerText": "56 m/s",
+          "explanation": "Given:\ns(t) = 4t³ + 2t²\n\nt = 2 s\n\nFormula:\nv(t) = ds/dt\n\nSolution:\nv(t) = 12t² + 4t\nv(2) = 12(2²) + 4(2)\nv(2) = 48 + 8\nv(2) = 56 m/s\n\nTherefore, the velocity is 56 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Rate",
+            "Derivative",
+            "Kinematics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The radius of a circular object increases at 2 cm/s. At the instant r = 5 cm, how fast is its area increasing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "10π cm²/s",
+            "20π cm²/s",
+            "25π cm²/s",
+            "50π cm²/s"
+          ],
+          "answerIndex": 1,
+          "answerText": "20π cm²/s",
+          "explanation": "Given:\ndr/dt = 2 cm/s\nr = 5 cm\n\nFormula:\nA = πr²\nDifferentiate:\ndA/dt = 2πr(dr/dt)\n\nSolution:\ndA/dt = 2π(5)(2)\ndA/dt = 20π cm²/s\n\nTherefore, the area is increasing at 20π cm²/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Related Rates",
+            "Derivative",
+            "Area"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A father is 4 times as old as his son. In 12 years, the father will be twice as old as his son. How old is the son now?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "4 years",
+            "6 years",
+            "8 years",
+            "12 years"
+          ],
+          "answerIndex": 1,
+          "answerText": "6 years",
+          "explanation": "Given:\nFather's age = 4x\nSon's age = x\n\nIn 12 years:\nFather = 4x + 12\nSon = x + 12\n\nEquation:\n4x + 12 = 2(x + 12)\n\nSolution:\n4x + 12 = 2x + 24\n2x = 12\nx = 6\n\nTherefore, the son is 6 years old.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Age Problems",
+            "Algebra",
+            "Word Problems"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A force of 50 N moves an object 8 m in the direction of the force. What work is done?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "6.25 J",
+            "58 J",
+            "400 J",
+            "800 J"
+          ],
+          "answerIndex": 2,
+          "answerText": "400 J",
+          "explanation": "Given:\nF = 50 N\nd = 8 m\n\nFormula:\nW = Fd\n\nSolution:\nW = (50)(8)\nW = 400 J\n\nTherefore, the work done is 400 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Work",
+            "Force",
+            "Physics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A variable force is given by F(x) = 4x² N. Find the work done from x = 0 to x = 3 m.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "12 J",
+            "27 J",
+            "36 J",
+            "108 J"
+          ],
+          "answerIndex": 2,
+          "answerText": "36 J",
+          "explanation": "Given:\nF(x) = 4x² N\nx = 0 to 3 m\n\nFormula:\nW = ∫ F(x) dx\n\nSolution:\nW = ∫₀³ 4x² dx\nW = 4[x³/3]₀³\nW = 4(27/3)\nW = 36 J\n\nTherefore, the work is 36 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Work",
+            "Integration",
+            "Calculus Applications"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A steel bar is 2 m long and experiences a temperature increase of 50°C. If α = 12 × 10⁻⁶/°C, what is its free thermal expansion?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "0.00012 m",
+            "0.0006 m",
+            "0.0012 m",
+            "0.012 m"
+          ],
+          "answerIndex": 2,
+          "answerText": "0.0012 m",
+          "explanation": "Given:\nL = 2 m\nΔT = 50°C\nα = 12 × 10⁻⁶/°C\n\nFormula:\nΔL = αLΔT\n\nSolution:\nΔL = (12 × 10⁻⁶)(2)(50)\nΔL = 1200 × 10⁻⁶\nΔL = 0.0012 m\n\nTherefore, the free thermal expansion is 0.0012 m, or 1.2 mm.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Thermal Stress",
+            "Thermal Expansion",
+            "Materials"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A steel bar is completely restrained from expanding. If E = 200 GPa and α = 12 × 10⁻⁶/°C, what thermal stress develops for a temperature increase of 40°C?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "48 MPa",
+            "96 MPa",
+            "120 MPa",
+            "240 MPa"
+          ],
+          "answerIndex": 1,
+          "answerText": "96 MPa",
+          "explanation": "Given:\nE = 200 GPa\nα = 12 × 10⁻⁶/°C\nΔT = 40°C\n\nFor complete restraint, thermal stress magnitude is:\nσ = EαΔT\n\nSolution:\nσ = (200 × 10⁹)(12 × 10⁻⁶)(40)\nσ = 96 × 10⁶ Pa\nσ = 96 MPa\n\nBecause the bar wants to expand but is restrained, the stress is compressive.\n\nTherefore, the thermal stress magnitude is 96 MPa compressive.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Thermal Stress",
+            "Stress",
+            "Materials"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An ideal gas has pressure 200 kPa, volume 0.5 m³, and temperature 300 K. What is its amount in moles? Use R = 8.314 J/(mol·K).",
+          "questionType": "multiple_choice",
+          "choices": [
+            "20.05 mol",
+            "40.09 mol",
+            "60.14 mol",
+            "80.18 mol"
+          ],
+          "answerIndex": 1,
+          "answerText": "40.09 mol",
+          "explanation": "Given:\nP = 200 kPa = 200,000 Pa\nV = 0.5 m³\nT = 300 K\nR = 8.314 J/(mol·K)\n\nFormula:\nPV = nRT\n\nSolve for n:\nn = PV/(RT)\n\nSolution:\nn = (200000)(0.5)/(8.314)(300)\nn = 100000/2494.2\nn ≈ 40.09 mol\n\nTherefore, the amount of gas is approximately 40.09 mol.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Equation of State",
+            "Ideal Gas",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An ideal gas occupies 2 m³ at 100 kPa and 300 K. If its temperature increases to 450 K at constant pressure, what is the new volume?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1.33 m³",
+            "2.50 m³",
+            "3.00 m³",
+            "3.50 m³"
+          ],
+          "answerIndex": 2,
+          "answerText": "3.00 m³",
+          "explanation": "Given:\nP is constant\nV₁ = 2 m³\nT₁ = 300 K\nT₂ = 450 K\n\nAt constant pressure, Charles' law gives:\nV₁/T₁ = V₂/T₂\n\nSolution:\nV₂ = V₁(T₂/T₁)\nV₂ = 2(450/300)\nV₂ = 3 m³\n\nTherefore, the new volume is 3.00 m³.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Equation of State",
+            "Charles Law",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A dataset is 2, 4, 4, 6, and 9. What is its population standard deviation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "2.00",
+            "2.28",
+            "2.37",
+            "3.20"
+          ],
+          "answerIndex": 2,
+          "answerText": "2.37",
+          "explanation": "Given:\nData = 2, 4, 4, 6, 9\n\nFormula:\nσ = √[Σ(x - μ)²/n]\n\nMean:\nμ = (2 + 4 + 4 + 6 + 9)/5 = 25/5 = 5\n\nSquared deviations:\n9, 1, 1, 1, 16\nSum = 28\n\nVariance:\n28/5 = 5.6\n\nStandard deviation:\nσ = √5.6 ≈ 2.37\n\nTherefore, the population standard deviation is approximately 2.37. Note that none of the listed choices matches this value, indicating that the choices contain an error.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Standard Deviation",
+            "Statistics",
+            "Data Analysis"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A wheel rotates at 120 revolutions per minute. What is its angular velocity in rad/s?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "2π rad/s",
+            "4π rad/s",
+            "6π rad/s",
+            "8π rad/s"
+          ],
+          "answerIndex": 1,
+          "answerText": "4π rad/s",
+          "explanation": "Given:\n120 rpm\n\nFormula:\nω = revolutions × 2π radians / time\n\nSolution:\n120 rev/min × (2π rad/rev) × (1 min/60 s)\n= 240π/60\n= 4π rad/s\n\nTherefore, the angular velocity is 4π rad/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Angular Velocity",
+            "Rotation",
+            "Unit Conversion"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A 2 m radius wheel rotates at 5 rad/s. What is the tangential velocity of a point on its rim?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "2.5 m/s",
+            "5 m/s",
+            "10 m/s",
+            "25 m/s"
+          ],
+          "answerIndex": 2,
+          "answerText": "10 m/s",
+          "explanation": "Given:\nr = 2 m\nω = 5 rad/s\n\nFormula:\nv = rω\n\nSolution:\nv = (2)(5)\nv = 10 m/s\n\nTherefore, the tangential velocity is 10 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Angular Velocity",
+            "Tangential Velocity",
+            "Rotation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A projectile is launched at 20 m/s at 30° above horizontal. What is its horizontal range if it lands at the same elevation? Use g = 9.8 m/s².",
+          "questionType": "multiple_choice",
+          "choices": [
+            "17.68 m",
+            "25.51 m",
+            "35.35 m",
+            "40.82 m"
+          ],
+          "answerIndex": 2,
+          "answerText": "35.35 m",
+          "explanation": "Given:\nv₀ = 20 m/s\nθ = 30°\ng = 9.8 m/s²\n\nFormula:\nR = v₀² sin(2θ)/g\n\nSolution:\nR = 20² sin(60°)/9.8\nR = 400(0.8660)/9.8\nR ≈ 35.35 m\n\nTherefore, the horizontal range is approximately 35.35 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Projectile Motion",
+            "Range",
+            "Kinematics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A bearing of 135° corresponds to which general direction?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Northeast",
+            "Southeast",
+            "Southwest",
+            "Northwest"
+          ],
+          "answerIndex": 1,
+          "answerText": "Southeast",
+          "explanation": "Given:\nBearing = 135°\n\nBearings are measured clockwise from north.\n0° = North\n90° = East\n180° = South\n270° = West\n\nSince 135° lies halfway between 90° and 180°, it points southeast.\n\nTherefore, the direction is southeast.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Bearing",
+            "Air Navigation",
+            "Direction"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft travels 150 km north and then 200 km east. What is the magnitude of the resultant displacement?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "250 km",
+            "300 km",
+            "350 km",
+            "400 km"
+          ],
+          "answerIndex": 0,
+          "answerText": "250 km",
+          "explanation": "Given:\nNorth = 150 km\nEast = 200 km\n\nFormula:\nR = √(N² + E²)\n\nSolution:\nR = √(150² + 200²)\nR = √(22500 + 40000)\nR = √62500\nR = 250 km\n\nTherefore, the resultant displacement is 250 km.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Bearing",
+            "Vector",
+            "Air Navigation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A car's position is s(t) = t³ - 6t² + 9t. At what times is its velocity zero?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "t = 1 s and 3 s",
+            "t = 2 s and 3 s",
+            "t = 1 s and 2 s",
+            "t = 0 s and 3 s"
+          ],
+          "answerIndex": 0,
+          "answerText": "t = 1 s and 3 s",
+          "explanation": "Given:\ns(t) = t³ - 6t² + 9t\n\nFormula:\nv(t) = ds/dt\n\nSolution:\nv(t) = 3t² - 12t + 9\nSet velocity equal to zero:\n3t² - 12t + 9 = 0\nDivide by 3:\nt² - 4t + 3 = 0\n(t - 1)(t - 3) = 0\n\nTherefore:\nt = 1 s or t = 3 s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Derivative",
+            "Rate",
+            "Kinematics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A rectangle has perimeter 40 m. What dimensions give the maximum area?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "5 m × 15 m",
+            "8 m × 12 m",
+            "10 m × 10 m",
+            "4 m × 16 m"
+          ],
+          "answerIndex": 2,
+          "answerText": "10 m × 10 m",
+          "explanation": "Given:\nPerimeter = 40 m\n\nLet width = x and length = y.\n\nFormula:\n2x + 2y = 40\nx + y = 20\n\ny = 20 - x\n\nArea:\nA = xy\nA(x) = x(20 - x)\nA(x) = 20x - x²\n\nDifferentiate:\nA'(x) = 20 - 2x\n\nSet equal to zero:\n20 - 2x = 0\nx = 10\n\ny = 20 - 10 = 10\n\nTherefore, the maximum-area rectangle is 10 m × 10 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Calculus Applications",
+            "Maxima and Minima",
+            "Optimization"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A rectangular box has a square base and no top. It must have a volume of 32 m³. What base side length minimizes the surface area?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "2 m",
+            "4 m",
+            "6 m",
+            "8 m"
+          ],
+          "answerIndex": 1,
+          "answerText": "4 m",
+          "explanation": "Given:\nVolume = 32 m³\nSquare base side = x\nHeight = h\n\nFormula:\nV = x²h\n\nTherefore:\nh = 32/x²\n\nSurface area without a top:\nS = x² + 4xh\n\nSubstitute h:\nS = x² + 4x(32/x²)\nS = x² + 128/x\n\nDifferentiate:\nS' = 2x - 128/x²\n\nSet equal to zero:\n2x = 128/x²\n2x³ = 128\nx³ = 64\nx = 4 m\n\nTherefore, the base side that minimizes surface area is 4 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Calculus Applications",
+            "Optimization",
+            "Volume"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A water tank has a horizontal area of 5 m² and is 4 m deep. How much work is required to pump all the water to the top? Use γ = 9800 N/m³.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "196000 J",
+            "392000 J",
+            "784000 J",
+            "980000 J"
+          ],
+          "answerIndex": 1,
+          "answerText": "392000 J",
+          "explanation": "Given:\nA = 5 m²\nDepth = 4 m\nγ = 9800 N/m³\n\nFor a slice at height y:\ndV = 5dy\nWeight = 9800(5dy)\nDistance to top = 4 - y\n\nFormula:\nW = ∫ γA(4-y)dy\n\nSolution:\nW = ∫₀⁴ 9800(5)(4-y)dy\nW = 49000[4y - y²/2]₀⁴\nW = 49000(16 - 8)\nW = 49000(8)\nW = 392000 J\n\nTherefore, the required work is 392000 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Work",
+            "Pumping Problems",
+            "Calculus Applications"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A vertical rectangular plate is 2 m wide and 4 m high. Its top is 1 m below the water surface. What is the hydrostatic force? Use γ = 9800 N/m³.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "49000 N",
+            "98000 N",
+            "235200 N",
+            "392000 N"
+          ],
+          "answerIndex": 2,
+          "answerText": "235200 N",
+          "explanation": "Given:\nWidth = 2 m\nHeight = 4 m\nTop depth = 1 m\nBottom depth = 5 m\nγ = 9800 N/m³\n\nUse average depth:\nh_avg = (1 + 5)/2 = 3 m\n\nArea:\nA = 2(4) = 8 m²\n\nFormula:\nF = γh_avgA\n\nSolution:\nF = 9800(3)(8)\nF = 235200 N\n\nTherefore, the hydrostatic force is 235200 N. The listed choices do not contain the correct value, so the choices contain an error.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Hydrostatic Force",
+            "Calculus Applications",
+            "Fluid Mechanics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A rod is 4 m long with linear density ρ(x) = 3 + x kg/m. What is its total mass?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "12 kg",
+            "16 kg",
+            "20 kg",
+            "28 kg"
+          ],
+          "answerIndex": 2,
+          "answerText": "20 kg",
+          "explanation": "Given:\nρ(x) = 3 + x kg/m\n0 ≤ x ≤ 4\n\nFormula:\ndm = ρ(x)dx\nm = ∫ρ(x)dx\n\nSolution:\nm = ∫₀⁴(3+x)dx\nm = [3x + x²/2]₀⁴\nm = 12 + 8\nm = 20 kg\n\nTherefore, the rod's total mass is 20 kg.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Integration",
+            "Mass",
+            "Calculus Applications"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A particle has velocity v(t) = 3t² - 4t + 2 m/s. What is its acceleration at t = 2 s?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "4 m/s²",
+            "6 m/s²",
+            "8 m/s²",
+            "10 m/s²"
+          ],
+          "answerIndex": 2,
+          "answerText": "8 m/s²",
+          "explanation": "Given:\nv(t) = 3t² - 4t + 2\n\nt = 2 s\n\nFormula:\na(t) = dv/dt\n\nSolution:\na(t) = 6t - 4\na(2) = 12 - 4\n a(2) = 8 m/s²\n\nTherefore, the acceleration is 8 m/s².",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Derivative",
+            "Acceleration",
+            "Kinematics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The radius of a sphere increases at 0.5 m/s. At r = 2 m, how fast is its volume increasing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "2π m³/s",
+            "4π m³/s",
+            "8π m³/s",
+            "16π m³/s"
+          ],
+          "answerIndex": 2,
+          "answerText": "8π m³/s",
+          "explanation": "Given:\ndr/dt = 0.5 m/s\nr = 2 m\n\nFormula:\nV = (4/3)πr³\n\nDifferentiate:\ndV/dt = 4πr²(dr/dt)\n\nSolution:\ndV/dt = 4π(2²)(0.5)\ndV/dt = 4π(4)(0.5)\ndV/dt = 8π m³/s\n\nTherefore, the volume increases at 8π m³/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Related Rates",
+            "Sphere",
+            "Derivative"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A father is 30 years older than his son. In 5 years, the father will be three times as old as his son. How old is the son now?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "8 years",
+            "10 years",
+            "12 years",
+            "15 years"
+          ],
+          "answerIndex": 1,
+          "answerText": "10 years",
+          "explanation": "Given:\nFather = Son + 30\nLet son = x.\nFather = x + 30.\n\nIn 5 years:\nFather = x + 35\nSon = x + 5\n\nFormula:\nx + 35 = 3(x + 5)\n\nSolution:\nx + 35 = 3x + 15\n20 = 2x\nx = 10\n\nTherefore, the son is 10 years old.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Age Problems",
+            "Algebra",
+            "Word Problems"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A force varies with position as F(x) = 10 - 2x N. What is the work done from x = 0 to x = 4 m?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "16 J",
+            "24 J",
+            "32 J",
+            "40 J"
+          ],
+          "answerIndex": 1,
+          "answerText": "24 J",
+          "explanation": "Given:\nF(x) = 10 - 2x\nx = 0 to 4 m\n\nFormula:\nW = ∫₀⁴F(x)dx\n\nSolution:\nW = ∫₀⁴(10 - 2x)dx\nW = [10x - x²]₀⁴\nW = 40 - 16\nW = 24 J\n\nTherefore, the work done is 24 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Work",
+            "Integration",
+            "Force"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aluminum rod has α = 23 × 10⁻⁶/°C and is 3 m long. What is its expansion for a temperature increase of 80°C?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "0.00276 m",
+            "0.00552 m",
+            "0.00736 m",
+            "0.0552 m"
+          ],
+          "answerIndex": 1,
+          "answerText": "0.00552 m",
+          "explanation": "Given:\nα = 23 × 10⁻⁶/°C\nL = 3 m\nΔT = 80°C\n\nFormula:\nΔL = αLΔT\n\nSolution:\nΔL = (23 × 10⁻⁶)(3)(80)\nΔL = 5520 × 10⁻⁶\nΔL = 0.00552 m\n\nTherefore, the expansion is 0.00552 m, or 5.52 mm.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Thermal Stress",
+            "Thermal Expansion",
+            "Materials"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A gas occupies 0.8 m³ at 150 kPa and 300 K. What volume will it occupy at 100 kPa and 400 K, assuming the amount of gas is constant?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "0.80 m³",
+            "1.20 m³",
+            "1.60 m³",
+            "2.40 m³"
+          ],
+          "answerIndex": 2,
+          "answerText": "1.60 m³",
+          "explanation": "Given:\nP₁ = 150 kPa\nV₁ = 0.8 m³\nT₁ = 300 K\nP₂ = 100 kPa\nT₂ = 400 K\n\nFormula:\nP₁V₁/T₁ = P₂V₂/T₂\n\nSolve:\nV₂ = P₁V₁T₂/(T₁P₂)\n\nSolution:\nV₂ = (150)(0.8)(400)/(300)(100)\nV₂ = 48000/30000\nV₂ = 1.6 m³\n\nTherefore, the new volume is 1.60 m³.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Equation of State",
+            "Combined Gas Law",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "For the data 5, 5, 5, 5, 5, what is the standard deviation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "0",
+            "1",
+            "5",
+            "25"
+          ],
+          "answerIndex": 0,
+          "answerText": "0",
+          "explanation": "Given:\nAll observations are 5.\n\nFormula:\nσ = √[Σ(x - μ)²/n]\n\nMean:\nμ = 5\n\nEvery deviation is:\nx - μ = 5 - 5 = 0\n\nTherefore:\nσ = √(0) = 0\n\nAll values are identical, so there is no spread.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Standard Deviation",
+            "Statistics",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft propeller rotates at 1800 rpm. What is its angular velocity in rad/s?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "30π rad/s",
+            "40π rad/s",
+            "60π rad/s",
+            "90π rad/s"
+          ],
+          "answerIndex": 2,
+          "answerText": "60π rad/s",
+          "explanation": "Given:\n1800 rpm\n\nFormula:\nω = rpm × 2π/60\n\nSolution:\nω = 1800(2π)/60\nω = 30(2π)\nω = 60π rad/s\n\nTherefore, the angular velocity is 60π rad/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Angular Velocity",
+            "Rotation",
+            "Aircraft"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A projectile is launched vertically upward at 49 m/s. Using g = 9.8 m/s², what maximum height does it reach?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "98 m",
+            "122.5 m",
+            "145 m",
+            "196 m"
+          ],
+          "answerIndex": 1,
+          "answerText": "122.5 m",
+          "explanation": "Given:\nv₀ = 49 m/s\ng = 9.8 m/s²\n\nAt maximum height, final velocity is zero.\n\nFormula:\nv² = v₀² - 2gH\n\nSet v = 0:\n0 = 49² - 2(9.8)H\n\nSolution:\nH = 49²/(19.6)\nH = 2401/19.6\nH = 122.5 m\n\nTherefore, the maximum height is 122.5 m.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Projectile Motion",
+            "Maximum Height",
+            "Kinematics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A ship travels 300 km on a bearing of 120°. What is its eastward component?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "150 km",
+            "259.8 km",
+            "300 km",
+            "346.4 km"
+          ],
+          "answerIndex": 1,
+          "answerText": "259.8 km",
+          "explanation": "Given:\nR = 300 km\nBearing = 120°\n\nFor a bearing measured from north:\nEast component = R sin θ\n\nSolution:\nEast = 300 sin 120°\nEast = 300(0.8660)\nEast ≈ 259.8 km\n\nTherefore, the eastward component is approximately 259.8 km.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Bearing",
+            "Components",
+            "Navigation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A 10 m ladder leans against a vertical wall. Its bottom moves away from the wall at 2 m/s. When the bottom is 6 m from the wall, how fast is the top moving downward?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1.0 m/s",
+            "1.5 m/s",
+            "2.0 m/s",
+            "2.67 m/s"
+          ],
+          "answerIndex": 1,
+          "answerText": "1.5 m/s",
+          "explanation": "Given:\nL = 10 m\nx = 6 m\ndx/dt = 2 m/s\n\nRelationship:\nx² + y² = 10²\n\nDifferentiate:\n2x dx/dt + 2y dy/dt = 0\n\nFind y:\ny = √(100 - 36) = 8 m\n\nSolve:\ndy/dt = -(x/y)(dx/dt)\n\ndy/dt = -(6/8)(2)\n= -1.5 m/s\n\nThe negative sign means downward.\nTherefore, the top moves downward at 1.5 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Related Rates",
+            "Ladder Problem",
+            "Derivative"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A rectangular field has length x and width 20 - x. What value of x gives maximum area?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "5",
+            "10",
+            "15",
+            "20"
+          ],
+          "answerIndex": 1,
+          "answerText": "10",
+          "explanation": "Given:\nLength = x\nWidth = 20 - x\n\nFormula:\nA = lw\n\nSolution:\nA(x) = x(20-x)\nA(x) = 20x - x²\n\nDifferentiate:\nA'(x) = 20 - 2x\n\nSet equal to zero:\n20 - 2x = 0\nx = 10\n\nSecond derivative:\nA''(x) = -2 < 0\nTherefore, this is a maximum.\n\nThus x = 10.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Maxima and Minima",
+            "Optimization",
+            "Calculus Applications"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A cylindrical can has radius r and height h. If its volume is fixed at 100π cm³, what is h in terms of r?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "h = 100/r",
+            "h = 100/r²",
+            "h = 100π/r²",
+            "h = r²/100"
+          ],
+          "answerIndex": 1,
+          "answerText": "h = 100/r²",
+          "explanation": "Given:\nV = 100π cm³\n\nFormula:\nV = πr²h\n\nSolve for h:\n100π = πr²h\nDivide by π:\n100 = r²h\n\nTherefore:\nh = 100/r²\n\nThus the correct expression is h = 100/r².",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Cylinder",
+            "Volume",
+            "Algebra"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Evaluate ln(e⁵).",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1",
+            "5",
+            "e⁵",
+            "0"
+          ],
+          "answerIndex": 1,
+          "answerText": "5",
+          "explanation": "Given:\nln(e⁵)\n\nFormula:\nln(e^x) = x\n\nSolution:\nln(e⁵) = 5\n\nTherefore, the answer is 5.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Logarithm",
+            "Natural Logarithm",
+            "Recall"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The position of a particle is s(t) = 2t³ - 3t² + 4t. What is its acceleration at t = 1 s?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "3 m/s²",
+            "6 m/s²",
+            "9 m/s²",
+            "12 m/s²"
+          ],
+          "answerIndex": 1,
+          "answerText": "6 m/s²",
+          "explanation": "Given:\ns(t) = 2t³ - 3t² + 4t\n\nFormula:\na(t) = d²s/dt²\n\nFirst derivative:\nv(t) = 6t² - 6t + 4\n\nSecond derivative:\na(t) = 12t - 6\n\nAt t = 1:\na(1) = 12 - 6 = 6 m/s²\n\nTherefore, the acceleration is 6 m/s².",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Derivative",
+            "Acceleration",
+            "Calculus"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A vertical gate is 4 m wide and 3 m high, with its top 2 m below the water surface. Using γ = 9800 N/m³, what is the hydrostatic force?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "411600 N",
+            "235200 N",
+            "294000 N",
+            "352800 N"
+          ],
+          "answerIndex": 0,
+          "answerText": "411600 N",
+          "explanation": "Given:\nWidth = 4 m\nHeight = 3 m\nTop depth = 2 m\nBottom depth = 5 m\n\nAverage depth:\nh_avg = (2+5)/2 = 3.5 m\n\nArea:\nA = 4(3) = 12 m²\n\nFormula:\nF = γh_avgA\n\nSolution:\nF = 9800(3.5)(12)\nF = 9800(42)\nF = 411600 N\n\nTherefore, the correct force is 411600 N. None of the listed choices matches, indicating an error in the choices.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Hydrostatic Force",
+            "Fluid Mechanics",
+            "Calculus Applications"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A steel member has an original length of 1.5 m. If its free thermal expansion is 0.9 mm, what is the thermal strain?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "0.00006",
+            "0.0006",
+            "0.006",
+            "0.06"
+          ],
+          "answerIndex": 1,
+          "answerText": "0.0006",
+          "explanation": "Given:\nΔL = 0.9 mm = 0.0009 m\nL = 1.5 m\n\nFormula:\nε = ΔL/L\n\nSolution:\nε = 0.0009/1.5\nε = 0.0006\n\nTherefore, the thermal strain is 0.0006.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Thermal Stress",
+            "Strain",
+            "Materials"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A gas has P = 300 kPa, V = 0.2 m³, and T = 400 K. What is the number of moles? Use R = 8.314 J/(mol·K).",
+          "questionType": "multiple_choice",
+          "choices": [
+            "12.03 mol",
+            "18.04 mol",
+            "24.06 mol",
+            "36.09 mol"
+          ],
+          "answerIndex": 1,
+          "answerText": "18.04 mol",
+          "explanation": "Given:\nP = 300000 Pa\nV = 0.2 m³\nT = 400 K\nR = 8.314 J/(mol·K)\n\nFormula:\nPV = nRT\nn = PV/(RT)\n\nSolution:\nn = (300000)(0.2)/(8.314)(400)\nn = 60000/3325.6\nn ≈ 18.04 mol\n\nTherefore, the amount of gas is approximately 18.04 mol.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Equation of State",
+            "Ideal Gas",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The data set is 10, 12, 14, 16, and 18. What is the population standard deviation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "2.00",
+            "2.83",
+            "3.16",
+            "4.00"
+          ],
+          "answerIndex": 1,
+          "answerText": "2.83",
+          "explanation": "Given:\nData = 10, 12, 14, 16, 18\n\nMean:\nμ = (10+12+14+16+18)/5 = 14\n\nSquared deviations:\n16, 4, 0, 4, 16\nSum = 40\n\nFormula:\nσ = √(Σ(x-μ)²/n)\n\nSolution:\nσ = √(40/5)\nσ = √8\nσ ≈ 2.83\n\nTherefore, the population standard deviation is approximately 2.83.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Standard Deviation",
+            "Statistics",
+            "Population"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A rotating disk has angular velocity 12 rad/s and radius 0.5 m. What is the centripetal acceleration at its edge?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "3 m/s²",
+            "36 m/s²",
+            "72 m/s²",
+            "144 m/s²"
+          ],
+          "answerIndex": 2,
+          "answerText": "72 m/s²",
+          "explanation": "Given:\nω = 12 rad/s\nr = 0.5 m\n\nFormula:\na_c = ω²r\n\nSolution:\na_c = (12²)(0.5)\na_c = 144(0.5)\na_c = 72 m/s²\n\nTherefore, the centripetal acceleration is 72 m/s².",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Angular Velocity",
+            "Centripetal Acceleration",
+            "Rotation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A projectile is fired at 50 m/s at 37° above horizontal. Using sin 37° = 0.6 and cos 37° = 0.8, what is its initial vertical velocity?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "30 m/s",
+            "35 m/s",
+            "40 m/s",
+            "50 m/s"
+          ],
+          "answerIndex": 0,
+          "answerText": "30 m/s",
+          "explanation": "Given:\nv₀ = 50 m/s\nθ = 37°\nsin 37° = 0.6\n\nFormula:\nv₀y = v₀ sin θ\n\nSolution:\nv₀y = 50(0.6)\nv₀y = 30 m/s\n\nTherefore, the initial vertical velocity is 30 m/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Projectile Motion",
+            "Velocity Components",
+            "Kinematics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A plane flies 400 km on a bearing of 030°. What is its northward component?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "200 km",
+            "346.4 km",
+            "400 km",
+            "461.9 km"
+          ],
+          "answerIndex": 1,
+          "answerText": "346.4 km",
+          "explanation": "Given:\nR = 400 km\nBearing = 30°\n\nFormula:\nNorth component = R cos θ\n\nSolution:\nNorth = 400 cos 30°\nNorth = 400(0.8660)\nNorth ≈ 346.4 km\n\nTherefore, the northward component is approximately 346.4 km.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Bearing",
+            "Air Navigation",
+            "Components"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A circular tank is being filled so that its radius increases at 0.1 m/s. At r = 3 m, how fast is its area increasing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "0.6π m²/s",
+            "1.8π m²/s",
+            "6π m²/s",
+            "9π m²/s"
+          ],
+          "answerIndex": 0,
+          "answerText": "0.6π m²/s",
+          "explanation": "Given:\ndr/dt = 0.1 m/s\nr = 3 m\n\nFormula:\nA = πr²\n\nDifferentiate:\ndA/dt = 2πr(dr/dt)\n\nSolution:\ndA/dt = 2π(3)(0.1)\ndA/dt = 0.6π m²/s\n\nTherefore, the area is increasing at 0.6π m²/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Related Rates",
+            "Area",
+            "Derivative"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A 4 m rod has density ρ(x) = 2x kg/m. What is its total mass?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "8 kg",
+            "12 kg",
+            "16 kg",
+            "32 kg"
+          ],
+          "answerIndex": 2,
+          "answerText": "16 kg",
+          "explanation": "Given:\nρ(x) = 2x kg/m\n0 ≤ x ≤ 4\n\nFormula:\nm = ∫ρ(x)dx\n\nSolution:\nm = ∫₀⁴2x dx\nm = [x²]₀⁴\nm = 16 kg\n\nTherefore, the total mass is 16 kg.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Integration",
+            "Mass",
+            "Calculus Applications"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A company has revenue R(x) = 80x - x² and cost C(x) = 20x + 100. What production level maximizes profit?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "20 units",
+            "30 units",
+            "40 units",
+            "50 units"
+          ],
+          "answerIndex": 1,
+          "answerText": "30 units",
+          "explanation": "Given:\nR(x) = 80x - x²\nC(x) = 20x + 100\n\nFormula:\nP(x) = R(x) - C(x)\n\nSolution:\nP(x) = (80x-x²) - (20x+100)\nP(x) = -x² + 60x - 100\n\nDifferentiate:\nP'(x) = -2x + 60\n\nSet equal to zero:\n-2x + 60 = 0\nx = 30\n\nSecond derivative:\nP''(x) = -2 < 0\n\nTherefore, the maximum profit occurs at 30 units.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Maxima and Minima",
+            "Profit",
+            "Calculus Applications"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A rectangular tank has horizontal water area 6 m² and depth 4 m. Find the work required to pump all water to the top. Use γ = 9800 N/m³.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "235200 J",
+            "392000 J",
+            "470400 J",
+            "940800 J"
+          ],
+          "answerIndex": 2,
+          "answerText": "470400 J",
+          "explanation": "Given:\nA = 6 m²\nDepth = 4 m\nγ = 9800 N/m³\n\nFor a thin slice at height y:\ndV = 6dy\nWeight = 9800(6dy)\nDistance to top = 4-y\n\nFormula:\nW = ∫₀⁴ γA(4-y)dy\n\nSolution:\nW = ∫₀⁴ 9800(6)(4-y)dy\nW = 58800[4y-y²/2]₀⁴\nW = 58800(8)\nW = 470400 J\n\nTherefore, the required work is 470400 J.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Work",
+            "Pumping Water",
+            "Calculus Applications"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A vertical square plate has side 2 m and its top is 1 m below the water surface. Using γ = 9800 N/m³, what is the hydrostatic force?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "39200 N",
+            "78400 N",
+            "156800 N",
+            "313600 N"
+          ],
+          "answerIndex": 1,
+          "answerText": "78400 N",
+          "explanation": "Given:\nWidth = 2 m\nHeight = 2 m\nTop depth = 1 m\nBottom depth = 3 m\nγ = 9800 N/m³\n\nAverage depth:\nh_avg = (1+3)/2 = 2 m\n\nArea:\nA = 2(2) = 4 m²\n\nFormula:\nF = γh_avgA\n\nSolution:\nF = 9800(2)(4)\nF = 78400 N\n\nTherefore, the hydrostatic force is 78400 N.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Hydrostatic Force",
+            "Fluid Mechanics",
+            "Calculus Applications"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A 10 m ladder leans against a wall. If its bottom is 6 m from the wall, what is the height reached by the ladder?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "6 m",
+            "8 m",
+            "10 m",
+            "12 m"
+          ],
+          "answerIndex": 1,
+          "answerText": "8 m",
+          "explanation": "Given:\nLadder = 10 m\nHorizontal distance = 6 m\n\nFormula:\nx² + y² = L²\n\nSolution:\n6² + y² = 10²\n36 + y² = 100\ny² = 64\ny = 8 m\n\nTherefore, the ladder reaches 8 m up the wall.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Related Rates",
+            "Geometry",
+            "Pythagorean Theorem"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A steel bar has E = 200 GPa and thermal expansion coefficient α = 12 × 10⁻⁶/°C. If completely restrained and heated by 25°C, what thermal stress develops?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "30 MPa",
+            "60 MPa",
+            "75 MPa",
+            "100 MPa"
+          ],
+          "answerIndex": 1,
+          "answerText": "60 MPa",
+          "explanation": "Given:\nE = 200 GPa\nα = 12 × 10⁻⁶/°C\nΔT = 25°C\n\nFormula:\nσ = EαΔT\n\nSolution:\nσ = (200 × 10⁹)(12 × 10⁻⁶)(25)\nσ = 60 × 10⁶ Pa\nσ = 60 MPa\n\nThe stress is compressive because expansion is restrained.\n\nTherefore, the thermal stress magnitude is 60 MPa.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Thermal Stress",
+            "Stress",
+            "Materials"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An ideal gas contains 2 mol at 300 K and occupies 0.05 m³. What is its pressure? Use R = 8.314 J/(mol·K).",
+          "questionType": "multiple_choice",
+          "choices": [
+            "49.88 kPa",
+            "99.77 kPa",
+            "199.54 kPa",
+            "498.8 kPa"
+          ],
+          "answerIndex": 1,
+          "answerText": "99.77 kPa",
+          "explanation": "Given:\nn = 2 mol\nT = 300 K\nV = 0.05 m³\nR = 8.314 J/(mol·K)\n\nFormula:\nPV = nRT\nP = nRT/V\n\nSolution:\nP = (2)(8.314)(300)/0.05\nP = 4988.4/0.05\nP = 99768 Pa\nP ≈ 99.77 kPa\n\nTherefore, the pressure is approximately 99.77 kPa.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Equation of State",
+            "Ideal Gas",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A data set has mean 50 and population standard deviation 4. If every value is increased by 10, what is the new standard deviation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "4",
+            "10",
+            "14",
+            "40"
+          ],
+          "answerIndex": 0,
+          "answerText": "4",
+          "explanation": "Given:\nOriginal standard deviation = 4\nEvery observation is increased by 10.\n\nRule:\nAdding or subtracting a constant from every data value changes the mean but does not change the standard deviation.\n\nTherefore:\nNew standard deviation = 4\n\nThe spread of the data remains exactly the same.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Standard Deviation",
+            "Statistics",
+            "Concept"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A wheel rotates through 20 revolutions in 4 seconds. What is its average angular velocity?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "5π rad/s",
+            "8π rad/s",
+            "10π rad/s",
+            "20π rad/s"
+          ],
+          "answerIndex": 2,
+          "answerText": "10π rad/s",
+          "explanation": "Given:\n20 revolutions\nTime = 4 s\n\nAngular displacement:\nθ = 20(2π) = 40π rad\n\nFormula:\nω_avg = θ/t\n\nSolution:\nω_avg = 40π/4\nω_avg = 10π rad/s\n\nTherefore, the average angular velocity is 10π rad/s.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Angular Velocity",
+            "Rotation",
+            "Average Rate"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A projectile is launched with horizontal velocity 25 m/s from a height of 80 m. How far horizontally will it travel before hitting the ground? Use g = 9.8 m/s².",
+          "questionType": "multiple_choice",
+          "choices": [
+            "50.5 m",
+            "75.8 m",
+            "101.0 m",
+            "160.0 m"
+          ],
+          "answerIndex": 2,
+          "answerText": "101.0 m",
+          "explanation": "Given:\nHorizontal velocity = 25 m/s\nHeight = 80 m\ng = 9.8 m/s²\n\nFirst find falling time:\ny = (1/2)gt²\n80 = 4.9t²\nt² = 16.3265\nt ≈ 4.04 s\n\nHorizontal motion:\nx = vt\nx = 25(4.04)\nx ≈ 101.0 m\n\nTherefore, the projectile travels approximately 101.0 m horizontally.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "Projectile Motion",
+            "Horizontal Launch",
+            "Kinematics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
         }
       ]
     }
