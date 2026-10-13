@@ -86,7 +86,14 @@
             widget.classList.toggle("is-running", state.running);
             widget.querySelector("[data-pomodoro-phase]").textContent = phaseLabel;
             widget.querySelector("[data-pomodoro-time]").textContent = formatTime(state.remaining);
-            widget.querySelector("[data-pomodoro-toggle]").textContent = state.running ? "Pause" : "Start";
+            const toggle = widget.querySelector("[data-pomodoro-toggle]");
+            const actionLabel = state.running ? "Pause" : "Start";
+            toggle.dataset.running = String(state.running);
+            toggle.setAttribute("aria-label", `${actionLabel} Pomodoro timer`);
+            toggle.title = `${actionLabel} timer`;
+            if (!toggle.querySelector(".pomodoro-control-icon")) {
+                toggle.textContent = actionLabel;
+            }
         });
         document.title = state.running ? `${formatTime(state.remaining)} | PrepCore` : document.title.replace(/^\d{2}:\d{2} \| /, "");
     }
@@ -168,14 +175,20 @@
 
     function closeSettings(widget) {
         widget.querySelector("[data-pomodoro-settings-panel]").hidden = true;
-        widget.querySelector("[data-pomodoro-settings]").setAttribute("aria-expanded", "false");
+        const button = widget.querySelector("[data-pomodoro-settings]");
+        button.setAttribute("aria-expanded", "false");
+        button.setAttribute("aria-label", "Open timer settings");
+        button.title = "Open timer settings";
     }
 
     function openSettings(widget) {
         widget.querySelector("[data-pomodoro-focus]").value = Math.round(state.focusSeconds / 60);
         widget.querySelector("[data-pomodoro-break]").value = Math.round(state.breakSeconds / 60);
         widget.querySelector("[data-pomodoro-settings-panel]").hidden = false;
-        widget.querySelector("[data-pomodoro-settings]").setAttribute("aria-expanded", "true");
+        const button = widget.querySelector("[data-pomodoro-settings]");
+        button.setAttribute("aria-expanded", "true");
+        button.setAttribute("aria-label", "Close timer settings");
+        button.title = "Close timer settings";
     }
 
     function saveSettings(widget, event) {

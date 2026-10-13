@@ -11449,6 +11449,22 @@ export async function initModePage(mode) {
     const dismissDrawerOverlay = () => {
         document.body.classList.remove("drawer-open");
         setDrawerBackdropHidden(true);
+        syncDrawerButtonState();
+    };
+
+    const isDrawerOpen = () => isDesktopDrawerMode()
+        ? !document.body.classList.contains("drawer-collapsed")
+        : document.body.classList.contains("drawer-open");
+
+    const syncDrawerButtonState = () => {
+        if (!elements.drawerOpen) {
+            return;
+        }
+        const isOpen = isDrawerOpen();
+        const label = isOpen ? "Collapse subject drawer" : "Open subject drawer";
+        elements.drawerOpen.setAttribute("aria-expanded", String(isOpen));
+        elements.drawerOpen.setAttribute("aria-label", label);
+        elements.drawerOpen.title = label;
     };
 
     const openDrawer = () => {
@@ -11457,30 +11473,42 @@ export async function initModePage(mode) {
             document.body.classList.remove("drawer-collapsed");
             document.body.classList.remove("drawer-open");
             setDrawerBackdropHidden(true);
-            return;
+        } else {
+            document.body.classList.add("drawer-open");
+            setDrawerBackdropHidden(false);
         }
 
-        document.body.classList.add("drawer-open");
-        setDrawerBackdropHidden(false);
+        syncDrawerButtonState();
     };
 
     const closeDrawer = () => {
         if (isDesktopDrawerMode()) {
             document.body.classList.add("drawer-collapsed");
             dismissDrawerOverlay();
-            return;
+        } else {
+            dismissDrawerOverlay();
         }
 
-        dismissDrawerOverlay();
+        syncDrawerButtonState();
+    };
+
+    const toggleDrawer = () => {
+        if (isDrawerOpen()) {
+            closeDrawer();
+        } else {
+            openDrawer();
+        }
     };
 
     const syncDrawerVisibility = () => {
         if (isDesktopDrawerMode()) {
             dismissDrawerOverlay();
+            syncDrawerButtonState();
             return;
         }
 
         setDrawerBackdropHidden(!document.body.classList.contains("drawer-open"));
+        syncDrawerButtonState();
     };
 
     if (elements.shuffle) {
@@ -12268,7 +12296,7 @@ export async function initModePage(mode) {
         buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
     };
 
-    elements.drawerOpen?.addEventListener("click", openDrawer);
+    elements.drawerOpen?.addEventListener("click", toggleDrawer);
     elements.drawerClose?.addEventListener("click", closeDrawer);
     elements.backdrop?.addEventListener("click", closeDrawer);
     elements.examMapOpen?.addEventListener("click", () => {
