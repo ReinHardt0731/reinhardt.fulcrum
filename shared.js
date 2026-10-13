@@ -8040,6 +8040,66 @@ function resolveSavedExamQuestionImages(question, record, subjects) {
     return [];
 }
 
+function createCorrectExamExplanationsSection(questions, answers) {
+    const questionList = Array.isArray(questions) ? questions : [];
+    const answerList = Array.isArray(answers) ? answers : [];
+    const correctIndexes = questionList
+        .map((_, index) => index)
+        .filter((index) => Boolean(answerList[index]?.correct));
+    if (!correctIndexes.length) return null;
+
+    const section = document.createElement("details");
+    section.className = "exam-correct-explanations";
+    section.appendChild(Object.assign(document.createElement("summary"), {
+        textContent: `Correct answers and explanations (${correctIndexes.length})`
+    }));
+    const list = document.createElement("div");
+    list.className = "exam-correct-explanations-list";
+
+    correctIndexes.forEach((index) => {
+        const question = questionList[index] || {};
+        const answer = answerList[index] || {};
+        const choices = Array.isArray(question.choices) ? question.choices : [];
+        const correctAnswer = text(answer.correctAnswer)
+            || (Number.isInteger(Number(question.answerIndex)) && question.answerIndex !== null
+                ? text(choices[Number(question.answerIndex)])
+                : text(question.answerText))
+            || "Not recorded";
+        const userAnswer = text(answer.userAnswer)
+            || (question.questionType === "multiple_choice" ? text(choices[Number(answer.userAnswerIndex)]) : "");
+        const answerImages = normalizeExplanationImages(answer);
+        const questionImages = normalizeExplanationImages(question);
+        const result = {
+            ...answer,
+            correct: true,
+            correctAnswer,
+            userAnswer,
+            explanation: answer.explanation || answer.explaination || question.explanation || question.explaination || "",
+            explanationImages: answerImages.length ? answerImages : questionImages,
+            explanationCard: answer.explanationCard || question.explanationCard || null
+        };
+
+        const item = document.createElement("article");
+        item.className = "exam-correct-explanation-item";
+        item.appendChild(Object.assign(document.createElement("h5"), {
+            textContent: `Question ${index + 1}: ${text(question.question || question.questionText || answer.questionText) || "Question text unavailable"}`
+        }));
+        const feedback = createFeedbackCard(result, { includeExplanation: false, explanationToggle: true });
+        if (!feedback.querySelector(".feedback-explanation-toggle")) {
+            feedback.appendChild(Object.assign(document.createElement("p"), {
+                className: "correct-explanation-unavailable",
+                textContent: "No explanation available for this question."
+            }));
+        }
+        item.appendChild(feedback);
+        list.appendChild(item);
+    });
+
+    section.appendChild(list);
+    renderQuestionMath(section);
+    return section;
+}
+
 function buildExamResultMarkdown(record) {
     const questions = Array.isArray(record.questions) ? record.questions : [];
     const answers = Array.isArray(record.answers) ? record.answers : [];
@@ -8287,6 +8347,8 @@ function createSavedExamReviewDetails(record, onDelete = null, subjects = []) {
         reviewLayout.appendChild(mapPanel);
     }
     details.appendChild(reviewLayout);
+    const correctExplanations = createCorrectExamExplanationsSection(recordQuestions, recordAnswers);
+    if (correctExplanations) details.appendChild(correctExplanations);
 
     const hasSavedAnswer = (index) => {
         if (Array.isArray(record.drafts) && index < record.drafts.length) return isExamAnswerSaved(record, index);
@@ -8650,6 +8712,8 @@ function renderAssessment(summary, session, title, score, content, startSession,
         }
         content.appendChild(reviewCard);
         renderQuestionMath(reviewCard);
+        const correctExplanations = createCorrectExamExplanationsSection(session.questions, session.answers);
+        if (correctExplanations) content.appendChild(correctExplanations);
     }
 }
 

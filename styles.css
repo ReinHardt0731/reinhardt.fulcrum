@@ -1894,6 +1894,19 @@ button.exam-map-row { cursor: pointer; }
     gap: 8px;
     margin-top: 12px;
 }
+.exam-correct-explanations {
+    margin-top: 12px;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: rgba(8, 17, 31, 0.28);
+}
+.exam-correct-explanations > summary { color: var(--text); font-weight: 700; cursor: pointer; }
+.exam-correct-explanations-list { display: grid; gap: 12px; margin-top: 12px; }
+.exam-correct-explanation-item { min-width: 0; padding: 12px; border: 1px solid var(--line); border-radius: 12px; }
+.exam-correct-explanation-item > h5 { margin: 0; line-height: 1.5; }
+.exam-correct-explanation-item .feedback-card { margin-top: 10px; }
+.correct-explanation-unavailable { margin: 10px 0 0; color: var(--muted); }
 .saved-exam-actions .saved-exam-delete { margin-top: 0; margin-left: auto; }
 .assessment-attempt-history {
     display: grid;
