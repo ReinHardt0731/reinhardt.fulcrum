@@ -245,6 +245,10 @@
         {
           "title": "Helicopters and Lighter than Air",
           "file": "chapters/helicopters-and-lighter-than-air.json"
+        },
+        {
+          "title": "Aero Mock Exam",
+          "file": "chapters/aerodynamics-aero-mock-exam.json"
         }
       ],
       "notesPath": "aerodynamics.md",
@@ -601,6 +605,10 @@
         {
           "title": "Inspection, Troubleshooting, Maintenance, and Overhaul",
           "file": "chapters/powerplant-mock-maintenance-troubleshooting-overhaul.json"
+        },
+        {
+          "title": "Starting and Ignition Test",
+          "file": "chapters/powerplant-starting-ignition-test.json"
         }
       ],
       "notesPath": "powerplant.md",
@@ -132157,6 +132165,1893 @@
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/powerplant-starting-ignition-test.json": {
+      "title": "Starting and Ignition Test",
+      "questions": [
+        {
+          "question": "Which statement BEST describes the primary purpose of a magneto in an aircraft piston-engine ignition system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To distribute fuel to each engine cylinder.",
+            "To generate high-voltage electrical energy for the spark plugs.",
+            "To rotate the engine during starting.",
+            "To control the amount of air entering the cylinders."
+          ],
+          "answerIndex": 1,
+          "answerText": "To generate high-voltage electrical energy for the spark plugs.",
+          "explanation": "A magneto is a self-contained, engine-driven electrical generator that produces the high-voltage pulses needed to fire the spark plugs. It uses electromagnetic induction and does not normally depend on the aircraft battery to generate ignition energy.\n\nWhy the other choices are incorrect:\n• Fuel distribution is handled by the fuel-metering system.\n• Engine rotation during starting is provided by the starter system.\n• Airflow is controlled by the induction system and associated controls.\n\nMemory Hook: Magneto = mechanical rotation converted into ignition electricity.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "magneto",
+            "ignition fundamentals",
+            "electromagnetic induction"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why does the permanent magnet rotate inside a conventional aircraft magneto?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To mechanically open the intake valve.",
+            "To keep the breaker points permanently closed.",
+            "To produce a changing magnetic flux through the coil windings.",
+            "To increase the compression ratio of the engine."
+          ],
+          "answerIndex": 2,
+          "answerText": "To produce a changing magnetic flux through the coil windings.",
+          "explanation": "Rotation changes the magnetic flux linked with the coil windings. According to Faraday's law, a changing magnetic flux induces an electromotive force. The magneto uses this principle to generate electrical energy for ignition.\n\nWhy the other choices are incorrect:\n• Intake valves are operated by the engine's valve train.\n• Breaker points must open and close at the appropriate time.\n• Compression ratio is determined by engine geometry.\n\nMemory Hook: Rotating magnet → changing flux → induced voltage.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "rotating magnet",
+            "Faraday law",
+            "magnetic flux",
+            "magneto theory"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which three circuits are commonly identified in the theory of a conventional high-tension magneto?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Magnetic, primary, and secondary circuits.",
+            "Starting, charging, and lighting circuits.",
+            "Fuel, hydraulic, and electrical circuits.",
+            "Primary, grounding, and lubrication circuits."
+          ],
+          "answerIndex": 0,
+          "answerText": "Magnetic, primary, and secondary circuits.",
+          "explanation": "The magnetic circuit contains the rotating magnet, pole shoes, and magnetic core. The primary electrical circuit includes the primary winding, breaker points, and condenser. The secondary circuit includes the secondary winding and the high-voltage path to the distributor and spark plugs.\n\nMemory Hook: Magnetic circuit creates the field; primary circuit controls its collapse; secondary circuit delivers the high voltage.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "magnetic circuit",
+            "primary circuit",
+            "secondary circuit",
+            "high-tension magneto"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the principal function of the primary winding in a conventional magneto?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To route high voltage directly to each spark plug.",
+            "To carry primary current and establish a magnetic field that can collapse rapidly.",
+            "To ground the magneto whenever the engine is running.",
+            "To increase the fuel pressure during starting."
+          ],
+          "answerIndex": 1,
+          "answerText": "To carry primary current and establish a magnetic field that can collapse rapidly.",
+          "explanation": "The primary winding contains relatively few turns of heavier wire. Primary current establishes a magnetic field in the coil core. When the breaker points open, the current is interrupted and the magnetic field collapses rapidly, inducing a high voltage in the secondary winding.\n\nWhy the other choices are incorrect:\n• High voltage is generated in the secondary winding and routed through the ignition system.\n• Grounding the primary circuit is used to switch off a conventional magneto.\n• Fuel pressure is controlled by the fuel system.\n\nMemory Hook: Primary winding = magnetic energy storage and switching.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "primary winding",
+            "coil",
+            "magnetic field",
+            "ignition circuit"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What happens when the breaker points open at the correctly timed position in a conventional magneto?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Primary current is interrupted, causing a rapid collapse of the primary magnetic field and a high-voltage pulse in the secondary winding.",
+            "The secondary winding is disconnected from the distributor, preventing ignition.",
+            "The permanent magnet stops rotating until the next cylinder fires.",
+            "The condenser supplies fuel to the spark plug."
+          ],
+          "answerIndex": 0,
+          "answerText": "Primary current is interrupted, causing a rapid collapse of the primary magnetic field and a high-voltage pulse in the secondary winding.",
+          "explanation": "Opening the breaker points interrupts primary current. The primary magnetic field then collapses rapidly, inducing a high voltage in the secondary winding through electromagnetic induction. The resulting pulse is routed to the appropriate spark plug.\n\nWhy the other choices are incorrect:\n• The secondary circuit must deliver the pulse to the spark plug.\n• The magnet continues rotating with the engine-driven mechanism.\n• The condenser is an electrical component, not part of the fuel system.\n\nBoard Tip: The rapid change in magnetic flux, rather than simply the existence of a magnetic field, is central to producing the ignition pulse.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "breaker points",
+            "primary current",
+            "secondary voltage",
+            "electromagnetic induction"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary function of the condenser, also called a capacitor, connected across the breaker points?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To increase engine compression during ignition.",
+            "To prevent all current from flowing through the primary winding.",
+            "To help prevent arcing at the breaker contacts and permit rapid collapse of the primary magnetic field.",
+            "To continuously supply battery current to the spark plugs."
+          ],
+          "answerIndex": 2,
+          "answerText": "To help prevent arcing at the breaker contacts and permit rapid collapse of the primary magnetic field.",
+          "explanation": "When the breaker points open, the condenser temporarily accepts charge and limits arcing across the contacts. This allows primary current to fall rapidly, producing the rapid magnetic-field collapse needed for a strong secondary voltage pulse.\n\nWhy the other choices are incorrect:\n• Compression depends on engine geometry and operation.\n• Primary current must flow while the points are closed to establish the magnetic field.\n• A conventional magneto is self-contained and does not continuously require battery current for normal spark generation.\n\nMemory Hook: Condenser = less contact arcing and faster field collapse.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "condenser",
+            "capacitor",
+            "breaker points",
+            "magneto maintenance"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement BEST describes the E-gap in a conventional high-tension magneto?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The physical distance between the spark plug's center and ground electrodes.",
+            "The specified angular relationship between the magnetic neutral position and breaker-point opening.",
+            "The distance between the magneto and the engine crankshaft.",
+            "The clearance between an intake valve and its seat."
+          ],
+          "answerIndex": 1,
+          "answerText": "The specified angular relationship between the magnetic neutral position and breaker-point opening.",
+          "explanation": "E-gap is an internal magneto timing relationship associated with the magnetic neutral position and the point at which the breaker contacts open. Correct adjustment helps establish the rapid magnetic-flux change needed for an effective ignition pulse.\n\nWhy the other choices are incorrect:\n• The spark-plug electrode clearance is the spark-plug gap.\n• Magneto mounting distance is not E-gap.\n• Valve clearance is unrelated to magneto internal timing.\n\nBoard Tip: E-gap is an internal magneto timing specification, not the spark-plug gap or the engine's ignition advance angle. The exact setting depends on the magneto model.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "E-gap",
+            "magneto timing",
+            "magnetic neutral position",
+            "breaker points"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why is correct E-gap adjustment important?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It ensures that the magneto produces an effective ignition pulse at the intended internal timing position.",
+            "It determines the amount of fuel injected into the cylinder.",
+            "It controls the opening pressure of the exhaust valve.",
+            "It eliminates the need for a distributor."
+          ],
+          "answerIndex": 0,
+          "answerText": "It ensures that the magneto produces an effective ignition pulse at the intended internal timing position.",
+          "explanation": "The E-gap relationship positions the magnetic rotor and breaker-point opening so that the primary magnetic field can change rapidly and induce adequate secondary voltage. Incorrect internal timing can reduce ignition performance or prevent the magneto from operating as intended.\n\nWhy the other choices are incorrect:\n• Fuel quantity is controlled by the fuel system.\n• Exhaust-valve opening is controlled by valve timing.\n• E-gap does not eliminate the distributor in a conventional high-tension magneto.\n\nMemory Hook: Correct E-gap supports effective magnetic-field collapse and spark generation.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "E-gap adjustment",
+            "internal timing",
+            "magneto performance",
+            "ignition troubleshooting"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the function of the secondary winding in a high-tension magneto?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To produce the high voltage needed to bridge the spark-plug gap.",
+            "To turn the crankshaft during starting.",
+            "To interrupt primary current mechanically.",
+            "To control the opening and closing of engine valves."
+          ],
+          "answerIndex": 0,
+          "answerText": "To produce the high voltage needed to bridge the spark-plug gap.",
+          "explanation": "The secondary winding has many thousands of turns of fine wire. The rapid change in magnetic flux induces a high voltage in this winding, which is routed through the distributor and ignition leads to the spark plug.\n\nWhy the other choices are incorrect:\n• The starter rotates the crankshaft.\n• Breaker points interrupt primary current in conventional systems.\n• Valve timing is handled by the valve train.\n\nMemory Hook: Primary winding builds the field; secondary winding develops the high voltage.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "secondary winding",
+            "high voltage",
+            "spark plug",
+            "magneto"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the principal function of the distributor in a conventional high-tension magneto system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To generate the primary magnetic field.",
+            "To distribute high-voltage ignition pulses to the correct spark plugs in firing order.",
+            "To open the breaker points at the E-gap position.",
+            "To regulate fuel-air mixture strength."
+          ],
+          "answerIndex": 1,
+          "answerText": "To distribute high-voltage ignition pulses to the correct spark plugs in firing order.",
+          "explanation": "The distributor rotor directs each high-voltage pulse to the appropriate distributor terminal and ignition lead. The terminals are connected to the spark plugs in the required firing sequence.\n\nWhy the other choices are incorrect:\n• The magnetic circuit and primary winding establish the magnetic field.\n• The breaker cam operates the breaker points.\n• Mixture strength is controlled by the fuel-metering system.\n\nMemory Hook: Magneto generates the pulse; distributor routes it.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "distributor",
+            "firing order",
+            "ignition leads",
+            "high-tension system"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "On a typical four-stroke piston engine, at what approximate speed does a mechanically driven distributor rotate relative to the crankshaft?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "At twice crankshaft speed.",
+            "At the same speed as the crankshaft.",
+            "At one-half crankshaft speed.",
+            "At one-quarter crankshaft speed."
+          ],
+          "answerIndex": 2,
+          "answerText": "At one-half crankshaft speed.",
+          "explanation": "A four-stroke engine completes one operating cycle in two crankshaft revolutions. The distributor must route ignition pulses in accordance with that cycle, so a conventional distributor driven from the engine typically rotates at one-half crankshaft speed.\n\nWhy the other choices are incorrect:\n• Twice crankshaft speed would produce excessive distributor rotation.\n• Equal speed does not match the normal four-stroke cycle requirement.\n• One-quarter speed is not the standard relationship for a conventional four-stroke distributor.\n\nBoard Tip: Do not confuse distributor speed with magneto rotor speed; their drive arrangements depend on the particular design.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "distributor speed",
+            "four-stroke engine",
+            "mechanical drive",
+            "firing sequence"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why are most conventional aircraft piston engines equipped with dual ignition?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To eliminate the need for spark plugs.",
+            "To provide redundancy and improve combustion by igniting the charge at two points.",
+            "To allow both magnetos to drive the starter motor.",
+            "To double the engine's compression ratio."
+          ],
+          "answerIndex": 1,
+          "answerText": "To provide redundancy and improve combustion by igniting the charge at two points.",
+          "explanation": "Dual ignition normally provides two electrically independent ignition systems, with two spark plugs per cylinder supplied by separate magnetos or equivalent independent ignition sources. If one system fails, the other may continue to provide ignition. Two ignition points also shorten combustion time and can improve power output.\n\nWhy the other choices are incorrect:\n• Spark plugs remain necessary in a conventional spark-ignition engine.\n• Magnetos generate ignition energy; they do not drive the starter motor.\n• Ignition does not change the engine's geometric compression ratio.\n\nMemory Hook: Dual ignition = redundancy plus more efficient combustion.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "dual ignition",
+            "redundancy",
+            "spark plugs",
+            "aircraft piston engines"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "In a conventional magneto ignition switch, what normally happens electrically when the switch is placed in OFF?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The primary circuit is grounded, preventing the normal rapid collapse needed to produce an ignition spark.",
+            "The primary circuit is disconnected from ground so the magneto produces its strongest spark.",
+            "The distributor is mechanically locked in position.",
+            "The spark-plug gaps close completely."
+          ],
+          "answerIndex": 0,
+          "answerText": "The primary circuit is grounded, preventing the normal rapid collapse needed to produce an ignition spark.",
+          "explanation": "A conventional magneto is switched off by grounding its primary circuit through the ignition switch and P-lead. This shunts the primary circuit so that opening the breaker points cannot create the normal rapid field collapse needed to induce a high-voltage secondary pulse.\n\nWhy the other choices are incorrect:\n• Removing the grounding path allows normal ignition operation when the system is otherwise functional.\n• The distributor is not normally locked by the ignition switch.\n• The switch does not alter spark-plug electrode spacing.\n\nSafety Tip: A broken P-lead or grounding circuit can leave a magneto live even when the cockpit switch indicates OFF.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "ignition switch",
+            "P-lead",
+            "grounding",
+            "magneto safety"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the purpose of the P-lead in a conventional magneto ignition system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To carry fuel pressure information to the cockpit.",
+            "To provide the grounding path used to switch the magneto off.",
+            "To supply starter-motor current to the magneto.",
+            "To route high voltage directly to the spark plugs."
+          ],
+          "answerIndex": 1,
+          "answerText": "To provide the grounding path used to switch the magneto off.",
+          "explanation": "The P-lead connects the magneto primary circuit to the ignition switch. In OFF, the switch grounds the P-lead, preventing normal ignition. In ON, the grounding path is removed and the breaker points control primary-current interruption.\n\nWhy the other choices are incorrect:\n• Fuel pressure sensing belongs to the engine instrumentation and fuel system.\n• Starter-motor current follows a separate high-current circuit.\n• High-voltage pulses travel through the secondary circuit and ignition leads.\n\nBoard Tip: A magneto can remain live if its grounding circuit fails. Always follow the applicable aircraft maintenance and propeller-safety procedures.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "P-lead",
+            "grounding wire",
+            "ignition switch",
+            "safety"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the purpose of the magneto RPM-drop check during an engine run-up?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To verify that the ignition systems and associated spark plugs operate correctly when each magneto is selected.",
+            "To determine the aircraft battery's remaining capacity.",
+            "To measure the engine's geometric compression ratio.",
+            "To check the hydraulic pressure of the landing gear."
+          ],
+          "answerIndex": 0,
+          "answerText": "To verify that the ignition systems and associated spark plugs operate correctly when each magneto is selected.",
+          "explanation": "During a magneto check, the pilot selects each magneto separately and observes the change in engine RPM. A decrease is expected because the engine is operating on one ignition system instead of both. The observed drop and any difference between the two checks must remain within the manufacturer's limits.\n\nWhy the other choices are incorrect:\n• Battery capacity is not measured by the magneto RPM-drop check.\n• Compression ratio is a geometric engine characteristic.\n• Landing-gear hydraulic pressure is unrelated to ignition.\n\nImportant: Always use the aircraft's approved checklist and manufacturer-specified RPM-drop limits.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "magneto check",
+            "RPM drop",
+            "run-up",
+            "ignition troubleshooting"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During a magneto check, why does engine RPM normally decrease when one magneto is switched off?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The engine loses half of its fuel supply.",
+            "The engine operates on one ignition system rather than two, usually reducing combustion efficiency and power slightly.",
+            "The starter motor disengages from the crankshaft.",
+            "The compression ratio is reduced by half."
+          ],
+          "answerIndex": 1,
+          "answerText": "The engine operates on one ignition system rather than two, usually reducing combustion efficiency and power slightly.",
+          "explanation": "With both magnetos operating, each cylinder normally receives sparks from two plugs. Selecting one magneto disables one set of plugs, so combustion may take longer and engine power decreases slightly, producing an RPM drop.\n\nWhy the other choices are incorrect:\n• Selecting one magneto does not normally cut the fuel supply in half.\n• The starter is not responsible for the expected RPM drop.\n• Compression ratio remains unchanged.\n\nBoard Tip: An expected RPM drop is normal; an excessive drop, an abnormal difference between magnetos, or no drop can indicate a problem and must be evaluated against the applicable maintenance limits.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "RPM drop",
+            "dual ignition",
+            "magneto check",
+            "combustion"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary purpose of an impulse coupling fitted to a magneto?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To increase magneto rotation speed momentarily during starting and retard ignition timing.",
+            "To increase the engine's compression ratio during starting.",
+            "To permanently disconnect the magneto from the engine.",
+            "To replace the distributor and all ignition leads."
+          ],
+          "answerIndex": 0,
+          "answerText": "To increase magneto rotation speed momentarily during starting and retard ignition timing.",
+          "explanation": "An impulse coupling uses a spring, flyweights, and a stop arrangement to temporarily hold back the magneto rotor as the engine turns. The spring then releases and snaps the rotor through its firing position rapidly, helping produce a stronger starting spark. It also retards the spark during starting to reduce the likelihood of kickback.\n\nWhy the other choices are incorrect:\n• Compression ratio is not changed by the coupling.\n• The coupling engages and releases as part of its normal operation; it does not permanently disconnect the magneto.\n• It does not replace the distributor or ignition leads.\n\nMemory Hook: Impulse coupling = faster magneto snap plus retarded starting spark.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "impulse coupling",
+            "starting",
+            "retarded ignition",
+            "kickback"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "How does an impulse coupling help produce a stronger spark during engine starting?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It stores energy in a spring and releases it to rotate the magneto rotor rapidly through the firing position.",
+            "It increases the number of turns in the secondary winding.",
+            "It supplies compressed air directly to the spark plug.",
+            "It holds the breaker points permanently open."
+          ],
+          "answerIndex": 0,
+          "answerText": "It stores energy in a spring and releases it to rotate the magneto rotor rapidly through the firing position.",
+          "explanation": "At cranking speed, a magneto may rotate too slowly to generate an adequate ignition pulse. The impulse coupling temporarily restrains the rotor, winds a spring, and then releases it. The resulting rapid rotor movement improves the starting spark.\n\nWhy the other choices are incorrect:\n• The winding turns do not change during starting.\n• Compressed air is not supplied by the coupling.\n• The breaker points must operate according to their timing mechanism.\n\nBoard Tip: An impulse coupling addresses both low cranking-speed spark energy and starting kickback through retarded ignition timing.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "impulse coupling",
+            "magneto speed",
+            "spring mechanism",
+            "starting spark"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the purpose of a high-tension booster-coil or shower-of-sparks starting system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To supply repeated high-voltage ignition pulses during starting when normal magneto output may be inadequate.",
+            "To provide continuous ignition only during normal cruise.",
+            "To replace the engine's fuel-metering system.",
+            "To increase the distributor's number of terminals."
+          ],
+          "answerIndex": 0,
+          "answerText": "To supply repeated high-voltage ignition pulses during starting when normal magneto output may be inadequate.",
+          "explanation": "At low cranking speeds, a conventional magneto may not provide sufficient spark energy. A high-tension booster or shower-of-sparks arrangement supplies repeated high-voltage pulses during starting. The applicable system is normally deactivated after the engine starts, according to the design and approved procedure.\n\nWhy the other choices are incorrect:\n• The starting booster is intended to assist starting, not to replace normal ignition throughout cruise.\n• Fuel metering is a separate function.\n• The booster does not increase the number of distributor terminals.\n\nMemory Hook: Shower of sparks = repeated ignition pulses during cranking.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "booster coil",
+            "shower of sparks",
+            "starting system",
+            "high-tension ignition"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the principal function of a low-tension booster-coil starting arrangement?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To provide additional low-voltage current to the magneto primary circuit during starting.",
+            "To provide fuel to the engine cylinders.",
+            "To mechanically drive the propeller during flight.",
+            "To increase the magneto's secondary-winding turn count."
+          ],
+          "answerIndex": 0,
+          "answerText": "To provide additional low-voltage current to the magneto primary circuit during starting.",
+          "explanation": "A low-tension booster arrangement uses an electrical supply and booster coil to augment the primary circuit during starting. The particular circuit can provide a retarded starting spark to reduce kickback. Its wiring and switching arrangement depend on the engine and ignition system.\n\nWhy the other choices are incorrect:\n• Fuel delivery is a fuel-system function.\n• The booster is not a propeller-driving mechanism.\n• It does not change the physical turn count of the secondary winding.\n\nBoard Tip: Distinguish a low-tension booster arrangement from a high-tension shower-of-sparks system by identifying where the starting assistance is applied.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "low-tension booster",
+            "primary circuit",
+            "starting ignition",
+            "kickback"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why is ignition timing normally retarded during starting on an engine equipped with an impulse coupling or an appropriate starting-ignition system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To reduce the possibility of combustion pushing the piston backward and causing engine kickback.",
+            "To increase the engine's compression ratio.",
+            "To make the spark occur after the exhaust valve opens.",
+            "To prevent the magneto from generating any voltage."
+          ],
+          "answerIndex": 0,
+          "answerText": "To reduce the possibility of combustion pushing the piston backward and causing engine kickback.",
+          "explanation": "During starting, engine speed is low and the crankshaft has relatively little rotational momentum. If ignition occurs too early, combustion pressure can oppose normal crankshaft rotation and cause kickback. Retarding the starting spark reduces this risk.\n\nWhy the other choices are incorrect:\n• Ignition timing does not alter the engine's geometric compression ratio.\n• The spark must occur at an appropriate point in the compression cycle, not after the exhaust valve opens.\n• The starting system must still generate a spark.\n\nMemory Hook: Retarded starting spark = less kickback risk.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "ignition timing",
+            "kickback",
+            "starting safety",
+            "impulse coupling"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the main purpose of the starter motor in a typical electrically started aircraft piston engine?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To rotate the crankshaft until the engine can sustain operation through combustion.",
+            "To generate the high voltage used by the spark plugs.",
+            "To regulate the E-gap in both magnetos.",
+            "To control the distributor's firing order electronically."
+          ],
+          "answerIndex": 0,
+          "answerText": "To rotate the crankshaft until the engine can sustain operation through combustion.",
+          "explanation": "The starter supplies mechanical torque to rotate the crankshaft during starting. This moves the pistons through their operating cycles and drives the engine-driven magnetos. Once combustion sustains engine operation, the starter is disengaged according to the aircraft's system design.\n\nWhy the other choices are incorrect:\n• The magnetos or electronic ignition hardware generate the ignition energy.\n• E-gap is an internal magneto timing specification.\n• A conventional distributor's routing is mechanically synchronized, not controlled by the starter motor.\n\nMemory Hook: Starter turns the engine; ignition lights the charge.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "starter motor",
+            "engine starting",
+            "crankshaft",
+            "starting fundamentals"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why might a conventional magneto produce an inadequate spark when an aircraft piston engine is cranked at very low speed?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The magnetic flux changes too slowly to produce the required ignition energy under the normal operating arrangement.",
+            "The compression ratio automatically becomes zero.",
+            "The distributor stops needing to follow the firing order.",
+            "The secondary winding loses all of its turns."
+          ],
+          "answerIndex": 0,
+          "answerText": "The magnetic flux changes too slowly to produce the required ignition energy under the normal operating arrangement.",
+          "explanation": "At low cranking speed, the magneto's magnetic flux changes more slowly. The resulting electrical output may not provide sufficient energy for reliable ignition. An impulse coupling or an appropriate booster arrangement can improve starting performance.\n\nWhy the other choices are incorrect:\n• Compression ratio does not become zero during cranking.\n• The distributor must still route pulses in the proper sequence.\n• The secondary winding does not lose its turns as speed decreases.\n\nBoard Tip: Low cranking speed is one reason auxiliary starting ignition systems are used.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "cranking speed",
+            "magneto output",
+            "starting aids",
+            "spark energy"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the purpose of the two spark plugs normally fitted to each cylinder in a dual-ignition aircraft piston engine?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To allow one plug to control the intake valve and the other to control the exhaust valve.",
+            "To provide ignition redundancy and initiate combustion at two locations in the cylinder.",
+            "To increase the cylinder's displacement.",
+            "To eliminate the need for a fuel-air mixture."
+          ],
+          "answerIndex": 1,
+          "answerText": "To provide ignition redundancy and initiate combustion at two locations in the cylinder.",
+          "explanation": "Dual ignition normally supplies each cylinder with two spark plugs connected to separate ignition systems. This provides redundancy and allows the charge to ignite at two locations, which can shorten combustion time and improve power output.\n\nWhy the other choices are incorrect:\n• Spark plugs do not operate the valves.\n• Cylinder displacement is determined by bore and stroke.\n• Combustion still requires a suitable combustible charge.\n\nMemory Hook: Two plugs per cylinder = redundancy and faster combustion.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "dual ignition",
+            "spark plugs",
+            "combustion",
+            "redundancy"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is magneto flashover or flashover-related misfiring most closely associated with?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "High-voltage current taking an unintended path to ground or another terminal instead of the intended spark-plug gap.",
+            "Normal combustion occurring at two spark plugs in one cylinder.",
+            "The starter disengaging after engine start.",
+            "The normal opening of the intake valve."
+          ],
+          "answerIndex": 0,
+          "answerText": "High-voltage current taking an unintended path to ground or another terminal instead of the intended spark-plug gap.",
+          "explanation": "Moisture, contamination, damaged insulation, or conductive carbon tracking can create an unintended electrical path. High voltage may then travel to ground or another terminal rather than firing the intended plug, causing misfiring.\n\nWhy the other choices are incorrect:\n• Dual-plug combustion is normal in a dual-ignition engine.\n• Starter disengagement is unrelated to electrical flashover.\n• Intake-valve operation is a mechanical event.\n\nBoard Tip: Inspect ignition insulation, distributor components, and moisture-related contamination when investigating flashover, following the manufacturer's maintenance instructions.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "flashover",
+            "carbon tracking",
+            "ignition leads",
+            "magneto troubleshooting"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why are magneto and distributor components designed with appropriate venting?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To reduce moisture accumulation and help prevent electrical leakage or flashover.",
+            "To increase the amount of fuel entering the cylinders.",
+            "To prevent the magneto rotor from turning.",
+            "To eliminate the need for ignition leads."
+          ],
+          "answerIndex": 0,
+          "answerText": "To reduce moisture accumulation and help prevent electrical leakage or flashover.",
+          "explanation": "Magneto and distributor components experience temperature changes that can promote condensation. Moisture can provide an unintended conducting path across insulating surfaces and cause flashover or misfiring. Appropriate venting helps manage these conditions, although magnetos cannot simply be hermetically sealed in all designs because of pressure and temperature changes.\n\nWhy the other choices are incorrect:\n• Venting is not a fuel-metering function.\n• The rotor must continue to rotate during normal operation.\n• Ignition leads are still needed to connect the distributor to the plugs.\n\nMemory Hook: Moisture on insulation can create an unwanted path for high voltage.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "magneto venting",
+            "moisture",
+            "flashover",
+            "insulation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary role of a high-voltage ignition harness in a conventional magneto system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To carry high-voltage pulses from the distributor to the appropriate spark plugs.",
+            "To supply lubricating oil to the magneto.",
+            "To transmit starter-motor torque to the crankshaft.",
+            "To control the opening of the breaker points."
+          ],
+          "answerIndex": 0,
+          "answerText": "To carry high-voltage pulses from the distributor to the appropriate spark plugs.",
+          "explanation": "The ignition harness consists of insulated conductors and associated shielding or protective components that route high-voltage pulses from the distributor to the spark plugs. Proper insulation, routing, and condition are essential to prevent leakage, arcing, and misfiring.\n\nWhy the other choices are incorrect:\n• Lubrication is not the harness's function.\n• Mechanical torque is transmitted through shafts and gears.\n• Breaker-point operation is controlled by the magneto's internal mechanism.\n\nBoard Tip: Damaged insulation or improper lead routing can cause ignition faults even if the magneto itself is functioning correctly.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "ignition harness",
+            "high-voltage leads",
+            "spark plugs",
+            "inspection"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement BEST distinguishes a conventional magneto from an electronic FADEC-controlled ignition system?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A magneto is an engine-driven ignition generator, while FADEC is a digital control system that can coordinate ignition and other engine functions.",
+            "A magneto always requires a digital computer, while FADEC always uses breaker points.",
+            "FADEC is only a mechanical device for routing high voltage to spark plugs.",
+            "A magneto controls every engine function, while FADEC only controls the starter motor."
+          ],
+          "answerIndex": 0,
+          "answerText": "A magneto is an engine-driven ignition generator, while FADEC is a digital control system that can coordinate ignition and other engine functions.",
+          "explanation": "A conventional magneto generates ignition energy through engine-driven electromagnetic induction and uses its own timing mechanism. FADEC stands for Full Authority Digital Engine Control and uses electronic control logic and sensor inputs to manage engine functions. Depending on the engine design, FADEC may control ignition timing, fuel metering, and other parameters.\n\nWhy the other choices are incorrect:\n• The conventional magneto does not inherently require a digital computer, and FADEC does not inherently require breaker points.\n• FADEC does much more than distribute high voltage.\n• FADEC's authority extends beyond the starter motor.\n\nBoard Tip: Do not assume that every FADEC-equipped engine either uses or eliminates magnetos; the ignition architecture depends on the specific engine.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "FADEC",
+            "electronic ignition",
+            "magneto comparison",
+            "engine control"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which component or system normally determines the desired ignition timing in a FADEC-controlled engine?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The digital engine controller using sensor information and its control logic.",
+            "A conventional breaker cam alone, in every FADEC installation.",
+            "The aircraft's landing-gear position indicator.",
+            "The distributor cap's physical diameter."
+          ],
+          "answerIndex": 0,
+          "answerText": "The digital engine controller using sensor information and its control logic.",
+          "explanation": "A FADEC receives relevant engine information, such as rotational position and speed, and uses programmed control logic to determine ignition timing where electronic ignition is implemented. The controller then commands compatible ignition hardware to generate the spark.\n\nWhy the other choices are incorrect:\n• A conventional breaker cam is not the universal timing controller in FADEC systems.\n• Landing-gear position is not the normal basis for engine ignition timing.\n• Distributor dimensions do not determine commanded ignition timing.\n\nMemory Hook: Sensors provide data; FADEC calculates; ignition hardware executes.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "FADEC",
+            "ignition timing",
+            "sensors",
+            "electronic engine control"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement about the energy source for a conventional magneto is CORRECT?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It normally generates ignition electricity from engine-driven mechanical rotation without requiring the aircraft battery for normal spark generation.",
+            "It obtains all ignition energy directly from the aircraft battery.",
+            "It can generate a spark only when the alternator is producing maximum output.",
+            "It requires the starter motor to remain engaged throughout flight."
+          ],
+          "answerIndex": 0,
+          "answerText": "It normally generates ignition electricity from engine-driven mechanical rotation without requiring the aircraft battery for normal spark generation.",
+          "explanation": "A conventional magneto is a self-contained engine-driven generator. Its rotating magnetic system produces the electrical energy required for ignition. Some starting-assist arrangements may use battery power, but normal magneto spark generation does not depend on the battery in the same way as a battery-dependent electronic ignition system.\n\nWhy the other choices are incorrect:\n• The magneto does not normally obtain all its ignition energy from the battery.\n• Alternator output is not the normal source of magneto spark energy.\n• The starter must disengage after the engine starts.\n\nBoard Tip: Magneto independence is an important reason conventional aircraft piston engines use magneto ignition.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "magneto independence",
+            "battery",
+            "alternator",
+            "ignition energy"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the likely consequence if a conventional magneto's grounding wire breaks and no longer provides a reliable grounding path?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The magneto may remain capable of producing sparks even when the ignition switch is placed in OFF.",
+            "The magneto will always stop rotating immediately.",
+            "The spark-plug gaps will automatically become smaller.",
+            "The engine's compression ratio will decrease."
+          ],
+          "answerIndex": 0,
+          "answerText": "The magneto may remain capable of producing sparks even when the ignition switch is placed in OFF.",
+          "explanation": "The ignition switch normally disables a conventional magneto by grounding its primary circuit. If the grounding path fails open, the switch may no longer be able to suppress ignition. The magneto can remain live, creating a serious hazard if the propeller is moved.\n\nWhy the other choices are incorrect:\n• The grounding wire does not mechanically stop the magneto rotor.\n• Spark-plug gap and compression ratio are not controlled by the grounding wire.\n\nSafety Tip: Treat a propeller as potentially live whenever magneto grounding integrity is uncertain. Follow the applicable aircraft maintenance procedures.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "grounding wire",
+            "P-lead failure",
+            "live magneto",
+            "propeller safety"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which sequence BEST describes the operation of a conventional magneto during a normal firing event?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Primary current develops, breaker points open at the timed position, the primary field collapses rapidly, secondary voltage rises, and the spark plug fires.",
+            "The spark plug fires first, the breaker points close, and the primary winding begins to rotate.",
+            "The distributor generates fuel pressure, the condenser opens the intake valve, and the magnet stops rotating.",
+            "The secondary current opens the exhaust valve, which then drives the magneto rotor."
+          ],
+          "answerIndex": 0,
+          "answerText": "Primary current develops, breaker points open at the timed position, the primary field collapses rapidly, secondary voltage rises, and the spark plug fires.",
+          "explanation": "The primary circuit establishes magnetic energy while the breaker points are closed. Opening the points interrupts primary current, and the condenser helps the field collapse rapidly. The resulting change in magnetic flux induces high voltage in the secondary winding, and the distributor routes the pulse to the correct spark plug.\n\nWhy the other choices are incorrect:\n• The spark plug does not initiate the electrical generation sequence.\n• The distributor does not generate fuel pressure or operate engine valves.\n• The secondary circuit does not mechanically drive the magneto rotor.\n\nMemory Hook: Current → points open → field collapses → secondary voltage → spark.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "magneto operation",
+            "sequence of events",
+            "breaker points",
+            "secondary voltage"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which condition is MOST likely to cause the magneto to produce an ineffective or absent spark despite the engine rotating?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Incorrect internal magneto timing or a fault in the primary or secondary ignition circuit.",
+            "A correctly adjusted distributor routing pulses in firing order.",
+            "A properly operating condenser preventing excessive breaker-point arcing.",
+            "Normal rotation of the engine-driven magneto."
+          ],
+          "answerIndex": 0,
+          "answerText": "Incorrect internal magneto timing or a fault in the primary or secondary ignition circuit.",
+          "explanation": "A magneto may fail to produce an adequate spark if its internal timing is incorrect, the breaker points or condenser are faulty, the windings are damaged, or the secondary path is defective. The exact fault must be identified through approved troubleshooting and testing procedures.\n\nWhy the other choices are incorrect:\n• Correct distributor routing is necessary for normal operation.\n• A functioning condenser supports proper field collapse and reduces contact arcing.\n• Magneto rotation is necessary for normal generation.\n\nBoard Tip: Separate a generation or timing problem from a distribution problem when diagnosing ignition faults.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "ignition troubleshooting",
+            "internal timing",
+            "primary circuit",
+            "secondary circuit"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the main difference between a spark-ignition piston engine and a conventional diesel engine's ignition process?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A spark-ignition engine uses a spark to ignite the charge, while a diesel engine normally ignites injected fuel through the high temperature of compressed air.",
+            "Both engines always use magnetos to ignite the fuel.",
+            "A diesel engine requires a spark plug for every combustion event, while a spark-ignition engine does not.",
+            "A spark-ignition engine relies only on compression, while a diesel engine relies only on a battery."
+          ],
+          "answerIndex": 0,
+          "answerText": "A spark-ignition engine uses a spark to ignite the charge, while a diesel engine normally ignites injected fuel through the high temperature of compressed air.",
+          "explanation": "In a conventional spark-ignition engine, a spark plug initiates combustion of the combustible charge. In a diesel engine, compression raises the air temperature sufficiently for injected fuel to ignite under suitable operating conditions. Glow plugs or other preheating devices may assist cold starting, but they do not function as the normal timed spark ignition system of a gasoline piston engine.\n\nWhy the other choices are incorrect:\n• Conventional diesel engines do not normally use magnetos to ignite each combustion event.\n• Diesel engines do not normally require a spark plug for each firing event.\n• The descriptions of both engine types are reversed or incorrect in the final choice.\n\nMemory Hook: Spark ignition uses a spark; compression ignition relies on hot compressed air.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "diesel engine",
+            "compression ignition",
+            "spark ignition",
+            "engine fundamentals"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why might a conventional aircraft magneto use a starting aid even though the magneto is self-contained?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Self-contained operation does not guarantee adequate spark energy at very low cranking speed.",
+            "A magneto cannot generate electricity unless it is connected to a battery.",
+            "A starting aid is required to increase the engine's cylinder displacement.",
+            "A starting aid replaces the need for a combustible fuel-air charge."
+          ],
+          "answerIndex": 0,
+          "answerText": "Self-contained operation does not guarantee adequate spark energy at very low cranking speed.",
+          "explanation": "A magneto generates ignition electricity from mechanical rotation, but at low cranking speed the changing magnetic flux may be insufficient to provide a reliable spark. Starting aids such as an impulse coupling or a booster system improve ignition during cranking. The particular system depends on the engine installation.\n\nWhy the other choices are incorrect:\n• A conventional magneto normally generates its own ignition energy.\n• Starting aids do not alter cylinder displacement.\n• Combustion still requires the appropriate charge and compression.\n\nBoard Tip: Self-contained describes the source of normal ignition energy, not guaranteed spark quality at every rotational speed.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "magneto starting",
+            "starting aids",
+            "cranking speed",
+            "ignition energy"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement BEST explains why the starter and ignition system perform different jobs during engine starting?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The starter supplies mechanical rotation, while the ignition system supplies the timed spark needed to initiate combustion.",
+            "The starter generates the fuel-air mixture, while the ignition system rotates the crankshaft.",
+            "The starter controls E-gap, while the ignition system controls landing-gear movement.",
+            "Both systems perform exactly the same function and are interchangeable."
+          ],
+          "answerIndex": 0,
+          "answerText": "The starter supplies mechanical rotation, while the ignition system supplies the timed spark needed to initiate combustion.",
+          "explanation": "The starter rotates the crankshaft so the engine can move through its operating cycles. The ignition system provides the spark at the required time. Starting also requires appropriate fuel and air, adequate compression, and correct operating procedures.\n\nWhy the other choices are incorrect:\n• Fuel and air are supplied by the induction and fuel systems.\n• E-gap belongs to internal magneto timing, not the starter.\n• Mechanical rotation and ignition are complementary but distinct functions.\n\nMemory Hook: Starter turns; ignition fires; combustion sustains.",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "starting system",
+            "ignition system",
+            "crankshaft",
+            "engine starting sequence"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/aerodynamics-aero-mock-exam.json": {
+      "title": "Aero Mock Exam",
+      "questions": [
+        {
+          "question": "Assuming air density, drag coefficient, and reference area stay constant, a body is placed in an airstream whose velocity increases by a factor of 4. By what factor does aerodynamic drag increase?",
+          "choices": [
+            "12",
+            "16",
+            "4",
+            "8"
+          ],
+          "answerIndex": 1,
+          "explanation": "At constant density, drag coefficient, and reference area, drag varies with the square of speed. Quadrupling speed multiplies drag by 4² = 16.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "16"
+        },
+        {
+          "question": "On five-digit NACA airfoil, the third digit corresponds to the camber. What does it mean if the third digit is 1.",
+          "choices": [
+            "Critical",
+            "Reflex",
+            "Simple",
+            "Turbulent"
+          ],
+          "answerIndex": 1,
+          "explanation": "In the NACA five-digit designation, the third digit identifies the mean-camber-line type. A 1 denotes the reflexed mean camber line.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "Reflex"
+        },
+        {
+          "question": "A plain flap will increase CLmax by",
+          "choices": [
+            "Increasing the camber of the airfoil",
+            "Increasing angle of attack",
+            "Boundary layer control",
+            "Center of lift movement"
+          ],
+          "answerIndex": 0,
+          "explanation": "Deflecting a plain flap increases the airfoil's effective camber, increasing the maximum lift coefficient.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "Increasing the camber of the airfoil"
+        },
+        {
+          "question": "An elliptical planform wing has a span of 12 m and a chord of 2 m. What is the induced drag coefficient when the lift coefficient is 0.8?",
+          "choices": [
+            "0.034",
+            "0.430",
+            "0.068",
+            "0.860"
+          ],
+          "answerIndex": 0,
+          "explanation": "The wing area is 12 × 2 = 24 m², so AR = 12²/24 = 6. For an elliptical lift distribution, e = 1 and CDi = CL²/(πAR) = 0.64/(6π) ≈ 0.034.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "0.034"
+        },
+        {
+          "question": "NACA 4412 was used in the construction of the airfoil. Determine the chord (in) if the camber equals 9.12 cm.",
+          "choices": [
+            "22.80",
+            "29.92",
+            "89.76",
+            "228.00"
+          ],
+          "answerIndex": 2,
+          "explanation": "A NACA 4412 section has maximum camber equal to 4% of its chord. The chord is 9.12/0.04 = 228 cm = 89.76 in.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "89.76"
+        },
+        {
+          "question": "To be able to predict compressibility effects, you have to determine the",
+          "choices": [
+            "Mach Number",
+            "EAS",
+            "TAS",
+            "IAS"
+          ],
+          "answerIndex": 0,
+          "explanation": "Compressibility effects are organized by Mach number, the ratio of true airspeed to the local speed of sound.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "Mach Number"
+        },
+        {
+          "question": "How will the density and temperature change in a supersonic flow from a position in front of a shock wave to behind it?",
+          "choices": [
+            "Density will decrease, temperature will increase.",
+            "Density will decrease, temperature will decrease.",
+            "Density will increase, temperature will increase.",
+            "Density will increase, temperature will decrease."
+          ],
+          "answerIndex": 2,
+          "explanation": "A normal shock compresses and heats the flow. Static density and temperature are higher downstream of the shock.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "Density will increase, temperature will increase."
+        },
+        {
+          "question": "When the air has passed through a normal shock wave the Mach number is",
+          "choices": [
+            "lower than before but still greater than 1.",
+            "equal to 1.",
+            "higher than before.",
+            "less than 1."
+          ],
+          "answerIndex": 3,
+          "explanation": "For a normal shock with supersonic upstream flow, the downstream Mach number is subsonic.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "less than 1."
+        },
+        {
+          "question": "Two identical aeroplanes A and B are flying horizontal steady turns. Further data are: Condition A W= 1500 kg Bank= 20 deg TAS= 130 kt Condition B W= 1500 kg Bank= 20 deg TAS= 200 kt Which of the following statements is correct?",
+          "choices": [
+            "The load factor for A is larger than the load factor for B.",
+            "The turn radius A is larger than the turn radius B.",
+            "The lift coefficient A is smaller than the lift coefficient B.",
+            "The rate of turn A is larger than the rate of Turn B."
+          ],
+          "answerIndex": 3,
+          "explanation": "The bank angle gives both aircraft the same load factor. Turn radius varies with speed squared, while turn rate varies inversely with speed; aircraft A therefore has the higher turn rate.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "The rate of turn A is larger than the rate of Turn B."
+        },
+        {
+          "question": "A stealth jet is flying at an altitude of 20km at a velocity of 2500 miles/hr. what is the mach angle.",
+          "choices": [
+            "12.40 deg",
+            "15.30 deg",
+            "6.43 deg",
+            "18.20 deg"
+          ],
+          "answerIndex": 1,
+          "explanation": "At 20 km in the standard atmosphere, the speed of sound is about 295 m/s. 2,500 mph is about 1,118 m/s, giving M ≈ 3.79 and a Mach angle μ = sin⁻¹(1/M) ≈ 15.3°.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "15.30 deg"
+        },
+        {
+          "question": "A 5000 lb airplane with wing area of 250 sq ft and power available of 450 hp is at flight sea level standard condition. The airplane drag to lift relation is close to CD = 0.025 + 0.048 CL^2. At flight speed of 180 mph, the airplane drag coefficient is _______.",
+          "choices": [
+            "0.0237",
+            "0.0195",
+            "0.0206",
+            "0.0278"
+          ],
+          "answerIndex": 3,
+          "explanation": "At sea level, q = ½ρV² ≈ 82.8 lb/ft² and CL = W/(qS) ≈ 0.242. Substitution into CD = 0.025 + 0.048CL² gives CD ≈ 0.0278.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "0.0278"
+        },
+        {
+          "question": "For a vortex with constant circulation, how does the radius r of a circular streamline vary with tangential velocity v as distance from the core increases?",
+          "choices": [
+            "Directly Proportional",
+            "Inversely Proportional",
+            "Constant",
+            "Not related"
+          ],
+          "answerIndex": 1,
+          "explanation": "For a vortex with constant circulation, tangential speed is v = Γ/(2πr). As radius increases, tangential velocity decreases in inverse proportion.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "Inversely Proportional"
+        },
+        {
+          "question": "Where on the surface of a typical aerofoil will flow separation normally start at high angles of attack?",
+          "choices": [
+            "upper side leading edge",
+            "lower side trailing edge",
+            "lower side leading edge",
+            "upper side trailing edge"
+          ],
+          "answerIndex": 0,
+          "explanation": "At high angle of attack, the strong adverse pressure gradient near the upper leading edge commonly causes separation to begin there.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "upper side leading edge"
+        },
+        {
+          "question": "The Mach number _____.",
+          "choices": [
+            "is the ratio between the TAS of the aeroplane and the sea level speed of sound",
+            "is the ratio between the IAS of the aeroplane and the local speed of sound",
+            "increases as the local speed of sound decreases",
+            "increases at a given TAS, when the temperature rises"
+          ],
+          "answerIndex": 2,
+          "explanation": "Mach number is TAS divided by local speed of sound. At a fixed TAS, a lower local sound speed means a higher Mach number.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "increases as the local speed of sound decreases"
+        },
+        {
+          "question": "The aircraft total drag in straight and level flight is lowest when the",
+          "choices": [
+            "Induced drag is equal to zero",
+            "Induced drag is lowest",
+            "Parasite drag is equal to the induced drag",
+            "Parasite drag equals twice the induced drag"
+          ],
+          "answerIndex": 2,
+          "explanation": "In the drag polar, total drag reaches its minimum when parasite drag and induced drag are equal.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "Parasite drag is equal to the induced drag"
+        },
+        {
+          "question": "An aircraft has a mass of 7200 kg and a wing span of 12 m. If the wing loading is 1.968 kN/m^2, what is the induced drag when flying at speeds of 200 knots at sea-level?",
+          "choices": [
+            "1500 N",
+            "1600 N",
+            "1700 N",
+            "1800 N"
+          ],
+          "answerIndex": 2,
+          "explanation": "Using W = mg gives S = W/(W/S) ≈ 35.9 m² and AR = b²/S ≈ 4.01. With q ≈ 6,488 Pa, CL ≈ 0.303 and CDi = CL²/(πAR); D = qSCDi ≈ 1,700 N for an ideal elliptical lift distribution.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "1700 N"
+        },
+        {
+          "question": "The true airspeed (TAS) is _____.",
+          "choices": [
+            "higher than the speed of the undisturbed airstream about the aeroplane.",
+            "equal to the IAS, multiplied by the air density at sea level",
+            "lower than the speed of the undisturbed airstream about the aeroplane",
+            "lower than the indicated airspeed (IAS) at ISA conditions and altitudes below sea level"
+          ],
+          "answerIndex": 3,
+          "explanation": "Below sea level in the standard atmosphere, air density is greater than sea-level standard density. At the same indicated speed, TAS is lower than IAS when density is higher.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "lower than the indicated airspeed (IAS) at ISA conditions and altitudes below sea level"
+        },
+        {
+          "question": "If a symmetrical aerofoil is accelerated from subsonic to supersonic speed the centre of lift will move _____.",
+          "choices": [
+            "aft to the trailing edge",
+            "forward to the leading edge",
+            "forward to the mid chord",
+            "aft to the mid chord"
+          ],
+          "answerIndex": 3,
+          "explanation": "In supersonic flow, the aerodynamic center of a thin symmetric airfoil is near the half-chord point, so the center of lift moves aft toward mid-chord.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "aft to the mid chord"
+        },
+        {
+          "question": "To increase the critical Mach number a conventional aerofoil should ______.",
+          "choices": [
+            "have a low thickness to chord ratio",
+            "have a large camber",
+            "be used with a high angle of attack",
+            "have a large leading edge radius"
+          ],
+          "answerIndex": 0,
+          "explanation": "A lower thickness-to-chord ratio reduces the peak local acceleration over a conventional airfoil and raises its critical Mach number.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "have a low thickness to chord ratio"
+        },
+        {
+          "question": "Given the ratio of dynamic pressure and static pressure to be 0.135, calculate the Mach number. Assume air is the medium.",
+          "choices": [
+            "0.339",
+            "0.439",
+            "0.539",
+            "0.639"
+          ],
+          "answerIndex": 1,
+          "explanation": "For air, q/p = (γ/2)M² with γ = 1.4. Thus M = √(2 × 0.135/1.4) ≈ 0.439.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "0.439"
+        },
+        {
+          "question": "What is μ (slugs/ft-s) at the an altitude where the speed of sound equals 692.662 mph?",
+          "choices": [
+            "3.04 x 10^-7",
+            "3.24 x 10^-7",
+            "3.64 x 10^-7",
+            "3.84 x 10^-7"
+          ],
+          "answerIndex": 1,
+          "explanation": "The specified sound speed corresponds to about 239 K. Applying Sutherland's relation for air gives dynamic viscosity close to 3.24 × 10⁻⁷ slug/(ft·s).",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "3.24 x 10^-7"
+        },
+        {
+          "question": "Shock stall is",
+          "choices": [
+            "separation of the flow at high angles of attack and at high Mach Numbers.",
+            "separation of the flow at the trailing edge of the wing at high Mach Numbers.",
+            "separation of the boundary layer behind the shock wave.",
+            "separation of the flow behind the bow wave."
+          ],
+          "answerIndex": 2,
+          "explanation": "A shock causes a rapid pressure rise and adverse pressure gradient. The boundary layer can separate immediately downstream of the shock, producing shock stall.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "separation of the boundary layer behind the shock wave."
+        },
+        {
+          "question": "For a constant-speed flow redirected by a curved vane, what happens to the vertical component of force as the deflection angle from the horizontal increases, with all other parameters fixed?",
+          "choices": [
+            "Increases",
+            "Decreases",
+            "No relationship",
+            "Remains the same"
+          ],
+          "answerIndex": 0,
+          "explanation": "With fixed flow speed and mass flow, the vertical momentum change grows with the vertical component of the redirected velocity. A larger deflection angle from the horizontal increases that component.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "Increases"
+        },
+        {
+          "question": "The lift coefficient of an aircraft in steady horizontal flight is 0.4. Increase of angle of attack of 1 degree will increase the CL by 0.09. A vertical up gust instantly changes the angle of attack by 5 degrees. The load factor will be",
+          "choices": [
+            "2.13",
+            "1.09",
+            "2.00",
+            "3.19"
+          ],
+          "answerIndex": 0,
+          "explanation": "The gust raises CL by 5 × 0.09 = 0.45, so the new CL is 0.85. Lift, and therefore load factor, scales with CL here: n = 0.85/0.4 = 2.125 ≈ 2.13.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "2.13"
+        },
+        {
+          "question": "An aircraft has a stall speed of 100kt at a load factor n=1. In a turn with a load factor of n=2, the stall speed is",
+          "choices": [
+            "70 kt",
+            "200 kt",
+            "282 kt",
+            "141 kt"
+          ],
+          "answerIndex": 3,
+          "explanation": "Stall speed in a coordinated turn scales with the square root of load factor. Vs = 100√2 ≈ 141 kt.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "141 kt"
+        },
+        {
+          "question": "It is the point in a fluid stream where the diameter of the stream is the least and fluid velocity is at its maximum.",
+          "choices": [
+            "Converging-Diverging",
+            "Stagnation",
+            "Vena Contracta",
+            "Walls"
+          ],
+          "answerIndex": 2,
+          "explanation": "The vena contracta is the narrowest section of a contracted stream, where the flow speed is greatest.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "Vena Contracta"
+        },
+        {
+          "question": "Given g = 10m/s^2, an aircraft is in a steady turn, at a constant TAS of 300kt, and a bank angle of 45 degrees. Its turning radius is",
+          "choices": [
+            "2381 m",
+            "3254 m",
+            "4876 m",
+            "None of the above"
+          ],
+          "answerIndex": 0,
+          "explanation": "For a steady level turn, r = V²/(g tan φ). With V = 300 kt = 154.3 m/s, g = 10 m/s², and φ = 45°, r ≈ 2,381 m.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "2381 m"
+        },
+        {
+          "question": "This gas law states that pressure and volume are inversely related when the temperature is constant.",
+          "choices": [
+            "Avogadro’s",
+            "Boltzmann’s",
+            "Boyle’s",
+            "Charles"
+          ],
+          "answerIndex": 2,
+          "explanation": "Boyle's law states that pressure and volume vary inversely for a fixed amount of gas at constant temperature.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "Boyle’s"
+        },
+        {
+          "question": "The span-wise flow is caused by the difference between the air pressure on top and beneath the wing and its direction of movement goes from ______.",
+          "choices": [
+            "beneath to the top of the wing via the trailing edge",
+            "the top to beneath the wing via the leading edge",
+            "beneath to the top of the wing via the wing tip",
+            "the top to beneath the wing via the wing's trailing edge"
+          ],
+          "answerIndex": 2,
+          "explanation": "Pressure is higher below the wing than above it. The resulting crossflow moves from the lower surface around the wingtip toward the upper surface.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "beneath to the top of the wing via the wing tip"
+        },
+        {
+          "question": "When the Mach number is slowly increased in straight and level flight the first shockwaves will occur",
+          "choices": [
+            "on the underside of the wing.",
+            "somewhere on the fin.",
+            "Somewhere on the horizontal tail.",
+            "On the upper surface of the wing."
+          ],
+          "answerIndex": 3,
+          "explanation": "As Mach number approaches critical, local flow first becomes supersonic over the upper wing surface; the terminating shock first appears there. The exact spanwise location depends on the wing design.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "On the upper surface of the wing."
+        },
+        {
+          "question": "Which among the statements about Density Altitude is incorrect?",
+          "choices": [
+            "A high density altitude will decrease the power produced by an engine because less oxygen is available for combustion",
+            "A high density altitude requires a higher true airspeed for takeoff and landing and will therefore increase takeoff and landing distances",
+            "Density altitude is found by correcting pressure altitude for temperature and humidity deviations from the standard atmosphere",
+            "None, all statements above are correct"
+          ],
+          "answerIndex": 2,
+          "explanation": "Density altitude is pressure altitude corrected for nonstandard temperature. Humidity affects actual air density, but it is not part of that definition, making statement C incorrect.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "Density altitude is found by correcting pressure altitude for temperature and humidity deviations from the standard atmosphere"
+        },
+        {
+          "question": "VA is",
+          "choices": [
+            "The maximum speed at which rolls are allowed.",
+            "The speed that should not be exceeded in the climb.",
+            "The maximum speed for full, abrupt control deflections without exceeding the aircraft's limit load factor.",
+            "The speed at which a heavy transport aircraft should fly in turbulence."
+          ],
+          "answerIndex": 2,
+          "explanation": "Maneuvering speed is the maximum speed at which full, abrupt control deflections can be applied without exceeding the aircraft's limit load factor.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "The maximum speed for full, abrupt control deflections without exceeding the aircraft's limit load factor."
+        },
+        {
+          "question": "What is the CLmax of an aircraft with a wing loading of 700 Newtons per square meter and stalling velocity of 115 miles per hour? Assumes standard sea level conditions.",
+          "choices": [
+            "0.216",
+            "0.233",
+            "0.433",
+            "0.465"
+          ],
+          "answerIndex": 2,
+          "explanation": "At the stall, W/S = ½ρVs²CLmax. With Vs = 115 mph = 51.44 m/s, CLmax = 2(700)/(1.225 × 51.44²) ≈ 0.433.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "0.433"
+        },
+        {
+          "question": "A body is placed in a certain airstream. The density of the airstream decreases to half of the original value. The aerodynamic drag will decrease with a factor ______.",
+          "choices": [
+            "8.0",
+            "1.4",
+            "2.0",
+            "4.0"
+          ],
+          "answerIndex": 2,
+          "explanation": "At fixed speed, shape, and reference area, drag is proportional to density. Halving density halves drag, a reduction by a factor of 2.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "2.0"
+        },
+        {
+          "question": "By what percent does the lift increase in a steady level turn at 45 degrees angle of bank, compared to straight and level flight?",
+          "choices": [
+            "41%",
+            "19%",
+            "31%",
+            "52%"
+          ],
+          "answerIndex": 0,
+          "explanation": "In a level turn at 45°, n = 1/cos45° ≈ 1.414. Lift is therefore about 41% greater than in straight-and-level flight.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "41%"
+        },
+        {
+          "question": "Consider a rocket burning hydrogen and oxygen; the combustion chamber pressure and temperature are 25 atm and 3,517 Kelvin, respectively. The area of the rocket nozzle throat is 0.1 square meters. The area of the exit is designed so that the exit pressure exactly equals ambient pressure at a standard altitude of 30 km. For the gas mixture assume that k = 1.22 and the molecular weight M = 16. At a standard altitude of 30 km, calculate exit Mach number.",
+          "choices": [
+            "5.21",
+            "1.00",
+            "4.35",
+            "3.56"
+          ],
+          "answerIndex": 0,
+          "explanation": "At 30 km standard altitude, ambient pressure is about 1.2 kPa. Using the isentropic pressure relation with chamber pressure 25 atm and γ = 1.22 gives an exit Mach number near 5.21.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "5.21"
+        },
+        {
+          "question": "In internal pipe flow, what type of flow is generally expected when the Reynolds number exceeds 4,000?",
+          "choices": [
+            "Laminar",
+            "Transient",
+            "Turbulent",
+            "Uniform"
+          ],
+          "answerIndex": 2,
+          "explanation": "For internal pipe flow, Reynolds numbers above about 4,000 are generally in the turbulent regime.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "Turbulent"
+        },
+        {
+          "question": "In supersonic flight aerofoil pressure distribution is",
+          "choices": [
+            "rectangular.",
+            "irregular.",
+            "triangular.",
+            "the same as in subsonic flight."
+          ],
+          "answerIndex": 0,
+          "explanation": "In the idealized thin-airfoil supersonic model, pressure is approximately constant over each chordwise panel, producing a rectangular or step-like distribution.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "rectangular."
+        },
+        {
+          "question": "The flight Mach number is 0.8 and the TAS is 400 kts. What is the speed of sound?",
+          "choices": [
+            "500 kts",
+            "320 kts",
+            "480 kts",
+            "600 kts"
+          ],
+          "answerIndex": 0,
+          "explanation": "Mach number M = V/a, so the speed of sound is a = 400/0.8 = 500 kt.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "500 kts"
+        },
+        {
+          "question": "Just above the critical Mach number the first evidence of a shock wave will appear at the",
+          "choices": [
+            "upper side of the wing.",
+            "lower side of the wing.",
+            "leading edge of the wing.",
+            "trailing edge of the wing."
+          ],
+          "answerIndex": 0,
+          "explanation": "Just above critical Mach, a local supersonic region forms on the upper surface and terminates in a shock wave there.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "upper side of the wing."
+        },
+        {
+          "question": "What force is required to push a flat plate, 3 in by 2 in at a speed of 35 fps in a direction perpendicular to its surface?",
+          "choices": [
+            "22.36 lbs",
+            "11.18 lbs",
+            "1.55 lbs",
+            "0.078 lbs"
+          ],
+          "answerIndex": 3,
+          "explanation": "For a flat plate normal to the flow, use CD ≈ 1.28. With S = 6 in² = 0.0417 ft², V = 35 ft/s, and sea-level density 0.002377 slug/ft³, D = ½ρV²CDS ≈ 0.078 lb.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "0.078 lbs"
+        },
+        {
+          "question": "An aircraft is cruising at FL110. What is the ambient temperature (K)?",
+          "choices": [
+            "266.37",
+            "390.06",
+            "479.46",
+            "557.92"
+          ],
+          "answerIndex": 0,
+          "explanation": "At 11,000 ft in the standard troposphere, T = 288.15 − 0.0065(3,352.8) ≈ 266.4 K.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "266.37"
+        },
+        {
+          "question": "An aircraft model is placed in a certain wind tunnel airstream. The density of the airstream decreases to half of the original value. The aerodynamic drag will decrease with a factor",
+          "choices": [
+            "8.0",
+            "1.4",
+            "2.0",
+            "4.0"
+          ],
+          "answerIndex": 2,
+          "explanation": "At fixed speed, shape, and reference area, drag is proportional to density. Halving density halves the drag, so the reduction factor is 2.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "2.0"
+        },
+        {
+          "question": "An aeroplane has a stall speed of 78 KCAS at its gross weight of 6,850 lbs. What is the stall speed when the weight is 5,000 lbs?",
+          "choices": [
+            "57 KCAS",
+            "67 KCAS",
+            "91 KCAS",
+            "78 KCAS"
+          ],
+          "answerIndex": 1,
+          "explanation": "For the same configuration, stall speed varies with √weight. Vs = 78√(5,000/6,850) ≈ 66.6 KCAS, or 67 KCAS.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "67 KCAS"
+        },
+        {
+          "question": "Assuming an ideal elliptical lift distribution, what is the induced drag at 100 knots of a monoplane of mass 2,400 kg and wingspan 16 m?",
+          "choices": [
+            "632.8 N",
+            "425.9 N",
+            "632.6 lbf",
+            "425.9 lbf"
+          ],
+          "answerIndex": 1,
+          "explanation": "For an ideal elliptical lift distribution, Di = W²/(qπb²). With W = 2,400 × 9.81 N, V = 100 kt, sea-level density, and b = 16 m, Di ≈ 425.9 N.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "425.9 N"
+        },
+        {
+          "question": "Consider an oblique shock wave with β = 35 deg and pressure ratio of P2/P1=3. What is the upstream mach number?",
+          "choices": [
+            "2.87",
+            "3.21",
+            "4.10",
+            "2.42"
+          ],
+          "answerIndex": 0,
+          "explanation": "The pressure ratio gives the upstream normal Mach component Mn1 ≈ 1.647. Since Mn1 = M1 sinβ, M1 = 1.647/sin35° ≈ 2.87.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "2.87"
+        },
+        {
+          "question": "Which among the following statements about symmetrical and unsymmetrical airfoils is incorrect?",
+          "choices": [
+            "A symmetric airfoil at zero angle of attack produces identical velocity increases and static pressure decreases on both the upper and lower surfaces.",
+            "An unsymmetrical airfoil is able to produce an uneven pressure distribution even at zero AOA.",
+            "The first two digits of a 4-digit airfoil will give information whether an airfoil is unsymmetrical or not.",
+            "Because of positive camber, the area in the streamtube above the wing is larger than area in the streamtube below the wing and the airflow velocity above the wing is greater than the velocity below the wing."
+          ],
+          "answerIndex": 3,
+          "explanation": "A nonzero first digit in a NACA four-digit designation indicates camber, and the second digit locates its maximum. Statement D is incorrect: a larger upper streamtube area alone would imply lower, not higher, speed by continuity, and equal transit time is not a valid lift explanation.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "Because of positive camber, the area in the streamtube above the wing is larger than area in the streamtube below the wing and the airflow velocity above the wing is greater than the velocity below the wing."
+        },
+        {
+          "question": "In a two-dimensional flow pattern, where the streamlines converge the static pressure will _____.",
+          "choices": [
+            "not change",
+            "increase initially, then decrease",
+            "decrease",
+            "increase"
+          ],
+          "answerIndex": 2,
+          "explanation": "Converging streamlines indicate increasing flow speed. For steady incompressible flow, Bernoulli's relation then gives a lower static pressure.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "decrease"
+        },
+        {
+          "question": "The location of the center of pressure of a positive cambered wing at increasing angle of attack will",
+          "choices": [
+            "Shift aft",
+            "Shift in spanwise direction",
+            "Shift forward",
+            "Not shift"
+          ],
+          "answerIndex": 2,
+          "explanation": "For a positively cambered airfoil below stall, increasing angle of attack generally moves the center of pressure forward toward the quarter-chord region.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "Shift forward"
+        },
+        {
+          "question": "How does the exterior view of an aircraft change, when the trim is used during a speed decrease?",
+          "choices": [
+            "Elevator deflected downwards by means of a trimmable horizontal stabilizer",
+            "Nothing changes in exterior view",
+            "The elevator is deflected further downwards by means of an upwards deflected trimtab",
+            "The elevator is deflected upwards by means of a downwards deflected trimtab"
+          ],
+          "answerIndex": 3,
+          "explanation": "A speed decrease requires increased lift and a nose-up trim change. A downward-deflected trim tab pushes the elevator upward, producing that nose-up trim effect.",
+          "questionType": "multiple_choice",
+          "explanationImages": [],
+          "questionImages": [],
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0,
+          "answerText": "The elevator is deflected upwards by means of a downwards deflected trimtab"
         }
       ]
     }

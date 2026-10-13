@@ -1,4 +1,4 @@
-import { initProgressPage } from "./shared.js?v=attempt-history-canvas-fill-20261006";
+import { initProgressPage } from "./shared.js?v=aero-mock-exam-20261013";
 
 document.addEventListener("DOMContentLoaded", () => {
     initProgressPage();

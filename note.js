@@ -1,4 +1,4 @@
-import { initModePage } from "./shared.js?v=math2-word-problems-20261005";
+import { initModePage } from "./shared.js?v=aero-mock-exam-20261013";
 
 document.addEventListener("DOMContentLoaded", () => {
     initModePage("note");

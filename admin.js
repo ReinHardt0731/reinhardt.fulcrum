@@ -18,7 +18,7 @@ import {
     hydrateMarkdownPreview,
     renderMarkdownPreview,
     renderForceSystemModelCard
-} from "./shared.js?v=math2-word-problems-20261005";
+} from "./shared.js?v=aero-mock-exam-20261013";
 import { initAdminShell } from "./admin-shell.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
