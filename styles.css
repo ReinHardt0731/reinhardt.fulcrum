@@ -10362,6 +10362,10 @@ body.mode-learn .app-shell {
 }
 
 body.mode-learn .study-nav-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 8px;
     position: sticky;
     top: 12px;
     z-index: 25;
@@ -10504,6 +10508,11 @@ body.drawer-collapsed.exam-map-collapsed.mode-learn .app-shell > .exam-question-
     margin: 0;
 }
 
+body.mode-learn .study-nav-shell > .pomodoro-widget {
+    grid-column: 2;
+    grid-row: 1;
+}
+
 .pomodoro-icon-control {
     display: inline-grid;
     flex: 0 0 36px;
@@ -10584,37 +10593,74 @@ body.mode-learn .pomodoro-widget .pomodoro-actions {
         grid-row: 2;
     }
 
+    body.mode-learn .study-nav-shell {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+    }
+
     .study-nav-line {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         gap: 5px;
+        padding: 4px;
+        border: 1px solid rgba(175, 205, 255, .14);
+        border-radius: 16px;
+        background: rgba(8, 17, 31, .96);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, .14);
     }
 
     body.mode-learn .study-nav-line > .mode-switch-row {
         flex: 1 1 0;
+        width: auto;
         flex-wrap: nowrap;
         gap: 6px;
         overflow-x: auto;
         overflow-y: hidden;
         overscroll-behavior-x: contain;
-        scrollbar-width: thin;
+        scrollbar-width: none;
         -webkit-overflow-scrolling: touch;
     }
 
+    body.mode-learn .study-nav-line > .mode-switch-row::-webkit-scrollbar { display: none; }
+
     body.mode-learn .study-nav-line > .mode-switch-row .mode-button {
-        flex: 0 0 auto;
-        min-width: max-content;
+        flex: 1 0 42px;
+        width: 42px;
+        min-width: 42px;
+        height: 42px;
+        padding: 0;
+        justify-content: center;
         white-space: nowrap;
     }
 
-    body.mode-learn .study-nav-line > .pomodoro-widget {
-        min-width: 0;
-        margin-left: auto;
-        padding: 5px 7px;
-        gap: 6px;
+    body.mode-learn .study-nav-line > .mode-switch-row .mode-button > span {
+        display: none;
     }
 
-    body.mode-learn .study-nav-line > .pomodoro-widget .pomodoro-time { font-size: 1.05rem; }
-    body.mode-learn .study-nav-line > .pomodoro-widget .pomodoro-phase { font-size: .58rem; }
+    body.mode-learn .study-nav-shell > .pomodoro-widget {
+        grid-column: 1;
+        grid-row: 2;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 0;
+        margin: 0;
+        padding: 6px 9px;
+        gap: 10px;
+    }
+
+    body.mode-learn .study-nav-shell > .pomodoro-widget .pomodoro-actions {
+        margin-left: auto;
+    }
+
+    body.mode-learn .study-nav-shell > .pomodoro-widget .pomodoro-time { font-size: 1.05rem; }
+    body.mode-learn .study-nav-shell > .pomodoro-widget .pomodoro-phase { font-size: .58rem; }
 
     body.mode-learn:not(.drawer-open) .study-nav-drawer-toggle svg {
         transform: rotate(90deg);
@@ -10626,25 +10672,27 @@ body.mode-learn .pomodoro-widget .pomodoro-actions {
 }
 
 @media (max-width: 620px) {
-    body.mode-learn .study-nav-shell { padding: 4px; }
-
     body.mode-learn .study-nav-line > .mode-switch-row .mode-button {
         gap: 4px;
-        padding: 0 7px;
+        padding: 0;
         font-size: .82rem;
     }
 
-    body.mode-learn .study-nav-line > .pomodoro-widget .pomodoro-icon-control {
-        flex-basis: 32px;
-        width: 32px;
-        min-width: 32px;
-        height: 32px;
-        min-height: 32px;
+    body.mode-learn .study-nav-shell > .pomodoro-widget .pomodoro-icon-control {
+        flex-basis: 40px;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
     }
 
-    body.mode-learn .study-nav-line > .pomodoro-widget .pomodoro-control-icon {
-        width: 16px;
-        height: 16px;
+    body.mode-learn .study-nav-shell > .pomodoro-widget .pomodoro-reset {
+        display: inline-grid;
+    }
+
+    body.mode-learn .study-nav-shell > .pomodoro-widget .pomodoro-control-icon {
+        width: 18px;
+        height: 18px;
     }
 }
 
