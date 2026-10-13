@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 20
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -54,6 +56,32 @@ jobs:
             echo "ERROR: public/index.html missing — aborting upload"
             exit 1
           fi
+
+      - name: Generate update log from Git history
+        run: |
+          python3 - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+
+          result = subprocess.run(
+              ["git", "log", "-10", "--date=short", "--format=%h%x09%cs%x09%s"],
+              check=True,
+              capture_output=True,
+              text=True,
+              encoding="utf-8",
+          )
+          entries = []
+          for line in result.stdout.splitlines():
+              commit_hash, date, message = line.split("\t", 2)
+              entries.append({"date": date, "hash": commit_hash, "message": message})
+
+          Path("public/updates.json").write_text(
+              json.dumps({"entries": entries}, ensure_ascii=False, indent=2) + "\n",
+              encoding="utf-8",
+          )
+          print(f"Generated update log with {len(entries)} commits.")
+          PY
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
