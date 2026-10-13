@@ -30837,13 +30837,13 @@
           "questionType": "multiple_choice",
           "choices": [
             "the centre of pressure moves aft.",
-            "the lift coefficient and the drag coefficient increase.",
+            "the lift coefficient remains approximately constant while the drag coefficient increases.",
             "the stall speed increases.",
             "the total boundary layer becomes laminar."
           ],
           "answerIndex": 1,
-          "answerText": "the lift coefficient and the drag coefficient increase.",
-          "explanation": "At constant IAS, dynamic pressure is effectively constant. With the aircraft maintaining straight and level flight at the same weight, lift must remain equal to weight. Extending the flaps changes the wing's lift characteristics and increases drag; the resulting aerodynamic coefficients change accordingly. The source question identifies increased lift and drag coefficients as the correct relationship.\n\nWhy the other choices are incorrect:\n• Centre of pressure moves aft → This is not the defining aerodynamic consequence tested here.\n• Stall speed increases → Flap extension normally reduces stall speed by increasing CLmax.\n• Boundary layer becomes laminar → Flap deployment does not convert the entire boundary layer to laminar flow.\n\nDifferentiate Similar Concepts:\n• Flaps → Increase CLmax and generally increase drag.\n• Spoilers → Reduce lift and increase drag.\n\n💡 Memory Hook:\n$Flaps = more$ lift capability + more drag.\n\n🎯 Board Tip:\nAt constant IAS and weight, pay close attention to which aerodynamic quantity is actually changing rather than assuming lift itself changes.",
+          "answerText": "the lift coefficient remains approximately constant while the drag coefficient increases.",
+          "explanation": "In steady, straight-and-level flight at the same weight, lift remains equal to weight. At constant IAS, dynamic pressure is approximately constant, so the lift coefficient remains approximately constant. Extending flaps increases drag, so the drag coefficient increases.\n\nWhy the other choices are incorrect:\n• The centre of pressure does not provide a general rule that it must move aft for every flap design.\n• Stall speed normally decreases when flaps increase maximum lift coefficient.\n• Flap extension does not make the entire boundary layer laminar; separation and turbulent flow remain important.\n\nDifferentiate Similar Concepts:\n• Lift in steady level flight → equals aircraft weight.\n• Lift coefficient → approximately unchanged here because weight and dynamic pressure are unchanged.\n• Drag coefficient → increases with flap extension.\n\n💡 Memory Hook:\nSame weight + same IAS + level flight → same lift; flaps add drag.\n\n🎯 Board Tip:\nDistinguish a change in lift capability from the lift actually required in steady level flight.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -32219,41 +32219,17 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "Which of the following wing planforms gives the highest local profile lift coefficient at the wingroot ?",
+          "question": "Vortex generators fitted to the upper surface of a wing generally:",
           "questionType": "multiple_choice",
           "choices": [
-            "Rectangular.",
-            "Elliptical.",
-            "Tapered.",
-            "Positive angle of sweep."
+            "increase profile drag while helping delay flow separation.",
+            "decrease profile drag while helping delay flow separation.",
+            "increase critical Mach number without adding drag.",
+            "decrease critical Mach number without changing boundary-layer behaviour."
           ],
-          "answerIndex": 2,
-          "answerText": "Tapered.",
-          "explanation": "For a tapered wing, the lift distribution and local aerodynamic loading vary along the span. Compared with a rectangular or elliptical planform, a tapered wing can produce a higher local profile lift coefficient toward the wing root under the conditions described by the source question.\n\nWhy the other choices are incorrect:\n• Rectangular → Has a more uniform geometric chord distribution and does not produce the highest local profile lift coefficient at the root in this comparison.\n• Elliptical → Produces the idealized elliptical lift distribution for minimum induced drag, but this does not mean it has the highest local profile lift coefficient at the root.\n• Positive angle of sweep → Sweep affects the effective normal flow component and compressibility characteristics but is not the planform identified by the source answer.\n\nDifferentiate Similar Concepts:\n• Rectangular wing → Simple construction and relatively predictable stall behaviour.\n• Elliptical wing → Theoretical minimum induced drag for an ideal lift distribution.\n• Tapered wing → Chord decreases toward the tip and changes the spanwise loading.\n• Swept wing → Wing is angled rearward relative to the lateral axis.\n\n💡 Memory Hook:\nTaper changes the spanwise loading strongly toward the root.\n\n🎯 Board Tip:\nDo not equate **elliptical planform** with every aerodynamic optimum. Elliptical wings are famous for induced-drag efficiency, but the question here asks specifically about local profile lift coefficient at the root.",
-          "explanationImages": [],
-          "questionImages": [],
-          "tags": [
-            "Wing Planform",
-            "Lift Distribution",
-            "Profile Lift Coefficient",
-            "Tapered Wing",
-            "Application"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Vortex generators on the upper side of the wing:",
-          "questionType": "multiple_choice",
-          "choices": [
-            "increase critical Mach Number.",
-            "decrease critical Mach Number.",
-            "decrease wave drag.",
-            "increase wave drag."
-          ],
-          "answerIndex": 3,
-          "answerText": "increase wave drag.",
-          "explanation": "Vortex generators protrude into the airflow and create small vortices that mix higher-energy air from outside the boundary layer into the boundary layer. Their main purpose is to delay flow separation and improve control effectiveness, but this additional mixing and surface disturbance also produces additional drag. In the high-speed regime, the source identifies this effect as an increase in wave drag.\n\nWhy the other choices are incorrect:\n• Increase critical Mach Number → Vortex generators are not used primarily to increase critical Mach number.\n• Decrease critical Mach Number → Although their aerodynamic disturbance can influence compressible flow, the source identifies increased wave drag as the correct effect.\n• Decrease wave drag → This is opposite to the effect stated by the source question.\n\nDifferentiate Similar Concepts:\n• Vortex generators → Energize the boundary layer and delay separation.\n• Boundary-layer fence → Controls spanwise flow, especially on swept wings.\n• Winglet → Primarily reduces induced drag.\n\n💡 Memory Hook:\nVortex generators improve separation resistance, but they add drag.\n\n🎯 Board Tip:\nDo not assume that a device improving stall characteristics automatically reduces every type of drag.",
+          "answerIndex": 0,
+          "answerText": "increase profile drag while helping delay flow separation.",
+          "explanation": "Vortex generators mix higher-energy air into the boundary layer, helping it resist separation. Their protrusion and the extra mixing also add profile (parasite) drag. The drag increase should not be described categorically as wave drag.\n\nWhy the other choices are incorrect:\n• They do not generally reduce total profile drag.\n• They add drag rather than increasing critical Mach number without penalty.\n• They affect boundary-layer behaviour by design.\n\nDifferentiate Similar Concepts:\n• Vortex generators → energize the boundary layer and delay separation.\n• Trade-off → improved flow attachment with added profile drag.\n\n💡 Memory Hook:\nVortex generators help flow stay attached, and they add drag.\n\n🎯 Board Tip:\nSeparate a general profile-drag penalty from wave drag, which is tied to compressibility effects.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -32308,30 +32284,6 @@
             "Stall Protection",
             "Deep Stall",
             "Flight Controls"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Stick pushers must be installed in aeroplanes with dangerous stall characteristics. Dangerous stall characteristics include:",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Excessive wing drop and deep stall.",
-            "Pitch down and yaw.",
-            "Pitch down and minor wing drop.",
-            "Pitch down and increase in speed."
-          ],
-          "answerIndex": 0,
-          "answerText": "Excessive wing drop and deep stall.",
-          "explanation": "A stick pusher is a stall-protection system designed to provide an automatic nose-down input when the aircraft approaches a dangerous stall condition. Excessive wing drop and deep stall are dangerous stall characteristics because they can make normal stall recovery difficult or ineffective.\n\nWhy the other choices are incorrect:\n• Pitch down and yaw → A pitch-down tendency generally assists stall recovery rather than representing a dangerous stall characteristic.\n• Pitch down and minor wing drop → Minor wing drop is not the severe stall behaviour described by the question.\n• Pitch down and increase in speed → These characteristics indicate recovery rather than a dangerous stalled condition.\n\nDifferentiate Similar Concepts:\n• Stick shaker → Warns the pilot of an approaching stall.\n• Stick pusher → Automatically applies a nose-down input to prevent or recover from a dangerous stall.\n• Deep stall → A severe stall condition in which the tail may become immersed in the wing wake.\n\n💡 Memory Hook:\nDangerous $stall = severe$ wing drop or deep stall → stick pusher.\n\n🎯 Board Tip:\nDo not confuse a stick pusher with a stick shaker. The shaker **warns**; the pusher **acts**.",
-          "explanationImages": [],
-          "questionImages": [],
-          "tags": [
-            "Stick Pusher",
-            "Stall Protection",
-            "Deep Stall",
-            "Flight Controls",
-            "Application"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -34795,7 +34747,7 @@
             "Turn indicator neutral, slip indicator neutral."
           ],
           "answerIndex": 0,
-          "answerText": "turn indicator neutral, slip indicator left of neutral.",
+          "answerText": "Turn indicator neutral, slip indicator left of neutral.",
           "explanation": "After a left-engine failure in a twin-engine aircraft, maintaining straight and level flight requires compensating for the asymmetric thrust. With the wings kept level, the aircraft can be coordinated using rudder to oppose the yawing tendency. Once the aircraft is trimmed and stabilized in straight flight, the turn indicator can be neutral while the slip indicator remains displaced toward the failed-engine side according to the source's expected indication.\n\nWhy the other choices are incorrect:\n• Both turn and slip indicators left → A coordinated straight flight condition does not require a persistent turn indication.\n• Turn indicator left and slip neutral → This would represent a different flight condition involving a turn rather than straight flight with wings level.\n• Both neutral → The asymmetric engine-out condition produces the indicated slip condition.\n\nDifferentiate Similar Concepts:\n• Turn indicator → Indicates rate of turn.\n• Slip indicator → Indicates lateral coordination.\n• Engine failure → Creates asymmetric thrust and yawing tendency.\n\n💡 Memory Hook:\nWings level + engine failure = **rudder compensation, no turn**.\n\n🎯 Board Tip:\nSeparate the two instruments: **turn $indicator = turning$ motion; slip $indicator = coordination/slip$**.",
           "explanationImages": [],
           "questionImages": [],
@@ -35237,30 +35189,6 @@
             "Limit Load Factor",
             "V-n Diagram",
             "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "The stalling speed in IAS will change according to the following factors:",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Will increase during turn, increased mass and an aft c.g. location",
-            "Will decrease with a forward c.g. location, lower altitude and due to the slip stream from a propeller on an engine located forward of the wing",
-            "Will increase with increased load factor, icing conditions and more flaps",
-            "May increase during turbulence and will always increase when banking in a turn"
-          ],
-          "answerIndex": 3,
-          "answerText": "May increase during turbulence and will always increase when banking in a turn",
-          "explanation": "Stall speed in IAS can increase when the aircraft experiences an increased load factor, such as during turbulence or a banked level turn. In a coordinated level turn, increasing bank angle increases load factor, which increases stall speed.\n\nWhy the other choices are incorrect:\n• Increased mass and aft CG → Increased mass can increase stall speed, but an aft CG generally reduces the required tail-down force and tends to reduce stall speed rather than increase it.\n• Forward CG, lower altitude and propeller slipstream → The combination does not correctly represent the general factors affecting stall speed. A forward CG can increase stall speed, while propeller slipstream can locally reduce the stall speed of the affected wing region.\n• Increased load factor, icing and more flaps → Increased load factor and icing can increase stall speed, but flap extension normally decreases stall speed by increasing CLmax.\n\nDifferentiate Similar Concepts:\n• Load factor ↑ → stall speed ↑.\n• Weight ↑ → stall speed ↑.\n• Flaps extended → stall speed ↓.\n• Bank angle ↑ → load factor ↑ → stall speed ↑.\n• Icing → stall speed can increase.\n\n💡 Memory Hook:\n**More $g = more$ stall speed.**\n\n🎯 Board Tip:\nA banked level turn increases load factor, so stall speed increases by the square root of the load factor.",
-          "explanationImages": [],
-          "questionImages": [],
-          "tags": [
-            "Stall Speed",
-            "Load Factor",
-            "Bank Angle",
-            "Icing",
-            "Application"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -36312,9 +36240,9 @@
             "(i) $1/16$ (ii) $1/4$",
             "(i) $1/4$ (ii) 2"
           ],
-          "answerIndex": 0,
-          "answerText": "(i) $1/4$ (ii) $1/4$",
-          "explanation": "At constant load factor and aircraft configuration in level flight, doubling airspeed reduces the required lift coefficient by a factor of four because CL is inversely proportional to $V^{2}$.\n\nSince induced drag coefficient is proportional to $C_L^{2}$:\n\n$C_{D_i} \\propto   C_L^{2}$\n\nreducing CL to one-quarter reduces CDi to one-sixteenth.\n\nHowever, induced drag itself is proportional to q × CDi, where q increases by a factor of four when speed doubles. Therefore:\n\nDᵢ ∝ $V^{2}$ × (1/$V^{4}$) = 1/$V^{2}$.\n\nDoubling speed therefore reduces induced drag to one-quarter.\n\nThe mathematically consistent result is:\n• CDi → $1/16$\n• Di → $1/4$\n\n⚠️ The answer choices reproduced in the Volare source do not contain this exact pair. The source lists the four options as $1/2$ & $1/16$, 4 & $1/2$, $1/16$ & $1/4$, and $1/4$ & 2. Therefore, this item appears to contain a source error.\n\n🎯 Board Tip:\nFor constant weight/configuration: **V ×2 → CL ×$1/4$ → CDi ×$1/16$ → Di ×$1/4$**.",
+          "answerIndex": 2,
+          "answerText": "(i) $1/16$ (ii) $1/4$",
+          "explanation": "At constant load factor and aircraft configuration in level flight, doubling airspeed reduces the required lift coefficient by a factor of four because CL is inversely proportional to $V^{2}$.\n\nSince induced drag coefficient is proportional to $C_L^{2}$:\n\n$C_{D_i} \\propto   C_L^{2}$\n\nreducing CL to one-quarter reduces CDi to one-sixteenth.\n\nHowever, induced drag itself is proportional to q × CDi, where q increases by a factor of four when speed doubles. Therefore:\n\nDᵢ ∝ $V^{2}$ × (1/$V^{4}$) = 1/$V^{2}$.\n\nDoubling speed therefore reduces induced drag to one-quarter.\n\nThe mathematically consistent result is:\n• CDi → $1/16$\n• Di → $1/4$\n\nThe matching answer is option C: $1/16$ for induced drag coefficient and $1/4$ for induced drag.\n\n🎯 Board Tip:\nFor constant weight/configuration: **V ×2 → CL ×$1/4$ → CDi ×$1/16$ → Di ×$1/4$**.",
           "explanationImages": [],
           "questionImages": [],
           "tags": [
@@ -37179,28 +37107,6 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "To be able to predict compressibility effects you have to determine the:",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Mach Number.",
-            "EAS.",
-            "TAS.",
-            "IAS."
-          ],
-          "answerIndex": 0,
-          "answerText": "Mach Number.",
-          "explanation": "The Mach number is the ratio of the aircraft's true airspeed to the local speed of sound. It is the key parameter used to assess compressibility effects because compressibility becomes increasingly important as the aircraft approaches the speed of sound.\n\nWhy the other choices are incorrect:\n• EAS is useful for aerodynamic and structural loading comparisons but is not the primary parameter for predicting compressibility effects.\n• TAS gives the aircraft's actual speed through the air but does not by itself indicate how close the aircraft is to the local speed of sound.\n• IAS is an indicated airspeed and does not directly represent the aircraft's relationship to the local speed of sound.\n\nDifferentiate Similar Concepts:\n• Mach number → compressibility and high-speed effects.\n• TAS → actual speed through the air.\n• IAS → instrument indication related to dynamic pressure.\n• EAS → equivalent airspeed corrected for compressibility effects.\n\n💡 Memory Hook:\nCompressibility → think Mach.\n\n🎯 Board Tip:\nWhen a question asks about compressibility, shock waves, or transonic effects, look for **Mach number**.",
-          "explanationImages": [],
-          "questionImages": [],
-          "tags": [
-            "Mach Number",
-            "Compressibility",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
           "question": "Which of the following lists aeroplane features that each increase static lateral stability?",
           "questionType": "multiple_choice",
           "choices": [
@@ -37220,29 +37126,6 @@
             "Dihedral",
             "Sweepback",
             "Board Questions"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "The terms \"q\" and \"S\" in the lift formula are:",
-          "questionType": "multiple_choice",
-          "choices": [
-            "static pressure and dynamic pressure",
-            "dynamic pressure and the area of the wing",
-            "square root of surface and wing loading",
-            "static pressure and wing surface area"
-          ],
-          "answerIndex": 1,
-          "answerText": "dynamic pressure and the area of the wing",
-          "explanation": "The lift equation can be written as $L = C_L    \\times    q    \\times    S$, where q is dynamic pressure and S is the wing planform area. Dynamic pressure is given by $q = \\frac{1}{2}\\rho V^{2}$.\n\nWhy the other choices are incorrect:\n• Static pressure is not represented by q in the lift equation.\n• q does not represent a square root of surface or wing loading.\n• S represents wing area, but q is dynamic pressure rather than static pressure.\n\nDifferentiate Similar Concepts:\n• q → dynamic pressure.\n• S → wing planform area.\n• CL → lift coefficient.\n• L → lift force.\n\n💡 Memory Hook:\n$L = CL$ q S → $q = dynamic$, $S = surface$.\n\n🎯 Board Tip:\nMemorize the basic aerodynamic force equations: $L = CLqS$ and $D = CDqS$.",
-          "explanationImages": [],
-          "questionImages": [],
-          "tags": [
-            "Lift",
-            "Aerodynamic Formula",
-            "Dynamic Pressure",
-            "Recall"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -37429,29 +37312,6 @@
             "Transonic Flight",
             "Buffet",
             "Tricky Questions"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "The Mach number:",
-          "questionType": "multiple_choice",
-          "choices": [
-            "is the ratio between the TAS of the aeroplane and the local speed of sound.",
-            "is the ratio between the TAS of the aeroplane and the speed of sound at sea level.",
-            "is the ratio between the IAS of the aeroplane and the local speed of sound.",
-            "increases at a given TAS, when the temperature rises."
-          ],
-          "answerIndex": 0,
-          "answerText": "is the ratio between the TAS of the aeroplane and the local speed of sound.",
-          "explanation": "Mach number is defined as the ratio of true airspeed to the local speed of sound:\n\n$M = \\mathrm{\\mathrm{TAS}} / a$\n\nThe speed of sound depends primarily on the local temperature, so the local rather than sea-level speed of sound must be used.\n\nWhy the other choices are incorrect:\n• Speed of sound at sea level → Mach number uses the local speed of sound, not the sea-level value.\n• IAS → Mach number is based on TAS, not IAS.\n• Temperature rises → The local speed of sound increases with temperature, so at a constant TAS the Mach number decreases rather than increases.\n\nDifferentiate Similar Concepts:\n• Mach number → TAS / local speed of sound.\n• TAS → Actual speed through the air.\n• IAS → Indicated airspeed.\n• Speed of sound → Primarily dependent on temperature.\n\n💡 Memory Hook:\nMach = **True Airspeed ÷ local Sound speed**.\n\n🎯 Board Tip:\nWhenever you see compressibility, shock waves, or transonic flight, think **Mach number**.",
-          "explanationImages": [],
-          "questionImages": [],
-          "tags": [
-            "Mach Number",
-            "Speed of Sound",
-            "Compressibility",
-            "Recall"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0

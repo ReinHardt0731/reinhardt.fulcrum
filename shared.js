@@ -11,7 +11,7 @@ export const POMODORO_HISTORY_KEY = "prepcore.web.pomodoroHistory.v1";
 export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
 export const ADMIN_PASSWORD = "prepcore";
 export const NOTES_PATH = "./markdowns";
-const SUBJECTS_PATH = "./subjects.json?v=aero-mock-exam-20261013";
+const SUBJECTS_PATH = "./subjects.json?v=general-aero-curation-20261013";
 const VALID_MODES = new Set(["quiz", "learn", "flashcards", "exam", "note"]);
 const SUBJECTS_CACHE_KEY = "prepcore.web.subjectsCache.v1";
 const CHAPTER_CACHE_KEY = "prepcore.web.chapterCache.v1";
@@ -1844,7 +1844,8 @@ export function createExamSession(subject, chapterTitles, questionCount, options
 }
 
 export function buildQuestionResult(question, session, answer, correct, isUnsure = false) {
-    const userAnswerIndex = question.questionType === "multiple_choice" ? Number(answer) : null;
+    const hasAnswer = answer !== null && answer !== undefined && answer !== "";
+    const userAnswerIndex = question.questionType === "multiple_choice" && hasAnswer ? Number(answer) : null;
     const userAnswer = question.questionType === "multiple_choice"
         ? question.choices?.[Number(answer)] ?? (answer === null || answer === undefined ? "" : String(answer))
         : answer === null || answer === undefined ? "" : String(answer);
@@ -8039,11 +8040,111 @@ function resolveSavedExamQuestionImages(question, record, subjects) {
     return [];
 }
 
+function buildExamResultMarkdown(record) {
+    const questions = Array.isArray(record.questions) ? record.questions : [];
+    const answers = Array.isArray(record.answers) ? record.answers : [];
+    const summary = summarizeResults({ ...record, questions, answers });
+    const completedAt = new Date(Number(record.completedAt) || Date.now());
+    const missedItems = [];
+    const weakAreaCounts = new Map();
+
+    questions.forEach((question, index) => {
+        const answer = answers[index] || null;
+        const userAnswer = text(answer?.userAnswer);
+        const hasResponse = question?.questionType === "multiple_choice"
+            ? Number.isInteger(Number(answer?.userAnswerIndex)) && answer?.userAnswerIndex !== null && answer?.userAnswerIndex !== ""
+            : Boolean(userAnswer);
+        const correct = Boolean(answer?.correct);
+        if (correct) return;
+
+        const questionTags = Array.isArray(question?.tags) ? question.tags.map(text).filter(Boolean) : [];
+        const tags = questionTags.length
+            ? questionTags
+            : [text(question?.chapterTitle || record.chapterTitle) || "Untagged"];
+        tags.forEach((tag) => weakAreaCounts.set(tag, (weakAreaCounts.get(tag) || 0) + 1));
+        missedItems.push({ index, question, answer, hasResponse, tags });
+    });
+
+    const incorrectCount = missedItems.filter((item) => item.hasResponse).length;
+    const unansweredCount = missedItems.length - incorrectCount;
+    const weakAreas = [...weakAreaCounts.entries()]
+        .sort((left, right) => right[1] - left[1] || left[0].localeCompare(right[0]));
+    const lines = [
+        `# Exam result: ${text(record.subjectName || "Exam")}`,
+        "",
+        `- **Attempt:** ${text(record.chapterTitle || "Exam")}`,
+        `- **Completed:** ${completedAt.toLocaleString()}`,
+        `- **Score:** ${summary.correctCount}/${summary.total} (${summary.accuracy}%)`,
+        `- **Incorrect:** ${incorrectCount}`,
+        `- **Unanswered:** ${unansweredCount}`,
+        `- **Chapters:** ${(Array.isArray(record.selectedChapterTitles) && record.selectedChapterTitles.length ? record.selectedChapterTitles : [record.chapterTitle]).filter(Boolean).join(", ") || "Not recorded"}`,
+        `- **Selected exam tags:** ${(Array.isArray(record.selectedTags) ? record.selectedTags : []).join(", ") || "All tags"}`,
+        "",
+        "## Weak areas",
+        ...(weakAreas.length ? weakAreas.map(([tag, count]) => `- ${tag}: ${count} missed`) : ["- No missed or unanswered questions."]),
+        "",
+        "## Missed and unanswered questions"
+    ];
+
+    if (!missedItems.length) {
+        lines.push("All questions were answered correctly.");
+    } else {
+        missedItems.forEach(({ index, question, answer, hasResponse, tags }) => {
+            const prompt = text(question?.question || question?.questionText || answer?.questionText) || `Question ${index + 1}`;
+            const choices = Array.isArray(question?.choices) ? question.choices : [];
+            const correctAnswer = text(answer?.correctAnswer)
+                || (Number.isInteger(Number(question?.answerIndex)) && question?.answerIndex !== null
+                    ? text(choices[Number(question.answerIndex)])
+                    : text(question?.answerText))
+                || "Not recorded";
+            const recordedChoice = question?.questionType === "multiple_choice"
+                ? text(choices[Number(answer?.userAnswerIndex)])
+                : "";
+            const userAnswerText = text(answer?.userAnswer) || recordedChoice;
+            const explanation = text(answer?.explanation || answer?.explaination || question?.explanation || question?.explaination)
+                || "No explanation was saved.";
+            lines.push(
+                "",
+                `### Question ${index + 1} — ${hasResponse ? "Incorrect" : "Unanswered"}`,
+                "",
+                prompt,
+                "",
+                `- **Chapter:** ${text(question?.chapterTitle || record.chapterTitle || "Not recorded")}`,
+                `- **Tags:** ${tags.join(", ") || "Untagged"}`,
+                `- **Your answer:** ${hasResponse ? userAnswerText || "Response recorded" : "Unanswered"}`,
+                `- **Correct answer:** ${correctAnswer}`,
+                "",
+                ...(choices.length ? ["**Choices:**", ...choices.map((choice, choiceIndex) => `- ${String.fromCharCode(65 + choiceIndex)}. ${text(choice)}`), ""] : []),
+                `**Explanation:** ${explanation}`
+            );
+        });
+    }
+
+    return `${lines.join("\n")}\n`;
+}
+
+function downloadExamResultMarkdown(record) {
+    const blob = new Blob([buildExamResultMarkdown(record)], { type: "text/markdown;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    const completedAt = new Date(Number(record.completedAt) || Date.now());
+    const timestamp = completedAt.toISOString().replace(/[:.]/g, "-");
+    const filenameBase = slugify(`${record.subjectName || "exam"}-${record.chapterTitle || "result"}`);
+    link.href = url;
+    link.download = `${filenameBase}-${timestamp}.md`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
 function createSavedExamReviewDetails(record, onDelete = null, subjects = []) {
     const details = document.createElement("details");
     details.className = "saved-exam-record";
     details.dataset.examRecordId = record.id;
-    const summary = record.currentSummary || summarizeResults(record);
+    const recordQuestions = Array.isArray(record.questions) ? record.questions : [];
+    const recordAnswers = Array.isArray(record.answers) ? record.answers : [];
+    const summary = record.currentSummary || summarizeResults({ ...record, questions: recordQuestions, answers: recordAnswers });
     const date = new Date(Number(record.completedAt) || Date.now()).toLocaleString();
     const summaryLine = document.createElement("summary");
     summaryLine.append(
@@ -8117,7 +8218,7 @@ function createSavedExamReviewDetails(record, onDelete = null, subjects = []) {
             choices,
             Object.assign(document.createElement("span"), { className: "exam-map-flag", textContent: record.unsureFlags?.[index] ? "⚑" : "" })
         );
-        const missed = answer && !answer.correct;
+        const missed = !answer || !answer.correct;
         if (missed) {
             row.addEventListener("click", () => {
                 misses.querySelectorAll(".is-map-focused").forEach((node) => node.classList.remove("is-map-focused"));
@@ -8147,22 +8248,29 @@ function createSavedExamReviewDetails(record, onDelete = null, subjects = []) {
         map
     );
 
-    (record.answers || []).forEach((answer, index) => {
-        if (!answer || answer.correct) return;
+    recordQuestions.forEach((question, index) => {
+        const answer = recordAnswers[index] || null;
+        if (answer?.correct) return;
         const item = document.createElement("article");
         item.className = "review-item exam-missed-question";
         item.dataset.savedMissIndex = String(index);
         item.tabIndex = -1;
         const explanation = document.createElement("p");
-        explanation.textContent = formatExplanationText(answer.explanation || answer.explaination || "Revisit this topic in the chapter list.");
+        explanation.textContent = formatExplanationText(answer?.explanation || answer?.explaination || question.explanation || question.explaination || "Revisit this topic in the chapter list.");
         explanation.style.whiteSpace = "pre-wrap";
+        const correctAnswer = answer?.correctAnswer
+            || (Number.isInteger(Number(question.answerIndex)) && question.answerIndex !== null
+                ? question.choices?.[Number(question.answerIndex)]
+                : question.answerText)
+            || "Not recorded";
+        const userAnswer = text(answer?.userAnswer) || "Unanswered";
         item.append(
-            Object.assign(document.createElement("h5"), { className: "exam-missed-question-prompt", textContent: answer.questionText || record.questions?.[index]?.question || `Question ${index + 1}` }),
-            Object.assign(document.createElement("p"), { className: "exam-missed-question-answer", textContent: `Correct answer: ${answer.correctAnswer || "Not recorded"} · Your answer: ${answer.userAnswer || "No answer"}` }),
+            Object.assign(document.createElement("h5"), { className: "exam-missed-question-prompt", textContent: answer?.questionText || question.question || question.questionText || `Question ${index + 1}` }),
+            Object.assign(document.createElement("p"), { className: "exam-missed-question-answer", textContent: `Correct answer: ${correctAnswer} · Your answer: ${userAnswer}` }),
             Object.assign(document.createElement("p"), { className: "exam-missed-question-time", textContent: `Time spent: ${formatQuestionTime(record.questionTimesMs?.[index] || 0)}` }),
             explanation
         );
-        const explanationImages = createExplanationImagesElement(resolveSavedExamQuestionImages(record.questions?.[index], record, subjects));
+        const explanationImages = createExplanationImagesElement(resolveSavedExamQuestionImages(question, record, subjects));
         if (explanationImages) item.appendChild(explanationImages);
         misses.appendChild(item);
     });
@@ -8180,8 +8288,6 @@ function createSavedExamReviewDetails(record, onDelete = null, subjects = []) {
     }
     details.appendChild(reviewLayout);
 
-    const recordQuestions = Array.isArray(record.questions) ? record.questions : [];
-    const recordAnswers = Array.isArray(record.answers) ? record.answers : [];
     const hasSavedAnswer = (index) => {
         if (Array.isArray(record.drafts) && index < record.drafts.length) return isExamAnswerSaved(record, index);
         return Boolean(recordAnswers[index]);
@@ -8214,7 +8320,14 @@ function createSavedExamReviewDetails(record, onDelete = null, subjects = []) {
     const retryActions = document.createElement("div");
     retryActions.className = "saved-exam-actions";
     retryActions.setAttribute("role", "group");
-    retryActions.setAttribute("aria-label", "Retry questions in Learn mode");
+    retryActions.setAttribute("aria-label", "Saved exam actions");
+    const exportButton = Object.assign(document.createElement("button"), {
+        type: "button",
+        className: "ghost-button saved-exam-export",
+        textContent: "Export result (.md)"
+    });
+    exportButton.addEventListener("click", () => downloadExamResultMarkdown(record));
+    retryActions.appendChild(exportButton);
     retryGroups.forEach(({ label, reviewLabel, indexes }) => {
         const button = Object.assign(document.createElement("button"), {
             type: "button",
@@ -8496,18 +8609,25 @@ function renderAssessment(summary, session, title, score, content, startSession,
     content.appendChild(actions);
 
     if (session.mode === "exam") {
+        const missedExamItems = session.questions.flatMap((question, index) => {
+            const answer = session.answers[index] || null;
+            if (answer?.correct) return [];
+            return [{
+                questionIndex: index,
+                answer: answer || buildQuestionResult(question, session, null, false, session.unsureFlags?.[index] || false)
+            }];
+        });
         const reviewCard = document.createElement("div");
         reviewCard.className = "assessment-block";
-        reviewCard.appendChild(Object.assign(document.createElement("h4"), { textContent: "Missed questions" }));
-        if (!summary.missed.length) {
+        reviewCard.appendChild(Object.assign(document.createElement("h4"), { textContent: `Missed and unanswered questions (${missedExamItems.length})` }));
+        if (!missedExamItems.length) {
             reviewCard.appendChild(Object.assign(document.createElement("p"), { textContent: "Perfect session — nothing to review." }));
         } else {
             const list = document.createElement("div");
             list.className = "review-list";
-            summary.missed.forEach((entry) => {
+            missedExamItems.forEach(({ questionIndex, answer: entry }) => {
                 const item = document.createElement("article");
                 item.className = "review-item exam-missed-question";
-                const questionIndex = session.answers.indexOf(entry);
                 item.dataset.examQuestionIndex = String(questionIndex);
                 item.tabIndex = -1;
                 const questionTime = Array.isArray(session.questionTimesMs) && questionIndex >= 0
@@ -8518,7 +8638,7 @@ function renderAssessment(summary, session, title, score, content, startSession,
                 explanation.style.whiteSpace = "pre-wrap";
                 item.append(
                     Object.assign(document.createElement("h5"), { className: "exam-missed-question-prompt", textContent: entry.questionText }),
-                    Object.assign(document.createElement("p"), { className: "exam-missed-question-answer", textContent: `Correct answer: ${entry.correctAnswer}` }),
+                    Object.assign(document.createElement("p"), { className: "exam-missed-question-answer", textContent: `Your answer: ${text(entry.userAnswer) || "Unanswered"} · Correct answer: ${entry.correctAnswer}` }),
                     Object.assign(document.createElement("p"), { className: "exam-missed-question-time", textContent: `Time spent on this question: ${formatQuestionTime(questionTime)}` }),
                     explanation
                 );
@@ -9585,10 +9705,10 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         introCopy.className = "quiz-sheet-intro-copy";
         introCopy.append(
             Object.assign(document.createElement("p"), { className: "section-label", textContent: "Review mode" }),
-            Object.assign(document.createElement("h3"), { textContent: "Verify every answer before final submission" }),
+            Object.assign(document.createElement("h3"), { textContent: "Review exam before submission" }),
             Object.assign(document.createElement("p"), {
                 className: "hero-meta",
-                textContent: "Browse your selected answers, jump back to edit any question, then submit when you’re ready."
+                textContent: "Browse your responses or jump back to edit a question. You may submit with unanswered questions; blanks count as incorrect."
             })
         );
         const introMeta = document.createElement("div");
@@ -11099,7 +11219,7 @@ export async function initModePage(mode) {
             updateExamTimerBadge();
             if (activeSession.timeRemainingSeconds <= 0) {
                 clearExamTimer();
-                finishExamSession(true);
+                finishExamSession();
                 return;
             }
         }, 1000);
@@ -11159,16 +11279,9 @@ export async function initModePage(mode) {
 
     globalThis.__beginExamSession = beginExamSession;
 
-    const finishExamSession = (force = false) => {
+    const finishExamSession = () => {
         const session = state.session;
         if (!session || session.mode !== "exam") {
-            return;
-        }
-
-        const unanswered = session.questions.some((_, index) => !isExamAnswerSaved(session, index));
-        if (unanswered && !force) {
-            session.setupError = "Answer every question before you finish the exam.";
-            buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
             return;
         }
 
@@ -11211,15 +11324,10 @@ export async function initModePage(mode) {
         } else if (session.index < session.questions.length - 1) {
             nextIndex = session.index + 1;
         } else {
-            const unansweredIndex = session.questions.findIndex((_, index) => !isExamAnswerSaved(session, index));
-            if (unansweredIndex < 0) {
-                session.reviewingAnswers = true;
-                renderHeader();
-                buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
-                return;
-            }
-            nextIndex = unansweredIndex;
-            session.setupError = `Question ${unansweredIndex + 1} is still unanswered.`;
+            session.reviewingAnswers = true;
+            renderHeader();
+            buildModeQuestionStage(state, elements, selectSubject, selectChapter, startSession, advanceSession, submitCurrentQuestion, renderQuizSheetStage);
+            return;
         }
 
         session.index = nextIndex;
