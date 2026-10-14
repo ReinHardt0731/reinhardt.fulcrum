@@ -1,0 +1,3932 @@
+{
+  "title": "Volare - Mass & Balance",
+  "questions": [
+    {
+      "question": "Prior to departure the medium range twin jet aeroplane is loaded with maximum fuel of 20100 litres at a fuel density (specific gravity) of 0.78. Using the following data - Performance limited take-off mass 67200 kg Performance limited landing mass 54200 kg Dry Operating Mass 34930 kg Taxi fuel 250 kg Trip fuel 9250 kg Contingency and holding fuel 850 kg Alternate fuel 700 kg The maximum permissible traffic load is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "16470 kg",
+        "18040 kg",
+        "12840 kg",
+        "13090 kg."
+      ],
+      "answerIndex": 3,
+      "answerText": "13090 kg.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-12266A or Loading Manual MRJT 1 Figure 4.14) Using the load and trim sheet for the JAR FCL twin jet, which of the following is the correct value for the index at a Dry Operating Mass (DOM) of 35000 kg with a CG at 14% MAC ?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "33..0",
+        "40.0",
+        "35.5",
+        "41.5"
+      ],
+      "answerIndex": 1,
+      "answerText": "40.0",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The responsibility for determination of the mass of 'operating items' and 'crew members' included within the Dry Operating Mass lies with",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the commander.",
+        "the authority of the state of registration.",
+        "the person compiling the weighing schedule.",
+        "the operator."
+      ],
+      "answerIndex": 3,
+      "answerText": "the operator.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The stalling speed of an aeroplane will be highest when it is loaded with a:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "low gross mass and forward centre of gravity.",
+        "low gross mass and aft centre of gravity.",
+        "high gross mass and aft centre of gravity.",
+        "high gross mass and forward centre of gravity."
+      ],
+      "answerIndex": 3,
+      "answerText": "high gross mass and forward centre of gravity.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "During a violent avoidance manoeuvre, a light twin aircraft, certified to FAR 23 requirements was subjected to an instantaneous load factor of 4.2. The Flight Manual specifies that the aircraft is certified in the normal category for a load factor of -1.9 to +3.8. Considering the certification requirements and taking into account that the manufacturer of the twin did not include, during its conception, a supplementary margin in the flight envelope, it might be possible to observe;",
+      "questionType": "multiple_choice",
+      "choices": [
+        "a permanent deformation of the structure",
+        "a elastic deformation whilst the load was applied, but no permanent distortion",
+        "no distortion, permanent or temporary of the structure",
+        "rupture of one or more structural components"
+      ],
+      "answerIndex": 0,
+      "answerText": "a permanent deformation of the structure",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The actual 'Zero Fuel Mass' is equal to the:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Basic Empty Mass plus the fuel loaded.",
+        "Actual Landing Mass plus trip fuel.",
+        "Dry Operating Mass plus the traffic load.",
+        "Operating Mass plus all the traffic load."
+      ],
+      "answerIndex": 2,
+      "answerText": "Dry Operating Mass plus the traffic load.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9629 A or Loading Manual MRJT 1 Figure 4.9) From the loading manual for the jet transport aeroplane, the maximum floor loading intensity for the aft cargo compartment is :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "68 kg per square metre.",
+        "68 kg per square foot.",
+        "150 kg per square foot.",
+        "68 Lbs per square foot."
+      ],
+      "answerIndex": 1,
+      "answerText": "68 kg per square foot.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The empty mass of an aeroplane is recorded in",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the weighing schedule and is amended to take account of changes due to modifications of the aeroplane.",
+        "the weighing schedule. If changes occur, due to modifications, the aeroplane must be re-weighed always.",
+        "the loading manifest. It differs from Dry Operating Mass by the value of the 'useful load'.",
+        "the loading manifest. It differs from the zero fuel mass by the value of the 'traffic load'."
+      ],
+      "answerIndex": 0,
+      "answerText": "the weighing schedule and is amended to take account of changes due to modifications of the aeroplane.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The actual 'Take-off Mass' is equivalent to:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Actual Zero Fuel Mass plus the traffic load",
+        "Dry Operating Mass plus the take-off fuel",
+        "Actual Landing Mass plus the take-off fuel",
+        "Dry Operating Mass plus take-off fuel and the traffic load"
+      ],
+      "answerIndex": 3,
+      "answerText": "Dry Operating Mass plus take-off fuel and the traffic load",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Given that the total mass of an aeroplane is 112 000 kg with a centre of gravity position at 22.62m aft of the datum. The centre of gravity limits are between 18m and 22m. How much mass must be removed from the rear hold (30 m aft of the datum) to move the centre of gravity to the middle of the limits:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "8 680 kg",
+        "43 120 kg",
+        "29 344 kg",
+        "16 529 kg"
+      ],
+      "answerIndex": 2,
+      "answerText": "29 344 kg",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Which of the following is unlikely to have any effect on the position of the centre of gravity on an aeroplane in flight ?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Lowering the landing gear.",
+        "Movement of cabin attendants going about their normal duties.",
+        "Normal consumption of fuel for a swept wing aeroplane.",
+        "Changing the tailplane (horizontal stabiliser) incidence angle."
+      ],
+      "answerIndex": 3,
+      "answerText": "Changing the tailplane (horizontal stabiliser) incidence angle.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The distance from the datum to the Centre of Gravity of a mass is known as",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the lever.",
+        "the moment.",
+        "the index.",
+        "the moment arm or balance arm."
+      ],
+      "answerIndex": 3,
+      "answerText": "the moment arm or balance arm.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-12271A) From the data given at the appendix and assuming a fuel index shift of - 5.7 from the ZFM loaded index, determine which of the following is the correct value (percentage MAC) for the position of the centre of gravity at Take Off Mass.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "15 %",
+        "14 %",
+        "18 %",
+        "19 %"
+      ],
+      "answerIndex": 2,
+      "answerText": "18 %",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9609 A or Loading Manual MRJT 1 Figure 4.9) Referring to the loading manual for the transport aeroplane, the maximum load intensity for the lower forward cargo compartment is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "7288 kg in forward compartment and 9232 kg in aft compartment.",
+        "68 kg per square foot.",
+        "3305 kg in forward compartment and 4187 kg in aft compartment.",
+        "150 kg per square foot."
+      ],
+      "answerIndex": 1,
+      "answerText": "68 kg per square foot.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "At a mass of 1 800 kg, a helicopter equipped with a winch has a lateral CG-position of 5 cm to the left. The CG of the load suspended from the winch is at a distance of 60 cm to the right. With a winch load of 200 kg the lateral CG-position of the helicopter will be:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "10,5 cm to the right",
+        "1.5 cm to the right",
+        "1.5 cm to the left",
+        "10.5 cm to the right"
+      ],
+      "answerIndex": 1,
+      "answerText": "1.5 cm to the right",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-12274A) An aeroplane is carrying a traffic load of 10320 kg Complete the necessary sections of the attached appendix and determine which of the answers given below represents the maximum increase in the traffic load",
+      "questionType": "multiple_choice",
+      "choices": [
+        "7000 kg",
+        "8268 kg",
+        "655 kg",
+        "1830 kg"
+      ],
+      "answerIndex": 3,
+      "answerText": "1830 kg",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Length of the mean aerodynamic chord = 1 m Moment arm of the forward cargo: -0,50 m Moment arm of the aft cargo: + 2,50 m The aircraft mass is 2 200 kg and its centre of gravity is at 25% MAC To move the centre of gravity to 40%, which mass has to be transferred from the forward to the aft cargo hold?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "183 kg",
+        "165 kg",
+        "104 kg",
+        "110 kg"
+      ],
+      "answerIndex": 3,
+      "answerText": "110 kg",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "To calculate a usable take-off mass, the factors to be taken into account include:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Maximum zero fuel mass augmented by the fuel burn.",
+        "Maximum take-off mass decreased by the fuel burn.",
+        "Maximum landing mass augmented by the fuel burn.",
+        "Maximum landing mass augmented by fuel on board at take- off."
+      ],
+      "answerIndex": 2,
+      "answerText": "Maximum landing mass augmented by the fuel burn.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annexes 031-9631A or Loading Manual MRJT 1 Figure 4.9) From the Loading Manual for the transport aeroplane, the maximum load that can be carried in that section of the aft cargo compartment which has a balance arm centroid at :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "835.5 inches is 3062 kg.",
+        "835.5 inches is 6752 kg.",
+        "421.5 inches is 4541 kg.",
+        "421.5 inches is 2059 Lbs."
+      ],
+      "answerIndex": 0,
+      "answerText": "835.5 inches is 3062 kg.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "For the purpose of completing the Mass and Balance documentation, the Operating Mass is considered to be Dry Operating Mass plus",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Ramp Fuel Mass.",
+        "Trip Fuel Mass.",
+        "Ramp Fuel Mass less the fuel for APU and run-up.",
+        "Take-off Fuel Mass."
+      ],
+      "answerIndex": 3,
+      "answerText": "Take-off Fuel Mass.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "For the purpose of completing the Mass and Balance documentation, the Dry Operating Mass is defined as:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The total mass of the aeroplane ready for a specific type of operation excluding all usable fuel and traffic load.",
+        "The total mass of the aeroplane ready for a specific type of operation excluding all usable fuel.",
+        "The total mass of the aeroplane ready for a specific type of operation excluding all traffic load.",
+        "The total mass of the aeroplane ready for a specific type of operation excluding crew and crew baggage."
+      ],
+      "answerIndex": 0,
+      "answerText": "The total mass of the aeroplane ready for a specific type of operation excluding all usable fuel and traffic load.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An additional baggage container is loaded into the aft cargo compartment but is not entered into the load and trim sheet. The aeroplane will be heavier than expected and calculated take-off safety speeds",
+      "questionType": "multiple_choice",
+      "choices": [
+        "will give reduced safety margins.",
+        "will not be achieved.",
+        "will be greater than required.",
+        "are unaffected but V1 will be increased."
+      ],
+      "answerIndex": 0,
+      "answerText": "will give reduced safety margins.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Determine the Landing Mass for the following single engine aeroplane. Given: Standard Empty Mass :1764 lbs Optional Equipment : 35 lbs Pilot + Front seat passenger : 300 lbs Cargo Mass : 350 lbs Ramp Fuel = Block Fuel : 60 Gal. Trip Fuel : 35 Gal. Fuel density: 6 lbs/Gal.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "2659 lbs",
+        "2449 lbs",
+        "2589 lbs",
+        "2799 lbs"
+      ],
+      "answerIndex": 2,
+      "answerText": "2589 lbs",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9685 A or Loading Manual MRJT 1 Figure 4.14) The medium range twin jet transport is scheduled to operate from a departure airfield where conditions limit the take-off mass to 65050 kg. The destination airfield has a performance limited landing mass of 54500 kg. The Dry Operating Mass is 34900 kg. Loading data is as follows - Taxi fuel 350 kg Trip fuel 9250 kg Contingency and final reserve fuel 1100 kg Alternate fuel 1000 kg Traffic load 18600 kg Check the load and ensure that the flight may be operated without exceeding any of the aeroplane limits. Choose, from those given below, the most appropriate answer.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The flight may be safely operated with an additional 200 kg of traffic load.",
+        "The flight is 'landing mass' limited and the traffic load must be reduced to 17500 kg.",
+        "The flight is 'zero fuel mass' limited and the traffic load must be reduced to 14170 kg.",
+        "The flight may be safely operated with the stated traffic and fuel load."
+      ],
+      "answerIndex": 1,
+      "answerText": "The flight is 'landing mass' limited and the traffic load must be reduced to 17500 kg.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Given the following : - Maximum structural take-off mass 48 000 kg - Maximum structural landing mass: 44 000 kg - Maximum zero fuel mass: 36 000 kg -Taxi fuel: 600 kg -Contingency fuel: 900 kg -Alternate fuel: 800 kg -Final reserve fuel: 1 100 kg -Trip fuel: 9 000 kg Determine the actual take-off mass:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "47 800 kg",
+        "48 000 kg",
+        "48 400 kg",
+        "53 000 kg"
+      ],
+      "answerIndex": 0,
+      "answerText": "47 800 kg",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An aeroplane is weighed prior to entry into service. Who is responsible for deriving the Dry Operational Mass from the weighed mass by the addition of the 'operational items' ?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The aeroplane manufacturer or supplier.",
+        "The commander of the aeroplane.",
+        "The Operator.",
+        "The appropriate Aviation Authority."
+      ],
+      "answerIndex": 2,
+      "answerText": "The Operator.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "If an aeroplane is at a higher mass than anticipated, for a given airspeed the angle of attack will",
+      "questionType": "multiple_choice",
+      "choices": [
+        "remain constant, drag will decrease and endurance will decrease.",
+        "remain constant, drag will increase and endurance will increase.",
+        "be greater, drag will increase and endurance will decrease.",
+        "be decreased, drag will decrease and endurance will increase."
+      ],
+      "answerIndex": 2,
+      "answerText": "be greater, drag will increase and endurance will decrease.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-4739A or Loading Manual MEP1 Figure 3.4) With respect to multi-engine piston powered aeroplane, determine the ramp mass (lbs) in the following conditions: Basic empty mass: 3 210 lbs Basic arm: 88.5 Inches One pilot: 160 lbs Front seat passenger : 200 lbs Centre seat passengers: 290 lbs One passenger rear seat: 110 lbs Baggage in zone 1: 100 lbs Baggage in zone 4: 50 lbs Block fuel: 100 US Gal. Trip fuel: 55 US Gal. Fuel for start up and taxi (included in block fuel): 3 US Gal. Fuel density: 6 lbs/US Gal.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "4 372",
+        "4 720",
+        "4 120",
+        "4 390"
+      ],
+      "answerIndex": 1,
+      "answerText": "4 720",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-1581A) The loading for a flight is shown in the attached loadsheet, with the following data applying to the aeroplane: Maximum take-off mass: 150 000 kg Maximum landing mass: 140 000 kg Centre of gravity (cg) limit forward: 10.5 m aft of datum aft: 13.0 m aft of datum Estimated trip fuel: 55 000 kg",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Take-off cg is out of limits at 10.17 m aft of datum.",
+        "Take-off cg is out of limits at 12.34 m aft of datum.",
+        "Landing cg is out of limits at 11.97 m aft of datum.",
+        "Landing cg is out of limits at 10.17 m aft of datum."
+      ],
+      "answerIndex": 3,
+      "answerText": "Landing cg is out of limits at 10.17 m aft of datum.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "In calculations with respect to the position of the centre of gravity a reference is made to a datum. The datum is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "an arbitrary reference chosen by the pilot which can be located anywhere on the aeroplane.",
+        "calculated from the data derived from the weighing procedure carried out on the aeroplane after any major modification.",
+        "a reference plane which is chosen by the aeroplane manufacturer. Its position is given in the aeroplane Flight or Loading Manual.",
+        "calculated from the loading manifest."
+      ],
+      "answerIndex": 2,
+      "answerText": "a reference plane which is chosen by the aeroplane manufacturer. Its position is given in the aeroplane Flight or Loading Manual.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The crew of a transport aeroplane prepares a flight using the following data: - Dry operating mass: 90 000 kg - Block fuel: 30 000 kg - Taxi fuel: 800 kg - Maximum take-off mass: 145 000 kg The traffic load available for this flight is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "55 000 kg",
+        "55 800 kg",
+        "25 800 kg",
+        "25 000 kg"
+      ],
+      "answerIndex": 2,
+      "answerText": "25 800 kg",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The Basic Mass of a helicopter is the mass of the helicopter without crew, :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "without payload, with specific equipment for the mission, without the unusable fuel.",
+        "without specific equipment for the mission, without payload, wthout unusable fuel.",
+        "without specific equipments for the mission, without payload, with fuel on board.",
+        "without specific equipment for the mission, without payload, with the unusable fuel and standard equipment."
+      ],
+      "answerIndex": 3,
+      "answerText": "without specific equipment for the mission, without payload, with the unusable fuel and standard equipment.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "With the centre of gravity on the forward limit which of the following is to be expected?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A decrease in the landing speed.",
+        "A decrease of the stalling speed.",
+        "A tendency to yaw to the right on take-off.",
+        "A decrease in range."
+      ],
+      "answerIndex": 3,
+      "answerText": "A decrease in range.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An aeroplane is weighed and the following recordings are made: nose wheel assembly scale 5330 kg left main wheel assembly scale 12370 kg right main wheel assembly scale 12480 kg If the 'operational items' amount to a mass of 1780 kg with a crew mass of 545 kg, the empty mass, as entered in the weight schedule, is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "32505 kg",
+        "30180 kg",
+        "28400 kg",
+        "31960 kg"
+      ],
+      "answerIndex": 1,
+      "answerText": "30180 kg",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The Dry Operating Mass of an aircraft is 2 000 kg. The maximum take-off mass, landing and zero fuel mass are identical at 3500 kg. The block fuel mass is 550kg, and the taxi fuel mass is 50 kg. The available mass of payload is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1 000 kg",
+        "950 kg",
+        "1 500 kg",
+        "1 450 kg"
+      ],
+      "answerIndex": 0,
+      "answerText": "1 000 kg",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annexes 031-11072A and 031- 11072B) The weight and balance sheet is available and contrary to the forecast, cargo compartment 1 is empty. The zero fuel weight centre of gravity in MAC % (Mean Aerodynamic Chord) is located at:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "31.5 %",
+        "26 %",
+        "35.5 %",
+        "32 %"
+      ],
+      "answerIndex": 2,
+      "answerText": "35.5 %",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11258A and 031- 11258B) The planned take-off mass of a turbojet aeroplane is 180 000 kg, with its centre of gravity located at 26 % MAC (Mean Aerodynamic Cord). Shortly prior to engine start, the local staff informs the flight crew that 4 000 kg must be unloaded from cargo 4. After the handling operation, the new centre of gravity location in % MAC will be:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "21.8 %",
+        "20.0 %",
+        "30.2 %",
+        "23.0 %"
+      ],
+      "answerIndex": 0,
+      "answerText": "21.8 %",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "If the centre of gravity is near the forward limit the aeroplane will:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "require elevator trim which will result in an increase in fuel consumption.",
+        "benefit from reduced drag due to the decrease in angle of attack.",
+        "require less power for a given airspeed.",
+        "tend to over rotate during take-off."
+      ],
+      "answerIndex": 0,
+      "answerText": "require elevator trim which will result in an increase in fuel consumption.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-2946A) The total mass of an aeroplane is 145000 kg and the centre of gravity limits are between 4.7 m and 6.9 m aft of the datum. The loaded centre of gravity position is 4.4 m aft. How much mass must be transferred from the front to the rear hold in order to bring the out of limit centre of gravity position to the foremost limit:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "35 000 kg",
+        "62 500 kg",
+        "7 500 kg",
+        "3 500 kg"
+      ],
+      "answerIndex": 2,
+      "answerText": "7 500 kg",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The maximum quantity of fuel that can be loaded into an aeroplane's tanks is given as 3800 US Gallons. If the fuel density (specific gravity) is given as 0.79 the mass of fuel which may be loaded is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "13647 kg.",
+        "11364 kg.",
+        "14383 kg.",
+        "18206 kg."
+      ],
+      "answerIndex": 1,
+      "answerText": "11364 kg.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11606A) Without the man on the winch, the mass and the lateral CG-position of the aircraft are 6 000 kg and 0,04 m to the right. - the mass of the man on the winch is 100 kg With the man on the winch , the lateral CG-position of the aircraft will be:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0,016m to the left",
+        "beyond the limits",
+        "0,0633m to the right",
+        "0,062m to the right"
+      ],
+      "answerIndex": 3,
+      "answerText": "0,062m to the right",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An aeroplane may be weighed",
+      "questionType": "multiple_choice",
+      "choices": [
+        "in an area of the airfield set aside for maintenance.",
+        "at a specified 'weighing location' on the airfield.",
+        "in an enclosed, non-air conditioned, hangar.",
+        "in a quiet parking area clear of the normal manoeuvring area."
+      ],
+      "answerIndex": 2,
+      "answerText": "in an enclosed, non-air conditioned, hangar.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annexes 031-11070A and 031- 11070B) Contrary to the loading sheet forecasts you have : Cargo compartment 1: empty passengers in compartment OA: 20 Cargo compartment 2: 1 000 kg passengers in compartment OB: 20 Cargo compartment 3: 3 000 kg passengers in compartment OC: 30 Cargo compartment 4: 2 000 kg Cargo compartment 5: 1 000 kg The take-off centre of gravity in MAC % (Mean Aerodynamic Chord), will be located at:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "35.5 %",
+        "31.5 %",
+        "24.5 %",
+        "32.5 %"
+      ],
+      "answerIndex": 1,
+      "answerText": "31.5 %",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11249A , 031-11249B and 031-11249C) Knowing that: . Dry operating mass: 110 000 kg . Basic index: 119.1 . Number of passengers: 335 distributed as shown in the annex (75 kg per PAX) . Cargo load + luggage: 9 500 kg distributed as shown in the annex. . Fuel: 40 000 kg Stages (1) to (7) and (11) having already been calculated, the centre of gravity in % MAC (Mean Aerodynamic Cord) at take-off is located at:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "30.5 %",
+        "28.0 %",
+        "29.3 %",
+        "27.4 %"
+      ],
+      "answerIndex": 2,
+      "answerText": "29.3 %",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An aeroplane must be re-weighed at certain intervals. Where an operator uses 'fleet masses' and provided that changes have been correctly documented, this interval is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "whenever a major modification is carried out.",
+        "9 years for each aeroplane.",
+        "4 years for each aeroplane.",
+        "whenever the Certificate of Airworthiness is renewed."
+      ],
+      "answerIndex": 1,
+      "answerText": "9 years for each aeroplane.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "After weighing a helicopter the following values are noted: forward point: 350 kg aft right point: 995 kg aft left point: 1 205 kg What is the longitudinal CG-position in relation to the datum situated 4 m in front of the rotor axis, knowing that the forward point is at 2.5 m forward of the rotor axis and the aft points are 1 m aft of the rotor axis?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "4.52 m",
+        "4.09 m",
+        "4.21 m",
+        "4.15 m"
+      ],
+      "answerIndex": 0,
+      "answerText": "4.52 m",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The term 'useful load' as applied to an aeroplane includes",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the revenue-earning portion of traffic load only.",
+        "the revenue-earning portion of traffic load plus useable fuel.",
+        "traffic load plus useable fuel.",
+        "traffic load only."
+      ],
+      "answerIndex": 2,
+      "answerText": "traffic load plus useable fuel.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Given: Dry operating mass = 38 000 kg maximum structural take-off mass = 72 000 kg maximum landing mass = 65 000 kg maximum zero fuel mass = 61 000 kg Fuel burn = 8 000 kg Take-off Fuel = 10 300 kg The maximum allowed take-off mass and payload are respectively :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "73 000 kg and 27 000 kg",
+        "71 300 kg and 23 000 kg",
+        "71 300 kg and 25 300 kg",
+        "73 000 kg and 24 700 kg"
+      ],
+      "answerIndex": 1,
+      "answerText": "71 300 kg and 23 000 kg",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "While making mass and balance calculation for a particular aeroplane, the term 'Empty Mass' applies to the sum of airframe, engine(s), fixed ballast plus",
+      "questionType": "multiple_choice",
+      "choices": [
+        "all the oil, fuel, and hydraulic fluid but not including crew and traffic load.",
+        "all the consumable fuel and oil, but not including any radio or navigation equipment installed by manufacturer.",
+        "all the oil and fuel.",
+        "unusable fuel and full operating fluids."
+      ],
+      "answerIndex": 3,
+      "answerText": "unusable fuel and full operating fluids.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "What determines the longitudinal stability of an aeroplane ?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The location of the centre of gravity with respect to the neutral point.",
+        "The effectiveness of the horizontal stabilizer, rudder and rudder trim tab.",
+        "The relationship of thrust and lift to weight and drag.",
+        "The dihedral, angle of sweepback and the keel effect."
+      ],
+      "answerIndex": 0,
+      "answerText": "The location of the centre of gravity with respect to the neutral point.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Which of the following statements is correct?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "If the actual centre of gravity is close to the forward limit of the centre of gravity the aeroplane may be unstable, making it necessary to increase elevator forces",
+        "The lowest stalling speed is obtained if the actual centre of gravity is located in the middle between the aft and forward limit of centre of gravity",
+        "A tail heavy aeroplane is less stable and stalls at a lower speed than a nose heavy aeroplane",
+        "If the actual centre of gravity is located behind the aft limit of centre of gravity it is possible that the aeroplane will be unstable, making it necessary to increase elevator forces"
+      ],
+      "answerIndex": 2,
+      "answerText": "A tail heavy aeroplane is less stable and stalls at a lower speed than a nose heavy aeroplane",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9598 A or Loading Manual MRJT 1 Figure 4.11) The aeroplane has a Take Off Mass of 58 000 kg. At this mass the range of safe CG positions, as determined from the appropriate graph in the loading manual, is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Forward limit 8.0% MAC aft limit 26.5% MAC",
+        "Forward limit 8.2% MAC aft limit 26.2% MAC",
+        "Forward limit 9.5% MAC aft limit 26.1% MAC",
+        "Forward limit 8.5% MAC aft limit 26.1% MAC"
+      ],
+      "answerIndex": 0,
+      "answerText": "Forward limit 8.0% MAC aft limit 26.5% MAC",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-12267A ) Using the data given in the Load & Trim sheet, determine which of the following gives the correct values for the Zero Fuel Mass and position of the centre of gravity (% MAC) at that mass.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "41300 Kg and 17,8%",
+        "51300 Kg and 20,8%",
+        "46130 Kg and 20,8%",
+        "46130 Kg and 17,8%"
+      ],
+      "answerIndex": 3,
+      "answerText": "46130 Kg and 17,8%",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Which is true of the aeroplane empty mass?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It is a component of dry operating mass.",
+        "It is dry operating mass minus fuel load.",
+        "It is dry operating mass minus traffic load.",
+        "It is the actual take-off mass, less traffic load."
+      ],
+      "answerIndex": 0,
+      "answerText": "It is a component of dry operating mass.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The following data is extracted from an aeroplane's loading manifest: Performance limited take-off mass 93500 kg Expected landing mass at destination 81700 kg Maximum certificated landing mass 86300 kg Fuel on board 16500 kg During the flight a diversion is made to an en-route alternate which is not 'performance limited' for landing. Fuel remaining at landing is 10300 kg. The landing mass",
+      "questionType": "multiple_choice",
+      "choices": [
+        "is 87300 kg and excess structural stress could result",
+        "is 83200 kg which is in excess of the regulated landing mass and could result in overrunning the runway",
+        "must be reduced to 81700 kg in order to avoid a high speed approach.",
+        "is 87300 kg which is acceptable in this case because this is a diversion and not a normal scheduled landing."
+      ],
+      "answerIndex": 0,
+      "answerText": "is 87300 kg and excess structural stress could result",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The mass displacement caused by landing gear extension:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "creates a pitch-up longitudinal moment",
+        "does not create a longitudinal moment",
+        "creates a pitch-down longitudinal moment",
+        "creates a longitudinal moment in the direction (pitch-up or pitch-down) determined by the type of landing gear"
+      ],
+      "answerIndex": 3,
+      "answerText": "creates a longitudinal moment in the direction (pitch-up or pitch-down) determined by the type of landing gear",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "A revenue flight is to be made by a jet transport. The following are the aeroplane's structural limits: -Maximum Ramp Mass: 69 900 kg -Maximum Take Off Mass: 69 300 kg -Maximum Landing Mass: 58 900 kg -Maximum Zero Fuel Mass: 52 740 kg The performance limited take off mass is 67 450kg and the performance limited landing mass is 55 470 kg. Dry Operating Mass: 34 900 kg Trip Fuel: 6 200 kg Taxi Fuel: 250 kg Contingency & final reserve fuel: 1 300 kg Alternate Fuel: 1 100 kg The maximum traffic load that can be carried is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "25 800 kg",
+        "17 840 kg",
+        "18 170 kg",
+        "13 950 kg"
+      ],
+      "answerIndex": 1,
+      "answerText": "17 840 kg",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "During take-off you notice that, for a given elevator input, the aeroplane rotates much more rapidly than expected. This is an indication that :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the centre of pressure is aft of the centre of gravity.",
+        "the centre of gravity may be towards the aft limit.",
+        "the aeroplane is overloaded.",
+        "the centre of gravity is too far forward."
+      ],
+      "answerIndex": 1,
+      "answerText": "the centre of gravity may be towards the aft limit.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An aeroplane is to depart from an airfield at a take-off mass of 302550 kg. Fuel on board at take-off (including contingency and alternate of 19450 kg) is 121450 kg. The Dry Operating Mass is 161450 kg. The useful load will be",
+      "questionType": "multiple_choice",
+      "choices": [
+        "19650 kg",
+        "121450 kg",
+        "39105 kg",
+        "141100 kg"
+      ],
+      "answerIndex": 3,
+      "answerText": "141100 kg",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Conversion of fuel volume to mass",
+      "questionType": "multiple_choice",
+      "choices": [
+        "may be done by using standard fuel density values as specified in JAR - OPS 1.",
+        "must be done by using actual measured fuel density values.",
+        "must be done using fuel density values of 0.79 for JP 1 and 0.76 for JP 4 as specified in JAR - OPS, IEM - OPS 1.605E.",
+        "may be done by using standard fuel density values as specified in the Operations Manual, if the actual fuel density is not known."
+      ],
+      "answerIndex": 3,
+      "answerText": "may be done by using standard fuel density values as specified in the Operations Manual, if the actual fuel density is not known.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The maximum taxi (ramp) mass is governed by :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "tyre speed and temperature limitations.",
+        "bearing strength of the taxiway pavement.",
+        "taxi distance to take - off point.",
+        "structural considerations."
+      ],
+      "answerIndex": 3,
+      "answerText": "structural considerations.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9640 A or Loading Manual MRJT 1 Figure 4.14) A revenue flight is planned for the transport aeroplane. Take-off mass is not airfield limited. The following data applies: Dry Operating Mass 34930 kg Performance limited landing mass 55000 kg Fuel on board at ramp- Taxi fuel 350 kg Trip fuel 9730 kg Contingency and final reserve fuel 1200 kg Alternate fuel 1600 kg Passengers on board 130 Standard mass for each passenger 84 kg Baggage per passenger 14 kg Traffic load Maximum possible Use the loading manual provided and the above data. Determine the maximum cargo load that may be carried without exceeding the limiting aeroplane landing mass.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "5400 kg",
+        "6350 kg.",
+        "3185 kg.",
+        "4530 kg."
+      ],
+      "answerIndex": 3,
+      "answerText": "4530 kg.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Given: Total mass: 7500 kg Centre of gravity (cg) location station: 80.5 Aft cg limit station: 79.5 How much cargo must be shifted from the aft cargo compartment at station 150 to the forward cargo compartment at station 30 in order to move the cg location to the aft limit?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "65.8 kg.",
+        "68.9 kg.",
+        "73.5 kg.",
+        "62.5 kg."
+      ],
+      "answerIndex": 3,
+      "answerText": "62.5 kg.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The following results were obtained after weighing a helicopter : - mass at front point: 300 kg - mass at right rear point : 1 100 kg - mass at left rear point : 950 kg It is given that the front point is located 0.30 m left of the longitudinal axis and the rear points are symmetricaly located 1.20 m from this axis. The helicopter's lateral CG-position relative to the longitudinal axis is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "4 cm left",
+        "11 cm right",
+        "11 cm left",
+        "4 cm right"
+      ],
+      "answerIndex": 3,
+      "answerText": "4 cm right",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-4741A or Loading Manual MEP1 Figure 3.4) With respect to a multi-engine piston powered aeroplane, determine the total moment (lbs.In) at landing in the following conditions: Basic empty mass: 3 210 lbs. One pilot: 160 lbs. Front seat passenger : 200 lbs. Centre seat passengers: 290 lbs. (total) One passenger rear seat: 110 lbs. Baggage in zone 1: 100 lbs. Baggage in zone 4: 50 lbs. Block fuel: 100 US Gal. Trip fuel: 55 US Gal. Fuel for start up and taxi (included in block fuel): 3 US Gal. Fuel density: 6 lbs./US Gal. Total moment at take-o 432226 lbs.In ff:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "432 221",
+        "433 906",
+        "377 746",
+        "401 338"
+      ],
+      "answerIndex": 3,
+      "answerText": "401 338",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Given the following information, calculate the loaded centre of gravity (cg). STATION MASS (kg) ARM (cm) MOMENT (kgcm) Basic Empty Condition 12045 +30 Crew 145 -160 - Freight 1 5455 +200 Freight 2 410 -40 - Fuel 6045 -8 - Oil 124 +40 _________________________________________________ __________________ _________________________________________________ __________________ +361350 23200 +1091000 16400 48360 +4960",
+      "questionType": "multiple_choice",
+      "choices": [
+        "56.53 cm aft datum.",
+        "56.35 cm aft datum.",
+        "60.16 cm aft datum.",
+        "53.35 cm aft datum."
+      ],
+      "answerIndex": 0,
+      "answerText": "56.53 cm aft datum.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-12269A) Using the data given at the appendix to this question, if the fuel index corrections (from ZFM index) are as follows 9500 kg - 0.9 6500 kg - 6.1 3500 kg - 4.7 3000 kg - 4.3 Which of the following represent the correct values for landing mass of the aeroplane and the position of the centre of gravity for this condition ?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "49130 kg and 21.8 %",
+        "49130 kg and 19 %",
+        "52900kg and 19 %",
+        "52900 kg and 21.6 %"
+      ],
+      "answerIndex": 1,
+      "answerText": "49130 kg and 19 %",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An aeroplane is said to be 'neutrally stable'. This is likely to:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "be caused by a centre of gravity which is towards the rearward limit.",
+        "be caused by a centre of gravity which is towards the forward limit.",
+        "be totally unrelated to the position of the centre of gravity.",
+        "cause the centre of gravity to move forwards."
+      ],
+      "answerIndex": 0,
+      "answerText": "be caused by a centre of gravity which is towards the rearward limit.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "At maximum certificated take-off mass an aeroplane departs from an airfield which is not limiting for either take-off or landing masses. During initial climb the number one engine suffers a contained disintegration. An emergency is declared and the aeroplane returns to departure airfield for an immediate landing. The most likely result of this action will be",
+      "questionType": "multiple_choice",
+      "choices": [
+        "a high threshold speed and a shorter stop distance.",
+        "a landing further along the runway than normal.",
+        "a landing short resultant from the increased angle of approach due to the very high aeroplane mass.",
+        "a high threshold speed and possible undercarriage or other structural failure."
+      ],
+      "answerIndex": 3,
+      "answerText": "a high threshold speed and possible undercarriage or other structural failure.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Assuming gross mass, altitude and airspeed remain unchanged, movement of the centre of gravity from the forward to the aft limit will cause",
+      "questionType": "multiple_choice",
+      "choices": [
+        "higher stall speed.",
+        "lower optimum cruising speed.",
+        "reduced maximum cruise range.",
+        "increased cruise range."
+      ],
+      "answerIndex": 3,
+      "answerText": "increased cruise range.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9660 A or Loading Manual MRJT 1 Paragraph 3.1) The medium range jet transport aeroplane is to operate a flight carrying the maximum possible fuel load. Using the following data as appropriate, determine the mass of fuel on board at start of take off. Departure airfield performance limited take-off mass: 60 Landing airfield -not performance limited. Dry Operating Mass: 34930 kg Fuel required for flight - Taxi fuel: 715 kg Trip fuel: 8600 kg Contingency and final reserve fuel: 1700 kg Alternate fuel 1500 kg Additional reserve 400 kg Traffic load for flight 11000 kg 400 kg",
+      "questionType": "multiple_choice",
+      "choices": [
+        "15 815 kg",
+        "13 655 kg",
+        "16 080 kg",
+        "14 470 kg"
+      ],
+      "answerIndex": 3,
+      "answerText": "14 470 kg",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The datum is a reference from which all moment (balance) arms are measured. Its precise position is given in the control and loading manual and it is located",
+      "questionType": "multiple_choice",
+      "choices": [
+        "at or near the focal point of the aeroplane axis system.",
+        "at or near the natural balance point of the empty aeroplane.",
+        "at a convenient point which may not physically be on the aeroplane.",
+        "at or near the forward limit of the centre of gravity."
+      ],
+      "answerIndex": 2,
+      "answerText": "at a convenient point which may not physically be on the aeroplane.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "At a given mass the CG position is at 15% MAC. If the leading edge of MAC is at a position 625.6 inches aft of the datum and the MAC is given as 134.5 inches determine the position of the CG in relation to to the datum.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "228.34 inches aft of datum",
+        "645.78 inches aft of datum",
+        "20.18 inches aft of datum",
+        "605.43 inches aft of datum"
+      ],
+      "answerIndex": 1,
+      "answerText": "645.78 inches aft of datum",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annexes 031-11071A and 031- 11071B) Just prior to departure, you accept 10 passengers additional on board who will be seated in \"compartment OC\" and you have 750 kg unloaded from cargo compartment 5. The take-off centre of gravity in MAC % (Mean Aerodynamic Chord) will be located at:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "30.5 %",
+        "28.5 %",
+        "27.2 %",
+        "27.8 %"
+      ],
+      "answerIndex": 3,
+      "answerText": "27.8 %",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9630 A or Loading Manual MRJT 1 Figure 4.9) From the loading manual for the transport aeroplane, the aft cargo compartment has a maximum total load of :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1568 kg",
+        "3062 kg",
+        "4187 kg",
+        "9232 kg"
+      ],
+      "answerIndex": 2,
+      "answerText": "4187 kg",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "If individual masses are used, the mass of an aeroplane must be determined prior to initial entry into service and thereafter",
+      "questionType": "multiple_choice",
+      "choices": [
+        "at intervals of 9 years.",
+        "at intervals of 4 years if no modifications have taken place.",
+        "at regular annual intervals.",
+        "only if major modifications have taken place."
+      ],
+      "answerIndex": 1,
+      "answerText": "at intervals of 4 years if no modifications have taken place.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "When preparing to carry out the weighing procedure on an aeroplane, which of the following is not required?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "drain all engine tank oil.",
+        "drain all useable fuel.",
+        "drain all chemical toilet fluid tanks.",
+        "removable passenger services equipment to be off-loaded."
+      ],
+      "answerIndex": 0,
+      "answerText": "drain all engine tank oil.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An aeroplane's weighing schedule indicates that the empty mass is 57320 kg. The nominal Dry Operating Mass is 60120 kg and the Maximum Zero Fuel Mass is given as 72100 kg. Which of the following is a correct statement in relation to this aeroplane?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "operational items have a mass of 2800 kg and the maximum useful load is 14780 kg.",
+        "operational items have a mass of 2800 kg and the maximum traffic load for this aeroplane is 11980 kg.",
+        "operational items have a mass of 2800 kg and the maximum traffic load for this aeroplane is 14780 kg.",
+        "operational items have a mass of 2800 kg and the maximum useful load is 11980 kg."
+      ],
+      "answerIndex": 1,
+      "answerText": "operational items have a mass of 2800 kg and the maximum traffic load for this aeroplane is 11980 kg.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The crew of a transport aeroplane prepares a flight using the following data: - Block fuel: 40 000 kg - Trip fuel: 29 000 kg - Taxi fuel: 800 kg - Maximum take-off mass: 170 000 kg - Maximum landing mass: 148 500 kg - Maximum zero fuel mass: 112 500 kg - Dry operating mass: 80 400 kg The maximum traffic load for this flight is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "32 100 kg",
+        "32 900 kg",
+        "18 900 kg",
+        "40 400 kg"
+      ],
+      "answerIndex": 0,
+      "answerText": "32 100 kg",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The floor limit of an aircraft cargo hold is 5 000 N/m2. It is planned to load-up a cubic container measuring 0,4 m of side. It's maximum gross mass must not exceed: (assume g=10m/s2)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "32 kg",
+        "320 kg",
+        "80 kg",
+        "800 kg"
+      ],
+      "answerIndex": 2,
+      "answerText": "80 kg",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The maximum load per running metre of an aeroplane is 350 kg/m. The width of the floor area is 2 metres. The floor strength limitation is 300 kg per square metre. Which one of the following crates (length x width x height) can be loaded directly on the floor?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A load of 400 kg in a crate with dimensions 1.2 m x 1.2 m x 1.2 m.",
+        "A load of 500 kg in a crate with dimensions 1.5 m x 1 m x 1 m.",
+        "A load of 400 kg in a crate with dimensions 1.4 m x 0.8 m x 0.8 m.",
+        "A load of 700 kg in a crate with dimensions 1.8 m x 1.4 m x 0.8 m."
+      ],
+      "answerIndex": 0,
+      "answerText": "A load of 400 kg in a crate with dimensions 1.2 m x 1.2 m x 1.2 m.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9613 A or Loading Manual MRJT 1 Figure 4.9) A pallet having a freight platform which measures 200 cm x 250 cm has a total mass of 300 kg. The pallet is carried on two ground supports each measuring 20 cm x 200 cm. Using the loading manual for the transport aeroplane, calculate how much mass may be added to, or must be off loaded from, the pallet in order for the load intensity to match the maximum permitted distribution load intensity for lower deck forward cargo compartement.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "285.5 kg may be added.",
+        "28.5 kg must be off loaded.",
+        "28.5 kg may be added.",
+        "158.3 kg must be off loaded."
+      ],
+      "answerIndex": 0,
+      "answerText": "285.5 kg may be added.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9676 A or Loading Manual MRJT 1 Paragraph 4) For the medium range transport aeroplane, from the loading manual, determine the maximum total volume of fuel which can be loaded into the main wing tanks. (Fuel density value 0.78)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "5674 litres",
+        "11349 litres",
+        "8850 litres",
+        "11646 litres"
+      ],
+      "answerIndex": 1,
+      "answerText": "11349 litres",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "If nose wheel moves aft during gear retraction, how will this movement affect the location of the centre of gravity (cg) on the aeroplane?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It will cause the cg to move aft.",
+        "It will not affect the cg location.",
+        "It will cause the cg to move forward.",
+        "The cg location will change, but the direction cannot be told the information given."
+      ],
+      "answerIndex": 0,
+      "answerText": "It will cause the cg to move aft.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use appendix 031-11590A ) Without the crew, the mass and longitudinal CG position of the aircraft are 6 000 kg and 4,70m. - the mass of the pilot is 90 kg - the mass of the copilot is 100 kg - the mass of the flight engineer is 80 kg With the crew, the mass and longitudinal CG position of the aircraft are :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "6 270 kg and 5.012 m",
+        "6 270 kg and 4.61 m",
+        "6 270 kg and 4.594 m",
+        "6 270 kg and 4.796 m"
+      ],
+      "answerIndex": 2,
+      "answerText": "6 270 kg and 4.594 m",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11632A ) The empty mass of your helicopter is 1 100 kg with a CG- position at 3.05m. The load is as follows: -total mass of pilot and co-pilot: 150 kg -total mass of passengers at rear: 200 kg In order not to exeed the limitations the minimum remaining fuel on board should be:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "250 kg",
+        "125 kg",
+        "450 kg",
+        "350 kg"
+      ],
+      "answerIndex": 1,
+      "answerText": "125 kg",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The Dry Operating Mass of a helicopter is the total mass of a helicopter :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "including the crew,the fuel and the specific equipments for the mission but excluding payload",
+        "including the crew, the usable fuel and the specific equipments for the mission and payload",
+        "ready for a specific operation including the crew and traffic load, not including the usable fuel",
+        "excluding the crew but including specific equipments for the mission and not including the usable fuel"
+      ],
+      "answerIndex": 2,
+      "answerText": "ready for a specific operation including the crew and traffic load, not including the usable fuel",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-12270A) Using the data given at the appendix, determine which of the following correctly gives the values of the Zero Fuel Mass (ZFM) of the aeroplane and the load index at ZFM",
+      "questionType": "multiple_choice",
+      "choices": [
+        "48600 kg and 57.0",
+        "51300 kg and 57.0",
+        "46300 kg and 20.5",
+        "35100 kg and 20.5"
+      ],
+      "answerIndex": 0,
+      "answerText": "48600 kg and 57.0",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "On an aeroplane with 20 or more seats engaged on an inter-continental flight, the 'standard mass' which may be used for passenger baggage is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "14 kg per passenger.",
+        "11 kg per passenger.",
+        "15 kg per passenger.",
+        "13 kg per passenger."
+      ],
+      "answerIndex": 2,
+      "answerText": "15 kg per passenger.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The Zero Fuel Mass and the Dry Operating Mass",
+      "questionType": "multiple_choice",
+      "choices": [
+        "differ by the mass of usable fuel.",
+        "differ by the value of the traffic load mass.",
+        "are the same value.",
+        "differ by the sum of the mass of usable fuel plus traffic load mass."
+      ],
+      "answerIndex": 1,
+      "answerText": "differ by the value of the traffic load mass.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "If the centre of gravity of an aeroplane moves forward during flight the elevator control will :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "become heavier making the aeroplane more difficult to manouevre in pitch",
+        "become lighter making the aeroplane more difficult to manouevre in pitch.",
+        "become heavier making the aeroplane more easy to manouevre in pitch.",
+        "become lighter making the aeroplane more easy to manouevre in pitch."
+      ],
+      "answerIndex": 0,
+      "answerText": "become heavier making the aeroplane more difficult to manouevre in pitch",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "A location in the aeroplane which is identified by a number designating its distance from the datum is known as:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Station.",
+        "Moment.",
+        "MAC.",
+        "Index."
+      ],
+      "answerIndex": 0,
+      "answerText": "Station.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Loads must be adequately secured in order to:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "avoid unplanned centre of gravity (cg) movement and aircraft damage.",
+        "avoid any centre of gravity (cg) movement during flight.",
+        "prevent excessive 'g'-loading during the landing flare.",
+        "allow steep turns."
+      ],
+      "answerIndex": 0,
+      "answerText": "avoid unplanned centre of gravity (cg) movement and aircraft damage.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The weight of an aeroplane, which is in level non accelerated flight, is said to act",
+      "questionType": "multiple_choice",
+      "choices": [
+        "vertically through the datum point.",
+        "always along the vertical axis of the aeroplane.",
+        "vertically through the centre of gravity.",
+        "vertically through the centre of pressure."
+      ],
+      "answerIndex": 2,
+      "answerText": "vertically through the centre of gravity.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The following data applies to an aeroplane which is about to take o Certified maximum take-off mass 141500 kg Performance limited take-off mass 137300 kg Dry Operating Mass 58400 kg Crew and crew hand baggage mass 640 kg Crew baggage in hold 110 kg Fuel on board 60700 kg From this data calculate the mass of the useful load. ff:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "17450 kg",
+        "78900 kg",
+        "78150 kg",
+        "18200 kg"
+      ],
+      "answerIndex": 1,
+      "answerText": "78900 kg",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "In relation to an aeroplane, the term ' Basic Empty Mass' includes the mass of the aeroplane structure complete with its powerplants, systems, furnishings and other items of equipment considered to be an integral part of the particular aeroplane configuration. Its value is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "printed in the loading manual and includes unusable fuel.",
+        "found in the latest version of the weighing schedule as corrected to allow for modifications.",
+        "inclusive of an allowance for crew, crew baggage and other operating items. It is entered in the loading manifest.",
+        "found in the flight manual and is inclusive of unusable fuel plus fluids contained in closed systems."
+      ],
+      "answerIndex": 1,
+      "answerText": "found in the latest version of the weighing schedule as corrected to allow for modifications.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9605 A or Loading Manual MRJT 1 Figure 4.9) For the transport aeroplane the moment (balance) arm (B.A.) for the forward hold centroid is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "421.5 inches.",
+        "367.9 inches.",
+        "257 inches.",
+        "314.5 inches."
+      ],
+      "answerIndex": 1,
+      "answerText": "367.9 inches.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An aircraft basic empty mass is 3000 kg. The maximum take-off, landing, and zero-fuel mass are identical, at 5200 kg. Ramp fuel is 650 kg, the taxi fuel is 50 kg. The payload available is :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1 600 kg",
+        "1 550 kg",
+        "2 200 kg",
+        "2 150 kg"
+      ],
+      "answerIndex": 0,
+      "answerText": "1 600 kg",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The maximum mass to which an aeroplane may be loaded, prior to engine start, is :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "maximum certificated taxi (ramp) mass.",
+        "maximum regulated taxi (ramp) mass.",
+        "maximum certificated take - off mass.",
+        "maximum regulated take - off mass."
+      ],
+      "answerIndex": 0,
+      "answerText": "maximum certificated taxi (ramp) mass.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11273A and 031- 11273B) A turbojet aeroplane has a planned take-off mass of 190 000 kg. Following cargo loading, the crew is informed that the centre of gravity at take-off is located at 38 % MAC (Mean Aerodynamic Cord) which is beyond limits. The captain decides then to redistribute part of the cargo load between cargo 1 and cargo 4 in order to obtain a new centre of gravity location at 31 % MAC. He asks for a transfer of:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1 000 kg from cargo 4 to cargo 1.",
+        "It is not possible to obtain the required centre of gravity.",
+        "3 000 kg from cargo 4 to cargo 1.",
+        "2 000 kg from cargo 4 to cargo 1."
+      ],
+      "answerIndex": 2,
+      "answerText": "3 000 kg from cargo 4 to cargo 1.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The centre of gravity is the",
+      "questionType": "multiple_choice",
+      "choices": [
+        "centre of thrust along the longitudinal axis, in relation to a datum line",
+        "focus along the longitudinal axis, in relation to a datum line",
+        "neutral point along the longitudinal axis, in relation to a datum line",
+        "point where all the aircraft mass is considered to be concentrated"
+      ],
+      "answerIndex": 3,
+      "answerText": "point where all the aircraft mass is considered to be concentrated",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The mass and balance information gives : Basic mass : 1 200 kg ; Basic balance arm : 3.00 m Under these conditions the Basic centre of gravity is at 25% of the mean aerodynamic chord (MAC). The length of MAC is 2m. In the mass and balance section of the flight manual the following information is given : Position Arm front seats : 2.5 m rear seats : 3.5 m rear hold : 4.5 m fuel tanks : 3.0 m The pilot and one passenger embark; each weighs 80 kg. Fuel tanks contain 140 litres of petrol with a density of 0.714. The rear seats are not occupied.Taxi fuel is negligable. The position of the centre of gravity at take-off (as % MAC) is :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "29 %",
+        "34 %",
+        "17 %",
+        "22 %"
+      ],
+      "answerIndex": 3,
+      "answerText": "22 %",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The centre of gravity of an aeroplane is that point through which the total mass of the aeroplane is said to act. The weight acts in a direction",
+      "questionType": "multiple_choice",
+      "choices": [
+        "at right angles to the flight path.",
+        "governed by the distribution of the mass within the aeroplane.",
+        "parallel to the gravity vector.",
+        "always parallel to the aeroplane's vertical axis."
+      ],
+      "answerIndex": 2,
+      "answerText": "parallel to the gravity vector.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "In mass and balance calculations which of the following describes the datum?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It is the most forward position of the centre of gravity.",
+        "It is the most aft position of the centre of gravity.",
+        "It is the distance from the centre of gravity to the point through which the weight of the component acts.",
+        "It is the point on the aeroplane designated by the manufacturers from which all centre of gravity measurements and calculations are made."
+      ],
+      "answerIndex": 3,
+      "answerText": "It is the point on the aeroplane designated by the manufacturers from which all centre of gravity measurements and calculations are made.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "A mass of 500 kg is loaded at a station which is located 10 metres behind the present Centre of Gravity and 16 metres behind the datum. (Assume: g=10 m/s^2) The moment for that mass used in the loading manifest is :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "130000 Nm",
+        "80000 Nm",
+        "50000 Nm",
+        "30000 Nm"
+      ],
+      "answerIndex": 1,
+      "answerText": "80000 Nm",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "In relation to an aeroplane the Dry Operating Mass is the total mass of the aeroplane ready for a specific type of operation but excluding",
+      "questionType": "multiple_choice",
+      "choices": [
+        "usable fuel and crew.",
+        "potable water and lavatory chemicals.",
+        "usable fuel, potable water and lavatory chemicals.",
+        "usable fuel and traffic load."
+      ],
+      "answerIndex": 3,
+      "answerText": "usable fuel and traffic load.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Dry Operating Mass is the mass of the aeroplane less",
+      "questionType": "multiple_choice",
+      "choices": [
+        "traffic load, potable water and lavatory chemicals.",
+        "usable fuel, potable water and lavatory chemicals.",
+        "usable fuel and traffic load.",
+        "usable fuel."
+      ],
+      "answerIndex": 2,
+      "answerText": "usable fuel and traffic load.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "On an aeroplane without central fuel tank, the maximum Zero Fuel Mass is related to:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Maximum Structural Take-Off Mass.",
+        "Wing loaded trip fuel.",
+        "Variable equipment for the flight.",
+        "The bending moment at the wing root."
+      ],
+      "answerIndex": 3,
+      "answerText": "The bending moment at the wing root.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "When an aeroplane is stationary on the ground, its total weight will act vertically",
+      "questionType": "multiple_choice",
+      "choices": [
+        "through the main wheels of its undercarriage assembly.",
+        "through a point defined as the datum point.",
+        "through its centre of gravity.",
+        "through its centre of pressure."
+      ],
+      "answerIndex": 2,
+      "answerText": "through its centre of gravity.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The maximum floor loading for a cargo compartment in an aeroplane is given as 750 kg per square metre. A package with a mass of 600 kg. is to be loaded. Assuming the pallet base is entirely in contact with the floor, which of the following is the minimum size pallet that can be used ?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "30 cm by 200 cm",
+        "40 cm by 300 cm",
+        "40 cm by 200 cm",
+        "30 cm by 300 cm"
+      ],
+      "answerIndex": 2,
+      "answerText": "40 cm by 200 cm",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An aeroplane is to depart from an airfield where the performance limited take-off mass is 89200 kg. Certificated maximum masses are as follows: Ramp (taxi) mass 89930 kg Maximum Take-off mass 89430 kg MaximumLanding mass 71520 kg Actual Zero fuel mass 62050 kg Fuel on board at ramp: Taxi fuel 600 kg Trip fuel 17830 kg Contingency, final reserve and alternate 9030 kg If the Dry Operating Mass is 40970 kg the traffic load that can be carried on this flight is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "21080 kg",
+        "21500 kg",
+        "21220 kg",
+        "20870 kg"
+      ],
+      "answerIndex": 0,
+      "answerText": "21080 kg",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9603 A or Loading Manual MRJT 1 Figure 4.11) A aeroplane has a landing mass of 53 000kg. The range of safe CG positions, as determined from the appropriate graph in the loading manual, is :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Forward limit 7.3% MAC aft limit 26.8% MAC",
+        "Forward limit 8.7% MAC aft limit 26.8% MAC",
+        "Forward limit 7.8% MAC aft limit 27.0% MAC",
+        "Forward limit 8.2% MAC aft limit 27.0% MAC"
+      ],
+      "answerIndex": 2,
+      "answerText": "Forward limit 7.8% MAC aft limit 27.0% MAC",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An aeroplane has a mean aerodynamic chord (MAC) of 134.5 inches. The leading edge of this chord is at a distance of 625.6 inches aft of the datum. Give the location of the centre of gravity of the aeroplane in terms of percentage MAC if the mass of the aeroplane is acting vertically through a balance arm located 650 inches aft of the datum.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "75,6%",
+        "85,5%",
+        "10,5%",
+        "18,14%"
+      ],
+      "answerIndex": 3,
+      "answerText": "18,14%",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The empty mass of an aeroplane is given as 44800 kg. Operational items (including crew standard mass of 1060 kg) are 2300 kg. If the maximum zero fuel mass is given as 65500 kg, the maximum traffic load which could be carried is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "19460 kg.",
+        "18400 kg",
+        "20700 kg",
+        "23000 kg"
+      ],
+      "answerIndex": 1,
+      "answerText": "18400 kg",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "With respect to aeroplane loading in the planning phase, which of the following statements is always correct ? LM = Landing Mass TOM = Take-off Mass MTOM = Maximum Take-off Mass ZFM = Zero Fuel Mass MZFM = Maximum Zero Fuel Mass DOM = Dry Operating Mass",
+      "questionType": "multiple_choice",
+      "choices": [
+        "LM = TOM - Trip Fuel",
+        "MTOM = ZFM + maximum possible fuel mass",
+        "MZFM = Traffic load + DOM",
+        "Reserve Fuel = TOM - Trip Fuel"
+      ],
+      "answerIndex": 0,
+      "answerText": "LM = TOM - Trip Fuel",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The mass of an aeroplane is 1950 kg. If 450 kg is added to a cargo hold 1.75 metres from the loaded centre of gravity (cg). The loaded cg will move:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "33 cm.",
+        "40 cm.",
+        "30 cm.",
+        "34 cm."
+      ],
+      "answerIndex": 0,
+      "answerText": "33 cm.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Considering only structural limitations, on long distance flights (at the aeroplane's maximum range), the traffic load is normally limited by:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The maximum zero fuel mass.",
+        "The maximum zero fuel mass plus the take-off mass.",
+        "The maximum landing mass.",
+        "The maximum take-off mass."
+      ],
+      "answerIndex": 3,
+      "answerText": "The maximum take-off mass.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11248A , 031-11248B and 031-11248C) Knowing that: . Dry operating mass: 110 000 kg . Basic index: 119.1 . Number of passengers: 185 distributed as shown in the annex (75 kg per PAX) . Cargo load + luggage: 14 000 kg distributed as shown in the annex. . Fuel: 42 000 kg Stages (1) to (7) and (11) having already been calculated, the centre of gravity in % MAC (Mean Aerodynamic Cord) at take-off is located at:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "31.5 %",
+        "30.5 %",
+        "32.5 %",
+        "28.0 %"
+      ],
+      "answerIndex": 0,
+      "answerText": "31.5 %",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "When considering the effects of increased mass on an aeroplane, which of the following is true?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Stalling speeds will be higher.",
+        "Stalling speeds will be lower.",
+        "Gradient of climb for a given power setting will be higher.",
+        "Flight endurance will be increased."
+      ],
+      "answerIndex": 0,
+      "answerText": "Stalling speeds will be higher.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "A flight benefits from a strong tail wind which was not forecast. On arrival at destination a straight in approach and immediate landing clearance is given. The landing mass will be higher than planned and",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the landing distance will be unaffected.",
+        "the approach path will be steeper.",
+        "the approach path will be steeper and threshold speed higher.",
+        "the landing distance required will be longer."
+      ],
+      "answerIndex": 3,
+      "answerText": "the landing distance required will be longer.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Traffic load is the:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Zero Fuel Mass minus Dry Operating Mass.",
+        "Dry Operating Mass minus the disposable load.",
+        "Dry Operating Mass minus the variable load.",
+        "Take-off Mass minus Zero Fuel Mass."
+      ],
+      "answerIndex": 0,
+      "answerText": "Zero Fuel Mass minus Dry Operating Mass.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "When the centre of gravity is at the forward limit, an aeroplane will be :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "extremely unstable and require small elevator control to change pitch.",
+        "extremely stable and will require excessive elevator control to change pitch.",
+        "extremely stable and require small elevator control to change pitch.",
+        "extremely unstable and require excessive elevator control to change pitch."
+      ],
+      "answerIndex": 1,
+      "answerText": "extremely stable and will require excessive elevator control to change pitch.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-1569A) Where is the centre of gravity of the aeroplane in the diagram?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "26.57 cm aft of datum.",
+        "32.29 cm aft of datum.",
+        "26.57 cm forward of datum.",
+        "32.29 cm forward of datum."
+      ],
+      "answerIndex": 2,
+      "answerText": "26.57 cm forward of datum.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "By adding to the basic empty mass the following fixed necessary equipment for a specific flight (catering, safety and rescue equipment, fly away kit, crew), we get:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "landing mass",
+        "Dry operating mass",
+        "take-off mass",
+        "zero fuel mass"
+      ],
+      "answerIndex": 1,
+      "answerText": "Dry operating mass",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Which of the following statements is correct?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The centre of gravity is given in percent of MAC calculated from the leading edge of the wing, where MAC always = the wing chord halfway between the centre line of the fuselage and the wing tip",
+        "If the actual centre of gravity is located behind the aft limit the aeroplane longitudinal stability increases.",
+        "A tail heavy aeroplane is less stable and stalls at a lower speed than a nose heavy aeroplane",
+        "The station (STA) is always the location of the centre of gravity in relation to a reference point, normally the leading edge of the wing at MAC"
+      ],
+      "answerIndex": 2,
+      "answerText": "A tail heavy aeroplane is less stable and stalls at a lower speed than a nose heavy aeroplane",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "In cruise flight, an aft centre of gravity location will:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "decrease longitudinal static stability",
+        "increase longitudinal static stability",
+        "does not influence longitudinal static stability",
+        "not change the static curve of stability into longitudinal"
+      ],
+      "answerIndex": 0,
+      "answerText": "decrease longitudinal static stability",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use appendix 031-11589A) Without the man on the winch, the mass and the lateral CG position of the helicopter are 6 000 kg and 0.055 m to the right. - the mass of the wet man on the winch is 180 kg With the man on the winch, the mass and lateral CG- position of the helicopter are :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "6 180 kg and 0.059m to the right",
+        "6 180 kg and 0.075m to the right",
+        "6 180 kg and 0.041m to the right",
+        "beyond the limit"
+      ],
+      "answerIndex": 3,
+      "answerText": "beyond the limit",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The floor of the main cargo hold is limited to 4 000 N/m2. It is planned to load a cubic container each side of which measures 0.5m. Its maximum gross mass must not exceed: (assume g=10m/s2)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "5 000 kg",
+        "100 kg",
+        "1 000 kg",
+        "500 kg"
+      ],
+      "answerIndex": 1,
+      "answerText": "100 kg",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11219A) An aeroplane, whose specific data is shown in the annex, has a planned take-off mass of 200 000 kg, with its centre of gravity (C.G.) is located at 15.38 m rearward of the reference point, representing a C.G. location at 30 % MAC (Mean Aerodynamic Cord). For performance purposes, the captain decides to reset the value of the centre of gravity location to 35 % MAC. The front and rear cargo compartments are located at a distance of 15 m and 25 m from the reference point respectively, the cargo load mass which needs to be transferred from the front to the rear cargo compartment is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It is not possible to establish the required centre of gravity location.",
+        "4 600 kg",
+        "5 600 kg",
+        "3 600 kg"
+      ],
+      "answerIndex": 1,
+      "answerText": "4 600 kg",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The datum used for balance calculations is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "chosen on the longitudinal axis of the aeroplane, and necessarily situated between the nose and the tail of the aircraft",
+        "chosen on the longitudinal axis of the aircraft and necessarily situated between the leading edge and trailing edge of the wing",
+        "chosen on the longitudinal axis of the aircraft, and always at the fire-wall level",
+        "chosen on the longitudinal axis of the aeroplane, but not necessarily between the nose and the tail of the aircraft"
+      ],
+      "answerIndex": 3,
+      "answerText": "chosen on the longitudinal axis of the aeroplane, but not necessarily between the nose and the tail of the aircraft",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "A revenue flight is to be made by a jet transport. The following are the aeroplane's structural limits: -Maximum Ramp Mass: 69 900 kg -Maximum Take Off Mass: 69 300 kg -Maximum Landing Mass: 58 900 kg -Maximum Zero Fuel Mass: 52 740 kg Take Off and Landing mass are not performance limited. Dry Operating Mass: 34 900 kg Trip Fuel: 11 800 kg Taxi Fuel: 500 kg Contingency & final reserve fuel: 1 600 kg Alternate Fuel: 1 900 kg The maximum traffic load that can be carried is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "17 840 kg",
+        "19 100 kg",
+        "19 200 kg",
+        "19 500 kg"
+      ],
+      "answerIndex": 0,
+      "answerText": "17 840 kg",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The following results were obtained after weighing a helicopter : - front point : 220 kg - right rear point : 500 kg - left rear point : 480 kg The helicopter's datum is 3.40 m forward of the rotor axis. The front point is located 2.00 m forward of the rotor axis and the rear points are located 0.50 m aft of the rotor axis. The longitudinal CG-position in relation to the datum is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0,04 m",
+        "3,44 m",
+        "1,18 m",
+        "3,36 m"
+      ],
+      "answerIndex": 1,
+      "answerText": "3,44 m",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "A revenue flight is to be made by a jet transport. The following are the aeroplane's structural limits: -Maximum Ramp Mass: 69 900 kg -Maximum Take Off Mass: 69 300 kg -Maximum Landing Mass: 58 900 kg -Maximum Zero Fuel Mass: 52 740 kg Take Off and Landing mass are not performance limited. Dry Operating Mass: 34 930 kg Trip Fuel: 11 500 kg Taxi Fuel: 250 kg Contingency & final reserve fuel: 1 450 kg Alternate Fuel: 1 350 kg The maximum traffic load that can be carried is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "20 420 kg",
+        "17 810 kg",
+        "21 170 kg",
+        "21 070 kg"
+      ],
+      "answerIndex": 1,
+      "answerText": "17 810 kg",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The term 'Maximum Zero Fuel Mass' consist of :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The maximum mass authorized for a certain aeroplane not including the fuel load and operational items",
+        "The maximum mass for some aeroplanes including the fuel load and the traffic load",
+        "The maximum permissible mass of an aeroplane with no usable fuel.",
+        "The maximum mass authorized for a certain aeroplane not including traffic load and fuel load."
+      ],
+      "answerIndex": 2,
+      "answerText": "The maximum permissible mass of an aeroplane with no usable fuel.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The following data applies to a planned flight. Dry Operating Mass 34900 kg Performance limited Take-Off Mass 66300 kg Performance limited Landing Mass 55200 kg Maximum Zero Fuel Mass 53070 kg Fuel required at ramp:- Taxy fuel 400 kg trip fuel 8600 kg contingency fuel 430 kg alternate fuel 970 kg holding fuel 900 kg Traffic load 16600 kg Fuel costs at the departure airfield are such that it is decided to load the maximum fuel quantity possible. The total fuel which may be safely loaded prior to departure is :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "12700 kg",
+        "13230 kg",
+        "15200 kg",
+        "10730 kg"
+      ],
+      "answerIndex": 0,
+      "answerText": "12700 kg",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Determine the Take-off Mass for the following single engine aeroplane. Given : Standard Empty Mass : 1764 lbs Optional Equipment : 35 lbs Pilot + Front seat passenger : 300 lbs Cargo Mass : 350 lbs Ramp Fuel = Block Fuel : 60 Gal. Trip Fuel : 35 Gal. Fuel density : 6 lbs/Gal.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "2659 lbs",
+        "2799 lbs",
+        "2764 lbs",
+        "2809 lbs"
+      ],
+      "answerIndex": 1,
+      "answerText": "2799 lbs",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The flight preparation of a turbojet aeroplane provides the following data: Take-off runway limitation: 185 000 kg Landing runway limitation: 180 000 kg Planned fuel consumption: 11 500 kg Fuel already loaded on board the aircraft: 20 Knowing that: Maximum take-off mass (MTOM): 212 000 kg Maximum landing mass (MLM): 174 000 kg Maximum zero fuel mass (MZFM): 164 000 kg Dry operating mass (DOM): 110 000 kg The maximum cargo load that the captain may decide to load on board is: 000 kg",
+      "questionType": "multiple_choice",
+      "choices": [
+        "61 500 kg",
+        "54 000 kg",
+        "55 000 kg",
+        "55 500 kg"
+      ],
+      "answerIndex": 1,
+      "answerText": "54 000 kg",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Based on actual conditions, an aeroplane has the following performance take-off mass limitations: Flaps : 0° 10° 15° Runway: 4100 4400 4600 Climb: 4700 4500 4200 Masses are in kg Structural limits: take-off/landing/zero fuel: 4 300 kg The maximum take-off mass is :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "4 200 kg",
+        "4 700 kg",
+        "4 300 kg",
+        "4 100 kg"
+      ],
+      "answerIndex": 2,
+      "answerText": "4 300 kg",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "For a particular aeroplane, the structural maximum mass without any fuel on board, other than unusable quantities, is :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "a fixed value which is stated in the Aeroplane Operating Manual.",
+        "a variable value which is governed by the payload carried.",
+        "a variable value which may limit the payload carried.",
+        "a fixed value which will limit the amount of fuel carried."
+      ],
+      "answerIndex": 0,
+      "answerText": "a fixed value which is stated in the Aeroplane Operating Manual.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Given that: - Maximum structural take-off mass: 146 000 kg - Maximum structural landing mass: 93 900 kg - Maximum zero fuel mass: 86 300 kg - Trip fuel: 27 000 kg - Taxi fuel: 1 000 kg - Contingency fuel: 1350 kg - Alternate fuel: 2650 kg - Final reserve fuel: 3000 kg Determine the actual take-off mass:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "121 300 kg.",
+        "120 300 kg.",
+        "146 000 kg.",
+        "120 900 kg."
+      ],
+      "answerIndex": 1,
+      "answerText": "120 300 kg.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The Maximum Zero Fuel Mass is the mass of the aeroplane with no usable fuel on board. It is a limitation which is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "governed by the requirements of the centre of gravity limits and the structural limits of the aeroplane.",
+        "tabulated in the Flight Manual against arguments of airfield elevation and temperature.",
+        "governed by the traffic load to be carried. It also provides protection from excessive 'wing bending'.",
+        "listed in the Flight Manual as a fixed value. It is a structural limit."
+      ],
+      "answerIndex": 3,
+      "answerText": "listed in the Flight Manual as a fixed value. It is a structural limit.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 033-9583A or Loading Manual MRJT 1 page 20) For the medium range twin jet the datum point is located",
+      "questionType": "multiple_choice",
+      "choices": [
+        "540 cm forward of the front spar.",
+        "on the nose of the aeroplane.",
+        "at the leading edge of the Mean Aerodynamic Chord (MAC).",
+        "540 inches forward of the front spar."
+      ],
+      "answerIndex": 3,
+      "answerText": "540 inches forward of the front spar.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "In order to provide an adequate \"buffet boundary\" at the commencement of the cruise a speed of 1.3Vs is used. At a mass of 120000 kg this is a CAS of 180 knots. If the mass of the aeroplane is increased to 135000 kg the value of 1.3Vs will be",
+      "questionType": "multiple_choice",
+      "choices": [
+        "increased to 191 knots, drag will increase and air distance per kg of fuel will decrease.",
+        "unaffected as Vs always occurs at the same angle of attack.",
+        "increased to 191 knots, drag will decrease and air distance per kg of fuel will increase.",
+        "increased to 202 knots but, since the same angle of attack is used, drag and range will remain the same."
+      ],
+      "answerIndex": 0,
+      "answerText": "increased to 191 knots, drag will increase and air distance per kg of fuel will decrease.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Which of the following alternatives corresponds to zero fuel mass?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Operating mass plus passengers and cargo.",
+        "Take-off mass minus fuel to destination and alternate.",
+        "The mass of an aeroplane with no usable fuel.",
+        "Operating mass plus load of passengers and cargo."
+      ],
+      "answerIndex": 2,
+      "answerText": "The mass of an aeroplane with no usable fuel.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annexes 031-6564A and 031- 6564B or Loading Manual SEP1 Figure 2.4) With respect to a single-engine piston powered aeroplane, determine the zero fuel moment (lbs.In./100) in the following conditions: Basic Empty Mass: 2415 lbs. Arm at Basic Empty Mass: 77,9 In. Cargo Zone A: 350 lbs. Baggage Zone B: 35 lbs. Pilot and front seat passenger : 300 lbs (total)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "6675",
+        "2496,3",
+        "2311,8",
+        "2548,8"
+      ],
+      "answerIndex": 3,
+      "answerText": "2548,8",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-12268A) Using the data given in the Load & Trim sheet, determine from the following the correct values for the take off mass and the position of the centre of gravity at that mass if the fuel index correction to be applied is given as - 0.9",
+      "questionType": "multiple_choice",
+      "choices": [
+        "20.3 %",
+        "22.6 %",
+        "17.5 %",
+        "20.1 %"
+      ],
+      "answerIndex": 2,
+      "answerText": "17.5 %",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An aeroplane, which is scheduled to fly an oceanic sector, is due to depart from a high altitude airport in the tropics at 1400 local time. The airport has an exceptionally long runway. Which of the following is most likely to be the limiting factor(s) in determining the take - off mass ?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "maximum zero fuel mass.",
+        "maximum certificated take - off mass.",
+        "en route obstacle clearance requirements.",
+        "altitude and temperature of the departure airfield."
+      ],
+      "answerIndex": 3,
+      "answerText": "altitude and temperature of the departure airfield.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The Maximum Zero Fuel Mass is a structural limiting mass. It is made up of the aeroplane Dry Operational mass plus",
+      "questionType": "multiple_choice",
+      "choices": [
+        "traffic load and crew standard mass.",
+        "traffic load and unuseable fuel.",
+        "traffic load, unuseable fuel and crew standard mass.",
+        "unuseable and crew standard mass."
+      ],
+      "answerIndex": 1,
+      "answerText": "traffic load and unuseable fuel.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11227A) An aeroplane, whose specific data is shown in the annex, has a planned take-off mass of 200 000 kg, with its centre of gravity (C.G.) located at 15.38 m rearward of the reference point, representing a C.G. location at 30 % MAC (Mean Aerodynamic Cord). The current cargo load distribution is: front cargo: 6 500 kg; rear cargo: 4 000 kg. For performance purposes, the captain decides to reset the value of the centre of gravity location to 33 % MAC. The front and rear cargo compartments are located at a distance of 15 m and 25 m from the reference point respectively. After the transfer operation, the new cargo load distribution is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "front cargo: 9 260 kg; rear cargo: 1 240 kg",
+        "front cargo: 3 740 kg; rear cargo: 6 760 kg",
+        "front cargo: 6 760 kg; rear cargo: 3 740 kg",
+        "front cargo: 4 550 kg; rear cargo: 5 950 kg"
+      ],
+      "answerIndex": 1,
+      "answerText": "front cargo: 3 740 kg; rear cargo: 6 760 kg",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11257A and 031- 11257B ) The planned take-off mass of a turbojet aeroplane is 190 000 kg, with its centre of gravity located at 29 % MAC (Mean Aerodynamic Cord) . Shortly prior to engine start, the local staff informs the flight crew that 4 000 kg must be unloaded from cargo 4. After the handling operation, the new centre of gravity location in % MAC will be:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "33 %",
+        "27 %",
+        "31 %",
+        "25 %"
+      ],
+      "answerIndex": 3,
+      "answerText": "25 %",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Calculate the centre of gravity in % MAC (mean aerodynamic chord) with following data: Distance datum - centre of gravity: 12.53 m Distance datum - leading edge: 9.63 m Length of MAC: 8 m",
+      "questionType": "multiple_choice",
+      "choices": [
+        "36.3 % MAC",
+        "63.4 % MAC",
+        "47.0 % MAC",
+        "23.1 % MAC"
+      ],
+      "answerIndex": 0,
+      "answerText": "36.3 % MAC",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11275A and 031- 11275B) A turbojet aeroplane has a planned take-off mass of 190 000 kg; the cargo load is distributed as follows: cargo 1: 3 000 kg; cargo 4: 7 000 kg. Once the cargo loading is completed, the crew is informed that the centre of gravity at take-off is located at 38 % MAC (Mean Aerodynamic Cord) which is beyond the limits. The captain decides then to redistribute part of the cargo load between cargo 1 and cargo 4 in order to obtain a new centre of gravity location at 31 % MAC. Following the transfer operation, the new load distribution is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "cargo 1: 6 000 kg; cargo 4: 4 000 kg",
+        "cargo 1: 4 000 kg; cargo 4: 6 000 kg",
+        "cargo 1: 5 000 kg; cargo 4: 4 000 kg",
+        "cargo 1: 4 000 kg; cargo 4: 5 000 kg"
+      ],
+      "answerIndex": 0,
+      "answerText": "cargo 1: 6 000 kg; cargo 4: 4 000 kg",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The Dry Operating Mass of an aeroplane includes :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Fuel and passengers baggage and cargo.",
+        "Passengers baggage and cargo.",
+        "Crew and crew baggage, catering, removable passenger service equipment, potable water and lavatory chemicals.",
+        "Unusable fuel and reserve fuel."
+      ],
+      "answerIndex": 2,
+      "answerText": "Crew and crew baggage, catering, removable passenger service equipment, potable water and lavatory chemicals.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-12272A) For the purpose of calculating traffic loads, an operator's loading manual gives the following standard mass values for passengers. (These values include an allowance for hand baggage) Male 88 kg Female 70 kg Child 35 kg Infant 6 kg The standard mass value to be used for hold baggage is 14 kg per piece The loading manifest shows the following details : Passengers loaded Males 40 Females 65 Children 8 Infants 5 Baggage in hold number 4: 120 pieces Using the standard mass values given and the data in the appendix, select from the following the correct value for the mass of freight (all loaded in hold No1) which constitutes the remainder of the traffic load",
+      "questionType": "multiple_choice",
+      "choices": [
+        "280 kg",
+        "no cargo can be loaded in hold number 1",
+        "260 kg",
+        "210 kg"
+      ],
+      "answerIndex": 2,
+      "answerText": "260 kg",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annexes 031-11069A and 031- 11069B) Contrary to the forecast given in the LOAD and TRIM sheet, cargo compartment 1 is empty. The take-off centre of gravity in MAC % (Mean Aerodynamic Chord) will be located at:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "32.5 %",
+        "36 %",
+        "25 %",
+        "31 %"
+      ],
+      "answerIndex": 3,
+      "answerText": "31 %",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Standard masses may be used for the computation of mass values for baggage if the aeroplane",
+      "questionType": "multiple_choice",
+      "choices": [
+        "has 30 or more seats.",
+        "is carrying 30 or more passengers.",
+        "has 20 or more seats.",
+        "has 6 or more seats."
+      ],
+      "answerIndex": 2,
+      "answerText": "has 20 or more seats.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An aeroplane is performance limited to a landing mass of 54230 kg. The Dry Operating Mass is 35000 kg and the zero fuel mass is 52080 kg. If the take-off mass is 64280 kg the useful load is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "17080 kg",
+        "12200 kg.",
+        "10080 kg.",
+        "29280 kg."
+      ],
+      "answerIndex": 3,
+      "answerText": "29280 kg.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The operator of an aircraft equipped with 50 seats uses standard masses for passengers and baggage. During the preparation of a scheduled flight a group of passengers present themselves at the check-in desk, it is apparent that even the lightest of these exceeds the value of the declared standard mass.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the operator is obliged to use the actual masses of each passenger",
+        "the operator should use the individual masses of the passengers or alter the standard masss",
+        "the operator may use the standard masses for the load and balance calculation without correction",
+        "the operator may use the standard masses for the balance but must correct these for the load calculation"
+      ],
+      "answerIndex": 1,
+      "answerText": "the operator should use the individual masses of the passengers or alter the standard masss",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Given: Maximum structural take-off mass= 146 900 kg Maximum structural landing mass= 93 800 kg Maximum zero fuel mass= 86 400 kg Trip fuel= 27 500 kg Block fuel= 35 500 kg Engine starting and taxi fuel = 1 000 kg The maximum take-off mass is equal to:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "120 300 kg",
+        "120 900 kg",
+        "121 300 kg",
+        "113 900 kg"
+      ],
+      "answerIndex": 1,
+      "answerText": "120 900 kg",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "In determining the Dry Operating Mass of an aeroplane it is common practice to use 'standard mass' values for crew. These values are",
+      "questionType": "multiple_choice",
+      "choices": [
+        "flight crew (male) 88 kg. (female) 75 kg., cabin crew 75 kg. each. These include an allowance for hand baggage.",
+        "flight crew (male) 88 kg. (female) 75 kg., cabin crew 75 kg. each. These do not include an allowance for hand baggage.",
+        "flight crew 85 kg., cabin crew 75 kg. each. These are inclusive of a hand baggage allowance.",
+        "flight crew 85 kg., cabin crew 75 kg. each. These do not include a hand baggage allowance."
+      ],
+      "answerIndex": 2,
+      "answerText": "flight crew 85 kg., cabin crew 75 kg. each. These are inclusive of a hand baggage allowance.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The maximum certificated take - off mass is :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "a take - off limiting mass which is governed by the gradient of climb after reaching V2 .",
+        "limited by the runway take off distance available. It is tabulated in the Flight Manual.",
+        "a structural limit which may not be exceeded for any take - off.",
+        "a take - off limiting mass which is affected by the aerodrome altitude and temperature."
+      ],
+      "answerIndex": 2,
+      "answerText": "a structural limit which may not be exceeded for any take - off.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The maximum zero-fuel mass: 1- is a regulatory limitation 2- is calculated for a maximum load factor of +3.5 g 3- is due to the maximum permissible bending moment at the wing root 4- imposes fuel dumping from the outer wings tank first 5- imposes fuel dumping from the inner wings tank first 6- can be increased by stiffening the wing The combination of correct statements is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1, 2, 3",
+        "1, 3, 5",
+        "2, 5, 6",
+        "4, 2, 6"
+      ],
+      "answerIndex": 1,
+      "answerText": "1, 3, 5",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The maximum zero fuel mass is a mass limitation for the:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "strength of the fuselage",
+        "allowable load exerted upon the wing considering a margin for fuel tanking",
+        "total load of the fuel imposed upon the wing",
+        "strength of the wing root"
+      ],
+      "answerIndex": 3,
+      "answerText": "strength of the wing root",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9643 A or Loading Manual MRJT 1 Figure 4.14) The following data relates to a planned flight of an aeroplane - Dry Operational mass 60520 kg Performance limited take-off mass 92750 kg Performance limited landing mass 72250 kg Maximum Zero Fuel mass 67530 kg Fuel on board at take-off - Trip fuel 12500 kg Contingency and final reserve fuel 2300 kg Alternate fuel 1700 kg Using this data, as appropriate, calculate the maximum traffic load that can be carried.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "7010 kg",
+        "7730 kg",
+        "11730 kg",
+        "15730 kg"
+      ],
+      "answerIndex": 0,
+      "answerText": "7010 kg",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9604 A or Loading Manual MRJT 1 Figure 4.11) The aeroplane has a mass of 61 000 kg in the cruise. The range of safe CG positions, as determined from the appropriate graph in the loading manual, is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "forward limit 7.7% aft limit 25.2% MAC",
+        "forward limit 8.3% aft limit 26.3% MAC",
+        "forward limit 8.0% aft limit 27.2% MAC.",
+        "forward limit 7.6% aft limit 26.9% MAC."
+      ],
+      "answerIndex": 1,
+      "answerText": "forward limit 8.3% aft limit 26.3% MAC",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The Take-off Mass of an aeroplane is 66700 kg which includes a traffic load of 14200 kg and a usable fuel load of 10500 kg. If the standard mass for the crew is 545 kg the Dry Operating Mass is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "56200 kg",
+        "41455 kg",
+        "42545 kg",
+        "42000 kg"
+      ],
+      "answerIndex": 3,
+      "answerText": "42000 kg",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The centre of gravity location of the aeroplane is normally computed along the:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "horizontal axis.",
+        "longitudinal axis.",
+        "lateral axis.",
+        "vertical axis."
+      ],
+      "answerIndex": 1,
+      "answerText": "longitudinal axis.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Assume: Aeroplane gross mass: 4750 kg Centre of gravity at station: 115.8 What will be the new position of the centre of gravity if 100 kg is moved from the station 30 to station 120?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Station 117.69",
+        "Station 118.33",
+        "Station 120.22",
+        "Station 118.25"
+      ],
+      "answerIndex": 0,
+      "answerText": "Station 117.69",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The determination of the centre of gravity in relation to the mean aerodynamic chord:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "consists of defining the centre of gravity longitudinally in relation to the length of the mean aerodynamic chord and the leading edge",
+        "consists of defining the centre of gravity longitudinally in relation to the length of the mean aerodynamic chord and the trailing edge",
+        "consists of defining the centre of gravity longitudinally in relation to the position of the aerodynamic convergence point",
+        "consists of defining the centre of gravity longitudinally in relation to the position of the aerodynamic centre of pressure"
+      ],
+      "answerIndex": 0,
+      "answerText": "consists of defining the centre of gravity longitudinally in relation to the length of the mean aerodynamic chord and the leading edge",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11246A and 031- 11246B) The planned take-off mass of an aeroplane is 180 000 kg, with its centre of gravity located at 31 % MAC (Mean Aerodynamic Cord). Shortly prior to engine start, the local staff informs the crew that an additional load of 4 000 kg must be loaded in cargo 1. After loading this cargo, the new centre of gravity location will be:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "28 %",
+        "37 %",
+        "34 %",
+        "25 %"
+      ],
+      "answerIndex": 3,
+      "answerText": "25 %",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The empty mass of an aeroplane, as given in the weighing schedule, is 61300 kg. The operational items (including crew) is given as a mass of 2300 kg. If the take-off mass is 132000 kg (including a useable fuel quantity of 43800 kg) the useful load is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "70700 kg",
+        "29600 kg",
+        "26900 kg.",
+        "68400 kg"
+      ],
+      "answerIndex": 3,
+      "answerText": "68400 kg",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The centre of gravity of a body is that point",
+      "questionType": "multiple_choice",
+      "choices": [
+        "through which the sum of the forces of all masses of the body is considered to act.",
+        "where the sum of the moments from the external forces acting on the body is equal to zero.",
+        "where the sum of the external forces is equal to zero.",
+        "which is always used as datum when computing moments."
+      ],
+      "answerIndex": 0,
+      "answerText": "through which the sum of the forces of all masses of the body is considered to act.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Which one of the following is correct?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Arm = Force / Moment",
+        "Moment = Force / Arm",
+        "Arm = Force X Moment",
+        "Arm = Moment / Force"
+      ],
+      "answerIndex": 3,
+      "answerText": "Arm = Moment / Force",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9608 A or Loading Manual MRJT 1 Figure 4.9) Referring to the loading manual for the transport aeroplane, the maximum running load for the aft section of the forward lower deck cargo compartment is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "13.12 kg per inch.",
+        "13.15 kg per inch.",
+        "14.65 kg per inch.",
+        "7.18 kg per inch."
+      ],
+      "answerIndex": 0,
+      "answerText": "13.12 kg per inch.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "For the purpose of completing the Mass and Balance documentation, the Traffic Load is considered to be equal to the Take-off Mass",
+      "questionType": "multiple_choice",
+      "choices": [
+        "less the Operating Mass.",
+        "plus the Operating Mass.",
+        "plus the Trip Fuel Mass.",
+        "less the Trip Fuel Mass."
+      ],
+      "answerIndex": 0,
+      "answerText": "less the Operating Mass.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The centre of gravity of an aeroplane",
+      "questionType": "multiple_choice",
+      "choices": [
+        "may only be moved if permitted by the regulating authority and endorsed in the aeroplane's certificate of airworthiness.",
+        "is in a fixed position and is unaffected by aeroplane loading.",
+        "must be maintained in a fixed position by careful distribution of the load.",
+        "can be allowed to move between defined limits."
+      ],
+      "answerIndex": 3,
+      "answerText": "can be allowed to move between defined limits.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9644 A or Loading Manual MRJT 1 Figure 4.14) Aeroplane Dry Operating mass 85000 kg Performance limited take-off mass 127000 kg Performance limited landing mass 98500 kg Maximum zero fuel mass 89800 kg Fuel requirements for flight - Trip fuel 29300 kg Contingency and final reserve fuel 3600 kg Alternate fuel 2800 kg. The maximum traffic load that can be carried on this flight is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "4800 kg",
+        "7100 kg",
+        "6300 kg",
+        "12700 kg"
+      ],
+      "answerIndex": 0,
+      "answerText": "4800 kg",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-1580A) A jet aeroplane, with the geometrical characteristics shown in the appendix, has a take-off weight (W) of 460 000 N and a centre of gravity (point G on annex) located at 15.40 m from the zero reference point. At the last moment the station manager has 12 000 N of freight added in the forward compartment at 10 m from the zero reference point. The final location of the centre of gravity, calculated in percentage of mean aerodynamic chord AB (from point A), is equal to:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "30.4 %.",
+        "35.5 %.",
+        "27.5 %.",
+        "16.9 %."
+      ],
+      "answerIndex": 2,
+      "answerText": "27.5 %.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An aeroplane is loaded with its centre of gravity towards the rear limit. This will result in :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "a reduced fuel consumption as a result of reduced drag.",
+        "an increase in longitudinal stability.",
+        "a reduction in power required for a given speed.",
+        "an increased risk of stalling due to a decrease in tailplane moment"
+      ],
+      "answerIndex": 3,
+      "answerText": "an increased risk of stalling due to a decrease in tailplane moment",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "On an aeroplane with a seating capacity of more than 30, it is decided to use standard mass values for computing the total mass of passengers. If the flight is not a holiday charter, the mass value which may be used for an adult is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "76 kg",
+        "84 kg (male) 76 kg (female).",
+        "88 kg (male) 74 kg (female).",
+        "84 kg"
+      ],
+      "answerIndex": 3,
+      "answerText": "84 kg",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Allowed traffic load is the difference between :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "allowed take off mass and basic mass",
+        "operating mass and basic mass",
+        "allowed take off mass and operating mass",
+        "allowed take off mass and basic mass plus trip fuel"
+      ],
+      "answerIndex": 2,
+      "answerText": "allowed take off mass and operating mass",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11247A and 031- 11247B) A turbojet aeroplane is parked with the following data: Corrected Dry Operating Mass: 110 100 kg Basic corrected index: 118.6 Initial cargo distribution: cargo 1 = 4 000 kg; cargo 2 = 2 000 kg; cargo 3 = 2 000 kg; The other cargo compartments are empty. Take-off mass: 200 000 kg Centre of gravity location: 32 % MAC (Mean Aerodynamic Cord) To maximize performance, the captain decides to redistribute part of the cargo load between cargo 1 and cargo 4, in order to take off with a new centre of gravity location at 35 % MAC. After loading, the new load distribution between cargo 1 and cargo 4 is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1 000 kg in cargo 1; 3 000 kg in cargo 4",
+        "2 500 kg in cargo 1; 1 500 kg in cargo 4",
+        "3 000 kg in cargo 1; 1 000 kg in cargo 4",
+        "2 000 kg in cargo 1; 2 000 kg in cargo 4"
+      ],
+      "answerIndex": 1,
+      "answerText": "2 500 kg in cargo 1; 1 500 kg in cargo 4",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031 11634A) Maximum allowed take-off mass limit: 37 200kg Dry operating mass: 21 600 kg Take-off fuel: 8 500 kg Passengers on board: male 33, female 32, children 5 Baggages: 880 kg The company uses the standard passenger mass systems (see annex) allowed by regulations. The flight is not a holiday charter. In these conditions, the maximum cargo that may be loaded is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "585 kg",
+        "901 kg",
+        "1 098 kg",
+        "1 105 kg"
+      ],
+      "answerIndex": 0,
+      "answerText": "585 kg",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Fuel loaded onto an aeroplane is 15400 kg but is erroneously entered into the load and trim sheet as 14500 kg. This error is not detected by the flight crew but they will notice that",
+      "questionType": "multiple_choice",
+      "choices": [
+        "V1 will be reached sooner than expected",
+        "V1 will be increased.",
+        "the aeroplane will rotate much earlier than expected.",
+        "speed at un-stick will be higher than expected"
+      ],
+      "answerIndex": 3,
+      "answerText": "speed at un-stick will be higher than expected",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Prior to departure an aeroplane is loaded with 16500 litres of fuel at a fuel density of 780 kg/m³. This is entered into the load sheet as 16500 kg and calculations are carried out accordingly. As a result of this error, the aeroplane is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "lighter than anticipated and the calculated safety speeds will be too high",
+        "lighter than anticipated and the calculated safety speeds will be too low",
+        "heavier than anticipated and the calculated safety speeds will be too high",
+        "heavier than anticipated and the calculated safety speeds will be too low."
+      ],
+      "answerIndex": 0,
+      "answerText": "lighter than anticipated and the calculated safety speeds will be too high",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The standard mass for a child is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "35 kg for holiday charters and 38 kg for all other flights.",
+        "38 kg for all flights.",
+        "30 kg for holiday charters and 35 kg for all other flights.",
+        "35 kg for all flights."
+      ],
+      "answerIndex": 3,
+      "answerText": "35 kg for all flights.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11619A ) A helicopter's basic mass is 1 100 kg and the longitudinal CG-position is at 3.10 m. Determine the longitudinal CG position in the following conditions : - pilot and front passenger : 150 kg - rear passengers : 150 kg - fuel : 500 kg",
+      "questionType": "multiple_choice",
+      "choices": [
+        "2.82 m",
+        "2.91 m",
+        "2.85 m",
+        "2.97 m"
+      ],
+      "answerIndex": 1,
+      "answerText": "2.91 m",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-9596 A or Loading Manual MRJT 1 Figure 4.11) At the maximum landing mass the range of safe CG positions, as determined from the appropriate graph in the loading manual, is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Forward limit 8.0% MAC aft limit 27.2% MAC",
+        "Forward limit 8.6% MAC aft limit 27.0% MAC",
+        "Forward limit 8.0% MAC aft limit 26.8% MAC",
+        "Forward limit 7.4% MAC aft limit 27.0% MAC"
+      ],
+      "answerIndex": 3,
+      "answerText": "Forward limit 7.4% MAC aft limit 27.0% MAC",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "In cruise, an extreme aft longitudinal center of gravity:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "moves away the cyclic stick from its forward stop and increases the stress in the rotor head",
+        "brings the cyclic stick closer to its forward stop and decreases the stress in the rotor head",
+        "moves away the cyclic stick from its forward stop and decreases the stresses in the head rotors",
+        "brings the cyclic stick closer to its forward stop and increases the stress in the rotor head"
+      ],
+      "answerIndex": 3,
+      "answerText": "brings the cyclic stick closer to its forward stop and increases the stress in the rotor head",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annexes 031- 11205A and 031- 11205B) A turbojet aeroplane is parked with the following data: Corrected dry operating mass: 110 100 kg Basic corrected index: 118.6 Initial cargo distribution: cargo 1: 4 000 kg ; cargo 2: 2 000 kg ; cargo 3: 2 000 kg; other cargo compartments are empty Take-off mass: 200 000 kg; centre of gravity (C.G.) location: 32 % For perfomance reasons, the captain decides to redistribute part of the cargo loading between cargo compartments, in order to take off with a new C.G. location of 34 %. He asks for a transfer of:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1 500 kg from cargo 3 to cargo 1",
+        "1 000 kg from cargo 1 to cargo 4",
+        "500 kg from cargo 1 to cargo 3",
+        "1 000 kg from cargo 3 to cargo 1"
+      ],
+      "answerIndex": 1,
+      "answerText": "1 000 kg from cargo 1 to cargo 4",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Given an aeroplane with: Maximum Structural Landing Mass: 68000 kg Maximum Zero Fuel Mass: 70200 kg Maximum Structural Take-off Mass: 78200 kg Dry Operating Mass : 48000 kg Scheduled trip fuel is 7000 kg and the reserve fuel is 2800 kg, Assuming performance limitations are not restricting, the maximum permitted take-off mass and maximum traffic load are respectively:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "77200 kg and 22200 kg",
+        "75000 kg and 17200 kg",
+        "75000 kg and 20000 kg",
+        "77200 kg and 19400 kg"
+      ],
+      "answerIndex": 1,
+      "answerText": "75000 kg and 17200 kg",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The centre of gravity of an aeroplane is at 25% of the Mean Aerodynamic Chord. This means that the centre of gravity of the aeroplane is situated at 25% of the length of:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the mean aerodynamic chord in relation to the datum",
+        "the aeroplane in relation to the leading edge",
+        "the mean aerodynamic chord in relation to the leading edge",
+        "the mean aerodynamic chord in relation to the trailing edge"
+      ],
+      "answerIndex": 2,
+      "answerText": "the mean aerodynamic chord in relation to the leading edge",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Given: Dry Operating Mass= 29 800 kg Maximum Take-Off Mass= 52 400 kg Maximum Zero-Fuel Mass= 43 100 kg Maximum Landing Mass= 46 700 kg Trip fuel= 4 000 kg Fuel quantity at brakes release= 8 000 kg The maximum traffic load is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "13 300 kg",
+        "9 300 kg",
+        "14 600 kg",
+        "12 900 kg"
+      ],
+      "answerIndex": 3,
+      "answerText": "12 900 kg",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The maximum intensity floor loading for an aeroplane is given in the Flight Manual as 650 kg per square metre. What is the maximum mass of a package which can be safely supported on a pallet with dimensions of 80 cm by 80 cm?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "41.6 kg",
+        "101.6 kg",
+        "416.0 kg",
+        "1015.6 kg"
+      ],
+      "answerIndex": 2,
+      "answerText": "416.0 kg",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An aeroplane with a two wheel nose gear and four main wheels rests on the ground with a single nose wheel load of 500 kg and a single main wheel load of 6000 kg. The distance between the nose wheels and the main wheels is 10 meter. How far is the centre of gravity in front of the main wheels?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "41.6 cm.",
+        "40 cm.",
+        "25 cm.",
+        "4 meter."
+      ],
+      "answerIndex": 1,
+      "answerText": "40 cm.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Moment (balance) arms are measured from a specific point to the body station at which the mass is located. That point is known as",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the datum.",
+        "the focal point.",
+        "the axis.",
+        "the centre of gravity of the aeroplane."
+      ],
+      "answerIndex": 0,
+      "answerText": "the datum.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The total mass of the aeroplane including crew, crew baggage; plus catering and removable passenger equipment; plus potable water and lavatory chemicals but excluding usable fuel and traffic load, is referred to as:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Maximum Zero Fuel Mass",
+        "Dry Operating Mass.",
+        "Zero Fuel Mass.",
+        "Aeroplane Prepared for Service ( APS) Mass."
+      ],
+      "answerIndex": 1,
+      "answerText": "Dry Operating Mass.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "A jet transport has the following structural limits: -Maximum Ramp Mass: 63 060 kg -Maximum Take Off Mass: 62 800 kg -Maximum Landing Mass: 54 900 kg -Maximum Zero Fuel Mass: 51 300 kg The aeroplane's fuel is loaded accordance with the following requirements: -Taxi fuel: 400 kg -Trip fuel: 8400 kg -Contingency & final reserve fuel: 1800 kg -Alternate fuel: 1100 kg If the Dry Operating Mass is 34930 kg, determine the maximum traffic load that can be carried on the flight if departure and landing airfields are not performance limited.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "16 370 kg",
+        "16 430 kg",
+        "17 070 kg",
+        "16 570 kg"
+      ],
+      "answerIndex": 0,
+      "answerText": "16 370 kg",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-12273A) From the data contained in the attached appendix, the maximum allowable take - off mass and traffic load is respectively :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "68038 kg and 18588 kg",
+        "66770 kg and 17320 kg",
+        "60425 kg and 10975 kg",
+        "61600 kg and 12150 kg"
+      ],
+      "answerIndex": 3,
+      "answerText": "61600 kg and 12150 kg",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The total mass of an aeroplane is 9000 kg. The centre of gravity (cg) position is at 2.0 m from the datum line. The aft limit for cg is at 2.1 m from the datum line. What mass of cargo must be shifted from the front cargo hold (at 0.8 m from the datum) to the aft hold (at 3.8 m), to move the cg to the aft limit?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "300 kg",
+        "900 kg",
+        "30.0 kg",
+        "196 kg"
+      ],
+      "answerIndex": 0,
+      "answerText": "300 kg",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The zero fuel mass of an aeroplane is always:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The maximum take-off mass minus the take-off fuel mass.",
+        "The take-off mass minus the take-off fuel mass.",
+        "The take-off mass minus the wing fuel mass.",
+        "The take-off mass minus the fuselage fuel mass."
+      ],
+      "answerIndex": 1,
+      "answerText": "The take-off mass minus the take-off fuel mass.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11250A, 031-11250B and 031-11250C) Knowing that: . Dry operating mass: 110 000 kg . Basic index: 119.1 . Number of passengers: 335 distributed as shown in the annex (75 kg per PAX) . Cargo load + luggage: 9 500 kg distributed as shown in the annex. . Fuel: 40 000 kg Stages (1) to (7) and (11) having already been calculated, the centre of gravity in % MAC (Mean Aerodynamic Cord) for zero fuel mass is located at:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "28.0 %",
+        "30.5 %",
+        "27.4 %",
+        "29.3 %"
+      ],
+      "answerIndex": 0,
+      "answerText": "28.0 %",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Considering only structural limitations, on very short legs with minimum take-off fuel, the traffic load is normally limited by:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Maximum take-off mass.",
+        "Actual landing mass.",
+        "Maximum zero fuel mass.",
+        "Maximum landing mass."
+      ],
+      "answerIndex": 2,
+      "answerText": "Maximum zero fuel mass.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "An aeroplane has its centre of gravity located 7 metres from the datum line and it has a mass of 49000 N. The moment about the datum is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "7000 Nm.",
+        "34 300 Nm.",
+        "343 000 Nm.",
+        "1.43 Nm."
+      ],
+      "answerIndex": 2,
+      "answerText": "343 000 Nm.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Given are the following information at take-off STATION MASS (kg) ARM (cm) MOMENT (kgcm) Basic Empty Condition 12045 +30 Crew 145 -160 - Freight 1 5455 +200 Freight 2 410 -40 - Fuel 6045 -8 - Oil 124 +40 Given that the flight time is 2 hours and the estimated fuel flow will be 1050 litres per hour and the average oil consumption will be 2.25 litres per hour. The specific density of fuel is 0.79 and the specific density of oil is 0.96. Calculate the landing centre of gravity _________________________________________________ __________________ _________________________________________________ __________________ +361350 23200 +1091000 16400 48360 +4960",
+      "questionType": "multiple_choice",
+      "choices": [
+        "61.29 cm aft of datum.",
+        "61.28 cm aft of datum.",
+        "61.26 cm aft of datum.",
+        "61.27 cm aft of datum."
+      ],
+      "answerIndex": 1,
+      "answerText": "61.28 cm aft of datum.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "'Standard Mass' as used in the computation of passenger load establish the mass of a child as",
+      "questionType": "multiple_choice",
+      "choices": [
+        "35 kg irrespective of age provided they occupy a seat.",
+        "35 kg only if they are over 2 years old and occupy a seat.",
+        "35 kg for children over 2 years occupying a seat and 10 kg for infants (less than 2 years) not occupying a seat.",
+        "35 kg for children over 2 years occupying a seat and 10 kg for infants (less than 2 years) occupying a seat."
+      ],
+      "answerIndex": 0,
+      "answerText": "35 kg irrespective of age provided they occupy a seat.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Determine the Zero Fuel Mass for the following single engine aeroplane. Given : Standard Empty Mass : 1764 lbs Optional Equipment : 35 lbs Pilot + Front seat passenger : 300 lbs Cargo Mass : 350 lbs Ramp Fuel = Block Fuel : 60 Gal. Trip Fuel : 35 Gal. Fuel density : 6 lbs/Gal.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "2659 lbs",
+        "2414 lbs",
+        "2449 lbs",
+        "2589 lbs"
+      ],
+      "answerIndex": 2,
+      "answerText": "2449 lbs",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "In mass and balance calculations the \"index\" is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the moment divided by a constant.",
+        "a location in the aeroplane identified by a number.",
+        "an imaginary vertical plane or line from which all measurements are taken.",
+        "the range of moments the centre of gravity (cg) can have without making the aeroplane unsafe to fly."
+      ],
+      "answerIndex": 0,
+      "answerText": "the moment divided by a constant.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The take-off mass of an aeroplane is 117 000 kg, comprising a traffic load of 18 000 kg and fuel of 46 000 kg. What is the dry operating mass?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "71 000 kg",
+        "99 000 kg",
+        "53 000 kg",
+        "64 000 kg"
+      ],
+      "answerIndex": 2,
+      "answerText": "53 000 kg",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The take-off mass of an aeroplane is 141000 kg. Total fuel on board is 63000 kg including 14000 kg reserve fuel and 1000 kg of unusable fuel. The traffic load is 12800 kg. The zero fuel mass is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "65200 kg.",
+        "79000 kg",
+        "78000 kg",
+        "93000 kg"
+      ],
+      "answerIndex": 1,
+      "answerText": "79000 kg",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Mass for individual passengers (to be carried on an aeroplane) may be determined from a verbal statement by or on behalf of the passengers if the number of",
+      "questionType": "multiple_choice",
+      "choices": [
+        "passengers carried is less than 20.",
+        "passenger seats available is less than 6.",
+        "passengers carried is less than 6.",
+        "passenger seats available is less than 20."
+      ],
+      "answerIndex": 1,
+      "answerText": "passenger seats available is less than 6.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "To measure the mass and CG-position of an aircraft, it should be weighed with a minimum of:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1 point of support",
+        "4 point of support",
+        "3 points of support",
+        "2 points of support"
+      ],
+      "answerIndex": 2,
+      "answerText": "3 points of support",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Which of the following statements is correct?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The Maximum Take-off Mass is equal to the maximum mass when leaving the ramp.",
+        "The Basic Empty Mass is equal to the mass of the aeroplane excluding traffic load and useable fuel but including the crew.",
+        "The Maximum Landing Mass of an aeroplane is restricted by structural limitations, performance limitations and the strength of the runway.",
+        "The Maximum Zero Fuel Mass ensures that the centre of gravity remains within limit s after the uplift of fuel."
+      ],
+      "answerIndex": 2,
+      "answerText": "The Maximum Landing Mass of an aeroplane is restricted by structural limitations, performance limitations and the strength of the runway.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-4742A or Loading Manual MEP1 Figure 3.4) With respect to a multi-engine piston powered aeroplane, determine the CG location at take off in the following conditions: Basic empty mass: 3 210 lbs. One pilot: 160 lbs. Front seat passenger : 200 lbs. Centre seat passengers: 290 lbs. (total) One passenger rear seat: 110 lbs. Baggage in zone 1: 100 lbs. Baggage in zone 4: 50 lbs. Zero Fuel Mass: 4210 lbs. Moment at Zero Fuel Mass: 377751 lbs.In Block fuel: 100 US Gal. Trip fuel: 55 US Gal. Fuel for start up and taxi (included in block fuel): 3 US Gal. Fuel density: 6 lbs./US Gal.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "93.60 inches aft of datum",
+        "91.84 inches aft of datum",
+        "91.92 inches aft of datum",
+        "91.69 inches aft of datum"
+      ],
+      "answerIndex": 2,
+      "answerText": "91.92 inches aft of datum",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "When establishing the mass breakdown of an aeroplane, the empty mass is defined as the sum of the:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "basic mass plus special equipment mass",
+        "standard empty mass plus specific equipment mass plus trapped fluids plus unusable fuel mass",
+        "empty mass dry plus variable equipment mass",
+        "basic mass plus variable equipment mass"
+      ],
+      "answerIndex": 1,
+      "answerText": "standard empty mass plus specific equipment mass plus trapped fluids plus unusable fuel mass",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Which of the following is most likely to affect the range of centre of gravity positions on an aeroplane?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Location of the undercarriage.",
+        "The need to maintain a low value of stalling speed.",
+        "The need to minimise drag forces and so improve efficiency.",
+        "Elevator and tailplane (horizontal stabiliser) effectiveness in all flight conditions."
+      ],
+      "answerIndex": 3,
+      "answerText": "Elevator and tailplane (horizontal stabiliser) effectiveness in all flight conditions.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "A flight has been made from London to Valencia carrying minimum fuel and maximum traffic load. On the return flight the fuel tanks in the aeroplane are to be filled to capacity with a total fuel load of 20100 litres at a fuel density of 0.79 kg/l. The following are the aeroplane's structural limits: -Maximum Ramp Mass: 69 900 kg -Maximum Take Off Mass: 69 300 kg -Maximum Landing Mass: 58 900 kg -Maximum Zero Fuel Mass: 52 740 kg The performance limited take off mass at Valencia is 67 330 kg. The landing mass at London is not performance limited. Dry Operating Mass: 34 930 kg Trip Fuel (Valencia to London): 5 990 kg Taxi fuel: 250 kg The maximum traffic load that can be carried from Valencia will be:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "13 240 kg",
+        "16 770 kg",
+        "9 830 kg",
+        "14 331 kg"
+      ],
+      "answerIndex": 3,
+      "answerText": "14 331 kg",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The loaded centre of gravity (cg) of an aeroplane is 713 mm aft of datum. The mean aerodynamic chord lies between station 524 mm aft and 1706 mm aft. The cg expressed as % MAC (mean aerodynamic chord) is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "60 %",
+        "10 %",
+        "16 %",
+        "41 %"
+      ],
+      "answerIndex": 2,
+      "answerText": "16 %",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "If 390 Ibs of cargo are moved from compartment B (a to compartment A (forward), what is the station number of the new centre of gravity (cg). Given : Gross mass 116.500 Ibs Present cg station 435.0 Compartment A station 285.5 Compartment B station 792.5 ft)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "506.3",
+        "436.7",
+        "433.3",
+        "463.7"
+      ],
+      "answerIndex": 2,
+      "answerText": "433.3",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use appendix 031-11605A) Without the crew, the weight and the CG-position of the aircraft are 7 000 kg and 4,70m. - the mass of the pilot is 90 kg - the mass of the copilot is 75 kg - the mass of the flight engineer is 90 kg With this crew on board, the CG-position of the aircraft will be:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0,217 m",
+        "4,783 m",
+        "4,455 m",
+        "4,615 m"
+      ],
+      "answerIndex": 3,
+      "answerText": "4,615 m",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The maximum certificated taxi (or ramp) mass is that mass to which an aeroplane may be loaded prior to engine start. It is :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "a value which varies with airfield temperature and altitude. Corrections are listed in the Flight Manual.",
+        "a value which varies only with airfield altitude. Standard corrections are listed in the Flight Manual.",
+        "a value which is only affected by the outside air temperature. Corrections are calculated from data given in the Flight Manual.",
+        "a fixed value which is listed in the Flight Manual."
+      ],
+      "answerIndex": 3,
+      "answerText": "a fixed value which is listed in the Flight Manual.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11251A , 031-11251B and 031-11251C) Knowing that: . Dry operating mass: 110 000 kg . Basic index: 119.1 . Number of passengers: 185 distributed as shown in the annex (75 kg per PAX) . Cargo load + luggage: 14 000 kg distributed as shown in the annex. . Fuel: 42 000 kg Stages (1) to (7) and (11) having already been calculated, the centre of gravity in % MAC (Mean Aerodynamic Cord) for zero fuel mass is located at:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "32.3 %",
+        "29.3 %",
+        "28.3 %",
+        "30.5 %"
+      ],
+      "answerIndex": 3,
+      "answerText": "30.5 %",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "At the flight preparation stage, the following parameters in particular are available for determining the mass of the aircraft: 1- Dry operating mass 2- Operating mass Which statement is correct:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The operating mass is the mass of the aeroplane without take-off fuel.",
+        "The dry operating mass includes take-off fuel.",
+        "The operating mass includes the traffic load.",
+        "The dry operating mass includes fixed equipment needed to carry out a specific flight."
+      ],
+      "answerIndex": 3,
+      "answerText": "The dry operating mass includes fixed equipment needed to carry out a specific flight.",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Given an aeroplane with: Maximum Structural Landing Mass: 125000 kg Maximum Zero Fuel Mass: 108500 kg Maximum Structural Take-off Mass: 155000 kg Dry Operating Mass: 82000 kg Scheduled trip fuel is 17000 kg and the reserve fuel is 5000 kg. Assuming performance limitations are not restricting, the maximum permitted take-off mass and maximum traffic load are respectively:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "130500 kg and 26500 kg",
+        "130500 kg and 31500 kg",
+        "125500 kg and 21500 kg",
+        "125500 kg and 26500 kg"
+      ],
+      "answerIndex": 0,
+      "answerText": "130500 kg and 26500 kg",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Given: Total mass 2900 kg Centre of gravity (cg) location station: 115.0 Aft cg limit station: 116.0 The maximum mass that can be added at station 130.0 is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "207 kg.",
+        "317 kg.",
+        "140 kg.",
+        "14 kg."
+      ],
+      "answerIndex": 0,
+      "answerText": "207 kg.",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-11222A and 031- 11222B ) The planned take-off mass of an aeroplane is 190 000 kg, with its centre of gravity located at 29 % MAC (Mean Aerodynamic Cord). Shortly prior to engine start, the local staff informs the flight crew that an additional load of 4 000 kg must be loaded in cargo 4. After loading this cargo, the new centre of gravity location will be:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "33 %",
+        "25 %",
+        "27 %",
+        "31 %"
+      ],
+      "answerIndex": 0,
+      "answerText": "33 %",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "The basic empty mass of an aircraft is 30 000 kg. The masses of the following items are : - catering: 300 kg - safety and rescue material: nil - fly away kit: nil - crew (inclusive crew baggage): 365kg - fuel at take-o ff: 3 - unusable fuel: 120 kg - passengers, baggage, cargo: 8 000 kg The Dry Operating Mass is : 000 kg",
+      "questionType": "multiple_choice",
+      "choices": [
+        "30 785 kg",
+        "30 300 kg",
+        "38 300 kg",
+        "30 665 kg"
+      ],
+      "answerIndex": 0,
+      "answerText": "30 785 kg",
+      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "With reference to mass and balance calculations (on an aeroplane) a datum point is used. This datum point is :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "a point near the centre of the aeroplane. It moves longitudinally as masses are added forward and aft of its location.",
+        "a point from which all balance arms are measured. The location of this point varies with the distribution of loads on the aeroplane.",
+        "a fixed point from which all balance arms are measured. It may be located anywhere on the aeroplane's longitudinal axis or on the extensions to that axis.",
+        "the point through which the sum of the mass values (of the aeroplane and its contents) is assumed to act vertically."
+      ],
+      "answerIndex": 2,
+      "answerText": "a fixed point from which all balance arms are measured. It may be located anywhere on the aeroplane's longitudinal axis or on the extensions to that axis.",
+      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Given are: - Maximum structural take-off mass: 72 000 kg - Maximum structural landing mass: 56 000 kg - Maximum zero fuel mass: 48 000 kg - Taxi fuel: 800 kg - Trip fuel: 18 000 kg - Contingency fuel: 900 kg - Alternate fuel: 700 kg - Final reserve fuel: 2 000 kg Determine the actual take-off mass:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "74 000 kg",
+        "72 000 kg",
+        "70 400 kg",
+        "69 600 kg"
+      ],
+      "answerIndex": 3,
+      "answerText": "69 600 kg",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "(For this question use annex 031-4740A or Loading Manual MEP1 Figure 3.4) With respect to multi-engine piston powered aeroplane, determine the block fuel moment (lbs.In.) in the following conditions: Basic empty mass: 3 210 lbs. One pilot: 160 lbs. Front seat passenger : 200 lbs. Centre seat passengers: 290 lbs. (total) One passenger rear seat: 110 lbs. Baggage in zone 1: 100 lbs. Baggage in zone 4: 50 lbs. Block fuel: 100 US Gal. Trip fuel: 55 US Gal. Fuel for start up and taxi (included in block fuel): 3 US Gal. Fuel density: 6 lbs./US Gal.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "433 906",
+        "30 888",
+        "9 360",
+        "56 160"
+      ],
+      "answerIndex": 3,
+      "answerText": "56 160",
+      "explanation": "The answer sheet in the source PDF marks option D as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    },
+    {
+      "question": "Given: Aeroplane mass = 36 000 kg Centre of gravity (cg) is located at station 17 m What is the effect on cg location if you move 20 passengers (total mass = 1 600 kg) from station 16 to station 23?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It moves aft by 0.157 m.",
+        "It moves aft by 0.31 m.",
+        "It moves forward by 0.157 m.",
+        "It moves aft by 3.22 m."
+      ],
+      "answerIndex": 1,
+      "answerText": "It moves aft by 0.31 m.",
+      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "tags": [
+        "mass & balance",
+        "volare"
+      ]
+    }
+  ]
+}

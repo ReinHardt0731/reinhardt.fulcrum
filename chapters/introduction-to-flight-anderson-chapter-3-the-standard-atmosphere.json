@@ -1,0 +1,293 @@
+{
+  "title": "Chapter 3: The Standard Atmosphere",
+  "questions": [
+    {
+      "question": "Problem 14: Calculate the standard atmosphere values of T, p, and ρ at a geopotential altitude of 14 km.",
+      "answerText": "216.66 K, 1.41 × 10^4 N/m², 0.23 kg/m³",
+      "explanation": "Given: Calculate the standard atmosphere values of T, p, and ρ at a geopotential altitude of 14 km.\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 216.66 K, 1.41 × 10^4 N/m², 0.23 kg/m³.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "216.66 K, 1.41 × 10^4 N/m², 0.23 kg/m³",
+        "255.66 K, 1.41 × 10^4 N/m², 0.23 kg/m³",
+        "138.66 K, 1.41 × 10^4 N/m², 0.23 kg/m³",
+        "177.66 K, 1.41 × 10^4 N/m², 0.23 kg/m³"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 15: If an airplane is flying at an altitude where the actual pressure and temperature are 4.72 × 10^4 N/m² and 255.7 K, respectively, what are the pressure, temperature, and density altitudes?",
+      "answerText": "6 km, 5 km, 6.24 km",
+      "explanation": "Given: If an airplane is flying at an altitude where the actual pressure and temperature are 4.72 × 10^4 N/m² and 255.7 K, respectively, what are the pressure, temperature, and density altitudes?\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 6 km, 5 km, 6.24 km.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "4.92 km, 5 km, 6.24 km",
+        "7.08 km, 5 km, 6.24 km",
+        "3.84 km, 5 km, 6.24 km",
+        "6 km, 5 km, 6.24 km"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 16: The flight test data for a given airplane refer to a level-flight maximum-velocity run made at an altitude that simultaneously corresponded to a pressure altitude of 30,000 ft and density altitude of 28,500 ft. Calculate the temperature of the air at the altitude at which the airplane was flying for the test.",
+      "answerText": "390 ° R",
+      "explanation": "Given: The flight test data for a given airplane refer to a level-flight maximum-velocity run made at an altitude that simultaneously corresponded to a pressure altitude of 30,000 ft and density altitude of 28,500 ft. Calculate the temperature of the air at the altitude at which the airplane was flying for the test.\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 390 ° R.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "320 ° R",
+        "460 ° R",
+        "390 ° R",
+        "250 ° R"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 17: Consider an airplane flying at some real, geometric altitude. The outside (ambient) pressure and temperature are 5.3 × 10^4 N/m² and 253 K, respectively. Calculate the pressure and density altitudes at which this airplane is flying.",
+      "answerText": "5146.6 m, 5082 m",
+      "explanation": "Given: Consider an airplane flying at some real, geometric altitude. The outside (ambient) pressure and temperature are 5.3 × 10^4 N/m² and 253 K, respectively. Calculate the pressure and density altitudes at which this airplane is flying.\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 5146.6 m, 5082 m.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "4220.2 m, 5082 m",
+        "5146.6 m, 5082 m",
+        "3293.8 m, 5082 m",
+        "6073.0 m, 5082 m"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 18: The ambient temperature in the air ahead of an airplane in flight is 240 K. At what temperature altitude is the airplane flying?",
+      "answerText": "7.4 km",
+      "explanation": "Given: The ambient temperature in the air ahead of an airplane in flight is 240 K. At what temperature altitude is the airplane flying?\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 7.4 km.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "7.4 km",
+        "8.7 km",
+        "4.7 km",
+        "6.1 km"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 19: At 12 km in the standard atmosphere, the pressure, density, and temperature are 1.9399 × 10^4 N/m², 3.1194 × 10-1 kg/m³, and 216.66 K, respectively. Using these values, calculate the standard atmospheric values of pressure, density, and temperature at an altitude of 18 km.",
+      "answerText": "7.53 × 10^3 N/m², 0.121 kg/m³, 216.66 K",
+      "explanation": "Given: At 12 km in the standard atmosphere, the pressure, density, and temperature are 1.9399 × 10^4 N/m², 3.1194 × 10-1 kg/m³, and 216.66 K, respectively. Using these values, calculate the standard atmospheric values of pressure, density, and temperature at an altitude of 18 km.\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 7.53 × 10^3 N/m², 0.121 kg/m³, 216.66 K.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "6.17 × 10^3 N/m², 0.121 kg/m³, 216.66 K",
+        "8.89 × 10^3 N/m², 0.121 kg/m³, 216.66 K",
+        "4.82 × 10^3 N/m², 0.121 kg/m³, 216.66 K",
+        "7.53 × 10^3 N/m², 0.121 kg/m³, 216.66 K"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 20: Consider an airplane flying at some real altitude. The outside pressure and temperature are 2.65 × 10^4 N/m² and 220 K, respectively. What are the pressure and density altitudes?",
+      "answerText": "10 km, 9.88 km",
+      "explanation": "Given: Consider an airplane flying at some real altitude. The outside pressure and temperature are 2.65 × 10^4 N/m² and 220 K, respectively. What are the pressure and density altitudes?\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 10 km, 9.88 km.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "8.2 km, 9.88 km",
+        "11.8 km, 9.88 km",
+        "10 km, 9.88 km",
+        "6.4 km, 9.88 km"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 21: During a flight test of a new airplane, the pilot radios to the ground that she is in level flight at a standard altitude of 35,000 ft. What is the ambient air pressure far ahead of the airplane?",
+      "answerText": "499 lb/ft²",
+      "explanation": "Given: During a flight test of a new airplane, the pilot radios to the ground that she is in level flight at a standard altitude of 35,000 ft. What is the ambient air pressure far ahead of the airplane?\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 499 lb/ft².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "409 lb/ft²",
+        "499 lb/ft²",
+        "319 lb/ft²",
+        "589 lb/ft²"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 22: Consider an airplane flying at a pressure altitude of 33,500 ft and a density altitude of 32,000 ft. Calculate the outside air temperature.",
+      "answerText": "378 ° R",
+      "explanation": "Given: Consider an airplane flying at a pressure altitude of 33,500 ft and a density altitude of 32,000 ft. Calculate the outside air temperature.\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 378 ° R.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "378 ° R",
+        "446 ° R",
+        "242 ° R",
+        "310 ° R"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 23: At what value of the geometric altitude is the difference h – h G equal to 2 percent of the geopotential altitude, h?",
+      "answerText": "127 km",
+      "explanation": "Given: At what value of the geometric altitude is the difference h – h G equal to 2 percent of the geopotential altitude, h?\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 127 km.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "104 km",
+        "150 km",
+        "81.3 km",
+        "127 km"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 24: Using Toussaint’s formula, calculate the pressure at a geopotential altitude of 5 km.",
+      "answerText": "5.38 × 10^4 N/m²",
+      "explanation": "Given: Using Toussaint’s formula, calculate the pressure at a geopotential altitude of 5 km.\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 5.38 × 10^4 N/m².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "4.41 × 10^4 N/m²",
+        "6.35 × 10^4 N/m²",
+        "5.38 × 10^4 N/m²",
+        "3.44 × 10^4 N/m²"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 25: The atmosphere of Jupiter is essentially made up of hydrogen, H 2. For H 2, the specific gas constant is 4157 J/(kg)(K). The acceleration of gravity of Jupiter is 24.9 m/s 2. Assuming an isothermal atmosphere with a temperature of 150 K and assuming that Jupiter has a definable surface, calculate the altitude above that surface where the pressure is one-half the surface pressure.",
+      "answerText": "17.357 km",
+      "explanation": "Given: The atmosphere of Jupiter is essentially made up of hydrogen, H 2. For H 2, the specific gas constant is 4157 J/(kg)(K). The acceleration of gravity of Jupiter is 24.9 m/s 2. Assuming an isothermal atmosphere with a temperature of 150 K and assuming that Jupiter has a definable surface, calculate the altitude above that surface where the pressure is one-half the surface pressure.\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 17.357 km.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "14.233 km",
+        "17.357 km",
+        "11.108 km",
+        "20.481 km"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 26: An F-15 supersonic fighter aircraft is in a rapid climb. At the instant it passes through a standard altitude of 25,000 ft, its time rate of change of altitude is 500 ft/s, which by definition is the rate-of-climb. Corresponding to this rate-of-climb at 25,000 ft is a time rate of change of ambient pressure. Calculate this rate of change of pressure in units of pounds per square foot per second.",
+      "answerText": "-17.17 lb/ft² sec",
+      "explanation": "Given: An F-15 supersonic fighter aircraft is in a rapid climb. At the instant it passes through a standard altitude of 25,000 ft, its time rate of change of altitude is 500 ft/s, which by definition is the rate-of-climb. Corresponding to this rate-of-climb at 25,000 ft is a time rate of change of ambient pressure. Calculate this rate of change of pressure in units of pounds per square foot per second.\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives -17.17 lb/ft² sec.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "-17.17 lb/ft² sec",
+        "-20.26 lb/ft² sec",
+        "-10.99 lb/ft² sec",
+        "-14.08 lb/ft² sec"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 27: Assume that you are ascending in an elevator at sea level. Your eardrums are very sensitive to minute changes in pressure. In this case, you are feeling a 1 percent decrease in pressure per minute. Calculate the upward speed of the elevator in meters per minute.",
+      "answerText": "84.1 meter per minute",
+      "explanation": "Given: Assume that you are ascending in an elevator at sea level. Your eardrums are very sensitive to minute changes in pressure. In this case, you are feeling a 1 percent decrease in pressure per minute. Calculate the upward speed of the elevator in meters per minute.\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 84.1 meter per minute.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "69.0 meter per minute",
+        "99.2 meter per minute",
+        "53.8 meter per minute",
+        "84.1 meter per minute"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 28: Consider an airplane flying at an altitude where the pressure and temperature are 530 lb/ft² and 390°R, respectively. Calculate the pressure and density altitudes at which the airplane is flying.",
+      "answerText": "33,156 ft",
+      "explanation": "Given: Consider an airplane flying at an altitude where the pressure and temperature are 530 lb/ft² and 390°R, respectively. Calculate the pressure and density altitudes at which the airplane is flying.\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 33,156 ft.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "27,188 ft",
+        "39,124 ft",
+        "33,156 ft",
+        "21,220 ft"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 29: The airstream in the test section of a wind tunnel is at a pressure of 0.92 atm. When a test model is placed in the test section, what pressure altitude is being simulated for this model?",
+      "answerText": "724.5",
+      "explanation": "Given: The airstream in the test section of a wind tunnel is at a pressure of 0.92 atm. When a test model is placed in the test section, what pressure altitude is being simulated for this model?\n\nFormula: Standard-atmosphere relations: in an isothermal layer p2/p1 = exp[-g*delta_h/(R*T)]; in a lapse-rate layer T = T0-L*h and p/p0 = (T/T0)^[g/(R*L)]. Density follows from rho = p/(R*T), and pressure variation follows dp/dh = -rho*g.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 724.5.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-3-the-standard-atmosphere"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "594.1",
+        "724.5",
+        "463.7",
+        "854.9"
+      ],
+      "answerIndex": 1
+    }
+  ]
+}

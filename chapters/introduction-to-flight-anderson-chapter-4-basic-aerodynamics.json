@@ -1,0 +1,1229 @@
+{
+  "title": "Chapter 4: Basic Aerodynamics",
+  "questions": [
+    {
+      "question": "Problem 30: Consider a convergent duct with an inlet area A 1 = 5 m². Air enters this duct with a velocity V 1 = 10 m/s and leaves the duct exit with a velocity V 2 = 30 m/s. What is the area of the duct exit?",
+      "answerText": "1.67 m²",
+      "explanation": "Given: Consider a convergent duct with an inlet area A 1 = 5 m². Air enters this duct with a velocity V 1 = 10 m/s and leaves the duct exit with a velocity V 2 = 30 m/s. What is the area of the duct exit?\n\nFormula: Steady one-dimensional continuity: rho1*V1*A1 = rho2*V2*A2. At constant density this becomes A1*V1 = A2*V2.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.67 m².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.37 m²",
+        "1.97 m²",
+        "1.07 m²",
+        "1.67 m²"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 31: Consider a convergent duct with an inlet area A 1 = 3 ft² and an exit area A 2 = 2.57 ft². Air enters this duct with a velocity V 1 = 700 ft/s and a density ρ 1 = 0.002 slug/ft³, and air leaves with an exit velocity V 2 = 1070 ft/s. Calculate the density of the air ρ 2 at the exit.",
+      "answerText": "0.00153 slug/ft³",
+      "explanation": "Given: Consider a convergent duct with an inlet area A 1 = 3 ft² and an exit area A 2 = 2.57 ft². Air enters this duct with a velocity V 1 = 700 ft/s and a density ρ 1 = 0.002 slug/ft³, and air leaves with an exit velocity V 2 = 1070 ft/s. Calculate the density of the air ρ 2 at the exit.\n\nFormula: Steady one-dimensional continuity: rho1*V1*A1 = rho2*V2*A2. At constant density this becomes A1*V1 = A2*V2.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.00153 slug/ft³.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.0013 slug/ft³",
+        "0.0018 slug/ft³",
+        "0.00153 slug/ft³",
+        "0.0010 slug/ft³"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 32: Consider an airfoil in a flow of air, where far ahead (upstream) of the airfoil, the pressure, velocity, and density are 2116 lb/ft², 100 mi/h, and 0.002377 slug/ft³, respectively. At a given point A on the airfoil, the pressure is 2070 lb/ft². What is the velocity at point A?",
+      "answerText": "245.4 ft/s",
+      "explanation": "Given: Consider an airfoil in a flow of air, where far ahead (upstream) of the airfoil, the pressure, velocity, and density are 2116 lb/ft², 100 mi/h, and 0.002377 slug/ft³, respectively. At a given point A on the airfoil, the pressure is 2070 lb/ft². What is the velocity at point A?\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 245.4 ft/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "201.2 ft/s",
+        "245.4 ft/s",
+        "157.1 ft/s",
+        "289.6 ft/s"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 33: Consider the same convergent duct and conditions as in Question 31. If the air pressure and temperature at the inlet are p 1 = 1.2 × 10^5 N/m² and T 1 = 330 K, respectively, calculate the pressure at the exit.",
+      "answerText": "1.195 × 10^5 N/m²",
+      "explanation": "Given: Consider the same convergent duct and conditions as in Question 31. If the air pressure and temperature at the inlet are p 1 = 1.2 × 10^5 N/m² and T 1 = 330 K, respectively, calculate the pressure at the exit.\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.195 × 10^5 N/m².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.195 × 10^5 N/m²",
+        "1.410 × 10^5 N/m²",
+        "0.765 × 10^5 N/m²",
+        "0.980 × 10^5 N/m²"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 34: Calculate the internal energy and enthalpy, per unit mass, for air at standard sea-level conditions in (a) SI units and (b) English engineering units. For air at standard conditions, c v = 720 J/(kg)(K) = 4290 ft · lb/(slug)(°R), and c p = 1008 J/(kg)(K) = 6006 ft · lb/(slug)(°R).",
+      "answerText": "SI: e = 2.07 × 10^5 J/kg, h = 2.90 × 10^5 J/kg; English: e = 2.23 × 10^6 ft·lb/slug, h = 3.12 × 10^6 ft·lb/slug",
+      "explanation": "Given: Calculate the internal energy and enthalpy, per unit mass, for air at standard sea-level conditions in (a) SI units and (b) English engineering units. For air at standard conditions, c v = 720 J/(kg)(K) = 4290 ft · lb/(slug)(°R), and c p = 1008 J/(kg)(K) = 6006 ft · lb/(slug)(°R).\n\nFormula: For a perfect gas, internal energy e = cv*T and enthalpy h = cp*T. Isentropic relations include p/rho^gamma = constant and T2/T1 = (p2/p1)^[(gamma-1)/gamma].\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives SI: e = 2.07 × 10^5 J/kg, h = 2.90 × 10^5 J/kg; English: e = 2.23 × 10^6 ft·lb/slug, h = 3.12 × 10^6 ft·lb/slug.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "SI: e =1.70 × 10^5 J/kg, h = 2.90 × 10^5 J/kg; English: e = 2.23 × 10^6 ft·lb/slug, h = 3.12 × 10^6 ft·lb/slug",
+        "SI: e =2.44 × 10^5 J/kg, h = 2.90 × 10^5 J/kg; English: e = 2.23 × 10^6 ft·lb/slug, h = 3.12 × 10^6 ft·lb/slug",
+        "SI: e =1.32 × 10^5 J/kg, h = 2.90 × 10^5 J/kg; English: e = 2.23 × 10^6 ft·lb/slug, h = 3.12 × 10^6 ft·lb/slug",
+        "SI: e = 2.07 × 10^5 J/kg, h = 2.90 × 10^5 J/kg; English: e = 2.23 × 10^6 ft·lb/slug, h = 3.12 × 10^6 ft·lb/slug"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 35: Consider air inside a cylinder, with a piston at the top of the c ylinder. The internal energy of the air inside the cylinder is 4 × 10^5 J. The piston moves into the cylinder by a distance sufficient to do 2 × 10^5 J of work on the system. At the same time, 6 × 10^5 J of heat are added to the system. Calculate the internal energy of the air after the work is done and the heat added.",
+      "answerText": "12 × 𝟏𝟎 𝟓 J",
+      "explanation": "Given: Consider air inside a cylinder, with a piston at the top of the c ylinder. The internal energy of the air inside the cylinder is 4 × 10^5 J. The piston moves into the cylinder by a distance sufficient to do 2 × 10^5 J of work on the system. At the same time, 6 × 10^5 J of heat are added to the system. Calculate the internal energy of the air after the work is done and the heat added.\n\nFormula: First law / steady-flow energy: delta_E = Q + W_on; for a flow with heat transfer, q + h1 + V1^2/2 = h2 + V2^2/2. With h = cp*T, solve for the unknown energy or temperature.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 12 × 𝟏𝟎 𝟓 J.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "9.84 × 𝟏𝟎 𝟓 J",
+        "14.2 × 𝟏𝟎 𝟓 J",
+        "12 × 𝟏𝟎 𝟓 J",
+        "7.68 × 𝟏𝟎 𝟓 J"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 36: An airplane is flying at standard sea-level conditions. The temperature at a point on the wing is 250 K. What is the pressure at this point?",
+      "answerText": "6.14 × 𝟏𝟎 𝟒 N/m²",
+      "explanation": "Given: An airplane is flying at standard sea-level conditions. The temperature at a point on the wing is 250 K. What is the pressure at this point?\n\nFormula: For isentropic flow of a perfect gas, p/p_inf = (T/T_inf)^[gamma/(gamma-1)]. Use the standard sea-level free-stream state and solve for the local static pressure.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 6.14 × 𝟏𝟎 𝟒 N/m².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "5.03 × 𝟏𝟎 𝟒 N/m²",
+        "6.14 × 𝟏𝟎 𝟒 N/m²",
+        "3.93 × 𝟏𝟎 𝟒 N/m²",
+        "7.25 × 𝟏𝟎 𝟒 N/m²"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 37: In a rocket engine, the fuel and oxidizer are burned in the combustion chamber, and then the hot gas expands through a nozzle to high velocity at the exit of the engine. The flow through the rocket engine nozzle downstream of the combustion chamber is isentropic. Consider the case when the pressure and temperature of the burned gas in the combustion chamber are 20 atm and 3500 K, respectively. If the pressure of the gas at the exit of the nozzle is 0.5 atm, calculate the gas temperature at the exit. Note: The combustion gas is not air, so the value for γ will be different than for air; that is, γ will not be equal to 1.4. For the combustion gas in this example, γ = 1.15.",
+      "answerText": "2167 K",
+      "explanation": "Given: In a rocket engine, the fuel and oxidizer are burned in the combustion chamber, and then the hot gas expands through a nozzle to high velocity at the exit of the engine. The flow through the rocket engine nozzle downstream of the combustion chamber is isentropic. Consider the case when the pressure and temperature of the burned gas in the combustion chamber are 20 atm and 3500 K, respectively. If the pressure of the gas at the exit of the nozzle is 0.5 atm, calculate the gas temperature at the exit. Note: The combustion gas is not air, so the value for γ will be different than for air; that is, γ will not be equal to 1.4. For the combustion gas in this example, γ = 1.15.\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 2167 K.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "2167 K",
+        "2,557 K",
+        "1,387 K",
+        "1,777 K"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 38: Consider the case where the fuel – air mixture has been brought into the cylinder at standard sea-level conditions during the intake stroke. The design compression ratio is 10. Calculate the pressure and temperature of the gas – air mixture in the cylinder at the end of the compression stroke, assuming that the compression process takes place isentropically. Because most of the mixture is air and very little is fuel (typical fuel-to-air ratios by mass are 0.05), it is safe to assume a value of γ = 1.4.",
+      "answerText": "25.1 atm, 723 K",
+      "explanation": "Given: Consider the case where the fuel – air mixture has been brought into the cylinder at standard sea-level conditions during the intake stroke. The design compression ratio is 10. Calculate the pressure and temperature of the gas – air mixture in the cylinder at the end of the compression stroke, assuming that the compression process takes place isentropically. Because most of the mixture is air and very little is fuel (typical fuel-to-air ratios by mass are 0.05), it is safe to assume a value of γ = 1.4.\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 25.1 atm, 723 K.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "20.6 atm, 723 K",
+        "29.6 atm, 723 K",
+        "16.1 atm, 723 K",
+        "25.1 atm, 723 K"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 39: In a supersonic wind tunnel, the reservoir temperature and pressure are 1000 K and 10 atm. The static temperatures at the throat and exit are 833 K and 300 K, and the mass flow is 0.5 kg/s. For air, c_p = 1008 J/(kg·K), calculate (a) throat velocity, (b) exit velocity, (c) throat area, and (d) exit area.",
+      "answerText": "(a) 580 m/s; (b) 1188 m/s; (c) 3.87 cm²; (d) 24.2 cm²",
+      "explanation": "Given: In a supersonic wind tunnel, the reservoir temperature and pressure are 1000 K and 10 atm. The static temperatures at the throat and exit are 833 K and 300 K, and the mass flow is 0.5 kg/s. For air, c_p = 1008 J/(kg·K), calculate (a) throat velocity, (b) exit velocity, (c) throat area, and (d) exit area.\n\nFormula: Steady-flow energy and continuity: V = sqrt[2*cp*(T0-T)] and mdot = rho*V*A. Use the ideal-gas equation rho = p/(R*T) to find flow areas.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives (a) 580 m/s; (b) 1188 m/s; (c) 3.87 cm²; (d) 24.2 cm².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "(a)476 m/s; (b) 1188 m/s; (c) 3.87 cm²; (d) 24.2 cm²",
+        "(a)684 m/s; (b) 1188 m/s; (c) 3.87 cm²; (d) 24.2 cm²",
+        "(a) 580 m/s; (b) 1188 m/s; (c) 3.87 cm²; (d) 24.2 cm²",
+        "(a)371 m/s; (b) 1188 m/s; (c) 3.87 cm²; (d) 24.2 cm²"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 40: Consider an airfoil in a flow of air, where far ahead of the airfoil (the free stream), the pressure, velocity, and density are 2116 lb/ft², 500 mi/h, and 0.002377 slug/ft³, respectively. At a given point A on the airfoil, the pressure is 1497 lb/ft². What is the velocity at point A? Assume isentropic flow. For air, c p = 6006 ft · lb/(slug)(°R).",
+      "answerText": "1061 fps",
+      "explanation": "Given: Consider an airfoil in a flow of air, where far ahead of the airfoil (the free stream), the pressure, velocity, and density are 2116 lb/ft², 500 mi/h, and 0.002377 slug/ft³, respectively. At a given point A on the airfoil, the pressure is 1497 lb/ft². What is the velocity at point A? Assume isentropic flow. For air, c p = 6006 ft · lb/(slug)(°R).\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1061 fps.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "870 fps",
+        "1061 fps",
+        "679 fps",
+        "1,252 fps"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 41: Consider the Space Shuttle as it returns to earth after completing a mission in orbit. At a point on its entry path through the atmosphere, its velocity is 6.4 km/sec at an altitude of 60 km. At some point on the bottom surface, near the nose of the shuttle, the flow velocity is zero. Assuming a constant specific heat of c p = 1008 J/(kg)(K), calculate the temperature of the air at the stagnation point.",
+      "answerText": "20,571 K",
+      "explanation": "Given: Consider the Space Shuttle as it returns to earth after completing a mission in orbit. At a point on its entry path through the atmosphere, its velocity is 6.4 km/sec at an altitude of 60 km. At some point on the bottom surface, near the nose of the shuttle, the flow velocity is zero. Assuming a constant specific heat of c p = 1008 J/(kg)(K), calculate the temperature of the air at the stagnation point.\n\nFormula: Stagnation temperature: T0 = T + V^2/(2*cp) = T*[1 + (gamma-1)*M^2/2]. At a stagnation point V = 0, so kinetic energy becomes enthalpy.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 20,571 K.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "20,571 K",
+        "24,274 K",
+        "13,165 K",
+        "16,868 K"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 42: The author and his wife had the joy of flying in the Anglo-French Concorde Supersonic transport (SST) from New York to London (a flight that took only three hours compared to the more than six hours in a conventional subsonic jet transport). The SST cruised at a velocity of 1936 ft/s at an altitude of 50,000 ft. Calculate the stagnation temperature for the SST at cruise, assuming a constant specific heat for air of 6006 ft-lb/(slug)( ° R).",
+      "answerText": "702 °R",
+      "explanation": "Given: The author and his wife had the joy of flying in the Anglo-French Concorde Supersonic transport (SST) from New York to London (a flight that took only three hours compared to the more than six hours in a conventional subsonic jet transport). The SST cruised at a velocity of 1936 ft/s at an altitude of 50,000 ft. Calculate the stagnation temperature for the SST at cruise, assuming a constant specific heat for air of 6006 ft-lb/(slug)( ° R).\n\nFormula: Stagnation temperature: T0 = T + V^2/(2*cp) = T*[1 + (gamma-1)*M^2/2]. At a stagnation point V = 0, so kinetic energy becomes enthalpy.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 702 °R.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "576 °R",
+        "828 °R",
+        "449 °R",
+        "702 °R"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 43: Consider the combustion chamber (burner) in a turbojet engine. Consider the case where air, having passed through the compressor, enters the combustor at a temperature of 1200 °R. As it flows through the combustor, heat is added per unit mass in the amount of 2.1 × 10 7 ft lb/slug. The flow velocity at the entrance to the combustor is 300 ft/s, and decreases to 200 ft/s at the exit of the combustor. Calculate the temperature of the flow at the exit, assuming constant specific heat c p = 6006 ft lb/(slug)(°R).",
+      "answerText": "4701 °R",
+      "explanation": "Given: Consider the combustion chamber (burner) in a turbojet engine. Consider the case where air, having passed through the compressor, enters the combustor at a temperature of 1200 °R. As it flows through the combustor, heat is added per unit mass in the amount of 2.1 × 10 7 ft lb/slug. The flow velocity at the entrance to the combustor is 300 ft/s, and decreases to 200 ft/s at the exit of the combustor. Calculate the temperature of the flow at the exit, assuming constant specific heat c p = 6006 ft lb/(slug)(°R).\n\nFormula: First law / steady-flow energy: delta_E = Q + W_on; for a flow with heat transfer, q + h1 + V1^2/2 = h2 + V2^2/2. With h = cp*T, solve for the unknown energy or temperature.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 4701 °R.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "3,855 °R",
+        "5,547 °R",
+        "4701 °R",
+        "3,009 °R"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 44: A jet transport is flying at a standard altitude of 30,000 ft with a velocity of 550 mi/h. What is its Mach number?",
+      "answerText": "0.811",
+      "explanation": "Given: A jet transport is flying at a standard altitude of 30,000 ft with a velocity of 550 mi/h. What is its Mach number?\n\nFormula: Mach number: M = V/a, where a = sqrt(gamma*R*T). Convert speed and temperature to consistent units before calculating the local speed of sound.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.811.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.665",
+        "0.811",
+        "0.519",
+        "0.957"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 45: In the nozzle flow, calculate the Mach number of the flow at the throat, M *, and at the exit, M e.",
+      "answerText": "1, 3.42",
+      "explanation": "Given: In the nozzle flow, calculate the Mach number of the flow at the throat, M *, and at the exit, M e.\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1, 3.42.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1, 3.42",
+        "1.18 3.42",
+        "0.64 3.42",
+        "0.82 3.42"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 46: In a low-speed subsonic wind tunnel, one side of a mercury manometer is connected to the settling chamber (reservoir) and the other side is connected to the test section. The contraction ratio of the nozzle 1 A 2 / A 1 equals. The reservoir pressure and temperature are p 1 = 1.1 15 atm and T 1 = 300 K, respectively. When the tunnel is running, the height difference between the two columns of mercury is 10 cm. The density of liquid mercury is 1.36 × 10^4 kg/m³. Calculate the airflow velocity in the test section V 2.",
+      "answerText": "144 m/s",
+      "explanation": "Given: In a low-speed subsonic wind tunnel, one side of a mercury manometer is connected to the settling chamber (reservoir) and the other side is connected to the test section. The contraction ratio of the nozzle 1 A 2 / A 1 equals. The reservoir pressure and temperature are p 1 = 1.1 15 atm and T 1 = 300 K, respectively. When the tunnel is running, the height difference between the two columns of mercury is 10 cm. The density of liquid mercury is 1.36 × 10^4 kg/m³. Calculate the airflow velocity in the test section V 2.\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 144 m/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "118 m/s",
+        "170 m/s",
+        "92.2 m/s",
+        "144 m/s"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 47: Consider a low-speed subsonic wind tunnel designed with a reservoir cross-sectional area A 1 = 2 m² and a test-section cross-sectional area A 2 = 0.5 m². The pressure in the test section is p 2 = 1 atm. Assume constant density equal to standard sea-level density. (a) Calculate the pressure required in the reservoir, p 1, necessary to achieve a flow velocity V 2 = 40 m/s in the test section. (b) Calculate the mass flow through the wind tunnel.",
+      "answerText": "1.019 × 10^5 N/m², 24.6 kg/s",
+      "explanation": "Given: Consider a low-speed subsonic wind tunnel designed with a reservoir cross-sectional area A 1 = 2 m² and a test-section cross-sectional area A 2 = 0.5 m². The pressure in the test section is p 2 = 1 atm. Assume constant density equal to standard sea-level density. (a) Calculate the pressure required in the reservoir, p 1, necessary to achieve a flow velocity V 2 = 40 m/s in the test section. (b) Calculate the mass flow through the wind tunnel.\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.019 × 10^5 N/m², 24.6 kg/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.836 × 10^5 N/m², 24.6 kg/s",
+        "1.202 × 10^5 N/m², 24.6 kg/s",
+        "1.019 × 10^5 N/m², 24.6 kg/s",
+        "0.652 × 10^5 N/m², 24.6 kg/s"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 48: For the wind tunnel, (a) if the pressure difference (p 1 – p 2 ) is doubled, calculate the flow velocity in the test section. (b) The ratio A 1 / A 2 is defined as the contraction ratio for the wind tunnel nozzle. If the contraction ratio is doubled, with 900 N/m² pressure difference, calculate the flow velocity in the test section.",
+      "answerText": "38.6 m/s",
+      "explanation": "Given: For the wind tunnel, (a) if the pressure difference (p 1 – p 2 ) is doubled, calculate the flow velocity in the test section. (b) The ratio A 1 / A 2 is defined as the contraction ratio for the wind tunnel nozzle. If the contraction ratio is doubled, with 900 N/m² pressure difference, calculate the flow velocity in the test section.\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 38.6 m/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "31.7 m/s",
+        "38.6 m/s",
+        "24.7 m/s",
+        "45.5 m/s"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 49: The altimeter on a low-speed Cessna 150 private aircraft reads 5000 ft. By an independent measurement, the outside air temperature is 505 °R. If a Pitot tube mounted on the wing tip measures a pressure of 1818 lb/ft², what is the true velocity of the airplane? What is the equivalent airspeed?",
+      "answerText": "237 fps, 219 fps",
+      "explanation": "Given: The altimeter on a low-speed Cessna 150 private aircraft reads 5000 ft. By an independent measurement, the outside air temperature is 505 °R. If a Pitot tube mounted on the wing tip measures a pressure of 1818 lb/ft², what is the true velocity of the airplane? What is the equivalent airspeed?\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 237 fps, 219 fps.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "237 fps, 219 fps",
+        "280 fps, 219 fps",
+        "152 fps, 219 fps",
+        "194 fps, 219 fps"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 50: In a low-speed subsonic wind tunnel with a closed test section, a static pressure tap on the wall of the tunnel test section measures 0.98 atm. The temperature of the air in the test section is 80°F. A Pitot tube is inserted in the mi ddle of the flow in the test section in order to measure the flow velocity. The pressure measured by the Pitot tube is 2200 lb/ft². Calculate the flow velocity in the test section.",
+      "answerText": "229 mph",
+      "explanation": "Given: In a low-speed subsonic wind tunnel with a closed test section, a static pressure tap on the wall of the tunnel test section measures 0.98 atm. The temperature of the air in the test section is 80°F. A Pitot tube is inserted in the mi ddle of the flow in the test section in order to measure the flow velocity. The pressure measured by the Pitot tube is 2200 lb/ft². Calculate the flow velocity in the test section.\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 229 mph.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "188 mph",
+        "270 mph",
+        "147 mph",
+        "229 mph"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 51: Consider a low-speed subsonic wind tunnel with an open test section. The ambient pressure in the room is 1 atm, and the temperature of the air in the test section is 15 ° C. A Pitot tube is mounted in the test section. The tunnel is turned on, and the air velocity in the test section is adjusted to be 110 m/sec. What is the subsequent reading from the Pitot tube?",
+      "answerText": "1.07 atm",
+      "explanation": "Given: Consider a low-speed subsonic wind tunnel with an open test section. The ambient pressure in the room is 1 atm, and the temperature of the air in the test section is 15 ° C. A Pitot tube is mounted in the test section. The tunnel is turned on, and the air velocity in the test section is adjusted to be 110 m/sec. What is the subsequent reading from the Pitot tube?\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.07 atm.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.88 atm",
+        "1.26 atm",
+        "1.07 atm",
+        "0.68 atm"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 52: An airplane is flying at sea level at a speed of 100 m/s. Calculate the free-stream dynamic pressure and total pressure.",
+      "answerText": "6.15 × 10^4 N/m², 1.07 × 10^5 N/m²",
+      "explanation": "Given: An airplane is flying at sea level at a speed of 100 m/s. Calculate the free-stream dynamic pressure and total pressure.\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 6.15 × 10^4 N/m², 1.07 × 10^5 N/m².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "5.04 × 10^4 N/m², 1.07 × 10^5 N/m²",
+        "6.15 × 10^4 N/m², 1.07 × 10^5 N/m²",
+        "3.94 × 10^4 N/m², 1.07 × 10^5 N/m²",
+        "7.26 × 10^4 N/m², 1.07 × 10^5 N/m²"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 53: A high-speed subsonic McDonnell-Do uglas DC-10 airliner is flying at a pressure altitude of 10 km. A Pitot tube on the wing tip measures a pressure of 4.24 × 10^4 N/m². Calculate the Mach number at which the airplane is flying. If the ambient air temperature is 230 K, calculate the true airs peed and the calibrated airspeed.",
+      "answerText": "258 m/s, 157 m/s",
+      "explanation": "Given: A high-speed subsonic McDonnell-Do uglas DC-10 airliner is flying at a pressure altitude of 10 km. A Pitot tube on the wing tip measures a pressure of 4.24 × 10^4 N/m². Calculate the Mach number at which the airplane is flying. If the ambient air temperature is 230 K, calculate the true airs peed and the calibrated airspeed.\n\nFormula: Mach number: M = V/a, where a = sqrt(gamma*R*T). Convert speed and temperature to consistent units before calculating the local speed of sound.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 258 m/s, 157 m/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "258 m/s, 157 m/s",
+        "304 m/s, 157 m/s",
+        "165 m/s, 157 m/s",
+        "212 m/s, 157 m/s"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 54: Consider an F-80 flying at 594 mph at standard sea level. (This is the maximum speed of the F-80C at sea level.) Calculate the pressure and temperature at the stagnation point on the nose of the airplane.",
+      "answerText": "3166 lb/ft², 582.3 °R",
+      "explanation": "Given: Consider an F-80 flying at 594 mph at standard sea level. (This is the maximum speed of the F-80C at sea level.) Calculate the pressure and temperature at the stagnation point on the nose of the airplane.\n\nFormula: Stagnation temperature: T0 = T + V^2/(2*cp) = T*[1 + (gamma-1)*M^2/2]. At a stagnation point V = 0, so kinetic energy becomes enthalpy.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 3166 lb/ft², 582.3 °R.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "2,596 lb/ft², 582.3 °R",
+        "3,736 lb/ft², 582.3 °R",
+        "2,026 lb/ft², 582.3 °R",
+        "3166 lb/ft², 582.3 °R"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 55: At a given point in a flow field of air, the Mach number, velocity, and density are 0.9, 300 m/s, and 1.2 kg/m³, respectively. Calculate at this point (a) the total pressure, and (b) the dynamic pressure.",
+      "answerText": "1.61 × 10^5 N/m², 5.4 × 10^4 N/m²",
+      "explanation": "Given: At a given point in a flow field of air, the Mach number, velocity, and density are 0.9, 300 m/s, and 1.2 kg/m³, respectively. Calculate at this point (a) the total pressure, and (b) the dynamic pressure.\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.61 × 10^5 N/m², 5.4 × 10^4 N/m².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.32 × 10^5 N/m², 5.4 × 10^4 N/m²",
+        "1.90 × 10^5 N/m², 5.4 × 10^4 N/m²",
+        "1.61 × 10^5 N/m², 5.4 × 10^4 N/m²",
+        "1.03 × 10^5 N/m², 5.4 × 10^4 N/m²"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 56: An experimental rocket-powered aircraft is flying at a velocity of 3000 mi/h at an altitude where the ambient pressure and temperature are 151 lb/ft² and 390 °R, respectively. A Pitot tube is mounted in the nose of the aircraft. What is the pressure measured by the Pitot tube?",
+      "answerText": "4077 l b/ft²",
+      "explanation": "Given: An experimental rocket-powered aircraft is flying at a velocity of 3000 mi/h at an altitude where the ambient pressure and temperature are 151 lb/ft² and 390 °R, respectively. A Pitot tube is mounted in the nose of the aircraft. What is the pressure measured by the Pitot tube?\n\nFormula: For a supersonic Pitot measurement, use the normal-shock (Rayleigh Pitot) relation between measured stagnation pressure, ambient static pressure, and Mach number.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 4077 l b/ft².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "3,343 l b/ft²",
+        "4077 l b/ft²",
+        "2,609 l b/ft²",
+        "4,811 l b/ft²"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 57: Consider the F-102A. The airplane is flying at a supersonic speed at a standard altitude of 8 km. The pressure measured by the Pitot tube is 9.27 × 10^4 N/m². At what Mach number is the airplane flying?",
+      "answerText": "1.26",
+      "explanation": "Given: Consider the F-102A. The airplane is flying at a supersonic speed at a standard altitude of 8 km. The pressure measured by the Pitot tube is 9.27 × 10^4 N/m². At what Mach number is the airplane flying?\n\nFormula: Mach number: M = V/a, where a = sqrt(gamma*R*T). Convert speed and temperature to consistent units before calculating the local speed of sound.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.26.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.26",
+        "1.49",
+        "0.81",
+        "1.03"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 58: Consider the isentropic flow over the airfoil. The free-stream pressure, velocity, and density are 2116 lb/ft², 500 mi/h, and 0.002377 slug/ft³, respectively. At a given point A on the airfoil, the pressure is 1497 lb/ft². What are the Mach number and the velocity at point A?",
+      "answerText": "0.9977, 1058 fps",
+      "explanation": "Given: Consider the isentropic flow over the airfoil. The free-stream pressure, velocity, and density are 2116 lb/ft², 500 mi/h, and 0.002377 slug/ft³, respectively. At a given point A on the airfoil, the pressure is 1497 lb/ft². What are the Mach number and the velocity at point A?\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.9977, 1058 fps.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.8181, 1058 fps",
+        "1.1773, 1058 fps",
+        "0.6385, 1058 fps",
+        "0.9977, 1058 fps"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 59: You are given the job of designing a supersonic wind tunnel that has a Mach 2 flow at standard sea-level conditions in the test section. What reservoir pressure and temperature and what area ratio A e /A t are required to obtain these conditions?",
+      "answerText": "7.9 × 10^5 N/m², 518.7 K, 1.69",
+      "explanation": "Given: You are given the job of designing a supersonic wind tunnel that has a Mach 2 flow at standard sea-level conditions in the test section. What reservoir pressure and temperature and what area ratio A e /A t are required to obtain these conditions?\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 7.9 × 10^5 N/m², 518.7 K, 1.69.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "6.5 × 10^5 N/m², 518.7 K, 1.69",
+        "9.3 × 10^5 N/m², 518.7 K, 1.69",
+        "7.9 × 10^5 N/m², 518.7 K, 1.69",
+        "5.1 × 10^5 N/m², 518.7 K, 1.69"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 60: The reservoir temperature and pressure of a supersonic wind tunnel are 600 °R and 10 atm, respectively. The Mach number of the flow in the test section is 3. A blunt nosed model is inserted in the test section flow. Calculate the pressure, temperature, and density at the stagnation point (at the nose of the body).",
+      "answerText": "6947 lb/ft², 600 °R, 0.0067 slug/ft³",
+      "explanation": "Given: The reservoir temperature and pressure of a supersonic wind tunnel are 600 °R and 10 atm, respectively. The Mach number of the flow in the test section is 3. A blunt nosed model is inserted in the test section flow. Calculate the pressure, temperature, and density at the stagnation point (at the nose of the body).\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 6947 lb/ft², 600 °R, 0.0067 slug/ft³.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "5,697 lb/ft², 600 °R, 0.0067 slug/ft³",
+        "6947 lb/ft², 600 °R, 0.0067 slug/ft³",
+        "4,446 lb/ft², 600 °R, 0.0067 slug/ft³",
+        "8,197 lb/ft², 600 °R, 0.0067 slug/ft³"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 61: In the combustion chamber of a rocket engine, kerosene and oxygen are burned, resulting in a hot, high-pressure gas mixture in the combustion chamber with the following conditions and properties: T 0 = 3144 K, p 0 = 20 atm, R = 378 J/(kg)(K), and γ = 1.26. The pressure at the exit of the rocket nozzle is 1 atm, and the throat area of the nozzle is 0.1 m². Assuming isentropic flow through the rocket nozzle, calculate (a) the velocity at the exit and (b) the mass flo w through the nozzle.",
+      "answerText": "2305 m/s, 122.2 kg/s",
+      "explanation": "Given: In the combustion chamber of a rocket engine, kerosene and oxygen are burned, resulting in a hot, high-pressure gas mixture in the combustion chamber with the following conditions and properties: T 0 = 3144 K, p 0 = 20 atm, R = 378 J/(kg)(K), and γ = 1.26. The pressure at the exit of the rocket nozzle is 1 atm, and the throat area of the nozzle is 0.1 m². Assuming isentropic flow through the rocket nozzle, calculate (a) the velocity at the exit and (b) the mass flo w through the nozzle.\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 2305 m/s, 122.2 kg/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "2305 m/s, 122.2 kg/s",
+        "2,720 m/s, 122.2 kg/s",
+        "1,475 m/s, 122.2 kg/s",
+        "1,890 m/s, 122.2 kg/s"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 62: Consider a supersonic wind tunnel. The reservoir pressure is 5 atm. The area of the first throat is 100 cm². The static pressure measured at a pressure tap in the wall of the second throat is 0.87 atm. The local Mach number at the second throat is M t,2 = 1. Calculate the area of the second throat, A t,2.",
+      "answerText": "303.6 cm²",
+      "explanation": "Given: Consider a supersonic wind tunnel. The reservoir pressure is 5 atm. The area of the first throat is 100 cm². The static pressure measured at a pressure tap in the wall of the second throat is 0.87 atm. The local Mach number at the second throat is M t,2 = 1. Calculate the area of the second throat, A t,2.\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 303.6 cm².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "249.0 cm²",
+        "358.2 cm²",
+        "194.3 cm²",
+        "303.6 cm²"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 63: Consider the flow of air over a small flat plate that is 5 cm long in the flow direction and 1 m wide. The free-stream conditions correspond to standard sea level, and the flow velocity is 120 m/s. Assuming laminar flow, calculate (a) The boundary layer thickness at the downstream edge (the trailing edge). (b) The drag force on the plate.",
+      "answerText": "4.06 × 10^-4 m, 1.826 N",
+      "explanation": "Given: Consider the flow of air over a small flat plate that is 5 cm long in the flow direction and 1 m wide. The free-stream conditions correspond to standard sea level, and the flow velocity is 120 m/s. Assuming laminar flow, calculate (a) The boundary layer thickness at the downstream edge (the trailing edge). (b) The drag force on the plate.\n\nFormula: Flat-plate boundary layer: Re_x = rho*V*x/mu. Laminar: delta_x ~= 5*x/sqrt(Re_x), and average Cf ~= 1.328/sqrt(Re_L). Turbulent: delta_x ~= 0.37*x/Re_x^(1/5). Then wall shear tau_w = Cf*(0.5*rho*V^2) and skin-friction drag Df = Cf*(0.5*rho*V^2)*S_wetted.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 4.06 × 10^-4 m, 1.826 N.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "3.33 × 10^-4 m, 1.826 N",
+        "4.79 × 10^-4 m, 1.826 N",
+        "4.06 × 10^-4 m, 1.826 N",
+        "2.60 × 10^-4 m, 1.826 N"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 64: For the flat plate, calculate and compare the local shear stress at the locations 1 and 5 cm from the front edge (the leading edge) of the plate, measured in the flow direction.",
+      "answerText": "20.43 N/m²",
+      "explanation": "Given: For the flat plate, calculate and compare the local shear stress at the locations 1 and 5 cm from the front edge (the leading edge) of the plate, measured in the flow direction.\n\nFormula: Flat-plate boundary layer: Re_x = rho*V*x/mu. Laminar: delta_x ~= 5*x/sqrt(Re_x), and average Cf ~= 1.328/sqrt(Re_L). Turbulent: delta_x ~= 0.37*x/Re_x^(1/5). Then wall shear tau_w = Cf*(0.5*rho*V^2) and skin-friction drag Df = Cf*(0.5*rho*V^2)*S_wetted.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 20.43 N/m².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "16.75 N/m²",
+        "20.43 N/m²",
+        "13.08 N/m²",
+        "24.11 N/m²"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 65: Consider the same flow over the same flat plate as in Question 61; however, assume that the boundary layer is now completely turbulent. Calculate the boundary layer thickness at the trailing edge and the drag force on the plate.",
+      "answerText": "1.39 × 𝟏𝟎 − 𝟑 m, 4.92 N",
+      "explanation": "Given: Consider the same flow over the same flat plate as in Question 61; however, assume that the boundary layer is now completely turbulent. Calculate the boundary layer thickness at the trailing edge and the drag force on the plate.\n\nFormula: Flat-plate boundary layer: Re_x = rho*V*x/mu. Laminar: delta_x ~= 5*x/sqrt(Re_x), and average Cf ~= 1.328/sqrt(Re_L). Turbulent: delta_x ~= 0.37*x/Re_x^(1/5). Then wall shear tau_w = Cf*(0.5*rho*V^2) and skin-friction drag Df = Cf*(0.5*rho*V^2)*S_wetted.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.39 × 𝟏𝟎 − 𝟑 m, 4.92 N.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.39 × 𝟏𝟎 − 𝟑 m, 4.92 N",
+        "1.64 × 𝟏𝟎 − 𝟑 m, 4.92 N",
+        "0.89 × 𝟏𝟎 − 𝟑 m, 4.92 N",
+        "1.14 × 𝟏𝟎 − 𝟑 m, 4.92 N"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 66: Repeat Question 62, except now assume that the boundary layer is completely turbulent.",
+      "answerText": "54.33 N/m², 39.34 N/m²",
+      "explanation": "Given: Repeat Question 62, except now assume that the boundary layer is completely turbulent.\n\nFormula: Flat-plate boundary layer: Re_x = rho*V*x/mu. Laminar: delta_x ~= 5*x/sqrt(Re_x), and average Cf ~= 1.328/sqrt(Re_L). Turbulent: delta_x ~= 0.37*x/Re_x^(1/5). Then wall shear tau_w = Cf*(0.5*rho*V^2) and skin-friction drag Df = Cf*(0.5*rho*V^2)*S_wetted.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 54.33 N/m², 39.34 N/m².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "44.55 N/m², 39.34 N/m²",
+        "64.11 N/m², 39.34 N/m²",
+        "34.77 N/m², 39.34 N/m²",
+        "54.33 N/m², 39.34 N/m²"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 67: A three-view of the Lockheed F-104A Starfighter. This was the first fighter aircraft designed for sustained Mach 2 flig ht. The airfoil section of the wing is very thin, with an extremely sharp leading edge. Assume that the wing is an infinitely thin flat plate. Consider the F-104 flying at Mach 2 at a standard altitude of 35,000 ft. Assume that the boundary layer over the wing is turbulent. Estimate the shear stress at a point 2 ft downstream of the leading edge.",
+      "answerText": "2.43 lb/ft²",
+      "explanation": "Given: A three-view of the Lockheed F-104A Starfighter. This was the first fighter aircraft designed for sustained Mach 2 flig ht. The airfoil section of the wing is very thin, with an extremely sharp leading edge. Assume that the wing is an infinitely thin flat plate. Consider the F-104 flying at Mach 2 at a standard altitude of 35,000 ft. Assume that the boundary layer over the wing is turbulent. Estimate the shear stress at a point 2 ft downstream of the leading edge.\n\nFormula: Flat-plate boundary layer: Re_x = rho*V*x/mu. Laminar: delta_x ~= 5*x/sqrt(Re_x), and average Cf ~= 1.328/sqrt(Re_L). Turbulent: delta_x ~= 0.37*x/Re_x^(1/5). Then wall shear tau_w = Cf*(0.5*rho*V^2) and skin-friction drag Df = Cf*(0.5*rho*V^2)*S_wetted.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 2.43 lb/ft².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.99 lb/ft²",
+        "2.87 lb/ft²",
+        "2.43 lb/ft²",
+        "1.56 lb/ft²"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 68: Consider the NASA LS (1)-0417 airfoil, mounted in the test section of a wind tunnel. The length of the model in the flow direction is 0.6 m, and its width across the flow is 1.0 m. The tips of the model are flush with the vertical sidewalls of the wind tunnel; in this fashion the induced drag is zero, and the total drag on the airfoil model is the profile drag, D. When the airflow in the test section of the wind tunnel is 97 m/s at standard sea-level conditions, the profile drag on the airfoil at zero degrees angle of attack is 34.7 N. (a) For these conditions, calculate the drag on the airfoil due to skin friction D f. Assume that D f is the same as the turbulent skin friction drag on a flat plate of equal length and width. (b) Calculate the pressure drag due to flow separation, D p, on the airfoil.",
+      "answerText": "24.6 N, 10.1 N",
+      "explanation": "Given: Consider the NASA LS (1)-0417 airfoil, mounted in the test section of a wind tunnel. The length of the model in the flow direction is 0.6 m, and its width across the flow is 1.0 m. The tips of the model are flush with the vertical sidewalls of the wind tunnel; in this fashion the induced drag is zero, and the total drag on the airfoil model is the profile drag, D. When the airflow in the test section of the wind tunnel is 97 m/s at standard sea-level conditions, the profile drag on the airfoil at zero degrees angle of attack is 34.7 N. (a) For these conditions, calculate the drag on the airfoil due to skin friction D f. Assume that D f is the same as the turbulent skin friction drag on a flat plate of equal length and width. (b) Calculate the pressure drag due to flow separation, D p, on the airfoil.\n\nFormula: Flat-plate boundary layer: Re_x = rho*V*x/mu. Laminar: delta_x ~= 5*x/sqrt(Re_x), and average Cf ~= 1.328/sqrt(Re_L). Turbulent: delta_x ~= 0.37*x/Re_x^(1/5). Then wall shear tau_w = Cf*(0.5*rho*V^2) and skin-friction drag Df = Cf*(0.5*rho*V^2)*S_wetted.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 24.6 N, 10.1 N.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "20.2 N, 10.1 N",
+        "24.6 N, 10.1 N",
+        "15.7 N, 10.1 N",
+        "29.0 N, 10.1 N"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 69: Consider the incompressible flow of water through a divergent duct. The inlet velocity and area are 5 ft/s and 10 ft², respectively. If the exit area is 4 times the inlet area, calculate the water flow velocity at the exit.",
+      "answerText": "1.25 fps",
+      "explanation": "Given: Consider the incompressible flow of water through a divergent duct. The inlet velocity and area are 5 ft/s and 10 ft², respectively. If the exit area is 4 times the inlet area, calculate the water flow velocity at the exit.\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.25 fps.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.25 fps",
+        "1.47 fps",
+        "0.80 fps",
+        "1.02 fps"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 70: In Question 69, calculate the pressure difference between the exit and the inlet. The density of water is 62.4 lb m /ft².",
+      "answerText": "22.7 lb/ft²",
+      "explanation": "Given: In Question 69, calculate the pressure difference between the exit and the inlet. The density of water is 62.4 lb m /ft².\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 22.7 lb/ft².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "18.6 lb/ft²",
+        "26.8 lb/ft²",
+        "14.5 lb/ft²",
+        "22.7 lb/ft²"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 71: Consider an airplane flying with a velocity of 60 m/s at a standard altitude of 3 km. At a point on the wing, the airflow velocity is 70 m/s. Calculate the pressure at this point. Assume incompressible flow.",
+      "answerText": "6.95 × 10^4 N/m²",
+      "explanation": "Given: Consider an airplane flying with a velocity of 60 m/s at a standard altitude of 3 km. At a point on the wing, the airflow velocity is 70 m/s. Calculate the pressure at this point. Assume incompressible flow.\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 6.95 × 10^4 N/m².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "5.70 × 10^4 N/m²",
+        "8.20 × 10^4 N/m²",
+        "6.95 × 10^4 N/m²",
+        "4.45 × 10^4 N/m²"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 72: Consider the flow of air through a convergent – divergent duct, such as the venturi tube. The inlet, throat, and exit areas are 3, 1.5, and 2 m², respectively. The inlet and exit pressures are 1.02 × 10^5 and 1.00 × 10^5 N/m², respectively. Calculate the flow velocity at the throat. Assume incompressible flow with standard sea-level density.",
+      "answerText": "102.22 m/s",
+      "explanation": "Given: Consider the flow of air through a convergent – divergent duct, such as the venturi tube. The inlet, throat, and exit areas are 3, 1.5, and 2 m², respectively. The inlet and exit pressures are 1.02 × 10^5 and 1.00 × 10^5 N/m², respectively. Calculate the flow velocity at the throat. Assume incompressible flow with standard sea-level density.\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 102.22 m/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "83.82 m/s",
+        "102.22 m/s",
+        "65.42 m/s",
+        "120.62 m/s"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 73: An airplane is flying at a velocity of 130 mi/h at a standard altitude of 5000 ft. At a point on the wing, the pressure is 1750.0 lb/ft². Calculate the velocity at that point, assuming incompressible flow.",
+      "answerText": "216.8 fps",
+      "explanation": "Given: An airplane is flying at a velocity of 130 mi/h at a standard altitude of 5000 ft. At a point on the wing, the pressure is 1750.0 lb/ft². Calculate the velocity at that point, assuming incompressible flow.\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 216.8 fps.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "216.8 fps",
+        "255.8 fps",
+        "138.8 fps",
+        "177.8 fps"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 74: Imagine that you have designed a low-speed airplane with a maximum velocity at sea level of 90 m/s. For your airspeed instrument, you plan to use a venturi tube with a 1.3:1 area ratio. Inside the cockpit is an airspeed indicator — a dial that is connected to a pressure gauge sensing the venturi tube pressure difference p 1 – p 2 and properly calibrated in terms of velocity. What is the maximum pressure difference you would expect the gauge to experience?",
+      "answerText": "3423 N/ m²",
+      "explanation": "Given: Imagine that you have designed a low-speed airplane with a maximum velocity at sea level of 90 m/s. For your airspeed instrument, you plan to use a venturi tube with a 1.3:1 area ratio. Inside the cockpit is an airspeed indicator — a dial that is connected to a pressure gauge sensing the venturi tube pressure difference p 1 – p 2 and properly calibrated in terms of velocity. What is the maximum pressure difference you would expect the gauge to experience?\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 3423 N/ m².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "2,807 N/ m²",
+        "4,039 N/ m²",
+        "2,191 N/ m²",
+        "3423 N/ m²"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 75: A supersonic nozzle is also a convergent – divergent duct, which is fed by a large reservoir at the inlet to the nozzle. In the reservoir of the nozzle, the pressure and temperature are 10 atm and 300 K, respectively. At the nozzle exit, the pressure is 1 atm. Calculate the temperature and density of the flow at the exit. Assume that the flow is isentropic and (of course) compressible.",
+      "answerText": "155 K, 2.26 kg/m³",
+      "explanation": "Given: A supersonic nozzle is also a convergent – divergent duct, which is fed by a large reservoir at the inlet to the nozzle. In the reservoir of the nozzle, the pressure and temperature are 10 atm and 300 K, respectively. At the nozzle exit, the pressure is 1 atm. Calculate the temperature and density of the flow at the exit. Assume that the flow is isentropic and (of course) compressible.\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 155 K, 2.26 kg/m³.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "127 K, 2.26 kg/m³",
+        "183 K, 2.26 kg/m³",
+        "155 K, 2.26 kg/m³",
+        "99.2 K, 2.26 kg/m³"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 76: Consider an airplane flying at a standard altitude of 5 km with a velocity of 270 m/s. At a point on the wing of the airplane, the velocity is 330 m/s. Calculate the pressure at this point.",
+      "answerText": "4.19 × 10^4 N/m²",
+      "explanation": "Given: Consider an airplane flying at a standard altitude of 5 km with a velocity of 270 m/s. At a point on the wing of the airplane, the velocity is 330 m/s. Calculate the pressure at this point.\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 4.19 × 10^4 N/m².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "3.44 × 10^4 N/m²",
+        "4.19 × 10^4 N/m²",
+        "2.68 × 10^4 N/m²",
+        "4.94 × 10^4 N/m²"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 77: The mass flow of air through a supersonic nozzle is 1.5 lb m/s. The exit velocity is 1500 ft/s, and the reservoir temperature and pressure are 1000 °R and 7 atm, respectively. Calculate the area of the nozzle exit. For air, c p = 6000 ft-lb/ (slug)(°R).",
+      "answerText": "0.0061 ft²",
+      "explanation": "Given: The mass flow of air through a supersonic nozzle is 1.5 lb m/s. The exit velocity is 1500 ft/s, and the reservoir temperature and pressure are 1000 °R and 7 atm, respectively. Calculate the area of the nozzle exit. For air, c p = 6000 ft-lb/ (slug)(°R).\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.0061 ft².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.0061 ft²",
+        "0.0072 ft²",
+        "0.0039 ft²",
+        "0.0050 ft²"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 78: A supersonic transport is flying at a velocity of 1500 mi/h at a standard altitude of 50,000 ft. The temperature at a point in the flow over the wing is 793.32 °R. Calculate the flow velocity at that point.",
+      "answerText": "6.3 fps",
+      "explanation": "Given: A supersonic transport is flying at a velocity of 1500 mi/h at a standard altitude of 50,000 ft. The temperature at a point in the flow over the wing is 793.32 °R. Calculate the flow velocity at that point.\n\nFormula: Compressible-flow energy and mass conservation: h + V^2/2 = constant (h = cp*T), and mdot = rho*V*A. With fuel addition, mdot_exit = mdot_air + mdot_fuel.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 6.3 fps.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "5.2 fps",
+        "7.4 fps",
+        "4.0 fps",
+        "6.3 fps"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 79: For the airplane in Question 78, the total cross-sectional area of the inlet to the jet engines is 20 ft². Assume that the flow properties of the air entering the inlet are those of the free stream ahead of the airplane. Fuel is injected inside the engine at a rate of 0.05 lb of fuel for every pound of air flowing through the engine (i.e., the fuel – air ratio by mass is 0.05). Calculate the mass flow (in slugs/per second) that comes out the exit of the engine.",
+      "answerText": "16.81 slug/s",
+      "explanation": "Given: For the airplane in Question 78, the total cross-sectional area of the inlet to the jet engines is 20 ft². Assume that the flow properties of the air entering the inlet are those of the free stream ahead of the airplane. Fuel is injected inside the engine at a rate of 0.05 lb of fuel for every pound of air flowing through the engine (i.e., the fuel – air ratio by mass is 0.05). Calculate the mass flow (in slugs/per second) that comes out the exit of the engine.\n\nFormula: Compressible-flow energy and mass conservation: h + V^2/2 = constant (h = cp*T), and mdot = rho*V*A. With fuel addition, mdot_exit = mdot_air + mdot_fuel.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 16.81 slug/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "13.78 slug/s",
+        "19.84 slug/s",
+        "16.81 slug/s",
+        "10.76 slug/s"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 80: Calculate the Mach number at the exit of the nozzle in Question 77.",
+      "answerText": "1.07",
+      "explanation": "Given: Calculate the Mach number at the exit of the nozzle in Question 77.\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.07.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.88",
+        "1.07",
+        "0.68",
+        "1.26"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 81: A Boeing 747 is cruising at a velocity of 250 m/s at a standard altitude of 13 km. What is its Mach number?",
+      "answerText": "0.847",
+      "explanation": "Given: A Boeing 747 is cruising at a velocity of 250 m/s at a standard altitude of 13 km. What is its Mach number?\n\nFormula: Mach number: M = V/a, where a = sqrt(gamma*R*T). Convert speed and temperature to consistent units before calculating the local speed of sound.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.847.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.847",
+        "0.999",
+        "0.542",
+        "0.695"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 82: A high-speed missile is traveling at Mach 3 at standard sea level. What is its velocity in miles per hour?",
+      "answerText": "2283 mph",
+      "explanation": "Given: A high-speed missile is traveling at Mach 3 at standard sea level. What is its velocity in miles per hour?\n\nFormula: Mach number: M = V/a, where a = sqrt(gamma*R*T). Convert speed and temperature to consistent units before calculating the local speed of sound.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 2283 mph.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1,872 mph",
+        "2,694 mph",
+        "1,461 mph",
+        "2283 mph"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 83: Calculate the flight Mach nu mber for the supersonic transport in Question 78.",
+      "answerText": "2.27",
+      "explanation": "Given: Calculate the flight Mach nu mber for the supersonic transport in Question 78.\n\nFormula: Mach number: M = V/a, where a = sqrt(gamma*R*T). Convert speed and temperature to consistent units before calculating the local speed of sound.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 2.27.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.86",
+        "2.68",
+        "2.27",
+        "1.45"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 84: Consider a low-speed subsonic wind tunnel with a nozzle contraction ratio of 1:20. One side of a mercury manometer is connected to the settling chamber and the other side to the test section. The pressure and temperature in the test section are 1 atm and 300 K, respectively. What is the height difference between the two columns of mercury when the test section velocity is 80 m/s?",
+      "answerText": "2.8 cm",
+      "explanation": "Given: Consider a low-speed subsonic wind tunnel with a nozzle contraction ratio of 1:20. One side of a mercury manometer is connected to the settling chamber and the other side to the test section. The pressure and temperature in the test section are 1 atm and 300 K, respectively. What is the height difference between the two columns of mercury when the test section velocity is 80 m/s?\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 2.8 cm.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "2.3 cm",
+        "2.8 cm",
+        "1.8 cm",
+        "3.3 cm"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 85: A Pitot tube is mounted in the test section of a low-speed subsonic wind tunnel. The flow in the test section has a velocity, static pressure, and temperature of 150 mi/h, 1 atm, and 70°F, respectively. Calculate the pressure measured by the Pitot tube.",
+      "answerText": "2172 lb/ft²",
+      "explanation": "Given: A Pitot tube is mounted in the test section of a low-speed subsonic wind tunnel. The flow in the test section has a velocity, static pressure, and temperature of 150 mi/h, 1 atm, and 70°F, respectively. Calculate the pressure measured by the Pitot tube.\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 2172 lb/ft².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "2172 lb/ft²",
+        "2,563 lb/ft²",
+        "1,390 lb/ft²",
+        "1,781 lb/ft²"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 86: The altimeter on a low-speed Piper Aztec reads 8000 ft. A Pitot tube mounted on the wing tip measures a pressure of 1650 lb/ft². If the outside air temperature is 500 °R, what is the true velocity of the airplane? What is the equivalent airspeed?",
+      "answerText": "292 ft/s, 256 ft/s",
+      "explanation": "Given: The altimeter on a low-speed Piper Aztec reads 8000 ft. A Pitot tube mounted on the wing tip measures a pressure of 1650 lb/ft². If the outside air temperature is 500 °R, what is the true velocity of the airplane? What is the equivalent airspeed?\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 292 ft/s, 256 ft/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "239 ft/s, 256 ft/s",
+        "345 ft/s, 256 ft/s",
+        "187 ft/s, 256 ft/s",
+        "292 ft/s, 256 ft/s"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 87: The altimeter on a low-speed airplane reads 2 km. The airspeed indicator reads 50 m/s. If the outside air temperature is 280 K, what is the true velocity of the airplane?",
+      "answerText": "56 m/s",
+      "explanation": "Given: The altimeter on a low-speed airplane reads 2 km. The airspeed indicator reads 50 m/s. If the outside air temperature is 280 K, what is the true velocity of the airplane?\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 56 m/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "45.9 m/s",
+        "66.1 m/s",
+        "56 m/s",
+        "35.8 m/s"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 88: A Pitot tube is mounted in the test section of a high-speed subsonic wind tunnel. The pressure and temperature of the airflow are 1 atm and 270 K, respectively. If the flow velocity is 250 m/s, what is the pressure measured by the Pitot tube?",
+      "answerText": "1.48 × 10^5 N/m²",
+      "explanation": "Given: A Pitot tube is mounted in the test section of a high-speed subsonic wind tunnel. The pressure and temperature of the airflow are 1 atm and 270 K, respectively. If the flow velocity is 250 m/s, what is the pressure measured by the Pitot tube?\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.48 × 10^5 N/m².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.21 × 10^5 N/m²",
+        "1.48 × 10^5 N/m²",
+        "0.95 × 10^5 N/m²",
+        "1.75 × 10^5 N/m²"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 89: A high-speed subsonic Boeing 777 airliner is flying at a pressure altitude of 12 km. A Pitot tube on the vertical tail measures a pressure of 2.96 × 10^4 N/m². At what Mach number is the airplane flying?",
+      "answerText": "0.801",
+      "explanation": "Given: A high-speed subsonic Boeing 777 airliner is flying at a pressure altitude of 12 km. A Pitot tube on the vertical tail measures a pressure of 2.96 × 10^4 N/m². At what Mach number is the airplane flying?\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.801.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.801",
+        "0.945",
+        "0.513",
+        "0.657"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 90: A high-speed subsonic airplane is flying at Mach 0.65. A Pitot tube on the wing tip measures a pressure of 2339 lb/ft². What is the altitude reading on the altimeter?",
+      "answerText": "1761 lb/ft²",
+      "explanation": "Given: A high-speed subsonic airplane is flying at Mach 0.65. A Pitot tube on the wing tip measures a pressure of 2339 lb/ft². What is the altitude reading on the altimeter?\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1761 lb/ft².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1,444 lb/ft²",
+        "2,078 lb/ft²",
+        "1,127 lb/ft²",
+        "1761 lb/ft²"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 91: A high-performance F-16 fighter is flying at Mach 0.96 at sea level. What is the air temperature at the stagnation point at the leading edge of the wing?",
+      "answerText": "154.3 ℉",
+      "explanation": "Given: A high-performance F-16 fighter is flying at Mach 0.96 at sea level. What is the air temperature at the stagnation point at the leading edge of the wing?\n\nFormula: Stagnation temperature: T0 = T + V^2/(2*cp) = T*[1 + (gamma-1)*M^2/2]. At a stagnation point V = 0, so kinetic energy becomes enthalpy.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 154.3 ℉.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "126.5 ℉",
+        "182.1 ℉",
+        "154.3 ℉",
+        "98.8 ℉"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 92: An airplane is flying at a pressure altitude of 10 km with a velocity of 596 m/s. The outside air temperature is 220 K. What is the pressure measured by a Pitot tube mounted on the nose of the airplane?",
+      "answerText": "1.49 × 10^5 N/m²",
+      "explanation": "Given: An airplane is flying at a pressure altitude of 10 km with a velocity of 596 m/s. The outside air temperature is 220 K. What is the pressure measured by a Pitot tube mounted on the nose of the airplane?\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.49 × 10^5 N/m².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.22 × 10^5 N/m²",
+        "1.49 × 10^5 N/m²",
+        "0.95 × 10^5 N/m²",
+        "1.76 × 10^5 N/m²"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 93: Consider a Mach 2 airstream at standard sea-level conditions. Calculate the total pressure of this flow. Compare this result with (a) the stagnation pressure that would exist at the nose of a blunt body in the flow.",
+      "answerText": "1.193 × 10^5 lb/ft²",
+      "explanation": "Given: Consider a Mach 2 airstream at standard sea-level conditions. Calculate the total pressure of this flow. Compare this result with (a) the stagnation pressure that would exist at the nose of a blunt body in the flow.\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.193 × 10^5 lb/ft².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.193 × 10^5 lb/ft²",
+        "1.408 × 10^5 lb/ft²",
+        "0.764 × 10^5 lb/ft²",
+        "0.978 × 10^5 lb/ft²"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 94: Consider the flow of air through a supersonic nozzle. The reservoir pressure and temperature are 5 atm and 500 K, respectively. If the Mach number at the nozzle exit is 3, calculate the exit pr essure, temperature, and density.",
+      "answerText": "1.37 × 𝟏𝟎 𝟒 N/m², 178.6 K, 0.267 kg/m³",
+      "explanation": "Given: Consider the flow of air through a supersonic nozzle. The reservoir pressure and temperature are 5 atm and 500 K, respectively. If the Mach number at the nozzle exit is 3, calculate the exit pr essure, temperature, and density.\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.37 × 𝟏𝟎 𝟒 N/m², 178.6 K, 0.267 kg/m³.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.12 × 𝟏𝟎 𝟒 N/m², 178.6 K, 0.267 kg/m³",
+        "1.62 × 𝟏𝟎 𝟒 N/m², 178.6 K, 0.267 kg/m³",
+        "0.88 × 𝟏𝟎 𝟒 N/m², 178.6 K, 0.267 kg/m³",
+        "1.37 × 𝟏𝟎 𝟒 N/m², 178.6 K, 0.267 kg/m³"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 95: Consider a supersonic nozzle across which the pressure ratio is p e / p 0 = 0.2. Calculate the ratio of exit area to throat area.",
+      "answerText": "1.35",
+      "explanation": "Given: Consider a supersonic nozzle across which the pressure ratio is p e / p 0 = 0.2. Calculate the ratio of exit area to throat area.\n\nFormula: Isentropic perfect-gas relations: T0/T = 1 + (gamma-1)*M^2/2; p0/p = (T0/T)^[gamma/(gamma-1)]; rho0/rho = (T0/T)^[1/(gamma-1)]. Nozzle mass flow also satisfies mdot = rho*V*A.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.35.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.11",
+        "1.59",
+        "1.35",
+        "0.86"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 96: The wing of the Fairchild Republic A-10A twin-jet close-support airplane is approximately rectangular with a wingspan (the length perpendicular to the flow direction) of 17.5 m and a chord (the length parallel to the flow direction) of 3 m. The airplane is flying at standard sea level with a velocity of 200 m/s. If the flow is considered to be completely laminar, calculate the boundary layer thickness at the trailing edge and the total skin friction drag. Assume that the wing is approximated by a flat plate. Assume incompressible flow.",
+      "answerText": "540 N",
+      "explanation": "Given: The wing of the Fairchild Republic A-10A twin-jet close-support airplane is approximately rectangular with a wingspan (the length perpendicular to the flow direction) of 17.5 m and a chord (the length parallel to the flow direction) of 3 m. The airplane is flying at standard sea level with a velocity of 200 m/s. If the flow is considered to be completely laminar, calculate the boundary layer thickness at the trailing edge and the total skin friction drag. Assume that the wing is approximated by a flat plate. Assume incompressible flow.\n\nFormula: Flat-plate boundary layer: Re_x = rho*V*x/mu. Laminar: delta_x ~= 5*x/sqrt(Re_x), and average Cf ~= 1.328/sqrt(Re_L). Turbulent: delta_x ~= 0.37*x/Re_x^(1/5). Then wall shear tau_w = Cf*(0.5*rho*V^2) and skin-friction drag Df = Cf*(0.5*rho*V^2)*S_wetted.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 540 N.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "443 N",
+        "540 N",
+        "346 N",
+        "637 N"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 97: Consider an airplane flying at a standard altitude of 25,000 ft at a velocity of 800 ft/s. To experience the same dynamic pressure at sea level, how fast must the airplane be flying?",
+      "answerText": "535.8 ft/s",
+      "explanation": "Given: Consider an airplane flying at a standard altitude of 25,000 ft at a velocity of 800 ft/s. To experience the same dynamic pressure at sea level, how fast must the airplane be flying?\n\nFormula: Bernoulli equation for incompressible flow: p + 0.5*rho*V^2 = constant. Continuity gives rho*A*V = constant. Dynamic pressure is q = 0.5*rho*V^2 and total pressure is p0 = p + q.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 535.8 ft/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-4-basic-aerodynamics"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "535.8 ft/s",
+        "632.2 ft/s",
+        "342.9 ft/s",
+        "439.4 ft/s"
+      ],
+      "answerIndex": 0
+    }
+  ]
+}

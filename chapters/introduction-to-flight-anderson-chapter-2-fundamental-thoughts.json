@@ -1,0 +1,239 @@
+{
+  "title": "Chapter 2: Fundamental Thoughts",
+  "questions": [
+    {
+      "question": "Problem 1: The air pressure and density at a point on the wing of a Boeing 747 are 1.10 × 10^5 N/m² and 1.20 kg/m³, respectively. What is the temperature at that point?",
+      "answerText": "319 K",
+      "explanation": "Given: The air pressure and density at a point on the wing of a Boeing 747 are 1.10 × 10^5 N/m² and 1.20 kg/m³, respectively. What is the temperature at that point?\n\nFormula: Ideal-gas equation: p = rho*R*T, so T = p/(rho*R). Use R = 287 J/(kg*K) for air in SI units.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 319 K.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-2-fundamental-thoughts"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "262 K",
+        "376 K",
+        "319 K",
+        "204 K"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 2: The high-pressure air storage tank for a supersonic wind tunnel has a volume of 1000 ft³. If air is stored at a pressure of 30 atm and a temperature of 530 °R, what is the mass of gas stored in the tank in slugs? In pound mass?",
+      "answerText": "69.8 slugs, 2245 lbm",
+      "explanation": "Given: The high-pressure air storage tank for a supersonic wind tunnel has a volume of 1000 ft³. If air is stored at a pressure of 30 atm and a temperature of 530 °R, what is the mass of gas stored in the tank in slugs? In pound mass?\n\nFormula: Ideal-gas equation for a fixed tank: m = p*V/(R*T). Convert the resulting mass between slugs and lbm using consistent units.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 69.8 slugs, 2245 lbm.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-2-fundamental-thoughts"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "57.2 slugs, 2245 lbm",
+        "69.8 slugs, 2245 lbm",
+        "44.7 slugs, 2245 lbm",
+        "82.4 slugs, 2245 lbm"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 3: Air flowing at high speed in a wind tunnel has pressure and temperature equal to 0.3 atm and −100°C, respectively. What is the air density? What is the specific volume?",
+      "answerText": "0.610 kg/m³, 1.64 m³/kg",
+      "explanation": "Given: Air flowing at high speed in a wind tunnel has pressure and temperature equal to 0.3 atm and −100°C, respectively. What is the air density? What is the specific volume?\n\nFormula: Ideal-gas equation and specific volume: rho = p/(R*T), and v = 1/rho.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.610 kg/m³, 1.64 m³/kg.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-2-fundamental-thoughts"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.610 kg/m³, 1.64 m³/kg",
+        "0.720 kg/m³, 1.64 m³/kg",
+        "0.390 kg/m³, 1.64 m³/kg",
+        "0.500 kg/m³, 1.64 m³/kg"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 4: Consider the Concorde supersonic transport flying at twice the speed of sound at an altitude of 16 km. At a point on the wing, the metal surface temperature is 362 K. The immediate layer of air in contact with the wing at that point has the same temperature and is at a pressure of 1.04 × 10^4 N/m². Calculate the air density at this point.",
+      "answerText": "0.100 kg/m³",
+      "explanation": "Given: Consider the Concorde supersonic transport flying at twice the speed of sound at an altitude of 16 km. At a point on the wing, the metal surface temperature is 362 K. The immediate layer of air in contact with the wing at that point has the same temperature and is at a pressure of 1.04 × 10^4 N/m². Calculate the air density at this point.\n\nFormula: Ideal-gas equation: rho = p/(R*T), using the local pressure and temperature.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.100 kg/m³.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-2-fundamental-thoughts"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.082 kg/m³",
+        "0.118 kg/m³",
+        "0.064 kg/m³",
+        "0.100 kg/m³"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 5: Consider the Lockheed-Martin F-117A stealth fighter. For the F-117A, the wing loading is 280.8 kgf/m². Calculate the wing loading in units of lb/ft².",
+      "answerText": "57.3 lb/ft²",
+      "explanation": "Given: Consider the Lockheed-Martin F-117A stealth fighter. For the F-117A, the wing loading is 280.8 kgf/m². Calculate the wing loading in units of lb/ft².\n\nFormula: Wing-loading unit conversion: convert kgf/m^2 to lb/ft^2 using 1 kgf = 2.20462 lbf and 1 m^2 = 10.7639 ft^2.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 57.3 lb/ft².",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-2-fundamental-thoughts"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "47.0 lb/ft²",
+        "67.6 lb/ft²",
+        "57.3 lb/ft²",
+        "36.7 lb/ft²"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 6: Consider a Piper Cub, a small, light, general aviation airplane. The Piper Cub is a design that dates to before World War II, and many are still flying today. When the airplane is flying at 60 mi/h, calculate the velocity in terms of (a) ft/s and (b) m/s.",
+      "answerText": "88 ft/s, 26.82 m/s",
+      "explanation": "Given: Consider a Piper Cub, a small, light, general aviation airplane. The Piper Cub is a design that dates to before World War II, and many are still flying today. When the airplane is flying at 60 mi/h, calculate the velocity in terms of (a) ft/s and (b) m/s.\n\nFormula: Speed conversion: 1 mi/h = 5280/3600 ft/s and 1 mi/h = 0.44704 m/s.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 88 ft/s, 26.82 m/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-2-fundamental-thoughts"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "72.2 ft/s, 26.82 m/s",
+        "88 ft/s, 26.82 m/s",
+        "56.3 ft/s, 26.82 m/s",
+        "104 ft/s, 26.82 m/s"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 7: Consider the Lockheed-Martin F-117A. The planform area of the wing is 913 ft², the wing loading is 280.8 kgf/m², calculate the net force exerted on the F-117A required for it to achieve an acceleration of one-third of a g (one-third the standard acceleration of gravity) in straight-line flight.",
+      "answerText": "17,438 lb",
+      "explanation": "Given: Consider the Lockheed-Martin F-117A. The planform area of the wing is 913 ft², the wing loading is 280.8 kgf/m², calculate the net force exerted on the F-117A required for it to achieve an acceleration of one-third of a g (one-third the standard acceleration of gravity) in straight-line flight.\n\nFormula: Newton second law: F = m*a. Obtain aircraft mass from weight using m = W/g, with W = (wing loading)*wing area.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 17,438 lb.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-2-fundamental-thoughts"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "17,438 lb",
+        "20,577 lb",
+        "11,160 lb",
+        "14,299 lb"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 8: Consider a case in which the air inside the pressurized cabin of a jet transport flying at some altitude is at a pressure of 0.9 atm and a temperature of 15°C. The total volume of air at any instant inside the cabin is 1800 m². If the air in the cabin is completely recirculated through the air conditioning system every 20 min, calculate the mass flow of air in kg/s through the system.",
+      "answerText": "1.65 kg/s",
+      "explanation": "Given: Consider a case in which the air inside the pressurized cabin of a jet transport flying at some altitude is at a pressure of 0.9 atm and a temperature of 15°C. The total volume of air at any instant inside the cabin is 1800 m². If the air in the cabin is completely recirculated through the air conditioning system every 20 min, calculate the mass flow of air in kg/s through the system.\n\nFormula: Ideal-gas density and mass flow: rho = p/(R*T), m = rho*V, and mdot = m/delta_t.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.65 kg/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-2-fundamental-thoughts"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.35 kg/s",
+        "1.95 kg/s",
+        "1.06 kg/s",
+        "1.65 kg/s"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 9: Consider the low-speed flight of the Space Shuttle as it is nearing a landing. If the air pressure and temperature at the nose of the shuttle are 1.2 atm and 300 K, respectively, what are the density and specific volume?",
+      "answerText": "1.41 kg/m³, 0.71 m³/kg",
+      "explanation": "Given: Consider the low-speed flight of the Space Shuttle as it is nearing a landing. If the air pressure and temperature at the nose of the shuttle are 1.2 atm and 300 K, respectively, what are the density and specific volume?\n\nFormula: Ideal-gas equation and specific volume: rho = p/(R*T), then v = 1/rho.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.41 kg/m³, 0.71 m³/kg.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-2-fundamental-thoughts"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.16 kg/m³, 0.71 m³/kg",
+        "1.66 kg/m³, 0.71 m³/kg",
+        "1.41 kg/m³, 0.71 m³/kg",
+        "0.90 kg/m³, 0.71 m³/kg"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 10: Calculate the weight of air (in pounds) contained within a room 20 ft long, 15 ft wide, and 8 ft high. Assume standard atmospheric pressure and temperature of 2116 lb/ft² and 59°F, respectively.",
+      "answerText": "183 lb",
+      "explanation": "Given: Calculate the weight of air (in pounds) contained within a room 20 ft long, 15 ft wide, and 8 ft high. Assume standard atmospheric pressure and temperature of 2116 lb/ft² and 59°F, respectively.\n\nFormula: Ideal-gas equation in English units: rho = p/(R*T). Room air weight is W = rho*g*V_room.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 183 lb.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-2-fundamental-thoughts"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "150 lb",
+        "183 lb",
+        "117 lb",
+        "216 lb"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 11: If 1500 lb m of air is pumped into a previously empty 900 ft² storage tank and the air temperature in the tank is uniformly 70°F, what is the air pressure in the tank in atmospheres?",
+      "answerText": "22.3 atm",
+      "explanation": "Given: If 1500 lb m of air is pumped into a previously empty 900 ft² storage tank and the air temperature in the tank is uniformly 70°F, what is the air pressure in the tank in atmospheres?\n\nFormula: Ideal-gas equation: p = m*R*T/V. Use lbm consistently with the English-unit gas constant, then convert pressure to atmospheres.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 22.3 atm.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-2-fundamental-thoughts"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "22.3 atm",
+        "26.3 atm",
+        "14.3 atm",
+        "18.3 atm"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 12: Assume that, at a point on the wing of the Concorde supersonic transport, the air temperature is −10°C and the pressure is 1.7 × 10^4 N/m². Calculate the density at this point.",
+      "answerText": "0.225 kg/m³",
+      "explanation": "Given: Assume that, at a point on the wing of the Concorde supersonic transport, the air temperature is −10°C and the pressure is 1.7 × 10^4 N/m². Calculate the density at this point.\n\nFormula: Ideal-gas equation: rho = p/(R*T), with absolute temperature in kelvins.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.225 kg/m³.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-2-fundamental-thoughts"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.184 kg/m³",
+        "0.266 kg/m³",
+        "0.144 kg/m³",
+        "0.225 kg/m³"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 13: At a point in the test section of a supersonic wind tunnel, the air pressure and temperature are 0.5 × 10^5 N/m² and 240 K, respectively. Calculate the specific volume.",
+      "answerText": "1.38 m³/kg",
+      "explanation": "Given: At a point in the test section of a supersonic wind tunnel, the air pressure and temperature are 0.5 × 10^5 N/m² and 240 K, respectively. Calculate the specific volume.\n\nFormula: Ideal-gas equation and specific volume: rho = p/(R*T), and v = 1/rho.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.38 m³/kg.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-2-fundamental-thoughts"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.13 m³/kg",
+        "1.63 m³/kg",
+        "1.38 m³/kg",
+        "0.88 m³/kg"
+      ],
+      "answerIndex": 2
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "title": "Chapter 10: Hypersonic Vehicles",
+  "questions": [
+    {
+      "question": "Problem 1: Consider the hypersonic flow over a sphere at Mach 25. Let s denote distance along the sphere surface, measured from the stagnation point, and let R denote the radius of the sphere. Point 1 is located a distance s/R = 0.6 from the stagnation point. Estimate the pressure coefficient at point 1.",
+      "answerText": "1.25",
+      "explanation": "Given: Consider the hypersonic flow over a sphere at Mach 25. Let s denote distance along the sphere surface, measured from the stagnation point, and let R denote the radius of the sphere. Point 1 is located a distance s/R = 0.6 from the stagnation point. Estimate the pressure coefficient at point 1.\n\nFormula: For hypersonic flow over a sphere, use the Newtonian or modified-Newtonian surface pressure-coefficient distribution, relating local surface angle to the surface distance s/R.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.25.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-10-hypersonic-vehicles"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.02",
+        "1.47",
+        "1.25",
+        "0.80"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 2: Using Newtonian theory, calculate the hypersonic lift and drag coefficients for a flat plate at an angle of attack of 12 degrees.",
+      "answerText": "0.085, 0.018",
+      "explanation": "Given: Using Newtonian theory, calculate the hypersonic lift and drag coefficients for a flat plate at an angle of attack of 12 degrees.\n\nFormula: Newtonian flat-plate coefficients: CL = 2*sin(alpha)^2*cos(alpha) and CD = 2*sin(alpha)^3.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.085, 0.018.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-10-hypersonic-vehicles"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.070, 0.018",
+        "0.085, 0.018",
+        "0.054, 0.018",
+        "0.100, 0.018"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 3: Consider a laminar boundary layer on a flat plate. At the trailing edge of the plate, wi th a free-stream Mach number of 2, the boundary layer thickness is 0.3 in. Assuming that the Reynolds number is held constant, calculate the boundary layer thickness for a Mach number of 20.",
+      "answerText": "2.5 ft",
+      "explanation": "Given: Consider a laminar boundary layer on a flat plate. At the trailing edge of the plate, wi th a free-stream Mach number of 2, the boundary layer thickness is 0.3 in. Assuming that the Reynolds number is held constant, calculate the boundary layer thickness for a Mach number of 20.\n\nFormula: Laminar flat-plate boundary-layer relation: delta/x is a function of Reynolds number and Mach-dependent flow properties. Apply the stipulated constant-Reynolds-number scaling between the two cases.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 2.5 ft.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-10-hypersonic-vehicles"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "2.5 ft",
+        "2.9 ft",
+        "1.6 ft",
+        "2.0 ft"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 4: Consider a hypersonic vehicle flying at Mach 20 at a standard alt itude of 59 km. Calculate the air temperature at a stagnation point on this vehicle.",
+      "answerText": "20,906 K",
+      "explanation": "Given: Consider a hypersonic vehicle flying at Mach 20 at a standard alt itude of 59 km. Calculate the air temperature at a stagnation point on this vehicle.\n\nFormula: Stagnation temperature: T0 = T_inf*[1 + (gamma-1)*M_inf^2/2]. Use the standard-atmosphere static temperature at the stated altitude.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 20,906 K.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-10-hypersonic-vehicles"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "17,143 K",
+        "24,669 K",
+        "13,380 K",
+        "20,906 K"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 5: Assume that the nose of the Space Shuttle is spherical, with a nose radius of 1 ft. At Mach 18, calculate (a) the pressure coeffici ent at the stagnation point and (b) the pressure coefficient at a distance of 6 in away from the stagnation point measured along the surface.",
+      "answerText": "1.836, 1.418",
+      "explanation": "Given: Assume that the nose of the Space Shuttle is spherical, with a nose radius of 1 ft. At Mach 18, calculate (a) the pressure coeffici ent at the stagnation point and (b) the pressure coefficient at a distance of 6 in away from the stagnation point measured along the surface.\n\nFormula: Use the Newtonian pressure distribution on a sphere: Cp = Cp,max*cos(theta)^2, with theta found from arc distance s/R; at the nose use the stagnation value Cp,max.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.836, 1.418.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-10-hypersonic-vehicles"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.506, 1.418",
+        "2.166, 1.418",
+        "1.836, 1.418",
+        "1.175, 1.418"
+      ],
+      "answerIndex": 2
+    }
+  ]
+}

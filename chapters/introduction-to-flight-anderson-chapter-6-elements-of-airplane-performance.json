@@ -1,0 +1,527 @@
+{
+  "title": "Chapter 6: Elements of Airplane Performance",
+  "questions": [
+    {
+      "question": "Problem 122: During much of the powered phase of the maximum altitude flight, Joe Walker maintained the X-15 at a climb angle of 32 degrees. When the rocket propellants ran out, the X-15 was climbing through 176,000 feet at a flight velocity of 5600 ft/s. Calculate the rate-of-climb at the time of engine burnout.",
+      "answerText": "2968 fps",
+      "explanation": "Given: During much of the powered phase of the maximum altitude flight, Joe Walker maintained the X-15 at a climb angle of 32 degrees. When the rocket propellants ran out, the X-15 was climbing through 176,000 feet at a flight velocity of 5600 ft/s. Calculate the rate-of-climb at the time of engine burnout.\n\nFormula: Rate of climb is the vertical component of velocity: ROC = V*sin(gamma).\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 2968 fps.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "2,434 fps",
+        "2968 fps",
+        "1,900 fps",
+        "3,502 fps"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 123: The thrust of the XLR 99 rocket engine was essentially constant at 57,000 lb during the powered phase of the X-15 flight. For the maximum altitude flight on August 22, 1963, the aerodynamic drag at the burnout altitude of 176,000 ft. was only 252 lb, due to the very low air density at that altitude. The empty weight of the X-15 was 14,590 lb. Calculate the rate-of-climb of the X-15.",
+      "answerText": "21,781 fps",
+      "explanation": "Given: The thrust of the XLR 99 rocket engine was essentially constant at 57,000 lb during the powered phase of the X-15 flight. For the maximum altitude flight on August 22, 1963, the aerodynamic drag at the burnout altitude of 176,000 ft. was only 252 lb, due to the very low air density at that altitude. The empty weight of the X-15 was 14,590 lb. Calculate the rate-of-climb of the X-15.\n\nFormula: Rate of climb from excess power is ROC = (T-D)*V/W. Use the flight velocity stated for the burnout condition and convert the result to ft/s.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 21,781 fps.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "21,781 fps",
+        "25,702 fps",
+        "13,940 fps",
+        "17,860 fps"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 124: T he maximum lift-to-drag ratio for the CP-1 is 13.6. Calculate the minimum glide angle and the maximum range measured along the ground covered by the CP-1 in a power-off glide that starts at an altitude of 10,000 ft.",
+      "answerText": "4.2 °, 25.6 mile",
+      "explanation": "Given: T he maximum lift-to-drag ratio for the CP-1 is 13.6. Calculate the minimum glide angle and the maximum range measured along the ground covered by the CP-1 in a power-off glide that starts at an altitude of 10,000 ft.\n\nFormula: For a power-off glide, tan(gamma) = D/L = 1/(L/D). Ground range R = h/tan(gamma), assuming still air and no turns.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 4.2 °, 25.6 mile.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "3.4 °, 25.6 mile",
+        "5.0 °, 25.6 mile",
+        "2.7 °, 25.6 mile",
+        "4.2 °, 25.6 mile"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 125: For the CP-1, calculate the equilibrium glide velocities at altitudes of 10,000 and 2000 ft, each corresponding to the minimum glide angle. CP-1 data: wingspan 35.8 ft, wing area 174 ft², gross weight 2950 lb, fuel capacity 65 gal, 230 hp piston engine, specific fuel consumption 0.45 lb/(hp·h), zero-lift drag coefficient 0.025, Oswald factor 0.8, and propeller efficiency 0.8.",
+      "answerText": "174.3 ft/s, 154.3 ft/s",
+      "explanation": "Given: For the CP-1, calculate the equilibrium glide velocities at altitudes of 10,000 and 2000 ft, each corresponding to the minimum glide angle. CP-1 data: wingspan 35.8 ft, wing area 174 ft², gross weight 2950 lb, fuel capacity 65 gal, 230 hp piston engine, specific fuel consumption 0.45 lb/(hp·h), zero-lift drag coefficient 0.025, Oswald factor 0.8, and propeller efficiency 0.8.\n\nFormula: At minimum glide angle, use CL = sqrt(CD0*pi*e*AR); then V = sqrt[2W/(rho*S*CL)] at each altitude using that altitude density.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 174.3 ft/s, 154.3 ft/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "142.9 ft/s, 154.3 ft/s",
+        "205.7 ft/s, 154.3 ft/s",
+        "174.3 ft/s, 154.3 ft/s",
+        "111.6 ft/s, 154.3 ft/s"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 126: Estimate the maximum range and maximum endurance for the CP-1. CP-1 data: wingspan 35.8 ft, wing area 174 ft², gross weight 2950 lb, fuel capacity 65 gal, 230 hp piston engine, specific fuel consumption 0.45 lb/(hp·h), zero-lift drag coefficient 0.025, Oswald factor 0.8, and propeller efficiency 0.8.",
+      "answerText": "1,207 miles, 14.4 hours",
+      "explanation": "Given: Estimate the maximum range and maximum endurance for the CP-1. CP-1 data: wingspan 35.8 ft, wing area 174 ft², gross weight 2950 lb, fuel capacity 65 gal, 230 hp piston engine, specific fuel consumption 0.45 lb/(hp·h), zero-lift drag coefficient 0.025, Oswald factor 0.8, and propeller efficiency 0.8.\n\nFormula: For a propeller airplane, apply the Breguet range and endurance equations using propeller efficiency, specific fuel consumption, the appropriate maximum L/D ratios, and the initial/final weights.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1,207 miles, 14.4 hours.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "990 miles, 14.4 hours",
+        "1,207 miles, 14.4 hours",
+        "772 miles, 14.4 hours",
+        "1,424 miles, 14.4 hours"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 127: Estimate the maximum range and endurance for the CJ-1. CJ-1 data: wingspan 53.3 ft, wing area 318 ft², gross weight 19,815 lb, fuel capacity 1119 gal, two 3650 lb-thrust turbofan engines, specific fuel consumption 0.6 lb/(lb thrust·h), zero-lift drag coefficient 0.02, Oswald factor 0.81.",
+      "answerText": "3,630 miles, 13.3 hours",
+      "explanation": "Given: Estimate the maximum range and endurance for the CJ-1. CJ-1 data: wingspan 53.3 ft, wing area 318 ft², gross weight 19,815 lb, fuel capacity 1119 gal, two 3650 lb-thrust turbofan engines, specific fuel consumption 0.6 lb/(lb thrust·h), zero-lift drag coefficient 0.02, Oswald factor 0.81.\n\nFormula: For a jet airplane, Breguet range is R = (V/cT)*(L/D)*ln(Wi/Wf); endurance follows the jet endurance relation at the optimum CL^0.5/CD condition.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 3,630 miles, 13.3 hours.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "3,630 miles, 13.3 hours",
+        "4,283 miles, 13.3 hours",
+        "2,323 miles, 13.3 hours",
+        "2,977 miles, 13.3 hours"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 128: Calculate (C_L/C_D)_max and (C_L^(3/2)/C_D)_max for the CP-1. CP-1 data: wingspan 35.8 ft, wing area 174 ft², gross weight 2950 lb, fuel capacity 65 gal, 230 hp piston engine, specific fuel consumption 0.45 lb/(hp·h), zero-lift drag coefficient 0.025, Oswald factor 0.8, and propeller efficiency 0.8.",
+      "answerText": "13.6 for (C_L/C_D)_max; 12.8 for (C_L^(3/2)/C_D)_max",
+      "explanation": "Given: Calculate (C_L/C_D)_max and (C_L^(3/2)/C_D)_max for the CP-1. CP-1 data: wingspan 35.8 ft, wing area 174 ft², gross weight 2950 lb, fuel capacity 65 gal, 230 hp piston engine, specific fuel consumption 0.45 lb/(hp·h), zero-lift drag coefficient 0.025, Oswald factor 0.8, and propeller efficiency 0.8.\n\nFormula: With CD = CD0 + K*CL^2 and K = 1/(pi*e*AR), (L/D)max = 1/(2*sqrt(CD0*K)); (CL^1.5/CD)max occurs at CL = sqrt(3*CD0/K).\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 13.6 for (C_L/C_D)_max; 12.8 for (C_L^(3/2)/C_D)_max.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "11.2 for (C_L/C_D)_max; 12.8 for (C_L^(3/2)/C_D)_max",
+        "16.0 for (C_L/C_D)_max; 12.8 for (C_L^(3/2)/C_D)_max",
+        "8.7 for (C_L/C_D)_max; 12.8 for (C_L^(3/2)/C_D)_max",
+        "13.6 for (C_L/C_D)_max; 12.8 for (C_L^(3/2)/C_D)_max"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 129: Calculate (C_L^(1/2)/C_D)_max and (C_L/C_D)_max for the CJ-1. CJ-1 data: wingspan 53.3 ft, wing area 318 ft², gross weight 19,815 lb, fuel capacity 1119 gal, two 3650 lb-thrust turbofan engines, specific fuel consumption 0.6 lb/(lb thrust·h), zero-lift drag coefficient 0.02, Oswald factor 0.81.",
+      "answerText": "23.4 for (C_L^(1/2)/C_D)_max; 16.9 for (C_L/C_D)_max",
+      "explanation": "Given: Calculate (C_L^(1/2)/C_D)_max and (C_L/C_D)_max for the CJ-1. CJ-1 data: wingspan 53.3 ft, wing area 318 ft², gross weight 19,815 lb, fuel capacity 1119 gal, two 3650 lb-thrust turbofan engines, specific fuel consumption 0.6 lb/(lb thrust·h), zero-lift drag coefficient 0.02, Oswald factor 0.81.\n\nFormula: With CD = CD0 + K*CL^2 and K = 1/(pi*e*AR), maximize CL^0.5/CD and CL/CD by differentiating each ratio with respect to CL.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 23.4 for (C_L^(1/2)/C_D)_max; 16.9 for (C_L/C_D)_max.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "19.2 for (C_L^(1/2)/C_D)_max; 16.9 for (C_L/C_D)_max",
+        "27.6 for (C_L^(1/2)/C_D)_max; 16.9 for (C_L/C_D)_max",
+        "23.4 for (C_L^(1/2)/C_D)_max; 16.9 for (C_L/C_D)_max",
+        "15.0 for (C_L^(1/2)/C_D)_max; 16.9 for (C_L/C_D)_max"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 130: Calculate (a) the CP-1 maximum velocity at sea level, (b) its maximum rate of climb at sea level, (c) the CJ-1 maximum velocity at sea level, and (d) its maximum rate of climb at sea level. CP-1 data: span 35.8 ft, wing area 174 ft², gross weight 2950 lb, one 230 hp piston engine, specific fuel consumption 0.45 lb/(hp·h), zero-lift drag coefficient 0.025, Oswald factor 0.8, propeller efficiency 0.8. CJ-1 data: span 53.3 ft, wing area 318 ft², gross weight 19,815 lb, two 3650 lb-thrust turbofan engines, specific fuel consumption 0.6 lb/(lb thrust·h), zero-lift drag coefficient 0.02, Oswald factor 0.81.",
+      "answerText": "(a) 268 fps; (b) 1497.6 fpm; (c) 979.6 fps; (d) 8117 fpm",
+      "explanation": "Given: Calculate (a) the CP-1 maximum velocity at sea level, (b) its maximum rate of climb at sea level, (c) the CJ-1 maximum velocity at sea level, and (d) its maximum rate of climb at sea level. CP-1 data: span 35.8 ft, wing area 174 ft², gross weight 2950 lb, one 230 hp piston engine, specific fuel consumption 0.45 lb/(hp·h), zero-lift drag coefficient 0.025, Oswald factor 0.8, propeller efficiency 0.8. CJ-1 data: span 53.3 ft, wing area 318 ft², gross weight 19,815 lb, two 3650 lb-thrust turbofan engines, specific fuel consumption 0.6 lb/(lb thrust·h), zero-lift drag coefficient 0.02, Oswald factor 0.81.\n\nFormula: Maximum speed occurs where power available equals power required. Maximum rate of climb is ROC = (Pavailable-Prequired)/W for a propeller airplane, or (T-D)*V/W for a jet.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives (a) 268 fps; (b) 1497.6 fpm; (c) 979.6 fps; (d) 8117 fpm.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "(a)220 fps; (b) 1497.6 fpm; (c) 979.6 fps; (d) 8117 fpm",
+        "(a) 268 fps; (b) 1497.6 fpm; (c) 979.6 fps; (d) 8117 fpm",
+        "(a)172 fps; (b) 1497.6 fpm; (c) 979.6 fps; (d) 8117 fpm",
+        "(a)316 fps; (b) 1497.6 fpm; (c) 979.6 fps; (d) 8117 fpm"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 131: Consider an airplane with C D,0 = 0.025, AR = 7.37, and e = 0.80. The airplane is flying at conditions such that its lift coefficient is C_L = 0.228. Calculate the ratio of lift to drag at this condition.",
+      "answerText": "8.2",
+      "explanation": "Given: Consider an airplane with C D,0 = 0.025, AR = 7.37, and e = 0.80. The airplane is flying at conditions such that its lift coefficient is C_L = 0.228. Calculate the ratio of lift to drag at this condition.\n\nFormula: Drag polar: CD = CD0 + CL^2/(pi*e*AR). Then L/D = CL/CD.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 8.2.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "8.2",
+        "9.7",
+        "5.2",
+        "6.7"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 132: Estimate the liftoff distance for the CJ-1 at sea level. Assume a paved runway: μ r = 0.02. During the ground roll, the angle of attack of the airplane is restricted by the requirement that the tail not drag the ground; so, assume that C_L,max during ground roll is limited to 1.0. Also, when the airplane is on the ground, the wings are 6 ft above the ground. CJ-1 data: wingspan 53.3 ft, wing area 318 ft², gross weight 19,815 lb, fuel capacity 1119 gal, two 3650 lb-thrust turbofan engines, specific fuel consumption 0.6 lb/(lb thrust·h), zero-lift drag coefficient 0.02, Oswald factor 0.81.",
+      "answerText": "3,532 ft",
+      "explanation": "Given: Estimate the liftoff distance for the CJ-1 at sea level. Assume a paved runway: μ r = 0.02. During the ground roll, the angle of attack of the airplane is restricted by the requirement that the tail not drag the ground; so, assume that C_L,max during ground roll is limited to 1.0. Also, when the airplane is on the ground, the wings are 6 ft above the ground. CJ-1 data: wingspan 53.3 ft, wing area 318 ft², gross weight 19,815 lb, fuel capacity 1119 gal, two 3650 lb-thrust turbofan engines, specific fuel consumption 0.6 lb/(lb thrust·h), zero-lift drag coefficient 0.02, Oswald factor 0.81.\n\nFormula: During takeoff ground roll, integrate ds = V*dV/a, where a = g*(T-D-mu*(W-L))/W and L = q*S*CL. Include the ground-effect correction specified by the problem.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 3,532 ft.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "2,896 ft",
+        "4,168 ft",
+        "2,260 ft",
+        "3,532 ft"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 133: Estimate the landing ground roll distance at sea level for the CJ-1. No thrust reversal is used; however, spoilers are employed so that L = 0. The spoilers increase the zero lift drag coefficient by 10 percent. The fuel tanks are essentially empty, so neglect the weight of any fuel carried by the airplane. The maximum lift coefficient, with flaps fully deployed at touchdown, is 2.5. CJ-1 data: wingspan 53.3 ft, wing area 318 ft², gross weight 19,815 lb, fuel capacity 1119 gal, two 3650 lb-thrust turbofan engines, specific fuel consumption 0.6 lb/(lb thrust·h), zero-lift drag coefficient 0.02, Oswald factor 0.81.",
+      "answerText": "842 ft",
+      "explanation": "Given: Estimate the landing ground roll distance at sea level for the CJ-1. No thrust reversal is used; however, spoilers are employed so that L = 0. The spoilers increase the zero lift drag coefficient by 10 percent. The fuel tanks are essentially empty, so neglect the weight of any fuel carried by the airplane. The maximum lift coefficient, with flaps fully deployed at touchdown, is 2.5. CJ-1 data: wingspan 53.3 ft, wing area 318 ft², gross weight 19,815 lb, fuel capacity 1119 gal, two 3650 lb-thrust turbofan engines, specific fuel consumption 0.6 lb/(lb thrust·h), zero-lift drag coefficient 0.02, Oswald factor 0.81.\n\nFormula: For landing ground roll, integrate ds = V*dV/a with deceleration a = g*(D+mu*(W-L))/W. Use L=0 after touchdown and include the specified spoiler drag.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 842 ft.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "690 ft",
+        "994 ft",
+        "842 ft",
+        "539 ft"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 134: Consider the CJ-1 in a level turn at sea level. Calculate the minimum turn radius and the maximum turn rate. The maximum load factor and lift coefficient (with no flap deflection) are 5 and 1.4, respectively. CJ-1 data: wingspan 53.3 ft, wing area 318 ft², gross weight 19,815 lb, fuel capacity 1119 gal, two 3650 lb-thrust turbofan engines, specific fuel consumption 0.6 lb/(lb thrust·h), zero-lift drag coefficient 0.02, Oswald factor 0.81.",
+      "answerText": "1186 ft, 20.9 deg/s or 0.365 rad/s",
+      "explanation": "Given: Consider the CJ-1 in a level turn at sea level. Calculate the minimum turn radius and the maximum turn rate. The maximum load factor and lift coefficient (with no flap deflection) are 5 and 1.4, respectively. CJ-1 data: wingspan 53.3 ft, wing area 318 ft², gross weight 19,815 lb, fuel capacity 1119 gal, two 3650 lb-thrust turbofan engines, specific fuel consumption 0.6 lb/(lb thrust·h), zero-lift drag coefficient 0.02, Oswald factor 0.81.\n\nFormula: In a coordinated level turn, n = L/W, turn radius r = V^2/[g*sqrt(n^2-1)], and turn rate omega = g*sqrt(n^2-1)/V. Use the maximum allowable n from the lift limit.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1186 ft, 20.9 deg/s or 0.365 rad/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "973 ft, 20.9 deg/s or 0.365 rad/s",
+        "1186 ft, 20.9 deg/s or 0.365 rad/s",
+        "759 ft, 20.9 deg/s or 0.365 rad/s",
+        "1,399 ft, 20.9 deg/s or 0.365 rad/s"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 135: Consider an airplane patterned after the twin-engine Beechcraft Queen Air executive transport. The airplane weight is 38,220 N, wing area is 27.3 m², aspect ratio is 7.5, Oswald efficiency factor is 0.9, and zero-lift drag coefficient is C D,0 = 0.03. Calculate the thrust required to fly at a velocity of 350 km/h at (a) standard sea level and (b) an altitude of 4.5 km.",
+      "answerText": "5179 N, 3711 N",
+      "explanation": "Given: Consider an airplane patterned after the twin-engine Beechcraft Queen Air executive transport. The airplane weight is 38,220 N, wing area is 27.3 m², aspect ratio is 7.5, Oswald efficiency factor is 0.9, and zero-lift drag coefficient is C D,0 = 0.03. Calculate the thrust required to fly at a velocity of 350 km/h at (a) standard sea level and (b) an altitude of 4.5 km.\n\nFormula: Find CL = W/(q*S), compute CD = CD0 + CL^2/(pi*e*AR), and thrust required equals drag D = q*S*CD at each altitude.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 5179 N, 3711 N.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "5179 N, 3711 N",
+        "6,111 N, 3711 N",
+        "3,315 N, 3711 N",
+        "4,247 N, 3711 N"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 136: An airplane weighing 5000 lb is flying at standard sea level with a velocity of 200 mi/h. At this velocity the L/D ratio is a maximum. The wing area an d aspect ratio are 200 ft² and 8.5, respectively. The Oswald efficiency factor is 0.93. Calculate the total drag on the airplane.",
+      "answerText": "98.1 lb",
+      "explanation": "Given: An airplane weighing 5000 lb is flying at standard sea level with a velocity of 200 mi/h. At this velocity the L/D ratio is a maximum. The wing area an d aspect ratio are 200 ft² and 8.5, respectively. The Oswald efficiency factor is 0.93. Calculate the total drag on the airplane.\n\nFormula: At maximum L/D, total drag is D = W/(L/D)max. For a parabolic drag polar, (L/D)max = 1/[2*sqrt(CD0*K)] with K=1/(pi*e*AR).\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 98.1 lb.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "80.4 lb",
+        "115.8 lb",
+        "62.8 lb",
+        "98.1 lb"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 139: The maximum lift-to-drag ratio of the World War I Sopwith Camel was 7.7. If the aircraft is in flight at 5000 ft when the engine fails, how far can it glide in terms of distance measured along the ground?",
+      "answerText": "729 miles",
+      "explanation": "Given: The maximum lift-to-drag ratio of the World War I Sopwith Camel was 7.7. If the aircraft is in flight at 5000 ft when the engine fails, how far can it glide in terms of distance measured along the ground?\n\nFormula: For a power-off glide, tan(gamma)=1/(L/D). Horizontal range is R = h*(L/D), with consistent units and still-air assumptions.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 729 miles.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "729 miles",
+        "860 miles",
+        "467 miles",
+        "598 miles"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 140: For the Sopwith Camel in Question 139, calculate the equilibrium glide velocity at 3000 ft, corresponding to the minimum glide angle. The aspect ratio of the airplane is 4.11, the Oswald efficiency factor is 0.7, the weight is 1400 lb, and the wing area is 231 ft².",
+      "answerText": "97.2 fps",
+      "explanation": "Given: For the Sopwith Camel in Question 139, calculate the equilibrium glide velocity at 3000 ft, corresponding to the minimum glide angle. The aspect ratio of the airplane is 4.11, the Oswald efficiency factor is 0.7, the weight is 1400 lb, and the wing area is 231 ft².\n\nFormula: At minimum glide angle, CL = sqrt(CD0*pi*e*AR); equilibrium speed follows from W = 0.5*rho*V^2*S*CL.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 97.2 fps.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "79.7 fps",
+        "114.7 fps",
+        "62.2 fps",
+        "97.2 fps"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 141: Consider an airplane with a zero-lift drag coefficient of 0.025, an as pect ratio of 6.72, and an Oswald efficiency factor of 0.9. Calculate the value of (L/D) max.",
+      "answerText": "13.78",
+      "explanation": "Given: Consider an airplane with a zero-lift drag coefficient of 0.025, an as pect ratio of 6.72, and an Oswald efficiency factor of 0.9. Calculate the value of (L/D) max.\n\nFormula: For CD = CD0 + K*CL^2, the maximum lift-to-drag ratio is (L/D)max = 1/(2*sqrt(CD0*K)), where K = 1/(pi*e*AR).\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 13.78.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "11.30",
+        "16.26",
+        "13.78",
+        "8.82"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 142: Consider the single-engine light plane described in Question 138. If the specific fuel consumption is 0.42 lb of fuel per horsepower per hour, the fuel capacity is 44 gal, and the maximum gross weight is 3400 lb, calculate the range and endurance at standard sea level. Aircraft data: aspect ratio 6.2, wing area 181 ft², Oswald efficiency 0.91, gross weight 3000 lb, zero-lift drag coefficient 0.027, 345 hp engine, propeller efficiency 0.83.",
+      "answerText": "719 miles, 7.4 hours",
+      "explanation": "Given: Consider the single-engine light plane described in Question 138. If the specific fuel consumption is 0.42 lb of fuel per horsepower per hour, the fuel capacity is 44 gal, and the maximum gross weight is 3400 lb, calculate the range and endurance at standard sea level. Aircraft data: aspect ratio 6.2, wing area 181 ft², Oswald efficiency 0.91, gross weight 3000 lb, zero-lift drag coefficient 0.027, 345 hp engine, propeller efficiency 0.83.\n\nFormula: For a propeller aircraft, use the Breguet range and endurance equations with eta_p, specific fuel consumption, (L/D)max or (CL^1.5/CD)max, and fuel-derived initial/final weights.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 719 miles, 7.4 hours.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "590 miles, 7.4 hours",
+        "719 miles, 7.4 hours",
+        "460 miles, 7.4 hours",
+        "848 miles, 7.4 hours"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 143: Consider the twin-jet airplane described in Question 137. The thrust-specific fuel consumption is 1.0 N of fuel per newton of thrust per hour, the fu el capacity is 1900 gal, and the maximum gross weight is 136,960 N. Calculate the range and endurance at a standard altitude of 8 km. Aircraft data: wing area 47 m², aspect ratio 6.5, Oswald efficiency 0.87, weight 103,047 N, zero-lift drag coefficient 0.032, and two engines producing 40,298 N static thrust each.",
+      "answerText": "2730 km, 6.25 hou rs",
+      "explanation": "Given: Consider the twin-jet airplane described in Question 137. The thrust-specific fuel consumption is 1.0 N of fuel per newton of thrust per hour, the fu el capacity is 1900 gal, and the maximum gross weight is 136,960 N. Calculate the range and endurance at a standard altitude of 8 km. Aircraft data: wing area 47 m², aspect ratio 6.5, Oswald efficiency 0.87, weight 103,047 N, zero-lift drag coefficient 0.032, and two engines producing 40,298 N static thrust each.\n\nFormula: For a jet, range is R = (V/cT)*(L/D)*ln(Wi/Wf); endurance depends on (CL^0.5/CD)max and the same weight ratio. Use the specified altitude density and fuel weight.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 2730 km, 6.25 hou rs.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "2730 km, 6.25 hou rs",
+        "3,221 km, 6.25 hou rs",
+        "1,747 km, 6.25 hou rs",
+        "2,239 km, 6.25 hou rs"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 144: Estimate the sea-level liftoff distance for the airplane in Question 137. Assume a paved runway. Also, during the ground roll, the angle of attack is restricted by the requirement that the tail not drag the ground. Hence, assume that C_L,max during the ground roll is limited to 0.8. When the airplane is on the ground, the wings are 5 ft above the ground. Aircraft data: wing area 47 m², aspect ratio 6.5, Oswald efficiency 0.87, weight 103,047 N, zero-lift drag coefficient 0.032, and two engines producing 40,298 N static thrust each.",
+      "answerText": "452 m",
+      "explanation": "Given: Estimate the sea-level liftoff distance for the airplane in Question 137. Assume a paved runway. Also, during the ground roll, the angle of attack is restricted by the requirement that the tail not drag the ground. Hence, assume that C_L,max during the ground roll is limited to 0.8. When the airplane is on the ground, the wings are 5 ft above the ground. Aircraft data: wing area 47 m², aspect ratio 6.5, Oswald efficiency 0.87, weight 103,047 N, zero-lift drag coefficient 0.032, and two engines producing 40,298 N static thrust each.\n\nFormula: Takeoff distance is obtained by integrating ds = V*dV/a with a = g*(T-D-mu*(W-L))/W; calculate lift and drag during the ground roll from the given coefficients.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 452 m.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "371 m",
+        "533 m",
+        "289 m",
+        "452 m"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 145: Estimate the sea-level liftoff distance for the airplane in Question 138. Assume a paved runway, and C_L,max = 1.1 during the ground roll. When the airplane is on the ground, the wings are 4 ft above the ground. Aircraft data: aspect ratio 6.2, wing area 181 ft², Oswald efficiency 0.91, gross weight 3000 lb, zero-lift drag coefficient 0.027, and 345 hp engine.",
+      "answerText": "572 ft",
+      "explanation": "Given: Estimate the sea-level liftoff distance for the airplane in Question 138. Assume a paved runway, and C_L,max = 1.1 during the ground roll. When the airplane is on the ground, the wings are 4 ft above the ground. Aircraft data: aspect ratio 6.2, wing area 181 ft², Oswald efficiency 0.91, gross weight 3000 lb, zero-lift drag coefficient 0.027, and 345 hp engine.\n\nFormula: Takeoff distance is obtained by integrating ds = V*dV/a with a = g*(T-D-mu*(W-L))/W; use the given ground-roll CLmax and aircraft data.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 572 ft.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "469 ft",
+        "675 ft",
+        "572 ft",
+        "366 ft"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 146: Estimate the sea-level landing ground rol l distance for the airplane in Question 137. Assume that the airplane is landing at full gross weight. The maximum lift coefficient with flaps fully employed at touchdown is 2.8. After touchdown, assume zero lift. Aircraft data: wing area 47 m², aspect ratio 6.5, Oswald efficiency 0.87, weight 103,047 N, zero-lift drag coefficient 0.032, and two engines producing 40,298 N static thrust each.",
+      "answerText": "268 m",
+      "explanation": "Given: Estimate the sea-level landing ground rol l distance for the airplane in Question 137. Assume that the airplane is landing at full gross weight. The maximum lift coefficient with flaps fully employed at touchdown is 2.8. After touchdown, assume zero lift. Aircraft data: wing area 47 m², aspect ratio 6.5, Oswald efficiency 0.87, weight 103,047 N, zero-lift drag coefficient 0.032, and two engines producing 40,298 N static thrust each.\n\nFormula: Landing ground roll follows ds = V*dV/a with a = g*(D+mu*(W-L))/W; after touchdown set lift to zero and use the given drag and braking conditions.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 268 m.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "220 m",
+        "268 m",
+        "172 m",
+        "316 m"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 147: Estimate the sea-level landing ground roll distance for the airplane in Question 138. Assume that the airplane is landing with a weight of 2900 lb. The maximum lift coefficient with flaps at touchdown is 1.8. After touchdown, assume zero lift. Aircraft data: aspect ratio 6.2, wing area 181 ft², Oswald efficiency 0.91, gross weight 3000 lb, zero-lift drag coefficient 0.027, and 345 hp engine.",
+      "answerText": "493 ft",
+      "explanation": "Given: Estimate the sea-level landing ground roll distance for the airplane in Question 138. Assume that the airplane is landing with a weight of 2900 lb. The maximum lift coefficient with flaps at touchdown is 1.8. After touchdown, assume zero lift. Aircraft data: aspect ratio 6.2, wing area 181 ft², Oswald efficiency 0.91, gross weight 3000 lb, zero-lift drag coefficient 0.027, and 345 hp engine.\n\nFormula: Landing ground roll follows ds = V*dV/a with a = g*(D+mu*(W-L))/W; after touchdown set lift to zero and use the given weight and flap CLmax to find touchdown speed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 493 ft.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "493 ft",
+        "582 ft",
+        "316 ft",
+        "404 ft"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 148: For the airplane in Question 137, the sea-level corner velocity is 250 mi/h, and the maximum lift coefficient with no flap deflection is 1.2. Calculate the minimum turn radius and maximum turn rate at sea level. Aircraft data: wing area 47 m², aspect ratio 6.5, Oswald efficiency 0.87, weight 103,047 N, zero-lift drag coefficient 0.032, and two engines producing 40,298 N static thrust each.",
+      "answerText": "312 m, 0.358 rad/s",
+      "explanation": "Given: For the airplane in Question 137, the sea-level corner velocity is 250 mi/h, and the maximum lift coefficient with no flap deflection is 1.2. Calculate the minimum turn radius and maximum turn rate at sea level. Aircraft data: wing area 47 m², aspect ratio 6.5, Oswald efficiency 0.87, weight 103,047 N, zero-lift drag coefficient 0.032, and two engines producing 40,298 N static thrust each.\n\nFormula: For a level coordinated turn, r = V^2/[g*sqrt(n^2-1)] and omega = g*sqrt(n^2-1)/V. Determine n from lift limit at corner velocity, then calculate radius and turn rate.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 312 m, 0.358 rad/s.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "256 m, 0.358 rad/s",
+        "368 m, 0.358 rad/s",
+        "200 m, 0.358 rad/s",
+        "312 m, 0.358 rad/s"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "question": "Problem 149: The Predator UAV has the following characteristics: wingspan = 14.85 m, wing area = 11.45 m², maximum weight = 1020 kg, and fuel weight = 295 kg. The power plant is a Rotax four-cylinder, four-stroke engine of 85 horsepower driving a two-blade, variable-pitch pusher propeller. Assume that the Oswald efficiency factor is 0.7, the zero-lift drag coefficient is 0.03, the propeller efficiency is 0.9, and the specific fuel consumption is 0.2 kg of fuel per hp per hour. Calculate the maximum velocity of the Predator at sea level.",
+      "answerText": "62.6 m/s (about 225 km/h)",
+      "explanation": "Given: The Predator UAV has the following characteristics: wingspan = 14.85 m, wing area = 11.45 m², maximum weight = 1020 kg, and fuel weight = 295 kg. The power plant is a Rotax four-cylinder, four-stroke engine of 85 horsepower driving a two-blade, variable-pitch pusher propeller. Assume that the Oswald efficiency factor is 0.7, the zero-lift drag coefficient is 0.03, the propeller efficiency is 0.9, and the specific fuel consumption is 0.2 kg of fuel per hp per hour. Calculate the maximum velocity of the Predator at sea level.\n\nFormula: At maximum level speed, available engine power equals required power: eta_p*P = D*V, with D = q*S*(CD0 + CL^2/(pi*e*AR)) and CL = W/(q*S).\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 62.6 m/s (about 225 km/h).",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "51.3 m/s (about 225 km/h)",
+        "73.9 m/s (about 225 km/h)",
+        "62.6 m/s (about 225 km/h)",
+        "40.1 m/s (about 225 km/h)"
+      ],
+      "answerIndex": 2
+    },
+    {
+      "question": "Problem 150: For the Predator UAV given in Question 149, calculate the maximum range. Problem 149 data: wingspan 14.85 m, wing area 11.45 m², maximum weight 1020 kg, 85 hp engine, zero-lift drag coefficient 0.03, Oswald factor 0.7, and propeller efficiency 0.9.",
+      "answerText": "3440 km",
+      "explanation": "Given: For the Predator UAV given in Question 149, calculate the maximum range. Problem 149 data: wingspan 14.85 m, wing area 11.45 m², maximum weight 1020 kg, 85 hp engine, zero-lift drag coefficient 0.03, Oswald factor 0.7, and propeller efficiency 0.9.\n\nFormula: For a propeller aircraft, Breguet range is proportional to (eta_p/cp)*(L/D)*ln(Wi/Wf). Use the maximum-range aerodynamic condition and convert fuel mass into final aircraft weight.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 3440 km.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "2,821 km",
+        "3440 km",
+        "2,202 km",
+        "4,059 km"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "question": "Problem 151: For the Predator UAV given in Question 149, calculate the maximum endurance at sea level. Problem 149 data: wingspan 14.85 m, wing area 11.45 m², maximum weight 1020 kg, 85 hp engine, zero-lift drag coefficient 0.03, Oswald factor 0.7, and propeller efficiency 0.9.",
+      "answerText": "77 hours",
+      "explanation": "Given: For the Predator UAV given in Question 149, calculate the maximum endurance at sea level. Problem 149 data: wingspan 14.85 m, wing area 11.45 m², maximum weight 1020 kg, 85 hp engine, zero-lift drag coefficient 0.03, Oswald factor 0.7, and propeller efficiency 0.9.\n\nFormula: Propeller-aircraft endurance follows the propeller Breguet endurance equation at the maximum-endurance condition; use eta_p, specific fuel consumption, the optimum aerodynamic ratio, and fuel weight.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 77 hours.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "77 hours",
+        "90.9 hours",
+        "49.3 hours",
+        "63.1 hours"
+      ],
+      "answerIndex": 0
+    },
+    {
+      "question": "Problem 152: The Douglas DC-3 has a maximum velocity of 229 mi/h at an altitude of 7500 ft. Each of its two engines provides a maximum of 1200 hp. Its weight is 25,000 lb, aspect ratio is 9.14, and wing area is 987 ft². Assume that the propeller efficiency is 0.8, and the Oswald efficiency factor is 0.7. Calculate the zero-lift drag coefficient for the DC-3.",
+      "answerText": "0.0243",
+      "explanation": "Given: The Douglas DC-3 has a maximum velocity of 229 mi/h at an altitude of 7500 ft. Each of its two engines provides a maximum of 1200 hp. Its weight is 25,000 lb, aspect ratio is 9.14, and wing area is 987 ft². Assume that the propeller efficiency is 0.8, and the Oswald efficiency factor is 0.7. Calculate the zero-lift drag coefficient for the DC-3.\n\nFormula: At the stated maximum speed, compute q and CL = W/(q*S); then CD = D/(q*S), K = 1/(pi*e*AR), and solve CD0 = CD - K*CL^2.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.0243.",
+      "tags": [
+        "introduction-to-flight",
+        "anderson",
+        "chapter-6-elements-of-airplane-performance"
+      ],
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.0199",
+        "0.0287",
+        "0.0156",
+        "0.0243"
+      ],
+      "answerIndex": 3
+    }
+  ]
+}
