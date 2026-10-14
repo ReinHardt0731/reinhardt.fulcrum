@@ -11,7 +11,7 @@ export const POMODORO_HISTORY_KEY = "prepcore.web.pomodoroHistory.v1";
 export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
 export const ADMIN_PASSWORD = "prepcore";
 export const NOTES_PATH = "./markdowns";
-const SUBJECTS_PATH = "./subjects.json?v=general-aero-curation-20261013";
+const SUBJECTS_PATH = "./subjects.json?v=anderson-cache-fix-20261014";
 const VALID_MODES = new Set(["quiz", "learn", "flashcards", "exam", "note"]);
 const SUBJECTS_CACHE_KEY = "prepcore.web.subjectsCache.v1";
 const CHAPTER_CACHE_KEY = "prepcore.web.chapterCache.v1";
@@ -1497,7 +1497,7 @@ async function resolveChapterData(entry, chapterLookup = {}) {
         }
 
         try {
-            const response = await fetch(file);
+            const response = await fetch(file, { cache: "no-store" });
             if (response.ok) {
                 const payload = await response.json();
                 const resolved = Array.isArray(payload)
@@ -1616,7 +1616,7 @@ export function normalizeQuizPayload(payload, subjectOverride = "") {
 
 export async function loadSubjects() {
     try {
-        const response = await fetch(SUBJECTS_PATH);
+        const response = await fetch(SUBJECTS_PATH, { cache: "no-store" });
         if (!response.ok) {
             return [];
         }

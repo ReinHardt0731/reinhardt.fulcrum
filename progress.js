@@ -1,4 +1,4 @@
-import { initProgressPage } from "./shared.js?v=correct-exam-explanations-20261013";
+import { initProgressPage } from "./shared.js?v=anderson-cache-fix-20261014";
 
 document.addEventListener("DOMContentLoaded", () => {
     initProgressPage();

@@ -1,4 +1,4 @@
-import { initModePage } from "./shared.js?v=aero-mock-exam-20261013";
+import { initModePage } from "./shared.js?v=anderson-cache-fix-20261014";
 
 document.addEventListener("DOMContentLoaded", () => {
     initModePage("quiz");

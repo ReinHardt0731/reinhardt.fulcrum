@@ -1,4 +1,4 @@
-import { initHomePage } from "./shared.js?v=aero-mock-exam-20261013";
+import { initHomePage } from "./shared.js?v=anderson-cache-fix-20261014";
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
