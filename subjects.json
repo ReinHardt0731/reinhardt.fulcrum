@@ -171634,6 +171634,844 @@
           "answerIndex": 2
         }
       ]
+    },
+    "chapters/aerodynamics-aero-mock-exam-ii.json": {
+      "title": "Aero Mock Exam II",
+      "questions": [
+        {
+          "question": "For a propeller-driven airplane, how do indicated best-angle climb speed \\(V_X\\) and best-rate climb speed \\(V_Y\\) change as altitude increases, up to the absolute ceiling?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Both decrease.",
+            "Both increase.",
+            "\\(V_X\\) increases while \\(V_Y\\) decreases.",
+            "\\(V_X\\) decreases while \\(V_Y\\) increases."
+          ],
+          "answerIndex": 2,
+          "answerText": "\\(V_X\\) increases while \\(V_Y\\) decreases.",
+          "explanation": "For a propeller airplane, indicated \\(V_X\\) increases and indicated \\(V_Y\\) decreases with altitude. They converge at the absolute ceiling.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "For a normally aspirated piston airplane above its critical altitude, how does maximum level-flight indicated airspeed generally change as altitude increases further?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "increases until the service ceiling.",
+            "increases.",
+            "decreases.",
+            "remains the same."
+          ],
+          "answerIndex": 2,
+          "answerText": "decreases.",
+          "explanation": "Above critical altitude, the engine cannot maintain rated power as air density falls, so maximum level-flight speed generally decreases.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "As altitude increases, an airplane's rate of climb generally _____ .",
+          "questionType": "multiple_choice",
+          "choices": [
+            "increases.",
+            "decreases.",
+            "remains the same.",
+            "decreases only up to the service ceiling."
+          ],
+          "answerIndex": 1,
+          "answerText": "decreases.",
+          "explanation": "As altitude increases, power available or excess thrust generally decreases, so the rate of climb falls and reaches zero at the absolute ceiling.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "The best angle of climb is achieved when:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "the ratio of rate of climb to flight speed is maximum.",
+            "the rate of climb is maximum.",
+            "the glide angle is minimum.",
+            "the flight speed is maximum."
+          ],
+          "answerIndex": 0,
+          "answerText": "the ratio of rate of climb to flight speed is maximum.",
+          "explanation": "Climb angle depends on vertical speed relative to forward speed, so it is best when their ratio is greatest.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "If power available is independent of flight speed, maximum rate of climb occurs when:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "power required is maximum.",
+            "excess power is minimum.",
+            "excess power remains constant.",
+            "power required is minimum."
+          ],
+          "answerIndex": 3,
+          "answerText": "power required is minimum.",
+          "explanation": "With constant power available, excess power is greatest where power required is least.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "When power available and power required are plotted against flight speed, maximum excess power gives the maximum:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "power available.",
+            "power required.",
+            "rate of climb.",
+            "flight speed."
+          ],
+          "answerIndex": 2,
+          "answerText": "rate of climb.",
+          "explanation": "Rate of climb is proportional to excess power divided by aircraft weight.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "For a propeller-driven airplane at a fixed weight and altitude, maximum endurance occurs when the parasite drag coefficient is _____ the induced drag coefficient.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "parasite drag coefficient is twice the induced drag coefficient.",
+            "parasite drag coefficient is one third of induced drag coefficient.",
+            "parasite drag coefficient equals induced drag coefficient.",
+            "parasite drag coefficient is three times the induced drag coefficient."
+          ],
+          "answerIndex": 1,
+          "answerText": "parasite drag coefficient is one third of induced drag coefficient.",
+          "explanation": "For a propeller airplane, maximum endurance occurs at minimum power required. With a parabolic drag polar, this condition gives \\(C_{D_i}=3C_{D_0}\\), so parasite drag coefficient is one third of induced drag coefficient.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "The speed for best rate of climb is called:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "VY.",
+            "VX.",
+            "V2.",
+            "V0."
+          ],
+          "answerIndex": 0,
+          "answerText": "VY.",
+          "explanation": "VY denotes the speed for best rate of climb; VX is the speed for best angle of climb.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "When an airplane flies in ground effect:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "effective angle of attack is decreased.",
+            "induced angle of attack is increased.",
+            "lift is increased and drag is decreased.",
+            "drag and lift are both reduced."
+          ],
+          "answerIndex": 2,
+          "answerText": "lift is increased and drag is decreased.",
+          "explanation": "Ground effect reduces wingtip vortices and induced drag while increasing lift for a given angle of attack.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "For isentropic flow over an airfoil, the freestream temperature is \\(245\\,\\mathrm{K}\\) and pressure is \\(4.35\\times10^4\\,\\mathrm{Pa}\\). At a surface point, pressure is \\(3.60\\times10^4\\,\\mathrm{Pa}\\). What is the local density?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "\\(0.742\\,\\mathrm{kg/m^3}\\)",
+            "\\(0.540\\,\\mathrm{kg/m^3}\\)",
+            "\\(0.426\\,\\mathrm{kg/m^3}\\)",
+            "\\(0.623\\,\\mathrm{kg/m^3}\\)"
+          ],
+          "answerIndex": 1,
+          "answerText": "\\(0.540\\,\\mathrm{kg/m^3}\\)",
+          "explanation": "For isentropic flow, \\(T_2/T_1=(p_2/p_1)^{(\\gamma-1)/\\gamma}\\). Thus \\(T_2=245(3.60/4.35)^{0.4/1.4}\\approx232.1\\,\\mathrm{K}\\), and \\(\\rho_2=p_2/(RT_2)=36000/(287.05\\times232.1)\\approx0.540\\,\\mathrm{kg/m^3}\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "In an adiabatic nozzle, reservoir velocity is negligible, reservoir temperature is 1,000 K, and nozzle exit temperature is 600 K. What is the exit velocity?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "897 m/s.",
+            "923 m/s.",
+            "852 m/s.",
+            "764 m/s."
+          ],
+          "answerIndex": 0,
+          "answerText": "897 m/s.",
+          "explanation": "For an adiabatic nozzle with negligible reservoir velocity, \\(V_e=\\sqrt{2c_p(T_0-T_e)}\\). Using air \\(c_p\\approx1005\\,\\mathrm{J/(kg\\cdot K)}\\), \\(V_e=\\sqrt{2(1005)(1000-600)}\\approx896.7\\,\\mathrm{m/s}\\), which rounds to \\(897\\,\\mathrm{m/s}\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "An airfoil has freestream pressure \\(p_1=0.61\\,\\mathrm{atm}\\), density \\(\\rho_1=0.819\\,\\mathrm{kg/m^3}\\), and speed \\(V_1=300\\,\\mathrm{m/s}\\). At a surface point, pressure is \\(p_2=0.50\\,\\mathrm{atm}\\). Assuming isentropic flow, what is the local speed?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "402 m/s.",
+            "432 m/s.",
+            "375 m/s.",
+            "346 m/s."
+          ],
+          "answerIndex": 3,
+          "answerText": "346 m/s.",
+          "explanation": "For isentropic flow, \\(T_2/T_1=(p_2/p_1)^{(\\gamma-1)/\\gamma}\\). The upstream temperature from the ideal-gas law is \\(T_1=p_1/(\\rho_1R)\\approx262.8\\,\\mathrm{K}\\), and then \\(T_2\\approx248.5\\,\\mathrm{K}\\). Conservation of stagnation enthalpy gives \\(V_2=\\sqrt{V_1^2+2c_p(T_1-T_2)}\\approx345\\,\\mathrm{m/s}\\), closest to \\(346\\,\\mathrm{m/s}\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "An air tank has pressure \\(p=196.32\\,\\mathrm{kPa}\\) and density \\(\\rho=1.9\\,\\mathrm{kg/m^3}\\). Assuming air with \\(\\gamma=1.4\\), what is the local speed of sound?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "340 m/s.",
+            "370 m/s.",
+            "380 m/s.",
+            "360 m/s."
+          ],
+          "answerIndex": 2,
+          "answerText": "380 m/s.",
+          "explanation": "For an ideal gas, \\(a=\\sqrt{\\gamma p/\\rho}\\). Substituting the stated values gives \\(a=\\sqrt{1.4(196320)/1.9}\\approx380.3\\,\\mathrm{m/s}\\), or \\(380\\,\\mathrm{m/s}\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "A normal shock has upstream velocity 680 m/s, temperature 288 K, and pressure 1 atm. What is the downstream temperature?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "402 K.",
+            "486 K.",
+            "432 K.",
+            "375 K."
+          ],
+          "answerIndex": 1,
+          "answerText": "486 K.",
+          "explanation": "For air, \\(a_1=\\sqrt{\\gamma RT_1}\\approx340.3\\,\\mathrm{m/s}\\), so \\(M_1=680/a_1\\approx2.00\\). The normal-shock relations give \\(p_2/p_1\\approx4.50\\) and \\(\\rho_2/\\rho_1\\approx2.66\\). Therefore \\(T_2=T_1(p_2/p_1)/(\\rho_2/\\rho_1)\\approx485.7\\,\\mathrm{K}\\), or \\(486\\,\\mathrm{K}\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "A normal shock forms as an aircraft travels at 1,600 m/s through still standard sea-level air. What is the downstream Mach number?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "0.42.",
+            "0.55.",
+            "0.63.",
+            "0.48."
+          ],
+          "answerIndex": 0,
+          "answerText": "0.42.",
+          "explanation": "At sea level, \\(a_1\\approx340.3\\,\\mathrm{m/s}\\), so \\(M_1=1600/a_1\\approx4.70\\). Across a normal shock, \\(M_2=\\sqrt{[1+0.2M_1^2]/[1.4M_1^2-0.2]}\\approx0.420\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "Across a normal shock in standard sea-level air, \\(p_1=1\\,\\mathrm{atm}\\), \\(T_1=518.67\\,\\mathrm{R}\\), and the downstream state is \\(p_2=10.33\\,\\mathrm{atm}\\), \\(T_2=1390\\,\\mathrm{R}\\). What is the downstream Mach number?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "0.42.",
+            "0.63.",
+            "0.55.",
+            "0.48."
+          ],
+          "answerIndex": 3,
+          "answerText": "0.48.",
+          "explanation": "The pressure ratio is \\(p_2/p_1=10.33\\). The normal-shock pressure relation gives \\(M_1\\approx3.00\\); applying the normal-shock Mach relation gives downstream \\(M_2\\approx0.475\\), or \\(0.48\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "At a standard altitude of \\(6\\,\\mathrm{km}\\), a normal shock has pressure ratio \\(p_2/p_1=3.0\\). What is the downstream pressure?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "16,075 Pa.",
+            "145,600 Pa.",
+            "\\(141{,}545\\,\\mathrm{Pa}\\)",
+            "140,418 Pa."
+          ],
+          "answerIndex": 2,
+          "answerText": "\\(141{,}545\\,\\mathrm{Pa}\\)",
+          "explanation": "At \\(6\\,\\mathrm{km}\\) in the standard atmosphere, upstream pressure is approximately \\(p_1=47{,}182\\,\\mathrm{Pa}\\). Thus \\(p_2=3p_1\\approx141{,}545\\,\\mathrm{Pa}\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "At \\(7\\,\\mathrm{km}\\) altitude, a normal shock has density ratio \\(\\rho_1/\\rho_2=0.325\\). What is the downstream velocity?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "244 m/s.",
+            "233 m/s.",
+            "255 m/s.",
+            "222 m/s."
+          ],
+          "answerIndex": 1,
+          "answerText": "233 m/s.",
+          "explanation": "The normal-shock density relation gives an upstream Mach number of about \\(2.29\\). At \\(7\\,\\mathrm{km}\\), the standard-atmosphere speed of sound is about \\(312.6\\,\\mathrm{m/s}\\), so \\(V_1\\approx717\\,\\mathrm{m/s}\\). Continuity gives \\(V_2=V_1(\\rho_1/\\rho_2)=717(0.325)\\approx233\\,\\mathrm{m/s}\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "Immediately upstream of a normal shock, \\(p_1=1\\,\\mathrm{atm}\\), \\(T_1=288\\,\\mathrm{K}\\), and \\(M_1=2.6\\). What is the downstream pressure?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "7.72 atm.",
+            "6.89 atm.",
+            "7.36 atm.",
+            "6.63 atm."
+          ],
+          "answerIndex": 0,
+          "answerText": "7.72 atm.",
+          "explanation": "For air, \\(p_2/p_1=1+[2\\gamma/(\\gamma+1)](M_1^2-1)\\). With \\(\\gamma=1.4\\) and \\(M_1=2.6\\), \\(p_2/p_1=7.72\\), so \\(p_2=7.72\\,\\mathrm{atm}\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "An oblique shock in air has wave angle \\(\\beta=30^\\circ\\) and upstream Mach number \\(M_1=2.4\\). What is the downstream Mach number \\(M_2\\)?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "2.31.",
+            "1.32.",
+            "3.12.",
+            "2.13."
+          ],
+          "answerIndex": 3,
+          "answerText": "2.13.",
+          "explanation": "The upstream normal component is \\(M_{n1}=M_1\\sin\\beta=1.20\\). The normal-shock relation gives \\(M_{n2}\\approx0.842\\); the flow deflection from the \\(\\theta\\)-\\(\\beta\\)-\\(M\\) relation is about \\(6.7^\\circ\\). Therefore \\(M_2=M_{n2}/\\sin(\\beta-\\theta)\\approx2.13\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "An oblique shock in air has wave angle \\(\\beta=35^\\circ\\) and pressure ratio \\(p_2/p_1=3.0\\). What is the upstream Mach number \\(M_1\\)?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "2.31.",
+            "1.32.",
+            "2.87.",
+            "3.12."
+          ],
+          "answerIndex": 2,
+          "answerText": "2.87.",
+          "explanation": "The pressure ratio gives upstream normal Mach component \\(M_{n1}=\\sqrt{1+(p_2/p_1-1)(\\gamma+1)/(2\\gamma)}\\approx1.647\\). Since \\(M_{n1}=M_1\\sin\\beta\\), \\(M_1=1.647/\\sin35^\\circ\\approx2.87\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "An isentropic Prandtl-Meyer expansion in air has upstream Mach number \\(M_1=3.0\\) and static-pressure ratio \\(p_2/p_1=0.4\\). What is the downstream Mach number \\(M_2\\)?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "\\(3.63\\)",
+            "\\(1.32\\)",
+            "\\(2.13\\)",
+            "\\(2.31\\)"
+          ],
+          "answerIndex": 0,
+          "answerText": "\\(3.63\\)",
+          "explanation": "For isentropic flow, \\(p_0/p=[1+0.2M^2]^{3.5}\\). Thus \\([1+0.2M_2^2]=[1+0.2M_1^2]/(p_2/p_1)^{1/3.5}\\), which gives \\(M_2\\approx3.632\\), or \\(3.63\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "Which force component is parallel to the chord or body axis and equals form drag plus skin friction at zero angle of attack?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Axial force.",
+            "Drag.",
+            "Lift.",
+            "Normal force."
+          ],
+          "answerIndex": 0,
+          "answerText": "Axial force.",
+          "explanation": "Axial force acts parallel to the chord or body axis; normal force acts perpendicular to it.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "For a 6%-thick biconvex airfoil at \\(M=1.8\\), the skin-friction drag coefficient is \\(C_{D_f}=0.0053\\). What is the optimum angle of attack for maximum lift-to-drag ratio?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "\\(3.65^\\circ\\)",
+            "\\(5.30^\\circ\\)",
+            "\\(6.55^\\circ\\)",
+            "\\(4.72^\\circ\\)"
+          ],
+          "answerIndex": 3,
+          "answerText": "\\(4.72^\\circ\\)",
+          "explanation": "For a biconvex section, \\(\\alpha_{opt}=\\tfrac12\\sqrt{K_1(t/c)^2+\\sqrt{M^2-1}\\,C_{D_f}}\\) radians, with \\(K_1=5.33\\). Substituting \\(t/c=0.06\\), \\(M=1.8\\), and \\(C_{D_f}=0.0053\\) gives \\(\\alpha_{opt}\\approx0.0823\\,\\mathrm{rad}=4.72^\\circ\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "The drag polar is \\(C_D=0.0358+0.0405C_L^2\\). For a propeller airplane at the best-endurance condition, what is the induced drag coefficient \\(C_{D_i}\\)?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "0.0716.",
+            "0.0358.",
+            "0.0405.",
+            "0.1074."
+          ],
+          "answerIndex": 3,
+          "answerText": "0.1074.",
+          "explanation": "For maximum endurance in a propeller airplane, the parabolic polar condition is \\(C_{D_i}=3C_{D_0}\\). Here \\(C_{D_0}=0.0358\\), so \\(C_{D_i}=3(0.0358)=0.1074\\). The factor \\(0.0405\\) is the induced-drag factor multiplying \\(C_L^2\\), not the induced drag coefficient at the best-endurance condition.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "Across a normal shock in air, the pressure ratio \\(p_2/p_1\\) is twice the density ratio \\(\\rho_2/\\rho_1\\). What is the downstream Mach number?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "\\(0.528\\)",
+            "\\(0.534\\)",
+            "\\(0.626\\)",
+            "\\(0.447\\)"
+          ],
+          "answerIndex": 0,
+          "answerText": "\\(0.528\\)",
+          "explanation": "Solve the normal-shock pressure and density relations with \\(p_2/p_1=2(\\rho_2/\\rho_1)\\). This gives \\(M_1\\approx2.357\\), then \\(M_2=\\sqrt{[1+0.2M_1^2]/[1.4M_1^2-0.2]}\\approx0.5278\\), or \\(0.528\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "At a standard altitude of 8,000 m, an airplane flies at Mach 0.76. What is its flight speed?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "234 m/s.",
+            "655 m/s.",
+            "365 m/s.",
+            "470 m/s."
+          ],
+          "answerIndex": 0,
+          "answerText": "234 m/s.",
+          "explanation": "At 8,000 m in the standard atmosphere, \\(T\\approx236.15\\,\\mathrm{K}\\), so \\(a=\\sqrt{\\gamma RT}\\approx308.1\\,\\mathrm{m/s}\\). The flight speed is \\(V=Ma=0.76(308.1)\\approx234\\,\\mathrm{m/s}\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "For the drag polar \\(C_D=0.0358+0.0405C_L^2\\), what induced drag coefficient occurs at the best-range condition for a propeller airplane?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "0.7104.",
+            "0.1074.",
+            "0.0405.",
+            "0.0358."
+          ],
+          "answerIndex": 3,
+          "answerText": "0.0358.",
+          "explanation": "For a propeller airplane at maximum range, maximum lift-to-drag ratio occurs when induced and parasite drag coefficients are equal. Thus \\(C_{D_i}=C_{D_0}=0.0358\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "An altimeter set to \\(29.92\\,\\mathrm{inHg}\\) indicates a pressure altitude of \\(14{,}000\\,\\mathrm{ft}\\). If outside air temperature is \\(35^\\circ\\mathrm{F}\\), what is the density altitude?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "16,526 ft.",
+            "14,358 ft.",
+            "\\(15{,}652\\,\\mathrm{ft}\\)",
+            "17,232 ft."
+          ],
+          "answerIndex": 2,
+          "answerText": "\\(15{,}652\\,\\mathrm{ft}\\)",
+          "explanation": "At a pressure altitude of \\(14{,}000\\,\\mathrm{ft}\\), ISA temperature is about \\(9.0^\\circ\\mathrm{F}\\). The warmer actual temperature gives a density altitude of approximately \\(15{,}652\\,\\mathrm{ft}\\) when the standard-atmosphere density is matched to the actual density.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "A \\(10^\\circ\\) Prandtl-Meyer expansion wave acts on a Mach \\(M_1=2.0\\) stream in air. If \\(p_2/p_1=1/3\\), what is the downstream Mach number?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "2.34.",
+            "2.71.",
+            "2.63.",
+            "2.85."
+          ],
+          "answerIndex": 1,
+          "answerText": "2.71.",
+          "explanation": "For an isentropic expansion, \\(p_0/p=[1+0.2M^2]^{3.5}\\). Using \\(M_1=2.0\\) and \\(p_2/p_1=1/3\\) gives \\(M_2\\approx2.705\\), or \\(2.71\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "As air passes through a compression wave, which statement is correct?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The pressure increases.",
+            "The temperature decreases.",
+            "The Mach number increases.",
+            "The pressure decreases."
+          ],
+          "answerIndex": 0,
+          "answerText": "The pressure increases.",
+          "explanation": "A compression wave raises static pressure and temperature while reducing Mach number.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "In straight-and-level flight, total airplane drag is minimum when _____ .",
+          "questionType": "multiple_choice",
+          "choices": [
+            "parasite drag equals half the induced drag.",
+            "induced drag is minimum.",
+            "induced drag is zero.",
+            "parasite drag equals induced drag."
+          ],
+          "answerIndex": 3,
+          "answerText": "parasite drag equals induced drag.",
+          "explanation": "For a parabolic drag polar, minimum total drag occurs when parasite drag equals induced drag.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "As air passes through a shock wave, static temperature increases and static pressure _____ .",
+          "questionType": "multiple_choice",
+          "choices": [
+            "stays constant.",
+            "decreases and then increases again beyond a certain Mach number.",
+            "increases.",
+            "decreases."
+          ],
+          "answerIndex": 2,
+          "answerText": "increases.",
+          "explanation": "A shock wave raises both static temperature and static pressure.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "Which statements about an expansion wave in supersonic flow are correct? 1. Upstream static temperature is higher than downstream static temperature. 2. Upstream Mach number is lower than downstream Mach number.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Only statement 1 is correct.",
+            "Both statements are correct.",
+            "Both statements are incorrect.",
+            "Only statement 2 is correct."
+          ],
+          "answerIndex": 1,
+          "answerText": "Both statements are correct.",
+          "explanation": "Across an expansion, static temperature falls and Mach number rises downstream; therefore both statements are correct.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "For incompressible flow through a tube with changing cross-sectional area, how does density change?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "\\(\\rho_1=\\rho_2\\)",
+            "Density depends on the tube area.",
+            "\\(\\rho_1>\\rho_2\\)",
+            "\\(\\rho_1<\\rho_2\\)"
+          ],
+          "answerIndex": 0,
+          "answerText": "\\(\\rho_1=\\rho_2\\)",
+          "explanation": "Incompressible flow assumes constant density, so \\(\\rho_1=\\rho_2\\) even when the tube area changes.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "For incompressible flow, total pressure is _____ .",
+          "questionType": "multiple_choice",
+          "choices": [
+            "one half of density times velocity squared only.",
+            "measured through a small surface hole parallel to the local stream.",
+            "static pressure minus dynamic pressure.",
+            "static pressure plus dynamic pressure."
+          ],
+          "answerIndex": 3,
+          "answerText": "static pressure plus dynamic pressure.",
+          "explanation": "For incompressible flow, total pressure is the sum of static and dynamic pressure: \\(p_t=p_s+q=p_s+\\tfrac12\\rho V^2\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "Across a shock wave, static temperature increases and static density _____ .",
+          "questionType": "multiple_choice",
+          "choices": [
+            "stays constant.",
+            "decreases and then increases again beyond a certain Mach number.",
+            "increases.",
+            "decreases."
+          ],
+          "answerIndex": 2,
+          "answerText": "increases.",
+          "explanation": "A shock wave compresses the flow, increasing its static density along with its static temperature.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "A Pitot-static tube measures a pressure difference of \\(0.11\\,\\mathrm{m}\\) of water in a standard sea-level wind tunnel. What is the airspeed?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "36 m/s.",
+            "42 m/s.",
+            "38 m/s.",
+            "40 m/s."
+          ],
+          "answerIndex": 1,
+          "answerText": "42 m/s.",
+          "explanation": "The pressure difference is \\(\\Delta p=\\rho_wgh\\approx(1000)(9.81)(0.11)=1079\\,\\mathrm{Pa}\\). At sea level, \\(\\Delta p=\\tfrac12\\rho_{air}V^2\\), so \\(V=\\sqrt{2\\Delta p/\\rho_{air}}=\\sqrt{2(1079)/1.225}\\approx42.0\\,\\mathrm{m/s}\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "At a standard-atmosphere pressure ratio \\(p/p_0=0.465\\), what is the ratio of local speed of sound to its sea-level value?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "0.930.",
+            "0.630.",
+            "0.730.",
+            "0.830."
+          ],
+          "answerIndex": 0,
+          "answerText": "0.930.",
+          "explanation": "The standard-atmosphere pressure ratio corresponds to an altitude of about \\(6.01\\,\\mathrm{km}\\), where \\(T\\approx249.1\\,\\mathrm{K}\\). Since \\(a/a_0=\\sqrt{T/T_0}\\), \\(a/a_0=\\sqrt{249.1/288.15}\\approx0.930\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "A NACA 23018 airfoil has maximum camber \\(3.6\\,\\mathrm{cm}\\). The NACA 230 mean line has maximum camber equal to \\(1.8\\%\\) of chord, located at \\(15\\%\\) of chord. How far aft of the leading edge is the maximum camber?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "26 cm.",
+            "24 cm.",
+            "25 cm.",
+            "30 cm."
+          ],
+          "answerIndex": 3,
+          "answerText": "30 cm.",
+          "explanation": "The chord is \\(c=3.6/0.018=200\\,\\mathrm{cm}\\). The NACA 230 mean line reaches maximum camber at \\(0.15c\\), so the location is \\(0.15(200)=30\\,\\mathrm{cm}\\) aft of the leading edge.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "For air with \\(\\gamma=1.4\\), what is the critical pressure coefficient for an aircraft flying at \\(500\\,\\mathrm{kt}\\) in air at \\(25^\\circ\\mathrm{F}\\)?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "-0.417.",
+            "-0.325.",
+            "-0.488.",
+            "-0.534."
+          ],
+          "answerIndex": 2,
+          "answerText": "-0.488.",
+          "explanation": "At \\(25^\\circ\\mathrm{F}\\), the speed of sound is about \\(329\\,\\mathrm{m/s}\\), so \\(M\\approx0.782\\). The sonic pressure ratio is \\(p^*/p_\\infty=[(1+0.2M^2)/1.2]^{3.5}\\approx0.791\\). Thus \\(C_{p,crit}=2(p^*/p_\\infty-1)/(\\gamma M^2)\\approx-0.488\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "An aircraft flies at true airspeed \\(V_{TAS}=720\\,\\mathrm{km/h}\\) and Mach \\(M=0.65\\). Assuming the standard atmosphere, which altitude, pressure, and density set best matches these conditions?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "\\(8.09\\,\\mathrm{km},\\ 35.15\\,\\mathrm{kPa},\\ 0.520\\,\\mathrm{kg/m^3}\\)",
+            "\\(7.85\\,\\mathrm{km},\\ 36.3\\,\\mathrm{kPa},\\ 0.53\\,\\mathrm{kg/m^3}\\)",
+            "\\(10.2\\,\\mathrm{km},\\ 30.5\\,\\mathrm{kPa},\\ 1.0\\,\\mathrm{kg/m^3}\\)",
+            "\\(9.8\\,\\mathrm{km},\\ 45.2\\,\\mathrm{kPa},\\ 1.02\\,\\mathrm{kg/m^3}\\)"
+          ],
+          "answerIndex": 0,
+          "answerText": "\\(8.09\\,\\mathrm{km},\\ 35.15\\,\\mathrm{kPa},\\ 0.520\\,\\mathrm{kg/m^3}\\)",
+          "explanation": "Convert \\(720\\,\\mathrm{km/h}=200\\,\\mathrm{m/s}\\). Then the local sound speed is \\(a=V/M\\approx307.7\\,\\mathrm{m/s}\\), corresponding to \\(T=a^2/(\\gamma R)\\approx235.6\\,\\mathrm{K}\\). In the standard atmosphere this is about \\(8.09\\,\\mathrm{km}\\), with \\(p\\approx35.15\\,\\mathrm{kPa}\\) and \\(\\rho=p/(RT)\\approx0.520\\,\\mathrm{kg/m^3}\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "At what altitude in the standard atmosphere do Celsius and Fahrenheit temperatures have the same numerical value?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "8,462 m.",
+            "9,765 m.",
+            "6,729 m.",
+            "2,976 m."
+          ],
+          "answerIndex": 0,
+          "answerText": "8,462 m.",
+          "explanation": "Celsius and Fahrenheit have the same value at \\(-40^\\circ\\). In the standard troposphere, \\(T=233.15\\,\\mathrm{K}\\) occurs at \\(h=(288.15-233.15)/0.0065\\approx8462\\,\\mathrm{m}\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "Which statement about a stagnation point is true?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Total pressure is negligible.",
+            "Total pressure equals dynamic pressure.",
+            "Total pressure approaches infinity.",
+            "Total pressure equals static pressure."
+          ],
+          "answerIndex": 3,
+          "answerText": "Total pressure equals static pressure.",
+          "explanation": "At a stagnation point, local velocity and dynamic pressure are zero. Therefore total pressure equals static pressure at that point.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "A diffuser area increases at \\(0.05\\,\\mathrm{m^2}\\) per centimeter of run. At a point where area is \\(1\\,\\mathrm{m^2}\\) and velocity is \\(10\\,\\mathrm{m/s}\\), what is the magnitude of the velocity change per meter of run for constant-density flow?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "5 m/s per meter of run.",
+            "15 m/s per meter of run.",
+            "50 m/s per meter of run.",
+            "30 m/s per meter of run."
+          ],
+          "answerIndex": 2,
+          "answerText": "50 m/s per meter of run.",
+          "explanation": "Convert the area gradient: \\(dA/dx=0.05\\,\\mathrm{m^2/cm}=5\\,\\mathrm{m^2/m}\\). Continuity gives \\(dV/dx=-(V/A)(dA/dx)=-(10/1)(5)=-50\\,\\mathrm{m/s\\ per\\ m}\\). Its magnitude is \\(50\\,\\mathrm{m/s\\ per\\ m}\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "A pipe tapers linearly over \\(100\\,\\mathrm{ft}\\) from a diameter of \\(3\\,\\mathrm{ft}\\) to \\(2\\,\\mathrm{ft}\\). Near the \\(2\\,\\mathrm{ft}\\) end, the local velocity is \\(80\\,\\mathrm{ft/s}\\). What is the rate of velocity increase per foot?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "44 ft/s per ft.",
+            "0.44 ft/s per ft.",
+            "440 ft/s per ft.",
+            "0.80 ft/s per ft."
+          ],
+          "answerIndex": 3,
+          "answerText": "0.80 ft/s per ft.",
+          "explanation": "For a linear taper, \\(dD/dx=(2-3)/100=-0.01\\). At \\(D=2\\,\\mathrm{ft}\\), \\((1/A)(dA/dx)=2(dD/Ddx)=-0.01\\,\\mathrm{ft^{-1}}\\). Continuity gives \\(dV/dx=-(V/A)(dA/dx)=0.80\\,\\mathrm{ft/s\\ per\\ ft}\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "A model wing has chord \\(c_m=0.10\\,\\mathrm{m}\\). What test speed gives the same Reynolds number as a \\(1.22\\,\\mathrm{m}\\) wing flying at \\(44.7\\,\\mathrm{m/s}\\), under the same fluid conditions?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "545 m/s.",
+            "540 m/s.",
+            "550 m/s.",
+            "535 m/s."
+          ],
+          "answerIndex": 0,
+          "answerText": "545 m/s.",
+          "explanation": "Equal Reynolds number in the same fluid requires \\(V_mc_m=V_fc_f\\). Therefore \\(V_m=44.7(1.22/0.10)\\approx545\\,\\mathrm{m/s}\\).",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "As air passes through the restriction of a Venturi, velocity, static pressure, and static temperature respectively _____ .",
+          "questionType": "multiple_choice",
+          "choices": [
+            "decrease, decrease, increase.",
+            "decrease, increase, decrease.",
+            "increase, increase, increase.",
+            "increase, decrease, decrease."
+          ],
+          "answerIndex": 3,
+          "answerText": "increase, decrease, decrease.",
+          "explanation": "The restriction accelerates the flow. For adiabatic, subsonic flow, static pressure and static temperature decrease as velocity increases.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        },
+        {
+          "question": "For subsonic incompressible flow through a tube, if cross-sectional area increases, the flow speed is _____ .",
+          "questionType": "multiple_choice",
+          "choices": [
+            "not changing.",
+            "sonic.",
+            "decreasing.",
+            "increasing."
+          ],
+          "answerIndex": 2,
+          "answerText": "decreasing.",
+          "explanation": "Continuity for incompressible flow gives \\(AV=\\mathrm{constant}\\). Therefore velocity decreases as cross-sectional area increases.",
+          "tags": [
+            "aerodynamics",
+            "mock exam"
+          ]
+        }
+      ]
     }
   }
 }

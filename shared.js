@@ -11,10 +11,14 @@ export const POMODORO_HISTORY_KEY = "prepcore.web.pomodoroHistory.v1";
 export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
 export const ADMIN_PASSWORD = "prepcore";
 export const NOTES_PATH = "./markdowns";
-const SUBJECTS_PATH = "./subjects.json?v=anderson-cache-fix-20261014";
+// Bump this when subjects.json or its chapter payloads change. It invalidates both
+// the browser's HTTP cache and the persistent normalized-library cache.
+const SUBJECTS_CACHE_VERSION = "library-idb-cache-20261014";
+const SUBJECTS_PATH = `./subjects.json?v=${SUBJECTS_CACHE_VERSION}`;
 const VALID_MODES = new Set(["quiz", "learn", "flashcards", "exam", "note"]);
-const SUBJECTS_CACHE_KEY = "prepcore.web.subjectsCache.v1";
-const CHAPTER_CACHE_KEY = "prepcore.web.chapterCache.v1";
+const SUBJECTS_CACHE_KEY = `prepcore.web.subjectsCache.${SUBJECTS_CACHE_VERSION}`;
+const LIBRARY_CACHE_DB = "PrepCoreLibraryCache";
+const LIBRARY_CACHE_STORE = "libraries";
 const LEARN_SESSION_KEY = "prepcore.web.learnSession.v1";
 const FLASHCARDS_SESSION_KEY = "prepcore.web.flashcardsSession.v1";
 const LEARN_BATCH_SIZE = 10;
@@ -1614,54 +1618,162 @@ export function normalizeQuizPayload(payload, subjectOverride = "") {
     };
 }
 
-export async function loadSubjects() {
-    try {
-        const response = await fetch(SUBJECTS_PATH, { cache: "no-store" });
-        if (!response.ok) {
-            return [];
+let subjectsMemoryCache = null;
+let subjectsLoadInFlight = null;
+
+function openLibraryCacheDatabase() {
+    if (!globalThis.indexedDB) {
+        return Promise.reject(new Error("IndexedDB is unavailable."));
+    }
+
+    return new Promise((resolve, reject) => {
+        const request = indexedDB.open(LIBRARY_CACHE_DB, 1);
+        request.onupgradeneeded = () => {
+            const db = request.result;
+            if (!db.objectStoreNames.contains(LIBRARY_CACHE_STORE)) {
+                db.createObjectStore(LIBRARY_CACHE_STORE, { keyPath: "key" });
+            }
+        };
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error || new Error("Could not open the study-library cache."));
+    });
+}
+
+async function readCachedSubjects() {
+    const db = await openLibraryCacheDatabase();
+    return new Promise((resolve, reject) => {
+        const transaction = db.transaction(LIBRARY_CACHE_STORE, "readonly");
+        const request = transaction.objectStore(LIBRARY_CACHE_STORE).get(SUBJECTS_CACHE_KEY);
+        let subjects = null;
+        request.onsuccess = () => {
+            subjects = Array.isArray(request.result?.subjects) ? request.result.subjects : null;
+        };
+        request.onerror = () => reject(request.error || new Error("Could not read the study-library cache."));
+        transaction.oncomplete = () => {
+            db.close();
+            resolve(subjects);
+        };
+        transaction.onerror = () => {
+            db.close();
+            reject(transaction.error || new Error("Could not read the study-library cache."));
+        };
+        transaction.onabort = () => {
+            db.close();
+            reject(transaction.error || new Error("The study-library cache read was aborted."));
+        };
+    });
+}
+
+async function writeCachedSubjects(subjects) {
+    const db = await openLibraryCacheDatabase();
+    return new Promise((resolve, reject) => {
+        const transaction = db.transaction(LIBRARY_CACHE_STORE, "readwrite");
+        transaction.objectStore(LIBRARY_CACHE_STORE).put({
+            key: SUBJECTS_CACHE_KEY,
+            subjects,
+            cachedAt: Date.now()
+        });
+        transaction.oncomplete = () => {
+            db.close();
+            resolve();
+        };
+        transaction.onerror = () => {
+            db.close();
+            reject(transaction.error || new Error("Could not save the study-library cache."));
+        };
+        transaction.onabort = () => {
+            db.close();
+            reject(transaction.error || new Error("The study-library cache write was aborted."));
+        };
+    });
+}
+
+export async function loadSubjects({ forceRefresh = false } = {}) {
+    if (!forceRefresh && subjectsMemoryCache) {
+        return subjectsMemoryCache;
+    }
+    if (!forceRefresh && subjectsLoadInFlight) {
+        return subjectsLoadInFlight;
+    }
+
+    const loadPromise = (async () => {
+        if (!forceRefresh) {
+            try {
+                const cached = await readCachedSubjects();
+                if (cached?.length) {
+                    subjectsMemoryCache = cached;
+                    return cached;
+                }
+            } catch {
+                // IndexedDB is an optimization. Continue with the repository data if unavailable.
+            }
         }
 
-        const raw = await response.json();
-        const chapterLookup = raw?.chapterData || raw?.chapterFiles || {};
-        const subjects = Array.isArray(raw)
-            ? raw
-            : Array.isArray(raw?.subjects)
-                ? raw.subjects
-                : [];
-
-        const resolvedSubjects = [];
-        for (const subject of subjects) {
-            if (!subject || typeof subject !== "object" || Array.isArray(subject)) {
-                continue;
+        try {
+            const response = await fetch(SUBJECTS_PATH, { cache: forceRefresh ? "reload" : "default" });
+            if (!response.ok) {
+                return [];
             }
 
-            const chapterEntries = Array.isArray(subject.chapters) ? subject.chapters : [];
-            const resolvedChapters = [];
-            for (const chapterEntry of chapterEntries) {
-                const loadedChapter = await resolveChapterData(chapterEntry, chapterLookup);
-                const chapterPayload = loadedChapter || chapterEntry;
-                const chapter = coerceChapter(
-                    loadedChapter
-                        ? { ...chapterEntry, ...loadedChapter, file: loadedChapter.file || chapterEntry?.file || chapterEntry?.path || chapterEntry?.source || chapterEntry?.chapterFile }
-                        : chapterEntry,
-                    1,
-                    chapterLookup
-                );
-                if (chapter) {
-                    resolvedChapters.push(chapter);
+            const raw = await response.json();
+            const chapterLookup = raw?.chapterData || raw?.chapterFiles || {};
+            const sourceSubjects = Array.isArray(raw)
+                ? raw
+                : Array.isArray(raw?.subjects)
+                    ? raw.subjects
+                    : [];
+
+            const resolvedSubjects = [];
+            for (const subject of sourceSubjects) {
+                if (!subject || typeof subject !== "object" || Array.isArray(subject)) {
+                    continue;
+                }
+
+                const chapterEntries = Array.isArray(subject.chapters) ? subject.chapters : [];
+                const resolvedChapters = [];
+                for (const chapterEntry of chapterEntries) {
+                    const loadedChapter = await resolveChapterData(chapterEntry, chapterLookup);
+                    const chapter = coerceChapter(
+                        loadedChapter
+                            ? { ...chapterEntry, ...loadedChapter, file: loadedChapter.file || chapterEntry?.file || chapterEntry?.path || chapterEntry?.source || chapterEntry?.chapterFile }
+                            : chapterEntry,
+                        1,
+                        chapterLookup
+                    );
+                    if (chapter) {
+                        resolvedChapters.push(chapter);
+                    }
+                }
+
+                const normalizedSubject = coerceStoredSubject({ ...subject, chapters: resolvedChapters }, 1, chapterLookup);
+                if (normalizedSubject) {
+                    resolvedSubjects.push(normalizedSubject);
                 }
             }
 
-            const normalizedSubject = coerceStoredSubject({ ...subject, chapters: resolvedChapters }, 1, chapterLookup);
-            if (normalizedSubject) {
-                resolvedSubjects.push(normalizedSubject);
+            const sortedSubjects = resolvedSubjects.sort((left, right) => text(left.name).localeCompare(text(right.name)));
+            if (sortedSubjects.length) {
+                subjectsMemoryCache = sortedSubjects;
+                try {
+                    await writeCachedSubjects(sortedSubjects);
+                } catch {
+                    // Keep the in-memory result even if persistent browser storage is full or blocked.
+                }
             }
+            return sortedSubjects;
+        } catch (error) {
+            console.error("Could not load the study library from subjects.json.", error);
+            return [];
         }
+    })();
 
-        const sortedSubjects = resolvedSubjects.sort((left, right) => text(left.name).localeCompare(text(right.name)));
-        return sortedSubjects;
-    } catch {
-        return [];
+    subjectsLoadInFlight = loadPromise;
+    try {
+        return await loadPromise;
+    } finally {
+        if (subjectsLoadInFlight === loadPromise) {
+            subjectsLoadInFlight = null;
+        }
     }
 }
 
@@ -2400,8 +2512,8 @@ function restoreModeSession(subject, chapter, mode) {
     return session;
 }
 
-export async function storageSelectState() {
-    const subjects = await loadSubjects();
+export async function storageSelectState(options = {}) {
+    const subjects = await loadSubjects(options);
 
     const storedSubjectId = text(storageGet(ACTIVE_SUBJECT_KEY, ""));
     const storedMode = text(storageGet(ACTIVE_MODE_KEY, "quiz")) || "quiz";
@@ -10419,7 +10531,7 @@ export async function initHomePage() {
 
     if (elements.refresh) {
         elements.refresh.addEventListener("click", () => {
-            void refresh();
+            void refresh({ forceRefresh: true });
         });
     }
 
@@ -10805,7 +10917,7 @@ export async function initHomePage() {
         return DEFAULT_UPDATE_LOG;
     };
 
-    const refresh = async () => {
+    const refresh = async ({ forceRefresh = false } = {}) => {
         if (state.refreshing) return;
         state.refreshing = true;
         state.loading = !state.subjects.length;
@@ -10818,7 +10930,7 @@ export async function initHomePage() {
 
         const updateEntriesPromise = loadUpdateEntries();
         try {
-            const fresh = await storageSelectState();
+            const fresh = await storageSelectState({ forceRefresh });
             if (fresh.subjects.length) {
                 state.subjects = fresh.subjects;
                 state.activeSubject = fresh.activeSubject;
@@ -12320,8 +12432,8 @@ export async function initModePage(mode) {
     });
     elements.examMapBackdrop?.addEventListener("click", closeExamMap);
     elements.subjectSelect?.addEventListener("change", (event) => selectSubject(event.target.value));
-    const refresh = async () => {
-        const fresh = await storageSelectState();
+    const refresh = async (forceRefresh = false) => {
+        const fresh = await storageSelectState({ forceRefresh });
 
         state.subjects = fresh.subjects;
         state.activeSubject = fresh.activeSubject;
@@ -12355,7 +12467,7 @@ export async function initModePage(mode) {
                 clearModeSession("flashcards");
             }
 
-            await refresh();
+            await refresh(true);
         } catch (err) {
             // If something goes wrong (e.g. fetch failure), fall back to a full reload
             console.error("Refresh failed:", err);

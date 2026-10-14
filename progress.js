@@ -1,4 +1,4 @@
-import { initProgressPage } from "./shared.js?v=anderson-cache-fix-20261014";
+import { initProgressPage } from "./shared.js?v=library-idb-cache-20261014";
 
 document.addEventListener("DOMContentLoaded", () => {
     initProgressPage();

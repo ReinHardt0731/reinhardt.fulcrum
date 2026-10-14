@@ -1,4 +1,4 @@
-import { initHomePage } from "./shared.js?v=anderson-cache-fix-20261014";
+import { initHomePage } from "./shared.js?v=library-idb-cache-20261014";
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
