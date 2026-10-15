@@ -2,664 +2,544 @@
   "title": "Aerodynamics Exam: Stability and Control",
   "questions": [
     {
-      "question": "A trainee claims: “Tail area divided by fuselage length.” What correction is accurate about static margin?",
+      "question": "Buffeting is the intermittent application of forces to part of an airplane. It is caused by:",
       "questionType": "multiple_choice",
       "choices": [
-        "Lift divided by drag.",
-        "Tail area divided by fuselage length.",
-        "(Neutral point − CG location)/mean aerodynamic chord.",
-        "(CG − neutral point)/wing span."
-      ],
-      "answerIndex": 2,
-      "answerText": "(Neutral point − CG location)/mean aerodynamic chord.",
-      "explanation": "A positive static margin means the CG lies ahead of the neutral point.\n\nApply it to static margin. The statement that matches the principle is “(Neutral point − CG location)/mean aerodynamic chord.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "static margin",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "Which primary control surface chiefly controls yaw?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The flap.",
-        "The rudder.",
-        "The elevator.",
-        "The ailerons."
+        "Incorrect rigging of flaps",
+        "An unsteady flow from turbulence",
+        "Incorrect rigging of ailerons",
+        "Incorrect rigging of spoilers"
       ],
       "answerIndex": 1,
-      "answerText": "The rudder.",
-      "explanation": "Rudder deflection produces a yawing moment about the vertical axis.\n\nApply it to control surfaces. The statement that matches the principle is “The rudder.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
+      "answerText": "An unsteady flow from turbulence",
+      "explanation": "Buffeting is caused by unsteady airflow, including turbulence, that produces fluctuating aerodynamic forces.",
       "tags": [
-        "original practice",
-        "control surfaces",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
+        "stability and control",
+        "source pdf",
+        "question 1"
+      ]
     },
     {
-      "question": "A trainee claims: “The point of maximum wing thickness.” What correction is accurate about neutral point?",
+      "question": "With which system is differential control associated?",
       "questionType": "multiple_choice",
       "choices": [
-        "The CG location at which the airplane has neutral static longitudinal stability.",
-        "The location where lift equals drag.",
-        "The point of maximum wing thickness.",
-        "The center of the fuselage volume."
-      ],
-      "answerIndex": 0,
-      "answerText": "The CG location at which the airplane has neutral static longitudinal stability.",
-      "explanation": "At the neutral point, a small change in angle of attack produces no restoring or destabilizing pitching-moment slope.\n\nApply it to neutral point. The statement that matches the principle is “The CG location at which the airplane has neutral static longitudinal stability.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "neutral point",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "A trainee claims: “It makes the vertical tail unnecessary.” What correction is accurate about lateral stability?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "A sideslip produces a rolling tendency that helps restore wings-level flight.",
-        "A pitch disturbance produces a yawing moment only.",
-        "The aircraft loses all roll stability.",
-        "It makes the vertical tail unnecessary."
-      ],
-      "answerIndex": 0,
-      "answerText": "A sideslip produces a rolling tendency that helps restore wings-level flight.",
-      "explanation": "Dihedral, sweep, and high-wing effects can contribute rolling moments in sideslip.\n\nApply it to lateral stability. The statement that matches the principle is “A sideslip produces a rolling tendency that helps restore wings-level flight.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "lateral stability",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "A trainee claims: “The aircraft has no pitching moment at any angle.” What correction is accurate about static stability?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The aircraft has no pitching moment at any angle.",
-        "The initial pitching moment tends to restore the aircraft toward trim.",
-        "The disturbance produces an ever-increasing pitch moment away from trim.",
-        "The aircraft returns only after a pilot input."
-      ],
-      "answerIndex": 1,
-      "answerText": "The initial pitching moment tends to restore the aircraft toward trim.",
-      "explanation": "Static stability describes the initial tendency after a disturbance, independent of how the motion evolves over time.\n\nApply it to static stability. The statement that matches the principle is “The initial pitching moment tends to restore the aircraft toward trim.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "static stability",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "A trainee claims: “Lift divided by drag.” What correction is accurate about static margin?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "(CG − neutral point)/wing span.",
-        "Lift divided by drag.",
-        "Tail area divided by fuselage length.",
-        "(Neutral point − CG location)/mean aerodynamic chord."
+        "Trim",
+        "Rudder",
+        "Elevator",
+        "Aileron"
       ],
       "answerIndex": 3,
-      "answerText": "(Neutral point − CG location)/mean aerodynamic chord.",
-      "explanation": "A positive static margin means the CG lies ahead of the neutral point.\n\nApply it to static margin. The statement that matches the principle is “(Neutral point − CG location)/mean aerodynamic chord.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
+      "answerText": "Aileron",
+      "explanation": "Differential ailerons use unequal upward and downward deflection to reduce adverse yaw.",
       "tags": [
-        "original practice",
-        "static margin",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
+        "stability and control",
+        "source pdf",
+        "question 2"
+      ]
     },
     {
-      "question": "How is static margin commonly defined?",
+      "question": "The purpose of spring tabs or servo tabs is to:",
       "questionType": "multiple_choice",
       "choices": [
-        "Tail area divided by fuselage length.",
-        "(Neutral point − CG location)/mean aerodynamic chord.",
-        "(CG − neutral point)/wing span.",
-        "Lift divided by drag."
-      ],
-      "answerIndex": 1,
-      "answerText": "(Neutral point − CG location)/mean aerodynamic chord.",
-      "explanation": "A positive static margin means the CG lies ahead of the neutral point.\n\nApply it to static margin. The statement that matches the principle is “(Neutral point − CG location)/mean aerodynamic chord.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "static margin",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "A trainee claims: “Aileron deflection fixed in one direction.” What correction is accurate about directional stability?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "Aileron deflection fixed in one direction.",
-        "A vertical tail aft of the center of gravity.",
-        "A horizontal tail forward of the CG only.",
-        "Anhedral alone in every configuration."
-      ],
-      "answerIndex": 1,
-      "answerText": "A vertical tail aft of the center of gravity.",
-      "explanation": "The aft vertical tail tends to align the nose with the relative wind after a sideslip.\n\nApply it to directional stability. The statement that matches the principle is “A vertical tail aft of the center of gravity.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "directional stability",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "A trainee claims: “A horizontal tail forward of the CG only.” What correction is accurate about directional stability?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "A horizontal tail forward of the CG only.",
-        "Anhedral alone in every configuration.",
-        "Aileron deflection fixed in one direction.",
-        "A vertical tail aft of the center of gravity."
-      ],
-      "answerIndex": 3,
-      "answerText": "A vertical tail aft of the center of gravity.",
-      "explanation": "The aft vertical tail tends to align the nose with the relative wind after a sideslip.\n\nApply it to directional stability. The statement that matches the principle is “A vertical tail aft of the center of gravity.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "directional stability",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "A trainee claims: “Replace the primary control surface in all aircraft.” What correction is accurate about trim tab?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "Reduce the sustained control force needed to maintain a selected condition.",
-        "Increase the wing’s aspect ratio.",
-        "Replace the primary control surface in all aircraft.",
-        "Prevent all dynamic oscillations."
+        "Assist the pilot in moving the control surfaces",
+        "Contribute to the static balance of the control surface",
+        "Make in-flight trim adjustments possible",
+        "Increase flight-control effectiveness"
       ],
       "answerIndex": 0,
-      "answerText": "Reduce the sustained control force needed to maintain a selected condition.",
-      "explanation": "A trim tab creates a balancing hinge moment so the pilot need not hold continuous force.\n\nApply it to trim tab. The statement that matches the principle is “Reduce the sustained control force needed to maintain a selected condition.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
+      "answerText": "Assist the pilot in moving the control surfaces",
+      "explanation": "A spring or servo tab helps move the primary control surface, reducing the force the pilot must apply.",
       "tags": [
-        "original practice",
-        "trim tab",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
+        "stability and control",
+        "source pdf",
+        "question 3"
+      ]
     },
     {
-      "question": "What does dynamic stability describe?",
+      "question": "The purpose of the vertical fin is to provide:",
       "questionType": "multiple_choice",
       "choices": [
-        "The initial restoring-moment direction only.",
-        "The aircraft’s maximum lift coefficient.",
-        "The location of the center of pressure only.",
-        "How the motion changes with time after a disturbance."
+        "Directional stability",
+        "Longitudinal stability",
+        "Lateral stability",
+        "Drag reduction"
+      ],
+      "answerIndex": 0,
+      "answerText": "Directional stability",
+      "explanation": "The vertical fin resists sideslip and provides directional stability about the vertical axis.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 4"
+      ]
+    },
+    {
+      "question": "If the control stick of an aircraft with properly rigged flight controls is moved rearward and to the left, the right aileron will move:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Down and the elevator will move down",
+        "Up and the elevator will move down",
+        "Down and the elevator will move up",
+        "Up and the elevator will move up"
+      ],
+      "answerIndex": 2,
+      "answerText": "Down and the elevator will move up",
+      "explanation": "Aft stick moves the elevator up. Left stick raises the left aileron and lowers the right aileron.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 5"
+      ]
+    },
+    {
+      "question": "Which statement about the difference between Krueger flaps and slats is correct?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A Krueger flap forms a slot; a slat does not",
+        "A slat increases critical angle of attack; a Krueger flap does not",
+        "A Krueger flap increases critical angle of attack; a slat does not",
+        "A slat forms a slot; a Krueger flap does not"
       ],
       "answerIndex": 3,
-      "answerText": "How the motion changes with time after a disturbance.",
-      "explanation": "Dynamic stability concerns time history: whether oscillations decay, persist, or grow.\n\nApply it to dynamic stability. The statement that matches the principle is “How the motion changes with time after a disturbance.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
+      "answerText": "A slat forms a slot; a Krueger flap does not",
+      "explanation": "A deployed slat creates a slot that energizes the flow over the upper wing surface. A Krueger flap does not form that slot.",
       "tags": [
-        "original practice",
-        "dynamic stability",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
+        "stability and control",
+        "source pdf",
+        "question 6"
+      ]
     },
     {
-      "question": "A trainee claims: “A pitch disturbance produces a yawing moment only.” What correction is accurate about lateral stability?",
+      "question": "What is the most effective flap system?",
       "questionType": "multiple_choice",
       "choices": [
-        "The aircraft loses all roll stability.",
-        "It makes the vertical tail unnecessary.",
-        "A sideslip produces a rolling tendency that helps restore wings-level flight.",
-        "A pitch disturbance produces a yawing moment only."
+        "Plain flap",
+        "Single-slotted flap",
+        "Fowler flap",
+        "Split flap"
       ],
       "answerIndex": 2,
-      "answerText": "A sideslip produces a rolling tendency that helps restore wings-level flight.",
-      "explanation": "Dihedral, sweep, and high-wing effects can contribute rolling moments in sideslip.\n\nApply it to lateral stability. The statement that matches the principle is “A sideslip produces a rolling tendency that helps restore wings-level flight.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
+      "answerText": "Fowler flap",
+      "explanation": "A Fowler flap increases both wing camber and effective wing area, producing a large lift increase.",
       "tags": [
-        "original practice",
-        "lateral stability",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
+        "stability and control",
+        "source pdf",
+        "question 7"
+      ]
     },
     {
-      "question": "A trainee claims: “The initial restoring-moment direction only.” What correction is accurate about dynamic stability?",
+      "question": "On an aircraft, the Krueger flap is a:",
       "questionType": "multiple_choice",
       "choices": [
-        "The aircraft’s maximum lift coefficient.",
-        "The location of the center of pressure only.",
-        "How the motion changes with time after a disturbance.",
-        "The initial restoring-moment direction only."
+        "Leading-edge flap close to the wing root",
+        "Trailing-edge flap",
+        "Leading-edge flap close to the wing tip",
+        "Leading-edge flap"
+      ],
+      "answerIndex": 0,
+      "answerText": "Leading-edge flap close to the wing root",
+      "explanation": "A Krueger flap is a leading-edge device commonly installed near the wing root.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 8"
+      ]
+    },
+    {
+      "question": "Where does the lift act on the wing?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Always forward of the centre of gravity",
+        "Suction",
+        "Centre of pressure",
+        "Centre of gravity"
       ],
       "answerIndex": 2,
-      "answerText": "How the motion changes with time after a disturbance.",
-      "explanation": "Dynamic stability concerns time history: whether oscillations decay, persist, or grow.\n\nApply it to dynamic stability. The statement that matches the principle is “How the motion changes with time after a disturbance.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
+      "answerText": "Centre of pressure",
+      "explanation": "The resultant aerodynamic lift acts through the centre of pressure for the current flight condition.",
       "tags": [
-        "original practice",
-        "dynamic stability",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
+        "stability and control",
+        "source pdf",
+        "question 9"
+      ]
     },
     {
-      "question": "What is the primary function of a trim tab?",
+      "question": "The lateral axis is also called the:",
       "questionType": "multiple_choice",
       "choices": [
-        "Replace the primary control surface in all aircraft.",
-        "Prevent all dynamic oscillations.",
-        "Reduce the sustained control force needed to maintain a selected condition.",
-        "Increase the wing’s aspect ratio."
+        "Normal axis",
+        "Horizontal axis",
+        "Roll axis",
+        "Pitch axis"
+      ],
+      "answerIndex": 3,
+      "answerText": "Pitch axis",
+      "explanation": "The lateral axis runs from wingtip to wingtip and is the pitch axis.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 10"
+      ]
+    },
+    {
+      "question": "Pitch angle is defined as:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The angle between the chord line and the free-stream flow velocity",
+        "The angle between the chord line and the relative airflow",
+        "The angle between the aircraft longitudinal axis and the local horizon",
+        "The angle between the lower wing surface and the relative airflow"
       ],
       "answerIndex": 2,
-      "answerText": "Reduce the sustained control force needed to maintain a selected condition.",
-      "explanation": "A trim tab creates a balancing hinge moment so the pilot need not hold continuous force.\n\nApply it to trim tab. The statement that matches the principle is “Reduce the sustained control force needed to maintain a selected condition.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
+      "answerText": "The angle between the aircraft longitudinal axis and the local horizon",
+      "explanation": "Pitch attitude is measured between the aircraft longitudinal axis and the local horizon.",
       "tags": [
-        "original practice",
-        "trim tab",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
+        "stability and control",
+        "source pdf",
+        "question 11"
+      ]
     },
     {
-      "question": "A trainee claims: “Increase the wing’s aspect ratio.” What correction is accurate about trim tab?",
+      "question": "When the stick is moved forward, the stabilizer lift:",
       "questionType": "multiple_choice",
       "choices": [
-        "Prevent all dynamic oscillations.",
-        "Reduce the sustained control force needed to maintain a selected condition.",
-        "Increase the wing’s aspect ratio.",
-        "Replace the primary control surface in all aircraft."
+        "Decreases",
+        "Increases",
+        "Always remains the same",
+        "Usually remains the same"
       ],
       "answerIndex": 1,
-      "answerText": "Reduce the sustained control force needed to maintain a selected condition.",
-      "explanation": "A trim tab creates a balancing hinge moment so the pilot need not hold continuous force.\n\nApply it to trim tab. The statement that matches the principle is “Reduce the sustained control force needed to maintain a selected condition.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
+      "answerText": "Increases",
+      "explanation": "Moving the stick forward commands a nose-down change; the resulting tail force changes to provide the required pitching moment.",
       "tags": [
-        "original practice",
-        "trim tab",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
+        "stability and control",
+        "source pdf",
+        "question 12"
+      ]
     },
     {
-      "question": "A trainee claims: “The location where lift equals drag.” What correction is accurate about neutral point?",
+      "question": "In straight and level flight, the centre of pressure is behind the centre of gravity. With the resultant force from the elevators and tailplane action to maintain straight and level flight, the force would be:",
       "questionType": "multiple_choice",
       "choices": [
-        "The center of the fuselage volume.",
-        "The CG location at which the airplane has neutral static longitudinal stability.",
-        "The location where lift equals drag.",
-        "The point of maximum wing thickness."
-      ],
-      "answerIndex": 1,
-      "answerText": "The CG location at which the airplane has neutral static longitudinal stability.",
-      "explanation": "At the neutral point, a small change in angle of attack produces no restoring or destabilizing pitching-moment slope.\n\nApply it to neutral point. The statement that matches the principle is “The CG location at which the airplane has neutral static longitudinal stability.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "neutral point",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "Which feature usually contributes positive directional stability?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "A vertical tail aft of the center of gravity.",
-        "A horizontal tail forward of the CG only.",
-        "Anhedral alone in every configuration.",
-        "Aileron deflection fixed in one direction."
-      ],
-      "answerIndex": 0,
-      "answerText": "A vertical tail aft of the center of gravity.",
-      "explanation": "The aft vertical tail tends to align the nose with the relative wind after a sideslip.\n\nApply it to directional stability. The statement that matches the principle is “A vertical tail aft of the center of gravity.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "directional stability",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "A trainee claims: “The disturbance produces an ever-increasing pitch moment away from trim.” What correction is accurate about static stability?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The disturbance produces an ever-increasing pitch moment away from trim.",
-        "The aircraft returns only after a pilot input.",
-        "The aircraft has no pitching moment at any angle.",
-        "The initial pitching moment tends to restore the aircraft toward trim."
-      ],
-      "answerIndex": 3,
-      "answerText": "The initial pitching moment tends to restore the aircraft toward trim.",
-      "explanation": "Static stability describes the initial tendency after a disturbance, independent of how the motion evolves over time.\n\nApply it to static stability. The statement that matches the principle is “The initial pitching moment tends to restore the aircraft toward trim.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "static stability",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "A trainee claims: “The center of the fuselage volume.” What correction is accurate about neutral point?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The location where lift equals drag.",
-        "The point of maximum wing thickness.",
-        "The center of the fuselage volume.",
-        "The CG location at which the airplane has neutral static longitudinal stability."
-      ],
-      "answerIndex": 3,
-      "answerText": "The CG location at which the airplane has neutral static longitudinal stability.",
-      "explanation": "At the neutral point, a small change in angle of attack produces no restoring or destabilizing pitching-moment slope.\n\nApply it to neutral point. The statement that matches the principle is “The CG location at which the airplane has neutral static longitudinal stability.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "neutral point",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "A trainee claims: “The aircraft loses all roll stability.” What correction is accurate about lateral stability?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "It makes the vertical tail unnecessary.",
-        "A sideslip produces a rolling tendency that helps restore wings-level flight.",
-        "A pitch disturbance produces a yawing moment only.",
-        "The aircraft loses all roll stability."
-      ],
-      "answerIndex": 1,
-      "answerText": "A sideslip produces a rolling tendency that helps restore wings-level flight.",
-      "explanation": "Dihedral, sweep, and high-wing effects can contribute rolling moments in sideslip.\n\nApply it to lateral stability. The statement that matches the principle is “A sideslip produces a rolling tendency that helps restore wings-level flight.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "lateral stability",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "A trainee claims: “Anhedral alone in every configuration.” What correction is accurate about directional stability?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "Anhedral alone in every configuration.",
-        "Aileron deflection fixed in one direction.",
-        "A vertical tail aft of the center of gravity.",
-        "A horizontal tail forward of the CG only."
+        "Upward",
+        "Horizontally",
+        "Downward",
+        "In a direction depending on the thrust/drag couple"
       ],
       "answerIndex": 2,
-      "answerText": "A vertical tail aft of the center of gravity.",
-      "explanation": "The aft vertical tail tends to align the nose with the relative wind after a sideslip.\n\nApply it to directional stability. The statement that matches the principle is “A vertical tail aft of the center of gravity.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
+      "answerText": "Downward",
+      "explanation": "With the centre of pressure aft of the centre of gravity, a downward tail force supplies the balancing nose-up moment.",
       "tags": [
-        "original practice",
-        "directional stability",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
+        "stability and control",
+        "source pdf",
+        "question 13"
+      ]
     },
     {
-      "question": "A trainee claims: “(CG − neutral point)/wing span.” What correction is accurate about static margin?",
+      "question": "If an aircraft is pitching up:",
       "questionType": "multiple_choice",
       "choices": [
-        "(Neutral point − CG location)/mean aerodynamic chord.",
-        "(CG − neutral point)/wing span.",
-        "Lift divided by drag.",
-        "Tail area divided by fuselage length."
-      ],
-      "answerIndex": 0,
-      "answerText": "(Neutral point − CG location)/mean aerodynamic chord.",
-      "explanation": "A positive static margin means the CG lies ahead of the neutral point.\n\nApply it to static margin. The statement that matches the principle is “(Neutral point − CG location)/mean aerodynamic chord.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "static margin",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "What is the neutral point in longitudinal stability?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The point of maximum wing thickness.",
-        "The center of the fuselage volume.",
-        "The CG location at which the airplane has neutral static longitudinal stability.",
-        "The location where lift equals drag."
-      ],
-      "answerIndex": 2,
-      "answerText": "The CG location at which the airplane has neutral static longitudinal stability.",
-      "explanation": "At the neutral point, a small change in angle of attack produces no restoring or destabilizing pitching-moment slope.\n\nApply it to neutral point. The statement that matches the principle is “The CG location at which the airplane has neutral static longitudinal stability.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "neutral point",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "A trainee claims: “Prevent all dynamic oscillations.” What correction is accurate about trim tab?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "Increase the wing’s aspect ratio.",
-        "Replace the primary control surface in all aircraft.",
-        "Prevent all dynamic oscillations.",
-        "Reduce the sustained control force needed to maintain a selected condition."
+        "The incidence angle first increases and then decreases",
+        "The incidence angle increases",
+        "The incidence angle decreases",
+        "The incidence angle remains fixed"
       ],
       "answerIndex": 3,
-      "answerText": "Reduce the sustained control force needed to maintain a selected condition.",
-      "explanation": "A trim tab creates a balancing hinge moment so the pilot need not hold continuous force.\n\nApply it to trim tab. The statement that matches the principle is “Reduce the sustained control force needed to maintain a selected condition.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
+      "answerText": "The incidence angle remains fixed",
+      "explanation": "The angle of incidence is a fixed geometric angle between the chord line and the aircraft longitudinal axis; pitching does not change it.",
       "tags": [
-        "original practice",
-        "trim tab",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
+        "stability and control",
+        "source pdf",
+        "question 14"
+      ]
     },
     {
-      "question": "A trainee claims: “The location of the center of pressure only.” What correction is accurate about dynamic stability?",
+      "question": "Which is the correct description of the method for measuring the dihedral angle?",
       "questionType": "multiple_choice",
       "choices": [
-        "How the motion changes with time after a disturbance.",
-        "The initial restoring-moment direction only.",
-        "The aircraft’s maximum lift coefficient.",
-        "The location of the center of pressure only."
+        "The angle between the wing plane and the horizontal",
+        "The angle between a line through the 25% wing chord and the horizontal axis",
+        "The angle between the 25% chord and the lateral axis",
+        "The angle between the 25% chord line and the horizontal axis"
       ],
       "answerIndex": 0,
-      "answerText": "How the motion changes with time after a disturbance.",
-      "explanation": "Dynamic stability concerns time history: whether oscillations decay, persist, or grow.\n\nApply it to dynamic stability. The statement that matches the principle is “How the motion changes with time after a disturbance.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
+      "answerText": "The angle between the wing plane and the horizontal",
+      "explanation": "Dihedral is the angle between the wing plane and the horizontal reference plane.",
       "tags": [
-        "original practice",
-        "dynamic stability",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
+        "stability and control",
+        "source pdf",
+        "question 15"
+      ]
     },
     {
-      "question": "Which effect is associated with dihedral effect?",
+      "question": "Longitudinal dihedral is:",
       "questionType": "multiple_choice",
       "choices": [
-        "A pitch disturbance produces a yawing moment only.",
-        "The aircraft loses all roll stability.",
-        "It makes the vertical tail unnecessary.",
-        "A sideslip produces a rolling tendency that helps restore wings-level flight."
-      ],
-      "answerIndex": 3,
-      "answerText": "A sideslip produces a rolling tendency that helps restore wings-level flight.",
-      "explanation": "Dihedral, sweep, and high-wing effects can contribute rolling moments in sideslip.\n\nApply it to lateral stability. The statement that matches the principle is “A sideslip produces a rolling tendency that helps restore wings-level flight.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "lateral stability",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "A trainee claims: “The elevator.” What correction is accurate about control surfaces?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The rudder.",
-        "The elevator.",
-        "The ailerons.",
-        "The flap."
-      ],
-      "answerIndex": 0,
-      "answerText": "The rudder.",
-      "explanation": "Rudder deflection produces a yawing moment about the vertical axis.\n\nApply it to control surfaces. The statement that matches the principle is “The rudder.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "control surfaces",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "A trainee claims: “The aircraft’s maximum lift coefficient.” What correction is accurate about dynamic stability?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The location of the center of pressure only.",
-        "How the motion changes with time after a disturbance.",
-        "The initial restoring-moment direction only.",
-        "The aircraft’s maximum lift coefficient."
+        "The difference between the wing and tail dihedral angles",
+        "The difference between the wing and tail angles of incidence",
+        "When the wing has anhedral and the tail dihedral",
+        "The difference between the wing and tail angles of sweep"
       ],
       "answerIndex": 1,
-      "answerText": "How the motion changes with time after a disturbance.",
-      "explanation": "Dynamic stability concerns time history: whether oscillations decay, persist, or grow.\n\nApply it to dynamic stability. The statement that matches the principle is “How the motion changes with time after a disturbance.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
+      "answerText": "The difference between the wing and tail angles of incidence",
+      "explanation": "Longitudinal dihedral is the difference between the wing and tailplane incidence angles.",
       "tags": [
-        "original practice",
-        "dynamic stability",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
+        "stability and control",
+        "source pdf",
+        "question 16"
+      ]
     },
     {
-      "question": "What does positive static longitudinal stability mean after a small pitch disturbance?",
+      "question": "If an increase in power tends to make the nose of the aircraft dip, this is the result of the:",
       "questionType": "multiple_choice",
       "choices": [
-        "The initial pitching moment tends to restore the aircraft toward trim.",
-        "The disturbance produces an ever-increasing pitch moment away from trim.",
-        "The aircraft returns only after a pilot input.",
-        "The aircraft has no pitching moment at any angle."
-      ],
-      "answerIndex": 0,
-      "answerText": "The initial pitching moment tends to restore the aircraft toward trim.",
-      "explanation": "Static stability describes the initial tendency after a disturbance, independent of how the motion evolves over time.\n\nApply it to static stability. The statement that matches the principle is “The initial pitching moment tends to restore the aircraft toward trim.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
-      "tags": [
-        "original practice",
-        "static stability",
-        "theory"
-      ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
-    },
-    {
-      "question": "A trainee claims: “The aircraft returns only after a pilot input.” What correction is accurate about static stability?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The aircraft returns only after a pilot input.",
-        "The aircraft has no pitching moment at any angle.",
-        "The initial pitching moment tends to restore the aircraft toward trim.",
-        "The disturbance produces an ever-increasing pitch moment away from trim."
+        "Centre of lift being ahead of the centre of gravity",
+        "Centre of lift and centre of gravity being collocated",
+        "Line of thrust being above the centre of gravity",
+        "Line of thrust passing through the centre of gravity"
       ],
       "answerIndex": 2,
-      "answerText": "The initial pitching moment tends to restore the aircraft toward trim.",
-      "explanation": "Static stability describes the initial tendency after a disturbance, independent of how the motion evolves over time.\n\nApply it to static stability. The statement that matches the principle is “The initial pitching moment tends to restore the aircraft toward trim.” The other choices conflict with this relationship or definition.",
-      "explanationImages": [],
-      "questionImages": [],
+      "answerText": "Line of thrust being above the centre of gravity",
+      "explanation": "A thrust line above the centre of gravity creates a nose-down pitching moment when thrust increases.",
       "tags": [
-        "original practice",
-        "static stability",
-        "theory"
+        "stability and control",
+        "source pdf",
+        "question 17"
+      ]
+    },
+    {
+      "question": "The angle between the aeroplane longitudinal axis and the chord line is the:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Glide-path angle",
+        "Angle of incidence",
+        "Climb-path angle",
+        "Angle of attack"
       ],
-      "expectedAnswer": null,
-      "acceptedDeviation": 0
+      "answerIndex": 1,
+      "answerText": "Angle of incidence",
+      "explanation": "Angle of incidence is the fixed angle between the aircraft longitudinal axis and the wing chord line.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 18"
+      ]
+    },
+    {
+      "question": "How is longitudinal stability affected by positive camber of the aerofoil?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Positive, because the centre of pressure shifts rearward as angle of attack increases",
+        "Negative, because the lift vector rotates forward as angle of attack increases",
+        "Positive, because the lift vector rotates backward as angle of attack increases",
+        "No effect, because camber produces a constant pitch-down moment coefficient independent of angle of attack"
+      ],
+      "answerIndex": 3,
+      "answerText": "No effect, because camber produces a constant pitch-down moment coefficient independent of angle of attack",
+      "explanation": "The source key identifies the constant pitch-down moment coefficient of a cambered aerofoil as producing no change in longitudinal stability with angle of attack.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 19"
+      ]
+    },
+    {
+      "question": "Which aeroplane behaviour will be corrected by a yaw damper?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Spiral dive",
+        "Buffeting",
+        "Dutch roll",
+        "Tuck-under"
+      ],
+      "answerIndex": 2,
+      "answerText": "Dutch roll",
+      "explanation": "A yaw damper senses and counters yaw oscillations, damping Dutch roll.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 20"
+      ]
+    },
+    {
+      "question": "The aft movement of the centre of pressure during acceleration through the transonic flight regime will:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Decrease static lateral stability",
+        "Increase static longitudinal stability",
+        "Decrease longitudinal stability",
+        "Increase static lateral stability"
+      ],
+      "answerIndex": 1,
+      "answerText": "Increase static longitudinal stability",
+      "explanation": "An aft shift of the centre of pressure increases the longitudinal stability contribution in the condition described.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 21"
+      ]
+    },
+    {
+      "question": "Flap selection at constant IAS in straight and level flight will increase the:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Lift and drag",
+        "Maximum lift coefficient (CLmax) and drag",
+        "Lift coefficient and drag",
+        "Stall speed"
+      ],
+      "answerIndex": 1,
+      "answerText": "Maximum lift coefficient (CLmax) and drag",
+      "explanation": "Extending flaps raises maximum lift coefficient and increases drag.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 22"
+      ]
+    },
+    {
+      "question": "When spoilers are used as speed brakes:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "CLmax of the polar curve is not affected",
+        "They do not affect wheel-braking action during landing",
+        "At the same angle of attack, CL remains unaffected",
+        "At the same angle of attack, CD is increased and CL is decreased"
+      ],
+      "answerIndex": 3,
+      "answerText": "At the same angle of attack, CD is increased and CL is decreased",
+      "explanation": "Spoilers add drag and disrupt lift, increasing CD while decreasing CL at the same angle of attack.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 23"
+      ]
+    },
+    {
+      "question": "After a disturbance about the lateral axis, an aeroplane oscillates about the lateral axis at a constant amplitude. The aeroplane is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Statically unstable, dynamically stable",
+        "Statically stable, dynamically unstable",
+        "Statically unstable, dynamically neutral",
+        "Statically stable, dynamically neutral"
+      ],
+      "answerIndex": 3,
+      "answerText": "Statically stable, dynamically neutral",
+      "explanation": "A restoring response indicates static stability. Constant oscillation amplitude indicates neutral dynamic stability.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 24"
+      ]
+    },
+    {
+      "question": "What increases the stalling angle of attack? Use of:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Flaps",
+        "Spoilers",
+        "Fuselage-mounted speed brakes",
+        "Slats"
+      ],
+      "answerIndex": 3,
+      "answerText": "Slats",
+      "explanation": "Slats delay flow separation and let the wing reach a higher angle of attack before stalling.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 25"
+      ]
+    },
+    {
+      "question": "Which of the following are used as stall-warning devices?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Stick shaker and angle-of-attack indicator",
+        "Angle-of-attack indicator and speed indicator",
+        "Angle-of-attack sensor and stall strip",
+        "Stick shaker and stall strip"
+      ],
+      "answerIndex": 3,
+      "answerText": "Stick shaker and stall strip",
+      "explanation": "A stick shaker warns the pilot through the controls; a stall strip can trigger the aerodynamic warning cues used by the source material.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 26"
+      ]
+    },
+    {
+      "question": "When power-assisted controls are used for pitch control, this:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Makes trimming superfluous",
+        "Makes aerodynamic balancing of the control surfaces meaningless",
+        "Can function only with an elevator trim tab",
+        "Ensures that part of the aerodynamic forces is still felt on the column"
+      ],
+      "answerIndex": 3,
+      "answerText": "Ensures that part of the aerodynamic forces is still felt on the column",
+      "explanation": "The control system is arranged so the pilot retains aerodynamic feedback through the column.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 27"
+      ]
+    },
+    {
+      "question": "A plain flap will increase CLmax by:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Increasing the camber of the aerofoil",
+        "Increasing angle of attack",
+        "Boundary-layer control",
+        "Centre-of-lift movement"
+      ],
+      "answerIndex": 0,
+      "answerText": "Increasing the camber of the aerofoil",
+      "explanation": "A plain flap increases aerofoil camber, raising the maximum lift coefficient.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 28"
+      ]
+    },
+    {
+      "question": "A horn balance in a control system has the following purpose:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Decrease the effective longitudinal dihedral of the aeroplane",
+        "Decrease stick forces",
+        "Prevent flutter",
+        "Obtain mass balancing"
+      ],
+      "answerIndex": 1,
+      "answerText": "Decrease stick forces",
+      "explanation": "A horn balance reduces hinge moment and therefore lowers the pilot force needed to move the control surface.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 29"
+      ]
+    },
+    {
+      "question": "Winglets:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Decrease induced drag",
+        "Decrease static lateral stability",
+        "Increase manoeuvrability",
+        "Create an elliptical lift distribution"
+      ],
+      "answerIndex": 0,
+      "answerText": "Decrease induced drag",
+      "explanation": "Winglets reduce wingtip-vortex losses and induced drag.",
+      "tags": [
+        "stability and control",
+        "source pdf",
+        "question 30"
+      ]
     }
   ]
 }
