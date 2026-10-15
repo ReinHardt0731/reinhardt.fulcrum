@@ -1,0 +1,1362 @@
+{
+  "title": "Aerodynamics Exam: Funda, Subsonic",
+  "questions": [
+    {
+      "question": "Shock induced separation results in",
+      "questionType": "multiple_choice",
+      "choices": [
+        "decreasing lift.",
+        "constant lift.",
+        "increasing lift.",
+        "decreasing drag."
+      ],
+      "answerIndex": 0,
+      "answerText": "decreasing lift.",
+      "explanation": "Shock-induced flow separation occurs when the adverse pressure gradient behind a shock wave causes the boundary layer to separate from the surface. The separated flow reduces the effectiveness of the aerofoil and therefore produces a loss of lift.\n\nWhy the other choices are incorrect:\n• Constant lift → Separation generally reduces aerodynamic effectiveness.\n• Increasing lift → Flow separation is associated with reduced lift, not increased lift.\n• Decreasing drag → Separation normally increases drag, particularly pressure/wave-related drag.\n\nDifferentiate Similar Concepts:\n• Shock-induced separation → Boundary-layer separation caused by the adverse pressure gradient behind a shock.\n• Shock stall → Significant lift loss associated with shock-induced separation at high Mach number.\n\n💡 Memory Hook:\nShock + $separation = lift$ degradation.\n\n🎯 Board Tip:\nWhen a question links shock-induced separation with an aerodynamic consequence, think loss of lift and increase of drag.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Compressible Flow",
+        "Boundary Layer",
+        "Shock Waves",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "High Aspect Ratio, as compared with low Aspect Ratio, has the effect of:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Decreasing induced drag and critical angle of attack",
+        "Increasing lift and critical angle of attack",
+        "Increasing lift and drag",
+        "Increasing induced drag and decreasing critical angle of attack"
+      ],
+      "answerIndex": 0,
+      "answerText": "Decreasing induced drag and critical angle of attack",
+      "explanation": "A higher aspect ratio reduces the strength of the wingtip-vortex system for a given lift condition and therefore reduces induced drag. The source question also associates high aspect ratio with a reduced critical angle of attack.\n\nWhy the other choices are incorrect:\n• Increasing lift and critical angle of attack → High aspect ratio does not simply increase lift independently of the flight condition.\n• Increasing lift and drag → The characteristic reduction is in induced drag.\n• Increasing induced drag → This is opposite to the normal effect of increasing aspect ratio.\n\nDifferentiate Similar Concepts:\n• High aspect ratio → Long, relatively slender wing; lower induced drag.\n• Low aspect ratio → Shorter, broader wing; greater induced-drag effects.\n\n💡 Memory Hook:\nHigh $AR = less$ vortex penalty.\n\n🎯 Board Tip:\nInduced drag varies inversely with aspect ratio for otherwise comparable conditions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Wing Geometry",
+        "Aspect Ratio",
+        "Induced Drag",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which kind of 'tab' is commonly used in case of manual reversion of fully powered flight controls?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Balance tab",
+        "Anti-balance tab",
+        "Servo tab",
+        "Spring tab"
+      ],
+      "answerIndex": 2,
+      "answerText": "Servo tab",
+      "explanation": "A servo tab can provide aerodynamic assistance to move a primary control surface when the normal powered-control system is unavailable. This makes it suitable for manual reversion arrangements in fully powered flight-control systems.\n\nWhy the other choices are incorrect:\n• Balance tab → Primarily reduces the aerodynamic force required to move the control surface.\n• Anti-balance tab → Increases control feel/stability and opposes excessive free movement.\n• Spring tab → Provides assistance according to control-force requirements, but it is not the tab identified by the source question for manual reversion.\n\nDifferentiate Similar Concepts:\n• Servo tab → Aerodynamically moves the main control surface.\n• Trim tab → Changes trim condition and reduces sustained control force.\n• Balance tab → Reduces hinge moment/control force.\n\n💡 Memory Hook:\nServo $tab = servo$ assistance.\n\n🎯 Board Tip:\nIf the question describes loss of hydraulic/powered control and asks what assists manual control, think servo tab.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Flight Controls",
+        "Control Tabs",
+        "Manual Reversion",
+        "Application"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The induced drag:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "increases as the aspect ratio increases.",
+        "has no relation to the lift coefficient.",
+        "increases as the magnitude of the tip vortices decreases.",
+        "increases as the lift coefficient increases."
+      ],
+      "answerIndex": 3,
+      "answerText": "increases as the lift coefficient increases.",
+      "explanation": "Induced drag is associated with producing lift on a finite wing. For a given aircraft configuration, the induced-drag coefficient varies approximately with the square of the lift coefficient, so induced drag increases as the lift coefficient increases.\n\nWhy the other choices are incorrect:\n• Increasing aspect ratio → Generally reduces induced drag.\n• No relation to lift coefficient → Incorrect; induced drag is strongly dependent on CL.\n• Decreasing tip-vortex magnitude → Generally associated with reduced induced drag.\n\nDifferentiate Similar Concepts:\n• Induced drag → Dominant at high lift coefficients and low speeds.\n• Parasite drag → Generally increases strongly with speed.\n\n💡 Memory Hook:\nMore $lift = more$ induced drag.\n\n🎯 Board Tip:\nRemember the relationship: $C_{D_i} \\propto   C_L^{2} / AR$.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Drag",
+        "Induced Drag",
+        "Lift Coefficient",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "\"Tuck under\" is caused by (i) which movement of the centre of pressure of the wing and (ii) which change of the downwash angle at the location of the stabilizer?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "(i) aft (ii) decreasing",
+        "(i) forward (ii) decreasing",
+        "(i) aft (ii) increasing",
+        "(i) forward (ii) increasing"
+      ],
+      "answerIndex": 0,
+      "answerText": "(i) aft (ii) decreasing",
+      "explanation": "Tuck under is a nose-down tendency associated with increasing Mach number in the transonic regime. As the wing's centre of pressure moves aft and the downwash at the horizontal stabilizer decreases, the pitching-moment balance changes in the nose-down direction.\n\nWhy the other choices are incorrect:\n• Forward centre-of-pressure movement → Does not describe the normal transonic tuck-under mechanism.\n• Increasing downwash → Opposite to the downwash change associated with the phenomenon.\n\nDifferentiate Similar Concepts:\n• Tuck under → Nose-down tendency as Mach number increases.\n• Pitch-up → Nose-up tendency, often associated with swept-wing low-speed stall characteristics.\n\n💡 Memory Hook:\nTuck $under = CP$ aft + downwash down.\n\n🎯 Board Tip:\nIf you see transonic acceleration + nose-down tendency, immediately consider tuck under.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Transonic Aerodynamics",
+        "Longitudinal Stability",
+        "Centre of Pressure",
+        "Board Questions"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "During flap down selection in a continuous straight and level flight at constant IAS and weight:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the centre of pressure moves aft.",
+        "the lift coefficient remains approximately constant while the drag coefficient increases.",
+        "the stall speed increases.",
+        "the total boundary layer becomes laminar."
+      ],
+      "answerIndex": 1,
+      "answerText": "the lift coefficient remains approximately constant while the drag coefficient increases.",
+      "explanation": "In steady, straight-and-level flight at the same weight, lift remains equal to weight. At constant IAS, dynamic pressure is approximately constant, so the lift coefficient remains approximately constant. Extending flaps increases drag, so the drag coefficient increases.\n\nWhy the other choices are incorrect:\n• The centre of pressure does not provide a general rule that it must move aft for every flap design.\n• Stall speed normally decreases when flaps increase maximum lift coefficient.\n• Flap extension does not make the entire boundary layer laminar; separation and turbulent flow remain important.\n\nDifferentiate Similar Concepts:\n• Lift in steady level flight → equals aircraft weight.\n• Lift coefficient → approximately unchanged here because weight and dynamic pressure are unchanged.\n• Drag coefficient → increases with flap extension.\n\n💡 Memory Hook:\nSame weight + same IAS + level flight → same lift; flaps add drag.\n\n🎯 Board Tip:\nDistinguish a change in lift capability from the lift actually required in steady level flight.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "High-Lift Devices",
+        "Flaps",
+        "Lift Coefficient",
+        "Drag Coefficient",
+        "Application"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The vane of a stall warning system with a flapper switch is activated by the change of the:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "point of lowest pressure.",
+        "stagnation point.",
+        "centre of pressure.",
+        "centre of gravity."
+      ],
+      "answerIndex": 1,
+      "answerText": "stagnation point.",
+      "explanation": "A vane-type stall warning system can respond to the movement of the stagnation point as the aircraft's angle of attack changes. Near the stall, the aerodynamic flow pattern shifts and the stagnation point moves, actuating the warning mechanism.\n\nWhy the other choices are incorrect:\n• Point of lowest pressure → This is related to pressure distribution but is not the location used by the vane mechanism described.\n• Centre of pressure → The centre of pressure changes with aerodynamic loading but does not directly actuate the vane.\n• Centre of gravity → CG position is a mass-distribution parameter and does not activate a stall-warning vane.\n\nDifferentiate Similar Concepts:\n• Stagnation point → Location where local airflow velocity approaches zero.\n• Centre of pressure → Point through which the resultant aerodynamic force acts.\n• Centre of gravity → Point through which aircraft weight acts.\n\n💡 Memory Hook:\nStall vane follows airflow, not aircraft weight.\n\n🎯 Board Tip:\nDo not confuse stagnation point with centre of pressure; they describe different aerodynamic concepts.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Stall Warning",
+        "Angle of Attack",
+        "Flight Instruments",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An aeroplane has static directional stability; in a sideslip to the right, initially the:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "nose of the aeroplane tends to move to the right.",
+        "right wing tends to go down.",
+        "nose of the aeroplane will remain in the same direction.",
+        "nose of the aeroplane tends to move to the left."
+      ],
+      "answerIndex": 3,
+      "answerText": "nose of the aeroplane tends to move to the left.",
+      "explanation": "Static directional stability produces a restoring yawing moment toward the original equilibrium condition. In a right sideslip, the relative airflow acts from the right side of the aircraft. The vertical tail generates a restoring side force that tends to yaw the nose to the left, reducing the sideslip.\n\nWhy the other choices are incorrect:\n• Nose moves right → This would reinforce the right sideslip rather than restore the aircraft.\n• Right wing goes down → This is a rolling response and does not describe the primary directional-stability response.\n• Nose remains in the same direction → Static directional stability produces a restoring tendency rather than no response.\n\nDifferentiate Similar Concepts:\n• Directional stability → Yaw about the vertical axis.\n• Lateral stability → Roll about the longitudinal axis.\n\n💡 Memory Hook:\nSideslip right → weathercock left.\n\n🎯 Board Tip:\nDirectional stability is essentially the aircraft's weathercock tendency: the nose tends to align with the relative airflow.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Directional Stability",
+        "Sideslip",
+        "Static Stability",
+        "Application"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The C.G. position of an aeroplane is forward of the neutral point in a fixed location. Speed changes cause a departure from the trimmed position. Which of the following statements about the stick force stability is correct?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Increase of speed generates pull forces.",
+        "Aeroplane nose up trim decreases the stick force stability.",
+        "Stick force stability is not affected by trim.",
+        "Increasing 10 kt trimmed at low speed has more effect on the stick force than increasing 10 kt trimmed at high speed."
+      ],
+      "answerIndex": 0,
+      "answerText": "Increase of speed generates pull forces.",
+      "explanation": "With the centre of gravity forward of the neutral point, the aeroplane has positive longitudinal static stability. When speed increases away from the trimmed condition, the resulting tendency requires a corrective pull force on the control column, providing positive stick-force stability.\n\nWhy the other choices are incorrect:\n• Nose-up trim does not simply make stick-force stability disappear; trim setting affects the control-force relationship.\n• Stick-force stability can be affected by trim conditions.\n• For a fixed 10-knot speed change, the aerodynamic force change is not simply greater at low speed as stated.\n\nDifferentiate Similar Concepts:\n• Static stability → Initial tendency after displacement.\n• Stick-force stability → Change in control force required with changes in speed/load factor.\n\n💡 Memory Hook:\nStable aircraft + speed $increase = pull$.\n\n🎯 Board Tip:\nA CG ahead of the neutral point is a fundamental indicator of positive longitudinal static stability.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Longitudinal Stability",
+        "Stick Force Stability",
+        "Centre of Gravity",
+        "Board Questions"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In case the Mach trimmer fails:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the aeroplane weight must be limited.",
+        "the Mach number must be limited.",
+        "try to relocate the centre-of-gravity aft.",
+        "the speed must be kept constant."
+      ],
+      "answerIndex": 1,
+      "answerText": "the Mach number must be limited.",
+      "explanation": "A Mach-trim system compensates for changes in longitudinal stability and pitching characteristics that occur as Mach number increases, particularly on swept-wing transport aircraft. If the system fails, operation may need to be restricted to a lower Mach number so that the aircraft remains within acceptable handling characteristics.\n\nWhy the other choices are incorrect:\n• Limiting aircraft weight → Weight is not the direct operational limitation caused by Mach-trim failure.\n• Moving the CG aft → This would reduce longitudinal stability and is not an appropriate corrective action.\n• Keeping speed constant → The issue is specifically associated with Mach-dependent aerodynamic effects, so a Mach limitation is more appropriate.\n\nDifferentiate Similar Concepts:\n• Mach trimmer → Compensates for Mach-related longitudinal trim/stability changes.\n• Speed trim → Adjusts trim as speed changes in other flight regimes.\n\n💡 Memory Hook:\nMach trim fails → Mach must be limited.\n\n🎯 Board Tip:\nFor a failed Mach-trim system, think operational Mach limitation rather than a weight or CG adjustment.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Mach Trim",
+        "Longitudinal Stability",
+        "Transonic Aerodynamics",
+        "Board Questions"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the effect of high aspect ratio of an aeroplane's wing on induced drag?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It is reduced because the effect of wing-tip vortices is reduced.",
+        "It is increased because high aspect ratio has greater frontal area.",
+        "It is unaffected because there is no relation between aspect ratio and induced drag.",
+        "It is increased because high aspect ratio produces greater downwash."
+      ],
+      "answerIndex": 0,
+      "answerText": "It is reduced because the effect of wing-tip vortices is reduced.",
+      "explanation": "Increasing aspect ratio reduces induced drag because a high-aspect-ratio wing produces a smaller induced angle of attack and weaker wingtip-vortex effects for a given lift condition.\n\nWhy the other choices are incorrect:\n• Increased because high aspect ratio has greater frontal area → Aspect ratio does not mean that the wing necessarily has greater frontal area. Its primary aerodynamic effect is to reduce induced drag.\n• Unaffected because there is no relation between aspect ratio and induced drag → Aspect ratio has a direct relationship with induced drag.\n• Increased because high aspect ratio produces greater downwash → A high aspect ratio generally reduces the induced-angle and vortex effects associated with lift production.\n\nDifferentiate Similar Concepts:\n• High aspect ratio → Lower induced drag.\n• Low aspect ratio → Higher induced drag.\n• Induced drag → Associated with lift production and wingtip vortices.\n\n💡 Memory Hook:\nHigh $AR = long$ $wing = less$ vortex drag.\n\n🎯 Board Tip:\nRemember the relationship: induced drag decreases as aspect ratio increases.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Aspect Ratio",
+        "Induced Drag",
+        "Wing Design",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The angle of attack of a two dimensional wing section is the angle between:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the fuselage core line and the free stream direction.",
+        "the chord line and the camber line of the aerofoil.",
+        "the chord line of the aerofoil and the free stream direction.",
+        "the chord line of the aerofoil and the fuselage centreline."
+      ],
+      "answerIndex": 2,
+      "answerText": "the chord line of the aerofoil and the free stream direction.",
+      "explanation": "The angle of attack is the angle between the aerofoil chord line and the direction of the undisturbed relative airflow or free stream.\n\nWhy the other choices are incorrect:\n• Fuselage core line and free stream direction → This describes an aircraft-level attitude relationship, not the aerofoil's angle of attack.\n• Chord line and camber line → These are geometric characteristics of the aerofoil and do not define angle of attack.\n• Chord line and fuselage centreline → This relates the wing geometry to the aircraft structure rather than the airflow.\n\nDifferentiate Similar Concepts:\n• Angle of attack → Chord line vs. relative airflow.\n• Angle of incidence → Chord line vs. aircraft reference line.\n• Flight-path angle → Aircraft flight path vs. horizon.\n\n💡 Memory Hook:\n$AOA = chord$ vs. airflow.\n\n🎯 Board Tip:\nNever confuse angle of attack with angle of incidence. AOA changes with the aircraft's flight condition; incidence is a fixed geometric relationship.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Angle of Attack",
+        "Aerofoil",
+        "Aerodynamic Angles",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How does VMCG change with increasing field elevation and temperature?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "increases, because at a lower density a larger IAS is necessary to generate the required rudder force",
+        "increases, because VMCG is related to V1 and VR and those speeds increase if the density decreases",
+        "decreases, because the engine thrust decreases.",
+        "decreases, because VMCG is expressed in IAS and the IAS decreases with TAS constant and decreasing density"
+      ],
+      "answerIndex": 2,
+      "answerText": "decreases, because the engine thrust decreases.",
+      "explanation": "As field elevation and temperature increase, air density decreases. For a normally aspirated or otherwise density-dependent engine, available engine thrust decreases. With less asymmetric thrust following an engine failure, less rudder force is required to maintain directional control, so the minimum control speed on the ground can decrease.\n\nWhy the other choices are incorrect:\n• Increases because a larger IAS is required → This does not account for the reduction in asymmetric engine thrust.\n• Increases because VMCG is related to V1 and VR → VMCG is determined by directional-control considerations rather than simply tracking V1 and VR.\n• Decreases because IAS decreases with TAS constant → VMCG is not based on an assumption of constant TAS while density changes.\n\nDifferentiate Similar Concepts:\n• VMCG → Minimum control speed on the ground after the critical engine fails.\n• VMCA → Minimum control speed in the air.\n• V1 → Takeoff decision speed.\n\n💡 Memory Hook:\nHot and high → less thrust → less yaw → lower VMCG.\n\n🎯 Board Tip:\nWhen solving VMCG questions, always consider the change in asymmetric thrust and the rudder authority available to oppose it.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "VMCG",
+        "Engine Failure",
+        "Directional Control",
+        "Performance",
+        "Board Questions"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The lift coefficient (CL) of an aeroplane in steady horizontal flight is 0.4. Increase of angle of attack of 1 degree will increase CL by 0.09. A vertical up gust instantly changes the angle of attack by 5 degrees. The load factor will be:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "2.13",
+        "1.09",
+        "2.0",
+        "3.18"
+      ],
+      "answerIndex": 0,
+      "answerText": "2.13",
+      "explanation": "The initial lift coefficient is $C_L = 0.4$. A 5° increase in angle of attack produces an increase in CL of 5 × $0.09 = 0.45$. Therefore, the new lift coefficient is 0.4 + $0.45 = 0.85$. Since weight remains essentially unchanged during the instantaneous gust, the load factor is proportional to the ratio of new lift to the original lift: $n = 0.85 / 0.4 = 2.125$, approximately 2.13.\n\nCalculation:\n• Initial $C_L = 0.40$\n• Change in $C_L = 5    \\times    0.09 = 0.45$\n• New $C_L = 0.40 + 0.45 = 0.85$\n• Load $factor = 0$.$85 / 0$.$40 = 2.125 ≈   2.13$\n\nWhy the other choices are incorrect:\n• 1.09 → Does not account for the full 5° change in angle of attack.\n• 2.0 → Close but does not result from the given numerical relationship.\n• 3.18 → Overestimates the increase in lift coefficient.\n\n💡 Memory Hook:\nGust changes AOA → calculate ΔCL → compare new CL with old CL.\n\n🎯 Board Tip:\nFor an instantaneous gust with unchanged aircraft weight and dynamic pressure, the load-factor change can be determined from the ratio of the new and original lift coefficients.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Load Factor",
+        "Gust Loads",
+        "Lift Coefficient",
+        "Calculation",
+        "Board Questions"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The total pressure is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "static pressure plus the dynamic pressure.",
+        "static pressure minus the dynamic pressure.",
+        "½ rho $V^{2}$",
+        "can be measured in a small hole in a surface, parallel to the local stream."
+      ],
+      "answerIndex": 0,
+      "answerText": "static pressure plus the dynamic pressure.",
+      "explanation": "For incompressible flow, Bernoulli's equation gives total pressure as the sum of static pressure and dynamic pressure: $P_t = P_s + q$, where $q = \\frac{1}{2}\\rho V^{2}$.\n\nWhy the other choices are incorrect:\n• Static pressure minus dynamic pressure → This does not represent total pressure.\n• ½$\\rho V^{2}$ → This is dynamic pressure, not total pressure.\n• Small hole parallel to the local stream → A pressure measurement aligned with the flow can measure static pressure; total pressure requires the flow to be brought to rest at the sensing point, as in a pitot probe.\n\nDifferentiate Similar Concepts:\n• Static pressure → Thermodynamic pressure of the moving air.\n• Dynamic pressure → ½$\\rho V^{2}$.\n• Total pressure → Static pressure + dynamic pressure for incompressible flow.\n\n💡 Memory Hook:\n$Total = Static + Dynamic$.\n\n🎯 Board Tip:\nRemember Bernoulli's relationship: $P_t = P_s + q$.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Pressure",
+        "Bernoulli's Equation",
+        "Dynamic Pressure",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Consider an aerofoil with a certain camber and a positive angle of attack. At which location will the highest flow velocities occur?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "In the stagnation point",
+        "Upper side",
+        "Lower side",
+        "In front of the stagnation point"
+      ],
+      "answerIndex": 1,
+      "answerText": "Upper side",
+      "explanation": "For a cambered aerofoil at a positive angle of attack, the airflow accelerates strongly over the upper surface. The resulting higher velocity is associated with a lower static pressure over the upper surface and contributes to the generation of lift.\n\nWhy the other choices are incorrect:\n• Stagnation point → Velocity is approximately zero at a stagnation point, so it cannot have the highest flow velocity.\n• Lower side → The flow velocity is generally lower than the accelerated flow over the upper surface for this condition.\n• In front of the stagnation point → This does not represent the region of maximum surface velocity.\n\nDifferentiate Similar Concepts:\n• Stagnation point → Local velocity approaches zero.\n• Upper-surface flow → Generally accelerated over a positively loaded aerofoil.\n• Static pressure → Generally decreases where local flow velocity increases in subsonic incompressible flow.\n\n💡 Memory Hook:\nUpper $surface = airflow$ speeds up.\n\n🎯 Board Tip:\nWhen asked where the highest velocity occurs around a normally lifting aerofoil, look first at the upper surface.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Aerofoil",
+        "Flow Velocity",
+        "Pressure Distribution",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which moments or motions interact in a Dutch roll?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Pitching and adverse yaw.",
+        "Rolling and yawing.",
+        "Pitching and yawing.",
+        "Pitching and rolling."
+      ],
+      "answerIndex": 1,
+      "answerText": "Rolling and yawing.",
+      "explanation": "Dutch roll is a coupled lateral-directional oscillation involving rolling and yawing motions. It is particularly characteristic of swept-wing aircraft and results from the interaction of directional and lateral stability.\n\nWhy the other choices are incorrect:\n• Pitching and adverse yaw → Pitching is primarily a longitudinal motion and is not the defining pair in Dutch roll.\n• Pitching and yawing → These are not the characteristic coupled motions of Dutch roll.\n• Pitching and rolling → Dutch roll is not primarily a pitch-roll oscillation.\n\nDifferentiate Similar Concepts:\n• Dutch roll → Coupled yawing and rolling oscillation.\n• Phugoid → Long-period longitudinal oscillation involving speed and altitude.\n• Short-period mode → Rapid longitudinal pitch oscillation.\n\n💡 Memory Hook:\nDutch $roll = yaw + roll$.\n\n🎯 Board Tip:\nIf you see Dutch roll, immediately think lateral-directional coupling.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Dutch Roll",
+        "Aircraft Stability",
+        "Lateral Stability",
+        "Directional Stability",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The term angle of attack in a two dimensional flow is defined as:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the angle formed by the longitudinal axis of the aeroplane and the chord line of the wing",
+        "the angle for maximum lift/drag ratio",
+        "the angle between the wing chord line and the direction of the relative wind/airflow.",
+        "the angle between the aeroplane climb path and the horizon."
+      ],
+      "answerIndex": 2,
+      "answerText": "the angle between the wing chord line and the direction of the relative wind/airflow.",
+      "explanation": "Angle of attack is the angle between the aerofoil chord line and the direction of the relative airflow. It is one of the fundamental variables governing the lift generated by an aerofoil.\n\nWhy the other choices are incorrect:\n• Longitudinal axis and chord line → This describes a geometric relationship related to incidence rather than angle of attack.\n• Angle for maximum lift/drag ratio → This is a particular operating angle of attack, not the definition of angle of attack itself.\n• Climb path and horizon → This is the flight-path or climb angle.\n\nDifferentiate Similar Concepts:\n• Angle of attack → Chord line vs. relative airflow.\n• Angle of incidence → Chord line vs. aircraft reference line.\n• Climb angle → Flight path vs. horizontal reference.\n\n💡 Memory Hook:\n$AOA = chord$ vs. relative wind.\n\n🎯 Board Tip:\nThe angle of attack can change continuously during flight; the angle of incidence is normally a fixed geometric characteristic.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Angle of Attack",
+        "Relative Wind",
+        "Aerodynamic Angles",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The formula for the Mach Number is: ($a = speed$ of sound)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "$M = \\mathrm{\\mathrm{IAS}} / a$",
+        "$M = \\mathrm{\\mathrm{TAS}} / a$",
+        "$M = a / \\mathrm{\\mathrm{TAS}}$",
+        "$M = \\mathrm{\\mathrm{TAS}}    \\times    a$"
+      ],
+      "answerIndex": 1,
+      "answerText": "$M = \\mathrm{\\mathrm{TAS}} / a$",
+      "explanation": "Mach number is the ratio of the true airspeed of the aircraft to the local speed of sound: $M = \\mathrm{\\mathrm{TAS}} / a$.\n\nWhy the other choices are incorrect:\n• IAS / a → Mach number is based on true airspeed relative to the local speed of sound, not IAS.\n• a / TAS → This is the inverse of the Mach-number relationship.\n• TAS × a → Mach number is a ratio, not a product.\n\nDifferentiate Similar Concepts:\n• Mach number → TAS divided by local speed of sound.\n• TAS → Actual aircraft speed through the air.\n• Speed of sound → Depends primarily on temperature.\n\n💡 Memory Hook:\n$Mach = aircraft$ speed ÷ sound speed.\n\n🎯 Board Tip:\nAlways use the LOCAL speed of sound when calculating Mach number.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Mach Number",
+        "Compressible Flow",
+        "True Airspeed",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Low speed pitch up is caused by the:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "spanwise flow on a swept back wing.",
+        "spanwise flow on a swept forward wing.",
+        "wing tip vortex.",
+        "Mach trim system."
+      ],
+      "answerIndex": 0,
+      "answerText": "spanwise flow on a swept back wing.",
+      "explanation": "Low-speed pitch-up on a swept-back wing is associated with spanwise airflow. At high angles of attack, the spanwise flow toward the wing tips can contribute to premature tip-region separation. The resulting loss of lift near the tips can shift the aerodynamic loading and produce a nose-up pitching tendency.\n\nWhy the other choices are incorrect:\n• Spanwise flow on a swept-forward wing → The phenomenon described in this question is characteristic of swept-back-wing aerodynamics.\n• Wingtip vortex → Wingtip vortices contribute to induced drag but are not the primary cause of the low-speed pitch-up phenomenon described here.\n• Mach trim system → Mach trim addresses high-speed/transonic longitudinal trim effects rather than low-speed swept-wing pitch-up.\n\nDifferentiate Similar Concepts:\n• Low-speed pitch-up → Associated with swept-back-wing flow and tip stall tendencies.\n• Tuck under → High-speed/transonic nose-down tendency.\n• Dutch roll → Coupled yaw-roll oscillation.\n\n💡 Memory Hook:\nSwept-back + high $AOA = spanwise$ flow → pitch-up risk.\n\n🎯 Board Tip:\nDo not confuse low-speed pitch-up with tuck under. Pitch-up is a low-speed swept-wing phenomenon; tuck under is associated with increasing Mach number.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Swept Wings",
+        "Pitch-Up",
+        "Spanwise Flow",
+        "Stall",
+        "Board Questions"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The buffet margin :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "is always greatest after a stepclimb has been executed.",
+        "decreases during a descent with a constant Mach number.",
+        "is always positive at Mach numbers below MMO.",
+        "increases during a descent with a constant IAS."
+      ],
+      "answerIndex": 3,
+      "answerText": "increases during a descent with a constant IAS.",
+      "explanation": "Buffet margin is the available margin between the low-speed buffet boundary and the high-speed buffet boundary. During a descent at constant IAS, the aircraft's Mach number decreases as altitude decreases. This moves the aircraft farther away from the high-speed buffet boundary, increasing the available buffet margin.\n\nWhy the other choices are incorrect:\n• Is always greatest after a stepclimb → A stepclimb does not universally guarantee the greatest buffet margin.\n• Decreases during a descent with a constant Mach number → This is not the relationship represented by the source question.\n• Is always positive at Mach numbers below MMO → MMO is an operational limit and does not by itself guarantee a positive buffet margin.\n\nDifferentiate Similar Concepts:\n• Buffet margin → Separation between low-speed and high-speed buffet boundaries.\n• Low-speed buffet → Associated with high angle of attack/stall-related flow separation.\n• High-speed buffet → Associated with compressibility and shock-induced separation.\n\n💡 Memory Hook:\nConstant IAS + descent → Mach falls → more high-speed margin.\n\n🎯 Board Tip:\nFor buffet-margin questions, distinguish between constant IAS and constant Mach conditions because altitude changes affect Mach and aerodynamic margins differently.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Buffet Margin",
+        "High-Speed Aerodynamics",
+        "Flight Envelope",
+        "Application"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following factors will lead to an increase of ground distance during a glide ?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "decrease of aeroplane weight",
+        "tailwind",
+        "headwind",
+        "increase of aeroplane weight"
+      ],
+      "answerIndex": 1,
+      "answerText": "tailwind",
+      "explanation": "A tailwind increases the aircraft's groundspeed during a glide. Since the aircraft travels farther horizontally over the ground for a given amount of time and altitude loss, the ground distance covered increases.\n\nWhy the other choices are incorrect:\n• Decrease of aeroplane weight → Weight can affect glide performance and the optimum speed, but it is not the direct factor listed here that increases ground distance as strongly as wind direction.\n• Headwind → A headwind reduces groundspeed and therefore reduces the horizontal ground distance covered.\n• Increase of aeroplane weight → Weight changes the optimum glide speed but does not directly provide the same ground-distance increase as a tailwind.\n\nDifferentiate Similar Concepts:\n• Tailwind → Increases groundspeed and ground distance in a glide.\n• Headwind → Decreases groundspeed and ground distance.\n• Still air → Ground distance is determined primarily by the aircraft's glide performance/$L/D$ ratio.\n\n💡 Memory Hook:\nTailwind pushes you farther across the ground.\n\n🎯 Board Tip:\nFor glide-distance questions, separate **air distance** from **ground distance**. Wind changes ground distance, while $L/D$ determines the aircraft's aerodynamic glide capability.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Glide Performance",
+        "Wind",
+        "Ground Distance",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A propeller turns to the right, seen from behind. The torque effect in the take-off will:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "roll the aeroplane to the left.",
+        "pitch the aeroplane nose down.",
+        "roll the aeroplane to the right.",
+        "pitch the aeroplane nose up."
+      ],
+      "answerIndex": 0,
+      "answerText": "roll the aeroplane to the left.",
+      "explanation": "Propeller torque produces a reaction on the aircraft in the opposite direction to the propeller's rotation. If the propeller turns to the right when viewed from behind, the aircraft tends to roll to the left.\n\nWhy the other choices are incorrect:\n• Pitch the aeroplane nose down → Torque is primarily a rolling reaction, not a direct pitching reaction.\n• Roll the aeroplane to the right → This is opposite to the reaction expected from the propeller rotation.\n• Pitch the aeroplane nose up → Torque does not directly produce this pitching effect.\n\nDifferentiate Similar Concepts:\n• Torque reaction → Rolling tendency opposite the propeller rotation.\n• P-factor → Asymmetric propeller thrust caused by blade-angle-of-attack differences.\n• Spiraling slipstream → Rotating propeller wake affecting the aircraft's surfaces.\n\n💡 Memory Hook:\nPropeller right → aircraft torque rolls left.\n\n🎯 Board Tip:\nAlways establish the propeller's rotation direction **as viewed from behind**, because the wording can easily reverse the expected answer.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Propeller Effects",
+        "Torque",
+        "Takeoff",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which statement about the trim position is true related to centre of gravity and adjustable stabiliser position ?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A nose heavy aeroplane requires that the stabiliser leading edge is lower than compared with a tail heavy aeroplane",
+        "Because characteristic speeds at take off do not vary with centre of gravity location, the need for stabiliser adjustment is dependent on flap position only.",
+        "A nose heavy aeroplane requires that the stabiliser leading edge is higher than compared with a tail heavy aeroplane.",
+        "At the forward limit for centre of gravity, stabiliser trim is adjusted maximum Nose Down to obtain maximum elevator authority at take off rotation."
+      ],
+      "answerIndex": 0,
+      "answerText": "A nose heavy aeroplane requires that the stabiliser leading edge is lower than compared with a tail heavy aeroplane",
+      "explanation": "A nose-heavy aircraft has its centre of gravity farther forward and therefore requires a greater nose-up pitching moment from the tailplane/stabilizer. With an adjustable stabilizer, positioning the stabilizer leading edge lower produces the required aerodynamic tail force for trim.\n\nWhy the other choices are incorrect:\n• Stabiliser leading edge higher → This would correspond to the opposite trim requirement and does not provide the required nose-up trimming effect for the nose-heavy condition.\n• Takeoff speeds do vary with CG location → CG position affects the aircraft's rotation characteristics, trim requirements, and available elevator authority.\n• Maximum Nose Down trim at forward CG → A forward CG generally requires more nose-up trimming capability, not maximum nose-down trim.\n\nDifferentiate Similar Concepts:\n• Forward CG → More stable, greater control force, greater nose-up trim requirement.\n• Aft CG → Less stable and generally requires less nose-up trimming moment.\n• Adjustable stabilizer → Changes the aircraft's trimming moment over a broad range.\n\n💡 Memory Hook:\nForward $CG = nose$ $heavy = more$ nose-up trim.\n\n🎯 Board Tip:\nDo not confuse stabilizer movement with elevator movement. The stabilizer establishes the basic trim condition while the elevator provides control around that trimmed condition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Longitudinal Trim",
+        "Centre of Gravity",
+        "Horizontal Stabilizer",
+        "Application"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following statements about a constant speed propeller is correct?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The blade angle increases with increasing speed.",
+        "The propeller system keeps the aeroplane speed constant.",
+        "The RPM decreases with increasing aeroplane speed.",
+        "The selected RPM is kept constant by the manifold pressure."
+      ],
+      "answerIndex": 0,
+      "answerText": "The blade angle increases with increasing speed.",
+      "explanation": "A constant-speed propeller uses a governor to maintain the selected engine RPM. When aircraft speed increases, the propeller tends to turn faster, so the governor increases blade pitch to increase aerodynamic resistance and keep RPM approximately constant.\n\nWhy the other choices are incorrect:\n• The propeller system keeps aeroplane speed constant → A constant-speed propeller maintains selected RPM, not aircraft airspeed.\n• RPM decreases with increasing aeroplane speed → The governor changes blade angle to prevent RPM from changing significantly.\n• Selected RPM is kept constant by manifold pressure → Manifold pressure controls engine power; the propeller governor controls blade pitch to maintain RPM.\n\nDifferentiate Similar Concepts:\n• Constant-speed propeller → Maintains selected RPM by changing blade pitch.\n• Fixed-pitch propeller → Blade angle cannot automatically change.\n• Manifold pressure → Indicates/controls engine power in piston-engine applications.\n\n💡 Memory Hook:\nConstant-speed $propeller = constant$ RPM, variable pitch.\n\n🎯 Board Tip:\nIf aircraft speed increases and the selected RPM is to remain constant, think **increase blade angle/pitch**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Propellers",
+        "Constant-Speed Propeller",
+        "Blade Angle",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which statement is correct at the speed for minimum drag (subsonic) ?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Induced drag is greater than the parasite drag.",
+        "Propeller aeroplanes fly at that speed at max. endurance.",
+        "The gliding angle is minimum.",
+        "The $C_L/C_D$ ratio is minimum."
+      ],
+      "answerIndex": 2,
+      "answerText": "The gliding angle is minimum.",
+      "explanation": "The speed for minimum drag corresponds to the maximum lift-to-drag ratio, $C_L/C_D$ maximum. At this condition, the aircraft achieves its best glide angle, meaning the ratio of horizontal distance to altitude lost is maximized and the glide angle is minimized.\n\nWhy the other choices are incorrect:\n• Induced drag is greater than parasite drag → At minimum total drag, induced and parasite drag are equal.\n• Propeller aeroplanes fly at that speed at maximum endurance → For a propeller aircraft, maximum endurance occurs at minimum power required, which is at a lower speed than minimum drag speed.\n• $C_L/C_D$ ratio is minimum → Minimum drag corresponds to maximum $C_L/C_D$, not minimum.\n\nDifferentiate Similar Concepts:\n• Minimum drag → Maximum $L/D$ → Best glide angle.\n• Minimum power → Important for maximum endurance of propeller aircraft.\n• Best glide → Maximum horizontal distance per unit altitude lost.\n\n💡 Memory Hook:\nMinimum $drag = maximum$ $L/D$ = best glide angle.\n\n🎯 Board Tip:\nDo not confuse **best glide** with **maximum endurance**. Best glide is associated with maximum $L/D$, while maximum endurance for propeller aircraft is associated with minimum power required.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Drag Polar",
+        "Best Glide",
+        "L/D Ratio",
+        "Performance"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Lift and drag on an aerofoil are vertical respectively parallel to the",
+      "questionType": "multiple_choice",
+      "choices": [
+        "longitudinal axis.",
+        "horizon.",
+        "relative wind/airflow.",
+        "chord line."
+      ],
+      "answerIndex": 2,
+      "answerText": "relative wind/airflow.",
+      "explanation": "Aerodynamic lift and drag are defined relative to the airflow. Lift acts perpendicular to the relative wind, while drag acts parallel and opposite to the relative wind. Therefore, the relative wind/airflow provides the reference direction for both forces.\n\nWhy the other choices are incorrect:\n• Longitudinal axis → Aircraft body-axis reference, not the aerodynamic force reference.\n• Horizon → A fixed Earth reference and not necessarily aligned with the airflow.\n• Chord line → A geometric aerofoil reference line, not the direction used to define lift and drag.\n\nDifferentiate Similar Concepts:\n• Lift → Perpendicular to relative airflow.\n• Drag → Parallel and opposite to relative airflow.\n• Weight → Vertically downward toward Earth.\n• Thrust → Generally acts approximately along the propulsion axis.\n\n💡 Memory Hook:\nLift = ⟂ airflow; Drag = ∥ airflow.\n\n🎯 Board Tip:\nWhen the aircraft is climbing, descending, or turning, do not use the horizon as the reference for lift and drag. Use the **relative airflow**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Lift",
+        "Drag",
+        "Relative Wind",
+        "Aerodynamic Forces",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A strongly swept back wing stalls. If the wake of the wing contacts the horizontal tail, the effect on the stall behaviour can be:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "nose up tendency and/or lack of elevator response.",
+        "nose down tendency.",
+        "increase sensitivity of elevator inputs.",
+        "tendency to increase speed after initial stall."
+      ],
+      "answerIndex": 0,
+      "answerText": "nose up tendency and/or lack of elevator response.",
+      "explanation": "A strongly swept-back wing can produce a separated wake that reaches the horizontal tail at high angles of attack. The disturbed airflow over the tail can reduce elevator effectiveness and may produce a nose-up tendency. This is one of the important hazards associated with swept-wing stall and deep-stall behaviour.\n\nWhy the other choices are incorrect:\n• Nose down tendency → The disturbed tail flow can instead produce a nose-up tendency and reduced pitch-control effectiveness.\n• Increase sensitivity of elevator inputs → The wake generally reduces the effectiveness of the horizontal tail rather than making it more sensitive.\n• Tendency to increase speed after initial stall → The primary concern is loss of pitch-control effectiveness and possible nose-up behaviour.\n\nDifferentiate Similar Concepts:\n• Swept-wing stall → Can involve spanwise flow and tip-stall tendencies.\n• Deep stall → Horizontal-tail effectiveness can be severely reduced by the wing wake.\n• Pitch-up → Nose-up tendency associated with swept-wing stall characteristics.\n\n💡 Memory Hook:\nWing wake on $tail = elevator$ may become weak.\n\n🎯 Board Tip:\nWhen a question says the **swept-wing wake contacts the horizontal tail**, immediately consider reduced elevator effectiveness and possible nose-up tendency.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Swept Wings",
+        "Stall",
+        "Deep Stall",
+        "Longitudinal Control",
+        "Board Questions"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "\"Tuck under\" may happen at:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "high Mach numbers.",
+        "low Mach numbers.",
+        "all Mach numbers.",
+        "only at low altitudes."
+      ],
+      "answerIndex": 0,
+      "answerText": "high Mach numbers.",
+      "explanation": "Tuck under is a nose-down pitching tendency associated with increasing Mach number, particularly in the transonic regime. As Mach increases, compressibility effects and the rearward movement of the wing's centre of pressure can alter the aircraft's longitudinal pitching moment.\n\nWhy the other choices are incorrect:\n• Low Mach numbers → Tuck under is primarily associated with high-speed/transonic aerodynamic effects.\n• All Mach numbers → The phenomenon is not independent of Mach number.\n• Only at low altitudes → Tuck under is associated with Mach effects rather than a specific low-altitude condition.\n\nDifferentiate Similar Concepts:\n• Tuck under → Nose-down tendency as Mach increases.\n• Pitch-up → Nose-up tendency associated with certain low-speed swept-wing stall conditions.\n• Shock stall → Lift loss caused by shock-induced flow separation.\n\n💡 Memory Hook:\nHigh Mach → tuck under.\n\n🎯 Board Tip:\nWhen you see **tuck under**, think **transonic acceleration + nose-down pitching tendency**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Tuck Under",
+        "Transonic Aerodynamics",
+        "Longitudinal Stability",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following flight phenomena can happen at Mach Numbers below the critical Mach Number?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Mach buffet.",
+        "Shock stall.",
+        "Dutch roll.",
+        "Tuck under."
+      ],
+      "answerIndex": 2,
+      "answerText": "Dutch roll.",
+      "explanation": "Dutch roll is a lateral-directional dynamic stability phenomenon involving coupled rolling and yawing motion. It is not dependent on the aircraft exceeding its critical Mach number and can occur at subcritical Mach numbers.\n\nWhy the other choices are incorrect:\n• Mach buffet → Associated with compressibility effects and normally occurs at sufficiently high Mach numbers.\n• Shock stall → Requires shock-wave formation and shock-induced separation, which are associated with transonic conditions.\n• Tuck under → Associated with Mach-related transonic longitudinal effects.\n\nDifferentiate Similar Concepts:\n• Dutch roll → Rolling and yawing oscillation; can occur at subcritical Mach numbers.\n• Mach buffet → High-speed buffet associated with compressibility/shock effects.\n• Shock stall → Lift loss caused by shock-induced flow separation.\n• Tuck under → Nose-down pitching tendency with increasing Mach.\n\n💡 Memory Hook:\nDutch roll does not need Mach 1 effects.\n\n🎯 Board Tip:\nIf the question asks which phenomenon can occur **below Mcrit**, choose the phenomenon that is fundamentally a stability-mode problem rather than a compressibility problem.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Dutch Roll",
+        "Dynamic Stability",
+        "Mach Number",
+        "Compressible Flow",
+        "Board Questions"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The value of the manoeuvre stability of an aeroplane is 150 N/g. The load factor in straight and level flight is 1. The increase of stick force necessary to achieve the load factor of 2.5 is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "450 N.",
+        "150 N.",
+        "225 N.",
+        "375 N."
+      ],
+      "answerIndex": 2,
+      "answerText": "225 N.",
+      "explanation": "Manoeuvre stability, expressed as stick force per g, is 150 N/g. The aircraft starts at a load factor of 1 and must reach a load factor of 2.5, giving an increase in load factor of 1.5 g.\n\nCalculation:\n• Stick force per $g = 150$ N/g\n• Change in load $factor = 2.5 - 1 = 1.5$ g\n• Additional stick $force = 150  ×  1.5 = 225$ N\n\nTherefore, the required increase in stick force is 225 N.\n\nWhy the other choices are incorrect:\n• 450 N → This corresponds to 3 g of additional load factor.\n• 150 N → This corresponds to only 1 g of additional load factor.\n• 375 N → This corresponds to 2.5 g of additional load factor rather than the increase from 1 to 2.5.\n\nDifferentiate Similar Concepts:\n• Manoeuvre stability → Change in stick force per change in load factor.\n• Stick force per g → Fe/g, commonly expressed in N/g.\n• Load factor → Lift divided by weight.\n\n💡 Memory Hook:\nFe/g × Δ$g = extra$ stick force.\n\n🎯 Board Tip:\nAlways calculate the CHANGE in load factor first. Do not multiply the stick-force-per-g value directly by the final load factor.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Manoeuvre Stability",
+        "Stick Force",
+        "Load Factor",
+        "Calculation",
+        "Board Questions"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A plain flap will increase CLmax by",
+      "questionType": "multiple_choice",
+      "choices": [
+        "increasing the camber of the aerofoil.",
+        "increasing angle of attack.",
+        "boundary layer control.",
+        "centre of lift movement."
+      ],
+      "answerIndex": 0,
+      "answerText": "increasing the camber of the aerofoil.",
+      "explanation": "A plain flap increases the effective camber of the aerofoil when it is deflected. This changes the pressure distribution and allows the wing to produce a higher maximum lift coefficient, CLmax.\n\nWhy the other choices are incorrect:\n• Increasing angle of attack → Flap deflection changes the aerofoil geometry and lift characteristics; simply increasing angle of attack is not the mechanism by which the plain flap increases CLmax.\n• Boundary layer control → A plain flap is not primarily a boundary-layer-control device.\n• Centre of lift movement → Flap deployment can change the centre of pressure, but this is not the fundamental reason for the increase in CLmax.\n\nDifferentiate Similar Concepts:\n• Flap → Primarily increases camber and CLmax.\n• Slat → Delays flow separation and increases the maximum usable angle of attack.\n• Spoiler → Reduces lift and increases drag.\n\n💡 Memory Hook:\nFlap $down = more$ $camber = more$ CLmax.\n\n🎯 Board Tip:\nFor a plain-flap question asking specifically *why CLmax increases*, think **increased camber**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "High-Lift Devices",
+        "Plain Flap",
+        "CLmax",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Climbing at a constant Mach Number up to FL 350 the TAS will:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "remain constant.",
+        "decrease.",
+        "first increase, then decrease.",
+        "increase."
+      ],
+      "answerIndex": 1,
+      "answerText": "decrease.",
+      "explanation": "Mach number is the ratio of true airspeed to the local speed of sound. In the standard atmosphere, temperature decreases with altitude through the troposphere, causing the local speed of sound to decrease. If Mach number remains constant, TAS must decrease along with the speed of sound.\n\nRelationship:\n$M = \\mathrm{\\mathrm{TAS}} / a$\nTherefore:\n$\\mathrm{TAS} = M    \\times    a$\n\nSince M is constant and the speed of sound decreases during the climb to FL 350, TAS decreases.\n\nWhy the other choices are incorrect:\n• Remain constant → This would require the local speed of sound to remain constant, which it does not during the standard-atmosphere climb.\n• First increase, then decrease → There is no such reversal under the stated standard-atmosphere condition.\n• Increase → Opposite to the effect of decreasing temperature and speed of sound.\n\nDifferentiate Similar Concepts:\n• Mach number → TAS / local speed of sound.\n• TAS → Changes with the local speed of sound when Mach is held constant.\n• IAS → Based primarily on dynamic pressure rather than directly on local speed of sound.\n\n💡 Memory Hook:\nConstant Mach + colder $air = lower$ TAS.\n\n🎯 Board Tip:\nAt constant Mach, always think **TAS follows the local speed of sound**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Mach Number",
+        "True Airspeed",
+        "Atmosphere",
+        "Climb Performance",
+        "Application"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A horn balance in a control system has the following purpose:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "to decrease the effective longitudinal dihedral of the aeroplane.",
+        "to decrease stick forces.",
+        "to prevent flutter.",
+        "to obtain mass balancing."
+      ],
+      "answerIndex": 1,
+      "answerText": "to decrease stick forces.",
+      "explanation": "A horn balance is an aerodynamic balance used on a control surface. Part of the control surface projects ahead of the hinge line, allowing aerodynamic pressure to assist the movement of the surface and thereby reduce the hinge moment and pilot control force.\n\nWhy the other choices are incorrect:\n• Decrease effective longitudinal dihedral → Longitudinal dihedral is related to aircraft geometry and stability, not the purpose of a horn balance.\n• Prevent flutter → Flutter prevention may involve mass balancing and structural/aerodynamic design, but horn balancing is primarily intended to reduce control forces.\n• Obtain mass balancing → Mass balancing is achieved by positioning mass relative to the hinge axis; it is different from aerodynamic balancing.\n\nDifferentiate Similar Concepts:\n• Horn balance → Aerodynamic balance that reduces control forces.\n• Mass balance → Moves the centre of gravity of the control surface appropriately to reduce flutter susceptibility.\n• Servo tab → Uses aerodynamic force on a tab to assist movement of the main control surface.\n\n💡 Memory Hook:\nHorn $balance = less$ hinge $force = less$ stick force.\n\n🎯 Board Tip:\nDo not confuse **aerodynamic balancing** with **mass balancing**. A horn balance is aerodynamic.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Flight Controls",
+        "Aerodynamic Balancing",
+        "Horn Balance",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The static pressure is acting:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "only perpendicular to the direction of the flow.",
+        "only in the direction of the total pressure.",
+        "in all directions.",
+        "only in direction of the flow."
+      ],
+      "answerIndex": 2,
+      "answerText": "in all directions.",
+      "explanation": "Static pressure is a scalar thermodynamic pressure and acts in all directions within a fluid. It is not restricted to the direction of airflow.\n\nWhy the other choices are incorrect:\n• Only perpendicular to the flow → Pressure forces act normally to surfaces in contact with the fluid and are not limited to one direction in the fluid itself.\n• Only in the direction of total pressure → Total pressure is a pressure concept combining static and dynamic pressure; it is not a direction.\n• Only in the direction of flow → This incorrectly treats pressure as a directional vector quantity.\n\nDifferentiate Similar Concepts:\n• Static pressure → Acts in all directions.\n• Dynamic pressure → Associated with the kinetic energy of the moving airflow.\n• Total pressure → Static pressure plus dynamic pressure under the applicable Bernoulli assumptions.\n\n💡 Memory Hook:\nPressure has no preferred direction.\n\n🎯 Board Tip:\nStatic pressure is a **scalar**, while airflow velocity is a vector.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Static Pressure",
+        "Fluid Mechanics",
+        "Pressure",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "When the air has passed through a normal shock wave the Mach number is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "lower than before but still greater than 1.",
+        "equal to 1.",
+        "higher than before.",
+        "less than 1."
+      ],
+      "answerIndex": 3,
+      "answerText": "less than 1.",
+      "explanation": "A normal shock wave converts a supersonic flow upstream of the shock into subsonic flow downstream. Therefore, the Mach number after the normal shock is less than 1.\n\nWhy the other choices are incorrect:\n• Lower than before but still greater than 1 → A normal shock causes the flow to cross from supersonic to subsonic conditions, so the downstream Mach number is below 1.\n• Equal to 1 → Mach 1 is not the normal downstream condition of a normal shock.\n• Higher than before → The Mach number decreases across a normal shock.\n\nDifferentiate Similar Concepts:\n• Normal shock → Supersonic to subsonic flow.\n• Expansion wave → Flow accelerates and Mach number increases.\n• Oblique shock → The normal component of supersonic flow is reduced, while the overall downstream flow may remain supersonic.\n\n💡 Memory Hook:\nNormal $shock = M$ > 1 → $M < 1$.\n\n🎯 Board Tip:\nRemember that a **normal shock always produces a subsonic downstream Mach number** for the standard shock-wave case.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Normal Shock",
+        "Mach Number",
+        "Compressible Flow",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Tuck under will happen",
+      "questionType": "multiple_choice",
+      "choices": [
+        "only at the critical Mach number.",
+        "only below the critical Mach number.",
+        "above or below the critical Mach number depending on the angle of attack.",
+        "only above the critical Mach number."
+      ],
+      "answerIndex": 3,
+      "answerText": "only above the critical Mach number.",
+      "explanation": "Tuck under is a nose-down pitching tendency associated with the rearward movement of the wing's centre of pressure as the aircraft enters the transonic regime. It occurs after the critical Mach number has been exceeded and compressibility effects become significant.\n\nWhy the other choices are incorrect:\n• Only at the critical Mach number → Critical Mach number marks the onset of local sonic flow, not the complete development of the tuck-under phenomenon.\n• Only below the critical Mach number → Tuck under is associated with transonic compressibility effects occurring above Mcrit.\n• Above or below Mcrit depending on angle of attack → The source identifies the phenomenon with Mach numbers above the critical Mach number.\n\nDifferentiate Similar Concepts:\n• Mcrit → First free-stream Mach number at which local sonic flow occurs somewhere on the aircraft.\n• Tuck under → Nose-down tendency associated with increasing Mach in the transonic regime.\n• MMO → Maximum operating Mach number.\n\n💡 Memory Hook:\nMcrit passed → compressibility effects → tuck under.\n\n🎯 Board Tip:\nWhen you see **tuck under**, associate it with the aircraft operating **above Mcrit**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Tuck Under",
+        "Critical Mach Number",
+        "Transonic Aerodynamics",
+        "Board Questions"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Winglets",
+      "questionType": "multiple_choice",
+      "choices": [
+        "decrease the induced drag.",
+        "decrease the static lateral stability.",
+        "increase the manoeuvrability.",
+        "create an elliptical lift distribution."
+      ],
+      "answerIndex": 0,
+      "answerText": "decrease the induced drag.",
+      "explanation": "Winglets reduce the strength and influence of wingtip vortices, thereby reducing induced drag. Aerodynamically, they act as a way of improving the effective aspect ratio of the wing without requiring the same increase in physical wingspan.\n\nWhy the other choices are incorrect:\n• Decrease static lateral stability → Winglets are not primarily intended to reduce static lateral stability.\n• Increase manoeuvrability → Their main aerodynamic purpose is drag reduction, not increased manoeuvrability.\n• Create an elliptical lift distribution → Winglets can influence the vortex system and effective span efficiency, but they do not simply create an elliptical lift distribution.\n\nDifferentiate Similar Concepts:\n• Winglets → Reduce induced drag by modifying the wingtip-vortex system.\n• High aspect ratio → Also reduces induced drag by reducing vortex-related losses.\n• Wingtip vortices → Major source of induced drag on finite wings.\n\n💡 Memory Hook:\n$Winglets = weaker$ wingtip $vortices = less$ induced drag.\n\n🎯 Board Tip:\nIf the question asks for the primary aerodynamic benefit of winglets, choose **reduced induced drag**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Winglets",
+        "Induced Drag",
+        "Wingtip Vortices",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The span-wise flow is caused by the difference between the air pressure on top and beneath the wing and its direction of movement goes from:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "beneath to the top of the wing via the trailing edge",
+        "the top to beneath the wing via the leading edge",
+        "beneath to the top of the wing via the wing tip",
+        "the top to beneath the wing via the wing's trailing edge"
+      ],
+      "answerIndex": 2,
+      "answerText": "beneath to the top of the wing via the wing tip",
+      "explanation": "The pressure beneath a lifting wing is higher than the pressure above it. Near the wingtip, this pressure difference drives air from the high-pressure lower surface toward the low-pressure upper surface around the tip. This contributes to the formation of the wingtip vortex and spanwise flow.\n\nWhy the other choices are incorrect:\n• Beneath to top via the trailing edge → The principal flow around the tip occurs at the wingtip, not through the trailing edge.\n• Top to beneath via the leading edge → This reverses the pressure-driven direction described by the source.\n• Top to beneath via the trailing edge → Again, this reverses the pressure relationship.\n\nDifferentiate Similar Concepts:\n• Spanwise flow → Flow component along the wing span.\n• Chordwise flow → Flow component generally along the chord direction.\n• Wingtip vortex → Rotational flow produced partly by the pressure difference between lower and upper wing surfaces.\n\n💡 Memory Hook:\nHigh pressure below → low pressure above → flow curls around the tip.\n\n🎯 Board Tip:\nFor a lifting wing, remember **lower surface → upper surface around the wingtip**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Spanwise Flow",
+        "Wingtip Vortices",
+        "Finite Wings",
+        "Application"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The correct drag formula is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "$D = CD$ 2 RHO $V^{2}$ S",
+        "$D = CD$ $1/2$ RHO V S",
+        "$D = CD$ $1/2$ 1/RHO $V^{2}$ S",
+        "$D = CD$ $1/2$ RHO $V^{2}$ S"
+      ],
+      "answerIndex": 3,
+      "answerText": "$D = CD$ $1/2$ RHO $V^{2}$ S",
+      "explanation": "The aerodynamic drag equation is $D = \\frac{1}{2}\\rho V^{2}SCD$. It can also be written as $D = qSCD$, where $q = \\frac{1}{2}\\rho V^{2}$ is the dynamic pressure.\n\nTherefore:\n$D = \\frac{1}{2}   \\times   \\rho    \\times   V^{2}  \\times  S  \\times  C_D$\n\nWhy the other choices are incorrect:\n• CD 2ρV²S → The factor should be ½, not 2.\n• CD ½ρVS → Velocity must be squared because dynamic pressure is proportional to $V^{2}$.\n• CD ½(1/ρ)V²S → Density belongs in the numerator, not the denominator.\n\nDifferentiate Similar Concepts:\n• Drag → $D = \\frac{1}{2}\\rho V^{2}SCD$.\n• Lift → $L = \\frac{1}{2}\\rho V^{2}SCL$.\n• Dynamic pressure → $q = \\frac{1}{2}\\rho V^{2}$.\n\n💡 Memory Hook:\n$Drag = q    \\times    S    \\times    C_D$.\n\n🎯 Board Tip:\nMemorize the basic aerodynamic-force equation: **$Force = dynamic$ pressure × area × coefficient**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Drag",
+        "Aerodynamic Force",
+        "Dynamic Pressure",
+        "Formula",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Entering the stall the centre of pressure of a straight (1) wing and of a strongly swept back wing (2) will:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "(1) move aft, (2) not move.",
+        "(1) move aft, (2) move forward.",
+        "(1) move aft, (2) move aft.",
+        "(1) not move (2) move forward."
+      ],
+      "answerIndex": 1,
+      "answerText": "(1) move aft, (2) move forward.",
+      "explanation": "As a straight wing approaches and enters the stall, its centre of pressure tends to move aft. A strongly swept-back wing can exhibit a forward movement of the centre of pressure during the stall because of its characteristic spanwise flow and tip-stall behaviour.\n\nWhy the other choices are incorrect:\n• (1) move aft, (2) not move → The swept-back wing can experience a forward CP movement during the stall.\n• (1) move aft, (2) move aft → This does not represent the characteristic swept-wing stall behaviour described by the question.\n• (1) not move, (2) move forward → The straight wing is also associated with an aft movement of the centre of pressure.\n\nDifferentiate Similar Concepts:\n• Straight-wing stall → CP tends to move aft.\n• Swept-wing stall → CP can move forward, contributing to pitch-up characteristics.\n\n💡 Memory Hook:\nStraight wing → CP aft; swept wing → CP forward at stall.\n\n🎯 Board Tip:\nA forward CP movement on a swept-back wing is an important clue for understanding the pitch-up tendency associated with swept-wing stall.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Centre of Pressure",
+        "Swept Wings",
+        "Stall",
+        "Pitch-Up",
+        "Board Questions"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "When power assisted controls are used for pitch control, this:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "makes trimming superfluous.",
+        "makes aerodynamic balancing of the control surfaces meaningless.",
+        "can only function in combination with an elevator trim tab.",
+        "ensures that a part of the aerodynamic forces is still felt on the column."
+      ],
+      "answerIndex": 3,
+      "answerText": "ensures that a part of the aerodynamic forces is still felt on the column.",
+      "explanation": "Power-assisted flight controls use hydraulic or other powered assistance to move the control surface, reducing the amount of aerodynamic force that must be transmitted directly to the pilot. An elevator feel system is therefore used so that the pilot still receives an appropriate control-force response rather than having an unnaturally light control column.\n\nWhy the other choices are incorrect:\n• Makes trimming superfluous → Powered controls do not eliminate the need for aircraft trim.\n• Makes aerodynamic balancing meaningless → Aerodynamic balancing can still be important for reducing hinge moments and control-system loads.\n• Can only function with an elevator trim tab → Power-assisted controls do not require this exact combination to function.\n\nDifferentiate Similar Concepts:\n• Power-assisted control → Power assists movement of the primary control surface.\n• Fully powered control → The pilot's input commands the powered actuator rather than directly moving the surface through aerodynamic forces.\n• Elevator feel system → Provides appropriate artificial control forces to the pilot.\n\n💡 Memory Hook:\nPower assists the surface; feel assists the pilot.\n\n🎯 Board Tip:\nIf powered controls make the column feel too light, think **artificial/elevator feel system**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Flight Controls",
+        "Power-Assisted Controls",
+        "Elevator Feel",
+        "Longitudinal Control",
+        "Application"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which kind of flow separation occurs at the smallest angle of attack?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "shockstall.",
+        "high-speed stall.",
+        "low-speed stall.",
+        "deep stall."
+      ],
+      "answerIndex": 0,
+      "answerText": "shockstall.",
+      "explanation": "Shock-induced flow separation can occur at a relatively small geometric angle of attack compared with conventional low-speed stall because the adverse pressure gradient associated with a shock wave can cause boundary-layer separation at high Mach number even when the angle of attack is not large.\n\nWhy the other choices are incorrect:\n• High-speed stall → This is associated with compressibility effects but is not the most specific answer to the smallest angle-of-attack condition.\n• Low-speed stall → Conventional stall requires the aerofoil to approach its critical angle of attack, which is much higher.\n• Deep stall → Deep stall is associated with a highly stalled condition and generally occurs at a high angle of attack.\n\nDifferentiate Similar Concepts:\n• Shock stall → Separation caused by the adverse pressure gradient behind a shock wave.\n• Low-speed stall → Separation caused by exceeding the critical angle of attack.\n• Deep stall → Severe stalled condition in which the horizontal tail may be immersed in the wing wake.\n\n💡 Memory Hook:\nShock can separate flow before the wing reaches the usual stall angle.\n\n🎯 Board Tip:\nWhen the question asks about separation at the **smallest angle of attack**, connect it with high-speed shock-induced separation.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Flow Separation",
+        "Shock Stall",
+        "High-Speed Aerodynamics",
+        "Stall",
+        "Board Questions"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Compared with an oblique shock wave at the same Mach number a normal shock wave has a:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "lower static temperature.",
+        "higher loss in total pressure.",
+        "higher total pressure.",
+        "higher total temperature."
+      ],
+      "answerIndex": 1,
+      "answerText": "higher loss in total pressure.",
+      "explanation": "A normal shock produces a larger irreversible loss of total pressure than an oblique shock at the same upstream Mach number because the normal component of the flow encounters a stronger shock. Total pressure decreases across a shock because of entropy generation.\n\nWhy the other choices are incorrect:\n• Lower static temperature → Static temperature increases across both types of shock; this is not the distinguishing feature asked here.\n• Higher total pressure → Total pressure decreases across a shock, and the normal shock produces the greater loss.\n• Higher total temperature → For an adiabatic shock with no shaft work, total temperature remains essentially constant.\n\nDifferentiate Similar Concepts:\n• Normal shock → Greater total-pressure loss.\n• Oblique shock → Lower total-pressure loss for the same upstream Mach number because only the normal component undergoes the strong compression.\n• Total temperature → Approximately conserved across an adiabatic shock.\n\n💡 Memory Hook:\nNormal $shock = maximum$ pressure loss.\n\n🎯 Board Tip:\nFor shock-wave comparisons, remember that **total pressure is lost**, while total temperature remains essentially constant in an adiabatic shock.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Shock Waves",
+        "Normal Shock",
+        "Oblique Shock",
+        "Total Pressure",
+        "Compressible Flow"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Two methods to increase the critical Mach Number are:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "thin aerofoils and dihedral of the wing.",
+        "positive cambering of the aerofoil and sweep back of the wing.",
+        "thick aerofoils and dihedral of the wing.",
+        "thin aerofoils and sweep back of the wing."
+      ],
+      "answerIndex": 3,
+      "answerText": "thin aerofoils and sweep back of the wing.",
+      "explanation": "Critical Mach number can be increased by reducing the tendency of local airflow to accelerate to Mach 1. A thinner aerofoil has less severe acceleration over its surface, while wing sweep reduces the component of freestream velocity normal to the leading edge. Both effects delay the onset of local sonic flow.\n\nWhy the other choices are incorrect:\n• Thin aerofoils and dihedral → Thin aerofoils help, but dihedral is primarily related to lateral stability rather than critical Mach number.\n• Positive camber and sweepback → Sweepback helps increase Mcrit, but increased positive camber generally increases the local acceleration and can reduce Mcrit.\n• Thick aerofoils and dihedral → Thickness tends to lower Mcrit, while dihedral is not the relevant parameter.\n\nDifferentiate Similar Concepts:\n• Thin aerofoil → Higher critical Mach number.\n• Swept-back wing → Higher critical Mach number.\n• Thick aerofoil → Lower critical Mach number.\n• Dihedral → Primarily affects lateral stability.\n\n💡 Memory Hook:\nThin + $swept = higher$ Mcrit.\n\n🎯 Board Tip:\nTwo classic methods for increasing critical Mach number are **reducing thickness** and **increasing sweepback**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Critical Mach Number",
+        "Swept Wings",
+        "Aerofoil Thickness",
+        "Compressible Flow",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The location of the centre of pressure of a positive cambered wing at increasing angle of attack will:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "shift aft.",
+        "shift in spanwise direction.",
+        "shift forward.",
+        "not shift."
+      ],
+      "answerIndex": 2,
+      "answerText": "shift forward.",
+      "explanation": "For a positively cambered aerofoil, increasing angle of attack generally causes the centre of pressure to move forward over the normal pre-stall operating range. This movement is associated with the changing pressure distribution over the cambered aerofoil.\n\nWhy the other choices are incorrect:\n• Shift aft → This is not the normal trend for a positively cambered aerofoil as angle of attack increases in the conventional subsonic range.\n• Shift in spanwise direction → Centre-of-pressure movement with angle of attack is primarily discussed along the chord rather than as a spanwise displacement.\n• Not shift → The centre of pressure of a cambered aerofoil is not generally fixed with changing angle of attack.\n\nDifferentiate Similar Concepts:\n• Centre of pressure → Point where the resultant aerodynamic force acts.\n• Aerodynamic centre → Point about which pitching moment remains essentially constant with angle of attack.\n• Positive camber → Produces lift at zero angle of attack and affects CP movement.\n\n💡 Memory Hook:\nPositive camber + increasing AOA → CP forward.\n\n🎯 Board Tip:\nDo not confuse centre of pressure with aerodynamic centre. The CP moves with angle of attack; the aerodynamic centre is comparatively fixed.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Centre of Pressure",
+        "Cambered Aerofoil",
+        "Angle of Attack",
+        "Aerodynamic Centre"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which one of the following statements about Bernoulli's theorem is correct?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The total pressure is zero when the velocity of the stream is zero.",
+        "The dynamic pressure is maximum in the stagnation point.",
+        "The dynamic pressure increases as static pressure decreases.",
+        "The dynamic pressure decreases as static pressure decreases."
+      ],
+      "answerIndex": 2,
+      "answerText": "The dynamic pressure increases as static pressure decreases.",
+      "explanation": "For steady incompressible flow along a streamline, Bernoulli's equation states that static pressure plus dynamic pressure remains constant when elevation effects are neglected. Therefore, when static pressure decreases, dynamic pressure increases.\n\nThe relationship is:\n$P_t = P_s + 1/2\\rho V^{2}$\n\nWhy the other choices are incorrect:\n• Total pressure is zero when velocity is zero → At a stagnation point, velocity becomes zero and dynamic pressure becomes zero, but total pressure equals the static pressure and is not zero.\n• Dynamic pressure is maximum at the stagnation point → Dynamic pressure is zero at a stagnation point because velocity is zero.\n• Dynamic pressure decreases as static pressure decreases → This is opposite to the Bernoulli relationship under the stated assumptions.\n\nDifferentiate Similar Concepts:\n• Static pressure → Pressure associated with the local thermodynamic state.\n• Dynamic pressure → $1/2$ρ$V^{2}$.\n• Total pressure → Static + dynamic pressure for incompressible flow.\n\n💡 Memory Hook:\nStatic down → dynamic up.\n\n🎯 Board Tip:\nAt a stagnation point, **velocity and dynamic pressure are zero**, while static pressure reaches the stagnation/total pressure value.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Bernoulli's Theorem",
+        "Static Pressure",
+        "Dynamic Pressure",
+        "Fluid Mechanics",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The boundary layer of a wing is caused by:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "a layer on the wing in which the stream velocity is lower than the free stream velocity, due to friction.",
+        "the normal shock wave at transonic speeds.",
+        "a turbulent stream pattern around the wing.",
+        "suction at the upper wing side."
+      ],
+      "answerIndex": 0,
+      "answerText": "a layer on the wing in which the stream velocity is lower than the free stream velocity, due to friction.",
+      "explanation": "The boundary layer develops because of viscosity and the no-slip condition at the wing surface. Air immediately adjacent to the surface has approximately zero velocity relative to the surface, while velocity increases toward the free-stream value. This creates a region of strong velocity gradients known as the boundary layer.\n\nWhy the other choices are incorrect:\n• Normal shock wave → A shock can strongly affect a boundary layer but does not cause the fundamental existence of the boundary layer.\n• Turbulent stream pattern → A boundary layer may be laminar or turbulent; turbulence is not required for its existence.\n• Suction at the upper wing side → Pressure distribution and suction are consequences of the aerodynamic flow, not the fundamental cause of the boundary layer.\n\nDifferentiate Similar Concepts:\n• Boundary layer → Viscous region near a surface.\n• Laminar boundary layer → Smooth, ordered fluid motion.\n• Turbulent boundary layer → Strong mixing and fluctuating velocity.\n• Free stream → Flow outside the boundary layer, approximately unaffected by surface friction.\n\n💡 Memory Hook:\nBoundary $layer = viscosity + no-slip$.\n\n🎯 Board Tip:\nThe defining feature is that velocity changes from approximately zero at the surface toward the free-stream velocity.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Boundary Layer",
+        "Viscosity",
+        "Aerodynamics",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Dihedral of the wing:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "decreases the static lateral stability.",
+        "increases the static lateral stability.",
+        "is the only way to increase the static lateral stability.",
+        "is only positive for aeroplanes with high mounted wings."
+      ],
+      "answerIndex": 1,
+      "answerText": "increases the static lateral stability.",
+      "explanation": "Positive wing dihedral contributes to static lateral stability. When the aircraft experiences a sideslip, the dihedral effect creates a rolling moment that tends to restore the aircraft toward wings-level flight.\n\nWhy the other choices are incorrect:\n• Decreases static lateral stability → Positive dihedral generally increases the restoring rolling tendency.\n• Is the only way → Lateral stability can also be influenced by wing position, sweep, vertical-tail effects, fuselage effects, and other design features.\n• Only positive for high-mounted wings → Dihedral can be used on aircraft with different wing configurations; high-wing placement itself also contributes to lateral stability through the pendulum/dihedral effect.\n\nDifferentiate Similar Concepts:\n• Dihedral → Positive contribution to lateral stability.\n• Anhedral → Can reduce the positive dihedral effect and is often used when excessive lateral stability must be avoided.\n• Directional stability → Primarily associated with yaw and the vertical tail.\n\n💡 Memory Hook:\n$Dihedral = roll$ back toward level.\n\n🎯 Board Tip:\nIf asked for the primary stability effect of positive dihedral, answer **increased static lateral stability**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Dihedral",
+        "Lateral Stability",
+        "Aircraft Stability",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How does the exterior view of an aeroplane change, when the trim is used during a speed decrease?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The elevator is deflected further downwards by means of a trimmable horizontal stabiliser.",
+        "Nothing changes in the exterior view.",
+        "The elevator is deflected further downwards by means of an upwards deflected trimtab.",
+        "The elevator is deflected further upwards by means of a downwards deflected trimtab."
+      ],
+      "answerIndex": 3,
+      "answerText": "The elevator is deflected further upwards by means of a downwards deflected trimtab.",
+      "explanation": "When speed is decreased, the aircraft requires an appropriate nose-up trimming moment to maintain the desired trimmed condition. With a conventional elevator trim tab, a downward-deflected trim tab produces an aerodynamic force that drives the elevator upward, producing the required nose-up pitching moment.\n\nWhy the other choices are incorrect:\n• Elevator deflected downward by a trimmable stabilizer → A movable stabilizer can trim the aircraft, but this answer does not describe the conventional trim-tab action asked for.\n• Nothing changes → Using trim changes the control-surface/stabilizer aerodynamic configuration.\n• Elevator deflected downward by an upward trim tab → The trim-tab/elevator relationship is reversed from the required direction.\n\nDifferentiate Similar Concepts:\n• Trim tab down → Elevator moves up.\n• Trim tab up → Elevator moves down.\n• Elevator → Primary pitch-control surface.\n• Stabilizer → Provides the primary trimming moment when the stabilizer itself is movable.\n\n💡 Memory Hook:\nTrim tab moves opposite; elevator moves the aircraft.\n\n🎯 Board Tip:\nFor a conventional elevator trim tab, remember: **tab down → elevator up → nose-up trim**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Trim",
+        "Elevator",
+        "Trim Tab",
+        "Longitudinal Control",
+        "Application"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "On a non swept wing, when the aerofoil is accelerated from subsonic to supersonic speeds, the aerodynamic centre :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "shifts aft by about 10%.",
+        "remains unchanged.",
+        "slightly shifts forward.",
+        "shifts from 25% to about 50% of the aerofoil chord."
+      ],
+      "answerIndex": 3,
+      "answerText": "shifts from 25% to about 50% of the aerofoil chord.",
+      "explanation": "As a non-swept aerofoil progresses from subsonic toward supersonic flow, compressibility effects cause the aerodynamic centre to move substantially aft. In the simplified aerodynamic model used for this question, it moves from approximately 25% chord toward 50% chord.\n\nWhy the other choices are incorrect:\n• Shifts aft by about 10% → The movement is much more significant than a simple 10% shift.\n• Remains unchanged → The aerodynamic centre changes position as the flow regime changes from subsonic to supersonic.\n• Slightly shifts forward → The characteristic movement is aft, not forward.\n\nDifferentiate Similar Concepts:\n• Subsonic aerodynamic centre → approximately 25% chord for a conventional aerofoil.\n• Supersonic aerodynamic centre → approximately 50% chord.\n• Centre of pressure → Its position varies with angle of attack and aerodynamic condition.\n\n💡 Memory Hook:\n$Subsonic ≈  25$%; $supersonic ≈  50$%.\n\n🎯 Board Tip:\nThe big clue is **subsonic → supersonic**. Think of the aerodynamic centre moving **aft toward mid-chord**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Aerodynamic Centre",
+        "Compressible Flow",
+        "Supersonic Aerodynamics",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For a normal stable aeroplane, the centre of gravity is located:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "at the neutral point of the aeroplane.",
+        "between the aft limit and the neutral point of the aeroplane.",
+        "with a sufficient minimum margin ahead of the neutral point of the aeroplane.",
+        "aft of the neutral point of the aeroplane."
+      ],
+      "answerIndex": 2,
+      "answerText": "with a sufficient minimum margin ahead of the neutral point of the aeroplane.",
+      "explanation": "For an aeroplane to possess positive static longitudinal stability, its centre of gravity must be located ahead of the neutral point. The distance between the centre of gravity and the neutral point provides the static margin. A stable aircraft therefore requires a sufficient positive static margin.\n\nWhy the other choices are incorrect:\n• At the neutral point → This corresponds to neutral static stability, not positive static stability.\n• Between the aft limit and the neutral point → This does not clearly establish the required minimum positive static margin; the essential condition is that the CG remains sufficiently ahead of the neutral point.\n• Aft of the neutral point → This would result in negative static stability.\n\nDifferentiate Similar Concepts:\n• CG ahead of neutral point → Positive static longitudinal stability.\n• CG at neutral point → Neutral stability.\n• CG aft of neutral point → Negative/unstable condition.\n• Static margin → Distance between CG and neutral point, normally expressed as a fraction of MAC.\n\n💡 Memory Hook:\n$Stable = CG$ ahead of NP.\n\n🎯 Board Tip:\nThe **neutral point is the boundary**. Keep the CG ahead of it to maintain positive longitudinal static stability.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Longitudinal Stability",
+        "Centre of Gravity",
+        "Neutral Point",
+        "Static Margin",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "At an aeroplane's minimum drag speed, what is the ratio between induced drag Di and profile drag Dp? Di/Dp=",
+      "questionType": "multiple_choice",
+      "choices": [
+        "$1/1$",
+        "It varies between aeroplane types.",
+        "$2/1$",
+        "$1/2$"
+      ],
+      "answerIndex": 0,
+      "answerText": "$1/1$",
+      "explanation": "At the speed for minimum total drag, induced drag and parasite/profile drag are equal. Therefore, the ratio Di/Dp is $1/1$.\n\nAt minimum drag:\n$Di = Dp$\n\nSince total drag is the sum of induced and parasite drag, the point where these two components are equal corresponds to minimum total drag.\n\nWhy the other choices are incorrect:\n• It varies between aeroplane types → Although aircraft have different drag characteristics, the theoretical minimum-drag condition occurs when induced and parasite drag are equal.\n• $2/1$ → This would mean induced drag is twice profile drag and therefore does not represent minimum total drag.\n• $1/2$ → This would mean profile drag is twice induced drag.\n\nDifferentiate Similar Concepts:\n• Minimum drag → $Di = Dp$.\n• Below minimum-drag speed → Induced drag dominates.\n• Above minimum-drag speed → Parasite/profile drag dominates.\n\n💡 Memory Hook:\nMinimum $drag = two$ drag components meet.\n\n🎯 Board Tip:\nRemember the classic drag-polar relationship: **minimum total drag occurs where induced drag equals parasite drag**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Drag",
+        "Induced Drag",
+        "Parasite Drag",
+        "Minimum Drag",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which statement about a primary control surface controlled by a servo tab, is correct ?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The servo tab can also be used as a trimtab.",
+        "The control effectiveness of the primary surface is increased by servo tab deflection.",
+        "Due to the effectiveness of the servo tab the control surface area can be smaller.",
+        "The position is undetermined during taxiing, in particular with tailwind."
+      ],
+      "answerIndex": 0,
+      "answerText": "The servo tab can also be used as a trimtab.",
+      "explanation": "A servo tab is an aerodynamic device that assists movement of the primary control surface. On some aircraft, the servo tab can also be arranged to perform the trimming function, allowing the aircraft to maintain a desired attitude without continuous pilot control force.\n\nWhy the other choices are incorrect:\n• The control effectiveness of the primary surface is increased → The servo tab assists the movement of the control surface; it does not fundamentally increase the aerodynamic effectiveness of the primary surface itself.\n• Control surface area can be smaller → Servo tabs reduce control forces but this statement is not the defining characteristic identified by the source question.\n• Position is undetermined during taxiing, particularly with tailwind → This is not the fundamental characteristic of a servo-tab-controlled primary surface.\n\nDifferentiate Similar Concepts:\n• Servo tab → Aerodynamically assists movement of the primary control surface.\n• Trim tab → Used to relieve sustained control forces and maintain a trimmed condition.\n• Balance tab → Reduces hinge moment and therefore pilot control force.\n\n💡 Memory Hook:\nServo $tab = moves$ the big surface for you.\n\n🎯 Board Tip:\nA servo tab may also serve as a **trim tab**, depending on the control-system design.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Flight Controls",
+        "Servo Tab",
+        "Trim Tab",
+        "Control Systems",
+        "Application"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "By what percentage does the lift increase in a steady level turn at 45° angle of bank, compared to straight and level flight?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "41%.",
+        "19%.",
+        "31%.",
+        "52%."
+      ],
+      "answerIndex": 0,
+      "answerText": "41%.",
+      "explanation": "For a coordinated level turn, the load factor is \\(n=1/\\cos\\phi\\). For a \\(45^\\circ\\) bank, \\(n=1/\\cos45^\\circ\u0007pprox1.414\\). Stall speed varies with the square root of load factor: \\(V_{S,\\mathrm{new}}=V_S\\sqrt{n}\\). Therefore \\(V_{S,\\mathrm{new}}/V_S=\\sqrt{1.414}\u0007pprox1.189\\). This gives approximately a 19% increase, not 41%.\n\nHowever, the Volare questionnaire's expected answer for this item is **41%**, corresponding to the increase in load factor rather than the actual percentage increase in stall speed. For faithful conversion of the source questionnaire, the listed answer is retained here.\n\nWhy the other choices are incorrect according to the source's intended answer:\n? 31% ? Not the value intended by the questionnaire.\n? 52% ? Not the value intended by the questionnaire.\n? 19% ? This is actually the mathematically derived increase in stall speed from the stated relationship.\n\n?? Board Tip:\nBe careful with this question: **load factor increases by about 41%, but stall speed increases by about 19%** at a 45 degrees bank.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Load Factor",
+        "Steady Level Turn",
+        "Lift",
+        "Bank Angle",
+        "Calculation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The shape of the gust load diagram is also determinated by the following three vertical speed in ft/s (clean configuration) :",
+      "questionType": "multiple_choice",
+      "choices": [
+        "25, 55, 75",
+        "35, 55, 66",
+        "25, 50, 66",
+        "15, 56, 65"
+      ],
+      "answerIndex": 2,
+      "answerText": "25, 50, 66",
+      "explanation": "The gust load diagram is constructed using specified design gust velocities. For the clean configuration, the three vertical gust speeds used in the source question are 25, 50, and 66 ft/s.\n\nThese gust velocities are used to establish the aircraft's response to vertical gusts and therefore influence the shape and limits of the gust envelope.\n\nWhy the other choices are incorrect:\n• 25, 55, 75 → These are not the three clean-configuration gust velocities specified by the source.\n• 35, 55, 66 → The first two values do not match the specified set.\n• 15, 56, 65 → These values do not correspond to the specified clean-configuration gust set.\n\nDifferentiate Similar Concepts:\n• Gust load diagram → Shows aircraft load-factor response to vertical gusts.\n• Manoeuvre envelope → Relates load factor to airspeed for manoeuvring conditions.\n• Clean configuration → Uses the applicable design gust velocities for the clean aircraft.\n\n💡 Memory Hook:\nClean gust $set = 25 – 50 – 66$ ft/s.\n\n🎯 Board Tip:\nThis is primarily a **memorization question**. Keep the three values together as one set.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Gust Loads",
+        "V-n Diagram",
+        "Flight Envelope",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Longitudinal static stability is created by the fact that the:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "wing surface is greater than the horizontal tail surface.",
+        "aeroplane possesses a large trim speed range.",
+        "centre of gravity is located in front of the neutral point of the aeroplane.",
+        "centre of gravity is located in front of the leading edge of the wing."
+      ],
+      "answerIndex": 2,
+      "answerText": "centre of gravity is located in front of the neutral point of the aeroplane.",
+      "explanation": "Positive longitudinal static stability requires the centre of gravity to be located ahead of the aircraft's neutral point. If the aircraft is disturbed in pitch, the resulting aerodynamic moments tend to return it toward its original equilibrium condition.\n\nWhy the other choices are incorrect:\n• Wing surface greater than horizontal tail surface → Relative surface areas alone do not establish longitudinal static stability.\n• Large trim speed range → Trim range is a controllability/trim characteristic, not the fundamental condition for static stability.\n• CG in front of the wing leading edge → The CG normally lies somewhere within the aircraft's mass distribution; its relationship to the neutral point is what determines static longitudinal stability.\n\nDifferentiate Similar Concepts:\n• Longitudinal stability → Pitch stability.\n• Neutral point → CG location corresponding to neutral longitudinal static stability.\n• Static margin → Distance between CG and neutral point.\n\n💡 Memory Hook:\nCG ahead of $NP = stable$ in pitch.\n\n🎯 Board Tip:\nWhenever you see **longitudinal static stability**, immediately check the **CG–neutral point relationship**.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Longitudinal Stability",
+        "Neutral Point",
+        "Centre of Gravity",
+        "Static Stability",
+        "Recall"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The turn indicator shows a right turn. The slip indicator is left of neutral. To coordinate the turn:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "less right bank is required.",
+        "a higher turn rate is required.",
+        "more right bank is required.",
+        "more right rudder is required."
+      ],
+      "answerIndex": 0,
+      "answerText": "less right bank is required.",
+      "explanation": "With the turn indicator showing a right turn and the slip indicator displaced to the left, the aircraft is not correctly coordinated and is slipping toward the inside of the turn. Reducing the right bank reduces the lateral component of the turn and brings the aircraft closer to coordinated flight.\n\nWhy the other choices are incorrect:\n• Higher turn rate → Increasing turn rate does not directly correct the indicated slip.\n• More right bank → This would increase the condition associated with the existing slip rather than correcting it.\n• More right rudder → The required rudder correction would be opposite to this choice for the indicated condition.\n\nDifferentiate Similar Concepts:\n• Slip → Aircraft has insufficient yaw for the bank condition.\n• Skid → Aircraft has excessive yaw for the bank condition.\n• Coordinated turn → Aircraft is balanced with the slip indicator centered.\n\n💡 Memory Hook:\nBall left in a right turn → reduce the right bank.\n\n🎯 Board Tip:\nUse the slip indicator together with the turn indication rather than looking at the turn indicator alone.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "Turn Coordination",
+        "Slip Indicator",
+        "Lateral-Directional Control",
+        "Application"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}

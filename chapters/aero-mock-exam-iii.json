@@ -1,0 +1,1055 @@
+{
+  "title": "Aero Mock Exam III",
+  "questions": [
+    {
+      "question": "Assuming air density, drag coefficient, and reference area stay constant, a body is placed in an airstream whose velocity increases by a factor of 4. By what factor does aerodynamic drag increase?",
+      "choices": [
+        "12",
+        "16",
+        "4",
+        "8"
+      ],
+      "answerIndex": 1,
+      "explanation": "At constant density, drag coefficient, and reference area, drag varies with the square of speed. Quadrupling speed multiplies drag by 4² = 16.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "16"
+    },
+    {
+      "question": "On five-digit NACA airfoil, the third digit corresponds to the camber. What does it mean if the third digit is 1.",
+      "choices": [
+        "Critical",
+        "Reflex",
+        "Simple",
+        "Turbulent"
+      ],
+      "answerIndex": 1,
+      "explanation": "In the NACA five-digit designation, the third digit identifies the mean-camber-line type. A 1 denotes the reflexed mean camber line.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "Reflex"
+    },
+    {
+      "question": "A plain flap will increase CLmax by",
+      "choices": [
+        "Increasing the camber of the airfoil",
+        "Increasing angle of attack",
+        "Boundary layer control",
+        "Center of lift movement"
+      ],
+      "answerIndex": 0,
+      "explanation": "Deflecting a plain flap increases the airfoil's effective camber, increasing the maximum lift coefficient.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "Increasing the camber of the airfoil"
+    },
+    {
+      "question": "An elliptical planform wing has a span of 12 m and a chord of 2 m. What is the induced drag coefficient when the lift coefficient is 0.8?",
+      "choices": [
+        "0.034",
+        "0.430",
+        "0.068",
+        "0.860"
+      ],
+      "answerIndex": 0,
+      "explanation": "The wing area is 12 × 2 = 24 m², so AR = 12²/24 = 6. For an elliptical lift distribution, e = 1 and CDi = CL²/(πAR) = 0.64/(6π) ≈ 0.034.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "0.034"
+    },
+    {
+      "question": "NACA 4412 was used in the construction of the airfoil. Determine the chord (in) if the camber equals 9.12 cm.",
+      "choices": [
+        "22.80",
+        "29.92",
+        "89.76",
+        "228.00"
+      ],
+      "answerIndex": 2,
+      "explanation": "A NACA 4412 section has maximum camber equal to 4% of its chord. The chord is 9.12/0.04 = 228 cm = 89.76 in.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "89.76"
+    },
+    {
+      "question": "To be able to predict compressibility effects, you have to determine the",
+      "choices": [
+        "Mach Number",
+        "EAS",
+        "TAS",
+        "IAS"
+      ],
+      "answerIndex": 0,
+      "explanation": "Compressibility effects are organized by Mach number, the ratio of true airspeed to the local speed of sound.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "Mach Number"
+    },
+    {
+      "question": "How will the density and temperature change in a supersonic flow from a position in front of a shock wave to behind it?",
+      "choices": [
+        "Density will decrease, temperature will increase.",
+        "Density will decrease, temperature will decrease.",
+        "Density will increase, temperature will increase.",
+        "Density will increase, temperature will decrease."
+      ],
+      "answerIndex": 2,
+      "explanation": "A normal shock compresses and heats the flow. Static density and temperature are higher downstream of the shock.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "Density will increase, temperature will increase."
+    },
+    {
+      "question": "When the air has passed through a normal shock wave the Mach number is",
+      "choices": [
+        "lower than before but still greater than 1.",
+        "equal to 1.",
+        "higher than before.",
+        "less than 1."
+      ],
+      "answerIndex": 3,
+      "explanation": "For a normal shock with supersonic upstream flow, the downstream Mach number is subsonic.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "less than 1."
+    },
+    {
+      "question": "Two identical aeroplanes A and B are flying horizontal steady turns. Further data are: Condition A W= 1500 kg Bank= 20 deg TAS= 130 kt Condition B W= 1500 kg Bank= 20 deg TAS= 200 kt Which of the following statements is correct?",
+      "choices": [
+        "The load factor for A is larger than the load factor for B.",
+        "The turn radius A is larger than the turn radius B.",
+        "The lift coefficient A is smaller than the lift coefficient B.",
+        "The rate of turn A is larger than the rate of Turn B."
+      ],
+      "answerIndex": 3,
+      "explanation": "The bank angle gives both aircraft the same load factor. Turn radius varies with speed squared, while turn rate varies inversely with speed; aircraft A therefore has the higher turn rate.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "The rate of turn A is larger than the rate of Turn B."
+    },
+    {
+      "question": "A stealth jet is flying at an altitude of 20km at a velocity of 2500 miles/hr. what is the mach angle.",
+      "choices": [
+        "12.40 deg",
+        "15.30 deg",
+        "6.43 deg",
+        "18.20 deg"
+      ],
+      "answerIndex": 1,
+      "explanation": "At 20 km in the standard atmosphere, the speed of sound is about 295 m/s. 2,500 mph is about 1,118 m/s, giving M ≈ 3.79 and a Mach angle μ = sin⁻¹(1/M) ≈ 15.3°.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "15.30 deg"
+    },
+    {
+      "question": "A 5000 lb airplane with wing area of 250 sq ft and power available of 450 hp is at flight sea level standard condition. The airplane drag to lift relation is close to CD = 0.025 + 0.048 CL^2. At flight speed of 180 mph, the airplane drag coefficient is _______.",
+      "choices": [
+        "0.0237",
+        "0.0195",
+        "0.0206",
+        "0.0278"
+      ],
+      "answerIndex": 3,
+      "explanation": "At sea level, q = ½ρV² ≈ 82.8 lb/ft² and CL = W/(qS) ≈ 0.242. Substitution into CD = 0.025 + 0.048CL² gives CD ≈ 0.0278.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "0.0278"
+    },
+    {
+      "question": "For a vortex with constant circulation, how does the radius r of a circular streamline vary with tangential velocity v as distance from the core increases?",
+      "choices": [
+        "Directly Proportional",
+        "Inversely Proportional",
+        "Constant",
+        "Not related"
+      ],
+      "answerIndex": 1,
+      "explanation": "For a vortex with constant circulation, tangential speed is v = Γ/(2πr). As radius increases, tangential velocity decreases in inverse proportion.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "Inversely Proportional"
+    },
+    {
+      "question": "Where on the surface of a typical aerofoil will flow separation normally start at high angles of attack?",
+      "choices": [
+        "upper side leading edge",
+        "lower side trailing edge",
+        "lower side leading edge",
+        "upper side trailing edge"
+      ],
+      "answerIndex": 0,
+      "explanation": "At high angle of attack, the strong adverse pressure gradient near the upper leading edge commonly causes separation to begin there.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "upper side leading edge"
+    },
+    {
+      "question": "The Mach number _____.",
+      "choices": [
+        "is the ratio between the TAS of the aeroplane and the sea level speed of sound",
+        "is the ratio between the IAS of the aeroplane and the local speed of sound",
+        "increases as the local speed of sound decreases",
+        "increases at a given TAS, when the temperature rises"
+      ],
+      "answerIndex": 2,
+      "explanation": "Mach number is TAS divided by local speed of sound. At a fixed TAS, a lower local sound speed means a higher Mach number.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "increases as the local speed of sound decreases"
+    },
+    {
+      "question": "The aircraft total drag in straight and level flight is lowest when the",
+      "choices": [
+        "Induced drag is equal to zero",
+        "Induced drag is lowest",
+        "Parasite drag is equal to the induced drag",
+        "Parasite drag equals twice the induced drag"
+      ],
+      "answerIndex": 2,
+      "explanation": "In the drag polar, total drag reaches its minimum when parasite drag and induced drag are equal.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "Parasite drag is equal to the induced drag"
+    },
+    {
+      "question": "An aircraft has a mass of 7200 kg and a wing span of 12 m. If the wing loading is 1.968 kN/m^2, what is the induced drag when flying at speeds of 200 knots at sea-level?",
+      "choices": [
+        "1500 N",
+        "1600 N",
+        "1700 N",
+        "1800 N"
+      ],
+      "answerIndex": 2,
+      "explanation": "Using W = mg gives S = W/(W/S) ≈ 35.9 m² and AR = b²/S ≈ 4.01. With q ≈ 6,488 Pa, CL ≈ 0.303 and CDi = CL²/(πAR); D = qSCDi ≈ 1,700 N for an ideal elliptical lift distribution.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "1700 N"
+    },
+    {
+      "question": "The true airspeed (TAS) is _____.",
+      "choices": [
+        "higher than the speed of the undisturbed airstream about the aeroplane.",
+        "equal to the IAS, multiplied by the air density at sea level",
+        "lower than the speed of the undisturbed airstream about the aeroplane",
+        "lower than the indicated airspeed (IAS) at ISA conditions and altitudes below sea level"
+      ],
+      "answerIndex": 3,
+      "explanation": "Below sea level in the standard atmosphere, air density is greater than sea-level standard density. At the same indicated speed, TAS is lower than IAS when density is higher.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "lower than the indicated airspeed (IAS) at ISA conditions and altitudes below sea level"
+    },
+    {
+      "question": "If a symmetrical aerofoil is accelerated from subsonic to supersonic speed the centre of lift will move _____.",
+      "choices": [
+        "aft to the trailing edge",
+        "forward to the leading edge",
+        "forward to the mid chord",
+        "aft to the mid chord"
+      ],
+      "answerIndex": 3,
+      "explanation": "In supersonic flow, the aerodynamic center of a thin symmetric airfoil is near the half-chord point, so the center of lift moves aft toward mid-chord.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "aft to the mid chord"
+    },
+    {
+      "question": "To increase the critical Mach number a conventional aerofoil should ______.",
+      "choices": [
+        "have a low thickness to chord ratio",
+        "have a large camber",
+        "be used with a high angle of attack",
+        "have a large leading edge radius"
+      ],
+      "answerIndex": 0,
+      "explanation": "A lower thickness-to-chord ratio reduces the peak local acceleration over a conventional airfoil and raises its critical Mach number.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "have a low thickness to chord ratio"
+    },
+    {
+      "question": "Given the ratio of dynamic pressure and static pressure to be 0.135, calculate the Mach number. Assume air is the medium.",
+      "choices": [
+        "0.339",
+        "0.439",
+        "0.539",
+        "0.639"
+      ],
+      "answerIndex": 1,
+      "explanation": "For air, q/p = (γ/2)M² with γ = 1.4. Thus M = √(2 × 0.135/1.4) ≈ 0.439.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "0.439"
+    },
+    {
+      "question": "What is μ (slugs/ft-s) at the an altitude where the speed of sound equals 692.662 mph?",
+      "choices": [
+        "3.04 x 10^-7",
+        "3.24 x 10^-7",
+        "3.64 x 10^-7",
+        "3.84 x 10^-7"
+      ],
+      "answerIndex": 1,
+      "explanation": "The specified sound speed corresponds to about 239 K. Applying Sutherland's relation for air gives dynamic viscosity close to 3.24 × 10⁻⁷ slug/(ft·s).",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "3.24 x 10^-7"
+    },
+    {
+      "question": "Shock stall is",
+      "choices": [
+        "separation of the flow at high angles of attack and at high Mach Numbers.",
+        "separation of the flow at the trailing edge of the wing at high Mach Numbers.",
+        "separation of the boundary layer behind the shock wave.",
+        "separation of the flow behind the bow wave."
+      ],
+      "answerIndex": 2,
+      "explanation": "A shock causes a rapid pressure rise and adverse pressure gradient. The boundary layer can separate immediately downstream of the shock, producing shock stall.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "separation of the boundary layer behind the shock wave."
+    },
+    {
+      "question": "For a constant-speed flow redirected by a curved vane, what happens to the vertical component of force as the deflection angle from the horizontal increases, with all other parameters fixed?",
+      "choices": [
+        "Increases",
+        "Decreases",
+        "No relationship",
+        "Remains the same"
+      ],
+      "answerIndex": 0,
+      "explanation": "With fixed flow speed and mass flow, the vertical momentum change grows with the vertical component of the redirected velocity. A larger deflection angle from the horizontal increases that component.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "Increases"
+    },
+    {
+      "question": "The lift coefficient of an aircraft in steady horizontal flight is 0.4. Increase of angle of attack of 1 degree will increase the CL by 0.09. A vertical up gust instantly changes the angle of attack by 5 degrees. The load factor will be",
+      "choices": [
+        "2.13",
+        "1.09",
+        "2.00",
+        "3.19"
+      ],
+      "answerIndex": 0,
+      "explanation": "The gust raises CL by 5 × 0.09 = 0.45, so the new CL is 0.85. Lift, and therefore load factor, scales with CL here: n = 0.85/0.4 = 2.125 ≈ 2.13.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "2.13"
+    },
+    {
+      "question": "An aircraft has a stall speed of 100kt at a load factor n=1. In a turn with a load factor of n=2, the stall speed is",
+      "choices": [
+        "70 kt",
+        "200 kt",
+        "282 kt",
+        "141 kt"
+      ],
+      "answerIndex": 3,
+      "explanation": "Stall speed in a coordinated turn scales with the square root of load factor. Vs = 100√2 ≈ 141 kt.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "141 kt"
+    },
+    {
+      "question": "It is the point in a fluid stream where the diameter of the stream is the least and fluid velocity is at its maximum.",
+      "choices": [
+        "Converging-Diverging",
+        "Stagnation",
+        "Vena Contracta",
+        "Walls"
+      ],
+      "answerIndex": 2,
+      "explanation": "The vena contracta is the narrowest section of a contracted stream, where the flow speed is greatest.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "Vena Contracta"
+    },
+    {
+      "question": "Given g = 10m/s^2, an aircraft is in a steady turn, at a constant TAS of 300kt, and a bank angle of 45 degrees. Its turning radius is",
+      "choices": [
+        "2381 m",
+        "3254 m",
+        "4876 m",
+        "None of the above"
+      ],
+      "answerIndex": 0,
+      "explanation": "For a steady level turn, r = V²/(g tan φ). With V = 300 kt = 154.3 m/s, g = 10 m/s², and φ = 45°, r ≈ 2,381 m.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "2381 m"
+    },
+    {
+      "question": "This gas law states that pressure and volume are inversely related when the temperature is constant.",
+      "choices": [
+        "Avogadro’s",
+        "Boltzmann’s",
+        "Boyle’s",
+        "Charles"
+      ],
+      "answerIndex": 2,
+      "explanation": "Boyle's law states that pressure and volume vary inversely for a fixed amount of gas at constant temperature.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "Boyle’s"
+    },
+    {
+      "question": "The span-wise flow is caused by the difference between the air pressure on top and beneath the wing and its direction of movement goes from ______.",
+      "choices": [
+        "beneath to the top of the wing via the trailing edge",
+        "the top to beneath the wing via the leading edge",
+        "beneath to the top of the wing via the wing tip",
+        "the top to beneath the wing via the wing's trailing edge"
+      ],
+      "answerIndex": 2,
+      "explanation": "Pressure is higher below the wing than above it. The resulting crossflow moves from the lower surface around the wingtip toward the upper surface.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "beneath to the top of the wing via the wing tip"
+    },
+    {
+      "question": "When the Mach number is slowly increased in straight and level flight the first shockwaves will occur",
+      "choices": [
+        "on the underside of the wing.",
+        "somewhere on the fin.",
+        "Somewhere on the horizontal tail.",
+        "On the upper surface of the wing."
+      ],
+      "answerIndex": 3,
+      "explanation": "As Mach number approaches critical, local flow first becomes supersonic over the upper wing surface; the terminating shock first appears there. The exact spanwise location depends on the wing design.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "On the upper surface of the wing."
+    },
+    {
+      "question": "Which among the statements about Density Altitude is incorrect?",
+      "choices": [
+        "A high density altitude will decrease the power produced by an engine because less oxygen is available for combustion",
+        "A high density altitude requires a higher true airspeed for takeoff and landing and will therefore increase takeoff and landing distances",
+        "Density altitude is found by correcting pressure altitude for temperature and humidity deviations from the standard atmosphere",
+        "None, all statements above are correct"
+      ],
+      "answerIndex": 2,
+      "explanation": "Density altitude is pressure altitude corrected for nonstandard temperature. Humidity affects actual air density, but it is not part of that definition, making statement C incorrect.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "Density altitude is found by correcting pressure altitude for temperature and humidity deviations from the standard atmosphere"
+    },
+    {
+      "question": "VA is",
+      "choices": [
+        "The maximum speed at which rolls are allowed.",
+        "The speed that should not be exceeded in the climb.",
+        "The maximum speed for full, abrupt control deflections without exceeding the aircraft's limit load factor.",
+        "The speed at which a heavy transport aircraft should fly in turbulence."
+      ],
+      "answerIndex": 2,
+      "explanation": "Maneuvering speed is the maximum speed at which full, abrupt control deflections can be applied without exceeding the aircraft's limit load factor.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "The maximum speed for full, abrupt control deflections without exceeding the aircraft's limit load factor."
+    },
+    {
+      "question": "What is the CLmax of an aircraft with a wing loading of 700 Newtons per square meter and stalling velocity of 115 miles per hour? Assumes standard sea level conditions.",
+      "choices": [
+        "0.216",
+        "0.233",
+        "0.433",
+        "0.465"
+      ],
+      "answerIndex": 2,
+      "explanation": "At the stall, W/S = ½ρVs²CLmax. With Vs = 115 mph = 51.44 m/s, CLmax = 2(700)/(1.225 × 51.44²) ≈ 0.433.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "0.433"
+    },
+    {
+      "question": "A body is placed in a certain airstream. The density of the airstream decreases to half of the original value. The aerodynamic drag will decrease with a factor ______.",
+      "choices": [
+        "8.0",
+        "1.4",
+        "2.0",
+        "4.0"
+      ],
+      "answerIndex": 2,
+      "explanation": "At fixed speed, shape, and reference area, drag is proportional to density. Halving density halves drag, a reduction by a factor of 2.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "2.0"
+    },
+    {
+      "question": "By what percent does the lift increase in a steady level turn at 45 degrees angle of bank, compared to straight and level flight?",
+      "choices": [
+        "41%",
+        "19%",
+        "31%",
+        "52%"
+      ],
+      "answerIndex": 0,
+      "explanation": "In a level turn at 45°, n = 1/cos45° ≈ 1.414. Lift is therefore about 41% greater than in straight-and-level flight.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "41%"
+    },
+    {
+      "question": "Consider a rocket burning hydrogen and oxygen; the combustion chamber pressure and temperature are 25 atm and 3,517 Kelvin, respectively. The area of the rocket nozzle throat is 0.1 square meters. The area of the exit is designed so that the exit pressure exactly equals ambient pressure at a standard altitude of 30 km. For the gas mixture assume that k = 1.22 and the molecular weight M = 16. At a standard altitude of 30 km, calculate exit Mach number.",
+      "choices": [
+        "5.21",
+        "1.00",
+        "4.35",
+        "3.56"
+      ],
+      "answerIndex": 0,
+      "explanation": "At 30 km standard altitude, ambient pressure is about 1.2 kPa. Using the isentropic pressure relation with chamber pressure 25 atm and γ = 1.22 gives an exit Mach number near 5.21.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "5.21"
+    },
+    {
+      "question": "In internal pipe flow, what type of flow is generally expected when the Reynolds number exceeds 4,000?",
+      "choices": [
+        "Laminar",
+        "Transient",
+        "Turbulent",
+        "Uniform"
+      ],
+      "answerIndex": 2,
+      "explanation": "For internal pipe flow, Reynolds numbers above about 4,000 are generally in the turbulent regime.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "Turbulent"
+    },
+    {
+      "question": "In supersonic flight aerofoil pressure distribution is",
+      "choices": [
+        "rectangular.",
+        "irregular.",
+        "triangular.",
+        "the same as in subsonic flight."
+      ],
+      "answerIndex": 0,
+      "explanation": "In the idealized thin-airfoil supersonic model, pressure is approximately constant over each chordwise panel, producing a rectangular or step-like distribution.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "rectangular."
+    },
+    {
+      "question": "The flight Mach number is 0.8 and the TAS is 400 kts. What is the speed of sound?",
+      "choices": [
+        "500 kts",
+        "320 kts",
+        "480 kts",
+        "600 kts"
+      ],
+      "answerIndex": 0,
+      "explanation": "Mach number M = V/a, so the speed of sound is a = 400/0.8 = 500 kt.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "500 kts"
+    },
+    {
+      "question": "Just above the critical Mach number the first evidence of a shock wave will appear at the",
+      "choices": [
+        "upper side of the wing.",
+        "lower side of the wing.",
+        "leading edge of the wing.",
+        "trailing edge of the wing."
+      ],
+      "answerIndex": 0,
+      "explanation": "Just above critical Mach, a local supersonic region forms on the upper surface and terminates in a shock wave there.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "upper side of the wing."
+    },
+    {
+      "question": "What force is required to push a flat plate, 3 in by 2 in at a speed of 35 fps in a direction perpendicular to its surface?",
+      "choices": [
+        "22.36 lbs",
+        "11.18 lbs",
+        "1.55 lbs",
+        "0.078 lbs"
+      ],
+      "answerIndex": 3,
+      "explanation": "For a flat plate normal to the flow, use CD ≈ 1.28. With S = 6 in² = 0.0417 ft², V = 35 ft/s, and sea-level density 0.002377 slug/ft³, D = ½ρV²CDS ≈ 0.078 lb.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "0.078 lbs"
+    },
+    {
+      "question": "An aircraft is cruising at FL110. What is the ambient temperature (K)?",
+      "choices": [
+        "266.37",
+        "390.06",
+        "479.46",
+        "557.92"
+      ],
+      "answerIndex": 0,
+      "explanation": "At 11,000 ft in the standard troposphere, T = 288.15 − 0.0065(3,352.8) ≈ 266.4 K.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "266.37"
+    },
+    {
+      "question": "An aircraft model is placed in a certain wind tunnel airstream. The density of the airstream decreases to half of the original value. The aerodynamic drag will decrease with a factor",
+      "choices": [
+        "8.0",
+        "1.4",
+        "2.0",
+        "4.0"
+      ],
+      "answerIndex": 2,
+      "explanation": "At fixed speed, shape, and reference area, drag is proportional to density. Halving density halves the drag, so the reduction factor is 2.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "2.0"
+    },
+    {
+      "question": "An aeroplane has a stall speed of 78 KCAS at its gross weight of 6,850 lbs. What is the stall speed when the weight is 5,000 lbs?",
+      "choices": [
+        "57 KCAS",
+        "67 KCAS",
+        "91 KCAS",
+        "78 KCAS"
+      ],
+      "answerIndex": 1,
+      "explanation": "For the same configuration, stall speed varies with √weight. Vs = 78√(5,000/6,850) ≈ 66.6 KCAS, or 67 KCAS.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "67 KCAS"
+    },
+    {
+      "question": "Assuming an ideal elliptical lift distribution, what is the induced drag at 100 knots of a monoplane of mass 2,400 kg and wingspan 16 m?",
+      "choices": [
+        "632.8 N",
+        "425.9 N",
+        "632.6 lbf",
+        "425.9 lbf"
+      ],
+      "answerIndex": 1,
+      "explanation": "For an ideal elliptical lift distribution, Di = W²/(qπb²). With W = 2,400 × 9.81 N, V = 100 kt, sea-level density, and b = 16 m, Di ≈ 425.9 N.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "425.9 N"
+    },
+    {
+      "question": "Consider an oblique shock wave with β = 35 deg and pressure ratio of P2/P1=3. What is the upstream mach number?",
+      "choices": [
+        "2.87",
+        "3.21",
+        "4.10",
+        "2.42"
+      ],
+      "answerIndex": 0,
+      "explanation": "The pressure ratio gives the upstream normal Mach component Mn1 ≈ 1.647. Since Mn1 = M1 sinβ, M1 = 1.647/sin35° ≈ 2.87.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "2.87"
+    },
+    {
+      "question": "Which among the following statements about symmetrical and unsymmetrical airfoils is incorrect?",
+      "choices": [
+        "A symmetric airfoil at zero angle of attack produces identical velocity increases and static pressure decreases on both the upper and lower surfaces.",
+        "An unsymmetrical airfoil is able to produce an uneven pressure distribution even at zero AOA.",
+        "The first two digits of a 4-digit airfoil will give information whether an airfoil is unsymmetrical or not.",
+        "Because of positive camber, the area in the streamtube above the wing is larger than area in the streamtube below the wing and the airflow velocity above the wing is greater than the velocity below the wing."
+      ],
+      "answerIndex": 3,
+      "explanation": "A nonzero first digit in a NACA four-digit designation indicates camber, and the second digit locates its maximum. Statement D is incorrect: a larger upper streamtube area alone would imply lower, not higher, speed by continuity, and equal transit time is not a valid lift explanation.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "Because of positive camber, the area in the streamtube above the wing is larger than area in the streamtube below the wing and the airflow velocity above the wing is greater than the velocity below the wing."
+    },
+    {
+      "question": "In a two-dimensional flow pattern, where the streamlines converge the static pressure will _____.",
+      "choices": [
+        "not change",
+        "increase initially, then decrease",
+        "decrease",
+        "increase"
+      ],
+      "answerIndex": 2,
+      "explanation": "Converging streamlines indicate increasing flow speed. For steady incompressible flow, Bernoulli's relation then gives a lower static pressure.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "decrease"
+    },
+    {
+      "question": "The location of the center of pressure of a positive cambered wing at increasing angle of attack will",
+      "choices": [
+        "Shift aft",
+        "Shift in spanwise direction",
+        "Shift forward",
+        "Not shift"
+      ],
+      "answerIndex": 2,
+      "explanation": "For a positively cambered airfoil below stall, increasing angle of attack generally moves the center of pressure forward toward the quarter-chord region.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "Shift forward"
+    },
+    {
+      "question": "How does the exterior view of an aircraft change, when the trim is used during a speed decrease?",
+      "choices": [
+        "Elevator deflected downwards by means of a trimmable horizontal stabilizer",
+        "Nothing changes in exterior view",
+        "The elevator is deflected further downwards by means of an upwards deflected trimtab",
+        "The elevator is deflected upwards by means of a downwards deflected trimtab"
+      ],
+      "answerIndex": 3,
+      "explanation": "A speed decrease requires increased lift and a nose-up trim change. A downward-deflected trim tab pushes the elevator upward, producing that nose-up trim effect.",
+      "questionType": "multiple_choice",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0,
+      "answerText": "The elevator is deflected upwards by means of a downwards deflected trimtab"
+    }
+  ]
+}

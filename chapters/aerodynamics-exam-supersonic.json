@@ -1,0 +1,1237 @@
+{
+  "title": "Aerodynamics Exam: Supersonic",
+  "questions": [
+    {
+      "question": "A trainee claims: “Tail area divided by fuselage length.” What correction is accurate about static margin?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Lift divided by drag.",
+        "Tail area divided by fuselage length.",
+        "(Neutral point − CG location)/mean aerodynamic chord.",
+        "(CG − neutral point)/wing span."
+      ],
+      "answerIndex": 2,
+      "answerText": "(Neutral point − CG location)/mean aerodynamic chord.",
+      "explanation": "A positive static margin means the CG lies ahead of the neutral point.\n\nApply it to static margin. The statement that matches the principle is “(Neutral point − CG location)/mean aerodynamic chord.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "static margin",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which primary control surface chiefly controls yaw?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The flap.",
+        "The rudder.",
+        "The elevator.",
+        "The ailerons."
+      ],
+      "answerIndex": 1,
+      "answerText": "The rudder.",
+      "explanation": "Rudder deflection produces a yawing moment about the vertical axis.\n\nApply it to control surfaces. The statement that matches the principle is “The rudder.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "control surfaces",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “The point of maximum wing thickness.” What correction is accurate about neutral point?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The CG location at which the airplane has neutral static longitudinal stability.",
+        "The location where lift equals drag.",
+        "The point of maximum wing thickness.",
+        "The center of the fuselage volume."
+      ],
+      "answerIndex": 0,
+      "answerText": "The CG location at which the airplane has neutral static longitudinal stability.",
+      "explanation": "At the neutral point, a small change in angle of attack produces no restoring or destabilizing pitching-moment slope.\n\nApply it to neutral point. The statement that matches the principle is “The CG location at which the airplane has neutral static longitudinal stability.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "neutral point",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “It makes the vertical tail unnecessary.” What correction is accurate about lateral stability?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A sideslip produces a rolling tendency that helps restore wings-level flight.",
+        "A pitch disturbance produces a yawing moment only.",
+        "The aircraft loses all roll stability.",
+        "It makes the vertical tail unnecessary."
+      ],
+      "answerIndex": 0,
+      "answerText": "A sideslip produces a rolling tendency that helps restore wings-level flight.",
+      "explanation": "Dihedral, sweep, and high-wing effects can contribute rolling moments in sideslip.\n\nApply it to lateral stability. The statement that matches the principle is “A sideslip produces a rolling tendency that helps restore wings-level flight.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "lateral stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “The aircraft has no pitching moment at any angle.” What correction is accurate about static stability?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The aircraft has no pitching moment at any angle.",
+        "The initial pitching moment tends to restore the aircraft toward trim.",
+        "The disturbance produces an ever-increasing pitch moment away from trim.",
+        "The aircraft returns only after a pilot input."
+      ],
+      "answerIndex": 1,
+      "answerText": "The initial pitching moment tends to restore the aircraft toward trim.",
+      "explanation": "Static stability describes the initial tendency after a disturbance, independent of how the motion evolves over time.\n\nApply it to static stability. The statement that matches the principle is “The initial pitching moment tends to restore the aircraft toward trim.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "static stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “Lift divided by drag.” What correction is accurate about static margin?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "(CG − neutral point)/wing span.",
+        "Lift divided by drag.",
+        "Tail area divided by fuselage length.",
+        "(Neutral point − CG location)/mean aerodynamic chord."
+      ],
+      "answerIndex": 3,
+      "answerText": "(Neutral point − CG location)/mean aerodynamic chord.",
+      "explanation": "A positive static margin means the CG lies ahead of the neutral point.\n\nApply it to static margin. The statement that matches the principle is “(Neutral point − CG location)/mean aerodynamic chord.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "static margin",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How is static margin commonly defined?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Tail area divided by fuselage length.",
+        "(Neutral point − CG location)/mean aerodynamic chord.",
+        "(CG − neutral point)/wing span.",
+        "Lift divided by drag."
+      ],
+      "answerIndex": 1,
+      "answerText": "(Neutral point − CG location)/mean aerodynamic chord.",
+      "explanation": "A positive static margin means the CG lies ahead of the neutral point.\n\nApply it to static margin. The statement that matches the principle is “(Neutral point − CG location)/mean aerodynamic chord.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "static margin",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “Aileron deflection fixed in one direction.” What correction is accurate about directional stability?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Aileron deflection fixed in one direction.",
+        "A vertical tail aft of the center of gravity.",
+        "A horizontal tail forward of the CG only.",
+        "Anhedral alone in every configuration."
+      ],
+      "answerIndex": 1,
+      "answerText": "A vertical tail aft of the center of gravity.",
+      "explanation": "The aft vertical tail tends to align the nose with the relative wind after a sideslip.\n\nApply it to directional stability. The statement that matches the principle is “A vertical tail aft of the center of gravity.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "directional stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “A horizontal tail forward of the CG only.” What correction is accurate about directional stability?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A horizontal tail forward of the CG only.",
+        "Anhedral alone in every configuration.",
+        "Aileron deflection fixed in one direction.",
+        "A vertical tail aft of the center of gravity."
+      ],
+      "answerIndex": 3,
+      "answerText": "A vertical tail aft of the center of gravity.",
+      "explanation": "The aft vertical tail tends to align the nose with the relative wind after a sideslip.\n\nApply it to directional stability. The statement that matches the principle is “A vertical tail aft of the center of gravity.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "directional stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “Replace the primary control surface in all aircraft.” What correction is accurate about trim tab?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Reduce the sustained control force needed to maintain a selected condition.",
+        "Increase the wing’s aspect ratio.",
+        "Replace the primary control surface in all aircraft.",
+        "Prevent all dynamic oscillations."
+      ],
+      "answerIndex": 0,
+      "answerText": "Reduce the sustained control force needed to maintain a selected condition.",
+      "explanation": "A trim tab creates a balancing hinge moment so the pilot need not hold continuous force.\n\nApply it to trim tab. The statement that matches the principle is “Reduce the sustained control force needed to maintain a selected condition.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "trim tab",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does dynamic stability describe?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The initial restoring-moment direction only.",
+        "The aircraft’s maximum lift coefficient.",
+        "The location of the center of pressure only.",
+        "How the motion changes with time after a disturbance."
+      ],
+      "answerIndex": 3,
+      "answerText": "How the motion changes with time after a disturbance.",
+      "explanation": "Dynamic stability concerns time history: whether oscillations decay, persist, or grow.\n\nApply it to dynamic stability. The statement that matches the principle is “How the motion changes with time after a disturbance.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "dynamic stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “A pitch disturbance produces a yawing moment only.” What correction is accurate about lateral stability?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The aircraft loses all roll stability.",
+        "It makes the vertical tail unnecessary.",
+        "A sideslip produces a rolling tendency that helps restore wings-level flight.",
+        "A pitch disturbance produces a yawing moment only."
+      ],
+      "answerIndex": 2,
+      "answerText": "A sideslip produces a rolling tendency that helps restore wings-level flight.",
+      "explanation": "Dihedral, sweep, and high-wing effects can contribute rolling moments in sideslip.\n\nApply it to lateral stability. The statement that matches the principle is “A sideslip produces a rolling tendency that helps restore wings-level flight.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "lateral stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “The initial restoring-moment direction only.” What correction is accurate about dynamic stability?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The aircraft’s maximum lift coefficient.",
+        "The location of the center of pressure only.",
+        "How the motion changes with time after a disturbance.",
+        "The initial restoring-moment direction only."
+      ],
+      "answerIndex": 2,
+      "answerText": "How the motion changes with time after a disturbance.",
+      "explanation": "Dynamic stability concerns time history: whether oscillations decay, persist, or grow.\n\nApply it to dynamic stability. The statement that matches the principle is “How the motion changes with time after a disturbance.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "dynamic stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the primary function of a trim tab?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Replace the primary control surface in all aircraft.",
+        "Prevent all dynamic oscillations.",
+        "Reduce the sustained control force needed to maintain a selected condition.",
+        "Increase the wing’s aspect ratio."
+      ],
+      "answerIndex": 2,
+      "answerText": "Reduce the sustained control force needed to maintain a selected condition.",
+      "explanation": "A trim tab creates a balancing hinge moment so the pilot need not hold continuous force.\n\nApply it to trim tab. The statement that matches the principle is “Reduce the sustained control force needed to maintain a selected condition.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "trim tab",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “Increase the wing’s aspect ratio.” What correction is accurate about trim tab?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Prevent all dynamic oscillations.",
+        "Reduce the sustained control force needed to maintain a selected condition.",
+        "Increase the wing’s aspect ratio.",
+        "Replace the primary control surface in all aircraft."
+      ],
+      "answerIndex": 1,
+      "answerText": "Reduce the sustained control force needed to maintain a selected condition.",
+      "explanation": "A trim tab creates a balancing hinge moment so the pilot need not hold continuous force.\n\nApply it to trim tab. The statement that matches the principle is “Reduce the sustained control force needed to maintain a selected condition.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "trim tab",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “The location where lift equals drag.” What correction is accurate about neutral point?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The center of the fuselage volume.",
+        "The CG location at which the airplane has neutral static longitudinal stability.",
+        "The location where lift equals drag.",
+        "The point of maximum wing thickness."
+      ],
+      "answerIndex": 1,
+      "answerText": "The CG location at which the airplane has neutral static longitudinal stability.",
+      "explanation": "At the neutral point, a small change in angle of attack produces no restoring or destabilizing pitching-moment slope.\n\nApply it to neutral point. The statement that matches the principle is “The CG location at which the airplane has neutral static longitudinal stability.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "neutral point",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which feature usually contributes positive directional stability?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A vertical tail aft of the center of gravity.",
+        "A horizontal tail forward of the CG only.",
+        "Anhedral alone in every configuration.",
+        "Aileron deflection fixed in one direction."
+      ],
+      "answerIndex": 0,
+      "answerText": "A vertical tail aft of the center of gravity.",
+      "explanation": "The aft vertical tail tends to align the nose with the relative wind after a sideslip.\n\nApply it to directional stability. The statement that matches the principle is “A vertical tail aft of the center of gravity.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "directional stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “The disturbance produces an ever-increasing pitch moment away from trim.” What correction is accurate about static stability?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The disturbance produces an ever-increasing pitch moment away from trim.",
+        "The aircraft returns only after a pilot input.",
+        "The aircraft has no pitching moment at any angle.",
+        "The initial pitching moment tends to restore the aircraft toward trim."
+      ],
+      "answerIndex": 3,
+      "answerText": "The initial pitching moment tends to restore the aircraft toward trim.",
+      "explanation": "Static stability describes the initial tendency after a disturbance, independent of how the motion evolves over time.\n\nApply it to static stability. The statement that matches the principle is “The initial pitching moment tends to restore the aircraft toward trim.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "static stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “The center of the fuselage volume.” What correction is accurate about neutral point?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The location where lift equals drag.",
+        "The point of maximum wing thickness.",
+        "The center of the fuselage volume.",
+        "The CG location at which the airplane has neutral static longitudinal stability."
+      ],
+      "answerIndex": 3,
+      "answerText": "The CG location at which the airplane has neutral static longitudinal stability.",
+      "explanation": "At the neutral point, a small change in angle of attack produces no restoring or destabilizing pitching-moment slope.\n\nApply it to neutral point. The statement that matches the principle is “The CG location at which the airplane has neutral static longitudinal stability.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "neutral point",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “The aircraft loses all roll stability.” What correction is accurate about lateral stability?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It makes the vertical tail unnecessary.",
+        "A sideslip produces a rolling tendency that helps restore wings-level flight.",
+        "A pitch disturbance produces a yawing moment only.",
+        "The aircraft loses all roll stability."
+      ],
+      "answerIndex": 1,
+      "answerText": "A sideslip produces a rolling tendency that helps restore wings-level flight.",
+      "explanation": "Dihedral, sweep, and high-wing effects can contribute rolling moments in sideslip.\n\nApply it to lateral stability. The statement that matches the principle is “A sideslip produces a rolling tendency that helps restore wings-level flight.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "lateral stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “Anhedral alone in every configuration.” What correction is accurate about directional stability?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Anhedral alone in every configuration.",
+        "Aileron deflection fixed in one direction.",
+        "A vertical tail aft of the center of gravity.",
+        "A horizontal tail forward of the CG only."
+      ],
+      "answerIndex": 2,
+      "answerText": "A vertical tail aft of the center of gravity.",
+      "explanation": "The aft vertical tail tends to align the nose with the relative wind after a sideslip.\n\nApply it to directional stability. The statement that matches the principle is “A vertical tail aft of the center of gravity.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "directional stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “(CG − neutral point)/wing span.” What correction is accurate about static margin?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "(Neutral point − CG location)/mean aerodynamic chord.",
+        "(CG − neutral point)/wing span.",
+        "Lift divided by drag.",
+        "Tail area divided by fuselage length."
+      ],
+      "answerIndex": 0,
+      "answerText": "(Neutral point − CG location)/mean aerodynamic chord.",
+      "explanation": "A positive static margin means the CG lies ahead of the neutral point.\n\nApply it to static margin. The statement that matches the principle is “(Neutral point − CG location)/mean aerodynamic chord.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "static margin",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the neutral point in longitudinal stability?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The point of maximum wing thickness.",
+        "The center of the fuselage volume.",
+        "The CG location at which the airplane has neutral static longitudinal stability.",
+        "The location where lift equals drag."
+      ],
+      "answerIndex": 2,
+      "answerText": "The CG location at which the airplane has neutral static longitudinal stability.",
+      "explanation": "At the neutral point, a small change in angle of attack produces no restoring or destabilizing pitching-moment slope.\n\nApply it to neutral point. The statement that matches the principle is “The CG location at which the airplane has neutral static longitudinal stability.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "neutral point",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “Prevent all dynamic oscillations.” What correction is accurate about trim tab?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Increase the wing’s aspect ratio.",
+        "Replace the primary control surface in all aircraft.",
+        "Prevent all dynamic oscillations.",
+        "Reduce the sustained control force needed to maintain a selected condition."
+      ],
+      "answerIndex": 3,
+      "answerText": "Reduce the sustained control force needed to maintain a selected condition.",
+      "explanation": "A trim tab creates a balancing hinge moment so the pilot need not hold continuous force.\n\nApply it to trim tab. The statement that matches the principle is “Reduce the sustained control force needed to maintain a selected condition.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "trim tab",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “The location of the center of pressure only.” What correction is accurate about dynamic stability?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "How the motion changes with time after a disturbance.",
+        "The initial restoring-moment direction only.",
+        "The aircraft’s maximum lift coefficient.",
+        "The location of the center of pressure only."
+      ],
+      "answerIndex": 0,
+      "answerText": "How the motion changes with time after a disturbance.",
+      "explanation": "Dynamic stability concerns time history: whether oscillations decay, persist, or grow.\n\nApply it to dynamic stability. The statement that matches the principle is “How the motion changes with time after a disturbance.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "dynamic stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which effect is associated with dihedral effect?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A pitch disturbance produces a yawing moment only.",
+        "The aircraft loses all roll stability.",
+        "It makes the vertical tail unnecessary.",
+        "A sideslip produces a rolling tendency that helps restore wings-level flight."
+      ],
+      "answerIndex": 3,
+      "answerText": "A sideslip produces a rolling tendency that helps restore wings-level flight.",
+      "explanation": "Dihedral, sweep, and high-wing effects can contribute rolling moments in sideslip.\n\nApply it to lateral stability. The statement that matches the principle is “A sideslip produces a rolling tendency that helps restore wings-level flight.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "lateral stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “The elevator.” What correction is accurate about control surfaces?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The rudder.",
+        "The elevator.",
+        "The ailerons.",
+        "The flap."
+      ],
+      "answerIndex": 0,
+      "answerText": "The rudder.",
+      "explanation": "Rudder deflection produces a yawing moment about the vertical axis.\n\nApply it to control surfaces. The statement that matches the principle is “The rudder.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "control surfaces",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “The aircraft’s maximum lift coefficient.” What correction is accurate about dynamic stability?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The location of the center of pressure only.",
+        "How the motion changes with time after a disturbance.",
+        "The initial restoring-moment direction only.",
+        "The aircraft’s maximum lift coefficient."
+      ],
+      "answerIndex": 1,
+      "answerText": "How the motion changes with time after a disturbance.",
+      "explanation": "Dynamic stability concerns time history: whether oscillations decay, persist, or grow.\n\nApply it to dynamic stability. The statement that matches the principle is “How the motion changes with time after a disturbance.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "dynamic stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does positive static longitudinal stability mean after a small pitch disturbance?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The initial pitching moment tends to restore the aircraft toward trim.",
+        "The disturbance produces an ever-increasing pitch moment away from trim.",
+        "The aircraft returns only after a pilot input.",
+        "The aircraft has no pitching moment at any angle."
+      ],
+      "answerIndex": 0,
+      "answerText": "The initial pitching moment tends to restore the aircraft toward trim.",
+      "explanation": "Static stability describes the initial tendency after a disturbance, independent of how the motion evolves over time.\n\nApply it to static stability. The statement that matches the principle is “The initial pitching moment tends to restore the aircraft toward trim.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "static stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A trainee claims: “The aircraft returns only after a pilot input.” What correction is accurate about static stability?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The aircraft returns only after a pilot input.",
+        "The aircraft has no pitching moment at any angle.",
+        "The initial pitching moment tends to restore the aircraft toward trim.",
+        "The disturbance produces an ever-increasing pitch moment away from trim."
+      ],
+      "answerIndex": 2,
+      "answerText": "The initial pitching moment tends to restore the aircraft toward trim.",
+      "explanation": "Static stability describes the initial tendency after a disturbance, independent of how the motion evolves over time.\n\nApply it to static stability. The statement that matches the principle is “The initial pitching moment tends to restore the aircraft toward trim.” The other choices conflict with this relationship or definition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "static stability",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Across a normal shock, how is the shock oriented to the upstream stream, and how does the stream respond?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The flow turns through the shock by an arbitrary large angle.",
+        "The flow accelerates from subsonic to supersonic.",
+        "The shock causes no pressure change.",
+        "The flow direction remains along the shock normal while the flow decelerates."
+      ],
+      "answerIndex": 3,
+      "answerText": "The flow direction remains along the shock normal while the flow decelerates.",
+      "explanation": "A normal shock is perpendicular to the upstream flow. The flow remains aligned with the shock normal while its Mach number falls. Therefore, The flow direction remains along the shock normal while the flow decelerates.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "normal shock",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What aerodynamic benefit can careful airfoil shaping provide at supersonic speed?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "They can reduce wave-drag penalties by managing compressibility effects.",
+        "They eliminate all aerodynamic drag.",
+        "They make local flow incompressible.",
+        "They guarantee no shock at any speed."
+      ],
+      "answerIndex": 0,
+      "answerText": "They can reduce wave-drag penalties by managing compressibility effects.",
+      "explanation": "Airfoil thickness and sweep influence local compression and wave formation. Shaping can reduce wave-drag penalties, although it cannot eliminate drag or shocks at every condition. Therefore, They can reduce wave-drag penalties by managing compressibility effects.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "supersonic airfoil",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "When a supersonic stream turns around a convex corner, what flow change occurs?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It expands through a Prandtl–Meyer fan and accelerates.",
+        "It passes through a compression shock and slows.",
+        "It becomes stagnant.",
+        "It experiences a normal shock for every turn."
+      ],
+      "answerIndex": 0,
+      "answerText": "It expands through a Prandtl–Meyer fan and accelerates.",
+      "explanation": "A convex turn lets supersonic flow expand isentropically. The flow accelerates and its static pressure and temperature decrease. Therefore, It expands through a Prandtl–Meyer fan and accelerates.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "expansion fan",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does an attached oblique compression shock do to a supersonic stream?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Leaves all flow properties unchanged.",
+        "Exists only in subsonic flow.",
+        "Turns the flow toward itself and increases static pressure.",
+        "Turns the flow away and decreases pressure."
+      ],
+      "answerIndex": 2,
+      "answerText": "Turns the flow toward itself and increases static pressure.",
+      "explanation": "An attached oblique shock forms when supersonic flow turns toward a compression surface. The flow is deflected and static pressure rises. Therefore, Turns the flow toward itself and increases static pressure.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "oblique shock",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What aerodynamic change marks the drag-divergence region?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The flow becomes entirely incompressible.",
+        "Drag begins to rise rapidly as stronger shocks and separation develop.",
+        "Drag falls to zero.",
+        "Lift becomes independent of angle of attack."
+      ],
+      "answerIndex": 1,
+      "answerText": "Drag begins to rise rapidly as stronger shocks and separation develop.",
+      "explanation": "Near drag divergence, local supersonic regions and stronger shocks can increase wave drag and promote separation. The total drag rises rapidly. Therefore, Drag begins to rise rapidly as stronger shocks and separation develop.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "drag divergence",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "At a concave compression corner, which changes occur across an attached oblique shock?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Exists only in subsonic flow.",
+        "Turns the flow toward itself and increases static pressure.",
+        "Turns the flow away and decreases pressure.",
+        "Leaves all flow properties unchanged."
+      ],
+      "answerIndex": 1,
+      "answerText": "Turns the flow toward itself and increases static pressure.",
+      "explanation": "An attached oblique shock forms when supersonic flow turns toward a compression surface. The flow is deflected and static pressure rises. Therefore, Turns the flow toward itself and increases static pressure.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "oblique shock",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What event defines an aircraft’s critical Mach number?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The speed of sound divided by aircraft weight.",
+        "The free-stream Mach number at which local flow first reaches Mach 1 on the aircraft.",
+        "The Mach number at which the whole aircraft first stops.",
+        "The maximum Mach number behind every shock."
+      ],
+      "answerIndex": 1,
+      "answerText": "The free-stream Mach number at which local flow first reaches Mach 1 on the aircraft.",
+      "explanation": "Critical Mach is the free-stream Mach number at which a local region of flow on the aircraft first reaches Mach 1. Therefore, The free-stream Mach number at which local flow first reaches Mach 1 on the aircraft.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "critical Mach",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which statement describes the flow direction and deceleration across a normal shock?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The shock causes no pressure change.",
+        "The flow direction remains along the shock normal while the flow decelerates.",
+        "The flow turns through the shock by an arbitrary large angle.",
+        "The flow accelerates from subsonic to supersonic."
+      ],
+      "answerIndex": 1,
+      "answerText": "The flow direction remains along the shock normal while the flow decelerates.",
+      "explanation": "A normal shock is perpendicular to the upstream flow. The flow remains aligned with the shock normal while its Mach number falls. Therefore, The flow direction remains along the shock normal while the flow decelerates.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "normal shock",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A supersonic stream crosses a normal shock. What happens to its direction and Mach number?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The flow accelerates from subsonic to supersonic.",
+        "The shock causes no pressure change.",
+        "The flow direction remains along the shock normal while the flow decelerates.",
+        "The flow turns through the shock by an arbitrary large angle."
+      ],
+      "answerIndex": 2,
+      "answerText": "The flow direction remains along the shock normal while the flow decelerates.",
+      "explanation": "A normal shock is perpendicular to the upstream flow. The flow remains aligned with the shock normal while its Mach number falls. Therefore, The flow direction remains along the shock normal while the flow decelerates.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "normal shock",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A convex turn creates a Prandtl–Meyer fan. How do speed and static pressure change?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It passes through a compression shock and slows.",
+        "It becomes stagnant.",
+        "It experiences a normal shock for every turn.",
+        "It expands through a Prandtl–Meyer fan and accelerates."
+      ],
+      "answerIndex": 3,
+      "answerText": "It expands through a Prandtl–Meyer fan and accelerates.",
+      "explanation": "A convex turn lets supersonic flow expand isentropically. The flow accelerates and its static pressure and temperature decrease. Therefore, It expands through a Prandtl–Meyer fan and accelerates.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "expansion fan",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which factors constrain the test-section Mach number in a supersonic tunnel?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Nozzle geometry, reservoir conditions, and choking/area-ratio constraints.",
+        "Wing aspect ratio alone.",
+        "The aircraft’s center of gravity.",
+        "The tunnel’s paint color."
+      ],
+      "answerIndex": 0,
+      "answerText": "Nozzle geometry, reservoir conditions, and choking/area-ratio constraints.",
+      "explanation": "The nozzle area ratio and reservoir state determine the tunnel’s attainable test-section conditions; choking sets a key operating constraint. Therefore, Nozzle geometry, reservoir conditions, and choking/area-ratio constraints.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "wind tunnel choking",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why does total pressure fall across a shock even though the flow is adiabatic?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The shock adds energy to the flow.",
+        "The shock is irreversible and increases entropy.",
+        "The shock is isothermal and removes mass.",
+        "Static pressure is constant across it."
+      ],
+      "answerIndex": 1,
+      "answerText": "The shock is irreversible and increases entropy.",
+      "explanation": "A shock is irreversible and raises entropy. Stagnation temperature is conserved for an adiabatic perfect-gas shock, but stagnation pressure decreases. Therefore, The shock is irreversible and increases entropy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "shock total pressure",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "As an aircraft approaches drag-divergence Mach number, what trend should be expected?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Drag begins to rise rapidly as stronger shocks and separation develop.",
+        "Drag falls to zero.",
+        "Lift becomes independent of angle of attack.",
+        "The flow becomes entirely incompressible."
+      ],
+      "answerIndex": 0,
+      "answerText": "Drag begins to rise rapidly as stronger shocks and separation develop.",
+      "explanation": "Near drag divergence, local supersonic regions and stronger shocks can increase wave drag and promote separation. The total drag rises rapidly. Therefore, Drag begins to rise rapidly as stronger shocks and separation develop.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "drag divergence",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How do nozzle geometry and reservoir conditions affect a tunnel’s attainable test-section Mach number?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The tunnel’s paint color.",
+        "Nozzle geometry, reservoir conditions, and choking/area-ratio constraints.",
+        "Wing aspect ratio alone.",
+        "The aircraft’s center of gravity."
+      ],
+      "answerIndex": 1,
+      "answerText": "Nozzle geometry, reservoir conditions, and choking/area-ratio constraints.",
+      "explanation": "The nozzle area ratio and reservoir state determine the tunnel’s attainable test-section conditions; choking sets a key operating constraint. Therefore, Nozzle geometry, reservoir conditions, and choking/area-ratio constraints.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "wind tunnel choking",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What explains the loss of stagnation pressure through a shock?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The shock is isothermal and removes mass.",
+        "Static pressure is constant across it.",
+        "The shock adds energy to the flow.",
+        "The shock is irreversible and increases entropy."
+      ],
+      "answerIndex": 3,
+      "answerText": "The shock is irreversible and increases entropy.",
+      "explanation": "A shock is irreversible and raises entropy. Stagnation temperature is conserved for an adiabatic perfect-gas shock, but stagnation pressure decreases. Therefore, The shock is irreversible and increases entropy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "shock total pressure",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What wave system forms when a supersonic flow turns away from a convex surface?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It becomes stagnant.",
+        "It experiences a normal shock for every turn.",
+        "It expands through a Prandtl–Meyer fan and accelerates.",
+        "It passes through a compression shock and slows."
+      ],
+      "answerIndex": 2,
+      "answerText": "It expands through a Prandtl–Meyer fan and accelerates.",
+      "explanation": "A convex turn lets supersonic flow expand isentropically. The flow accelerates and its static pressure and temperature decrease. Therefore, It expands through a Prandtl–Meyer fan and accelerates.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "expansion fan",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How does an oblique shock affect flow direction and static pressure?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Turns the flow toward itself and increases static pressure.",
+        "Turns the flow away and decreases pressure.",
+        "Leaves all flow properties unchanged.",
+        "Exists only in subsonic flow."
+      ],
+      "answerIndex": 0,
+      "answerText": "Turns the flow toward itself and increases static pressure.",
+      "explanation": "An attached oblique shock forms when supersonic flow turns toward a compression surface. The flow is deflected and static pressure rises. Therefore, Turns the flow toward itself and increases static pressure.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "oblique shock",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How is critical Mach number identified from the local flow over an aircraft?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The maximum Mach number behind every shock.",
+        "The speed of sound divided by aircraft weight.",
+        "The free-stream Mach number at which local flow first reaches Mach 1 on the aircraft.",
+        "The Mach number at which the whole aircraft first stops."
+      ],
+      "answerIndex": 2,
+      "answerText": "The free-stream Mach number at which local flow first reaches Mach 1 on the aircraft.",
+      "explanation": "Critical Mach is the free-stream Mach number at which a local region of flow on the aircraft first reaches Mach 1. Therefore, The free-stream Mach number at which local flow first reaches Mach 1 on the aircraft.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "critical Mach",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which flow changes accompany an isentropic expansion around a convex corner?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It experiences a normal shock for every turn.",
+        "It expands through a Prandtl–Meyer fan and accelerates.",
+        "It passes through a compression shock and slows.",
+        "It becomes stagnant."
+      ],
+      "answerIndex": 1,
+      "answerText": "It expands through a Prandtl–Meyer fan and accelerates.",
+      "explanation": "A convex turn lets supersonic flow expand isentropically. The flow accelerates and its static pressure and temperature decrease. Therefore, It expands through a Prandtl–Meyer fan and accelerates.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "expansion fan",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why can drag rise rapidly near the drag-divergence Mach number?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Drag falls to zero.",
+        "Lift becomes independent of angle of attack.",
+        "The flow becomes entirely incompressible.",
+        "Drag begins to rise rapidly as stronger shocks and separation develop."
+      ],
+      "answerIndex": 3,
+      "answerText": "Drag begins to rise rapidly as stronger shocks and separation develop.",
+      "explanation": "Near drag divergence, local supersonic regions and stronger shocks can increase wave drag and promote separation. The total drag rises rapidly. Therefore, Drag begins to rise rapidly as stronger shocks and separation develop.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "drag divergence",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What first occurs on the aircraft at its critical Mach number?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The Mach number at which the whole aircraft first stops.",
+        "The maximum Mach number behind every shock.",
+        "The speed of sound divided by aircraft weight.",
+        "The free-stream Mach number at which local flow first reaches Mach 1 on the aircraft."
+      ],
+      "answerIndex": 3,
+      "answerText": "The free-stream Mach number at which local flow first reaches Mach 1 on the aircraft.",
+      "explanation": "Critical Mach is the free-stream Mach number at which a local region of flow on the aircraft first reaches Mach 1. Therefore, The free-stream Mach number at which local flow first reaches Mach 1 on the aircraft.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "critical Mach",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why might a designer use thin or swept sections on a supersonic aircraft?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "They guarantee no shock at any speed.",
+        "They can reduce wave-drag penalties by managing compressibility effects.",
+        "They eliminate all aerodynamic drag.",
+        "They make local flow incompressible."
+      ],
+      "answerIndex": 1,
+      "answerText": "They can reduce wave-drag penalties by managing compressibility effects.",
+      "explanation": "Airfoil thickness and sweep influence local compression and wave formation. Shaping can reduce wave-drag penalties, although it cannot eliminate drag or shocks at every condition. Therefore, They can reduce wave-drag penalties by managing compressibility effects.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "supersonic airfoil",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which thermodynamic change accounts for the total-pressure decrease across a shock?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Static pressure is constant across it.",
+        "The shock adds energy to the flow.",
+        "The shock is irreversible and increases entropy.",
+        "The shock is isothermal and removes mass."
+      ],
+      "answerIndex": 2,
+      "answerText": "The shock is irreversible and increases entropy.",
+      "explanation": "A shock is irreversible and raises entropy. Stagnation temperature is conserved for an adiabatic perfect-gas shock, but stagnation pressure decreases. Therefore, The shock is irreversible and increases entropy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "shock total pressure",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What condition marks the onset of critical Mach number?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The free-stream Mach number at which local flow first reaches Mach 1 on the aircraft.",
+        "The Mach number at which the whole aircraft first stops.",
+        "The maximum Mach number behind every shock.",
+        "The speed of sound divided by aircraft weight."
+      ],
+      "answerIndex": 0,
+      "answerText": "The free-stream Mach number at which local flow first reaches Mach 1 on the aircraft.",
+      "explanation": "Critical Mach is the free-stream Mach number at which a local region of flow on the aircraft first reaches Mach 1. Therefore, The free-stream Mach number at which local flow first reaches Mach 1 on the aircraft.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "critical Mach",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the relation between the upstream velocity and a normal shock surface?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The flow direction remains along the shock normal while the flow decelerates.",
+        "The flow turns through the shock by an arbitrary large angle.",
+        "The flow accelerates from subsonic to supersonic.",
+        "The shock causes no pressure change."
+      ],
+      "answerIndex": 0,
+      "answerText": "The flow direction remains along the shock normal while the flow decelerates.",
+      "explanation": "A normal shock is perpendicular to the upstream flow. The flow remains aligned with the shock normal while its Mach number falls. Therefore, The flow direction remains along the shock normal while the flow decelerates.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "normal shock",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How can section geometry help control wave drag at high Mach number?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "They make local flow incompressible.",
+        "They guarantee no shock at any speed.",
+        "They can reduce wave-drag penalties by managing compressibility effects.",
+        "They eliminate all aerodynamic drag."
+      ],
+      "answerIndex": 2,
+      "answerText": "They can reduce wave-drag penalties by managing compressibility effects.",
+      "explanation": "Airfoil thickness and sweep influence local compression and wave formation. Shaping can reduce wave-drag penalties, although it cannot eliminate drag or shocks at every condition. Therefore, They can reduce wave-drag penalties by managing compressibility effects.",
+      "explanationImages": [],
+      "questionImages": [],
+      "tags": [
+        "original practice",
+        "supersonic airfoil",
+        "theory"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}
