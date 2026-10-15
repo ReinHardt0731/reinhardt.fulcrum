@@ -1,4 +1,4 @@
-import { initHomePage } from "./shared.js?v=library-idb-cache-20261015";
+import { initHomePage } from "./shared.js?v=library-idb-cache-20261015-2";
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
