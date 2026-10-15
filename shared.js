@@ -7035,7 +7035,7 @@ function appendLearnExplanation(container, result) {
     }
 }
 
-function createAssessmentChart(segments, centerValue, centerLabel, ariaLabel) {
+function createAssessmentChart(segments, centerValue, centerLabel, ariaLabel, { interactive = false } = {}) {
     const chartCard = document.createElement("div");
     chartCard.className = "assessment-chart-card";
 
@@ -7045,7 +7045,7 @@ function createAssessmentChart(segments, centerValue, centerLabel, ariaLabel) {
     const chart = document.createElement("div");
     chart.className = "assessment-chart";
     chart.setAttribute("role", "img");
-    chart.setAttribute("aria-label", ariaLabel);
+    chart.setAttribute("aria-label", interactive ? `${ariaLabel}. Hover a chart segment or focus a legend item for its value and percentage.` : ariaLabel);
 
     const total = segments.reduce((sum, segment) => sum + Math.max(0, Number(segment.value) || 0), 0);
     if (total > 0) {
@@ -7083,11 +7083,79 @@ function createAssessmentChart(segments, centerValue, centerLabel, ariaLabel) {
     const legend = document.createElement("div");
     legend.className = "assessment-legend";
 
+    let tooltip = null;
+    const showTooltip = (segment, clientX, clientY) => {
+        if (!tooltip) return;
+        const value = Math.max(0, Number(segment.value) || 0);
+        const percentage = total ? Math.round((value / total) * 100) : 0;
+        tooltip.replaceChildren(
+            Object.assign(document.createElement("strong"), { textContent: segment.label }),
+            Object.assign(document.createElement("span"), { textContent: `${value} · ${percentage}%` })
+        );
+        tooltip.hidden = false;
+        tooltip.style.left = "12px";
+        tooltip.style.top = "12px";
+        const bounds = tooltip.getBoundingClientRect();
+        tooltip.style.left = `${Math.max(12, Math.min(window.innerWidth - bounds.width - 12, clientX + 14))}px`;
+        tooltip.style.top = `${Math.max(12, Math.min(window.innerHeight - bounds.height - 12, clientY + 14))}px`;
+    };
+    const hideTooltip = () => {
+        if (tooltip) tooltip.hidden = true;
+    };
+
+    if (interactive) {
+        tooltip = document.createElement("div");
+        tooltip.className = "assessment-chart-tooltip";
+        tooltip.id = `assessment-chart-tooltip-${Math.random().toString(36).slice(2, 10)}`;
+        tooltip.setAttribute("role", "tooltip");
+        tooltip.hidden = true;
+
+        chart.addEventListener("pointermove", (event) => {
+            if (!total) return;
+            const bounds = chart.getBoundingClientRect();
+            const radius = Math.min(bounds.width, bounds.height) / 2;
+            const offsetX = event.clientX - bounds.left - bounds.width / 2;
+            const offsetY = event.clientY - bounds.top - bounds.height / 2;
+            const distance = Math.hypot(offsetX, offsetY);
+            if (distance > radius || distance < radius * 0.64) {
+                hideTooltip();
+                return;
+            }
+
+            const angle = (Math.atan2(offsetY, offsetX) * 180 / Math.PI + 450) % 360;
+            const chartValue = angle / 360 * total;
+            let cursor = 0;
+            const segment = segments.find((item) => {
+                const value = Math.max(0, Number(item.value) || 0);
+                if (!value) return false;
+                cursor += value;
+                return chartValue < cursor;
+            });
+            if (segment) showTooltip(segment, event.clientX, event.clientY);
+        });
+        chart.addEventListener("pointerleave", hideTooltip);
+    }
+
     segments.forEach((segment) => {
         const item = document.createElement("div");
         item.className = "assessment-legend-item";
         item.style.setProperty("--legend-fill", `${Math.max(0, Number(segment.fillPercent) || 0)}%`);
         item.style.setProperty("--legend-fill-color", segment.color);
+        if (interactive) {
+            const value = Math.max(0, Number(segment.value) || 0);
+            const percentage = total ? Math.round((value / total) * 100) : 0;
+            item.tabIndex = 0;
+            item.setAttribute("aria-label", `${segment.label}: ${value}, ${percentage}%`);
+            item.setAttribute("aria-describedby", tooltip.id);
+            item.addEventListener("pointerenter", (event) => showTooltip(segment, event.clientX, event.clientY));
+            item.addEventListener("pointermove", (event) => showTooltip(segment, event.clientX, event.clientY));
+            item.addEventListener("pointerleave", hideTooltip);
+            item.addEventListener("focus", () => {
+                const bounds = item.getBoundingClientRect();
+                showTooltip(segment, bounds.right, bounds.top);
+            });
+            item.addEventListener("blur", hideTooltip);
+        }
 
         const copy = document.createElement("div");
         copy.className = "assessment-legend-copy";
@@ -7112,6 +7180,7 @@ function createAssessmentChart(segments, centerValue, centerLabel, ariaLabel) {
 
     chartPanel.append(chart, legend);
     chartCard.append(chartPanel);
+    if (tooltip) chartCard.appendChild(tooltip);
     return chartCard;
 }
 
@@ -7125,7 +7194,7 @@ function createAccuracyAttemptChartCard(quizEntries, learnEntries, examEntries) 
     titleEl.textContent = "Attempt History";
     const metaEl = document.createElement("p");
     metaEl.className = "progress-summary-card-meta";
-    metaEl.textContent = "Quiz, Learn checkpoint, and Exam sessions";
+    metaEl.textContent = "Quiz, completed Learn sessions, and Exam sessions";
     header.append(titleEl, metaEl);
 
     const legend = document.createElement("div");
@@ -7179,7 +7248,7 @@ function createAccuracyAttemptChartCard(quizEntries, learnEntries, examEntries) 
 
     const note = document.createElement("p");
     note.className = "progress-summary-card-note";
-    note.textContent = "Scroll horizontally to explore attempts. Hover or focus a bar for details; Learn bars show first-try accuracy. Select an Exam bar to open its saved review.";
+    note.textContent = "Scroll horizontally to explore attempts. Hover or focus a bar for details; Learn bars show session first-try accuracy. Select an Exam bar to open its saved review.";
 
     card.append(header, legend, chartWrap, note);
     return card;
@@ -7223,7 +7292,7 @@ function createAccuracyAttemptChart(quizEntries, learnEntries, examEntries) {
     if (!combinedEntries.length) {
         const empty = document.createElement("div");
         empty.className = "accuracy-chart-empty";
-        empty.textContent = "No attempts yet. Complete a Quiz, Learn checkpoint, or Exam to see your history.";
+        empty.textContent = "No attempts yet. Complete a Quiz, Learn session, or Exam to see your history.";
         return empty;
     }
 
@@ -7350,7 +7419,7 @@ function createAccuracyAttemptChart(quizEntries, learnEntries, examEntries) {
         group.setAttribute("data-attempt-correct", String(bar.correct));
         group.setAttribute("data-attempt-total", String(bar.attempted));
         group.setAttribute("tabindex", "0");
-        const modeLabel = bar.mode === "learn" ? "Learn checkpoint" : bar.mode === "exam" ? "Exam" : "Quiz";
+        const modeLabel = bar.mode === "learn" ? "Learn session" : bar.mode === "exam" ? "Exam" : "Quiz";
         const timestampValue = Date.parse(bar.timestamp || "");
         const dateLabel = Number.isFinite(timestampValue) ? new Date(timestampValue).toLocaleString() : "Date unavailable";
         const scoreLabel = bar.attempted
@@ -7358,9 +7427,8 @@ function createAccuracyAttemptChart(quizEntries, learnEntries, examEntries) {
                 ? `, ${bar.correct} of ${bar.attempted} first-try correct`
                 : `, ${bar.correct} of ${bar.attempted} correct`
             : "";
-        const displayNumber = bar.mode === "learn" && bar.checkpointNumber ? bar.checkpointNumber : bar.attempt;
         const accuracyLabel = bar.mode === "learn" ? "first-try accuracy" : "accuracy";
-        const attemptLabel = bar.mode === "learn" ? `${modeLabel} ${displayNumber}` : `${modeLabel} attempt ${bar.attempt}`;
+        const attemptLabel = bar.mode === "learn" ? `${modeLabel} ${bar.attempt}` : `${modeLabel} attempt ${bar.attempt}`;
         const accessibleLabel = `${attemptLabel}, ${dateLabel}, ${bar.accuracy}% ${accuracyLabel}${scoreLabel}`;
         if (bar.recordId) {
             group.setAttribute("data-exam-record-id", bar.recordId);
@@ -7414,24 +7482,50 @@ function createAttemptHoverPreview(record, attempt) {
     preview.className = "progress-attempt-hover-card";
     preview.setAttribute("role", "tooltip");
     const modeKey = text(attempt?.getAttribute("data-attempt-mode"));
-    const mode = modeKey === "learn" ? "Learn checkpoint" : modeKey === "exam" ? "Exam" : "Quiz";
+    const mode = modeKey === "learn" ? "Learn session" : modeKey === "exam" ? "Exam" : "Quiz";
     const attemptNumber = Number(attempt?.getAttribute("data-attempt-number")) || 0;
     const accuracy = Number(attempt?.getAttribute("data-attempt-accuracy")) || 0;
     const timestamp = Date.parse(attempt?.getAttribute("data-attempt-timestamp") || "");
     const correct = Number(attempt?.getAttribute("data-attempt-correct")) || 0;
     const attemptTotal = Number(attempt?.getAttribute("data-attempt-total")) || 0;
-    const checkpointNumber = Number(attempt?.getAttribute("data-checkpoint-number")) || 0;
-    const displayNumber = modeKey === "learn" && checkpointNumber ? checkpointNumber : attemptNumber;
-    const attemptLabel = modeKey === "learn" ? `${mode} ${displayNumber}` : `${mode} attempt ${attemptNumber}`;
+    const attemptLabel = modeKey === "learn" ? `${mode} ${attemptNumber}` : `${mode} attempt ${attemptNumber}`;
     preview.appendChild(Object.assign(document.createElement("strong"), {
         textContent: attemptLabel
     }));
     const meta = document.createElement("p");
     meta.className = "progress-attempt-hover-meta";
-    const accuracyLabel = modeKey === "learn" ? "first-try accuracy" : "accuracy";
+    const accuracyLabel = modeKey === "learn" ? "session first-try accuracy" : "accuracy";
     const correctLabel = modeKey === "learn" ? "first-try correct" : "correct";
     meta.textContent = `${Number.isFinite(timestamp) ? new Date(timestamp).toLocaleString() : "Date unavailable"} · ${accuracy}% ${accuracyLabel}${attemptTotal ? ` · ${correct}/${attemptTotal} ${correctLabel}` : ""}`;
     preview.appendChild(meta);
+
+    if (modeKey === "learn" && attemptTotal > 0) {
+        const missed = Math.max(0, attemptTotal - correct);
+        const firstTrySegments = [
+            {
+                label: "First-try correct",
+                value: correct,
+                color: "var(--success)",
+                fillPercent: Math.round((correct / attemptTotal) * 100),
+                meta: `${correct}/${attemptTotal}`
+            },
+            {
+                label: "Not correct on first try",
+                value: missed,
+                color: "var(--danger)",
+                fillPercent: Math.round((missed / attemptTotal) * 100),
+                meta: `${missed}/${attemptTotal}`
+            }
+        ];
+        preview.appendChild(Object.assign(document.createElement("strong"), { textContent: "First-try breakdown" }));
+        preview.appendChild(createAssessmentChart(
+            firstTrySegments,
+            `${accuracy}%`,
+            "First Try",
+            `Learn session breakdown: ${correct} first-try correct and ${missed} not correct on the first try.`
+        ));
+        return preview;
+    }
 
     if (!record) return preview;
     const summary = record.currentSummary || summarizeResults(record);
@@ -7691,7 +7785,8 @@ function createProgressSummaryCard(title, summary, description) {
         ],
         `${summary.accuracy}%`,
         "Accuracy",
-        `${title} breakdown`
+        `${title} breakdown`,
+        { interactive: true }
     );
 
     const note = document.createElement("p");
@@ -7728,7 +7823,8 @@ function createLearningProgressSummaryCard(summary) {
         ],
         `${summary.learningProgress}%`,
         "Learning Progress",
-        "Learn mastery progress"
+        "Learn mastery progress",
+        { interactive: true }
     );
 
     const note = document.createElement("p");
@@ -11130,7 +11226,7 @@ export function initProgressPage() {
         const progressEntries = getProgressEntries().filter((entry) => ["quiz", "learn", "exam"].includes(text(entry.mode)));
         const quizAttempts = progressEntries.filter((entry) => text(entry.mode) === "quiz" && text(entry.summaryType) === "session");
         const learnAttempts = progressEntries
-            .filter((entry) => text(entry.mode) === "learn" && text(entry.summaryType) === "learn-checkpoint")
+            .filter((entry) => text(entry.mode) === "learn" && text(entry.summaryType) === "learn-session")
             .map((entry) => {
                 const attempted = Math.max(0, Number(entry.attempted) || 0);
                 const firstAttemptCorrect = Math.max(0, Number(entry.firstAttemptCorrect ?? entry.correct) || 0);

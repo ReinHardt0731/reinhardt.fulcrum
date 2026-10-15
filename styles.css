@@ -8579,6 +8579,24 @@ body.mode-page .workspace > .mode-topbar::before {
     text-align: center;
 }
 
+.assessment-chart-tooltip {
+    position: fixed;
+    z-index: 1001;
+    display: grid;
+    gap: 3px;
+    min-width: 110px;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    color: var(--text);
+    background: var(--panel-strong);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.38);
+    font-size: 0.8rem;
+    pointer-events: none;
+}
+.assessment-chart-tooltip[hidden] { display: none; }
+.assessment-chart-tooltip span { color: var(--muted); }
+
 .assessment-chart-value {
     font-size: clamp(1.45rem, 3vw, 1.9rem);
     line-height: 1;
@@ -8608,6 +8626,8 @@ body.mode-page .workspace > .mode-topbar::before {
     background: rgba(255, 255, 255, 0.03);
     overflow: hidden;
 }
+.assessment-legend-item[tabindex="0"] { cursor: help; }
+.assessment-legend-item[tabindex="0"]:focus-visible { box-shadow: inset 0 0 0 2px var(--primary); }
 
 .assessment-legend-item::before {
     content: "";

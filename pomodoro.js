@@ -23,14 +23,20 @@
     };
     let state = { ...defaults };
     let intervalId = null;
+    const restoreDuration = (seconds, fallback) => {
+        const value = Number(seconds);
+        return Number.isFinite(value) && value > 0
+            ? Math.round(Math.min(120 * 60, Math.max(60, value)))
+            : fallback;
+    };
 
     try {
         const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
         if (saved && (saved.phase === "focus" || saved.phase === "break")) {
             state = {
                 phase: saved.phase,
-                focusSeconds: Math.min(120, Math.max(1, Number(saved.focusSeconds) || DEFAULT_FOCUS_SECONDS / 60)) * 60,
-                breakSeconds: Math.min(120, Math.max(1, Number(saved.breakSeconds) || DEFAULT_BREAK_SECONDS / 60)) * 60,
+                focusSeconds: restoreDuration(saved.focusSeconds, DEFAULT_FOCUS_SECONDS),
+                breakSeconds: restoreDuration(saved.breakSeconds, DEFAULT_BREAK_SECONDS),
                 remaining: Math.max(0, Number(saved.remaining) || 0),
                 running: Boolean(saved.running),
                 lastTick: Number(saved.lastTick) || null,
