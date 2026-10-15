@@ -2994,6 +2994,10 @@ body.admin-drawer-collapsed .admin-subject-rail {
     background: #3b82f6;
 }
 
+.accuracy-chart-legend-swatch.learn {
+    background: var(--tertiary);
+}
+
 .accuracy-chart-legend-swatch.exam {
     background: #f59e0b;
 }

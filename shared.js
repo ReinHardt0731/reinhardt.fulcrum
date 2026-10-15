@@ -7115,7 +7115,7 @@ function createAssessmentChart(segments, centerValue, centerLabel, ariaLabel) {
     return chartCard;
 }
 
-function createAccuracyAttemptChartCard(quizEntries, examEntries) {
+function createAccuracyAttemptChartCard(quizEntries, learnEntries, examEntries) {
     const card = document.createElement("div");
     card.className = "progress-summary-card progress-chart-card full-width";
 
@@ -7125,7 +7125,7 @@ function createAccuracyAttemptChartCard(quizEntries, examEntries) {
     titleEl.textContent = "Attempt History";
     const metaEl = document.createElement("p");
     metaEl.className = "progress-summary-card-meta";
-    metaEl.textContent = "Quiz and exam sessions";
+    metaEl.textContent = "Quiz, Learn checkpoint, and Exam sessions";
     header.append(titleEl, metaEl);
 
     const legend = document.createElement("div");
@@ -7137,6 +7137,10 @@ function createAccuracyAttemptChartCard(quizEntries, examEntries) {
         }),
         Object.assign(document.createElement("span"), {
             className: "accuracy-chart-legend-item",
+            innerHTML: '<span class="accuracy-chart-legend-swatch learn"></span>Learn'
+        }),
+        Object.assign(document.createElement("span"), {
+            className: "accuracy-chart-legend-item",
             innerHTML: '<span class="accuracy-chart-legend-swatch exam"></span>Exam'
         })
     );
@@ -7144,9 +7148,9 @@ function createAccuracyAttemptChartCard(quizEntries, examEntries) {
     const chartWrap = document.createElement("div");
     chartWrap.className = "accuracy-chart-wrapper";
     chartWrap.setAttribute("role", "region");
-    chartWrap.setAttribute("aria-label", "Scrollable Quiz and Exam attempt history chart");
+    chartWrap.setAttribute("aria-label", "Scrollable Quiz, Learn, and Exam attempt history chart");
     chartWrap.setAttribute("tabindex", "0");
-    chartWrap.appendChild(createAccuracyAttemptChart(quizEntries, examEntries));
+    chartWrap.appendChild(createAccuracyAttemptChart(quizEntries, learnEntries, examEntries));
     const fitChartCanvas = () => {
         const svg = chartWrap.querySelector(".accuracy-chart-svg");
         if (!svg) return;
@@ -7175,13 +7179,13 @@ function createAccuracyAttemptChartCard(quizEntries, examEntries) {
 
     const note = document.createElement("p");
     note.className = "progress-summary-card-note";
-    note.textContent = "Scroll horizontally to explore attempts. Hover or focus a bar for details; select an Exam bar to open its saved review.";
+    note.textContent = "Scroll horizontally to explore attempts. Hover or focus a bar for details; Learn bars show first-try accuracy. Select an Exam bar to open its saved review.";
 
     card.append(header, legend, chartWrap, note);
     return card;
 }
 
-function createAccuracyAttemptChart(quizEntries, examEntries) {
+function createAccuracyAttemptChart(quizEntries, learnEntries, examEntries) {
     const width = 760;
     const height = 260;
     const padding = { top: 24, right: 24, bottom: 64, left: 64 };
@@ -7191,6 +7195,7 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
 
     const combinedEntries = [
         ...(Array.isArray(quizEntries) ? quizEntries : []),
+        ...(Array.isArray(learnEntries) ? learnEntries : []),
         ...(Array.isArray(examEntries) ? examEntries : [])
     ]
         .filter(Boolean)
@@ -7206,8 +7211,9 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
         .map((entry, index) => ({
             attempt: index + 1,
             accuracy: Math.max(0, Math.min(100, Number(entry?.accuracy) || 0)),
-            mode: text(entry?.mode) === "exam" ? "exam" : "quiz",
+            mode: ["quiz", "learn", "exam"].includes(text(entry?.mode)) ? text(entry.mode) : "quiz",
             recordId: entry.recordId,
+            checkpointNumber: Math.max(0, Number(entry?.checkpointNumber) || 0),
             subjectId: entry.subjectId,
             timestamp: entry.timestamp,
             correct: Math.max(0, Number(entry?.correct) || 0),
@@ -7217,7 +7223,7 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
     if (!combinedEntries.length) {
         const empty = document.createElement("div");
         empty.className = "accuracy-chart-empty";
-        empty.textContent = "No attempts yet. Complete a Quiz or Exam to see your history.";
+        empty.textContent = "No attempts yet. Complete a Quiz, Learn checkpoint, or Exam to see your history.";
         return empty;
     }
 
@@ -7238,11 +7244,12 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
             attempt: entry.attempt,
             mode: entry.mode,
             recordId: entry.recordId,
+            checkpointNumber: entry.checkpointNumber,
             subjectId: entry.subjectId,
             timestamp: entry.timestamp,
             correct: entry.correct,
             attempted: entry.attempted,
-            color: entry.mode === "exam" ? "#f59e0b" : "#3b82f6"
+            color: entry.mode === "exam" ? "#f59e0b" : entry.mode === "learn" ? "var(--tertiary)" : "#3b82f6"
         };
     });
 
@@ -7252,7 +7259,7 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
     svg.setAttribute("height", String(height));
     svg.setAttribute("class", "accuracy-chart-svg");
     svg.setAttribute("role", "group");
-    svg.setAttribute("aria-label", "Accuracy by quiz and exam attempt");
+    svg.setAttribute("aria-label", "Accuracy by quiz, Learn checkpoint, and exam attempt");
     svg.style.width = `${totalPlotWidth}px`;
     svg.dataset.plotWidth = String(totalPlotWidth);
 
@@ -7335,6 +7342,7 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
     bars.forEach((bar) => {
         const group = document.createElementNS("http://www.w3.org/2000/svg", "g");
         group.setAttribute("data-attempt-mode", bar.mode);
+        group.setAttribute("data-checkpoint-number", String(bar.checkpointNumber));
         group.setAttribute("data-attempt-accuracy", String(bar.accuracy));
         group.setAttribute("data-attempt-subject-id", text(bar.subjectId));
         group.setAttribute("data-attempt-timestamp", text(bar.timestamp));
@@ -7342,11 +7350,18 @@ function createAccuracyAttemptChart(quizEntries, examEntries) {
         group.setAttribute("data-attempt-correct", String(bar.correct));
         group.setAttribute("data-attempt-total", String(bar.attempted));
         group.setAttribute("tabindex", "0");
-        const modeLabel = bar.mode === "exam" ? "Exam" : "Quiz";
+        const modeLabel = bar.mode === "learn" ? "Learn checkpoint" : bar.mode === "exam" ? "Exam" : "Quiz";
         const timestampValue = Date.parse(bar.timestamp || "");
         const dateLabel = Number.isFinite(timestampValue) ? new Date(timestampValue).toLocaleString() : "Date unavailable";
-        const scoreLabel = bar.attempted ? `, ${bar.correct} of ${bar.attempted} correct` : "";
-        const accessibleLabel = `${modeLabel} attempt ${bar.attempt}, ${dateLabel}, ${bar.accuracy}% accuracy${scoreLabel}`;
+        const scoreLabel = bar.attempted
+            ? bar.mode === "learn"
+                ? `, ${bar.correct} of ${bar.attempted} first-try correct`
+                : `, ${bar.correct} of ${bar.attempted} correct`
+            : "";
+        const displayNumber = bar.mode === "learn" && bar.checkpointNumber ? bar.checkpointNumber : bar.attempt;
+        const accuracyLabel = bar.mode === "learn" ? "first-try accuracy" : "accuracy";
+        const attemptLabel = bar.mode === "learn" ? `${modeLabel} ${displayNumber}` : `${modeLabel} attempt ${bar.attempt}`;
+        const accessibleLabel = `${attemptLabel}, ${dateLabel}, ${bar.accuracy}% ${accuracyLabel}${scoreLabel}`;
         if (bar.recordId) {
             group.setAttribute("data-exam-record-id", bar.recordId);
             group.setAttribute("role", "button");
@@ -7398,18 +7413,24 @@ function createAttemptHoverPreview(record, attempt) {
     const preview = document.createElement("div");
     preview.className = "progress-attempt-hover-card";
     preview.setAttribute("role", "tooltip");
-    const mode = text(attempt?.getAttribute("data-attempt-mode")) === "exam" ? "Exam" : "Quiz";
+    const modeKey = text(attempt?.getAttribute("data-attempt-mode"));
+    const mode = modeKey === "learn" ? "Learn checkpoint" : modeKey === "exam" ? "Exam" : "Quiz";
     const attemptNumber = Number(attempt?.getAttribute("data-attempt-number")) || 0;
     const accuracy = Number(attempt?.getAttribute("data-attempt-accuracy")) || 0;
     const timestamp = Date.parse(attempt?.getAttribute("data-attempt-timestamp") || "");
     const correct = Number(attempt?.getAttribute("data-attempt-correct")) || 0;
     const attemptTotal = Number(attempt?.getAttribute("data-attempt-total")) || 0;
+    const checkpointNumber = Number(attempt?.getAttribute("data-checkpoint-number")) || 0;
+    const displayNumber = modeKey === "learn" && checkpointNumber ? checkpointNumber : attemptNumber;
+    const attemptLabel = modeKey === "learn" ? `${mode} ${displayNumber}` : `${mode} attempt ${attemptNumber}`;
     preview.appendChild(Object.assign(document.createElement("strong"), {
-        textContent: `${mode} attempt ${attemptNumber}`
+        textContent: attemptLabel
     }));
     const meta = document.createElement("p");
     meta.className = "progress-attempt-hover-meta";
-    meta.textContent = `${Number.isFinite(timestamp) ? new Date(timestamp).toLocaleString() : "Date unavailable"} · ${accuracy}% accuracy${attemptTotal ? ` · ${correct}/${attemptTotal} correct` : ""}`;
+    const accuracyLabel = modeKey === "learn" ? "first-try accuracy" : "accuracy";
+    const correctLabel = modeKey === "learn" ? "first-try correct" : "correct";
+    meta.textContent = `${Number.isFinite(timestamp) ? new Date(timestamp).toLocaleString() : "Date unavailable"} · ${accuracy}% ${accuracyLabel}${attemptTotal ? ` · ${correct}/${attemptTotal} ${correctLabel}` : ""}`;
     preview.appendChild(meta);
 
     if (!record) return preview;
@@ -11106,11 +11127,24 @@ export function initProgressPage() {
         const quizSummary = getRecentModeSummary("quiz", 7);
         const examSummary = getRecentModeSummary("exam", 7);
         const learnSummary = getRecentLearnSummary(7);
-        const progressEntries = getProgressEntries().filter((entry) => text(entry.mode) === "quiz" || text(entry.mode) === "exam");
+        const progressEntries = getProgressEntries().filter((entry) => ["quiz", "learn", "exam"].includes(text(entry.mode)));
         const quizAttempts = progressEntries.filter((entry) => text(entry.mode) === "quiz" && text(entry.summaryType) === "session");
+        const learnAttempts = progressEntries
+            .filter((entry) => text(entry.mode) === "learn" && text(entry.summaryType) === "learn-checkpoint")
+            .map((entry) => {
+                const attempted = Math.max(0, Number(entry.attempted) || 0);
+                const firstAttemptCorrect = Math.max(0, Number(entry.firstAttemptCorrect ?? entry.correct) || 0);
+                return {
+                    ...entry,
+                    accuracy: attempted ? Math.round((firstAttemptCorrect / attempted) * 100) : 0,
+                    correct: firstAttemptCorrect,
+                    attempted
+                };
+            })
+            .filter((entry) => entry.attempted > 0);
         const examAttempts = progressEntries.filter((entry) => text(entry.mode) === "exam" && text(entry.summaryType) === "session");
         summaryCards.replaceChildren(
-            createAccuracyAttemptChartCard(quizAttempts, examAttempts),
+            createAccuracyAttemptChartCard(quizAttempts, learnAttempts, examAttempts),
             createProgressSummaryCard("Quiz accuracy", quizSummary, "Recent quiz performance across the last 7 days."),
             createProgressSummaryCard("Exam accuracy", examSummary, "Recent exam performance across the last 7 days."),
             createLearningProgressSummaryCard(learnSummary),
