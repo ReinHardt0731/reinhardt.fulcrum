@@ -2,1329 +2,513 @@
   "title": "Aerodynamics Exam: Airplane Performance",
   "questions": [
     {
-      "question": "The optimum cruise altitude is",
+      "question": "The speed VS is defined as:",
       "questionType": "multiple_choice",
       "choices": [
-        "the pressure altitude up to which a cabin altitude of 8000 ft can be maintained.",
-        "the pressure altitude at which the speed for high speed buffet as TAS is a maximum.",
-        "the pressure altitude at which the best specific range can be achieved.",
-        "the pressure altitude at which the fuel flow is a maximum."
+        "speed for best specific range",
+        "design stress speed",
+        "safety speed for take-off in case of a contaminated runway",
+        "stalling speed or minimum steady flight speed at which the aeroplane is controllable"
       ],
-      "answerIndex": 2,
-      "answerText": "the pressure altitude at which the best specific range can be achieved.",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
+      "answerIndex": 3,
+      "answerText": "stalling speed or minimum steady flight speed at which the aeroplane is controllable",
+      "explanation": "VS denotes the stalling or minimum steady controllable flight speed.",
       "tags": [
-        "performance",
-        "volare"
+        "aerodynamics",
+        "mock exam"
       ]
     },
     {
-      "question": "Which statement with respect to the step climb is correct?",
+      "question": "Under what condition are pressure altitude and density altitude the same value?",
       "questionType": "multiple_choice",
       "choices": [
-        "A step climb is executed because ATC desires a higher altitude.",
-        "A step climb is executed in principle when, just after leveling off, the 1.3g altitude is reached.",
-        "Executing a desired step climb at high altitude can be limited by buffet onset at g-loads larger than 1.",
-        "A step climb must be executed immediately after the aeroplane has exceeded the optimum altitude."
-      ],
-      "answerIndex": 2,
-      "answerText": "Executing a desired step climb at high altitude can be limited by buffet onset at g-loads larger than 1.",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Which speed provides maximum obstacle clearance during climb?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The speed for which the ratio between rate of climb and forward speed is maximum.",
-        "V2 + 10 kt.",
-        "The speed for maximum rate of climb.",
-        "V2."
+        "At standard temperature",
+        "When the altimeter setting is 1013 in. Hg",
+        "When the altimeter setting is 29.92 in. Hg",
+        "When indicated and pressure altitudes are the same value on the altimeter"
       ],
       "answerIndex": 0,
-      "answerText": "The speed for which the ratio between rate of climb and forward speed is maximum.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "answerText": "At standard temperature",
+      "explanation": "Density altitude equals pressure altitude at standard temperature.",
       "tags": [
-        "performance",
-        "volare"
+        "aerodynamics",
+        "mock exam"
       ]
     },
     {
-      "question": "On a reciprocating engined aeroplane, to maintain a given angle of attack, configuration and altitude at higher gross mass",
+      "question": "The climb gradient is defined as the ratio of:",
       "questionType": "multiple_choice",
       "choices": [
-        "the airspeed and the drag will be increased.",
-        "the airspeed will be decreased and the drag increased.",
-        "the lift/drag ratio must be increased.",
-        "the airspeed will be increased but the drag does not change."
-      ],
-      "answerIndex": 0,
-      "answerText": "the airspeed and the drag will be increased.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Given that: VEF= Critical engine failure speed VMCG= Ground minimum control speed VMCA= Air minimum control speed VMU= Minimum unstick speed V1= Take-off decision speed VR= Rotation speed V2 min.= Minimum take-off safety speed The correct formula is:",
-      "questionType": "multiple_choice",
-      "choices": [
-        "1.05 VMCA<= VEF<= V1",
-        "1.05 VMCG< VEF<= VR",
-        "V2min<= VEF<= VMU",
-        "VMCG<=VEF < V1"
-      ],
-      "answerIndex": 3,
-      "answerText": "VMCG<=VEF < V1",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "At a given altitude, when a turbojet aeroplane mass is increased by 5% - assuming the engines specific consumption remains unchanged -, its hourly consumption is approximately increased by:",
-      "questionType": "multiple_choice",
-      "choices": [
-        "10%",
-        "2.5%",
-        "5%",
-        "7.5%"
-      ],
-      "answerIndex": 2,
-      "answerText": "5%",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Which of the following statements is correct?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The performance limited take-off mass is independant of the wind component.",
-        "The accelerate stop distance required is independant of the runway condition.",
-        "The take-off distance with one engine out is independant of the wind component.",
-        "The climb limited take-off mass is independant of the wind component."
-      ],
-      "answerIndex": 3,
-      "answerText": "The climb limited take-off mass is independant of the wind component.",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "A lower airspeed at constant mass and altitude requires",
-      "questionType": "multiple_choice",
-      "choices": [
-        "less thrust and a lower coefficient of lift.",
-        "more thrust and a lower coefficient of lift.",
-        "more thrust and a lower coefficient of drag.",
-        "a higher coefficient of lift."
-      ],
-      "answerIndex": 3,
-      "answerText": "a higher coefficient of lift.",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "At a constant Mach number the thrust and the fuel flow of a jet engine",
-      "questionType": "multiple_choice",
-      "choices": [
-        "increase in proportion to the ambient pressure at constant temperature.",
-        "decrease in proportion to the ambient pressure at constant temperature.",
-        "increase with increasing altitude.",
-        "are independent of outside air temperature (OAT)."
+        "True airspeed to rate of climb",
+        "The increase of altitude to horizontal air distance expressed as a percentage",
+        "Rate of climb to true airspeed",
+        "The increase of altitude to distance over ground expressed as a percentage"
       ],
       "answerIndex": 1,
-      "answerText": "decrease in proportion to the ambient pressure at constant temperature.",
-      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "answerText": "The increase of altitude to horizontal air distance expressed as a percentage",
+      "explanation": "Climb gradient is vertical height gained divided by horizontal distance.",
       "tags": [
-        "performance",
-        "volare"
+        "aerodynamics",
+        "mock exam"
       ]
     },
     {
-      "question": "Following a take-off determined by the 50ft (15m) screen height, a light twin climbs on a 10% over-the-ground climb gradient. It will clear a 900 m high obstacle in relation to the runway (horizontally), situated at 10 000 m from the 50 ft clearing point with an obstacle clearance of:",
+      "question": "The absolute ceiling is defined as:",
       "questionType": "multiple_choice",
       "choices": [
-        "85 m",
-        "It will not clear the obstacle",
-        "115 m",
-        "100 m"
-      ],
-      "answerIndex": 2,
-      "answerText": "115 m",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Moving the center of gravity from the forward to the aft limit (gross mass, altitude and airspeed remain unchanged)",
-      "questionType": "multiple_choice",
-      "choices": [
-        "increases the power required.",
-        "affects neither drag nor power required.",
-        "increases the induced drag.",
-        "decreases the induced drag and reduces the power required."
-      ],
-      "answerIndex": 3,
-      "answerText": "decreases the induced drag and reduces the power required.",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "On a reciprocating engined aeroplane, with increasing altitude at constant gross mass, angle of attack and configuraton the power required",
-      "questionType": "multiple_choice",
-      "choices": [
-        "remains unchanged but the TAS increases.",
-        "increases and the TAS increases by the same percentage.",
-        "increases but TAS remains constant.",
-        "decreases slightly because of the lower air density."
-      ],
-      "answerIndex": 1,
-      "answerText": "increases and the TAS increases by the same percentage.",
-      "explanation": "The answer sheet in the source PDF marks option B as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "During certification test flights for a turbojet aeroplane, the actual measured take-off runs from brake release to a point equidistant between the point at which VLOF is reached and the point at which the aeroplane is 35 feet above the take-off surface are: - 1747 m, all engines operating - 1950 m, with the critical engine failure recognized at V1, the other factors remaining unchanged. Considering both possibilities to determine the take-off run (TOR). What is the correct distance?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "1950 m.",
-        "2009 m.",
-        "2243 m.",
-        "2096 m."
-      ],
-      "answerIndex": 1,
-      "answerText": "2009 m.",
-      "explanation": "The answer sheet in the source PDF marks option B as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "(For this question use annex 032-6586A or Flight planning Manual SEP 1 Figure 2.3 Table 2.3.1) Using the Power Setting Table, for the single engine aeroplane, determine the cruise TAS and fuel flow (lbs/hr) with full throttle and cruise lean mixture in the following conditions: Given : OAT: 3°C Pressure altitude: 6000 ft Power: Full throttle / 21,0 in/Hg./ 2100 RPM",
-      "questionType": "multiple_choice",
-      "choices": [
-        "131 kt and 56,9 lbs/hr",
-        "125 kt and 55,7 lbs/hr",
-        "134 kt and 55,7 lbs/hr",
-        "136 kt and 56,9 lbs/hr"
-      ],
-      "answerIndex": 2,
-      "answerText": "134 kt and 55,7 lbs/hr",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "(For this question use annex 032-3589A or Performance Manual MRJT 1 Figure 4.24) With regard to the drift down performance of the twin jet aeroplane, why does the curve representing 35 000 kg gross mass in the chart for drift down net profiles start at approximately 3 minutes at FL370?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "Because at this mass the engines slow down at a slower rate after failure, there is still some thrust left during four minutes.",
-        "Due to higher TAS at this mass it takes more time to develop the optimal rate of descent, because of the inertia involved.",
-        "All the curves start at the same point, which is situated outside the chart.",
-        "Because at this mass it takes about 3 minutes to decelerate to the optimum speed for drift down at the original cruising level."
-      ],
-      "answerIndex": 3,
-      "answerText": "Because at this mass it takes about 3 minutes to decelerate to the optimum speed for drift down at the original cruising level.",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Assuming that the required lift exists, which forces determine an aeroplane's angle of climb?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "Thrust and drag only.",
-        "Weight and thrust only.",
-        "Weight, drag and thrust.",
-        "Weight and drag only."
-      ],
-      "answerIndex": 2,
-      "answerText": "Weight, drag and thrust.",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "The point at which a tangent out of the origin touches the power required curve",
-      "questionType": "multiple_choice",
-      "choices": [
-        "is the point where Drag coefficient is a minimum.",
-        "is the point where the Lift to Drag ratio is a minimum.",
-        "is the maximum drag speed.",
-        "is the point where the Lift to Drag ratio is a maximum."
-      ],
-      "answerIndex": 3,
-      "answerText": "is the point where the Lift to Drag ratio is a maximum.",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "How does the best angle of climb and best rate of climb vary with increasing altitude?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "Both decrease.",
-        "Both increase.",
-        "Best angle of climb increases while best rate of climb decreases.",
-        "Best angle of climb decreases while best rate of climb increases."
+        "The altitude where the maximum rate of climb is 0 ft/minute",
+        "The altitude where a certain maximum rate of climb (e.g. 100 ft/min) is attained",
+        "The outer boundary of our galaxy",
+        "The altitude where the rate of climb is maximum"
       ],
       "answerIndex": 0,
-      "answerText": "Both decrease.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "answerText": "The altitude where the maximum rate of climb is 0 ft/minute",
+      "explanation": "At the absolute ceiling, maximum rate of climb is zero.",
       "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Which statement related to a take-off from a wet runway is correct?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "In case of a reverser inoperative the wet runway performance information can still be used",
-        "Screenheight reduction can not be applied because of reduction in obstacle clearance.",
-        "A reduction of screen height is allowed in order to reduce weight penalties",
-        "The use of a reduced Vr is sufficient to maitain the same safety margins as for a dry runway"
-      ],
-      "answerIndex": 2,
-      "answerText": "A reduction of screen height is allowed in order to reduce weight penalties",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Reduced take-off thrust should normally not be used when:",
-      "questionType": "multiple_choice",
-      "choices": [
-        "it is dark.",
-        "the runway is dry.",
-        "the runway is wet.",
-        "windshear is reported on the take-off path."
-      ],
-      "answerIndex": 3,
-      "answerText": "windshear is reported on the take-off path.",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "The long range cruise speed is in relation to the speed for maximum range cruise.",
-      "questionType": "multiple_choice",
-      "choices": [
-        "Lower",
-        "Depending on the OAT and net mass.",
-        "Depending on density altitude and mass.",
-        "Higher"
-      ],
-      "answerIndex": 3,
-      "answerText": "Higher",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "(For this question use annex 032-6585A or Flight planning Manual SEP 1 Figure 2.2 Table 2.2.3) Using the Power Setting Table, for the single engine aeroplane, determine the cruise TAS and fuel flow (lbs/hr) with full throttle and cruise lean mixture in the following conditions: Given: OAT: 13°C Pressure altitude: 8000 ft RPM: 2300",
-      "questionType": "multiple_choice",
-      "choices": [
-        "160 kt and 71,1 lbs/hr",
-        "159 kt and 71,7 lbs/hr",
-        "160 kt and 69,3 lbs/hr",
-        "158 kt and 74,4 lbs/hr"
-      ],
-      "answerIndex": 2,
-      "answerText": "160 kt and 69,3 lbs/hr",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "The rate of climb",
-      "questionType": "multiple_choice",
-      "choices": [
-        "is approximately climb gradient times true airspeed divided by 100.",
-        "is the downhill component of the true airspeed.",
-        "is angle of climb times true airspeed.",
-        "is the horizontal component of the true airspeed."
-      ],
-      "answerIndex": 0,
-      "answerText": "is approximately climb gradient times true airspeed divided by 100.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "The maximum horizontal speed occurs when:",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The thrust is equal to minimum drag.",
-        "The thrust does not increase further with increasing speed.",
-        "The maximum thrust is equal to the total drag.",
-        "The thrust is equal to the maximum drag."
-      ],
-      "answerIndex": 2,
-      "answerText": "The maximum thrust is equal to the total drag.",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "(For this question use annex 032-6575A or Performance Manual SEP 1 Figure 2.1) With regard to the take off performance chart for the single engine aeroplane determine the maximum allowable take off mass . Given : O.A.T : ISA Pressure Altitude: 4000 ft Headwind component: 5 kt Flaps: up Runway: Tarred and Dry Factored runway length: 2000 ft Obstacle height: 50 ft",
-      "questionType": "multiple_choice",
-      "choices": [
-        "3000 lbs",
-        "2900 lbs",
-        "> 3650 lbs",
-        "3240 lbs"
-      ],
-      "answerIndex": 3,
-      "answerText": "3240 lbs",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "The required Take-off Distance (TOD) and the field length limited Take-off Mass (TOM) are different for the zero flap case and take-off position flap case. What is the result of flap setting in take-off position compared to zero flap position?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "Increased TOD required and decreased field length limited TOM.",
-        "Increased TOD required and increased field length limited TOM.",
-        "Decreased TOD required and decreased field length limited TOM.",
-        "Decreased TOD required and increased field length limited TOM."
-      ],
-      "answerIndex": 3,
-      "answerText": "Decreased TOD required and increased field length limited TOM.",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Which statement is correct?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "VR must not be less than 1.05 VMCA and not less than 1.1 V1.",
-        "VR must not be less than 1.05 VMCA and not less than V1.",
-        "VR must not be less than VMCA and not less than 1.05 V1.",
-        "VR must not be less than 1.1 VMCA and not less than V1."
-      ],
-      "answerIndex": 1,
-      "answerText": "VR must not be less than 1.05 VMCA and not less than V1.",
-      "explanation": "The answer sheet in the source PDF marks option B as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "The optimum altitude",
-      "questionType": "multiple_choice",
-      "choices": [
-        "is the altitude up to which cabin pressure of 8 000 ft can be maintained.",
-        "increases as mass decreases and is the altitude at which the specific range reaches its maximum.",
-        "decreases as mass decreases.",
-        "is the altitude at which the specific range reaches its minimum."
-      ],
-      "answerIndex": 1,
-      "answerText": "increases as mass decreases and is the altitude at which the specific range reaches its maximum.",
-      "explanation": "The answer sheet in the source PDF marks option B as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Considering TAS for maximum range and maximum endurance, other factors remaining constant,",
-      "questionType": "multiple_choice",
-      "choices": [
-        "TAS for maximum range will increase with increased altitude while TAS for maximum endurance will decrease with increased altitude.",
-        "both will increase with increasing altitude.",
-        "both will decrease with increasing altitude.",
-        "both will stay constant regardless of altitude."
-      ],
-      "answerIndex": 1,
-      "answerText": "both will increase with increasing altitude.",
-      "explanation": "The answer sheet in the source PDF marks option B as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "The climb gradient of an aircraft after take-off is 6% in standard atmosphere, no wind, at 0 ft pressure altitude. Using the following corrections: \"± 0,2 % / 1 000 ft field elevation\" \"± 0,1 % / °C from standard temperature\" \" - 1 % with wing anti-ice\" \" - 0,5% with engine anti-ice\" The climb gradient after take-off from an airport situated at 1 000 ft, 17° C; QNH 1013,25 hPa, with wing and engine anti-ice operating for a functional check is :",
-      "questionType": "multiple_choice",
-      "choices": [
-        "3,9 %",
-        "4,3 %",
-        "4,7 %",
-        "4,9 %"
-      ],
-      "answerIndex": 0,
-      "answerText": "3,9 %",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Which one of the following statements concerning drift- down is correct?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The drift-down procedure requires a minimum descent angle after an engine failure at cruising altitude.",
-        "The drift-down procedure requires a minimum obstacle clearance of 35 ft.",
-        "An engine failure at high cruising altitude will always result in a drift-down, because it is not permitted to fly the same altitude with one engine inoperative as with all engines operating.",
-        "When determining the obstacle clearance during drift-down, fuel dumping may be taken into account."
-      ],
-      "answerIndex": 3,
-      "answerText": "When determining the obstacle clearance during drift-down, fuel dumping may be taken into account.",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Two identical turbojet aeroplanes (whose specific fuel consumption is assumed to be constant) are in a holding pattern at the same altitude. The mass of the first one is 95 000 kg and its hourly fuel consumption is equal to 3100 kg/h. Since the mass of the second one is 105 000 kg, its hourly fuel consumption is:",
-      "questionType": "multiple_choice",
-      "choices": [
-        "3787 kg/h",
-        "3426 kg/h",
-        "3259 kg/h",
-        "3602 kg/h"
-      ],
-      "answerIndex": 2,
-      "answerText": "3259 kg/h",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "As long as an aeroplane is in a positive climb",
-      "questionType": "multiple_choice",
-      "choices": [
-        "VX is always below VY.",
-        "VX is sometimes below and sometimes above VY depending on altitude.",
-        "VX is always above VY.",
-        "VY is always above VMO."
-      ],
-      "answerIndex": 0,
-      "answerText": "VX is always below VY.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "What is the advantage of balancing V1, even in the event of a climb limited take-off?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The safety margin with respect to the runway length is greatest.",
-        "The take-off distance required with one engine out at V1 is the shortest.",
-        "The accelerate stop distance required is the shortest.",
-        "The climb limited take-off mass is the highest."
-      ],
-      "answerIndex": 0,
-      "answerText": "The safety margin with respect to the runway length is greatest.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "What happens to the drag of a jet aeroplane if, during the initial climb after take off, constant IAS is maintained? (Assume a constant mass.)",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The drag decreases.",
-        "The drag increases initially and decreases thereafter.",
-        "The drag remains almost constant.",
-        "The drag increases considerably."
-      ],
-      "answerIndex": 2,
-      "answerText": "The drag remains almost constant.",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "The point where Drag coefficient/Lift coefficient is a minimum is",
-      "questionType": "multiple_choice",
-      "choices": [
-        "at stalling speed (VS).",
-        "on the \"back side\" of the drag curve.",
-        "the point where a tangent from the origin touches the drag curve.",
-        "the lowest point of the drag curve."
-      ],
-      "answerIndex": 2,
-      "answerText": "the point where a tangent from the origin touches the drag curve.",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "The speed VR",
-      "questionType": "multiple_choice",
-      "choices": [
-        "must be higher than VLOF.",
-        "must be equal to or lower than V1.",
-        "is the speed at which rotation to the lift-off angle of attack is initiated.",
-        "must be higher than V2."
-      ],
-      "answerIndex": 2,
-      "answerText": "is the speed at which rotation to the lift-off angle of attack is initiated.",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "At a given mass, the stalli ng speed of a twin engine aircraft is 100 kt in the landing configuration. The minimum speed a pilot must maintain in short final is:",
-      "questionType": "multiple_choice",
-      "choices": [
-        "130 kt",
-        "115 kt",
-        "125 kt",
-        "120 kt"
-      ],
-      "answerIndex": 0,
-      "answerText": "130 kt",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "In case of an engine failure which is recognized at or above V1",
-      "questionType": "multiple_choice",
-      "choices": [
-        "the take-off should be rejected if the speed is still below VR.",
-        "the take-off must be continued.",
-        "the take-off must be rejected if the speed is still below VLOF.",
-        "a height of 50 ft must be reached within the take-off distance."
-      ],
-      "answerIndex": 1,
-      "answerText": "the take-off must be continued.",
-      "explanation": "The answer sheet in the source PDF marks option B as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "For take-off obstacle clearance calculations, obstacles in the first segment may be avoided",
-      "questionType": "multiple_choice",
-      "choices": [
-        "by banking not more than 15° between 50 ft and 400 ft above the runway elevation.",
-        "by banking as much as needed if aeroplane is more than 50 ft above runway elevation.",
-        "only by using standard turns.",
-        "by standard turns - but only after passing 1500 ft."
-      ],
-      "answerIndex": 0,
-      "answerText": "by banking not more than 15° between 50 ft and 400 ft above the runway elevation.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "The Density Altitude",
-      "questionType": "multiple_choice",
-      "choices": [
-        "is used to calculate the FL above the Transition Altitude.",
-        "is used to determine the aeroplane performance.",
-        "is equal to the pressure altitude.",
-        "is used to establish minimum clearance of 2.000 feet over mountains."
-      ],
-      "answerIndex": 1,
-      "answerText": "is used to determine the aeroplane performance.",
-      "explanation": "The answer sheet in the source PDF marks option B as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Which of the following factors leads to the maximum flight time of a glide?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "Low mass.",
-        "High mass.",
-        "Headwind.",
-        "Tailwind."
-      ],
-      "answerIndex": 0,
-      "answerText": "Low mass.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "A constant headwind",
-      "questionType": "multiple_choice",
-      "choices": [
-        "increases the descent distance over ground.",
-        "increases the angle of the descent flight path.",
-        "increases the angle of descent.",
-        "increases the rate of descent."
-      ],
-      "answerIndex": 1,
-      "answerText": "increases the angle of the descent flight path.",
-      "explanation": "The answer sheet in the source PDF marks option B as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "The second segment begins",
-      "questionType": "multiple_choice",
-      "choices": [
-        "when landing gear is fully retracted.",
-        "when flap retraction begins.",
-        "when flaps are selected up.",
-        "when acceleration starts from V2 to the speed for flap retraction."
-      ],
-      "answerIndex": 0,
-      "answerText": "when landing gear is fully retracted.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "The stalling speed or the minimum steady flight speed at which the aeroplane is controllable in landing configuration is abbreviated as",
-      "questionType": "multiple_choice",
-      "choices": [
-        "VS1.",
-        "VS.",
-        "VMC.",
-        "VSO."
-      ],
-      "answerIndex": 3,
-      "answerText": "VSO.",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "If the take-off mass of an aeroplane is tyre speed limited, downhill slope would",
-      "questionType": "multiple_choice",
-      "choices": [
-        "increase the maximum mass for take-off.",
-        "increase the required take-off distance.",
-        "have no effect on the maximum mass for take-off.",
-        "decrease the maximum mass for take-off."
-      ],
-      "answerIndex": 2,
-      "answerText": "have no effect on the maximum mass for take-off.",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "What will be the effect on an aeroplane's performance if aerodrome pressure altitude is decreased?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "It will increase the take-off distance required.",
-        "It will increase the take-off ground run.",
-        "It will increase the accelerate stop distance.",
-        "It will decrease the take-off distance required."
-      ],
-      "answerIndex": 3,
-      "answerText": "It will decrease the take-off distance required.",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "An aeroplane carries out a descent from FL 410 to FL 270 at cruise Mach number, and from FL 270 to FL 100 at the IAS reached at FL 270. How does the angle of descent change in the first and in the second part of the descent? Assume idle thrust and clean configuration and ignore compressibilit y effects.",
-      "questionType": "multiple_choice",
-      "choices": [
-        "Increases in the first part; is constant in the second.",
-        "Increases in the first part; decreases in the second.",
-        "Is constant in the first part; decreases in the second.",
-        "Decreases in the first part; increases in the second."
-      ],
-      "answerIndex": 0,
-      "answerText": "Increases in the first part; is constant in the second.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "A constant headwind component",
-      "questionType": "multiple_choice",
-      "choices": [
-        "increases the angle of flight path during climb.",
-        "increases the best rate of climb.",
-        "decreases the angle of climb.",
-        "increases the maximum endurance."
-      ],
-      "answerIndex": 0,
-      "answerText": "increases the angle of flight path during climb.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Higher gross mass at the same altitude decreases the gradient and the rate of climb whereas",
-      "questionType": "multiple_choice",
-      "choices": [
-        "VY and VX are increased.",
-        "VX is increased and VY is decreased.",
-        "VY and VX are not affected by a higher gross mass.",
-        "VY and VX are decreased."
-      ],
-      "answerIndex": 0,
-      "answerText": "VY and VX are increased.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "For a turboprop powered aeroplane, a 2200 m long runway at the destination aerodrome is expected to be \"wet\". The \"dry runway\" landing distance, should not exceed:",
-      "questionType": "multiple_choice",
-      "choices": [
-        "1540 m.",
-        "1147 m.",
-        "1339 m.",
-        "1771 m."
-      ],
-      "answerIndex": 2,
-      "answerText": "1339 m.",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Maximum endurance for a piston engined aeroplane is achieved at:",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The speed that approximately corresponds to the maximum rate of climb speed.",
-        "The speed for maximum lift coefficient.",
-        "The speed for minimum drag.",
-        "The speed that corresponds to the speed for maximum climb angle."
-      ],
-      "answerIndex": 0,
-      "answerText": "The speed that approximately corresponds to the maximum rate of climb speed.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "When the outside air temperature increases, then",
-      "questionType": "multiple_choice",
-      "choices": [
-        "the field length limited take-off mass decreases but the climb limited take-off mass increases.",
-        "the field length limited take-off mass increases but the climb limited take-off mass decreases.",
-        "the field length limited take-off mass and the climb limited take-off mass decreases.",
-        "the field length limited take-off mass and the climb limited take-off mass increases."
-      ],
-      "answerIndex": 2,
-      "answerText": "the field length limited take-off mass and the climb limited take-off mass decreases.",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "If the level-off altitude is below the obstacle clearance altitude during a drift down procedure",
-      "questionType": "multiple_choice",
-      "choices": [
-        "fuel jettisoning should be started at the beginning of drift down.",
-        "the recommended drift down speed should be disregarded and it should be flown at the stall speed plus 10 kt.",
-        "fuel jettisoning should be started when the obstacle clearance altitude is reached.",
-        "the drift down should be flown with flaps in the approach configuration."
-      ],
-      "answerIndex": 0,
-      "answerText": "fuel jettisoning should be started at the beginning of drift down.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "After engine failure the aeroplane is unable to maintain its cruising altitude. What is the procedure which should be applied?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "Emergency Descent Procedure.",
-        "ETOPS.",
-        "Long Range Cruise Descent.",
-        "Drift Down Procedure."
-      ],
-      "answerIndex": 3,
-      "answerText": "Drift Down Procedure.",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "With all engines out, a pilot wants to fly for maximum time. Therefore he has to fly the speed corresponding to:",
-      "questionType": "multiple_choice",
-      "choices": [
-        "the minimum drag.",
-        "the critical Mach number.",
-        "the minimum angle of descent.",
-        "the maximum lift."
-      ],
-      "answerIndex": 0,
-      "answerText": "the minimum drag.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Which of the following statements with regard to the actual acceleration height at the beginning of the 3rd climb segment is correct?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The minimum value according to regulations is 1000 ft.",
-        "There is no legal minimum value, because this will be determined from case to case during the calculation of the net flight path.",
-        "The minimum value according to regulations is 400 ft.",
-        "A lower height than 400 ft is allowed in special circumstances e.g. noise abatement."
-      ],
-      "answerIndex": 2,
-      "answerText": "The minimum value according to regulations is 400 ft.",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "The take-off distance available is",
-      "questionType": "multiple_choice",
-      "choices": [
-        "the total runway length, without clearway even if this one exists.",
-        "the length of the take-off run available plus the length of the clearway available.",
-        "the runway length minus stopway.",
-        "the runway length plus half of the clearway."
-      ],
-      "answerIndex": 1,
-      "answerText": "the length of the take-off run available plus the length of the clearway available.",
-      "explanation": "The answer sheet in the source PDF marks option B as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "At constant thrust and constant altitude the fuel flow of a jet engine",
-      "questionType": "multiple_choice",
-      "choices": [
-        "increases slightly with increasing airspeed.",
-        "is independent of the airspeed.",
-        "decreases slightly with increasing airspeed.",
-        "increases with decreasing OAT."
-      ],
-      "answerIndex": 0,
-      "answerText": "increases slightly with increasing airspeed.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "During certification flight testing on a four engine turbojet aeroplane the actual take-off distances measured are: - 3050 m with failure of the critical engine recognised at - 2555 m with all engines operating and all other things being equal The take-off distance adopted for the certification file is: V1",
-      "questionType": "multiple_choice",
-      "choices": [
-        "3050 m",
-        "3513 m",
-        "2555 m",
-        "2938 m"
-      ],
-      "answerIndex": 0,
-      "answerText": "3050 m",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "(For this question use annex 032-6570A or Performance Manual SEP 1 Figure 2.4) With regard to the landing chart for the single engine aeroplane determine the landing distance from a height of 50 ft . Given : O.A.T : ISA +15°C Pressure Altitude: 0 ft Aeroplane Mass: 2940 lbs Tailwind component: 10 kt Flaps: Landing position (down) Runway: Tarred and Dry",
-      "questionType": "multiple_choice",
-      "choices": [
-        "approximately : 950 feet",
-        "approximately : 1400 feet",
-        "approximately : 750 feet",
-        "approximately : 1300 feet"
-      ],
-      "answerIndex": 3,
-      "answerText": "approximately : 1300 feet",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "On a long distance flight the gross mass decreases continuously as a consequence of the fuel consumption. The result is:",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The speed must be increased to compensate the lower mass.",
-        "The specific range increases and the optimum altitude decreases.",
-        "The specific range decreases and the optimum altitude increases.",
-        "The specific range and the optimum altitude increases."
-      ],
-      "answerIndex": 3,
-      "answerText": "The specific range and the optimum altitude increases.",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "(For this question use annex 032-6582A or Performance Manual SEP 1 Figure 2.3) Using the climb performance chart, for the single engine aeroplane, determine the ground distance to reach a height of 1500 ft above the reference zero inthe following conditions: Given : O.A.T at Take-o Airport pressure altitude: 5000 ft Aeroplane mass: 3300 lbs Speed: 100 KIAS Wind component: 5 kts Tailwind ff: ISA",
-      "questionType": "multiple_choice",
-      "choices": [
-        "18 909 ft",
-        "18 073 ft",
-        "20 109 ft",
-        "16 665 ft"
-      ],
-      "answerIndex": 3,
-      "answerText": "16 665 ft",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "The drift down requirements are based on:",
-      "questionType": "multiple_choice",
-      "choices": [
-        "the actual engine thrust output at the altitude of engine failure.",
-        "the maximum flight path gradient during the descent.",
-        "the landing mass limit at the alternate.",
-        "the obstacle clearance during a descent to the new cruising altitude if an engine has failed."
-      ],
-      "answerIndex": 3,
-      "answerText": "the obstacle clearance during a descent to the new cruising altitude if an engine has failed.",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "An aeroplane executes a steady glide at the speed for minimum glide angle. If the forward speed is kept constant, what is the effect of a lower mass? Rate of descent / Glide angle / CL/CD ratio",
-      "questionType": "multiple_choice",
-      "choices": [
-        "decreases / constant / decreases",
-        "increases / increases / constant",
-        "increases / constant / increases",
-        "increases / increases / decreases"
-      ],
-      "answerIndex": 3,
-      "answerText": "increases / increases / decreases",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "A flight is planned with a turbojet aeroplane to an aerodrome with a landing distance available of 2400 m. Which of the following is the maximum landing distance for a dry runway?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "1 440 m.",
-        "1 250 m.",
-        "1 090 m.",
-        "1 655 m."
-      ],
-      "answerIndex": 0,
-      "answerText": "1 440 m.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "How does the thrust of fixed propeller vary during take- off run ? The thrust",
-      "questionType": "multiple_choice",
-      "choices": [
-        "increases slightly while the aeroplane speed builds up.",
-        "varies with mass changes only.",
-        "has no change during take-off and climb.",
-        "decreases slightly while the aeroplane speed builds up."
-      ],
-      "answerIndex": 3,
-      "answerText": "decreases slightly while the aeroplane speed builds up.",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Field length is balanced when",
-      "questionType": "multiple_choice",
-      "choices": [
-        "one engine acceleration from V1 to VLOF plus flare distance between VLOF and 35 feet are equal.",
-        "take-off distance equals accelerate-stop distance.",
-        "calculated V2 is less than 110% VMCA and V1, VR, VMCG.",
-        "all engine acceleration to V1 and braking distance for rejected take-off are equal."
-      ],
-      "answerIndex": 1,
-      "answerText": "take-off distance equals accelerate-stop distance.",
-      "explanation": "The answer sheet in the source PDF marks option B as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "(For this question use annex 032-1562A or Performance Manual MRJT 1 Figure 4.4 ) For a twin engine turbojet aeroplane two take-off flap settings (5° and 15°) are certified. Given: Field length avalaible= 2400 m Outside air temperature= -10°C Airport pressure altitude= 7000 ft The maximum allowed take-off mass is:",
-      "questionType": "multiple_choice",
-      "choices": [
-        "55 000 kg",
-        "70 000 kg",
-        "52 000 kg",
-        "56 000 kg"
-      ],
-      "answerIndex": 3,
-      "answerText": "56 000 kg",
-      "explanation": "The answer sheet in the source PDF marks option D as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Which of the following answers is true?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "V1 > VR",
-        "V1 < VMCG",
-        "V1 <= VR",
-        "V1 > Vlof"
-      ],
-      "answerIndex": 2,
-      "answerText": "V1 <= VR",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "(For this question use annex 032-6580A or Performance Manual SEP 1 Figure 2.2) With regard to the take off performance chart for the single engine aeroplane determine the take off distance over a 50 ft obstacle height. Given : O.A.T : 30°C Pressure Altitude: 1000 ft Aeroplane Mass: 2950 lbs Tailwind component: 5 kt Flaps: Approach setting Runway: Short, wet grass, firm subsoil Correction factor: 1.25 (for runway conditions)",
-      "questionType": "multiple_choice",
-      "choices": [
-        "1600 ft",
-        "2000 ft",
-        "2375 ft",
-        "1900 ft"
-      ],
-      "answerIndex": 2,
-      "answerText": "2375 ft",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "A jet aeroplane is climbing at constant Mach number below the tropopause. Which of the following statements is correct?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "IAS decreases and TAS decreases.",
-        "IAS increases and TAS increases.",
-        "IAS decreases and TAS increases.",
-        "IAS increases and TAS decreases."
-      ],
-      "answerIndex": 0,
-      "answerText": "IAS decreases and TAS decreases.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
-      "tags": [
-        "performance",
-        "volare"
+        "aerodynamics",
+        "mock exam"
       ]
     },
     {
       "question": "Regarding take-off, the take-off decision speed V1:",
       "questionType": "multiple_choice",
       "choices": [
-        "is the airspeed of the aeroplane upon reaching 35 feet above the take-off surface.",
-        "is the airspeed on the ground at which the pilot is assumed to have made a decision to continue or discontinue the take- off.",
-        "is always equal to VEF (Engine Failure speed).",
-        "is an airspeed at which the aeroplane is airborne but below 35 ft and the pilot is assumed to have made a decision to continue or discontinue the take-off ."
+        "Is an airspeed at which the aeroplane is airborne but below 35 ft and the pilot has decided to continue or discontinue take-off",
+        "Is the airspeed on the ground at which the pilot is assumed to have made a decision to continue or discontinue take-off",
+        "Is the airspeed upon reaching 35 feet above the take-off surface",
+        "Is always equal to VEF (Engine Failure speed)"
       ],
       "answerIndex": 1,
-      "answerText": "is the airspeed on the ground at which the pilot is assumed to have made a decision to continue or discontinue the take- off.",
-      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "answerText": "Is the airspeed on the ground at which the pilot is assumed to have made a decision to continue or discontinue take-off",
+      "explanation": "V1 is the ground speed at which the take-off decision is made.",
       "tags": [
-        "performance",
-        "volare"
+        "aerodynamics",
+        "mock exam"
       ]
     },
     {
-      "question": "Given a jet aircraft. Which order of increasing speeds in the performance diagram is correct?",
+      "question": "The load factor in a turn in level flight with constant TAS depends on:",
       "questionType": "multiple_choice",
       "choices": [
-        "Vs, Maximum range speed, Vx",
-        "Maximum endurance speed, Maximum range speed, Vx",
-        "Vs, Vx, Maximum range speed",
-        "Maximum endurance speed, Long range speed, Maximum range speed"
-      ],
-      "answerIndex": 2,
-      "answerText": "Vs, Vx, Maximum range speed",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "If the climb speed schedule is changed from 280/.74 to 290/.74 the new crossover altitude is",
-      "questionType": "multiple_choice",
-      "choices": [
-        "unchanged.",
-        "only affected by the aeroplane gross mass.",
-        "lower.",
-        "higher."
-      ],
-      "answerIndex": 2,
-      "answerText": "lower.",
-      "explanation": "The answer sheet in the source PDF marks option C as correct.",
-      "tags": [
-        "performance",
-        "volare"
-      ]
-    },
-    {
-      "question": "Which data can be extracted from the Buffet Onset Boundary Chart?",
-      "questionType": "multiple_choice",
-      "choices": [
-        "The value of the Mach number at which low speed and shockstall occur at various weights and altitudes.",
-        "The values of the Mach number at which low speed and Mach buffet occur at various masses and altitudes.",
-        "The value of maximum operating Mach number (MMO) at various masses and power settings.",
-        "The value of the critical Mach number at various masses and altitudes."
+        "the radius of the turn and the bank angle",
+        "the bank angle only",
+        "the true airspeed and the bank angle",
+        "the radius of the turn and the weight of the aeroplane"
       ],
       "answerIndex": 1,
-      "answerText": "The values of the Mach number at which low speed and Mach buffet occur at various masses and altitudes.",
-      "explanation": "The answer sheet in the source PDF marks option B as correct.",
+      "answerText": "the bank angle only",
+      "explanation": "In a coordinated level turn, load factor is determined by bank angle.",
       "tags": [
-        "performance",
-        "volare"
+        "aerodynamics",
+        "mock exam"
       ]
     },
     {
-      "question": "With zero wind, the angle of attack for maximum range for an aeroplane with turbojet engines is:",
+      "question": "The Density Altitude:",
       "questionType": "multiple_choice",
       "choices": [
-        "equal to that of maximum lift to drag ratio.",
-        "equal to that maximum endurance.",
-        "equal to that corresponding to zero induced drag.",
-        "lower than that of maximum lift to drag ratio."
+        "is used to determine the aeroplane performance",
+        "is used to calculate the FL above the Transition Altitude",
+        "is used to establish minimum clearance of 2,000 feet over mountains",
+        "is equal to the pressure altitude"
       ],
       "answerIndex": 0,
-      "answerText": "equal to that of maximum lift to drag ratio.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "answerText": "is used to determine the aeroplane performance",
+      "explanation": "Density altitude is used to evaluate aircraft performance.",
       "tags": [
-        "performance",
-        "volare"
+        "aerodynamics",
+        "mock exam"
       ]
     },
     {
-      "question": "The speed V2 is defined for jet aeroplane as",
+      "question": "The point where Drag coefficient/Lift coefficient is a minimum is:",
       "questionType": "multiple_choice",
       "choices": [
-        "take-off climb speed or speed at 35 ft.",
-        "lift off speed.",
-        "take-off decision speed.",
-        "critical engine failure speed."
+        "At stalling speed (VS)",
+        "The lowest point of the drag curve",
+        "The point where a tangent from the origin touches the drag curve",
+        "On the ‘back side’ of the drag curve"
+      ],
+      "answerIndex": 1,
+      "answerText": "The lowest point of the drag curve",
+      "explanation": "The minimum point of the drag curve is the keyed answer.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "For a piston-engine aircraft, the Critical Altitude is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The maximum altitude in standard atmosphere at which it is possible to maintain a specified power or manifold pressure",
+        "The maximum altitude at which it is possible to maintain a specified manifold pressure",
+        "The maximum altitude at which it is possible to maintain a specified power",
+        "The minimum altitude at which it is possible to maintain specified power or manifold pressure"
       ],
       "answerIndex": 0,
-      "answerText": "take-off climb speed or speed at 35 ft.",
-      "explanation": "The answer sheet in the source PDF marks option A as correct.",
+      "answerText": "The maximum altitude in standard atmosphere at which it is possible to maintain a specified power or manifold pressure",
+      "explanation": "Critical altitude is the highest altitude at which specified power or manifold pressure can be maintained.",
       "tags": [
-        "performance",
-        "volare"
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Which of the following statements is correct?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Landing distance on a grass runway is shorter than on tarmac because of the rougher surface",
+        "Deployment of lift dumpers will increase the effectiveness of the wheel brakes",
+        "A reduced flap setting for landing gives a shorter distance due to reduced lift and greater wheel load",
+        "Wheel braking is most effective when the wheels are locked"
+      ],
+      "answerIndex": 1,
+      "answerText": "Deployment of lift dumpers will increase the effectiveness of the wheel brakes",
+      "explanation": "Lift dumpers transfer more weight to the wheels and improve brake effectiveness.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Decreasing take-off flap from 15° to 0° will probably result in a VLOF that is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "unchanged",
+        "greatly reduced",
+        "reduced",
+        "increased"
+      ],
+      "answerIndex": 3,
+      "answerText": "increased",
+      "explanation": "With less flap-generated lift, a higher speed is needed for lift-off.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "The effect of a decrease in density is to:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "decrease take-off distance and increase rate of climb",
+        "increase take-off distance and reduce rate of climb",
+        "decrease take-off distance and reduce rate of climb",
+        "increase take-off distance and increase rate of climb"
+      ],
+      "answerIndex": 1,
+      "answerText": "increase take-off distance and reduce rate of climb",
+      "explanation": "Lower density reduces aircraft performance, increasing take-off distance and reducing climb rate.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "At the moment of lift-off:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "lift is greater than mass",
+        "rolling resistance is a maximum",
+        "lift and drag are equal to zero",
+        "lift is equal to weight"
+      ],
+      "answerIndex": 3,
+      "answerText": "lift is equal to weight",
+      "explanation": "At lift-off, lift balances aircraft weight.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "An upward runway slope:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "increases the available take-off distance",
+        "increases the available rate of climb",
+        "increases the take-off distance required",
+        "decreases the take-off distance required"
+      ],
+      "answerIndex": 2,
+      "answerText": "increases the take-off distance required",
+      "explanation": "An uphill slope opposes acceleration and increases required take-off distance.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Which combination produces the best take-off performance in a normal atmosphere?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Low altitude, high ambient temperature",
+        "High altitude, high ambient temperature",
+        "High altitude, low ambient temperature",
+        "Low altitude, low ambient temperature"
+      ],
+      "answerIndex": 3,
+      "answerText": "Low altitude, low ambient temperature",
+      "explanation": "Low altitude and low temperature give denser air and better performance.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "What is the effect of an increased flap angle on the optimum lift-to-drag ratio?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The optimum ratio decreases initially, then increases at higher flap settings",
+        "None",
+        "The optimum ratio will decrease",
+        "The optimum ratio will increase"
+      ],
+      "answerIndex": 2,
+      "answerText": "The optimum ratio will decrease",
+      "explanation": "Increased flap adds drag and reduces optimum L/D.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "The effect of increased weight on a glide descent in a normal atmosphere is: forward speed ___, rate of descent ___.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "decreased, rate decreases",
+        "increased, rate decreases",
+        "decreased, rate increases",
+        "increased, rate increases"
+      ],
+      "answerIndex": 3,
+      "answerText": "increased, rate increases",
+      "explanation": "At the same glide angle, more weight requires greater speed and yields a greater descent rate.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "The forces acting on an aircraft during the take-off run are:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "weight, thrust and drag",
+        "lift, weight, aerodynamic drag, thrust and mechanical friction",
+        "lift, weight, aerodynamic drag and thrust",
+        "lift, weight and aerodynamic drag"
+      ],
+      "answerIndex": 1,
+      "answerText": "lift, weight, aerodynamic drag, thrust and mechanical friction",
+      "explanation": "The take-off run includes lift, weight, thrust, aerodynamic drag, and mechanical friction.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Landing distance will be increased as a result of all the following:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "increased temperature, increased pressure altitude, downhill runway slope",
+        "increased temperature, decreased pressure altitude, downhill runway slope",
+        "decreased temperature, decreased pressure altitude, uphill runway slope",
+        "increased temperature, increased pressure altitude, uphill runway slope"
+      ],
+      "answerIndex": 0,
+      "answerText": "increased temperature, increased pressure altitude, downhill runway slope",
+      "explanation": "Hotter air, higher pressure altitude, and downhill slope increase landing distance.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Descending at a constant IAS and constant gradient of descent, the pitch angle must be:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "increased rapidly",
+        "kept constant",
+        "progressively increased",
+        "progressively decreased"
+      ],
+      "answerIndex": 3,
+      "answerText": "progressively decreased",
+      "explanation": "As the aircraft descends at constant IAS and gradient, pitch progressively decreases.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Which airspeed provides the greatest gain in altitude in the shortest distance during climb after take-off?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "VA",
+        "VY",
+        "VX",
+        "V2"
+      ],
+      "answerIndex": 2,
+      "answerText": "VX",
+      "explanation": "VX maximizes climb gradient and height gained per distance.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Which statement about the lift/drag ratio in straight and level flight is correct?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The highest value is reached when lift equals aircraft weight",
+        "At the highest value of lift/drag ratio, total drag is lowest",
+        "The ratio always increases as lift decreases",
+        "The highest value is reached when lift is zero"
+      ],
+      "answerIndex": 1,
+      "answerText": "At the highest value of lift/drag ratio, total drag is lowest",
+      "explanation": "At maximum L/D, total drag is at its minimum.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "If aircraft weight is increased, the maximum lift/drag ratio will:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "increase although the aircraft will have to be flown more slowly",
+        "not be affected",
+        "increase",
+        "decrease"
+      ],
+      "answerIndex": 1,
+      "answerText": "not be affected",
+      "explanation": "Maximum L/D is determined by the aircraft drag polar, not aircraft weight.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Skin friction due to air viscosity along the wing surface is part of:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "interference drag",
+        "form drag",
+        "parasite drag",
+        "induced drag"
+      ],
+      "answerIndex": 2,
+      "answerText": "parasite drag",
+      "explanation": "Skin-friction drag is a component of parasite drag.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "What phenomenon causes induced drag?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The increased pressure at the leading edge",
+        "Wing tanks",
+        "The spanwise flow inward below the wing and outward above the wing",
+        "Wingtip vortices"
+      ],
+      "answerIndex": 3,
+      "answerText": "Wingtip vortices",
+      "explanation": "Wingtip vortices and their downwash produce induced drag.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Maintaining thickness/chord ratio but changing to a supercritical wing section will:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "reduce the aft shift of CP in the transonic range",
+        "lead to more prominent shockwave formation",
+        "make lateral stability more critical",
+        "give the aircraft an increased range"
+      ],
+      "answerIndex": 3,
+      "answerText": "give the aircraft an increased range",
+      "explanation": "A supercritical wing reduces wave drag and can improve range.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Flying at the maximum rate of climb speed (Vy) you will obtain maximum:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "altitude at maximum boost setting",
+        "altitude in the shortest distance and time",
+        "altitude in the shortest time",
+        "altitude in the shortest distance"
+      ],
+      "answerIndex": 2,
+      "answerText": "altitude in the shortest time",
+      "explanation": "Vy is the speed for maximum rate of climb, so it gains altitude in the shortest time.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Find the maximum rate of climb for an airplane weighing 19,815 lb when PR = 1,884 hp and PA = 6,636 hp.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "7,814 fpm",
+        "7,914 fpm",
+        "7,614 fpm",
+        "7,714 fpm"
+      ],
+      "answerIndex": 1,
+      "answerText": "7,914 fpm",
+      "explanation": "Using excess power to calculate vertical speed gives about 7,914 ft/min.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "What is the CD for an airplane with the following characteristics? Wingspan 53.3 ft; wing area 318 ft?; normal gross weight 19,815 lb; fuel capacity 1,119 gal of kerosene; two turbofan engines of 3,650-lb thrust each at sea level; specific fuel consumption 0.6 lb fuel/(lb thrust)(h); parasite drag coefficient CD,0 = 0.02; Oswald efficiency factor e = 0.81.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.002",
+        "0.012",
+        "0.022",
+        "0.032"
+      ],
+      "answerIndex": 2,
+      "answerText": "0.022",
+      "explanation": "The total drag coefficient is the sum of parasite and induced contributions for the stated aircraft condition; the keyed result is 0.022.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "What is the relationship between CD,0 and CD,i at minimum power required?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "CD,0 = CD,i",
+        "CD,0 = 1/3 CD,i",
+        "1/3 CD,0 = CD,i",
+        "Varies with angle of attack"
+      ],
+      "answerIndex": 1,
+      "answerText": "CD,0 = 1/3 CD,i",
+      "explanation": "At minimum power required, induced drag coefficient is three times parasite drag coefficient.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
       ]
     }
   ]

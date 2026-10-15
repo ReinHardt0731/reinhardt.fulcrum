@@ -1,4 +1,4 @@
-import { initProgressPage } from "./shared.js?v=attempt-history-learn-20261015";
+import { initProgressPage } from "./shared.js?v=library-idb-cache-20261015-5";
 
 document.addEventListener("DOMContentLoaded", () => {
     initProgressPage();

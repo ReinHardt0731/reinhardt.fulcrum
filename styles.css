@@ -1800,7 +1800,8 @@ button.exam-map-row { cursor: pointer; }
     background: rgba(8, 17, 31, 0.72);
 }
 .weak-exam-pool { color: var(--muted); font-size: 0.88rem; }
-.weak-exam-builder > button { justify-self: stretch; }
+.weak-exam-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.weak-exam-actions button { min-width: 0; }
 .saved-exam-history { display: grid; gap: 10px; margin-top: 18px; }
 .saved-exam-record {
     position: relative;
@@ -1953,6 +1954,7 @@ button.exam-map-row { cursor: pointer; }
 
 @media (max-width: 640px) {
     .weak-exam-controls { grid-template-columns: 1fr; }
+    .weak-exam-actions { grid-template-columns: 1fr; }
     .saved-exam-map { grid-template-columns: 1fr; }
     .saved-exam-review-layout { grid-template-columns: minmax(0, 1fr); }
     .saved-exam-map-panel,
@@ -2016,16 +2018,27 @@ body.drawer-collapsed.exam-map-visible.exam-map-collapsed.mode-exam .app-shell {
     .exam-question-map {
         position: fixed;
         z-index: 32;
-        top: 10px;
-        right: 10px;
-        bottom: 10px;
+        top: max(10px, env(safe-area-inset-top, 0px));
+        right: max(10px, env(safe-area-inset-right, 0px));
+        bottom: max(10px, env(safe-area-inset-bottom, 0px));
         width: min(92vw, 330px);
         height: auto;
-        max-height: none;
+        max-height: calc(100vh - 20px);
+        max-height: calc(100dvh - 20px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
         transform: translateX(calc(100% + 20px));
         opacity: 0;
         pointer-events: none;
         border-radius: 20px;
+    }
+
+    .exam-question-map-list {
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior-y: contain;
+        -webkit-overflow-scrolling: touch;
+        touch-action: pan-y;
     }
 
     body.exam-map-open .exam-question-map {
@@ -10369,7 +10382,16 @@ body.admin-drawer-collapsed .admin-subject-rail { display: flex; }
     white-space: nowrap;
 }
 @media (max-width: 900px) {
-    .planner-mode-nav { position: static; overflow-x: auto; }
+    .planner-mode-nav {
+        position: -webkit-sticky;
+        position: sticky;
+        top: max(8px, env(safe-area-inset-top, 0px));
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .planner-mode-nav::-webkit-scrollbar { display: none; }
     .planner-mode-nav .mode-button { flex: 1 0 116px; }
 }
 @media (max-width: 700px) {
@@ -10716,6 +10738,9 @@ body.mode-study-nav .pomodoro-widget .pomodoro-actions {
 }
 
 @media (max-width: 900px) {
+    /* Let the sticky toolbar follow the document scroll on mobile Safari. */
+    body.mode-study-nav .app-shell { overflow: visible; }
+
     body.mode-study-nav .app-shell,
     body.mode-exam.mode-study-nav .app-shell,
     body.learn-map-visible.mode-learn .app-shell,
@@ -10728,8 +10753,10 @@ body.mode-study-nav .pomodoro-widget .pomodoro-actions {
     }
 
     body.mode-study-nav .study-nav-shell {
+        position: -webkit-sticky;
         position: sticky;
-        top: 8px;
+        top: max(8px, env(safe-area-inset-top, 0px));
+        z-index: 40;
         grid-column: 1;
         grid-row: 1;
     }

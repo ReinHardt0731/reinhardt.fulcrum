@@ -13,7 +13,7 @@ export const ADMIN_PASSWORD = "prepcore";
 export const NOTES_PATH = "./markdowns";
 // Bump this when subjects.json or its chapter payloads change. It invalidates both
 // the browser's HTTP cache and the persistent normalized-library cache.
-const SUBJECTS_CACHE_VERSION = "library-idb-cache-20261015-4";
+const SUBJECTS_CACHE_VERSION = "library-idb-cache-20261015-5";
 const SUBJECTS_PATH = `./subjects.json?v=${SUBJECTS_CACHE_VERSION}`;
 const VALID_MODES = new Set(["quiz", "learn", "flashcards", "exam", "note"]);
 const SUBJECTS_CACHE_KEY = `prepcore.web.subjectsCache.${SUBJECTS_CACHE_VERSION}`;
@@ -7564,7 +7564,27 @@ function renderProgressExamHistory(container, records, subjectState) {
             syncSelection(selectedSubject.id, chapterTitle, "exam");
             window.location.href = "exam.html";
         };
-        const builder = createWeakExamBuilder(selectedSubject, latestAttempt, startCustomExam);
+        const startWeakAreaLearnMode = ({ tags, questionCount }) => {
+            const matchingQuestions = selectedSubject.chapters.flatMap((chapter) =>
+                collectChapterQuestions(chapter).map((entry, index) => coerceQuestion(entry, index + 1))
+            ).filter((question) => normalizeTags(question.tags).some((tag) => tags.includes(tag)));
+            const questions = shuffleArray(matchingQuestions).slice(0, questionCount);
+            if (!questions.length) return;
+
+            const chapterTitle = selectedSubject.selectedChapter || selectedSubject.chapters[0]?.title || "";
+            saveReviewSession({
+                subjectId: selectedSubject.id,
+                subjectName: selectedSubject.name,
+                chapterTitle,
+                reviewLabel: "Weak-area Learn mode",
+                reviewSource: "weak-area",
+                questions,
+                createdAt: new Date().toISOString()
+            });
+            syncSelection(selectedSubject.id, chapterTitle, "learn");
+            window.location.href = "learn.html";
+        };
+        const builder = createWeakExamBuilder(selectedSubject, latestAttempt, startCustomExam, startWeakAreaLearnMode);
         if (builder) builderSlot.appendChild(builder);
     };
 
@@ -8026,13 +8046,13 @@ function renderLearnAssessment(_summary, session, title, score, content, startSe
     content.append(card, details, actions);
 }
 
-function createWeakExamBuilder(subject, attempt, startCustomExam) {
-    if (!subject || typeof startCustomExam !== "function") return null;
+function createWeakExamBuilder(subject, attempt, startCustomExam, startWeakAreaLearnMode) {
+    if (!subject || typeof startCustomExam !== "function" || typeof startWeakAreaLearnMode !== "function") return null;
     const builder = document.createElement("section");
     builder.className = "weak-exam-builder";
     builder.append(
-        Object.assign(document.createElement("h5"), { textContent: "Build a weak-area exam" }),
-        Object.assign(document.createElement("p"), { textContent: "Choose tags to practice. Questions matching any selected tag will be included." })
+        Object.assign(document.createElement("h5"), { textContent: "Build weak-area practice" }),
+        Object.assign(document.createElement("p"), { textContent: "Tags missed on your latest Exam are preselected when available. Adjust the tags and question count to practice them in Learn mode or Exam." })
     );
     const tagCounts = new Map();
     subject.chapters.forEach((chapter) => collectChapterQuestions(chapter).forEach((entry, index) => {
@@ -8112,13 +8132,17 @@ function createWeakExamBuilder(subject, attempt, startCustomExam) {
     countLabel.append("Number of questions", Object.assign(document.createElement("input"), { type: "number", min: "1", step: "1", value: "10", className: "weak-exam-count" }));
     const countInput = countLabel.querySelector("input");
     const timeLabel = document.createElement("label");
-    timeLabel.append("Time limit (hh:mm:ss, optional)", Object.assign(document.createElement("input"), {
+    timeLabel.append("Exam time limit (hh:mm:ss, optional)", Object.assign(document.createElement("input"), {
         type: "text", inputMode: "numeric", placeholder: "00:20:00", pattern: "[0-9]+:[0-5][0-9]:[0-5][0-9]", className: "weak-exam-time"
     }));
     const timeInput = timeLabel.querySelector("input");
     controls.append(countLabel, timeLabel);
     const poolInfo = Object.assign(document.createElement("p"), { className: "weak-exam-pool", "aria-live": "polite" });
-    const startButton = Object.assign(document.createElement("button"), { type: "button", className: "primary-button", textContent: "Start custom exam" });
+    const startLearnButton = Object.assign(document.createElement("button"), { type: "button", className: "primary-button", textContent: "Start Learn mode" });
+    const startExamButton = Object.assign(document.createElement("button"), { type: "button", className: "ghost-button", textContent: "Start Exam" });
+    const startActions = document.createElement("div");
+    startActions.className = "weak-exam-actions";
+    startActions.append(startLearnButton, startExamButton);
     const updatePool = () => {
         const tags = checkboxes.filter((input) => input.checked).map((input) => input.value);
         const searchTerm = text(searchInput.value).trim().toLocaleLowerCase();
@@ -8160,7 +8184,8 @@ function createWeakExamBuilder(subject, attempt, startCustomExam) {
         countInput.value = String(Math.max(1, Math.min(Math.floor(Number(countInput.value) || 10), Math.max(1, max))));
         poolInfo.textContent = `${matching} matching questions. Maximum possible items: ${matching}.`;
         tagSummary.textContent = `Choose tags (${tags.length} selected)`;
-        startButton.disabled = matching === 0;
+        startLearnButton.disabled = matching === 0;
+        startExamButton.disabled = matching === 0;
         return { tags, matching };
     };
     searchButton.addEventListener("click", () => {
@@ -8177,7 +8202,13 @@ function createWeakExamBuilder(subject, attempt, startCustomExam) {
     searchInput.addEventListener("input", updatePool);
     countInput.addEventListener("input", updatePool);
     updatePool();
-    startButton.addEventListener("click", () => {
+    startLearnButton.addEventListener("click", () => {
+        const { tags, matching } = updatePool();
+        if (!matching || !tags.length) return;
+        const count = Math.max(1, Math.min(Math.floor(Number(countInput.value) || 1), matching));
+        startWeakAreaLearnMode({ chapters: subject.chapters.map((chapter) => chapter.title), tags, questionCount: count });
+    });
+    startExamButton.addEventListener("click", () => {
         const { tags, matching } = updatePool();
         if (!matching || !tags.length) return;
         const count = Math.max(1, Math.min(Math.floor(Number(countInput.value) || 1), matching));
@@ -8199,7 +8230,7 @@ function createWeakExamBuilder(subject, attempt, startCustomExam) {
         }
         startCustomExam({ chapters: subject.chapters.map((chapter) => chapter.title), tags, questionCount: count, maxQuestions: matching, timeLimitSeconds });
     });
-    builder.append(tagDisclosure, controls, poolInfo, startButton);
+    builder.append(tagDisclosure, controls, poolInfo, startActions);
     return builder;
 }
 
