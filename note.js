@@ -1,4 +1,4 @@
-import { initModePage } from "./shared.js?v=chapter5-image-zoom-20261016-1";
+import { initModePage } from "./shared.js?v=aerodynamics-mock-exam-iv-20261016-2";
 
 document.addEventListener("DOMContentLoaded", () => {
     initModePage("note");

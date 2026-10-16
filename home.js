@@ -1,4 +1,4 @@
-import { initHomePage } from "./shared.js?v=chapter5-image-zoom-20261016-1";
+import { initHomePage } from "./shared.js?v=aerodynamics-mock-exam-iv-20261016-2";
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";

@@ -211,6 +211,14 @@
           "file": "chapters/aerodynamics-aero-mock-exam-ii.json"
         },
         {
+          "title": "Aero Mock Exam III",
+          "file": "chapters/aero-mock-exam-iii.json"
+        },
+        {
+          "title": "Aerodynamics Mock Exam IV",
+          "file": "chapters/aerodynamics-mock-exam-iv.json"
+        },
+        {
           "title": "Aerodynamics Exam: Airplane Performance",
           "file": "chapters/aerodynamics-exam-airplane-performance.json"
         },
@@ -225,14 +233,6 @@
         {
           "title": "Aerodynamics Exam: Supersonic",
           "file": "chapters/aerodynamics-exam-supersonic.json"
-        },
-        {
-          "title": "Aero Mock Exam III",
-          "file": "chapters/aero-mock-exam-iii.json"
-        },
-        {
-          "title": "Aerodynamics Mock Exam IV",
-          "file": "chapters/aerodynamics-mock-exam-iv.json"
         },
         {
           "title": "Volare - Performance",
@@ -264,7 +264,7 @@
         }
       ],
       "notesPath": "aerodynamics.md",
-      "updatedAt": "2026-10-15T09:34:03.432Z"
+      "updatedAt": "2026-10-16T08:13:40.551Z"
     },
     {
       "id": "aircraft-structure-and-design",
@@ -54434,7 +54434,7 @@
       "title": "Aerodynamics Mock Exam IV",
       "questions": [
         {
-          "question": "A shock wave angled 90? from the relative flow is a:",
+          "question": "A shock wave angled \\(90^\\circ\\) from the relative flow is a:",
           "questionType": "multiple_choice",
           "choices": [
             "Oblique",
@@ -54466,7 +54466,7 @@
           ],
           "answerIndex": 0,
           "answerText": "4,480,000",
-          "explanation": "Use Re = ?Vc/?. At standard sea-level conditions, V = 176 ft/s and c = 4 ft give Re ? 4.48 ? 10?, matching option A.",
+          "explanation": "Use \\(\\mathrm{Re}=\\frac{\\rho Vc}{\\mu}\\). At standard sea-level conditions, \\(V=176\\,\\mathrm{ft/s}\\) and \\(c=4\\,\\mathrm{ft}\\) give \\(\\mathrm{Re}\\approx4.48\\times10^6\\), matching option A.",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -54478,7 +54478,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "An airplane is making a 40? banked turn of 565 ft radius. What should its airspeed be?",
+          "question": "An airplane is making a \\(40^\\circ\\) banked turn of \\(565\\,\\mathrm{ft}\\) radius. What should its airspeed be?",
           "questionType": "multiple_choice",
           "choices": [
             "132.32 ft/s",
@@ -54488,7 +54488,7 @@
           ],
           "answerIndex": 3,
           "answerText": "123.50 ft/s",
-          "explanation": "For a coordinated level turn, tan ? = V?/(gR). Thus V = ?(gR tan 40?) ? 123.6 ft/s, matching 123.50 ft/s.",
+          "explanation": "For a coordinated level turn, \\(\\tan\\phi=\\frac{V^2}{gR}\\). Thus \\(V=\\sqrt{gR\\tan40^\\circ}\\approx123.6\\,\\mathrm{ft/s}\\), matching \\(123.50\\,\\mathrm{ft/s}\\).",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -54522,7 +54522,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "In a 45? bank, what is the load factor experienced by the aircraft?",
+          "question": "In a \\(45^\\circ\\) bank, what is the load factor experienced by the aircraft?",
           "questionType": "multiple_choice",
           "choices": [
             "1.4",
@@ -54532,7 +54532,7 @@
           ],
           "answerIndex": 0,
           "answerText": "1.4",
-          "explanation": "In a level coordinated turn, n = 1/cos ?. At 45?, n ? 1.414, or 1.4.",
+          "explanation": "In a level coordinated turn, \\(n=\\frac{1}{\\cos\\phi}\\). At \\(\\phi=45^\\circ\\), \\(n\\approx1.414\\), or 1.4.",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -54554,7 +54554,7 @@
           ],
           "answerIndex": 1,
           "answerText": "3,272 lb",
-          "explanation": "At standard sea-level density, q = ??V? = ?(0.002377)(40 ? 5280/3600)? ? 4.09 lb/ft?. The 40 ? 20 ft door has area 800 ft?, so F = qA ? 3,272 lb. This assumes a drag coefficient of 1.0; the original choices did not include this result.",
+          "explanation": "At standard sea-level density, \\(q=\\tfrac12\\rho V^2=\\tfrac12(0.002377)(40\\times5280/3600)^2\\approx4.09\\,\\mathrm{lb/ft^2}\\). The door area is \\(40\\times20=800\\,\\mathrm{ft^2}\\), so \\(F=qA\\approx3{,}272\\,\\mathrm{lb}\\). This uses the conventional flat-plate estimate with drag coefficient 1.0, giving option B.",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -54569,14 +54569,14 @@
           "question": "An airplane is at a pressure altitude of 33,500 ft and a density altitude of 32,000 ft. Calculate the outside air temperature.",
           "questionType": "multiple_choice",
           "choices": [
-            "378 ?R",
-            "380 ?R",
-            "370 ?R",
-            "400 ?R"
+            "\\(378\\,^{\\circ}\\mathrm{R}\\)",
+            "\\(380\\,^{\\circ}\\mathrm{R}\\)",
+            "\\(370\\,^{\\circ}\\mathrm{R}\\)",
+            "\\(400\\,^{\\circ}\\mathrm{R}\\)"
           ],
           "answerIndex": 0,
-          "answerText": "378 ?R",
-          "explanation": "At 33,500 ft, ISA pressure is about 25.6 kPa. The density at a 32,000 ft density altitude is about 0.425 kg/m?; at the given pressure this implies T ? 209.6 K = 377.2 ?R. The nearest option is 378 ?R. A density altitude below pressure altitude indicates colder-than-ISA air.",
+          "answerText": "\\(378\\,^{\\circ}\\mathrm{R}\\)",
+          "explanation": "At \\(33{,}500\\,\\mathrm{ft}\\), ISA pressure is about \\(25.6\\,\\mathrm{kPa}\\). The density at a \\(32{,}000\\,\\mathrm{ft}\\) density altitude is about \\(0.425\\,\\mathrm{kg/m^3}\\); at the given pressure this implies \\(T\\approx209.6\\,\\mathrm{K}=377.2\\,^{\\circ}\\mathrm{R}\\). The nearest option is \\(378\\,^{\\circ}\\mathrm{R}\\). A density altitude below pressure altitude indicates colder-than-ISA air.",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -54610,17 +54610,17 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "For isentropic flow over an airfoil, the freestream temperature and pressure are 245 K and 114.66, respectively. At a point on the airfoil, pressure is 3.6 ? 10? Pa. Calculate the density at that point.",
+          "question": "For isentropic flow over an airfoil, the freestream temperature and pressure are \\(245\\,\\mathrm{K}\\) and \\(114.66\\,\\mathrm{psi}\\), respectively. At a point on the airfoil, pressure is \\(3.6\\times10^4\\,\\mathrm{Pa}\\). Calculate the density at that point.",
           "questionType": "multiple_choice",
           "choices": [
-            "1.54 kg/m?",
-            "1.23 kg/m?",
-            "1.11 kg/m?",
-            "1.30 kg/m?"
+            "\\(1.54\\,\\mathrm{kg/m^3}\\)",
+            "\\(1.23\\,\\mathrm{kg/m^3}\\)",
+            "\\(1.11\\,\\mathrm{kg/m^3}\\)",
+            "\\(1.30\\,\\mathrm{kg/m^3}\\)"
           ],
           "answerIndex": 1,
-          "answerText": "1.23 kg/m?",
-          "explanation": "Convert 114.66 psi to about 790.6 kPa. For isentropic air, T?/T? = (p?/p?)^((??1)/?), so T? ? 101.4 K. Then ?? = p?/(RT?) = 36,000/(287 ? 101.4) ? 1.24 kg/m?, matching 1.23 kg/m? (B).",
+          "answerText": "\\(1.23\\,\\mathrm{kg/m^3}\\)",
+          "explanation": "Convert \\(114.66\\,\\mathrm{psi}\\) to about \\(790.6\\,\\mathrm{kPa}\\). For isentropic air, \\(\\frac{T_2}{T_1}=\\left(\\frac{p_2}{p_1}\\right)^{(\\gamma-1)/\\gamma}\\), so \\(T_2\\approx101.4\\,\\mathrm{K}\\). Then \\(\\rho_2=\\frac{p_2}{RT_2}=\\frac{36{,}000}{287\\times101.4}\\approx1.24\\,\\mathrm{kg/m^3}\\), matching \\(1.23\\,\\mathrm{kg/m^3}\\) (B).",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -54642,7 +54642,7 @@
           ],
           "answerIndex": 0,
           "answerText": "95%",
-          "explanation": "The ideal propeller efficiency is 2V/(V + V_s). Substituting 210 and 230 kt gives 420/440 ? 95.5%, or 95%.",
+          "explanation": "The ideal propeller efficiency is \\(\\eta=\\frac{2V}{V+V_s}\\). Substituting \\(V=210\\,\\mathrm{kt}\\) and \\(V_s=230\\,\\mathrm{kt}\\) gives \\(420/440\\approx95.5\\%\\), or 95%.",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -54654,7 +54654,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "A standard altimeter reads 14,000 ft. When the ambient temperature is 35?F, what is the density altitude?",
+          "question": "A standard altimeter reads \\(14{,}000\\,\\mathrm{ft}\\). When the ambient temperature is \\(35^\\circ\\mathrm{F}\\), what is the density altitude?",
           "questionType": "multiple_choice",
           "choices": [
             "14,652 ft",
@@ -54679,14 +54679,14 @@
           "question": "For an airplane flying at 886 ft/s at 25,000 ft altitude, find the critical value of the pressure coefficient.",
           "questionType": "multiple_choice",
           "choices": [
-            "?0.25",
-            "?0.20",
-            "?0.30",
-            "?0.15"
+            "\\(-0.25\\)",
+            "\\(-0.20\\)",
+            "\\(-0.30\\)",
+            "\\(-0.15\\)"
           ],
           "answerIndex": 0,
-          "answerText": "?0.25",
-          "explanation": "At 25,000 ft, ISA temperature is about 238.6 K and speed of sound about 1,016 ft/s, so M? ? 0.872. The isentropic pressure ratio for a sonic point gives p*/p? ? 0.867. Thus Cp,crit = 2(p*/p? ? 1)/(?M??) ? ?0.250, matching ?0.25 (A).",
+          "answerText": "\\(-0.25\\)",
+          "explanation": "At \\(25{,}000\\,\\mathrm{ft}\\), ISA temperature is about \\(238.6\\,\\mathrm{K}\\) and the speed of sound about \\(1{,}016\\,\\mathrm{ft/s}\\), so \\(M_\\infty\\approx0.872\\). The isentropic pressure ratio for a sonic point gives \\(p^*/p_\\infty\\approx0.867\\). Thus \\(C_{p,\\mathrm{crit}}=\\frac{2(p^*/p_\\infty-1)}{\\gamma M_\\infty^2}\\approx-0.250\\), matching \\(-0.25\\) (A).",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -54698,7 +54698,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "A Clark Y wing 350 ft? in area is moving through the air at 80 ft/s. Determine the drag (CD = 0.0452).",
+          "question": "A Clark Y wing \\(350\\,\\mathrm{ft^2}\\) in area is moving through the air at \\(80\\,\\mathrm{ft/s}\\). Determine the drag (\\(C_D=0.0452\\)).",
           "questionType": "multiple_choice",
           "choices": [
             "323 lb",
@@ -54708,7 +54708,7 @@
           ],
           "answerIndex": 3,
           "answerText": "120 lb",
-          "explanation": "D = qSCD, with q = ??V? and sea-level density ? ? 0.002377 slug/ft?. This gives D ? 120 lb.",
+          "explanation": "\\(D=qSC_D\\), with \\(q=\\tfrac12\\rho V^2\\) and sea-level density \\(\\rho\\approx0.002377\\,\\mathrm{slug/ft^3}\\). This gives \\(D\\approx120\\,\\mathrm{lb}\\).",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -54786,7 +54786,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "An airplane weighing 3,000 lb has a wing area of 350 ft?. What horsepower is required for the wing when flying at 90 ft/s? (CD = 0.0561)",
+          "question": "An airplane weighing \\(3{,}000\\,\\mathrm{lb}\\) has a wing area of \\(350\\,\\mathrm{ft^2}\\). What horsepower is required for the wing when flying at \\(90\\,\\mathrm{ft/s}\\)? (\\(C_D=0.0561\\))",
           "questionType": "multiple_choice",
           "choices": [
             "31 hp",
@@ -54796,7 +54796,7 @@
           ],
           "answerIndex": 0,
           "answerText": "31 hp",
-          "explanation": "At sea level, q = ??V? = ?(0.002377)(90)? ? 9.63 lb/ft?. Then D = qSCD = 9.63(350)(0.0561) ? 189 lb, and required power is DV/550 ? 30.9 hp, which rounds to 31 hp.",
+          "explanation": "At sea level, \\(q=\\tfrac12\\rho V^2=\\tfrac12(0.002377)(90)^2\\approx9.63\\,\\mathrm{lb/ft^2}\\). Then \\(D=qSC_D=9.63(350)(0.0561)\\approx189\\,\\mathrm{lb}\\), and required power is \\(P=DV/550\\approx30.9\\,\\mathrm{hp}\\), which rounds to 31 hp.",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -55028,7 +55028,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "A horizontal pipe, 1 ft in diameter, tapers gradually to 8 in. in diameter. If the flow rate is 9 ft?/s, what is the pressure difference between the two sections?",
+          "question": "A horizontal pipe, \\(1\\,\\mathrm{ft}\\) in diameter, tapers gradually to \\(8\\,\\mathrm{in}\\) in diameter. If the flow rate is \\(9\\,\\mathrm{ft^3/s}\\), what is the pressure difference between the two sections?",
           "questionType": "multiple_choice",
           "choices": [
             "3.48 psi",
@@ -55038,7 +55038,7 @@
           ],
           "answerIndex": 1,
           "answerText": "3.59 psi",
-          "explanation": "Continuity gives V? = Q/A? = 9/(?/4) ? 11.46 ft/s and V? = 9/[?(8/12)?/4] ? 25.78 ft/s. For a horizontal pipe, ?p = ??(V?? ? V??); using water density gives ?p ? 3.59 psi. The PDF wording is split across lines, but the stated 9 ft?/s flow rate reproduces option B.",
+          "explanation": "Continuity gives \\(V_1=Q/A_1=9/(\\pi/4)\\approx11.46\\,\\mathrm{ft/s}\\) and \\(V_2=9/[\\pi(8/12)^2/4]\\approx25.78\\,\\mathrm{ft/s}\\). For a horizontal pipe, \\(\\Delta p=\\tfrac12\\rho(V_2^2-V_1^2)\\); using water density gives \\(\\Delta p\\approx3.59\\,\\mathrm{psi}\\). The stated flow rate reproduces option B.",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -55104,7 +55104,7 @@
           ],
           "answerIndex": 1,
           "answerText": "4,149.76 Pa",
-          "explanation": "At low Mach number, the pressure difference is dynamic pressure q = ??V?. With 160 kt converted to SI units and sea-level density, q ? 4,150 Pa.",
+          "explanation": "At low Mach number, the pressure difference is dynamic pressure, \\(q=\\tfrac12\\rho V^2\\). With \\(160\\,\\mathrm{kt}\\) converted to SI units and sea-level density, \\(q\\approx4{,}150\\,\\mathrm{Pa}\\).",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -55126,7 +55126,7 @@
           ],
           "answerIndex": 0,
           "answerText": "9,180 m",
-          "explanation": "Convert 678 mi/h to about 303 m/s. From a = ?(?RT), this corresponds to T ? 228.4 K. Using the ISA tropospheric lapse rate, h = (288.15 ? 228.4)/0.0065 ? 9.2 km; the nearest listed value is 9,180 m.",
+          "explanation": "Convert \\(678\\,\\mathrm{mi/h}\\) to about \\(303\\,\\mathrm{m/s}\\). From \\(a=\\sqrt{\\gamma RT}\\), this corresponds to \\(T\\approx228.4\\,\\mathrm{K}\\). Using the ISA tropospheric lapse rate, \\(h=(288.15-228.4)/0.0065\\approx9.2\\,\\mathrm{km}\\); the nearest listed value is \\(9{,}180\\,\\mathrm{m}\\).",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -55138,17 +55138,17 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "A convergent duct has an inlet area of 5 m?. Air enters at 10 m/s and leaves at 98.43 ft/s. What is the exit area?",
+          "question": "A convergent duct has an inlet area of \\(5\\,\\mathrm{m^2}\\). Air enters at \\(10\\,\\mathrm{m/s}\\) and leaves at \\(98.43\\,\\mathrm{ft/s}\\). What is the exit area?",
           "questionType": "multiple_choice",
           "choices": [
-            "2.333 m?",
-            "1.333 m?",
-            "1.666 m?",
-            "2.666 m?"
+            "\\(2.333\\,\\mathrm{m^2}\\)",
+            "\\(1.333\\,\\mathrm{m^2}\\)",
+            "\\(1.666\\,\\mathrm{m^2}\\)",
+            "\\(2.666\\,\\mathrm{m^2}\\)"
           ],
           "answerIndex": 2,
-          "answerText": "1.666 m?",
-          "explanation": "For incompressible flow, A?V? = A?V?. Convert 98.43 ft/s to 30 m/s; A? = 5(10/30) ? 1.667 m?.",
+          "answerText": "\\(1.666\\,\\mathrm{m^2}\\)",
+          "explanation": "For incompressible flow, \\(A_1V_1=A_2V_2\\). Convert \\(98.43\\,\\mathrm{ft/s}\\) to \\(30\\,\\mathrm{m/s}\\); \\(A_2=5(10/30)\\approx1.667\\,\\mathrm{m^2}\\).",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -55160,7 +55160,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "An airplane flies at 130 mi/h at a standard altitude of 5,000 ft. At a point on the wing, pressure is 1,750 lb/ft?. Calculate velocity at that point, assuming incompressible flow.",
+          "question": "An airplane flies at \\(130\\,\\mathrm{mi/h}\\) at a standard altitude of \\(5{,}000\\,\\mathrm{ft}\\). At a point on the wing, pressure is \\(1{,}750\\,\\mathrm{lb/ft^2}\\). Calculate velocity at that point, assuming incompressible flow.",
           "questionType": "multiple_choice",
           "choices": [
             "220.5 ft/s",
@@ -55170,7 +55170,7 @@
           ],
           "answerIndex": 3,
           "answerText": "216.8 ft/s",
-          "explanation": "At 5,000 ft, ISA static pressure is about 1,760.8 lb/ft? and density is about 0.002048 slug/ft?. The freestream speed is 130 mi/h = 190.7 ft/s. Bernoulli gives V? = ?[V?? + 2(p? ? p?)/?] ? 216.6 ft/s for p? = 1,750 lb/ft?, matching 216.8 ft/s (D).",
+          "explanation": "At \\(5{,}000\\,\\mathrm{ft}\\), ISA static pressure is about \\(1{,}760.8\\,\\mathrm{lb/ft^2}\\) and density is about \\(0.002048\\,\\mathrm{slug/ft^3}\\) . The freestream speed is \\(130\\,\\mathrm{mi/h}=190.7\\,\\mathrm{ft/s}\\). Bernoulli gives \\(V_2=\\sqrt{V_1^2+2(p_1-p_2)/\\rho}\\approx216.6\\,\\mathrm{ft/s}\\) for \\(p_2=1{,}750\\,\\mathrm{lb/ft^2}\\), matching \\(216.8\\,\\mathrm{ft/s}\\) (D).",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -55182,7 +55182,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "A Pitot tube is mounted in the test section of a low-speed subsonic wind tunnel. The flow velocity, static pressure, and temperature are 150 mi/h, 1 atm, and 70?F. Calculate the pressure measured by the Pitot tube.",
+          "question": "A Pitot tube is mounted in the test section of a low-speed subsonic wind tunnel. The flow velocity, static pressure, and temperature are \\(150\\,\\mathrm{mi/h}\\), \\(1\\,\\mathrm{atm}\\), and \\(70^\\circ\\mathrm{F}\\), respectively. Calculate the pressure measured by the Pitot tube.",
           "questionType": "multiple_choice",
           "choices": [
             "2,172 psf",
@@ -55192,7 +55192,7 @@
           ],
           "answerIndex": 0,
           "answerText": "2,172 psf",
-          "explanation": "The Pitot reading is stagnation pressure: p? = p + ??V?. The dynamic pressure at 150 mi/h is about 56 psf, so p? ? 2,172 psf.",
+          "explanation": "The Pitot reading is stagnation pressure: \\(p_0=p+\\tfrac12\\rho V^2\\). The dynamic pressure at \\(150\\,\\mathrm{mi/h}\\) is about \\(56\\,\\mathrm{lb/ft^2}\\), so \\(p_0\\approx2{,}172\\,\\mathrm{lb/ft^2}\\).",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -55214,7 +55214,7 @@
           ],
           "answerIndex": 3,
           "answerText": "310 lb",
-          "explanation": "Using the Magnus-effect circulation ? = 2?r?? and lift per unit length L? = ?V? gives a total lift close to 310 lb for the stated span.",
+          "explanation": "Using the Magnus-effect circulation \\(\\Gamma=2\\pi r^2\\omega\\) and lift per unit length \\(L^{\\prime}=\\rho V\\Gamma\\) gives a total lift close to \\(310\\,\\mathrm{lb}\\) for the stated span.",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -55229,14 +55229,14 @@
           "question": "Which of the following is not an equation for calculating aspect ratio?",
           "questionType": "multiple_choice",
           "choices": [
-            "b/c",
-            "S/c?",
-            "b?/S",
-            "b?/c?"
+            "\\(\\frac{b}{c}\\)",
+            "\\(\\frac{S}{c^2}\\)",
+            "\\(\\frac{b^2}{S}\\)",
+            "\\(\\frac{b^2}{c^2}\\)"
           ],
           "answerIndex": 3,
-          "answerText": "b?/c?",
-          "explanation": "Aspect ratio is b?/S, equivalent to b/c for a rectangular wing and S/c? for S = bc. The expression b?/c? is the square of b/c, not the aspect ratio.",
+          "answerText": "\\(\\frac{b^2}{c^2}\\)",
+          "explanation": "Aspect ratio is \\(AR=b^2/S\\), equivalent to \\(b/c\\) for a rectangular wing and \\(S/c^2\\) when \\(S=bc\\). The expression \\(b^2/c^2\\) is the square of \\(b/c\\), not the aspect ratio.",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -55248,17 +55248,17 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "In a Venturi tube, point A has diameter 1 ft and point B has radius 3 in. What is the flow rate of water if the pressure difference is 5 in. of mercury?",
+          "question": "In a Venturi tube, point A has diameter \\(1\\,\\mathrm{ft}\\) and point B has radius \\(3\\,\\mathrm{in}\\). What is the flow rate of water if the pressure difference is \\(5\\,\\mathrm{in\\,Hg}\\)?",
           "questionType": "multiple_choice",
           "choices": [
-            "5.24 ft?/s",
-            "3.87 ft?/s",
-            "4.58 ft?/s",
-            "5.10 ft?/s"
+            "\\(5.24\\,\\mathrm{ft^3/s}\\)",
+            "\\(3.87\\,\\mathrm{ft^3/s}\\)",
+            "\\(4.58\\,\\mathrm{ft^3/s}\\)",
+            "\\(5.10\\,\\mathrm{ft^3/s}\\)"
           ],
           "answerIndex": 1,
-          "answerText": "3.87 ft?/s",
-          "explanation": "A 5 in. Hg pressure difference is about 5.67 ft of water head. With A? = ?(1 ft)?/4 and A? = ?(0.5 ft)?/4, Bernoulli plus continuity gives Q ? 3.87 ft?/s (about 0.110 m?/s). The PDF labels its answer choices m?/s, but those units are inconsistent with the values.",
+          "answerText": "\\(3.87\\,\\mathrm{ft^3/s}\\)",
+          "explanation": "A \\(5\\,\\mathrm{in\\,Hg}\\) pressure difference is about \\(5.67\\,\\mathrm{ft}\\) of water head. With \\(A_1=\\pi(1\\,\\mathrm{ft})^2/4\\) and \\(A_2=\\pi(0.5\\,\\mathrm{ft})^2/4\\), Bernoulli plus continuity gives \\(Q\\approx3.87\\,\\mathrm{ft^3/s}\\) (about \\(0.110\\,\\mathrm{m^3/s}\\)). The PDF mislabeled the answer options as m^3/s; they are now shown in ft^3/s to match the calculation.",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -55280,7 +55280,7 @@
           ],
           "answerIndex": 2,
           "answerText": "14.7 lb",
-          "explanation": "Aerodynamic force varies with speed squared. F? = 0.012(35/1)? = 14.7 lb.",
+          "explanation": "Aerodynamic force varies with speed squared. \\(F_2=0.012(35/1)^2=14.7\\,\\mathrm{lb}\\).",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -55302,7 +55302,7 @@
           ],
           "answerIndex": 0,
           "answerText": "36.7 lb",
-          "explanation": "Using Magnus lift per span, L? = ?V? with ? = 2?r??, gives approximately 36.7 lb for the one-foot cylinder length.",
+          "explanation": "Using Magnus lift per span, \\(L'=\\rho V\\Gamma\\) with \\(\\Gamma=2\\pi r^2\\omega\\), gives approximately \\(36.7\\,\\mathrm{lb}\\) for the one-foot cylinder length.",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -55346,7 +55346,7 @@
           ],
           "answerIndex": 3,
           "answerText": "Lift is greater during level flight than climbing flight",
-          "explanation": "In steady level flight, lift equals weight. In a steady climb at flight-path angle ?, lift is approximately W cos ? (assuming thrust acts along the flight path), which is less than W. Thus lift in level flight is greater than in the climb.",
+          "explanation": "In steady level flight, lift equals weight. In a steady climb at flight-path angle \\(\\gamma\\), lift is approximately \\(W\\cos\\gamma\\) (assuming thrust acts along the flight path), which is less than \\(W\\). Thus lift in level flight is greater than in the climb.",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -55380,7 +55380,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "Which assumption applies to the classical incompressible form of Bernoulli?s equation?",
+          "question": "Which assumption applies to the classical incompressible form of Bernoulli's equation?",
           "questionType": "multiple_choice",
           "choices": [
             "It applies only to turbulent flow",
@@ -55456,7 +55456,7 @@
           ],
           "answerIndex": 3,
           "answerText": "Quadrupled",
-          "explanation": "With density, wing area, and lift coefficient unchanged, L = ??V?SCL. Doubling V therefore quadruples lift.",
+          "explanation": "With density, wing area, and lift coefficient unchanged, \\(L=\\tfrac12\\rho V^2SC_L\\). Doubling \\(V\\) therefore quadruples lift.",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -55468,7 +55468,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "The rate of climb is RC = 850 ? h/12 ft/min. Compute the climbing time from 300 ft to the service ceiling.",
+          "question": "The rate of climb is \\(RC=850-h/12\\,\\mathrm{ft/min}\\). Compute the climbing time from \\(300\\,\\mathrm{ft}\\) to the service ceiling.",
           "questionType": "multiple_choice",
           "choices": [
             "25.32 min",
@@ -55478,7 +55478,7 @@
           ],
           "answerIndex": 0,
           "answerText": "25.32 min",
-          "explanation": "Using the service-ceiling convention of 100 ft/min gives h = 9,000 ft. Integrating dt = dh/(850 ? h/12) from 300 to 9,000 ft gives about 25.3 min.",
+          "explanation": "Using the service-ceiling convention of \\(100\\,\\mathrm{ft/min}\\) gives \\(h=9{,}000\\,\\mathrm{ft}\\). Integrating \\(dt=\\frac{dh}{850-h/12}\\), from \\(h=300\\,\\mathrm{ft}\\) to \\(h=9{,}000\\,\\mathrm{ft}\\), gives about \\(25.3\\,\\mathrm{min}\\).",
           "tags": [
             "aerodynamics",
             "mock exam"
@@ -55523,7 +55523,7 @@
           ],
           "answerIndex": 4,
           "answerText": "Cannot be determined from the information provided",
-          "explanation": "The two climb-time statements do not specify the aircraft?s weight, speed, engine/propeller performance, or a climb-performance model. Those data are needed to find where power available equals power required, so none of the four numerical altitudes can be justified from the information given.",
+          "explanation": "The two climb-time statements do not specify the aircraft's weight, speed, engine/propeller performance, or a climb-performance model. Those data are needed to find where power available equals power required, so none of the four numerical altitudes can be justified from the information given.",
           "tags": [
             "aerodynamics",
             "mock exam"
