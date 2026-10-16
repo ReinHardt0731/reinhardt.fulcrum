@@ -1,0 +1,856 @@
+{
+  "title": "Aerodynamics Mock Exam IV",
+  "questions": [
+    {
+      "question": "A shock wave angled 90? from the relative flow is a:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Oblique",
+        "Normal",
+        "Expansion",
+        "None of the above"
+      ],
+      "answerIndex": 1,
+      "answerText": "Normal",
+      "explanation": "A wave perpendicular to the upstream relative flow is a normal shock; an oblique shock is inclined at another angle.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Find the Reynolds number for an airplane wing with a 4 ft chord moving at 120 mi/h under standard atmospheric conditions.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "4,480,000",
+        "5,900,000",
+        "3,650,000",
+        "2,780,000"
+      ],
+      "answerIndex": 0,
+      "answerText": "4,480,000",
+      "explanation": "Use Re = ?Vc/?. At standard sea-level conditions, V = 176 ft/s and c = 4 ft give Re ? 4.48 ? 10?, matching option A.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "An airplane is making a 40? banked turn of 565 ft radius. What should its airspeed be?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "132.32 ft/s",
+        "128.17 ft/s",
+        "125.16 ft/s",
+        "123.50 ft/s"
+      ],
+      "answerIndex": 3,
+      "answerText": "123.50 ft/s",
+      "explanation": "For a coordinated level turn, tan ? = V?/(gR). Thus V = ?(gR tan 40?) ? 123.6 ft/s, matching 123.50 ft/s.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "The aspect ratio of a wing is calculated by:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Wing area divided by wing span",
+        "Wing span divided by wing thickness",
+        "Wing span divided by chord",
+        "Wing area divided by wing chord"
+      ],
+      "answerIndex": 2,
+      "answerText": "Wing span divided by chord",
+      "explanation": "Aspect ratio is span squared divided by planform area; for a rectangular wing this reduces to span divided by chord.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "In a 45? bank, what is the load factor experienced by the aircraft?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.4",
+        "1.5",
+        "2",
+        "1.2"
+      ],
+      "answerIndex": 0,
+      "answerText": "1.4",
+      "explanation": "In a level coordinated turn, n = 1/cos ?. At 45?, n ? 1.414, or 1.4.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "What is the total force of a 40 mi/h wind on a hangar door 40 ft by 20 ft?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "356 lb",
+        "3,272 lb",
+        "2,160 lb",
+        "1,189 lb"
+      ],
+      "answerIndex": 1,
+      "answerText": "3,272 lb",
+      "explanation": "At standard sea-level density, q = ??V? = ?(0.002377)(40 ? 5280/3600)? ? 4.09 lb/ft?. The 40 ? 20 ft door has area 800 ft?, so F = qA ? 3,272 lb. This assumes a drag coefficient of 1.0; the original choices did not include this result.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "An airplane is at a pressure altitude of 33,500 ft and a density altitude of 32,000 ft. Calculate the outside air temperature.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "378 ?R",
+        "380 ?R",
+        "370 ?R",
+        "400 ?R"
+      ],
+      "answerIndex": 0,
+      "answerText": "378 ?R",
+      "explanation": "At 33,500 ft, ISA pressure is about 25.6 kPa. The density at a 32,000 ft density altitude is about 0.425 kg/m?; at the given pressure this implies T ? 209.6 K = 377.2 ?R. The nearest option is 378 ?R. A density altitude below pressure altitude indicates colder-than-ISA air.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Lift on the wing is most properly defined as:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Force perpendicular to the relative wind",
+        "Reduced pressure resulting from laminar flow over the upper camber of an airfoil",
+        "Force parallel to the relative wind",
+        "Pressure differential acting perpendicular to the wing"
+      ],
+      "answerIndex": 0,
+      "answerText": "Force perpendicular to the relative wind",
+      "explanation": "Lift is the aerodynamic force component perpendicular to the relative wind. It is not defined by a particular flow regime or surface pressure alone.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "For isentropic flow over an airfoil, the freestream temperature and pressure are 245 K and 114.66, respectively. At a point on the airfoil, pressure is 3.6 ? 10? Pa. Calculate the density at that point.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.54 kg/m?",
+        "1.23 kg/m?",
+        "1.11 kg/m?",
+        "1.30 kg/m?"
+      ],
+      "answerIndex": 1,
+      "answerText": "1.23 kg/m?",
+      "explanation": "Convert 114.66 psi to about 790.6 kPa. For isentropic air, T?/T? = (p?/p?)^((??1)/?), so T? ? 101.4 K. Then ?? = p?/(RT?) = 36,000/(287 ? 101.4) ? 1.24 kg/m?, matching 1.23 kg/m? (B).",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "What is the maximum obtainable efficiency of a propeller if the airspeed is 210 knots and slipstream velocity is 230 knots?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "95%",
+        "85%",
+        "90%",
+        "75%"
+      ],
+      "answerIndex": 0,
+      "answerText": "95%",
+      "explanation": "The ideal propeller efficiency is 2V/(V + V_s). Substituting 210 and 230 kt gives 420/440 ? 95.5%, or 95%.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "A standard altimeter reads 14,000 ft. When the ambient temperature is 35?F, what is the density altitude?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "14,652 ft",
+        "15,656 ft",
+        "15,984 ft",
+        "13,271 ft"
+      ],
+      "answerIndex": 1,
+      "answerText": "15,656 ft",
+      "explanation": "The temperature is warmer than ISA at 14,000 ft, so density altitude is higher than pressure altitude. The standard correction gives approximately 15,656 ft.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "For an airplane flying at 886 ft/s at 25,000 ft altitude, find the critical value of the pressure coefficient.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "?0.25",
+        "?0.20",
+        "?0.30",
+        "?0.15"
+      ],
+      "answerIndex": 0,
+      "answerText": "?0.25",
+      "explanation": "At 25,000 ft, ISA temperature is about 238.6 K and speed of sound about 1,016 ft/s, so M? ? 0.872. The isentropic pressure ratio for a sonic point gives p*/p? ? 0.867. Thus Cp,crit = 2(p*/p? ? 1)/(?M??) ? ?0.250, matching ?0.25 (A).",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "A Clark Y wing 350 ft? in area is moving through the air at 80 ft/s. Determine the drag (CD = 0.0452).",
+      "questionType": "multiple_choice",
+      "choices": [
+        "323 lb",
+        "225 lb",
+        "175 lb",
+        "120 lb"
+      ],
+      "answerIndex": 3,
+      "answerText": "120 lb",
+      "explanation": "D = qSCD, with q = ??V? and sea-level density ? ? 0.002377 slug/ft?. This gives D ? 120 lb.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "As the cyclic control is moved forward, the rotor disc tilts forward. The helicopter will:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Move backward",
+        "Move to the right",
+        "Move forward",
+        "Move to the left"
+      ],
+      "answerIndex": 2,
+      "answerText": "Move forward",
+      "explanation": "Tilting the rotor disc forward produces a forward horizontal thrust component, so the helicopter moves forward.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Which speed gives the best rate of climb and is used to gain the most altitude in a given period of time?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "VY",
+        "VX",
+        "VR",
+        "VMU"
+      ],
+      "answerIndex": 0,
+      "answerText": "VY",
+      "explanation": "VY is the best-rate-of-climb speed: it gives the greatest altitude gain per unit time. VX instead gives the greatest altitude gain per unit horizontal distance.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Rotor blade loading is the rotor thrust divided by the total planform area of the rotor blades. Which term describes this quantity?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Power loading",
+        "Wing loading",
+        "Blade loading",
+        "Disc loading"
+      ],
+      "answerIndex": 2,
+      "answerText": "Blade loading",
+      "explanation": "Blade loading is rotor thrust divided by the combined blade planform area. Disc loading instead divides rotor thrust by the rotor swept-disc area.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "An airplane weighing 3,000 lb has a wing area of 350 ft?. What horsepower is required for the wing when flying at 90 ft/s? (CD = 0.0561)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "31 hp",
+        "22 hp",
+        "12 hp",
+        "18 hp"
+      ],
+      "answerIndex": 0,
+      "answerText": "31 hp",
+      "explanation": "At sea level, q = ??V? = ?(0.002377)(90)? ? 9.63 lb/ft?. Then D = qSCD = 9.63(350)(0.0561) ? 189 lb, and required power is DV/550 ? 30.9 hp, which rounds to 31 hp.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Across a normal shock, what happens to the static pressure and temperature?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Both pressure and temperature increase",
+        "Pressure increases but temperature decreases",
+        "Pressure decreases but temperature increases",
+        "Both pressure and temperature decrease"
+      ],
+      "answerIndex": 0,
+      "answerText": "Both pressure and temperature increase",
+      "explanation": "A normal shock compresses and heats the flow: static pressure and static temperature both increase, while velocity and Mach number decrease.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "The angle of attack of an airfoil is the angle between the:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Longitudinal axis and the relative wind",
+        "Airfoil's center line and the relative wind",
+        "Airfoil's center line and the longitudinal axis",
+        "Chord line of the wing and the relative wind"
+      ],
+      "answerIndex": 3,
+      "answerText": "Chord line of the wing and the relative wind",
+      "explanation": "Angle of attack is measured between the airfoil chord line and the relative wind. The source text for this item is encoded oddly in the PDF; wording has been normalized.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "For a conventional cambered airfoil below stall, as angle of attack increases, the center of pressure generally moves:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Forward",
+        "Backward",
+        "Constant",
+        "Everywhere"
+      ],
+      "answerIndex": 0,
+      "answerText": "Forward",
+      "explanation": "For a conventional cambered airfoil in its normal pre-stall range, increasing angle of attack generally shifts the center of pressure forward. The exact movement depends on airfoil shape and operating range.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "If the aircraft is operated in steady flight at maximum lift-to-drag ratio, the total drag is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Maximum",
+        "Minimum",
+        "Zero",
+        "Equal to the total lift"
+      ],
+      "answerIndex": 1,
+      "answerText": "Minimum",
+      "explanation": "Maximum L/D is the condition of minimum drag for a given lift in steady flight.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "What is the primary factor in determining calibrated airspeed?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Headwind",
+        "Density",
+        "Tailwind",
+        "Instrument error"
+      ],
+      "answerIndex": 3,
+      "answerText": "Instrument error",
+      "explanation": "Calibrated airspeed is indicated airspeed corrected for instrument and position errors. Wind does not affect airspeed, and density is used in converting to true airspeed.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "What is the definition of power?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The ability to do work",
+        "Work done per unit time",
+        "Energy due to motion",
+        "Mass times acceleration"
+      ],
+      "answerIndex": 1,
+      "answerText": "Work done per unit time",
+      "explanation": "Power is the rate of doing work, or work transferred per unit time.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Roll is defined as movement of the lateral axis about which axis?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Lateral",
+        "Longitudinal",
+        "Vertical",
+        "Diagonal"
+      ],
+      "answerIndex": 1,
+      "answerText": "Longitudinal",
+      "explanation": "Roll is rotation about the aircraft's longitudinal axis.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Pitch is defined as movement of the longitudinal axis about which axis?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Lateral",
+        "Longitudinal",
+        "Vertical",
+        "Diagonal"
+      ],
+      "answerIndex": 0,
+      "answerText": "Lateral",
+      "explanation": "Pitch is rotation about the lateral axis.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Yaw is defined as movement of the directional axis about which axis?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Lateral",
+        "Longitudinal",
+        "Vertical",
+        "Diagonal"
+      ],
+      "answerIndex": 2,
+      "answerText": "Vertical",
+      "explanation": "Yaw is rotation about the vertical axis.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "All motion or changes in aircraft attitude occur about which position?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Aerodynamic center",
+        "Center of pressure",
+        "Center of gravity",
+        "Trailing edge"
+      ],
+      "answerIndex": 2,
+      "answerText": "Center of gravity",
+      "explanation": "Aircraft rotations are described about the center of gravity, where the three body axes are taken to intersect.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "A horizontal pipe, 1 ft in diameter, tapers gradually to 8 in. in diameter. If the flow rate is 9 ft?/s, what is the pressure difference between the two sections?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "3.48 psi",
+        "3.59 psi",
+        "3.08 psi",
+        "4.01 psi"
+      ],
+      "answerIndex": 1,
+      "answerText": "3.59 psi",
+      "explanation": "Continuity gives V? = Q/A? = 9/(?/4) ? 11.46 ft/s and V? = 9/[?(8/12)?/4] ? 25.78 ft/s. For a horizontal pipe, ?p = ??(V?? ? V??); using water density gives ?p ? 3.59 psi. The PDF wording is split across lines, but the stated 9 ft?/s flow rate reproduces option B.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Which flight condition has both supersonic and subsonic airflow around the aircraft?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Mach 1.1",
+        "Mach 1.3",
+        "Mach 0.5",
+        "Mach 0.7"
+      ],
+      "answerIndex": 0,
+      "answerText": "Mach 1.1",
+      "explanation": "Transonic flow occurs near Mach 1, where local regions may be both subsonic and supersonic. Mach 1.1 is the closest listed condition.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "What is the line from the leading edge to the trailing edge of an airfoil that is equidistant from its upper and lower surfaces?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Chord",
+        "Thickness line",
+        "Moment arm",
+        "Mean camber line"
+      ],
+      "answerIndex": 3,
+      "answerText": "Mean camber line",
+      "explanation": "The mean camber line is the locus of points halfway between the upper and lower surfaces, measured perpendicular to the chord.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "An airplane is flying at sea level at 160 knots. What is the difference between stagnation and static pressure in the pitot-static system?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "5,259.57 Pa",
+        "4,149.76 Pa",
+        "5,149.76 Pa",
+        "3,902.31 Pa"
+      ],
+      "answerIndex": 1,
+      "answerText": "4,149.76 Pa",
+      "explanation": "At low Mach number, the pressure difference is dynamic pressure q = ??V?. With 160 kt converted to SI units and sea-level density, q ? 4,150 Pa.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "At an altitude in ISA, the speed of sound is 678 mi/h. What is the altitude?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "9,180 m",
+        "31,245 ft",
+        "9,830 m",
+        "27,278 ft"
+      ],
+      "answerIndex": 0,
+      "answerText": "9,180 m",
+      "explanation": "Convert 678 mi/h to about 303 m/s. From a = ?(?RT), this corresponds to T ? 228.4 K. Using the ISA tropospheric lapse rate, h = (288.15 ? 228.4)/0.0065 ? 9.2 km; the nearest listed value is 9,180 m.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "A convergent duct has an inlet area of 5 m?. Air enters at 10 m/s and leaves at 98.43 ft/s. What is the exit area?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "2.333 m?",
+        "1.333 m?",
+        "1.666 m?",
+        "2.666 m?"
+      ],
+      "answerIndex": 2,
+      "answerText": "1.666 m?",
+      "explanation": "For incompressible flow, A?V? = A?V?. Convert 98.43 ft/s to 30 m/s; A? = 5(10/30) ? 1.667 m?.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "An airplane flies at 130 mi/h at a standard altitude of 5,000 ft. At a point on the wing, pressure is 1,750 lb/ft?. Calculate velocity at that point, assuming incompressible flow.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "220.5 ft/s",
+        "200 ft/s",
+        "212.8 ft/s",
+        "216.8 ft/s"
+      ],
+      "answerIndex": 3,
+      "answerText": "216.8 ft/s",
+      "explanation": "At 5,000 ft, ISA static pressure is about 1,760.8 lb/ft? and density is about 0.002048 slug/ft?. The freestream speed is 130 mi/h = 190.7 ft/s. Bernoulli gives V? = ?[V?? + 2(p? ? p?)/?] ? 216.6 ft/s for p? = 1,750 lb/ft?, matching 216.8 ft/s (D).",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "A Pitot tube is mounted in the test section of a low-speed subsonic wind tunnel. The flow velocity, static pressure, and temperature are 150 mi/h, 1 atm, and 70?F. Calculate the pressure measured by the Pitot tube.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "2,172 psf",
+        "3,172 psf",
+        "2,072 psf",
+        "3,072 psf"
+      ],
+      "answerIndex": 0,
+      "answerText": "2,172 psf",
+      "explanation": "The Pitot reading is stagnation pressure: p? = p + ??V?. The dynamic pressure at 150 mi/h is about 56 psf, so p? ? 2,172 psf.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "A cylinder 3 ft in diameter and 8 ft long rotates at 150 rpm in an air stream of 50 mi/h. What is the total lift?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "325 lb",
+        "320 lb",
+        "315 lb",
+        "310 lb"
+      ],
+      "answerIndex": 3,
+      "answerText": "310 lb",
+      "explanation": "Using the Magnus-effect circulation ? = 2?r?? and lift per unit length L? = ?V? gives a total lift close to 310 lb for the stated span.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Which of the following is not an equation for calculating aspect ratio?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "b/c",
+        "S/c?",
+        "b?/S",
+        "b?/c?"
+      ],
+      "answerIndex": 3,
+      "answerText": "b?/c?",
+      "explanation": "Aspect ratio is b?/S, equivalent to b/c for a rectangular wing and S/c? for S = bc. The expression b?/c? is the square of b/c, not the aspect ratio.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "In a Venturi tube, point A has diameter 1 ft and point B has radius 3 in. What is the flow rate of water if the pressure difference is 5 in. of mercury?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "5.24 ft?/s",
+        "3.87 ft?/s",
+        "4.58 ft?/s",
+        "5.10 ft?/s"
+      ],
+      "answerIndex": 1,
+      "answerText": "3.87 ft?/s",
+      "explanation": "A 5 in. Hg pressure difference is about 5.67 ft of water head. With A? = ?(1 ft)?/4 and A? = ?(0.5 ft)?/4, Bernoulli plus continuity gives Q ? 3.87 ft?/s (about 0.110 m?/s). The PDF labels its answer choices m?/s, but those units are inconsistent with the values.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "The force against an automobile windshield is 0.012 lb when the car is moving at 1 mi/h. What is the force when it travels at 35 mi/h?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "4.7 lb",
+        "3.5 lb",
+        "14.7 lb",
+        "13.5 lb"
+      ],
+      "answerIndex": 2,
+      "answerText": "14.7 lb",
+      "explanation": "Aerodynamic force varies with speed squared. F? = 0.012(35/1)? = 14.7 lb.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "A cylinder 4 ft in diameter and 1 ft long rotates at 100 rpm in an air stream of 40 mi/h. What is the lifting force?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "36.7 lb",
+        "38.2 lb",
+        "34.4 lb",
+        "32.7 lb"
+      ],
+      "answerIndex": 0,
+      "answerText": "36.7 lb",
+      "explanation": "Using Magnus lift per span, L? = ?V? with ? = 2?r??, gives approximately 36.7 lb for the one-foot cylinder length.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "This situation happens every time the helicopter's main rotor is at rest.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Rotor coning",
+        "Rotor droop",
+        "Feathering",
+        "Rotor tracking"
+      ],
+      "answerIndex": 1,
+      "answerText": "Rotor droop",
+      "explanation": "With no rotation to provide centrifugal stiffening, rotor blades droop under their own weight.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "For unaccelerated flight at the same weight, which comparison is true?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Lift is always greater than weight",
+        "Lift is always perpendicular to the airfoil chord",
+        "Lift is greater during level flight than level turning flight",
+        "Lift is greater during level flight than climbing flight"
+      ],
+      "answerIndex": 3,
+      "answerText": "Lift is greater during level flight than climbing flight",
+      "explanation": "In steady level flight, lift equals weight. In a steady climb at flight-path angle ?, lift is approximately W cos ? (assuming thrust acts along the flight path), which is less than W. Thus lift in level flight is greater than in the climb.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Which vehicle carries its oxidizer instead of taking oxygen from the surrounding air?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Airplanes",
+        "Helicopters",
+        "Rockets",
+        "Hot-air balloons"
+      ],
+      "answerIndex": 2,
+      "answerText": "Rockets",
+      "explanation": "A rocket carries both fuel and oxidizer, so it can produce thrust without atmospheric oxygen. Conventional airplane and helicopter engines use air from the atmosphere.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Which assumption applies to the classical incompressible form of Bernoulli?s equation?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It applies only to turbulent flow",
+        "It assumes steady, inviscid, incompressible flow along a streamline",
+        "It requires mass not to be conserved",
+        "It applies only across shock waves"
+      ],
+      "answerIndex": 1,
+      "answerText": "It assumes steady, inviscid, incompressible flow along a streamline",
+      "explanation": "The elementary Bernoulli equation is applied to steady, inviscid, incompressible flow along a streamline. More general energy equations can handle compressible flow, so this assumption is specific to the classical incompressible form.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "It is the design maneuvering speed.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "V_A",
+        "V_B",
+        "V_C",
+        "V_D"
+      ],
+      "answerIndex": 0,
+      "answerText": "V_A",
+      "explanation": "V_A denotes design maneuvering speed.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "The aircraft is said to be trimmed if:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The moment at the aerodynamic center is always zero",
+        "The rotation at the center of pressure is zero",
+        "The net pitching moment about the center of gravity is zero",
+        "The net moment about the geometric center is zero"
+      ],
+      "answerIndex": 2,
+      "answerText": "The net pitching moment about the center of gravity is zero",
+      "explanation": "In pitch trim, the net pitching moment about the aircraft center of gravity is zero. This is a moment-balance condition; it does not mean angular velocity must be zero in every possible trimmed maneuver.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "What happens to the value of lift as velocity is doubled?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Halved",
+        "Doubled",
+        "Tripled",
+        "Quadrupled"
+      ],
+      "answerIndex": 3,
+      "answerText": "Quadrupled",
+      "explanation": "With density, wing area, and lift coefficient unchanged, L = ??V?SCL. Doubling V therefore quadruples lift.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "The rate of climb is RC = 850 ? h/12 ft/min. Compute the climbing time from 300 ft to the service ceiling.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "25.32 min",
+        "28.30 min",
+        "31.29 min",
+        "22.54 min"
+      ],
+      "answerIndex": 0,
+      "answerText": "25.32 min",
+      "explanation": "Using the service-ceiling convention of 100 ft/min gives h = 9,000 ft. Integrating dt = dh/(850 ? h/12) from 300 to 9,000 ft gives about 25.3 min.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "Airflow passing through an expansion wave:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Slows down",
+        "Becomes denser",
+        "Increases the pressure of the air",
+        "Decreases the temperature of the air"
+      ],
+      "answerIndex": 3,
+      "answerText": "Decreases the temperature of the air",
+      "explanation": "An expansion wave accelerates supersonic flow and lowers its static pressure and temperature; density also decreases.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    },
+    {
+      "question": "An airplane takes 7 min 30 sec to reach 8,000 ft altitude. In the same time interval, it reaches 13,600 ft altitude. Determine the altitude at which power required equals power available.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "24,400 ft",
+        "25,500 ft",
+        "26,600 ft",
+        "27,700 ft",
+        "Cannot be determined from the information provided"
+      ],
+      "answerIndex": 4,
+      "answerText": "Cannot be determined from the information provided",
+      "explanation": "The two climb-time statements do not specify the aircraft?s weight, speed, engine/propeller performance, or a climb-performance model. Those data are needed to find where power available equals power required, so none of the four numerical altitudes can be justified from the information given.",
+      "tags": [
+        "aerodynamics",
+        "mock exam"
+      ]
+    }
+  ]
+}
