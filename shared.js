@@ -1,4 +1,4 @@
-﻿export const STORAGE_KEY = "prepcore.web.subjects.v1";
+export const STORAGE_KEY = "prepcore.web.subjects.v1";
 export const ACTIVE_SUBJECT_KEY = "prepcore.web.activeSubject.v1";
 export const ACTIVE_CHAPTER_KEY = "prepcore.web.activeChapter.v1";
 export const ACTIVE_MODE_KEY = "prepcore.web.activeMode.v1";
@@ -13,7 +13,7 @@ export const ADMIN_PASSWORD = "prepcore";
 export const NOTES_PATH = "./markdowns";
 // Bump this when subjects.json or its chapter payloads change. It invalidates both
 // the browser's HTTP cache and the persistent normalized-library cache.
-const SUBJECTS_CACHE_VERSION = "chapter5-naca4412-qa-20261016-1";
+const SUBJECTS_CACHE_VERSION = "chapter5-image-zoom-20261016-1";
 const SUBJECTS_PATH = `./subjects.json?v=${SUBJECTS_CACHE_VERSION}`;
 const VALID_MODES = new Set(["quiz", "learn", "flashcards", "exam", "note"]);
 const SUBJECTS_CACHE_KEY = `prepcore.web.subjectsCache.${SUBJECTS_CACHE_VERSION}`;
@@ -1179,6 +1179,98 @@ function normalizeQuestionImages(entry) {
     }).filter((image) => image.src);
 }
 
+let imageZoomDialog = null;
+let imageZoomImage = null;
+let imageZoomScale = 1;
+
+function setImageZoomScale(scale) {
+    imageZoomScale = Math.max(1, Math.min(4, scale));
+    if (imageZoomImage) {
+        imageZoomImage.style.width = `${imageZoomScale * 100}%`;
+    }
+}
+
+function openImageZoom(imageData) {
+    if (!imageZoomDialog) {
+        const dialog = document.createElement("dialog");
+        dialog.className = "image-zoom-dialog";
+        dialog.setAttribute("aria-label", "Image viewer");
+
+        const toolbar = document.createElement("div");
+        toolbar.className = "image-zoom-toolbar";
+        const caption = document.createElement("p");
+        caption.className = "image-zoom-caption";
+        const controls = document.createElement("div");
+        controls.className = "image-zoom-controls";
+
+        const zoomOut = document.createElement("button");
+        zoomOut.type = "button";
+        zoomOut.textContent = "−";
+        zoomOut.setAttribute("aria-label", "Zoom out");
+        zoomOut.addEventListener("click", () => setImageZoomScale(imageZoomScale / 1.25));
+
+        const reset = document.createElement("button");
+        reset.type = "button";
+        reset.textContent = "Reset";
+        reset.addEventListener("click", () => setImageZoomScale(1));
+
+        const zoomIn = document.createElement("button");
+        zoomIn.type = "button";
+        zoomIn.textContent = "+";
+        zoomIn.setAttribute("aria-label", "Zoom in");
+        zoomIn.addEventListener("click", () => setImageZoomScale(imageZoomScale * 1.25));
+
+        const close = document.createElement("button");
+        close.type = "button";
+        close.className = "image-zoom-close";
+        close.textContent = "Close";
+        close.addEventListener("click", () => dialog.close());
+
+        controls.append(zoomOut, reset, zoomIn, close);
+        toolbar.append(caption, controls);
+
+        const viewport = document.createElement("div");
+        viewport.className = "image-zoom-viewport";
+        const image = document.createElement("img");
+        image.className = "image-zoomed-image";
+        imageZoomImage = image;
+        viewport.appendChild(image);
+        dialog.append(toolbar, viewport);
+        dialog.addEventListener("click", (event) => {
+            if (event.target === dialog) dialog.close();
+        });
+        document.body.appendChild(dialog);
+        imageZoomDialog = dialog;
+    }
+
+    imageZoomImage.src = imageData.src;
+    imageZoomImage.alt = imageData.alt || imageData.caption || "Enlarged image";
+    imageZoomDialog.querySelector(".image-zoom-caption").textContent = imageData.caption || imageZoomImage.alt;
+    setImageZoomScale(1);
+    if (typeof imageZoomDialog.showModal === "function") {
+        imageZoomDialog.showModal();
+    } else {
+        imageZoomDialog.setAttribute("open", "");
+    }
+}
+
+function createZoomableImage(imageData, fallbackAlt) {
+    const trigger = document.createElement("button");
+    trigger.type = "button";
+    trigger.className = "image-zoom-trigger";
+    const alt = imageData.alt || imageData.caption || fallbackAlt;
+    trigger.setAttribute("aria-label", `Open enlarged image: ${alt}`);
+    trigger.title = "Click to zoom in";
+
+    const image = document.createElement("img");
+    image.src = imageData.src;
+    image.alt = alt;
+    image.loading = "lazy";
+    trigger.appendChild(image);
+    trigger.addEventListener("click", () => openImageZoom(imageData));
+    return trigger;
+}
+
 function createExplanationImagesElement(images) {
     const normalizedImages = Array.isArray(images) ? images : [];
     if (!normalizedImages.length) {
@@ -1190,11 +1282,7 @@ function createExplanationImagesElement(images) {
     normalizedImages.forEach((imageData) => {
         const figure = document.createElement("figure");
         figure.className = "feedback-explanation-figure";
-        const image = document.createElement("img");
-        image.src = imageData.src;
-        image.alt = imageData.alt || imageData.caption || "Explanation diagram";
-        image.loading = "lazy";
-        figure.appendChild(image);
+        figure.appendChild(createZoomableImage(imageData, "Explanation diagram"));
         if (imageData.caption) {
             const caption = document.createElement("figcaption");
             caption.textContent = imageData.caption;
@@ -1216,11 +1304,7 @@ function createQuestionImagesElement(images) {
     normalizedImages.forEach((imageData) => {
         const figure = document.createElement("figure");
         figure.className = "question-figure";
-        const image = document.createElement("img");
-        image.src = imageData.src;
-        image.alt = imageData.alt || imageData.caption || "Question diagram";
-        image.loading = "lazy";
-        figure.appendChild(image);
+        figure.appendChild(createZoomableImage(imageData, "Question diagram"));
         if (imageData.caption) {
             const caption = document.createElement("figcaption");
             caption.textContent = imageData.caption;

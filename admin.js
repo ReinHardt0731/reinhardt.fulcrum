@@ -18,7 +18,7 @@ import {
     hydrateMarkdownPreview,
     renderMarkdownPreview,
     renderForceSystemModelCard
-} from "./shared.js?v=chapter5-naca4412-qa-20261016-1";
+} from "./shared.js?v=chapter5-image-zoom-20261016-1";
 import { initAdminShell } from "./admin-shell.js";
 
 document.addEventListener("DOMContentLoaded", async () => {

@@ -8179,6 +8179,111 @@ body.mode-page .workspace > .mode-topbar::before {
     border-radius: 8px;
 }
 
+.image-zoom-trigger {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    cursor: zoom-in;
+}
+
+.image-zoom-trigger:focus-visible {
+    outline: 3px solid var(--accent, #61c3ff);
+    outline-offset: 3px;
+}
+
+.image-zoom-dialog {
+    width: min(96vw, 1500px);
+    max-width: 96vw;
+    max-height: 96vh;
+    padding: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(97, 195, 255, 0.35);
+    border-radius: 16px;
+    color: var(--text, #f5f8ff);
+    background: #091321;
+}
+
+.image-zoom-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.84);
+}
+
+.image-zoom-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.image-zoom-caption {
+    min-width: 0;
+    margin: 0;
+    color: var(--muted, #b7c3d5);
+    font-size: 0.9rem;
+}
+
+.image-zoom-controls {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 6px;
+}
+
+.image-zoom-controls button {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 6px 10px;
+    border: 1px solid rgba(97, 195, 255, 0.35);
+    border-radius: 9px;
+    color: inherit;
+    background: #12243a;
+    cursor: pointer;
+}
+
+.image-zoom-viewport {
+    width: 100%;
+    max-height: calc(96vh - 92px);
+    overflow: auto;
+    text-align: center;
+}
+
+.image-zoomed-image {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .image-zoom-dialog {
+        width: 100vw;
+        max-width: 100vw;
+        max-height: 100dvh;
+        padding: 8px;
+        border-radius: 12px;
+    }
+
+    .image-zoom-toolbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .image-zoom-controls {
+        width: 100%;
+    }
+
+    .image-zoom-controls button {
+        flex: 1;
+    }
+
+    .image-zoom-viewport {
+        max-height: calc(100dvh - 130px);
+    }
+}
+
 .question-figure figcaption {
     margin-top: 8px;
     color: var(--muted);
