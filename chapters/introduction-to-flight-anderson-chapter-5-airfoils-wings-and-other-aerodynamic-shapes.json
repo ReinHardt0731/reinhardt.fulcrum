@@ -56,9 +56,9 @@
       "answerIndex": 0
     },
     {
-      "question": "Problem 101: Consider two different points on the surface of an airplane wing flying at 80 m/s. The pressure coefficient and flow velocity at point 1 are −1.5 and 110 m/s, respectively. The pr essure coefficient at point 2 is −0.8. Assuming incompressible flow, calculate the flow velocity at point 2.",
-      "answerText": "87.3 m/s",
-      "explanation": "Given: Consider two different points on the surface of an airplane wing flying at 80 m/s. The pressure coefficient and flow velocity at point 1 are −1.5 and 110 m/s, respectively. The pr essure coefficient at point 2 is −0.8. Assuming incompressible flow, calculate the flow velocity at point 2.\n\nFormula: Pressure coefficient: Cp = (p-p_inf)/(0.5*rho_inf*V_inf^2). For incompressible flow, Bernoulli gives Cp = 1-(V/V_inf)^2.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 87.3 m/s.",
+      "question": "Problem 101: Consider an airplane wing flying at 80 m/s. If the pressure coefficient at a point on the wing is −0.8, calculate the local flow velocity, assuming incompressible flow.",
+      "answerText": "107.3 m/s",
+      "explanation": "For incompressible flow, C_p = 1 − (V/V_∞)^2. Therefore V = V_∞√(1 − C_p) = 80√(1.8) = 107.3 m/s.",
       "tags": [
         "introduction-to-flight",
         "anderson",
@@ -69,7 +69,7 @@
         "71.6 m/s",
         "103.0 m/s",
         "55.9 m/s",
-        "87.3 m/s"
+        "107.3 m/s"
       ],
       "answerIndex": 3
     },
@@ -92,9 +92,9 @@
       "answerIndex": 2
     },
     {
-      "question": "Problem 103: The Lockheed F-104 supersonic fighter is the first fighter aircraft designed for sustained flight at Mach 2. Its wing planform area is 19.5 m². Consider the F-104 in steady, level flight, an d assume that its weight is 7262 kg f. Calculate its angle of attack at Mach 2 when it is flying at (a) sea level and (b) 10 km.",
+      "question": "Problem 103: The Lockheed F-104 supersonic fighter is the first fighter aircraft designed for sustained flight at Mach 2. Its wing planform area is 19.5 m². Consider the F-104 in steady, level flight, and assume that its weight is 7262 kgf. Calculate its angle of attack at Mach 2 when it is flying at (a) sea level and (b) 10 km.",
       "answerText": "0.35 °, 1.2 °",
-      "explanation": "Given: The Lockheed F-104 supersonic fighter is the first fighter aircraft designed for sustained flight at Mach 2. Its wing planform area is 19.5 m². Consider the F-104 in steady, level flight, an d assume that its weight is 7262 kg f. Calculate its angle of attack at Mach 2 when it is flying at (a) sea level and (b) 10 km.\n\nFormula: Lift and drag: L = q*S*CL and D = q*S*CD; induced drag CDi = CL^2/(pi*e*AR). Finite-wing lift slope is a = a0/[1+a0/(pi*e*AR)]. Resolve forces by angle of attack when needed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.35 °, 1.2 °.",
+      "explanation": "Given: The Lockheed F-104 supersonic fighter is the first fighter aircraft designed for sustained flight at Mach 2. Its wing planform area is 19.5 m². Consider the F-104 in steady, level flight, and assume that its weight is 7262 kgf. Calculate its angle of attack at Mach 2 when it is flying at (a) sea level and (b) 10 km.\n\nFormula: Lift and drag: L = q*S*CL and D = q*S*CD; induced drag CDi = CL^2/(pi*e*AR). Finite-wing lift slope is a = a0/[1+a0/(pi*e*AR)]. Resolve forces by angle of attack when needed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.35 °, 1.2 °.",
       "tags": [
         "introduction-to-flight",
         "anderson",
@@ -111,8 +111,8 @@
     },
     {
       "question": "Problem 104: If the pilot of the F-104 in Question 103, flying in steady, level flight at Mach 2 at an altitude of 10 km, suddenly pitched the airplane to an angle of attack of 10°, calculate the instantaneous lift exerted on the airplane.",
-      "answerText": "5.86 × 10^5 N/m²",
-      "explanation": "Given: If the pilot of the F-104 in Question 103, flying in steady, level flight at Mach 2 at an altitude of 10 km, suddenly pitched the airplane to an angle of attack of 10°, calculate the instantaneous lift exerted on the airplane.\n\nFormula: Lift and drag: L = q*S*CL and D = q*S*CD; induced drag CDi = CL^2/(pi*e*AR). Finite-wing lift slope is a = a0/[1+a0/(pi*e*AR)]. Resolve forces by angle of attack when needed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 5.86 × 10^5 N/m².",
+      "answerText": "5.86 × 10^5 N",
+      "explanation": "Given: If the pilot of the F-104 in Question 103, flying in steady, level flight at Mach 2 at an altitude of 10 km, suddenly pitched the airplane to an angle of attack of 10°, calculate the instantaneous lift exerted on the airplane.\n\nFormula: Lift and drag: L = q*S*CL and D = q*S*CD; induced drag CDi = CL^2/(pi*e*AR). Finite-wing lift slope is a = a0/[1+a0/(pi*e*AR)]. Resolve forces by angle of attack when needed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 5.86 × 10^5 N.",
       "tags": [
         "introduction-to-flight",
         "anderson",
@@ -120,10 +120,10 @@
       ],
       "questionType": "multiple_choice",
       "choices": [
-        "5.86 × 10^5 N/m²",
-        "6.91 × 10^5 N/m²",
-        "3.75 × 10^5 N/m²",
-        "4.81 × 10^5 N/m²"
+        "5.86 × 10^5 N",
+        "6.91 × 10^5 N",
+        "3.75 × 10^5 N",
+        "4.81 × 10^5 N"
       ],
       "answerIndex": 0
     },
@@ -147,8 +147,8 @@
     },
     {
       "question": "Problem 106: The wingspan of the Northrop F-5 is 25.25 ft. Calculate the induced drag coefficient and the induced drag itself for the conditions of Question 105. Assume that e = 0.8.",
-      "answerText": "0.0466",
-      "explanation": "Given: The wingspan of the Northrop F-5 is 25.25 ft. Calculate the induced drag coefficient and the induced drag itself for the conditions of Question 105. Assume that e = 0.8.\n\nFormula: Lift and drag: L = q*S*CL and D = q*S*CD; induced drag CDi = CL^2/(pi*e*AR). Finite-wing lift slope is a = a0/[1+a0/(pi*e*AR)]. Resolve forces by angle of attack when needed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.0466.",
+      "answerText": "C_Di = 0.0466; D_i ≈ 1,265 lb",
+      "explanation": "Using Q105, C_L = 0.6626. The aspect ratio is b²/S = 25.25²/170 = 3.75. Thus C_Di = C_L²/(πeAR) = 0.0466. At 250 mi/h, q ≈ 159.8 lb/ft², so D_i = qS C_Di ≈ 1,265 lb.",
       "tags": [
         "introduction-to-flight",
         "anderson",
@@ -156,17 +156,17 @@
       ],
       "questionType": "multiple_choice",
       "choices": [
-        "0.0382",
-        "0.0550",
-        "0.0466",
-        "0.0298"
+        "C_Di = 0.0382; D_i ≈ 1,037 lb",
+        "C_Di = 0.0550; D_i ≈ 1,494 lb",
+        "C_Di = 0.0466; D_i ≈ 1,265 lb",
+        "C_Di = 0.0298; D_i ≈ 810 lb"
       ],
       "answerIndex": 2
     },
     {
       "question": "Problem 107: Consider a flying wing (such as the Northrop YB-49 of the early 1950s) with a wing area of 206 m², an aspect ratio of 10, a span effectiveness factor of 0.95, and an NACA 4412 airfoil. The weight of the airplane is 7.5 × 10^5 N. If the density altitude is 3 km and the flight velocity is 100 m/s, calculate the total drag on the aircraft.",
-      "answerText": "2.53 × 10^4 N/m²",
-      "explanation": "Given: Consider a flying wing (such as the Northrop YB-49 of the early 1950s) with a wing area of 206 m², an aspect ratio of 10, a span effectiveness factor of 0.95, and an NACA 4412 airfoil. The weight of the airplane is 7.5 × 10^5 N. If the density altitude is 3 km and the flight velocity is 100 m/s, calculate the total drag on the aircraft.\n\nFormula: Lift and drag: L = q*S*CL and D = q*S*CD; induced drag CDi = CL^2/(pi*e*AR). Finite-wing lift slope is a = a0/[1+a0/(pi*e*AR)]. Resolve forces by angle of attack when needed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 2.53 × 10^4 N/m².",
+      "answerText": "≈ 2.56 × 10^4 N",
+      "explanation": "At 3 km, use ρ ≈ 0.909 kg/m³, giving q = ½ρV² ≈ 4,545 Pa. In level flight, C_L = W/(qS) ≈ 0.801, and C_Di = C_L²/(πeAR) ≈ 0.0215. The equivalent chord from S/AR is c = √(206/10) ≈ 4.54 m, so the flight Reynolds number is about 2.4 × 10^7. The nearest NACA 4412 drag-polar curve in the supplied Abbott–von Doenhoff figure is Re = 9 × 10^6; reading C_D,profile ≈ 0.0058 at C_L ≈ 0.80 gives D = qS(C_Di + C_D,profile) ≈ 2.56 × 10^4 N. This is an estimate because the plotted Re is below the aircraft-condition Reynolds number.",
       "tags": [
         "introduction-to-flight",
         "anderson",
@@ -174,17 +174,24 @@
       ],
       "questionType": "multiple_choice",
       "choices": [
-        "2.07 × 10^4 N/m²",
-        "2.53 × 10^4 N/m²",
-        "1.62 × 10^4 N/m²",
-        "2.99 × 10^4 N/m²"
+        "2.07 × 10^4 N",
+        "≈ 2.56 × 10^4 N",
+        "1.62 × 10^4 N",
+        "2.99 × 10^4 N"
       ],
-      "answerIndex": 1
+      "answerIndex": 1,
+      "questionImages": [
+        {
+          "src": "asset/naca-4412-abbott-von-doenhoff-tr824-p141.jpg",
+          "alt": "NACA 4412 section lift curve and drag polar from Abbott, von Doenhoff, and Stivers, NACA Report 824, page 141. The polar shows Reynolds-number curves at 3, 6, and 9 million.",
+          "caption": "NACA 4412 lift and drag data, Abbott, von Doenhoff & Stivers, NACA Report 824 (1945), p. 141. The plotted clean-surface curves are Re = 3, 6, and 9 million. For Problem 107, the Re = 9 million curve is used as the nearest reference; the aircraft estimate is Re ≈ 24 million, so the result is approximate."
+        }
+      ]
     },
     {
-      "question": "Problem 108: The Vought F4U-1D, is a classic World War II Navy fighter airplane. Some data for this airplane are: weight = 5,461 kg f, wing planform area = 29.17 m², wingspan = 12.49 m, maximum velocity at an altitude of 6 km = 684 km/h. At these conditions, the total wing drag coefficient is 0.00757. Calculate the profile drag coefficient for the wing. Assume that e = 0.9.",
+      "question": "Problem 108: The Vought F4U-1D is a classic World War II Navy fighter airplane. Some data for this airplane are: weight = 5,461 kgf, wing planform area = 29.17 m², wingspan = 12.49 m, maximum velocity at an altitude of 6 km = 684 km/h. At these conditions, the total wing drag coefficient is 0.00757. Calculate the profile drag coefficient for the wing. Assume that e = 0.9.",
       "answerText": "0.006",
-      "explanation": "Given: The Vought F4U-1D, is a classic World War II Navy fighter airplane. Some data for this airplane are: weight = 5,461 kg f, wing planform area = 29.17 m², wingspan = 12.49 m, maximum velocity at an altitude of 6 km = 684 km/h. At these conditions, the total wing drag coefficient is 0.00757. Calculate the profile drag coefficient for the wing. Assume that e = 0.9.\n\nFormula: Lift and drag: L = q*S*CL and D = q*S*CD; induced drag CDi = CL^2/(pi*e*AR). Finite-wing lift slope is a = a0/[1+a0/(pi*e*AR)]. Resolve forces by angle of attack when needed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.006.",
+      "explanation": "Given: The Vought F4U-1D is a classic World War II Navy fighter airplane. Some data for this airplane are: weight = 5,461 kgf, wing planform area = 29.17 m², wingspan = 12.49 m, maximum velocity at an altitude of 6 km = 684 km/h. At these conditions, the total wing drag coefficient is 0.00757. Calculate the profile drag coefficient for the wing. Assume that e = 0.9.\n\nFormula: Lift and drag: L = q*S*CL and D = q*S*CD; induced drag CDi = CL^2/(pi*e*AR). Finite-wing lift slope is a = a0/[1+a0/(pi*e*AR)]. Resolve forces by angle of attack when needed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.006.",
       "tags": [
         "introduction-to-flight",
         "anderson",
@@ -200,9 +207,9 @@
       "answerIndex": 0
     },
     {
-      "question": "Problem 109: A standard American-sized golf ball has a diameter of 1.68 in. The velocity of the golf ball immediately after coming off the face of the driver after impact of the club face with the ball is ty pically 148 mi/h. Calculate the Reynolds number of the ball, assuming standard sea-level conditions, and compare this value with the critical Reynolds number for a sphere.",
+      "question": "Problem 109: A standard American-sized golf ball has a diameter of 1.68 in. The velocity of the golf ball immediately after coming off the face of the driver after impact of the club face with the ball is typically 148 mi/h. Calculate the Reynolds number of the ball, assuming standard sea-level conditions, and compare this value with the critical Reynolds number for a sphere.",
       "answerText": "1.933 × 𝟏𝟎 𝟓",
-      "explanation": "Given: A standard American-sized golf ball has a diameter of 1.68 in. The velocity of the golf ball immediately after coming off the face of the driver after impact of the club face with the ball is ty pically 148 mi/h. Calculate the Reynolds number of the ball, assuming standard sea-level conditions, and compare this value with the critical Reynolds number for a sphere.\n\nFormula: Reynolds number: Re = rho*V*D/mu = V*D/nu. Compare the result with the critical Reynolds number for a sphere.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.933 × 𝟏𝟎 𝟓.",
+      "explanation": "Given: A standard American-sized golf ball has a diameter of 1.68 in. The velocity of the golf ball immediately after coming off the face of the driver after impact of the club face with the ball is typically 148 mi/h. Calculate the Reynolds number of the ball, assuming standard sea-level conditions, and compare this value with the critical Reynolds number for a sphere.\n\nFormula: Reynolds number: Re = rho*V*D/mu = V*D/nu. Compare the result with the critical Reynolds number for a sphere.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 1.933 × 𝟏𝟎 𝟓.",
       "tags": [
         "introduction-to-flight",
         "anderson",
@@ -219,8 +226,8 @@
     },
     {
       "question": "Problem 110: Consider an airfoil in a free stream with a velocity of 50 m/s at standard sea-level conditions. At a point on the airfoil, the pressure is 9.5 × 10^4 N/m². What is the pressure coefficient at this point?",
-      "answerText": "-3.91",
-      "explanation": "Given: Consider an airfoil in a free stream with a velocity of 50 m/s at standard sea-level conditions. At a point on the airfoil, the pressure is 9.5 × 10^4 N/m². What is the pressure coefficient at this point?\n\nFormula: Pressure coefficient: Cp = (p-p_inf)/(0.5*rho_inf*V_inf^2). For incompressible flow, Bernoulli gives Cp = 1-(V/V_inf)^2.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives -3.91.",
+      "answerText": "−4.13",
+      "explanation": "At standard sea level, p_∞ = 101,325 Pa and ρ_∞ = 1.225 kg/m³. C_p = (p − p_∞)/(½ρ_∞V_∞²) = (95,000 − 101,325)/(½·1.225·50²) ≈ −4.13.",
       "tags": [
         "introduction-to-flight",
         "anderson",
@@ -230,7 +237,7 @@
       "choices": [
         "-3.21",
         "-4.61",
-        "-3.91",
+        "−4.13",
         "-2.50"
       ],
       "answerIndex": 2
@@ -254,9 +261,9 @@
       "answerIndex": 1
     },
     {
-      "question": "Problem 112: Consider a wing mounted in the test-section of a sub sonic wind tunnel. The velocity of the airflow is 160 ft/s. If the velocity at a point on the wing is 195 ft/s, what is the pressure coefficient at this point?",
+      "question": "Problem 112: Consider a wing mounted in the test-section of a subsonic wind tunnel. The velocity of the airflow is 160 ft/s. If the velocity at a point on the wing is 195 ft/s, what is the pressure coefficient at this point?",
       "answerText": "-0.485",
-      "explanation": "Given: Consider a wing mounted in the test-section of a sub sonic wind tunnel. The velocity of the airflow is 160 ft/s. If the velocity at a point on the wing is 195 ft/s, what is the pressure coefficient at this point?\n\nFormula: Pressure coefficient: Cp = (p-p_inf)/(0.5*rho_inf*V_inf^2). For incompressible flow, Bernoulli gives Cp = 1-(V/V_inf)^2.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives -0.485.",
+      "explanation": "Given: Consider a wing mounted in the test-section of a subsonic wind tunnel. The velocity of the airflow is 160 ft/s. If the velocity at a point on the wing is 195 ft/s, what is the pressure coefficient at this point?\n\nFormula: Pressure coefficient: Cp = (p-p_inf)/(0.5*rho_inf*V_inf^2). For incompressible flow, Bernoulli gives Cp = 1-(V/V_inf)^2.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives -0.485.",
       "tags": [
         "introduction-to-flight",
         "anderson",
@@ -273,8 +280,8 @@
     },
     {
       "question": "Problem 113: Consider a wing in a high-speed wind tunnel. At a point on the wing, the velocity is 850 ft/s. If the test-section flow is at a velocity of 780 ft/s, with a pressure and temperature of 1 atm and 505°R, respectively, calculate the pressure coefficient at the point.",
-      "answerText": "-0.625",
-      "explanation": "Given: Consider a wing in a high-speed wind tunnel. At a point on the wing, the velocity is 850 ft/s. If the test-section flow is at a velocity of 780 ft/s, with a pressure and temperature of 1 atm and 505°R, respectively, calculate the pressure coefficient at the point.\n\nFormula: Pressure coefficient: Cp = (p-p_inf)/(0.5*rho_inf*V_inf^2). For incompressible flow, Bernoulli gives Cp = 1-(V/V_inf)^2.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives -0.625.",
+      "answerText": "−0.183",
+      "explanation": "For an isentropic subsonic flow, T_0 = T_∞ + V_∞²/(2c_p) and T = T_0 − V²/(2c_p), with p/T^(γ/(γ−1)) constant. Using γ = 1.4, R = 1716 ft²/(s²·°R), T_∞ = 505 °R, p_∞ = 1 atm, V_∞ = 780 ft/s, and V = 850 ft/s gives p ≈ 1,980 lb/ft². With q_∞ = ½ρ_∞V_∞² ≈ 743 lb/ft², C_p = (p − p_∞)/q_∞ ≈ −0.183.",
       "tags": [
         "introduction-to-flight",
         "anderson",
@@ -285,7 +292,7 @@
         "-0.512",
         "-0.737",
         "-0.400",
-        "-0.625"
+        "−0.183"
       ],
       "answerIndex": 3
     },
@@ -308,9 +315,9 @@
       "answerIndex": 2
     },
     {
-      "question": "Problem 115: The wing area of the Lockheed F-104 straight-wing supersonic fighter is approximately 210 ft². If the airplane weighs 16,000 lb and is flying in level flight at Mach 2.2 at a standard altitude of 36,000 ft, es timate the wave drag on the wings.",
+      "question": "Problem 115: The wing area of the Lockheed F-104 straight-wing supersonic fighter is approximately 210 ft². If the airplane weighs 16,000 lb and is flying in level flight at Mach 2.2 at a standard altitude of 36,000 ft, estimate the wave drag on the wings.",
       "answerText": "366 lb",
-      "explanation": "Given: The wing area of the Lockheed F-104 straight-wing supersonic fighter is approximately 210 ft². If the airplane weighs 16,000 lb and is flying in level flight at Mach 2.2 at a standard altitude of 36,000 ft, es timate the wave drag on the wings.\n\nFormula: Lift and drag: L = q*S*CL and D = q*S*CD; induced drag CDi = CL^2/(pi*e*AR). Finite-wing lift slope is a = a0/[1+a0/(pi*e*AR)]. Resolve forces by angle of attack when needed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 366 lb.",
+      "explanation": "Given: The wing area of the Lockheed F-104 straight-wing supersonic fighter is approximately 210 ft². If the airplane weighs 16,000 lb and is flying in level flight at Mach 2.2 at a standard altitude of 36,000 ft, estimate the wave drag on the wings.\n\nFormula: Lift and drag: L = q*S*CL and D = q*S*CD; induced drag CDi = CL^2/(pi*e*AR). Finite-wing lift slope is a = a0/[1+a0/(pi*e*AR)]. Resolve forces by angle of attack when needed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 366 lb.",
       "tags": [
         "introduction-to-flight",
         "anderson",
@@ -344,9 +351,9 @@
       "answerIndex": 0
     },
     {
-      "question": "Problem 117: Consider such a finite wing with an area and aspect ratio of 1.5 ft² and 6, respectively, mounted in a wind tunnel where the test-section flow velocity is 100 ft/s at standard sea-level conditions. When the wing is pitched to α = −2°, no lift is measured. When the wing is pitched to α = 10°, a lift of 17.9 lb is measured. Calcu late the lift slope for the airfoil (the infinite wing) if the span effectiveness factor is 0.95.",
+      "question": "Problem 117: Consider such a finite wing with an area and aspect ratio of 1.5 ft² and 6, respectively, mounted in a wind tunnel where the test-section flow velocity is 100 ft/s at standard sea-level conditions. When the wing is pitched to α = −2°, no lift is measured. When the wing is pitched to α = 10°, a lift of 17.9 lb is measured. Calculate the lift slope for the airfoil (the infinite wing) if the span effectiveness factor is 0.95.",
       "answerText": "0.11 per degree",
-      "explanation": "Given: Consider such a finite wing with an area and aspect ratio of 1.5 ft² and 6, respectively, mounted in a wind tunnel where the test-section flow velocity is 100 ft/s at standard sea-level conditions. When the wing is pitched to α = −2°, no lift is measured. When the wing is pitched to α = 10°, a lift of 17.9 lb is measured. Calcu late the lift slope for the airfoil (the infinite wing) if the span effectiveness factor is 0.95.\n\nFormula: Lift and drag: L = q*S*CL and D = q*S*CD; induced drag CDi = CL^2/(pi*e*AR). Finite-wing lift slope is a = a0/[1+a0/(pi*e*AR)]. Resolve forces by angle of attack when needed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.11 per degree.",
+      "explanation": "Given: Consider such a finite wing with an area and aspect ratio of 1.5 ft² and 6, respectively, mounted in a wind tunnel where the test-section flow velocity is 100 ft/s at standard sea-level conditions. When the wing is pitched to α = −2°, no lift is measured. When the wing is pitched to α = 10°, a lift of 17.9 lb is measured. Calculate the lift slope for the airfoil (the infinite wing) if the span effectiveness factor is 0.95.\n\nFormula: Lift and drag: L = q*S*CL and D = q*S*CD; induced drag CDi = CL^2/(pi*e*AR). Finite-wing lift slope is a = a0/[1+a0/(pi*e*AR)]. Resolve forces by angle of attack when needed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.11 per degree.",
       "tags": [
         "introduction-to-flight",
         "anderson",
@@ -362,9 +369,9 @@
       "answerIndex": 3
     },
     {
-      "question": "Problem 118: A finite wing of area 1.5 ft² and aspect ratio of 6 is tested in a subsonic wind tunnel at a velocity of 130 ft/s at standard sea-level conditions. At an angl e of attack of −1°, the measured lift and drag are 0 and 0.181 lb, respectively. At an angle of attack of 2°, the lift and drag are measured as 5.0 and 0.23 lb, respectively. Calculate the span efficiency factor and the infinite-wing lift slope.",
+      "question": "Problem 118: A finite wing of area 1.5 ft² and aspect ratio of 6 is tested in a subsonic wind tunnel at a velocity of 130 ft/s at standard sea-level conditions. At an angle of attack of −1°, the measured lift and drag are 0 and 0.181 lb, respectively. At an angle of attack of 2°, the lift and drag are measured as 5.0 and 0.23 lb, respectively. Calculate the span efficiency factor and the infinite-wing lift slope.",
       "answerText": "0.90, 0.068 per degree",
-      "explanation": "Given: A finite wing of area 1.5 ft² and aspect ratio of 6 is tested in a subsonic wind tunnel at a velocity of 130 ft/s at standard sea-level conditions. At an angl e of attack of −1°, the measured lift and drag are 0 and 0.181 lb, respectively. At an angle of attack of 2°, the lift and drag are measured as 5.0 and 0.23 lb, respectively. Calculate the span efficiency factor and the infinite-wing lift slope.\n\nFormula: Lift and drag: L = q*S*CL and D = q*S*CD; induced drag CDi = CL^2/(pi*e*AR). Finite-wing lift slope is a = a0/[1+a0/(pi*e*AR)]. Resolve forces by angle of attack when needed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.90, 0.068 per degree.",
+      "explanation": "Given: A finite wing of area 1.5 ft² and aspect ratio of 6 is tested in a subsonic wind tunnel at a velocity of 130 ft/s at standard sea-level conditions. At an angle of attack of −1°, the measured lift and drag are 0 and 0.181 lb, respectively. At an angle of attack of 2°, the lift and drag are measured as 5.0 and 0.23 lb, respectively. Calculate the span efficiency factor and the infinite-wing lift slope.\n\nFormula: Lift and drag: L = q*S*CL and D = q*S*CD; induced drag CDi = CL^2/(pi*e*AR). Finite-wing lift slope is a = a0/[1+a0/(pi*e*AR)]. Resolve forces by angle of attack when needed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives 0.90, 0.068 per degree.",
       "tags": [
         "introduction-to-flight",
         "anderson",
@@ -398,9 +405,9 @@
       "answerIndex": 1
     },
     {
-      "question": "Problem 120: The airfoil on the Lockheed F-104 straight-wing supersonic fighter is a thin, symmetric airfoil with a thickness ratio of 3.5 percent. Consider this airfoil in a flow at an angle of attack of 5°. The incompressible lift coefficient for the airfoil is given app roximately by c_l = 2πα, where α is the angle of attack in radians. Estimate the airfoil lift coefficient for (a) M = 0.2, (b) M = 0.7, and (c) M = 2.0.",
-      "answerText": "a ) 0.548, b ) 0.767, c) 0.2",
-      "explanation": "Given: The airfoil on the Lockheed F-104 straight-wing supersonic fighter is a thin, symmetric airfoil with a thickness ratio of 3.5 percent. Consider this airfoil in a flow at an angle of attack of 5°. The incompressible lift coefficient for the airfoil is given app roximately by c_l = 2πα, where α is the angle of attack in radians. Estimate the airfoil lift coefficient for (a) M = 0.2, (b) M = 0.7, and (c) M = 2.0.\n\nFormula: Lift and drag: L = q*S*CL and D = q*S*CD; induced drag CDi = CL^2/(pi*e*AR). Finite-wing lift slope is a = a0/[1+a0/(pi*e*AR)]. Resolve forces by angle of attack when needed.\n\nSolution: Convert the supplied quantities to a consistent unit system, substitute them into the formula above, and solve for the requested quantity. For multiple requested parts, repeat the calculation for each part. This gives a ) 0.548, b ) 0.767, c) 0.2.",
+      "question": "Problem 120: The airfoil on the Lockheed F-104 straight-wing supersonic fighter is a thin, symmetric airfoil with a thickness ratio of 3.5 percent. Consider this airfoil in a flow at an angle of attack of 5°. The incompressible lift coefficient for the airfoil is given approximately by c_l = 2πα, where α is the angle of attack in radians. Estimate the airfoil lift coefficient for (a) M = 0.2, (b) M = 0.7, and (c) M = 2.0.",
+      "answerText": "a) 0.559, b) 0.767, c) 0.2",
+      "explanation": "The incompressible value is c_l0 = 2πα = 0.548. For subsonic Mach numbers, use the Prandtl–Glauert estimate c_l = c_l0/√(1−M²): at M=0.2, c_l ≈ 0.559; at M=0.7, c_l ≈ 0.767. For M=2, thin supersonic theory gives c_l = 4α/√(M²−1) ≈ 0.20, with α in radians.",
       "tags": [
         "introduction-to-flight",
         "anderson",
@@ -408,7 +415,7 @@
       ],
       "questionType": "multiple_choice",
       "choices": [
-        "a ) 0.548, b ) 0.767, c) 0.2",
+        "a) 0.559, b) 0.767, c) 0.2",
         "a )0.647, b ) 0.767, c) 0.2",
         "a )0.351, b ) 0.767, c) 0.2",
         "a )0.449, b ) 0.767, c) 0.2"

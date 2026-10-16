@@ -13,7 +13,7 @@ export const ADMIN_PASSWORD = "prepcore";
 export const NOTES_PATH = "./markdowns";
 // Bump this when subjects.json or its chapter payloads change. It invalidates both
 // the browser's HTTP cache and the persistent normalized-library cache.
-const SUBJECTS_CACHE_VERSION = "library-idb-cache-20261015-5";
+const SUBJECTS_CACHE_VERSION = "chapter5-naca4412-qa-20261016-1";
 const SUBJECTS_PATH = `./subjects.json?v=${SUBJECTS_CACHE_VERSION}`;
 const VALID_MODES = new Set(["quiz", "learn", "flashcards", "exam", "note"]);
 const SUBJECTS_CACHE_KEY = `prepcore.web.subjectsCache.${SUBJECTS_CACHE_VERSION}`;
@@ -2436,8 +2436,20 @@ function restoreModeSession(subject, chapter, mode) {
         return null;
     }
 
+    const savedQuestions = Array.isArray(saved.questions) && saved.questions.length ? saved.questions : null;
+    const currentQuestionsByText = new Map(
+        collectChapterQuestions(chapter)
+            .map((entry, index) => coerceQuestion(entry, index + 1))
+            .map((question) => [text(question.question).trim(), question])
+    );
+    const restoredQuestions = savedQuestions?.map((question) => {
+        const currentQuestion = currentQuestionsByText.get(text(question?.question).trim());
+        return currentQuestion
+            ? { ...question, questionImages: currentQuestion.questionImages }
+            : question;
+    });
     const session = createSession(subject, chapter, mode, {
-        questions: Array.isArray(saved.questions) && saved.questions.length ? saved.questions : undefined,
+        questions: restoredQuestions || undefined,
         chapterTitle: saved.chapterTitle,
         reviewLabel: saved.reviewLabel,
         reviewSource: saved.reviewSource,

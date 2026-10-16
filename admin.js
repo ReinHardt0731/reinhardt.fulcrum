@@ -18,7 +18,7 @@ import {
     hydrateMarkdownPreview,
     renderMarkdownPreview,
     renderForceSystemModelCard
-} from "./shared.js?v=library-idb-cache-20261015-5";
+} from "./shared.js?v=chapter5-naca4412-qa-20261016-1";
 import { initAdminShell } from "./admin-shell.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -235,6 +235,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         drawerCollapsed: false,
         chapterDrag: null
     };
+    let chapterPreviewFile = null;
+    let chapterPreviewQuiz = null;
 
     const now = () => new Date().toISOString();
     const text = (value) => String(value ?? "").trim();
@@ -1133,7 +1135,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (!file || !previewStatus || !previewContent) {
             return null;
         }
+        if (file === chapterPreviewFile && chapterPreviewQuiz) {
+            return chapterPreviewQuiz;
+        }
         const quiz = await previewQuizFile(file, subjectOverride);
+        chapterPreviewFile = file;
+        chapterPreviewQuiz = quiz;
         const chapterCount = quiz.chapters.length;
         const questionCount = quiz.chapters.reduce((sum, chapter) => sum + chapter.questions.length, 0);
         previewStatus.textContent = `${chapterCount} chapters | ${questionCount} questions`;
@@ -1147,11 +1154,18 @@ document.addEventListener("DOMContentLoaded", async () => {
         lines.push(`Subject: ${quiz.subject}`);
         lines.push(`Selected chapter: ${quiz.selected_chapter}`);
         lines.push(`Quiz type: ${quiz.quiz_type}`);
+        lines.push("Use each question's picture picker below to attach images before saving.");
         lines.forEach((line) => {
             summary.appendChild(Object.assign(document.createElement("p"), { textContent: line }));
         });
         const chapterCards = document.createElement("div");
         chapterCards.className = "review-list";
+        const readImageFile = (imageFile) => new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(String(reader.result || ""));
+            reader.onerror = () => reject(new Error(`Could not read ${imageFile.name}.`));
+            reader.readAsDataURL(imageFile);
+        });
         quiz.chapters.forEach((chapter) => {
             const chapterCard = document.createElement("article");
             chapterCard.className = "review-item";
@@ -1159,6 +1173,64 @@ document.addEventListener("DOMContentLoaded", async () => {
                 Object.assign(document.createElement("h5"), { textContent: chapter.title }),
                 Object.assign(document.createElement("p"), { textContent: `${chapter.questions.length} question${chapter.questions.length === 1 ? "" : "s"}` })
             );
+            chapter.questions.forEach((question, questionIndex) => {
+                const questionCard = document.createElement("div");
+                questionCard.className = "admin-question-image-editor";
+                questionCard.appendChild(Object.assign(document.createElement("p"), {
+                    className: "admin-question-image-prompt",
+                    textContent: `${questionIndex + 1}. ${question.question}`
+                }));
+                const imageInput = document.createElement("input");
+                imageInput.type = "file";
+                imageInput.accept = "image/*";
+                imageInput.multiple = true;
+                imageInput.setAttribute("aria-label", `Add pictures to ${chapter.title}, question ${questionIndex + 1}`);
+                const imageLabel = document.createElement("label");
+                imageLabel.className = "admin-file-field";
+                imageLabel.append(Object.assign(document.createElement("span"), { className: "section-label", textContent: "Question pictures" }), imageInput);
+                const imageList = document.createElement("div");
+                imageList.className = "admin-question-image-list";
+                const renderImages = () => {
+                    imageList.replaceChildren();
+                    (question.questionImages || []).forEach((image, imageIndex) => {
+                        const preview = document.createElement("figure");
+                        preview.className = "admin-question-image-preview";
+                        const img = document.createElement("img");
+                        img.src = image.src;
+                        img.alt = image.alt || image.caption || "Question picture preview";
+                        preview.appendChild(img);
+                        const remove = document.createElement("button");
+                        remove.type = "button";
+                        remove.className = "ghost-button";
+                        remove.textContent = "Remove";
+                        remove.addEventListener("click", () => {
+                            question.questionImages.splice(imageIndex, 1);
+                            renderImages();
+                        });
+                        preview.appendChild(remove);
+                        imageList.appendChild(preview);
+                    });
+                };
+                imageInput.addEventListener("change", async () => {
+                    imageInput.disabled = true;
+                    try {
+                        const uploaded = await Promise.all(Array.from(imageInput.files || []).map(async (imageFile) => ({
+                            src: await readImageFile(imageFile),
+                            alt: imageFile.name.replace(/\.[^.]+$/, "")
+                        })));
+                        question.questionImages = [...(question.questionImages || []), ...uploaded];
+                        renderImages();
+                    } catch (error) {
+                        setStatus(error.message || "Could not read the selected image.");
+                    } finally {
+                        imageInput.disabled = false;
+                        imageInput.value = "";
+                    }
+                });
+                questionCard.append(imageLabel, imageList);
+                renderImages();
+                chapterCard.appendChild(questionCard);
+            });
             chapterCards.appendChild(chapterCard);
         });
         previewContent.append(summary, chapterCards);
