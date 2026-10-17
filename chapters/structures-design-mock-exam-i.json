@@ -17,7 +17,7 @@
       ],
       "answerIndex": 3,
       "answerText": "3.0",
-      "explanation": "Correct answer: 3.0. The supplied key selects 3.0 for the negative acrobatic-category maneuvering factor; the negative sign describes the load direction, while the listed choice gives its magnitude.\n\nWhy the other choices are incorrect:\n• 2.1: It does not match the condition or structural role described; the supplied key selects 3.\n• 3.8: It does not match the condition or structural role described; the supplied key selects 3.\n• 2.5: It does not match the condition or structural role described; the supplied key selects 3.\n\nDifferentiate Similar Concepts:\nPositive and negative load factors act in opposite vertical directions; the source option states only the magnitude.\n\n💡 Memory Hook:\nAcrobatic: 3.0 magnitude on the negative side.\n\n🎯 Board Tip:\nCheck whether the option includes a sign or gives only the factor magnitude.",
+      "explanation": "Correct answer: 3.0 in the negative direction. For the legacy acrobatic-category standard represented in this exam, the negative limit factor is −3.0. The answer choices give its magnitude without the sign.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -30,7 +30,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "A simply supported beam, 3 meters in length is acted upon by an upward uniformly distributed load along its entire length with a magnitude of 8 KN/m. What is the maximum shear imposed on the beam by the load",
+      "question": "A simply supported beam, 3 meters in length, carries an upward uniformly distributed load of 8 kN/m along its entire length. What is the maximum shear force in the beam?",
       "questionType": "multiple_choice",
       "choices": [
         "12 KN",
@@ -40,7 +40,7 @@
       ],
       "answerIndex": 0,
       "answerText": "12 KN",
-      "explanation": "Correct answer: 12 KN. The total uniform load is \\(8\\ \\mathrm{kN/m}\\times 3\\ \\mathrm{m}=24\\ \\mathrm{kN}\\). Symmetry places half at each support, so the maximum shear magnitude is 12 kN.\n\nWhy the other choices are incorrect:\n• 24 KN: It does not match the condition or structural role described; the total uniform load is \\(8\\ \\mathrm{kN/m}\\times 3\\ \\mathrm{m}=24\\ \\mathrm{kN}\\).\n• 6 KN: It does not match the condition or structural role described; the total uniform load is \\(8\\ \\mathrm{kN/m}\\times 3\\ \\mathrm{m}=24\\ \\mathrm{kN}\\).\n• 8 KN: It does not match the condition or structural role described; the total uniform load is \\(8\\ \\mathrm{kN/m}\\times 3\\ \\mathrm{m}=24\\ \\mathrm{kN}\\).\n\nDifferentiate Similar Concepts:\nSupport reaction is not the same as the total distributed load; shear changes linearly along the beam.\n\n💡 Memory Hook:\nUniform load \\(\\rightarrow\\) half the total at each support.\n\n🎯 Board Tip:\nFor a simply supported beam, calculate reactions before reading the shear diagram.",
+      "explanation": "Correct answer: 12 kN.\n\nGiven:\n\\(w=8\\ \\mathrm{kN/m}\\), \\(L=3\\ \\mathrm{m}\\).\n\nFormula:\nFor a simply supported beam with a uniform load over the full span, each support reaction is \\(R=\\frac{wL}{2}\\). The maximum shear magnitude occurs at a support.\n\nSolution:\n\\(R=\\frac{(8)(3)}{2}=12\\ \\mathrm{kN}\\). The total load is 24 kN, split equally between the supports.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -56,14 +56,14 @@
       "question": "A simply supported beam, 3 meters in length, carries an upward uniformly distributed load of 8 kN/m along its entire length. What is the maximum bending moment imposed on the beam?",
       "questionType": "multiple_choice",
       "choices": [
-        "9 KN - m",
-        "36 KN - m",
-        "18 KN - m",
-        "6 KN - m"
+        "9 kN·m",
+        "36 kN·m",
+        "18 kN·m",
+        "6 kN·m"
       ],
       "answerIndex": 0,
-      "answerText": "9 KN - m",
-      "explanation": "Correct answer: 9 KN - m. For a simply supported beam with full-span uniform load, \\(M_{\\max}=\\frac{wL^2}{8}=\\frac{8(3^2)}{8}=9\\ \\mathrm{kN\\cdot m}\\).\n\nWhy the other choices are incorrect:\n• 36 KN - m: It does not match the condition or structural role described; for a simply supported beam with full-span uniform load, \\(M_{\\max}=\\frac{wL^2}{8}=\\frac{8(3^2)}{8}=9\\ \\mathrm{kN\\cdot m}\\).\n• 18 KN - m: It does not match the condition or structural role described; for a simply supported beam with full-span uniform load, \\(M_{\\max}=\\frac{wL^2}{8}=\\frac{8(3^2)}{8}=9\\ \\mathrm{kN\\cdot m}\\).\n• 6 KN - m: It does not match the condition or structural role described; for a simply supported beam with full-span uniform load, \\(M_{\\max}=\\frac{wL^2}{8}=\\frac{8(3^2)}{8}=9\\ \\mathrm{kN\\cdot m}\\).\n\nDifferentiate Similar Concepts:\nMaximum moment is not total load or shear; it is the area under the shear diagram.\n\n💡 Memory Hook:\nUniform load: \\(M_{\\max}=\\frac{wL^2}{8}\\).\n\n🎯 Board Tip:\nKeep the span squared and check moment units.",
+      "answerText": "9 kN·m",
+      "explanation": "Correct answer: 9 kN·m.\n\nGiven:\n\\(w=8\\ \\mathrm{kN/m}\\), \\(L=3\\ \\mathrm{m}\\).\n\nFormula:\nFor a simply supported beam with a full-span uniform load, \\(M_{\\max}=\\frac{wL^2}{8}\\).\n\nSolution:\n\\(M_{\\max}=\\frac{(8)(3^2)}{8}=9\\ \\mathrm{kN\\cdot m}\\).\n\nThe span is squared, so the result has units of kN·m. Total load (24 kN) and support shear (12 kN) are different quantities.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -86,7 +86,7 @@
       ],
       "answerIndex": 2,
       "answerText": "Beams",
-      "explanation": "Correct answer: Beams. Beams are slender members that primarily carry loads transverse to their longitudinal axis, creating shear and bending.\n\nWhy the other choices are incorrect:\n• Shafts: It does not match the condition or structural role described; beams are slender members that primarily carry loads transverse to their longitudinal axis, creating shear and bending.\n• Plates: It does not match the condition or structural role described; beams are slender members that primarily carry loads transverse to their longitudinal axis, creating shear and bending.\n• Bulkhead: It does not match the condition or structural role described; beams are slender members that primarily carry loads transverse to their longitudinal axis, creating shear and bending.\n\nDifferentiate Similar Concepts:\nA shaft is primarily associated with torsion; a plate is a surface element; a bulkhead is a transverse structural partition.\n\n💡 Memory Hook:\nBeam bends; shaft twists.\n\n🎯 Board Tip:\nIdentify the direction of load relative to the member axis.",
+      "explanation": "Correct answer: Beams. Beams are long members designed mainly for loads perpendicular to their axes; those loads create bending and shear. Shafts primarily resist torsion.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -109,7 +109,7 @@
       ],
       "answerIndex": 1,
       "answerText": "Statically stable",
-      "explanation": "Correct answer: Statically stable. Static stability describes the initial tendency to move back toward equilibrium after a disturbance. The prompt reports an oscillatory response but does not specify whether it damps out.\n\nWhy the other choices are incorrect:\n• Dynamically stable: It does not match the condition or structural role described; static stability describes the initial tendency to move back toward equilibrium after a disturbance.\n• Statically and dynamically unstable: It does not match the condition or structural role described; static stability describes the initial tendency to move back toward equilibrium after a disturbance.\n• Statically and dynamically stable: It does not match the condition or structural role described; static stability describes the initial tendency to move back toward equilibrium after a disturbance.\n\nDifferentiate Similar Concepts:\nDynamic stability concerns how the motion changes with time; oscillation alone does not establish damping.\n\n💡 Memory Hook:\nStatic = initial response; dynamic = motion over time.\n\n🎯 Board Tip:\nDo not infer positive dynamic stability from the word oscillates alone.",
+      "explanation": "Correct answer: Statically stable. Static stability is the initial tendency to move back toward equilibrium after a disturbance. Oscillation alone does not show whether the motion damps out, so dynamic stability cannot be determined from the stem.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -132,7 +132,7 @@
       ],
       "answerIndex": 2,
       "answerText": "As the factor of safety increases, the ultimate load increases.",
-      "explanation": "Correct answer: As the factor of safety increases, the ultimate load increases.. Ultimate load equals limit load multiplied by the factor of safety. With limit load fixed, a larger factor of safety raises ultimate load.\n\nWhy the other choices are incorrect:\n• As the factor of safety increases, the ultimate load decreases.: It does not match the condition or structural role described; ultimate load equals limit load multiplied by the factor of safety.\n• As the ultimate load increases, the factor of safety decreases.: It does not match the condition or structural role described; ultimate load equals limit load multiplied by the factor of safety.\n• The factor of safety is constant at 1.5 therefore, ultimate load is als o constant.: It does not match the condition or structural role described; ultimate load equals limit load multiplied by the factor of safety.\n\nDifferentiate Similar Concepts:\nThe relationship is direct, not inverse; the stated factor is not arbitrary when the certification basis fixes it.\n\n💡 Memory Hook:\n\\(P_{\\mathrm{ultimate}}=P_{\\mathrm{limit}}\\times\\mathrm{F.S.}\\).\n\n🎯 Board Tip:\nKeep limit load and ultimate load distinct.",
+      "explanation": "Correct answer: As the factor of safety increases, the ultimate load increases. With limit load fixed, \\(P_{\\mathrm{ultimate}}=P_{\\mathrm{limit}}\\times\\mathrm{F.S.}\\), so ultimate load changes in direct proportion to the factor of safety.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -155,7 +155,7 @@
       ],
       "answerIndex": 0,
       "answerText": "Fixed support",
-      "explanation": "Correct answer: Fixed support. A fixed support restrains translation in both axes and rotation, so it can develop reaction forces and a reaction moment.\n\nWhy the other choices are incorrect:\n• Hinge support: It does not match the condition or structural role described; a fixed support restrains translation in both axes and rotation, so it can develop reaction forces and a reaction moment.\n• Roller support: It does not match the condition or structural role described; a fixed support restrains translation in both axes and rotation, so it can develop reaction forces and a reaction moment.\n• Wedge support: It does not match the condition or structural role described; a fixed support restrains translation in both axes and rotation, so it can develop reaction forces and a reaction moment.\n\nDifferentiate Similar Concepts:\nA hinge permits rotation; a roller permits motion along its surface; neither restrains all three motions.\n\n💡 Memory Hook:\nFixed support blocks motion and rotation.\n\n🎯 Board Tip:\nCount permitted degrees of freedom to identify a support.",
+      "explanation": "Correct answer: Fixed support. A fixed support restrains two translations and rotation, so it can develop horizontal and vertical reaction forces plus a reaction moment. A hinge permits rotation; a roller permits movement along its surface.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -178,7 +178,7 @@
       ],
       "answerIndex": 3,
       "answerText": "Truss structure",
-      "explanation": "Correct answer: Truss structure. A truss is built from slender members joined at their ends and idealized as carrying axial tension or compression.\n\nWhy the other choices are incorrect:\n• Beam structure: It does not match the condition or structural role described; a truss is built from slender members joined at their ends and idealized as carrying axial tension or compression.\n• Monocoque structure: It does not match the condition or structural role described; a truss is built from slender members joined at their ends and idealized as carrying axial tension or compression.\n• Semi-monocoque structure: It does not match the condition or structural role described; a truss is built from slender members joined at their ends and idealized as carrying axial tension or compression.\n\nDifferentiate Similar Concepts:\nBeams carry bending; monocoque and semi-monocoque describe shell-based aircraft construction rather than pin-jointed axial members.\n\n💡 Memory Hook:\nTruss members carry axial force.\n\n🎯 Board Tip:\nLook for end-jointed members and axial-only loading.",
+      "explanation": "Correct answer: Truss structure. A truss is made of end-connected slender members that, in the ideal model, carry axial tension or compression. Beams carry bending; monocoque and semi-monocoque refer to stressed-skin construction.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -199,9 +199,9 @@
         "Shafts",
         "Trusses"
       ],
-      "answerIndex": 0,
-      "answerText": "Beams",
-      "explanation": "Correct answer: Beams. The provided key marks Beams. However, the stem describes members loaded axially in compression, which is the usual definition of columns. This source-key conflict is retained for verification.\n\nWhy the other choices are incorrect:\n• Columns: It does not match the condition or structural role described; the provided key marks beams.\n• Shafts: It does not match the condition or structural role described; the provided key marks beams.\n• Trusses: It does not match the condition or structural role described; the provided key marks beams.\n\nDifferentiate Similar Concepts:\nColumns are the compression members described by the stem; beams are normally identified with transverse loading and bending.\n\n💡 Memory Hook:\nColumn = axial compression; beam = transverse load and bending.\n\n🎯 Board Tip:\nCheck the marked choice in the supplied answer-key PDF before studying this item.",
+      "answerIndex": 1,
+      "answerText": "Columns",
+      "explanation": "Correct answer: Columns.\n\nA column is a member loaded primarily in axial compression. The supplied key marked “Beams,” but that conflicts with the stem and the standard definition: beams primarily carry transverse loads and bending. The keyed answer is corrected to Columns.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -224,7 +224,7 @@
       ],
       "answerIndex": 2,
       "answerText": "Stress",
-      "explanation": "Correct answer: Stress. Stress is internal force intensity: the force acting over a unit area at a point or section.\n\nWhy the other choices are incorrect:\n• Shear: It does not match the condition or structural role described; stress is internal force intensity: the force acting over a unit area at a point or section.\n• Torque: It does not match the condition or structural role described; stress is internal force intensity: the force acting over a unit area at a point or section.\n• Strain: It does not match the condition or structural role described; stress is internal force intensity: the force acting over a unit area at a point or section.\n\nDifferentiate Similar Concepts:\nShear and torque are load actions; strain measures deformation, not force per area.\n\n💡 Memory Hook:\nStress = force/area; strain = deformation ratio.\n\n🎯 Board Tip:\nDo not confuse a load with the material response to that load.",
+      "explanation": "Correct answer: Stress. Stress is internal force per unit area on a material plane. Strain measures deformation, while torque is a twisting moment.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -247,7 +247,7 @@
       ],
       "answerIndex": 3,
       "answerText": "Poisson's Ratio",
-      "explanation": "Correct answer: Poisson's Ratio. Poisson's ratio relates lateral strain to axial strain. A member stretched axially contracts laterally, so the strains have opposite signs.\n\nWhy the other choices are incorrect:\n• Modulus ratio: It does not match the condition or structural role described; poisson's ratio relates lateral strain to axial strain.\n• Stress - strain relationship: It does not match the condition or structural role described; poisson's ratio relates lateral strain to axial strain.\n• Hooke's Law: It does not match the condition or structural role described; poisson's ratio relates lateral strain to axial strain.\n\nDifferentiate Similar Concepts:\nHooke's law relates stress and strain in the elastic range; modulus is a stress-to-strain ratio, not the lateral-to-axial ratio.\n\n💡 Memory Hook:\nPoisson compares sideways strain with lengthwise strain.\n\n🎯 Board Tip:\nTrack the direction of each strain and its sign.",
+      "explanation": "Correct answer: Poisson's ratio. It relates lateral strain to axial strain. With the usual sign convention, \\(\\nu=-\\frac{\\varepsilon_{\\mathrm{lateral}}}{\\varepsilon_{\\mathrm{axial}}}\\); the minus sign reflects that the strains have opposite signs.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -270,7 +270,7 @@
       ],
       "answerIndex": 2,
       "answerText": "Bending",
-      "explanation": "Correct answer: Bending. A transverse load creates a bending moment; the section develops tension on one side and compression on the other.\n\nWhy the other choices are incorrect:\n• Torsion: It does not match the condition or structural role described; a transverse load creates a bending moment; the section develops tension on one side and compression on the other.\n• Shear: It does not match the condition or structural role described; a transverse load creates a bending moment; the section develops tension on one side and compression on the other.\n• Compression: It does not match the condition or structural role described; a transverse load creates a bending moment; the section develops tension on one side and compression on the other.\n\nDifferentiate Similar Concepts:\nTorsion twists about the member axis; shear tends to slide adjacent portions; pure compression acts along the axis.\n\n💡 Memory Hook:\nBending: tension on one side, compression on the other.\n\n🎯 Board Tip:\nA bending section has a neutral axis separating tension and compression.",
+      "explanation": "Correct answer: Bending. A transverse load creates a bending moment, producing tension on one side of a cross-section and compression on the other.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -293,7 +293,7 @@
       ],
       "answerIndex": 0,
       "answerText": "Torsion",
-      "explanation": "Correct answer: Torsion. A torque that tends to twist a member produces torsional shear stresses within it.\n\nWhy the other choices are incorrect:\n• Shear: It does not match the condition or structural role described; a torque that tends to twist a member produces torsional shear stresses within it.\n• Bending: It does not match the condition or structural role described; a torque that tends to twist a member produces torsional shear stresses within it.\n• Compression: It does not match the condition or structural role described; a torque that tends to twist a member produces torsional shear stresses within it.\n\nDifferentiate Similar Concepts:\nBending curves the member; direct shear slides one part past another; compression shortens it axially.\n\n💡 Memory Hook:\nTorque causes torsion.\n\n🎯 Board Tip:\nFollow the direction of the applied moment about the member axis.",
+      "explanation": "Correct answer: Torsion. A torque twists a member about its longitudinal axis and produces torsional shear stress.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -316,7 +316,7 @@
       ],
       "answerIndex": 3,
       "answerText": "Modulus of rigidity",
-      "explanation": "Correct answer: Modulus of rigidity. The shear modulus, or modulus of rigidity, is the ratio of shear stress to shear strain in the linear-elastic range.\n\nWhy the other choices are incorrect:\n• Poisson's Ratio: It does not match the condition or structural role described; the shear modulus, or modulus of rigidity, is the ratio of shear stress to shear strain in the linear-elastic range.\n• Stress - strain relationship: It does not match the condition or structural role described; the shear modulus, or modulus of rigidity, is the ratio of shear stress to shear strain in the linear-elastic range.\n• Modulus ratio: It does not match the condition or structural role described; the shear modulus, or modulus of rigidity, is the ratio of shear stress to shear strain in the linear-elastic range.\n\nDifferentiate Similar Concepts:\nPoisson's ratio compares lateral and axial strain; Young's modulus is the normal stress-to-strain ratio.\n\n💡 Memory Hook:\nG is the elastic modulus for shear.\n\n🎯 Board Tip:\nPair shear stress with shear strain.",
+      "explanation": "Correct answer: Modulus of rigidity. The shear modulus \\(G\\) is the ratio of shear stress to shear strain in the linear-elastic range: \\(G=\\frac{\\tau}{\\gamma}\\).",
       "tags": [
         "structures and design",
         "mock exam",
@@ -339,7 +339,7 @@
       ],
       "answerIndex": 0,
       "answerText": "Polar moment of inertia",
-      "explanation": "Correct answer: Polar moment of inertia. In the torsion relation, the area integral of radius squared is the polar moment of inertia, J, which describes resistance to twisting.\n\nWhy the other choices are incorrect:\n• Radius of gravitation: It does not match the condition or structural role described; in the torsion relation, the area integral of radius squared is the polar moment of inertia, j, which describes resistance to twisting.\n• Moment of inertia about a base: It does not match the condition or structural role described; in the torsion relation, the area integral of radius squared is the polar moment of inertia, j, which describes resistance to twisting.\n• Product of inertia about inclined axis through a centroid: It does not match the condition or structural role described; in the torsion relation, the area integral of radius squared is the polar moment of inertia, j, which describes resistance to twisting.\n\nDifferentiate Similar Concepts:\nThe other inertia terms describe different axes or mass distribution; the polar moment uses distance squared from the shaft axis.\n\n💡 Memory Hook:\nPolar J measures area spread around the shaft axis.\n\n🎯 Board Tip:\nUse J for circular-shaft torsion and I for bending.",
+      "explanation": "Correct answer: Polar moment of inertia. (J=\\int_A r^2\\,dA) is the polar second moment of area about the shaft axis. It measures how the area is distributed around that axis and appears in the shaft-twist equation.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -362,7 +362,7 @@
       ],
       "answerIndex": 1,
       "answerText": "Limit loads",
-      "explanation": "Correct answer: Limit loads. Limit loads are the maximum loads expected in service. Ultimate loads are obtained by applying the required safety factor to limit loads.\n\nWhy the other choices are incorrect:\n• Ultimate loads: It does not match the condition or structural role described; limit loads are the maximum loads expected in service.\n• Design loads: It does not match the condition or structural role described; limit loads are the maximum loads expected in service.\n• Imposed loads: It does not match the condition or structural role described; limit loads are the maximum loads expected in service.\n\nDifferentiate Similar Concepts:\nUltimate load includes the safety factor; design or imposed load are not the defined service maximum in this item.\n\n💡 Memory Hook:\nLimit = expected service maximum; ultimate = factored limit.\n\n🎯 Board Tip:\nCheck whether the question asks expected load or factored strength load.",
+      "explanation": "Correct answer: Limit loads. Limit loads are the maximum loads expected in service. Ultimate loads are the limit loads multiplied by the applicable factor of safety.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -385,7 +385,7 @@
       ],
       "answerIndex": 1,
       "answerText": "Positive high angle of attack",
-      "explanation": "Correct answer: Positive high angle of attack. A pullout at the wing's highest angle of attack produces positive high-angle-of-attack loading: lift is positive and drag opposes the relative wind.\n\nWhy the other choices are incorrect:\n• Positive low angle of attack: It does not match the condition or structural role described; a pullout at the wing's highest angle of attack produces positive high-angle-of-attack loading: lift is positive and drag opposes the relative wind.\n• Negative low angle of attack: It does not match the condition or structural role described; a pullout at the wing's highest angle of attack produces positive high-angle-of-attack loading: lift is positive and drag opposes the relative wind.\n• Negative high angle of attack: It does not match the condition or structural role described; a pullout at the wing's highest angle of attack produces positive high-angle-of-attack loading: lift is positive and drag opposes the relative wind.\n\nDifferentiate Similar Concepts:\nThe negative conditions reverse the normal lift direction; low-angle conditions do not describe the stated high-AoA pullout.\n\n💡 Memory Hook:\nPullout + high AoA \\(\\rightarrow\\) positive load.\n\n🎯 Board Tip:\nIdentify both the load sign and angle-of-attack condition.",
+      "explanation": "Correct answer: Positive high angle of attack. In a pullout at high positive angle of attack, lift acts perpendicular to the relative wind and produces positive loading; drag acts parallel and opposite to the relative wind.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -408,7 +408,7 @@
       ],
       "answerIndex": 0,
       "answerText": "Negative low angle of attack",
-      "explanation": "Correct answer: Negative low angle of attack. The described diving-speed case with negative load factor or negative gust corresponds to negative low angle of attack in the supplied key.\n\nWhy the other choices are incorrect:\n• Negative high angle of attack: It does not match the condition or structural role described; the described diving-speed case with negative load factor or negative gust corresponds to negative low angle of attack in the supplied key.\n• Positive low angle of attack: It does not match the condition or structural role described; the described diving-speed case with negative load factor or negative gust corresponds to negative low angle of attack in the supplied key.\n• Positive high angle of attack: It does not match the condition or structural role described; the described diving-speed case with negative load factor or negative gust corresponds to negative low angle of attack in the supplied key.\n\nDifferentiate Similar Concepts:\nPositive conditions have upward lift loading; negative high-AoA is not the stated diving-speed case.\n\n💡 Memory Hook:\nNegative load at dive speed \\(\\rightarrow\\) negative low AoA.\n\n🎯 Board Tip:\nMatch the sign of the lift/load to the flight condition.",
+      "explanation": "Correct answer: Negative low angle of attack, according to the supplied key. The stem describes a negative-load condition at dive speed or in a negative gust. The negative sign identifies the loading direction.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -431,7 +431,7 @@
       ],
       "answerIndex": 2,
       "answerText": "1.414 KN, downwa rd",
-      "explanation": "Correct answer: 1.414 KN, downwa rd. The key marks 1.414 kN downward. The welded-joint figure is needed to resolve the member-force directions and apply equilibrium, so the keyed result is kept with the source diagram attached.\n\nWhy the other choices are incorrect:\n• 3.5 KN, downward: It does not match the condition or structural role described; the key marks 1.\n• 1.14 KN, upward: It does not match the condition or structural role described; the key marks 1.\n• 2 KN, upward: It does not match the condition or structural role described; the key marks 1.\n\nDifferentiate Similar Concepts:\nThe other magnitudes or directions fail the joint's force-balance result shown in Fig. A.\n\n💡 Memory Hook:\nAt a joint, resolve forces into components and set both sums to zero.\n\n🎯 Board Tip:\nUse the figure's angles and signs before calculating the resultant.",
+      "explanation": "Correct answer: 1.414 kN downward.\n\nGiven:\nThe member-force diagram in Fig. A.\n\nFormula:\nFor equilibrium, \\(\\sum F_x=0\\) and \\(\\sum F_y=0\\). Resolve each known force into horizontal and vertical components.\n\nSolution:\nUse the diagram's force magnitudes and directions to solve for member F. The figure is required to reproduce the numerical result; the supplied key gives 1.414 kN downward.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -459,7 +459,7 @@
       ],
       "answerIndex": 1,
       "answerText": "L = 5920 lb, D = 2155 lb",
-      "explanation": "Correct answer: L = 5920 lb, D = 2155 lb. In a steady glide at 20^\\circ below horizontal, lift balances the perpendicular weight component and drag balances the along-path component: \\(L=W\\cos(20^\\circ)\\approx5{,}920\\ \\mathrm{lb},\\quad D=W\\sin(20^\\circ)\\approx2{,}155\\ \\mathrm{lb}\\).\n\nWhy the other choices are incorrect:\n• L = 5155 lb, D = 2920 lb: It does not match the condition or structural role described; in a steady glide at 20^\\circ below horizontal, lift balances the perpendicular weight component and drag balances the along-path component: \\(L=W\\cos(20^\\circ)\\approx5{,}920\\ \\mathrm{lb},\\quad D=W\\sin(20^\\circ)\\approx2{,}155\\ \\mathrm{lb}\\).\n• L = 6120 lb, D = 3250 lb: It does not match the condition or structural role described; in a steady glide at 20^\\circ below horizontal, lift balances the perpendicular weight component and drag balances the along-path component: \\(L=W\\cos(20^\\circ)\\approx5{,}920\\ \\mathrm{lb},\\quad D=W\\sin(20^\\circ)\\approx2{,}155\\ \\mathrm{lb}\\).\n• L = 5209 lb, D = 2551 lb: It does not match the condition or structural role described; in a steady glide at 20^\\circ below horizontal, lift balances the perpendicular weight component and drag balances the along-path component: \\(L=W\\cos(20^\\circ)\\approx5{,}920\\ \\mathrm{lb},\\quad D=W\\sin(20^\\circ)\\approx2{,}155\\ \\mathrm{lb}\\).\n\nDifferentiate Similar Concepts:\nInterchanging sine and cosine swaps the larger perpendicular component and smaller along-path component; the total force must still balance the 6,300-lb weight.\n\n💡 Memory Hook:\nLift uses cosine of glide angle; drag uses sine.\n\n🎯 Board Tip:\nResolve weight parallel and perpendicular to the flight path.",
+      "explanation": "Correct answer: \\(L\\approx5{,}920\\ \\mathrm{lb}\\), \\(D\\approx2{,}155\\ \\mathrm{lb}\\).\n\nGiven:\n\\(W=6{,}300\\ \\mathrm{lb}\\), glide angle \\(\\gamma=20^\\circ\\).\n\nFormula:\nIn a steady glide, lift balances the component of weight perpendicular to the flight path and drag balances the component parallel to it: \\(L=W\\cos\\gamma\\), \\(D=W\\sin\\gamma\\).\n\nSolution:\n\\(L=6{,}300\\cos20^\\circ\\approx5{,}920\\ \\mathrm{lb}\\).\n\\(D=6{,}300\\sin20^\\circ\\approx2{,}155\\ \\mathrm{lb}\\).",
       "tags": [
         "structures and design",
         "mock exam",
@@ -482,7 +482,7 @@
       ],
       "answerIndex": 0,
       "answerText": "Shear stress",
-      "explanation": "Correct answer: Shear stress. Shear stress is associated with adjacent portions of a member tending to slide transversely relative to one another.\n\nWhy the other choices are incorrect:\n• Bending stress: It does not match the condition or structural role described; shear stress is associated with adjacent portions of a member tending to slide transversely relative to one another.\n• Torsional stress: It does not match the condition or structural role described; shear stress is associated with adjacent portions of a member tending to slide transversely relative to one another.\n• Tensile stress: It does not match the condition or structural role described; shear stress is associated with adjacent portions of a member tending to slide transversely relative to one another.\n\nDifferentiate Similar Concepts:\nBending causes curvature; torsion causes twist; direct compression acts along the member rather than across a section.\n\n💡 Memory Hook:\nShear = sliding tendency across a section.\n\n🎯 Board Tip:\nDistinguish transverse shear from axial stress and torsional shear.",
+      "explanation": "Correct answer: Shear stress. Shear stress occurs when adjacent portions of a member tend to slide past one another. Bending instead creates tension and compression across a section.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -505,7 +505,7 @@
       ],
       "answerIndex": 2,
       "answerText": "8.0 degrees",
-      "explanation": "Correct answer: 8.0 degrees. The supplied key gives an \\(8.0^\\circ\\) reaction angle. Fig. B is required to resolve the support reaction components; the source answer is retained and the figure is attached.\n\nWhy the other choices are incorrect:\n• 18 degrees: It does not match the condition or structural role described; the supplied key gives an 8.\n• 80 degrees: It does not match the condition or structural role described; the supplied key gives an 8.\n• 81.2 degrees: It does not match the condition or structural role described; the supplied key gives an 8.\n\nDifferentiate Similar Concepts:\nThe other angles do not match the force-component ratio shown in the source figure.\n\n💡 Memory Hook:\nResultant angle comes from the ratio of vertical to horizontal reaction components.\n\n🎯 Board Tip:\nKeep the reference line and direction stated in the question.",
+      "explanation": "Correct answer: 8.0°.\n\nGiven:\nThe loading diagram in Fig. B.\n\nFormula:\nFirst use \\(\\sum F_x=0\\) and \\(\\sum F_y=0\\) to find the reaction components at A. Then calculate \\(\\theta=\\tan^{-1}(|R_{Ay}|/|R_{Ax}|)\\).\n\nSolution:\nSubstitute the components found from Fig. B. The figure is needed to reproduce their values; the supplied key gives \\(8.0^\\circ\\).",
       "tags": [
         "structures and design",
         "mock exam",
@@ -533,7 +533,7 @@
       ],
       "answerIndex": 3,
       "answerText": "2.5",
-      "explanation": "Correct answer: 2.5. For upward acceleration, the load factor is (g+a)/g = \\((32.2+48)/32.2\\approx2.5\\).\n\nWhy the other choices are incorrect:\n• 1.27: It does not match the condition or structural role described; for upward acceleration, the load factor is (g+a)/g = (32.\n• 2.44: It does not match the condition or structural role described; for upward acceleration, the load factor is (g+a)/g = (32.\n• 1.5: It does not match the condition or structural role described; for upward acceleration, the load factor is (g+a)/g = (32.\n\nDifferentiate Similar Concepts:\nUsing a/g alone omits the force needed to support weight; dividing by the wrong acceleration component changes the factor.\n\n💡 Memory Hook:\nUpward acceleration: n = 1 + a/g.\n\n🎯 Board Tip:\nInclude gravity when converting vertical acceleration to load factor.",
+      "explanation": "Correct answer: 2.5.\n\nGiven:\nUpward acceleration \\(a=48\\ \\mathrm{ft/s^2}\\); gravitational acceleration \\(g\\approx32.2\\ \\mathrm{ft/s^2}\\).\n\nFormula:\nFor upward acceleration, \\(n=\\frac{g+a}{g}\\). The airplane's weight cancels when force is expressed as a load factor.\n\nSolution:\n\\(n=\\frac{32.2+48}{32.2}\\approx2.49\\), which rounds to 2.5.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -556,7 +556,7 @@
       ],
       "answerIndex": 3,
       "answerText": "153 MPa",
-      "explanation": "Correct answer: 153 MPa. Average direct shear stress is force divided by the rivet cross-sectional area. The source key gives 153 MPa; Fig. C supplies the applied load and rivet arrangement needed to verify it.\n\nWhy the other choices are incorrect:\n• 153 Pa: It does not match the condition or structural role described; average direct shear stress is force divided by the rivet cross-sectional area.\n• 153 KPa: It does not match the condition or structural role described; average direct shear stress is force divided by the rivet cross-sectional area.\n• 15.3 MPa: It does not match the condition or structural role described; average direct shear stress is force divided by the rivet cross-sectional area.\n\nDifferentiate Similar Concepts:\nThe alternatives do not match the keyed load-over-area result for the section between the sheets.\n\n💡 Memory Hook:\nRivet shear stress = transmitted force / shear-plane area.\n\n🎯 Board Tip:\nCheck whether the rivet is in single or double shear from the figure.",
+      "explanation": "Correct answer: 153 MPa.\n\nGiven:\nRivet diameter \\(d=2.50\\ \\mathrm{mm}\\); the applied load is shown in Fig. C.\n\nFormula:\nFor a rivet in single shear, \\(A=\\frac{\\pi d^2}{4}\\) and \\(\\tau_{\\mathrm{avg}}=\\frac{F}{A}\\).\n\nSolution:\n\\(A=\\frac{\\pi(2.50)^2}{4}\\approx4.91\\ \\mathrm{mm^2}\\). Using the load shown in Fig. C gives the keyed stress of 153 MPa. (\\(1\\ \\mathrm{N/mm^2}=1\\ \\mathrm{MPa}\\).)",
       "tags": [
         "structures and design",
         "mock exam",
@@ -574,17 +574,17 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "A 4-ft-long propeller shaft with a diameter of 1.5 inches is subjected to a torque of 390 ft·lb. What is its angle of twist if the modulus of rigidity is \\(11\\times10^6\\ \\mathrm{lb/in^2}\\)?",
+      "question": "A 4-ft-long propeller shaft with a diameter of 1.5 inches is subjected to a torque of \\(390\\ \\mathrm{ft\\cdot lb}\\). What is its angle of twist if the modulus of rigidity is \\(11\\times10^6\\ \\mathrm{lb/in^2}\\)?",
       "questionType": "multiple_choice",
       "choices": [
         "0.47 degrees",
-        "1.47 degrees",
+        "2.35 degrees",
         "14.7 degrees",
         "4.7 degrees"
       ],
       "answerIndex": 1,
-      "answerText": "1.47 degrees",
-      "explanation": "Correct answer: 1.47 degrees. For a circular shaft, the twist angle follows \\(\\theta=\\frac{TL}{JG}\\). Substituting the provided length, diameter, torque, and shear modulus gives the keyed \\(1.47^\\circ\\).\n\nWhy the other choices are incorrect:\n• 0.47 degrees: It does not match the condition or structural role described; for a circular shaft, the twist angle follows \\(\\theta=\\frac{TL}{JG}\\).\n• 14.7 degrees: It does not match the condition or structural role described; for a circular shaft, the twist angle follows \\(\\theta=\\frac{TL}{JG}\\).\n• 4.7 degrees: It does not match the condition or structural role described; for a circular shaft, the twist angle follows \\(\\theta=\\frac{TL}{JG}\\).\n\nDifferentiate Similar Concepts:\nThe remaining options are not the twist from the stated torsion relation and geometry.\n\n💡 Memory Hook:\nLonger shaft or greater torque increases twist; larger J or G reduces it.\n\n🎯 Board Tip:\nUse consistent inch-pound units, then convert radians to degrees.",
+      "answerText": "2.35 degrees",
+      "explanation": "Correct answer: \\(2.35^\\circ\\).\n\nGiven:\n\\(T=390\\ \\mathrm{ft\\cdot lb}=4{,}680\\ \\mathrm{lb\\cdot in}\\), \\(L=4\\ \\mathrm{ft}=48\\ \\mathrm{in}\\), \\(d=1.5\\ \\mathrm{in}\\), \\(G=11\\times10^6\\ \\mathrm{lb/in^2}\\).\n\nFormula:\nFor a solid circular shaft, \\(J=\\frac{\\pi d^4}{32}\\) and \\(\\theta=\\frac{TL}{JG}\\).\n\nSolution:\n\\(J=\\frac{\\pi(1.5)^4}{32}\\approx0.497\\ \\mathrm{in^4}\\).\n\\(\\theta=\\frac{(4{,}680)(48)}{(0.497)(11\\times10^6)}\\approx0.0411\\ \\mathrm{rad}\\approx2.35^\\circ\\).\n\nThe previous keyed value of 1.47° does not follow from the stated dimensions and material property, so the answer choice and key are corrected.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -597,7 +597,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "The skin thickness of the wing torque box is 1/16 inch. If it is subjected to a torsional load of 2,000 ft·lb, what is the shear stress? Refer to Fig. D (see page 6).",
+      "question": "The skin thickness of the wing torque box is \\(\\frac{1}{16}\\) inch. If it is subjected to a torsional load of \\(2{,}000\\ \\mathrm{ft\\cdot lb}\\), what is the shear stress? Refer to Fig. D (see page 6).",
       "questionType": "multiple_choice",
       "choices": [
         "1,455 psi",
@@ -606,8 +606,8 @@
         "14,550 psi"
       ],
       "answerIndex": 1,
-      "answerText": "17,455 ps i",
-      "explanation": "Correct answer: 17,455 ps i. The key gives 17,455 psi. The torque-box dimensions in Fig. D are needed to determine enclosed area and wall shear flow; retain the keyed result with that figure.\n\nWhy the other choices are incorrect:\n• 1,455 psi: It does not match the condition or structural role described; the key gives 17,455 psi.\n• 174.5 psi: It does not match the condition or structural role described; the key gives 17,455 psi.\n• 14,550 psi: It does not match the condition or structural role described; the key gives 17,455 psi.\n\nDifferentiate Similar Concepts:\nThe alternatives do not match the thin-walled closed-section calculation for the pictured box.\n\n💡 Memory Hook:\nClosed thin-wall torsion uses shear flow around the enclosed cell; stress is flow divided by thickness.\n\n🎯 Board Tip:\nUse the enclosed area and constant wall thickness from Fig. D.",
+      "answerText": "17,455 psi",
+      "explanation": "Correct answer according to the supplied key: 17,455 psi.\n\nFor a thin-walled, single-cell closed torque box, shear flow is \\(q=\\frac{T}{2A_m}\\), and wall shear stress is \\(\\tau=\\frac{q}{t}=\\frac{T}{2A_m t}\\), where \\(A_m\\) is the area enclosed by the wall's median line and \\(t\\) is its thickness.\n\nHere \\(t=\\frac{1}{16}\\ \\mathrm{in}\\). The enclosed area must be read from Fig. D, so that figure is needed to reproduce the numerical result.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -635,7 +635,7 @@
       ],
       "answerIndex": 0,
       "answerText": "244 ft/s",
-      "explanation": "Correct answer: 244 ft/s. The source key selects 244 ft/s for the stated commuter-design cruise-speed calculation using the given weight, span, mean chord, and lift coefficient.\n\nWhy the other choices are incorrect:\n• 166.5 ft/s: It does not match the condition or structural role described; the source key selects 244 ft/s for the stated commuter-design cruise-speed calculation using the given weight, span, mean chord, and lift coefficient.\n• 144.6 ft/s: It does not match the condition or structural role described; the source key selects 244 ft/s for the stated commuter-design cruise-speed calculation using the given weight, span, mean chord, and lift coefficient.\n• 157.7 knots: It does not match the condition or structural role described; the source key selects 244 ft/s for the stated commuter-design cruise-speed calculation using the given weight, span, mean chord, and lift coefficient.\n\nDifferentiate Similar Concepts:\nThe alternative speeds do not match the keyed result for the supplied design parameters.\n\n💡 Memory Hook:\nCruise-speed calculation depends on wing loading and the stated lift coefficient.\n\n🎯 Board Tip:\nKeep the units and configuration (flaps retracted) consistent throughout.",
+      "explanation": "Correct answer: \\(244\\ \\mathrm{ft/s}\\) (about \\(144.6\\) knots).\n\nGiven:\n\\(W=3{,}100\\ \\mathrm{lb}\\), \\(b=34\\ \\mathrm{ft}\\), \\(\\bar c=4.75\\ \\mathrm{ft}\\).\n\nFormula:\n\\(S=b\\bar c\\), then use the minimum cruise-speed relation \\(V_C=33\\sqrt{W/S}\\) knots used by this exam.\n\nSolution:\n\\(S=34(4.75)=161.5\\ \\mathrm{ft^2}\\); \\(W/S=3{,}100/161.5\\approx19.20\\ \\mathrm{lb/ft^2}\\).\n\\(V_C=33\\sqrt{19.20}\\approx144.6\\) knots \\(\\approx244\\ \\mathrm{ft/s}\\).",
       "tags": [
         "structures and design",
         "mock exam",
@@ -658,7 +658,7 @@
       ],
       "answerIndex": 0,
       "answerText": "3.8",
-      "explanation": "Correct answer: 3.8. The keyed positive limit maneuvering factor is 3.8 for the category and specifications stated in the question.\n\nWhy the other choices are incorrect:\n• 3.93: It does not match the condition or structural role described; the keyed positive limit maneuvering factor is 3.\n• 2.1: It does not match the condition or structural role described; the keyed positive limit maneuvering factor is 3.\n• 4.4: It does not match the condition or structural role described; the keyed positive limit maneuvering factor is 3.\n\nDifferentiate Similar Concepts:\nThe other load factors correspond to different category or design conditions, not the case keyed here.\n\n💡 Memory Hook:\nA limit factor is a design load multiplier, not a speed or strength margin.\n\n🎯 Board Tip:\nRead the certification category before choosing a load factor.",
+      "explanation": "Correct answer: 3.8.\n\nGiven:\n\\(W=3{,}100\\ \\mathrm{lb}\\).\n\nFormula:\nThe relation used by this exam is \\(n=2.1+\\frac{24{,}000}{W+10{,}000}\\), subject to a maximum of 3.8.\n\nSolution:\n\\(n=2.1+\\frac{24{,}000}{3{,}100+10{,}000}\\approx3.93\\). Applying the 3.8 cap gives the keyed limit factor of 3.8.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -671,7 +671,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "For purpose of constructing the flight envelope of a design airplane under FAR part 23, the derived gust velocity for Vc gust line at 35, 000 ft is:",
+      "question": "For the purpose of constructing an airplane's flight envelope under FAR Part 23, what is the derived gust velocity on the \\(V_C\\) gust line at 35,000 ft?",
       "questionType": "multiple_choice",
       "choices": [
         "35.17 ft/s",
@@ -681,7 +681,7 @@
       ],
       "answerIndex": 2,
       "answerText": "37.15 ft/s",
-      "explanation": "Correct answer: 37.15 ft/s. The supplied key gives 37.15 ft/s as the derived gust velocity for the Vc gust line at 35,000 ft.\n\nWhy the other choices are incorrect:\n• 35.17 ft/s: It does not match the condition or structural role described; the supplied key gives 37.\n• 37.15 mph: It does not match the condition or structural role described; the supplied key gives 37.\n• 37.15 knots: It does not match the condition or structural role described; the supplied key gives 37.\n\nDifferentiate Similar Concepts:\nThe other choices do not match the keyed altitude-specific gust value.\n\n💡 Memory Hook:\nGust velocity is a speed input; gust load factor is the resulting structural response.\n\n🎯 Board Tip:\nKeep altitude and the Vc gust line together when selecting a value.",
+      "explanation": "Correct answer according to the supplied key: 37.15 ft/s. This is a derived gust-velocity value for the exam's \\(V_C\\) gust line at 35,000 ft. The governing gust schedule depends on the regulation edition used by the source exam.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -704,7 +704,7 @@
       ],
       "answerIndex": 1,
       "answerText": "Increasing directional stability",
-      "explanation": "Correct answer: Increasing directional stability. The supplied key selects increased directional stability as the additional benefit of the swept-back wing in this question.\n\nWhy the other choices are incorrect:\n• Reducing induc ed drag: It does not match the condition or structural role described; the supplied key selects increased directional stability as the additional benefit of the swept-back wing in this question.\n• Improving L/D ratio: It does not match the condition or structural role described; the supplied key selects increased directional stability as the additional benefit of the swept-back wing in this question.\n• Reduce parasite drag: It does not match the condition or structural role described; the supplied key selects increased directional stability as the additional benefit of the swept-back wing in this question.\n\nDifferentiate Similar Concepts:\nThe other choices do not match the answer identified in the supplied key; the question's keyed secondary effect is directional stability.\n\n💡 Memory Hook:\nCritical Mach concerns compressibility; directional stability concerns yaw response.\n\n🎯 Board Tip:\nThis secondary-effect item follows the supplied answer key.",
+      "explanation": "Correct answer: Increasing directional stability. A swept-back wing tends to align the airplane with the relative wind in a sideslip, adding a weathercock effect. Sweep also raises critical Mach number.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -717,17 +717,17 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "Where is the buttock line or buttline of an aircraft",
+      "question": "Where is the buttock line (buttline) of an aircraft?",
       "questionType": "multiple_choice",
       "choices": [
-        "a width measurement left or right of, and parallel to, the vertical centerline",
-        "a width measurement left of, and perpendicular to, the vertical centerline",
-        "a height measurement le ft or right of, perpendicular to the horizontal centerline",
-        "none of the choices"
+        "A lateral measurement left or right of, and parallel to, the vertical centerline",
+        "A lateral measurement left of, and perpendicular to, the vertical centerline",
+        "A height measurement left or right of, and perpendicular to, the horizontal centerline",
+        "None of the choices"
       ],
       "answerIndex": 0,
-      "answerText": "a width measurement left or right of, and parallel to, the vertical centerline",
-      "explanation": "Correct answer: a width measurement left or right of, and parallel to, the vertical centerline. Buttline measures lateral distance from and parallel to the aircraft vertical centerline.\n\nWhy the other choices are incorrect:\n• a width measurement left of, and perpendicular to, the vertical centerline: It does not match the condition or structural role described; buttline measures lateral distance from and parallel to the aircraft vertical centerline.\n• a height measurement le ft or right of, perpendicular to the horizontal centerline: It does not match the condition or structural role described; buttline measures lateral distance from and parallel to the aircraft vertical centerline.\n• none of the choices: It does not match the condition or structural role described; buttline measures lateral distance from and parallel to the aircraft vertical centerline.\n\nDifferentiate Similar Concepts:\nFuselage station is a longitudinal coordinate; waterline is vertical; buttline is transverse.\n\n💡 Memory Hook:\nBL = left/right; FS = fore/aft; WL = up/down.\n\n🎯 Board Tip:\nRemember the three aircraft reference axes.",
+      "answerText": "A lateral measurement left or right of, and parallel to, the vertical centerline",
+      "explanation": "Correct answer: A lateral measurement left or right of, and parallel to, the vertical centerline. Buttock lines are lateral coordinates from the aircraft centerline; fuselage stations measure fore-and-aft position.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -750,7 +750,7 @@
       ],
       "answerIndex": 2,
       "answerText": "137 inches aft of the zero or fixed reference line",
-      "explanation": "Correct answer: 137 inches aft of the zero or fixed reference line. Fuselage station 137 is 137 inches aft of the fixed or zero reference line, along the fuselage longitudinal axis.\n\nWhy the other choices are incorrect:\n• 137 centimeters aft of the nose or fixed refere nce line: It does not match the condition or structural role described; fuselage station 137 is 137 inches aft of the fixed or zero reference line, along the fuselage longitudinal axis.\n• aft of engine: It does not match the condition or structural role described; fuselage station 137 is 137 inches aft of the fixed or zero reference line, along the fuselage longitudinal axis.\n• 137 inches aft of the engine firewall: It does not match the condition or structural role described; fuselage station 137 is 137 inches aft of the fixed or zero reference line, along the fuselage longitudinal axis.\n\nDifferentiate Similar Concepts:\nIt is not a vertical or side-to-side coordinate; those use other aircraft reference lines.\n\n💡 Memory Hook:\nStation numbers run fore and aft from a datum.\n\n🎯 Board Tip:\nCheck where the aircraft datum is defined in the drawing.",
+      "explanation": "Correct answer: 137 inches aft of the zero or fixed reference line. Fuselage stations measure longitudinal position from a defined datum, so station 137 is 137 inches aft of that reference.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -763,17 +763,17 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "Which statement is true regarding a cantilever wing",
+      "question": "Which statement is true about a cantilever wing?",
       "questionType": "multiple_choice",
       "choices": [
         "No external bracing is needed.",
         "It has nonadjustable lift struts.",
-        "It requires only one lift strut on each si de.",
-        "all of the choices"
+        "It requires only one lift strut on each side.",
+        "All of the choices"
       ],
       "answerIndex": 0,
       "answerText": "No external bracing is needed.",
-      "explanation": "Correct answer: No external bracing is needed.. A cantilever wing is supported internally at the root and needs no external struts or braces.\n\nWhy the other choices are incorrect:\n• It has nonadjustable lift struts.: It does not match the condition or structural role described; a cantilever wing is supported internally at the root and needs no external struts or braces.\n• It requires only one lift strut on each si de.: It does not match the condition or structural role described; a cantilever wing is supported internally at the root and needs no external struts or braces.\n• all of the choices: It does not match the condition or structural role described; a cantilever wing is supported internally at the root and needs no external struts or braces.\n\nDifferentiate Similar Concepts:\nA braced wing transfers some load through external supports; the defining feature here is an unbraced span.\n\n💡 Memory Hook:\nCantilever = internally supported, externally unbraced.\n\n🎯 Board Tip:\nLook for struts or wires when distinguishing cantilever from braced wings.",
+      "explanation": "Correct answer: No external bracing is needed. A cantilever wing carries its loads through its internal structure and attachment to the fuselage, without external lift struts.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -796,7 +796,7 @@
       ],
       "answerIndex": 2,
       "answerText": "an unsteady flow from turbulence",
-      "explanation": "Correct answer: an unsteady flow from turbulence. Buffeting is caused by unsteady turbulent or separated airflow that produces intermittent aerodynamic forces on a structure.\n\nWhy the other choices are incorrect:\n• incorrect rigging of flaps: It does not match the condition or structural role described; buffeting is caused by unsteady turbulent or separated airflow that produces intermittent aerodynamic forces on a structure.\n• incorrect rigging of ailerons: It does not match the condition or structural role described; buffeting is caused by unsteady turbulent or separated airflow that produces intermittent aerodynamic forces on a structure.\n• all of the choices: It does not match the condition or structural role described; buffeting is caused by unsteady turbulent or separated airflow that produces intermittent aerodynamic forces on a structure.\n\nDifferentiate Similar Concepts:\nA steady smooth flow would not produce the fluctuating forces described; static loading is not buffeting.\n\n💡 Memory Hook:\nBuffet = fluctuating airflow and force.\n\n🎯 Board Tip:\nLook for intermittent vibration or force rather than a steady load.",
+      "explanation": "Correct answer: An unsteady flow from turbulence. Buffeting is an intermittent vibration or force caused by unsteady airflow, often turbulent or separated flow striking the airplane.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -819,7 +819,7 @@
       ],
       "answerIndex": 2,
       "answerText": "longerons and stringers",
-      "explanation": "Correct answer: longerons and stringers. Longerons and stringers are the longitudinal members in a semi-monocoque fuselage; they support and stiffen the skin along the fuselage.\n\nWhy the other choices are incorrect:\n• spars and ribs: It does not match the condition or structural role described; longerons and stringers are the longitudinal members in a semi-monocoque fuselage; they support and stiffen the skin along the fuselage.\n• spars and stringers: It does not match the condition or structural role described; longerons and stringers are the longitudinal members in a semi-monocoque fuselage; they support and stiffen the skin along the fuselage.\n• bulkhead and formers: It does not match the condition or structural role described; longerons and stringers are the longitudinal members in a semi-monocoque fuselage; they support and stiffen the skin along the fuselage.\n\nDifferentiate Similar Concepts:\nFrames and bulkheads run transversely; spars are primary wing members.\n\n💡 Memory Hook:\nLongerons/stringers run lengthwise; frames run around the fuselage.\n\n🎯 Board Tip:\nUse member orientation to identify aircraft structure terms.",
+      "explanation": "Correct answer: Longerons and stringers. These longitudinal members stiffen the fuselage skin. Frames and bulkheads provide transverse support.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -832,7 +832,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "What of type loads causes the most rivet failures",
+      "question": "Which type of load causes the most rivet failures?",
       "questionType": "multiple_choice",
       "choices": [
         "bearing",
@@ -842,7 +842,7 @@
       ],
       "answerIndex": 1,
       "answerText": "shearing",
-      "explanation": "Correct answer: shearing. The supplied key identifies shearing as the load type associated with the most rivet failures in this item; rivets transfer joint loads primarily across their shanks.\n\nWhy the other choices are incorrect:\n• bearing: It does not match the condition or structural role described; the supplied key identifies shearing as the load type associated with the most rivet failures in this item; rivets transfer joint loads primarily across their shanks.\n• head: It does not match the condition or structural role described; the supplied key identifies shearing as the load type associated with the most rivet failures in this item; rivets transfer joint loads primarily across their shanks.\n• strain: It does not match the condition or structural role described; the supplied key identifies shearing as the load type associated with the most rivet failures in this item; rivets transfer joint loads primarily across their shanks.\n\nDifferentiate Similar Concepts:\nTension, compression, and torsion are different load modes; the keyed joint-failure mode is shear.\n\n💡 Memory Hook:\nRivets in a lap joint are commonly checked for shear through the shank.\n\n🎯 Board Tip:\nTrace how load transfers from one joined sheet to the other.",
+      "explanation": "Correct answer: Shearing. In a properly designed riveted lap joint, the rivet shank transfers load primarily in shear.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -855,7 +855,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "What physical factors are involved in the aspect ratio of airplane wings",
+      "question": "Which physical dimensions determine a wing's aspect ratio?",
       "questionType": "multiple_choice",
       "choices": [
         "thickness and chord",
@@ -865,7 +865,7 @@
       ],
       "answerIndex": 2,
       "answerText": "span and chord",
-      "explanation": "Correct answer: span and chord. Aspect ratio is based on wing span relative to chord (equivalently \\(b^2/S\\) for a general planform).\n\nWhy the other choices are incorrect:\n• thickness and chord: It does not match the condition or structural role described; aspect ratio is based on wing span relative to chord (equivalently \\(b^2/S\\) for a general planform).\n• dihedral angle and angle of attack: It does not match the condition or structural role described; aspect ratio is based on wing span relative to chord (equivalently \\(b^2/S\\) for a general planform).\n• area and thickness: It does not match the condition or structural role described; aspect ratio is based on wing span relative to chord (equivalently \\(b^2/S\\) for a general planform).\n\nDifferentiate Similar Concepts:\nWing area and span describe the planform; chord is the characteristic width dimension.\n\n💡 Memory Hook:\nAspect ratio compares span with chord.\n\n🎯 Board Tip:\nDo not confuse aspect ratio with wing area alone.",
+      "explanation": "Correct answer: Span and chord. For a rectangular wing, \\(AR=\\frac{b}{c}\\); for a general planform, \\(AR=\\frac{b^2}{S}\\).",
       "tags": [
         "structures and design",
         "mock exam",
@@ -881,14 +881,14 @@
       "question": "An airplane's center of lift is usually located aft of its center of gravity under what condition?",
       "questionType": "multiple_choice",
       "choices": [
-        "so that the airplane will have a tail - heavy tendency",
-        "to improve stability about the longitudinal axis",
-        "so that the airplane will have a nose - heavy tendency",
-        "to induce poor static stability"
+        "So the airplane will have a tail-heavy tendency",
+        "To improve stability about the longitudinal axis",
+        "So the airplane will have a nose-heavy tendency",
+        "To induce poor static stability"
       ],
       "answerIndex": 1,
       "answerText": "to improve stability about the longitudinal axis",
-      "explanation": "Correct answer: to improve stability about the longitudinal axis. The source key says the aft center of lift improves stability about the longitudinal axis. Preserve this keyed response, but verify the axis wording against the supplied answer key because aircraft longitudinal (pitch) stability is commonly associated with the lateral axis.\n\nWhy the other choices are incorrect:\n• so that the airplane will have a tail - heavy tendency: It does not match the condition or structural role described; the source key says the aft center of lift improves stability about the longitudinal axis.\n• so that the airplane will have a nose - heavy tendency: It does not match the condition or structural role described; the source key says the aft center of lift improves stability about the longitudinal axis.\n• to induce poor static stability: It does not match the condition or structural role described; the source key says the aft center of lift improves stability about the longitudinal axis.\n\nDifferentiate Similar Concepts:\nThe alternatives do not reflect the source-keyed stability explanation; the stated axis wording may itself be inconsistent.\n\n💡 Memory Hook:\nCenter of lift location affects moments about the center of gravity; axis terminology matters.\n\n🎯 Board Tip:\nCheck the answer-key marking and the axis label before memorizing this item.",
+      "explanation": "The supplied key selects “to improve stability about the longitudinal axis,” but the axis wording appears incorrect. An aft center of lift relative to the center of gravity primarily affects pitch stability, which is rotation about the lateral axis. Verify the intended choice against the source before relying on this item.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -901,7 +901,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "A well - designed rivet joint will subject the rivets to______.",
+      "question": "A well-designed riveted joint primarily subjects its rivets to what type of load?",
       "questionType": "multiple_choice",
       "choices": [
         "compressive loads",
@@ -911,7 +911,7 @@
       ],
       "answerIndex": 2,
       "answerText": "shear loads",
-      "explanation": "Correct answer: shear loads. A well-designed riveted lap joint transfers load through shear in the rivet shanks.\n\nWhy the other choices are incorrect:\n• compressive loads: It does not match the condition or structural role described; a well-designed riveted lap joint transfers load through shear in the rivet shanks.\n• tension loads: It does not match the condition or structural role described; a well-designed riveted lap joint transfers load through shear in the rivet shanks.\n• bearing loads: It does not match the condition or structural role described; a well-designed riveted lap joint transfers load through shear in the rivet shanks.\n\nDifferentiate Similar Concepts:\nThe rivets are not intended to carry the entire joint load as bending or axial tension when the lap joint is properly designed.\n\n💡 Memory Hook:\nLap joint \\(\\rightarrow\\) rivet shear.\n\n🎯 Board Tip:\nRelate fastener loading to how the connected sheets try to slide.",
+      "explanation": "Correct answer: Shear loads. A well-designed lap joint transfers the applied load mainly as shear through the rivet shanks. The sheets also exert bearing pressure on the rivets.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -934,7 +934,7 @@
       ],
       "answerIndex": 0,
       "answerText": "lift curve slope",
-      "explanation": "Correct answer: lift curve slope. Tailplane airfoil lift-curve slope affects the change in tail lift with angle of attack, making it a major consideration for tail effectiveness and stability.\n\nWhy the other choices are incorrect:\n• zero - lift angle of attack: It does not match the condition or structural role described; tailplane airfoil lift-curve slope affects the change in tail lift with angle of attack, making it a major consideration for tail effectiveness and stability.\n• maximum lift coefficient: It does not match the condition or structural role described; tailplane airfoil lift-curve slope affects the change in tail lift with angle of attack, making it a major consideration for tail effectiveness and stability.\n• minimum drag coefficient: It does not match the condition or structural role described; tailplane airfoil lift-curve slope affects the change in tail lift with angle of attack, making it a major consideration for tail effectiveness and stability.\n\nDifferentiate Similar Concepts:\nOther airfoil characteristics may matter, but the source-keyed design consideration is lift-curve slope.\n\n💡 Memory Hook:\nLift-curve slope tells how rapidly lift changes with angle of attack.\n\n🎯 Board Tip:\nTailplane performance depends on both geometry and airfoil response.",
+      "explanation": "Correct answer: Lift-curve slope. It describes how much lift changes as angle of attack changes, which helps determine the tailplane's control and stabilizing response.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -957,7 +957,7 @@
       ],
       "answerIndex": 2,
       "answerText": "the rear wing or tail to stall first",
-      "explanation": "Correct answer: the rear wing or tail to stall first. The main wing should stall before the tail so the pilot retains pitch-control authority as the wing approaches stall; the source wording says not to let the rear wing/tail stall first.\n\nWhy the other choices are incorrect:\n• the left wing to stall first: It does not match the condition or structural role described; the main wing should stall before the tail so the pilot retains pitch-control authority as the wing approaches stall; the source wording says not to let the rear wing/tail stall first.\n• the canard wing to stall late: It does not match the condition or structural role described; the main wing should stall before the tail so the pilot retains pitch-control authority as the wing approaches stall; the source wording says not to let the rear wing/tail stall first.\n• the vertical stabilizer to stall only: It does not match the condition or structural role described; the main wing should stall before the tail so the pilot retains pitch-control authority as the wing approaches stall; the source wording says not to let the rear wing/tail stall first.\n\nDifferentiate Similar Concepts:\nIf the tail stalls first, pitch control and recovery can be compromised.\n\n💡 Memory Hook:\nWing first, tail flying: preserve control near stall.\n\n🎯 Board Tip:\nCheck stall sequence, not just maximum lift.",
+      "explanation": "Correct answer: The rear wing or tail should not stall first. The main wing should stall before the tail so the tail retains airflow and pitch-control authority as the airplane approaches a stall.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -980,7 +980,7 @@
       ],
       "answerIndex": 2,
       "answerText": "skin or covering",
-      "explanation": "Correct answer: skin or covering. A monocoque fuselage relies largely on its skin or covering to carry structural loads.\n\nWhy the other choices are incorrect:\n• longerons and formers: It does not match the condition or structural role described; a monocoque fuselage relies largely on its skin or covering to carry structural loads.\n• bulkheads and longerons: It does not match the condition or structural role described; a monocoque fuselage relies largely on its skin or covering to carry structural loads.\n• all of the choices: It does not match the condition or structural role described; a monocoque fuselage relies largely on its skin or covering to carry structural loads.\n\nDifferentiate Similar Concepts:\nIn semi-monocoque construction, frames and stringers share more load with the skin; a truss relies on discrete members.\n\n💡 Memory Hook:\nMonocoque = stressed skin carries much of the load.\n\n🎯 Board Tip:\nDistinguish a stressed shell from a frame-dominated structure.",
+      "explanation": "Correct answer: Skin or covering. Monocoque construction relies largely on its outer skin to carry structural loads. Semi-monocoque construction shares loads among the skin, frames, and stringers.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -1003,7 +1003,7 @@
       ],
       "answerIndex": 0,
       "answerText": "normal, utility, commuter & acrobatic category airplanes",
-      "explanation": "Correct answer: normal, utility, commuter & acrobatic category airplanes. The source answer identifies Part 23 with normal, utility, commuter, and acrobatic category airplanes, matching the classifications listed in this mock exam.\n\nWhy the other choices are incorrect:\n• normal & sport category airplanes: It does not match the condition or structural role described; the source answer identifies part 23 with normal, utility, commuter, and acrobatic category airplanes, matching the classifications listed in this mock exam.\n• commuter, transport & special category airplanes: It does not match the condition or structural role described; the source answer identifies part 23 with normal, utility, commuter, and acrobatic category airplanes, matching the classifications listed in this mock exam.\n• acrobatic category airplanes: It does not match the condition or structural role described; the source answer identifies part 23 with normal, utility, commuter, and acrobatic category airplanes, matching the classifications listed in this mock exam.\n\nDifferentiate Similar Concepts:\nThe other category groupings do not match the keyed Part 23 list in the supplied paper.\n\n💡 Memory Hook:\nKnow which certification category set the source question is testing.\n\n🎯 Board Tip:\nFor this exam item, follow the category names shown in the provided key.",
+      "explanation": "Correct answer according to this mock exam's key: normal, utility, commuter, and acrobatic category airplanes. This is the category grouping used by the source question's regulatory edition; verify the applicable edition before treating it as a current certification rule.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -1026,7 +1026,7 @@
       ],
       "answerIndex": 1,
       "answerText": "flight envelope",
-      "explanation": "Correct answer: flight envelope. A velocity-load-factor diagram is the flight envelope: it relates speed and load factor limits.\n\nWhy the other choices are incorrect:\n• flight limits: It does not match the condition or structural role described; a velocity-load-factor diagram is the flight envelope: it relates speed and load factor limits.\n• flight operations minimums: It does not match the condition or structural role described; a velocity-load-factor diagram is the flight envelope: it relates speed and load factor limits.\n• aircraft diagram: It does not match the condition or structural role described; a velocity-load-factor diagram is the flight envelope: it relates speed and load factor limits.\n\nDifferentiate Similar Concepts:\nA climb chart or performance chart has different axes and purpose; the keyed diagram is the V-n envelope.\n\n💡 Memory Hook:\nV-n diagram = speed versus load factor.\n\n🎯 Board Tip:\nRead the diagram axes to distinguish structural limits from performance.",
+      "explanation": "Correct answer: Flight envelope. A velocity-load-factor (V-n) diagram plots airspeed against load factor and shows operating and structural limits.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -1039,7 +1039,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "A 6,300 lb airplane is in a steady glide with flight path at an angle of \\(20^\\circ\\) below the horizontal. What is the LIFT and DRAG of the airplane",
+      "question": "A 6,300 lb airplane is in a steady glide with its flight path (20^\\circ) below the horizontal. What are the lift and drag forces?",
       "questionType": "multiple_choice",
       "choices": [
         "L = 5920 lb, D = 2155 lb",
@@ -1049,7 +1049,7 @@
       ],
       "answerIndex": 0,
       "answerText": "L = 5920 lb, D = 2155 lb",
-      "explanation": "Correct answer: L = 5920 lb, D = 2155 lb. This repeats the steady-glide resolution: \\(L=6{,}300\\cos(20^\\circ)\\approx5{,}920\\ \\mathrm{lb},\\quad D=6{,}300\\sin(20^\\circ)\\approx2{,}155\\ \\mathrm{lb}\\).\n\nWhy the other choices are incorrect:\n• L = 5209 lb, D = 2551 lb: It does not match the condition or structural role described; this repeats the steady-glide resolution: \\(L=6{,}300\\cos(20^\\circ)\\approx5{,}920\\ \\mathrm{lb},\\quad D=6{,}300\\sin(20^\\circ)\\approx2{,}155\\ \\mathrm{lb}\\).\n• L = 6120 lb, D = 3250 lb: It does not match the condition or structural role described; this repeats the steady-glide resolution: \\(L=6{,}300\\cos(20^\\circ)\\approx5{,}920\\ \\mathrm{lb},\\quad D=6{,}300\\sin(20^\\circ)\\approx2{,}155\\ \\mathrm{lb}\\).\n• L = 5155 lb, D = 2920 lb: It does not match the condition or structural role described; this repeats the steady-glide resolution: \\(L=6{,}300\\cos(20^\\circ)\\approx5{,}920\\ \\mathrm{lb},\\quad D=6{,}300\\sin(20^\\circ)\\approx2{,}155\\ \\mathrm{lb}\\).\n\nDifferentiate Similar Concepts:\nSwapping sine and cosine assigns the weight components to the wrong axes; the supplied key preserves the same result as the earlier item.\n\n💡 Memory Hook:\nLift is perpendicular to the path; drag is parallel and opposite it.\n\n🎯 Board Tip:\nResolve weight relative to the flight path, not the horizon.",
+      "explanation": "Correct answer: \\(L\\approx5{,}920\\ \\mathrm{lb}\\), \\(D\\approx2{,}155\\ \\mathrm{lb}\\).\n\nGiven:\n\\(W=6{,}300\\ \\mathrm{lb}\\), glide angle \\(\\gamma=20^\\circ\\).\n\nFormula:\nIn a steady glide, \\(L=W\\cos\\gamma\\) and \\(D=W\\sin\\gamma\\).\n\nSolution:\n\\(L=6{,}300\\cos20^\\circ\\approx5{,}920\\ \\mathrm{lb}\\).\n\\(D=6{,}300\\sin20^\\circ\\approx2{,}155\\ \\mathrm{lb}\\).",
       "tags": [
         "structures and design",
         "mock exam",
@@ -1072,7 +1072,7 @@
       ],
       "answerIndex": 2,
       "answerText": "244 ft/s",
-      "explanation": "Correct answer: 244 ft/s. The wing reference area is \\(S=b\\bar{c}=34(4.75)=161.5\\ \\mathrm{ft^2}\\), so \\(W/S=3100/161.5\\approx19.20\\ \\mathrm{lb/ft^2}\\). Using the minimum cruise-speed relation for this item gives \\(V_C=33\\sqrt{W/S}\\approx144.6\\ \\mathrm{kt}\\approx244\\ \\mathrm{ft/s}\\), which matches the answer marked by the supplied key.\n\nWhy the other choices are incorrect:\n• 166.5 ft/s: This is below the cruise speed calculated from the stated wing loading.\n• 157.7 knots: This converts to about 266 ft/s, above the keyed value.\n• 144.6 ft/s: This is not the same as 144.6 knots; the units change the speed.\n\nDifferentiate Similar Concepts:\nWing loading is weight divided by wing area, while cruise speed is a velocity; keep the units attached to the calculated value.\n\n💡 Memory Hook:\n\\(V_C\\) rises with the square root of wing loading.\n\n🎯 Board Tip:\nConvert knots and feet per second before comparing answer choices.",
+      "explanation": "Correct answer: \\(244\\ \\mathrm{ft/s}\\) (about \\(144.6\\) knots).\n\nGiven:\n\\(W=3{,}100\\ \\mathrm{lb}\\), \\(b=34\\ \\mathrm{ft}\\), \\(\\bar c=4.75\\ \\mathrm{ft}\\).\n\nFormula:\n\\(S=b\\bar c\\), then use the minimum cruise-speed relation \\(V_C=33\\sqrt{W/S}\\) knots used by this exam.\n\nSolution:\n\\(S=34(4.75)=161.5\\ \\mathrm{ft^2}\\); \\(W/S=3{,}100/161.5\\approx19.20\\ \\mathrm{lb/ft^2}\\).\n\\(V_C=33\\sqrt{19.20}\\approx144.6\\) knots \\(\\approx244\\ \\mathrm{ft/s}\\).",
       "tags": [
         "structures and design",
         "mock exam",
@@ -1095,7 +1095,7 @@
       ],
       "answerIndex": 1,
       "answerText": "3.8",
-      "explanation": "Correct answer: 3.8. The source key selects 3.8 for the commuter-category airplane. The weight relation gives \\(n=2.1+\\frac{24{,}000}{W+10{,}000}=2.1+\\frac{24{,}000}{3{,}100+10{,}000}\\approx3.93\\); the applicable limit is capped at 3.8, so the keyed choice is retained.\n\nWhy the other choices are incorrect:\n• 2.1: This is the lower baseline value and does not account for the stated weight.\n• 4.4: This exceeds the applicable 3.8 limit.\n• 3.93: This is the uncapped result from the weight relation, not the applicable capped limit.\n\nDifferentiate Similar Concepts:\nThe calculated value and the applicable category limit are distinct when the calculation exceeds the cap.\n\n💡 Memory Hook:\nCalculate first, then apply the category limit.\n\n🎯 Board Tip:\nCheck whether a regulatory load factor has a maximum cap.",
+      "explanation": "Correct answer: 3.8.\n\nUsing the relation in the supplied key:\n\\(n=2.1+\\frac{24{,}000}{W+10{,}000}=2.1+\\frac{24{,}000}{3{,}100+10{,}000}\\approx3.93\\).\n\nThe applicable maximum for this keyed category is 3.8, so the limit maneuvering load factor is capped at 3.8.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -1118,7 +1118,7 @@
       ],
       "answerIndex": 3,
       "answerText": "Type I",
-      "explanation": "Correct answer: Type I. For a propeller-driven airplane, maximum range is associated with maximum L/D; the key selects the statement that identifies that condition.\n\nWhy the other choices are incorrect:\n• Type III: It does not match the condition or structural role described; for a propeller-driven airplane, maximum range is associated with maximum l/d; the key selects the statement that identifies that condition.\n• Type II: It does not match the condition or structural role described; for a propeller-driven airplane, maximum range is associated with maximum l/d; the key selects the statement that identifies that condition.\n• Type IV: It does not match the condition or structural role described; for a propeller-driven airplane, maximum range is associated with maximum l/d; the key selects the statement that identifies that condition.\n\nDifferentiate Similar Concepts:\nMaximum endurance is tied to minimum power required, not the maximum-range criterion; the other option states a different performance objective.\n\n💡 Memory Hook:\nRange optimizes distance; endurance optimizes time aloft.\n\n🎯 Board Tip:\nDistinguish maximum range from maximum endurance before choosing the aerodynamic ratio.",
+      "explanation": "Correct answer: Type I.\n\nThe stem describes a floor-level exit with a 24-by-48-inch opening, positioned near the aft passenger compartment. Those dimensions and placement match the Type I description used by this exam. The previous explanation had been copied from an unrelated question.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -1131,7 +1131,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "When an airplane is designed to carry 140 to 179 passengers, it must be equipped with ___________ of emergency exits.",
+      "question": "An airplane designed to carry 140 to 179 passengers must be equipped with how many and what types of emergency exits?",
       "questionType": "multiple_choice",
       "choices": [
         "1 Type IV and 1 Type III",
@@ -1141,7 +1141,7 @@
       ],
       "answerIndex": 1,
       "answerText": "2 Type I and 2 Type III",
-      "explanation": "Correct answer: 2 Type I and 2 Type III. The source item is Questions 49–50 and provides paired shear-force/bending-moment choices for the wing-load diagram. The key selects the first pair; the distributed load must be integrated for shear and its moment arm used for bending moment.\n\nWhy the other choices are incorrect:\n• 1 Type IV and 1 Type III: It does not match the condition or structural role described; the source item is questions 49–50 and provides paired shear-force/bending-moment choices for the wing-load diagram.\n• 2 Type I and 1 Type III: It does not match the condition or structural role described; the source item is questions 49–50 and provides paired shear-force/bending-moment choices for the wing-load diagram.\n• 2 Type II and 1 Type IV: It does not match the condition or structural role described; the source item is questions 49–50 and provides paired shear-force/bending-moment choices for the wing-load diagram.\n\nDifferentiate Similar Concepts:\nThe alternative pairs have different shear results and do not match the answer key; the figure is needed to reproduce the integration.\n\n💡 Memory Hook:\nShear is the area under the distributed-load diagram; bending moment is the moment of that area.\n\n🎯 Board Tip:\nUse the supplied diagram and preserve sign convention at the inboard end.",
+      "explanation": "Correct answer according to the supplied key: 2 Type I and 2 Type III exits.\n\nThis is an emergency-exit-count question. The keyed combination is two Type I exits and two Type III exits; the previous explanation referred to a wing-load diagram and did not explain this item. Verify the passenger-count requirement against the regulation edition used by the source exam.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -1164,7 +1164,7 @@
       ],
       "answerIndex": 2,
       "answerText": "stiffener",
-      "explanation": "Correct answer: stiffener. A stiffener is a formed sheet or extrusion attached to sheet metal to increase its rigidity and resistance to buckling.\n\nWhy the other choices are incorrect:\n• spar: It does not match the condition or structural role described; a stiffener is a formed sheet or extrusion attached to sheet metal to increase its rigidity and resistance to buckling.\n• strut: It does not match the condition or structural role described; a stiffener is a formed sheet or extrusion attached to sheet metal to increase its rigidity and resistance to buckling.\n• bulkhead: It does not match the condition or structural role described; a stiffener is a formed sheet or extrusion attached to sheet metal to increase its rigidity and resistance to buckling.\n\nDifferentiate Similar Concepts:\nA spar is a primary spanwise wing member, a strut carries axial load, and a bulkhead is a transverse fuselage frame.\n\n💡 Memory Hook:\nStiffener reinforces thin sheet.\n\n🎯 Board Tip:\nIdentify whether the item asks for a local sheet reinforcement or a primary airframe member.",
+      "explanation": "Correct answer: Stiffener. A stiffener is a formed strip or extrusion attached to thin sheet to add rigidity and help prevent buckling. Spars, struts, and bulkheads serve different structural roles.",
       "tags": [
         "structures and design",
         "mock exam",

@@ -12423,8 +12423,9 @@ export async function initModePage(mode) {
                     }
 
                     const restored = forceRestart ? null : restoreModeSession(subject, chapter, nextMode);
-                    const shouldResume = restored
-                        && (restored.answers?.some(Boolean) || restored.drafts?.some((draft) => text(draft)));
+                    const shouldResume = restored && (nextMode === "learn"
+                        ? !restored.complete
+                        : (restored.answers?.some(Boolean) || restored.drafts?.some((draft) => text(draft))));
                     const resume = shouldResume && window.confirm(`A saved ${nextMode === "learn" ? "Learn" : "Flashcards"} attempt exists for this subject and chapter. Choose OK to resume it, or Cancel to restart.`);
                     if (resume) {
                         state.session = restored;
@@ -12434,6 +12435,9 @@ export async function initModePage(mode) {
                     }
                 }
             }
+        }
+        if (nextMode === "learn" && state.session) {
+            saveModeSession(state.session);
         }
         syncSelection(subject.id, chapter.title, nextMode);
         renderModeSwitcher();
@@ -12715,11 +12719,7 @@ export async function initModePage(mode) {
                 clearQuizSession();
             }
 
-            // Clear learn/flashcards sessions so refresh shows a fresh state
-            if (mode === "learn") {
-                clearReviewSession();
-                clearModeSession("learn");
-            }
+            // Refreshing the library should not discard an in-progress Learn session.
             if (mode === "flashcards") {
                 clearModeSession("flashcards");
             }
@@ -12763,7 +12763,12 @@ export async function initModePage(mode) {
     });
     window.addEventListener("pagehide", () => {
         const session = state.session;
-        if (!session || session.mode !== "exam" || session.submitted || !session.timerStarted) return;
+        if (!session) return;
+        if (session.mode === "learn") {
+            saveModeSession(session);
+            return;
+        }
+        if (session.mode !== "exam" || session.submitted || !session.timerStarted) return;
         syncExamQuestionTiming(session);
         if (session.timeLimitSeconds > 0 && session.startedAt) {
             const elapsed = Math.max(0, Math.floor((Date.now() - session.startedAt) / 1000));
