@@ -1315,6 +1315,47 @@ function createQuestionImagesElement(images) {
     return gallery;
 }
 
+function createQuestionTableElement(tableData) {
+    if (!tableData || !Array.isArray(tableData.columns) || !Array.isArray(tableData.rows)) return null;
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "question-data-table-wrap";
+    const table = document.createElement("table");
+    table.className = "question-data-table";
+    if (tableData.caption) {
+        table.appendChild(Object.assign(document.createElement("caption"), {
+            className: "question-data-table-caption",
+            textContent: tableData.caption
+        }));
+    }
+
+    const thead = document.createElement("thead");
+    const headerRow = document.createElement("tr");
+    tableData.columns.forEach((column) => {
+        headerRow.appendChild(Object.assign(document.createElement("th"), {
+            scope: "col",
+            textContent: String(column)
+        }));
+    });
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    const tbody = document.createElement("tbody");
+    tableData.rows.forEach((row) => {
+        const tableRow = document.createElement("tr");
+        row.forEach((value, index) => {
+            const cell = document.createElement(index === 0 ? "th" : "td");
+            if (index === 0) cell.scope = "row";
+            cell.textContent = String(value ?? "");
+            tableRow.appendChild(cell);
+        });
+        tbody.appendChild(tableRow);
+    });
+    table.appendChild(tbody);
+    wrapper.appendChild(table);
+    return wrapper;
+}
+
 function createChoiceContentElement(value) {
     const element = document.createElement("span");
     element.className = "choice-content";
@@ -1348,10 +1389,13 @@ export function normalizeQuestion(entry, position) {
     const tags = normalizeTags(entry.tags);
     const explanationImages = normalizeExplanationImages(entry);
     const questionImages = normalizeQuestionImages(entry);
+    const questionTable = entry.questionTable && Array.isArray(entry.questionTable.columns) && Array.isArray(entry.questionTable.rows)
+        ? entry.questionTable
+        : null;
     const explanationCard = entry.explanationCard && typeof entry.explanationCard === "object" ? entry.explanationCard : null;
 
     if (questionType === "calculation") {
-        return { ...generateCalculationQuestion(entry, position), questionImages, explanationCard };
+        return { ...generateCalculationQuestion(entry, position), questionImages, questionTable, explanationCard };
     }
 
     if (questionType === "numeric") {
@@ -1369,6 +1413,7 @@ export function normalizeQuestion(entry, position) {
             explanation,
             explanationImages,
             questionImages,
+            questionTable,
             explanationCard,
             tags,
             expectedAnswer,
@@ -1393,6 +1438,7 @@ export function normalizeQuestion(entry, position) {
             explanation,
             explanationImages,
             questionImages,
+            questionTable,
             explanationCard,
             tags,
             expectedAnswer: null,
@@ -1428,6 +1474,7 @@ export function normalizeQuestion(entry, position) {
         explanation,
         explanationImages,
         questionImages,
+        questionTable,
         explanationCard,
         tags,
         expectedAnswer: null,
@@ -9280,6 +9327,8 @@ function renderLearnCheckpointStage(stage, progressFill, session, onReviewSubmit
         questionText.textContent = question.question;
         const reviewResult = session.learnReviewResults?.[questionIndex];
         content.appendChild(questionText);
+        const questionTable = createQuestionTableElement(question.questionTable);
+        if (questionTable) content.appendChild(questionTable);
         const questionImages = createQuestionImagesElement(question.questionImages);
         if (questionImages) {
             content.appendChild(questionImages);
@@ -10024,6 +10073,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
         const questionText = document.createElement("h4");
         questionText.textContent = question.question;
+        const questionTable = createQuestionTableElement(question.questionTable);
         const questionImages = createQuestionImagesElement(question.questionImages);
 
         const hint = document.createElement("p");
@@ -10105,6 +10155,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         }
 
         card.append(header, questionText);
+        if (questionTable) card.appendChild(questionTable);
         if (questionImages) {
             card.appendChild(questionImages);
         }
@@ -10382,6 +10433,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
     const questionText = document.createElement("h4");
     questionText.textContent = question.question;
+    const questionTable = createQuestionTableElement(question.questionTable);
 
     const hint = document.createElement("p");
     hint.className = "question-hint";
@@ -10656,6 +10708,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
         card.append(header, answerArea);
     } else {
         card.append(header, questionText);
+        if (questionTable) card.appendChild(questionTable);
         if (questionImages) {
             card.appendChild(questionImages);
         }
@@ -12115,6 +12168,7 @@ export async function initModePage(mode) {
 
         const questionText = document.createElement("h4");
         questionText.textContent = question.question;
+        const questionTable = createQuestionTableElement(question.questionTable);
         const questionImages = createQuestionImagesElement(question.questionImages);
 
         const hint = document.createElement("p");
@@ -12201,6 +12255,7 @@ export async function initModePage(mode) {
 
         answerArea.appendChild(feedback);
         card.append(header, questionText);
+        if (questionTable) card.appendChild(questionTable);
         if (questionImages) {
             card.appendChild(questionImages);
         }

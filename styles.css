@@ -7990,6 +7990,53 @@ body.mode-page .workspace > .mode-topbar::before {
     font-weight: 600;
 }
 
+.question-data-table-wrap {
+    max-width: 100%;
+    overflow-x: auto;
+    margin-top: 16px;
+    border: 1px solid rgba(112, 160, 205, 0.28);
+    border-radius: 14px;
+}
+
+.question-data-table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.question-data-table-caption {
+    padding: 12px 14px;
+    color: var(--text);
+    font-weight: 700;
+    text-align: left;
+    background: rgba(40, 73, 108, 0.55);
+}
+
+.question-data-table th,
+.question-data-table td {
+    padding: 10px 14px;
+    border-top: 1px solid rgba(112, 160, 205, 0.2);
+    white-space: nowrap;
+}
+
+.question-data-table thead th {
+    color: var(--text);
+    background: rgba(40, 73, 108, 0.38);
+    font-weight: 700;
+}
+
+.question-data-table tbody th {
+    color: var(--text);
+    font-weight: 600;
+    text-align: left;
+}
+
+.question-data-table tbody tr:nth-child(even) {
+    background: rgba(20, 39, 64, 0.34);
+}
+
 .review-item h5 {
     margin: 12px 0 6px;
 }
