@@ -1,4 +1,4 @@
-import { initModePage } from "./shared.js?v=structures-design-mock-exams-i-ii-iii-20261017-1";
+import { initModePage } from "./shared.js?v=structures-design-mock-i-ii-20261017-2";
 
 document.addEventListener("DOMContentLoaded", () => {
     initModePage("exam");

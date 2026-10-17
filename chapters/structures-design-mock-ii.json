@@ -1,0 +1,1092 @@
+{
+  "title": "Structures and Design Mock II",
+  "sourceFiles": [
+    "F:\\ACAD Files\\JAMES REVIEWER AELE 2025\\MOCK\\Mock Exam 2\\II S _ D - Q.pdf",
+    "F:\\ACAD Files\\JAMES REVIEWER AELE 2025\\MOCK\\Mock Exam 2\\Mock Exam 2 Answer Key\\II S _ D - AK.pdf"
+  ],
+  "questions": [
+    {
+      "question": "In NACA 653 - 421, what is the designation of 5?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Design lift coefficient",
+        "Minimum pressure",
+        "Maximum thickness"
+      ],
+      "answerIndex": 1,
+      "answerText": "Minimum pressure",
+      "explanation": "Correct answer: Minimum pressure. In the NACA 6-series designation, the digit 5 identifies the location of minimum pressure as a percentage of chord; the provided key marks Minimum pressure.\n\nWhy the other choices are incorrect:\n• Design lift coefficient: It does not fit the condition asked; in the naca 6-series designation, the digit 5 identifies the location of minimum pressure as a percentage of chord; the provided key marks minimum pressure.\n• Maximum thickness: It does not fit the condition asked; in the naca 6-series designation, the digit 5 identifies the location of minimum pressure as a percentage of chord; the provided key marks minimum pressure.\n\nDifferentiate Similar Concepts:\nDesign lift coefficient is represented by another designation value, while maximum thickness is a defining feature of other NACA series.\n\n💡 Memory Hook:\nNACA 6-series digits identify pressure-distribution design details.\n\n🎯 Board Tip:\nRead the series family first, then interpret the digit in its position.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Wing weight is approximately ____ percent of the gross weight.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "10",
+        "15",
+        "20"
+      ],
+      "answerIndex": 1,
+      "answerText": "15",
+      "explanation": "Correct answer: 15. The supplied answer key gives 15 percent as the approximate wing share of gross weight.\n\nWhy the other choices are incorrect:\n• 10: It does not fit the condition asked; the supplied answer key gives 15 percent as the approximate wing share of gross weight.\n• 20: It does not fit the condition asked; the supplied answer key gives 15 percent as the approximate wing share of gross weight.\n\nDifferentiate Similar Concepts:\nThe other percentages are different estimates and are not the value keyed for this mock item.\n\n💡 Memory Hook:\nThis is an approximate design rule, not an exact weight breakdown.\n\n🎯 Board Tip:\nTreat approximate component-weight percentages as estimates and follow the keyed source value.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the velocity for the Design Cruising Speed?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.9Vmax",
+        "1.4Vc",
+        "1.5 Vc"
+      ],
+      "answerIndex": 0,
+      "answerText": "0.9Vmax",
+      "explanation": "Correct answer: 0.9Vmax. The key identifies design cruising speed as 0.9 Vmax for this source question.\n\nWhy the other choices are incorrect:\n• 1.4Vc: It does not fit the condition asked; the key identifies design cruising speed as 0.\n• 1.5 Vc: It does not fit the condition asked; the key identifies design cruising speed as 0.\n\nDifferentiate Similar Concepts:\n1.4 Vc and 1.5 Vc are different multiples of design cruise speed, not the keyed relation here.\n\n💡 Memory Hook:\nVmax and Vc are different reference speeds.\n\n🎯 Board Tip:\nKeep the variable in the question attached to its stated multiplier.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The propeller diameter varies ________ with BHP.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Directly",
+        "Inversely",
+        "The same"
+      ],
+      "answerIndex": 0,
+      "answerText": "Directly",
+      "explanation": "Correct answer: Directly. The source key marks propeller diameter as varying directly with BHP.\n\nWhy the other choices are incorrect:\n• Inversely: It does not fit the condition asked; the source key marks propeller diameter as varying directly with bhp.\n• The same: It does not fit the condition asked; the source key marks propeller diameter as varying directly with bhp.\n\nDifferentiate Similar Concepts:\nAn inverse relation or no change contradicts the relationship keyed in the supplied answer sheet.\n\n💡 Memory Hook:\nDirect means both quantities increase together in the source relation.\n\n🎯 Board Tip:\nTranslate directly/inversely into a same-direction/opposite-direction change.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The angle of attack at maximum lift to drag ratio is indicative of what?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Cruising speed",
+        "Top speed",
+        "Cruising angle"
+      ],
+      "answerIndex": 2,
+      "answerText": "Cruising angle",
+      "explanation": "Correct answer: Cruising angle. The angle of attack at maximum lift-to-drag ratio corresponds to the cruising angle in the supplied key.\n\nWhy the other choices are incorrect:\n• Cruising speed: It does not fit the condition asked; the angle of attack at maximum lift-to-drag ratio corresponds to the cruising angle in the supplied key.\n• Top speed: It does not fit the condition asked; the angle of attack at maximum lift-to-drag ratio corresponds to the cruising angle in the supplied key.\n\nDifferentiate Similar Concepts:\nTop speed and cruising speed are flight-speed terms; this prompt asks which angle the best L/D angle indicates.\n\n💡 Memory Hook:\nBest L/D is an efficiency condition, not the airplane's top-speed condition.\n\n🎯 Board Tip:\nSeparate angle-of-attack questions from speed-definition questions.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The gust load factor for cruising speed at 20000’ and below is ________.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "50fps",
+        "66fps",
+        "25fps"
+      ],
+      "answerIndex": 0,
+      "answerText": "50fps",
+      "explanation": "Correct answer: 50fps. The provided key marks 50 ft/s. The choices use velocity units, so the wording's ?gust load factor? appears to refer to a derived gust velocity; the source value is preserved.\n\nWhy the other choices are incorrect:\n• 66fps: It does not fit the condition asked; the provided key marks 50 ft/s.\n• 25fps: It does not fit the condition asked; the provided key marks 50 ft/s.\n\nDifferentiate Similar Concepts:\n66 ft/s and 25 ft/s are not the source-keyed gust value for this stated speed/altitude condition.\n\n💡 Memory Hook:\nGust velocity is measured in ft/s; load factor is dimensionless.\n\n🎯 Board Tip:\nCheck units: they reveal when a question's label may be imprecise.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Restricted speed is equal to",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.1Vs",
+        "2Vsf",
+        "Vm"
+      ],
+      "answerIndex": 0,
+      "answerText": "1.1Vs",
+      "explanation": "Correct answer: 1.1Vs. The supplied answer key identifies restricted speed as 1.1 Vs for this item.\n\nWhy the other choices are incorrect:\n• 2Vsf: It does not fit the condition asked; the supplied answer key identifies restricted speed as 1.\n• Vm: It does not fit the condition asked; the supplied answer key identifies restricted speed as 1.\n\nDifferentiate Similar Concepts:\n2 Vsf and Vm are different speed references and are not the keyed relation in this question.\n\n💡 Memory Hook:\nA speed limit multiplier must be paired with the correct reference speed.\n\n🎯 Board Tip:\nDo not substitute a maneuvering or maximum speed for the stated restricted-speed relation.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Propellers on seaplane should clear the water by at least ____ ___ when the plane is at rest.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "16in",
+        "17in",
+        "18in"
+      ],
+      "answerIndex": 2,
+      "answerText": "18in",
+      "explanation": "Correct answer: 18in. The source key selects 18 inches as the minimum water clearance for the seaplane propeller while at rest.\n\nWhy the other choices are incorrect:\n• 16in: It does not fit the condition asked; the source key selects 18 inches as the minimum water clearance for the seaplane propeller while at rest.\n• 17in: It does not fit the condition asked; the source key selects 18 inches as the minimum water clearance for the seaplane propeller while at rest.\n\nDifferentiate Similar Concepts:\n16 and 17 inches are smaller values than the keyed clearance.\n\n💡 Memory Hook:\nClearance is a minimum geometric gap, not an operating-speed value.\n\n🎯 Board Tip:\nNotice the condition ?plane is at rest? when reading the clearance item.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The angle of attack at which the aircraft stalls varies ________ with gross weight",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The same",
+        "Directly",
+        "Inversely"
+      ],
+      "answerIndex": 0,
+      "answerText": "The same",
+      "explanation": "Correct answer: The same. The key marks the stall angle of attack as the same with gross weight. Weight affects the speed at which the stall occurs, while the stall angle for a fixed configuration is treated as unchanged in this item.\n\nWhy the other choices are incorrect:\n• Directly: It does not fit the condition asked; the key marks the stall angle of attack as the same with gross weight.\n• Inversely: It does not fit the condition asked; the key marks the stall angle of attack as the same with gross weight.\n\nDifferentiate Similar Concepts:\nDirect or inverse variation with weight confuses stall speed/loading effects with the angle-of-attack stall condition.\n\n💡 Memory Hook:\nGross weight changes stall speed; it does not by itself change the critical AoA in this simplified question.\n\n🎯 Board Tip:\nDistinguish stall speed from stall angle of attack.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "It is also known as the asymmetrical propeller loading which usually occurs at high AoA.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Load factor",
+        "G factor",
+        "P factor"
+      ],
+      "answerIndex": 2,
+      "answerText": "P factor",
+      "explanation": "Correct answer: P factor. P-factor is the asymmetric propeller loading associated with high angle of attack and blade-angle differences across the propeller disk.\n\nWhy the other choices are incorrect:\n• Load factor: It does not fit the condition asked; p-factor is the asymmetric propeller loading associated with high angle of attack and blade-angle differences across the propeller disk.\n• G factor: It does not fit the condition asked; p-factor is the asymmetric propeller loading associated with high angle of attack and blade-angle differences across the propeller disk.\n\nDifferentiate Similar Concepts:\nLoad factor is aircraft acceleration/load ratio; G factor is not the propeller asymmetry term asked for.\n\n💡 Memory Hook:\nP-factor = asymmetric propeller thrust at high AoA.\n\n🎯 Board Tip:\nThe clue ?asymmetrical propeller loading? points to P-factor.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Maximum loads anticipated on the airplane druid its lifetime of service.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Load factor",
+        "Limit load",
+        "Maximum load"
+      ],
+      "answerIndex": 1,
+      "answerText": "Limit load",
+      "explanation": "Correct answer: Limit load. The provided key identifies limit load as the maximum anticipated service load in this mock item's terminology.\n\nWhy the other choices are incorrect:\n• Load factor: It does not fit the condition asked; the provided key identifies limit load as the maximum anticipated service load in this mock item's terminology.\n• Maximum load: It does not fit the condition asked; the provided key identifies limit load as the maximum anticipated service load in this mock item's terminology.\n\nDifferentiate Similar Concepts:\nLoad factor is a multiplier, and ?maximum load? is not the defined term keyed by the answer sheet.\n\n💡 Memory Hook:\nLimit load is the anticipated service maximum; ultimate load is the factored design value.\n\n🎯 Board Tip:\nDistinguish the load itself from the factor applied to it.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Are equal to the limit loads mul tiplied by a factor of safety.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Ultimate design load",
+        "Safety load",
+        "Minimum load"
+      ],
+      "answerIndex": 0,
+      "answerText": "Ultimate design load",
+      "explanation": "Correct answer: Ultimate design load. Ultimate design load is obtained by multiplying limit load by the factor of safety.\n\nWhy the other choices are incorrect:\n• Safety load: It does not fit the condition asked; ultimate design load is obtained by multiplying limit load by the factor of safety.\n• Minimum load: It does not fit the condition asked; ultimate design load is obtained by multiplying limit load by the factor of safety.\n\nDifferentiate Similar Concepts:\nA safety factor is the multiplier, not the resulting load; minimum load is unrelated to this definition.\n\n💡 Memory Hook:\nUltimate = limit ? factor of safety.\n\n🎯 Board Tip:\nUse the given relationship rather than swapping the factor and result.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A n aircraft wing configuration with a prominent bend in the wing inner section towards the wing root.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "droop wing",
+        "gull wing",
+        "delta wing"
+      ],
+      "answerIndex": 1,
+      "answerText": "gull wing",
+      "explanation": "Correct answer: gull wing. A gull wing has a pronounced bend near the wing root, matching the configuration described and the supplied key.\n\nWhy the other choices are incorrect:\n• droop wing: It does not fit the condition asked; a gull wing has a pronounced bend near the wing root, matching the configuration described and the supplied key.\n• delta wing: It does not fit the condition asked; a gull wing has a pronounced bend near the wing root, matching the configuration described and the supplied key.\n\nDifferentiate Similar Concepts:\nA droop wing describes a downward-curved wing portion; a delta wing is planform-shaped, not defined by this root bend.\n\n💡 Memory Hook:\nGull wing has a bent or raised inner panel.\n\n🎯 Board Tip:\nUse the location and direction of the bend to identify the wing configuration.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For standard normal category airplane the negative maneuvering limit load factor is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "- 1.7",
+        "- 1.8",
+        "- 1.9"
+      ],
+      "answerIndex": 2,
+      "answerText": "- 1.9",
+      "explanation": "Correct answer: - 1.9. For the normal category, the provided key selects a negative maneuvering limit factor of ?1.9.\n\nWhy the other choices are incorrect:\n• - 1.7: It does not fit the condition asked; for the normal category, the provided key selects a negative maneuvering limit factor of ?1.\n• - 1.8: It does not fit the condition asked; for the normal category, the provided key selects a negative maneuvering limit factor of ?1.\n\nDifferentiate Similar Concepts:\n?1.7 and ?1.8 are other values; the source key selects ?1.9 for this category item.\n\n💡 Memory Hook:\nThe negative sign denotes downward loading; the magnitude is 1.9.\n\n🎯 Board Tip:\nKeep category and sign together when recalling load factors.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For standard utility category air plane the positive limit load factor with flaps fully extended at V F is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.1",
+        "2.2",
+        "3.3"
+      ],
+      "answerIndex": 1,
+      "answerText": "2.2",
+      "explanation": "Correct answer: 2.2. The source key gives +2.2 for the utility-category flap-extended limit factor at VF.\n\nWhy the other choices are incorrect:\n• 1.1: It does not fit the condition asked; the source key gives +2.\n• 3.3: It does not fit the condition asked; the source key gives +2.\n\nDifferentiate Similar Concepts:\n1.1 and 3.3 are not the answer marked for this flap/configuration case.\n\n💡 Memory Hook:\nFlap-extended load limits are not the same as clean-wing maneuvering limits.\n\n🎯 Board Tip:\nRead category, flap position, and speed condition before selecting n.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For standard acrobatic category aircraft the limit load factor with flaps fully extended at V F and considering only the vertical wing load is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.0",
+        "1.1",
+        "2.2"
+      ],
+      "answerIndex": 0,
+      "answerText": "0.0",
+      "explanation": "Correct answer: 0.0. The provided key selects 0.0 when the acrobatic-category flap-extended case considers only vertical wing load.\n\nWhy the other choices are incorrect:\n• 1.1: It does not fit the condition asked; the provided key selects 0.\n• 2.2: It does not fit the condition asked; the provided key selects 0.\n\nDifferentiate Similar Concepts:\n1.1 and 2.2 are positive values and do not match the keyed condition in this item.\n\n💡 Memory Hook:\nThis is a specific flap/vertical-load condition, not the clean acrobatic limit factor.\n\n🎯 Board Tip:\nDo not carry the clean-wing value into a flaps-extended question.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For standard acrobatic airplane the negative maneuvering limit load factor is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "- 3.0",
+        "- 2.0",
+        "- 1.0"
+      ],
+      "answerIndex": 0,
+      "answerText": "- 3.0",
+      "explanation": "Correct answer: - 3.0. The source key marks ?3.0 as the negative maneuvering limit factor for the acrobatic category.\n\nWhy the other choices are incorrect:\n• - 2.0: It does not fit the condition asked; the source key marks ?3.\n• - 1.0: It does not fit the condition asked; the source key marks ?3.\n\nDifferentiate Similar Concepts:\n?2.0 and ?1.0 have lower magnitudes and are not the supplied keyed value.\n\n💡 Memory Hook:\nThe negative factor describes downward load; its magnitude is 3.0.\n\n🎯 Board Tip:\nMemorize load-factor magnitude with its category and sign.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For standard normal category airplane the positive maneuvering limit load factor is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "3.4",
+        "3.6",
+        "3.8"
+      ],
+      "answerIndex": 2,
+      "answerText": "3.8",
+      "explanation": "Correct answer: 3.8. The supplied key gives +3.8 for the normal-category positive maneuvering limit factor.\n\nWhy the other choices are incorrect:\n• 3.4: It does not fit the condition asked; the supplied key gives +3.\n• 3.6: It does not fit the condition asked; the supplied key gives +3.\n\nDifferentiate Similar Concepts:\n3.4 and 3.6 do not match the source-keyed normal-category value.\n\n💡 Memory Hook:\nPositive n denotes upward loading; category determines the limit value.\n\n🎯 Board Tip:\nConfirm the category before recalling a limit factor.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For conventional, single engine airplane of 6,000 pounds or less maximum weight, the minimum design maneuvering speed is given by",
+      "questionType": "multiple_choice",
+      "choices": [
+        "12.5 (n 1 w/s) 0.5",
+        "17.0 (n 1 w/s) 0.5",
+        "19.5 (n 1 w/s) 0.5"
+      ],
+      "answerIndex": 1,
+      "answerText": "17.0 (n 1 w/s) 0.5",
+      "explanation": "Correct answer: 17.0 (n 1 w/s) 0.5. The source key selects 17.0?(n?W/S) for minimum design maneuvering speed in this stated airplane class.\n\nWhy the other choices are incorrect:\n• 12.5 (n 1 w/s) 0.5: It does not fit the condition asked; the source key selects 17.\n• 19.5 (n 1 w/s) 0.5: It does not fit the condition asked; the source key selects 17.\n\nDifferentiate Similar Concepts:\nThe 12.5 and 19.5 coefficients belong to other speed equations in the answer choices, not the keyed maneuvering-speed relation.\n\n💡 Memory Hook:\nManeuvering speed scales with the square root of load factor times wing loading.\n\n🎯 Board Tip:\nKeep the coefficient attached to Va; nearby V-speed formulas use different coefficients.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For conventional, single engine airplane of 6,000 pounds or less maximum weight, the minimum design flap speed is given by",
+      "questionType": "multiple_choice",
+      "choices": [
+        "12.5 (n 1 w/s) 0.5",
+        "17.0 (n 1 w/s) 0.5",
+        "19.5 (n 1 w/s) 0.5"
+      ],
+      "answerIndex": 0,
+      "answerText": "12.5 (n 1 w/s) 0.5",
+      "explanation": "Correct answer: 12.5 (n 1 w/s) 0.5. For the minimum design flap speed, the supplied key selects 12.5?(n?W/S).\n\nWhy the other choices are incorrect:\n• 17.0 (n 1 w/s) 0.5: It does not fit the condition asked; for the minimum design flap speed, the supplied key selects 12.\n• 19.5 (n 1 w/s) 0.5: It does not fit the condition asked; for the minimum design flap speed, the supplied key selects 12.\n\nDifferentiate Similar Concepts:\n17.0 and 19.5 are coefficients for other speed relations in the listed set, not the flap-speed relation keyed here.\n\n💡 Memory Hook:\nFlap design speed and maneuvering speed use different coefficients.\n\n🎯 Board Tip:\nLabel each formula by its V-speed before substituting values.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For conventional, single engine airplane of 6,000 pounds or less maximum weight, the maximum design dive speed is given by",
+      "questionType": "multiple_choice",
+      "choices": [
+        "17.0 (n 1 w/s) 0.5",
+        "19.5 (n 1 w/s) 0.5",
+        "27.3 (n 1 w/s) 0.5"
+      ],
+      "answerIndex": 2,
+      "answerText": "27.3 (n 1 w/s) 0.5",
+      "explanation": "Correct answer: 27.3 (n 1 w/s) 0.5. The key marks 27.3?(n?W/S) as the maximum design dive-speed relation for this question.\n\nWhy the other choices are incorrect:\n• 17.0 (n 1 w/s) 0.5: It does not fit the condition asked; the key marks 27.\n• 19.5 (n 1 w/s) 0.5: It does not fit the condition asked; the key marks 27.\n\nDifferentiate Similar Concepts:\n17.0 and 19.5 are other coefficients and do not give the keyed dive-speed expression.\n\n💡 Memory Hook:\nDive speed is a different structural design speed from Va and Vf.\n\n🎯 Board Tip:\nKeep the speed subscript tied to the correct formula.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For any category airplane of gross weight of 3,000 pounds or less the constant k value in determining the landing reaction is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.25",
+        "0.33",
+        "0.34"
+      ],
+      "answerIndex": 0,
+      "answerText": "0.25",
+      "explanation": "Correct answer: 0.25. The source key gives k = 0.25 for an airplane of 3,000 lb or less in the landing-reaction item.\n\nWhy the other choices are incorrect:\n• 0.33: It does not fit the condition asked; the source key gives k = 0.\n• 0.34: It does not fit the condition asked; the source key gives k = 0.\n\nDifferentiate Similar Concepts:\n0.33 and 0.34 are not the constant keyed for this lower weight range.\n\n💡 Memory Hook:\nThe constant k is selected by the stated gross-weight band.\n\n🎯 Board Tip:\nRead the weight threshold before choosing k.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For any category airplane of gross weight of 6,000 pounds or greater the constant k value in determining the landing reaction is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.25",
+        "0.33",
+        "0.34"
+      ],
+      "answerIndex": 1,
+      "answerText": "0.33",
+      "explanation": "Correct answer: 0.33. For gross weight of 6,000 lb or greater, the supplied key selects k = 0.33.\n\nWhy the other choices are incorrect:\n• 0.25: It does not fit the condition asked; for gross weight of 6,000 lb or greater, the supplied key selects k = 0.\n• 0.34: It does not fit the condition asked; for gross weight of 6,000 lb or greater, the supplied key selects k = 0.\n\nDifferentiate Similar Concepts:\n0.25 is keyed to a different weight range in the same exam; 0.34 is not selected by the provided answer sheet.\n\n💡 Memory Hook:\nThe two landing-reaction questions use different weight bands and constants.\n\n🎯 Board Tip:\nCompare the thresholds in Questions 22 and 23 rather than reusing one constant.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "During basic landing condition, the reaction forces can be referred at",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Center of pressure and thrust line",
+        "Center of gravity and thrust line",
+        "Center of gravity and to any point within the wing"
+      ],
+      "answerIndex": 1,
+      "answerText": "Center of gravity and thrust line",
+      "explanation": "Correct answer: Center of gravity and thrust line. The provided key identifies the center of gravity and thrust line as the reference for the basic landing reaction forces.\n\nWhy the other choices are incorrect:\n• Center of pressure and thrust line: It does not fit the condition asked; the provided key identifies the center of gravity and thrust line as the reference for the basic landing reaction forces.\n• Center of gravity and to any point within the wing: It does not fit the condition asked; the provided key identifies the center of gravity and thrust line as the reference for the basic landing reaction forces.\n\nDifferentiate Similar Concepts:\nCenter of pressure is an aerodynamic reference; ?any point within the wing? does not state the keyed force-reference pair.\n\n💡 Memory Hook:\nLanding reactions are analyzed with respect to aircraft mass center and thrust line in this item.\n\n🎯 Board Tip:\nKeep the reference points and lines stated as a pair.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For the design maneuvering wing loading less than 47 and AR of 2.0 for vertical tail, the average surface loading is given by",
+      "questionType": "multiple_choice",
+      "choices": [
+        "3.65 (n 1 w/s) 0.5",
+        "3.66 (n 1 w/s) 0.5",
+        "3.67 (n 1 w/s) 0.5"
+      ],
+      "answerIndex": 1,
+      "answerText": "3.66 (n 1 w/s) 0.5",
+      "explanation": "Correct answer: 3.66 (n 1 w/s) 0.5. For the stated vertical-tail case with maneuvering wing loading below 47 and AR 2.0, the key selects 3.66?(n?W/S).\n\nWhy the other choices are incorrect:\n• 3.65 (n 1 w/s) 0.5: It does not fit the condition asked; for the stated vertical-tail case with maneuvering wing loading below 47 and ar 2.\n• 3.67 (n 1 w/s) 0.5: It does not fit the condition asked; for the stated vertical-tail case with maneuvering wing loading below 47 and ar 2.\n\nDifferentiate Similar Concepts:\n3.65 and 3.67 are adjacent coefficients, not the value marked for the stated case.\n\n💡 Memory Hook:\nThis formula is specific to the vertical tail and the below-47 loading range.\n\n🎯 Board Tip:\nCheck both the surface (vertical tail) and loading range before selecting the coefficient.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For the design maneuvering wing loading for horizontal tail either up or down, the average surface loading is given by",
+      "questionType": "multiple_choice",
+      "choices": [
+        "4.8 + 0.534 (n 1 w/s)",
+        "5.8 + 0.535 (n 1 w/s)",
+        "6.8 + 0.536 (n 1 w/s)"
+      ],
+      "answerIndex": 0,
+      "answerText": "4.8 + 0.534 (n 1 w/s)",
+      "explanation": "Correct answer: 4.8 + 0.534 (n 1 w/s). The supplied key marks 4.8 + 0.534(n?W/S) for the horizontal-tail up/down loading case.\n\nWhy the other choices are incorrect:\n• 5.8 + 0.535 (n 1 w/s): It does not fit the condition asked; the supplied key marks 4.\n• 6.8 + 0.536 (n 1 w/s): It does not fit the condition asked; the supplied key marks 4.\n\nDifferentiate Similar Concepts:\nThe alternatives change the constant and coefficient; they are not the source-keyed horizontal-tail expression.\n\n💡 Memory Hook:\nThe horizontal-tail expression is distinct from the vertical-tail square-root formulas.\n\n🎯 Board Tip:\nRead ?horizontal tail? and the up/down condition before selecting its formula.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For the design maneuvering wing loading greater than 47, the average surface loading for vertical tail is given by",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.534 (n 1 w/s)",
+        "0.535 (n 1 w/s)",
+        "0.536 (n 1 w/s)"
+      ],
+      "answerIndex": 0,
+      "answerText": "0.534 (n 1 w/s)",
+      "explanation": "Correct answer: 0.534 (n 1 w/s). For maneuvering wing loading greater than 47, the source key selects 0.534(n?W/S) for the vertical tail.\n\nWhy the other choices are incorrect:\n• 0.535 (n 1 w/s): It does not fit the condition asked; for maneuvering wing loading greater than 47, the source key selects 0.\n• 0.536 (n 1 w/s): It does not fit the condition asked; for maneuvering wing loading greater than 47, the source key selects 0.\n\nDifferentiate Similar Concepts:\n0.535 and 0.536 are nearby coefficients but are not the marked value in the supplied key.\n\n💡 Memory Hook:\nThe greater-than-47 case uses a different form from the below-47 relation.\n\n🎯 Board Tip:\nDo not extrapolate the low-range formula into the high-range case.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For the design m aneuvering wing loading for aileron, the average surface loading is given by",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.455 (n 1 w/s)",
+        "0.466 (n 1 w/s)",
+        "0.477 (n 1 w/s)"
+      ],
+      "answerIndex": 1,
+      "answerText": "0.466 (n 1 w/s)",
+      "explanation": "Correct answer: 0.466 (n 1 w/s). The provided key gives 0.466(n?W/S) for average aileron surface loading.\n\nWhy the other choices are incorrect:\n• 0.455 (n 1 w/s): It does not fit the condition asked; the provided key gives 0.\n• 0.477 (n 1 w/s): It does not fit the condition asked; the provided key gives 0.\n\nDifferentiate Similar Concepts:\n0.455 and 0.477 are alternate coefficients, not the value marked for aileron loading.\n\n💡 Memory Hook:\nAileron loading has its own relation, separate from tail-surface loading.\n\n🎯 Board Tip:\nMatch the control surface named in the prompt to its formula.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The point of an airfoil through which lift acts is the",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Center of gravity",
+        "Center of pressure",
+        "Midpoint of the chord"
+      ],
+      "answerIndex": 1,
+      "answerText": "Center of pressure",
+      "explanation": "Correct answer: Center of pressure. The center of pressure is the point through which the resultant aerodynamic lift acts.\n\nWhy the other choices are incorrect:\n• Center of gravity: It does not fit the condition asked; the center of pressure is the point through which the resultant aerodynamic lift acts.\n• Midpoint of the chord: It does not fit the condition asked; the center of pressure is the point through which the resultant aerodynamic lift acts.\n\nDifferentiate Similar Concepts:\nThe center of gravity is the resultant weight location; the chord midpoint is a geometric location, not necessarily the lift resultant.\n\n💡 Memory Hook:\nCenter of pressure = aerodynamic resultant; center of gravity = mass resultant.\n\n🎯 Board Tip:\nDo not treat a force location as the same thing as the aircraft's mass center.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The lift of an airplane is a function of",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Coefficient of lift, density, wing area and rate of climb squared",
+        "Coefficient of lift, density, wing area and velocity squared",
+        "Coefficient of lift, density, wing loading and velocity squared"
+      ],
+      "answerIndex": 1,
+      "answerText": "Coefficient of lift, density, wing area and velocity squared",
+      "explanation": "Correct answer: Coefficient of lift, density, wing area and velocity squared. Lift depends on coefficient of lift, air density, wing area, and velocity squared through L = ??V?SCL.\n\nWhy the other choices are incorrect:\n• Coefficient of lift, density, wing area and rate of climb squared: It does not fit the condition asked; lift depends on coefficient of lift, air density, wing area, and velocity squared through l = ??v?scl.\n• Coefficient of lift, density, wing loading and velocity squared: It does not fit the condition asked; lift depends on coefficient of lift, air density, wing area, and velocity squared through l = ??v?scl.\n\nDifferentiate Similar Concepts:\nRate of climb is not part of the lift equation; wing loading is weight per area and cannot replace wing area in this form.\n\n💡 Memory Hook:\nDynamic pressure varies with density and V?; lift also scales with S and CL.\n\n🎯 Board Tip:\nCheck that every factor in the lift equation has the right physical units.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An instrument used by the pilot during all phases of flight from take - off, climb, descent and landing in order to maintain required airspeed",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Rate of climb indicator",
+        "Turn and bank indicator",
+        "Airspeed indicator"
+      ],
+      "answerIndex": 2,
+      "answerText": "Airspeed indicator",
+      "explanation": "Correct answer: Airspeed indicator. The airspeed indicator is the cockpit instrument used to monitor airspeed throughout the listed phases of flight.\n\nWhy the other choices are incorrect:\n• Rate of climb indicator: It does not fit the condition asked; the airspeed indicator is the cockpit instrument used to monitor airspeed throughout the listed phases of flight.\n• Turn and bank indicator: It does not fit the condition asked; the airspeed indicator is the cockpit instrument used to monitor airspeed throughout the listed phases of flight.\n\nDifferentiate Similar Concepts:\nA rate-of-climb indicator shows vertical speed; a turn-and-bank indicator shows attitude/turn information.\n\n💡 Memory Hook:\nASI = airspeed; VSI = climb rate.\n\n🎯 Board Tip:\nMatch the instrument name to the quantity the pilot needs to control.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Is the airspeed read directly from the airspeed indicator on an aircraft",
+      "questionType": "multiple_choice",
+      "choices": [
+        "True airspeed",
+        "Indicated airspeed",
+        "Ground airspeed"
+      ],
+      "answerIndex": 0,
+      "answerText": "True airspeed",
+      "explanation": "Correct answer: True airspeed. The supplied answer key marks True airspeed. However, the wording ?read directly from the airspeed indicator? normally describes indicated airspeed. I preserved the source-key answer and flag this discrepancy for checking against the PDF key.\n\nWhy the other choices are incorrect:\n• Indicated airspeed: It does not fit the condition asked; the supplied answer key marks true airspeed.\n• Ground airspeed: It does not fit the condition asked; the supplied answer key marks true airspeed.\n\nDifferentiate Similar Concepts:\nIndicated airspeed is the ordinary definition suggested by the wording; the marked key selects True airspeed, so this item appears inconsistent.\n\n💡 Memory Hook:\nIAS is instrument-read; TAS is aircraft speed relative to the air mass.\n\n🎯 Board Tip:\nVerify this answer against the marked key before using it as a learning fact.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Is the airspeed of an aircraft relative to the air mass in which it flies",
+      "questionType": "multiple_choice",
+      "choices": [
+        "True airspeed",
+        "Indicated airspeed",
+        "Ground airspeed"
+      ],
+      "answerIndex": 1,
+      "answerText": "Indicated airspeed",
+      "explanation": "Correct answer: Indicated airspeed. The supplied answer key marks Indicated airspeed. However, speed relative to the air mass is normally true airspeed. I preserved the source-key answer and flag the apparent swap with Question 32.\n\nWhy the other choices are incorrect:\n• True airspeed: It does not fit the condition asked; the supplied answer key marks indicated airspeed.\n• Ground airspeed: It does not fit the condition asked; the supplied answer key marks indicated airspeed.\n\nDifferentiate Similar Concepts:\nTrue airspeed is the definition ordinarily matching the stem; the supplied key marks indicated airspeed.\n\n💡 Memory Hook:\nIAS is the instrument indication; TAS is speed through the surrounding air mass.\n\n🎯 Board Tip:\nCheck Questions 32 and 33 together against the source answer key.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "It is the relative angle of incidence between the two wings of a bi - plane",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Decalage",
+        "Gap",
+        "Stagger"
+      ],
+      "answerIndex": 0,
+      "answerText": "Decalage",
+      "explanation": "Correct answer: Decalage. Decalage is the relative angle of incidence between the wings of a biplane.\n\nWhy the other choices are incorrect:\n• Gap: It does not fit the condition asked; decalage is the relative angle of incidence between the wings of a biplane.\n• Stagger: It does not fit the condition asked; decalage is the relative angle of incidence between the wings of a biplane.\n\nDifferentiate Similar Concepts:\nGap is vertical distance between wings; stagger is the fore/aft displacement of one wing relative to the other.\n\n💡 Memory Hook:\nDecalage = angle; gap = vertical separation; stagger = fore/aft offset.\n\n🎯 Board Tip:\nUse the geometric quantity asked for, not another biplane spacing term.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "It is used to attain acceptable interference drag with a circular fuselage in a high and low wing arrangement",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Struts",
+        "Panels",
+        "Fairings"
+      ],
+      "answerIndex": 2,
+      "answerText": "Fairings",
+      "explanation": "Correct answer: Fairings. Fairings smooth airflow around wing/fuselage junctions and reduce interference drag in the arrangements described.\n\nWhy the other choices are incorrect:\n• Struts: It does not fit the condition asked; fairings smooth airflow around wing/fuselage junctions and reduce interference drag in the arrangements described.\n• Panels: It does not fit the condition asked; fairings smooth airflow around wing/fuselage junctions and reduce interference drag in the arrangements described.\n\nDifferentiate Similar Concepts:\nStruts are structural braces and panels are surfaces; neither is the aerodynamic smoothing component asked for.\n\n💡 Memory Hook:\nFairing streamlines a junction.\n\n🎯 Board Tip:\nSeparate a structural member from a drag-reduction cover.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following statement is correct",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Excessive dihedral effect produces Dutch roll",
+        "Positive geometric dihedral angle is required to avoid an excess of effective dihedral",
+        "To counter a Dutch roll tendency the vertical tail area must be decreased"
+      ],
+      "answerIndex": 0,
+      "answerText": "Excessive dihedral effect produces Dutch roll",
+      "explanation": "Correct answer: Excessive dihedral effect produces Dutch roll. The provided key selects excessive dihedral effect as a cause of Dutch roll in this statement set.\n\nWhy the other choices are incorrect:\n• Positive geometric dihedral angle is required to avoid an excess of effective dihedral: It does not fit the condition asked; the provided key selects excessive dihedral effect as a cause of dutch roll in this statement set.\n• To counter a Dutch roll tendency the vertical tail area must be decreased: It does not fit the condition asked; the provided key selects excessive dihedral effect as a cause of dutch roll in this statement set.\n\nDifferentiate Similar Concepts:\nThe other statements do not match the source-keyed correct statement; notably, reducing vertical-tail area is not the keyed correction.\n\n💡 Memory Hook:\nDutch roll couples yaw and roll; dihedral effect contributes to lateral-directional response.\n\n🎯 Board Tip:\nFor statement combinations, evaluate each claim before choosing the one keyed as correct.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following statement is correct",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The wing incidence angle is the pitch angle of the wing with respect to the rudder",
+        "The wing incidence angle is the pitch angle of the wing with respect to the fuselage",
+        "The wing incidence angle is the pitch angle of the wing with respect to the aileron"
+      ],
+      "answerIndex": 1,
+      "answerText": "The wing incidence angle is the pitch angle of the wing with respect to the fuselage",
+      "explanation": "Correct answer: The wing incidence angle is the pitch angle of the wing with respect to the fuselage. Wing incidence is the pitch angle of the wing relative to the fuselage, as marked by the key.\n\nWhy the other choices are incorrect:\n• The wing incidence angle is the pitch angle of the wing with respect to the rudder: It does not fit the condition asked; wing incidence is the pitch angle of the wing relative to the fuselage, as marked by the key.\n• The wing incidence angle is the pitch angle of the wing with respect to the aileron: It does not fit the condition asked; wing incidence is the pitch angle of the wing relative to the fuselage, as marked by the key.\n\nDifferentiate Similar Concepts:\nThe rudder and aileron are control surfaces; they are not the aircraft reference body for wing incidence.\n\n💡 Memory Hook:\nIncidence is a fixed wing-to-fuselage geometric angle; angle of attack is relative to airflow.\n\n🎯 Board Tip:\nDistinguish the aircraft reference line from the relative wind.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "It is the actual change in airfoil angle of in cidence, usually measured with respect to the root airfoil",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Aerodynamic twist",
+        "Geometric twist",
+        "Airfoil twist"
+      ],
+      "answerIndex": 1,
+      "answerText": "Geometric twist",
+      "explanation": "Correct answer: Geometric twist. Geometric twist is the change in wing incidence from root to tip, which is the keyed term.\n\nWhy the other choices are incorrect:\n• Aerodynamic twist: It does not fit the condition asked; geometric twist is the change in wing incidence from root to tip, which is the keyed term.\n• Airfoil twist: It does not fit the condition asked; geometric twist is the change in wing incidence from root to tip, which is the keyed term.\n\nDifferentiate Similar Concepts:\nAerodynamic twist changes airfoil characteristics along the span; ?airfoil twist? is not the standard name keyed here.\n\n💡 Memory Hook:\nGeometric twist changes chord-line angle; aerodynamic twist changes section characteristics.\n\n🎯 Board Tip:\nRoot-to-tip incidence change signals geometric twist.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following statement is correct",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Fat airfoils (round leading edge and t/c greater than about 14%) stall from the Leading edge",
+        "Inner a irfoils stall from the leading edge",
+        "Inner airfoils stall from the trailing edge"
+      ],
+      "answerIndex": 1,
+      "answerText": "Inner a irfoils stall from the leading edge",
+      "explanation": "Correct answer: Inner a irfoils stall from the leading edge. The supplied key states that inner airfoils stall from the leading edge, which allows the outer wing and ailerons to retain effectiveness longer.\n\nWhy the other choices are incorrect:\n• Fat airfoils (round leading edge and t/c greater than about 14%) stall from the Leading edge: It does not fit the condition asked; the supplied key states that inner airfoils stall from the leading edge, which allows the outer wing and ailerons to retain effectiveness longer.\n• Inner airfoils stall from the trailing edge: It does not fit the condition asked; the supplied key states that inner airfoils stall from the leading edge, which allows the outer wing and ailerons to retain effectiveness longer.\n\nDifferentiate Similar Concepts:\nA statement about all fat airfoils or inner sections stalling at the trailing edge does not match the keyed claim.\n\n💡 Memory Hook:\nA root-first stall tends to preserve roll control near the stall.\n\n🎯 Board Tip:\nCheck where the stall starts along the span, not just the airfoil thickness.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "It is the actual distance the aircraft travels from the time the wheels the first touch to the time the aircraft comes to a complete stop",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Landing ground roll",
+        "Take - off roll",
+        "Landing field length"
+      ],
+      "answerIndex": 0,
+      "answerText": "Landing ground roll",
+      "explanation": "Correct answer: Landing ground roll. Landing ground roll is the distance from initial wheel contact until the airplane stops.\n\nWhy the other choices are incorrect:\n• Take - off roll: It does not fit the condition asked; landing ground roll is the distance from initial wheel contact until the airplane stops.\n• Landing field length: It does not fit the condition asked; landing ground roll is the distance from initial wheel contact until the airplane stops.\n\nDifferentiate Similar Concepts:\nTake-off roll is before liftoff; landing field length includes more than the ground-roll segment.\n\n💡 Memory Hook:\nGround roll starts at touchdown; field length covers the full required landing distance.\n\n🎯 Board Tip:\nTrack the start and end points in each distance definition.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following statement is correct",
+      "questionType": "multiple_choice",
+      "choices": [
+        "An aircraft with a higher T/W will accelerate more quickly, climb more rapidly, reach a higher maximum speed and sustain higher turn rates",
+        "Thrust - to - Weight ratio is constant",
+        "Thrust - to - We ight ratio does not affect the performance of the aircraft"
+      ],
+      "answerIndex": 0,
+      "answerText": "An aircraft with a higher T/W will accelerate more quickly, climb more rapidly, reach a higher maximum speed and sustain higher turn rates",
+      "explanation": "Correct answer: An aircraft with a higher T/W will accelerate more quickly, climb more rapidly, reach a higher maximum speed and sustain higher turn rates. The source key marks the statement that higher thrust-to-weight ratio improves acceleration, climb, maximum-speed potential, and sustained turn performance.\n\nWhy the other choices are incorrect:\n• Thrust - to - Weight ratio is constant: It does not fit the condition asked; the source key marks the statement that higher thrust-to-weight ratio improves acceleration, climb, maximum-speed potential, and sustained turn performance.\n• Thrust - to - We ight ratio does not affect the performance of the aircraft: It does not fit the condition asked; the source key marks the statement that higher thrust-to-weight ratio improves acceleration, climb, maximum-speed potential, and sustained turn performance.\n\nDifferentiate Similar Concepts:\nA constant T/W or no performance effect contradicts the role of available thrust relative to weight.\n\n💡 Memory Hook:\nT/W compares propulsion capability with airplane weight.\n\n🎯 Board Tip:\nA ratio affects performance only through the operating condition and other limits, but it is not irrelevant.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "It is the maximum speed for lowering and retracting the under carriage",
+      "questionType": "multiple_choice",
+      "choices": [
+        "V F",
+        "V LO",
+        "V LE"
+      ],
+      "answerIndex": 1,
+      "answerText": "V LO",
+      "explanation": "Correct answer: V LO. VLO is the maximum speed for landing-gear extension or retraction, as identified by the answer key.\n\nWhy the other choices are incorrect:\n• V F: It does not fit the condition asked; vlo is the maximum speed for landing-gear extension or retraction, as identified by the answer key.\n• V LE: It does not fit the condition asked; vlo is the maximum speed for landing-gear extension or retraction, as identified by the answer key.\n\nDifferentiate Similar Concepts:\nVLE is the maximum speed with gear extended; VF concerns flaps, not landing gear operation.\n\n💡 Memory Hook:\nVLO = gear operation; VLE = gear extended.\n\n🎯 Board Tip:\nDistinguish gear movement speed from gear-extended speed.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "It is the minimum control speed at which it is possible to maintain directional control during take - off when the engine fails and the wheels are still on the runway",
+      "questionType": "multiple_choice",
+      "choices": [
+        "V MCA",
+        "V MCG",
+        "V NE"
+      ],
+      "answerIndex": 1,
+      "answerText": "V MCG",
+      "explanation": "Correct answer: V MCG. VMCG is minimum control speed on the ground, with the critical engine failed and the airplane still on the runway.\n\nWhy the other choices are incorrect:\n• V MCA: It does not fit the condition asked; vmcg is minimum control speed on the ground, with the critical engine failed and the airplane still on the runway.\n• V NE: It does not fit the condition asked; vmcg is minimum control speed on the ground, with the critical engine failed and the airplane still on the runway.\n\nDifferentiate Similar Concepts:\nVMCA is airborne minimum control speed; VNE is never-exceed speed, not an engine-out ground-control speed.\n\n💡 Memory Hook:\nMCG = minimum control on ground; MCA = minimum control airborne.\n\n🎯 Board Tip:\nThe word ?wheels on runway? identifies the ground variant.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The best rate of climb speed is the airspeed which delivers the greatest gain in altitude the shortest possible time",
+      "questionType": "multiple_choice",
+      "choices": [
+        "V X",
+        "V Y",
+        "V Z"
+      ],
+      "answerIndex": 1,
+      "answerText": "V Y",
+      "explanation": "Correct answer: V Y. Vy gives the greatest altitude gain per unit time, so it is the best rate-of-climb speed.\n\nWhy the other choices are incorrect:\n• V X: It does not fit the condition asked; vy gives the greatest altitude gain per unit time, so it is the best rate-of-climb speed.\n• V Z: It does not fit the condition asked; vy gives the greatest altitude gain per unit time, so it is the best rate-of-climb speed.\n\nDifferentiate Similar Concepts:\nVx maximizes altitude gained per horizontal distance; Vz is not the keyed best-rate speed here.\n\n💡 Memory Hook:\nVy = best rate; Vx = best angle.\n\n🎯 Board Tip:\nRate is time-based; angle is distance-based.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The rise of an airfoil from root to tip",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Dihedral",
+        "Anhedral",
+        "Decalage"
+      ],
+      "answerIndex": 0,
+      "answerText": "Dihedral",
+      "explanation": "Correct answer: Dihedral. Dihedral is the upward inclination of the wing from root to tip.\n\nWhy the other choices are incorrect:\n• Anhedral: It does not fit the condition asked; dihedral is the upward inclination of the wing from root to tip.\n• Decalage: It does not fit the condition asked; dihedral is the upward inclination of the wing from root to tip.\n\nDifferentiate Similar Concepts:\nAnhedral is downward inclination; decalage is the relative incidence angle between biplane wings.\n\n💡 Memory Hook:\nDihedral up; anhedral down; decalage is an angle between biplane wings.\n\n🎯 Board Tip:\nUse the direction of the wingtip relative to the root.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The maximum lift - to - drag ratio for the CP - 1 is 13.6. Calculate the minimum glide angle and the maximum range measured along the ground covered by the CP - 1 in a power - off glide that starts at an altitude of 10,000 ft. What is minimum glide angle?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "3.2°",
+        "4.2°",
+        "5.2°"
+      ],
+      "answerIndex": 1,
+      "answerText": "4.2°",
+      "explanation": "Correct answer: 4.2°. For L/D = 13.6, the glide angle satisfies tan ? = D/L = 1/13.6, so ? is about 4.2?; this matches the key.\n\nWhy the other choices are incorrect:\n• 3.2°: It does not fit the condition asked; for l/d = 13.\n• 5.2°: It does not fit the condition asked; for l/d = 13.\n\nDifferentiate Similar Concepts:\n3.2? and 5.2? do not match the inverse-tangent calculation from the stated glide ratio.\n\n💡 Memory Hook:\nA glide ratio is a distance ratio; the glide angle is its arctangent relationship.\n\n🎯 Board Tip:\nUse atan(1/(L/D)) and round to the nearest listed value.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the maximum range?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "25.6 miles",
+        "26.6 miles",
+        "24.6 miles"
+      ],
+      "answerIndex": 0,
+      "answerText": "25.6 miles",
+      "explanation": "Correct answer: 25.6 miles. Using the keyed glide angle and the 10,000-ft starting height gives a horizontal range matching 25.6 miles in the source key.\n\nWhy the other choices are incorrect:\n• 26.6 miles: It does not fit the condition asked; using the keyed glide angle and the 10,000-ft starting height gives a horizontal range matching 25.\n• 24.6 miles: It does not fit the condition asked; using the keyed glide angle and the 10,000-ft starting height gives a horizontal range matching 25.\n\nDifferentiate Similar Concepts:\n26.6 and 24.6 miles do not match the horizontal distance from the stated glide geometry.\n\n💡 Memory Hook:\nRange is the horizontal leg; altitude is the vertical leg.\n\n🎯 Board Tip:\nConvert feet to miles only after solving the right-triangle relation.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following statement is correct",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Maximum endurance for a propeller driven airplane occurs when the airplane is flying at maximum power required",
+        "Maximum endurance for a propeller driven airplane occurs when the airplane is flying at a velocity such that C L 3/2 /C D is minimum",
+        "Maximum range for a propeller driven airplane occurs when the airplane is flying at a velocity such that C L /C D is max imum"
+      ],
+      "answerIndex": 2,
+      "answerText": "Maximum range for a propeller driven airplane occurs when the airplane is flying at a velocity such that C L /C D is max imum",
+      "explanation": "Correct answer: Maximum range for a propeller driven airplane occurs when the airplane is flying at a velocity such that C L /C D is max imum. For propeller-driven maximum range, the keyed statement is the velocity at which CL/CD is maximum.\n\nWhy the other choices are incorrect:\n• Maximum endurance for a propeller driven airplane occurs when the airplane is flying at maximum power required: It does not fit the condition asked; for propeller-driven maximum range, the keyed statement is the velocity at which cl/cd is maximum.\n• Maximum endurance for a propeller driven airplane occurs when the airplane is flying at a velocity such that C L 3/2 /C D is minimum: It does not fit the condition asked; for propeller-driven maximum range, the keyed statement is the velocity at which cl/cd is maximum.\n\nDifferentiate Similar Concepts:\nMaximum endurance is a time aloft objective and uses a different condition; maximum power required is not the maximum-range criterion.\n\n💡 Memory Hook:\nRange maximizes distance per fuel; endurance maximizes time aloft.\n\n🎯 Board Tip:\nDo not interchange the CL/CD range criterion with the endurance criterion.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Questions 49–50. Under cruising conditions the distributed load acting on the wing of a small airplane has the idealized variation shown in the figure. Calculate the shear force V and bending moment M at the inboard end of the wing.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "- 6.04 kN and 15.45 kN",
+        "- 7.04 kN and 15.45 kN",
+        "- 5.04 kN and 15.45 kN"
+      ],
+      "answerIndex": 0,
+      "answerText": "- 6.04 kN and 15.45 kN",
+      "explanation": "Correct answer: - 6.04 kN and 15.45 kN. The source groups Questions 49?50 around one wing-load diagram and paired response choices. The key marks option A for both answer numbers; the first pair is therefore retained. Shear comes from integrating distributed load, and bending moment from its moment arm.\n\nWhy the other choices are incorrect:\n• - 7.04 kN and 15.45 kN: It does not fit the condition asked; the source groups questions 49?50 around one wing-load diagram and paired response choices.\n• - 5.04 kN and 15.45 kN: It does not fit the condition asked; the source groups questions 49?50 around one wing-load diagram and paired response choices.\n\nDifferentiate Similar Concepts:\nThe other pairs have different shear values and are not the paired result marked by the key; the figure is required to reproduce the numerical integration.\n\n💡 Memory Hook:\nShear is the accumulated load; bending moment is the accumulated load times distance.\n\n🎯 Board Tip:\nUse the PDF's load diagram and its sign convention at the inboard end.",
+      "tags": [
+        "structures and design",
+        "mock exam",
+        "Mock Exam II"
+      ],
+      "explanationImages": [],
+      "questionImages": [
+        {
+          "src": "asset/structures-design/mock-exam-ii-questions-49-50-figure.png",
+          "alt": "Source figure showing idealized distributed wing load for Questions 49 and 50."
+        }
+      ],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}

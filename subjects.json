@@ -274,8 +274,12 @@
       "selectedChapter": "D'alembert Principle",
       "chapters": [
         {
-          "title": "Structures and Design Mock Exam I II and III",
-          "file": "chapters/structures-design-mock-exams-i-ii-iii.json"
+          "title": "Structures and Design Mock Exam I",
+          "file": "chapters/structures-design-mock-exam-i.json"
+        },
+        {
+          "title": "Structures and Design Mock Exam II",
+          "file": "chapters/structures-design-mock-ii.json"
         },
         {
           "title": "General Aircraft Structures and Design I",
