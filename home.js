@@ -1,4 +1,4 @@
-import { initHomePage } from "./shared.js?v=structures-design-mock-i-ii-20261017-2";
+import { initHomePage } from "./shared.js?v=structures-design-mock-i-ii-20261017-3";
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";

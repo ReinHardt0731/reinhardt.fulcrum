@@ -125,7 +125,7 @@
       ],
       "answerIndex": 0,
       "answerText": "50fps",
-      "explanation": "Correct answer: 50fps. The provided key marks 50 ft/s. The choices use velocity units, so the wording's ?gust load factor? appears to refer to a derived gust velocity; the source value is preserved.\n\nWhy the other choices are incorrect:\n• 66fps: It does not fit the condition asked; the provided key marks 50 ft/s.\n• 25fps: It does not fit the condition asked; the provided key marks 50 ft/s.\n\nDifferentiate Similar Concepts:\n66 ft/s and 25 ft/s are not the source-keyed gust value for this stated speed/altitude condition.\n\n💡 Memory Hook:\nGust velocity is measured in ft/s; load factor is dimensionless.\n\n🎯 Board Tip:\nCheck units: they reveal when a question's label may be imprecise.",
+      "explanation": "Correct answer: 50fps. The provided key marks 50 ft/s. The choices use velocity units, so the wording's “gust load factor” appears to refer to a derived gust velocity; the source value is preserved.\n\nWhy the other choices are incorrect:\n• 66fps: It does not fit the condition asked; the provided key marks 50 ft/s.\n• 25fps: It does not fit the condition asked; the provided key marks 50 ft/s.\n\nDifferentiate Similar Concepts:\n66 ft/s and 25 ft/s are not the source-keyed gust value for this stated speed/altitude condition.\n\n💡 Memory Hook:\nGust velocity is measured in ft/s; load factor is dimensionless.\n\n🎯 Board Tip:\nCheck units: they reveal when a question's label may be imprecise.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -169,7 +169,7 @@
       ],
       "answerIndex": 2,
       "answerText": "18in",
-      "explanation": "Correct answer: 18in. The source key selects 18 inches as the minimum water clearance for the seaplane propeller while at rest.\n\nWhy the other choices are incorrect:\n• 16in: It does not fit the condition asked; the source key selects 18 inches as the minimum water clearance for the seaplane propeller while at rest.\n• 17in: It does not fit the condition asked; the source key selects 18 inches as the minimum water clearance for the seaplane propeller while at rest.\n\nDifferentiate Similar Concepts:\n16 and 17 inches are smaller values than the keyed clearance.\n\n💡 Memory Hook:\nClearance is a minimum geometric gap, not an operating-speed value.\n\n🎯 Board Tip:\nNotice the condition ?plane is at rest? when reading the clearance item.",
+      "explanation": "Correct answer: 18in. The source key selects 18 inches as the minimum water clearance for the seaplane propeller while at rest.\n\nWhy the other choices are incorrect:\n• 16in: It does not fit the condition asked; the source key selects 18 inches as the minimum water clearance for the seaplane propeller while at rest.\n• 17in: It does not fit the condition asked; the source key selects 18 inches as the minimum water clearance for the seaplane propeller while at rest.\n\nDifferentiate Similar Concepts:\n16 and 17 inches are smaller values than the keyed clearance.\n\n💡 Memory Hook:\nClearance is a minimum geometric gap, not an operating-speed value.\n\n🎯 Board Tip:\nNotice the condition “plane is at rest” when reading the clearance item.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -213,7 +213,7 @@
       ],
       "answerIndex": 2,
       "answerText": "P factor",
-      "explanation": "Correct answer: P factor. P-factor is the asymmetric propeller loading associated with high angle of attack and blade-angle differences across the propeller disk.\n\nWhy the other choices are incorrect:\n• Load factor: It does not fit the condition asked; p-factor is the asymmetric propeller loading associated with high angle of attack and blade-angle differences across the propeller disk.\n• G factor: It does not fit the condition asked; p-factor is the asymmetric propeller loading associated with high angle of attack and blade-angle differences across the propeller disk.\n\nDifferentiate Similar Concepts:\nLoad factor is aircraft acceleration/load ratio; G factor is not the propeller asymmetry term asked for.\n\n💡 Memory Hook:\nP-factor = asymmetric propeller thrust at high AoA.\n\n🎯 Board Tip:\nThe clue ?asymmetrical propeller loading? points to P-factor.",
+      "explanation": "Correct answer: P factor. P-factor is the asymmetric propeller loading associated with high angle of attack and blade-angle differences across the propeller disk.\n\nWhy the other choices are incorrect:\n• Load factor: It does not fit the condition asked; p-factor is the asymmetric propeller loading associated with high angle of attack and blade-angle differences across the propeller disk.\n• G factor: It does not fit the condition asked; p-factor is the asymmetric propeller loading associated with high angle of attack and blade-angle differences across the propeller disk.\n\nDifferentiate Similar Concepts:\nLoad factor is aircraft acceleration/load ratio; G factor is not the propeller asymmetry term asked for.\n\n💡 Memory Hook:\nP-factor = asymmetric propeller thrust at high AoA.\n\n🎯 Board Tip:\nThe clue “asymmetrical propeller loading” points to P-factor.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -235,7 +235,7 @@
       ],
       "answerIndex": 1,
       "answerText": "Limit load",
-      "explanation": "Correct answer: Limit load. The provided key identifies limit load as the maximum anticipated service load in this mock item's terminology.\n\nWhy the other choices are incorrect:\n• Load factor: It does not fit the condition asked; the provided key identifies limit load as the maximum anticipated service load in this mock item's terminology.\n• Maximum load: It does not fit the condition asked; the provided key identifies limit load as the maximum anticipated service load in this mock item's terminology.\n\nDifferentiate Similar Concepts:\nLoad factor is a multiplier, and ?maximum load? is not the defined term keyed by the answer sheet.\n\n💡 Memory Hook:\nLimit load is the anticipated service maximum; ultimate load is the factored design value.\n\n🎯 Board Tip:\nDistinguish the load itself from the factor applied to it.",
+      "explanation": "Correct answer: Limit load. The provided key identifies limit load as the maximum anticipated service load in this mock item's terminology.\n\nWhy the other choices are incorrect:\n• Load factor: It does not fit the condition asked; the provided key identifies limit load as the maximum anticipated service load in this mock item's terminology.\n• Maximum load: It does not fit the condition asked; the provided key identifies limit load as the maximum anticipated service load in this mock item's terminology.\n\nDifferentiate Similar Concepts:\nLoad factor is a multiplier, and “maximum load” is not the defined term keyed by the answer sheet.\n\n💡 Memory Hook:\nLimit load is the anticipated service maximum; ultimate load is the factored design value.\n\n🎯 Board Tip:\nDistinguish the load itself from the factor applied to it.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -257,7 +257,7 @@
       ],
       "answerIndex": 0,
       "answerText": "Ultimate design load",
-      "explanation": "Correct answer: Ultimate design load. Ultimate design load is obtained by multiplying limit load by the factor of safety.\n\nWhy the other choices are incorrect:\n• Safety load: It does not fit the condition asked; ultimate design load is obtained by multiplying limit load by the factor of safety.\n• Minimum load: It does not fit the condition asked; ultimate design load is obtained by multiplying limit load by the factor of safety.\n\nDifferentiate Similar Concepts:\nA safety factor is the multiplier, not the resulting load; minimum load is unrelated to this definition.\n\n💡 Memory Hook:\nUltimate = limit ? factor of safety.\n\n🎯 Board Tip:\nUse the given relationship rather than swapping the factor and result.",
+      "explanation": "Correct answer: Ultimate design load. Ultimate design load is obtained by multiplying limit load by the factor of safety.\n\nWhy the other choices are incorrect:\n• Safety load: It does not fit the condition asked; ultimate design load is obtained by multiplying limit load by the factor of safety.\n• Minimum load: It does not fit the condition asked; ultimate design load is obtained by multiplying limit load by the factor of safety.\n\nDifferentiate Similar Concepts:\nA safety factor is the multiplier, not the resulting load; minimum load is unrelated to this definition.\n\n💡 Memory Hook:\n\\(P_{\\mathrm{ultimate}}=P_{\\mathrm{limit}}\\times\\mathrm{F.S.}\\).\n\n🎯 Board Tip:\nUse the given relationship rather than swapping the factor and result.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -301,7 +301,7 @@
       ],
       "answerIndex": 2,
       "answerText": "- 1.9",
-      "explanation": "Correct answer: - 1.9. For the normal category, the provided key selects a negative maneuvering limit factor of ?1.9.\n\nWhy the other choices are incorrect:\n• - 1.7: It does not fit the condition asked; for the normal category, the provided key selects a negative maneuvering limit factor of ?1.\n• - 1.8: It does not fit the condition asked; for the normal category, the provided key selects a negative maneuvering limit factor of ?1.\n\nDifferentiate Similar Concepts:\n?1.7 and ?1.8 are other values; the source key selects ?1.9 for this category item.\n\n💡 Memory Hook:\nThe negative sign denotes downward loading; the magnitude is 1.9.\n\n🎯 Board Tip:\nKeep category and sign together when recalling load factors.",
+      "explanation": "Correct answer: - 1.9. For the normal category, the provided key selects a negative maneuvering limit factor of \\(-1.9\\).\n\nWhy the other choices are incorrect:\n• - 1.7: It does not fit the condition asked; for the normal category, the provided key selects a negative maneuvering limit factor of \\(-1.9\\).\n• - 1.8: It does not fit the condition asked; for the normal category, the provided key selects a negative maneuvering limit factor of \\(-1.9\\).\n\nDifferentiate Similar Concepts:\n\\(-1.7\\) and \\(-1.8\\) are other values; the source key selects \\(-1.9\\) for this category item.\n\n💡 Memory Hook:\nThe negative sign denotes downward loading; the magnitude is 1.9.\n\n🎯 Board Tip:\nKeep category and sign together when recalling load factors.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -367,7 +367,7 @@
       ],
       "answerIndex": 0,
       "answerText": "- 3.0",
-      "explanation": "Correct answer: - 3.0. The source key marks ?3.0 as the negative maneuvering limit factor for the acrobatic category.\n\nWhy the other choices are incorrect:\n• - 2.0: It does not fit the condition asked; the source key marks ?3.\n• - 1.0: It does not fit the condition asked; the source key marks ?3.\n\nDifferentiate Similar Concepts:\n?2.0 and ?1.0 have lower magnitudes and are not the supplied keyed value.\n\n💡 Memory Hook:\nThe negative factor describes downward load; its magnitude is 3.0.\n\n🎯 Board Tip:\nMemorize load-factor magnitude with its category and sign.",
+      "explanation": "Correct answer: - 3.0. The source key marks \\(-3.0\\) as the negative maneuvering limit factor for the acrobatic category.\n\nWhy the other choices are incorrect:\n• - 2.0: It does not fit the condition asked; the source key marks \\(-3.0\\).\n• - 1.0: It does not fit the condition asked; the source key marks \\(-3.0\\).\n\nDifferentiate Similar Concepts:\n\\(-2.0\\) and \\(-1.0\\) have lower magnitudes and are not the supplied keyed value.\n\n💡 Memory Hook:\nThe negative factor describes downward load; its magnitude is 3.0.\n\n🎯 Board Tip:\nMemorize load-factor magnitude with its category and sign.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -405,13 +405,13 @@
       "question": "For conventional, single engine airplane of 6,000 pounds or less maximum weight, the minimum design maneuvering speed is given by",
       "questionType": "multiple_choice",
       "choices": [
-        "12.5 (n 1 w/s) 0.5",
-        "17.0 (n 1 w/s) 0.5",
-        "19.5 (n 1 w/s) 0.5"
+        "\\(12.5\\sqrt{n(W/S)}\\)",
+        "\\(17.0\\sqrt{n(W/S)}\\)",
+        "\\(19.5\\sqrt{n(W/S)}\\)"
       ],
       "answerIndex": 1,
-      "answerText": "17.0 (n 1 w/s) 0.5",
-      "explanation": "Correct answer: 17.0 (n 1 w/s) 0.5. The source key selects 17.0?(n?W/S) for minimum design maneuvering speed in this stated airplane class.\n\nWhy the other choices are incorrect:\n• 12.5 (n 1 w/s) 0.5: It does not fit the condition asked; the source key selects 17.\n• 19.5 (n 1 w/s) 0.5: It does not fit the condition asked; the source key selects 17.\n\nDifferentiate Similar Concepts:\nThe 12.5 and 19.5 coefficients belong to other speed equations in the answer choices, not the keyed maneuvering-speed relation.\n\n💡 Memory Hook:\nManeuvering speed scales with the square root of load factor times wing loading.\n\n🎯 Board Tip:\nKeep the coefficient attached to Va; nearby V-speed formulas use different coefficients.",
+      "answerText": "\\(17.0\\sqrt{n(W/S)}\\)",
+      "explanation": "Correct answer: \\(17.0\\sqrt{n(W/S)}\\). The source key selects \\(17.0\\sqrt{n(W/S)}\\) for minimum design maneuvering speed in this stated airplane class.\n\nWhy the other choices are incorrect:\n• \\(12.5\\sqrt{n(W/S)}\\): It does not fit the condition asked; the source key selects the 17.0 coefficient for maneuvering speed.\n• \\(19.5\\sqrt{n(W/S)}\\): It does not fit the condition asked; the source key selects the 17.0 coefficient for maneuvering speed.\n\nDifferentiate Similar Concepts:\nThe 12.5 and 19.5 coefficients belong to other speed equations in the answer choices, not the keyed maneuvering-speed relation.\n\n💡 Memory Hook:\nManeuvering speed scales with the square root of load factor times wing loading.\n\n🎯 Board Tip:\nKeep the coefficient attached to Va; nearby V-speed formulas use different coefficients.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -427,13 +427,13 @@
       "question": "For conventional, single engine airplane of 6,000 pounds or less maximum weight, the minimum design flap speed is given by",
       "questionType": "multiple_choice",
       "choices": [
-        "12.5 (n 1 w/s) 0.5",
-        "17.0 (n 1 w/s) 0.5",
-        "19.5 (n 1 w/s) 0.5"
+        "\\(12.5\\sqrt{n(W/S)}\\)",
+        "\\(17.0\\sqrt{n(W/S)}\\)",
+        "\\(19.5\\sqrt{n(W/S)}\\)"
       ],
       "answerIndex": 0,
-      "answerText": "12.5 (n 1 w/s) 0.5",
-      "explanation": "Correct answer: 12.5 (n 1 w/s) 0.5. For the minimum design flap speed, the supplied key selects 12.5?(n?W/S).\n\nWhy the other choices are incorrect:\n• 17.0 (n 1 w/s) 0.5: It does not fit the condition asked; for the minimum design flap speed, the supplied key selects 12.\n• 19.5 (n 1 w/s) 0.5: It does not fit the condition asked; for the minimum design flap speed, the supplied key selects 12.\n\nDifferentiate Similar Concepts:\n17.0 and 19.5 are coefficients for other speed relations in the listed set, not the flap-speed relation keyed here.\n\n💡 Memory Hook:\nFlap design speed and maneuvering speed use different coefficients.\n\n🎯 Board Tip:\nLabel each formula by its V-speed before substituting values.",
+      "answerText": "\\(12.5\\sqrt{n(W/S)}\\)",
+      "explanation": "Correct answer: \\(12.5\\sqrt{n(W/S)}\\). For the minimum design flap speed, the supplied key selects \\(12.5\\sqrt{n(W/S)}\\).\n\nWhy the other choices are incorrect:\n• \\(17.0\\sqrt{n(W/S)}\\): It does not fit the condition asked; for the minimum design flap speed, the supplied key selects the 12.5 coefficient for flap speed.\n• \\(19.5\\sqrt{n(W/S)}\\): It does not fit the condition asked; for the minimum design flap speed, the supplied key selects the 12.5 coefficient for flap speed.\n\nDifferentiate Similar Concepts:\n17.0 and 19.5 are coefficients for other speed relations in the listed set, not the flap-speed relation keyed here.\n\n💡 Memory Hook:\nFlap design speed and maneuvering speed use different coefficients.\n\n🎯 Board Tip:\nLabel each formula by its V-speed before substituting values.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -449,13 +449,13 @@
       "question": "For conventional, single engine airplane of 6,000 pounds or less maximum weight, the maximum design dive speed is given by",
       "questionType": "multiple_choice",
       "choices": [
-        "17.0 (n 1 w/s) 0.5",
-        "19.5 (n 1 w/s) 0.5",
-        "27.3 (n 1 w/s) 0.5"
+        "\\(17.0\\sqrt{n(W/S)}\\)",
+        "\\(19.5\\sqrt{n(W/S)}\\)",
+        "\\(27.3\\sqrt{n(W/S)}\\)"
       ],
       "answerIndex": 2,
-      "answerText": "27.3 (n 1 w/s) 0.5",
-      "explanation": "Correct answer: 27.3 (n 1 w/s) 0.5. The key marks 27.3?(n?W/S) as the maximum design dive-speed relation for this question.\n\nWhy the other choices are incorrect:\n• 17.0 (n 1 w/s) 0.5: It does not fit the condition asked; the key marks 27.\n• 19.5 (n 1 w/s) 0.5: It does not fit the condition asked; the key marks 27.\n\nDifferentiate Similar Concepts:\n17.0 and 19.5 are other coefficients and do not give the keyed dive-speed expression.\n\n💡 Memory Hook:\nDive speed is a different structural design speed from Va and Vf.\n\n🎯 Board Tip:\nKeep the speed subscript tied to the correct formula.",
+      "answerText": "\\(27.3\\sqrt{n(W/S)}\\)",
+      "explanation": "Correct answer: \\(27.3\\sqrt{n(W/S)}\\). The key marks \\(27.3\\sqrt{n(W/S)}\\) as the maximum design dive-speed relation for this question.\n\nWhy the other choices are incorrect:\n• \\(17.0\\sqrt{n(W/S)}\\): It does not fit the condition asked; the key marks the 27.3 coefficient for dive speed.\n• \\(19.5\\sqrt{n(W/S)}\\): It does not fit the condition asked; the key marks the 27.3 coefficient for dive speed.\n\nDifferentiate Similar Concepts:\n17.0 and 19.5 are other coefficients and do not give the keyed dive-speed expression.\n\n💡 Memory Hook:\nDive speed is a different structural design speed from Va and Vf.\n\n🎯 Board Tip:\nKeep the speed subscript tied to the correct formula.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -521,7 +521,7 @@
       ],
       "answerIndex": 1,
       "answerText": "Center of gravity and thrust line",
-      "explanation": "Correct answer: Center of gravity and thrust line. The provided key identifies the center of gravity and thrust line as the reference for the basic landing reaction forces.\n\nWhy the other choices are incorrect:\n• Center of pressure and thrust line: It does not fit the condition asked; the provided key identifies the center of gravity and thrust line as the reference for the basic landing reaction forces.\n• Center of gravity and to any point within the wing: It does not fit the condition asked; the provided key identifies the center of gravity and thrust line as the reference for the basic landing reaction forces.\n\nDifferentiate Similar Concepts:\nCenter of pressure is an aerodynamic reference; ?any point within the wing? does not state the keyed force-reference pair.\n\n💡 Memory Hook:\nLanding reactions are analyzed with respect to aircraft mass center and thrust line in this item.\n\n🎯 Board Tip:\nKeep the reference points and lines stated as a pair.",
+      "explanation": "Correct answer: Center of gravity and thrust line. The provided key identifies the center of gravity and thrust line as the reference for the basic landing reaction forces.\n\nWhy the other choices are incorrect:\n• Center of pressure and thrust line: It does not fit the condition asked; the provided key identifies the center of gravity and thrust line as the reference for the basic landing reaction forces.\n• Center of gravity and to any point within the wing: It does not fit the condition asked; the provided key identifies the center of gravity and thrust line as the reference for the basic landing reaction forces.\n\nDifferentiate Similar Concepts:\nCenter of pressure is an aerodynamic reference; “any point within the wing” does not state the keyed force-reference pair.\n\n💡 Memory Hook:\nLanding reactions are analyzed with respect to aircraft mass center and thrust line in this item.\n\n🎯 Board Tip:\nKeep the reference points and lines stated as a pair.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -537,13 +537,13 @@
       "question": "For the design maneuvering wing loading less than 47 and AR of 2.0 for vertical tail, the average surface loading is given by",
       "questionType": "multiple_choice",
       "choices": [
-        "3.65 (n 1 w/s) 0.5",
-        "3.66 (n 1 w/s) 0.5",
-        "3.67 (n 1 w/s) 0.5"
+        "\\(3.65\\sqrt{n(W/S)}\\)",
+        "\\(3.66\\sqrt{n(W/S)}\\)",
+        "\\(3.67\\sqrt{n(W/S)}\\)"
       ],
       "answerIndex": 1,
-      "answerText": "3.66 (n 1 w/s) 0.5",
-      "explanation": "Correct answer: 3.66 (n 1 w/s) 0.5. For the stated vertical-tail case with maneuvering wing loading below 47 and AR 2.0, the key selects 3.66?(n?W/S).\n\nWhy the other choices are incorrect:\n• 3.65 (n 1 w/s) 0.5: It does not fit the condition asked; for the stated vertical-tail case with maneuvering wing loading below 47 and ar 2.\n• 3.67 (n 1 w/s) 0.5: It does not fit the condition asked; for the stated vertical-tail case with maneuvering wing loading below 47 and ar 2.\n\nDifferentiate Similar Concepts:\n3.65 and 3.67 are adjacent coefficients, not the value marked for the stated case.\n\n💡 Memory Hook:\nThis formula is specific to the vertical tail and the below-47 loading range.\n\n🎯 Board Tip:\nCheck both the surface (vertical tail) and loading range before selecting the coefficient.",
+      "answerText": "\\(3.66\\sqrt{n(W/S)}\\)",
+      "explanation": "Correct answer: \\(3.66\\sqrt{n(W/S)}\\). For the stated vertical-tail case with maneuvering wing loading below 47 and AR 2.0, the key selects \\(3.66\\sqrt{n(W/S)}\\).\n\nWhy the other choices are incorrect:\n• \\(3.65\\sqrt{n(W/S)}\\): It does not fit the condition asked; for the stated vertical-tail case with maneuvering wing loading below 47 and ar 2.\n• \\(3.67\\sqrt{n(W/S)}\\): It does not fit the condition asked; for the stated vertical-tail case with maneuvering wing loading below 47 and ar 2.\n\nDifferentiate Similar Concepts:\n3.65 and 3.67 are adjacent coefficients, not the value marked for the stated case.\n\n💡 Memory Hook:\nThis formula is specific to the vertical tail and the below-47 loading range.\n\n🎯 Board Tip:\nCheck both the surface (vertical tail) and loading range before selecting the coefficient.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -559,13 +559,13 @@
       "question": "For the design maneuvering wing loading for horizontal tail either up or down, the average surface loading is given by",
       "questionType": "multiple_choice",
       "choices": [
-        "4.8 + 0.534 (n 1 w/s)",
-        "5.8 + 0.535 (n 1 w/s)",
-        "6.8 + 0.536 (n 1 w/s)"
+        "\\(4.8+0.534n(W/S)\\)",
+        "\\(5.8+0.535n(W/S)\\)",
+        "\\(6.8+0.536n(W/S)\\)"
       ],
       "answerIndex": 0,
-      "answerText": "4.8 + 0.534 (n 1 w/s)",
-      "explanation": "Correct answer: 4.8 + 0.534 (n 1 w/s). The supplied key marks 4.8 + 0.534(n?W/S) for the horizontal-tail up/down loading case.\n\nWhy the other choices are incorrect:\n• 5.8 + 0.535 (n 1 w/s): It does not fit the condition asked; the supplied key marks 4.\n• 6.8 + 0.536 (n 1 w/s): It does not fit the condition asked; the supplied key marks 4.\n\nDifferentiate Similar Concepts:\nThe alternatives change the constant and coefficient; they are not the source-keyed horizontal-tail expression.\n\n💡 Memory Hook:\nThe horizontal-tail expression is distinct from the vertical-tail square-root formulas.\n\n🎯 Board Tip:\nRead ?horizontal tail? and the up/down condition before selecting its formula.",
+      "answerText": "\\(4.8+0.534n(W/S)\\)",
+      "explanation": "Correct answer: \\(4.8+0.534n(W/S)\\). The supplied key marks 4.8 + \\(0.534n(W/S)\\) for the horizontal-tail up/down loading case.\n\nWhy the other choices are incorrect:\n• \\(5.8+0.535n(W/S)\\): It does not fit the condition asked; the supplied key marks the 4.8 constant and 0.534 coefficient.\n• \\(6.8+0.536n(W/S)\\): It does not fit the condition asked; the supplied key marks the 4.8 constant and 0.534 coefficient.\n\nDifferentiate Similar Concepts:\nThe alternatives change the constant and coefficient; they are not the source-keyed horizontal-tail expression.\n\n💡 Memory Hook:\nThe horizontal-tail expression is distinct from the vertical-tail square-root formulas.\n\n🎯 Board Tip:\nRead \\u201chorizontal tail\\u201d and the up/down condition before selecting its formula.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -581,13 +581,13 @@
       "question": "For the design maneuvering wing loading greater than 47, the average surface loading for vertical tail is given by",
       "questionType": "multiple_choice",
       "choices": [
-        "0.534 (n 1 w/s)",
-        "0.535 (n 1 w/s)",
-        "0.536 (n 1 w/s)"
+        "\\(0.534n(W/S)\\)",
+        "\\(0.535n(W/S)\\)",
+        "\\(0.536n(W/S)\\)"
       ],
       "answerIndex": 0,
-      "answerText": "0.534 (n 1 w/s)",
-      "explanation": "Correct answer: 0.534 (n 1 w/s). For maneuvering wing loading greater than 47, the source key selects 0.534(n?W/S) for the vertical tail.\n\nWhy the other choices are incorrect:\n• 0.535 (n 1 w/s): It does not fit the condition asked; for maneuvering wing loading greater than 47, the source key selects 0.\n• 0.536 (n 1 w/s): It does not fit the condition asked; for maneuvering wing loading greater than 47, the source key selects 0.\n\nDifferentiate Similar Concepts:\n0.535 and 0.536 are nearby coefficients but are not the marked value in the supplied key.\n\n💡 Memory Hook:\nThe greater-than-47 case uses a different form from the below-47 relation.\n\n🎯 Board Tip:\nDo not extrapolate the low-range formula into the high-range case.",
+      "answerText": "\\(0.534n(W/S)\\)",
+      "explanation": "Correct answer: \\(0.534n(W/S)\\). For maneuvering wing loading greater than 47, the source key selects \\(0.534n(W/S)\\) for the vertical tail.\n\nWhy the other choices are incorrect:\n• \\(0.535n(W/S)\\): It does not fit the condition asked; for maneuvering wing loading greater than 47, the source key selects the 0.534 coefficient.\n• \\(0.536n(W/S)\\): It does not fit the condition asked; for maneuvering wing loading greater than 47, the source key selects the 0.534 coefficient.\n\nDifferentiate Similar Concepts:\n0.535 and 0.536 are nearby coefficients but are not the marked value in the supplied key.\n\n💡 Memory Hook:\nThe greater-than-47 case uses a different form from the below-47 relation.\n\n🎯 Board Tip:\nDo not extrapolate the low-range formula into the high-range case.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -603,13 +603,13 @@
       "question": "For the design m aneuvering wing loading for aileron, the average surface loading is given by",
       "questionType": "multiple_choice",
       "choices": [
-        "0.455 (n 1 w/s)",
-        "0.466 (n 1 w/s)",
-        "0.477 (n 1 w/s)"
+        "\\(0.455n(W/S)\\)",
+        "\\(0.466n(W/S)\\)",
+        "\\(0.477n(W/S)\\)"
       ],
       "answerIndex": 1,
-      "answerText": "0.466 (n 1 w/s)",
-      "explanation": "Correct answer: 0.466 (n 1 w/s). The provided key gives 0.466(n?W/S) for average aileron surface loading.\n\nWhy the other choices are incorrect:\n• 0.455 (n 1 w/s): It does not fit the condition asked; the provided key gives 0.\n• 0.477 (n 1 w/s): It does not fit the condition asked; the provided key gives 0.\n\nDifferentiate Similar Concepts:\n0.455 and 0.477 are alternate coefficients, not the value marked for aileron loading.\n\n💡 Memory Hook:\nAileron loading has its own relation, separate from tail-surface loading.\n\n🎯 Board Tip:\nMatch the control surface named in the prompt to its formula.",
+      "answerText": "\\(0.466n(W/S)\\)",
+      "explanation": "Correct answer: \\(0.466n(W/S)\\). The provided key gives \\(0.466n(W/S)\\) for average aileron surface loading.\n\nWhy the other choices are incorrect:\n• \\(0.455n(W/S)\\): It does not fit the condition asked; the provided key gives the 0.466 coefficient.\n• \\(0.477n(W/S)\\): It does not fit the condition asked; the provided key gives the 0.466 coefficient.\n\nDifferentiate Similar Concepts:\n0.455 and 0.477 are alternate coefficients, not the value marked for aileron loading.\n\n💡 Memory Hook:\nAileron loading has its own relation, separate from tail-surface loading.\n\n🎯 Board Tip:\nMatch the control surface named in the prompt to its formula.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -653,7 +653,7 @@
       ],
       "answerIndex": 1,
       "answerText": "Coefficient of lift, density, wing area and velocity squared",
-      "explanation": "Correct answer: Coefficient of lift, density, wing area and velocity squared. Lift depends on coefficient of lift, air density, wing area, and velocity squared through L = ??V?SCL.\n\nWhy the other choices are incorrect:\n• Coefficient of lift, density, wing area and rate of climb squared: It does not fit the condition asked; lift depends on coefficient of lift, air density, wing area, and velocity squared through l = ??v?scl.\n• Coefficient of lift, density, wing loading and velocity squared: It does not fit the condition asked; lift depends on coefficient of lift, air density, wing area, and velocity squared through l = ??v?scl.\n\nDifferentiate Similar Concepts:\nRate of climb is not part of the lift equation; wing loading is weight per area and cannot replace wing area in this form.\n\n💡 Memory Hook:\nDynamic pressure varies with density and V?; lift also scales with S and CL.\n\n🎯 Board Tip:\nCheck that every factor in the lift equation has the right physical units.",
+      "explanation": "Correct answer: Coefficient of lift, density, wing area and velocity squared. Lift depends on coefficient of lift, air density, wing area, and velocity squared through \\(L=\\frac{1}{2}\\rho V^2SC_L\\).\n\nWhy the other choices are incorrect:\n• Coefficient of lift, density, wing area and rate of climb squared: It does not fit the condition asked; lift depends on coefficient of lift, air density, wing area, and velocity squared through \\(L=\\frac{1}{2}\\rho V^2SC_L\\).\n• Coefficient of lift, density, wing loading and velocity squared: It does not fit the condition asked; lift depends on coefficient of lift, air density, wing area, and velocity squared through \\(L=\\frac{1}{2}\\rho V^2SC_L\\).\n\nDifferentiate Similar Concepts:\nRate of climb is not part of the lift equation; wing loading is weight per area and cannot replace wing area in this form.\n\n💡 Memory Hook:\nDynamic pressure varies with density and \\(V^2\\); lift also scales with S and CL.\n\n🎯 Board Tip:\nCheck that every factor in the lift equation has the right physical units.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -697,7 +697,7 @@
       ],
       "answerIndex": 0,
       "answerText": "True airspeed",
-      "explanation": "Correct answer: True airspeed. The supplied answer key marks True airspeed. However, the wording ?read directly from the airspeed indicator? normally describes indicated airspeed. I preserved the source-key answer and flag this discrepancy for checking against the PDF key.\n\nWhy the other choices are incorrect:\n• Indicated airspeed: It does not fit the condition asked; the supplied answer key marks true airspeed.\n• Ground airspeed: It does not fit the condition asked; the supplied answer key marks true airspeed.\n\nDifferentiate Similar Concepts:\nIndicated airspeed is the ordinary definition suggested by the wording; the marked key selects True airspeed, so this item appears inconsistent.\n\n💡 Memory Hook:\nIAS is instrument-read; TAS is aircraft speed relative to the air mass.\n\n🎯 Board Tip:\nVerify this answer against the marked key before using it as a learning fact.",
+      "explanation": "Correct answer: True airspeed. The supplied answer key marks True airspeed. However, the wording “read directly from the airspeed indicator” normally describes indicated airspeed. I preserved the source-key answer and flag this discrepancy for checking against the PDF key.\n\nWhy the other choices are incorrect:\n• Indicated airspeed: It does not fit the condition asked; the supplied answer key marks true airspeed.\n• Ground airspeed: It does not fit the condition asked; the supplied answer key marks true airspeed.\n\nDifferentiate Similar Concepts:\nIndicated airspeed is the ordinary definition suggested by the wording; the marked key selects True airspeed, so this item appears inconsistent.\n\n💡 Memory Hook:\nIAS is instrument-read; TAS is aircraft speed relative to the air mass.\n\n🎯 Board Tip:\nVerify this answer against the marked key before using it as a learning fact.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -829,7 +829,7 @@
       ],
       "answerIndex": 1,
       "answerText": "Geometric twist",
-      "explanation": "Correct answer: Geometric twist. Geometric twist is the change in wing incidence from root to tip, which is the keyed term.\n\nWhy the other choices are incorrect:\n• Aerodynamic twist: It does not fit the condition asked; geometric twist is the change in wing incidence from root to tip, which is the keyed term.\n• Airfoil twist: It does not fit the condition asked; geometric twist is the change in wing incidence from root to tip, which is the keyed term.\n\nDifferentiate Similar Concepts:\nAerodynamic twist changes airfoil characteristics along the span; ?airfoil twist? is not the standard name keyed here.\n\n💡 Memory Hook:\nGeometric twist changes chord-line angle; aerodynamic twist changes section characteristics.\n\n🎯 Board Tip:\nRoot-to-tip incidence change signals geometric twist.",
+      "explanation": "Correct answer: Geometric twist. Geometric twist is the change in wing incidence from root to tip, which is the keyed term.\n\nWhy the other choices are incorrect:\n• Aerodynamic twist: It does not fit the condition asked; geometric twist is the change in wing incidence from root to tip, which is the keyed term.\n• Airfoil twist: It does not fit the condition asked; geometric twist is the change in wing incidence from root to tip, which is the keyed term.\n\nDifferentiate Similar Concepts:\nAerodynamic twist changes airfoil characteristics along the span; “airfoil twist” is not the standard name keyed here.\n\n💡 Memory Hook:\nGeometric twist changes chord-line angle; aerodynamic twist changes section characteristics.\n\n🎯 Board Tip:\nRoot-to-tip incidence change signals geometric twist.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -939,7 +939,7 @@
       ],
       "answerIndex": 1,
       "answerText": "V MCG",
-      "explanation": "Correct answer: V MCG. VMCG is minimum control speed on the ground, with the critical engine failed and the airplane still on the runway.\n\nWhy the other choices are incorrect:\n• V MCA: It does not fit the condition asked; vmcg is minimum control speed on the ground, with the critical engine failed and the airplane still on the runway.\n• V NE: It does not fit the condition asked; vmcg is minimum control speed on the ground, with the critical engine failed and the airplane still on the runway.\n\nDifferentiate Similar Concepts:\nVMCA is airborne minimum control speed; VNE is never-exceed speed, not an engine-out ground-control speed.\n\n💡 Memory Hook:\nMCG = minimum control on ground; MCA = minimum control airborne.\n\n🎯 Board Tip:\nThe word ?wheels on runway? identifies the ground variant.",
+      "explanation": "Correct answer: V MCG. VMCG is minimum control speed on the ground, with the critical engine failed and the airplane still on the runway.\n\nWhy the other choices are incorrect:\n• V MCA: It does not fit the condition asked; vmcg is minimum control speed on the ground, with the critical engine failed and the airplane still on the runway.\n• V NE: It does not fit the condition asked; vmcg is minimum control speed on the ground, with the critical engine failed and the airplane still on the runway.\n\nDifferentiate Similar Concepts:\nVMCA is airborne minimum control speed; VNE is never-exceed speed, not an engine-out ground-control speed.\n\n💡 Memory Hook:\nMCG = minimum control on ground; MCA = minimum control airborne.\n\n🎯 Board Tip:\nThe word “wheels on runway” identifies the ground variant.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -1005,7 +1005,7 @@
       ],
       "answerIndex": 1,
       "answerText": "4.2°",
-      "explanation": "Correct answer: 4.2°. For L/D = 13.6, the glide angle satisfies tan ? = D/L = 1/13.6, so ? is about 4.2?; this matches the key.\n\nWhy the other choices are incorrect:\n• 3.2°: It does not fit the condition asked; for l/d = 13.\n• 5.2°: It does not fit the condition asked; for l/d = 13.\n\nDifferentiate Similar Concepts:\n3.2? and 5.2? do not match the inverse-tangent calculation from the stated glide ratio.\n\n💡 Memory Hook:\nA glide ratio is a distance ratio; the glide angle is its arctangent relationship.\n\n🎯 Board Tip:\nUse atan(1/(L/D)) and round to the nearest listed value.",
+      "explanation": "Correct answer: 4.2°. For L/D = 13.6, the glide angle satisfies \\(\\tan\\theta=D/L=1/13.6\\), so \\(\\theta\\approx4.2^\\circ\\); this matches the key.\n\nWhy the other choices are incorrect:\n• 3.2°: It does not fit the condition asked; for l/d = 13.\n• 5.2°: It does not fit the condition asked; for l/d = 13.\n\nDifferentiate Similar Concepts:\n\\(3.2^\\circ\\) and \\(5.2^\\circ\\) do not match the inverse-tangent calculation from the stated glide ratio.\n\n💡 Memory Hook:\nA glide ratio is a distance ratio; the glide angle is its arctangent relationship.\n\n🎯 Board Tip:\nUse atan(1/(L/D)) and round to the nearest listed value.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -1071,7 +1071,7 @@
       ],
       "answerIndex": 0,
       "answerText": "- 6.04 kN and 15.45 kN",
-      "explanation": "Correct answer: - 6.04 kN and 15.45 kN. The source groups Questions 49?50 around one wing-load diagram and paired response choices. The key marks option A for both answer numbers; the first pair is therefore retained. Shear comes from integrating distributed load, and bending moment from its moment arm.\n\nWhy the other choices are incorrect:\n• - 7.04 kN and 15.45 kN: It does not fit the condition asked; the source groups questions 49?50 around one wing-load diagram and paired response choices.\n• - 5.04 kN and 15.45 kN: It does not fit the condition asked; the source groups questions 49?50 around one wing-load diagram and paired response choices.\n\nDifferentiate Similar Concepts:\nThe other pairs have different shear values and are not the paired result marked by the key; the figure is required to reproduce the numerical integration.\n\n💡 Memory Hook:\nShear is the accumulated load; bending moment is the accumulated load times distance.\n\n🎯 Board Tip:\nUse the PDF's load diagram and its sign convention at the inboard end.",
+      "explanation": "Correct answer: - 6.04 kN and 15.45 kN. The source groups Questions 49–50 around one wing-load diagram and paired response choices. The key marks option A for both answer numbers; the first pair is therefore retained. Shear comes from integrating distributed load, and bending moment from its moment arm.\n\nWhy the other choices are incorrect:\n• - 7.04 kN and 15.45 kN: It does not fit the condition asked; the source groups questions 49–50 around one wing-load diagram and paired response choices.\n• - 5.04 kN and 15.45 kN: It does not fit the condition asked; the source groups questions 49–50 around one wing-load diagram and paired response choices.\n\nDifferentiate Similar Concepts:\nThe other pairs have different shear values and are not the paired result marked by the key; the figure is required to reproduce the numerical integration.\n\n💡 Memory Hook:\nShear is the accumulated load; bending moment is the accumulated load times distance.\n\n🎯 Board Tip:\nUse the PDF's load diagram and its sign convention at the inboard end.",
       "tags": [
         "structures and design",
         "mock exam",
