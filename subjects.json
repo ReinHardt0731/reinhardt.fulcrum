@@ -86161,7 +86161,19 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "Given are the following information at take-off STATION MASS (kg) ARM (cm) MOMENT (kgcm) Basic Empty Condition 12045 +30 Crew 145 -160 - Freight 1 5455 +200 Freight 2 410 -40 - Fuel 6045 -8 - Oil 124 +40 Given that the flight time is 2 hours and the estimated fuel flow will be 1050 litres per hour and the average oil consumption will be 2.25 litres per hour. The specific density of fuel is 0.79 and the specific density of oil is 0.96. Calculate the landing centre of gravity _________________________________________________ __________________ _________________________________________________ __________________ +361350 23200 +1091000 16400 48360 +4960",
+          "question": "Given the following information at take-off, calculate the landing centre of gravity. The flight time is 2 hours, the estimated fuel flow is 1050 litres per hour, and the average oil consumption is 2.25 litres per hour. The specific density of fuel is 0.79 kg/L and the specific density of oil is 0.96 kg/L.",
+          "questionTable": {
+            "caption": "Take-off mass and balance data",
+            "columns": ["Station", "Mass (kg)", "Arm (cm)", "Moment (kg·cm)"],
+            "rows": [
+              ["Basic Empty Condition", "12045", "+30", "+361350"],
+              ["Crew", "145", "−160", "−23200"],
+              ["Freight 1", "5455", "+200", "+1091000"],
+              ["Freight 2", "410", "−40", "−16400"],
+              ["Fuel", "6045", "−8", "−48360"],
+              ["Oil", "124", "+40", "+4960"]
+            ]
+          },
           "questionType": "multiple_choice",
           "choices": [
             "61.29 cm aft of datum.",
