@@ -7,7 +7,7 @@
   ],
   "questions": [
     {
-      "question": "A design airplane has a weight of 2,200 lb and a wing area of 90 ft 2 . It is to be certified as acrobatic category under FAR part 23. What is the negative limit maneuvering load factor in which the airplane must be designed for",
+      "question": "An airplane weighs 2,200 lb and has a wing area of 90 \\(\\mathrm{ft^2}\\). It is to be certified in the acrobatic category under FAR Part 23. What negative limit maneuvering load factor must it be designed for?",
       "questionType": "multiple_choice",
       "choices": [
         "2.1",
@@ -53,7 +53,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "A simply supported beam, 3 meters in length is acted upon by an upward uniformly distributed load along it entire length with a magnitude 8 KN/m. What is the maximum bending moment imposed on the beam by the load",
+      "question": "A simply supported beam, 3 meters in length, carries an upward uniformly distributed load of 8 kN/m along its entire length. What is the maximum bending moment imposed on the beam?",
       "questionType": "multiple_choice",
       "choices": [
         "9 KN - m",
@@ -76,7 +76,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "Structural members designed to support loadings applied perpendicular to their axes. They are long, straight bars having a constant cross - sectional area.",
+      "question": "Which structural members support loads applied perpendicular to their axes and are long, straight bars with a constant cross-sectional area?",
       "questionType": "multiple_choice",
       "choices": [
         "Shafts",
@@ -128,7 +128,7 @@
         "As the factor of safety increases, the ultimate load decreases.",
         "As the ultimate load increases, the factor of safety decreases.",
         "As the factor of safety increases, the ultimate load increases.",
-        "The factor of safety is constant at 1.5 therefore, ultimate load is als o constant."
+        "The factor of safety is constant at 1.5; therefore, the ultimate load is also constant."
       ],
       "answerIndex": 2,
       "answerText": "As the factor of safety increases, the ultimate load increases.",
@@ -145,7 +145,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "Normally designed to provide restraint against rotation and all translations; therefore, reactive fo rces and moments are developed along the directions where movements are not permitted.",
+      "question": "A support restrains rotation and translation in all directions. It therefore develops reaction forces and moments in the restrained directions. What type of support is this?",
       "questionType": "multiple_choice",
       "choices": [
         "Fixed support",
@@ -168,17 +168,17 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "It is a structure composed of slender members joined together at their end points, in which the memb ers are subjected to only axial loads.",
+      "question": "Which structure is composed of slender members joined at their endpoints, with each member subjected only to axial loads?",
       "questionType": "multiple_choice",
       "choices": [
         "Beam structure",
         "Monocoque structure",
-        "Semi - monocoque structure",
-        "Truss structure 2 6"
+        "Semi-monocoque structure",
+        "Truss structure"
       ],
       "answerIndex": 3,
-      "answerText": "Truss structure 2 6",
-      "explanation": "Correct answer: Truss structure 2 6. A truss is built from slender members joined at their ends and idealized as carrying axial tension or compression.\n\nWhy the other choices are incorrect:\n• Beam structure: It does not match the condition or structural role described; a truss is built from slender members joined at their ends and idealized as carrying axial tension or compression.\n• Monocoque structure: It does not match the condition or structural role described; a truss is built from slender members joined at their ends and idealized as carrying axial tension or compression.\n• Semi - monocoque structure: It does not match the condition or structural role described; a truss is built from slender members joined at their ends and idealized as carrying axial tension or compression.\n\nDifferentiate Similar Concepts:\nBeams carry bending; monocoque and semi-monocoque describe shell-based aircraft construction rather than pin-jointed axial members.\n\n💡 Memory Hook:\nTruss members carry axial force.\n\n🎯 Board Tip:\nLook for end-jointed members and axial-only loading.",
+      "answerText": "Truss structure",
+      "explanation": "Correct answer: Truss structure. A truss is built from slender members joined at their ends and idealized as carrying axial tension or compression.\n\nWhy the other choices are incorrect:\n• Beam structure: It does not match the condition or structural role described; a truss is built from slender members joined at their ends and idealized as carrying axial tension or compression.\n• Monocoque structure: It does not match the condition or structural role described; a truss is built from slender members joined at their ends and idealized as carrying axial tension or compression.\n• Semi-monocoque structure: It does not match the condition or structural role described; a truss is built from slender members joined at their ends and idealized as carrying axial tension or compression.\n\nDifferentiate Similar Concepts:\nBeams carry bending; monocoque and semi-monocoque describe shell-based aircraft construction rather than pin-jointed axial members.\n\n💡 Memory Hook:\nTruss members carry axial force.\n\n🎯 Board Tip:\nLook for end-jointed members and axial-only loading.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -191,7 +191,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "Members w hich are loaded so that they are compressed axially and therefore have developed within them compressive resistances or stresses.",
+      "question": "What are members called when they are loaded in axial compression and develop compressive stresses?",
       "questionType": "multiple_choice",
       "choices": [
         "Beams",
@@ -214,7 +214,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "It is a measure of the intensity of load acting on a definite plan e passing throu gh a given point in the material.",
+      "question": "What is the measure of load intensity acting on a definite plane through a given point in a material?",
       "questionType": "multiple_choice",
       "choices": [
         "Shear",
@@ -237,7 +237,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "The axial strain in a member is always accompanied by a lateral strain of opposite sign. Thus, if a member stretches under load, its cross - sectional area becomes smaller at the sa me time. The relationship of the lateral strain to axial strain is expressed by:",
+      "question": "Axial strain is accompanied by lateral strain of the opposite sign. When a member stretches under load, its cross-sectional area becomes smaller. What is the ratio of lateral strain to axial strain called?",
       "questionType": "multiple_choice",
       "choices": [
         "Modulus ratio",
@@ -260,7 +260,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "A transverse load on a member tends to make the member rotate about an axis at a section aw ay from that where the load is applied and normal to the axis of the member. If the member is restrained fro m rotating at any section other than that at which the load is applied, internal tension stresses are set up at one side of the member and compressi on at the other. At any section where such stresses are present the member is said to be subjected to:",
+      "question": "A transverse load tends to rotate a member about an axis normal to the member at a section away from the load. If rotation is restrained at another section, tension develops on one side and compression on the other. What type of loading is the member subjected to?",
       "questionType": "multiple_choice",
       "choices": [
         "Torsion",
@@ -283,7 +283,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "If loads are applied to a member so that it tends to twist about an axis, internal shear stresses ar e s et up in the member at any section between the application of load and the reaction to resist the twisting force. In such a case the member is said to be subjected to:",
+      "question": "When a load tends to twist a member about its axis, internal shear stresses develop between the applied load and the reaction resisting the twist. What type of loading is the member subjected to?",
       "questionType": "multiple_choice",
       "choices": [
         "Torsion",
@@ -306,7 +306,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "The ratio of shear stress to strain be low the proportional limit is called shear modulus of elasticity or:",
+      "question": "What is the ratio of shear stress to shear strain below the proportional limit also called?",
       "questionType": "multiple_choice",
       "choices": [
         "Poisson's Ratio",
@@ -329,7 +329,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "The total moment due to internal stresses of a shaft or tube is equal in magnitude to the exter nal torque, and is given by the equation dA r L G T 2 . The quantity dA r 2 is known as the:",
+      "question": "For a shaft or tube in torsion, the angle of twist is given by \\(\\theta=\\frac{TL}{GJ}\\), where \\(J=\\int_A r^2\\,dA\\). What is \\(J\\), the area integral of radius squared, called?",
       "questionType": "multiple_choice",
       "choices": [
         "Polar moment of inertia",
@@ -352,7 +352,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "The maximum anticipated loads in the entire service life - span of a flight vehicle is called:",
+      "question": "What are the maximum loads anticipated during the service life of a flight vehicle called?",
       "questionType": "multiple_choice",
       "choices": [
         "Ultimate loads",
@@ -375,7 +375,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "This condition is obtained in a pullout at the highest possible angle of attack o f the wing. The lift and drag forces are perpendicular and parallel respectively to the relative wind.",
+      "question": "This condition occurs during a pullout at the wing's highest possible angle of attack. Lift and drag act perpendicular and parallel, respectively, to the relative wind. Which condition is described?",
       "questionType": "multiple_choice",
       "choices": [
         "Positive low angle of attack",
@@ -398,17 +398,17 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "This condition occur s at the diving speed limit of the airplane, it may occur in an intentional maneuver producing negative load factor or negative gust condition.",
+      "question": "This condition occurs at the airplane's diving-speed limit. It may also occur during an intentional maneuver with a negative load factor or during a negative gust. Which condition is described?",
       "questionType": "multiple_choice",
       "choices": [
         "Negative low angle of attack",
         "Negative high angle of attack",
         "Positive low angle of attack",
-        "Positive hi gh angle of attack 3 6"
+        "Positive high angle of attack"
       ],
       "answerIndex": 0,
       "answerText": "Negative low angle of attack",
-      "explanation": "Correct answer: Negative low angle of attack. The described diving-speed case with negative load factor or negative gust corresponds to negative low angle of attack in the supplied key.\n\nWhy the other choices are incorrect:\n• Negative high angle of attack: It does not match the condition or structural role described; the described diving-speed case with negative load factor or negative gust corresponds to negative low angle of attack in the supplied key.\n• Positive low angle of attack: It does not match the condition or structural role described; the described diving-speed case with negative load factor or negative gust corresponds to negative low angle of attack in the supplied key.\n• Positive hi gh angle of attack 3 6: It does not match the condition or structural role described; the described diving-speed case with negative load factor or negative gust corresponds to negative low angle of attack in the supplied key.\n\nDifferentiate Similar Concepts:\nPositive conditions have upward lift loading; negative high-AoA is not the stated diving-speed case.\n\n💡 Memory Hook:\nNegative load at dive speed \\(\\rightarrow\\) negative low AoA.\n\n🎯 Board Tip:\nMatch the sign of the lift/load to the flight condition.",
+      "explanation": "Correct answer: Negative low angle of attack. The described diving-speed case with negative load factor or negative gust corresponds to negative low angle of attack in the supplied key.\n\nWhy the other choices are incorrect:\n• Negative high angle of attack: It does not match the condition or structural role described; the described diving-speed case with negative load factor or negative gust corresponds to negative low angle of attack in the supplied key.\n• Positive low angle of attack: It does not match the condition or structural role described; the described diving-speed case with negative load factor or negative gust corresponds to negative low angle of attack in the supplied key.\n• Positive high angle of attack: It does not match the condition or structural role described; the described diving-speed case with negative load factor or negative gust corresponds to negative low angle of attack in the supplied key.\n\nDifferentiate Similar Concepts:\nPositive conditions have upward lift loading; negative high-AoA is not the stated diving-speed case.\n\n💡 Memory Hook:\nNegative load at dive speed \\(\\rightarrow\\) negative low AoA.\n\n🎯 Board Tip:\nMatch the sign of the lift/load to the flight condition.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -421,7 +421,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "A welded joint with members and their corresponding internal force as shown in Fig. A (see page 6 ). What is the magnitude and direction of the force in member F to maintain equilibrium condition",
+      "question": "A welded joint and its member forces are shown in Fig. A (see page 6). What magnitude and direction of force in member F will maintain equilibrium?",
       "questionType": "multiple_choice",
       "choices": [
         "3.5 KN, downward",
@@ -472,7 +472,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "When a load is applied to a member normal to its axis and the member is held fixed at another sectio n, at any section between the load and reaction the particles on one side of the section tend to move in a transve rse direction with respect to the other side; that is, they tend to slide by each other. This set up internal stresses in the member called:",
+      "question": "When a load is applied perpendicular to a member's axis and the member is fixed at another section, adjacent portions between the load and reaction tend to slide past one another. What internal stress does this create?",
       "questionType": "multiple_choice",
       "choices": [
         "Shear stress",
@@ -495,7 +495,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "A beam is loaded as shown in Fig. B (see 6 ). What is the angle of inclination of the resultant reaction at A below the horizontal reference line",
+      "question": "A beam is loaded as shown in Fig. B (see page 6). What is the angle of the resultant reaction at A below the horizontal reference line?",
       "questionType": "multiple_choice",
       "choices": [
         "18 degrees",
@@ -523,7 +523,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "During climb, the airplane accelerates at 48 ft/s 2 . If the weight of the airplane i s 3,800 lb, what is the load factor",
+      "question": "During a climb, an airplane accelerates at \\(48\\ \\mathrm{ft/s^2}\\). If it weighs 3,800 lb, what is its load factor?",
       "questionType": "multiple_choice",
       "choices": [
         "1.27",
@@ -546,7 +546,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "If the rivet shown in Fig. C (see page 6 ) has a shank diameter of 2.50 mm, what is the average stress in a section of the rivet between the two pieces of sheet at the given load",
+      "question": "The rivet shown in Fig. C (see page 6) has a shank diameter of 2.50 mm. What is the average stress in the rivet section between the two sheets under the given load?",
       "questionType": "multiple_choice",
       "choices": [
         "153 Pa",
@@ -574,7 +574,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "A propeller shaft, 4 ft long and 1.5 inches diameter is subjected to a torque of 390 ft - lb. What is the deflection angle if the modulus of rigidity is \\(11\\times10^6\\ \\mathrm{lb/in^2}\\)",
+      "question": "A 4-ft-long propeller shaft with a diameter of 1.5 inches is subjected to a torque of 390 ft·lb. What is its angle of twist if the modulus of rigidity is \\(11\\times10^6\\ \\mathrm{lb/in^2}\\)?",
       "questionType": "multiple_choice",
       "choices": [
         "0.47 degrees",
@@ -597,11 +597,11 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "If the skin of the wing torque box is constant at 1/16 inch and is subjected to torsional load of 2, 000 ft - lb, what is the shear stress Refer to Fig. D (see page 6 )",
+      "question": "The skin thickness of the wing torque box is 1/16 inch. If it is subjected to a torsional load of 2,000 ft·lb, what is the shear stress? Refer to Fig. D (see page 6).",
       "questionType": "multiple_choice",
       "choices": [
         "1,455 psi",
-        "17,455 ps i",
+        "17,455 psi",
         "174.5 psi",
         "14,550 psi"
       ],
@@ -625,7 +625,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "A design airplane intended to be certified as a commuter category under FAR part 23 has the following specifications: design gross weight is 3,100 lb, wing span is 34 ft, MAC is 4.75 ft, and maximum lif t coefficient is 1.35 with flaps retracted. What is the required minimum cruise speed",
+      "question": "An airplane is to be certified in the commuter category under FAR Part 23. Its design gross weight is 3,100 lb, wingspan is 34 ft, mean aerodynamic chord (MAC) is 4.75 ft, and maximum lift coefficient with flaps retracted is 1.35. What is the required minimum cruise speed?",
       "questionType": "multiple_choice",
       "choices": [
         "244 ft/s",
@@ -648,17 +648,17 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "A design airplane intended to be certified as a commuter category under FAR part 23 has the followin g specifications: design gross weight is 3,100 lb, wing span is 34 ft, MAC is 4.75 ft, and maximum lift coefficient is 1.35 with flaps retracted. What is the required positive limit maneuvering load factor",
+      "question": "An airplane is to be certified in the commuter category under FAR Part 23. Its design gross weight is 3,100 lb, wingspan is 34 ft, mean aerodynamic chord (MAC) is 4.75 ft, and maximum lift coefficient with flaps retracted is 1.35. What is its required positive limit maneuvering load factor?",
       "questionType": "multiple_choice",
       "choices": [
         "3.8",
         "3.93",
         "2.1",
-        "4.4 4 6"
+        "4.4"
       ],
       "answerIndex": 0,
       "answerText": "3.8",
-      "explanation": "Correct answer: 3.8. The keyed positive limit maneuvering factor is 3.8 for the category and specifications stated in the question.\n\nWhy the other choices are incorrect:\n• 3.93: It does not match the condition or structural role described; the keyed positive limit maneuvering factor is 3.\n• 2.1: It does not match the condition or structural role described; the keyed positive limit maneuvering factor is 3.\n• 4.4 4 6: It does not match the condition or structural role described; the keyed positive limit maneuvering factor is 3.\n\nDifferentiate Similar Concepts:\nThe other load factors correspond to different category or design conditions, not the case keyed here.\n\n💡 Memory Hook:\nA limit factor is a design load multiplier, not a speed or strength margin.\n\n🎯 Board Tip:\nRead the certification category before choosing a load factor.",
+      "explanation": "Correct answer: 3.8. The keyed positive limit maneuvering factor is 3.8 for the category and specifications stated in the question.\n\nWhy the other choices are incorrect:\n• 3.93: It does not match the condition or structural role described; the keyed positive limit maneuvering factor is 3.\n• 2.1: It does not match the condition or structural role described; the keyed positive limit maneuvering factor is 3.\n• 4.4: It does not match the condition or structural role described; the keyed positive limit maneuvering factor is 3.\n\nDifferentiate Similar Concepts:\nThe other load factors correspond to different category or design conditions, not the case keyed here.\n\n💡 Memory Hook:\nA limit factor is a design load multiplier, not a speed or strength margin.\n\n🎯 Board Tip:\nRead the certification category before choosing a load factor.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -694,10 +694,10 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "The swept back wing design is primarily intended to increase the critical Mach number of a supersoni c aircraft but also useful in:",
+      "question": "A swept-back wing is primarily intended to increase the critical Mach number of a supersonic aircraft. What other benefit does it provide?",
       "questionType": "multiple_choice",
       "choices": [
-        "Reducing induc ed drag",
+        "Reducing induced drag",
         "Increasing directional stability",
         "Improving L/D ratio",
         "Reduce parasite drag"
@@ -809,7 +809,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "Longitudinal (fore and aft) structural members of a semi - monocoque fuselage are called___.",
+      "question": "What are the longitudinal (fore-and-aft) structural members of a semi-monocoque fuselage called?",
       "questionType": "multiple_choice",
       "choices": [
         "spars and ribs",
@@ -878,7 +878,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "An airplane's cen ter of lift is usually located aft of its center of gravity ___________.",
+      "question": "An airplane's center of lift is usually located aft of its center of gravity under what condition?",
       "questionType": "multiple_choice",
       "choices": [
         "so that the airplane will have a tail - heavy tendency",
@@ -924,17 +924,17 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "What one major consideration in selecting an airfoil to be used for the tailplane design of an aircr af t",
+      "question": "What is a major consideration when selecting an airfoil for an aircraft's tailplane?",
       "questionType": "multiple_choice",
       "choices": [
         "lift curve slope",
         "zero - lift angle of attack",
         "maximum lift coefficient",
-        "minimum drag coefficient 5 6"
+        "minimum drag coefficient"
       ],
       "answerIndex": 0,
       "answerText": "lift curve slope",
-      "explanation": "Correct answer: lift curve slope. Tailplane airfoil lift-curve slope affects the change in tail lift with angle of attack, making it a major consideration for tail effectiveness and stability.\n\nWhy the other choices are incorrect:\n• zero - lift angle of attack: It does not match the condition or structural role described; tailplane airfoil lift-curve slope affects the change in tail lift with angle of attack, making it a major consideration for tail effectiveness and stability.\n• maximum lift coefficient: It does not match the condition or structural role described; tailplane airfoil lift-curve slope affects the change in tail lift with angle of attack, making it a major consideration for tail effectiveness and stability.\n• minimum drag coefficient 5 6: It does not match the condition or structural role described; tailplane airfoil lift-curve slope affects the change in tail lift with angle of attack, making it a major consideration for tail effectiveness and stability.\n\nDifferentiate Similar Concepts:\nOther airfoil characteristics may matter, but the source-keyed design consideration is lift-curve slope.\n\n💡 Memory Hook:\nLift-curve slope tells how rapidly lift changes with angle of attack.\n\n🎯 Board Tip:\nTailplane performance depends on both geometry and airfoil response.",
+      "explanation": "Correct answer: lift curve slope. Tailplane airfoil lift-curve slope affects the change in tail lift with angle of attack, making it a major consideration for tail effectiveness and stability.\n\nWhy the other choices are incorrect:\n• zero - lift angle of attack: It does not match the condition or structural role described; tailplane airfoil lift-curve slope affects the change in tail lift with angle of attack, making it a major consideration for tail effectiveness and stability.\n• maximum lift coefficient: It does not match the condition or structural role described; tailplane airfoil lift-curve slope affects the change in tail lift with angle of attack, making it a major consideration for tail effectiveness and stability.\n• minimum drag coefficient: It does not match the condition or structural role described; tailplane airfoil lift-curve slope affects the change in tail lift with angle of attack, making it a major consideration for tail effectiveness and stability.\n\nDifferentiate Similar Concepts:\nOther airfoil characteristics may matter, but the source-keyed design consideration is lift-curve slope.\n\n💡 Memory Hook:\nLift-curve slope tells how rapidly lift changes with angle of attack.\n\n🎯 Board Tip:\nTailplane performance depends on both geometry and airfoil response.",
       "tags": [
         "structures and design",
         "mock exam",
@@ -1016,7 +1016,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "The velocit y - load factor diagram is also known as the ______________.",
+      "question": "What is the velocity-load factor diagram also known as?",
       "questionType": "multiple_choice",
       "choices": [
         "flight limits",
@@ -1062,7 +1062,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "A design airplane intended to be certified as a commuter category under FAR part 23 has the followin g spec ifications: design gross weight is 3,100 lb, wing span is 34 ft, MAC is 4.75 ft, and maximum lift coefficient is 1.35 with flaps retracted. What is the required minimum cruise speed",
+      "question": "An airplane is to be certified in the commuter category under FAR Part 23. Its design gross weight is 3,100 lb, wingspan is 34 ft, mean aerodynamic chord (MAC) is 4.75 ft, and maximum lift coefficient with flaps retracted is 1.35. What is the required minimum cruise speed?",
       "questionType": "multiple_choice",
       "choices": [
         "166.5 ft/s",
@@ -1085,7 +1085,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "A design airpla ne intended to be certified as a commuter category under FAR part 23 has the following specifications: design gross weight is 3,100 lb, wing span is 34 ft, MAC is 4.75 ft, and maximum lif t coefficient is 1.35 with flaps retracted. What is the required posi tive limit maneuvering load factor",
+      "question": "An airplane is to be certified in the commuter category under FAR Part 23. Its design gross weight is 3,100 lb, wingspan is 34 ft, mean aerodynamic chord (MAC) is 4.75 ft, and maximum lift coefficient with flaps retracted is 1.35. What is its required positive limit maneuvering load factor?",
       "questionType": "multiple_choice",
       "choices": [
         "2.1",
@@ -1108,7 +1108,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "This type of emergency exit has the following characteristics: a rectangular opening not less than 2 4 in wide by 48 in high with corner radii not greater than one third the width of the ex it. This type of exit is located on each side of the fuselage at the aft portion of passenger compartment unless configuratio n of the airplane is such that some other location would afford a more effective means of evacuation. Thi s type of exit is at floor - level.",
+      "question": "Which type of emergency exit has a rectangular opening at least 24 inches wide by 48 inches high, with corner radii no greater than one-third the opening's width? It is located on each side of the fuselage near the aft end of the passenger compartment unless another location would provide more effective evacuation, and it is at floor level.",
       "questionType": "multiple_choice",
       "choices": [
         "Type III",
@@ -1154,7 +1154,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "A piece of formed sheet metal or extrusion riveted to a larger piece of thin sheet metal to give it rigidity and stiffness.",
+      "question": "What is a piece of formed sheet metal or an extrusion called when it is riveted to a larger piece of thin sheet metal to add rigidity and stiffness?",
       "questionType": "multiple_choice",
       "choices": [
         "spar",
