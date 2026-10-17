@@ -1,4 +1,4 @@
-import { initModePage } from "./shared.js?v=aerodynamics-mock-exam-iv-20261016-2";
+import { initModePage } from "./shared.js?v=structures-design-mock-exams-i-ii-iii-20261017-1";
 
 document.addEventListener("DOMContentLoaded", () => {
     initModePage("note");
