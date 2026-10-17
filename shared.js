@@ -13,7 +13,7 @@ export const ADMIN_PASSWORD = "prepcore";
 export const NOTES_PATH = "./markdowns";
 // Bump this when subjects.json or its chapter payloads change. It invalidates both
 // the browser's HTTP cache and the persistent normalized-library cache.
-const SUBJECTS_CACHE_VERSION = "structures-design-mock-i-ii-20261017-3";
+const SUBJECTS_CACHE_VERSION = "volare-mass-balance-table-20261018-2";
 const SUBJECTS_PATH = `./subjects.json?v=${SUBJECTS_CACHE_VERSION}`;
 const VALID_MODES = new Set(["quiz", "learn", "flashcards", "exam", "note"]);
 const SUBJECTS_CACHE_KEY = `prepcore.web.subjectsCache.${SUBJECTS_CACHE_VERSION}`;
@@ -2457,6 +2457,39 @@ function clearQuizSession(subject, chapter) {
     removeScopedSession(QUIZ_SESSION_KEY, "quiz", subject, chapter);
 }
 
+function refreshSavedQuestions(savedQuestions, chapter) {
+    if (!Array.isArray(savedQuestions) || !chapter) return savedQuestions;
+
+    const currentQuestions = collectChapterQuestions(chapter)
+        .map((entry, index) => coerceQuestion(entry, index + 1));
+    const currentByText = new Map(currentQuestions.map((question) => [text(question.question).trim(), question]));
+    const fingerprint = (question) => JSON.stringify([
+        text(question?.questionType),
+        Array.isArray(question?.choices) ? question.choices.map((choice) => text(choice).replace(/\s+/g, " ").trim().toLowerCase()) : [],
+        Number(question?.answerIndex),
+        text(question?.answerText).replace(/\s+/g, " ").trim().toLowerCase()
+    ]);
+    const currentByFingerprint = new Map();
+    currentQuestions.forEach((question) => {
+        const key = fingerprint(question);
+        const matches = currentByFingerprint.get(key) || [];
+        matches.push(question);
+        currentByFingerprint.set(key, matches);
+    });
+
+    return savedQuestions.map((savedQuestion) => {
+        const matches = currentByFingerprint.get(fingerprint(savedQuestion)) || [];
+        const uniqueFallback = matches.length === 1 ? matches[0] : null;
+        const refreshed = currentByText.get(text(savedQuestion?.question).trim()) || uniqueFallback;
+        if (!refreshed) return savedQuestion;
+
+        return {
+            ...refreshed,
+            choiceOrder: savedQuestion?.choiceOrder
+        };
+    });
+}
+
 function restoreQuizSession(subject, chapter) {
     const saved = getScopedSession(QUIZ_SESSION_KEY, "quiz", subject, chapter);
     if (!saved || !subject || !chapter || saved.subjectId !== subject.id || saved.chapterTitle !== chapter.title) {
@@ -2464,7 +2497,9 @@ function restoreQuizSession(subject, chapter) {
     }
 
     const session = createSession(subject, chapter, "quiz", {
-        questions: Array.isArray(saved.questions) && saved.questions.length ? saved.questions : undefined,
+        questions: Array.isArray(saved.questions) && saved.questions.length
+            ? refreshSavedQuestions(saved.questions, chapter)
+            : undefined,
         shuffleChoices: false
     });
     session.answers = Array.isArray(saved.answers)
@@ -2568,17 +2603,7 @@ function restoreModeSession(subject, chapter, mode) {
     }
 
     const savedQuestions = Array.isArray(saved.questions) && saved.questions.length ? saved.questions : null;
-    const currentQuestionsByText = new Map(
-        collectChapterQuestions(chapter)
-            .map((entry, index) => coerceQuestion(entry, index + 1))
-            .map((question) => [text(question.question).trim(), question])
-    );
-    const restoredQuestions = savedQuestions?.map((question) => {
-        const currentQuestion = currentQuestionsByText.get(text(question?.question).trim());
-        return currentQuestion
-            ? { ...question, questionImages: currentQuestion.questionImages }
-            : question;
-    });
+    const restoredQuestions = savedQuestions ? refreshSavedQuestions(savedQuestions, chapter) : null;
     const session = createSession(subject, chapter, mode, {
         questions: restoredQuestions || undefined,
         chapterTitle: saved.chapterTitle,

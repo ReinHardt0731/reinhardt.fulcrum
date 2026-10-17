@@ -18,7 +18,7 @@ import {
     hydrateMarkdownPreview,
     renderMarkdownPreview,
     renderForceSystemModelCard
-} from "./shared.js?v=structures-design-mock-i-ii-20261017-3";
+} from "./shared.js?v=volare-mass-balance-table-20261018-2";
 import { initAdminShell } from "./admin-shell.js";
 
 document.addEventListener("DOMContentLoaded", async () => {

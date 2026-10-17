@@ -82267,7 +82267,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "(For this question use annex 031-4739A or Loading Manual MEP1 Figure 3.4) With respect to multi-engine piston powered aeroplane, determine the ramp mass (lbs) in the following conditions: Basic empty mass: 3 210 lbs Basic arm: 88.5 Inches One pilot: 160 lbs Front seat passenger : 200 lbs Centre seat passengers: 290 lbs One passenger rear seat: 110 lbs Baggage in zone 1: 100 lbs Baggage in zone 4: 50 lbs Block fuel: 100 US Gal. Trip fuel: 55 US Gal. Fuel for start up and taxi (included in block fuel): 3 US Gal. Fuel density: 6 lbs/US Gal.",
+          "question": "(For this question use annex 031-4739A or Loading Manual MEP1 Figure 3.4.) Using the aircraft data below, determine the ramp mass in pounds.",
           "questionType": "multiple_choice",
           "choices": [
             "4 372",
@@ -82286,7 +82286,64 @@
             "volare"
           ],
           "expectedAnswer": null,
-          "acceptedDeviation": 0
+          "acceptedDeviation": 0,
+          "questionTable": {
+            "caption": "Ramp-mass inputs",
+            "columns": [
+              "Item",
+              "Value"
+            ],
+            "rows": [
+              [
+                "Basic arm",
+                "88.5 in"
+              ],
+              [
+                "Basic empty mass",
+                "3210 lb"
+              ],
+              [
+                "Pilot",
+                "160 lb"
+              ],
+              [
+                "Front seat passenger",
+                "200 lb"
+              ],
+              [
+                "Centre seat passengers",
+                "290 lb total"
+              ],
+              [
+                "Rear seat passenger",
+                "110 lb"
+              ],
+              [
+                "Baggage, zone 1",
+                "100 lb"
+              ],
+              [
+                "Baggage, zone 4",
+                "50 lb"
+              ],
+              [
+                "Block fuel",
+                "100 US gal"
+              ],
+              [
+                "Trip fuel",
+                "55 US gal"
+              ],
+              [
+                "Start-up and taxi fuel",
+                "3 US gal (included in block fuel)"
+              ],
+              [
+                "Fuel density",
+                "6 lb/US gal"
+              ]
+            ]
+          }
         },
         {
           "question": "(For this question use annex 031-1581A) The loading for a flight is shown in the attached loadsheet, with the following data applying to the aeroplane: Maximum take-off mass: 150 000 kg Maximum landing mass: 140 000 kg Centre of gravity (cg) limit forward: 10.5 m aft of datum aft: 13.0 m aft of datum Estimated trip fuel: 55 000 kg",
@@ -83059,7 +83116,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "The following results were obtained after weighing a helicopter : - mass at front point: 300 kg - mass at right rear point : 1 100 kg - mass at left rear point : 950 kg It is given that the front point is located 0.30 m left of the longitudinal axis and the rear points are symmetricaly located 1.20 m from this axis. The helicopter's lateral CG-position relative to the longitudinal axis is:",
+          "question": "The following scale readings were obtained after weighing a helicopter. The lateral positions of the weighing points are shown below. Determine the helicopter's lateral CG position relative to the longitudinal axis.",
           "questionType": "multiple_choice",
           "choices": [
             "4 cm left",
@@ -83078,10 +83135,35 @@
             "volare"
           ],
           "expectedAnswer": null,
-          "acceptedDeviation": 0
+          "acceptedDeviation": 0,
+          "questionTable": {
+            "caption": "Helicopter weighing readings (right is positive)",
+            "columns": [
+              "Weighing point",
+              "Mass (kg)",
+              "Lateral arm (m)"
+            ],
+            "rows": [
+              [
+                "Front point",
+                "300",
+                "−0.30 (left)"
+              ],
+              [
+                "Right rear point",
+                "1100",
+                "+1.20 (right)"
+              ],
+              [
+                "Left rear point",
+                "950",
+                "−1.20 (left)"
+              ]
+            ]
+          }
         },
         {
-          "question": "(For this question use annex 031-4741A or Loading Manual MEP1 Figure 3.4) With respect to a multi-engine piston powered aeroplane, determine the total moment (lbs.In) at landing in the following conditions: Basic empty mass: 3 210 lbs. One pilot: 160 lbs. Front seat passenger : 200 lbs. Centre seat passengers: 290 lbs. (total) One passenger rear seat: 110 lbs. Baggage in zone 1: 100 lbs. Baggage in zone 4: 50 lbs. Block fuel: 100 US Gal. Trip fuel: 55 US Gal. Fuel for start up and taxi (included in block fuel): 3 US Gal. Fuel density: 6 lbs./US Gal. Total moment at take-o 432226 lbs.In ff:",
+          "question": "(For this question use annex 031-4741A or Loading Manual MEP1 Figure 3.4.) Using the aircraft data below and the stated take-off total moment, determine the total moment at landing in lb·in.",
           "questionType": "multiple_choice",
           "choices": [
             "432 221",
@@ -83100,10 +83182,67 @@
             "volare"
           ],
           "expectedAnswer": null,
-          "acceptedDeviation": 0
+          "acceptedDeviation": 0,
+          "questionTable": {
+            "caption": "Landing-moment inputs",
+            "columns": [
+              "Item",
+              "Value"
+            ],
+            "rows": [
+              [
+                "Basic empty mass",
+                "3210 lb"
+              ],
+              [
+                "Pilot",
+                "160 lb"
+              ],
+              [
+                "Front seat passenger",
+                "200 lb"
+              ],
+              [
+                "Centre seat passengers",
+                "290 lb total"
+              ],
+              [
+                "Rear seat passenger",
+                "110 lb"
+              ],
+              [
+                "Baggage, zone 1",
+                "100 lb"
+              ],
+              [
+                "Baggage, zone 4",
+                "50 lb"
+              ],
+              [
+                "Block fuel",
+                "100 US gal"
+              ],
+              [
+                "Trip fuel",
+                "55 US gal"
+              ],
+              [
+                "Start-up and taxi fuel",
+                "3 US gal (included in block fuel)"
+              ],
+              [
+                "Fuel density",
+                "6 lb/US gal"
+              ],
+              [
+                "Take-off total moment",
+                "432226 lb·in"
+              ]
+            ]
+          }
         },
         {
-          "question": "Given the following information, calculate the loaded centre of gravity (cg). STATION MASS (kg) ARM (cm) MOMENT (kgcm) Basic Empty Condition 12045 +30 Crew 145 -160 - Freight 1 5455 +200 Freight 2 410 -40 - Fuel 6045 -8 - Oil 124 +40 _________________________________________________ __________________ _________________________________________________ __________________ +361350 23200 +1091000 16400 48360 +4960",
+          "question": "Given the following mass-and-balance data, calculate the loaded centre of gravity (CG).",
           "questionType": "multiple_choice",
           "choices": [
             "56.53 cm aft datum.",
@@ -83122,7 +83261,54 @@
             "volare"
           ],
           "expectedAnswer": null,
-          "acceptedDeviation": 0
+          "acceptedDeviation": 0,
+          "questionTable": {
+            "caption": "Mass and balance data",
+            "columns": [
+              "Station",
+              "Mass (kg)",
+              "Arm (cm)",
+              "Moment (kg·cm)"
+            ],
+            "rows": [
+              [
+                "Basic Empty Condition",
+                "12045",
+                "+30",
+                "+361350"
+              ],
+              [
+                "Crew",
+                "145",
+                "−160",
+                "−23200"
+              ],
+              [
+                "Freight 1",
+                "5455",
+                "+200",
+                "+1091000"
+              ],
+              [
+                "Freight 2",
+                "410",
+                "−40",
+                "−16400"
+              ],
+              [
+                "Fuel",
+                "6045",
+                "−8",
+                "−48360"
+              ],
+              [
+                "Oil",
+                "124",
+                "+40",
+                "+4960"
+              ]
+            ]
+          }
         },
         {
           "question": "(For this question use annex 031-12269A) Using the data given at the appendix to this question, if the fuel index corrections (from ZFM index) are as follows 9500 kg - 0.9 6500 kg - 6.1 3500 kg - 4.7 3000 kg - 4.3 Which of the following represent the correct values for landing mass of the aeroplane and the position of the centre of gravity for this condition ?",
@@ -83895,7 +84081,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "The mass and balance information gives : Basic mass : 1 200 kg ; Basic balance arm : 3.00 m Under these conditions the Basic centre of gravity is at 25% of the mean aerodynamic chord (MAC). The length of MAC is 2m. In the mass and balance section of the flight manual the following information is given : Position Arm front seats : 2.5 m rear seats : 3.5 m rear hold : 4.5 m fuel tanks : 3.0 m The pilot and one passenger embark; each weighs 80 kg. Fuel tanks contain 140 litres of petrol with a density of 0.714. The rear seats are not occupied.Taxi fuel is negligable. The position of the centre of gravity at take-off (as % MAC) is :",
+          "question": "The aircraft has a basic mass of 1 200 kg and a basic arm of 3.00 m. Its basic CG is at 25% MAC, and the MAC is 2 m long. The flight manual gives the station arms below. A pilot and one passenger, each weighing 80 kg, embark. The rear seats are unoccupied. The fuel tanks contain 140 litres of petrol at a density of 0.714. Taxi fuel is negligible. Find the take-off CG as a percentage of MAC.",
           "questionType": "multiple_choice",
           "choices": [
             "29 %",
@@ -83914,7 +84100,32 @@
             "volare"
           ],
           "expectedAnswer": null,
-          "acceptedDeviation": 0
+          "acceptedDeviation": 0,
+          "questionTable": {
+            "caption": "Station arms from the flight manual",
+            "columns": [
+              "Location",
+              "Arm (m)"
+            ],
+            "rows": [
+              [
+                "Front seats",
+                "2.5"
+              ],
+              [
+                "Rear seats",
+                "3.5"
+              ],
+              [
+                "Rear hold",
+                "4.5"
+              ],
+              [
+                "Fuel tanks",
+                "3.0"
+              ]
+            ]
+          }
         },
         {
           "question": "The centre of gravity of an aeroplane is that point through which the total mass of the aeroplane is said to act. The weight acts in a direction",
@@ -84555,7 +84766,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "The following results were obtained after weighing a helicopter : - front point : 220 kg - right rear point : 500 kg - left rear point : 480 kg The helicopter's datum is 3.40 m forward of the rotor axis. The front point is located 2.00 m forward of the rotor axis and the rear points are located 0.50 m aft of the rotor axis. The longitudinal CG-position in relation to the datum is:",
+          "question": "The helicopter datum is 3.40 m forward of the rotor axis. The weighing points and their positions relative to the rotor axis are shown below. Determine the longitudinal CG position in relation to the datum.",
           "questionType": "multiple_choice",
           "choices": [
             "0,04 m",
@@ -84574,7 +84785,32 @@
             "volare"
           ],
           "expectedAnswer": null,
-          "acceptedDeviation": 0
+          "acceptedDeviation": 0,
+          "questionTable": {
+            "caption": "Helicopter weighing readings (aft of rotor axis is positive)",
+            "columns": [
+              "Weighing point",
+              "Mass (kg)",
+              "Longitudinal arm (m)"
+            ],
+            "rows": [
+              [
+                "Front point",
+                "220",
+                "−2.00 (forward)"
+              ],
+              [
+                "Right rear point",
+                "500",
+                "+0.50 (aft)"
+              ],
+              [
+                "Left rear point",
+                "480",
+                "+0.50 (aft)"
+              ]
+            ]
+          }
         },
         {
           "question": "A revenue flight is to be made by a jet transport. The following are the aeroplane's structural limits: -Maximum Ramp Mass: 69 900 kg -Maximum Take Off Mass: 69 300 kg -Maximum Landing Mass: 58 900 kg -Maximum Zero Fuel Mass: 52 740 kg Take Off and Landing mass are not performance limited. Dry Operating Mass: 34 930 kg Trip Fuel: 11 500 kg Taxi Fuel: 250 kg Contingency & final reserve fuel: 1 450 kg Alternate Fuel: 1 350 kg The maximum traffic load that can be carried is:",
@@ -84995,7 +85231,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "(For this question use annex 031-11275A and 031- 11275B) A turbojet aeroplane has a planned take-off mass of 190 000 kg; the cargo load is distributed as follows: cargo 1: 3 000 kg; cargo 4: 7 000 kg. Once the cargo loading is completed, the crew is informed that the centre of gravity at take-off is located at 38 % MAC (Mean Aerodynamic Cord) which is beyond the limits. The captain decides then to redistribute part of the cargo load between cargo 1 and cargo 4 in order to obtain a new centre of gravity location at 31 % MAC. Following the transfer operation, the new load distribution is:",
+          "question": "(For this question use annex 031-11275A and 031-11275B.) A turbojet aeroplane has a planned take-off mass of 190 000 kg. After loading, its centre of gravity is at 38% MAC, beyond the limits. The captain decides to redistribute cargo between cargo compartments 1 and 4 to obtain a new CG at 31% MAC. What should the new cargo distribution be?",
           "questionType": "multiple_choice",
           "choices": [
             "cargo 1: 6 000 kg; cargo 4: 4 000 kg",
@@ -85014,7 +85250,24 @@
             "volare"
           ],
           "expectedAnswer": null,
-          "acceptedDeviation": 0
+          "acceptedDeviation": 0,
+          "questionTable": {
+            "caption": "Initial cargo distribution",
+            "columns": [
+              "Cargo compartment",
+              "Load (kg)"
+            ],
+            "rows": [
+              [
+                "1",
+                "3000"
+              ],
+              [
+                "4",
+                "7000"
+              ]
+            ]
+          }
         },
         {
           "question": "The Dry Operating Mass of an aeroplane includes :",
@@ -85039,7 +85292,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "(For this question use annex 031-12272A) For the purpose of calculating traffic loads, an operator's loading manual gives the following standard mass values for passengers. (These values include an allowance for hand baggage) Male 88 kg Female 70 kg Child 35 kg Infant 6 kg The standard mass value to be used for hold baggage is 14 kg per piece The loading manifest shows the following details : Passengers loaded Males 40 Females 65 Children 8 Infants 5 Baggage in hold number 4: 120 pieces Using the standard mass values given and the data in the appendix, select from the following the correct value for the mass of freight (all loaded in hold No1) which constitutes the remainder of the traffic load",
+          "question": "(For this question use annex 031-12272A.) An operator's loading manual gives standard passenger masses that include hand baggage. The manifest and the standard mass for hold baggage are shown below. Using these values and the appendix, calculate the mass of freight loaded in hold 1 that makes up the remainder of the traffic load.",
           "questionType": "multiple_choice",
           "choices": [
             "280 kg",
@@ -85058,7 +85311,42 @@
             "volare"
           ],
           "expectedAnswer": null,
-          "acceptedDeviation": 0
+          "acceptedDeviation": 0,
+          "questionTable": {
+            "caption": "Standard masses and manifest counts",
+            "columns": [
+              "Load category",
+              "Standard mass",
+              "Quantity"
+            ],
+            "rows": [
+              [
+                "Male passenger (includes hand baggage)",
+                "88 kg each",
+                "40 passengers"
+              ],
+              [
+                "Female passenger (includes hand baggage)",
+                "70 kg each",
+                "65 passengers"
+              ],
+              [
+                "Child passenger (includes hand baggage)",
+                "35 kg each",
+                "8 passengers"
+              ],
+              [
+                "Infant passenger (includes hand baggage)",
+                "6 kg each",
+                "5 passengers"
+              ],
+              [
+                "Hold baggage",
+                "14 kg per piece",
+                "120 pieces in hold 4"
+              ]
+            ]
+          }
         },
         {
           "question": "(For this question use annexes 031-11069A and 031- 11069B) Contrary to the forecast given in the LOAD and TRIM sheet, cargo compartment 1 is empty. The take-off centre of gravity in MAC % (Mean Aerodynamic Chord) will be located at:",
@@ -85655,7 +85943,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "(For this question use annex 031-11247A and 031- 11247B) A turbojet aeroplane is parked with the following data: Corrected Dry Operating Mass: 110 100 kg Basic corrected index: 118.6 Initial cargo distribution: cargo 1 = 4 000 kg; cargo 2 = 2 000 kg; cargo 3 = 2 000 kg; The other cargo compartments are empty. Take-off mass: 200 000 kg Centre of gravity location: 32 % MAC (Mean Aerodynamic Cord) To maximize performance, the captain decides to redistribute part of the cargo load between cargo 1 and cargo 4, in order to take off with a new centre of gravity location at 35 % MAC. After loading, the new load distribution between cargo 1 and cargo 4 is:",
+          "question": "(For this question use annex 031-11247A and 031-11247B.) A turbojet aeroplane has a corrected dry operating mass of 110 100 kg, basic corrected index 118.6, take-off mass 200 000 kg, and CG at 32% MAC. The initial cargo distribution is shown below; all other cargo compartments are empty. Cargo is to be redistributed between compartments 1 and 4 to achieve a take-off CG of 35% MAC. What will the new loads in compartments 1 and 4 be?",
           "questionType": "multiple_choice",
           "choices": [
             "1 000 kg in cargo 1; 3 000 kg in cargo 4",
@@ -85674,7 +85962,32 @@
             "volare"
           ],
           "expectedAnswer": null,
-          "acceptedDeviation": 0
+          "acceptedDeviation": 0,
+          "questionTable": {
+            "caption": "Initial cargo distribution",
+            "columns": [
+              "Cargo compartment",
+              "Load (kg)"
+            ],
+            "rows": [
+              [
+                "1",
+                "4000"
+              ],
+              [
+                "2",
+                "2000"
+              ],
+              [
+                "3",
+                "2000"
+              ],
+              [
+                "4",
+                "0 (empty)"
+              ]
+            ]
+          }
         },
         {
           "question": "(For this question use annex 031 11634A) Maximum allowed take-off mass limit: 37 200kg Dry operating mass: 21 600 kg Take-off fuel: 8 500 kg Passengers on board: male 33, female 32, children 5 Baggages: 880 kg The company uses the standard passenger mass systems (see annex) allowed by regulations. The flight is not a holiday charter. In these conditions, the maximum cargo that may be loaded is",
@@ -85831,7 +86144,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "(For this question use annexes 031- 11205A and 031- 11205B) A turbojet aeroplane is parked with the following data: Corrected dry operating mass: 110 100 kg Basic corrected index: 118.6 Initial cargo distribution: cargo 1: 4 000 kg ; cargo 2: 2 000 kg ; cargo 3: 2 000 kg; other cargo compartments are empty Take-off mass: 200 000 kg; centre of gravity (C.G.) location: 32 % For perfomance reasons, the captain decides to redistribute part of the cargo loading between cargo compartments, in order to take off with a new C.G. location of 34 %. He asks for a transfer of:",
+          "question": "(For this question use annexes 031-11205A and 031-11205B.) A turbojet aeroplane has a corrected dry operating mass of 110 100 kg, basic corrected index 118.6, take-off mass 200 000 kg, and CG at 32% MAC. The initial cargo distribution is shown below; all other cargo compartments are empty. For performance reasons, the captain wants a take-off CG of 34% MAC. Which cargo transfer is required?",
           "questionType": "multiple_choice",
           "choices": [
             "1 500 kg from cargo 3 to cargo 1",
@@ -85850,7 +86163,32 @@
             "volare"
           ],
           "expectedAnswer": null,
-          "acceptedDeviation": 0
+          "acceptedDeviation": 0,
+          "questionTable": {
+            "caption": "Initial cargo distribution",
+            "columns": [
+              "Cargo compartment",
+              "Load (kg)"
+            ],
+            "rows": [
+              [
+                "1",
+                "4000"
+              ],
+              [
+                "2",
+                "2000"
+              ],
+              [
+                "3",
+                "2000"
+              ],
+              [
+                "4",
+                "0 (empty)"
+              ]
+            ]
+          }
         },
         {
           "question": "Given an aeroplane with: Maximum Structural Landing Mass: 68000 kg Maximum Zero Fuel Mass: 70200 kg Maximum Structural Take-off Mass: 78200 kg Dry Operating Mass : 48000 kg Scheduled trip fuel is 7000 kg and the reserve fuel is 2800 kg, Assuming performance limitations are not restricting, the maximum permitted take-off mass and maximum traffic load are respectively:",
@@ -86164,14 +86502,49 @@
           "question": "Given the following information at take-off, calculate the landing centre of gravity. The flight time is 2 hours, the estimated fuel flow is 1050 litres per hour, and the average oil consumption is 2.25 litres per hour. The specific density of fuel is 0.79 kg/L and the specific density of oil is 0.96 kg/L.",
           "questionTable": {
             "caption": "Take-off mass and balance data",
-            "columns": ["Station", "Mass (kg)", "Arm (cm)", "Moment (kg·cm)"],
+            "columns": [
+              "Station",
+              "Mass (kg)",
+              "Arm (cm)",
+              "Moment (kg·cm)"
+            ],
             "rows": [
-              ["Basic Empty Condition", "12045", "+30", "+361350"],
-              ["Crew", "145", "−160", "−23200"],
-              ["Freight 1", "5455", "+200", "+1091000"],
-              ["Freight 2", "410", "−40", "−16400"],
-              ["Fuel", "6045", "−8", "−48360"],
-              ["Oil", "124", "+40", "+4960"]
+              [
+                "Basic Empty Condition",
+                "12045",
+                "+30",
+                "+361350"
+              ],
+              [
+                "Crew",
+                "145",
+                "−160",
+                "−23200"
+              ],
+              [
+                "Freight 1",
+                "5455",
+                "+200",
+                "+1091000"
+              ],
+              [
+                "Freight 2",
+                "410",
+                "−40",
+                "−16400"
+              ],
+              [
+                "Fuel",
+                "6045",
+                "−8",
+                "−48360"
+              ],
+              [
+                "Oil",
+                "124",
+                "+40",
+                "+4960"
+              ]
             ]
           },
           "questionType": "multiple_choice",
@@ -86371,7 +86744,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "(For this question use annex 031-4742A or Loading Manual MEP1 Figure 3.4) With respect to a multi-engine piston powered aeroplane, determine the CG location at take off in the following conditions: Basic empty mass: 3 210 lbs. One pilot: 160 lbs. Front seat passenger : 200 lbs. Centre seat passengers: 290 lbs. (total) One passenger rear seat: 110 lbs. Baggage in zone 1: 100 lbs. Baggage in zone 4: 50 lbs. Zero Fuel Mass: 4210 lbs. Moment at Zero Fuel Mass: 377751 lbs.In Block fuel: 100 US Gal. Trip fuel: 55 US Gal. Fuel for start up and taxi (included in block fuel): 3 US Gal. Fuel density: 6 lbs./US Gal.",
+          "question": "(For this question use annex 031-4742A or Loading Manual MEP1 Figure 3.4.) Using the aircraft data below, determine the CG location at take-off.",
           "questionType": "multiple_choice",
           "choices": [
             "93.60 inches aft of datum",
@@ -86390,7 +86763,68 @@
             "volare"
           ],
           "expectedAnswer": null,
-          "acceptedDeviation": 0
+          "acceptedDeviation": 0,
+          "questionTable": {
+            "caption": "Take-off CG inputs",
+            "columns": [
+              "Item",
+              "Value"
+            ],
+            "rows": [
+              [
+                "Basic empty mass",
+                "3210 lb"
+              ],
+              [
+                "Pilot",
+                "160 lb"
+              ],
+              [
+                "Front seat passenger",
+                "200 lb"
+              ],
+              [
+                "Centre seat passengers",
+                "290 lb total"
+              ],
+              [
+                "Rear seat passenger",
+                "110 lb"
+              ],
+              [
+                "Baggage, zone 1",
+                "100 lb"
+              ],
+              [
+                "Baggage, zone 4",
+                "50 lb"
+              ],
+              [
+                "Zero fuel mass",
+                "4210 lb"
+              ],
+              [
+                "Moment at zero fuel mass",
+                "377751 lb·in"
+              ],
+              [
+                "Block fuel",
+                "100 US gal"
+              ],
+              [
+                "Trip fuel",
+                "55 US gal"
+              ],
+              [
+                "Start-up and taxi fuel",
+                "3 US gal (included in block fuel)"
+              ],
+              [
+                "Fuel density",
+                "6 lb/US gal"
+              ]
+            ]
+          }
         },
         {
           "question": "When establishing the mass breakdown of an aeroplane, the empty mass is defined as the sum of the:",
@@ -86723,7 +87157,7 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "(For this question use annex 031-4740A or Loading Manual MEP1 Figure 3.4) With respect to multi-engine piston powered aeroplane, determine the block fuel moment (lbs.In.) in the following conditions: Basic empty mass: 3 210 lbs. One pilot: 160 lbs. Front seat passenger : 200 lbs. Centre seat passengers: 290 lbs. (total) One passenger rear seat: 110 lbs. Baggage in zone 1: 100 lbs. Baggage in zone 4: 50 lbs. Block fuel: 100 US Gal. Trip fuel: 55 US Gal. Fuel for start up and taxi (included in block fuel): 3 US Gal. Fuel density: 6 lbs./US Gal.",
+          "question": "(For this question use annex 031-4740A or Loading Manual MEP1 Figure 3.4.) Using the aircraft data below, determine the block fuel moment in lb·in.",
           "questionType": "multiple_choice",
           "choices": [
             "433 906",
@@ -86742,7 +87176,60 @@
             "volare"
           ],
           "expectedAnswer": null,
-          "acceptedDeviation": 0
+          "acceptedDeviation": 0,
+          "questionTable": {
+            "caption": "Block-fuel moment inputs",
+            "columns": [
+              "Item",
+              "Value"
+            ],
+            "rows": [
+              [
+                "Basic empty mass",
+                "3210 lb"
+              ],
+              [
+                "Pilot",
+                "160 lb"
+              ],
+              [
+                "Front seat passenger",
+                "200 lb"
+              ],
+              [
+                "Centre seat passengers",
+                "290 lb total"
+              ],
+              [
+                "Rear seat passenger",
+                "110 lb"
+              ],
+              [
+                "Baggage, zone 1",
+                "100 lb"
+              ],
+              [
+                "Baggage, zone 4",
+                "50 lb"
+              ],
+              [
+                "Block fuel",
+                "100 US gal"
+              ],
+              [
+                "Trip fuel",
+                "55 US gal"
+              ],
+              [
+                "Start-up and taxi fuel",
+                "3 US gal (included in block fuel)"
+              ],
+              [
+                "Fuel density",
+                "6 lb/US gal"
+              ]
+            ]
+          }
         },
         {
           "question": "Given: Aeroplane mass = 36 000 kg Centre of gravity (cg) is located at station 17 m What is the effect on cg location if you move 20 passengers (total mass = 1 600 kg) from station 16 to station 23?",

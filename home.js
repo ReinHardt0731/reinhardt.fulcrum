@@ -1,4 +1,4 @@
-import { initHomePage } from "./shared.js?v=structures-design-mock-i-ii-20261017-3";
+import { initHomePage } from "./shared.js?v=volare-mass-balance-table-20261018-2";
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
