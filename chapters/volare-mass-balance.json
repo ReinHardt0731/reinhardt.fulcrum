@@ -19,7 +19,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-12266A or Loading Manual MRJT 1 Figure 4.14) Using the load and trim sheet for the JAR FCL twin jet, which of the following is the correct value for the index at a Dry Operating Mass (DOM) of 35000 kg with a CG at 14% MAC ?",
+      "question": "Using the load and trim sheet for the JAR FCL twin jet, which of the following is the correct value for the index at a Dry Operating Mass (DOM) of 35000 kg with a CG at 14% MAC ?",
       "questionType": "multiple_choice",
       "choices": [
         "33..0",
@@ -33,6 +33,13 @@
       "tags": [
         "mass & balance",
         "volare"
+      ],
+      "questionImages": [
+        {
+          "src": "asset/volare-annexes/mrjt1-load-trim-plot.png",
+          "alt": "MRJT1 load-and-trim sheet graph, CAP 696 Figure 4.12",
+          "caption": "MRJT1 load-and-trim chart (CAA CAP 696, Figure 4.12; plot area)."
+        }
       ]
     },
     {
@@ -104,7 +111,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-9629 A or Loading Manual MRJT 1 Figure 4.9) From the loading manual for the jet transport aeroplane, the maximum floor loading intensity for the aft cargo compartment is :",
+      "question": "From the loading manual for the jet transport aeroplane, the maximum floor loading intensity for the aft cargo compartment is :",
       "questionType": "multiple_choice",
       "choices": [
         "68 kg per square metre.",
@@ -118,7 +125,114 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "MRJT1 cargo compartment limitations (CAP 696 Figure 4.9)",
+        "columns": [
+          "Compartment",
+          "Limit type",
+          "Maximum value",
+          "Arm / segment"
+        ],
+        "rows": [
+          [
+            "Forward hold (1)",
+            "Running load",
+            "13.15 kg/in",
+            "BA 228?286 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Running load",
+            "8.47 kg/in",
+            "BA 286?343 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Running load",
+            "13.12 kg/in",
+            "BA 343?500 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Distribution load intensity",
+            "68 kg/ft?",
+            "?"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "762 kg",
+            "Centroid BA 257 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "483 kg",
+            "Centroid BA 314.5 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "2,059 kg",
+            "Centroid BA 421.5 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Maximum total load",
+            "3,305 kg",
+            "Hold centroid BA 367.9 in; volume 607 ft?"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "14.65 kg/in",
+            "BA 731?940 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "7.26 kg/in",
+            "BA 940?997 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "7.18 kg/in",
+            "BA 997?1,096 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Distribution load intensity",
+            "68 kg/ft?",
+            "?"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "3,062 kg",
+            "Centroid BA 835.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "414 kg",
+            "Centroid BA 968.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "711 kg",
+            "Centroid BA 1,046.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Maximum total load",
+            "4,187 kg",
+            "Hold centroid BA 884.5 in; volume 766 ft?"
+          ]
+        ]
+      }
     },
     {
       "question": "The empty mass of an aeroplane is recorded in",
@@ -223,7 +337,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-9609 A or Loading Manual MRJT 1 Figure 4.9) Referring to the loading manual for the transport aeroplane, the maximum load intensity for the lower forward cargo compartment is:",
+      "question": "Referring to the loading manual for the transport aeroplane, the maximum load intensity for the lower forward cargo compartment is:",
       "questionType": "multiple_choice",
       "choices": [
         "7288 kg in forward compartment and 9232 kg in aft compartment.",
@@ -237,7 +351,114 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "MRJT1 cargo compartment limitations (CAP 696 Figure 4.9)",
+        "columns": [
+          "Compartment",
+          "Limit type",
+          "Maximum value",
+          "Arm / segment"
+        ],
+        "rows": [
+          [
+            "Forward hold (1)",
+            "Running load",
+            "13.15 kg/in",
+            "BA 228?286 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Running load",
+            "8.47 kg/in",
+            "BA 286?343 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Running load",
+            "13.12 kg/in",
+            "BA 343?500 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Distribution load intensity",
+            "68 kg/ft?",
+            "?"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "762 kg",
+            "Centroid BA 257 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "483 kg",
+            "Centroid BA 314.5 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "2,059 kg",
+            "Centroid BA 421.5 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Maximum total load",
+            "3,305 kg",
+            "Hold centroid BA 367.9 in; volume 607 ft?"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "14.65 kg/in",
+            "BA 731?940 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "7.26 kg/in",
+            "BA 940?997 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "7.18 kg/in",
+            "BA 997?1,096 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Distribution load intensity",
+            "68 kg/ft?",
+            "?"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "3,062 kg",
+            "Centroid BA 835.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "414 kg",
+            "Centroid BA 968.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "711 kg",
+            "Centroid BA 1,046.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Maximum total load",
+            "4,187 kg",
+            "Hold centroid BA 884.5 in; volume 766 ft?"
+          ]
+        ]
+      }
     },
     {
       "question": "At a mass of 1 800 kg, a helicopter equipped with a winch has a lateral CG-position of 5 cm to the left. The CG of the load suspended from the winch is at a distance of 60 cm to the right. With a winch load of 200 kg the lateral CG-position of the helicopter will be:",
@@ -257,7 +478,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-12274A) An aeroplane is carrying a traffic load of 10320 kg Complete the necessary sections of the attached appendix and determine which of the answers given below represents the maximum increase in the traffic load",
+      "question": "An aeroplane is carrying a traffic load of 10320 kg Using these loading limits, determine the maximum increase in traffic load",
       "questionType": "multiple_choice",
       "choices": [
         "7000 kg",
@@ -271,7 +492,40 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Verified load-sheet inputs from annex 031-12274A",
+        "columns": [
+          "Parameter",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Dry Operating Mass",
+            "35,750 kg"
+          ],
+          [
+            "Performance-limited landing mass",
+            "54,245 kg"
+          ],
+          [
+            "Maximum zero fuel mass",
+            "53,070 kg"
+          ],
+          [
+            "Trip fuel",
+            "7,355 kg"
+          ],
+          [
+            "Take-off fuel",
+            "13,700 kg"
+          ],
+          [
+            "Current traffic load",
+            "10,320 kg"
+          ]
+        ]
+      }
     },
     {
       "question": "Length of the mean aerodynamic chord = 1 m Moment arm of the forward cargo: -0,50 m Moment arm of the aft cargo: + 2,50 m The aircraft mass is 2 200 kg and its centre of gravity is at 25% MAC To move the centre of gravity to 40%, which mass has to be transferred from the forward to the aft cargo hold?",
@@ -308,7 +562,7 @@
       ]
     },
     {
-      "question": "(For this question use annexes 031-9631A or Loading Manual MRJT 1 Figure 4.9) From the Loading Manual for the transport aeroplane, the maximum load that can be carried in that section of the aft cargo compartment which has a balance arm centroid at :",
+      "question": "From the Loading Manual for the transport aeroplane, the maximum load that can be carried in that section of the aft cargo compartment which has a balance arm centroid at :",
       "questionType": "multiple_choice",
       "choices": [
         "835.5 inches is 3062 kg.",
@@ -322,7 +576,114 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "MRJT1 cargo compartment limitations (CAP 696 Figure 4.9)",
+        "columns": [
+          "Compartment",
+          "Limit type",
+          "Maximum value",
+          "Arm / segment"
+        ],
+        "rows": [
+          [
+            "Forward hold (1)",
+            "Running load",
+            "13.15 kg/in",
+            "BA 228?286 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Running load",
+            "8.47 kg/in",
+            "BA 286?343 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Running load",
+            "13.12 kg/in",
+            "BA 343?500 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Distribution load intensity",
+            "68 kg/ft?",
+            "?"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "762 kg",
+            "Centroid BA 257 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "483 kg",
+            "Centroid BA 314.5 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "2,059 kg",
+            "Centroid BA 421.5 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Maximum total load",
+            "3,305 kg",
+            "Hold centroid BA 367.9 in; volume 607 ft?"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "14.65 kg/in",
+            "BA 731?940 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "7.26 kg/in",
+            "BA 940?997 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "7.18 kg/in",
+            "BA 997?1,096 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Distribution load intensity",
+            "68 kg/ft?",
+            "?"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "3,062 kg",
+            "Centroid BA 835.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "414 kg",
+            "Centroid BA 968.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "711 kg",
+            "Centroid BA 1,046.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Maximum total load",
+            "4,187 kg",
+            "Hold centroid BA 884.5 in; volume 766 ft?"
+          ]
+        ]
+      }
     },
     {
       "question": "For the purpose of completing the Mass and Balance documentation, the Operating Mass is considered to be Dry Operating Mass plus",
@@ -393,7 +754,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-9685 A or Loading Manual MRJT 1 Figure 4.14) The medium range twin jet transport is scheduled to operate from a departure airfield where conditions limit the take-off mass to 65050 kg. The destination airfield has a performance limited landing mass of 54500 kg. The Dry Operating Mass is 34900 kg. Loading data is as follows - Taxi fuel 350 kg Trip fuel 9250 kg Contingency and final reserve fuel 1100 kg Alternate fuel 1000 kg Traffic load 18600 kg Check the load and ensure that the flight may be operated without exceeding any of the aeroplane limits. Choose, from those given below, the most appropriate answer.",
+      "question": "The medium range twin jet transport is scheduled to operate from a departure airfield where conditions limit the take-off mass to 65050 kg. The destination airfield has a performance limited landing mass of 54500 kg. The Dry Operating Mass is 34900 kg. Loading data is as follows - Taxi fuel 350 kg Trip fuel 9250 kg Contingency and final reserve fuel 1100 kg Alternate fuel 1000 kg Traffic load 18600 kg Check the load and ensure that the flight may be operated without exceeding any of the aeroplane limits. Choose, from those given below, the most appropriate answer.",
       "questionType": "multiple_choice",
       "choices": [
         "The flight may be safely operated with an additional 200 kg of traffic load.",
@@ -407,7 +768,48 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Flight mass and fuel data",
+        "columns": [
+          "Item",
+          "Mass (kg)"
+        ],
+        "rows": [
+          [
+            "Performance-limited take-off mass",
+            "65,050"
+          ],
+          [
+            "Performance-limited landing mass",
+            "54,500"
+          ],
+          [
+            "Dry operating mass",
+            "34,900"
+          ],
+          [
+            "Taxi fuel",
+            "350"
+          ],
+          [
+            "Trip fuel",
+            "9,250"
+          ],
+          [
+            "Contingency and final reserve fuel",
+            "1,100"
+          ],
+          [
+            "Alternate fuel",
+            "1,000"
+          ],
+          [
+            "Traffic load",
+            "18,600"
+          ]
+        ]
+      }
     },
     {
       "question": "Given the following : - Maximum structural take-off mass 48 000 kg - Maximum structural landing mass: 44 000 kg - Maximum zero fuel mass: 36 000 kg -Taxi fuel: 600 kg -Contingency fuel: 900 kg -Alternate fuel: 800 kg -Final reserve fuel: 1 100 kg -Trip fuel: 9 000 kg Determine the actual take-off mass:",
@@ -461,7 +863,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-4739A or Loading Manual MEP1 Figure 3.4.) Using the aircraft data below, determine the ramp mass in pounds.",
+      "question": "Using the aircraft data below, determine the ramp mass in pounds.",
       "questionType": "multiple_choice",
       "choices": [
         "4 372",
@@ -477,59 +879,67 @@
         "volare"
       ],
       "questionTable": {
-        "caption": "Ramp-mass inputs",
+        "caption": "Ramp-mass inputs and MEP1 balance arms",
         "columns": [
           "Item",
-          "Value"
+          "Mass / quantity",
+          "Arm aft of datum (in)"
         ],
         "rows": [
           [
-            "Basic arm",
-            "88.5 in"
-          ],
-          [
             "Basic empty mass",
-            "3210 lb"
+            "3,210 lb",
+            "88.5"
           ],
           [
             "Pilot",
-            "160 lb"
+            "160 lb",
+            "85.5"
           ],
           [
             "Front seat passenger",
-            "200 lb"
+            "200 lb",
+            "85.5"
           ],
           [
             "Centre seat passengers",
-            "290 lb total"
+            "290 lb total",
+            "118.5"
           ],
           [
             "Rear seat passenger",
-            "110 lb"
+            "110 lb",
+            "157.6"
           ],
           [
             "Baggage, zone 1",
-            "100 lb"
+            "100 lb",
+            "22.5"
           ],
           [
             "Baggage, zone 4",
-            "50 lb"
+            "50 lb",
+            "178.7"
           ],
           [
             "Block fuel",
-            "100 US gal"
+            "100 US gal (600 lb)",
+            "93.6"
           ],
           [
             "Trip fuel",
-            "55 US gal"
+            "55 US gal (330 lb)",
+            "93.6"
           ],
           [
             "Start-up and taxi fuel",
-            "3 US gal (included in block fuel)"
+            "3 US gal (18 lb; included in block fuel)",
+            "93.6"
           ],
           [
             "Fuel density",
-            "6 lb/US gal"
+            "6 lb/US gal",
+            "?"
           ]
         ]
       }
@@ -671,7 +1081,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-11258A and 031- 11258B) The planned take-off mass of a turbojet aeroplane is 180 000 kg, with its centre of gravity located at 26 % MAC (Mean Aerodynamic Cord). Shortly prior to engine start, the local staff informs the flight crew that 4 000 kg must be unloaded from cargo 4. After the handling operation, the new centre of gravity location in % MAC will be:",
+      "question": "The planned take-off mass of a turbojet aeroplane is 180 000 kg, with its centre of gravity located at 26 % MAC (Mean Aerodynamic Cord). Shortly prior to engine start, the local staff informs the flight crew that 4 000 kg must be unloaded from cargo 4. After the handling operation, the new centre of gravity location in % MAC will be:",
       "questionType": "multiple_choice",
       "choices": [
         "21.8 %",
@@ -685,7 +1095,40 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Verified annex 031-11258A/B geometry",
+        "columns": [
+          "Parameter",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Take-off mass",
+            "180,000 kg"
+          ],
+          [
+            "Initial CG",
+            "26% MAC"
+          ],
+          [
+            "Cargo removed",
+            "4,000 kg from cargo 4"
+          ],
+          [
+            "Cargo 4 arm",
+            "23.69 m aft of reference"
+          ],
+          [
+            "Leading edge of MAC",
+            "14 m from reference"
+          ],
+          [
+            "MAC length",
+            "4.6 m"
+          ]
+        ]
+      }
     },
     {
       "question": "If the centre of gravity is near the forward limit the aeroplane will:",
@@ -705,7 +1148,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-2946A) The total mass of an aeroplane is 145000 kg and the centre of gravity limits are between 4.7 m and 6.9 m aft of the datum. The loaded centre of gravity position is 4.4 m aft. How much mass must be transferred from the front to the rear hold in order to bring the out of limit centre of gravity position to the foremost limit:",
+      "question": "The total mass of an aeroplane is 145000 kg and the centre of gravity limits are between 4.7 m and 6.9 m aft of the datum. The loaded centre of gravity position is 4.4 m aft. How much mass must be transferred from the front to the rear hold in order to bring the out of limit centre of gravity position to the foremost limit:",
       "questionType": "multiple_choice",
       "choices": [
         "35 000 kg",
@@ -719,7 +1162,40 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Verified data from annex 031-2946A",
+        "columns": [
+          "Input",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Aeroplane mass",
+            "145,000 kg"
+          ],
+          [
+            "Current CG",
+            "4.4 m aft of datum"
+          ],
+          [
+            "Forward CG limit",
+            "4.7 m aft of datum"
+          ],
+          [
+            "Forward hold arm",
+            "2.9 m aft of datum"
+          ],
+          [
+            "Aft hold arm",
+            "8.7 m aft of datum"
+          ],
+          [
+            "Distance between hold arms",
+            "5.8 m"
+          ]
+        ]
+      }
     },
     {
       "question": "The maximum quantity of fuel that can be loaded into an aeroplane's tanks is given as 3800 US Gallons. If the fuel density (specific gravity) is given as 0.79 the mass of fuel which may be loaded is",
@@ -739,7 +1215,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-11606A) Without the man on the winch, the mass and the lateral CG-position of the aircraft are 6 000 kg and 0,04 m to the right. - the mass of the man on the winch is 100 kg With the man on the winch , the lateral CG-position of the aircraft will be:",
+      "question": "Without the man on the winch, the mass and the lateral CG-position of the aircraft are 6 000 kg and 0,04 m to the right. - the mass of the man on the winch is 100 kg With the man on the winch , the lateral CG-position of the aircraft will be:",
       "questionType": "multiple_choice",
       "choices": [
         "0,016m to the left",
@@ -753,7 +1229,32 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Rescue-hoist position and lateral CG limits (annex data)",
+        "columns": [
+          "Aircraft data",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Rescue hoist position longitudinal coordinate",
+            "4.23 m"
+          ],
+          [
+            "Rescue hoist position lateral coordinate",
+            "1.40 m right of aircraft symmetry plane"
+          ],
+          [
+            "Right lateral CG limit",
+            "0.08 m"
+          ],
+          [
+            "Left lateral CG limit",
+            "0.09 m"
+          ]
+        ]
+      }
     },
     {
       "question": "An aeroplane may be weighed",
@@ -926,7 +1427,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-9598 A or Loading Manual MRJT 1 Figure 4.11) The aeroplane has a Take Off Mass of 58 000 kg. At this mass the range of safe CG positions, as determined from the appropriate graph in the loading manual, is:",
+      "question": "The aeroplane has a Take Off Mass of 58 000 kg. At this mass the range of safe CG positions, as determined from the appropriate graph in the loading manual, is:",
       "questionType": "multiple_choice",
       "choices": [
         "Forward limit 8.0% MAC aft limit 26.5% MAC",
@@ -940,6 +1441,13 @@
       "tags": [
         "mass & balance",
         "volare"
+      ],
+      "questionImages": [
+        {
+          "src": "asset/volare-annexes/mrjt1-cg-envelope.png",
+          "alt": "MRJT1 centre-of-gravity envelope chart, CAP 696 Figure 4.11",
+          "caption": "MRJT1 CG envelope (CAA CAP 696, Figure 4.11)."
+        }
       ]
     },
     {
@@ -1096,7 +1604,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-9640 A or Loading Manual MRJT 1 Figure 4.14) A revenue flight is planned for the transport aeroplane. Take-off mass is not airfield limited. The following data applies: Dry Operating Mass 34930 kg Performance limited landing mass 55000 kg Fuel on board at ramp- Taxi fuel 350 kg Trip fuel 9730 kg Contingency and final reserve fuel 1200 kg Alternate fuel 1600 kg Passengers on board 130 Standard mass for each passenger 84 kg Baggage per passenger 14 kg Traffic load Maximum possible Use the loading manual provided and the above data. Determine the maximum cargo load that may be carried without exceeding the limiting aeroplane landing mass.",
+      "question": "A revenue flight is planned for the transport aeroplane. Take-off mass is not airfield limited. The following data applies: Dry Operating Mass 34930 kg Performance limited landing mass 55000 kg Fuel on board at ramp- Taxi fuel 350 kg Trip fuel 9730 kg Contingency and final reserve fuel 1200 kg Alternate fuel 1600 kg Passengers on board 130 Standard mass for each passenger 84 kg Baggage per passenger 14 kg Traffic load Maximum possible Use the loading manual provided and the above data. Determine the maximum cargo load that may be carried without exceeding the limiting aeroplane landing mass.",
       "questionType": "multiple_choice",
       "choices": [
         "5400 kg",
@@ -1110,7 +1618,48 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Landing-mass cargo calculation data",
+        "columns": [
+          "Item",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Dry operating mass",
+            "34,930 kg"
+          ],
+          [
+            "Performance-limited landing mass",
+            "55,000 kg"
+          ],
+          [
+            "Taxi fuel",
+            "350 kg"
+          ],
+          [
+            "Trip fuel",
+            "9,730 kg"
+          ],
+          [
+            "Contingency and final reserve fuel",
+            "1,200 kg"
+          ],
+          [
+            "Alternate fuel",
+            "1,600 kg"
+          ],
+          [
+            "Passengers",
+            "130 ? 84 kg"
+          ],
+          [
+            "Baggage",
+            "130 ? 14 kg"
+          ]
+        ]
+      }
     },
     {
       "question": "Given: Total mass: 7500 kg Centre of gravity (cg) location station: 80.5 Aft cg limit station: 79.5 How much cargo must be shifted from the aft cargo compartment at station 150 to the forward cargo compartment at station 30 in order to move the cg location to the aft limit?",
@@ -1172,7 +1721,7 @@
       }
     },
     {
-      "question": "(For this question use annex 031-4741A or Loading Manual MEP1 Figure 3.4.) Using the aircraft data below and the stated take-off total moment, determine the total moment at landing in lb·in.",
+      "question": "Using the aircraft data below and the stated take-off total moment, determine the total moment at landing in lb·in.",
       "questionType": "multiple_choice",
       "choices": [
         "432 221",
@@ -1188,59 +1737,72 @@
         "volare"
       ],
       "questionTable": {
-        "caption": "Landing-moment inputs",
+        "caption": "Landing-moment inputs and MEP1 balance arms",
         "columns": [
           "Item",
-          "Value"
+          "Mass / quantity",
+          "Arm aft of datum (in)"
         ],
         "rows": [
           [
             "Basic empty mass",
-            "3210 lb"
+            "3,210 lb",
+            "88.5"
           ],
           [
             "Pilot",
-            "160 lb"
+            "160 lb",
+            "85.5"
           ],
           [
             "Front seat passenger",
-            "200 lb"
+            "200 lb",
+            "85.5"
           ],
           [
             "Centre seat passengers",
-            "290 lb total"
+            "290 lb total",
+            "118.5"
           ],
           [
             "Rear seat passenger",
-            "110 lb"
+            "110 lb",
+            "157.6"
           ],
           [
             "Baggage, zone 1",
-            "100 lb"
+            "100 lb",
+            "22.5"
           ],
           [
             "Baggage, zone 4",
-            "50 lb"
+            "50 lb",
+            "178.7"
           ],
           [
             "Block fuel",
-            "100 US gal"
+            "100 US gal (600 lb)",
+            "93.6"
           ],
           [
             "Trip fuel",
-            "55 US gal"
+            "55 US gal (330 lb)",
+            "93.6"
           ],
           [
             "Start-up and taxi fuel",
-            "3 US gal (included in block fuel)"
+            "3 US gal (18 lb; included in block fuel)",
+            "93.6"
           ],
           [
             "Fuel density",
-            "6 lb/US gal"
+            "6 lb/US gal",
+            "?"
           ],
           [
-            "Take-off total moment",
-            "432226 lb·in"
+            "Total moment at take-off",
+            "432,226 lb?in",
+            "?"
           ]
         ]
       }
@@ -1310,7 +1872,7 @@
       }
     },
     {
-      "question": "(For this question use annex 031-12269A) Using the data given at the appendix to this question, if the fuel index corrections (from ZFM index) are as follows 9500 kg - 0.9 6500 kg - 6.1 3500 kg - 4.7 3000 kg - 4.3 Which of the following represent the correct values for landing mass of the aeroplane and the position of the centre of gravity for this condition ?",
+      "question": "Given the following fuel index corrections from the zero-fuel-mass index, determine the landing mass and centre-of-gravity position for this condition.",
       "questionType": "multiple_choice",
       "choices": [
         "49130 kg and 21.8 %",
@@ -1324,7 +1886,32 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Fuel index corrections from ZFM index",
+        "columns": [
+          "Fuel mass (kg)",
+          "Index correction"
+        ],
+        "rows": [
+          [
+            "9,500",
+            "?0.9"
+          ],
+          [
+            "6,500",
+            "?6.1"
+          ],
+          [
+            "3,500",
+            "?4.7"
+          ],
+          [
+            "3,000",
+            "?4.3"
+          ]
+        ]
+      }
     },
     {
       "question": "An aeroplane is said to be 'neutrally stable'. This is likely to:",
@@ -1378,7 +1965,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-9660 A or Loading Manual MRJT 1 Paragraph 3.1) The medium range jet transport aeroplane is to operate a flight carrying the maximum possible fuel load. Using the following data as appropriate, determine the mass of fuel on board at start of take off. Departure airfield performance limited take-off mass: 60 Landing airfield -not performance limited. Dry Operating Mass: 34930 kg Fuel required for flight - Taxi fuel: 715 kg Trip fuel: 8600 kg Contingency and final reserve fuel: 1700 kg Alternate fuel 1500 kg Additional reserve 400 kg Traffic load for flight 11000 kg 400 kg",
+      "question": "The medium range jet transport aeroplane is to operate a flight carrying the maximum possible fuel load. Using the following data as appropriate, determine the mass of fuel on board at start of take off. Departure airfield performance limited take-off mass: 60 Landing airfield -not performance limited. Dry Operating Mass: 34930 kg Fuel required for flight - Taxi fuel: 715 kg Trip fuel: 8600 kg Contingency and final reserve fuel: 1700 kg Alternate fuel 1500 kg Additional reserve 400 kg Traffic load for flight 11000 kg 400 kg",
       "questionType": "multiple_choice",
       "choices": [
         "15 815 kg",
@@ -1392,7 +1979,42 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "MRJT1 fuel tank capacity (CAP 696 Figure 4.5)",
+        "columns": [
+          "Tank",
+          "Balance arm (in)",
+          "Volume (US gal)",
+          "Mass (kg)"
+        ],
+        "rows": [
+          [
+            "Left wing main tank 1",
+            "650.7",
+            "1,499",
+            "4,542"
+          ],
+          [
+            "Right wing main tank 2",
+            "650.7",
+            "1,499",
+            "4,542"
+          ],
+          [
+            "Centre tank",
+            "600.4",
+            "2,313",
+            "7,008"
+          ],
+          [
+            "Maximum total fuel",
+            "628.8",
+            "5,311",
+            "16,092"
+          ]
+        ]
+      }
     },
     {
       "question": "The datum is a reference from which all moment (balance) arms are measured. Its precise position is given in the control and loading manual and it is located",
@@ -1446,7 +2068,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-9630 A or Loading Manual MRJT 1 Figure 4.9) From the loading manual for the transport aeroplane, the aft cargo compartment has a maximum total load of :",
+      "question": "From the loading manual for the transport aeroplane, the aft cargo compartment has a maximum total load of :",
       "questionType": "multiple_choice",
       "choices": [
         "1568 kg",
@@ -1460,7 +2082,114 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "MRJT1 cargo compartment limitations (CAP 696 Figure 4.9)",
+        "columns": [
+          "Compartment",
+          "Limit type",
+          "Maximum value",
+          "Arm / segment"
+        ],
+        "rows": [
+          [
+            "Forward hold (1)",
+            "Running load",
+            "13.15 kg/in",
+            "BA 228?286 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Running load",
+            "8.47 kg/in",
+            "BA 286?343 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Running load",
+            "13.12 kg/in",
+            "BA 343?500 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Distribution load intensity",
+            "68 kg/ft?",
+            "?"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "762 kg",
+            "Centroid BA 257 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "483 kg",
+            "Centroid BA 314.5 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "2,059 kg",
+            "Centroid BA 421.5 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Maximum total load",
+            "3,305 kg",
+            "Hold centroid BA 367.9 in; volume 607 ft?"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "14.65 kg/in",
+            "BA 731?940 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "7.26 kg/in",
+            "BA 940?997 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "7.18 kg/in",
+            "BA 997?1,096 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Distribution load intensity",
+            "68 kg/ft?",
+            "?"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "3,062 kg",
+            "Centroid BA 835.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "414 kg",
+            "Centroid BA 968.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "711 kg",
+            "Centroid BA 1,046.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Maximum total load",
+            "4,187 kg",
+            "Hold centroid BA 884.5 in; volume 766 ft?"
+          ]
+        ]
+      }
     },
     {
       "question": "If individual masses are used, the mass of an aeroplane must be determined prior to initial entry into service and thereafter",
@@ -1565,7 +2294,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-9613 A or Loading Manual MRJT 1 Figure 4.9) A pallet having a freight platform which measures 200 cm x 250 cm has a total mass of 300 kg. The pallet is carried on two ground supports each measuring 20 cm x 200 cm. Using the loading manual for the transport aeroplane, calculate how much mass may be added to, or must be off loaded from, the pallet in order for the load intensity to match the maximum permitted distribution load intensity for lower deck forward cargo compartement.",
+      "question": "A pallet having a freight platform which measures 200 cm x 250 cm has a total mass of 300 kg. The pallet is carried on two ground supports each measuring 20 cm x 200 cm. Using the loading manual for the transport aeroplane, calculate how much mass may be added to, or must be off loaded from, the pallet in order for the load intensity to match the maximum permitted distribution load intensity for lower deck forward cargo compartement.",
       "questionType": "multiple_choice",
       "choices": [
         "285.5 kg may be added.",
@@ -1579,10 +2308,117 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "MRJT1 cargo compartment limitations (CAP 696 Figure 4.9)",
+        "columns": [
+          "Compartment",
+          "Limit type",
+          "Maximum value",
+          "Arm / segment"
+        ],
+        "rows": [
+          [
+            "Forward hold (1)",
+            "Running load",
+            "13.15 kg/in",
+            "BA 228?286 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Running load",
+            "8.47 kg/in",
+            "BA 286?343 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Running load",
+            "13.12 kg/in",
+            "BA 343?500 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Distribution load intensity",
+            "68 kg/ft?",
+            "?"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "762 kg",
+            "Centroid BA 257 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "483 kg",
+            "Centroid BA 314.5 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "2,059 kg",
+            "Centroid BA 421.5 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Maximum total load",
+            "3,305 kg",
+            "Hold centroid BA 367.9 in; volume 607 ft?"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "14.65 kg/in",
+            "BA 731?940 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "7.26 kg/in",
+            "BA 940?997 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "7.18 kg/in",
+            "BA 997?1,096 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Distribution load intensity",
+            "68 kg/ft?",
+            "?"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "3,062 kg",
+            "Centroid BA 835.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "414 kg",
+            "Centroid BA 968.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "711 kg",
+            "Centroid BA 1,046.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Maximum total load",
+            "4,187 kg",
+            "Hold centroid BA 884.5 in; volume 766 ft?"
+          ]
+        ]
+      }
     },
     {
-      "question": "(For this question use annex 031-9676 A or Loading Manual MRJT 1 Paragraph 4) For the medium range transport aeroplane, from the loading manual, determine the maximum total volume of fuel which can be loaded into the main wing tanks. (Fuel density value 0.78)",
+      "question": "For the medium range transport aeroplane, from the loading manual, determine the maximum total volume of fuel which can be loaded into the main wing tanks. (Fuel density value 0.78)",
       "questionType": "multiple_choice",
       "choices": [
         "5674 litres",
@@ -1596,7 +2432,48 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "MRJT1 fuel tank capacities (CAP 696 Figure 4.5)",
+        "columns": [
+          "Tank",
+          "Balance arm (in)",
+          "Volume (US gal)",
+          "Mass (kg)"
+        ],
+        "rows": [
+          [
+            "Left main wing tank 1",
+            "650.7",
+            "1,499",
+            "4,542"
+          ],
+          [
+            "Right main wing tank 2",
+            "650.7",
+            "1,499",
+            "4,542"
+          ],
+          [
+            "Centre tank",
+            "600.4",
+            "2,313",
+            "7,008"
+          ],
+          [
+            "Maximum total fuel",
+            "628.8",
+            "5,311",
+            "16,092"
+          ],
+          [
+            "Combined main wing tanks",
+            "?",
+            "2,998 (11,349 L)",
+            "9,084"
+          ]
+        ]
+      }
     },
     {
       "question": "If nose wheel moves aft during gear retraction, how will this movement affect the location of the centre of gravity (cg) on the aeroplane?",
@@ -1820,7 +2697,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-9605 A or Loading Manual MRJT 1 Figure 4.9) For the transport aeroplane the moment (balance) arm (B.A.) for the forward hold centroid is:",
+      "question": "For the transport aeroplane the moment (balance) arm (B.A.) for the forward hold centroid is:",
       "questionType": "multiple_choice",
       "choices": [
         "421.5 inches.",
@@ -1834,7 +2711,114 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "MRJT1 cargo compartment limitations (CAP 696 Figure 4.9)",
+        "columns": [
+          "Compartment",
+          "Limit type",
+          "Maximum value",
+          "Arm / segment"
+        ],
+        "rows": [
+          [
+            "Forward hold (1)",
+            "Running load",
+            "13.15 kg/in",
+            "BA 228?286 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Running load",
+            "8.47 kg/in",
+            "BA 286?343 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Running load",
+            "13.12 kg/in",
+            "BA 343?500 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Distribution load intensity",
+            "68 kg/ft?",
+            "?"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "762 kg",
+            "Centroid BA 257 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "483 kg",
+            "Centroid BA 314.5 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "2,059 kg",
+            "Centroid BA 421.5 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Maximum total load",
+            "3,305 kg",
+            "Hold centroid BA 367.9 in; volume 607 ft?"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "14.65 kg/in",
+            "BA 731?940 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "7.26 kg/in",
+            "BA 940?997 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "7.18 kg/in",
+            "BA 997?1,096 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Distribution load intensity",
+            "68 kg/ft?",
+            "?"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "3,062 kg",
+            "Centroid BA 835.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "414 kg",
+            "Centroid BA 968.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "711 kg",
+            "Centroid BA 1,046.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Maximum total load",
+            "4,187 kg",
+            "Hold centroid BA 884.5 in; volume 766 ft?"
+          ]
+        ]
+      }
     },
     {
       "question": "An aircraft basic empty mass is 3000 kg. The maximum take-off, landing, and zero-fuel mass are identical, at 5200 kg. Ramp fuel is 650 kg, the taxi fuel is 50 kg. The payload available is :",
@@ -1871,7 +2855,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-11273A and 031- 11273B) A turbojet aeroplane has a planned take-off mass of 190 000 kg. Following cargo loading, the crew is informed that the centre of gravity at take-off is located at 38 % MAC (Mean Aerodynamic Cord) which is beyond limits. The captain decides then to redistribute part of the cargo load between cargo 1 and cargo 4 in order to obtain a new centre of gravity location at 31 % MAC. He asks for a transfer of:",
+      "question": "A turbojet aeroplane has a planned take-off mass of 190 000 kg. Following cargo loading, the crew is informed that the centre of gravity at take-off is located at 38 % MAC (Mean Aerodynamic Cord) which is beyond limits. The captain decides then to redistribute part of the cargo load between cargo 1 and cargo 4 in order to obtain a new centre of gravity location at 31 % MAC. He asks for a transfer of:",
       "questionType": "multiple_choice",
       "choices": [
         "1 000 kg from cargo 4 to cargo 1.",
@@ -1885,7 +2869,44 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Verified annex 031-11273A/B geometry",
+        "columns": [
+          "Parameter",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Take-off mass",
+            "190,000 kg"
+          ],
+          [
+            "Initial CG",
+            "38% MAC"
+          ],
+          [
+            "Target CG",
+            "31% MAC"
+          ],
+          [
+            "Cargo 1 arm",
+            "3.5 m from reference"
+          ],
+          [
+            "Cargo 4 arm",
+            "20.39 m from reference"
+          ],
+          [
+            "Leading edge of MAC",
+            "14 m from reference"
+          ],
+          [
+            "MAC length",
+            "4.6 m"
+          ]
+        ]
+      }
     },
     {
       "question": "The centre of gravity is the",
@@ -2100,7 +3121,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-9603 A or Loading Manual MRJT 1 Figure 4.11) A aeroplane has a landing mass of 53 000kg. The range of safe CG positions, as determined from the appropriate graph in the loading manual, is :",
+      "question": "A aeroplane has a landing mass of 53 000kg. The range of safe CG positions, as determined from the appropriate graph in the loading manual, is :",
       "questionType": "multiple_choice",
       "choices": [
         "Forward limit 7.3% MAC aft limit 26.8% MAC",
@@ -2114,6 +3135,13 @@
       "tags": [
         "mass & balance",
         "volare"
+      ],
+      "questionImages": [
+        {
+          "src": "asset/volare-annexes/mrjt1-cg-envelope.png",
+          "alt": "MRJT1 centre-of-gravity envelope chart, CAP 696 Figure 4.11",
+          "caption": "MRJT1 CG envelope (CAA CAP 696, Figure 4.11)."
+        }
       ]
     },
     {
@@ -2287,7 +3315,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-1569A) Where is the centre of gravity of the aeroplane in the diagram?",
+      "question": "Where is the centre of gravity of the aeroplane in the diagram?",
       "questionType": "multiple_choice",
       "choices": [
         "26.57 cm aft of datum.",
@@ -2301,6 +3329,13 @@
       "tags": [
         "mass & balance",
         "volare"
+      ],
+      "questionImages": [
+        {
+          "src": "asset/volare-annexes/annex-031-1569A-weighing-points.svg",
+          "alt": "Original schematic of the verified annex weighing data: front scale 1,750 N at 1.5 m forward of datum and rear scales 4,050 N and 4,080 N at datum.",
+          "caption": "Schematic redrawn from published solution data for annex 031-1569A; not the original annex artwork."
+        }
       ]
     },
     {
@@ -2355,7 +3390,7 @@
       ]
     },
     {
-      "question": "(For this question use appendix 031-11589A) Without the man on the winch, the mass and the lateral CG position of the helicopter are 6 000 kg and 0.055 m to the right. - the mass of the wet man on the winch is 180 kg With the man on the winch, the mass and lateral CG- position of the helicopter are :",
+      "question": "Without the man on the winch, the mass and the lateral CG position of the helicopter are 6 000 kg and 0.055 m to the right. - the mass of the wet man on the winch is 180 kg With the man on the winch, the mass and lateral CG- position of the helicopter are :",
       "questionType": "multiple_choice",
       "choices": [
         "6 180 kg and 0.059m to the right",
@@ -2369,7 +3404,32 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Rescue-hoist position and lateral CG limits (annex data)",
+        "columns": [
+          "Aircraft data",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Rescue hoist position longitudinal coordinate",
+            "4.23 m"
+          ],
+          [
+            "Rescue hoist position lateral coordinate",
+            "1.40 m right of aircraft symmetry plane"
+          ],
+          [
+            "Right lateral CG limit",
+            "0.08 m"
+          ],
+          [
+            "Left lateral CG limit",
+            "0.09 m"
+          ]
+        ]
+      }
     },
     {
       "question": "The floor of the main cargo hold is limited to 4 000 N/m2. It is planned to load a cubic container each side of which measures 0.5m. Its maximum gross mass must not exceed: (assume g=10m/s2)",
@@ -2389,7 +3449,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-11219A) An aeroplane, whose specific data is shown in the annex, has a planned take-off mass of 200 000 kg, with its centre of gravity (C.G.) is located at 15.38 m rearward of the reference point, representing a C.G. location at 30 % MAC (Mean Aerodynamic Cord). For performance purposes, the captain decides to reset the value of the centre of gravity location to 35 % MAC. The front and rear cargo compartments are located at a distance of 15 m and 25 m from the reference point respectively, the cargo load mass which needs to be transferred from the front to the rear cargo compartment is:",
+      "question": "An aeroplane, has a planned take-off mass of 200 000 kg, with its centre of gravity (C.G.) is located at 15.38 m rearward of the reference point, representing a C.G. location at 30 % MAC (Mean Aerodynamic Cord). For performance purposes, the captain decides to reset the value of the centre of gravity location to 35 % MAC. The front and rear cargo compartments are located at a distance of 15 m and 25 m from the reference point respectively, the cargo load mass which needs to be transferred from the front to the rear cargo compartment is:",
       "questionType": "multiple_choice",
       "choices": [
         "It is not possible to establish the required centre of gravity location.",
@@ -2403,7 +3463,36 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Mass and balance data",
+        "columns": [
+          "Parameter",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Take-off mass",
+            "200,000 kg"
+          ],
+          [
+            "Initial CG",
+            "15.38 m aft of reference (30% MAC)"
+          ],
+          [
+            "Target CG",
+            "35% MAC"
+          ],
+          [
+            "Front cargo arm",
+            "15 m from reference"
+          ],
+          [
+            "Rear cargo arm",
+            "25 m from reference"
+          ]
+        ]
+      }
     },
     {
       "question": "The datum used for balance calculations is:",
@@ -2635,7 +3724,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 033-9583A or Loading Manual MRJT 1 page 20) For the medium range twin jet the datum point is located",
+      "question": "For the medium range twin jet the datum point is located",
       "questionType": "multiple_choice",
       "choices": [
         "540 cm forward of the front spar.",
@@ -2649,7 +3738,20 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "MRJT1 datum location (CAA CAP 696)",
+        "columns": [
+          "Reference point",
+          "Location"
+        ],
+        "rows": [
+          [
+            "Datum",
+            "540 inches forward of the front spar"
+          ]
+        ]
+      }
     },
     {
       "question": "In order to provide an adequate \"buffet boundary\" at the commencement of the cruise a speed of 1.3Vs is used. At a mass of 120000 kg this is a CAS of 180 knots. If the mass of the aeroplane is increased to 135000 kg the value of 1.3Vs will be",
@@ -2686,7 +3788,7 @@
       ]
     },
     {
-      "question": "(For this question use annexes 031-6564A and 031- 6564B or Loading Manual SEP1 Figure 2.4) With respect to a single-engine piston powered aeroplane, determine the zero fuel moment (lbs.In./100) in the following conditions: Basic Empty Mass: 2415 lbs. Arm at Basic Empty Mass: 77,9 In. Cargo Zone A: 350 lbs. Baggage Zone B: 35 lbs. Pilot and front seat passenger : 300 lbs (total)",
+      "question": "With respect to a single-engine piston powered aeroplane, determine the zero fuel moment (lbs.In./100) in the following conditions: Basic Empty Mass: 2415 lbs. Arm at Basic Empty Mass: 77,9 In. Cargo Zone A: 350 lbs. Baggage Zone B: 35 lbs. Pilot and front seat passenger : 300 lbs (total)",
       "questionType": "multiple_choice",
       "choices": [
         "6675",
@@ -2700,7 +3802,37 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "SEP1 zero-fuel-moment inputs and arms (CAP 696 Figure 2.4)",
+        "columns": [
+          "Item",
+          "Mass",
+          "Arm aft of datum (in)"
+        ],
+        "rows": [
+          [
+            "Basic empty mass",
+            "2,415 lb",
+            "77.9"
+          ],
+          [
+            "Pilot and front-seat passenger",
+            "300 lb",
+            "79"
+          ],
+          [
+            "Cargo zone A",
+            "350 lb",
+            "108"
+          ],
+          [
+            "Baggage zone B",
+            "35 lb",
+            "150"
+          ]
+        ]
+      }
     },
     {
       "question": "(For this question use annex 031-12268A) Using the data given in the Load & Trim sheet, determine from the following the correct values for the take off mass and the position of the centre of gravity at that mass if the fuel index correction to be applied is given as - 0.9",
@@ -2754,7 +3886,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-11227A) An aeroplane, whose specific data is shown in the annex, has a planned take-off mass of 200 000 kg, with its centre of gravity (C.G.) located at 15.38 m rearward of the reference point, representing a C.G. location at 30 % MAC (Mean Aerodynamic Cord). The current cargo load distribution is: front cargo: 6 500 kg; rear cargo: 4 000 kg. For performance purposes, the captain decides to reset the value of the centre of gravity location to 33 % MAC. The front and rear cargo compartments are located at a distance of 15 m and 25 m from the reference point respectively. After the transfer operation, the new cargo load distribution is:",
+      "question": "An aeroplane, has a planned take-off mass of 200 000 kg, with its centre of gravity (C.G.) located at 15.38 m rearward of the reference point, representing a C.G. location at 30 % MAC (Mean Aerodynamic Cord). The current cargo load distribution is: front cargo: 6 500 kg; rear cargo: 4 000 kg. For performance purposes, the captain decides to reset the value of the centre of gravity location to 33 % MAC. The front and rear cargo compartments are located at a distance of 15 m and 25 m from the reference point respectively. After the transfer operation, the new cargo load distribution is:",
       "questionType": "multiple_choice",
       "choices": [
         "front cargo: 9 260 kg; rear cargo: 1 240 kg",
@@ -2768,10 +3900,47 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Mass and balance data",
+        "columns": [
+          "Parameter",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Take-off mass",
+            "200,000 kg"
+          ],
+          [
+            "Initial CG",
+            "15.38 m aft of reference (30% MAC)"
+          ],
+          [
+            "Target CG",
+            "33% MAC"
+          ],
+          [
+            "Front cargo arm",
+            "15 m from reference"
+          ],
+          [
+            "Rear cargo arm",
+            "25 m from reference"
+          ],
+          [
+            "Initial front cargo",
+            "6,500 kg"
+          ],
+          [
+            "Initial rear cargo",
+            "4,000 kg"
+          ]
+        ]
+      }
     },
     {
-      "question": "(For this question use annex 031-11257A and 031- 11257B ) The planned take-off mass of a turbojet aeroplane is 190 000 kg, with its centre of gravity located at 29 % MAC (Mean Aerodynamic Cord) . Shortly prior to engine start, the local staff informs the flight crew that 4 000 kg must be unloaded from cargo 4. After the handling operation, the new centre of gravity location in % MAC will be:",
+      "question": "The planned take-off mass of a turbojet aeroplane is 190 000 kg, with its centre of gravity located at 29 % MAC (Mean Aerodynamic Cord) . Shortly prior to engine start, the local staff informs the flight crew that 4 000 kg must be unloaded from cargo 4. After the handling operation, the new centre of gravity location in % MAC will be:",
       "questionType": "multiple_choice",
       "choices": [
         "33 %",
@@ -2785,7 +3954,40 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Verified annex 031-11257A/B geometry",
+        "columns": [
+          "Parameter",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Take-off mass",
+            "190,000 kg"
+          ],
+          [
+            "Initial CG",
+            "29% MAC"
+          ],
+          [
+            "Cargo removed",
+            "4,000 kg from cargo 4"
+          ],
+          [
+            "Cargo 4 arm",
+            "23.69 m aft of reference"
+          ],
+          [
+            "Leading edge of MAC",
+            "14 m from reference"
+          ],
+          [
+            "MAC length",
+            "4.6 m"
+          ]
+        ]
+      }
     },
     {
       "question": "Calculate the centre of gravity in % MAC (mean aerodynamic chord) with following data: Distance datum - centre of gravity: 12.53 m Distance datum - leading edge: 9.63 m Length of MAC: 8 m",
@@ -2805,7 +4007,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-11275A and 031-11275B.) A turbojet aeroplane has a planned take-off mass of 190 000 kg. After loading, its centre of gravity is at 38% MAC, beyond the limits. The captain decides to redistribute cargo between cargo compartments 1 and 4 to obtain a new CG at 31% MAC. What should the new cargo distribution be?",
+      "question": "A turbojet aeroplane has a planned take-off mass of 190 000 kg. After loading, its centre of gravity is at 38% MAC, beyond the limits. The captain decides to redistribute cargo between cargo compartments 1 and 4 to obtain a new CG at 31% MAC. What should the new cargo distribution be?",
       "questionType": "multiple_choice",
       "choices": [
         "cargo 1: 6 000 kg; cargo 4: 4 000 kg",
@@ -2821,19 +4023,47 @@
         "volare"
       ],
       "questionTable": {
-        "caption": "Initial cargo distribution",
+        "caption": "Verified annex 031-11275A/B load and geometry",
         "columns": [
-          "Cargo compartment",
-          "Load (kg)"
+          "Parameter",
+          "Value"
         ],
         "rows": [
           [
-            "1",
-            "3000"
+            "Take-off mass",
+            "190,000 kg"
           ],
           [
-            "4",
-            "7000"
+            "Initial CG",
+            "38% MAC"
+          ],
+          [
+            "Target CG",
+            "31% MAC"
+          ],
+          [
+            "Cargo 1 initial load",
+            "3,000 kg"
+          ],
+          [
+            "Cargo 4 initial load",
+            "7,000 kg"
+          ],
+          [
+            "Cargo 1 arm",
+            "3.50 m from reference"
+          ],
+          [
+            "Cargo 4 arm",
+            "20.39 m from reference"
+          ],
+          [
+            "Leading edge of MAC",
+            "14 m from reference"
+          ],
+          [
+            "MAC length",
+            "4.6 m"
           ]
         ]
       }
@@ -2856,7 +4086,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-12272A.) An operator's loading manual gives standard passenger masses that include hand baggage. The manifest and the standard mass for hold baggage are shown below. Using these values and the appendix, calculate the mass of freight loaded in hold 1 that makes up the remainder of the traffic load.",
+      "question": "An operator's loading manual gives standard passenger masses that include hand baggage. The manifest and the standard mass for hold baggage are shown below. Using these values, calculate the mass of freight loaded in hold 1 that makes up the remainder of the traffic load.",
       "questionType": "multiple_choice",
       "choices": [
         "280 kg",
@@ -2903,6 +4133,11 @@
             "Hold baggage",
             "14 kg per piece",
             "120 pieces in hold 4"
+          ],
+          [
+            "Maximum traffic load permitted by the appendix",
+            "10,320 kg",
+            ""
           ]
         ]
       }
@@ -3061,7 +4296,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-9643 A or Loading Manual MRJT 1 Figure 4.14) The following data relates to a planned flight of an aeroplane - Dry Operational mass 60520 kg Performance limited take-off mass 92750 kg Performance limited landing mass 72250 kg Maximum Zero Fuel mass 67530 kg Fuel on board at take-off - Trip fuel 12500 kg Contingency and final reserve fuel 2300 kg Alternate fuel 1700 kg Using this data, as appropriate, calculate the maximum traffic load that can be carried.",
+      "question": "The following data relates to a planned flight of an aeroplane - Dry Operational mass 60520 kg Performance limited take-off mass 92750 kg Performance limited landing mass 72250 kg Maximum Zero Fuel mass 67530 kg Fuel on board at take-off - Trip fuel 12500 kg Contingency and final reserve fuel 2300 kg Alternate fuel 1700 kg Using this data, as appropriate, calculate the maximum traffic load that can be carried.",
       "questionType": "multiple_choice",
       "choices": [
         "7010 kg",
@@ -3075,10 +4310,47 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Maximum traffic-load calculation data",
+        "columns": [
+          "Item",
+          "Mass (kg)"
+        ],
+        "rows": [
+          [
+            "Dry operating mass",
+            "60,520"
+          ],
+          [
+            "Performance-limited take-off mass",
+            "92,750"
+          ],
+          [
+            "Performance-limited landing mass",
+            "72,250"
+          ],
+          [
+            "Maximum zero fuel mass",
+            "67,530"
+          ],
+          [
+            "Trip fuel",
+            "12,500"
+          ],
+          [
+            "Contingency and final reserve fuel",
+            "2,300"
+          ],
+          [
+            "Alternate fuel",
+            "1,700"
+          ]
+        ]
+      }
     },
     {
-      "question": "(For this question use annex 031-9604 A or Loading Manual MRJT 1 Figure 4.11) The aeroplane has a mass of 61 000 kg in the cruise. The range of safe CG positions, as determined from the appropriate graph in the loading manual, is:",
+      "question": "The aeroplane has a mass of 61 000 kg in the cruise. The range of safe CG positions, as determined from the appropriate graph in the loading manual, is:",
       "questionType": "multiple_choice",
       "choices": [
         "forward limit 7.7% aft limit 25.2% MAC",
@@ -3092,6 +4364,13 @@
       "tags": [
         "mass & balance",
         "volare"
+      ],
+      "questionImages": [
+        {
+          "src": "asset/volare-annexes/mrjt1-cg-envelope.png",
+          "alt": "MRJT1 centre-of-gravity envelope chart, CAP 696 Figure 4.11",
+          "caption": "MRJT1 CG envelope (CAA CAP 696, Figure 4.11)."
+        }
       ]
     },
     {
@@ -3163,7 +4442,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-11246A and 031- 11246B) The planned take-off mass of an aeroplane is 180 000 kg, with its centre of gravity located at 31 % MAC (Mean Aerodynamic Cord). Shortly prior to engine start, the local staff informs the crew that an additional load of 4 000 kg must be loaded in cargo 1. After loading this cargo, the new centre of gravity location will be:",
+      "question": "The planned take-off mass of an aeroplane is 180 000 kg, with its centre of gravity located at 31 % MAC (Mean Aerodynamic Cord). Shortly prior to engine start, the local staff informs the crew that an additional load of 4 000 kg must be loaded in cargo 1. After loading this cargo, the new centre of gravity location will be:",
       "questionType": "multiple_choice",
       "choices": [
         "28 %",
@@ -3177,7 +4456,40 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Verified annex 031-11246A/B geometry",
+        "columns": [
+          "Parameter",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Take-off mass",
+            "180,000 kg"
+          ],
+          [
+            "Initial CG",
+            "31% MAC"
+          ],
+          [
+            "Cargo added",
+            "4,000 kg to cargo 1"
+          ],
+          [
+            "Cargo 1 arm",
+            "2.73 m aft of reference"
+          ],
+          [
+            "Leading edge of MAC",
+            "14 m from reference"
+          ],
+          [
+            "MAC length",
+            "4.6 m"
+          ]
+        ]
+      }
     },
     {
       "question": "The empty mass of an aeroplane, as given in the weighing schedule, is 61300 kg. The operational items (including crew) is given as a mass of 2300 kg. If the take-off mass is 132000 kg (including a useable fuel quantity of 43800 kg) the useful load is",
@@ -3231,7 +4543,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-9608 A or Loading Manual MRJT 1 Figure 4.9) Referring to the loading manual for the transport aeroplane, the maximum running load for the aft section of the forward lower deck cargo compartment is:",
+      "question": "Referring to the loading manual for the transport aeroplane, the maximum running load for the aft section of the forward lower deck cargo compartment is:",
       "questionType": "multiple_choice",
       "choices": [
         "13.12 kg per inch.",
@@ -3245,7 +4557,114 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "MRJT1 cargo compartment limitations (CAP 696 Figure 4.9)",
+        "columns": [
+          "Compartment",
+          "Limit type",
+          "Maximum value",
+          "Arm / segment"
+        ],
+        "rows": [
+          [
+            "Forward hold (1)",
+            "Running load",
+            "13.15 kg/in",
+            "BA 228?286 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Running load",
+            "8.47 kg/in",
+            "BA 286?343 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Running load",
+            "13.12 kg/in",
+            "BA 343?500 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Distribution load intensity",
+            "68 kg/ft?",
+            "?"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "762 kg",
+            "Centroid BA 257 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "483 kg",
+            "Centroid BA 314.5 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Segment maximum load",
+            "2,059 kg",
+            "Centroid BA 421.5 in"
+          ],
+          [
+            "Forward hold (1)",
+            "Maximum total load",
+            "3,305 kg",
+            "Hold centroid BA 367.9 in; volume 607 ft?"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "14.65 kg/in",
+            "BA 731?940 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "7.26 kg/in",
+            "BA 940?997 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Running load",
+            "7.18 kg/in",
+            "BA 997?1,096 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Distribution load intensity",
+            "68 kg/ft?",
+            "?"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "3,062 kg",
+            "Centroid BA 835.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "414 kg",
+            "Centroid BA 968.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Segment maximum load",
+            "711 kg",
+            "Centroid BA 1,046.5 in"
+          ],
+          [
+            "Aft hold (4)",
+            "Maximum total load",
+            "4,187 kg",
+            "Hold centroid BA 884.5 in; volume 766 ft?"
+          ]
+        ]
+      }
     },
     {
       "question": "For the purpose of completing the Mass and Balance documentation, the Traffic Load is considered to be equal to the Take-off Mass",
@@ -3282,7 +4701,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-9644 A or Loading Manual MRJT 1 Figure 4.14) Aeroplane Dry Operating mass 85000 kg Performance limited take-off mass 127000 kg Performance limited landing mass 98500 kg Maximum zero fuel mass 89800 kg Fuel requirements for flight - Trip fuel 29300 kg Contingency and final reserve fuel 3600 kg Alternate fuel 2800 kg. The maximum traffic load that can be carried on this flight is:",
+      "question": "Aeroplane Dry Operating mass 85000 kg Performance limited take-off mass 127000 kg Performance limited landing mass 98500 kg Maximum zero fuel mass 89800 kg Fuel requirements for flight - Trip fuel 29300 kg Contingency and final reserve fuel 3600 kg Alternate fuel 2800 kg. The maximum traffic load that can be carried on this flight is:",
       "questionType": "multiple_choice",
       "choices": [
         "4800 kg",
@@ -3296,10 +4715,47 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Maximum traffic-load calculation data",
+        "columns": [
+          "Item",
+          "Mass (kg)"
+        ],
+        "rows": [
+          [
+            "Dry operating mass",
+            "85,000"
+          ],
+          [
+            "Performance-limited take-off mass",
+            "127,000"
+          ],
+          [
+            "Performance-limited landing mass",
+            "98,500"
+          ],
+          [
+            "Maximum zero fuel mass",
+            "89,800"
+          ],
+          [
+            "Trip fuel",
+            "29,300"
+          ],
+          [
+            "Contingency and final reserve fuel",
+            "3,600"
+          ],
+          [
+            "Alternate fuel",
+            "2,800"
+          ]
+        ]
+      }
     },
     {
-      "question": "(For this question use annex 031-1580A) A jet aeroplane, with the geometrical characteristics shown in the appendix, has a take-off weight (W) of 460 000 N and a centre of gravity (point G on annex) located at 15.40 m from the zero reference point. At the last moment the station manager has 12 000 N of freight added in the forward compartment at 10 m from the zero reference point. The final location of the centre of gravity, calculated in percentage of mean aerodynamic chord AB (from point A), is equal to:",
+      "question": "A jet aeroplane, has a take-off weight (W) of 460 000 N and a centre of gravity (point G) located at 15.40 m from the zero reference point. At the last moment the station manager has 12 000 N of freight added in the forward compartment at 10 m from the zero reference point. The final location of the centre of gravity, calculated in percentage of mean aerodynamic chord AB (from point A), is equal to:",
       "questionType": "multiple_choice",
       "choices": [
         "30.4 %.",
@@ -3313,6 +4769,13 @@
       "tags": [
         "mass & balance",
         "volare"
+      ],
+      "questionImages": [
+        {
+          "src": "asset/volare-annexes/annex-031-1580A-reference-geometry.svg",
+          "alt": "Original schematic showing the reference point, the 14 m MAC leading edge, 4.6 m MAC, original centre of gravity at 15.40 m, and added freight of 12,000 N at 10 m.",
+          "caption": "Geometry redrawn from verified values in the published solution for annex 031-1580A; not the original annex artwork."
+        }
       ]
     },
     {
@@ -3367,7 +4830,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-11247A and 031-11247B.) A turbojet aeroplane has a corrected dry operating mass of 110 100 kg, basic corrected index 118.6, take-off mass 200 000 kg, and CG at 32% MAC. The initial cargo distribution is shown below; all other cargo compartments are empty. Cargo is to be redistributed between compartments 1 and 4 to achieve a take-off CG of 35% MAC. What will the new loads in compartments 1 and 4 be?",
+      "question": "A turbojet aeroplane has a corrected dry operating mass of 110 100 kg, basic corrected index 118.6, take-off mass 200 000 kg, and CG at 32% MAC. The initial cargo distribution is shown below; all other cargo compartments are empty. Cargo is to be redistributed between compartments 1 and 4 to achieve a take-off CG of 35% MAC. What will the new loads in compartments 1 and 4 be?",
       "questionType": "multiple_choice",
       "choices": [
         "1 000 kg in cargo 1; 3 000 kg in cargo 4",
@@ -3383,33 +4846,57 @@
         "volare"
       ],
       "questionTable": {
-        "caption": "Initial cargo distribution",
+        "caption": "Verified annex 031-11247A/B load and geometry",
         "columns": [
-          "Cargo compartment",
-          "Load (kg)"
+          "Parameter",
+          "Value"
         ],
         "rows": [
           [
-            "1",
-            "4000"
+            "Corrected Dry Operating Mass",
+            "110,100 kg"
           ],
           [
-            "2",
-            "2000"
+            "Basic corrected index",
+            "118.6"
           ],
           [
-            "3",
-            "2000"
+            "Take-off mass",
+            "200,000 kg"
           ],
           [
-            "4",
-            "0 (empty)"
+            "Initial CG",
+            "32% MAC"
+          ],
+          [
+            "Cargo 1 initial load / arm",
+            "4,000 kg / 2.73 m"
+          ],
+          [
+            "Cargo 2 initial load / arm",
+            "2,000 kg / 8.55 m"
+          ],
+          [
+            "Cargo 3 initial load / arm",
+            "2,000 kg / 16.49 m"
+          ],
+          [
+            "Cargo 4 initial load / arm",
+            "0 kg / 21.13 m"
+          ],
+          [
+            "Leading edge of MAC",
+            "14 m from reference"
+          ],
+          [
+            "MAC length",
+            "4.6 m"
           ]
         ]
       }
     },
     {
-      "question": "(For this question use annex 031 11634A) Maximum allowed take-off mass limit: 37 200kg Dry operating mass: 21 600 kg Take-off fuel: 8 500 kg Passengers on board: male 33, female 32, children 5 Baggages: 880 kg The company uses the standard passenger mass systems (see annex) allowed by regulations. The flight is not a holiday charter. In these conditions, the maximum cargo that may be loaded is",
+      "question": "Maximum allowed take-off mass limit: 37 200kg Dry operating mass: 21 600 kg Take-off fuel: 8 500 kg Passengers on board: male 33, female 32, children 5 Baggages: 880 kg The company uses the standard passenger mass systems  allowed by regulations. The flight is not a holiday charter. In these conditions, the maximum cargo that may be loaded is",
       "questionType": "multiple_choice",
       "choices": [
         "585 kg",
@@ -3423,7 +4910,47 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Passenger and traffic-load calculation data (CAA CAP 696 standard masses)",
+        "columns": [
+          "Item",
+          "Standard mass / quantity",
+          "Total mass"
+        ],
+        "rows": [
+          [
+            "Adult passengers (30+ seats; non-holiday charter)",
+            "84 kg ? 65",
+            "5,460 kg"
+          ],
+          [
+            "Children",
+            "35 kg ? 5",
+            "175 kg"
+          ],
+          [
+            "Hold baggage",
+            "880 kg",
+            "880 kg"
+          ],
+          [
+            "Dry operating mass",
+            "?",
+            "21,600 kg"
+          ],
+          [
+            "Take-off fuel",
+            "?",
+            "8,500 kg"
+          ],
+          [
+            "Maximum take-off mass",
+            "?",
+            "37,200 kg"
+          ]
+        ]
+      }
     },
     {
       "question": "Fuel loaded onto an aeroplane is 15400 kg but is erroneously entered into the load and trim sheet as 14500 kg. This error is not detected by the flight crew but they will notice that",
@@ -3494,7 +5021,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-9596 A or Loading Manual MRJT 1 Figure 4.11) At the maximum landing mass the range of safe CG positions, as determined from the appropriate graph in the loading manual, is:",
+      "question": "At the maximum landing mass the range of safe CG positions, as determined from the appropriate graph in the loading manual, is:",
       "questionType": "multiple_choice",
       "choices": [
         "Forward limit 8.0% MAC aft limit 27.2% MAC",
@@ -3508,6 +5035,13 @@
       "tags": [
         "mass & balance",
         "volare"
+      ],
+      "questionImages": [
+        {
+          "src": "asset/volare-annexes/mrjt1-cg-envelope.png",
+          "alt": "MRJT1 centre-of-gravity envelope chart, CAP 696 Figure 4.11",
+          "caption": "MRJT1 CG envelope (CAA CAP 696, Figure 4.11)."
+        }
       ]
     },
     {
@@ -3528,7 +5062,7 @@
       ]
     },
     {
-      "question": "(For this question use annexes 031-11205A and 031-11205B.) A turbojet aeroplane has a corrected dry operating mass of 110 100 kg, basic corrected index 118.6, take-off mass 200 000 kg, and CG at 32% MAC. The initial cargo distribution is shown below; all other cargo compartments are empty. For performance reasons, the captain wants a take-off CG of 34% MAC. Which cargo transfer is required?",
+      "question": "A turbojet aeroplane has a corrected dry operating mass of 110 100 kg, basic corrected index 118.6, take-off mass 200 000 kg, and CG at 32% MAC. The initial cargo distribution is shown below; all other cargo compartments are empty. For performance reasons, the captain wants a take-off CG of 34% MAC. Which cargo transfer is required?",
       "questionType": "multiple_choice",
       "choices": [
         "1 500 kg from cargo 3 to cargo 1",
@@ -3544,27 +5078,51 @@
         "volare"
       ],
       "questionTable": {
-        "caption": "Initial cargo distribution",
+        "caption": "Verified annex 031-11205A/B load and geometry",
         "columns": [
-          "Cargo compartment",
-          "Load (kg)"
+          "Parameter",
+          "Value"
         ],
         "rows": [
           [
-            "1",
-            "4000"
+            "Corrected Dry Operating Mass",
+            "110,100 kg"
           ],
           [
-            "2",
-            "2000"
+            "Basic corrected index",
+            "118.6"
           ],
           [
-            "3",
-            "2000"
+            "Take-off mass",
+            "200,000 kg"
           ],
           [
-            "4",
-            "0 (empty)"
+            "Initial CG",
+            "32% MAC"
+          ],
+          [
+            "Cargo 1 initial load / arm",
+            "4,000 kg / 2.73 m"
+          ],
+          [
+            "Cargo 2 initial load / arm",
+            "2,000 kg / 8.55 m"
+          ],
+          [
+            "Cargo 3 initial load / arm",
+            "2,000 kg / 16.49 m"
+          ],
+          [
+            "Cargo 4 initial load / arm",
+            "0 kg / 21.13 m"
+          ],
+          [
+            "Leading edge of MAC",
+            "14 m from reference"
+          ],
+          [
+            "MAC length",
+            "4.6 m"
           ]
         ]
       }
@@ -3706,7 +5264,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-12273A) From the data contained in the attached appendix, the maximum allowable take - off mass and traffic load is respectively :",
+      "question": "Using the loading data below, determine the maximum allowable take-off mass and traffic load, respectively:",
       "questionType": "multiple_choice",
       "choices": [
         "68038 kg and 18588 kg",
@@ -3720,7 +5278,28 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Verified load-sheet totals from annex 031-12273A",
+        "columns": [
+          "Calculation item",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Maximum allowable take-off mass",
+            "61,600 kg"
+          ],
+          [
+            "Operating mass (DOM plus take-off fuel)",
+            "49,450 kg"
+          ],
+          [
+            "Maximum traffic load",
+            "12,150 kg"
+          ]
+        ]
+      }
     },
     {
       "question": "The total mass of an aeroplane is 9000 kg. The centre of gravity (cg) position is at 2.0 m from the datum line. The aft limit for cg is at 2.1 m from the datum line. What mass of cargo must be shifted from the front cargo hold (at 0.8 m from the datum) to the aft hold (at 3.8 m), to move the cg to the aft limit?",
@@ -4008,7 +5587,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-4742A or Loading Manual MEP1 Figure 3.4.) Using the aircraft data below, determine the CG location at take-off.",
+      "question": "Using the aircraft data below, determine the CG location at take-off.",
       "questionType": "multiple_choice",
       "choices": [
         "93.60 inches aft of datum",
@@ -4024,63 +5603,77 @@
         "volare"
       ],
       "questionTable": {
-        "caption": "Take-off CG inputs",
+        "caption": "Take-off CG inputs and MEP1 balance arms",
         "columns": [
           "Item",
-          "Value"
+          "Mass / quantity",
+          "Arm aft of datum (in)"
         ],
         "rows": [
           [
             "Basic empty mass",
-            "3210 lb"
+            "3,210 lb",
+            "88.5"
           ],
           [
             "Pilot",
-            "160 lb"
+            "160 lb",
+            "85.5"
           ],
           [
             "Front seat passenger",
-            "200 lb"
+            "200 lb",
+            "85.5"
           ],
           [
             "Centre seat passengers",
-            "290 lb total"
+            "290 lb total",
+            "118.5"
           ],
           [
             "Rear seat passenger",
-            "110 lb"
+            "110 lb",
+            "157.6"
           ],
           [
             "Baggage, zone 1",
-            "100 lb"
+            "100 lb",
+            "22.5"
           ],
           [
             "Baggage, zone 4",
-            "50 lb"
-          ],
-          [
-            "Zero fuel mass",
-            "4210 lb"
-          ],
-          [
-            "Moment at zero fuel mass",
-            "377751 lb·in"
+            "50 lb",
+            "178.7"
           ],
           [
             "Block fuel",
-            "100 US gal"
+            "100 US gal (600 lb)",
+            "93.6"
           ],
           [
             "Trip fuel",
-            "55 US gal"
+            "55 US gal (330 lb)",
+            "93.6"
           ],
           [
             "Start-up and taxi fuel",
-            "3 US gal (included in block fuel)"
+            "3 US gal (18 lb; included in block fuel)",
+            "93.6"
           ],
           [
             "Fuel density",
-            "6 lb/US gal"
+            "6 lb/US gal",
+            "?"
+          ],
+          [
+            "Zero fuel mass",
+            "4,210 lb",
+            "?"
+          ],
+          [
+            "Moment at zero fuel mass",
+            "377,751 lb?in",
+            "?"
           ]
         ]
       }
@@ -4273,7 +5866,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-11222A and 031- 11222B ) The planned take-off mass of an aeroplane is 190 000 kg, with its centre of gravity located at 29 % MAC (Mean Aerodynamic Cord). Shortly prior to engine start, the local staff informs the flight crew that an additional load of 4 000 kg must be loaded in cargo 4. After loading this cargo, the new centre of gravity location will be:",
+      "question": "The planned take-off mass of an aeroplane is 190 000 kg, with its centre of gravity located at 29 % MAC (Mean Aerodynamic Cord). Shortly prior to engine start, the local staff informs the flight crew that an additional load of 4 000 kg must be loaded in cargo 4. After loading this cargo, the new centre of gravity location will be:",
       "questionType": "multiple_choice",
       "choices": [
         "33 %",
@@ -4287,7 +5880,40 @@
       "tags": [
         "mass & balance",
         "volare"
-      ]
+      ],
+      "questionTable": {
+        "caption": "Verified annex 031-11222A/B geometry",
+        "columns": [
+          "Parameter",
+          "Value"
+        ],
+        "rows": [
+          [
+            "Take-off mass",
+            "190,000 kg"
+          ],
+          [
+            "Initial CG",
+            "29% MAC"
+          ],
+          [
+            "Cargo added",
+            "4,000 kg to cargo 4"
+          ],
+          [
+            "Cargo 4 arm",
+            "23.89 m aft of reference"
+          ],
+          [
+            "Leading edge of MAC",
+            "14 m from reference"
+          ],
+          [
+            "MAC length",
+            "4.6 m"
+          ]
+        ]
+      }
     },
     {
       "question": "The basic empty mass of an aircraft is 30 000 kg. The masses of the following items are : - catering: 300 kg - safety and rescue material: nil - fly away kit: nil - crew (inclusive crew baggage): 365kg - fuel at take-o ff: 3 - unusable fuel: 120 kg - passengers, baggage, cargo: 8 000 kg The Dry Operating Mass is : 000 kg",
@@ -4341,7 +5967,7 @@
       ]
     },
     {
-      "question": "(For this question use annex 031-4740A or Loading Manual MEP1 Figure 3.4.) Using the aircraft data below, determine the block fuel moment in lb·in.",
+      "question": "Using the aircraft data below, determine the block fuel moment in lb·in.",
       "questionType": "multiple_choice",
       "choices": [
         "433 906",
@@ -4357,55 +5983,67 @@
         "volare"
       ],
       "questionTable": {
-        "caption": "Block-fuel moment inputs",
+        "caption": "Block-fuel moment inputs and MEP1 balance arms",
         "columns": [
           "Item",
-          "Value"
+          "Mass / quantity",
+          "Arm aft of datum (in)"
         ],
         "rows": [
           [
             "Basic empty mass",
-            "3210 lb"
+            "3,210 lb",
+            "88.5"
           ],
           [
             "Pilot",
-            "160 lb"
+            "160 lb",
+            "85.5"
           ],
           [
             "Front seat passenger",
-            "200 lb"
+            "200 lb",
+            "85.5"
           ],
           [
             "Centre seat passengers",
-            "290 lb total"
+            "290 lb total",
+            "118.5"
           ],
           [
             "Rear seat passenger",
-            "110 lb"
+            "110 lb",
+            "157.6"
           ],
           [
             "Baggage, zone 1",
-            "100 lb"
+            "100 lb",
+            "22.5"
           ],
           [
             "Baggage, zone 4",
-            "50 lb"
+            "50 lb",
+            "178.7"
           ],
           [
             "Block fuel",
-            "100 US gal"
+            "100 US gal (600 lb)",
+            "93.6"
           ],
           [
             "Trip fuel",
-            "55 US gal"
+            "55 US gal (330 lb)",
+            "93.6"
           ],
           [
             "Start-up and taxi fuel",
-            "3 US gal (included in block fuel)"
+            "3 US gal (18 lb; included in block fuel)",
+            "93.6"
           ],
           [
             "Fuel density",
-            "6 lb/US gal"
+            "6 lb/US gal",
+            "?"
           ]
         ]
       }

@@ -1,4 +1,4 @@
-import { initHomePage } from "./shared.js?v=volare-mass-balance-table-20261018-2";
+import { initHomePage } from "./shared.js?v=engineering-economics-cache-20261018-1";
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
