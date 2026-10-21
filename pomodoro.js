@@ -4,6 +4,7 @@
     const DEFAULT_FOCUS_SECONDS = 25 * 60;
     const DEFAULT_BREAK_SECONDS = 5 * 60;
     const isExamPage = document.body.classList.contains("mode-exam");
+    const isPlannerPage = document.body.classList.contains("planner-page");
     const widgets = document.querySelectorAll("[data-pomodoro]");
     if (!widgets.length) {
         return;
@@ -26,7 +27,7 @@
     const restoreDuration = (seconds, fallback) => {
         const value = Number(seconds);
         return Number.isFinite(value) && value > 0
-            ? Math.round(Math.min(120 * 60, Math.max(60, value)))
+            ? Math.round(Math.min(24 * 60 * 60, Math.max(60, value)))
             : fallback;
     };
 
@@ -48,7 +49,15 @@
     }
 
     const phaseDuration = () => state.phase === "focus" ? state.focusSeconds : state.breakSeconds;
-    const formatTime = (seconds) => `${Math.floor(seconds / 60).toString().padStart(2, "0")}:${(seconds % 60).toString().padStart(2, "0")}`;
+    const formatTime = (seconds) => {
+        const totalSeconds = Math.max(0, Math.floor(seconds));
+        const hours = Math.floor(totalSeconds / 3600);
+        const minutes = Math.floor((totalSeconds % 3600) / 60);
+        const remainingSeconds = totalSeconds % 60;
+        return hours > 0
+            ? `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${remainingSeconds.toString().padStart(2, "0")}`
+            : `${Math.floor(totalSeconds / 60).toString().padStart(2, "0")}:${remainingSeconds.toString().padStart(2, "0")}`;
+    };
 
     function save() {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
@@ -100,8 +109,16 @@
             if (!toggle.querySelector(".pomodoro-control-icon")) {
                 toggle.textContent = actionLabel;
             }
+            if (widget.classList.contains("planner-pomodoro")) {
+                const browserFullscreen = widget.querySelector("[data-pomodoro-browser-fullscreen]");
+                const isBrowserFullscreen = document.fullscreenElement === widget;
+                const browserFullscreenLabel = isBrowserFullscreen ? "Exit browser fullscreen" : "Enter browser fullscreen";
+                browserFullscreen.dataset.browserFullscreen = String(isBrowserFullscreen);
+                browserFullscreen.setAttribute("aria-label", browserFullscreenLabel);
+                browserFullscreen.title = browserFullscreenLabel;
+            }
         });
-        document.title = state.running ? `${formatTime(state.remaining)} | PrepCore` : document.title.replace(/^\d{2}:\d{2} \| /, "");
+        document.title = state.running ? `${formatTime(state.remaining)} | PrepCore` : document.title.replace(/^(?:\d{2,}:)?\d{2}:\d{2} \| /, "");
     }
 
     function playAlarm() {
@@ -188,8 +205,18 @@
     }
 
     function openSettings(widget) {
-        widget.querySelector("[data-pomodoro-focus]").value = Math.round(state.focusSeconds / 60);
-        widget.querySelector("[data-pomodoro-break]").value = Math.round(state.breakSeconds / 60);
+        if (widget.querySelector("[data-pomodoro-hours]")) {
+            [
+                ["focus", state.focusSeconds],
+                ["break", state.breakSeconds]
+            ].forEach(([phase, seconds]) => {
+                widget.querySelector(`[data-pomodoro-${phase}-hours]`).value = Math.floor(seconds / 3600);
+                widget.querySelector(`[data-pomodoro-${phase}-minutes]`).value = Math.floor((seconds % 3600) / 60);
+            });
+        } else {
+            widget.querySelector("[data-pomodoro-focus]").value = Math.round(state.focusSeconds / 60);
+            widget.querySelector("[data-pomodoro-break]").value = Math.round(state.breakSeconds / 60);
+        }
         widget.querySelector("[data-pomodoro-settings-panel]").hidden = false;
         const button = widget.querySelector("[data-pomodoro-settings]");
         button.setAttribute("aria-expanded", "true");
@@ -199,13 +226,33 @@
 
     function saveSettings(widget, event) {
         event.preventDefault();
-        const focusMinutes = Number(widget.querySelector("[data-pomodoro-focus]").value);
-        const breakMinutes = Number(widget.querySelector("[data-pomodoro-break]").value);
-        if (!Number.isInteger(focusMinutes) || !Number.isInteger(breakMinutes) || focusMinutes < 1 || focusMinutes > 120 || breakMinutes < 1 || breakMinutes > 120) {
-            return;
+        if (widget.querySelector("[data-pomodoro-hours]")) {
+            const durations = ["focus", "break"].map((phase) => {
+                const hoursInput = widget.querySelector(`[data-pomodoro-${phase}-hours]`);
+                const minutesInput = widget.querySelector(`[data-pomodoro-${phase}-minutes]`);
+                const hours = Number(hoursInput.value);
+                const minutes = Number(minutesInput.value);
+                const valid = Number.isInteger(hours) && Number.isInteger(minutes)
+                    && hours >= 0 && hours <= 24 && minutes >= 0 && minutes <= 59
+                    && hours * 60 + minutes >= 1 && hours * 60 + minutes <= 24 * 60;
+                hoursInput.setCustomValidity(valid ? "" : "Enter a duration from 00:01 to 24:00.");
+                return valid ? (hours * 60 + minutes) * 60 : null;
+            });
+            if (durations.some((duration) => duration === null)) {
+                widget.querySelector("[data-pomodoro-settings-panel]").reportValidity();
+                return;
+            }
+            state.focusSeconds = durations[0];
+            state.breakSeconds = durations[1];
+        } else {
+            const focusMinutes = Number(widget.querySelector("[data-pomodoro-focus]").value);
+            const breakMinutes = Number(widget.querySelector("[data-pomodoro-break]").value);
+            if (!Number.isInteger(focusMinutes) || !Number.isInteger(breakMinutes) || focusMinutes < 1 || focusMinutes > 120 || breakMinutes < 1 || breakMinutes > 120) {
+                return;
+            }
+            state.focusSeconds = focusMinutes * 60;
+            state.breakSeconds = breakMinutes * 60;
         }
-        state.focusSeconds = focusMinutes * 60;
-        state.breakSeconds = breakMinutes * 60;
         state.remaining = phaseDuration();
         state.running = false;
         state.lastTick = null;
@@ -234,6 +281,75 @@
         });
         widget.querySelector("[data-pomodoro-settings-panel]").addEventListener("submit", (event) => saveSettings(widget, event));
         widget.querySelector("[data-pomodoro-cancel]").addEventListener("click", () => closeSettings(widget));
+        if (isPlannerPage && widget.classList.contains("planner-pomodoro")) {
+            let keepOverlayOnBrowserExit = false;
+            let fullscreenPlaceholder = null;
+            ["focus", "break"].forEach((phase) => {
+                const hoursInput = widget.querySelector(`[data-pomodoro-${phase}-hours]`);
+                const minutesInput = widget.querySelector(`[data-pomodoro-${phase}-minutes]`);
+                [hoursInput, minutesInput].forEach((input) => input.addEventListener("input", () => {
+                    hoursInput.setCustomValidity("");
+                }));
+            });
+            const setExpanded = (expanded) => {
+                if (expanded && !fullscreenPlaceholder) {
+                    fullscreenPlaceholder = document.createComment("Planner timer position");
+                    widget.parentNode.insertBefore(fullscreenPlaceholder, widget);
+                    document.body.appendChild(widget);
+                } else if (!expanded && fullscreenPlaceholder) {
+                    fullscreenPlaceholder.parentNode.insertBefore(widget, fullscreenPlaceholder);
+                    fullscreenPlaceholder.remove();
+                    fullscreenPlaceholder = null;
+                }
+                widget.classList.toggle("is-fullscreen", expanded);
+                widget.querySelector("[data-pomodoro-expand]").hidden = expanded;
+                widget.querySelector("[data-pomodoro-browser-fullscreen]").hidden = !expanded;
+                widget.querySelector("[data-pomodoro-close]").hidden = !expanded;
+                if (expanded) {
+                    closeSettings(widget);
+                }
+            };
+            widget.querySelector("[data-pomodoro-expand]").addEventListener("click", () => setExpanded(true));
+            widget.querySelector("[data-pomodoro-close]").addEventListener("click", async () => {
+                if (document.fullscreenElement === widget && document.exitFullscreen) {
+                    try { await document.exitFullscreen(); } catch {}
+                }
+                setExpanded(false);
+            });
+            widget.querySelector("[data-pomodoro-browser-fullscreen]").addEventListener("click", async () => {
+                try {
+                    if (document.fullscreenElement === widget) {
+                        keepOverlayOnBrowserExit = true;
+                        await document.exitFullscreen();
+                    } else if (widget.requestFullscreen) {
+                        await widget.requestFullscreen();
+                    }
+                } catch {
+                    // The in-page fullscreen view remains available if browser fullscreen is blocked.
+                }
+                render();
+            });
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Escape" && widget.classList.contains("is-fullscreen")) {
+                    if (document.fullscreenElement === widget && document.exitFullscreen) {
+                        document.exitFullscreen().catch(() => {});
+                    }
+                    setExpanded(false);
+                }
+            });
+            document.addEventListener("fullscreenchange", () => {
+                if (document.fullscreenElement !== widget && widget.dataset.browserFullscreen === "true") {
+                    widget.dataset.browserFullscreen = "false";
+                    if (!keepOverlayOnBrowserExit) {
+                        setExpanded(false);
+                    }
+                    keepOverlayOnBrowserExit = false;
+                } else {
+                    widget.dataset.browserFullscreen = String(document.fullscreenElement === widget);
+                }
+                render();
+            });
+        }
     });
 
     if (isExamPage && state.running) {

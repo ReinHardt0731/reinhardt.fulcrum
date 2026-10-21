@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fulcrum | Planner</title>
-    <link rel="stylesheet" href="styles.css?v=planner-mode-nav-20261001">
+    <link rel="stylesheet" href="styles.css?v=planner-timer-icons-20261021">
 </head>
 <body class="planner-page">
     <main class="planner-shell">
@@ -39,14 +39,25 @@
                 <div class="pomodoro-icon-tile" aria-hidden="true"><svg class="pomodoro-clock-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></div>
                 <div class="pomodoro-face"><span class="pomodoro-phase" data-pomodoro-phase>Focus</span><strong class="pomodoro-time" data-pomodoro-time>25:00</strong></div>
                 <div class="pomodoro-actions">
-                    <button class="pomodoro-button" data-pomodoro-toggle type="button">Start</button>
-                    <button class="pomodoro-reset" data-pomodoro-reset type="button" aria-label="Reset Pomodoro timer">Reset</button>
-                    <button class="pomodoro-settings-button" data-pomodoro-settings type="button" aria-label="Timer settings" aria-expanded="false">Settings</button>
+                    <button class="pomodoro-button pomodoro-icon-control" data-pomodoro-toggle data-running="false" type="button" aria-label="Start Pomodoro timer" title="Start timer"><svg class="pomodoro-control-icon pomodoro-play-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.5v13L18 12 8 5.5Z"></path></svg><svg class="pomodoro-control-icon pomodoro-pause-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 5h4v14H7zM13 5h4v14h-4z"></path></svg></button>
+                    <button class="pomodoro-reset pomodoro-icon-control" data-pomodoro-reset type="button" aria-label="Reset Pomodoro timer" title="Reset Pomodoro timer"><svg class="pomodoro-control-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 8V3m0 5h5"></path><path d="M5.5 8.5A8.5 8.5 0 1 1 4 13"></path></svg></button>
+                    <button class="pomodoro-settings-button pomodoro-icon-control" data-pomodoro-settings type="button" aria-label="Open timer settings" title="Open timer settings" aria-expanded="false"><svg class="pomodoro-control-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 8.25a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5Z"></path><path d="M19.4 13a7.4 7.4 0 0 0 0-2l2-1.5-2-3.4-2.4 1a7.5 7.5 0 0 0-1.7-1L15 3h-4l-.4 3.1a7.5 7.5 0 0 0-1.7 1l-2.4-1-2 3.4 2 1.5a7.4 7.4 0 0 0 0 2l-2 1.5 2 3.4 2.4-1a7.5 7.5 0 0 0 1.7 1L11 21h4l.4-3.1a7.5 7.5 0 0 0 1.7-1l2.4 1 2-3.4z"></path></svg></button>
+                    <button class="pomodoro-settings-button pomodoro-icon-control planner-timer-expand" data-pomodoro-expand type="button" aria-label="Open fullscreen timer" title="Open fullscreen timer"><svg class="pomodoro-control-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 4H4v4M16 4h4v4M4 16v4h4M20 16v4h-4M4 4l6 6M20 4l-6 6M4 20l6-6M20 20l-6-6"></path></svg></button>
+                    <button class="pomodoro-settings-button pomodoro-icon-control planner-timer-browser-fullscreen" data-pomodoro-browser-fullscreen data-browser-fullscreen="false" type="button" aria-label="Enter browser fullscreen" title="Enter browser fullscreen" hidden><svg class="pomodoro-control-icon pomodoro-browser-fullscreen-enter-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4M9 4v5H4M20 9h-5V4M15 20v-5h5M4 15h5v5"></path></svg><svg class="pomodoro-control-icon pomodoro-browser-fullscreen-exit-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 4v5H4M20 9h-5V4M15 20v-5h5M4 15h5v5"></path></svg></button>
+                    <button class="pomodoro-reset pomodoro-icon-control planner-timer-close" data-pomodoro-close type="button" aria-label="Close fullscreen timer" title="Close fullscreen timer" hidden><svg class="pomodoro-control-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"></path></svg></button>
                 </div>
-                <form class="pomodoro-settings-panel" data-pomodoro-settings-panel hidden>
-                    <label>Focus <input data-pomodoro-focus type="number" min="1" max="120" inputmode="numeric"></label>
-                    <label>Break <input data-pomodoro-break type="number" min="1" max="120" inputmode="numeric"></label>
-                    <div><button class="pomodoro-button" data-pomodoro-save type="submit">Save</button><button class="pomodoro-reset" data-pomodoro-cancel type="button">Cancel</button></div>
+                <form class="pomodoro-settings-panel planner-pomodoro-settings" data-pomodoro-settings-panel data-pomodoro-hours hidden>
+                    <fieldset>
+                        <legend>Focus duration</legend>
+                        <label>Hours <input data-pomodoro-focus-hours type="number" min="0" max="24" value="0" required inputmode="numeric"></label>
+                        <label>Minutes <input data-pomodoro-focus-minutes type="number" min="0" max="59" value="25" required inputmode="numeric"></label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Break duration</legend>
+                        <label>Hours <input data-pomodoro-break-hours type="number" min="0" max="24" value="0" required inputmode="numeric"></label>
+                        <label>Minutes <input data-pomodoro-break-minutes type="number" min="0" max="59" value="5" required inputmode="numeric"></label>
+                    </fieldset>
+                    <div><button class="pomodoro-button pomodoro-icon-control" data-pomodoro-save type="submit" aria-label="Save timer settings" title="Save timer settings"><svg class="pomodoro-control-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg></button><button class="pomodoro-reset pomodoro-icon-control" data-pomodoro-cancel type="button" aria-label="Cancel timer settings" title="Cancel timer settings"><svg class="pomodoro-control-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"></path></svg></button></div>
                 </form>
             </section>
         </header>
@@ -118,7 +129,7 @@
             <span>Your checklist and focus time are saved in this browser.</span>
         </footer>
     </main>
-    <script src="pomodoro.js?v=pomodoro-duration-units-20261015" defer></script>
+    <script src="pomodoro.js?v=pomodoro-icon-controls-20261021" defer></script>
     <script type="module" src="planner.js?v=planner-v2-20260930"></script>
 </body>
 </html>
