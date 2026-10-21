@@ -1,0 +1,805 @@
+{
+  "title": "Reciprocating Induction, Carburetion, and Fuel Metering",
+  "questions": [
+    {
+      "question": "If fuel/air ratio is proper and ignition timing is correct, the combustion process should be completed",
+      "questionType": "multiple_choice",
+      "choices": [
+        "When the exhaust valve opens at the end of the power stroke.",
+        "Before top center on the compression stroke.",
+        "Just after top center at the beginning of the power stroke.",
+        "20 to 30° before top center at the end of the compression stroke."
+      ],
+      "answerIndex": 2,
+      "answerText": "Just after top center at the beginning of the power stroke.",
+      "explanation": "**Why this is correct**\nIgnition begins before top dead center so the flame has time to develop while the piston is near the end of compression. Peak pressure then occurs just after TDC, when it can push the piston down through the power stroke. Ignition timing is not the same instant as completed combustion.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Induction, Carburetion, and Fuel Metering"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "When is the fuel/air mixture ignited in a conventional reciprocating engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "When the piston reaches top dead center on the compression stroke.",
+        "After the piston passes top dead center on the power stroke.",
+        "When the piston has reached top dead center of the intake stroke.",
+        "Shortly before the piston reaches the top of the compression stroke."
+      ],
+      "answerIndex": 3,
+      "answerText": "Shortly before the piston reaches the top of the compression stroke.",
+      "explanation": "**Why this is correct**\nThe spark is timed shortly before TDC on the compression stroke. The burning mixture takes finite time to reach peak pressure, so starting combustion before TDC places peak pressure just after TDC for useful expansion work.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Induction, Carburetion, and Fuel Metering"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The primary purpose in setting proper valve timing and overlap is to",
+      "questionType": "multiple_choice",
+      "choices": [
+        "obtain the best volumetric efficiency and lower cylinder operating temperatures.",
+        "Eliminate the need to coordinate ignition timing with valve movement.",
+        "Permit the best possible charge of fuel/air mixture into the cylinders.",
+        "Gain more thorough exhaust gas scavenging."
+      ],
+      "answerIndex": 0,
+      "answerText": "obtain the best volumetric efficiency and lower cylinder operating temperatures.",
+      "explanation": "**Why this is correct**\nCorrect valve timing lets the intake charge continue filling the cylinder and helps clear hot exhaust gas during overlap. Better volumetric efficiency improves charge mass, while effective scavenging reduces retained hot gas and cylinder temperature. Excessive overlap or mistiming can instead cause reversion.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Induction, Carburetion, and Fuel Metering"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Into what part of a reciprocating engine induction system is deicing alcohol normally injected?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Into the fuel bowl downstream of the throttle plate.",
+        "The airstream ahead of the carburetor.",
+        "The low-pressure area ahead of the throttle valve.",
+        "The supercharger or impeller section."
+      ],
+      "answerIndex": 1,
+      "answerText": "The airstream ahead of the carburetor.",
+      "explanation": "**Why this is correct**\nAlcohol is injected into the airstream ahead of the carburetor so it can reach the inlet and carburetor passages where ice may form. The alcohol lowers water's freezing point; it is not sprayed into the cylinders as a combustion additive.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Induction, Carburetion, and Fuel Metering"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "During full power output of an unsupercharged engine equipped with a float-type carburetor, in which of the following areas will the highest pressure exist?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Intake manifold.",
+        "Downstream of the throttle valve in the intake manifold.",
+        "Carburetor air scoop.",
+        "Venturi."
+      ],
+      "answerIndex": 2,
+      "answerText": "Carburetor air scoop.",
+      "explanation": "**Why this is correct**\nIn a normally aspirated induction system at full power, the carburetor air scoop is exposed to ram pressure and is upstream of the pressure drop across the carburetor venturi and throttle. Thus it has the highest pressure among the listed locations.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Induction, Carburetion, and Fuel Metering"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Augmenter tubes are part of which reciprocating engine system?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Fuel.",
+        "Lubrication.",
+        "Induction.",
+        "Exhaust."
+      ],
+      "answerIndex": 3,
+      "answerText": "Exhaust.",
+      "explanation": "**Why this is correct**\nAugmenter tubes use the high-velocity exhaust flow to induce additional cooling air through the engine compartment. They are part of the exhaust arrangement and use an ejector effect; they are not fuel-metering tubes.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Induction, Carburetion, and Fuel Metering"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following assists in removing heat from the metal walls and fins of an air-cooled cylinder assembly?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A baffle and cowl arrangement.",
+        "An engine induction system.",
+        "An oil-pressure relief valve.",
+        "An intercooler system."
+      ],
+      "answerIndex": 0,
+      "answerText": "A baffle and cowl arrangement.",
+      "explanation": "**Why this is correct**\nBaffles and the cowling direct cooling air across cylinder fins instead of letting it bypass the hot surfaces. The metal fins increase heat-transfer area, and forced airflow carries heat away. A missing or poorly sealed baffle can cause localized overheating.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Induction, Carburetion, and Fuel Metering"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "If the intake valve is opened too early in the cycle of operation of a four-stroke cycle engine, it may result in",
+      "questionType": "multiple_choice",
+      "choices": [
+        "engine kickback.",
+        "backfiring into the induction system.",
+        "improper scavenging of exhaust gases.",
+        "excessive oil pressure."
+      ],
+      "answerIndex": 1,
+      "answerText": "backfiring into the induction system.",
+      "explanation": "**Why this is correct**\nIf the intake valve opens too early while cylinder pressure is still high, combustion gases can escape backward into the induction passage. Correct valve timing keeps the intake event coordinated with piston motion and exhaust pressure.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Induction, Carburetion, and Fuel Metering"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of a power check on a reciprocating engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "To determine if the fuel/air mixture is adequate.",
+        "To check magneto drop.",
+        "To determine satisfactory performance.",
+        "To determine whether the engine develops its specified power under the test conditions."
+      ],
+      "answerIndex": 2,
+      "answerText": "To determine satisfactory performance.",
+      "explanation": "**Why this is correct**\nA power check compares the engine's measured indications and output with specified performance limits. It can reveal inadequate power or abnormal operation, but it is a performance assessment rather than a single-component diagnosis.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Induction, Carburetion, and Fuel Metering"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Backfiring through the carburetor generally results from the use of _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "an excessively rich mixture",
+        "excessively atomized fuel",
+        "an excessively lean mixture",
+        "equal amount of fuel and air"
+      ],
+      "answerIndex": 2,
+      "answerText": "an excessively lean mixture",
+      "explanation": "**Why this is correct**\nA lean mixture can burn slowly and irregularly; flame may continue into the intake event and ignite mixture in the induction passage, causing backfire. A rich mixture more commonly causes roughness, fouling, or reduced power.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Induction, Carburetion, and Fuel Metering"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The following are the major components of a normally aspirated engine except _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "ice removal system",
+        "induction filter",
+        "air intake",
+        "fuel delivery system"
+      ],
+      "answerIndex": 0,
+      "answerText": "ice removal system",
+      "explanation": "**Why this is correct**\nThe listed major engine systems include induction, fuel metering, ignition, lubrication, cooling, and exhaust. An ice-removal system is an accessory or installation feature, not a fundamental engine component system present on every reciprocating engine.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Induction, Carburetion, and Fuel Metering"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A fuel ratio of 11:1 normally refers to _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1 part of fuel, 11 parts of air",
+        "1.1 part of fuel, 1 part of air",
+        "a stoichiometric mixture",
+        "1 part of air, 11 parts fuel"
+      ],
+      "answerIndex": 0,
+      "answerText": "1 part of fuel, 11 parts of air",
+      "explanation": "**Why this is correct**\nA ratio written fuel-to-air as 11:1 means one unit of fuel for eleven units of air. Always read which material is named first; reversing the order changes the mixture interpretation.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Induction, Carburetion, and Fuel Metering"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Reciprocating engine power will be decreased at all altitudes if _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "air density is increased",
+        "manifold pressure is increased",
+        "humidity is increased",
+        "altitude is maintained"
+      ],
+      "answerIndex": 2,
+      "answerText": "humidity is increased",
+      "explanation": "**Why this is correct**\nHigher humidity means more water vapor occupies part of the inducted gas mixture, displacing some oxygen for a given volume. With less oxygen available for combustion, power decreases, particularly in a normally aspirated engine.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Induction, Carburetion, and Fuel Metering"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The device that controls the volume of the fuel/air mixture to the cylinders is called a _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "tachometer",
+        "metering jet",
+        "mixture control",
+        "throttle valve"
+      ],
+      "answerIndex": 3,
+      "answerText": "throttle valve",
+      "explanation": "**Why this is correct**\nThe throttle valve regulates the amount of mixture or air admitted to the engine and therefore controls power. The mixture control changes fuel-to-air proportion; it is not the primary airflow-volume control.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Induction, Carburetion, and Fuel Metering"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How does a float-type carburetor normally meter fuel into the airstream?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A governor varies oil flow",
+        "Fuel drains by gravity into the exhaust",
+        "A pressure difference draws fuel from a metering discharge nozzle",
+        "A high-pressure injector sprays fuel at each spark plug"
+      ],
+      "answerIndex": 2,
+      "answerText": "A pressure difference draws fuel from a metering discharge nozzle",
+      "explanation": "**Why this is correct**\nFuel flows from the float chamber through a metering path because pressure at the discharge nozzle is lower than the fuel supply pressure. The pressure difference draws and atomizes fuel into the moving airstream; the float maintains a nearly constant fuel level.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of the carburetor venturi?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Increase local air velocity and lower static pressure to promote fuel discharge",
+        "Reduce airflow to zero",
+        "Heat the fuel above its boiling point",
+        "Control ignition timing"
+      ],
+      "answerIndex": 0,
+      "answerText": "Increase local air velocity and lower static pressure to promote fuel discharge",
+      "explanation": "**Why this is correct**\nThe venturi narrows the passage, increasing airflow velocity and lowering local static pressure. That pressure drop helps draw fuel through the discharge nozzle. It does not raise pressure to force fuel into the airstream.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why is mixture leaned as altitude increases in a carbureted engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The venturi stops functioning",
+        "The throttle plate closes automatically",
+        "Air density decreases, so less fuel is needed to maintain the proper mixture",
+        "Fuel density always doubles"
+      ],
+      "answerIndex": 2,
+      "answerText": "Air density decreases, so less fuel is needed to maintain the proper mixture",
+      "explanation": "**Why this is correct**\nAs altitude increases, air density and oxygen mass per intake volume decrease. The same fuel flow would make the mixture too rich, so the pilot reduces fuel with the mixture control to preserve the proper fuel-air ratio.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the function of an accelerator pump in a carburetor?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Control oil temperature",
+        "Increase compression ratio",
+        "Temporarily enrich the mixture when the throttle is opened rapidly",
+        "Lean the mixture during starting"
+      ],
+      "answerIndex": 2,
+      "answerText": "Temporarily enrich the mixture when the throttle is opened rapidly",
+      "explanation": "**Why this is correct**\nRapid throttle opening increases airflow immediately, while fuel delivery may lag. The accelerator pump supplies a brief extra shot of fuel to prevent a transient lean stumble; it is not the normal steady-state metering circuit.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does a carburetor economizer or power-enrichment system do at high power?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Adds fuel to provide the richer mixture required for high-power operation",
+        "Stops all fuel flow",
+        "Changes valve overlap",
+        "Reduces cylinder cooling"
+      ],
+      "answerIndex": 0,
+      "answerText": "Adds fuel to provide the richer mixture required for high-power operation",
+      "explanation": "**Why this is correct**\nAt high power the engine needs a richer mixture for detonation margin and cooling. The economizer or power-enrichment circuit adds fuel when the throttle reaches the high-power region; it does not lean the mixture for cruise.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of an idle system in a carburetor?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Meter fuel when airflow through the main venturi is too low for normal main-nozzle operation",
+        "Supply fuel only at takeoff",
+        "Control exhaust back pressure",
+        "Drive the starter"
+      ],
+      "answerIndex": 0,
+      "answerText": "Meter fuel when airflow through the main venturi is too low for normal main-nozzle operation",
+      "explanation": "**Why this is correct**\nAt idle, airflow through the main venturi is too small to create enough pressure drop for the main discharge nozzle. The idle circuit supplies metered fuel through ports near the throttle plate, where local pressure conditions support flow.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is a common effect of carburetor icing?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A gradual loss of power and possible roughness as ice restricts airflow",
+        "An increase in cylinder displacement",
+        "A rise in oil quantity",
+        "A change in magneto timing"
+      ],
+      "answerIndex": 0,
+      "answerText": "A gradual loss of power and possible roughness as ice restricts airflow",
+      "explanation": "**Why this is correct**\nIce can form in the carburetor throat as pressure and temperature fall during fuel vaporization. Accumulating ice restricts airflow and may cause gradual RPM or manifold-pressure loss and roughness. Carburetor heat warms the inlet air to melt or prevent this ice.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why does carburetor heat usually reduce engine power when applied?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Heated air is less dense and may also bypass the normal intake path",
+        "It increases oxygen density",
+        "It raises compression ratio",
+        "It advances ignition timing"
+      ],
+      "answerIndex": 0,
+      "answerText": "Heated air is less dense and may also bypass the normal intake path",
+      "explanation": "**Why this is correct**\nHeated induction air has lower density, so each cylinder receives less oxygen mass at a given volume. Carburetor heat can also add intake restriction. The immediate power reduction is expected and is distinct from the power recovery after ice melts.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In a pressure-injection carburetor, what provides the pressure for fuel delivery?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A fuel pump and metering unit",
+        "Only gravity in a float bowl",
+        "The exhaust turbine",
+        "The oil scavenge pump"
+      ],
+      "answerIndex": 0,
+      "answerText": "A fuel pump and metering unit",
+      "explanation": "**Why this is correct**\nA pressure-injection carburetor uses a pump and metering unit to pressurize and regulate fuel delivery. Fuel flow is controlled by pressure differentials and metering components rather than being drawn solely from a float-bowl level.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An air-to-fuel mass ratio of 12:1 means what?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Twelve cylinders per carburetor",
+        "Twelve units of pressure per fuel unit",
+        "Twelve parts air by mass for one part fuel by mass",
+        "Twelve parts fuel by mass for one part air"
+      ],
+      "answerIndex": 2,
+      "answerText": "Twelve parts air by mass for one part fuel by mass",
+      "explanation": "**Why this is correct**\nAn air-to-fuel mass ratio of 12:1 specifies twelve units of air mass for each one unit of fuel mass. It is a mass ratio, not a volume ratio, and the order is air first, fuel second.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the primary purpose of an intake manifold?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Exhaust combustion gases",
+        "Drive the magnetos",
+        "Distribute the combustible charge to the engine cylinders",
+        "Collect oil from the sump"
+      ],
+      "answerIndex": 2,
+      "answerText": "Distribute the combustible charge to the engine cylinders",
+      "explanation": "**Why this is correct**\nThe intake manifold carries and distributes the combustible charge from the carburetor or fuel-metering system to individual cylinders. Unequal distribution can produce different cylinder mixtures and temperatures.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What can an induction leak downstream of a carburetor cause?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A higher oil pressure",
+        "A lower compression ratio by design",
+        "An excessively lean mixture and uneven cylinder operation",
+        "An enriched mixture in all cases"
+      ],
+      "answerIndex": 2,
+      "answerText": "An excessively lean mixture and uneven cylinder operation",
+      "explanation": "**Why this is correct**\nA leak downstream of the carburetor admits unmetered air. Since the fuel system does not add fuel for that extra air, the affected cylinders run lean and may operate unevenly, especially at idle.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How does a fuel-injection system differ from a float carburetor at the cylinder?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It uses no fuel pump",
+        "It meters oil instead of fuel",
+        "Fuel is metered under pressure and distributed through injector nozzles",
+        "Fuel is mixed only in a float bowl"
+      ],
+      "answerIndex": 2,
+      "answerText": "Fuel is metered under pressure and distributed through injector nozzles",
+      "explanation": "**Why this is correct**\nFuel injection meters fuel under pressure and routes it through injector nozzles near the intake ports or cylinders. A float carburetor meters fuel into the common airflow using venturi pressure changes and a float-controlled supply.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are alternate-air doors provided on some induction systems?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Drain the carburetor bowl",
+        "Open the exhaust valve",
+        "Provide an alternate source of induction air if the normal inlet is obstructed",
+        "Control the propeller governor"
+      ],
+      "answerIndex": 2,
+      "answerText": "Provide an alternate source of induction air if the normal inlet is obstructed",
+      "explanation": "**Why this is correct**\nAn alternate-air door lets the engine draw air from another source if the normal inlet or filter is blocked. The alternate path preserves airflow but may be unfiltered or warmer, depending on the installation.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the effect of a restricted air filter on a normally aspirated engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Higher fuel octane",
+        "Reduced induction airflow and available power",
+        "Higher volumetric efficiency in all conditions",
+        "Increased cylinder displacement"
+      ],
+      "answerIndex": 1,
+      "answerText": "Reduced induction airflow and available power",
+      "explanation": "**Why this is correct**\nA restricted filter limits the mass of air entering a normally aspirated engine. Less oxygen is available to burn fuel, reducing maximum power; a sufficiently severe restriction may also cause rough operation.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why is fuel vaporization important before combustion?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It helps produce a combustible mixture that can burn consistently",
+        "It prevents the fuel from mixing with air",
+        "It raises the engine’s mechanical compression ratio",
+        "It removes the need for ignition"
+      ],
+      "answerIndex": 0,
+      "answerText": "It helps produce a combustible mixture that can burn consistently",
+      "explanation": "**Why this is correct**\nFuel must be atomized and vaporized sufficiently to mix with air and burn steadily. Poor vaporization can cause uneven distribution, incomplete combustion, and difficulty operating, especially during cold conditions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "During a bench test, an engine receives 900 lb of air per hour and 75 lb of fuel per hour. What is the air-to-fuel mass ratio?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0",
+        "825",
+        "68",
+        "12"
+      ],
+      "answerIndex": 3,
+      "answerText": "12",
+      "explanation": "**Worked solution**\nAir-to-fuel mass ratio = air mass flow / fuel mass flow = 900 lb/hr / 75 lb/hr = 12. The hourly units cancel, so the ratio is 12:1 by mass.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An engine requires an air-to-fuel mass ratio of 15:1. If air flow is 1,200 lb/hr, what fuel flow is required?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "18000",
+        "1215",
+        "80",
+        "18"
+      ],
+      "answerIndex": 2,
+      "answerText": "80",
+      "explanation": "**Worked solution**\nFor an air-to-fuel ratio of 15:1, fuel flow = air flow / 15 = 1,200 lb/hr / 15 = 80 lb/hr. Check: 15 x 80 = 1,200 lb/hr of air.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A test cell measures 180 kg/hr of air and 15 kg/hr of fuel. Find the air-to-fuel ratio.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "165",
+        "27",
+        "12",
+        "0"
+      ],
+      "answerIndex": 2,
+      "answerText": "12",
+      "explanation": "**Worked solution**\nAir-to-fuel mass ratio = 180 kg/hr / 15 kg/hr = 12. The flow units cancel; this means 12 kg of air per kilogram of fuel.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Induction, Carburetion, and Fuel Metering",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following will decrease volumetric efficiency in a reciprocating engine? 1. Full throttle operation. 2. Low cylinder head temperatures. 3. Improper valve timing. 4. Sharp bends in the induction system. 5. High carburetor air temperatures.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1, 2, and 5.",
+        "2, 4, and 5.",
+        "1,2, 3, and 4.",
+        "3, 4, and 5."
+      ],
+      "answerIndex": 3,
+      "answerText": "3, 4, and 5.",
+      "explanation": "**Why this is correct**\nImproper valve timing and sharp induction bends reduce the volume of fresh charge reaching the cylinders. High carburetor-air temperature lowers air density, also reducing inducted mass. Wide-open throttle and a cooler cylinder head generally support, rather than reduce, volumetric efficiency in the conditions assumed by this question.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "moved to reciprocating induction chapter"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}

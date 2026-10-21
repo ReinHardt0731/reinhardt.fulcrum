@@ -1,0 +1,1566 @@
+{
+  "title": "Thermodynamics, Engine Cycles, Performance, and Calculations",
+  "questions": [
+    {
+      "question": "Engine pressure ratio is the total pressure ratio between the",
+      "questionType": "multiple_choice",
+      "choices": [
+        "compressor inlet total pressure and combustor inlet total pressure.",
+        "front of the compressor and the rear of the turbine.",
+        "front of the engine inlet and the aft end of the compressor.",
+        "aft end of the compressor and the aft end of the turbine."
+      ],
+      "answerIndex": 1,
+      "answerText": "front of the compressor and the rear of the turbine.",
+      "explanation": "**Why this is correct**\nEngine pressure ratio (EPR) compares total pressure at the turbine exhaust with total pressure at the engine inlet. The station pair is the whole engine, not just the compressor.\n\n**Engineering principle**\nCompressor pressure ratio is compressor-discharge total pressure divided by compressor-inlet total pressure. EPR uses engine inlet and turbine exhaust stations.\n\n**Memory hook:** EPR spans inlet to exhaust.\n\n**Board tip:** Identify the two pressure stations before forming a ratio.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A gas is enclosed in a cylinder with a weighted piston as the top boundary. The gas is heated and expands from a volume of 0.04 m3 to 0.10 m 3 at a constant pressure of 200 kPa. Find the work done on the system.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "6 kJ",
+        "10 kJ",
+        "14 kJ",
+        "12 kJ"
+      ],
+      "answerIndex": 3,
+      "answerText": "12 kJ",
+      "explanation": "**Worked solution and sign check**\nKnown: constant pressure p = 200 kPa; V1 = 0.04 m^3; V2 = 0.10 m^3. Boundary work done by the gas is W_by = p(V2 - V1) = 200 kPa x 0.06 m^3 = 12 kJ, since 1 kPa m^3 = 1 kJ. The question asks work done on the gas, which is -12 kJ under the usual sign convention. The keyed +12 kJ is the work done by the gas; verify the sign convention/key.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A Carnot engine operates between 800˚R to 1000˚R. What is its thermal efficiency?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "20%",
+        "30%",
+        "40%",
+        "50%"
+      ],
+      "answerIndex": 0,
+      "answerText": "20%",
+      "explanation": "**Why this is correct**\nFor a reversible Carnot engine, efficiency depends only on the hot and cold reservoir temperatures.\n\n**Engineering principle**\neta=1-Tcold/Thot, with both temperatures on the absolute scale.\n\n**Substitute and solve**\neta=1-800 R/1,000 R=0.20=20%.\n\n**Exam check**\nThe temperatures are already in Rankine, an absolute scale.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the efficiency of an Otto cycle with a compression ratio of 6:1 the gas is air?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.512",
+        "0.867",
+        "0.456",
+        "0.765"
+      ],
+      "answerIndex": 0,
+      "answerText": "0.512",
+      "explanation": "**Worked solution**\nFor an ideal Otto cycle, eta = 1 - 1/r^(gamma-1). For air use gamma = 1.4 and r = 6: eta = 1 - 1/6^0.4 = 1 - 0.488 = 0.512, or 51.2%. This assumes constant specific heats and an ideal cycle.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An ideal gas is 45 psig and 80˚F is heated in a lclosed container to 130˚F. What is the final pressure?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "54psia",
+        "75psia",
+        "65psia",
+        "43psia"
+      ],
+      "answerIndex": 2,
+      "answerText": "65psia",
+      "explanation": "**Worked solution**\nFor a sealed rigid container, P/T is constant using absolute pressure and absolute temperature. P1 = 45 psig + 14.7 = 59.7 psia; T1 = 80 + 459.67 = 539.67 R; T2 = 130 + 459.67 = 589.67 R. P2 = 59.7(589.67/539.67) = 65.23 psia, about 65 psia.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Independent of the mass of the substance is present or the “extent” of the system under consideration.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Intensive Properties",
+        "Specific heat",
+        "Extensive Properties",
+        "Entropy"
+      ],
+      "answerIndex": 0,
+      "answerText": "Intensive Properties",
+      "explanation": "**Why this is correct**\nAn intensive property does not scale with the amount of matter in the system. Temperature, pressure, and density are intensive; mass and total volume are extensive.\n\n**Engineering principle**\nIf a system is divided into portions at the same state, an intensive property keeps its value while an extensive property divides with the amount of material.\n\n**Memory hook**\nIntensive: independent of amount.\n\n**Board tip**\nClassify the property by asking whether doubling the material doubles its value.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Assuming compression is according to the law PV=constant. Calculate the initial volume of gas at a pressure of 2 bar which will occupy a volume of 6 m3 when it is compressed to a pressure of 42 bar.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "126 m3",
+        "130 m3",
+        "120 m3",
+        "136 m3"
+      ],
+      "answerIndex": 0,
+      "answerText": "126 m3",
+      "explanation": "**Why this method applies**\nBoyle law applies to a fixed mass of ideal gas at constant temperature.\n\n**Given**\nP1=2 bar; P2=42 bar; V2=6 m^3.\n\n**Engineering relation**\nP1V1=P2V2.\n\n**Substitute and solve**\nV1=P2V2/P1=(42 x 6)/2=126 m^3.\n\n**Exam check**\nThe gas is compressed from the lower pressure to the higher pressure, so the initial volume must exceed 6 m^3.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Highest Thrust Setting without time limitation",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Max. Take-off thrust",
+        "Max. Go-around thrust",
+        "Max. Continuous thrust",
+        "Max. Climb thrust"
+      ],
+      "answerIndex": 2,
+      "answerText": "Max. Continuous thrust",
+      "explanation": "**Why this is correct**\nMaximum continuous thrust is the highest thrust rating approved for continuous operation without a time limit. Time-limited takeoff or climb ratings may be higher but require prescribed limits and cooldown/operating procedures.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which statement is true with regards to Thrust?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Thrust increases when mass of air entering the engine increases and when the acceleration of the air through the engine decreases",
+        "Thrust increases when mass of air entering the engine increases and when the acceleration of the air through the engine increases",
+        "Thrust increases when mass of air entering the engine decreases and when the acceleration of the air through the engine increases",
+        "Thrust increases when mass of air entering the engine decreases and when the acceleration of the air through the engine decreases"
+      ],
+      "answerIndex": 1,
+      "answerText": "Thrust increases when mass of air entering the engine increases and when the acceleration of the air through the engine increases",
+      "explanation": "**Why this is correct**\nJet thrust follows the momentum change imparted to the airflow, with pressure thrust included when exit and ambient pressures differ. Increasing the mass flow of air accelerated by the engine can increase thrust when the other operating conditions are comparable.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "“For every force, there’s an equal and opposite reaction”",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Newton’s First Law of Motion",
+        "Newton’s Second Law of Motion",
+        "Newton’s Third Law of Motion",
+        "Ideal gas law"
+      ],
+      "answerIndex": 2,
+      "answerText": "Newton’s Third Law of Motion",
+      "explanation": "**Why this is correct**\nNewton's third law says interacting bodies exert equal and opposite forces on each other. The law of inertia is Newton's first law; do not interchange the numbering or statements.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In the P-V diagram of the Brayton Cycle, which parameter is constant?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Pressure",
+        "Volume",
+        "Temperature",
+        "Entropy"
+      ],
+      "answerIndex": 0,
+      "answerText": "Pressure",
+      "explanation": "**Why this is correct**\nIn the ideal Brayton cycle, heat addition and heat rejection occur at constant pressure. Compression and expansion are modeled as isentropic in the ideal cycle; real compressors and turbines have losses.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Provided the engine speed is kept constant, which condition would increase Thrust?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Increase in ambient Temperature",
+        "Increase in ambient Pressure",
+        "Decrease in air density",
+        "Increase in Altitude"
+      ],
+      "answerIndex": 1,
+      "answerText": "Increase in ambient Pressure",
+      "explanation": "**Why this is correct**\nAt fixed engine speed, increased ambient pressure can increase air mass flow through the engine, supporting greater momentum change and thrust, subject to the engine control limits. The answer assumes comparable temperature and operating conditions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following condition would produce the highest thrust?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "high acceleration of a small amount of air",
+        "low acceleration of a large amount of air",
+        "high acceleration of a large amount of air",
+        "low acceleration of a small amount of air"
+      ],
+      "answerIndex": 2,
+      "answerText": "high acceleration of a large amount of air",
+      "explanation": "**Why this is correct**\nThrust depends on the rate of momentum change, approximately mass flow times velocity change for a simple pressure-matched stream. Accelerating a larger mass of air to a useful velocity is an effective way to produce high thrust.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which thermodynamic cycle explains how a turbojet engine operates?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Otto cycle",
+        "Carnot cycle",
+        "Brayton cycle",
+        "Diesel Cycle"
+      ],
+      "answerIndex": 2,
+      "answerText": "Brayton cycle",
+      "explanation": "**Why this is correct**\nThe Brayton cycle models gas-turbine operation: air is compressed, heat is added in the combustor at roughly constant pressure, and hot gas expands through a turbine and nozzle. The ideal cycle simplifies real component losses.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which parameter/s is/are used to represent thrust on most dual-spool gas turbine engines?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "N1",
+        "N2 or EPR",
+        "N1 or EPR",
+        "N1 or N2"
+      ],
+      "answerIndex": 2,
+      "answerText": "N1 or EPR",
+      "explanation": "**Why this is correct**\nMany dual-spool turbine engines indicate thrust using N1, the low-pressure spool speed, or engine pressure ratio (EPR), depending on engine design. These are calibrated indicators, not a universal direct measurement of force; use the aircraft manual.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the main advantage of centrifugal flow compressor over axial flow compressor?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The drag",
+        "The over-all pressure ratio",
+        "The number of stages",
+        "The increase in pressure per stage"
+      ],
+      "answerIndex": 3,
+      "answerText": "The increase in pressure per stage",
+      "explanation": "**Why this is correct**\nA centrifugal compressor can achieve a relatively large pressure rise in one stage because the impeller accelerates air radially and the diffuser converts velocity into pressure. Axial compressors usually use many stages for comparable overall pressure ratio.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which statement is true with regards to thrust reversers?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Thrust reversers are used to fly in the reverse direction",
+        "Full Reverse thrust can be applied immediately after touchdown",
+        "Thrust reversers can be applied on just one engine for turning",
+        "Thrust reversers are used to assist the brakes in stopping the aircraft on ground"
+      ],
+      "answerIndex": 3,
+      "answerText": "Thrust reversers are used to assist the brakes in stopping the aircraft on ground",
+      "explanation": "**Why this is correct**\nThrust reversers redirect or otherwise alter the exhaust flow to produce a rearward force that assists deceleration after landing. They supplement wheel braking and are not a substitute for the aircraft stopping procedures.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which component of the lubrication system triggers a warning when system pressure drops below a specified level?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The pressure transmitter",
+        "The pressure switch",
+        "The bypass filter",
+        "The pressure gage"
+      ],
+      "answerIndex": 1,
+      "answerText": "The pressure switch",
+      "explanation": "**Why this is correct**\nA pressure switch senses when oil pressure crosses its set threshold and closes or opens the warning circuit. It is an on/off warning device; a pressure transducer can provide a continuous cockpit indication.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the advantage of double face impeller over a single face impeller?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It has a higher volume of air",
+        "It has higher pressure ratio",
+        "It is lighter in weight",
+        "It has higher strength"
+      ],
+      "answerIndex": 0,
+      "answerText": "It has a higher volume of air",
+      "explanation": "**Why this is correct**\nA double-faced centrifugal impeller admits air at both sides, increasing flow capacity for a given impeller diameter and speed. The answer refers to volumetric throughput, not necessarily a greater pressure rise per stage.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the shape formed between the rotor blades of an impulse type of turbine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Convergent",
+        "Divergent",
+        "Convergent-Divergent",
+        "Area is constant"
+      ],
+      "answerIndex": 3,
+      "answerText": "Area is constant",
+      "explanation": "**Why this is correct**\nIn an impulse turbine, the rotor passages are designed with approximately constant flow area while the rotor extracts energy by changing the gas momentum. Pressure drop is intended to occur mainly in the stationary nozzle, unlike a reaction stage.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following is a characteristic of a thrust bearing used in most radial engines?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Double-row ball.",
+        "Straight roller.",
+        "Deep-groove ball.",
+        "Tapered roller."
+      ],
+      "answerIndex": 2,
+      "answerText": "Deep-groove ball.",
+      "explanation": "**Why this is correct**\nA deep-groove ball bearing can carry radial load and some axial thrust, which suits the cited radial-engine thrust-bearing application. Bearing choice depends on the engine design and load directions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The primary concern in establishing the firing order for an opposed engine is to",
+      "questionType": "multiple_choice",
+      "choices": [
+        "keep power impulses on adjacent cylinders as far apart as possible in order to obtain the greatest mechanical efficiency.",
+        "keep the power impulses on adjacent cylinders as close as possible in order to obtain the greatest mechanical efficiency.",
+        "make adjacent cylinders fire one after another to maximize mechanical efficiency.",
+        "provide for balance and eliminate vibration to the greatest extent possible."
+      ],
+      "answerIndex": 3,
+      "answerText": "provide for balance and eliminate vibration to the greatest extent possible.",
+      "explanation": "**Why this is correct**\nFiring order is selected to distribute combustion impulses and loads around the crankshaft, improving balance and reducing vibration. It must also respect crankshaft geometry and avoid unfavorable adjacent-cylinder loading.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The measurement of efficiency of a rocket engine–propellant combination is known as _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "specific thrust",
+        "propulsive efficiency",
+        "specific impulse",
+        "rocket efficiency"
+      ],
+      "answerIndex": 2,
+      "answerText": "specific impulse",
+      "explanation": "**Why this is correct**\nSpecific impulse is a standard measure of rocket-engine/propellant performance: thrust produced per unit propellant weight-flow rate, commonly expressed in seconds. It allows comparison across propellant combinations and operating conditions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The force exerted per unit area on the earth’s surface due to the weight of the air.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Energy",
+        "Surroundings",
+        "Atmospheric pressure",
+        "Density"
+      ],
+      "answerIndex": 2,
+      "answerText": "Atmospheric pressure",
+      "explanation": "**Why this is correct**\nAtmospheric pressure is force per unit area caused by the weight of the air column above a surface. It varies with altitude and weather; standard sea-level pressure is a reference value.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A capacity of a given body to produce physical effects external to the body.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Weight",
+        "Work",
+        "Specific weight",
+        "Energy"
+      ],
+      "answerIndex": 3,
+      "answerText": "Energy",
+      "explanation": "**Why this is correct**\nEnergy is the capacity of a system to produce physical effects or do work. It may appear as internal, kinetic, potential, chemical, or other forms and is measured in joules in SI units.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The one that separates the substance from its surroundings is called the _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "system",
+        "wall",
+        "boundary",
+        "border"
+      ],
+      "answerIndex": 2,
+      "answerText": "boundary",
+      "explanation": "**Why this is correct**\nThe system boundary is the real or imagined surface that separates the substance or system being analyzed from its surroundings.\n\n**Engineering principle**\nMass and energy can cross a control boundary in an open system; a closed-system boundary permits energy transfer but not mass transfer.\n\n**Memory hook**\nBoundary separates system from surroundings.\n\n**Board tip**\nIdentify what lies inside the chosen boundary before writing an energy balance.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "It is the sum of the gage pressure and atmospheric pressure.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Absolute pressure",
+        "Vacuum pressure",
+        "Gage pressure",
+        "Plenum pressure"
+      ],
+      "answerIndex": 0,
+      "answerText": "Absolute pressure",
+      "explanation": "**Why this is correct**\nAbsolute pressure is measured from a perfect vacuum and equals gauge pressure plus local atmospheric pressure: P_abs = P_gauge + P_atm. Gauge pressure alone is relative to ambient.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "It refers to the quantities that describe and define the thermodynamic substance.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Properties",
+        "Weight",
+        "Volume",
+        "Mass"
+      ],
+      "answerIndex": 0,
+      "answerText": "Properties",
+      "explanation": "**Why this is correct**\nThermodynamic properties are measurable or calculable quantities that describe a system state, such as pressure, temperature, volume, and internal energy. A complete state requires an independent set of properties.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "On an Otto cycle process, it represents the area enclosed by the relation of entropy and temperature.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Net Heat",
+        "Work",
+        "Heat",
+        "Net Work"
+      ],
+      "answerIndex": 3,
+      "answerText": "Net Work",
+      "explanation": "**Why this is correct**\nFor a reversible cycle, the enclosed area on a temperature-entropy diagram represents net heat transfer; because the system returns to its initial state, the net heat equals net work. Thus the area represents net cycle work under the ideal reversible interpretation.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A perfect gas has a value of R = 319.2 J/kg-K and specific heat ratio of 1.26. If 113.74 BTU is added to 2.27 kg of this gas at constant pressure, determine the non-flow work process. The initial temperature is 32.2 degree Celsius.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "28.78 kJ",
+        "23.48 BTU",
+        "182.76 ft–lb",
+        "15 Watts"
+      ],
+      "answerIndex": 1,
+      "answerText": "23.48 BTU",
+      "explanation": "**Worked solution**\nFor constant-pressure heating of an ideal gas, Q = m Cp deltaT and boundary work W = mR deltaT. Since Cp = gamma R/(gamma-1), W/Q = (gamma-1)/gamma. Substitute Q = 113.74 BTU and gamma = 1.26: W = 113.74(0.26/1.26) = 23.48 BTU. The mass and initial temperature cancel from this ratio.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The absolute pressure of a gas in a tank is 150 kPa. If the barometric pressure is 90 kPa, what would be the gage pressure?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "63.987 kPa",
+        "60 kPa",
+        "70.142 kPa",
+        "201 Kpa"
+      ],
+      "answerIndex": 1,
+      "answerText": "60 kPa",
+      "explanation": "**Worked solution**\nGauge pressure = absolute pressure - atmospheric pressure = 150 kPa - 90 kPa = 60 kPa. Both pressures use the same units, so the difference is directly in kPa.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A perfect gas (R=320 J/kg-K; Cp=1.6 kJ/kg-K) has an initial temperature of thirty-two degrees Celsius. If 150 kJ of heat is added to 3 kg of this gas at constant pressure, find the non-flow work.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "30 kJ",
+        "120 kJ",
+        "70 kJ",
+        "32 kJ"
+      ],
+      "answerIndex": 0,
+      "answerText": "30 kJ",
+      "explanation": "**Worked solution**\nFor a closed gas at constant pressure, Q = m Cp deltaT and boundary work W = mR deltaT, so W/Q = R/Cp. Convert R = 320 J/(kg K) = 0.320 kJ/(kg K). Then W = 150 kJ x 0.320/1.6 = 30 kJ. Initial temperature is not needed for this ratio.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Newton's first law of motion, commonly called the law of inertia, states that _____ .",
+      "questionType": "multiple_choice",
+      "choices": [
+        "An object remains at rest or in uniform straight-line motion unless acted upon by an unbalanced external force.",
+        "To every action, there is an equal and opposite reaction.",
+        "Force equals mass multiplied by acceleration.",
+        "Energy can neither be created nor destroyed; it changes form."
+      ],
+      "answerIndex": 0,
+      "answerText": "An object remains at rest or in uniform straight-line motion unless acted upon by an unbalanced external force.",
+      "explanation": "**Answer-key check**\nThe stem attributes the law of inertia to Newton's third law, but the stated answer is Newton's first law. The law of inertia says a body remains at rest or in uniform straight-line motion unless acted on by a net external force. The answer choice may be right for the intended definition, but the question's law number is wrong; correct the stem before scoring.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Standard sea level pressure is _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "14.7 psf",
+        "29.29 in. Hg",
+        "760 Torr",
+        "101.325 Bars"
+      ],
+      "answerIndex": 2,
+      "answerText": "760 Torr",
+      "explanation": "**Why this is correct**\nStandard atmospheric pressure at sea level is 101.325 kPa, equivalent to 760 mmHg (760 Torr) or 29.92 inHg. This is a standard reference value; local station pressure changes with weather and altitude.\n\n**Engineering principle**\nStandard pressure is an agreed reference, not a guaranteed local measurement.\n\n💡 **Memory hook:** 760 Torr ≈ 101.3 kPa ≈ 29.92 inHg.\n\n🎯 **Board tip:** Convert pressure units before using gas laws.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The Brayton cycle is known as the constant _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "polytrophic cycle",
+        "pressure cycle",
+        "mass cycle",
+        "temperature cycle"
+      ],
+      "answerIndex": 1,
+      "answerText": "pressure cycle",
+      "explanation": "**Why this is correct**\nThe ideal Brayton cycle is called a constant-pressure heat-addition cycle because energy is added in the combustor with little pressure change. Compression and expansion are separate processes in the cycle.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Universal gas constant is equal to __________.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "53.342 J/kg-K",
+        "287.08 J/kg-K",
+        "8,314 J/kg-K",
+        "286.9 J/kg-K"
+      ],
+      "answerIndex": 1,
+      "answerText": "287.08 J/kg-K",
+      "explanation": "**Answer-key check**\nThe keyed 287.08 J/(kg K) is approximately the specific gas constant for dry air, not the universal gas constant. The universal gas constant is about 8.314 J/(mol K). Confirm whether the question intended the specific constant for air before retaining the keyed value.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A tank contains a mixture of 20 kg nitrogen, 20 kg of carbon dioxide and 10 kg of oxygen. The total volume of the tank is 20 m^3. Determine the mass density of the mixture in kg/m^3.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "2.356",
+        "2.564",
+        "2.500",
+        "3.003"
+      ],
+      "answerIndex": 2,
+      "answerText": "2.500",
+      "explanation": "**Worked solution**\nTotal mass = 20 + 20 + 10 = 50 kg. Mixture density = total mass/volume = 50 kg/20 m^3 = 2.50 kg/m^3. The component identities do not affect density once total mass and volume are given.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Determine the specific weight in kN/m^3 of the mixture in item no. 33 if the gravitational acceleration is 9.65 m/s^2.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "24.020",
+        "24.025",
+        "24.105",
+        "24.125"
+      ],
+      "answerIndex": 3,
+      "answerText": "24.125",
+      "explanation": "**Worked solution**\nSpecific weight gamma = density x gravitational acceleration. Using rho = 2.50 kg/m^3 and g = 9.65 m/s^2 gives gamma = 24.125 N/m^3 = 0.024125 kN/m^3. The keyed 24.125 kN/m^3 is too large by a factor of 1,000 if the question asks for kN/m^3; it matches N/m^3 numerically. Check the answer unit.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An adiabatic surface is best described as _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "impervious to heat",
+        "all of the above",
+        "cannot be penetrated by heat",
+        "an implication of perfect insulation"
+      ],
+      "answerIndex": 1,
+      "answerText": "all of the above",
+      "explanation": "**Why this is correct**\nAn adiabatic surface is insulated so that heat transfer across it is zero. The system may still exchange work or undergo a temperature change.\n\n**Engineering principle**\nAdiabatic means Q=0; it does not by itself mean constant temperature or reversible.\n\n**Memory hook**\nAdiabatic: no heat crosses the boundary.\n\n**Board tip**\nDo not equate adiabatic with isothermal or isentropic.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Entropy is also defined as that function of the working substance which remains constant during _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "an adiabatic process",
+        "an isentropic process",
+        "an isochore process",
+        "a polytropic process"
+      ],
+      "answerIndex": 1,
+      "answerText": "an isentropic process",
+      "explanation": "**Why this is correct**\nEntropy remains constant in an isentropic process, by definition. An ideal reversible adiabatic process is isentropic; an irreversible adiabatic process is not.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Kinetic energy is the energy of a substance due to its _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "mass",
+        "potential force",
+        "molecular movement",
+        "motion"
+      ],
+      "answerIndex": 3,
+      "answerText": "motion",
+      "explanation": "**Why this is correct**\nKinetic energy is energy associated with motion. For translational motion, KE = mv^2/2; increasing mass or speed increases the energy, with speed entering as a square.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In an irreversible adiabatic process, entropy always _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "increases",
+        "remains zero",
+        "have a constant n value",
+        "decreases"
+      ],
+      "answerIndex": 1,
+      "answerText": "remains zero",
+      "explanation": "**Answer-key check**\nIn an irreversible adiabatic process, entropy increases for an isolated system: deltaS is positive. Adiabatic means no heat transfer, not zero entropy change. The keyed answer 'remains zero' is incorrect unless it refers to an initial/reference value in a different context.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In a ramjet or “flying stovepipe,” compression is obtained by utilizing the forward motion of the aircraft to produce _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "thrust forces",
+        "equivalent turbo-charged air",
+        "intake air",
+        "dynamic pressure"
+      ],
+      "answerIndex": 1,
+      "answerText": "equivalent turbo-charged air",
+      "explanation": "**Why this is correct**\nA ramjet obtains compression from forward speed as the inlet slows and diffuses the incoming air. It has no mechanical compressor; the answer phrase 'equivalent turbo-charged air' is a source-specific description of the resulting pressurized air, not a general definition. Preserve the physical principle when studying.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The first law of thermodynamics states that during any cycle a system undergoes, the cyclic integral of the heat is _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "proportional to the cyclic integral of the work",
+        "proportional to the cyclic integral of the pressure and volume",
+        "equal to the work required",
+        "directly proportional to the temperature and volume"
+      ],
+      "answerIndex": 0,
+      "answerText": "proportional to the cyclic integral of the work",
+      "explanation": "**Why this is correct**\nFor a complete thermodynamic cycle, the system returns to its initial energy state, so net change in energy is zero. The first law therefore makes cyclic net heat transfer equal cyclic net work; the integrals are equal, not merely proportional.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Matter is composed of an aggregation of molecules that are moving continuously _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "in vibratory motion",
+        "in rotational motion",
+        "hazardly",
+        "in translational motion"
+      ],
+      "answerIndex": 0,
+      "answerText": "in vibratory motion",
+      "explanation": "**Why this is correct**\nMolecules are in continuous microscopic motion. In a gas, translational motion dominates the kinetic-theory description, while molecules may also rotate and vibrate depending on their structure and energy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following is not under bulk property?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Temperature",
+        "Refractive Index",
+        "Volume",
+        "Degree of Hardness"
+      ],
+      "answerIndex": 2,
+      "answerText": "Volume",
+      "explanation": "**Answer-key check**\nVolume is an extensive property because it scales with the amount of substance. The term 'bulk property' is ambiguous and often means a macroscopic measurable property, which can include volume; the keyed choice may reflect a narrower classroom definition. Clarify the source terminology before scoring.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A gas expands at constant pressure of 250 kPa from 0.03 m³ to 0.09 m³. How much boundary work does it do?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "8",
+        "22",
+        "15000",
+        "15"
+      ],
+      "answerIndex": 3,
+      "answerText": "15",
+      "explanation": "**Worked solution**\nAt constant pressure, boundary work W = p(V2 - V1). Substitute p = 250 kPa and deltaV = 0.09 - 0.03 = 0.06 m^3: W = 250 x 0.06 = 15 kJ, using 1 kPa m^3 = 1 kJ. This is work done by the expanding gas.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A gas at 300 K is heated at constant volume to 450 K. Its initial absolute pressure is 120 kPa. Find final pressure.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "80",
+        "150",
+        "540",
+        "180"
+      ],
+      "answerIndex": 3,
+      "answerText": "180",
+      "explanation": "**Worked solution**\nAt constant volume, P/T is constant for a fixed ideal-gas mass. P2 = P1(T2/T1) = 120 kPa(450 K/300 K) = 180 kPa absolute. Temperature is already in kelvins and pressure is absolute.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A gas expands isothermally from 100 kPa and 0.02 m³ to 0.05 m³. What is final pressure?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "40",
+        "250",
+        "60",
+        "150"
+      ],
+      "answerIndex": 0,
+      "answerText": "40",
+      "explanation": "**Worked solution**\nFor an isothermal ideal-gas process, P1V1 = P2V2. P2 = (100 kPa x 0.02 m^3)/0.05 m^3 = 40 kPa absolute. The volume increased by 2.5 times, so pressure falls to 1/2.5 of its initial value.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A gas has mass 2 kg, R = 287 J/(kg·K), T = 300 K, and volume 0.5 m³. Find absolute pressure in kPa.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "861",
+        "0.3",
+        "344.4",
+        "172.2"
+      ],
+      "answerIndex": 2,
+      "answerText": "344.4",
+      "explanation": "**Worked solution**\nIdeal-gas equation: P = mRT/V. Substitute m = 2 kg, R = 287 J/(kg K), T = 300 K, V = 0.5 m^3: P = 2 x 287 x 300/0.5 = 344,400 Pa = 344.4 kPa absolute.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For a gas, Cp = 1.00 kJ/(kg·K) and Cv = 0.713 kJ/(kg·K). Find R in kJ/(kg·K).",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.713",
+        "0.287",
+        "1.713",
+        "0.5"
+      ],
+      "answerIndex": 1,
+      "answerText": "0.287",
+      "explanation": "**Worked solution**\nFor an ideal gas, R = Cp - Cv = 1.000 - 0.713 = 0.287 kJ/(kg K). The units remain specific energy per unit mass per kelvin.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A gas has Cp = 1.0 kJ/(kg·K) and Cv = 0.8 kJ/(kg·K). Find gamma = Cp/Cv.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.25",
+        "0.8",
+        "1.8",
+        "0.2"
+      ],
+      "answerIndex": 0,
+      "answerText": "1.25",
+      "explanation": "**Worked solution**\nSpecific-heat ratio gamma = Cp/Cv = 1.0/0.8 = 1.25. The units cancel because both specific heats use the same units.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A 2 kg gas with Cv = 0.72 kJ/(kg·K) is heated 50 K at constant volume. Find heat added.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "108",
+        "144",
+        "72",
+        "36"
+      ],
+      "answerIndex": 2,
+      "answerText": "72",
+      "explanation": "**Worked solution**\nAt constant volume, heat added Q = m Cv deltaT. Substitute 2 kg x 0.72 kJ/(kg K) x 50 K = 72 kJ. With no boundary work, this heat raises internal energy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A 1.5 kg gas with Cp = 1.0 kJ/(kg·K) is heated 40 K at constant pressure. Find heat added.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "100",
+        "60",
+        "40",
+        "15"
+      ],
+      "answerIndex": 1,
+      "answerText": "60",
+      "explanation": "**Worked solution**\nAt constant pressure, Q = m Cp deltaT = 1.5 kg x 1.0 kJ/(kg K) x 40 K = 60 kJ. The kg and K units cancel, leaving kJ.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An ideal heat engine receives 500 kJ and rejects 300 kJ each cycle. Find thermal efficiency.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "40",
+        "0.4",
+        "0.6",
+        "1.7"
+      ],
+      "answerIndex": 1,
+      "answerText": "0.4",
+      "explanation": "**Worked solution**\nThermal efficiency eta = (Q_in - Q_out)/Q_in = (500 - 300) kJ/500 kJ = 0.40, or 40%. The remaining 300 kJ is rejected each cycle.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A Carnot engine operates between 600 K and 300 K reservoirs. Find its ideal efficiency.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "2",
+        "50",
+        "0.5",
+        "0.2"
+      ],
+      "answerIndex": 2,
+      "answerText": "0.5",
+      "explanation": "**Worked solution**\nCarnot efficiency eta = 1 - Tc/Th = 1 - 300 K/600 K = 0.50, or 50%. Reservoir temperatures must be absolute; kelvins are already absolute.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An Otto-cycle engine has compression ratio 8 and gamma = 1.4. Estimate ideal efficiency.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.435",
+        "0.6",
+        "0.707",
+        "0.565"
+      ],
+      "answerIndex": 3,
+      "answerText": "0.565",
+      "explanation": "**Worked solution**\nIdeal Otto efficiency eta = 1 - 1/r^(gamma-1). With r = 8 and gamma = 1.4: eta = 1 - 1/8^0.4 = 1 - 0.435 = 0.565, or 56.5%, assuming constant specific heats.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For a Brayton cycle, heat is added at constant pressure from 700 K to 1,400 K. Find heat added per kg if Cp = 1.0 kJ/(kg·K).",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1400",
+        "70",
+        "2",
+        "700"
+      ],
+      "answerIndex": 3,
+      "answerText": "700",
+      "explanation": "**Worked solution**\nAt constant pressure, heat added per unit mass q_in = Cp(T2-T1). Substitute Cp = 1.0 kJ/(kg K), T2-T1 = 1,400-700 = 700 K: q_in = 700 kJ/kg.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A gas receives 90 kJ of heat and does 35 kJ of work. Find its internal-energy increase.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "-55",
+        "55",
+        "125",
+        "35"
+      ],
+      "answerIndex": 1,
+      "answerText": "55",
+      "explanation": "**Worked solution**\nFor a closed system, first law gives deltaU = Q_in - W_by. Substitute 90 kJ - 35 kJ = 55 kJ increase in internal energy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A tank contains 18 kg of gas in a volume of 6 m³. Find density.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "12",
+        "108",
+        "3",
+        "0"
+      ],
+      "answerIndex": 2,
+      "answerText": "3",
+      "explanation": "**Worked solution**\nDensity rho = mass/volume = 18 kg/6 m^3 = 3 kg/m^3.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A gas sample has mass 3 kg and occupies 1.2 m³. Find specific volume.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.4",
+        "2.5",
+        "3.6",
+        "0.2"
+      ],
+      "answerIndex": 0,
+      "answerText": "0.4",
+      "explanation": "**Worked solution**\nSpecific volume v = volume/mass = 1.2 m^3/3 kg = 0.4 m^3/kg. It is the reciprocal of density for a uniform sample.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Air has density 1.5 kg/m³ at a location where g = 9.81 m/s². Find specific weight in N/m³.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.53",
+        "9.81",
+        "14715",
+        "14.72"
+      ],
+      "answerIndex": 3,
+      "answerText": "14.72",
+      "explanation": "**Worked solution**\nSpecific weight gamma = rho g = 1.5 kg/m^3 x 9.81 m/s^2 = 14.715 N/m^3, which rounds to 14.72 N/m^3.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An ideal Otto cycle has r = 8, gamma = 1.4, and initial compression temperature 300 K. Estimate temperature after isentropic compression.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "600",
+        "1550",
+        "689",
+        "429"
+      ],
+      "answerIndex": 2,
+      "answerText": "689",
+      "explanation": "**Worked solution**\nFor isentropic compression in an ideal Otto cycle, T2/T1 = r^(gamma-1). Thus T2 = 300 K x 8^0.4 = 300 x 2.297 = 689 K (rounded). This assumes constant specific heats.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An ideal Otto cycle has compression ratio 8 and gamma = 1.4. Estimate pressure after compression if initial pressure is 100 kPa.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "800",
+        "1429",
+        "8000",
+        "1838"
+      ],
+      "answerIndex": 3,
+      "answerText": "1838",
+      "explanation": "**Worked solution**\nFor isentropic compression, P2/P1 = r^gamma. Substitute P2 = 100 kPa x 8^1.4 = 100 x 18.38 = 1,838 kPa absolute. The pressure ratio uses absolute pressure.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A Brayton cycle has compressor pressure ratio 8 and gamma = 1.4. Estimate ideal thermal efficiency.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.448",
+        "0.292",
+        "0.75",
+        "0.4"
+      ],
+      "answerIndex": 0,
+      "answerText": "0.448",
+      "explanation": "**Worked solution**\nIdeal Brayton efficiency eta = 1 - 1/rp^((gamma-1)/gamma). With rp = 8 and gamma = 1.4: exponent = 0.4/1.4 = 0.2857; eta = 1 - 1/8^0.2857 = 1 - 0.552 = 0.448, or 44.8%.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A Diesel cycle has compression ratio 16, cutoff ratio 2, and gamma 1.4. Estimate ideal efficiency.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.386",
+        "0.5",
+        "0.8",
+        "0.614"
+      ],
+      "answerIndex": 3,
+      "answerText": "0.614",
+      "explanation": "**Worked solution**\nIdeal Diesel efficiency eta = 1 - [1/r^(gamma-1)] x [(rc^gamma - 1)/(gamma(rc - 1))]. With r=16, rc=2, gamma=1.4: 16^0.4=3.031, so the first factor is 0.3299; 2^1.4=2.639, so the second factor is (2.639-1)/1.4=1.1707. eta = 1-(0.3299 x 1.1707)=0.614, or 61.4%. Assumes an ideal air-standard Diesel cycle.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Consider a rocket burning hydrogen and oxygen; the combustion chamber pressure and temperature are 25 atm and 3,517 Kelvin, respectively. The area of the rocket nozzle throat is 0.1 square meters. The area of the exit is designed so that the exit pressure exactly equals ambient pressure at a standard altitude of 30 km. For the gas mixture assume that k = 1.22 and the molecular weight M = 16. At a standard altitude of 30 km, calculate the velocity at the exit.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "989.5 m/s",
+        "3,894 m/s",
+        "4,500 m/s",
+        "1,538 m/s"
+      ],
+      "answerIndex": 1,
+      "answerText": "3,894 m/s",
+      "explanation": "**Why this is correct**\nAn ideally expanded rocket nozzle converts thermal and pressure energy into exit kinetic energy. Using R=8,314/16=519.6 J/(kg K), Pe about 1.2 kPa at 30 km, and Pc=25 atm, the isentropic exit-velocity relation gives about 3.90 km/s, consistent with the keyed 3,894 m/s within atmosphere-table precision.\n\n**Engineering principle**\nExit pressure equals ambient for ideal expansion; exact velocity depends on the reference atmosphere pressure at 30 km.\n\n**Differentiate similar concepts**\nNozzle expansion converts enthalpy into speed.\n\n**Memory hook**\nNozzle expansion converts enthalpy into speed.\n\n**Board tip**\nUse absolute pressures and the stated gas molecular weight.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Thermodynamics, Engine Cycles, Performance, and Calculations"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}

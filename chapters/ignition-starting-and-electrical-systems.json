@@ -1,0 +1,720 @@
+{
+  "title": "Ignition, Starting, and Electrical Systems",
+  "questions": [
+    {
+      "question": "The five events of a four-stroke cycle engine in the order of their occurrence are",
+      "questionType": "multiple_choice",
+      "choices": [
+        "intake, compression, ignition, power, exhaust.",
+        "intake, compression, power, ignition, exhaust.",
+        "intake, ignition, compression, power, exhaust.",
+        "intake, power, compression, ignition, exhaust."
+      ],
+      "answerIndex": 0,
+      "answerText": "intake, compression, ignition, power, exhaust.",
+      "explanation": "**Why this is correct**\nA four-stroke piston engine proceeds through intake, compression, power, and exhaust strokes. Ignition is timed during compression shortly before top dead center; it is not itself a separate piston stroke, even though exam shorthand may list it as an event.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Ignition, Starting, and Electrical Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Cam-ground pistons are installed in some aircraft engines to",
+      "questionType": "multiple_choice",
+      "choices": [
+        "equalize the wear on all pistons.",
+        "provide a better fit at operating temperatures.",
+        "reduce the engine compression ratio.",
+        "act as a compensating feature so that a compensated magneto is not required."
+      ],
+      "answerIndex": 1,
+      "answerText": "provide a better fit at operating temperatures.",
+      "explanation": "**Why this is correct**\nA cam-ground piston is intentionally machined slightly out-of-round and tapered when cold. Because different areas expand differently as they heat, the piston approaches a more nearly cylindrical shape with suitable running clearance at operating temperature.\n\n**Engineering principle**\nCold shape compensates for thermal growth; the goal is proper hot clearance rather than a perfect cold circle.\n\n💡 **Memory hook:** Machined oval cold, fitted round hot.\n\n🎯 **Board tip:** Relate the machining shape to temperature-dependent expansion.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Ignition, Starting, and Electrical Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How many of the following are factors in establishing the maximum compression ratio limitations of an aircraft engine? 1. Detonation characteristics of the fuel used. 2. Design limitations of the engine. 3. Degree of supercharging. 4. Spark plug reach.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Two.",
+        "One.",
+        "Three.",
+        "Four."
+      ],
+      "answerIndex": 2,
+      "answerText": "Three.",
+      "explanation": "**Why this is correct**\nThe compression-ratio limit depends on fuel detonation resistance, engine design and cooling, and induction pressure from supercharging. Spark-plug reach does not establish the allowable compression ratio.\n\n**Engineering principle**\nHigher compression or boost raises end-of-compression temperature and pressure, increasing detonation risk; fuel grade and engine design set the permitted limits.\n\n**Memory hook:** Compression limit follows knock resistance and engine design.\n\n**Board tip:** Count only listed factors that affect combustion pressure or engine capability.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Ignition, Starting, and Electrical Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Engine ignition system belongs to ATA Chapter _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "76",
+        "74",
+        "75",
+        "73"
+      ],
+      "answerIndex": 1,
+      "answerText": "74",
+      "explanation": "**Why this is correct**\nIn the ATA chapter numbering system used by the question, engine ignition is Chapter 74. ATA chapter numbers classify aircraft systems for documentation and maintenance; they do not describe the operating sequence.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Ignition, Starting, and Electrical Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A rocket engine is a powerplant, self-contained, which depends _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "on the oxidizer and fuel for operation",
+        "on air thrust for operation",
+        "on the ignition system installed, as necessary, for operation",
+        "on atmospheric air for operation"
+      ],
+      "answerIndex": 0,
+      "answerText": "on the oxidizer and fuel for operation",
+      "explanation": "**Why this is correct**\nA rocket carries both fuel and oxidizer, so combustion does not depend on oxygen in the surrounding atmosphere. This permits operation in space, unlike an air-breathing jet engine.\n\n**Engineering principle**\nAir-breathing engines ingest atmospheric oxygen; rockets carry their oxidizer as part of the propellant system.\n\n💡 **Memory hook:** Rocket brings its oxygen.\n\n🎯 **Board tip:** Identify whether the engine depends on ambient air.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Ignition, Starting, and Electrical Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why can a magneto continue producing ignition with the aircraft battery switch off?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It generates ignition energy from engine rotation",
+        "It is powered by the cabin lighting circuit",
+        "It stores fuel pressure",
+        "It uses exhaust heat to make a spark"
+      ],
+      "answerIndex": 0,
+      "answerText": "It generates ignition energy from engine rotation",
+      "explanation": "**Why this is correct**\nA magneto is mechanically driven by the engine and generates its own electrical energy. The aircraft battery switch therefore does not normally disable magneto ignition; the magneto is stopped by grounding its primary circuit.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does grounding a magneto primary circuit do?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Opens the exhaust valve",
+        "Stops the magneto from producing a spark",
+        "Increases spark-plug gap",
+        "Enriches the mixture"
+      ],
+      "answerIndex": 1,
+      "answerText": "Stops the magneto from producing a spark",
+      "explanation": "**Why this is correct**\nGrounding the magneto primary circuit collapses the primary magnetic field and prevents the secondary winding from producing ignition voltage, stopping the spark.\n\n**Engineering principle**\nThe magneto generates its own ignition energy; the P-lead stops it by grounding the primary circuit.\n\n**Memory hook:** Ground the P-lead; kill the spark.\n\n**Board tip:** A disconnected P-lead can leave the magneto live, so follow safe grounding procedures.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are two independent magnetos commonly used on aircraft piston engines?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Reduce cylinder displacement",
+        "Provide ignition redundancy and improve combustion with two spark plugs",
+        "Double the fuel pressure",
+        "Eliminate the need for a battery"
+      ],
+      "answerIndex": 1,
+      "answerText": "Provide ignition redundancy and improve combustion with two spark plugs",
+      "explanation": "**Why this is correct**\nTwo independent magnetos provide redundancy: if one fails, the other can continue ignition. Two plugs per cylinder also initiate flame propagation at two points, supporting smoother and more complete combustion.\n\n**Engineering principle**\nEach magneto supplies a separate ignition circuit and ordinarily fires one of the two plugs in each cylinder.\n\n**Memory hook:** Two mags, two spark paths.\n\n**Board tip:** Redundancy and combustion quality are both reasons for dual ignition.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of an impulse coupling on a magneto?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Spin the magneto faster during starting and retard the spark for easier starting",
+        "Increase oil pressure at idle",
+        "Open the intake valve early",
+        "Regulate generator voltage"
+      ],
+      "answerIndex": 0,
+      "answerText": "Spin the magneto faster during starting and retard the spark for easier starting",
+      "explanation": "**Why this is correct**\nAn impulse coupling temporarily winds and releases a spring to spin the magneto faster during cranking, producing a hotter starting spark. It also retards spark timing to reduce kickback; it disengages once the engine runs.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does a high-tension ignition lead carry?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Engine oil to a rocker arm",
+        "Starter torque",
+        "High voltage from the magneto distributor to a spark plug",
+        "Low-pressure fuel"
+      ],
+      "answerIndex": 2,
+      "answerText": "High voltage from the magneto distributor to a spark plug",
+      "explanation": "**Why this is correct**\nA high-tension ignition lead carries the magneto distributor's high voltage to the spark plug. Its insulation contains the voltage so it does not leak to ground or adjacent conductors.\n\n**Engineering principle**\nThe primary circuit is low voltage; the magneto secondary circuit and ignition leads carry the high-voltage pulse.\n\n**Memory hook:** High-tension lead = high voltage to the plug.\n\n**Board tip:** Trace the path from magneto distributor to cylinder spark plug.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why is a magneto drop check performed during an engine run-up?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Set oil pressure relief",
+        "Test the cabin heater",
+        "Check operation of each ignition system independently",
+        "Measure propeller blade tracking"
+      ],
+      "answerIndex": 2,
+      "answerText": "Check operation of each ignition system independently",
+      "explanation": "**Why this is correct**\nA magneto drop check briefly selects each ignition system separately during run-up. A normal RPM drop shows that the selected system was contributing and that the other remains capable of firing; excessive drop or roughness requires troubleshooting.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does spark-plug fouling commonly cause?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A rise in fuel octane",
+        "A change in crankshaft stroke",
+        "Misfiring or rough operation",
+        "An increase in bore diameter"
+      ],
+      "answerIndex": 2,
+      "answerText": "Misfiring or rough operation",
+      "explanation": "**Why this is correct**\nA fouled plug cannot reliably bridge its electrodes with a spark, so that cylinder may misfire and the engine may run rough. Deposits can shunt current across the insulator nose or obstruct the spark gap.\n\n**Engineering principle**\nFouling is different from incorrect ignition timing or a failed magneto; inspect the plug and cylinder condition to identify the cause.\n\n**Memory hook:** Fouled gap, weak or missing spark.\n\n**Board tip:** Use approved cleaning and service limits before returning a plug to service.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are aircraft spark plugs often installed with specified reach and gasket requirements?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Control the fuel-air ratio",
+        "Ensure correct electrode position, heat transfer, and thread engagement",
+        "Increase valve lift",
+        "Set propeller pitch"
+      ],
+      "answerIndex": 1,
+      "answerText": "Ensure correct electrode position, heat transfer, and thread engagement",
+      "explanation": "**Why this is correct**\nSpecified spark-plug reach places the electrodes at the designed position in the combustion chamber. Correct gasket and thread engagement also support heat transfer and avoid damaging the head.\n\n**Engineering principle**\nA plug that is too long can contact the piston or valves; one that is too short can impair ignition and heat transfer.\n\n**Memory hook:** Correct reach puts the spark where designed.\n\n**Board tip:** Match plug reach, gasket, heat range, and thread to the engine data.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the function of the starter motor?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Control turbocharger speed",
+        "Rotate the engine through initial cycles until it can run independently",
+        "Supply continuous ignition after start",
+        "Meter engine oil"
+      ],
+      "answerIndex": 1,
+      "answerText": "Rotate the engine through initial cycles until it can run independently",
+      "explanation": "**Why this is correct**\nThe starter motor turns the engine through the initial cycles until combustion can sustain operation. After the engine accelerates beyond starter speed, the starter disengages to prevent damage.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why is a starter relay or contactor used?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Ground both magnetos during flight",
+        "Allow a low-current control circuit to switch high starter current",
+        "Reduce compression ratio",
+        "Meter fuel to the cylinders"
+      ],
+      "answerIndex": 1,
+      "answerText": "Allow a low-current control circuit to switch high starter current",
+      "explanation": "**Why this is correct**\nA starter contactor lets a low-current switch circuit control the much larger current required by the starter motor. This protects cockpit wiring and provides a controlled high-current path.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does a generator or alternator do after the engine starts?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Controls cylinder cooling",
+        "Pressurizes the fuel tank",
+        "Supplies electrical power and recharges the battery",
+        "Creates the magneto spark in all systems"
+      ],
+      "answerIndex": 2,
+      "answerText": "Supplies electrical power and recharges the battery",
+      "explanation": "**Why this is correct**\nAfter start, a generator or alternator supplies the electrical loads and replenishes battery charge. The battery provides stored energy and usually supports starting; the charging source supports operation once driven.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of a voltage regulator?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Limit propeller rpm",
+        "Maintain generator or alternator output voltage within the system range",
+        "Set ignition timing",
+        "Control fuel pressure"
+      ],
+      "answerIndex": 1,
+      "answerText": "Maintain generator or alternator output voltage within the system range",
+      "explanation": "**Why this is correct**\nA voltage regulator controls generator or alternator field output to keep bus voltage within the system's allowable range as engine speed and electrical load vary. It regulates voltage rather than directly regulating battery capacity.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why should ignition leads be routed and clamped correctly?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Change the spark advance curve",
+        "Prevent chafing, cross-firing, and electrical interference",
+        "Increase cylinder compression",
+        "Reduce crankshaft end play"
+      ],
+      "answerIndex": 1,
+      "answerText": "Prevent chafing, cross-firing, and electrical interference",
+      "explanation": "**Why this is correct**\nCorrect routing and clamping prevent ignition leads from chafing, contacting hot parts, or coupling high-voltage pulses into other wiring. Poor insulation or separation can cause leakage, crossfire, radio interference, or misfire.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of a starter-generator?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Combine engine-starting and electrical-generation functions in one machine",
+        "Combine fuel pump and oil cooler functions",
+        "Control two magnetos mechanically",
+        "Replace the engine-driven accessory gearbox"
+      ],
+      "answerIndex": 0,
+      "answerText": "Combine engine-starting and electrical-generation functions in one machine",
+      "explanation": "**Why this is correct**\nA starter-generator combines a motor function for engine starting with a generator function after the engine is running. One unit serves both roles, subject to the aircraft system's switching and control design.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the likely effect of incorrect ignition timing that is too advanced?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The mixture cannot ignite",
+        "Oil pressure always increases",
+        "The engine becomes a two-stroke cycle",
+        "Combustion pressure rises too early and can cause roughness or damaging stress"
+      ],
+      "answerIndex": 3,
+      "answerText": "Combustion pressure rises too early and can cause roughness or damaging stress",
+      "explanation": "**Why this is correct**\nIf ignition is too advanced, combustion pressure rises while the piston is still approaching top dead center. This opposes the piston, increases temperature and mechanical stress, and can promote detonation or rough operation.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are ignition timing checks made at the specified crankshaft position?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It determines fuel tank capacity",
+        "The spark must occur at the prescribed point relative to piston position",
+        "The timing mark sets oil temperature",
+        "It sets the propeller blade track"
+      ],
+      "answerIndex": 1,
+      "answerText": "The spark must occur at the prescribed point relative to piston position",
+      "explanation": "**Why this is correct**\nIgnition timing is specified relative to crankshaft position so the spark occurs at the intended point in the compression stroke. The correct timing supports combustion pressure at the proper point in piston travel.\n\n**Engineering principle**\nTiming too early can promote detonation or kickback; timing too late reduces power and can increase exhaust temperature.\n\n**Memory hook:** Spark timing is referenced to piston position.\n\n**Board tip:** Set and verify timing using the manufacturer's crankshaft marks and procedure.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of a capacitor in a magneto primary circuit?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Increase fuel pressure",
+        "Ground the spark plug continuously",
+        "Reduce arcing across breaker points and help collapse the magnetic field rapidly",
+        "Store engine oil"
+      ],
+      "answerIndex": 2,
+      "answerText": "Reduce arcing across breaker points and help collapse the magnetic field rapidly",
+      "explanation": "**Why this is correct**\nThe capacitor across magneto breaker points limits arcing as the points open and helps the primary magnetic field collapse rapidly. The rapid field change induces the high voltage needed for a strong spark.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does a dual-bus electrical architecture help provide?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Independent fuel metering",
+        "Automatic propeller feathering",
+        "Separate distribution paths and improved continuity for essential loads",
+        "Higher compression ratio"
+      ],
+      "answerIndex": 2,
+      "answerText": "Separate distribution paths and improved continuity for essential loads",
+      "explanation": "**Why this is correct**\nSeparate electrical buses provide alternate distribution paths, helping preserve selected essential loads if one bus is isolated or faulted.\n\n**Engineering principle**\nRedundancy works only when feeds, protection, and transfer paths avoid a shared single point of failure.\n\n**Memory hook:** Two paths can preserve essential power.\n\n**Board tip:** Trace bus ties and sources on the aircraft wiring diagram.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why must a magneto be checked for proper grounding during shutdown?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It prevents carburetor icing",
+        "A failed P-lead can leave the magneto live and the propeller capable of starting the engine",
+        "It controls the starter current",
+        "It regulates alternator output"
+      ],
+      "answerIndex": 1,
+      "answerText": "A failed P-lead can leave the magneto live and the propeller capable of starting the engine",
+      "explanation": "**Why this is correct**\nThe magneto P-lead grounds the primary circuit when the ignition switch is OFF. If the lead or switch fails open, the magneto can remain live and a propeller movement can start the engine, so shutdown grounding is safety-critical.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the role of a spark plug’s insulator nose?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Cool the oil sump",
+        "Electrically isolate the center electrode from the shell",
+        "Meter fuel through the plug",
+        "Carry the valve spring load"
+      ],
+      "answerIndex": 1,
+      "answerText": "Electrically isolate the center electrode from the shell",
+      "explanation": "**Why this is correct**\nThe spark-plug insulator electrically separates the center electrode from the grounded shell while exposing the electrode tip in the combustion chamber.\n\n**Engineering principle**\nThe insulator also transfers heat from the firing end according to the plug heat range; it must remain free of cracks and conductive deposits.\n\n**Memory hook:** Insulator keeps the spark path across the gap.\n\n**Board tip:** Distinguish electrical insulation from heat-range function.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why does a turbine ignition exciter store electrical energy before firing?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Produce a high-energy ignition pulse for starting",
+        "Power the aircraft cabin indefinitely",
+        "Control compressor bleed",
+        "Regulate lubrication pressure"
+      ],
+      "answerIndex": 0,
+      "answerText": "Produce a high-energy ignition pulse for starting",
+      "explanation": "**Why this is correct**\nA turbine ignition exciter stores electrical energy and releases it as a high-energy pulse to the igniter. This supports reliable ignition during starting or relight despite the high pressure and airflow environment.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of an igniter plug in a turbine engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Provide ignition during starting or relight when commanded",
+        "Continuously ignite every gas molecule in normal operation",
+        "Measure turbine temperature",
+        "Control exhaust nozzle area"
+      ],
+      "answerIndex": 0,
+      "answerText": "Provide ignition during starting or relight when commanded",
+      "explanation": "**Why this is correct**\nAn igniter plug provides the spark that lights the fuel-air mixture during turbine starting or a commanded relight. Unlike a piston spark plug, it is usually not firing continuously throughout normal turbine operation.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are aircraft batteries rated for both capacity and discharge capability?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Loads need stored energy over time and sufficient current for high-demand events",
+        "Battery capacity determines engine displacement",
+        "It sets propeller pitch",
+        "It replaces circuit protection"
+      ],
+      "answerIndex": 0,
+      "answerText": "Loads need stored energy over time and sufficient current for high-demand events",
+      "explanation": "**Why this is correct**\nThermodynamic questions depend on the system boundary, process constraint, and sign convention. Apply conservation of energy and the ideal-gas/process relation that matches the stated condition; use absolute temperature and absolute pressure in gas-law ratios.\n\n**Engineering principle**\nAdiabatic means no heat transfer; isentropic additionally requires reversibility. Specific heat at constant pressure differs from constant volume, and work done by a system has the opposite sign from work done on it.\n\n💡 **Memory hook:** Name the process before choosing the equation.\n\n🎯 **Board tip:** Check absolute versus gauge pressure and state the work sign convention.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the function of a circuit breaker in an aircraft powerplant electrical circuit?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Interrupt excessive current to protect wiring and equipment",
+        "Increase current during a start",
+        "Control the fuel-air mixture",
+        "Set engine timing"
+      ],
+      "answerIndex": 0,
+      "answerText": "Interrupt excessive current to protect wiring and equipment",
+      "explanation": "**Why this is correct**\nA circuit breaker opens the circuit when current exceeds its protective rating, limiting wire and equipment overheating. It should not be repeatedly reset when it trips; the cause of the overcurrent must be found.\n\n**Engineering principle**\nA breaker protects wiring from excessive current; a switch only commands normal operation.\n\n💡 **Memory hook:** Trip protects the wire.\n\n🎯 **Board tip:** Never use a breaker as a routine switch or defeat its rating.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why should spark-plug leads be tested for insulation breakdown?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It increases fuel flow",
+        "It affects crankshaft balance",
+        "Leakage can divert high voltage and weaken or prevent the spark",
+        "It changes the engine’s compression ratio"
+      ],
+      "answerIndex": 2,
+      "answerText": "Leakage can divert high voltage and weaken or prevent the spark",
+      "explanation": "**Why this is correct**\nTesting ignition leads for insulation breakdown finds paths where high voltage can leak to ground instead of reaching the spark plug. Leakage weakens or prevents the spark and can cause misfiring.\n\n**Engineering principle**\nThe ignition lead must contain the secondary voltage along its full length; damaged insulation creates an alternate current path.\n\n**Memory hook:** Leaking voltage means a weaker spark.\n\n**Board tip:** Inspect routing, terminals, and insulation using the approved test method.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Ignition, Starting, and Electrical Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}

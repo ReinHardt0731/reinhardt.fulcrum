@@ -1,0 +1,868 @@
+{
+  "title": "Reciprocating Engine Operation and Construction",
+  "questions": [
+    {
+      "question": "Excessive oil is prevented from accumulating on the cylinder walls of a reciprocating engine by",
+      "questionType": "multiple_choice",
+      "choices": [
+        "oil control rings on the pistons.",
+        "crankcase pressure forcing oil away from the cylinder wall.",
+        "the design shape of the piston skirt.",
+        "internal engine pressure bleeding past the ring grooves."
+      ],
+      "answerIndex": 0,
+      "answerText": "oil control rings on the pistons.",
+      "explanation": "**Why this is correct**\nOil-control rings meter the cylinder-wall oil film and scrape excess oil away so it returns to the crankcase instead of entering the combustion chamber.\n\n**Engineering principle**\nCompression rings primarily seal combustion pressure; oil rings regulate the wall film.\n\n**Differentiate similar concepts**\nCompression seals; oil ring meters.\n\n**Memory hook**\nCompression seals; oil ring meters.\n\n**Board tip**\nConnect oil consumption and compression symptoms to the correct ring function.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "moved to reciprocating-engine chapter"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "After spark plugs from an opposed engine have been serviced, in what position should they be reinstalled?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Swapped bottom to top.",
+        "Next in firing order to the one from which they were removed and swapped bottom to top.",
+        "Next in firing order to the one from which they were removed.",
+        "In the same cylinder positions, with no top-to-bottom swap."
+      ],
+      "answerIndex": 1,
+      "answerText": "Next in firing order to the one from which they were removed and swapped bottom to top.",
+      "explanation": "**Why this is correct**\nOn an opposed engine, serviceable plugs are installed in the manufacturer's specified firing-order positions and swapped top-to-bottom when directed. This helps distribute deposits and wear between plug positions.\n\n**Engineering principle**\nPlug position affects operating temperature and fouling; preserve cylinder identification and follow the engine manual rather than swapping arbitrarily.\n\n**Memory hook:** Keep firing-order position; rotate top and bottom as specified.\n\n**Board tip:** Follow the exact service instruction for the engine model.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A characteristic of dyna-focal engine mounts as applied to aircraft reciprocating engines is that the",
+      "questionType": "multiple_choice",
+      "choices": [
+        "engine attaches to the shock mounts at the engine's center of gravity.",
+        "shock mounts are parallel to the engine centerline.",
+        "shock mounts point toward the engine's center of gravity.",
+        "shock mounts eliminate the torsional flexing of the powerplant."
+      ],
+      "answerIndex": 2,
+      "answerText": "shock mounts point toward the engine's center of gravity.",
+      "explanation": "**Why this is correct**\nAn engine installation transfers thrust, torque, vibration, heat, fluid, and control loads between the powerplant and airframe. Mounts carry structural loads and isolate vibration; cowls/nacelles manage airflow and drag; firewalls and shields protect occupants and adjacent systems; flexible runs and clearances accommodate motion and thermal growth.\n\n**Engineering principle**\nInstallation components have different jobs: the mount carries load, the isolator attenuates vibration, the firewall blocks fire penetration, and the cowling shapes airflow.\n\n💡 **Memory hook:** Carry load, control heat, allow movement.\n\n🎯 **Board tip:** Identify whether the question concerns structure, airflow, fire protection, or control routing.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which statement is true regarding a thermocouple-type cylinder head temperature measuring system?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "When the master switch is turned on, a thermocouple indicator will move off-scale to the low side.",
+        "The indicator current is determined by the resistance of the thermocouple leads.",
+        "The resistance required for cylinder head temperature indicators is measured in farads.",
+        "The voltage output of a thermocouple system is determined by the temperature difference between the two ends of the thermocouple."
+      ],
+      "answerIndex": 3,
+      "answerText": "The voltage output of a thermocouple system is determined by the temperature difference between the two ends of the thermocouple.",
+      "explanation": "**Why this is correct**\nA thermocouple generates a small voltage related to the temperature difference between its sensing and reference junctions. The instrument must account for the reference-junction temperature to indicate the hot-junction temperature.\n\n**Engineering principle**\nA thermocouple is not a resistance bulb; its output arises from the Seebeck effect at dissimilar-metal junctions.\n\n💡 **Memory hook:** Two junction temperatures create the signal.\n\n🎯 **Board tip:** Read the question for temperature difference, not absolute temperature alone.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The most common method and generally the best conduction of heat from the inside of a cylinder barrel to the cooling air is accomplished by",
+      "questionType": "multiple_choice",
+      "choices": [
+        "machining fins directly on the outside of the barrel.",
+        "shrinking on a jacket or muff of aluminum cooling fins around a steel cylinder sleeve.",
+        "machining fins directly on the outside of the barrel and shrinking on a jacket or muff of aluminum cooling fins around a steel cylinder sleeve (on different areas of the barrel).",
+        "installing a separate finned jacket around the entire cylinder barrel."
+      ],
+      "answerIndex": 0,
+      "answerText": "machining fins directly on the outside of the barrel.",
+      "explanation": "**Why this is correct**\nAircraft geometry terms describe different reference directions and planform measures. Stagger is fore-and-aft wing offset; decalage is incidence-angle difference; buttline is a lateral station; sweep is the angle of a wing reference line to the lateral axis; aspect ratio is span²/area. Use the exact geometric clue in the question.\n\n**Engineering principle**\nDo not interchange longitudinal offset, incidence difference, dihedral, sweep, and station coordinates; each uses a different reference.\n\n💡 **Memory hook:** Stagger shifts; decalage tilts; buttline measures sideways.\n\n🎯 **Board tip:** Sketch the aircraft axes if a geometry term seems ambiguous.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The operating temperature valve clearance of a radial engine as compared to cold valve clearance is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The same",
+        "Greater",
+        "Less.",
+        "Less"
+      ],
+      "answerIndex": 1,
+      "answerText": "Greater",
+      "explanation": "**Why this is correct**\nA radial engine valve clearance is generally greater cold than at its specified hot condition because engine parts expand as they warm. Use the manufacturer's stated temperature condition; thermal growth differs among designs.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A nine-cylinder engine with a bore of 5.5 inches and a stroke of 6 inches will have a total piston displacement of",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1,425 cubic inches.",
+        "1,161 cubic inches.",
+        "1,283 cubic inches.",
+        "740 cubic inches"
+      ],
+      "answerIndex": 2,
+      "answerText": "1,283 cubic inches.",
+      "explanation": "**Worked solution**\nPiston displacement = cylinder area x stroke x cylinder count. Per cylinder, area = pi(5.5 in)^2/4 = 23.76 in^2; volume = 23.76 x 6 = 142.65 in^3. For nine cylinders, total = 1,283.8 in^3, approximately 1,283 in^3. This is swept volume and excludes clearance volume.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which statement is correct regarding engine crankshafts?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Moveable counterweights serve to reduce the dynamic vibrations in an aircraft reciprocating engine.",
+        "Moveable counterweights are designed to resonate at the natural frequency of the crankshaft.",
+        "Moveable counterweights serve to reduce axial thrust on the crankshaft.",
+        "Moveable counterweights serve to reduce the torsional vibrations in an aircraft reciprocating engine."
+      ],
+      "answerIndex": 3,
+      "answerText": "Moveable counterweights serve to reduce the torsional vibrations in an aircraft reciprocating engine.",
+      "explanation": "**Why this is correct**\nTorque about a member’s longitudinal axis produces torsional shear. For a circular shaft, τ=Tr/J and φ=TL/(JG); for a thin, single-cell closed section, Bredt–Batho gives q=T/(2Aₘ) and τ=q/t. A closed torque box carries circulating shear flow around its enclosed median area.\n\n**Engineering principle**\nUse the circular-shaft equations only for circular shafts; thin-wall shear flow uses enclosed median area and wall thickness.\n\n💡 **Memory hook:** Shaft: Tr/J. Closed cell: T/(2Aₘ), then q/t.\n\n🎯 **Board tip:** Check whether the section is solid, hollow circular, or a thin-walled closed cell.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Master rod bearings are generally what type?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Plain.",
+        "Roller",
+        "Ball.",
+        "Tapered roller."
+      ],
+      "answerIndex": 0,
+      "answerText": "Plain.",
+      "explanation": "**Why this is correct**\nIn a radial engine, the master rod bearing connects the master rod to the crankpin and supports the articulated rods. It is a plain bearing surface, lubricated by the engine oil system.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An aircraft reciprocating engine using hydraulic valve lifters is observed to have no clearance in its valve-operating mechanism after the minimum inlet oil and cylinder head temperatures for takeoff have been reached. When can this condition be expected?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "As a result of carbon and sludge becoming trapped in the lifter and restricting its motion.",
+        "During normal operation.",
+        "Only during cold operation before the oil warms.",
+        "When the lifters become deflated."
+      ],
+      "answerIndex": 1,
+      "answerText": "During normal operation.",
+      "explanation": "**Why this is correct**\nHydraulic lifters take up normal valve-train clearance during operation when filled with oil. Zero measured clearance can therefore be normal for an operating, properly adjusted system, but not necessarily with a collapsed or unpressurized lifter.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "If an engine with a stroke of 6 inches is operated at 2,000 RPM, the piston movement within the cylinder will be",
+      "questionType": "multiple_choice",
+      "choices": [
+        "constant during the entire 360° of crankshaft travel.",
+        "at top dead center.",
+        "at maximum velocity 90° after TDC.",
+        "at maximum velocity around TDC."
+      ],
+      "answerIndex": 2,
+      "answerText": "at maximum velocity 90° after TDC.",
+      "explanation": "**Why this is correct**\nFor a crank-slider, piston speed is greatest near 90 degrees of crank travel from top dead center, where crank motion projects strongly along the cylinder axis. At TDC and BDC the piston momentarily stops and reverses direction.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The valve clearance of an engine using hydraulic lifters, when the lifters are completely flat, or empty, should not exceed",
+      "questionType": "multiple_choice",
+      "choices": [
+        "60.00 inch.",
+        "a specified amount below zero.",
+        "specified amount below zero.",
+        "a specified amount above zero."
+      ],
+      "answerIndex": 3,
+      "answerText": "a specified amount above zero.",
+      "explanation": "**Why this is correct**\nWith a hydraulic lifter fully collapsed, the specified setup retains a small clearance above zero for adjustment and thermal behavior. A pumped-up lifter changes effective length, so the manual specifies the inspection state.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "If the hot clearance is used to set the valves when the engine is cold, what will occur during operation of the engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The valves will open late and close early.",
+        "The valves will open early and close late.",
+        "The valves will open late and close late.",
+        "The valves will open early and close early."
+      ],
+      "answerIndex": 0,
+      "answerText": "The valves will open late and close early.",
+      "explanation": "**Why this is correct**\nIf a valve is adjusted to the larger hot clearance while the engine is cold, the clearance will shrink as the parts warm. The effective lash becomes too small, causing the valve train to take up clearance sooner and hold the valve open longer than intended; the keyed answer claiming late opening/early closing should be reviewed against the specific engine geometry and source convention.\n\n**Engineering principle**\nThermal growth can either increase or decrease lash depending on the relative expansion of the parts; the engine maker’s cold-clearance specification controls.\n\n💡 **Memory hook:** Set cold lash from the approved specification, not from the hot value.\n\n🎯 **Board tip:** This keyed generalization is geometry-dependent; check the engine maintenance data.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The purpose of two or more valve springs in aircraft engines is to",
+      "questionType": "multiple_choice",
+      "choices": [
+        "provide a second, independent valve guide.",
+        "eliminate valve spring surge.",
+        "equalize valve face loading.",
+        "equalize side pressure on the valve stems."
+      ],
+      "answerIndex": 1,
+      "answerText": "eliminate valve spring surge.",
+      "explanation": "**Why this is correct**\nMultiple valve springs reduce the risk of spring surge or resonance at engine speeds and help maintain valve control. Correct installation and inspection remain necessary.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why does the smoothness of operation of an engine increase with a greater number of cylinders?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The piston speeds are equalized across all cylinders.",
+        "The engine has larger counterbalance weights.",
+        "The power impulses are spaced closer together.",
+        "The power impulses are spaced farther apart."
+      ],
+      "answerIndex": 2,
+      "answerText": "The power impulses are spaced closer together.",
+      "explanation": "**Why this is correct**\nMore cylinders distribute power events more evenly through the crankshaft cycle. Closer-spaced impulses reduce speed fluctuation between firings and make torque delivery smoother, though balance and firing order also matter.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A condition that can occur in radial engines but is unlikely to occur in horizontally opposed engines is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "carburetor icing.",
+        "valve overlap.",
+        "zero valve clearance.",
+        "hydraulic lock."
+      ],
+      "answerIndex": 3,
+      "answerText": "hydraulic lock.",
+      "explanation": "**Why this is correct**\nHydraulic lock can occur in a radial engine when oil or fuel collects in a lower cylinder and the piston tries to compress the nearly incompressible liquid. Forcing the propeller through can bend a connecting rod or cause severe damage; follow the approved clearing procedure before start.\n\n**Engineering principle**\nA liquid-filled cylinder is not a normal compression condition. Horizontally opposed engines are less prone because their cylinder orientation does not create the same collection pocket.\n\n💡 **Memory hook:** Liquid will not compress like the charge.\n\n🎯 **Board tip:** Check for hydraulic lock before rotating a radial engine after inactivity.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "On which part of the cylinder walls of a normally operating engine will the greatest amount of wear occur?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Near the top of the cylinder.",
+        "Wear is normally evenly distributed.",
+        "Near the bottom of the cylinder, where the piston reverses direction.",
+        "Near the center of the cylinder where piston velocity is greatest."
+      ],
+      "answerIndex": 0,
+      "answerText": "Near the top of the cylinder.",
+      "explanation": "**Why this is correct**\nCylinder wear is often greatest near the top of ring travel, where combustion pressure and temperature are high and lubrication conditions are less favorable around top dead center. The exact wear pattern depends on engine condition and operating history.\n\n**Engineering principle**\nWear can form a ridge at the upper limit of ring travel; inspect with the specified dimensional and visual checks.\n\n💡 **Memory hook:** Top ring travel sees severe pressure and heat.\n\n🎯 **Board tip:** Use service limits; do not infer serviceability from location alone.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Excessive valve clearance results in the valves opening",
+      "questionType": "multiple_choice",
+      "choices": [
+        "late and closing late.",
+        "late and closing early.",
+        "early and closing early.",
+        "early and closing late."
+      ],
+      "answerIndex": 1,
+      "answerText": "late and closing early.",
+      "explanation": "**Why this is correct**\nExcessive valve clearance delays initial opening and causes earlier closing because more cam motion is spent taking up the gap. This shortens valve-open duration and can reduce breathing and overlap.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Some cylinder barrels are hardened by _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "shot peening",
+        "nitriding",
+        "welding",
+        "tempering"
+      ],
+      "answerIndex": 1,
+      "answerText": "nitriding",
+      "explanation": "**Why this is correct**\nNitriding diffuses nitrogen into the cylinder-barrel surface to create a hard, wear-resistant case. It improves surface hardness while retaining a tougher core; it is distinct from plating.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Aircraft piston is commonly made of _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "aluminum alloy",
+        "silicone steel",
+        "aluminum bronze",
+        "cast iron"
+      ],
+      "answerIndex": 3,
+      "answerText": "cast iron",
+      "explanation": "**Answer-key check**\nThe keyed answer says cast iron, but aircraft piston-engine pistons are commonly aluminum alloy because it is light and conducts heat well. Cast iron is not the expected general answer. Verify the source key or a special historical context before keeping this answer.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "During which stroke does a four-stroke piston engine normally produce useful power?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Compression stroke",
+        "Exhaust stroke",
+        "Power stroke",
+        "Intake stroke"
+      ],
+      "answerIndex": 2,
+      "answerText": "Power stroke",
+      "explanation": "**Why this is correct**\nThe power stroke is when combustion pressure pushes the piston down and delivers positive work to the crankshaft. The other strokes exchange or compress gas and require energy input.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Operation and Construction",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is piston displacement for one cylinder?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Clearance volume divided by bore",
+        "Bore multiplied by compression ratio",
+        "Crank radius divided by stroke",
+        "Cylinder swept area multiplied by stroke"
+      ],
+      "answerIndex": 3,
+      "answerText": "Cylinder swept area multiplied by stroke",
+      "explanation": "**Why this is correct**\nPiston displacement is the swept volume as the piston travels from TDC to BDC: cylinder area times stroke. It excludes the clearance volume remaining at TDC.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Operation and Construction",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does a full-floating piston pin do?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Is fixed rigidly in the piston and rod",
+        "Carries oil through the crankshaft",
+        "Controls valve timing",
+        "Allows relative rotation at both the piston bosses and connecting-rod small end"
+      ],
+      "answerIndex": 3,
+      "answerText": "Allows relative rotation at both the piston bosses and connecting-rod small end",
+      "explanation": "**Why this is correct**\nA full-floating pin can rotate relative to both the piston bosses and connecting-rod small end. This distributes wear around the pin surfaces; retainers keep it from contacting the cylinder wall.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Operation and Construction",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are compression and oil-control rings designed with different functions?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Compression rings seal combustion gases while oil rings regulate cylinder-wall oil",
+        "Oil rings carry the crankshaft load",
+        "Compression rings meter fuel",
+        "Both ring types open the valves"
+      ],
+      "answerIndex": 0,
+      "answerText": "Compression rings seal combustion gases while oil rings regulate cylinder-wall oil",
+      "explanation": "**Why this is correct**\nEngine oil reduces friction and wear, removes heat, carries contaminants to filters, and protects surfaces. Pressure, temperature, and quantity describe different conditions: pressure is system resistance/flow indication, temperature reflects heat balance, and quantity is available supply.\n\n**Engineering principle**\nA relief valve limits maximum pressure; a filter bypass preserves flow when the filter is restricted but may allow unfiltered oil. A scavenge pump returns oil to the tank in a dry-sump system.\n\n💡 **Memory hook:** Pressure moves it; the filter cleans it; the cooler removes heat.\n\n🎯 **Board tip:** Treat an abnormal oil indication as a symptom to diagnose, not as a single guaranteed failure.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Operation and Construction",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A cylinder has 100 mm bore and 120 mm stroke. Find swept displacement in cm³ using pi = 3.14.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "471",
+        "1884",
+        "9420",
+        "942"
+      ],
+      "answerIndex": 3,
+      "answerText": "942",
+      "explanation": "**Why this method applies**\nSwept displacement is the bore area multiplied by piston stroke.\n\n**Given**\nBore=100 mm; stroke=120 mm; pi=3.14.\n\n**Engineering relation**\nV=pi B^2 S/4.\n\n**Substitute and solve**\nV=3.14(100^2)(120)/4=942,000 mm^3=942 cm^3.\n\n**Exam check**\nConvert mm^3 to cm^3 by dividing by 1,000.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Operation and Construction",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A six-cylinder engine has 5.0 in bore and 4.0 in stroke. Find total displacement in cubic inches using pi = 3.14.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "78",
+        "942",
+        "236",
+        "471"
+      ],
+      "answerIndex": 3,
+      "answerText": "471",
+      "explanation": "**Why this method applies**\nThe support and load pattern determine the governing equilibrium or strength relation.\n\n**Given**\nbore=5.0 in; stroke=4.0 in; cylinders=6.\n\n**Engineering relation**\nVtotal=pi B^2 S/4 x cylinder count.\n\n**Substitute and solve**\n3.14 x 5^2/4 x 4 x 6 = 471 in^3.\n\n**Exam check**\nUse the number of cylinders for total displacement.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Operation and Construction",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A cylinder’s swept volume is 600 cm³ and clearance volume is 50 cm³. Find compression ratio.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "11",
+        "650",
+        "13",
+        "12"
+      ],
+      "answerIndex": 2,
+      "answerText": "13",
+      "explanation": "**Worked solution**\nCompression ratio = (swept volume + clearance volume)/clearance volume = (600+50) cm^3/50 cm^3 = 650/50 = 13:1. Volumes use the same units and cancel.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Operation and Construction",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A piston travels 100 mm in 0.02 s during a measured interval. Find its average speed in m/s.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "50",
+        "5",
+        "2",
+        "10"
+      ],
+      "answerIndex": 1,
+      "answerText": "5",
+      "explanation": "**Worked solution**\nAverage speed = distance/time = 100 mm/0.02 s = 5,000 mm/s. Convert 5,000 mm/s x 0.001 m/mm = 5 m/s.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Operation and Construction",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A piston engine produces 120 lb·ft torque at 2,200 rpm. Using BHP = torque × rpm/5,252, find brake horsepower.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "220",
+        "50.27",
+        "25.14",
+        "100.55"
+      ],
+      "answerIndex": 1,
+      "answerText": "50.27",
+      "explanation": "**Why this method applies**\nBrake horsepower follows from shaft power P=T omega, with angular speed converted from rpm.\n\n**Given**\nTorque=120 lb ft; speed=2,200 rpm.\n\n**Engineering relation**\nBHP=torque(rpm)/5,252.\n\n**Substitute and solve**\nBHP=120(2,200)/5,252=50.27 hp.\n\n**Exam check**\nUse torque in lb ft with this horsepower constant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Operation and Construction",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An engine produces 180 brake hp and 200 indicated hp. Find mechanical efficiency.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "20",
+        "90",
+        "0.9",
+        "1.11"
+      ],
+      "answerIndex": 2,
+      "answerText": "0.9",
+      "explanation": "**Worked solution**\nMechanical efficiency = brake horsepower/indicated horsepower = 180/200 = 0.90, or 90%. Both are power units, so they cancel.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Operation and Construction",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A piston has a 5 in stroke and the engine runs at 2,400 rpm. Find mean piston speed in ft/min.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "2400",
+        "12000",
+        "2000",
+        "1000"
+      ],
+      "answerIndex": 2,
+      "answerText": "2000",
+      "explanation": "**Worked solution**\nMean piston speed = 2 x stroke x RPM. Convert 5 in = 5/12 ft. Thus speed = 2 x (5/12 ft) x 2,400 rev/min = 2,000 ft/min. The factor of two accounts for one up-and-down travel per crankshaft revolution.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Operation and Construction",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An engine ingests 90 ft³/min when its theoretical displacement flow is 100 ft³/min. Find volumetric efficiency.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.1",
+        "1.11",
+        "90",
+        "0.9"
+      ],
+      "answerIndex": 3,
+      "answerText": "0.9",
+      "explanation": "**Worked solution**\nVolumetric efficiency = actual inducted volume flow/theoretical displacement flow = 90 ft^3/min / 100 ft^3/min = 0.90, or 90%. The flow units cancel.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Operation and Construction",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A four-cylinder, four-stroke engine has IMEP 150 psi, piston area 10 in², stroke 0.5 ft, and runs at 1,200 rpm. Using N = rpm/2 power strokes/min per cylinder, find IHP.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "545.45",
+        "54.55",
+        "27.27",
+        "109.09"
+      ],
+      "answerIndex": 1,
+      "answerText": "54.55",
+      "explanation": "**Why this method applies**\nThe support and load pattern determine the governing equilibrium or strength relation.\n\n**Given**\nIMEP=150 psi; piston area=10 in^2; stroke=0.5 ft; speed=1,200 rpm; 4 cylinders.\n\n**Engineering relation**\nIHP=IMEP x area x stroke x (rpm/2) x cylinders / 33,000.\n\n**Substitute and solve**\n150 x 10 x 0.5 x 600 x 4 / 33,000 = 54.55 hp.\n\n**Exam check**\nA four-stroke cylinder has one power stroke every two crank revolutions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Operation and Construction",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which statement is true regarding bearings used in high-powered reciprocating aircraft engines?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Crankshaft bearings are generally of the ball- type due to their ability to withstand extreme loads without overheating.",
+        "The outer race of a single-row, self-aligning ball bearing will always have a radius equal to the radius of the balls.",
+        "There is less rolling friction when ball bearings are used than when roller bearings are employed.",
+        "Roller bearings always have less friction than ball bearings, regardless of load."
+      ],
+      "answerIndex": 2,
+      "answerText": "There is less rolling friction when ball bearings are used than when roller bearings are employed.",
+      "explanation": "**Why this is correct**\nBall bearings have point contact and can have lower rolling friction than roller bearings under comparable conditions. Roller bearings generally support larger radial loads.\n\n**Engineering principle**\nThe best bearing depends on load direction, speed, alignment, and lubrication, not friction alone.\n\n**Differentiate similar concepts**\nBall favors low friction; roller favors radial capacity.\n\n**Memory hook**\nBall favors low friction; roller favors radial capacity.\n\n**Board tip**\nTreat the comparison as conditional on the stated operating case.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which bearing is least likely to be a roller or ball bearing?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Crankshaft main bearing (radial engine).",
+        "Alternator rotor bearing.",
+        "Rocker arm bearing (overhead valve engine).",
+        "Master rod bearing (radial engine)."
+      ],
+      "answerIndex": 3,
+      "answerText": "Master rod bearing (radial engine).",
+      "explanation": "**Why this is correct**\nThe master-rod bearing in a radial engine is a plain bearing rather than a rolling-element ball or roller bearing. It supports the master rod and articulating rods on the crankpin.\n\n**Engineering principle**\nA plain bearing relies on a lubricating film; ball and roller bearings carry load through rolling elements.\n\n**Differentiate similar concepts**\nMaster rod uses a plain crankpin bearing.\n\n**Memory hook**\nMaster rod uses a plain crankpin bearing.\n\n**Board tip**\nDo not generalize this radial-engine arrangement to all bearings.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of the safety circlet installed on some valve stems?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "To prevent valves from falling into the combustion chamber.",
+        "To prevent the valve from rotating in its guide.",
+        "To hold the valve guide in position.",
+        "To hold the valve spring retaining washer in position."
+      ],
+      "answerIndex": 0,
+      "answerText": "To prevent valves from falling into the combustion chamber.",
+      "explanation": "**Why this is correct**\nThe safety circlet retains the valve assembly so a valve or related part is less likely to fall into the combustion chamber. Its installation must follow the engine-specific service procedure.\n\n**Engineering principle**\nRetention hardware controls component movement; it does not guide gas flow.\n\n**Differentiate similar concepts**\nCirclet retains; valve spring closes.\n\n**Memory hook**\nCirclet retains; valve spring closes.\n\n**Board tip**\nCheck the specific locking or retention method in maintenance data.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What will be the likely result if the piston ring gaps happen to be aligned when performing a differential- pressure compression check on a cylinder?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A worn or defective ring(s) indication.",
+        "Little or no effect.",
+        "A correctly aligned ring gap always indicates a worn or defective ring.",
+        "The rings will not be seated."
+      ],
+      "answerIndex": 1,
+      "answerText": "Little or no effect.",
+      "explanation": "**Why this is correct**\nRing gaps aligned at one instant have little or no effect on a differential-pressure compression check because the rings rotate in service and the test measures overall cylinder leakage.\n\n**Engineering principle**\nA leak-down result is interpreted by listening at the intake, exhaust, and crankcase; one ring-gap position is not by itself a defect.\n\n**Differentiate similar concepts**\nGap alignment is not a reliable diagnosis.\n\n**Memory hook**\nGap alignment is not a reliable diagnosis.\n\n**Board tip**\nListen for leakage location and compare the pressure drop with service limits.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Operation and Construction"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}

@@ -1,0 +1,723 @@
+{
+  "title": "Reciprocating Engine Lubrication and Cooling",
+  "questions": [
+    {
+      "question": "How are the piston pins of most aircraft engines lubricated?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "By the action of the oil control ring and the series of holes drilled in the ring groove directing oil to the pin and piston pin boss.",
+        "By the scavenge pump sending return oil through the piston pin.",
+        "By pressure oil through a drilled passageway in the heavy web portion of the connecting rod.",
+        "By oil which is sprayed or thrown by the master or connecting rods."
+      ],
+      "answerIndex": 3,
+      "answerText": "By oil which is sprayed or thrown by the master or connecting rods.",
+      "explanation": "**Why this is correct**\nPressure oil splashed or thrown by the master or connecting rods reaches the piston-pin bearing surfaces. The motion of the crankshaft and rods distributes oil without a separate pressure line to every pin.\n\n**Engineering principle**\nThis splash system depends on correct oil quantity and moving parts; it differs from a dedicated pressure-fed bearing.\n\n**Memory hook**\nFollow the path from oil source to pin.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Lubrication and Cooling"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "If the oil pressure gauge fluctuates over a wide range from zero to normal operating pressure, the most likely cause is.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "low oil supply.",
+        "broken or weak pressure relief valve spring.",
+        "air lock in the scavenge pump intake.",
+        "a defective cylinder-head temperature probe."
+      ],
+      "answerIndex": 0,
+      "answerText": "low oil supply.",
+      "explanation": "**Why this is correct**\nA wide swing from zero to normal pressure is consistent with a pickup intermittently uncovering as oil sloshes, especially when the supply is low.\n\n**Engineering principle**\nThe gauge reports pressure at its sender, not the amount of oil remaining; a fluctuating indication requires the approved procedure.\n\n**Memory hook**\nErratic pressure can point to an uncovered pickup.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Reciprocating Engine Lubrication and Cooling"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What are the main functions of engine lubricating oil?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Control ignition timing",
+        "Replace cylinder cooling fins",
+        "Reduce friction and wear, carry heat, and help clean and protect internal parts",
+        "Increase fuel octane only"
+      ],
+      "answerIndex": 2,
+      "answerText": "Reduce friction and wear, carry heat, and help clean and protect internal parts",
+      "explanation": "**Why this is correct**\nEngine oil forms a lubricating film, reduces friction and wear, carries heat away, suspends or transports contaminants, and protects metal surfaces.\n\n**Engineering principle**\nThe oil system supports several functions at once; a pressure indication alone does not prove that all are being met.\n\n**Memory hook**\nOil lubricates, cools, cleans, and protects.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is a principal difference between wet-sump and dry-sump systems?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A dry-sump system stores most oil in a separate tank",
+        "A wet sump has no oil pump",
+        "A dry sump has no scavenge pump",
+        "A wet sump stores oil only in a remote tank"
+      ],
+      "answerIndex": 0,
+      "answerText": "A dry-sump system stores most oil in a separate tank",
+      "explanation": "**Why this is correct**\nA wet-sump engine stores most of its oil in the engine crankcase or sump. A dry-sump system stores most oil in a separate tank.\n\n**Engineering principle**\nA dry-sump system uses pressure and scavenge stages and can keep the engine sump shallow.\n\n**Memory hook**\nWet sump: oil in engine; dry sump: oil in tank.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of a scavenge pump in a dry-sump system?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Meter fuel to the carburetor",
+        "Increase oil temperature",
+        "Supply ignition voltage",
+        "Return oil from the engine sump to the external tank"
+      ],
+      "answerIndex": 3,
+      "answerText": "Return oil from the engine sump to the external tank",
+      "explanation": "**Why this is correct**\nThe scavenge pump removes oil collected in the engine sump and returns it to the remote tank.\n\n**Engineering principle**\nDry-sump systems commonly scavenge at a greater capacity than the pressure pump to prevent oil accumulating in the case.\n\n**Memory hook**\nPressure pump sends oil out; scavenge pump brings it back.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why can a dry-sump system use a larger oil supply than the engine sump alone?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It eliminates the need for lubrication",
+        "The oil is consumed during every stroke",
+        "It prevents oil from circulating",
+        "A remote tank can hold the required quantity while the sump remains shallow"
+      ],
+      "answerIndex": 3,
+      "answerText": "A remote tank can hold the required quantity while the sump remains shallow",
+      "explanation": "**Why this is correct**\nA remote tank can carry the required oil quantity while the engine sump remains shallow, helping prevent oil starvation during aircraft attitudes and maneuvers.\n\n**Engineering principle**\nThe external reservoir separates storage capacity from the crankcase volume.\n\n**Memory hook**\nDry sump separates storage from collection.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does an oil pressure relief valve do?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Return fuel to the tank",
+        "Limit maximum system pressure by bypassing excess pump output",
+        "Increase oil temperature",
+        "Filter metal particles"
+      ],
+      "answerIndex": 1,
+      "answerText": "Limit maximum system pressure by bypassing excess pump output",
+      "explanation": "**Why this is correct**\nThe pressure-relief valve limits maximum system pressure by diverting excess pump output when pressure reaches its setting.\n\n**Engineering principle**\nIt protects the system from excessive pressure; it does not regulate engine oil temperature or guarantee adequate pressure if stuck open.\n\n**Memory hook**\nRelief valve limits the high side.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does a thermostatic oil cooler bypass do during cold operation?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Increase fuel pressure",
+        "Open the exhaust valve",
+        "Allow oil to bypass or limit flow through the cooler until warm",
+        "Stop the oil pump permanently"
+      ],
+      "answerIndex": 2,
+      "answerText": "Allow oil to bypass or limit flow through the cooler until warm",
+      "explanation": "**Why this is correct**\nWhen oil is cold and viscous, the thermostatic bypass limits flow through the cooler so the oil can warm without excessive restriction.\n\n**Engineering principle**\nAs the oil reaches its operating range, the thermostat routes more flow through the cooler.\n\n**Memory hook**\nCold: bypass cooler; warm: use cooler.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why is oil viscosity important to an aircraft engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It sets the spark-plug gap",
+        "It determines fuel octane",
+        "It controls valve lift directly",
+        "It affects film strength, flow, and lubrication across the operating temperature range"
+      ],
+      "answerIndex": 3,
+      "answerText": "It affects film strength, flow, and lubrication across the operating temperature range",
+      "explanation": "**Why this is correct**\nViscosity affects how readily oil flows and how well it maintains a lubricating film. The correct grade must work across the engine temperature range.\n\n**Engineering principle**\nToo-viscous oil can circulate poorly when cold; too-thin hot oil may not maintain the required film.\n\n**Memory hook**\nChoose viscosity for the full temperature range.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What can a clogged main oil filter bypass valve permit?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "All oil flow to stop in every design",
+        "Oil flow to continue around the filter, though unfiltered",
+        "The oil pump to reverse direction",
+        "Fuel to enter the sump by design"
+      ],
+      "answerIndex": 1,
+      "answerText": "Oil flow to continue around the filter, though unfiltered",
+      "explanation": "**Why this is correct**\nA filter bypass allows oil to continue circulating when the main filter is restricted, but the bypassed oil may be unfiltered.\n\n**Engineering principle**\nMaintaining flow can prevent immediate oil starvation; bypass operation still requires inspection and corrective maintenance.\n\n**Memory hook**\nBypass preserves flow, not cleanliness.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are oil screens and filters inspected for debris?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "They set cylinder firing order",
+        "They show fuel grade",
+        "Debris can indicate wear or internal damage",
+        "They determine compression ratio"
+      ],
+      "answerIndex": 2,
+      "answerText": "Debris can indicate wear or internal damage",
+      "explanation": "**Why this is correct**\nDebris captured by screens and filters can reveal abnormal wear or internal damage. Identify the material and source before deciding the engine is serviceable.\n\n**Engineering principle**\nA particle is a symptom, not a diagnosis; the approved limits and inspection procedure determine disposition.\n\n**Memory hook**\nInspect the debris and find its source.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the function of an oil cooler?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Remove heat from circulating engine oil",
+        "Raise fuel temperature for ignition",
+        "Cool intake air in every engine",
+        "Regulate propeller blade angle"
+      ],
+      "answerIndex": 0,
+      "answerText": "Remove heat from circulating engine oil",
+      "explanation": "**Why this is correct**\nAn oil cooler rejects heat from circulating oil to cooling air or another heat sink. It helps keep viscosity and lubrication within the operating range.\n\n**Engineering principle**\nThe cooler removes heat; a thermostatic bypass controls how much oil passes through it.\n\n**Memory hook**\nThe cooler carries heat away.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of oil jets directed at piston undersides in some engines?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Increase compression ratio",
+        "Meter carburetor fuel",
+        "Provide piston cooling and lubrication",
+        "Control intake valve timing"
+      ],
+      "answerIndex": 2,
+      "answerText": "Provide piston cooling and lubrication",
+      "explanation": "**Why this is correct**\nOil jets spray the piston underside to remove heat and provide lubrication to the piston and cylinder assembly.\n\n**Engineering principle**\nThe jet flow depends on the engine lubrication circuit and must be clear and correctly aimed.\n\n**Memory hook**\nOil jets cool the piston from below.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why is crankcase breather flow maintained?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Relieve internal pressure and remove blow-by vapors",
+        "Increase cylinder compression",
+        "Set propeller rpm",
+        "Meter oil to the cooler"
+      ],
+      "answerIndex": 0,
+      "answerText": "Relieve internal pressure and remove blow-by vapors",
+      "explanation": "**Why this is correct**\nThe crankcase breather releases blow-by gases and limits pressure buildup inside the crankcase. It also helps carry vapors away.\n\n**Engineering principle**\nA blocked breather can cause pressure, leakage, or seal problems; excessive flow can signal blow-by.\n\n**Memory hook**\nThe breather vents crankcase pressure.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is a likely cause of low oil pressure with normal oil temperature?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A blocked induction filter only",
+        "A stuck-open exhaust valve only",
+        "Low oil quantity, pump wear, leakage, or a pressure-control fault",
+        "A high compression ratio alone"
+      ],
+      "answerIndex": 2,
+      "answerText": "Low oil quantity, pump wear, leakage, or a pressure-control fault",
+      "explanation": "**Why this is correct**\nLow pressure with normal oil temperature can result from low quantity, pump wear, leakage, a worn bearing clearance, or a pressure-control fault.\n\n**Engineering principle**\nAn indication alone does not identify one cause; use the manufacturer troubleshooting sequence and confirm quantity safely.\n\n**Memory hook**\nLow pressure is a symptom with several possible causes.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why can excessively high oil temperature reduce lubrication effectiveness?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Hot oil becomes less viscous and may not maintain the intended film",
+        "Hot oil always thickens",
+        "It increases oil pressure without limit",
+        "It prevents oxidation"
+      ],
+      "answerIndex": 0,
+      "answerText": "Hot oil becomes less viscous and may not maintain the intended film",
+      "explanation": "**Why this is correct**\nHotter oil has lower viscosity and may not maintain the designed lubricating film, especially at loaded bearings. High temperature can also accelerate oil oxidation.\n\n**Engineering principle**\nThe effect depends on oil grade, pressure, clearances, and temperature limit; investigate an abnormal indication promptly.\n\n**Memory hook**\nHeat thins oil and speeds deterioration.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does an oil temperature bulb sense?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Oil temperature at the point where the sensor is installed",
+        "Crankshaft speed",
+        "Cylinder compression pressure",
+        "Fuel-air ratio"
+      ],
+      "answerIndex": 0,
+      "answerText": "Oil temperature at the point where the sensor is installed",
+      "explanation": "**Why this is correct**\nAn oil-temperature bulb or probe senses temperature at the point where it is installed in the oil circuit. The reading is not necessarily the temperature everywhere in the engine.\n\n**Engineering principle**\nSensor location and flow path affect the indicated value.\n\n**Memory hook**\nThe bulb reports local oil temperature.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are oil lines routed away from hot exhaust parts?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Improve ignition timing",
+        "Reduce cylinder displacement",
+        "Avoid overheating, damage, and fire risk if oil leaks",
+        "Increase oil viscosity"
+      ],
+      "answerIndex": 2,
+      "answerText": "Avoid overheating, damage, and fire risk if oil leaks",
+      "explanation": "**Why this is correct**\nOil lines are kept away from hot exhaust parts to reduce heat damage and the chance that leaking oil will ignite.\n\n**Engineering principle**\nSupport and routing must also prevent chafing, vibration fatigue, and interference.\n\n**Memory hook**\nKeep fluid lines clear of hot and moving parts.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the role of cylinder fins on an air-cooled engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Meter fuel",
+        "Support the crankshaft bearings",
+        "Increase surface area for heat transfer to cooling air",
+        "Store engine oil"
+      ],
+      "answerIndex": 2,
+      "answerText": "Increase surface area for heat transfer to cooling air",
+      "explanation": "**Why this is correct**\nCylinder fins increase exposed surface area so heat can transfer from the cylinder metal to cooling air.\n\n**Engineering principle**\nFins add area; baffles and cowl geometry direct air across that area.\n\n**Memory hook**\nMore fin area improves heat transfer.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How do cowl flaps influence cylinder cooling?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "They change cooling-air exit area and pressure distribution",
+        "They adjust valve lash",
+        "They meter fuel",
+        "They set oil pressure relief"
+      ],
+      "answerIndex": 0,
+      "answerText": "They change cooling-air exit area and pressure distribution",
+      "explanation": "**Why this is correct**\nCowl flaps change the cooling-air exit opening and pressure distribution through the cowling, which changes airflow over the cylinders.\n\n**Engineering principle**\nTheir effect depends on the inlet, baffles, outlet, and aircraft speed; they regulate airflow rather than produce cooling by themselves.\n\n**Memory hook**\nCowl flaps control cooling-air exit flow.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What can cause an air-cooled cylinder to run hotter than the others?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "An empty cabin oxygen bottle",
+        "A correctly installed oil dipstick",
+        "Restricted cooling airflow, mixture imbalance, or abnormal combustion",
+        "A larger propeller spinner only"
+      ],
+      "answerIndex": 2,
+      "answerText": "Restricted cooling airflow, mixture imbalance, or abnormal combustion",
+      "explanation": "**Why this is correct**\nA cylinder may run hotter because cooling air is restricted, mixture is uneven, combustion is abnormal, or an engine component is failing.\n\n**Engineering principle**\nCompare cylinder indications and inspect airflow, mixture distribution, ignition, and engine condition; do not assume one cause.\n\n**Memory hook**\nHot cylinder: check both airflow and combustion.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why should an engine be allowed to warm before high-power operation?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It prevents the starter from disengaging",
+        "It increases rated displacement",
+        "Cold oil circulates less readily and clearances have not reached operating conditions",
+        "Cold operation raises fuel octane"
+      ],
+      "answerIndex": 2,
+      "answerText": "Cold oil circulates less readily and clearances have not reached operating conditions",
+      "explanation": "**Why this is correct**\nAllowing warm-up lets cold, viscous oil circulate more readily and lets engine clearances approach their intended operating condition before high loads are applied.\n\n**Engineering principle**\nFollow the manufacturer warm-up limits; excessive idling can also cause poor temperature control or plug fouling.\n\n**Memory hook**\nWarm the oil before applying high power.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of a pressure-oil passage in a crankshaft?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Deliver oil to bearings and journals through internal drillings",
+        "Carry induction air to the cylinders",
+        "Route exhaust gases",
+        "Control propeller pitch"
+      ],
+      "answerIndex": 0,
+      "answerText": "Deliver oil to bearings and journals through internal drillings",
+      "explanation": "**Why this is correct**\nInternal crankshaft drillings route pressure oil to journals and bearing surfaces. The passages must remain clean so oil reaches the loaded interfaces.\n\n**Engineering principle**\nA blocked passage can starve a bearing even when the main pressure indication appears normal.\n\n**Memory hook**\nDrilled crankshafts deliver oil inside the shaft.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are oil seals installed at rotating shafts?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Meter fuel into the sump",
+        "Hold the piston rings in place",
+        "Limit lubricant leakage while allowing shaft rotation",
+        "Increase crankshaft friction"
+      ],
+      "answerIndex": 2,
+      "answerText": "Limit lubricant leakage while allowing shaft rotation",
+      "explanation": "**Why this is correct**\nA rotating-shaft seal limits lubricant leakage while allowing the shaft to turn. The seal must suit shaft speed, temperature, pressure, and movement.\n\n**Engineering principle**\nA seal controls leakage; it does not eliminate the need for correct lubrication or shaft condition.\n\n**Memory hook**\nSeal the leak path while allowing rotation.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does foaming or aeration in engine oil tend to do?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Raise the fuel pressure",
+        "Improve heat transfer without limit",
+        "Reduce the oil pump’s ability to provide a stable lubricating flow",
+        "Increase oil film strength in every case"
+      ],
+      "answerIndex": 2,
+      "answerText": "Reduce the oil pump’s ability to provide a stable lubricating flow",
+      "explanation": "**Why this is correct**\nAir entrained in foamy oil makes pump delivery less stable and can reduce the effective lubricating flow to bearings.\n\n**Engineering principle**\nAeration can result from low quantity, return-flow issues, or other system faults; follow approved troubleshooting.\n\n**Memory hook**\nFoam makes oil delivery unreliable.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why is oil quantity checked using the aircraft manufacturer’s specified procedure?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The dipstick is always inaccurate",
+        "Oil expands only when the engine runs",
+        "The quantity is set by fuel level",
+        "Oil drains back and system configuration affects the indicated quantity"
+      ],
+      "answerIndex": 3,
+      "answerText": "Oil drains back and system configuration affects the indicated quantity",
+      "explanation": "**Why this is correct**\nOil drains back after shutdown and system configuration affects the dipstick or sight indication. The specified timing and procedure make the quantity reading repeatable.\n\n**Engineering principle**\nA reading taken too soon or in the wrong aircraft attitude can misstate the available oil.\n\n**Memory hook**\nCheck quantity using the prescribed procedure.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of an oil-pressure warning switch?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Measure oil acidity",
+        "Control the propeller governor",
+        "Indicate fuel flow",
+        "Warn when pressure falls below a specified threshold"
+      ],
+      "answerIndex": 3,
+      "answerText": "Warn when pressure falls below a specified threshold",
+      "explanation": "**Why this is correct**\nAn oil-pressure warning switch closes or changes state when pressure crosses its set threshold, activating a warning circuit.\n\n**Engineering principle**\nIt is a threshold warning device, not a calibrated pressure gauge.\n\n**Memory hook**\nSwitch warns at a limit; gauge shows a value.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the function of a propeller governor oil passage in a hydraulically controlled propeller system?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Supply oil to the magnetos",
+        "Meter induction air",
+        "Route oil pressure used to change blade pitch",
+        "Cool the engine cylinders"
+      ],
+      "answerIndex": 2,
+      "answerText": "Route oil pressure used to change blade pitch",
+      "explanation": "**Why this is correct**\nIn a hydraulically controlled propeller, governor oil pressure is routed through passages to move the piston that changes blade angle.\n\n**Engineering principle**\nThe governor regulates RPM by controlling oil flow and pressure to the propeller mechanism.\n\n**Memory hook**\nOil pressure moves the propeller piston.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are oil analysis trends more useful than a single sample alone?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Trends set the engine’s firing order",
+        "Analysis replaces all inspections",
+        "Changes over time can reveal developing wear or contamination",
+        "A single sample cannot contain oil"
+      ],
+      "answerIndex": 2,
+      "answerText": "Changes over time can reveal developing wear or contamination",
+      "explanation": "**Why this is correct**\nA single oil sample shows one condition; a trend reveals whether wear metals or contaminants are increasing over time.\n\n**Engineering principle**\nCompare results with consistent sampling, engine hours, and laboratory limits before deciding that wear is abnormal.\n\n**Memory hook**\nTrend the sample; do not overread one result.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of a cylinder-head temperature indication?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Measure crankshaft twist",
+        "Indicate oil quantity",
+        "Determine valve clearance directly",
+        "Monitor the thermal condition of the cylinder head"
+      ],
+      "answerIndex": 3,
+      "answerText": "Monitor the thermal condition of the cylinder head",
+      "explanation": "**Why this is correct**\nCylinder-head temperature indication monitors the thermal condition near the installed probe. It can reveal overheating during changes in power, mixture, cooling airflow, or combustion.\n\n**Engineering principle**\nThe sensor measures local head temperature, not exhaust-gas temperature or oil temperature.\n\n**Memory hook**\nCHT measures the cylinder head near its probe.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Reciprocating Engine Lubrication and Cooling",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}

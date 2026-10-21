@@ -1,0 +1,711 @@
+{
+  "title": "Propellers and Propeller Control",
+  "questions": [
+    {
+      "question": "To reduce the power output of an engine equipped with a constant-speed propeller and operating near maximum BMEP, the",
+      "questionType": "multiple_choice",
+      "choices": [
+        "manifold pressure is reduced with the throttle control before the RPM is reduced with the propeller control.",
+        "manifold pressure is reduced with the propeller control before the RPM is reduced with the throttle control.",
+        "RPM is reduced with the propeller control before the manifold pressure is reduced with the throttle control.",
+        "the propeller control is moved to a higher RPM setting before reducing manifold pressure."
+      ],
+      "answerIndex": 0,
+      "answerText": "manifold pressure is reduced with the throttle control before the RPM is reduced with the propeller control.",
+      "explanation": "**Why this is correct**\nAt high brake mean effective pressure, reducing RPM first can leave high cylinder pressure and torque demand at low speed. Reduce manifold pressure with the throttle first, then select the lower RPM; this lowers engine loading before slowing the propeller.\n\n**Memory hook:** MP down before RPM down.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Propellers and Propeller Control"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Propeller fluid anti-icing systems generally use which of the following?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Methyl ethyl ketone.",
+        "Isopropyl alcohol.",
+        "Ethyl alcohol.",
+        "Ethylene glycol."
+      ],
+      "answerIndex": 1,
+      "answerText": "Isopropyl alcohol.",
+      "explanation": "**Why this is correct**\nAlcohol systems distribute isopropyl alcohol over the blade to depress the freezing point of water and help prevent ice adhesion. This is a fluid anti-icing method; it differs from electrical blade heating, which uses resistance elements.\n\n**Board tip:** Alcohol is applied to the propeller surface, not mixed into engine fuel.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Propellers and Propeller Control"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is a function of the automatic propeller synchronizing system on multiengine aircraft?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "To control the power output of all engines.",
+        "To control the tip speed of all propellers.",
+        "To control engine RPM and reduce vibration.",
+        "To maintain identical blade angles without changing engine RPM."
+      ],
+      "answerIndex": 2,
+      "answerText": "To control engine RPM and reduce vibration.",
+      "explanation": "**Why this is correct**\nA synchronizing system adjusts propeller RPM relationships to reduce the audible beat or vibration caused by slightly different rotation rates. A synchronizer does not replace each engine's propeller governor or set engine power.\n\n**Memory hook:** Synchronize the beat; governors control each RPM.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Propellers and Propeller Control"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What type of imbalance will cause a two-blade propeller to have a persistent tendency to come to rest in a horizontal position (with the blades parallel to the ground) while being checked on a propeller balancing beam?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Horizontal.",
+        "Harmonic.",
+        "Dynamic.",
+        "Vertical."
+      ],
+      "answerIndex": 3,
+      "answerText": "Vertical.",
+      "explanation": "**Why this is correct**\nWith two blades, a vertical mass imbalance places one blade assembly heavier than the other. The heavy blade tends to rotate downward, so the propeller repeatedly settles with the blades in a horizontal line. This is a static imbalance, not a fore-and-aft imbalance.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Propellers and Propeller Control"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A powerplant using a hydraulically controlled constant-speed propeller is operating within the propeller's constant- speed range at a fixed throttle setting. If the tension of the propeller governor control spring (speeder spring) is reduced by movement of the cockpit propeller control, the propeller blade angle will",
+      "questionType": "multiple_choice",
+      "choices": [
+        "increase, engine manifold pressure will increase, and engine RPM will decrease.",
+        "decrease, engine manifold pressure will increase, and engine RPM will decrease.",
+        "decrease, engine manifold pressure will decrease, and engine RPM will increase.",
+        "increase, engine manifold pressure will decrease, and engine RPM will increase."
+      ],
+      "answerIndex": 0,
+      "answerText": "increase, engine manifold pressure will increase, and engine RPM will decrease.",
+      "explanation": "**Why this is correct**\nWithin the constant-speed range, moving the control toward lower RPM commands coarser pitch. The blades absorb more torque, so engine RPM falls; at fixed throttle, the engine must develop more torque to turn the propeller and manifold pressure rises. The governor changes blade angle to balance the torque and RPM demand.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Propellers and Propeller Control"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The thrust produced by a rotating propeller is a result",
+      "questionType": "multiple_choice",
+      "choices": [
+        "an area of increased pressure in front of the blades and decreased pressure behind them.",
+        "an area of decreased pressure immediately in front of the propeller blades.",
+        "the angle of relative wind and rotational velocity of the propeller.",
+        "an area of low pressure behind the propellerblades."
+      ],
+      "answerIndex": 1,
+      "answerText": "an area of decreased pressure immediately in front of the propeller blades.",
+      "explanation": "**Why this is correct**\nThe rotating blades accelerate air rearward, creating a pressure and momentum change that produces forward thrust. In the elementary pressure description used here, blade action creates a lower-pressure region just ahead of the propeller; the complete momentum explanation is the rearward acceleration of the airflow.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Propellers and Propeller Control"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the primary purpose of the metal tipping which covers the blade tips and extends along the leading edge of each wood propeller blade?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "To increase the longitudinal strength of the blade.",
+        "To increase the lateral strength of the blade.",
+        "To prevent impact damage to the tip and leading edge of the blade.",
+        "To increase the longitudinal strength of the entire blade."
+      ],
+      "answerIndex": 2,
+      "answerText": "To prevent impact damage to the tip and leading edge of the blade.",
+      "explanation": "**Why this is correct**\nMetal tipping protects a wooden blade's vulnerable tip and leading edge from stones, rain, and other impact erosion. It is a wear and impact guard, not a structural repair or an ice-control system.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Propellers and Propeller Control"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The blade angle of a fixed-pitch propeller",
+      "questionType": "multiple_choice",
+      "choices": [
+        "increases in proportion to the distance each section is from the hub.",
+        "is the same at every radial station.",
+        "is greatest at the tip.",
+        "is smallest at the tip."
+      ],
+      "answerIndex": 3,
+      "answerText": "is smallest at the tip.",
+      "explanation": "**Why this is correct**\nBecause the blade tip travels faster than the root, a constant blade angle would give the tip a different effective angle of attack. Fixed-pitch blades are therefore twisted so the geometric blade angle decreases toward the tip; the tip angle is the smallest.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Propellers and Propeller Control"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Repairs of aluminum alloy adjustable pitch propellers are not permitted to be made on which of the following propeller blade areas?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Shank.",
+        "Face.",
+        "Back.",
+        "Tip within the limits specified by the manufacturer."
+      ],
+      "answerIndex": 0,
+      "answerText": "Shank.",
+      "explanation": "**Why this is correct**\nThe shank is the thick blade-root transition where stresses are high and dimensional repairs can compromise strength. Repair limits for adjustable-pitch aluminum blades are especially restrictive there. Follow the propeller manufacturer's approved data; do not infer that a permitted surface dressing applies to the shank.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Propellers and Propeller Control"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the principal advantage of using propeller reduction gears?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "To permit the propeller to turn faster than the engine.",
+        "To enable the engine RPM to be increased with an accompanying increase in power and allow the propeller to remain at a lower, more efficient RPM.",
+        "To enable the engine RPM to be increased with an accompanying increase in propeller RPM.",
+        "To enable the propeller RPM to be increased without an accompanying increase in engine RPM."
+      ],
+      "answerIndex": 1,
+      "answerText": "To enable the engine RPM to be increased with an accompanying increase in power and allow the propeller to remain at a lower, more efficient RPM.",
+      "explanation": "**Why this is correct**\nA reciprocating engine makes useful power at RPM that may be too high for an efficient propeller. Reduction gearing lets the engine turn faster, where it can produce power effectively, while keeping propeller RPM and blade-tip speed lower. This improves the match between engine and propeller.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Propellers and Propeller Control"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The actual power delivered to the propeller of an aircraft engine is called",
+      "questionType": "multiple_choice",
+      "choices": [
+        "indicated horsepower.",
+        "friction horsepower.",
+        "brake horsepower.",
+        "Thrust horsepower."
+      ],
+      "answerIndex": 2,
+      "answerText": "brake horsepower.",
+      "explanation": "**Why this is correct**\nBrake horsepower is the engine's measured shaft output available at its output shaft. Propeller thrust power is the useful rate of work on the aircraft, and is lower after transmission and aerodynamic losses. Do not confuse engine shaft power with thrust.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Propellers and Propeller Control"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following would indicate a general weak-engine condition when operated with a fixed- pitch propeller or test club?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Manifold pressure lower at idle RPM than at sta- tic RPM.",
+        "Lower than normal manifold pressure for any given RPM.",
+        "Higher than normal static RPM at full throttle.",
+        "Lower than normal static RPM, full throttle oper- ation."
+      ],
+      "answerIndex": 3,
+      "answerText": "Lower than normal static RPM, full throttle oper- ation.",
+      "explanation": "**Why this is correct**\nFor a fixed-pitch propeller or test club at full throttle, static RPM is an indicator of the engine's ability to produce power. A lower-than-specified static RPM can indicate weak output, although diagnosis must also consider propeller condition, installation, and test conditions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Propellers and Propeller Control"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "As the pressure is applied during a reciprocating engine compression check using a differential pressure tester, what would a movement of the propeller in the direction of engine rotation indicate?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The piston was positioned past top dead center.",
+        "The piston was still on the intake stroke.",
+        "The piston was on compression stroke.",
+        "The piston was on exhaust stroke."
+      ],
+      "answerIndex": 0,
+      "answerText": "The piston was positioned past top dead center.",
+      "explanation": "**Why this is correct**\nIf air pressure is introduced while the piston is already past top dead center, cylinder pressure can push it in the normal direction of rotation. The resulting propeller movement indicates the piston passed TDC; the check must be performed with the manufacturer's procedure and the propeller treated as hazardous.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Propellers and Propeller Control"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is geometric pitch of a propeller blade?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The theoretical distance the blade would advance in one revolution through a solid medium",
+        "The actual aircraft distance traveled in one minute",
+        "The angle between two blades at rest",
+        "The propeller diameter times rpm"
+      ],
+      "answerIndex": 0,
+      "answerText": "The theoretical distance the blade would advance in one revolution through a solid medium",
+      "explanation": "**Why this is correct**\nGeometric pitch is the ideal distance a blade would advance in one revolution if it moved through a solid medium with no slip. Actual advance through air is smaller. It is a geometric design quantity, not the aircraft's measured distance per revolution.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is propeller slip?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The difference between engine and turbine rpm",
+        "The blade-angle change from feather to reverse",
+        "The difference between static and dynamic balance",
+        "The difference between geometric advance and actual advance"
+      ],
+      "answerIndex": 3,
+      "answerText": "The difference between geometric advance and actual advance",
+      "explanation": "**Why this is correct**\nSlip is the difference between geometric pitch and actual advance per revolution. It represents the shortfall from the ideal solid-medium advance; in normal operation, some slip is necessary for a propeller to develop thrust.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of a constant-speed propeller governor?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Change blade angle to maintain selected rpm as load or airspeed changes",
+        "Maintain a fixed blade angle in all conditions",
+        "Control engine mixture",
+        "Set the ignition timing"
+      ],
+      "answerIndex": 0,
+      "answerText": "Change blade angle to maintain selected rpm as load or airspeed changes",
+      "explanation": "**Why this is correct**\nThe governor senses RPM and changes blade pitch to keep the selected speed as airspeed or propeller load changes. If RPM tends to rise, it coarsens the blade; if RPM tends to fall, it fines the blade, within the governor's operating range.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does feathering a propeller do?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Stops fuel flow to all engines",
+        "Turns the blades to a high angle to reduce drag after an engine failure",
+        "Sets the blades to the finest pitch",
+        "Increases drag for normal cruise"
+      ],
+      "answerIndex": 1,
+      "answerText": "Turns the blades to a high angle to reduce drag after an engine failure",
+      "explanation": "**Why this is correct**\nFeathering rotates the blades toward a very high pitch so a failed engine's propeller presents less frontal drag to the airflow. Feathering is a drag-reduction response; it does not restart or repair the engine.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are propeller blades twisted from root to tip?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The twist prevents all bending",
+        "Tip speed is lower than root speed",
+        "Different radial stations need different blade angles to maintain a useful angle of attack",
+        "The root must produce no thrust"
+      ],
+      "answerIndex": 2,
+      "answerText": "Different radial stations need different blade angles to maintain a useful angle of attack",
+      "explanation": "**Why this is correct**\nBlade rotational speed increases from root to tip, so the relative airflow angle varies along the span. Twist changes the local blade angle to keep each section operating at a useful angle of attack. Without twist, the root and tip would not contribute efficiently at the same time.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does a propeller synchronizer primarily do?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Feather both propellers automatically",
+        "Measure blade tracking",
+        "Match propeller rpm between engines to reduce beat frequency",
+        "Change fuel grade"
+      ],
+      "answerIndex": 2,
+      "answerText": "Match propeller rpm between engines to reduce beat frequency",
+      "explanation": "**Why this is correct**\nA synchronizer adjusts a propeller's RPM to match the reference propeller and reduce the beating sound caused by small RPM differences. Synchronization is separate from feathering and from the governor's task of maintaining the pilot-selected RPM.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why can a propeller reduction gearbox be used with a turbine engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It increases blade diameter without limit",
+        "It eliminates torque",
+        "It replaces the governor",
+        "The turbine can run efficiently at high rpm while the propeller turns more slowly"
+      ],
+      "answerIndex": 3,
+      "answerText": "The turbine can run efficiently at high rpm while the propeller turns more slowly",
+      "explanation": "**Why this is correct**\nA turbine can deliver useful power at high shaft speed, while a propeller is most efficient at a much lower rotational speed. A reduction gearbox reconciles those speeds and limits propeller tip speed, reducing compressibility and noise concerns.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the usual effect of moving a constant-speed propeller control toward a higher rpm setting?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The governor selects a finer blade angle to allow higher rpm",
+        "It selects feather",
+        "It reduces the fuel-air ratio",
+        "It increases gear reduction"
+      ],
+      "answerIndex": 0,
+      "answerText": "The governor selects a finer blade angle to allow higher rpm",
+      "explanation": "**Why this is correct**\nSelecting a higher RPM tells the governor to permit the engine to turn faster. To prevent the increased speed, it reduces blade angle (finer pitch), lowering propeller torque absorption until the selected RPM is reached. This describes operation within the constant-speed range.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A propeller has geometric pitch 2.0 m and turns at 1,200 rpm. What is its ideal pitch speed in m/s?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "24",
+        "2400",
+        "40",
+        "20"
+      ],
+      "answerIndex": 2,
+      "answerText": "40",
+      "explanation": "**Worked solution**\nKnown: pitch = 2.0 m/rev; speed = 1,200 rev/min. Convert RPM to rev/s: 1,200 / 60 = 20 rev/s. Ideal pitch speed = pitch x revolutions per second = 2.0 x 20 = 40 m/s. This assumes no slip.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A propeller with 1.5 m pitch turns at 2,000 rpm. Find ideal advance speed in m/s.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "50",
+        "25",
+        "30",
+        "3000"
+      ],
+      "answerIndex": 0,
+      "answerText": "50",
+      "explanation": "**Worked solution**\nKnown: pitch = 1.5 m/rev; speed = 2,000 rev/min. Convert: 2,000 / 60 = 33.33 rev/s. Ideal advance speed = 1.5 m/rev x 33.33 rev/s = 50 m/s. Units cancel to metres per second; actual aircraft speed is lower when slip is present.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A propeller’s geometric advance is 3.0 m/rev while actual advance is 2.4 m/rev. Find slip as a percentage of geometric pitch.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "25",
+        "80",
+        "0",
+        "20"
+      ],
+      "answerIndex": 3,
+      "answerText": "20",
+      "explanation": "**Worked solution**\nKnown: geometric pitch = 3.0 m/rev; actual advance = 2.4 m/rev. Slip = 3.0 - 2.4 = 0.6 m/rev. Slip percentage = (0.6 / 3.0) x 100 = 20%. The percentage is referenced to geometric pitch.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An engine delivers 100 kW to a propeller, which produces 75 kW useful propulsive power. Find propeller efficiency.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.33",
+        "75",
+        "0.75",
+        "0.25"
+      ],
+      "answerIndex": 2,
+      "answerText": "0.75",
+      "explanation": "**Worked solution**\nPropeller efficiency = useful propulsive power / shaft input power = 75 kW / 100 kW = 0.75, or 75%. Both powers use the same units, so the units cancel. The remaining 25% is not converted into useful propulsive power under these conditions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A propeller absorbs 80 kW at 1,600 rpm. Find torque in N·m.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "954.93",
+        "128000",
+        "477.46",
+        "238.73"
+      ],
+      "answerIndex": 2,
+      "answerText": "477.46",
+      "explanation": "**Worked solution**\nKnown: power = 80 kW = 80,000 W; RPM = 1,600 rev/min. Angular speed omega = 2 pi x (1,600 / 60) = 167.55 rad/s. Torque Q = P / omega = 80,000 / 167.55 = 477.5 N m. This uses shaft power P = Q omega.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A propeller advances 2.5 m per revolution at 1,440 rpm. Find ideal advance speed in m/s.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "3600",
+        "60",
+        "36",
+        "40"
+      ],
+      "answerIndex": 1,
+      "answerText": "60",
+      "explanation": "**Worked solution**\nKnown: pitch = 2.5 m/rev; RPM = 1,440 rev/min. Revolutions per second = 1,440 / 60 = 24 rev/s. Ideal advance speed = 2.5 x 24 = 60 m/s, assuming zero slip.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A propeller’s ideal speed is 70 m/s but its actual advance speed is 56 m/s. Find slip percent.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "14",
+        "25",
+        "80",
+        "20"
+      ],
+      "answerIndex": 3,
+      "answerText": "20",
+      "explanation": "**Worked solution**\nSlip speed = ideal speed - actual speed = 70 - 56 = 14 m/s. Slip percentage = (14 / 70) x 100 = 20%. The actual advance is 80% of the ideal geometric advance.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A 60 kW shaft input produces 42 kW useful propulsive power. Find propeller efficiency.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.7",
+        "0.3",
+        "1.4",
+        "70"
+      ],
+      "answerIndex": 0,
+      "answerText": "0.7",
+      "explanation": "**Worked solution**\nEfficiency = useful propulsive power / shaft input = 42 kW / 60 kW = 0.70, or 70%. The ratio is dimensionless because both quantities are power. The difference, 18 kW, represents power not appearing as useful propulsive power.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Propellers and Propeller Control",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of camber on a propeller blade section?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It helps create an aerodynamic pressure difference that produces blade lift and thrust.",
+        "It prevents the blade from rotating in the hub.",
+        "It sets engine compression ratio.",
+        "It removes centrifugal force from the blade."
+      ],
+      "answerIndex": 0,
+      "answerText": "It helps create an aerodynamic pressure difference that produces blade lift and thrust.",
+      "explanation": "A propeller blade is an airfoil. Its cambered section develops aerodynamic force with a component in the thrust direction.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Propellers and Propeller Control"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}

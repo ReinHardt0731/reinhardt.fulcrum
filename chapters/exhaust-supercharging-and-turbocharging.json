@@ -1,0 +1,715 @@
+{
+  "title": "Exhaust, Supercharging, and Turbocharging",
+  "questions": [
+    {
+      "question": "Compression ratio is the ratio between the",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Combustion chamber pressure on the combustion stroke and on the exhaust stroke.",
+        "Cylinder volume with piston at bottom dead center and at top dead center.",
+        "Piston travel on the compression stroke and on the intake stroke.",
+        "Cylinder pressure at bottom dead center divided by pressure at top dead center."
+      ],
+      "answerIndex": 1,
+      "answerText": "Cylinder volume with piston at bottom dead center and at top dead center.",
+      "explanation": "**Why this is correct**\nVolume is an extensive thermodynamic property: it scales with the amount of matter. If 'bulk property' is being used to mean a macroscopic/extensive property, volume is in fact a bulk property; the question may instead intend an intensive-property contrast. The wording needs clarification before scoring.\n\n**Engineering principle**\nVolume is extensive; temperature and pressure are intensive. 'Bulk property' is not a precise synonym for 'not extensive' in standard thermodynamics usage.\n\n💡 **Memory hook:** Double the system amount → double the volume (at same state per unit mass).\n\n🎯 **Board tip:** Check the source’s definition of 'bulk property'; as written, the keyed item is ambiguous.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Exhaust, Supercharging, and Turbocharging"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Excessive valve clearances will cause the duration of valve opening to",
+      "questionType": "multiple_choice",
+      "choices": [
+        "decrease for intake valves and increase for exhaust valves.",
+        "increase for both intake and exhaust valves.",
+        "decrease for both intake and exhaust valves.",
+        "leave the valve-opening duration unchanged."
+      ],
+      "answerIndex": 2,
+      "answerText": "decrease for both intake and exhaust valves.",
+      "explanation": "**Why this is correct**\nExcessive valve lash means the cam must take up more clearance before moving the valve, so opening occurs later and closing earlier. This shortens open duration and usually reduces lift.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Exhaust, Supercharging, and Turbocharging"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Most exhaust system failures result from thermal fatigue cracking in the areas of stress concentration. This condition is usually caused by",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the low exhaust-gas pressure encountered during cruise.",
+        "the drastic temperature change which is encountered at altitude.",
+        "improper welding techniques during manufacture.",
+        "the high temperatures at which the exhaust system operates."
+      ],
+      "answerIndex": 3,
+      "answerText": "the high temperatures at which the exhaust system operates.",
+      "explanation": "**Why this is correct**\nExhaust components experience repeated thermal cycles, vibration, and stress concentration at bends, joints, and supports. Thermal fatigue initiates cracks at those locations; inspect them closely.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Exhaust, Supercharging, and Turbocharging"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "On which strokes are both valves on a four-stroke cycle reciprocating engine open?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Exhaust and intake.",
+        "compression and power.",
+        "Power and exhaust.",
+        "Intake and compression."
+      ],
+      "answerIndex": 0,
+      "answerText": "Exhaust and intake.",
+      "explanation": "**Why this is correct**\nDuring overlap near the exhaust/intake transition, both valves are briefly off their seats. This helps scavenge exhaust and fill the cylinder; it is measured in crankshaft degrees.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Exhaust, Supercharging, and Turbocharging"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which statement is correct regarding a four-stroke cycle aircraft engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The intake valve closes on the intake stroke.",
+        "The intake valve closes on the compression stroke.",
+        "The intake valve closes on the exhaust stroke.",
+        "The exhaust valve opens on the exhaust stroke."
+      ],
+      "answerIndex": 1,
+      "answerText": "The intake valve closes on the compression stroke.",
+      "explanation": "**Why this is correct**\nThe intake valve closes after the piston passes bottom dead center and begins compression. The incoming charge continues moving into the cylinder, so the valve closes after BDC.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Exhaust, Supercharging, and Turbocharging"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Valve overlap is defined as the number of degrees of crankshaft travel",
+      "questionType": "multiple_choice",
+      "choices": [
+        "only while the intake valve is open.",
+        "during which both valves are on their seats.",
+        "during which both valves are off their seats.",
+        "between the closing of the intake valve and the opening of the exhaust valve."
+      ],
+      "answerIndex": 2,
+      "answerText": "during which both valves are off their seats.",
+      "explanation": "**Why this is correct**\nValve overlap is the crankshaft interval around the exhaust/intake transition when both valves are off their seats. It is an angular interval, not a time or lift value.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Exhaust, Supercharging, and Turbocharging"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "If the exhaust valve of a four-stroke cycle engine is closed and the intake valve is just closed, the piston is on the",
+      "questionType": "multiple_choice",
+      "choices": [
+        "exhaust stroke.",
+        "intake stroke.",
+        "power stroke.",
+        "compression stroke."
+      ],
+      "answerIndex": 3,
+      "answerText": "compression stroke.",
+      "explanation": "**Why this is correct**\nWith intake and exhaust valves closed and the piston rising after the intake valve closes, the charge is being compressed. That is the compression stroke.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Exhaust, Supercharging, and Turbocharging"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following will be caused by excessive valve clearance of a cylinder on a reciprocating aircraft engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Reduced valve overlap period.",
+        "Intake and exhaust valves will open early and close late.",
+        "A power increase by shortening the exhaust event.",
+        "Increased valve overlap period."
+      ],
+      "answerIndex": 0,
+      "answerText": "Reduced valve overlap period.",
+      "explanation": "**Why this is correct**\nExcessive clearance delays valve opening and advances closing, reducing the period both valves are off their seats. This shortens overlap and can reduce scavenging and volumetric efficiency.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Exhaust, Supercharging, and Turbocharging"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "To what altitude will a turbocharged engine maintain sea level pressure?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Absolute altitude",
+        "Critical altitude",
+        "Service ceiling",
+        "Pressure altitude"
+      ],
+      "answerIndex": 1,
+      "answerText": "Critical altitude",
+      "explanation": "**Why this is correct**\nCritical altitude is the highest altitude at which the turbocharger can maintain the specified sea-level manifold pressure under its limits. Above it, manifold pressure begins to fall.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Exhaust, Supercharging, and Turbocharging"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "One cause of afterburning in an aircraft engine is _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "a sticking intake valve",
+        "a sticking exhaust valve",
+        "an excessively lean mixture",
+        "an excessively rich mixture"
+      ],
+      "answerIndex": 3,
+      "answerText": "an excessively rich mixture",
+      "explanation": "**Why this is correct**\nThe keyed phrase afterburning is ambiguous in a piston-engine context. In a reciprocating engine, an excessively rich mixture can leave unburned fuel that ignites in the exhaust (afterfiring). A turbine-engine afterburner is a separate, intentional thrust-augmentation system.\n\n**Engineering principle**\nThe event's location and engine type distinguish exhaust afterfire from a turbine afterburner.\n\n**Memory hook:** Piston exhaust afterfire is unintended; turbine afterburning is designed.\n\n**Board tip:** Confirm which engine and definition the source intends before scoring this terminology.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Exhaust, Supercharging, and Turbocharging"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of a wastegate in a turbocharged piston-engine installation?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Control oil-cooler flow",
+        "Change ignition-plug reach",
+        "Regulate exhaust gas flow through the turbine and control boost",
+        "Meter fuel to the cylinders"
+      ],
+      "answerIndex": 2,
+      "answerText": "Regulate exhaust gas flow through the turbine and control boost",
+      "explanation": "**Why this is correct**\nThe wastegate meters exhaust flow through the turbine. Opening it bypasses exhaust energy and reduces boost; closing it directs more gas through the turbine to increase compressor output within limits.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What drives the compressor of an exhaust-driven turbocharger?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A turbine powered by engine exhaust gas",
+        "The starter motor continuously",
+        "The oil pump",
+        "A belt from the propeller hub only"
+      ],
+      "answerIndex": 0,
+      "answerText": "A turbine powered by engine exhaust gas",
+      "explanation": "**Why this is correct**\nExhaust gas turns the turbocharger turbine, which is mechanically coupled by a shaft to the intake compressor. Exhaust energy therefore supplies compressor drive.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of a supercharger?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Reduce intake air mass",
+        "Cool engine oil",
+        "Open the exhaust valve",
+        "Raise induction-air pressure above the pressure available from normal aspiration"
+      ],
+      "answerIndex": 3,
+      "answerText": "Raise induction-air pressure above the pressure available from normal aspiration",
+      "explanation": "**Why this is correct**\nA supercharger raises induction pressure so the cylinders receive more air mass than ambient pressure alone would provide. It can offset altitude power loss or increase charge density.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is a principal difference between a mechanically driven supercharger and an exhaust turbocharger?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The turbocharger has no compressor",
+        "The supercharger uses no induction air",
+        "The two terms always describe an identical drive source",
+        "The supercharger is driven mechanically by the engine; the turbocharger uses exhaust energy"
+      ],
+      "answerIndex": 3,
+      "answerText": "The supercharger is driven mechanically by the engine; the turbocharger uses exhaust energy",
+      "explanation": "**Why this is correct**\nA mechanically driven supercharger is powered from the engine crankshaft. An exhaust turbocharger uses exhaust gas to drive a turbine connected to its compressor, recovering exhaust energy.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why can excessive turbocharger boost damage a piston engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It lowers air density to zero",
+        "It stops oil circulation by definition",
+        "It reduces the fuel-air ratio automatically",
+        "It can raise cylinder pressure and temperature beyond approved limits"
+      ],
+      "answerIndex": 3,
+      "answerText": "It can raise cylinder pressure and temperature beyond approved limits",
+      "explanation": "**Why this is correct**\nExcess boost raises charge density, cylinder pressure, and temperature. Beyond approved limits this can cause detonation or excessive mechanical and thermal stress.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does a pressure controller do in a turbocharger system?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Sets cylinder bore",
+        "Controls magneto grounding",
+        "Schedules wastegate operation to control manifold pressure",
+        "Changes propeller blade material"
+      ],
+      "answerIndex": 2,
+      "answerText": "Schedules wastegate operation to control manifold pressure",
+      "explanation": "**Why this is correct**\nA pressure controller schedules wastegate position to maintain commanded manifold pressure within limits. It controls boost through exhaust flow, rather than changing ignition timing or fuel mixture directly.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of an intercooler or aftercooler in a boosted induction system?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Remove heat from compressed air and increase its density",
+        "Heat fuel to its flash point",
+        "Increase exhaust back pressure",
+        "Control valve lash"
+      ],
+      "answerIndex": 0,
+      "answerText": "Remove heat from compressed air and increase its density",
+      "explanation": "**Why this is correct**\nCompressed induction air is hot. An intercooler/aftercooler removes heat, increasing air density for a given pressure and reducing thermal stress and detonation tendency.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why can a turbocharged engine maintain higher manifold pressure at altitude than a normally aspirated engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Its cylinders grow larger at altitude",
+        "The exhaust valve remains open",
+        "Its fuel has more oxygen",
+        "The compressor raises intake pressure using exhaust energy"
+      ],
+      "answerIndex": 3,
+      "answerText": "The compressor raises intake pressure using exhaust energy",
+      "explanation": "**Why this is correct**\nGas-turbine components condition the flow in sequence. The compressor raises pressure; the diffuser slows air and converts velocity to static pressure before combustion; the combustor adds heat; the turbine extracts work; and the nozzle accelerates exhaust for thrust.\n\n**Engineering principle**\nA rotor adds energy to the flow; a stator redirects and diffuses it. Nozzle guide vanes accelerate and direct gas into the turbine rotor. Compressor bleed or variable vanes help maintain stable operation away from design conditions.\n\n💡 **Memory hook:** Compressor raises pressure; diffuser slows flow; nozzle speeds exhaust.\n\n🎯 **Board tip:** Track whether the question asks about pressure rise, velocity change, or flow direction.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What can an exhaust leak near a turbine inlet cause?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Higher cylinder displacement",
+        "A lower compression ratio in every cylinder",
+        "Improved turbocharger response without limit",
+        "Loss of turbine-driving energy and local overheating or damage"
+      ],
+      "answerIndex": 3,
+      "answerText": "Loss of turbine-driving energy and local overheating or damage",
+      "explanation": "**Why this is correct**\nThermodynamic questions depend on the system boundary, process constraint, and sign convention. Apply conservation of energy and the ideal-gas/process relation that matches the stated condition; use absolute temperature and absolute pressure in gas-law ratios.\n\n**Engineering principle**\nAdiabatic means no heat transfer; isentropic additionally requires reversibility. Specific heat at constant pressure differs from constant volume, and work done by a system has the opposite sign from work done on it.\n\n💡 **Memory hook:** Name the process before choosing the equation.\n\n🎯 **Board tip:** Check absolute versus gauge pressure and state the work sign convention.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are exhaust-system joints and supports inspected for cracks?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Thermal cycling and vibration can initiate fatigue cracks",
+        "Cracks increase oil viscosity",
+        "They control the fuel metering pressure",
+        "They set propeller pitch"
+      ],
+      "answerIndex": 0,
+      "answerText": "Thermal cycling and vibration can initiate fatigue cracks",
+      "explanation": "**Why this is correct**\nExhaust components experience high temperature gradients and repeated heating/cooling, while engine vibration adds cyclic mechanical stress. Stress concentrations at joints, welds, and supports can therefore initiate fatigue cracks.\n\n**Engineering principle**\nThermal fatigue arises from repeated temperature-driven strain; vibration fatigue comes from repeated mechanical loading. Both can act together.\n\n💡 **Memory hook:** Heat cycles plus vibration → fatigue risk.\n\n🎯 **Board tip:** Inspect attachment points and hot spots for cracks, leakage, and fretting.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is exhaust backfire in a reciprocating engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Combustion or unburned mixture ignites in the induction system",
+        "Oil burns in the sump",
+        "The propeller rotates backward",
+        "Fuel vapor condenses in the tank"
+      ],
+      "answerIndex": 0,
+      "answerText": "Combustion or unburned mixture ignites in the induction system",
+      "explanation": "**Why this is correct**\nA reciprocating-engine exhaust backfire is combustion that propagates backward into the induction system, often after an abnormal mixture or valve/timing condition. The stored answer describes that induction-system event rather than an exhaust event.\n\n**Engineering principle**\nAn intake backfire is heard or observed in the induction path; afterfiring is combustion in the exhaust after the charge leaves the cylinder.\n\n**Memory hook:** Backfire into intake; afterfire in exhaust.\n\n**Board tip**\nThe question's phrase exhaust backfire conflicts with the keyed induction-system definition; verify the original wording.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is afterfiring in the exhaust system?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The carburetor ices over",
+        "Oil pressure rises above the limit",
+        "Unburned fuel-air mixture ignites in the exhaust after leaving the cylinder",
+        "The starter engages after shutdown"
+      ],
+      "answerIndex": 2,
+      "answerText": "Unburned fuel-air mixture ignites in the exhaust after leaving the cylinder",
+      "explanation": "**Why this is correct**\nAfterfiring is continued or delayed combustion in the exhaust system after the charge has left the cylinder. Unburned fuel-air mixture can ignite in hot exhaust gases.\n\n**Engineering principle**\nThis differs from an induction backfire, which propagates into the intake system, and from a turbine afterburner, which is a designed thrust-augmentation device.\n\n**Memory hook:** Afterfire occurs after the cylinder, in the exhaust.\n\n**Board tip:** Identify where combustion occurs before naming the event.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A turbocharger compressor raises absolute inlet pressure from 60 kPa to 150 kPa. Find compressor pressure ratio.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "2.5",
+        "0.4",
+        "90",
+        "210"
+      ],
+      "answerIndex": 0,
+      "answerText": "2.5",
+      "explanation": "**Worked solution**\nCompressor pressure ratio = discharge absolute pressure/inlet absolute pressure = 150 kPa/60 kPa = 2.5. The kPa units cancel; use absolute pressures.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A turbo system has 80 kPa absolute inlet pressure and 160 kPa absolute manifold pressure. Find pressure ratio.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "80",
+        "240",
+        "2",
+        "0"
+      ],
+      "answerIndex": 2,
+      "answerText": "2",
+      "explanation": "**Worked solution**\nPressure ratio = 160 kPa absolute/80 kPa absolute = 2. The compressor doubles inlet absolute pressure.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A normally aspirated engine takes in air at 90 kPa absolute while a turbocharger supplies 135 kPa absolute. Find pressure ratio.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "225",
+        "1.5",
+        "0.7",
+        "45"
+      ],
+      "answerIndex": 1,
+      "answerText": "1.5",
+      "explanation": "**Worked solution**\nPressure ratio = 135 kPa absolute/90 kPa absolute = 1.5. The result is dimensionless; do not use gauge pressure in a ratio.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A turbocharger increases inlet pressure from 70 kPa to 140 kPa absolute. Find the pressure ratio.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "210",
+        "2",
+        "0",
+        "70"
+      ],
+      "answerIndex": 1,
+      "answerText": "2",
+      "explanation": "**Worked solution**\nPressure ratio = 140 kPa absolute/70 kPa absolute = 2. Always divide outlet absolute pressure by inlet absolute pressure.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A compressor receives air at 100 kPa and delivers it at 180 kPa absolute. What is the pressure ratio?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "280",
+        "1.8",
+        "0.6",
+        "80"
+      ],
+      "answerIndex": 1,
+      "answerText": "1.8",
+      "explanation": "**Worked solution**\nCompressor pressure ratio = 180 kPa/100 kPa = 1.8. Both pressures are absolute, so the ratio is valid and unitless.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Exhaust gas transfers 12 kJ of energy per second to a turbine. How much energy is transferred in 5 seconds?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "120",
+        "60",
+        "2",
+        "17"
+      ],
+      "answerIndex": 1,
+      "answerText": "60",
+      "explanation": "**Worked solution**\nPower is energy per time: 12 kJ/s. In 5 s, transferred energy = 12 kJ/s x 5 s = 60 kJ; seconds cancel.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A turbocharger shaft turns at 90,000 rpm. How many revolutions does it make in 2 seconds?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1500",
+        "45000",
+        "180000",
+        "3000"
+      ],
+      "answerIndex": 3,
+      "answerText": "3000",
+      "explanation": "**Worked solution**\n90,000 rev/min / 60 = 1,500 rev/s. Over 2 s, revolutions = 1,500 x 2 = 3,000 rev.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A controller limits manifold pressure to 40 inHg absolute. The sensed pressure is 36 inHg. How far below the limit is it?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1",
+        "36",
+        "76",
+        "4"
+      ],
+      "answerIndex": 3,
+      "answerText": "4",
+      "explanation": "**Worked solution**\nPressure margin below the limit = 40 inHg - 36 inHg = 4 inHg. Both readings are absolute pressures, so subtract directly.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Exhaust, Supercharging, and Turbocharging",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}

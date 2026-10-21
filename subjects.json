@@ -604,55 +604,55 @@
         },
         {
           "title": "Powerplant Fundamentals, Nomenclature, and Installation",
-          "file": "chapters/powerplant-mock-fundamentals-installation.json"
+          "file": "chapters/powerplant-fundamentals-nomenclature-and-installation.json"
         },
         {
           "title": "Reciprocating Engine Operation and Construction",
-          "file": "chapters/powerplant-mock-reciprocating-engine-operation-construction.json"
+          "file": "chapters/reciprocating-engine-operation-and-construction.json"
         },
         {
           "title": "Reciprocating Induction, Carburetion, and Fuel Metering",
-          "file": "chapters/powerplant-mock-reciprocating-induction-carburetion-fuel-metering.json"
+          "file": "chapters/reciprocating-induction-carburetion-and-fuel-metering.json"
         },
         {
           "title": "Ignition, Starting, and Electrical Systems",
-          "file": "chapters/powerplant-mock-ignition-starting-electrical-systems.json"
+          "file": "chapters/ignition-starting-and-electrical-systems.json"
         },
         {
           "title": "Reciprocating Engine Lubrication and Cooling",
-          "file": "chapters/powerplant-mock-reciprocating-lubrication-cooling.json"
+          "file": "chapters/reciprocating-engine-lubrication-and-cooling.json"
         },
         {
           "title": "Exhaust, Supercharging, and Turbocharging",
-          "file": "chapters/powerplant-mock-exhaust-supercharging-turbocharging.json"
+          "file": "chapters/exhaust-supercharging-and-turbocharging.json"
         },
         {
           "title": "Gas Turbine Theory and Engine Types",
-          "file": "chapters/powerplant-mock-gas-turbine-theory-engine-types.json"
+          "file": "chapters/gas-turbine-theory-and-engine-types.json"
         },
         {
           "title": "Gas Turbine Components and Operation",
-          "file": "chapters/powerplant-mock-gas-turbine-components-operation.json"
+          "file": "chapters/gas-turbine-components-and-operation.json"
         },
         {
           "title": "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems",
-          "file": "chapters/powerplant-mock-gas-turbine-systems.json"
+          "file": "chapters/gas-turbine-fuel-control-starting-ignition-lubrication-and-anti-icing-systems.json"
         },
         {
           "title": "Propellers and Propeller Control",
-          "file": "chapters/powerplant-mock-propellers-control.json"
+          "file": "chapters/propellers-and-propeller-control.json"
         },
         {
           "title": "Thermodynamics, Engine Cycles, Performance, and Calculations",
-          "file": "chapters/powerplant-mock-thermodynamics-engine-performance-calculations.json"
+          "file": "chapters/thermodynamics-engine-cycles-performance-and-calculations.json"
         },
         {
           "title": "Inspection, Troubleshooting, Maintenance, and Overhaul",
-          "file": "chapters/powerplant-mock-maintenance-troubleshooting-overhaul.json"
+          "file": "chapters/inspection-troubleshooting-maintenance-and-overhaul.json"
         },
         {
           "title": "Starting and Ignition Test",
-          "file": "chapters/powerplant-starting-ignition-test.json"
+          "file": "chapters/starting-and-ignition-test.json"
         },
         {
           "title": "Volare - Airplane Systems",
@@ -170236,461 +170236,691 @@
       "title": "Thermodynamics",
       "questions": [
         {
-          "question": "Which aircraft screw is primarily intended for fastening relatively light-duty metal parts together using tapped holes or nuts?",
+          "question": "Two systems are each in thermal equilibrium with a third system. What does the zeroth law establish?",
           "questionType": "multiple_choice",
           "choices": [
-            "Structural Screw",
-            "Machine Screw",
-            "Set Screw",
-            "Wood Screw"
-          ],
-          "answerIndex": 1,
-          "answerText": "Machine Screw",
-          "explanation": "Machine screws are designed for fastening relatively light-duty metal components such as inspection covers, instrument panels, and electrical equipment. They are commonly installed into tapped holes or used with nuts.\n\nDifferentiate Similar Concepts:\n• Machine Screw → Light-duty fastening.\n• Structural Screw → Structural applications.\n\n💡 Memory Hook:\nMachine = Metal.\n\n🎯 Board Tip:\nMachine screws are intended for light-duty applications and should not be substituted for aircraft bolts in primary structures.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which aircraft screw is approved for certain structural applications and may replace an aircraft bolt where specified by the manufacturer?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Machine Screw",
-            "Wood Screw",
-            "Structural Screw",
-            "Set Screw"
-          ],
-          "answerIndex": 2,
-          "answerText": "Structural Screw",
-          "explanation": "Structural screws are high-strength aircraft fasteners approved for specific structural applications. They may replace certain aircraft bolts only when specified in approved maintenance or manufacturer's data.\n\nDifferentiate Similar Concepts:\n• Structural Screw → Structural fastening.\n• Machine Screw → Light-duty fastening.\n\n💡 Memory Hook:\nStructural = Strength.\n\n🎯 Board Tip:\nNever substitute a machine screw for a structural screw simply because they appear similar.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which screw is designed primarily to prevent relative movement between a shaft and a mounted component such as a gear, collar, or pulley?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Machine Screw",
-            "Socket Screw",
-            "Set Screw",
-            "Thread-Cutting Screw"
-          ],
-          "answerIndex": 2,
-          "answerText": "Set Screw",
-          "explanation": "A set screw secures one component to another by bearing directly against the shaft. It is commonly used to lock gears, collars, and pulleys in position.\n\nDifferentiate Similar Concepts:\n• Set Screw → Shaft locking.\n• Machine Screw → Fastens separate components.\n\n💡 Memory Hook:\nSet = Set it on the shaft.\n\n🎯 Board Tip:\nA set screw locks components together rather than clamping two separate parts.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which aircraft screw is recognized by its internal hexagonal recess and is commonly selected where high tightening torque and limited wrench clearance are involved?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Machine Screw",
-            "Socket Screw",
-            "Wood Screw",
-            "Structural Screw"
-          ],
-          "answerIndex": 1,
-          "answerText": "Socket Screw",
-          "explanation": "Socket screws are driven using an Allen (hex) wrench. Their internal drive design allows the application of relatively high torque while occupying minimal external space.\n\nDifferentiate Similar Concepts:\n• Socket Screw → Internal hex drive.\n• Machine Screw → Conventional screwdriver recess.\n\n💡 Memory Hook:\nSocket = Allen Key.\n\n🎯 Board Tip:\nSocket screws are frequently selected when external wrench clearance is limited.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which aircraft screw is specifically designed to cut or form its own mating threads during installation into an untapped hole?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Machine Screw",
-            "Structural Screw",
-            "Thread-Cutting Screw",
-            "Set Screw"
-          ],
-          "answerIndex": 2,
-          "answerText": "Thread-Cutting Screw",
-          "explanation": "Thread-cutting screws are manufactured with cutting edges that create or form threads during installation, eliminating the need for a pre-tapped hole in many applications.\n\nDifferentiate Similar Concepts:\n• Thread-Cutting Screw → Creates threads.\n• Machine Screw → Requires existing threads or a nut.\n\n💡 Memory Hook:\nThread-Cutting = Makes its own threads.\n\n🎯 Board Tip:\nIf the stem mentions an untapped hole, consider a thread-cutting screw.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which type of screw is commonly used to fasten inspection plates, instrument panels, and other light-duty aircraft components?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Structural Screw",
-            "Machine Screw",
-            "Set Screw",
-            "Wood Screw"
-          ],
-          "answerIndex": 1,
-          "answerText": "Machine Screw",
-          "explanation": "Machine screws are primarily used for light-duty applications such as instrument panels, access covers, electrical equipment, and inspection plates. They are not intended for heavily loaded primary structures.\n\nDifferentiate Similar Concepts:\n• Machine Screw → Light-duty fastening.\n• Structural Screw → Structural applications.\n\n💡 Memory Hook:\nMachine = Maintenance covers.\n\n🎯 Board Tip:\nInspection covers and instrument panels are classic applications of machine screws.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which type of screw may be used in approved structural applications where specified by the aircraft manufacturer?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Machine Screw",
-            "Structural Screw",
-            "Thread-Cutting Screw",
-            "Set Screw"
-          ],
-          "answerIndex": 1,
-          "answerText": "Structural Screw",
-          "explanation": "Structural screws are high-strength fasteners intended for specific structural applications when approved by the aircraft manufacturer or maintenance data.\n\nDifferentiate Similar Concepts:\n• Structural Screw → Approved structural use.\n• Machine Screw → Light-duty use.\n\n💡 Memory Hook:\nStructural = Strength.\n\n🎯 Board Tip:\nNever substitute a machine screw where a structural screw is specified.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which screw develops its holding action by pressing directly against a shaft rather than clamping two separate parts together?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Machine Screw",
-            "Socket Screw",
-            "Set Screw",
-            "Structural Screw"
-          ],
-          "answerIndex": 2,
-          "answerText": "Set Screw",
-          "explanation": "A set screw secures collars, gears, pulleys, and similar components by pressing directly against the shaft, preventing relative movement.\n\nDifferentiate Similar Concepts:\n• Set Screw → Locks a shaft component.\n• Machine Screw → Clamps separate parts.\n\n💡 Memory Hook:\nSet = Set it on the shaft.\n\n🎯 Board Tip:\nThe phrase 'presses against the shaft' is a classic clue for a set screw.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which screw is preferred when high tightening torque must be applied in an area with limited external wrench clearance?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Machine Screw",
-            "Wood Screw",
-            "Socket Screw",
-            "Thread-Cutting Screw"
-          ],
-          "answerIndex": 2,
-          "answerText": "Socket Screw",
-          "explanation": "Socket screws use an internal hexagonal recess that allows high tightening torque while requiring minimal external clearance.\n\nDifferentiate Similar Concepts:\n• Socket Screw → Internal hex drive.\n• Machine Screw → Conventional screwdriver drive.\n\n💡 Memory Hook:\nAllen Wrench = Socket Screw.\n\n🎯 Board Tip:\nQuestions mentioning confined spaces or limited wrench clearance usually point to a socket screw.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "What is the principal advantage of a thread-cutting screw compared with a standard machine screw?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "It develops greater tensile strength.",
-            "It may be installed without a screwdriver.",
-            "It cuts or forms its own mating threads during installation.",
-            "It requires a cotter pin for locking."
-          ],
-          "answerIndex": 2,
-          "answerText": "It cuts or forms its own mating threads during installation.",
-          "explanation": "Thread-cutting screws eliminate the need for pre-tapped threads by creating or forming their own mating threads as they are installed.\n\nDifferentiate Similar Concepts:\n• Thread-Cutting Screw → Creates threads.\n• Machine Screw → Requires existing threads or a nut.\n\n💡 Memory Hook:\nNo threads? Thread-Cutting Screw.\n\n🎯 Board Tip:\nWhenever the question mentions an untapped hole, think thread-cutting screw.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Why are machine screws generally not used as primary structural fasteners in aircraft?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "They cannot carry tensile loads.",
-            "They are intended primarily for light-duty applications and generally do not have the strength of aircraft bolts or structural screws.",
-            "They are made only from aluminum.",
-            "They cannot be tightened to a specified torque."
-          ],
-          "answerIndex": 1,
-          "answerText": "They are intended primarily for light-duty applications and generally do not have the strength of aircraft bolts or structural screws.",
-          "explanation": "Machine screws are intended for relatively light-duty applications such as inspection covers, instrument panels, and electrical equipment. Primary aircraft structures require approved structural fasteners.\n\nDifferentiate Similar Concepts:\n• Machine Screw → Light-duty.\n• Structural Screw → Structural applications.\n\n💡 Memory Hook:\nMachine = Maintenance.\nStructural = Strength.\n\n🎯 Board Tip:\nIf the stem mentions a primary structural member, eliminate machine screw first.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "A maintenance technician must fasten an inspection cover that is removed frequently during routine servicing. Which fastener is MOST appropriate?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Machine Screw",
-            "Structural Screw",
-            "Set Screw",
-            "Close Tolerance Bolt"
+            "The first two systems are in thermal equilibrium with each other.",
+            "The systems contain equal amounts of internal energy.",
+            "No heat can ever flow between any of the three systems.",
+            "Their pressures and volumes must also be equal."
           ],
           "answerIndex": 0,
-          "answerText": "Machine Screw",
-          "explanation": "Machine screws are commonly used for removable light-duty components such as inspection panels, access covers, and instrument panels where repeated removal is expected.\n\nDifferentiate Similar Concepts:\n• Machine Screw → Frequently removed components.\n• Structural Screw → Structural joints.\n\n💡 Memory Hook:\nMaintenance access = Machine screw.\n\n🎯 Board Tip:\nInspection panels are one of the most common applications of machine screws.",
+          "answerText": "The first two systems are in thermal equilibrium with each other.",
+          "explanation": "Thermal equilibrium is transitive: if each system is in equilibrium with the same third system, they share the same temperature.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
           "explanationCard": null,
           "tags": [
-            "Aircraft Hardware",
-            "Recall"
+            "Aircraft Powerplant",
+            "Thermodynamics"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which screw is specifically intended to lock one component to another without using a nut?",
+          "question": "For a closed system using the convention that work done by the system is positive, which expression states the first law?",
           "questionType": "multiple_choice",
           "choices": [
-            "Machine Screw",
-            "Socket Screw",
-            "Set Screw",
-            "Structural Screw"
-          ],
-          "answerIndex": 2,
-          "answerText": "Set Screw",
-          "explanation": "A set screw secures collars, gears, pulleys, and similar components by bearing directly against a shaft rather than clamping separate parts together.\n\nDifferentiate Similar Concepts:\n• Set Screw → Locks a shaft component.\n• Machine Screw → Clamps components together.\n\n💡 Memory Hook:\nSet = Secure the shaft.\n\n🎯 Board Tip:\nThe words 'shaft,' 'gear,' 'pulley,' or 'collar' are classic clues for a set screw.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which screw should be selected when an internal hex drive is preferred because external wrench clearance is limited?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Wood Screw",
-            "Socket Screw",
-            "Machine Screw",
-            "Set Screw"
-          ],
-          "answerIndex": 1,
-          "answerText": "Socket Screw",
-          "explanation": "Socket screws use an internal hexagonal recess that allows installation with an Allen wrench. This design is especially useful in confined spaces where a conventional wrench or screwdriver cannot be easily used.\n\nDifferentiate Similar Concepts:\n• Socket Screw → Internal hex drive.\n• Machine Screw → Conventional drive recess.\n\n💡 Memory Hook:\nAllen key = Socket screw.\n\n🎯 Board Tip:\nQuestions mentioning confined spaces usually point toward socket screws.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "A mechanic needs to install a screw into a metal component that has no pre-cut internal threads and where using a nut is impractical. Which screw is MOST appropriate?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Machine Screw",
-            "Thread-Cutting Screw",
-            "Structural Screw",
-            "Set Screw"
-          ],
-          "answerIndex": 1,
-          "answerText": "Thread-Cutting Screw",
-          "explanation": "Thread-cutting screws are designed to create or form their own mating threads during installation, making them suitable where tapped threads are not available.\n\nDifferentiate Similar Concepts:\n• Thread-Cutting Screw → Creates threads.\n• Machine Screw → Requires existing threads or a nut.\n\n💡 Memory Hook:\nNo threads? Make threads.\n\n🎯 Board Tip:\nUntapped hole = Thread-cutting screw.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which aircraft screw should NOT be substituted for an aircraft bolt in a primary structural joint unless specifically approved by the manufacturer?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Structural Screw",
-            "Machine Screw",
-            "Socket Screw",
-            "Thread-Cutting Screw"
-          ],
-          "answerIndex": 1,
-          "answerText": "Machine Screw",
-          "explanation": "Machine screws are intended for relatively light-duty applications such as instrument panels, inspection covers, and electrical equipment. They should not replace aircraft bolts in primary structural joints unless specifically approved.\n\nDifferentiate Similar Concepts:\n• Machine Screw → Light-duty.\n• Structural Screw → Approved structural applications.\n\n💡 Memory Hook:\nMachine = Maintenance.\nStructural = Strength.\n\n🎯 Board Tip:\nWhen the stem mentions 'primary structure,' eliminate the machine screw first.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "Aircraft Hardware",
-            "Recall"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which aircraft screw requires pre-existing internal threads or the use of a nut for proper installation?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Machine Screw",
-            "Thread-Cutting Screw",
-            "Set Screw",
-            "Wood Screw"
+            "Change in energy equals heat added minus work done by the system.",
+            "Change in energy equals work done minus heat added.",
+            "Change in entropy equals heat added times temperature.",
+            "Change in pressure equals heat added minus volume."
           ],
           "answerIndex": 0,
-          "answerText": "Machine Screw",
-          "explanation": "Machine screws are designed to be installed into tapped holes or used with nuts. Unlike thread-cutting screws, they do not create their own mating threads.\n\nDifferentiate Similar Concepts:\n• Machine Screw → Existing threads required.\n• Thread-Cutting Screw → Creates threads.\n\n💡 Memory Hook:\nMachine needs matching threads.\n\n🎯 Board Tip:\nIf the hole is already tapped, think machine screw.",
+          "answerText": "Change in energy equals heat added minus work done by the system.",
+          "explanation": "The first law is energy conservation. With this sign convention, ?E = Q ? W.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
           "explanationCard": null,
           "tags": [
-            "Aircraft Hardware",
-            "Recall"
+            "Aircraft Powerplant",
+            "Thermodynamics"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "An aircraft mechanic must secure a gear to a shaft without clamping two separate structural members together. Which screw is most appropriate?",
+          "question": "What does the second law say about the entropy of an isolated system during a spontaneous process?",
           "questionType": "multiple_choice",
           "choices": [
-            "Structural Screw",
-            "Machine Screw",
-            "Set Screw",
-            "Socket Screw"
+            "It tends to increase.",
+            "It must decrease.",
+            "It remains exactly zero.",
+            "It changes only when the system does shaft work."
           ],
-          "answerIndex": 2,
-          "answerText": "Set Screw",
-          "explanation": "Set screws are intended to lock one component, such as a gear, pulley, or collar, onto a shaft by bearing directly against it rather than clamping separate parts together.\n\nDifferentiate Similar Concepts:\n• Set Screw → Shaft locking.\n• Machine Screw → Fastens separate components.\n\n💡 Memory Hook:\nSet = Secure the shaft.\n\n🎯 Board Tip:\nWords like 'gear,' 'pulley,' 'collar,' and 'shaft' are strong clues for a set screw.",
+          "answerIndex": 0,
+          "answerText": "It tends to increase.",
+          "explanation": "Irreversible spontaneous processes generate entropy; total entropy of an isolated system does not decrease.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
           "explanationCard": null,
           "tags": [
-            "Aircraft Hardware",
-            "Recall"
+            "Aircraft Powerplant",
+            "Thermodynamics"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which statement correctly distinguishes a structural screw from a machine screw?",
+          "question": "Which statement best describes the third law of thermodynamics?",
           "questionType": "multiple_choice",
           "choices": [
-            "A structural screw is designed to cut its own threads during installation.",
-            "A structural screw is approved for certain structural applications, whereas a machine screw is intended primarily for light-duty fastening.",
-            "A structural screw is used only for securing pulleys and collars to shafts.",
-            "A structural screw always requires an Allen wrench for installation."
+            "The entropy of a perfect crystal approaches zero as its temperature approaches absolute zero.",
+            "The internal energy of every gas is zero at room temperature.",
+            "Heat cannot be transferred between objects at different temperatures.",
+            "A heat engine can convert all heat input into work."
           ],
-          "answerIndex": 1,
-          "answerText": "A structural screw is approved for certain structural applications, whereas a machine screw is intended primarily for light-duty fastening.",
-          "explanation": "Structural screws are high-strength fasteners used in approved structural applications. Machine screws are intended for lighter-duty service and should not be substituted for structural fasteners without approval.\n\nDifferentiate Similar Concepts:\n• Structural Screw → Structural use.\n• Machine Screw → Light-duty use.\n\n💡 Memory Hook:\nStructural = Strength.\nMachine = Maintenance.\n\n🎯 Board Tip:\nMany board questions simply compare these two fasteners.",
+          "answerIndex": 0,
+          "answerText": "The entropy of a perfect crystal approaches zero as its temperature approaches absolute zero.",
+          "explanation": "The third law relates the limiting entropy of a perfect crystal to absolute zero.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
           "explanationCard": null,
           "tags": [
-            "Aircraft Hardware",
-            "Recall"
+            "Aircraft Powerplant",
+            "Thermodynamics"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which aircraft screw is specifically designed to eliminate the need for pre-tapped threads by forming or cutting its own mating threads during installation?",
+          "question": "In a flowing gas-turbine stream, what does specific enthalpy account for beyond internal energy?",
           "questionType": "multiple_choice",
           "choices": [
-            "Machine Screw",
-            "Socket Screw",
-            "Set Screw",
-            "Thread-Cutting Screw"
+            "Flow energy associated with pressure acting on the fluid volume.",
+            "The chemical energy of fuel that has not yet been burned.",
+            "The kinetic energy of the aircraft alone.",
+            "The mass of the engine casing."
           ],
-          "answerIndex": 3,
-          "answerText": "Thread-Cutting Screw",
-          "explanation": "Thread-cutting screws have cutting edges that create or form mating threads during installation. This makes them suitable where pre-cut threads are unavailable.\n\nDifferentiate Similar Concepts:\n• Thread-Cutting Screw → Creates threads.\n• Machine Screw → Uses existing threads.\n\n💡 Memory Hook:\nNo threads? Make threads.\n\n🎯 Board Tip:\nWhen the stem mentions an untapped hole, the answer is almost always a thread-cutting screw.",
+          "answerIndex": 0,
+          "answerText": "Flow energy associated with pressure acting on the fluid volume.",
+          "explanation": "Specific enthalpy is h = u + pv; the pv term is flow work per unit mass.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
           "explanationCard": null,
           "tags": [
-            "Aircraft Hardware",
-            "Recall"
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is entropy most useful for describing in an engine process?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Energy dispersal and the degree of irreversibility.",
+            "The total mass of fuel in the tanks.",
+            "The geometric displacement of a piston.",
+            "The engine speed at a fixed throttle setting."
+          ],
+          "answerIndex": 0,
+          "answerText": "Energy dispersal and the degree of irreversibility.",
+          "explanation": "Entropy tracks energy dispersal and is generated by irreversibilities such as friction, turbulence, and finite-temperature heat transfer.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "In an isobaric process, which property remains constant?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Pressure.",
+            "Volume.",
+            "Temperature.",
+            "Entropy."
+          ],
+          "answerIndex": 0,
+          "answerText": "Pressure.",
+          "explanation": "Isobaric means constant pressure; volume and temperature may change.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A gas is heated in a rigid, sealed container. Which process model applies?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Isochoric.",
+            "Isobaric.",
+            "Isothermal.",
+            "Polytropic with index zero."
+          ],
+          "answerIndex": 0,
+          "answerText": "Isochoric.",
+          "explanation": "The rigid container fixes volume, so the process is isochoric. Pressure and temperature rise as energy is added.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "For an ideal gas undergoing an isothermal process, which relationship remains constant?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The product pV.",
+            "The ratio p/V.",
+            "The product pT.",
+            "The sum p + V."
+          ],
+          "answerIndex": 0,
+          "answerText": "The product pV.",
+          "explanation": "For a fixed mass of ideal gas at constant temperature, pV remains constant.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the defining condition of an adiabatic process?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "No heat is transferred across the system boundary.",
+            "The system temperature remains constant.",
+            "The system pressure remains constant.",
+            "The process has no change in volume."
+          ],
+          "answerIndex": 0,
+          "answerText": "No heat is transferred across the system boundary.",
+          "explanation": "Adiabatic means Q = 0. Temperature and pressure can still change.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An isentropic process is best described as:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A reversible adiabatic process.",
+            "An irreversible process at constant pressure.",
+            "A process with constant temperature and volume.",
+            "A process in which all heat is converted to work."
+          ],
+          "answerIndex": 0,
+          "answerText": "A reversible adiabatic process.",
+          "explanation": "An ideal isentropic process is adiabatic and reversible, so entropy remains constant.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which equation describes an ideal-gas polytropic process?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "pV? = constant.",
+            "p + V? = constant.",
+            "pT? = constant.",
+            "V/T? = constant for every gas process."
+          ],
+          "answerIndex": 0,
+          "answerText": "pV? = constant.",
+          "explanation": "The polytropic relation pV? = constant models a broad range of compression and expansion processes.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "For a gas, what is the ratio ? (gamma) commonly defined as?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Specific heat at constant pressure divided by specific heat at constant volume.",
+            "Specific heat at constant volume divided by gas pressure.",
+            "Gas constant divided by temperature.",
+            "Pressure divided by density."
+          ],
+          "answerIndex": 0,
+          "answerText": "Specific heat at constant pressure divided by specific heat at constant volume.",
+          "explanation": "The specific-heat ratio is ? = cp/cv and appears in ideal isentropic gas relations.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What happens to the temperature of an ideal gas during rapid adiabatic compression?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It rises because work is done on the gas.",
+            "It falls because heat leaves the gas.",
+            "It remains constant by definition.",
+            "It becomes independent of pressure."
+          ],
+          "answerIndex": 0,
+          "answerText": "It rises because work is done on the gas.",
+          "explanation": "With negligible heat transfer, compression work increases the gas internal energy and temperature.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During ideal expansion through a turbine, what happens to the gas as it delivers shaft work?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Its enthalpy decreases.",
+            "Its enthalpy must increase.",
+            "Its pressure remains fixed throughout every turbine.",
+            "Its entropy must become negative."
+          ],
+          "answerIndex": 0,
+          "answerText": "Its enthalpy decreases.",
+          "explanation": "The turbine extracts work from the flowing gas, reducing its total enthalpy in the idealized process.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ideal thermodynamic cycle models a gas-turbine engine?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Brayton cycle.",
+            "Otto cycle.",
+            "Diesel cycle.",
+            "Rankine cycle."
+          ],
+          "answerIndex": 0,
+          "answerText": "Brayton cycle.",
+          "explanation": "The Brayton cycle models continuous-flow gas turbines, with compression, constant-pressure heat addition, expansion, and heat rejection.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ideal cycle is commonly used to model a spark-ignition reciprocating engine?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Otto cycle.",
+            "Brayton cycle.",
+            "Rankine cycle.",
+            "Stirling cycle."
+          ],
+          "answerIndex": 0,
+          "answerText": "Otto cycle.",
+          "explanation": "The ideal Otto cycle models spark-ignition engines with constant-volume heat addition and rejection.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "In the ideal Brayton cycle, heat is added at approximately:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Constant pressure.",
+            "Constant volume.",
+            "Constant temperature.",
+            "Constant entropy."
+          ],
+          "answerIndex": 0,
+          "answerText": "Constant pressure.",
+          "explanation": "The ideal Brayton cycle represents combustion as constant-pressure heat addition.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "In the ideal Otto cycle, heat is added at approximately:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Constant volume.",
+            "Constant pressure.",
+            "Constant temperature.",
+            "Constant entropy."
+          ],
+          "answerIndex": 0,
+          "answerText": "Constant volume.",
+          "explanation": "The ideal Otto cycle represents rapid combustion as constant-volume heat addition.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which equation relates pressure, volume, amount of gas, and absolute temperature for an ideal gas?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "pV = nRT.",
+            "pT = nRV.",
+            "p/V = nRT.",
+            "p + V = nRT."
+          ],
+          "answerIndex": 0,
+          "answerText": "pV = nRT.",
+          "explanation": "The ideal-gas equation is pV = nRT, using absolute temperature.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why must absolute temperature be used in ideal-gas and gas-turbine temperature-ratio calculations?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The equations require temperature measured from absolute zero.",
+            "Celsius and Fahrenheit scales have the same zero point.",
+            "Absolute temperature removes the need to know pressure.",
+            "Only absolute temperature can be measured in an engine."
+          ],
+          "answerIndex": 0,
+          "answerText": "The equations require temperature measured from absolute zero.",
+          "explanation": "Thermodynamic ratios and gas laws require an absolute scale such as kelvin or rankine.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does specific heat describe?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Heat required to raise a unit mass of a substance by one degree of temperature.",
+            "Heat released when a unit volume changes pressure.",
+            "Work required to rotate a shaft one revolution.",
+            "The ratio of fuel mass to air mass in a combustor."
+          ],
+          "answerIndex": 0,
+          "answerText": "Heat required to raise a unit mass of a substance by one degree of temperature.",
+          "explanation": "Specific heat is a material property relating heat transfer to temperature change per unit mass.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "For an ideal gas, why is cp greater than cv?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "At constant pressure, some added heat also supplies expansion work.",
+            "At constant volume, the gas does more boundary work.",
+            "Pressure is always greater than volume.",
+            "The gas constant is negative."
+          ],
+          "answerIndex": 0,
+          "answerText": "At constant pressure, some added heat also supplies expansion work.",
+          "explanation": "At constant pressure the gas expands as it warms, so more heat is required for the same temperature rise than at constant volume.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "On a pressure-volume diagram, what does the area under a quasi-static process curve represent?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Boundary work.",
+            "Entropy.",
+            "Specific heat.",
+            "Shaft torque."
+          ],
+          "answerIndex": 0,
+          "answerText": "Boundary work.",
+          "explanation": "Boundary work is W = ?p dV, represented by the area under the p-V curve.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A gas expands at constant pressure from volume V? to V?. What is its boundary work?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "p(V? ? V?).",
+            "V? ? V? divided by p.",
+            "Zero for every constant-pressure process.",
+            "p(V? + V?)."
+          ],
+          "answerIndex": 0,
+          "answerText": "p(V? ? V?).",
+          "explanation": "At constant pressure, integrating p dV gives W = p(V? ? V?).\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "How is the thermal efficiency of a heat engine defined?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Net work output divided by heat supplied.",
+            "Heat rejected divided by net work output.",
+            "Fuel mass divided by air mass.",
+            "Pressure rise divided by temperature rise."
+          ],
+          "answerIndex": 0,
+          "answerText": "Net work output divided by heat supplied.",
+          "explanation": "Thermal efficiency measures the fraction of supplied heat converted into net work.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "For fixed hot- and cold-reservoir temperatures, what does the Carnot limit represent?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The maximum possible thermal efficiency of a heat engine operating between those reservoirs.",
+            "The minimum fuel flow for every actual engine.",
+            "The pressure ratio required for a Brayton cycle.",
+            "The temperature at which all real engines operate."
+          ],
+          "answerIndex": 0,
+          "answerText": "The maximum possible thermal efficiency of a heat engine operating between those reservoirs.",
+          "explanation": "The Carnot efficiency is an upper bound set by the absolute reservoir temperatures; real engines are less efficient.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why is an actual engine cycle less efficient than its ideal reversible model?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Friction, pressure losses, mixing, and finite-temperature heat transfer generate entropy.",
+            "Real engines have no moving parts.",
+            "Actual combustion always occurs at constant temperature.",
+            "The ideal cycle includes fuel leakage."
+          ],
+          "answerIndex": 0,
+          "answerText": "Friction, pressure losses, mixing, and finite-temperature heat transfer generate entropy.",
+          "explanation": "Irreversibilities such as friction and pressure loss reduce the work available from a given heat input.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which three mechanisms can transfer heat?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Conduction, convection, and radiation.",
+            "Compression, expansion, and combustion.",
+            "Pressure, volume, and density.",
+            "Torque, thrust, and drag."
+          ],
+          "answerIndex": 0,
+          "answerText": "Conduction, convection, and radiation.",
+          "explanation": "Heat transfer occurs by conduction, convection, or electromagnetic radiation.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A gas-turbine compressor raises a gas from state 1 to state 2. For an ideal isentropic compression of an ideal gas, which trend is expected?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Pressure and temperature both increase.",
+            "Pressure increases while temperature decreases.",
+            "Both pressure and temperature remain constant.",
+            "Pressure decreases while temperature increases."
+          ],
+          "answerIndex": 0,
+          "answerText": "Pressure and temperature both increase.",
+          "explanation": "An ideal compressor adds work to the gas; isentropic compression raises both pressure and temperature.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Thermodynamics"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
@@ -171029,21 +171259,367 @@
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
+        },
+        {
+          "question": "Which engine dimension is the bore?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The inside diameter of the cylinder.",
+            "The distance the piston travels from top to bottom.",
+            "The distance between adjacent cylinder centers.",
+            "The length of the connecting rod."
+          ],
+          "answerIndex": 0,
+          "answerText": "The inside diameter of the cylinder.",
+          "explanation": "Bore is the cylinder diameter; stroke is piston travel between top and bottom dead center.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "General PowerPlant I"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the stroke of a reciprocating engine cylinder?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The piston travel from top dead center to bottom dead center.",
+            "The cylinder inside diameter.",
+            "The crankshaft speed in revolutions per minute.",
+            "The distance from the propeller flange to the firewall."
+          ],
+          "answerIndex": 0,
+          "answerText": "The piston travel from top dead center to bottom dead center.",
+          "explanation": "Stroke is the distance traveled by the piston between its two dead-center positions.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "General PowerPlant I"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "For a four-cylinder engine, which expression gives total swept displacement?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Four times the swept volume of one cylinder.",
+            "The clearance volume of one cylinder divided by four.",
+            "Bore multiplied by engine rpm.",
+            "Fuel volume per minute times four."
+          ],
+          "answerIndex": 0,
+          "answerText": "Four times the swept volume of one cylinder.",
+          "explanation": "Total displacement is the sum of the swept volumes of all cylinders.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "General PowerPlant I"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does an engine compression ratio compare?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cylinder volume at bottom dead center with volume at top dead center.",
+            "Cylinder pressure with oil pressure.",
+            "Bore with stroke.",
+            "Crankshaft speed with propeller speed."
+          ],
+          "answerIndex": 0,
+          "answerText": "Cylinder volume at bottom dead center with volume at top dead center.",
+          "explanation": "Compression ratio is the maximum cylinder volume divided by the minimum cylinder volume.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "General PowerPlant I"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why must a reciprocating engine have a defined firing order?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To distribute power impulses and loads through the crankshaft in the designed sequence.",
+            "To make every spark plug fire at the same instant.",
+            "To keep all pistons at top dead center together.",
+            "To set the propeller blade angle."
+          ],
+          "answerIndex": 0,
+          "answerText": "To distribute power impulses and loads through the crankshaft in the designed sequence.",
+          "explanation": "The firing order sequences combustion events to provide smooth operation and manage crankshaft loading.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "General PowerPlant I"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does brake horsepower represent?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Power available at the engine output shaft after internal losses.",
+            "The theoretical power released by fuel before engine losses.",
+            "Electrical power used only by the starter.",
+            "The power absorbed by an accessory gearbox alone."
+          ],
+          "answerIndex": 0,
+          "answerText": "Power available at the engine output shaft after internal losses.",
+          "explanation": "Brake horsepower is measured at the output shaft and reflects power remaining after friction and pumping losses.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "General PowerPlant I"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does mean effective pressure provide when comparing reciprocating engines?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A pressure measure representing the work-producing effect over a cycle.",
+            "The instantaneous pressure at the intake manifold only.",
+            "The oil pressure at the main bearing.",
+            "The pressure difference across the propeller."
+          ],
+          "answerIndex": 0,
+          "answerText": "A pressure measure representing the work-producing effect over a cycle.",
+          "explanation": "Mean effective pressure is a notional constant pressure that would produce the same work over the piston stroke.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "General PowerPlant I"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary function of the connecting rod in a reciprocating engine?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Transmit force between the piston and crankshaft.",
+            "Meter fuel into the intake manifold.",
+            "Open and close the exhaust valve directly in every engine design.",
+            "Drive the magneto without a gear train."
+          ],
+          "answerIndex": 0,
+          "answerText": "Transmit force between the piston and crankshaft.",
+          "explanation": "The connecting rod transfers piston force to the crankshaft and transmits crankshaft motion back to the piston.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "General PowerPlant I"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What motion does the crankshaft produce from the pistons in a reciprocating engine?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rotating motion.",
+            "Linear motion only.",
+            "Alternating electrical current.",
+            "Propeller blade feathering motion."
+          ],
+          "answerIndex": 0,
+          "answerText": "Rotating motion.",
+          "explanation": "The crankshaft converts reciprocating piston movement into rotation that can drive a propeller or gearbox.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "General PowerPlant I"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "In a typical four-stroke engine, how many crankshaft revolutions occur during one cylinder operating cycle?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Two.",
+            "One.",
+            "Four.",
+            "Eight."
+          ],
+          "answerIndex": 0,
+          "answerText": "Two.",
+          "explanation": "The intake, compression, power, and exhaust strokes require two crankshaft revolutions.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "General PowerPlant I"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary function of the camshaft and valve train?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Open and close the intake and exhaust valves at the correct times.",
+            "Change the propeller blade angle in flight.",
+            "Supply high voltage to the spark plugs.",
+            "Regulate oil temperature directly."
+          ],
+          "answerIndex": 0,
+          "answerText": "Open and close the intake and exhaust valves at the correct times.",
+          "explanation": "Cam lobes and valve-train components time valve opening and closing relative to crankshaft position.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "General PowerPlant I"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why are multiple cylinders commonly arranged in a radial engine?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To provide several cylinders around a compact crankcase and a short, air-cooled engine package.",
+            "To eliminate the need for a crankshaft.",
+            "To ensure all cylinders fire at the same crank angle.",
+            "To make the engine operate without lubrication."
+          ],
+          "answerIndex": 0,
+          "answerText": "To provide several cylinders around a compact crankcase and a short, air-cooled engine package.",
+          "explanation": "Radial arrangement places cylinders around the crankcase and supports a relatively compact air-cooled design.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "General PowerPlant I"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does a gas-turbine engine spool refer to?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A compressor-turbine assembly connected by a common shaft and rotating together.",
+            "A fuel nozzle and igniter pair.",
+            "A set of propeller blades controlled by a governor.",
+            "The exhaust duct downstream of the turbine."
+          ],
+          "answerIndex": 0,
+          "answerText": "A compressor-turbine assembly connected by a common shaft and rotating together.",
+          "explanation": "A spool is a mechanically connected compressor and turbine assembly; multi-spool engines have independently rotating assemblies.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "General PowerPlant I"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "In a turbofan, what is bypass ratio?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The mass airflow that bypasses the engine core divided by the mass airflow through the core.",
+            "The compressor pressure ratio divided by turbine temperature.",
+            "Fuel flow divided by total thrust.",
+            "Fan diameter divided by propeller diameter."
+          ],
+          "answerIndex": 0,
+          "answerText": "The mass airflow that bypasses the engine core divided by the mass airflow through the core.",
+          "explanation": "Bypass ratio compares bypass-stream airflow with core airflow.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "General PowerPlant I"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which description best fits a turboshaft engine?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It delivers most useful output as shaft power to drive a rotor or other load.",
+            "It produces thrust only through a high-speed exhaust jet.",
+            "It has no compressor or turbine.",
+            "It is a reciprocating engine with a free piston."
+          ],
+          "answerIndex": 0,
+          "answerText": "It delivers most useful output as shaft power to drive a rotor or other load.",
+          "explanation": "A turboshaft is optimized to deliver shaft power, commonly through a reduction gearbox.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "General PowerPlant I"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
         }
       ]
     },
-    "chapters/powerplant-mock-fundamentals-installation.json": {
+    "chapters/powerplant-fundamentals-nomenclature-and-installation.json": {
       "title": "Powerplant Fundamentals, Nomenclature, and Installation",
       "questions": [
         {
           "question": "In addition to fuel quantity, a computerized fuel system (CFS) with a totalizer-indicator provides indication of how many of the following? 1. Fuel flow rate. 2. Fuel used since reset or initial start-up. 3. Fuel time remaining at current power setting. 4. Fuel temperature.",
           "questionType": "multiple_choice",
           "choices": [
-            "Two.",
             "Three.",
-            "Four."
+            "Four.",
+            "One.",
+            "Two."
           ],
-          "answerIndex": 1,
+          "answerIndex": 0,
           "answerText": "Three.",
           "explanation": "**Why this is correct**\nA fuel totalizer combines fuel-flow data with fuel quantity to estimate consumption and endurance. It can display flow rate, fuel used, and time remaining at the current setting; fuel temperature is a separate measurement and is not one of those computed totalizer quantities.\n\n**Engineering principle**\nFuel quantity is the amount aboard; fuel used and time remaining are calculated from flow and the system’s starting quantity.\n\n💡 **Memory hook:** Flow × time = fuel used; usable fuel ÷ flow = time remaining.\n\n🎯 **Board tip:** Separate computed fuel-management data from a direct temperature indication.",
           "explanationImages": [],
@@ -171061,9 +171637,10 @@
           "question": "A red triangle, dot, or diamond mark on an engine instrument face or glass indicates",
           "questionType": "multiple_choice",
           "choices": [
-            "the maximum operating limit for all normal operations.",
+            "the maximum continuous operating limit.",
             "the maximum limit for high transients such as starting.",
-            "a restricted operating range"
+            "a restricted operating range",
+            "the maximum operating limit for all normal operations."
           ],
           "answerIndex": 1,
           "answerText": "the maximum limit for high transients such as starting.",
@@ -171083,11 +171660,12 @@
           "question": "The position of the cowl flaps during normal cruise flight conditions is",
           "questionType": "multiple_choice",
           "choices": [
+            "locked in the takeoff position.",
+            "one half open",
             "closed",
-            "open.",
-            "one half open"
+            "open."
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "answerText": "closed",
           "explanation": "**Why this is correct**\nDuring normal cruise, cowl flaps are generally closed or near closed to reduce drag while maintaining adequate cooling. If temperatures rise, opening them increases cooling airflow at an aerodynamic penalty.",
           "explanationImages": [],
@@ -171105,11 +171683,12 @@
           "question": "Some aircraft engine manufacturers equip their product with choked or taper-ground cylinders in order to",
           "questionType": "multiple_choice",
           "choices": [
-            "provide a straight cylinder bore at operating temperatures.",
             "flex the rings slightly during operation and reduce the possibility of the rings sticking in the grooves.",
-            "increase the compression pressure for starting purposes."
+            "increase the compression pressure for starting purposes.",
+            "allow the piston skirt to expand without regard to the specified cylinder clearance.",
+            "provide a straight cylinder bore at operating temperatures."
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "answerText": "provide a straight cylinder bore at operating temperatures.",
           "explanation": "**Why this is correct**\nA choked or taper-ground cylinder is machined to account for uneven thermal expansion. As the engine reaches operating temperature, the bore becomes closer to the intended straight cylindrical shape and piston-to-wall clearance becomes more uniform.\n\n**Engineering principle**\nCold dimensions are intentionally not the final running geometry; thermal growth is part of the design allowance.\n\n💡 **Memory hook:** Shape cold for the shape wanted hot.\n\n🎯 **Board tip:** The clue is the change from machining temperature to operating temperature.",
           "explanationImages": [],
@@ -171893,18 +172472,19 @@
         }
       ]
     },
-    "chapters/powerplant-mock-reciprocating-engine-operation-construction.json": {
+    "chapters/reciprocating-engine-operation-and-construction.json": {
       "title": "Reciprocating Engine Operation and Construction",
       "questions": [
         {
           "question": "Excessive oil is prevented from accumulating on the cylinder walls of a reciprocating engine by",
           "questionType": "multiple_choice",
           "choices": [
+            "oil control rings on the pistons.",
+            "crankcase pressure forcing oil away from the cylinder wall.",
             "the design shape of the piston skirt.",
-            "internal engine pressure bleeding past the ring grooves.",
-            "oil control rings on the pistons."
+            "internal engine pressure bleeding past the ring grooves."
           ],
-          "answerIndex": 2,
+          "answerIndex": 0,
           "answerText": "oil control rings on the pistons.",
           "explanation": "**Why this is correct**\nOil-control rings meter the cylinder-wall oil film and scrape excess oil away so it returns to the crankcase instead of entering the combustion chamber.\n\n**Engineering principle**\nCompression rings primarily seal combustion pressure; oil rings regulate the wall film.\n\n**Differentiate similar concepts**\nCompression seals; oil ring meters.\n\n**Memory hook**\nCompression seals; oil ring meters.\n\n**Board tip**\nConnect oil consumption and compression symptoms to the correct ring function.",
           "explanationImages": [],
@@ -171921,11 +172501,12 @@
           "question": "After spark plugs from an opposed engine have been serviced, in what position should they be reinstalled?",
           "questionType": "multiple_choice",
           "choices": [
-            "Next in firing order to the one from which they were removed.",
             "Swapped bottom to top.",
-            "Next in firing order to the one from which they were removed and swapped bottom to top."
+            "Next in firing order to the one from which they were removed and swapped bottom to top.",
+            "Next in firing order to the one from which they were removed.",
+            "In the same cylinder positions, with no top-to-bottom swap."
           ],
-          "answerIndex": 2,
+          "answerIndex": 1,
           "answerText": "Next in firing order to the one from which they were removed and swapped bottom to top.",
           "explanation": "**Why this is correct**\nOn an opposed engine, serviceable plugs are installed in the manufacturer's specified firing-order positions and swapped top-to-bottom when directed. This helps distribute deposits and wear between plug positions.\n\n**Engineering principle**\nPlug position affects operating temperature and fouling; preserve cylinder identification and follow the engine manual rather than swapping arbitrarily.\n\n**Memory hook:** Keep firing-order position; rotate top and bottom as specified.\n\n**Board tip:** Follow the exact service instruction for the engine model.",
           "explanationImages": [],
@@ -171943,9 +172524,10 @@
           "question": "A characteristic of dyna-focal engine mounts as applied to aircraft reciprocating engines is that the",
           "questionType": "multiple_choice",
           "choices": [
-            "shock mounts eliminate the torsional flexing of the powerplant.",
             "engine attaches to the shock mounts at the engine's center of gravity.",
-            "shock mounts point toward the engine's center of gravity."
+            "shock mounts are parallel to the engine centerline.",
+            "shock mounts point toward the engine's center of gravity.",
+            "shock mounts eliminate the torsional flexing of the powerplant."
           ],
           "answerIndex": 2,
           "answerText": "shock mounts point toward the engine's center of gravity.",
@@ -171965,11 +172547,12 @@
           "question": "Which statement is true regarding a thermocouple-type cylinder head temperature measuring system?",
           "questionType": "multiple_choice",
           "choices": [
+            "When the master switch is turned on, a thermocouple indicator will move off-scale to the low side.",
+            "The indicator current is determined by the resistance of the thermocouple leads.",
             "The resistance required for cylinder head temperature indicators is measured in farads.",
-            "The voltage output of a thermocouple system is determined by the temperature difference between the two ends of the thermocouple.",
-            "When the master switch is turned on, a thermocouple indicator will move off-scale to the low side."
+            "The voltage output of a thermocouple system is determined by the temperature difference between the two ends of the thermocouple."
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "answerText": "The voltage output of a thermocouple system is determined by the temperature difference between the two ends of the thermocouple.",
           "explanation": "**Why this is correct**\nA thermocouple generates a small voltage related to the temperature difference between its sensing and reference junctions. The instrument must account for the reference-junction temperature to indicate the hot-junction temperature.\n\n**Engineering principle**\nA thermocouple is not a resistance bulb; its output arises from the Seebeck effect at dissimilar-metal junctions.\n\n💡 **Memory hook:** Two junction temperatures create the signal.\n\n🎯 **Board tip:** Read the question for temperature difference, not absolute temperature alone.",
           "explanationImages": [],
@@ -171989,7 +172572,8 @@
           "choices": [
             "machining fins directly on the outside of the barrel.",
             "shrinking on a jacket or muff of aluminum cooling fins around a steel cylinder sleeve.",
-            "machining fins directly on the outside of the barrel and shrinking on a jacket or muff of aluminum cooling fins around a steel cylinder sleeve (on different areas of the barrel)."
+            "machining fins directly on the outside of the barrel and shrinking on a jacket or muff of aluminum cooling fins around a steel cylinder sleeve (on different areas of the barrel).",
+            "installing a separate finned jacket around the entire cylinder barrel."
           ],
           "answerIndex": 0,
           "answerText": "machining fins directly on the outside of the barrel.",
@@ -172009,11 +172593,12 @@
           "question": "The operating temperature valve clearance of a radial engine as compared to cold valve clearance is",
           "questionType": "multiple_choice",
           "choices": [
+            "The same",
             "Greater",
-            "Less",
-            "The same"
+            "Less.",
+            "Less"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "Greater",
           "explanation": "**Why this is correct**\nA radial engine valve clearance is generally greater cold than at its specified hot condition because engine parts expand as they warm. Use the manufacturer's stated temperature condition; thermal growth differs among designs.",
           "explanationImages": [],
@@ -172031,9 +172616,10 @@
           "question": "A nine-cylinder engine with a bore of 5.5 inches and a stroke of 6 inches will have a total piston displacement of",
           "questionType": "multiple_choice",
           "choices": [
-            "740 cubic inches",
             "1,425 cubic inches.",
-            "1,283 cubic inches."
+            "1,161 cubic inches.",
+            "1,283 cubic inches.",
+            "740 cubic inches"
           ],
           "answerIndex": 2,
           "answerText": "1,283 cubic inches.",
@@ -172053,11 +172639,12 @@
           "question": "Which statement is correct regarding engine crankshafts?",
           "questionType": "multiple_choice",
           "choices": [
-            "Moveable counterweights serve to reduce the torsional vibrations in an aircraft reciprocating engine.",
             "Moveable counterweights serve to reduce the dynamic vibrations in an aircraft reciprocating engine.",
-            "Moveable counterweights are designed to resonate at the natural frequency of the crankshaft."
+            "Moveable counterweights are designed to resonate at the natural frequency of the crankshaft.",
+            "Moveable counterweights serve to reduce axial thrust on the crankshaft.",
+            "Moveable counterweights serve to reduce the torsional vibrations in an aircraft reciprocating engine."
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "answerText": "Moveable counterweights serve to reduce the torsional vibrations in an aircraft reciprocating engine.",
           "explanation": "**Why this is correct**\nTorque about a member’s longitudinal axis produces torsional shear. For a circular shaft, τ=Tr/J and φ=TL/(JG); for a thin, single-cell closed section, Bredt–Batho gives q=T/(2Aₘ) and τ=q/t. A closed torque box carries circulating shear flow around its enclosed median area.\n\n**Engineering principle**\nUse the circular-shaft equations only for circular shafts; thin-wall shear flow uses enclosed median area and wall thickness.\n\n💡 **Memory hook:** Shaft: Tr/J. Closed cell: T/(2Aₘ), then q/t.\n\n🎯 **Board tip:** Check whether the section is solid, hollow circular, or a thin-walled closed cell.",
           "explanationImages": [],
@@ -172077,7 +172664,8 @@
           "choices": [
             "Plain.",
             "Roller",
-            "Ball."
+            "Ball.",
+            "Tapered roller."
           ],
           "answerIndex": 0,
           "answerText": "Plain.",
@@ -172097,11 +172685,12 @@
           "question": "An aircraft reciprocating engine using hydraulic valve lifters is observed to have no clearance in its valve-operating mechanism after the minimum inlet oil and cylinder head temperatures for takeoff have been reached. When can this condition be expected?",
           "questionType": "multiple_choice",
           "choices": [
+            "As a result of carbon and sludge becoming trapped in the lifter and restricting its motion.",
             "During normal operation.",
-            "When the lifters become deflated.",
-            "As a result of carbon and sludge becoming trapped in the lifter and restricting its motion."
+            "Only during cold operation before the oil warms.",
+            "When the lifters become deflated."
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "During normal operation.",
           "explanation": "**Why this is correct**\nHydraulic lifters take up normal valve-train clearance during operation when filled with oil. Zero measured clearance can therefore be normal for an operating, properly adjusted system, but not necessarily with a collapsed or unpressurized lifter.",
           "explanationImages": [],
@@ -172119,9 +172708,10 @@
           "question": "If an engine with a stroke of 6 inches is operated at 2,000 RPM, the piston movement within the cylinder will be",
           "questionType": "multiple_choice",
           "choices": [
-            "at maximum velocity around TDC.",
             "constant during the entire 360° of crankshaft travel.",
-            "at maximum velocity 90° after TDC."
+            "at top dead center.",
+            "at maximum velocity 90° after TDC.",
+            "at maximum velocity around TDC."
           ],
           "answerIndex": 2,
           "answerText": "at maximum velocity 90° after TDC.",
@@ -172141,11 +172731,12 @@
           "question": "The valve clearance of an engine using hydraulic lifters, when the lifters are completely flat, or empty, should not exceed",
           "questionType": "multiple_choice",
           "choices": [
+            "60.00 inch.",
+            "a specified amount below zero.",
             "specified amount below zero.",
-            "a specified amount above zero.",
-            "60.00 inch."
+            "a specified amount above zero."
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "answerText": "a specified amount above zero.",
           "explanation": "**Why this is correct**\nWith a hydraulic lifter fully collapsed, the specified setup retains a small clearance above zero for adjustment and thermal behavior. A pumped-up lifter changes effective length, so the manual specifies the inspection state.",
           "explanationImages": [],
@@ -172163,11 +172754,12 @@
           "question": "If the hot clearance is used to set the valves when the engine is cold, what will occur during operation of the engine?",
           "questionType": "multiple_choice",
           "choices": [
-            "The valves will open early and close early.",
             "The valves will open late and close early.",
-            "The valves will open early and close late."
+            "The valves will open early and close late.",
+            "The valves will open late and close late.",
+            "The valves will open early and close early."
           ],
-          "answerIndex": 1,
+          "answerIndex": 0,
           "answerText": "The valves will open late and close early.",
           "explanation": "**Why this is correct**\nIf a valve is adjusted to the larger hot clearance while the engine is cold, the clearance will shrink as the parts warm. The effective lash becomes too small, causing the valve train to take up clearance sooner and hold the valve open longer than intended; the keyed answer claiming late opening/early closing should be reviewed against the specific engine geometry and source convention.\n\n**Engineering principle**\nThermal growth can either increase or decrease lash depending on the relative expansion of the parts; the engine maker’s cold-clearance specification controls.\n\n💡 **Memory hook:** Set cold lash from the approved specification, not from the hot value.\n\n🎯 **Board tip:** This keyed generalization is geometry-dependent; check the engine maintenance data.",
           "explanationImages": [],
@@ -172185,9 +172777,10 @@
           "question": "The purpose of two or more valve springs in aircraft engines is to",
           "questionType": "multiple_choice",
           "choices": [
-            "equalize side pressure on the valve stems.",
+            "provide a second, independent valve guide.",
             "eliminate valve spring surge.",
-            "equalize valve face loading."
+            "equalize valve face loading.",
+            "equalize side pressure on the valve stems."
           ],
           "answerIndex": 1,
           "answerText": "eliminate valve spring surge.",
@@ -172207,11 +172800,12 @@
           "question": "Why does the smoothness of operation of an engine increase with a greater number of cylinders?",
           "questionType": "multiple_choice",
           "choices": [
+            "The piston speeds are equalized across all cylinders.",
+            "The engine has larger counterbalance weights.",
             "The power impulses are spaced closer together.",
-            "The power impulses are spaced farther apart.",
-            "The engine has larger counterbalance weights."
+            "The power impulses are spaced farther apart."
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "answerText": "The power impulses are spaced closer together.",
           "explanation": "**Why this is correct**\nMore cylinders distribute power events more evenly through the crankshaft cycle. Closer-spaced impulses reduce speed fluctuation between firings and make torque delivery smoother, though balance and firing order also matter.",
           "explanationImages": [],
@@ -172229,11 +172823,12 @@
           "question": "A condition that can occur in radial engines but is unlikely to occur in horizontally opposed engines is",
           "questionType": "multiple_choice",
           "choices": [
+            "carburetor icing.",
             "valve overlap.",
             "zero valve clearance.",
             "hydraulic lock."
           ],
-          "answerIndex": 2,
+          "answerIndex": 3,
           "answerText": "hydraulic lock.",
           "explanation": "**Why this is correct**\nHydraulic lock can occur in a radial engine when oil or fuel collects in a lower cylinder and the piston tries to compress the nearly incompressible liquid. Forcing the propeller through can bend a connecting rod or cause severe damage; follow the approved clearing procedure before start.\n\n**Engineering principle**\nA liquid-filled cylinder is not a normal compression condition. Horizontally opposed engines are less prone because their cylinder orientation does not create the same collection pocket.\n\n💡 **Memory hook:** Liquid will not compress like the charge.\n\n🎯 **Board tip:** Check for hydraulic lock before rotating a radial engine after inactivity.",
           "explanationImages": [],
@@ -172251,11 +172846,12 @@
           "question": "On which part of the cylinder walls of a normally operating engine will the greatest amount of wear occur?",
           "questionType": "multiple_choice",
           "choices": [
-            "Near the center of the cylinder where piston velocity is greatest.",
             "Near the top of the cylinder.",
-            "Wear is normally evenly distributed."
+            "Wear is normally evenly distributed.",
+            "Near the bottom of the cylinder, where the piston reverses direction.",
+            "Near the center of the cylinder where piston velocity is greatest."
           ],
-          "answerIndex": 1,
+          "answerIndex": 0,
           "answerText": "Near the top of the cylinder.",
           "explanation": "**Why this is correct**\nCylinder wear is often greatest near the top of ring travel, where combustion pressure and temperature are high and lubrication conditions are less favorable around top dead center. The exact wear pattern depends on engine condition and operating history.\n\n**Engineering principle**\nWear can form a ridge at the upper limit of ring travel; inspect with the specified dimensional and visual checks.\n\n💡 **Memory hook:** Top ring travel sees severe pressure and heat.\n\n🎯 **Board tip:** Use service limits; do not infer serviceability from location alone.",
           "explanationImages": [],
@@ -172273,11 +172869,12 @@
           "question": "Excessive valve clearance results in the valves opening",
           "questionType": "multiple_choice",
           "choices": [
+            "late and closing late.",
             "late and closing early.",
-            "early and closing late.",
-            "late and closing late."
+            "early and closing early.",
+            "early and closing late."
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "late and closing early.",
           "explanation": "**Why this is correct**\nExcessive valve clearance delays initial opening and causes earlier closing because more cam motion is spent taking up the gap. This shortens valve-open duration and can reduce breathing and overlap.",
           "explanationImages": [],
@@ -172653,11 +173250,12 @@
           "question": "Which statement is true regarding bearings used in high-powered reciprocating aircraft engines?",
           "questionType": "multiple_choice",
           "choices": [
+            "Crankshaft bearings are generally of the ball- type due to their ability to withstand extreme loads without overheating.",
             "The outer race of a single-row, self-aligning ball bearing will always have a radius equal to the radius of the balls.",
             "There is less rolling friction when ball bearings are used than when roller bearings are employed.",
-            "Crankshaft bearings are generally of the ball- type due to their ability to withstand extreme loads without overheating."
+            "Roller bearings always have less friction than ball bearings, regardless of load."
           ],
-          "answerIndex": 1,
+          "answerIndex": 2,
           "answerText": "There is less rolling friction when ball bearings are used than when roller bearings are employed.",
           "explanation": "**Why this is correct**\nBall bearings have point contact and can have lower rolling friction than roller bearings under comparable conditions. Roller bearings generally support larger radial loads.\n\n**Engineering principle**\nThe best bearing depends on load direction, speed, alignment, and lubrication, not friction alone.\n\n**Differentiate similar concepts**\nBall favors low friction; roller favors radial capacity.\n\n**Memory hook**\nBall favors low friction; roller favors radial capacity.\n\n**Board tip**\nTreat the comparison as conditional on the stated operating case.",
           "explanationImages": [],
@@ -172675,11 +173273,12 @@
           "question": "Which bearing is least likely to be a roller or ball bearing?",
           "questionType": "multiple_choice",
           "choices": [
+            "Crankshaft main bearing (radial engine).",
+            "Alternator rotor bearing.",
             "Rocker arm bearing (overhead valve engine).",
-            "Master rod bearing (radial engine).",
-            "Crankshaft main bearing (radial engine)."
+            "Master rod bearing (radial engine)."
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "answerText": "Master rod bearing (radial engine).",
           "explanation": "**Why this is correct**\nThe master-rod bearing in a radial engine is a plain bearing rather than a rolling-element ball or roller bearing. It supports the master rod and articulating rods on the crankpin.\n\n**Engineering principle**\nA plain bearing relies on a lubricating film; ball and roller bearings carry load through rolling elements.\n\n**Differentiate similar concepts**\nMaster rod uses a plain crankpin bearing.\n\n**Memory hook**\nMaster rod uses a plain crankpin bearing.\n\n**Board tip**\nDo not generalize this radial-engine arrangement to all bearings.",
           "explanationImages": [],
@@ -172697,11 +173296,12 @@
           "question": "What is the purpose of the safety circlet installed on some valve stems?",
           "questionType": "multiple_choice",
           "choices": [
+            "To prevent valves from falling into the combustion chamber.",
+            "To prevent the valve from rotating in its guide.",
             "To hold the valve guide in position.",
-            "To hold the valve spring retaining washer in position.",
-            "To prevent valves from falling into the combustion chamber."
+            "To hold the valve spring retaining washer in position."
           ],
-          "answerIndex": 2,
+          "answerIndex": 0,
           "answerText": "To prevent valves from falling into the combustion chamber.",
           "explanation": "**Why this is correct**\nThe safety circlet retains the valve assembly so a valve or related part is less likely to fall into the combustion chamber. Its installation must follow the engine-specific service procedure.\n\n**Engineering principle**\nRetention hardware controls component movement; it does not guide gas flow.\n\n**Differentiate similar concepts**\nCirclet retains; valve spring closes.\n\n**Memory hook**\nCirclet retains; valve spring closes.\n\n**Board tip**\nCheck the specific locking or retention method in maintenance data.",
           "explanationImages": [],
@@ -172719,11 +173319,12 @@
           "question": "What will be the likely result if the piston ring gaps happen to be aligned when performing a differential- pressure compression check on a cylinder?",
           "questionType": "multiple_choice",
           "choices": [
+            "A worn or defective ring(s) indication.",
             "Little or no effect.",
-            "The rings will not be seated.",
-            "A worn or defective ring(s) indication."
+            "A correctly aligned ring gap always indicates a worn or defective ring.",
+            "The rings will not be seated."
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "Little or no effect.",
           "explanation": "**Why this is correct**\nRing gaps aligned at one instant have little or no effect on a differential-pressure compression check because the rings rotate in service and the test measures overall cylinder leakage.\n\n**Engineering principle**\nA leak-down result is interpreted by listening at the intake, exhaust, and crankcase; one ring-gap position is not by itself a defect.\n\n**Differentiate similar concepts**\nGap alignment is not a reliable diagnosis.\n\n**Memory hook**\nGap alignment is not a reliable diagnosis.\n\n**Board tip**\nListen for leakage location and compare the pressure drop with service limits.",
           "explanationImages": [],
@@ -172739,16 +173340,17 @@
         }
       ]
     },
-    "chapters/powerplant-mock-reciprocating-induction-carburetion-fuel-metering.json": {
+    "chapters/reciprocating-induction-carburetion-and-fuel-metering.json": {
       "title": "Reciprocating Induction, Carburetion, and Fuel Metering",
       "questions": [
         {
           "question": "If fuel/air ratio is proper and ignition timing is correct, the combustion process should be completed",
           "questionType": "multiple_choice",
           "choices": [
-            "20 to 30° before top center at the end of the compression stroke.",
             "When the exhaust valve opens at the end of the power stroke.",
-            "Just after top center at the beginning of the power stroke."
+            "Before top center on the compression stroke.",
+            "Just after top center at the beginning of the power stroke.",
+            "20 to 30° before top center at the end of the compression stroke."
           ],
           "answerIndex": 2,
           "answerText": "Just after top center at the beginning of the power stroke.",
@@ -172768,11 +173370,12 @@
           "question": "When is the fuel/air mixture ignited in a conventional reciprocating engine?",
           "questionType": "multiple_choice",
           "choices": [
+            "When the piston reaches top dead center on the compression stroke.",
+            "After the piston passes top dead center on the power stroke.",
             "When the piston has reached top dead center of the intake stroke.",
-            "Shortly before the piston reaches the top of the compression stroke.",
-            "When the piston reaches top dead center on the compression stroke."
+            "Shortly before the piston reaches the top of the compression stroke."
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "answerText": "Shortly before the piston reaches the top of the compression stroke.",
           "explanation": "**Why this is correct**\nThe spark is timed shortly before TDC on the compression stroke. The burning mixture takes finite time to reach peak pressure, so starting combustion before TDC places peak pressure just after TDC for useful expansion work.",
           "explanationImages": [],
@@ -172790,11 +173393,12 @@
           "question": "The primary purpose in setting proper valve timing and overlap is to",
           "questionType": "multiple_choice",
           "choices": [
+            "obtain the best volumetric efficiency and lower cylinder operating temperatures.",
+            "Eliminate the need to coordinate ignition timing with valve movement.",
             "Permit the best possible charge of fuel/air mixture into the cylinders.",
-            "Gain more thorough exhaust gas scavenging.",
-            "obtain the best volumetric efficiency and lower cylinder operating temperatures."
+            "Gain more thorough exhaust gas scavenging."
           ],
-          "answerIndex": 2,
+          "answerIndex": 0,
           "answerText": "obtain the best volumetric efficiency and lower cylinder operating temperatures.",
           "explanation": "**Why this is correct**\nCorrect valve timing lets the intake charge continue filling the cylinder and helps clear hot exhaust gas during overlap. Better volumetric efficiency improves charge mass, while effective scavenging reduces retained hot gas and cylinder temperature. Excessive overlap or mistiming can instead cause reversion.",
           "explanationImages": [],
@@ -172812,9 +173416,10 @@
           "question": "Into what part of a reciprocating engine induction system is deicing alcohol normally injected?",
           "questionType": "multiple_choice",
           "choices": [
-            "The supercharger or impeller section.",
+            "Into the fuel bowl downstream of the throttle plate.",
             "The airstream ahead of the carburetor.",
-            "The low-pressure area ahead of the throttle valve."
+            "The low-pressure area ahead of the throttle valve.",
+            "The supercharger or impeller section."
           ],
           "answerIndex": 1,
           "answerText": "The airstream ahead of the carburetor.",
@@ -172834,9 +173439,10 @@
           "question": "During full power output of an unsupercharged engine equipped with a float-type carburetor, in which of the following areas will the highest pressure exist?",
           "questionType": "multiple_choice",
           "choices": [
-            "Venturi.",
             "Intake manifold.",
-            "Carburetor air scoop."
+            "Downstream of the throttle valve in the intake manifold.",
+            "Carburetor air scoop.",
+            "Venturi."
           ],
           "answerIndex": 2,
           "answerText": "Carburetor air scoop.",
@@ -172856,11 +173462,12 @@
           "question": "Augmenter tubes are part of which reciprocating engine system?",
           "questionType": "multiple_choice",
           "choices": [
+            "Fuel.",
+            "Lubrication.",
             "Induction.",
-            "Exhaust.",
-            "Fuel."
+            "Exhaust."
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "answerText": "Exhaust.",
           "explanation": "**Why this is correct**\nAugmenter tubes use the high-velocity exhaust flow to induce additional cooling air through the engine compartment. They are part of the exhaust arrangement and use an ejector effect; they are not fuel-metering tubes.",
           "explanationImages": [],
@@ -172878,11 +173485,12 @@
           "question": "Which of the following assists in removing heat from the metal walls and fins of an air-cooled cylinder assembly?",
           "questionType": "multiple_choice",
           "choices": [
-            "An intercooler system.",
             "A baffle and cowl arrangement.",
-            "An engine induction system."
+            "An engine induction system.",
+            "An oil-pressure relief valve.",
+            "An intercooler system."
           ],
-          "answerIndex": 1,
+          "answerIndex": 0,
           "answerText": "A baffle and cowl arrangement.",
           "explanation": "**Why this is correct**\nBaffles and the cowling direct cooling air across cylinder fins instead of letting it bypass the hot surfaces. The metal fins increase heat-transfer area, and forced airflow carries heat away. A missing or poorly sealed baffle can cause localized overheating.",
           "explanationImages": [],
@@ -172900,11 +173508,12 @@
           "question": "If the intake valve is opened too early in the cycle of operation of a four-stroke cycle engine, it may result in",
           "questionType": "multiple_choice",
           "choices": [
-            "improper scavenging of exhaust gases.",
             "engine kickback.",
-            "backfiring into the induction system."
+            "backfiring into the induction system.",
+            "improper scavenging of exhaust gases.",
+            "excessive oil pressure."
           ],
-          "answerIndex": 2,
+          "answerIndex": 1,
           "answerText": "backfiring into the induction system.",
           "explanation": "**Why this is correct**\nIf the intake valve opens too early while cylinder pressure is still high, combustion gases can escape backward into the induction passage. Correct valve timing keeps the intake event coordinated with piston motion and exhaust pressure.",
           "explanationImages": [],
@@ -172922,11 +173531,12 @@
           "question": "What is the purpose of a power check on a reciprocating engine?",
           "questionType": "multiple_choice",
           "choices": [
+            "To determine if the fuel/air mixture is adequate.",
             "To check magneto drop.",
             "To determine satisfactory performance.",
-            "To determine if the fuel/air mixture is adequate."
+            "To determine whether the engine develops its specified power under the test conditions."
           ],
-          "answerIndex": 1,
+          "answerIndex": 2,
           "answerText": "To determine satisfactory performance.",
           "explanation": "**Why this is correct**\nA power check compares the engine's measured indications and output with specified performance limits. It can reveal inadequate power or abnormal operation, but it is a performance assessment rather than a single-component diagnosis.",
           "explanationImages": [],
@@ -173515,11 +174125,12 @@
           "question": "Which of the following will decrease volumetric efficiency in a reciprocating engine? 1. Full throttle operation. 2. Low cylinder head temperatures. 3. Improper valve timing. 4. Sharp bends in the induction system. 5. High carburetor air temperatures.",
           "questionType": "multiple_choice",
           "choices": [
+            "1, 2, and 5.",
             "2, 4, and 5.",
             "1,2, 3, and 4.",
             "3, 4, and 5."
           ],
-          "answerIndex": 2,
+          "answerIndex": 3,
           "answerText": "3, 4, and 5.",
           "explanation": "**Why this is correct**\nImproper valve timing and sharp induction bends reduce the volume of fresh charge reaching the cylinders. High carburetor-air temperature lowers air density, also reducing inducted mass. Wide-open throttle and a cooler cylinder head generally support, rather than reduce, volumetric efficiency in the conditions assumed by this question.",
           "explanationImages": [],
@@ -173534,18 +174145,19 @@
         }
       ]
     },
-    "chapters/powerplant-mock-ignition-starting-electrical-systems.json": {
+    "chapters/ignition-starting-and-electrical-systems.json": {
       "title": "Ignition, Starting, and Electrical Systems",
       "questions": [
         {
           "question": "The five events of a four-stroke cycle engine in the order of their occurrence are",
           "questionType": "multiple_choice",
           "choices": [
+            "intake, compression, ignition, power, exhaust.",
+            "intake, compression, power, ignition, exhaust.",
             "intake, ignition, compression, power, exhaust.",
-            "intake, power, compression, ignition, exhaust.",
-            "intake, compression, ignition, power, exhaust."
+            "intake, power, compression, ignition, exhaust."
           ],
-          "answerIndex": 2,
+          "answerIndex": 0,
           "answerText": "intake, compression, ignition, power, exhaust.",
           "explanation": "**Why this is correct**\nA four-stroke piston engine proceeds through intake, compression, power, and exhaust strokes. Ignition is timed during compression shortly before top dead center; it is not itself a separate piston stroke, even though exam shorthand may list it as an event.",
           "explanationImages": [],
@@ -173563,11 +174175,12 @@
           "question": "Cam-ground pistons are installed in some aircraft engines to",
           "questionType": "multiple_choice",
           "choices": [
+            "equalize the wear on all pistons.",
             "provide a better fit at operating temperatures.",
-            "act as a compensating feature so that a compensated magneto is not required.",
-            "equalize the wear on all pistons."
+            "reduce the engine compression ratio.",
+            "act as a compensating feature so that a compensated magneto is not required."
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "provide a better fit at operating temperatures.",
           "explanation": "**Why this is correct**\nA cam-ground piston is intentionally machined slightly out-of-round and tapered when cold. Because different areas expand differently as they heat, the piston approaches a more nearly cylindrical shape with suitable running clearance at operating temperature.\n\n**Engineering principle**\nCold shape compensates for thermal growth; the goal is proper hot clearance rather than a perfect cold circle.\n\n💡 **Memory hook:** Machined oval cold, fitted round hot.\n\n🎯 **Board tip:** Relate the machining shape to temperature-dependent expansion.",
           "explanationImages": [],
@@ -173585,9 +174198,10 @@
           "question": "How many of the following are factors in establishing the maximum compression ratio limitations of an aircraft engine? 1. Detonation characteristics of the fuel used. 2. Design limitations of the engine. 3. Degree of supercharging. 4. Spark plug reach.",
           "questionType": "multiple_choice",
           "choices": [
-            "Four.",
             "Two.",
-            "Three."
+            "One.",
+            "Three.",
+            "Four."
           ],
           "answerIndex": 2,
           "answerText": "Three.",
@@ -174251,18 +174865,19 @@
         }
       ]
     },
-    "chapters/powerplant-mock-reciprocating-lubrication-cooling.json": {
+    "chapters/reciprocating-engine-lubrication-and-cooling.json": {
       "title": "Reciprocating Engine Lubrication and Cooling",
       "questions": [
         {
           "question": "How are the piston pins of most aircraft engines lubricated?",
           "questionType": "multiple_choice",
           "choices": [
+            "By the action of the oil control ring and the series of holes drilled in the ring groove directing oil to the pin and piston pin boss.",
+            "By the scavenge pump sending return oil through the piston pin.",
             "By pressure oil through a drilled passageway in the heavy web portion of the connecting rod.",
-            "By oil which is sprayed or thrown by the master or connecting rods.",
-            "By the action of the oil control ring and the series of holes drilled in the ring groove directing oil to the pin and piston pin boss."
+            "By oil which is sprayed or thrown by the master or connecting rods."
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "answerText": "By oil which is sprayed or thrown by the master or connecting rods.",
           "explanation": "**Why this is correct**\nPressure oil splashed or thrown by the master or connecting rods reaches the piston-pin bearing surfaces. The motion of the crankshaft and rods distributes oil without a separate pressure line to every pin.\n\n**Engineering principle**\nThis splash system depends on correct oil quantity and moving parts; it differs from a dedicated pressure-fed bearing.\n\n**Memory hook**\nFollow the path from oil source to pin.\n\n**Board tip**\nUse the engine maker?s specified operating limits and maintenance procedure for a real discrepancy.",
           "explanationImages": [],
@@ -174282,7 +174897,8 @@
           "choices": [
             "low oil supply.",
             "broken or weak pressure relief valve spring.",
-            "air lock in the scavenge pump intake."
+            "air lock in the scavenge pump intake.",
+            "a defective cylinder-head temperature probe."
           ],
           "answerIndex": 0,
           "answerText": "low oil supply.",
@@ -174972,18 +175588,19 @@
         }
       ]
     },
-    "chapters/powerplant-mock-exhaust-supercharging-turbocharging.json": {
+    "chapters/exhaust-supercharging-and-turbocharging.json": {
       "title": "Exhaust, Supercharging, and Turbocharging",
       "questions": [
         {
           "question": "Compression ratio is the ratio between the",
           "questionType": "multiple_choice",
           "choices": [
-            "Piston travel on the compression stroke and on the intake stroke.",
             "Combustion chamber pressure on the combustion stroke and on the exhaust stroke.",
-            "Cylinder volume with piston at bottom dead center and at top dead center."
+            "Cylinder volume with piston at bottom dead center and at top dead center.",
+            "Piston travel on the compression stroke and on the intake stroke.",
+            "Cylinder pressure at bottom dead center divided by pressure at top dead center."
           ],
-          "answerIndex": 2,
+          "answerIndex": 1,
           "answerText": "Cylinder volume with piston at bottom dead center and at top dead center.",
           "explanation": "**Why this is correct**\nVolume is an extensive thermodynamic property: it scales with the amount of matter. If 'bulk property' is being used to mean a macroscopic/extensive property, volume is in fact a bulk property; the question may instead intend an intensive-property contrast. The wording needs clarification before scoring.\n\n**Engineering principle**\nVolume is extensive; temperature and pressure are intensive. 'Bulk property' is not a precise synonym for 'not extensive' in standard thermodynamics usage.\n\n💡 **Memory hook:** Double the system amount → double the volume (at same state per unit mass).\n\n🎯 **Board tip:** Check the source’s definition of 'bulk property'; as written, the keyed item is ambiguous.",
           "explanationImages": [],
@@ -175001,11 +175618,12 @@
           "question": "Excessive valve clearances will cause the duration of valve opening to",
           "questionType": "multiple_choice",
           "choices": [
+            "decrease for intake valves and increase for exhaust valves.",
             "increase for both intake and exhaust valves.",
             "decrease for both intake and exhaust valves.",
-            "decrease for intake valves and increase for exhaust valves."
+            "leave the valve-opening duration unchanged."
           ],
-          "answerIndex": 1,
+          "answerIndex": 2,
           "answerText": "decrease for both intake and exhaust valves.",
           "explanation": "**Why this is correct**\nExcessive valve lash means the cam must take up more clearance before moving the valve, so opening occurs later and closing earlier. This shortens open duration and usually reduces lift.",
           "explanationImages": [],
@@ -175023,11 +175641,12 @@
           "question": "Most exhaust system failures result from thermal fatigue cracking in the areas of stress concentration. This condition is usually caused by",
           "questionType": "multiple_choice",
           "choices": [
+            "the low exhaust-gas pressure encountered during cruise.",
             "the drastic temperature change which is encountered at altitude.",
             "improper welding techniques during manufacture.",
             "the high temperatures at which the exhaust system operates."
           ],
-          "answerIndex": 2,
+          "answerIndex": 3,
           "answerText": "the high temperatures at which the exhaust system operates.",
           "explanation": "**Why this is correct**\nExhaust components experience repeated thermal cycles, vibration, and stress concentration at bends, joints, and supports. Thermal fatigue initiates cracks at those locations; inspect them closely.",
           "explanationImages": [],
@@ -175045,11 +175664,12 @@
           "question": "On which strokes are both valves on a four-stroke cycle reciprocating engine open?",
           "questionType": "multiple_choice",
           "choices": [
+            "Exhaust and intake.",
+            "compression and power.",
             "Power and exhaust.",
-            "Intake and compression.",
-            "Exhaust and intake."
+            "Intake and compression."
           ],
-          "answerIndex": 2,
+          "answerIndex": 0,
           "answerText": "Exhaust and intake.",
           "explanation": "**Why this is correct**\nDuring overlap near the exhaust/intake transition, both valves are briefly off their seats. This helps scavenge exhaust and fill the cylinder; it is measured in crankshaft degrees.",
           "explanationImages": [],
@@ -175067,11 +175687,12 @@
           "question": "Which statement is correct regarding a four-stroke cycle aircraft engine?",
           "questionType": "multiple_choice",
           "choices": [
+            "The intake valve closes on the intake stroke.",
             "The intake valve closes on the compression stroke.",
-            "The exhaust valve opens on the exhaust stroke.",
-            "The intake valve closes on the intake stroke."
+            "The intake valve closes on the exhaust stroke.",
+            "The exhaust valve opens on the exhaust stroke."
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "The intake valve closes on the compression stroke.",
           "explanation": "**Why this is correct**\nThe intake valve closes after the piston passes bottom dead center and begins compression. The incoming charge continues moving into the cylinder, so the valve closes after BDC.",
           "explanationImages": [],
@@ -175089,11 +175710,12 @@
           "question": "Valve overlap is defined as the number of degrees of crankshaft travel",
           "questionType": "multiple_choice",
           "choices": [
+            "only while the intake valve is open.",
+            "during which both valves are on their seats.",
             "during which both valves are off their seats.",
-            "between the closing of the intake valve and the opening of the exhaust valve.",
-            "during which both valves are on their seats."
+            "between the closing of the intake valve and the opening of the exhaust valve."
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "answerText": "during which both valves are off their seats.",
           "explanation": "**Why this is correct**\nValve overlap is the crankshaft interval around the exhaust/intake transition when both valves are off their seats. It is an angular interval, not a time or lift value.",
           "explanationImages": [],
@@ -175111,11 +175733,12 @@
           "question": "If the exhaust valve of a four-stroke cycle engine is closed and the intake valve is just closed, the piston is on the",
           "questionType": "multiple_choice",
           "choices": [
+            "exhaust stroke.",
             "intake stroke.",
             "power stroke.",
             "compression stroke."
           ],
-          "answerIndex": 2,
+          "answerIndex": 3,
           "answerText": "compression stroke.",
           "explanation": "**Why this is correct**\nWith intake and exhaust valves closed and the piston rising after the intake valve closes, the charge is being compressed. That is the compression stroke.",
           "explanationImages": [],
@@ -175135,7 +175758,8 @@
           "choices": [
             "Reduced valve overlap period.",
             "Intake and exhaust valves will open early and close late.",
-            "A power increase by shortening the exhaust event."
+            "A power increase by shortening the exhaust event.",
+            "Increased valve overlap period."
           ],
           "answerIndex": 0,
           "answerText": "Reduced valve overlap period.",
@@ -175679,18 +176303,19 @@
         }
       ]
     },
-    "chapters/powerplant-mock-gas-turbine-theory-engine-types.json": {
+    "chapters/gas-turbine-theory-and-engine-types.json": {
       "title": "Gas Turbine Theory and Engine Types",
       "questions": [
         {
           "question": "Some high-volume turboprop and turbojet engines are equipped with two-spool or split compressors. When these engines are operated at high altitudes, the",
           "questionType": "multiple_choice",
           "choices": [
+            "low-pressure rotor will decrease in speed as the compressor load decreases in the lower density air.",
             "low-pressure rotor will increase in speed as the compressor load decreases in the lower density air.",
-            "throttle must be retarded to prevent overspeeding of the high-pressure rotor due to the lower density air.",
-            "low-pressure rotor will decrease in speed as the compressor load decreases in the lower density air."
+            "the high-pressure rotor will always overspeed as inlet-air density decreases.",
+            "throttle must be retarded to prevent overspeeding of the high-pressure rotor due to the lower density air."
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "low-pressure rotor will increase in speed as the compressor load decreases in the lower density air.",
           "explanation": "**Why this is correct**\nA two-spool engine lets the low- and high-pressure compressor sections rotate at different speeds. At high altitude, lower air density reduces the compressor’s aerodynamic load; the low-pressure rotor can therefore accelerate unless the fuel control and operating limits constrain it.\n\n**Engineering principle**\nThe low-pressure spool is mechanically independent of the high-pressure spool, so their speeds need not change together.\n\n💡 **Memory hook:** Two spools can turn at two speeds.\n\n🎯 **Board tip:** Track each compressor and turbine on its own shaft.",
           "explanationImages": [],
@@ -175708,9 +176333,10 @@
           "question": "What term is used to describe a permanent and cumulative deformation of the turbine blades of a turbojet engine?",
           "questionType": "multiple_choice",
           "choices": [
-            "stretch.",
             "Distortion.",
-            "Creep."
+            "fatigue.",
+            "Creep.",
+            "stretch."
           ],
           "answerIndex": 2,
           "answerText": "Creep.",
@@ -176396,18 +177022,19 @@
         }
       ]
     },
-    "chapters/powerplant-mock-gas-turbine-components-operation.json": {
+    "chapters/gas-turbine-components-and-operation.json": {
       "title": "Gas Turbine Components and Operation",
       "questions": [
         {
           "question": "A turbine engine compressor which contains vanes on both sides of the impeller is a",
           "questionType": "multiple_choice",
           "choices": [
-            "double entry centrifugal compressor.",
             "double entry axial-flow compressor.",
-            "single entry axial-flow compressor."
+            "single entry axial-flow compressor.",
+            "single-entry centrifugal compressor.",
+            "double entry centrifugal compressor."
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "answerText": "double entry centrifugal compressor.",
           "explanation": "**Why this is correct**\nA double-entry centrifugal compressor has an impeller that admits air at both sides of its eye. The two inlet paths feed one impeller, allowing more mass flow for a given wheel diameter.\n\n**Engineering principle**\nThe diffuser is downstream of the impeller and is not what makes a compressor double-entry.\n\n**Differentiate similar concepts**\nTwo sides feed one impeller.\n\n**Memory hook**\nTwo sides feed one impeller.\n\n**Board tip**\nIdentify the inlet geometry at the impeller eye.",
           "explanationImages": [],
@@ -176427,7 +177054,8 @@
           "choices": [
             "To increase pressure and reduce velocity.",
             "To convert pressure to velocity.",
-            "To reduce pressure and increase velocity."
+            "To reduce pressure and increase velocity.",
+            "To maintain velocity while reducing static pressure."
           ],
           "answerIndex": 0,
           "answerText": "To increase pressure and reduce velocity.",
@@ -176447,11 +177075,12 @@
           "question": "In an axial-flow compressor, one purpose of the stator vanes at the discharge end of the compressor is to",
           "questionType": "multiple_choice",
           "choices": [
+            "decrease the velocity, prevent swirling, and decrease pressure.",
             "straighten the airflow and eliminate turbulence.",
-            "increase the velocity and prevent swirling and eddying.",
-            "decrease the velocity, prevent swirling, and decrease pressure."
+            "increase the swirl of the discharge airflow.",
+            "increase the velocity and prevent swirling and eddying."
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "straighten the airflow and eliminate turbulence.",
           "explanation": "**Why this is correct**\nDischarge stator vanes remove swirl and direct compressor air toward the next stage or diffuser. Their flow guidance helps reduce residual turbulence and sets the correct entry angle.\n\n**Engineering principle**\nA rotor adds energy to the air; a stator turns and diffuses it.\n\n**Differentiate similar concepts**\nRotor adds work; stator redirects flow.\n\n**Memory hook**\nRotor adds work; stator redirects flow.\n\n**Board tip**\nDo not confuse compressor stators with turbine nozzle guide vanes.",
           "explanationImages": [],
@@ -176469,11 +177098,12 @@
           "question": "The air passing through the combustion chamber of a turbine engine is",
           "questionType": "multiple_choice",
           "choices": [
+            "used only to cool the turbine blades after combustion.",
+            "speeded up and heated by the action of the turbines.",
             "used to support combustion and to cool the engine.",
-            "entirely combined with fuel and burned.",
-            "speeded up and heated by the action of the turbines."
+            "entirely combined with fuel and burned."
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "answerText": "used to support combustion and to cool the engine.",
           "explanation": "**Why this is correct**\nOnly part of the compressor air is mixed with fuel and burned. The remaining air cools and protects combustor and turbine surfaces and mixes with the hot gas downstream.\n\n**Engineering principle**\nCombustion needs less air than the engine ingests; liner holes distribute cooling and dilution air.\n\n**Differentiate similar concepts**\nA portion burns fuel; much of the flow cools and dilutes.\n\n**Memory hook**\nA portion burns fuel; much of the flow cools and dilutes.\n\n**Board tip**\nA combustor does not burn all its airflow.",
           "explanationImages": [],
@@ -176491,11 +177121,12 @@
           "question": "What is meant by a shrouded turbine?",
           "questionType": "multiple_choice",
           "choices": [
-            "The turbine blades are shaped so that their ends form a band or shroud.",
             "The turbine wheel is enclosed by a protective shroud to contain the blades in case of failure.",
-            "The turbine wheel has a shroud or duct which provides cooling air to the turbine blades."
+            "The turbine wheel has a shroud or duct which provides cooling air to the turbine blades.",
+            "The turbine blades are individually enclosed in hollow cooling sleeves.",
+            "The turbine blades are shaped so that their ends form a band or shroud."
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "answerText": "The turbine blades are shaped so that their ends form a band or shroud.",
           "explanation": "**Why this is correct**\nA shrouded turbine has blade tips joined by a band or shroud. This reduces tip leakage and helps control vibration, although it adds rotating mass.\n\n**Engineering principle**\nA shroud is a tip feature; the turbine disk secures the blade roots.\n\n**Differentiate similar concepts**\nBand at blade tips, disk at blade roots.\n\n**Memory hook**\nBand at blade tips, disk at blade roots.\n\n**Board tip**\nIdentify whether the question refers to the tip or root.",
           "explanationImages": [],
@@ -176853,10 +177484,240 @@
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
+        },
+        {
+          "question": "What is compressor surge in a gas-turbine engine?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A severe breakdown of stable compressor airflow that can cause pressure oscillations and possible flow reversal.",
+            "A normal increase in exhaust temperature during cruise.",
+            "A decrease in propeller pitch during feathering.",
+            "A rise in oil pressure caused by cold oil."
+          ],
+          "answerIndex": 0,
+          "answerText": "A severe breakdown of stable compressor airflow that can cause pressure oscillations and possible flow reversal.",
+          "explanation": "Surge is an unstable compressor operating condition involving large flow and pressure fluctuations; it can damage engine components.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Gas Turbine Components and Operation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the usual function of variable stator vanes in an axial compressor?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Change vane angle to maintain suitable airflow and compressor stability over the operating range.",
+            "Meter fuel directly into the combustion chamber.",
+            "Cool the turbine blades with oil.",
+            "Reverse exhaust flow for braking."
+          ],
+          "answerIndex": 0,
+          "answerText": "Change vane angle to maintain suitable airflow and compressor stability over the operating range.",
+          "explanation": "Variable stators adjust the airflow angle into following rotor stages as engine speed changes.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Gas Turbine Components and Operation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Where is a gas-turbine diffuser normally located in relation to a centrifugal compressor impeller?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Downstream of the impeller.",
+            "Ahead of the engine inlet.",
+            "Inside the turbine nozzle.",
+            "Between the exhaust cone and tailpipe."
+          ],
+          "answerIndex": 0,
+          "answerText": "Downstream of the impeller.",
+          "explanation": "The diffuser receives high-velocity air leaving the impeller and slows it to recover static pressure.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Gas Turbine Components and Operation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What happens to airflow velocity through a subsonic compressor diffuser?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It decreases while static pressure increases.",
+            "It increases while static pressure increases without limit.",
+            "It remains constant while temperature falls.",
+            "It reverses direction through every diffuser."
+          ],
+          "answerIndex": 0,
+          "answerText": "It decreases while static pressure increases.",
+          "explanation": "A diffuser converts some flow kinetic energy into static pressure by reducing velocity.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Gas Turbine Components and Operation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is a spool in a multi-spool gas-turbine engine?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A compressor and turbine section connected by a shaft and rotating as one assembly.",
+            "A fuel-control lever connected to the cockpit.",
+            "A group of fuel nozzles in one combustor can.",
+            "The stationary outer engine case."
+          ],
+          "answerIndex": 0,
+          "answerText": "A compressor and turbine section connected by a shaft and rotating as one assembly.",
+          "explanation": "Each spool is a rotating compressor-turbine assembly; different spools may operate at different speeds.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Gas Turbine Components and Operation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Why can a multi-spool engine improve compressor operation across a wider range?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Its compressor sections can rotate at different speeds suited to their airflow conditions.",
+            "It eliminates all compressor blades.",
+            "It forces every compressor stage to turn at the same speed.",
+            "It makes the engine independent of inlet air."
+          ],
+          "answerIndex": 0,
+          "answerText": "Its compressor sections can rotate at different speeds suited to their airflow conditions.",
+          "explanation": "Independent spool speeds let low- and high-pressure compressor sections operate closer to their efficient ranges.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Gas Turbine Components and Operation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the main purpose of an accessory gearbox on a turbine engine?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Use engine drive to operate accessories such as pumps and generators.",
+            "Increase the bypass ratio of the fan.",
+            "Mix fuel and air inside the combustor.",
+            "Change the area of the exhaust nozzle only."
+          ],
+          "answerIndex": 0,
+          "answerText": "Use engine drive to operate accessories such as pumps and generators.",
+          "explanation": "The accessory gearbox transfers mechanical power from the engine to required accessories.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Gas Turbine Components and Operation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "In a turbine engine, what is the role of the turbine nozzle guide vanes?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Direct and accelerate hot gas onto the turbine rotor at the intended angle.",
+            "Atomize fuel before it enters the fuel manifold.",
+            "Reduce compressor inlet pressure to ambient.",
+            "Prevent the compressor from rotating."
+          ],
+          "answerIndex": 0,
+          "answerText": "Direct and accelerate hot gas onto the turbine rotor at the intended angle.",
+          "explanation": "Nozzle guide vanes direct the combustor gas flow and set its angle and velocity before the turbine rotor.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Gas Turbine Components and Operation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the primary purpose of a turbine-engine exhaust nozzle?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Convert gas pressure and thermal energy into an accelerated exhaust stream.",
+            "Increase fuel pressure before combustion.",
+            "Drive the accessory gearbox directly.",
+            "Cool the combustion chamber by circulating oil."
+          ],
+          "answerIndex": 0,
+          "answerText": "Convert gas pressure and thermal energy into an accelerated exhaust stream.",
+          "explanation": "The nozzle expands and accelerates the exhaust flow to produce thrust.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Gas Turbine Components and Operation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What does the fan on a high-bypass turbofan primarily do?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Accelerate a large mass of bypass air to produce a substantial share of thrust.",
+            "Compress fuel for the high-pressure pump.",
+            "Drive the ignition exciter without a shaft.",
+            "Remove all airflow from the core."
+          ],
+          "answerIndex": 0,
+          "answerText": "Accelerate a large mass of bypass air to produce a substantial share of thrust.",
+          "explanation": "A high-bypass fan produces much of the engine thrust by accelerating bypass air.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Gas Turbine Components and Operation"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
         }
       ]
     },
-    "chapters/powerplant-mock-gas-turbine-systems.json": {
+    "chapters/gas-turbine-fuel-control-starting-ignition-lubrication-and-anti-icing-systems.json": {
       "title": "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems",
       "questions": [
         {
@@ -176865,7 +177726,8 @@
           "choices": [
             "a hot start is indicated if the exhaust gas temperature exceeds specified limits.",
             "an excessively lean mixture is likely to cause a hot start.",
-            "release the starter switch as soon as indication of light-off occurs."
+            "release the starter switch as soon as indication of light-off occurs.",
+            "a hot start is indicated when the engine fails to light off."
           ],
           "answerIndex": 0,
           "answerText": "a hot start is indicated if the exhaust gas temperature exceeds specified limits.",
@@ -176885,11 +177747,12 @@
           "question": "What should be done initially if a turbine engine catches fire when starting?",
           "questionType": "multiple_choice",
           "choices": [
+            "Continue starting attempt in order to blow out the fire.",
             "Turn off the fuel and continue engine rotation with the starter.",
-            "Continue engine start rotation and discharge a fire extinguisher into the intake",
-            "Continue starting attempt in order to blow out the fire."
+            "Stop the starter immediately and close the intake to prevent further airflow.",
+            "Continue engine start rotation and discharge a fire extinguisher into the intake"
           ],
-          "answerIndex": 0,
+          "answerIndex": 1,
           "answerText": "Turn off the fuel and continue engine rotation with the starter.",
           "explanation": "**Why this is correct**\nFor a turbine start fire, shut off fuel and continue starter rotation if directed by the aircraft procedure. Airflow can purge fuel and flame from the engine; use the approved fire checklist.",
           "explanationImages": [],
@@ -176907,11 +177770,12 @@
           "question": "A cool-off period prior to shutdown of a turbine engine is accomplished in order to",
           "questionType": "multiple_choice",
           "choices": [
+            "increase compressor pressure before securing the engine.",
+            "prevent seizure of the engine bearings.",
             "allow the turbine wheel to cool before the case contracts around it.",
-            "prevent vapor lock in the fuel control and/or fuel lines.",
-            "prevent seizure of the engine bearings."
+            "prevent vapor lock in the fuel control and/or fuel lines."
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "answerText": "allow the turbine wheel to cool before the case contracts around it.",
           "explanation": "**Why this is correct**\nA cool-off period lets turbine wheels and other hot-section parts cool gradually before shutdown. This reduces uneven thermal contraction, rubbing, and distortion; use the engine maker's stated time and conditions.",
           "explanationImages": [],
@@ -176929,11 +177793,12 @@
           "question": "Which of the following indicates that a combustion chamber of a jet engine is not operating properly?",
           "questionType": "multiple_choice",
           "choices": [
+            "Warping of the exhaust duct liner.",
+            "An unusually high fuel quantity in the aircraft tanks.",
             "Clam shells stick in thrust reverse position.",
-            "Hot spots on the tail cone.",
-            "Warping of the exhaust duct liner."
+            "Hot spots on the tail cone."
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "answerText": "Hot spots on the tail cone.",
           "explanation": "**Why this is correct**\nA localized hot spot on the tail cone can indicate uneven combustor operation or abnormal hot-gas impingement. Compare exhaust patterns and inspect according to the engine troubleshooting procedure.",
           "explanationImages": [],
@@ -177529,10 +178394,33 @@
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
+        },
+        {
+          "question": "In a dry-sump turbine-engine lubrication system, what is the purpose of the scavenge pump?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Return oil from bearing sumps to the oil tank.",
+            "Meter fuel to the combustion chamber.",
+            "Increase compressor discharge pressure.",
+            "Supply hydraulic pressure to the propeller governor."
+          ],
+          "answerIndex": 0,
+          "answerText": "Return oil from bearing sumps to the oil tank.",
+          "explanation": "The scavenge pump removes oil from sumps and returns it to the tank; the pressure pump supplies lubricating oil to the engine.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
         }
       ]
     },
-    "chapters/powerplant-mock-propellers-control.json": {
+    "chapters/propellers-and-propeller-control.json": {
       "title": "Propellers and Propeller Control",
       "questions": [
         {
@@ -177541,7 +178429,8 @@
           "choices": [
             "manifold pressure is reduced with the throttle control before the RPM is reduced with the propeller control.",
             "manifold pressure is reduced with the propeller control before the RPM is reduced with the throttle control.",
-            "RPM is reduced with the propeller control before the manifold pressure is reduced with the throttle control."
+            "RPM is reduced with the propeller control before the manifold pressure is reduced with the throttle control.",
+            "the propeller control is moved to a higher RPM setting before reducing manifold pressure."
           ],
           "answerIndex": 0,
           "answerText": "manifold pressure is reduced with the throttle control before the RPM is reduced with the propeller control.",
@@ -177561,9 +178450,10 @@
           "question": "Propeller fluid anti-icing systems generally use which of the following?",
           "questionType": "multiple_choice",
           "choices": [
-            "Ethylene glycol.",
+            "Methyl ethyl ketone.",
             "Isopropyl alcohol.",
-            "Ethyl alcohol."
+            "Ethyl alcohol.",
+            "Ethylene glycol."
           ],
           "answerIndex": 1,
           "answerText": "Isopropyl alcohol.",
@@ -177583,11 +178473,12 @@
           "question": "What is a function of the automatic propeller synchronizing system on multiengine aircraft?",
           "questionType": "multiple_choice",
           "choices": [
+            "To control the power output of all engines.",
             "To control the tip speed of all propellers.",
             "To control engine RPM and reduce vibration.",
-            "To control the power output of all engines."
+            "To maintain identical blade angles without changing engine RPM."
           ],
-          "answerIndex": 1,
+          "answerIndex": 2,
           "answerText": "To control engine RPM and reduce vibration.",
           "explanation": "**Why this is correct**\nA synchronizing system adjusts propeller RPM relationships to reduce the audible beat or vibration caused by slightly different rotation rates. A synchronizer does not replace each engine's propeller governor or set engine power.\n\n**Memory hook:** Synchronize the beat; governors control each RPM.",
           "explanationImages": [],
@@ -177605,11 +178496,12 @@
           "question": "What type of imbalance will cause a two-blade propeller to have a persistent tendency to come to rest in a horizontal position (with the blades parallel to the ground) while being checked on a propeller balancing beam?",
           "questionType": "multiple_choice",
           "choices": [
-            "Vertical.",
             "Horizontal.",
-            "Harmonic."
+            "Harmonic.",
+            "Dynamic.",
+            "Vertical."
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "answerText": "Vertical.",
           "explanation": "**Why this is correct**\nWith two blades, a vertical mass imbalance places one blade assembly heavier than the other. The heavy blade tends to rotate downward, so the propeller repeatedly settles with the blades in a horizontal line. This is a static imbalance, not a fore-and-aft imbalance.",
           "explanationImages": [],
@@ -177629,7 +178521,8 @@
           "choices": [
             "increase, engine manifold pressure will increase, and engine RPM will decrease.",
             "decrease, engine manifold pressure will increase, and engine RPM will decrease.",
-            "decrease, engine manifold pressure will decrease, and engine RPM will increase."
+            "decrease, engine manifold pressure will decrease, and engine RPM will increase.",
+            "increase, engine manifold pressure will decrease, and engine RPM will increase."
           ],
           "answerIndex": 0,
           "answerText": "increase, engine manifold pressure will increase, and engine RPM will decrease.",
@@ -177649,9 +178542,10 @@
           "question": "The thrust produced by a rotating propeller is a result",
           "questionType": "multiple_choice",
           "choices": [
-            "an area of low pressure behind the propellerblades.",
+            "an area of increased pressure in front of the blades and decreased pressure behind them.",
             "an area of decreased pressure immediately in front of the propeller blades.",
-            "the angle of relative wind and rotational velocity of the propeller."
+            "the angle of relative wind and rotational velocity of the propeller.",
+            "an area of low pressure behind the propellerblades."
           ],
           "answerIndex": 1,
           "answerText": "an area of decreased pressure immediately in front of the propeller blades.",
@@ -177671,11 +178565,12 @@
           "question": "What is the primary purpose of the metal tipping which covers the blade tips and extends along the leading edge of each wood propeller blade?",
           "questionType": "multiple_choice",
           "choices": [
+            "To increase the longitudinal strength of the blade.",
             "To increase the lateral strength of the blade.",
             "To prevent impact damage to the tip and leading edge of the blade.",
-            "To increase the longitudinal strength of the blade."
+            "To increase the longitudinal strength of the entire blade."
           ],
-          "answerIndex": 1,
+          "answerIndex": 2,
           "answerText": "To prevent impact damage to the tip and leading edge of the blade.",
           "explanation": "**Why this is correct**\nMetal tipping protects a wooden blade's vulnerable tip and leading edge from stones, rain, and other impact erosion. It is a wear and impact guard, not a structural repair or an ice-control system.",
           "explanationImages": [],
@@ -177693,11 +178588,12 @@
           "question": "The blade angle of a fixed-pitch propeller",
           "questionType": "multiple_choice",
           "choices": [
+            "increases in proportion to the distance each section is from the hub.",
+            "is the same at every radial station.",
             "is greatest at the tip.",
-            "is smallest at the tip.",
-            "increases in proportion to the distance each section is from the hub."
+            "is smallest at the tip."
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "answerText": "is smallest at the tip.",
           "explanation": "**Why this is correct**\nBecause the blade tip travels faster than the root, a constant blade angle would give the tip a different effective angle of attack. Fixed-pitch blades are therefore twisted so the geometric blade angle decreases toward the tip; the tip angle is the smallest.",
           "explanationImages": [],
@@ -177717,7 +178613,8 @@
           "choices": [
             "Shank.",
             "Face.",
-            "Back."
+            "Back.",
+            "Tip within the limits specified by the manufacturer."
           ],
           "answerIndex": 0,
           "answerText": "Shank.",
@@ -177737,9 +178634,10 @@
           "question": "What is the principal advantage of using propeller reduction gears?",
           "questionType": "multiple_choice",
           "choices": [
-            "To enable the propeller RPM to be increased without an accompanying increase in engine RPM.",
+            "To permit the propeller to turn faster than the engine.",
             "To enable the engine RPM to be increased with an accompanying increase in power and allow the propeller to remain at a lower, more efficient RPM.",
-            "To enable the engine RPM to be increased with an accompanying increase in propeller RPM."
+            "To enable the engine RPM to be increased with an accompanying increase in propeller RPM.",
+            "To enable the propeller RPM to be increased without an accompanying increase in engine RPM."
           ],
           "answerIndex": 1,
           "answerText": "To enable the engine RPM to be increased with an accompanying increase in power and allow the propeller to remain at a lower, more efficient RPM.",
@@ -177759,11 +178657,12 @@
           "question": "The actual power delivered to the propeller of an aircraft engine is called",
           "questionType": "multiple_choice",
           "choices": [
+            "indicated horsepower.",
             "friction horsepower.",
             "brake horsepower.",
-            "indicated horsepower."
+            "Thrust horsepower."
           ],
-          "answerIndex": 1,
+          "answerIndex": 2,
           "answerText": "brake horsepower.",
           "explanation": "**Why this is correct**\nBrake horsepower is the engine's measured shaft output available at its output shaft. Propeller thrust power is the useful rate of work on the aircraft, and is lower after transmission and aerodynamic losses. Do not confuse engine shaft power with thrust.",
           "explanationImages": [],
@@ -177781,11 +178680,12 @@
           "question": "Which of the following would indicate a general weak-engine condition when operated with a fixed- pitch propeller or test club?",
           "questionType": "multiple_choice",
           "choices": [
-            "Lower than normal static RPM, full throttle oper- ation.",
             "Manifold pressure lower at idle RPM than at sta- tic RPM.",
-            "Lower than normal manifold pressure for any given RPM."
+            "Lower than normal manifold pressure for any given RPM.",
+            "Higher than normal static RPM at full throttle.",
+            "Lower than normal static RPM, full throttle oper- ation."
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "answerText": "Lower than normal static RPM, full throttle oper- ation.",
           "explanation": "**Why this is correct**\nFor a fixed-pitch propeller or test club at full throttle, static RPM is an indicator of the engine's ability to produce power. A lower-than-specified static RPM can indicate weak output, although diagnosis must also consider propeller condition, installation, and test conditions.",
           "explanationImages": [],
@@ -177803,11 +178703,12 @@
           "question": "As the pressure is applied during a reciprocating engine compression check using a differential pressure tester, what would a movement of the propeller in the direction of engine rotation indicate?",
           "questionType": "multiple_choice",
           "choices": [
+            "The piston was positioned past top dead center.",
+            "The piston was still on the intake stroke.",
             "The piston was on compression stroke.",
-            "The piston was on exhaust stroke.",
-            "The piston was positioned past top dead center."
+            "The piston was on exhaust stroke."
           ],
-          "answerIndex": 2,
+          "answerIndex": 0,
           "answerText": "The piston was positioned past top dead center.",
           "explanation": "**Why this is correct**\nIf air pressure is introduced while the piston is already past top dead center, cylinder pressure can push it in the normal direction of rotation. The resulting propeller movement indicates the piston passed TDC; the check must be performed with the manufacturer's procedure and the propeller treated as hazardous.",
           "explanationImages": [],
@@ -178204,19 +179105,43 @@
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the purpose of camber on a propeller blade section?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It helps create an aerodynamic pressure difference that produces blade lift and thrust.",
+            "It prevents the blade from rotating in the hub.",
+            "It sets engine compression ratio.",
+            "It removes centrifugal force from the blade."
+          ],
+          "answerIndex": 0,
+          "answerText": "It helps create an aerodynamic pressure difference that produces blade lift and thrust.",
+          "explanation": "A propeller blade is an airfoil. Its cambered section develops aerodynamic force with a component in the thrust direction.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "Aircraft Powerplant",
+            "Propellers and Propeller Control"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
         }
       ]
     },
-    "chapters/powerplant-mock-thermodynamics-engine-performance-calculations.json": {
+    "chapters/thermodynamics-engine-cycles-performance-and-calculations.json": {
       "title": "Thermodynamics, Engine Cycles, Performance, and Calculations",
       "questions": [
         {
           "question": "Engine pressure ratio is the total pressure ratio between the",
           "questionType": "multiple_choice",
           "choices": [
-            "aft end of the compressor and the aft end of the turbine.",
+            "compressor inlet total pressure and combustor inlet total pressure.",
             "front of the compressor and the rear of the turbine.",
-            "front of the engine inlet and the aft end of the compressor."
+            "front of the engine inlet and the aft end of the compressor.",
+            "aft end of the compressor and the aft end of the turbine."
           ],
           "answerIndex": 1,
           "answerText": "front of the compressor and the rear of the turbine.",
@@ -178673,9 +179598,10 @@
           "question": "Which of the following is a characteristic of a thrust bearing used in most radial engines?",
           "questionType": "multiple_choice",
           "choices": [
-            "Tapered roller.",
             "Double-row ball.",
-            "Deep-groove ball."
+            "Straight roller.",
+            "Deep-groove ball.",
+            "Tapered roller."
           ],
           "answerIndex": 2,
           "answerText": "Deep-groove ball.",
@@ -178695,11 +179621,12 @@
           "question": "The primary concern in establishing the firing order for an opposed engine is to",
           "questionType": "multiple_choice",
           "choices": [
-            "provide for balance and eliminate vibration to the greatest extent possible.",
             "keep power impulses on adjacent cylinders as far apart as possible in order to obtain the greatest mechanical efficiency.",
-            "keep the power impulses on adjacent cylinders as close as possible in order to obtain the greatest mechanical efficiency."
+            "keep the power impulses on adjacent cylinders as close as possible in order to obtain the greatest mechanical efficiency.",
+            "make adjacent cylinders fire one after another to maximize mechanical efficiency.",
+            "provide for balance and eliminate vibration to the greatest extent possible."
           ],
-          "answerIndex": 0,
+          "answerIndex": 3,
           "answerText": "provide for balance and eliminate vibration to the greatest extent possible.",
           "explanation": "**Why this is correct**\nFiring order is selected to distribute combustion impulses and loads around the crankshaft, improving balance and reducing vibration. It must also respect crankshaft geometry and avoid unfavorable adjacent-cylinder loading.",
           "explanationImages": [],
@@ -178944,17 +179871,16 @@
           "acceptedDeviation": 0
         },
         {
-          "question": "Newton’s third law of motion generally termed the as “Law of Inertia” states that _____.",
+          "question": "Newton's first law of motion, commonly called the law of inertia, states that _____ .",
           "questionType": "multiple_choice",
           "choices": [
-            "“To every action, there is an equal and opposite reaction.”",
-            "“Two thermodynamic systems are each in thermal equilibrium with a third, then they are in thermal equilibrium with",
-            "each other.”",
-            "“Everybody persists in its state of rest, or of motion in a straight line, unless acted upon by some outside force.”",
-            "“Force is proportional to the product of mass and acceleration.”"
+            "An object remains at rest or in uniform straight-line motion unless acted upon by an unbalanced external force.",
+            "To every action, there is an equal and opposite reaction.",
+            "Force equals mass multiplied by acceleration.",
+            "Energy can neither be created nor destroyed; it changes form."
           ],
-          "answerIndex": 3,
-          "answerText": "“Everybody persists in its state of rest, or of motion in a straight line, unless acted upon by some outside force.”",
+          "answerIndex": 0,
+          "answerText": "An object remains at rest or in uniform straight-line motion unless acted upon by an unbalanced external force.",
           "explanation": "**Answer-key check**\nThe stem attributes the law of inertia to Newton's third law, but the stated answer is Newton's first law. The law of inertia says a body remains at rest or in uniform straight-line motion unless acted on by a net external force. The answer choice may be right for the intended definition, but the question's law number is wrong; correct the stem before scoring.",
           "explanationImages": [],
           "questionImages": [],
@@ -179771,18 +180697,19 @@
         }
       ]
     },
-    "chapters/powerplant-mock-maintenance-troubleshooting-overhaul.json": {
+    "chapters/inspection-troubleshooting-maintenance-and-overhaul.json": {
       "title": "Inspection, Troubleshooting, Maintenance, and Overhaul",
       "questions": [
         {
           "question": "What maintenance record(s) is/are required following a major repair of an aircraft engine?",
           "questionType": "multiple_choice",
           "choices": [
-            "Entries in engine maintenance records and a list of discrepancies for the FAA.",
             "Entries in the engine maintenance record and FAAForm337.",
-            "Entry in logbook."
+            "Entry in logbook.",
+            "A verbal notification to the owner with no maintenance-record entry.",
+            "Entries in engine maintenance records and a list of discrepancies for the FAA."
           ],
-          "answerIndex": 1,
+          "answerIndex": 0,
           "answerText": "Entries in the engine maintenance record and FAAForm337.",
           "explanation": "**Why this is correct**\nFor a major engine repair, the maintenance record must include the required return-to-service entry, and FAA Form 337 is used to document a major repair or alteration under the referenced US rules. Check current Part 43 requirements and the aircraft's jurisdiction before applying this exam answer operationally.",
           "explanationImages": [],
@@ -179800,9 +180727,10 @@
           "question": "Continued and/or excessive heat and centrifugal force on turbine engine rotor blades is likely to cause",
           "questionType": "multiple_choice",
           "choices": [
-            "profile.",
+            "erosion.",
             "creep.",
-            "galling."
+            "galling.",
+            "profile."
           ],
           "answerIndex": 1,
           "answerText": "creep.",
@@ -179822,9 +180750,10 @@
           "question": "Severe rubbing of turbine engine compressor blades will usually cause",
           "questionType": "multiple_choice",
           "choices": [
-            "bowing.",
             "cracking.",
-            "galling."
+            "erosion.",
+            "galling.",
+            "bowing."
           ],
           "answerIndex": 2,
           "answerText": "galling.",
@@ -179890,11 +180819,12 @@
           "question": "How is proper end-gap clearance on new piston rings assured during the overhaul of an engine?",
           "questionType": "multiple_choice",
           "choices": [
+            "By measuring the ring outside diameter and subtracting it from the cylinder diameter.",
             "By accurately measuring and matching the outside diameter of the rings with the inside diameter of the cylinders.",
             "By using rings specified by the engine manufacturer.",
             "By placing the rings in the cylinder and measuring the end-gap with a feeler gauge."
           ],
-          "answerIndex": 2,
+          "answerIndex": 3,
           "answerText": "By placing the rings in the cylinder and measuring the end-gap with a feeler gauge.",
           "explanation": "**Why this is correct**\nPlace the ring squarely in its cylinder and measure the end gap with a feeler gauge. The gap must meet the engine maker's limit.\n\n**Engineering principle**\nToo little gap can close as the ring heats and damage the cylinder; too much gap increases leakage.\n\n**Memory hook:** Square the ring; measure the gap.\n\n**Board tip:** Use the specified cylinder, position, and service limits.",
           "explanationImages": [],
@@ -179912,11 +180842,12 @@
           "question": "During overhaul, reciprocating engine exhaust valves are checked for stretch",
           "questionType": "multiple_choice",
           "choices": [
-            "with a suitable inside spring caliper.",
             "with a contour or radius gauge.",
-            "by placing the valve on a surface plate and mea- suring its length with a vernier height gauge."
+            "by placing the valve on a surface plate and mea- suring its length with a vernier height gauge.",
+            "by weighing the valve on a precision scale.",
+            "with a suitable inside spring caliper."
           ],
-          "answerIndex": 1,
+          "answerIndex": 0,
           "answerText": "with a contour or radius gauge.",
           "explanation": "**Why this is correct**\nExhaust-valve stretch is assessed with the specified contour or radius gauge to detect a tuliped or deformed valve head. A stretched valve can fail and cause loss of compression; use the engine manufacturer's inspection limit and reject criteria.",
           "explanationImages": [],
@@ -179934,9 +180865,10 @@
           "question": "During overhaul, the disassembled parts of an engine are usually degreased with some form of mineral spirits solvent rather than water-mixed degreasers primarily because",
           "questionType": "multiple_choice",
           "choices": [
-            "solvent degreasers are much more effective.",
+            "water-mixed degreasers reduce the hardness of steel engine parts.",
             "water-mixed degreaser residues may cause engine oil contamination in the overhauled engine.",
-            "water-mixed degreasers cause corrosion."
+            "water-mixed degreasers cause corrosion.",
+            "solvent degreasers are much more effective."
           ],
           "answerIndex": 1,
           "answerText": "water-mixed degreaser residues may cause engine oil contamination in the overhauled engine.",
@@ -179956,11 +180888,12 @@
           "question": "When cleaning aluminum and magnesium engine parts, it is inadvisable to soak them in solutions con- taining soap because",
           "questionType": "multiple_choice",
           "choices": [
+            "soap makes aluminum and magnesium parts nonmagnetic.",
+            "the parts can be destroyed by dissimilar metal electrolytic action if they are placed together in the solution for more than a few minutes.",
             "some of the soap will become impregnated in the surface of the material and subsequently cause engine oil contamination and foaming.",
-            "the soap can chemically alter the metals causing them to become more susceptible to corrosion.",
-            "the parts can be destroyed by dissimilar metal electrolytic action if they are placed together in the solution for more than a few minutes."
+            "the soap can chemically alter the metals causing them to become more susceptible to corrosion."
           ],
-          "answerIndex": 0,
+          "answerIndex": 2,
           "answerText": "some of the soap will become impregnated in the surface of the material and subsequently cause engine oil contamination and foaming.",
           "explanation": "**Why this is correct**\nStrong alkaline cleaners can attack aluminum and magnesium, and residues may remain in pores or joints. Use only a compatible approved cleaner, observe concentration and soak-time limits, then rinse and dry thoroughly.",
           "explanationImages": [],
@@ -179978,11 +180911,12 @@
           "question": "What is required by 14 CFR Part 43 appendix D when performing an annual/100-hour inspection on a recip- rocating engine aircraft?",
           "questionType": "multiple_choice",
           "choices": [
+            "Valve clearance check.",
+            "Propeller tracking check.",
             "Magneto timing check.",
-            "Cylinder compression check.",
-            "Valve clearance check."
+            "Cylinder compression check."
           ],
-          "answerIndex": 1,
+          "answerIndex": 3,
           "answerText": "Cylinder compression check.",
           "explanation": "**Why this is correct**\nAppendix D requires a detailed inspection of the engine and components, including cylinder condition and compression-related checks as specified by the inspection procedure. The keyed option is the cylinder compression check; use the current regulation and approved checklist for actual compliance.",
           "explanationImages": [],
@@ -180002,7 +180936,8 @@
           "choices": [
             "may be a result of abnormal plain type bearing wear and is cause for further investigation.",
             "is probably a result of ring and cylinder wall wear and is cause for engine removal and/or overhaul.",
-            "is normal in engines utilizing plain type bearings and aluminum pistons and is not cause for alarm."
+            "is normal in engines utilizing plain type bearings and aluminum pistons and is not cause for alarm.",
+            "is normal ferrous wear from cam lobes and should be disregarded."
           ],
           "answerIndex": 0,
           "answerText": "may be a result of abnormal plain type bearing wear and is cause for further investigation.",
@@ -180022,9 +180957,10 @@
           "question": "If metallic particles are found in the oil filter during an inspection",
           "questionType": "multiple_choice",
           "choices": [
-            "it is an indication of normal engine wear unless the particles are nonferrous.",
+            "the filter should be rinsed and reinstalled if oil pressure is normal.",
             "the cause should be identified and corrected: before the aircraft is released for flight.",
-            "it is an indication of normal engine wear unless the deposit exceeds a specified amount."
+            "it is an indication of normal engine wear unless the deposit exceeds a specified amount.",
+            "it is an indication of normal engine wear unless the particles are nonferrous."
           ],
           "answerIndex": 1,
           "answerText": "the cause should be identified and corrected: before the aircraft is released for flight.",
@@ -180469,7 +181405,7 @@
         }
       ]
     },
-    "chapters/powerplant-starting-ignition-test.json": {
+    "chapters/starting-and-ignition-test.json": {
       "title": "Starting and Ignition Test",
       "questions": [
         {
@@ -196773,7 +197709,7 @@
           "questionType": "multiple_choice",
           "choices": [
             "1,2,5,6,7",
-            "1,2,5,6,7",
+            "1,2,3,4,5,6,7",
             "1,2,3,5,7",
             "2,3,4,5,7"
           ],

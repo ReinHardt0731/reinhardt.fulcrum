@@ -1,0 +1,708 @@
+{
+  "title": "Inspection, Troubleshooting, Maintenance, and Overhaul",
+  "questions": [
+    {
+      "question": "What maintenance record(s) is/are required following a major repair of an aircraft engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Entries in the engine maintenance record and FAAForm337.",
+        "Entry in logbook.",
+        "A verbal notification to the owner with no maintenance-record entry.",
+        "Entries in engine maintenance records and a list of discrepancies for the FAA."
+      ],
+      "answerIndex": 0,
+      "answerText": "Entries in the engine maintenance record and FAAForm337.",
+      "explanation": "**Why this is correct**\nFor a major engine repair, the maintenance record must include the required return-to-service entry, and FAA Form 337 is used to document a major repair or alteration under the referenced US rules. Check current Part 43 requirements and the aircraft's jurisdiction before applying this exam answer operationally.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Continued and/or excessive heat and centrifugal force on turbine engine rotor blades is likely to cause",
+      "questionType": "multiple_choice",
+      "choices": [
+        "erosion.",
+        "creep.",
+        "galling.",
+        "profile."
+      ],
+      "answerIndex": 1,
+      "answerText": "creep.",
+      "explanation": "**Why this is correct**\nCreep is slow, permanent deformation that accumulates while a material is exposed to sustained stress, especially at elevated temperature. Turbine blades operate in hot gas under centrifugal stress, so creep can lengthen or distort a blade over time.\n\n**Engineering principle**\nCreep develops over time under sustained load; fatigue develops from repeated cyclic loading, while yielding is an immediate permanent deformation after exceeding the elastic limit.\n\n💡 **Memory hook:** Hot metal + sustained stress + time = creep.\n\n🎯 **Board tip:** Distinguish time-dependent creep from cycle-dependent fatigue.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Severe rubbing of turbine engine compressor blades will usually cause",
+      "questionType": "multiple_choice",
+      "choices": [
+        "cracking.",
+        "erosion.",
+        "galling.",
+        "bowing."
+      ],
+      "answerIndex": 2,
+      "answerText": "galling.",
+      "explanation": "**Why this is correct**\nGas-turbine components condition the flow in sequence. The compressor raises pressure; the diffuser slows air and converts velocity to static pressure before combustion; the combustor adds heat; the turbine extracts work; and the nozzle accelerates exhaust for thrust.\n\n**Engineering principle**\nA rotor adds energy to the flow; a stator redirects and diffuses it. Nozzle guide vanes accelerate and direct gas into the turbine rotor. Compressor bleed or variable vanes help maintain stable operation away from design conditions.\n\n💡 **Memory hook:** Compressor raises pressure; diffuser slows flow; nozzle speeds exhaust.\n\n🎯 **Board tip:** Track whether the question asks about pressure rise, velocity change, or flow direction.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which group of engine indications helps detect problems at an early stage?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Performance indication",
+        "System indication",
+        "Engine trend monitoring",
+        "Oil consumption, EGT, N1 and EPR"
+      ],
+      "answerIndex": 2,
+      "answerText": "Engine trend monitoring",
+      "explanation": "**Why this is correct**\nEngine trend monitoring records repeated operating parameters under comparable conditions and looks for gradual deviations from the engine’s own baseline. It can reveal deterioration before a single indication crosses its limit.\n\n**Engineering principle**\nTrend monitoring is longitudinal comparison; a one-time inspection or limit check is a snapshot.\n\n💡 **Memory hook:** Compare the engine with its own history.\n\n🎯 **Board tip:** Consistent measurement conditions make trends meaningful.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What type of damage may happen on turbine rotor blades due to high temperature and high centrifugal forces?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Elongation",
+        "Cavitation",
+        "Erosion",
+        "Creep"
+      ],
+      "answerIndex": 3,
+      "answerText": "Creep",
+      "explanation": "**Why this is correct**\nCreep is slow, permanent deformation that accumulates while a material is exposed to sustained stress, especially at elevated temperature. Turbine blades operate in hot gas under centrifugal stress, so creep can lengthen or distort a blade over time.\n\n**Engineering principle**\nCreep develops over time under sustained load; fatigue develops from repeated cyclic loading, while yielding is an immediate permanent deformation after exceeding the elastic limit.\n\n💡 **Memory hook:** Hot metal + sustained stress + time = creep.\n\n🎯 **Board tip:** Distinguish time-dependent creep from cycle-dependent fatigue.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How is proper end-gap clearance on new piston rings assured during the overhaul of an engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "By measuring the ring outside diameter and subtracting it from the cylinder diameter.",
+        "By accurately measuring and matching the outside diameter of the rings with the inside diameter of the cylinders.",
+        "By using rings specified by the engine manufacturer.",
+        "By placing the rings in the cylinder and measuring the end-gap with a feeler gauge."
+      ],
+      "answerIndex": 3,
+      "answerText": "By placing the rings in the cylinder and measuring the end-gap with a feeler gauge.",
+      "explanation": "**Why this is correct**\nPlace the ring squarely in its cylinder and measure the end gap with a feeler gauge. The gap must meet the engine maker's limit.\n\n**Engineering principle**\nToo little gap can close as the ring heats and damage the cylinder; too much gap increases leakage.\n\n**Memory hook:** Square the ring; measure the gap.\n\n**Board tip:** Use the specified cylinder, position, and service limits.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "During overhaul, reciprocating engine exhaust valves are checked for stretch",
+      "questionType": "multiple_choice",
+      "choices": [
+        "with a contour or radius gauge.",
+        "by placing the valve on a surface plate and mea- suring its length with a vernier height gauge.",
+        "by weighing the valve on a precision scale.",
+        "with a suitable inside spring caliper."
+      ],
+      "answerIndex": 0,
+      "answerText": "with a contour or radius gauge.",
+      "explanation": "**Why this is correct**\nExhaust-valve stretch is assessed with the specified contour or radius gauge to detect a tuliped or deformed valve head. A stretched valve can fail and cause loss of compression; use the engine manufacturer's inspection limit and reject criteria.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "During overhaul, the disassembled parts of an engine are usually degreased with some form of mineral spirits solvent rather than water-mixed degreasers primarily because",
+      "questionType": "multiple_choice",
+      "choices": [
+        "water-mixed degreasers reduce the hardness of steel engine parts.",
+        "water-mixed degreaser residues may cause engine oil contamination in the overhauled engine.",
+        "water-mixed degreasers cause corrosion.",
+        "solvent degreasers are much more effective."
+      ],
+      "answerIndex": 1,
+      "answerText": "water-mixed degreaser residues may cause engine oil contamination in the overhauled engine.",
+      "explanation": "**Why this is correct**\nA water-mixed degreaser must be thoroughly removed and the part dried because residue or trapped water can contaminate the oil system and promote corrosion. Follow the cleaner maker's instructions and approved engine cleaning practice.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "When cleaning aluminum and magnesium engine parts, it is inadvisable to soak them in solutions con- taining soap because",
+      "questionType": "multiple_choice",
+      "choices": [
+        "soap makes aluminum and magnesium parts nonmagnetic.",
+        "the parts can be destroyed by dissimilar metal electrolytic action if they are placed together in the solution for more than a few minutes.",
+        "some of the soap will become impregnated in the surface of the material and subsequently cause engine oil contamination and foaming.",
+        "the soap can chemically alter the metals causing them to become more susceptible to corrosion."
+      ],
+      "answerIndex": 2,
+      "answerText": "some of the soap will become impregnated in the surface of the material and subsequently cause engine oil contamination and foaming.",
+      "explanation": "**Why this is correct**\nStrong alkaline cleaners can attack aluminum and magnesium, and residues may remain in pores or joints. Use only a compatible approved cleaner, observe concentration and soak-time limits, then rinse and dry thoroughly.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is required by 14 CFR Part 43 appendix D when performing an annual/100-hour inspection on a recip- rocating engine aircraft?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Valve clearance check.",
+        "Propeller tracking check.",
+        "Magneto timing check.",
+        "Cylinder compression check."
+      ],
+      "answerIndex": 3,
+      "answerText": "Cylinder compression check.",
+      "explanation": "**Why this is correct**\nAppendix D requires a detailed inspection of the engine and components, including cylinder condition and compression-related checks as specified by the inspection procedure. The keyed option is the cylinder compression check; use the current regulation and approved checklist for actual compliance.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "During routine inspection of a reciprocating engine, a deposit of small, bright, metallic particles which do not cling to the magnetic drain plug is discovered in the oil sump and on the surface of the oil filter. This condition",
+      "questionType": "multiple_choice",
+      "choices": [
+        "may be a result of abnormal plain type bearing wear and is cause for further investigation.",
+        "is probably a result of ring and cylinder wall wear and is cause for engine removal and/or overhaul.",
+        "is normal in engines utilizing plain type bearings and aluminum pistons and is not cause for alarm.",
+        "is normal ferrous wear from cam lobes and should be disregarded."
+      ],
+      "answerIndex": 0,
+      "answerText": "may be a result of abnormal plain type bearing wear and is cause for further investigation.",
+      "explanation": "**Why this is correct**\nSmall bright ferrous particles can come from abnormal wear of plain bearings or other steel components. Identify the material and source rather than dismissing it; inspect the filter and magnetic plug and follow the engine troubleshooting procedure.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "If metallic particles are found in the oil filter during an inspection",
+      "questionType": "multiple_choice",
+      "choices": [
+        "the filter should be rinsed and reinstalled if oil pressure is normal.",
+        "the cause should be identified and corrected: before the aircraft is released for flight.",
+        "it is an indication of normal engine wear unless the deposit exceeds a specified amount.",
+        "it is an indication of normal engine wear unless the particles are nonferrous."
+      ],
+      "answerIndex": 1,
+      "answerText": "the cause should be identified and corrected: before the aircraft is released for flight.",
+      "explanation": "**Why this is correct**\nMetal in an oil filter is evidence of active wear, not a condition to ignore. Identify the particle type and source, inspect affected components, and correct the cause before returning the engine to service.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What publication is used for guidance to determine whether a powerplant repair is major or minor?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Airworthiness Directives",
+        "Service Bulletins",
+        "Technical Standard Orders",
+        "Federal Aviation Regulations, Part 43, appendix A"
+      ],
+      "answerIndex": 3,
+      "answerText": "Federal Aviation Regulations, Part 43, appendix A",
+      "explanation": "**Why this is correct**\nThe cited US rule set uses 14 CFR Part 43 Appendix A to define major repairs and major alterations. The classification determines documentation and approval requirements; it is not decided by cost or by the mechanic's preference alone.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A severe condition of chafing or fretting in which a transfer of metal from one part to another is called _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "scoring",
+        "galling",
+        "burning",
+        "waxing"
+      ],
+      "answerIndex": 1,
+      "answerText": "galling",
+      "explanation": "**Why this is correct**\nGalling is severe adhesive wear in which loaded surfaces rub and transfer material from one part to another. It can score or seize a component; lubrication, fit, surface finish, and material pairing affect the risk.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Straightening nitride crankshaft is _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "recommended",
+        "approved by the manufacturer",
+        "imposed by the all engine repair manuals",
+        "not recommended"
+      ],
+      "answerIndex": 3,
+      "answerText": "not recommended",
+      "explanation": "**Why this is correct**\nStraightening a nitrided crankshaft is generally not recommended because bending can crack or damage its hardened surface case and alter fatigue strength. Follow the manufacturer's disposition; do not attempt an unapproved correction.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "When must an AD be complied with after it becomes effective?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "At the next scheduled overhaul",
+        "During the next scheduled inspection",
+        "Every after A check or B check",
+        "As specified in the AD"
+      ],
+      "answerIndex": 3,
+      "answerText": "As specified in the AD",
+      "explanation": "**Why this is correct**\nAn airworthiness directive must be complied with according to the compliance time and conditions stated in that AD. Some directives allow alternatives or recurring intervals; the effective date alone does not establish one universal deadline.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What publication contains the mandatory replacement time for parts of a turbine engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Federal Aviation Regulation Part 43.",
+        "Engine Manufacturer’s Service Instructions.",
+        "Federal Aviation Regulation Part 49",
+        "Engine Manufacturer’s Maintenance Manual."
+      ],
+      "answerIndex": 1,
+      "answerText": "Engine Manufacturer’s Service Instructions.",
+      "explanation": "**Why this is correct**\nMandatory replacement times and life limits must be taken from the applicable engine manufacturer's approved service information and governing airworthiness requirements. Verify the exact model and revision rather than relying on a generic interval.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of a differential-pressure compression check on a piston engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Check starter current",
+        "Compare cylinder leakage with a regulated reference pressure",
+        "Measure oil viscosity",
+        "Determine propeller pitch"
+      ],
+      "answerIndex": 1,
+      "answerText": "Compare cylinder leakage with a regulated reference pressure",
+      "explanation": "**Why this is correct**\nA differential-pressure compression check compares regulated air supplied to a cylinder with the pressure retained by that cylinder. The leakage and where it escapes help assess rings, valves, and cylinder condition; it is not a direct power measurement.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why should a cylinder leak-down test be performed with the piston at top dead center on the compression stroke?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The magnetos must be producing a spark",
+        "Both valves should be closed and the piston held at the correct test position",
+        "The exhaust valve should be fully open",
+        "The engine must be at bottom dead center"
+      ],
+      "answerIndex": 1,
+      "answerText": "Both valves should be closed and the piston held at the correct test position",
+      "explanation": "**Why this is correct**\nAt top dead center on the compression stroke, both valves should be closed and the piston is at the correct position for the leak-down test. This prevents air escaping through an intentionally open valve and helps keep the propeller from rotating unexpectedly.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does a hiss at the carburetor or induction during a leak-down test suggest?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A cracked propeller hub",
+        "A failed oil cooler",
+        "Leakage past an intake valve",
+        "Leakage past the exhaust valve only"
+      ],
+      "answerIndex": 2,
+      "answerText": "Leakage past an intake valve",
+      "explanation": "**Why this is correct**\nThe induction and metering system must deliver the correct mass of air and fuel and distribute it to the cylinders. A venturi lowers static pressure as air velocity rises, drawing fuel from a discharge nozzle; the throttle controls inducted charge, while mixture control adjusts fuel proportion as air density changes.\n\n**Engineering principle**\nA lean mixture has too little fuel for the air; carburetor heat addresses icing but lowers air density and usually reduces power. Backfire into the induction is different from afterfire in the exhaust.\n\n💡 **Memory hook:** Venturi draws fuel; throttle meters charge; mixture trims ratio.\n\n🎯 **Board tip:** Use the location of the sound or temperature change to distinguish induction backfire from exhaust afterfire.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does a hiss at the exhaust during a leak-down test suggest?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A blocked fuel nozzle",
+        "A failed starter clutch",
+        "A worn propeller governor spring",
+        "Leakage past an exhaust valve"
+      ],
+      "answerIndex": 3,
+      "answerText": "Leakage past an exhaust valve",
+      "explanation": "**Why this is correct**\nA hiss at the exhaust outlet during a leak-down test indicates air escaping past the exhaust valve or its seat. Listen at intake, exhaust, and crankcase to localize the leakage path.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are magnetic drain plugs inspected during an oil change?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "They set ignition timing",
+        "They collect aluminum exclusively",
+        "Ferrous particles can indicate wear of internal steel or iron parts",
+        "They measure fuel flow"
+      ],
+      "answerIndex": 2,
+      "answerText": "Ferrous particles can indicate wear of internal steel or iron parts",
+      "explanation": "**Why this is correct**\nA magnetic drain plug collects ferrous wear particles from the oil. Inspecting its accumulation can reveal abnormal internal wear, but nonferrous debris will not be attracted and still requires filter or oil inspection.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of checking crankshaft runout during overhaul?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Determine whether the shaft is bent or outside alignment limits",
+        "Measure fuel octane",
+        "Set valve overlap",
+        "Determine spark-plug reach"
+      ],
+      "answerIndex": 0,
+      "answerText": "Determine whether the shaft is bent or outside alignment limits",
+      "explanation": "**Why this is correct**\nRunout measurement checks whether the crankshaft is bent or outside alignment limits. Excessive runout can cause vibration, bearing distress, and seal problems; compare the measured value with the model-specific service limit.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are service limits used during engine inspection?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "They set flight-planning speeds",
+        "They define allowable wear or dimensions for continued service",
+        "They replace all overhaul instructions",
+        "They show only new-part dimensions"
+      ],
+      "answerIndex": 1,
+      "answerText": "They define allowable wear or dimensions for continued service",
+      "explanation": "**Why this is correct**\nService limits define the permitted wear, clearance, or dimension for continued service. A measurement beyond the applicable limit requires the specified repair or rejection action; limits are component- and model-specific.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does a non-destructive inspection method aim to do?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Replace dimensional inspection",
+        "Find defects without making the inspected component unusable",
+        "Measure engine power only",
+        "Remove all surface coatings"
+      ],
+      "answerIndex": 1,
+      "answerText": "Find defects without making the inspected component unusable",
+      "explanation": "**Why this is correct**\nNondestructive inspection seeks cracks or other flaws while leaving the inspected component usable. Methods such as penetrant, magnetic-particle, eddy-current, and ultrasonic testing suit different materials and defect locations.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which method is suited to finding surface-breaking cracks in a nonporous nonmagnetic part?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Compression-ratio test",
+        "Liquid penetrant inspection",
+        "Magnetic-particle inspection",
+        "Oil-pressure test"
+      ],
+      "answerIndex": 1,
+      "answerText": "Liquid penetrant inspection",
+      "explanation": "**Why this is correct**\nLiquid penetrant inspection reveals surface-breaking flaws on clean, nonporous materials. Penetrant enters an open discontinuity by capillary action and developer draws it back out; it cannot reveal a flaw sealed beneath the surface.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which method is suited to detecting surface and near-surface flaws in ferromagnetic steel?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Liquid penetrant on every material",
+        "Fuel-flow test",
+        "Radiography of the spark plug only",
+        "Magnetic-particle inspection"
+      ],
+      "answerIndex": 3,
+      "answerText": "Magnetic-particle inspection",
+      "explanation": "**Why this is correct**\nMagnetic-particle inspection detects surface and near-surface discontinuities in ferromagnetic materials. A crack disturbs the magnetic field and attracts particles; the method does not work on nonmagnetic aluminum alloys.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why must engine parts be cleaned before detailed inspection?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It resets the service life",
+        "It changes the alloy temper",
+        "Deposits can hide cracks, wear, and other defects",
+        "Cleaning increases material strength"
+      ],
+      "answerIndex": 2,
+      "answerText": "Deposits can hide cracks, wear, and other defects",
+      "explanation": "**Why this is correct**\nCleaning removes oil, carbon, and deposits that can conceal cracks, corrosion, fretting, or wear. Use a compatible approved process because an unsuitable chemical can attack aluminum, magnesium, seals, or protective treatments.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of recording component serial numbers during overhaul?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Calculate wing loading",
+        "Maintain identity and traceability through the maintenance records",
+        "Determine the fuel-air ratio",
+        "Set the propeller rpm"
+      ],
+      "answerIndex": 1,
+      "answerText": "Maintain identity and traceability through the maintenance records",
+      "explanation": "**Why this is correct**\nSerial-number records maintain component identity and traceability through inspection, repair, and installation. That history supports life-limit control, AD compliance, and verification that approved parts are installed.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why should an engine be preserved if it will remain inactive for an extended period?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Keep the propeller at fine pitch",
+        "Avoid recording storage conditions",
+        "Reduce corrosion and internal damage from moisture and contamination",
+        "Increase the engine’s compression ratio"
+      ],
+      "answerIndex": 2,
+      "answerText": "Reduce corrosion and internal damage from moisture and contamination",
+      "explanation": "**Why this is correct**\nPreservation limits moisture and contaminant exposure that can corrode internal surfaces during storage. Follow the engine maker's procedure for oiling, sealing openings, desiccant, and periodic inspection.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Inspection, Troubleshooting, Maintenance, and Overhaul",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}

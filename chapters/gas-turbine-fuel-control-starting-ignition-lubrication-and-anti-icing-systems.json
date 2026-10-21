@@ -1,0 +1,703 @@
+{
+  "title": "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems",
+  "questions": [
+    {
+      "question": "When starting a turbine engine",
+      "questionType": "multiple_choice",
+      "choices": [
+        "a hot start is indicated if the exhaust gas temperature exceeds specified limits.",
+        "an excessively lean mixture is likely to cause a hot start.",
+        "release the starter switch as soon as indication of light-off occurs.",
+        "a hot start is indicated when the engine fails to light off."
+      ],
+      "answerIndex": 0,
+      "answerText": "a hot start is indicated if the exhaust gas temperature exceeds specified limits.",
+      "explanation": "**Why this is correct**\nA hot start occurs when exhaust-gas temperature exceeds the engine's permitted starting limit or rises too rapidly. Excess fuel or insufficient starter airflow can overheat turbine parts; follow the specific abort checklist.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What should be done initially if a turbine engine catches fire when starting?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Continue starting attempt in order to blow out the fire.",
+        "Turn off the fuel and continue engine rotation with the starter.",
+        "Stop the starter immediately and close the intake to prevent further airflow.",
+        "Continue engine start rotation and discharge a fire extinguisher into the intake"
+      ],
+      "answerIndex": 1,
+      "answerText": "Turn off the fuel and continue engine rotation with the starter.",
+      "explanation": "**Why this is correct**\nFor a turbine start fire, shut off fuel and continue starter rotation if directed by the aircraft procedure. Airflow can purge fuel and flame from the engine; use the approved fire checklist.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A cool-off period prior to shutdown of a turbine engine is accomplished in order to",
+      "questionType": "multiple_choice",
+      "choices": [
+        "increase compressor pressure before securing the engine.",
+        "prevent seizure of the engine bearings.",
+        "allow the turbine wheel to cool before the case contracts around it.",
+        "prevent vapor lock in the fuel control and/or fuel lines."
+      ],
+      "answerIndex": 2,
+      "answerText": "allow the turbine wheel to cool before the case contracts around it.",
+      "explanation": "**Why this is correct**\nA cool-off period lets turbine wheels and other hot-section parts cool gradually before shutdown. This reduces uneven thermal contraction, rubbing, and distortion; use the engine maker's stated time and conditions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following indicates that a combustion chamber of a jet engine is not operating properly?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Warping of the exhaust duct liner.",
+        "An unusually high fuel quantity in the aircraft tanks.",
+        "Clam shells stick in thrust reverse position.",
+        "Hot spots on the tail cone."
+      ],
+      "answerIndex": 3,
+      "answerText": "Hot spots on the tail cone.",
+      "explanation": "**Why this is correct**\nA localized hot spot on the tail cone can indicate uneven combustor operation or abnormal hot-gas impingement. Compare exhaust patterns and inspect according to the engine troubleshooting procedure.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Fuel with high flash point",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Provides good ignition capabilities",
+        "Is safe for handling",
+        "Has low freezing point",
+        "Has high density"
+      ],
+      "answerIndex": 1,
+      "answerText": "Is safe for handling",
+      "explanation": "**Why this is correct**\nFlash point is the lowest temperature at which a liquid gives off enough vapor to ignite momentarily under a test method. A higher flash point generally reduces vapor ignition risk during handling, but does not make fuel nonflammable or remove other hazards.\n\n**Engineering principle**\nFlash point is not autoignition temperature or boiling point.\n\n💡 **Memory hook:** Higher flash point = less easily ignited vapor at ordinary handling temperatures.\n\n🎯 **Board tip:** Follow fuel safety procedures regardless of flash point.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What prevents fuel from vaporizing inside the tanks when the aircraft is at high altitude?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Positive air pressure on the top surface of the fuel from the engine",
+        "Positive air pressure on the top surface of the fuel from ram air",
+        "Negative air pressure on the top surface of the fuel from the pneumatic system",
+        "Negative pressure on the top surface of the fuel from ram air"
+      ],
+      "answerIndex": 1,
+      "answerText": "Positive air pressure on the top surface of the fuel from ram air",
+      "explanation": "**Why this is correct**\nMaintaining a suitable positive pressure above fuel can suppress vapor formation by keeping tank pressure above the fuel’s vapor pressure under the operating condition. Aircraft tank venting and pressurization arrangements are installation-specific and must follow approved design data.\n\n**Engineering principle**\nTank vent pressure control is different from the engine fuel pump’s delivery pressure.\n\n💡 **Memory hook:** Higher tank pressure discourages boiling.\n\n🎯 **Board tip:** Avoid treating a simplified exam answer as a universal description of every aircraft fuel tank.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which accessory is not found in an APU?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Fuel pump",
+        "Oil pump",
+        "Electric generator",
+        "Hydraulic pump"
+      ],
+      "answerIndex": 3,
+      "answerText": "Hydraulic pump",
+      "explanation": "**Why this is correct**\nThe accessory complement of an APU depends on its installation, but a hydraulic pump is not a standard accessory in the cited question. APUs commonly provide electrical power and bleed air; verify aircraft fit.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which component prevents cavitation at the inlet of the high pressure fuel pump?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Fuel boost pumps in the tank",
+        "Low pressure fuel pump",
+        "LP fuel shut-off valve",
+        "Positive air pressure from ram air"
+      ],
+      "answerIndex": 1,
+      "answerText": "Low pressure fuel pump",
+      "explanation": "**Why this is correct**\nA low-pressure/boost pump supplies positive inlet pressure to the high-pressure pump. This reduces the risk of inlet starvation and cavitation, especially when fuel is hot, at altitude, or under high flow demand.\n\n**Engineering principle**\nThe boost pump supports the high-pressure pump; the high-pressure pump supplies the metering unit at operating pressure.\n\n💡 **Memory hook:** Feed the pump before asking it to raise pressure.\n\n🎯 **Board tip:** Cavitation is an inlet-pressure problem, not simply a clogged nozzle.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which control lever is used on engines equipped with hydromechanical fuel control unit to open the fuel valves and starts the ignition?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Forward thrust lever",
+        "Start lever",
+        "Reverse thrust lever",
+        "Master switch"
+      ],
+      "answerIndex": 1,
+      "answerText": "Start lever",
+      "explanation": "**Why this is correct**\nOn the referenced hydromechanical fuel control, the start lever initiates the start sequence and permits fuel introduction at the proper point. Exact lever logic is engine-specific.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does the thrust reverser interlock system do?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It prevents deployment of the reverser if the opposite reverser does not deploy",
+        "It prevents the engine from increasing power until the reverser is fully deployed",
+        "It prevents the reverser from deploying while in flight",
+        "It prevents the reverser from deploying when a fault is detected in the system"
+      ],
+      "answerIndex": 1,
+      "answerText": "It prevents the engine from increasing power until the reverser is fully deployed",
+      "explanation": "**Why this is correct**\nA thrust-reverser interlock prevents unsafe deployment or power increase while the reverser is in an incompatible position. It protects the engine and aircraft from unintended thrust and mechanical damage.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which statement is true with regards to heat exchangers?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Air is used to cool the oil using a heat exchanger",
+        "Fuel heats up while the oil cools down in a heat exchanger",
+        "Oil heats up while the fuel cools down in a heat exchanger",
+        "Fuel and oil mixes inside a heat exchanger then separates when it leaves"
+      ],
+      "answerIndex": 1,
+      "answerText": "Fuel heats up while the oil cools down in a heat exchanger",
+      "explanation": "**Why this is correct**\nA fuel-oil heat exchanger transfers heat between fluids: warm oil may heat cold fuel, while fuel may cool hot oil. Which one gains heat depends on inlet temperatures and operating state.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which component experiences the highest heat-to- metal contact in a jet engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Combustor",
+        "Ignition Plug",
+        "Fuel Nozzle",
+        "Turbine blades"
+      ],
+      "answerIndex": 3,
+      "answerText": "Turbine blades",
+      "explanation": "**Why this is correct**\nTurbine blades contact the hot gas after combustion while also carrying high centrifugal stress. Cooling passages, alloy, and coating protect them, but their temperature exposure makes inspection critical.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What happens when there is a leak in the fuel-oil heat exchanger?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The fuel will contaminate the oil",
+        "The oil will contaminate the fuel",
+        "Both fuel and oil will be contaminated",
+        "No contamination since both fluid have the same pressure"
+      ],
+      "answerIndex": 0,
+      "answerText": "The fuel will contaminate the oil",
+      "explanation": "**Why this is correct**\nA leak through the heat-exchanger barrier can contaminate the lower-pressure fluid with the higher-pressure fluid. The keyed answer says fuel contaminates oil; actual direction depends on pressure differential, so inspect both circuits.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What happens to the lubrication system when the main filter gets clogged?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Oil will stop flowing",
+        "Oil will continue to flow",
+        "Oil will flow thru the bypass valve",
+        "Oil will go in the reverse direction"
+      ],
+      "answerIndex": 2,
+      "answerText": "Oil will flow thru the bypass valve",
+      "explanation": "**Why this is correct**\nWhen filter restriction creates excessive pressure drop, the bypass valve opens to preserve oil flow. Oil may then be unfiltered, but maintaining lubrication is safer than starving bearings; investigate the blockage.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which statement is true with regards to oil viscosity?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Oxidation does not affect viscosity",
+        "Oil pressure greatly affects viscosity",
+        "Oil viscosity decreases when oil temperature increases",
+        "Oil viscosity increases when oil temperature increases"
+      ],
+      "answerIndex": 2,
+      "answerText": "Oil viscosity decreases when oil temperature increases",
+      "explanation": "**Why this is correct**\nOil viscosity generally decreases as temperature rises, so hot oil flows more readily and may provide a thinner lubricating film. Oil grade and pressure limits account for operating temperature.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What danger exist if thrust reversers are operated at low engine speed?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Problems with directional stability",
+        "Possibility of ingesting its own exhaust",
+        "Ineffective braking",
+        "High EGT"
+      ],
+      "answerIndex": 1,
+      "answerText": "Possibility of ingesting its own exhaust",
+      "explanation": "**Why this is correct**\nAt low engine speed, exhaust may be ingested back toward the inlet during reverser operation, creating hot-gas reingestion or compressor disturbance. Follow the approved speed and ground-use limits.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What type of seal is used to seal the oil in a bearing sump?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Magnetic carbon seals",
+        "Spring-loaded carbon seals",
+        "Labyrinth seals",
+        "O-ring"
+      ],
+      "answerIndex": 2,
+      "answerText": "Labyrinth seals",
+      "explanation": "**Why this is correct**\nLabyrinth seals use successive clearances and turns to restrict leakage without rubbing contact. This suits high-speed, hot rotating assemblies where contact seals can wear or overheat.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What would be the effect of an oil pressure relief valve getting stuck in the open position?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "High oil pressure will develop",
+        "Oil pressure will not develop sufficiently to lubricate",
+        "Oil will leak externally",
+        "Normal operation, oil will just return to the tank"
+      ],
+      "answerIndex": 1,
+      "answerText": "Oil pressure will not develop sufficiently to lubricate",
+      "explanation": "**Why this is correct**\nA relief valve stuck open continuously diverts oil, preventing pressure from reaching its required level. Low pressure threatens bearing lubrication and requires prompt action under the maintenance procedure.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "At what stage in a turbine engine is gas pressure the greatest?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Turbine outlet",
+        "Compressor outlet",
+        "Compressor inlet",
+        "Exhaust Cone"
+      ],
+      "answerIndex": 1,
+      "answerText": "Compressor outlet",
+      "explanation": "**Why this is correct**\nCompressor stages progressively raise pressure, so the greatest gas pressure is normally at the compressor outlet before combustion. Pressure then falls as gas expands through turbine stages.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the primary function of an exhaust cone of a turbine engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Align the exhaust gases to develop an efficient power",
+        "Straighten the swirling exhaust gasses.",
+        "Collect and convert exhaust gasses into a solid low-velocity exhaust vapor",
+        "Collect and convert exhaust gasses into a solid high-velocity exhaust jet"
+      ],
+      "answerIndex": 3,
+      "answerText": "Collect and convert exhaust gasses into a solid high-velocity exhaust jet",
+      "explanation": "**Why this is correct**\nThe exhaust cone collects turbine discharge and shapes it into an organized high-velocity exhaust stream. It contributes to thrust by guiding flow, while a nozzle may provide further expansion depending on engine design.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For what primary purpose is a turbine engine fuel control unit trimmed?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Eliminate vibration in the compression section",
+        "To obtain maximum thrust output when desired",
+        "To properly position the power levers",
+        "To adjust the idle RPM"
+      ],
+      "answerIndex": 1,
+      "answerText": "To obtain maximum thrust output when desired",
+      "explanation": "**Why this is correct**\nTrimming calibrates the fuel-control schedule so the engine reaches specified maximum thrust while staying within temperature, speed, and pressure limits. It is a maintenance adjustment, not a routine cockpit control.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the primary role of the turbine-engine fuel control unit?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Store all aircraft fuel",
+        "Control landing-gear extension",
+        "Meter fuel to meet commanded power while respecting engine operating limits",
+        "Set compressor blade geometry manually"
+      ],
+      "answerIndex": 2,
+      "answerText": "Meter fuel to meet commanded power while respecting engine operating limits",
+      "explanation": "**Why this is correct**\nThe fuel control meters fuel to match commanded power while respecting engine limits such as turbine temperature and spool speed. Fuel flow therefore varies with operating conditions rather than being fixed.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does an engine start lever commonly coordinate on a turbine engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Cabin door locking",
+        "Fuel introduction and ignition/start sequencing",
+        "Propeller blade tracking",
+        "Oil analysis sampling"
+      ],
+      "answerIndex": 1,
+      "answerText": "Fuel introduction and ignition/start sequencing",
+      "explanation": "**Why this is correct**\nThe start lever commonly coordinates fuel admission and ignition sequencing so fuel is introduced after adequate engine rotation and ignition availability. The specific sequence is defined by the engine checklist.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why is turbine starting temperature monitored closely?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Temperature controls wing loading",
+        "It measures fuel quantity",
+        "It sets starter current only",
+        "Excessive temperature during start can damage hot-section components"
+      ],
+      "answerIndex": 3,
+      "answerText": "Excessive temperature during start can damage hot-section components",
+      "explanation": "**Why this is correct**\nDuring starting, engine airflow is limited while fuel is being introduced, making hot-section temperature rise quickly if combustion is excessive. Temperature monitoring helps prevent damage to combustor and turbine parts.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of a turbine-engine igniter during start?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Remain continuously sparking at all normal conditions",
+        "Meter fuel to the burner",
+        "Control compressor speed",
+        "Provide an ignition spark until combustion becomes self-sustaining"
+      ],
+      "answerIndex": 3,
+      "answerText": "Provide an ignition spark until combustion becomes self-sustaining",
+      "explanation": "**Why this is correct**\nA turbine igniter supplies the spark that lights the fuel-air mixture during starting or a commanded relight. It normally stops firing after stable combustion is established.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does an anti-ice system protect on a turbine-engine inlet?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The starter relay from overload",
+        "Inlet surfaces where ice could restrict or disrupt airflow",
+        "The exhaust cone from corrosion only",
+        "The fuel-control gears from wear"
+      ],
+      "answerIndex": 1,
+      "answerText": "Inlet surfaces where ice could restrict or disrupt airflow",
+      "explanation": "**Why this is correct**\nInlet anti-ice protects surfaces where ice could restrict airflow, distort compressor entry flow, or shed into the engine. The system may use hot bleed air or electrical heating depending on design.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why is fuel recirculated through a fuel-oil heat exchanger on some engines?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Increase fuel octane",
+        "Remove all fuel from the aircraft",
+        "Ignite the mixture before the combustor",
+        "Transfer heat between fuel and oil to manage their temperatures"
+      ],
+      "answerIndex": 3,
+      "answerText": "Transfer heat between fuel and oil to manage their temperatures",
+      "explanation": "**Why this is correct**\nFuel recirculation lets a heat exchanger transfer energy between fuel and oil. It can warm cold fuel or cool hot oil depending on their relative temperatures, while the fluids remain separated.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does a fuel filter bypass arrangement protect against?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Interruption of fuel flow if the filter becomes excessively restricted",
+        "Excessive propeller rpm",
+        "Oil foaming",
+        "A hot start"
+      ],
+      "answerIndex": 0,
+      "answerText": "Interruption of fuel flow if the filter becomes excessively restricted",
+      "explanation": "**Why this is correct**\nA filter bypass preserves fuel delivery if the element becomes excessively restricted, by routing fuel around it after a pressure threshold. This prevents fuel starvation but can allow contaminants downstream.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are turbine-engine fuel nozzles checked for spray pattern?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It changes the engine type",
+        "It controls oil pressure",
+        "Poor atomization or uneven distribution can create hot spots and unstable combustion",
+        "The pattern sets the fan bypass ratio"
+      ],
+      "answerIndex": 2,
+      "answerText": "Poor atomization or uneven distribution can create hot spots and unstable combustion",
+      "explanation": "**Why this is correct**\nA good nozzle spray atomizes and distributes fuel evenly for stable combustion. Poor pattern can create local hot spots, incomplete burning, or excessive turbine temperature.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In a dry-sump turbine-engine lubrication system, what is the purpose of the scavenge pump?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Return oil from bearing sumps to the oil tank.",
+        "Meter fuel to the combustion chamber.",
+        "Increase compressor discharge pressure.",
+        "Supply hydraulic pressure to the propeller governor."
+      ],
+      "answerIndex": 0,
+      "answerText": "Return oil from bearing sumps to the oil tank.",
+      "explanation": "The scavenge pump removes oil from sumps and returns it to the tank; the pressure pump supplies lubricating oil to the engine.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Gas Turbine Fuel, Control, Starting, Ignition, Lubrication, and Anti-Icing Systems"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}

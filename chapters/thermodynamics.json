@@ -1,0 +1,695 @@
+{
+  "title": "Thermodynamics",
+  "questions": [
+    {
+      "question": "Two systems are each in thermal equilibrium with a third system. What does the zeroth law establish?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The first two systems are in thermal equilibrium with each other.",
+        "The systems contain equal amounts of internal energy.",
+        "No heat can ever flow between any of the three systems.",
+        "Their pressures and volumes must also be equal."
+      ],
+      "answerIndex": 0,
+      "answerText": "The first two systems are in thermal equilibrium with each other.",
+      "explanation": "Thermal equilibrium is transitive: if each system is in equilibrium with the same third system, they share the same temperature.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For a closed system using the convention that work done by the system is positive, which expression states the first law?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Change in energy equals heat added minus work done by the system.",
+        "Change in energy equals work done minus heat added.",
+        "Change in entropy equals heat added times temperature.",
+        "Change in pressure equals heat added minus volume."
+      ],
+      "answerIndex": 0,
+      "answerText": "Change in energy equals heat added minus work done by the system.",
+      "explanation": "The first law is energy conservation. With this sign convention, ?E = Q ? W.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does the second law say about the entropy of an isolated system during a spontaneous process?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It tends to increase.",
+        "It must decrease.",
+        "It remains exactly zero.",
+        "It changes only when the system does shaft work."
+      ],
+      "answerIndex": 0,
+      "answerText": "It tends to increase.",
+      "explanation": "Irreversible spontaneous processes generate entropy; total entropy of an isolated system does not decrease.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which statement best describes the third law of thermodynamics?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The entropy of a perfect crystal approaches zero as its temperature approaches absolute zero.",
+        "The internal energy of every gas is zero at room temperature.",
+        "Heat cannot be transferred between objects at different temperatures.",
+        "A heat engine can convert all heat input into work."
+      ],
+      "answerIndex": 0,
+      "answerText": "The entropy of a perfect crystal approaches zero as its temperature approaches absolute zero.",
+      "explanation": "The third law relates the limiting entropy of a perfect crystal to absolute zero.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In a flowing gas-turbine stream, what does specific enthalpy account for beyond internal energy?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Flow energy associated with pressure acting on the fluid volume.",
+        "The chemical energy of fuel that has not yet been burned.",
+        "The kinetic energy of the aircraft alone.",
+        "The mass of the engine casing."
+      ],
+      "answerIndex": 0,
+      "answerText": "Flow energy associated with pressure acting on the fluid volume.",
+      "explanation": "Specific enthalpy is h = u + pv; the pv term is flow work per unit mass.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is entropy most useful for describing in an engine process?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Energy dispersal and the degree of irreversibility.",
+        "The total mass of fuel in the tanks.",
+        "The geometric displacement of a piston.",
+        "The engine speed at a fixed throttle setting."
+      ],
+      "answerIndex": 0,
+      "answerText": "Energy dispersal and the degree of irreversibility.",
+      "explanation": "Entropy tracks energy dispersal and is generated by irreversibilities such as friction, turbulence, and finite-temperature heat transfer.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In an isobaric process, which property remains constant?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Pressure.",
+        "Volume.",
+        "Temperature.",
+        "Entropy."
+      ],
+      "answerIndex": 0,
+      "answerText": "Pressure.",
+      "explanation": "Isobaric means constant pressure; volume and temperature may change.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A gas is heated in a rigid, sealed container. Which process model applies?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Isochoric.",
+        "Isobaric.",
+        "Isothermal.",
+        "Polytropic with index zero."
+      ],
+      "answerIndex": 0,
+      "answerText": "Isochoric.",
+      "explanation": "The rigid container fixes volume, so the process is isochoric. Pressure and temperature rise as energy is added.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For an ideal gas undergoing an isothermal process, which relationship remains constant?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The product pV.",
+        "The ratio p/V.",
+        "The product pT.",
+        "The sum p + V."
+      ],
+      "answerIndex": 0,
+      "answerText": "The product pV.",
+      "explanation": "For a fixed mass of ideal gas at constant temperature, pV remains constant.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the defining condition of an adiabatic process?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "No heat is transferred across the system boundary.",
+        "The system temperature remains constant.",
+        "The system pressure remains constant.",
+        "The process has no change in volume."
+      ],
+      "answerIndex": 0,
+      "answerText": "No heat is transferred across the system boundary.",
+      "explanation": "Adiabatic means Q = 0. Temperature and pressure can still change.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An isentropic process is best described as:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A reversible adiabatic process.",
+        "An irreversible process at constant pressure.",
+        "A process with constant temperature and volume.",
+        "A process in which all heat is converted to work."
+      ],
+      "answerIndex": 0,
+      "answerText": "A reversible adiabatic process.",
+      "explanation": "An ideal isentropic process is adiabatic and reversible, so entropy remains constant.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which equation describes an ideal-gas polytropic process?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "pV? = constant.",
+        "p + V? = constant.",
+        "pT? = constant.",
+        "V/T? = constant for every gas process."
+      ],
+      "answerIndex": 0,
+      "answerText": "pV? = constant.",
+      "explanation": "The polytropic relation pV? = constant models a broad range of compression and expansion processes.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For a gas, what is the ratio ? (gamma) commonly defined as?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Specific heat at constant pressure divided by specific heat at constant volume.",
+        "Specific heat at constant volume divided by gas pressure.",
+        "Gas constant divided by temperature.",
+        "Pressure divided by density."
+      ],
+      "answerIndex": 0,
+      "answerText": "Specific heat at constant pressure divided by specific heat at constant volume.",
+      "explanation": "The specific-heat ratio is ? = cp/cv and appears in ideal isentropic gas relations.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What happens to the temperature of an ideal gas during rapid adiabatic compression?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It rises because work is done on the gas.",
+        "It falls because heat leaves the gas.",
+        "It remains constant by definition.",
+        "It becomes independent of pressure."
+      ],
+      "answerIndex": 0,
+      "answerText": "It rises because work is done on the gas.",
+      "explanation": "With negligible heat transfer, compression work increases the gas internal energy and temperature.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "During ideal expansion through a turbine, what happens to the gas as it delivers shaft work?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Its enthalpy decreases.",
+        "Its enthalpy must increase.",
+        "Its pressure remains fixed throughout every turbine.",
+        "Its entropy must become negative."
+      ],
+      "answerIndex": 0,
+      "answerText": "Its enthalpy decreases.",
+      "explanation": "The turbine extracts work from the flowing gas, reducing its total enthalpy in the idealized process.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which ideal thermodynamic cycle models a gas-turbine engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Brayton cycle.",
+        "Otto cycle.",
+        "Diesel cycle.",
+        "Rankine cycle."
+      ],
+      "answerIndex": 0,
+      "answerText": "Brayton cycle.",
+      "explanation": "The Brayton cycle models continuous-flow gas turbines, with compression, constant-pressure heat addition, expansion, and heat rejection.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which ideal cycle is commonly used to model a spark-ignition reciprocating engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Otto cycle.",
+        "Brayton cycle.",
+        "Rankine cycle.",
+        "Stirling cycle."
+      ],
+      "answerIndex": 0,
+      "answerText": "Otto cycle.",
+      "explanation": "The ideal Otto cycle models spark-ignition engines with constant-volume heat addition and rejection.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In the ideal Brayton cycle, heat is added at approximately:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Constant pressure.",
+        "Constant volume.",
+        "Constant temperature.",
+        "Constant entropy."
+      ],
+      "answerIndex": 0,
+      "answerText": "Constant pressure.",
+      "explanation": "The ideal Brayton cycle represents combustion as constant-pressure heat addition.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In the ideal Otto cycle, heat is added at approximately:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Constant volume.",
+        "Constant pressure.",
+        "Constant temperature.",
+        "Constant entropy."
+      ],
+      "answerIndex": 0,
+      "answerText": "Constant volume.",
+      "explanation": "The ideal Otto cycle represents rapid combustion as constant-volume heat addition.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which equation relates pressure, volume, amount of gas, and absolute temperature for an ideal gas?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "pV = nRT.",
+        "pT = nRV.",
+        "p/V = nRT.",
+        "p + V = nRT."
+      ],
+      "answerIndex": 0,
+      "answerText": "pV = nRT.",
+      "explanation": "The ideal-gas equation is pV = nRT, using absolute temperature.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why must absolute temperature be used in ideal-gas and gas-turbine temperature-ratio calculations?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The equations require temperature measured from absolute zero.",
+        "Celsius and Fahrenheit scales have the same zero point.",
+        "Absolute temperature removes the need to know pressure.",
+        "Only absolute temperature can be measured in an engine."
+      ],
+      "answerIndex": 0,
+      "answerText": "The equations require temperature measured from absolute zero.",
+      "explanation": "Thermodynamic ratios and gas laws require an absolute scale such as kelvin or rankine.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does specific heat describe?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Heat required to raise a unit mass of a substance by one degree of temperature.",
+        "Heat released when a unit volume changes pressure.",
+        "Work required to rotate a shaft one revolution.",
+        "The ratio of fuel mass to air mass in a combustor."
+      ],
+      "answerIndex": 0,
+      "answerText": "Heat required to raise a unit mass of a substance by one degree of temperature.",
+      "explanation": "Specific heat is a material property relating heat transfer to temperature change per unit mass.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For an ideal gas, why is cp greater than cv?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "At constant pressure, some added heat also supplies expansion work.",
+        "At constant volume, the gas does more boundary work.",
+        "Pressure is always greater than volume.",
+        "The gas constant is negative."
+      ],
+      "answerIndex": 0,
+      "answerText": "At constant pressure, some added heat also supplies expansion work.",
+      "explanation": "At constant pressure the gas expands as it warms, so more heat is required for the same temperature rise than at constant volume.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "On a pressure-volume diagram, what does the area under a quasi-static process curve represent?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Boundary work.",
+        "Entropy.",
+        "Specific heat.",
+        "Shaft torque."
+      ],
+      "answerIndex": 0,
+      "answerText": "Boundary work.",
+      "explanation": "Boundary work is W = ?p dV, represented by the area under the p-V curve.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A gas expands at constant pressure from volume V? to V?. What is its boundary work?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "p(V? ? V?).",
+        "V? ? V? divided by p.",
+        "Zero for every constant-pressure process.",
+        "p(V? + V?)."
+      ],
+      "answerIndex": 0,
+      "answerText": "p(V? ? V?).",
+      "explanation": "At constant pressure, integrating p dV gives W = p(V? ? V?).\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How is the thermal efficiency of a heat engine defined?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Net work output divided by heat supplied.",
+        "Heat rejected divided by net work output.",
+        "Fuel mass divided by air mass.",
+        "Pressure rise divided by temperature rise."
+      ],
+      "answerIndex": 0,
+      "answerText": "Net work output divided by heat supplied.",
+      "explanation": "Thermal efficiency measures the fraction of supplied heat converted into net work.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For fixed hot- and cold-reservoir temperatures, what does the Carnot limit represent?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The maximum possible thermal efficiency of a heat engine operating between those reservoirs.",
+        "The minimum fuel flow for every actual engine.",
+        "The pressure ratio required for a Brayton cycle.",
+        "The temperature at which all real engines operate."
+      ],
+      "answerIndex": 0,
+      "answerText": "The maximum possible thermal efficiency of a heat engine operating between those reservoirs.",
+      "explanation": "The Carnot efficiency is an upper bound set by the absolute reservoir temperatures; real engines are less efficient.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why is an actual engine cycle less efficient than its ideal reversible model?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Friction, pressure losses, mixing, and finite-temperature heat transfer generate entropy.",
+        "Real engines have no moving parts.",
+        "Actual combustion always occurs at constant temperature.",
+        "The ideal cycle includes fuel leakage."
+      ],
+      "answerIndex": 0,
+      "answerText": "Friction, pressure losses, mixing, and finite-temperature heat transfer generate entropy.",
+      "explanation": "Irreversibilities such as friction and pressure loss reduce the work available from a given heat input.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which three mechanisms can transfer heat?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Conduction, convection, and radiation.",
+        "Compression, expansion, and combustion.",
+        "Pressure, volume, and density.",
+        "Torque, thrust, and drag."
+      ],
+      "answerIndex": 0,
+      "answerText": "Conduction, convection, and radiation.",
+      "explanation": "Heat transfer occurs by conduction, convection, or electromagnetic radiation.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A gas-turbine compressor raises a gas from state 1 to state 2. For an ideal isentropic compression of an ideal gas, which trend is expected?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Pressure and temperature both increase.",
+        "Pressure increases while temperature decreases.",
+        "Both pressure and temperature remain constant.",
+        "Pressure decreases while temperature increases."
+      ],
+      "answerIndex": 0,
+      "answerText": "Pressure and temperature both increase.",
+      "explanation": "An ideal compressor adds work to the gas; isentropic compression raises both pressure and temperature.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Thermodynamics"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}

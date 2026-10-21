@@ -1,0 +1,719 @@
+{
+  "title": "Gas Turbine Theory and Engine Types",
+  "questions": [
+    {
+      "question": "Some high-volume turboprop and turbojet engines are equipped with two-spool or split compressors. When these engines are operated at high altitudes, the",
+      "questionType": "multiple_choice",
+      "choices": [
+        "low-pressure rotor will decrease in speed as the compressor load decreases in the lower density air.",
+        "low-pressure rotor will increase in speed as the compressor load decreases in the lower density air.",
+        "the high-pressure rotor will always overspeed as inlet-air density decreases.",
+        "throttle must be retarded to prevent overspeeding of the high-pressure rotor due to the lower density air."
+      ],
+      "answerIndex": 1,
+      "answerText": "low-pressure rotor will increase in speed as the compressor load decreases in the lower density air.",
+      "explanation": "**Why this is correct**\nA two-spool engine lets the low- and high-pressure compressor sections rotate at different speeds. At high altitude, lower air density reduces the compressor’s aerodynamic load; the low-pressure rotor can therefore accelerate unless the fuel control and operating limits constrain it.\n\n**Engineering principle**\nThe low-pressure spool is mechanically independent of the high-pressure spool, so their speeds need not change together.\n\n💡 **Memory hook:** Two spools can turn at two speeds.\n\n🎯 **Board tip:** Track each compressor and turbine on its own shaft.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Theory and Engine Types"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What term is used to describe a permanent and cumulative deformation of the turbine blades of a turbojet engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Distortion.",
+        "fatigue.",
+        "Creep.",
+        "stretch."
+      ],
+      "answerIndex": 2,
+      "answerText": "Creep.",
+      "explanation": "**Why this is correct**\nCreep is slow, permanent deformation that accumulates while a material is exposed to sustained stress, especially at elevated temperature. Turbine blades operate in hot gas under centrifugal stress, so creep can lengthen or distort a blade over time.\n\n**Engineering principle**\nCreep develops over time under sustained load; fatigue develops from repeated cyclic loading, while yielding is an immediate permanent deformation after exceeding the elastic limit.\n\n💡 **Memory hook:** Hot metal + sustained stress + time = creep.\n\n🎯 **Board tip:** Distinguish time-dependent creep from cycle-dependent fatigue.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Theory and Engine Types"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "On a twin spool engine, where would the air go next after the combustor?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "LPC",
+        "HPC",
+        "LPT",
+        "HPT"
+      ],
+      "answerIndex": 3,
+      "answerText": "HPT",
+      "explanation": "**Why this is correct**\nCombustor gases first expand through the high-pressure turbine, which extracts work to drive the high-pressure compressor. Downstream turbine stages then extract more energy before the gas reaches the exhaust.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Theory and Engine Types"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "On a twin-spool engine, which is commonly rotated by the last stage turbine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The fan",
+        "LPC and the Fan",
+        "HPC and accessories",
+        "LPC and HPC"
+      ],
+      "answerIndex": 1,
+      "answerText": "LPC and the Fan",
+      "explanation": "**Why this is correct**\nIn a two-spool turbofan, the low-pressure turbine drives the low-pressure compressor and, when fitted, the fan through the low-pressure shaft. The high-pressure turbine drives the high-pressure compressor on a separate concentric shaft.\n\n**Engineering principle**\nThe last turbine stages on the low-pressure spool drive the fan/LPC; the upstream high-pressure turbine drives the HPC.\n\n💡 **Memory hook:** LP turbine → LP compressor/fan; HP turbine → HP compressor.\n\n🎯 **Board tip:** Trace each turbine to its spool rather than assuming one shaft drives every compressor.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Theory and Engine Types"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "It is the ratio of the mass of secondary air to the mass of primary air",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Bypass ratio",
+        "Stoichiometric ratio",
+        "Aspect ratio",
+        "Relative wind ratio"
+      ],
+      "answerIndex": 0,
+      "answerText": "Bypass ratio",
+      "explanation": "**Why this is correct**\nBypass ratio is bypass-duct mass flow divided by core mass flow. It compares the two airflow streams; it is not bypass flow divided by total flow. A high value means proportionally more air avoids the hot core.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Theory and Engine Types"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which type of jet engine incorporates movable vanes that cause an intermittent entry of air inside the engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Gas turbine engine",
+        "Rocket",
+        "Pulse jet",
+        "Ram jet"
+      ],
+      "answerIndex": 2,
+      "answerText": "Pulse jet",
+      "explanation": "**Why this is correct**\nA pulsejet produces thrust through repeated cycles of air admission, combustion, and exhaust rather than steady continuous flow through a compressor and turbine. Its operation is inherently intermittent and typically noisy and inefficient compared with modern gas turbines.\n\n**Engineering principle**\nPulsejet combustion is intermittent; a turbojet’s gas path is continuous and turbine-driven.\n\n💡 **Memory hook:** Pulse = repeated pressure pulses.\n\n🎯 **Board tip:** The cycle, not the shape alone, identifies the engine type.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Theory and Engine Types"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What distinguishes a turbojet from a turbofan in how thrust is produced?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A turbojet derives most thrust from its core exhaust; a turbofan also accelerates bypass air",
+        "A turbojet has no compressor",
+        "A turbofan has no turbine",
+        "A turbofan uses piston cylinders"
+      ],
+      "answerIndex": 0,
+      "answerText": "A turbojet derives most thrust from its core exhaust; a turbofan also accelerates bypass air",
+      "explanation": "**Why this is correct**\nA turbojet derives most thrust from core exhaust. A turbofan also accelerates a substantial bypass stream with its fan, which improves propulsive efficiency at subsonic speeds by accelerating more air by a smaller amount.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the principal output of a turboshaft engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Shaft power to drive a rotor or other load",
+        "Only high-velocity exhaust thrust",
+        "Electrical voltage directly from the combustion chamber",
+        "Compressed air for cabin use only"
+      ],
+      "answerIndex": 0,
+      "answerText": "Shaft power to drive a rotor or other load",
+      "explanation": "**Why this is correct**\nA turboshaft is designed to deliver shaft power to an external load such as a helicopter transmission. It is not primarily designed to maximize residual exhaust thrust.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is a turboprop optimized to provide?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Piston displacement",
+        "Shaft power to a propeller, with the propeller producing most thrust",
+        "Thrust only from a high-speed core jet",
+        "Ram compression without a turbine"
+      ],
+      "answerIndex": 1,
+      "answerText": "Shaft power to a propeller, with the propeller producing most thrust",
+      "explanation": "**Why this is correct**\nA turboprop transfers most useful engine power through gearing to a propeller. The propeller accelerates a large mass of air moderately, which is efficient at low and medium aircraft speeds.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the Brayton cycle associated with?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A refrigeration cycle only",
+        "Idealized gas-turbine operation",
+        "Four-stroke spark-ignition operation",
+        "A reciprocating diesel cycle only"
+      ],
+      "answerIndex": 1,
+      "answerText": "Idealized gas-turbine operation",
+      "explanation": "**Why this is correct**\nThe Brayton cycle is the idealized gas-turbine cycle, with compression, approximately constant-pressure heat addition, and expansion. It models a turbine core rather than the Otto cycle of a spark-ignition piston engine.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does bypass ratio compare in a turbofan?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Compressor pressure to turbine pressure",
+        "Fan diameter to propeller diameter",
+        "Mass flow through the bypass stream to mass flow through the core",
+        "Fuel mass to oil mass"
+      ],
+      "answerIndex": 2,
+      "answerText": "Mass flow through the bypass stream to mass flow through the core",
+      "explanation": "**Why this is correct**\nTurbofan bypass ratio = bypass air mass flow / core air mass flow. A ratio above one means more mass flows around the core than through it; it does not directly state engine efficiency.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How does a ramjet obtain most of its compression?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Forward speed and inlet diffusion",
+        "A rotating compressor driven by a turbine",
+        "Piston compression",
+        "A supercharger gear train"
+      ],
+      "answerIndex": 0,
+      "answerText": "Forward speed and inlet diffusion",
+      "explanation": "**Why this is correct**\nA ramjet has no rotating compressor. Forward motion compresses incoming air as it diffuses in the inlet, so the engine needs speed to produce the pressure rise required for combustion.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why does a pulsejet produce intermittent thrust?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Combustion and pressure changes occur in repeated pulses",
+        "Its turbine blades feather",
+        "Its propeller changes pitch every revolution",
+        "Its fuel pump stops after each cycle"
+      ],
+      "answerIndex": 0,
+      "answerText": "Combustion and pressure changes occur in repeated pulses",
+      "explanation": "**Why this is correct**\nA pulsejet repeats intake and combustion events rather than maintaining continuous combustion. Its pressure and momentum changes therefore produce intermittent thrust.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the role of a rocket engine propellant?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Drive an external propeller",
+        "Supply both fuel and oxidizer so combustion does not depend on atmospheric oxygen",
+        "Provide fuel only while using compressor air",
+        "Cool the aircraft cabin"
+      ],
+      "answerIndex": 1,
+      "answerText": "Supply both fuel and oxidizer so combustion does not depend on atmospheric oxygen",
+      "explanation": "**Why this is correct**\nA rocket carries both fuel and oxidizer, so combustion does not depend on oxygen in the surrounding atmosphere. This permits operation in space, unlike an air-breathing jet engine.\n\n**Engineering principle**\nAir-breathing engines ingest atmospheric oxygen; rockets carry their oxidizer as part of the propellant system.\n\n💡 **Memory hook:** Rocket brings its oxygen.\n\n🎯 **Board tip:** Identify whether the engine depends on ambient air.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why is a turbofan often more fuel efficient than a turbojet at subsonic transport speeds?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It has no compressor work",
+        "It burns no fuel in the core",
+        "It eliminates all exhaust losses",
+        "It accelerates a larger mass of air by a smaller velocity change"
+      ],
+      "answerIndex": 3,
+      "answerText": "It accelerates a larger mass of air by a smaller velocity change",
+      "explanation": "**Why this is correct**\nAt subsonic transport speeds a turbofan can accelerate a larger mass of air by a smaller velocity increment than a turbojet. That generally reduces kinetic energy lost in the wake for the same thrust.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which engine type is most directly suited to helicopter rotor drive?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Pulsejet",
+        "Turboshaft",
+        "Turbojet",
+        "Ramjet"
+      ],
+      "answerIndex": 1,
+      "answerText": "Turboshaft",
+      "explanation": "**Why this is correct**\nCertification questions depend on the regulatory edition and aircraft category named in the source. Category-specific limits and exit requirements are prescribed values, while a design-speed calculation must use the stated weight, wing area, lift coefficient, and the applicable equation with consistent units.\n\n**Engineering principle**\nDo not apply one category’s load limits or one regulation edition to another. Historical Part 23 question keys may not represent current rule wording.\n\n💡 **Memory hook:** First identify category and rule edition.\n\n🎯 **Board tip:** If the supplied values do not reproduce the keyed result, flag the item rather than silently forcing the arithmetic.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is specific thrust commonly defined as?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Shaft torque divided by rpm",
+        "Pressure ratio times bypass ratio",
+        "Net thrust divided by inlet airflow mass flow rate",
+        "Fuel flow divided by thrust"
+      ],
+      "answerIndex": 2,
+      "answerText": "Net thrust divided by inlet airflow mass flow rate",
+      "explanation": "**Why this is correct**\nSpecific thrust is net thrust divided by inlet air mass-flow rate. It describes thrust per unit airflow and has units of velocity; it is different from fuel consumption per unit thrust.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What causes net thrust in a jet engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Fuel pressure alone",
+        "Compressor rpm alone",
+        "Engine weight acting downward",
+        "Change in momentum of the engine airflow plus pressure thrust where applicable"
+      ],
+      "answerIndex": 3,
+      "answerText": "Change in momentum of the engine airflow plus pressure thrust where applicable",
+      "explanation": "**Why this is correct**\nThermodynamic questions depend on the system boundary, process constraint, and sign convention. Apply conservation of energy and the ideal-gas/process relation that matches the stated condition; use absolute temperature and absolute pressure in gas-law ratios.\n\n**Engineering principle**\nAdiabatic means no heat transfer; isentropic additionally requires reversibility. Specific heat at constant pressure differs from constant volume, and work done by a system has the opposite sign from work done on it.\n\n💡 **Memory hook:** Name the process before choosing the equation.\n\n🎯 **Board tip:** Check absolute versus gauge pressure and state the work sign convention.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the basic purpose of a gas turbine engine’s compressor?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Convert shaft power into fuel",
+        "Increase air pressure before combustion",
+        "Extract all energy from the exhaust",
+        "Reduce airflow to zero"
+      ],
+      "answerIndex": 1,
+      "answerText": "Increase air pressure before combustion",
+      "explanation": "**Why this is correct**\nThe compressor raises incoming-air pressure before combustion. The increased pressure supports heat addition and turbine work extraction, while the compressor itself consumes shaft work from the turbine.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is a free turbine in a turboshaft installation?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A compressor bleed valve",
+        "An exhaust heat exchanger",
+        "A turbine stage mechanically separate from the gas-generator spool that drives the output shaft",
+        "A fan with no blades"
+      ],
+      "answerIndex": 2,
+      "answerText": "A turbine stage mechanically separate from the gas-generator spool that drives the output shaft",
+      "explanation": "**Why this is correct**\nA free turbine is mechanically separate from the gas-generator spool. It extracts energy from the gas-generator exhaust to drive the output shaft, letting load speed vary independently.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does a high bypass ratio generally indicate?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The engine burns only bypass air",
+        "A large mass flow bypasses the engine core relative to core flow",
+        "Most air bypasses the fan",
+        "The engine has no compressor"
+      ],
+      "answerIndex": 1,
+      "answerText": "A large mass flow bypasses the engine core relative to core flow",
+      "explanation": "**Why this is correct**\nA high bypass ratio means bypass-stream mass flow is large relative to core flow. This supports efficient subsonic propulsion, subject to fan size, weight, and installation tradeoffs.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why is a turboprop efficient at lower aircraft speeds?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Its propeller eliminates drag",
+        "The propeller accelerates a large air mass by a moderate velocity change",
+        "The core exhaust alone provides all thrust",
+        "It does not require a turbine"
+      ],
+      "answerIndex": 1,
+      "answerText": "The propeller accelerates a large air mass by a moderate velocity change",
+      "explanation": "**Why this is correct**\nA propeller efficiently accelerates a large mass of air by a moderate velocity change at lower flight speeds. In a turboprop, the turbine provides shaft power and the propeller produces most thrust.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the main function of a gas-generator spool?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Control only the cabin temperature",
+        "Feather the propeller",
+        "Compress air, burn fuel, and extract enough turbine work to drive the compressor",
+        "Drive the landing gear"
+      ],
+      "answerIndex": 2,
+      "answerText": "Compress air, burn fuel, and extract enough turbine work to drive the compressor",
+      "explanation": "**Why this is correct**\nThe gas-generator spool compresses inlet air, supports combustion, and extracts turbine work to drive its compressor. A separate free power turbine can then deliver useful output shaft power.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why is a ramjet ineffective at standstill?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It requires a propeller to rotate",
+        "It requires forward velocity to create inlet compression",
+        "Its fuel is solid",
+        "It has no combustion chamber"
+      ],
+      "answerIndex": 1,
+      "answerText": "It requires forward velocity to create inlet compression",
+      "explanation": "**Why this is correct**\nA ramjet depends on forward velocity to create inlet compression. At standstill it has neither ram compression nor a compressor rotor, so it cannot establish the normal operating pressure rise.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the ideal Otto-cycle efficiency trend as compression ratio increases?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It decreases to zero",
+        "It is independent of compression ratio",
+        "It becomes negative",
+        "It increases for a fixed specific-heat ratio"
+      ],
+      "answerIndex": 3,
+      "answerText": "It increases for a fixed specific-heat ratio",
+      "explanation": "**Why this is correct**\nReciprocating-engine parts and cycle events are best understood by following piston motion and load transfer: the crankshaft converts piston force to torque, connecting rods transmit load, and the valve train times gas exchange. Bore and stroke set swept volume; compression ratio compares total cylinder volume at BDC with clearance volume at TDC.\n\n**Engineering principle**\nSwept displacement excludes clearance volume; compression ratio includes it. A full-floating pin moves relative to both the piston bosses and connecting-rod small end.\n\n💡 **Memory hook:** Bore × stroke sets displacement; TDC/BDC set the volume ratio.\n\n🎯 **Board tip:** For cycle questions, track the four strokes in order and identify when combustion pressure does useful work.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Description review"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A turbofan passes 90 kg/s through the bypass duct and 30 kg/s through the core. Find bypass ratio.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "3",
+        "0",
+        "60",
+        "120"
+      ],
+      "answerIndex": 0,
+      "answerText": "3",
+      "explanation": "**Worked solution**\nBypass ratio = bypass mass flow/core mass flow = (90 kg/s)/(30 kg/s) = 3. The units cancel, so bypass ratio is dimensionless.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An engine takes in air at 250 m/s and exhausts it at 600 m/s; neglect pressure thrust and fuel mass. For 20 kg/s airflow, find thrust.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "7000",
+        "350",
+        "12000",
+        "17000"
+      ],
+      "answerIndex": 0,
+      "answerText": "7000",
+      "explanation": "**Worked solution**\nNeglecting pressure thrust and fuel mass, F = mass flow x (V_exit - V_inlet). F = 20 kg/s x (600-250) m/s = 20 x 350 = 7,000 kg m/s^2 = 7,000 N.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A gas turbine inlet total pressure is 100 kPa and compressor exit total pressure is 1,200 kPa. Find compressor pressure ratio.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0",
+        "1100",
+        "1300",
+        "12"
+      ],
+      "answerIndex": 3,
+      "answerText": "12",
+      "explanation": "**Worked solution**\nCompressor pressure ratio = compressor-exit total pressure/inlet total pressure = 1,200 kPa/100 kPa = 12. The pressure units cancel.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A turbofan bypass flow is 120 kg/s and core flow is 40 kg/s. What is bypass ratio?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "3",
+        "0",
+        "80",
+        "160"
+      ],
+      "answerIndex": 0,
+      "answerText": "3",
+      "explanation": "**Worked solution**\nBypass ratio = 120 kg/s bypass flow / 40 kg/s core flow = 3. This ratio is dimensionless.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A jet engine accelerates 15 kg/s of air from 200 m/s to 500 m/s. Neglect pressure thrust. Find net thrust.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "300",
+        "7500",
+        "10500",
+        "4500"
+      ],
+      "answerIndex": 3,
+      "answerText": "4500",
+      "explanation": "**Worked solution**\nNet thrust = mass flow x velocity change = 15 kg/s x (500-200) m/s = 15 x 300 = 4,500 N, neglecting pressure thrust as instructed.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Original practice",
+        "Gas Turbine Theory and Engine Types",
+        "Formula word problem"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}

@@ -1,0 +1,695 @@
+{
+  "title": "Gas Turbine Components and Operation",
+  "questions": [
+    {
+      "question": "A turbine engine compressor which contains vanes on both sides of the impeller is a",
+      "questionType": "multiple_choice",
+      "choices": [
+        "double entry axial-flow compressor.",
+        "single entry axial-flow compressor.",
+        "single-entry centrifugal compressor.",
+        "double entry centrifugal compressor."
+      ],
+      "answerIndex": 3,
+      "answerText": "double entry centrifugal compressor.",
+      "explanation": "**Why this is correct**\nA double-entry centrifugal compressor has an impeller that admits air at both sides of its eye. The two inlet paths feed one impeller, allowing more mass flow for a given wheel diameter.\n\n**Engineering principle**\nThe diffuser is downstream of the impeller and is not what makes a compressor double-entry.\n\n**Differentiate similar concepts**\nTwo sides feed one impeller.\n\n**Memory hook**\nTwo sides feed one impeller.\n\n**Board tip**\nIdentify the inlet geometry at the impeller eye.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the purpose of the diffuser section in a turbine engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "To increase pressure and reduce velocity.",
+        "To convert pressure to velocity.",
+        "To reduce pressure and increase velocity.",
+        "To maintain velocity while reducing static pressure."
+      ],
+      "answerIndex": 0,
+      "answerText": "To increase pressure and reduce velocity.",
+      "explanation": "**Why this is correct**\nThe diffuser slows the high-velocity air leaving the impeller and converts some kinetic energy into static pressure before combustion.\n\n**Engineering principle**\nThe impeller adds energy to the air; the diffuser reduces velocity and recovers pressure.\n\n**Differentiate similar concepts**\nImpeller accelerates; diffuser slows and recovers pressure.\n\n**Memory hook**\nImpeller accelerates; diffuser slows and recovers pressure.\n\n**Board tip**\nTrack whether the question asks for energy addition or pressure recovery.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In an axial-flow compressor, one purpose of the stator vanes at the discharge end of the compressor is to",
+      "questionType": "multiple_choice",
+      "choices": [
+        "decrease the velocity, prevent swirling, and decrease pressure.",
+        "straighten the airflow and eliminate turbulence.",
+        "increase the swirl of the discharge airflow.",
+        "increase the velocity and prevent swirling and eddying."
+      ],
+      "answerIndex": 1,
+      "answerText": "straighten the airflow and eliminate turbulence.",
+      "explanation": "**Why this is correct**\nDischarge stator vanes remove swirl and direct compressor air toward the next stage or diffuser. Their flow guidance helps reduce residual turbulence and sets the correct entry angle.\n\n**Engineering principle**\nA rotor adds energy to the air; a stator turns and diffuses it.\n\n**Differentiate similar concepts**\nRotor adds work; stator redirects flow.\n\n**Memory hook**\nRotor adds work; stator redirects flow.\n\n**Board tip**\nDo not confuse compressor stators with turbine nozzle guide vanes.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The air passing through the combustion chamber of a turbine engine is",
+      "questionType": "multiple_choice",
+      "choices": [
+        "used only to cool the turbine blades after combustion.",
+        "speeded up and heated by the action of the turbines.",
+        "used to support combustion and to cool the engine.",
+        "entirely combined with fuel and burned."
+      ],
+      "answerIndex": 2,
+      "answerText": "used to support combustion and to cool the engine.",
+      "explanation": "**Why this is correct**\nOnly part of the compressor air is mixed with fuel and burned. The remaining air cools and protects combustor and turbine surfaces and mixes with the hot gas downstream.\n\n**Engineering principle**\nCombustion needs less air than the engine ingests; liner holes distribute cooling and dilution air.\n\n**Differentiate similar concepts**\nA portion burns fuel; much of the flow cools and dilutes.\n\n**Memory hook**\nA portion burns fuel; much of the flow cools and dilutes.\n\n**Board tip**\nA combustor does not burn all its airflow.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is meant by a shrouded turbine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The turbine wheel is enclosed by a protective shroud to contain the blades in case of failure.",
+        "The turbine wheel has a shroud or duct which provides cooling air to the turbine blades.",
+        "The turbine blades are individually enclosed in hollow cooling sleeves.",
+        "The turbine blades are shaped so that their ends form a band or shroud."
+      ],
+      "answerIndex": 3,
+      "answerText": "The turbine blades are shaped so that their ends form a band or shroud.",
+      "explanation": "**Why this is correct**\nA shrouded turbine has blade tips joined by a band or shroud. This reduces tip leakage and helps control vibration, although it adds rotating mass.\n\n**Engineering principle**\nA shroud is a tip feature; the turbine disk secures the blade roots.\n\n**Differentiate similar concepts**\nBand at blade tips, disk at blade roots.\n\n**Memory hook**\nBand at blade tips, disk at blade roots.\n\n**Board tip**\nIdentify whether the question refers to the tip or root.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which compressor control system component protects the LPC by venting the air during low power operation?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "VSV",
+        "VBV",
+        "HP compressor bleed valve",
+        "LP turbine bleed valve"
+      ],
+      "answerIndex": 1,
+      "answerText": "VBV",
+      "explanation": "**Why this is correct**\nVariable bleed valves (VBVs) vent or recirculate low-pressure-compressor air during low-speed operation. They reduce LPC loading and help prevent unstable compressor operation.\n\n**Engineering principle**\nA VBV manages compressor airflow; a variable stator changes vane angle, while a blow-off valve may discharge air overboard.\n\n**Differentiate similar concepts**\nVBV unloads the low-pressure compressor.\n\n**Memory hook**\nVBV unloads the low-pressure compressor.\n\n**Board tip**\nKnow which spool or compressor the valve protects.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What happens to the air when it passes through a turbine nozzle guide vane?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It slows down due to the convergent shape",
+        "It speeds up due to the convergent shape",
+        "It slows down due to the divergent shape",
+        "It speeds up due to the divergent shape"
+      ],
+      "answerIndex": 1,
+      "answerText": "It speeds up due to the convergent shape",
+      "explanation": "**Why this is correct**\nNozzle guide vanes turn and accelerate hot gas before it reaches the turbine rotor. Their passage area and angle establish the gas velocity and direction at the rotor.\n\n**Engineering principle**\nA nozzle guide vane is a stationary turbine stator; the downstream rotor extracts work.\n\n**Differentiate similar concepts**\nStationary guide vane directs; rotating blade extracts work.\n\n**Memory hook**\nStationary guide vane directs; rotating blade extracts work.\n\n**Board tip**\nFollow the gas path from combustor to turbine rotor.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which cooling method is mainly used to protect the inner liner of the combustor from the intense heat of the combustion gases?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Impingement cooling",
+        "Splash cooling",
+        "Film cooling",
+        "Convection cooling"
+      ],
+      "answerIndex": 2,
+      "answerText": "Film cooling",
+      "explanation": "**Why this is correct**\nFilm cooling lays a thin layer of cooler compressor air over the combustor liner surface. The film separates the metal from the hottest combustion gas.\n\n**Engineering principle**\nFilm cooling protects the liner surface; internal convection cools passages inside a part.\n\n**Differentiate similar concepts**\nFilm lies along the hot surface.\n\n**Memory hook**\nFilm lies along the hot surface.\n\n**Board tip**\nAsk whether cooling air is on the surface or inside a passage.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What happens to pressure of supersonic air when it flows through a convergent nozzle?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It increases",
+        "It decreases",
+        "It remains constant",
+        "It fluctuates"
+      ],
+      "answerIndex": 0,
+      "answerText": "It increases",
+      "explanation": "**Why this is correct**\nIn a convergent nozzle, supersonic flow decelerates as area decreases and static pressure rises. A convergent-divergent nozzle is needed to continue accelerating a supersonic stream.\n\n**Engineering principle**\nFor subsonic flow, a convergent nozzle accelerates and lowers static pressure; the Mach regime changes the result.\n\n**Differentiate similar concepts**\nConvergent accelerates subsonic flow, decelerates supersonic flow.\n\n**Memory hook**\nConvergent accelerates subsonic flow, decelerates supersonic flow.\n\n**Board tip**\nAlways note whether the nozzle flow is subsonic or supersonic.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "When the engine is running on ground and the aircraft is not moving, what would be the pressure at the inlet section?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Lower than ambient",
+        "Higher than ambient",
+        "Same as ambient",
+        "Inlet pressure is not affected by ambient pressure"
+      ],
+      "answerIndex": 0,
+      "answerText": "Lower than ambient",
+      "explanation": "**Why this is correct**\nAt a stationary aircraft inlet, inlet losses and diffusion can make local static pressure below ambient at the compressor face, even though the aircraft is not moving.\n\n**Engineering principle**\nAn inlet should recover pressure efficiently; local pressure depends on inlet geometry and engine airflow.\n\n**Differentiate similar concepts**\nStationary does not mean zero engine airflow.\n\n**Memory hook**\nStationary does not mean zero engine airflow.\n\n**Board tip**\nDistinguish ambient pressure from pressure at the inlet station.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How is anti-ice performed on the air intake nose?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "By electrical heaters",
+        "By pneumatic boots",
+        "By spraying anti-ice fluid",
+        "By spraying hot gas"
+      ],
+      "answerIndex": 3,
+      "answerText": "By spraying hot gas",
+      "explanation": "**Why this is correct**\nHot compressor bleed air is routed to the inlet nose to prevent or remove ice. The hot air keeps the leading surface above freezing under the approved operating conditions.\n\n**Engineering principle**\nTurbine-engine inlet anti-ice commonly uses hot bleed air; propeller anti-ice can use electrical heat or fluid.\n\n**Differentiate similar concepts**\nInlet hot-air anti-ice differs from propeller fluid anti-ice.\n\n**Memory hook**\nInlet hot-air anti-ice differs from propeller fluid anti-ice.\n\n**Board tip**\nName the surface being protected before naming the system.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How are compressor stages counted?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Counting a rotor followed by a stator is one compressor stage",
+        "Counting a stator followed by a rotor is one compressor stage",
+        "One blade whether it’s a rotor or a stator is one compressor stage",
+        "A pair of rotor and stator is one compressor stage no matter which one is counted first"
+      ],
+      "answerIndex": 0,
+      "answerText": "Counting a rotor followed by a stator is one compressor stage",
+      "explanation": "**Why this is correct**\nOne axial-compressor stage consists of a rotor row followed by a stator row. The rotor adds energy; the stator redirects the flow and prepares it for the next rotor.\n\n**Engineering principle**\nA stage is a rotor-stator pair, not a single blade row.\n\n**Differentiate similar concepts**\nOne rotor plus one stator equals one stage.\n\n**Memory hook**\nOne rotor plus one stator equals one stage.\n\n**Board tip**\nCount blade rows by function and sequence.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What are the two main elements of a centrifugal flow compressor?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Rotor and stator",
+        "Impeller and diffuser",
+        "Rotor and diffuser",
+        "Impeller and rotor"
+      ],
+      "answerIndex": 1,
+      "answerText": "Impeller and diffuser",
+      "explanation": "**Why this is correct**\nA centrifugal compressor uses an impeller to accelerate air outward and a diffuser to slow it and recover pressure.\n\n**Engineering principle**\nThe impeller is the rotating element; the diffuser is stationary.\n\n**Differentiate similar concepts**\nRotating impeller plus stationary diffuser.\n\n**Memory hook**\nRotating impeller plus stationary diffuser.\n\n**Board tip**\nSeparate rotating work input from stationary pressure recovery.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "During engine deceleration or shutdown, which would contract first, the rotors or the casing?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The rotors because of the reduction in centrifugal force",
+        "The rotors because of the thermal contraction",
+        "The casing because of the reduction in centrifugal force",
+        "The casing because of the thermal contraction"
+      ],
+      "answerIndex": 0,
+      "answerText": "The rotors because of the reduction in centrifugal force",
+      "explanation": "**Why this is correct**\nAs a turbine engine decelerates or shuts down, rotor speed falls and centrifugal growth of the rotor decreases. The rotor contracts before the heavier casing cools and contracts.\n\n**Engineering principle**\nRotor speed changes quickly; the casing has greater thermal inertia and cools more slowly.\n\n**Differentiate similar concepts**\nRotor response is fast; casing cooldown lags.\n\n**Memory hook**\nRotor response is fast; casing cooldown lags.\n\n**Board tip**\nSeparate speed-related contraction from thermal contraction.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which part of an axial flow compressor would static pressure increase?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The rotors",
+        "The stators",
+        "The Low Pressure Compressor",
+        "Both in the rotors and stators"
+      ],
+      "answerIndex": 3,
+      "answerText": "Both in the rotors and stators",
+      "explanation": "**Why this is correct**\nStatic pressure rises through both compressor rotor and stator rows in a multistage axial compressor. The rotor adds total energy; the stator diffuses and redirects the flow so static pressure also recovers there.\n\n**Engineering principle**\nA rotor can increase velocity and total pressure while static-pressure behavior depends on its design; stators are diffusers.\n\n**Differentiate similar concepts**\nBoth rows contribute to stage pressure rise by different mechanisms.\n\n**Memory hook**\nBoth rows contribute to stage pressure rise by different mechanisms.\n\n**Board tip**\nDistinguish static pressure from total pressure.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What happens to the airflow as it enters the combustion chamber?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A big part of it is mixed with fuel and burned while the smaller part is used to cool the metal components",
+        "A small part of it is mixed with fuel and burned while the bigger part is used to cool the metal components",
+        "All of it is mixed with fuel and burned",
+        "All of it is used to cool the metal components"
+      ],
+      "answerIndex": 1,
+      "answerText": "A small part of it is mixed with fuel and burned while the bigger part is used to cool the metal components",
+      "explanation": "**Why this is correct**\nOnly a small part of combustor air supports burning; most bypasses the flame zone to cool the liner and mix with the hot gas. This protects metal and establishes turbine-inlet temperature.\n\n**Engineering principle**\nPrimary-zone air stabilizes combustion; dilution and cooling air control temperatures downstream.\n\n**Differentiate similar concepts**\nBurning air is a fraction of total combustor flow.\n\n**Memory hook**\nBurning air is a fraction of total combustor flow.\n\n**Board tip**\nLook for primary, cooling, or dilution air in the wording.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the primary function of turbine blades in a gas turbine engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "To compress incoming air before it enters the combustion chamber.",
+        "To extract energy from hot gases and drive the turbine rotor.",
+        "To meter fuel into the combustion chamber.",
+        "To slow the exhaust before it leaves the engine."
+      ],
+      "answerIndex": 1,
+      "answerText": "To extract energy from hot gases and drive the turbine rotor.",
+      "explanation": "Turbine blades extract energy from the hot gas stream and transfer it to the turbine rotor, which drives the compressor and engine accessories.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "gas turbine",
+        "turbine components"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following conditions is usually not acceptable to any extent in turbine blades?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Cracks",
+        "Pits",
+        "Dents",
+        "Holes"
+      ],
+      "answerIndex": 0,
+      "answerText": "Cracks",
+      "explanation": "**Why this is correct**\nA crack in a turbine blade is unacceptable because centrifugal and gas-bending stresses act on a hot, highly loaded component. A small crack can grow rapidly and lead to blade release or secondary damage.\n\n**Engineering principle**\nCrack acceptance differs from superficial coating marks or approved blendable damage; use the engine manual?s limits.\n\n**Differentiate similar concepts**\nA crack is a flaw with growth potential.\n\n**Memory hook**\nA crack is a flaw with growth potential.\n\n**Board tip**\nDo not apply generic airframe repair limits to hot-section blades.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An advantage of the centrifugal-flow compressor is its _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "pressure rise per stage",
+        "ram efficiency",
+        "steady temperature",
+        "peak efficiency"
+      ],
+      "answerIndex": 0,
+      "answerText": "pressure rise per stage",
+      "explanation": "**Why this is correct**\nA centrifugal compressor can produce a comparatively large pressure rise in one stage. Its robust construction and good pressure rise come with a larger frontal area than an axial compressor.\n\n**Engineering principle**\nAxial compressors achieve high overall pressure through many stages and smaller frontal area.\n\n**Differentiate similar concepts**\nCentrifugal: high rise per stage; axial: many compact stages.\n\n**Memory hook**\nCentrifugal: high rise per stage; axial: many compact stages.\n\n**Board tip**\nCompare pressure rise per stage with frontal area.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A weak fuel to air mixture along with normal airflow through a turbine engine may result in _____.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "a lean die-out",
+        "a rich flameout",
+        "very low fuel supply",
+        "high EGT"
+      ],
+      "answerIndex": 0,
+      "answerText": "a lean die-out",
+      "explanation": "**Why this is correct**\nA weak fuel-air mixture can cause a turbine engine to flame out or lean die out because the combustor cannot sustain stable burning. Normal airflow alone cannot keep the flame lit without adequate fuel scheduling.\n\n**Engineering principle**\nA lean die-out is combustion instability or flame extinction; it is not compressor surge.\n\n**Differentiate similar concepts**\nToo little fuel can extinguish the combustor flame.\n\n**Memory hook**\nToo little fuel can extinguish the combustor flame.\n\n**Board tip**\nDistinguish flameout from airflow instability.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Powerplant Mock Bank",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is compressor surge in a gas-turbine engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A severe breakdown of stable compressor airflow that can cause pressure oscillations and possible flow reversal.",
+        "A normal increase in exhaust temperature during cruise.",
+        "A decrease in propeller pitch during feathering.",
+        "A rise in oil pressure caused by cold oil."
+      ],
+      "answerIndex": 0,
+      "answerText": "A severe breakdown of stable compressor airflow that can cause pressure oscillations and possible flow reversal.",
+      "explanation": "Surge is an unstable compressor operating condition involving large flow and pressure fluctuations; it can damage engine components.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the usual function of variable stator vanes in an axial compressor?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Change vane angle to maintain suitable airflow and compressor stability over the operating range.",
+        "Meter fuel directly into the combustion chamber.",
+        "Cool the turbine blades with oil.",
+        "Reverse exhaust flow for braking."
+      ],
+      "answerIndex": 0,
+      "answerText": "Change vane angle to maintain suitable airflow and compressor stability over the operating range.",
+      "explanation": "Variable stators adjust the airflow angle into following rotor stages as engine speed changes.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Where is a gas-turbine diffuser normally located in relation to a centrifugal compressor impeller?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Downstream of the impeller.",
+        "Ahead of the engine inlet.",
+        "Inside the turbine nozzle.",
+        "Between the exhaust cone and tailpipe."
+      ],
+      "answerIndex": 0,
+      "answerText": "Downstream of the impeller.",
+      "explanation": "The diffuser receives high-velocity air leaving the impeller and slows it to recover static pressure.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What happens to airflow velocity through a subsonic compressor diffuser?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It decreases while static pressure increases.",
+        "It increases while static pressure increases without limit.",
+        "It remains constant while temperature falls.",
+        "It reverses direction through every diffuser."
+      ],
+      "answerIndex": 0,
+      "answerText": "It decreases while static pressure increases.",
+      "explanation": "A diffuser converts some flow kinetic energy into static pressure by reducing velocity.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is a spool in a multi-spool gas-turbine engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A compressor and turbine section connected by a shaft and rotating as one assembly.",
+        "A fuel-control lever connected to the cockpit.",
+        "A group of fuel nozzles in one combustor can.",
+        "The stationary outer engine case."
+      ],
+      "answerIndex": 0,
+      "answerText": "A compressor and turbine section connected by a shaft and rotating as one assembly.",
+      "explanation": "Each spool is a rotating compressor-turbine assembly; different spools may operate at different speeds.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why can a multi-spool engine improve compressor operation across a wider range?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Its compressor sections can rotate at different speeds suited to their airflow conditions.",
+        "It eliminates all compressor blades.",
+        "It forces every compressor stage to turn at the same speed.",
+        "It makes the engine independent of inlet air."
+      ],
+      "answerIndex": 0,
+      "answerText": "Its compressor sections can rotate at different speeds suited to their airflow conditions.",
+      "explanation": "Independent spool speeds let low- and high-pressure compressor sections operate closer to their efficient ranges.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the main purpose of an accessory gearbox on a turbine engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Use engine drive to operate accessories such as pumps and generators.",
+        "Increase the bypass ratio of the fan.",
+        "Mix fuel and air inside the combustor.",
+        "Change the area of the exhaust nozzle only."
+      ],
+      "answerIndex": 0,
+      "answerText": "Use engine drive to operate accessories such as pumps and generators.",
+      "explanation": "The accessory gearbox transfers mechanical power from the engine to required accessories.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In a turbine engine, what is the role of the turbine nozzle guide vanes?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Direct and accelerate hot gas onto the turbine rotor at the intended angle.",
+        "Atomize fuel before it enters the fuel manifold.",
+        "Reduce compressor inlet pressure to ambient.",
+        "Prevent the compressor from rotating."
+      ],
+      "answerIndex": 0,
+      "answerText": "Direct and accelerate hot gas onto the turbine rotor at the intended angle.",
+      "explanation": "Nozzle guide vanes direct the combustor gas flow and set its angle and velocity before the turbine rotor.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the primary purpose of a turbine-engine exhaust nozzle?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Convert gas pressure and thermal energy into an accelerated exhaust stream.",
+        "Increase fuel pressure before combustion.",
+        "Drive the accessory gearbox directly.",
+        "Cool the combustion chamber by circulating oil."
+      ],
+      "answerIndex": 0,
+      "answerText": "Convert gas pressure and thermal energy into an accelerated exhaust stream.",
+      "explanation": "The nozzle expands and accelerates the exhaust flow to produce thrust.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does the fan on a high-bypass turbofan primarily do?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Accelerate a large mass of bypass air to produce a substantial share of thrust.",
+        "Compress fuel for the high-pressure pump.",
+        "Drive the ignition exciter without a shaft.",
+        "Remove all airflow from the core."
+      ],
+      "answerIndex": 0,
+      "answerText": "Accelerate a large mass of bypass air to produce a substantial share of thrust.",
+      "explanation": "A high-bypass fan produces much of the engine thrust by accelerating bypass air.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "Gas Turbine Components and Operation"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}

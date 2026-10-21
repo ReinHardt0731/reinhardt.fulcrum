@@ -1,0 +1,680 @@
+{
+  "title": "General PowerPlant I",
+  "questions": [
+    {
+      "question": "Order of a four-stroke spark ignition cycle?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Intake, compression, power, exhaust",
+        "Compression, intake, exhaust, power",
+        "Power, intake, compression, exhaust",
+        "Intake, power, exhaust, compression"
+      ],
+      "answerIndex": 0,
+      "answerText": "Intake, compression, power, exhaust",
+      "explanation": "The four strokes are intake, compression, power, and exhaust. Reference: PRC Aeronautical Engineering syllabus; FAA Aviation Maintenance Technician Powerplant Handbook.\n\nCoverage-based prediction practice only; these are original review questions, not official or guaranteed exam questions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A gas turbine compressor primarily:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Raises incoming air pressure",
+        "Extracts exhaust energy",
+        "Meters hydraulic fluid",
+        "Stops airflow"
+      ],
+      "answerIndex": 0,
+      "answerText": "Raises incoming air pressure",
+      "explanation": "The compressor raises pressure before combustion. Reference: PRC Aeronautical Engineering syllabus; FAA Aviation Maintenance Technician Powerplant Handbook.\n\nCoverage-based prediction practice only; these are original review questions, not official or guaranteed exam questions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which component drives a gas turbine compressor via a shaft?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Turbine",
+        "Diffuser",
+        "Combustor liner",
+        "Nozzle"
+      ],
+      "answerIndex": 0,
+      "answerText": "Turbine",
+      "explanation": "The turbine extracts gas energy to drive the compressor. Reference: PRC Aeronautical Engineering syllabus; FAA Aviation Maintenance Technician Powerplant Handbook.\n\nCoverage-based prediction practice only; these are original review questions, not official or guaranteed exam questions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The combustor in a gas turbine:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Burns fuel in compressed air while maintaining stable flow",
+        "Mechanically compresses air",
+        "Directly produces electricity",
+        "Cools oil only"
+      ],
+      "answerIndex": 0,
+      "answerText": "Burns fuel in compressed air while maintaining stable flow",
+      "explanation": "It adds heat by burning fuel in compressed air with limited pressure loss. Reference: PRC Aeronautical Engineering syllabus; FAA Aviation Maintenance Technician Powerplant Handbook.\n\nCoverage-based prediction practice only; these are original review questions, not official or guaranteed exam questions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which engine gets most thrust from the exhaust jet rather than bypass flow?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Turbojet",
+        "High-bypass turbofan",
+        "Turboprop",
+        "Turboshaft"
+      ],
+      "answerIndex": 0,
+      "answerText": "Turbojet",
+      "explanation": "A turbojet accelerates core flow to high velocity for jet thrust. Reference: PRC Aeronautical Engineering syllabus; FAA Aviation Maintenance Technician Powerplant Handbook.\n\nCoverage-based prediction practice only; these are original review questions, not official or guaranteed exam questions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A turbofan differs from a turbojet because it has:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Fan accelerating bypass air around the core",
+        "No compressor",
+        "Combustion only in bypass",
+        "No turbine"
+      ],
+      "answerIndex": 0,
+      "answerText": "Fan accelerating bypass air around the core",
+      "explanation": "A fan produces thrust from bypass flow in addition to core flow. Reference: PRC Aeronautical Engineering syllabus; FAA Aviation Maintenance Technician Powerplant Handbook.\n\nCoverage-based prediction practice only; these are original review questions, not official or guaranteed exam questions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are turboprops effective at many lower speeds?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Propeller accelerates large air mass by modest amount",
+        "No shaft power",
+        "Exhaust is orbital speed",
+        "No gearbox"
+      ],
+      "answerIndex": 0,
+      "answerText": "Propeller accelerates large air mass by modest amount",
+      "explanation": "Propellers are efficient at lower speeds by imparting modest velocity change to much air. Reference: PRC Aeronautical Engineering syllabus; FAA Aviation Maintenance Technician Powerplant Handbook.\n\nCoverage-based prediction practice only; these are original review questions, not official or guaranteed exam questions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Engine lubrication primarily:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Reduces friction/wear and carries heat/contaminants",
+        "Raises combustion pressure",
+        "Controls lift",
+        "Replaces fuel"
+      ],
+      "answerIndex": 0,
+      "answerText": "Reduces friction/wear and carries heat/contaminants",
+      "explanation": "Oil forms a film, reduces wear, transports heat, and carries contaminants to filters. Reference: PRC Aeronautical Engineering syllabus; FAA Aviation Maintenance Technician Powerplant Handbook.\n\nCoverage-based prediction practice only; these are original review questions, not official or guaranteed exam questions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An oil filter bypass valve allows flow when:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Filter restriction is excessive",
+        "Engine is shut down",
+        "Fuel pressure rises",
+        "Propeller changes pitch"
+      ],
+      "answerIndex": 0,
+      "answerText": "Filter restriction is excessive",
+      "explanation": "The valve preserves oil flow if filter differential pressure is too high. Reference: PRC Aeronautical Engineering syllabus; FAA Aviation Maintenance Technician Powerplant Handbook.\n\nCoverage-based prediction practice only; these are original review questions, not official or guaranteed exam questions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A magneto?s role is to:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Generate engine ignition independently of aircraft electrical power",
+        "Pump fuel",
+        "Regulate oil temperature",
+        "Drive governor"
+      ],
+      "answerIndex": 0,
+      "answerText": "Generate engine ignition independently of aircraft electrical power",
+      "explanation": "A magneto is a self-contained, engine-driven ignition source. Reference: PRC Aeronautical Engineering syllabus; FAA Aviation Maintenance Technician Powerplant Handbook.\n\nCoverage-based prediction practice only; these are original review questions, not official or guaranteed exam questions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Detonation is dangerous because it:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Causes abnormal pressure and temperature loads",
+        "Improves cooling",
+        "Occurs only after shutdown",
+        "Lowers pressure below ambient"
+      ],
+      "answerIndex": 0,
+      "answerText": "Causes abnormal pressure and temperature loads",
+      "explanation": "Detonation is abnormal rapid end-gas combustion that can damage engine parts. Reference: PRC Aeronautical Engineering syllabus; FAA Aviation Maintenance Technician Powerplant Handbook.\n\nCoverage-based prediction practice only; these are original review questions, not official or guaranteed exam questions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A constant-speed propeller governor regulates:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Blade angle to maintain selected RPM",
+        "Fuel octane",
+        "Compression ratio",
+        "Gear extension"
+      ],
+      "answerIndex": 0,
+      "answerText": "Blade angle to maintain selected RPM",
+      "explanation": "The governor changes blade angle as load changes to maintain selected RPM. Reference: PRC Aeronautical Engineering syllabus; FAA Aviation Maintenance Technician Powerplant Handbook.\n\nCoverage-based prediction practice only; these are original review questions, not official or guaranteed exam questions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The ideal Brayton cycle models:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Gas turbine engines",
+        "Spark ignition only",
+        "Steam locomotives",
+        "Electric motors"
+      ],
+      "answerIndex": 0,
+      "answerText": "Gas turbine engines",
+      "explanation": "The Brayton cycle represents compression, heat addition, expansion, and heat rejection. Reference: PRC Aeronautical Engineering syllabus; FAA Aviation Maintenance Technician Powerplant Handbook.\n\nCoverage-based prediction practice only; these are original review questions, not official or guaranteed exam questions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A ramjet has no rotating compressor/turbine and relies on:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Forward speed and inlet to compress air",
+        "Piston and crankshaft",
+        "No combustion",
+        "Stationary operation alone"
+      ],
+      "answerIndex": 0,
+      "answerText": "Forward speed and inlet to compress air",
+      "explanation": "Ram effect compresses inlet air as the vehicle moves through the atmosphere. Reference: PRC Aeronautical Engineering syllabus; FAA Aviation Maintenance Technician Powerplant Handbook.\n\nCoverage-based prediction practice only; these are original review questions, not official or guaranteed exam questions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A reciprocating engine cooling system primarily:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Keeps component temperatures within design limits",
+        "Raises exhaust temperature without limit",
+        "Eliminates lubrication",
+        "Sets CG"
+      ],
+      "answerIndex": 0,
+      "answerText": "Keeps component temperatures within design limits",
+      "explanation": "Cooling rejects heat to keep engine components within allowable limits. Reference: PRC Aeronautical Engineering syllabus; FAA Aviation Maintenance Technician Powerplant Handbook.\n\nCoverage-based prediction practice only; these are original review questions, not official or guaranteed exam questions.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which engine dimension is the bore?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The inside diameter of the cylinder.",
+        "The distance the piston travels from top to bottom.",
+        "The distance between adjacent cylinder centers.",
+        "The length of the connecting rod."
+      ],
+      "answerIndex": 0,
+      "answerText": "The inside diameter of the cylinder.",
+      "explanation": "Bore is the cylinder diameter; stroke is piston travel between top and bottom dead center.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "General PowerPlant I"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the stroke of a reciprocating engine cylinder?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The piston travel from top dead center to bottom dead center.",
+        "The cylinder inside diameter.",
+        "The crankshaft speed in revolutions per minute.",
+        "The distance from the propeller flange to the firewall."
+      ],
+      "answerIndex": 0,
+      "answerText": "The piston travel from top dead center to bottom dead center.",
+      "explanation": "Stroke is the distance traveled by the piston between its two dead-center positions.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "General PowerPlant I"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For a four-cylinder engine, which expression gives total swept displacement?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Four times the swept volume of one cylinder.",
+        "The clearance volume of one cylinder divided by four.",
+        "Bore multiplied by engine rpm.",
+        "Fuel volume per minute times four."
+      ],
+      "answerIndex": 0,
+      "answerText": "Four times the swept volume of one cylinder.",
+      "explanation": "Total displacement is the sum of the swept volumes of all cylinders.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "General PowerPlant I"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does an engine compression ratio compare?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Cylinder volume at bottom dead center with volume at top dead center.",
+        "Cylinder pressure with oil pressure.",
+        "Bore with stroke.",
+        "Crankshaft speed with propeller speed."
+      ],
+      "answerIndex": 0,
+      "answerText": "Cylinder volume at bottom dead center with volume at top dead center.",
+      "explanation": "Compression ratio is the maximum cylinder volume divided by the minimum cylinder volume.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "General PowerPlant I"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why must a reciprocating engine have a defined firing order?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "To distribute power impulses and loads through the crankshaft in the designed sequence.",
+        "To make every spark plug fire at the same instant.",
+        "To keep all pistons at top dead center together.",
+        "To set the propeller blade angle."
+      ],
+      "answerIndex": 0,
+      "answerText": "To distribute power impulses and loads through the crankshaft in the designed sequence.",
+      "explanation": "The firing order sequences combustion events to provide smooth operation and manage crankshaft loading.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "General PowerPlant I"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does brake horsepower represent?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Power available at the engine output shaft after internal losses.",
+        "The theoretical power released by fuel before engine losses.",
+        "Electrical power used only by the starter.",
+        "The power absorbed by an accessory gearbox alone."
+      ],
+      "answerIndex": 0,
+      "answerText": "Power available at the engine output shaft after internal losses.",
+      "explanation": "Brake horsepower is measured at the output shaft and reflects power remaining after friction and pumping losses.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "General PowerPlant I"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does mean effective pressure provide when comparing reciprocating engines?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A pressure measure representing the work-producing effect over a cycle.",
+        "The instantaneous pressure at the intake manifold only.",
+        "The oil pressure at the main bearing.",
+        "The pressure difference across the propeller."
+      ],
+      "answerIndex": 0,
+      "answerText": "A pressure measure representing the work-producing effect over a cycle.",
+      "explanation": "Mean effective pressure is a notional constant pressure that would produce the same work over the piston stroke.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "General PowerPlant I"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the primary function of the connecting rod in a reciprocating engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Transmit force between the piston and crankshaft.",
+        "Meter fuel into the intake manifold.",
+        "Open and close the exhaust valve directly in every engine design.",
+        "Drive the magneto without a gear train."
+      ],
+      "answerIndex": 0,
+      "answerText": "Transmit force between the piston and crankshaft.",
+      "explanation": "The connecting rod transfers piston force to the crankshaft and transmits crankshaft motion back to the piston.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "General PowerPlant I"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What motion does the crankshaft produce from the pistons in a reciprocating engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Rotating motion.",
+        "Linear motion only.",
+        "Alternating electrical current.",
+        "Propeller blade feathering motion."
+      ],
+      "answerIndex": 0,
+      "answerText": "Rotating motion.",
+      "explanation": "The crankshaft converts reciprocating piston movement into rotation that can drive a propeller or gearbox.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "General PowerPlant I"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In a typical four-stroke engine, how many crankshaft revolutions occur during one cylinder operating cycle?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Two.",
+        "One.",
+        "Four.",
+        "Eight."
+      ],
+      "answerIndex": 0,
+      "answerText": "Two.",
+      "explanation": "The intake, compression, power, and exhaust strokes require two crankshaft revolutions.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "General PowerPlant I"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What is the primary function of the camshaft and valve train?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Open and close the intake and exhaust valves at the correct times.",
+        "Change the propeller blade angle in flight.",
+        "Supply high voltage to the spark plugs.",
+        "Regulate oil temperature directly."
+      ],
+      "answerIndex": 0,
+      "answerText": "Open and close the intake and exhaust valves at the correct times.",
+      "explanation": "Cam lobes and valve-train components time valve opening and closing relative to crankshaft position.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "General PowerPlant I"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are multiple cylinders commonly arranged in a radial engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "To provide several cylinders around a compact crankcase and a short, air-cooled engine package.",
+        "To eliminate the need for a crankshaft.",
+        "To ensure all cylinders fire at the same crank angle.",
+        "To make the engine operate without lubrication."
+      ],
+      "answerIndex": 0,
+      "answerText": "To provide several cylinders around a compact crankcase and a short, air-cooled engine package.",
+      "explanation": "Radial arrangement places cylinders around the crankcase and supports a relatively compact air-cooled design.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "General PowerPlant I"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What does a gas-turbine engine spool refer to?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A compressor-turbine assembly connected by a common shaft and rotating together.",
+        "A fuel nozzle and igniter pair.",
+        "A set of propeller blades controlled by a governor.",
+        "The exhaust duct downstream of the turbine."
+      ],
+      "answerIndex": 0,
+      "answerText": "A compressor-turbine assembly connected by a common shaft and rotating together.",
+      "explanation": "A spool is a mechanically connected compressor and turbine assembly; multi-spool engines have independently rotating assemblies.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "General PowerPlant I"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In a turbofan, what is bypass ratio?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The mass airflow that bypasses the engine core divided by the mass airflow through the core.",
+        "The compressor pressure ratio divided by turbine temperature.",
+        "Fuel flow divided by total thrust.",
+        "Fan diameter divided by propeller diameter."
+      ],
+      "answerIndex": 0,
+      "answerText": "The mass airflow that bypasses the engine core divided by the mass airflow through the core.",
+      "explanation": "Bypass ratio compares bypass-stream airflow with core airflow.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "General PowerPlant I"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which description best fits a turboshaft engine?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It delivers most useful output as shaft power to drive a rotor or other load.",
+        "It produces thrust only through a high-speed exhaust jet.",
+        "It has no compressor or turbine.",
+        "It is a reciprocating engine with a free piston."
+      ],
+      "answerIndex": 0,
+      "answerText": "It delivers most useful output as shaft power to drive a rotor or other load.",
+      "explanation": "A turboshaft is optimized to deliver shaft power, commonly through a reduction gearbox.\n\nReference: Powerplant study notes, Laws of Thermodynamics and Thermodynamic Processes; FAA-H-8083-32B, Aviation Maintenance Technician Handbook?Powerplant.",
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "tags": [
+        "Aircraft Powerplant",
+        "General PowerPlant I"
+      ],
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}
