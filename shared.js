@@ -6,6 +6,7 @@ export const REVIEW_SESSION_KEY = "prepcore.web.reviewSession.v1";
 export const QUIZ_SESSION_KEY = "prepcore.web.quizSession.v1";
 export const QUIZ_PROGRESS_KEY = "prepcore.web.quizProgress.v1";
 export const PROGRESS_HISTORY_KEY = "prepcore.web.progressHistory.v1";
+const QUESTION_PROGRESS_RECORD_TYPE = "question-progress-state";
 const EXAM_START_CONFIG_KEY = "prepcore.web.examStartConfig.v1";
 export const POMODORO_HISTORY_KEY = "prepcore.web.pomodoroHistory.v1";
 export const ADMIN_UNLOCK_KEY = "prepcore.web.adminUnlocked.v1";
@@ -275,9 +276,90 @@ const formatDateKey = (value = new Date()) => {
     return `${year}-${month}-${day}`;
 };
 
-function getProgressEntries() {
+function getStoredProgressHistory() {
     const entries = storageGet(PROGRESS_HISTORY_KEY, []);
     return Array.isArray(entries) ? entries : [];
+}
+
+function getProgressEntries() {
+    return getStoredProgressHistory().filter((entry) => text(entry?.recordType) !== QUESTION_PROGRESS_RECORD_TYPE);
+}
+
+function saveProgressEntries(entries) {
+    const progressState = getStoredProgressHistory()
+        .find((entry) => text(entry?.recordType) === QUESTION_PROGRESS_RECORD_TYPE);
+    const nextEntries = (Array.isArray(entries) ? entries : [])
+        .filter((entry) => text(entry?.recordType) !== QUESTION_PROGRESS_RECORD_TYPE)
+        .slice(-500);
+    if (progressState) nextEntries.push(progressState);
+    storageSet(PROGRESS_HISTORY_KEY, nextEntries);
+}
+
+function saveQuestionProgressRecord(progress) {
+    const entries = getProgressEntries().slice(-500);
+    entries.push({ recordType: QUESTION_PROGRESS_RECORD_TYPE, ...progress });
+    storageSet(PROGRESS_HISTORY_KEY, entries);
+}
+
+function getQuestionProgressSubjectKey(entry, subjects = []) {
+    const subjectId = text(entry?.subjectId);
+    const subjectName = text(entry?.subjectName).toLowerCase();
+    const subject = subjects.find((candidate) => text(candidate.id) === subjectId)
+        || subjects.find((candidate) => text(candidate.name).toLowerCase() === subjectName);
+    return text(subject?.id) || subjectId || (subjectName ? `name:${subjectName}` : "");
+}
+
+function loadAnsweredQuestionProgress(subjects = [], entries = getProgressEntries()) {
+    const saved = getStoredProgressHistory()
+        .find((entry) => text(entry?.recordType) === QUESTION_PROGRESS_RECORD_TYPE);
+    if (saved?.schemaVersion === 1
+        && saved.legacyBySubject && typeof saved.legacyBySubject === "object"
+        && saved.questionKeys && typeof saved.questionKeys === "object") {
+        return saved;
+    }
+
+    const legacyBySubject = {};
+    (Array.isArray(entries) ? entries : []).forEach((entry) => {
+        const mode = text(entry.mode);
+        const summaryType = text(entry.summaryType);
+        const isSessionSummary = summaryType === "session" && ["quiz", "exam"].includes(mode);
+        const isLearnSessionSummary = mode === "learn" && summaryType === "learn-session";
+        if (!isSessionSummary && !isLearnSessionSummary) return;
+
+        const subjectKey = getQuestionProgressSubjectKey(entry, subjects);
+        if (!subjectKey) return;
+        legacyBySubject[subjectKey] = (Number(legacyBySubject[subjectKey]) || 0)
+            + Math.max(0, Number(entry.attempted) || 0);
+    });
+
+    const progress = { schemaVersion: 1, legacyBySubject, questionKeys: {} };
+    saveQuestionProgressRecord(progress);
+    return progress;
+}
+
+function getAnsweredQuestionKey(session, question) {
+    const subjectId = text(session?.subjectId);
+    const chapterTitle = text(question?.chapterTitle || session?.chapterTitle);
+    const questionId = text(question?.id ?? question?.questionId);
+    const questionText = text(question?.question).normalize("NFKC").replace(/\s+/g, " ").toLowerCase();
+    const questionIdentity = questionId ? `id:${questionId}` : `text:${questionText}`;
+    if (!subjectId || !chapterTitle || questionIdentity === "text:") return "";
+    return [subjectId, chapterTitle, questionIdentity].map(encodeURIComponent).join("::");
+}
+
+function recordFirstAnsweredQuestion(session, question, subjects = []) {
+    if (!session || !["learn", "quiz", "exam"].includes(text(session.mode))) return false;
+    const questionKey = getAnsweredQuestionKey(session, question);
+    if (!questionKey) return false;
+
+    const progress = loadAnsweredQuestionProgress(subjects);
+    if (Object.prototype.hasOwnProperty.call(progress.questionKeys, questionKey)) return false;
+    progress.questionKeys[questionKey] = getQuestionProgressSubjectKey({
+        subjectId: session.subjectId,
+        subjectName: session.subjectName
+    }, subjects);
+    saveQuestionProgressRecord(progress);
+    return true;
 }
 
 function getPomodoroDailySeconds() {
@@ -344,7 +426,7 @@ export function recordStudyProgress(payload = {}) {
     }
 
     const nextEntries = [...getProgressEntries(), entry].slice(-500);
-    storageSet(PROGRESS_HISTORY_KEY, nextEntries);
+    saveProgressEntries(nextEntries);
     return entry;
 }
 
@@ -547,10 +629,20 @@ export function getBoardExamCountdown(now = new Date()) {
 }
 
 export function getDashboardProgress(subjects = [], entries = getProgressEntries()) {
+    const questionProgress = loadAnsweredQuestionProgress(subjects, entries);
+    const trackedQuestionsBySubject = Object.values(questionProgress.questionKeys)
+        .reduce((counts, subjectKey) => {
+            const key = text(subjectKey);
+            if (key) counts[key] = (counts[key] || 0) + 1;
+            return counts;
+        }, {});
     const subjectProgress = subjects.map((subject) => ({
         id: text(subject.id),
         name: text(subject.name) || "Untitled subject",
         totalChapters: Array.isArray(subject.chapters) ? subject.chapters.length : 0,
+        totalQuestions: Array.isArray(subject.chapters)
+            ? subject.chapters.reduce((sum, chapter) => sum + collectChapterQuestions(chapter).length, 0)
+            : 0,
         chapterTitles: new Set((Array.isArray(subject.chapters) ? subject.chapters : []).map((chapter) => text(chapter.title)).filter(Boolean)),
         completedChapters: new Set(),
         answered: 0,
@@ -579,29 +671,37 @@ export function getDashboardProgress(subjects = [], entries = getProgressEntries
 
     const progressBySubject = subjectProgress.map((subject) => {
         const completedChapters = Math.min(subject.totalChapters, subject.completedChapters.size);
+        const totalQuestions = subject.totalQuestions;
+        const legacyAnswered = Math.max(0, Number(questionProgress.legacyBySubject[subject.id]) || 0);
+        const trackedAnswered = Math.max(0, Number(trackedQuestionsBySubject[subject.id]) || 0);
+        const answered = Math.min(totalQuestions, legacyAnswered + trackedAnswered);
         return {
             id: subject.id,
             name: subject.name,
             totalChapters: subject.totalChapters,
+            totalQuestions,
             completedChapters,
             completedChapterTitles: [...subject.completedChapters],
-            answered: subject.answered,
+            answered,
             correct: subject.correct,
             complete: subject.totalChapters > 0 && completedChapters >= subject.totalChapters,
-            percent: subject.totalChapters ? Math.round((completedChapters / subject.totalChapters) * 100) : 0
+            percent: totalQuestions ? Math.round((answered / totalQuestions) * 100) : 0
         };
     });
     const totalChapters = progressBySubject.reduce((sum, subject) => sum + subject.totalChapters, 0);
     const completedChapters = progressBySubject.reduce((sum, subject) => sum + subject.completedChapters, 0);
+    const totalQuestions = progressBySubject.reduce((sum, subject) => sum + subject.totalQuestions, 0);
+    const answered = progressBySubject.reduce((sum, subject) => sum + subject.answered, 0);
 
     return {
         subjects: progressBySubject,
         completedSubjects: progressBySubject.filter((subject) => subject.complete).length,
         completedChapters,
         totalChapters,
-        answered: progressBySubject.reduce((sum, subject) => sum + subject.answered, 0),
+        totalQuestions,
+        answered,
         correct: progressBySubject.reduce((sum, subject) => sum + subject.correct, 0),
-        percent: totalChapters ? Math.round((completedChapters / totalChapters) * 100) : 0
+        percent: totalQuestions ? Math.round((answered / totalQuestions) * 100) : 0
     };
 }
 
@@ -2181,7 +2281,7 @@ function restoreExamDraft(session, index) {
     }
 }
 
-function commitExamDraft(session, index) {
+function commitExamDraft(session, index, subjects = []) {
     const question = session?.questions?.[index];
     if (!question) {
         return false;
@@ -2207,6 +2307,7 @@ function commitExamDraft(session, index) {
         session.unsureFlags?.[index] || false
     );
     session.drafts[index] = String(answer);
+    recordFirstAnsweredQuestion(session, question, subjects);
     return true;
 }
 
@@ -7695,6 +7796,34 @@ function createAttemptHoverPreview(record, attempt) {
         return preview;
     }
 
+    if (modeKey === "quiz" && attemptTotal > 0) {
+        const missed = Math.max(0, attemptTotal - correct);
+        const resultSegments = [
+            {
+                label: "Correct",
+                value: correct,
+                color: "var(--success)",
+                fillPercent: Math.round((correct / attemptTotal) * 100),
+                meta: `${correct}/${attemptTotal}`
+            },
+            {
+                label: "Missed",
+                value: missed,
+                color: "var(--danger)",
+                fillPercent: Math.round((missed / attemptTotal) * 100),
+                meta: `${missed}/${attemptTotal}`
+            }
+        ];
+        preview.appendChild(Object.assign(document.createElement("strong"), { textContent: "Quiz breakdown" }));
+        preview.appendChild(createAssessmentChart(
+            resultSegments,
+            `${accuracy}%`,
+            "Accuracy",
+            `Quiz attempt breakdown: ${correct} correct and ${missed} missed out of ${attemptTotal} questions.`
+        ));
+        return preview;
+    }
+
     if (!record) return preview;
     const summary = record.currentSummary || summarizeResults(record);
     const weakAreas = Array.isArray(summary.weakAreas) ? summary.weakAreas : [];
@@ -7809,7 +7938,7 @@ function renderProgressExamHistory(container, records, subjectState) {
                     });
                     if (closestIndex >= 0 && closestDistance < 10 * 60 * 1000) progress.splice(closestIndex, 1);
                 }
-                storageSet(PROGRESS_HISTORY_KEY, progress);
+                saveProgressEntries(progress);
                 window.location.reload();
             } catch (error) {
                 console.warn("Exam record could not be deleted.", error);
@@ -9559,7 +9688,7 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
                         session.busy = false;
                     } else {
                         if (!session.reviewingAnswers) {
-                            commitExamDraft(session, session.index);
+                            commitExamDraft(session, session.index, state.subjects);
                         }
                         session.index = index;
                         session.reviewingAnswers = false;
@@ -10779,6 +10908,7 @@ export async function initHomePage() {
         examCountdownLabel: document.getElementById("home-exam-countdown-label"),
         examCountdownCard: document.getElementById("home-exam-countdown"),
         progressOverviewValue: document.getElementById("home-progress-overview-value"),
+        progressOverviewDetail: document.getElementById("home-progress-overview-detail"),
         progressBarFill: document.getElementById("home-progress-bar-fill"),
         progressEmpty: document.getElementById("home-progress-empty"),
         subjectProgressList: document.getElementById("home-subject-progress-list"),
@@ -11031,6 +11161,7 @@ export async function initHomePage() {
     const renderDashboardProgress = () => {
         if (state.loading || state.loadError) {
             if (elements.progressOverviewValue) elements.progressOverviewValue.textContent = state.loading ? "…" : "—";
+            if (elements.progressOverviewDetail) elements.progressOverviewDetail.textContent = "";
             if (elements.progressBarFill) elements.progressBarFill.style.width = "0%";
             if (elements.progressEmpty) elements.progressEmpty.hidden = true;
             if (elements.subjectProgressList) elements.subjectProgressList.replaceChildren();
@@ -11058,8 +11189,11 @@ export async function initHomePage() {
         renderLearnContinuation(progress);
         const formatCount = (value) => Number(value || 0).toLocaleString();
         if (elements.progressOverviewValue) elements.progressOverviewValue.textContent = `${progress.percent}%`;
+        if (elements.progressOverviewDetail) {
+            elements.progressOverviewDetail.textContent = `${formatCount(progress.answered)} of ${formatCount(progress.totalQuestions)} questions answered`;
+        }
         if (elements.progressBarFill) elements.progressBarFill.style.width = `${progress.percent}%`;
-        if (elements.progressEmpty) elements.progressEmpty.hidden = progress.answered > 0 || progress.completedChapters > 0;
+        if (elements.progressEmpty) elements.progressEmpty.hidden = progress.answered > 0;
         if (!elements.subjectProgressList) return;
 
         elements.subjectProgressList.replaceChildren();
@@ -11090,7 +11224,7 @@ export async function initHomePage() {
 
             const detail = document.createElement("span");
             detail.className = "home-subject-progress-detail";
-            detail.textContent = `${subject.completedChapters}/${subject.totalChapters} chapters • ${formatCount(subject.answered)} answered • ${formatCount(subject.correct)} correct`;
+            detail.textContent = `${formatCount(subject.answered)} of ${formatCount(subject.totalQuestions)} questions answered`;
             item.append(heading, track, detail);
             elements.subjectProgressList.appendChild(item);
         });
@@ -11824,7 +11958,7 @@ export async function initModePage(mode) {
         }
 
         session.busy = true;
-        commitExamDraft(session, session.index);
+        commitExamDraft(session, session.index, state.subjects);
         session.busy = false;
         session.setupError = "";
         saveModeSession(session);
@@ -12156,6 +12290,7 @@ export async function initModePage(mode) {
         session.drafts[questionIndex] = text(answer);
         const result = buildQuestionResult(question, session, answer, isQuestionCorrect(question, answer));
         session.answers[questionIndex] = result;
+        recordFirstAnsweredQuestion(session, question, state.subjects);
 
         const answeredCount = countAnsweredQuestions(session);
         session.complete = answeredCount >= session.questions.length;
@@ -12597,6 +12732,9 @@ export async function initModePage(mode) {
         if (session.mode === "learn") {
             const isFirstAnswer = !session.answers[session.index];
             session.answers[session.index] = result;
+            if (isFirstAnswer) {
+                recordFirstAnsweredQuestion(session, question, state.subjects);
+            }
             session.drafts[session.index] = String(answer ?? "");
             session.reviewed = true;
             session.lastResult = result;

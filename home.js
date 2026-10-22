@@ -1,4 +1,4 @@
-import { initHomePage } from "./shared.js?v=engineering-economics-cache-20261018-1";
+import { initHomePage } from "./shared.js?v=question-progress-20261022-1";
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
