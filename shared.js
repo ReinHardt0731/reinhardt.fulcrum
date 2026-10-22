@@ -10607,6 +10607,9 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
 
     const answerArea = document.createElement("div");
     answerArea.className = "answer-area";
+    if (session.mode === "learn" && session.reviewed) {
+        answerArea.classList.add("learn-answer-area-reviewed");
+    }
 
     if (session.mode === "flashcards") {
         const flashcard = document.createElement("div");
@@ -10843,17 +10846,15 @@ function buildModeQuestionStage(state, elements, selectSubject, selectChapter, s
             actions.appendChild(Object.assign(document.createElement("span"), { className: "answer-hint", textContent: "Click a choice to get instant feedback." }));
         }
 
-        answerArea.append(choices, feedback, actions);
-
         if (session.mode === "learn" && session.reviewed) {
-            answerArea.insertBefore(
-                Object.assign(document.createElement("p"), {
-                    className: "learn-transition-status",
-                    role: "status",
-                    textContent: "Answer recorded. Use Next question when you’re ready."
-                }),
-                feedback
-            );
+            const status = Object.assign(document.createElement("p"), {
+                className: "learn-transition-status",
+                role: "status",
+                textContent: "Answer recorded. Use Next question when you’re ready."
+            });
+            answerArea.append(choices, status, actions, feedback);
+        } else {
+            answerArea.append(choices, feedback, actions);
         }
     }
 

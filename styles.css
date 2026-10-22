@@ -8054,6 +8054,23 @@ body.mode-page .workspace > .mode-topbar::before {
     counter-reset: answer-choice;
 }
 
+.answer-area.learn-answer-area-reviewed {
+    gap: 8px;
+}
+
+.answer-area.learn-answer-area-reviewed .choice-grid,
+.answer-area.learn-answer-area-reviewed .learn-transition-status {
+    margin-bottom: 0;
+}
+
+.answer-area.learn-answer-area-reviewed .learn-transition-status {
+    margin-top: 0;
+}
+
+.answer-area.learn-answer-area-reviewed .question-actions {
+    margin-top: 0;
+}
+
 .choice-button {
     display: grid;
     grid-template-columns: 34px minmax(0, 1fr);
