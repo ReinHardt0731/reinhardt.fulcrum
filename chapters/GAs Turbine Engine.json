@@ -1,0 +1,1144 @@
+[
+  {
+    "question": "Which sequence correctly identifies the major stages of a basic turbojet's operation?",
+    "choices": [
+      "Air is compressed, mixed with fuel and burned, drives the turbine, then expands through the exhaust.",
+      "Air is burned first, compressed by the turbine, then cooled before entering the compressor.",
+      "Air drives the turbine before compression, then fuel is added downstream of the exhaust.",
+      "Air is expanded in the diffuser, burned in the compressor, then compressed again by the nozzle."
+    ],
+    "answer": "Air is compressed, mixed with fuel and burned, drives the turbine, then expands through the exhaust.",
+    "explanation": "The compressor raises incoming-air pressure. The combustion chamber adds fuel and burns the mixture. Hot gases drive the turbine, which powers the compressor through a shaft, and then pass to the exhaust section for acceleration. The order matters because the turbine extracts enough energy to drive the compressor before the remaining gas produces thrust.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-1",
+      "turbojet",
+      "operating cycle",
+      "sequence"
+    ],
+    "id": 1
+  },
+  {
+    "question": "A jet engine expels exhaust rearward. Which explanation most directly accounts for the resulting forward thrust?",
+    "choices": [
+      "The rearward momentum change of the exhaust is accompanied by an equal-and-opposite reaction on the engine.",
+      "The exhaust cools rapidly, creating a vacuum ahead of the engine that pulls the aircraft forward.",
+      "The compressor pushes against stationary air inside the inlet, and this alone produces all forward thrust.",
+      "The turbine mechanically pushes the aircraft forward through its shaft, while exhaust flow is incidental."
+    ],
+    "answer": "The rearward momentum change of the exhaust is accompanied by an equal-and-opposite reaction on the engine.",
+    "explanation": "This is the reaction principle associated with Newton's third law. The engine accelerates mass rearward, and the corresponding reaction acts forward. The turbine primarily extracts energy from the hot gas to drive the compressor; it is not the direct source of all jet-engine thrust.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-1",
+      "thrust",
+      "Newton's third law",
+      "fundamentals"
+    ],
+    "id": 2
+  },
+  {
+    "question": "According to the notes, which two changes can increase jet-engine thrust?",
+    "choices": [
+      "Increase exhaust-gas speed or increase the quantity of exhaust gas.",
+      "Decrease exhaust-gas speed or decrease the quantity of exhaust gas.",
+      "Increase turbine restriction or reduce the mass of gas accelerated.",
+      "Decrease inlet pressure or increase the time fuel remains unburned."
+    ],
+    "answer": "Increase exhaust-gas speed or increase the quantity of exhaust gas.",
+    "explanation": "The lecture identifies two broad routes: increase the speed of exhaust gases and increase the quantity of exhaust gases. Both relate to changing the momentum imparted to the flow. Do not confuse these with simply increasing fuel flow without considering airflow and engine operating limits.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-1",
+      "thrust",
+      "mass flow",
+      "exhaust velocity"
+    ],
+    "id": 3
+  },
+  {
+    "question": "Which statement best describes the effect of altitude on thrust in the lecture's environmental-factor discussion?",
+    "choices": [
+      "Thrust generally decreases as altitude increases because the air becomes less dense.",
+      "Thrust generally increases as altitude increases because the air becomes less dense.",
+      "Thrust remains constant with altitude because the engine compresses all inlet air equally.",
+      "Thrust rises continuously with altitude until the engine reaches its design ceiling."
+    ],
+    "answer": "Thrust generally decreases as altitude increases because the air becomes less dense.",
+    "explanation": "The slides show a thrust-lapse trend with increasing altitude and explain that lower air density reduces the thrust an engine can produce. Actual engine performance depends on the engine and operating condition, but the tested relationship in this material is decreasing thrust with increasing altitude.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-1",
+      "thrust lapse",
+      "altitude",
+      "environmental factors"
+    ],
+    "id": 4
+  },
+  {
+    "question": "The lecture's thrust-versus-air-temperature graph slopes downward as temperature increases. What interpretation matches it?",
+    "choices": [
+      "Higher air temperature is associated with lower thrust in the illustrated relationship.",
+      "Higher air temperature is associated with higher thrust because warmer air expands more.",
+      "Air temperature changes exhaust direction but does not affect thrust magnitude.",
+      "Thrust increases with temperature until air density becomes independent of pressure."
+    ],
+    "answer": "Higher air temperature is associated with lower thrust in the illustrated relationship.",
+    "explanation": "The lecture depicts thrust decreasing as air temperature rises. Warmer air is generally less dense at a given pressure, reducing the mass of air entering the engine for a given inlet volume and contributing to reduced thrust. Read the plotted trend rather than assuming that hotter gas always means greater net engine thrust.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-1",
+      "air temperature",
+      "thrust factors",
+      "graph interpretation"
+    ],
+    "id": 5
+  },
+  {
+    "question": "Which statement best distinguishes a rocket from an air-breathing reaction engine?",
+    "choices": [
+      "A rocket carries both fuel and the oxidizer needed for combustion, rather than relying on atmospheric oxygen.",
+      "A rocket must ingest atmospheric air and compress it before fuel can burn.",
+      "A rocket produces thrust only after a propeller accelerates outside air.",
+      "A rocket uses a compressor and turbine to obtain oxygen from the atmosphere."
+    ],
+    "answer": "A rocket carries both fuel and the oxidizer needed for combustion, rather than relying on atmospheric oxygen.",
+    "explanation": "The slides classify rockets as non-air-breathing reaction engines. Their propellant includes fuel and oxidizer, allowing operation without drawing oxygen from the atmosphere. Air-breathing engines, by contrast, use incoming atmospheric air as part of the working flow.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-1",
+      "rocket",
+      "air-breathing",
+      "propellants"
+    ],
+    "id": 6
+  },
+  {
+    "question": "In rocket terminology used in the notes, what is the mixture ratio?",
+    "choices": [
+      "The ratio of oxidizer quantity to fuel quantity in the propellant mixture.",
+      "The ratio of exhaust velocity to the rocket's forward velocity.",
+      "The ratio of chamber pressure to the pressure at the nozzle exit.",
+      "The ratio of fuel stored in the tank to the mass of the rocket structure."
+    ],
+    "answer": "The ratio of oxidizer quantity to fuel quantity in the propellant mixture.",
+    "explanation": "The lecture defines mixture ratio as oxidizer-to-fuel ratio. Fuel burns when combined with oxygen; the oxidizer supplies the oxygen needed for combustion. Do not reverse the ratio and call it fuel-to-oxidizer.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-1",
+      "rocket propellants",
+      "mixture ratio",
+      "definition"
+    ],
+    "id": 7
+  },
+  {
+    "question": "A solid-propellant rocket has been ignited. Which operational limitation is emphasized in the lecture?",
+    "choices": [
+      "It cannot be shut down like a liquid-propellant engine and continues burning until its propellant is exhausted.",
+      "It can be throttled and restarted freely by closing and reopening its propellant valves.",
+      "It stops automatically whenever chamber pressure reaches its designed operating value.",
+      "It requires separate fuel and oxidizer tanks and pumps to sustain combustion."
+    ],
+    "answer": "It cannot be shut down like a liquid-propellant engine and continues burning until its propellant is exhausted.",
+    "explanation": "The lecture says solid motors are simple, but once ignited they burn until the propellant is used up. Their thrust pattern can be influenced by the geometry of the central channel, but that is not the same as real-time throttling or shutdown.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-1",
+      "solid rocket",
+      "operational limitations",
+      "throttling"
+    ],
+    "id": 8
+  },
+  {
+    "question": "Which trade-off best matches the lecture's comparison of solid- and liquid-propellant rockets?",
+    "choices": [
+      "Solid motors are simpler to store and handle, while liquid engines allow throttling, stopping, or restarting.",
+      "Solid motors are more complex but restart easily, while liquid engines are simpler and cannot be stopped.",
+      "Solid motors carry separate liquid tanks, while liquid engines store fuel and oxidizer as one solid grain.",
+      "Solid motors have higher specific impulse in every case, while liquid engines cannot control propellant flow."
+    ],
+    "answer": "Solid motors are simpler to store and handle, while liquid engines allow throttling, stopping, or restarting.",
+    "explanation": "The notes list ease of storage and handling, compactness, simplicity, and durability among solid-motor advantages. Liquid-propellant engines are more complex, but controlling propellant flow permits throttling, shutdown, and restart. The question tests a contrast, not a claim that one type is superior in every respect.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-1",
+      "solid rocket",
+      "liquid rocket",
+      "comparison"
+    ],
+    "id": 9
+  },
+  {
+    "question": "Which historical pairing is correctly matched?",
+    "choices": [
+      "Frank Whittle—granted a jet-engine patent in 1930 and regarded as the father of jet propulsion.",
+      "Hero of Alexandria—designed the first operational turbojet installed in an aircraft in 1939.",
+      "Hans von Ohain—invented the aeolipile around 250 B.C. to demonstrate reaction.",
+      "Sanford Moss—designed the Heinkel He-178 engine and flew it in August 1939."
+    ],
+    "answer": "Frank Whittle—granted a jet-engine patent in 1930 and regarded as the father of jet propulsion.",
+    "explanation": "The historical slides identify Frank Whittle as a Royal Air Force officer, describe him as the father of jet propulsion, and state that his first jet-engine patent was granted in 1930. Hero is associated with the aeolipile; Moss with early mechanical jet-propulsion and gas-turbine work; von Ohain with the first operational turbojet design described in the notes.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-1",
+      "history",
+      "Frank Whittle",
+      "patent"
+    ],
+    "id": 10
+  },
+  {
+    "question": "Which description of Hero's aeolipile matches the historical slides?",
+    "choices": [
+      "Steam escaped through radially arranged discharge tubes, causing a spherical container to rotate.",
+      "Compressed air passed through axial compressor stages to power a turbine and propeller.",
+      "Fuel and oxidizer burned in separate tanks before exhausting through a supersonic nozzle.",
+      "A balloon released air through one opening, demonstrating the principle of a modern turbofan."
+    ],
+    "answer": "Steam escaped through radially arranged discharge tubes, causing a spherical container to rotate.",
+    "explanation": "The slides describe a covered kettle heating water to produce steam, which was routed through tubes into a sphere. Steam escaping through discharge tubes arranged around the sphere caused rotation, illustrating the reaction principle. The device dates to the historical account around 250 B.C.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-2",
+      "history",
+      "Hero",
+      "aeolipile"
+    ],
+    "id": 11
+  },
+  {
+    "question": "What did the balloon experiment illustrate in the lecture's discussion of Newton's laws?",
+    "choices": [
+      "Air rushing out in one direction can produce motion of the balloon in the opposite direction.",
+      "A balloon moves only when the pressure inside it is equal to atmospheric pressure.",
+      "An object accelerates only when equal forces act on it from every direction.",
+      "Thrust requires combustion, so an unheated balloon cannot demonstrate reaction."
+    ],
+    "answer": "Air rushing out in one direction can produce motion of the balloon in the opposite direction.",
+    "explanation": "The released balloon is a simple demonstration of reaction: escaping air produces a force that moves the balloon oppositely. It shows that combustion is not required to illustrate the basic reaction principle of propulsion.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-2",
+      "Newton's third law",
+      "balloon experiment",
+      "thrust"
+    ],
+    "id": 12
+  },
+  {
+    "question": "Which statement about the ramjet is most consistent with the lecture?",
+    "choices": [
+      "It has no moving parts and requires sufficient forward speed to create the pressure needed for operation.",
+      "It uses a compressor turbine assembly to produce static thrust before the aircraft begins moving.",
+      "It maintains combustion at subsonic speed by slowing the incoming air with rotating compressor blades.",
+      "It carries its own oxidizer and is therefore classified as a non-air-breathing engine."
+    ],
+    "answer": "It has no moving parts and requires sufficient forward speed to create the pressure needed for operation.",
+    "explanation": "The slides describe the ramjet as an athodyd or aero-thermodynamic duct with no moving parts. Forward motion supplies ram pressure; without enough airflow and pressure, gases can escape from both ends rather than produce useful thrust. The lecture therefore notes that a ramjet must be boosted to operating speed by another engine or vehicle.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-2",
+      "ramjet",
+      "air-breathing engine",
+      "operating speed"
+    ],
+    "id": 13
+  },
+  {
+    "question": "Why does the lecture state that a ramjet cannot produce static thrust?",
+    "choices": [
+      "It depends on forward motion to force enough air into the inlet and establish the required high-pressure flow.",
+      "Its combustion chamber cannot accept fuel until the aircraft reaches a speed where the turbine begins rotating.",
+      "Its exhaust nozzle remains closed at rest and opens only after a compressor reaches maximum rpm.",
+      "It carries no fuel and must obtain all combustion energy from the surrounding atmosphere."
+    ],
+    "answer": "It depends on forward motion to force enough air into the inlet and establish the required high-pressure flow.",
+    "explanation": "The ramjet has no compressor or other moving machinery to establish the needed pressure at rest. The aircraft must already be moving fast enough for ram air to compress the flow. This is why the notes mention that it must be carried aloft or accelerated by another high-speed vehicle or engine.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-2",
+      "ramjet",
+      "static thrust",
+      "ram pressure"
+    ],
+    "id": 14
+  },
+  {
+    "question": "What is the key distinction between ramjet and scramjet combustion described in the lecture?",
+    "choices": [
+      "A ramjet burns with subsonic flow in the combustor, whereas a scramjet burns with supersonic flow.",
+      "A ramjet burns with supersonic flow in the combustor, whereas a scramjet slows all flow to subsonic speed.",
+      "A ramjet uses a turbine to drive a compressor, whereas a scramjet uses a propeller to compress air.",
+      "A ramjet carries an oxidizer, whereas a scramjet depends on a separate liquid-oxygen tank."
+    ],
+    "answer": "A ramjet burns with subsonic flow in the combustor, whereas a scramjet burns with supersonic flow.",
+    "explanation": "The slides identify scramjet as supersonic-combustion ramjet. A conventional ramjet decelerates incoming air to subsonic speed before combustion; the scramjet keeps the airflow supersonic through the engine, enabling the concept to address very high-speed operation.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-2",
+      "scramjet",
+      "ramjet",
+      "combustion flow"
+    ],
+    "id": 15
+  },
+  {
+    "question": "Which feature makes a pulsejet different from the ramjet in the lecture's description?",
+    "choices": [
+      "A pulsejet uses spring-loaded shutter valves and intermittent ignition as the shutters open and close.",
+      "A pulsejet uses a multi-stage turbine to drive a compressor continuously at constant speed.",
+      "A pulsejet keeps combustion supersonic throughout the engine to operate at extreme Mach numbers.",
+      "A pulsejet carries an oxidizer tank and burns a solid grain until the propellant is exhausted."
+    ],
+    "answer": "A pulsejet uses spring-loaded shutter valves and intermittent ignition as the shutters open and close.",
+    "explanation": "The pulsejet slide describes an intake duct with spring-loaded shutter valves. Ram pressure opens the shutters, fuel is injected and ignited, and pressure in the chamber forces the shutters closed; the process repeats. The notes contrast this with a ramjet's need for high forward speed before operation.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-2",
+      "pulsejet",
+      "shutter valves",
+      "combustion cycle"
+    ],
+    "id": 16
+  },
+  {
+    "question": "Which statement about the lecture's description of ramjet limitations is accurate?",
+    "choices": [
+      "The notes identify high fuel consumption and cite atmospheric heating as a limit on very high speed.",
+      "The notes identify low fuel consumption and state that the ramjet is limited mainly by propeller efficiency.",
+      "The notes state that a ramjet is limited by the need for a free turbine at high altitude.",
+      "The notes describe a ramjet as having a fixed maximum speed below the speed of sound."
+    ],
+    "answer": "The notes identify high fuel consumption and cite atmospheric heating as a limit on very high speed.",
+    "explanation": "The lecture lists high fuel consumption as the ramjet's biggest drawback and says atmospheric friction/heating limits its cited speed range. These statements reflect the course material's framing; the core conceptual point is that ramjet performance is constrained by both fuel use and very-high-speed thermal effects.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-2",
+      "ramjet",
+      "limitations",
+      "fuel consumption"
+    ],
+    "id": 17
+  },
+  {
+    "question": "Which engine type is classified in the lecture as a non-air-breathing reaction engine?",
+    "choices": [
+      "Rocket, because it carries the oxidizer required for its propellant to burn.",
+      "Ramjet, because it relies on high forward speed to compress atmospheric air.",
+      "Pulsejet, because it uses shutters to regulate the incoming air.",
+      "Turbojet, because its turbine extracts energy from the combustion gases."
+    ],
+    "answer": "Rocket, because it carries the oxidizer required for its propellant to burn.",
+    "explanation": "The lecture divides reaction engines into non-air-breathing and air-breathing types. The rocket carries fuel and oxidizer, while ramjets, pulsejets, and gas-turbine engines use atmospheric air as part of their operation.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-2",
+      "engine classification",
+      "rocket",
+      "air-breathing"
+    ],
+    "id": 18
+  },
+  {
+    "question": "Which statement best explains why a scramjet can be considered for speeds beyond the efficient range of a conventional ramjet?",
+    "choices": [
+      "It performs combustion while the airflow remains supersonic, avoiding the need to slow all combustor flow to subsonic speed.",
+      "It eliminates the inlet and burns fuel directly in stationary atmospheric air around the aircraft.",
+      "It uses rotating compressor blades to maintain subsonic airflow at any flight Mach number.",
+      "It produces thrust by carrying all working fluid and oxidizer, independent of atmospheric conditions."
+    ],
+    "answer": "It performs combustion while the airflow remains supersonic, avoiding the need to slow all combustor flow to subsonic speed.",
+    "explanation": "The notes state that above about Mach 5, conventional ramjet propulsion becomes very inefficient because of inlet shock-related losses and the requirement to decelerate flow. The scramjet's defining feature is supersonic combustion. The slides cite theoretical projections for very high speeds and mention the X-43A reaching Mach 9.6.",
+    "difficulty": "hard",
+    "tags": [
+      "batch-2",
+      "scramjet",
+      "high-speed propulsion",
+      "Mach number"
+    ],
+    "id": 19
+  },
+  {
+    "question": "Which statement best describes the function of the turbojet compressor rotor blades?",
+    "choices": [
+      "They rotate to gather and push air rearward, increasing its pressure through successive stages.",
+      "They remain stationary to straighten airflow and prevent all pressure rise in the compressor.",
+      "They extract energy from combustion gases and transfer it through a shaft to the propeller.",
+      "They expand the exhaust gases and convert their pressure into the final jet velocity."
+    ],
+    "answer": "They rotate to gather and push air rearward, increasing its pressure through successive stages.",
+    "explanation": "The lecture compares rotor blades to propellers: they rotate and move air through the engine. Stator blades are stationary and straighten or redirect the flow between rotor rows. The compressor's overall purpose is to supply high-pressure air to the combustion chamber.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-2",
+      "turbojet",
+      "compressor",
+      "rotor blades"
+    ],
+    "id": 20
+  },
+  {
+    "question": "In an axial-flow compressor, what is the principal role of the stator vanes between rotor rows?",
+    "choices": [
+      "They diffuse and redirect the airflow, reducing velocity and raising static pressure between rotating stages.",
+      "They rotate with the shaft to accelerate the air and add swirl in the direction of engine rotation.",
+      "They inject fuel into the airflow and stabilize the flame inside the combustion chamber.",
+      "They extract energy from the gas stream to drive the propeller reduction gearbox."
+    ],
+    "answer": "They diffuse and redirect the airflow, reducing velocity and raising static pressure between rotating stages.",
+    "explanation": "The slides describe stator vanes as stationary blades between rotor rows. They act as diffusers, slowing the flow and raising pressure, while also helping prevent unwanted swirl and directing the flow at the correct angle toward the next rotor row.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-3",
+      "axial compressor",
+      "stator vanes",
+      "pressure stages"
+    ],
+    "id": 21
+  },
+  {
+    "question": "What defines one pressure stage in the axial-flow compressor described in the PDF?",
+    "choices": [
+      "One row of rotor blades together with the following row of stator vanes.",
+      "One complete compressor shaft together with its attached turbine stages.",
+      "One impeller followed by a diffuser and a compressor manifold.",
+      "One combustion chamber together with its fuel nozzle and flame holder."
+    ],
+    "answer": "One row of rotor blades together with the following row of stator vanes.",
+    "explanation": "The lecture defines a pressure stage as each consecutive row of rotor blades and stator vanes. The rotor slightly accelerates the airflow; the stator diffuses it, slowing it and raising pressure. Adding stages increases the overall compressor pressure ratio.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-3",
+      "axial compressor",
+      "pressure stage",
+      "definition"
+    ],
+    "id": 22
+  },
+  {
+    "question": "Why do axial-flow compressors generally require multiple stages to achieve high pressure ratios?",
+    "choices": [
+      "Each stage produces a relatively small pressure rise, so additional stages build the total pressure increase.",
+      "Each stage lowers pressure substantially, so more stages are added to recover the original inlet pressure.",
+      "The stators prevent any pressure rise, so only the exhaust nozzle contributes to compressor pressure ratio.",
+      "Each stage burns a small amount of fuel to raise pressure before the next rotor row."
+    ],
+    "answer": "Each stage produces a relatively small pressure rise, so additional stages build the total pressure increase.",
+    "explanation": "The PDF states that a single axial stage can produce a pressure ratio of about 1.25:1, and high overall ratios are obtained by adding stages. The lecture contrasts this with centrifugal compressors, which can have a much larger pressure rise per stage but are more limited in stage count.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-3",
+      "axial compressor",
+      "pressure ratio",
+      "stages"
+    ],
+    "id": 23
+  },
+  {
+    "question": "Which set correctly lists the main elements of a centrifugal-flow compressor in the lecture?",
+    "choices": [
+      "Impeller, diffuser, and compressor manifold.",
+      "Rotor, stator, and variable inlet guide vanes.",
+      "Combustor, turbine, and exhaust cone.",
+      "Fan, free turbine, and reduction gearbox."
+    ],
+    "answer": "Impeller, diffuser, and compressor manifold.",
+    "explanation": "The centrifugal compressor is described as consisting of an impeller (rotor), diffuser (stator), and compressor manifold. The impeller accelerates air outward by centrifugal force; the diffuser slows it and raises static pressure; the manifold distributes the air to the combustion chambers.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-3",
+      "centrifugal compressor",
+      "components",
+      "definition"
+    ],
+    "id": 24
+  },
+  {
+    "question": "Air leaves a centrifugal compressor impeller at high velocity and enters a divergent diffuser. What change is intended?",
+    "choices": [
+      "The air slows down and its static pressure increases before it enters the combustion section.",
+      "The air accelerates further while its static pressure falls to stabilize the flame.",
+      "The air is mixed with fuel and burned before it reaches the compressor manifold.",
+      "The air is redirected into the turbine to power the compressor before combustion."
+    ],
+    "answer": "The air slows down and its static pressure increases before it enters the combustion section.",
+    "explanation": "The diffuser is a divergent duct. As the flow spreads out, velocity decreases and static pressure rises. It also prepares the air to enter the flame area at a lower velocity, because excessive velocity through the flame zone could extinguish combustion.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-3",
+      "diffuser",
+      "centrifugal compressor",
+      "pressure recovery"
+    ],
+    "id": 25
+  },
+  {
+    "question": "Which statement best describes the compressor manifold in a centrifugal-flow compressor?",
+    "choices": [
+      "It distributes air from the diffuser to the combustion chambers through outlet ports.",
+      "It collects exhaust gas from the turbine and accelerates it through the tailpipe.",
+      "It joins the propeller to the free turbine through reduction gearing.",
+      "It directs incoming air to the first rotor row at the correct angle of attack."
+    ],
+    "answer": "It distributes air from the diffuser to the combustion chambers through outlet ports.",
+    "explanation": "The compressor manifold diverts air from the diffuser into the combustion chambers. The lecture notes that it has one outlet port for each chamber so that the air is divided evenly.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-3",
+      "compressor manifold",
+      "centrifugal compressor",
+      "air distribution"
+    ],
+    "id": 26
+  },
+  {
+    "question": "Which is a recognized advantage of a centrifugal-flow compressor in the lecture?",
+    "choices": [
+      "A high pressure rise per stage combined with relatively simple manufacture and low starting-power requirements.",
+      "A very small frontal area with unlimited practical stages and the highest peak efficiency in all conditions.",
+      "A straight-through flow path with negligible pressure rise per stage and very high manufacturing cost.",
+      "A narrow operating-speed range combined with high weight and complex blade attachment."
+    ],
+    "answer": "A high pressure rise per stage combined with relatively simple manufacture and low starting-power requirements.",
+    "explanation": "The slides list simplicity, relatively low cost and weight, low starting power, and high pressure rise per stage among centrifugal-compressor advantages. Its disadvantages include large frontal area and practical limits on stage count.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-3",
+      "centrifugal compressor",
+      "advantages",
+      "comparison"
+    ],
+    "id": 27
+  },
+  {
+    "question": "Which disadvantage helps explain why centrifugal compressors are less suitable for some large, high-power engine designs?",
+    "choices": [
+      "Their large frontal area increases drag, and practical stage-count limits restrict further pressure-ratio growth.",
+      "Their flow is strictly axial, and each stage produces only a very small pressure rise.",
+      "Their blades must remain stationary, preventing them from accelerating the airflow.",
+      "Their pressure rise per stage is too high to permit any stable combustion downstream."
+    ],
+    "answer": "Their large frontal area increases drag, and practical stage-count limits restrict further pressure-ratio growth.",
+    "explanation": "The PDF identifies large frontal area for a given airflow as a source of aerodynamic drag and notes that practical limits on stage count restrict use in larger, more powerful engines. These disadvantages contrast with the axial compressor's smaller frontal area and easier scaling by adding stages.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-3",
+      "centrifugal compressor",
+      "disadvantages",
+      "design trade-offs"
+    ],
+    "id": 28
+  },
+  {
+    "question": "What is the purpose of inlet guide vanes immediately ahead of the first axial-compressor rotor?",
+    "choices": [
+      "They direct incoming air at a suitable angle to the first rotor and impart swirl in the engine's rotation direction.",
+      "They remove all swirl from the exhaust after the gases have passed through the turbine.",
+      "They increase fuel pressure and atomize fuel before it enters the combustion chamber.",
+      "They reduce the exhaust-gas temperature by routing cooling air around the turbine."
+    ],
+    "answer": "They direct incoming air at a suitable angle to the first rotor and impart swirl in the engine's rotation direction.",
+    "explanation": "The lecture identifies the first set of stator vanes ahead of the first rotor as inlet guide vanes (IGVs). They set the airflow angle and impart swirl in the direction of engine rotation. Outlet vanes perform a different role: straightening flow at the compressor exit.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-3",
+      "inlet guide vanes",
+      "axial compressor",
+      "airflow angle"
+    ],
+    "id": 29
+  },
+  {
+    "question": "Why might an axial compressor use variable inlet guide vanes and variable stator vanes?",
+    "choices": [
+      "To reposition the vanes and maintain suitable airflow through the compressor as operating conditions change.",
+      "To vary the chemical mixture ratio by changing the amount of oxidizer entering the engine.",
+      "To control the propeller blade pitch directly through the compressor case.",
+      "To replace the turbine shaft and allow the compressor to rotate without a power source."
+    ],
+    "answer": "To vary the chemical mixture ratio by changing the amount of oxidizer entering the engine.",
+    "explanation": "The slides state that variable inlet guide vanes and variable stators automatically reposition themselves to maintain proper airflow under changing conditions. They also help direct flow toward rotor blades at an appropriate angle, which is relevant to compressor-stall prevention.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-3",
+      "variable stators",
+      "compressor control",
+      "stall prevention"
+    ],
+    "id": 30
+  },
+  {
+    "question": "What is the compressor pressure ratio, as defined in the lecture?",
+    "choices": [
+      "Compressor outlet pressure divided by compressor inlet pressure.",
+      "Compressor inlet pressure divided by compressor outlet pressure.",
+      "Turbine outlet pressure divided by combustion-chamber fuel pressure.",
+      "Exhaust-nozzle pressure divided by ambient pressure at the aircraft."
+    ],
+    "answer": "Compressor outlet pressure divided by compressor inlet pressure.",
+    "explanation": "The PDF explicitly defines compressor pressure ratio as outlet pressure divided by inlet pressure. The notes also identify compressor speed, aircraft forward speed, and ambient-air density as factors affecting the amount of air passing through the engine.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-4",
+      "compressor pressure ratio",
+      "formula",
+      "definition"
+    ],
+    "id": 31
+  },
+  {
+    "question": "A technician notices that compressor bleed air is being used for cabin pressurization. Which effect does the lecture warn may occur?",
+    "choices": [
+      "A small but noticeable reduction in engine power, sometimes visible through engine pressure ratio indications.",
+      "A large increase in engine power because the compressor has less air to process.",
+      "An automatic increase in propeller reduction ratio without any change in engine output.",
+      "A complete loss of combustion because all bleed air is removed from the diffuser."
+    ],
+    "answer": "A small but noticeable reduction in engine power, sometimes visible through engine pressure ratio indications.",
+    "explanation": "The lecture lists cabin pressurization, heating and cooling, anti-/de-icing, and pneumatic engine starting as bleed-air uses. It warns that bleeding air from the compressor causes a small but noticeable power drop, sometimes detectable on the EPR indicator.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "bleed air",
+      "engine indications",
+      "power loss"
+    ],
+    "id": 32
+  },
+  {
+    "question": "Which set contains only uses of compressor bleed air listed in the PDF?",
+    "choices": [
+      "Cabin pressurization and conditioning, anti-icing or de-icing, and pneumatic engine starting.",
+      "Propeller reduction gearing, exhaust-nozzle expansion, and direct thrust-vector generation.",
+      "Fuel tank pressurization only, ignition timing, and solid-propellant grain shaping.",
+      "Turbine blade rotation, compressor rotor attachment, and exhaust cone cooling by ambient air."
+    ],
+    "answer": "Cabin pressurization and conditioning, anti-icing or de-icing, and pneumatic engine starting.",
+    "explanation": "The notes give cabin pressurization, heating and cooling; de-icing and anti-icing; and pneumatic engine starting as current applications of bleed air. Bleed air is extracted from one of the compressor's pressure stages.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-4",
+      "bleed air",
+      "applications",
+      "systems"
+    ],
+    "id": 33
+  },
+  {
+    "question": "Which statement about the gas-turbine air inlet is most accurate?",
+    "choices": [
+      "It should deliver uniform, low-turbulence airflow while recovering as much total pressure as possible.",
+      "It should deliberately create strong turbulence to mix the air before the compressor blades.",
+      "It should reduce total pressure as much as possible so that the compressor requires less work.",
+      "It should supply different airflow angles to each compressor stage to maximize swirl."
+    ],
+    "answer": "It should deliver uniform, low-turbulence airflow while recovering as much total pressure as possible.",
+    "explanation": "The inlet's functions include minimizing drag and ram-pressure loss, recovering total pressure, raising inlet pressure through ram effect, and providing a uniform supply to the compressor. Turbulence or obstruction can cause a severe loss of efficiency.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "air inlet",
+      "pressure recovery",
+      "inlet design"
+    ],
+    "id": 34
+  },
+  {
+    "question": "Why is warm compressor air routed through some modern turbofan inlets?",
+    "choices": [
+      "To prevent ice from forming on the inlet leading edge and breaking loose into the fan.",
+      "To cool the compressor inlet and increase the density of air entering the engine.",
+      "To raise the fuel's mixture ratio before the combustion chamber receives the air.",
+      "To reduce the fan diameter by changing the inlet's aerodynamic profile during flight."
+    ],
+    "answer": "To prevent ice from forming on the inlet leading edge and breaking loose into the fan.",
+    "explanation": "The lecture notes that the fan is often the first large component encountered by incoming air on modern turbofans. Inlet icing protection prevents ice buildup and pieces breaking off and damaging the fan; warm air bled from the compressor is ducted through the inlet.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "inlet anti-icing",
+      "turbofan",
+      "bleed air"
+    ],
+    "id": 35
+  },
+  {
+    "question": "Which inlet type is described as having a fixed-geometry duct that progressively increases in diameter from front to back for subsonic flow?",
+    "choices": [
+      "Subsonic inlet, whose divergent shape slows the air and increases its pressure.",
+      "Bell-mouth inlet, whose convergent shape is optimized for high-speed forward flight.",
+      "Supersonic inlet, whose only purpose is to accelerate air above Mach 1 at the compressor face.",
+      "Fuselage-mounted inlet, which necessarily uses a convergent duct to increase air velocity."
+    ],
+    "answer": "Subsonic inlet, whose divergent shape slows the air and increases its pressure.",
+    "explanation": "The slides describe a typical subsonic inlet as a fixed-geometry duct with increasing diameter from front to back. Its divergent shape allows intake air to spread out, reducing velocity and increasing pressure. The compressor itself must receive subsonic airflow according to the lecture.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "subsonic inlet",
+      "diffuser effect",
+      "inlet types"
+    ],
+    "id": 36
+  },
+  {
+    "question": "What is the primary reason a supersonic aircraft's inlet must reduce incoming-air speed before the compressor?",
+    "choices": [
+      "The compressor requires airflow slower than the speed of sound at its face.",
+      "The compressor requires supersonic airflow to keep the turbine from overspeeding.",
+      "The combustion chamber can only ignite fuel if the inlet air is at atmospheric pressure.",
+      "The exhaust nozzle cannot accelerate gas unless the inlet air has been stopped completely."
+    ],
+    "answer": "The compressor requires airflow slower than the speed of sound at its face.",
+    "explanation": "The PDF states that air entering the compressor on a turbine engine must flow slower than the speed of sound. Therefore, a supersonic aircraft's inlet must decelerate incoming air before it reaches the compressor. This is a different flow-management challenge from a simple subsonic inlet.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "supersonic inlet",
+      "compressor",
+      "Mach number"
+    ],
+    "id": 37
+  },
+  {
+    "question": "Which application best matches the bell-mouth inlet described in the lecture?",
+    "choices": [
+      "A ground-test engine or slow-moving aircraft, where high aerodynamic efficiency at low speed is useful.",
+      "A high-speed aircraft, where its shape minimizes drag at supersonic forward speeds.",
+      "A high-bypass turbofan, where it replaces the fan and directs bypass air around the core.",
+      "A fuselage intake requiring a long duct to reduce pressure imbalance during abrupt maneuvers."
+    ],
+    "answer": "A ground-test engine or slow-moving aircraft, where high aerodynamic efficiency at low speed is useful.",
+    "explanation": "The bell-mouth inlet has a convergent profile designed for high aerodynamic efficiency when stationary or moving slowly. The slides list helicopters, some slow aircraft, and ground-test stands as applications, and warn that its shape produces substantial drag in forward flight.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "bell-mouth inlet",
+      "applications",
+      "inlet types"
+    ],
+    "id": 38
+  },
+  {
+    "question": "Why are inlet screens seldom used on high-mass-airflow engines?",
+    "choices": [
+      "Icing or screen failure can cause serious engine damage despite the screen's foreign-object protection benefit.",
+      "They increase ram recovery so much that the compressor can no longer reach its design pressure ratio.",
+      "They prevent any airflow from entering the engine until the aircraft reaches supersonic speed.",
+      "They are incompatible with all centrifugal compressors because the impeller rotates outward."
+    ],
+    "answer": "Icing or screen failure can cause serious engine damage despite the screen's foreign-object protection benefit.",
+    "explanation": "The lecture describes inlet screens as one way to help prevent foreign-object damage, commonly used on rotorcraft, turboprops, and test stands. It says they are seldom used on high-mass-airflow engines because icing and screen failures can themselves cause serious engine damage.",
+    "difficulty": "hard",
+    "tags": [
+      "batch-4",
+      "FOD",
+      "inlet screen",
+      "maintenance"
+    ],
+    "id": 39
+  },
+  {
+    "question": "What problem is a vortex dissipater intended to reduce during ground operation?",
+    "choices": [
+      "An inlet vortex that can lift water, sand, small stones, or hardware into the engine.",
+      "A combustion vortex that prevents fuel from mixing with compressed air in the burner.",
+      "A turbine wake that reverses the direction of rotation of the compressor shaft.",
+      "A pressure vortex that forms only inside the exhaust nozzle during supersonic flight."
+    ],
+    "answer": "An inlet vortex that can lift water, sand, small stones, or hardware into the engine.",
+    "explanation": "The PDF explains that some inlets form a vortex between the ground and inlet during ground operations. The vortex can ingest debris, so a vortex dissipater—also called a vortex destroyer or blow-away jet—is installed on some engines to help alleviate the problem.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "vortex dissipater",
+      "FOD",
+      "ground operations"
+    ],
+    "id": 40
+  },
+  {
+    "question": "Which relationship between a turboprop and its propeller is described in the lecture?",
+    "choices": [
+      "The turbine transmits power through a shaft and reduction gear train to drive the propeller.",
+      "The propeller drives the compressor directly, while the turbine contributes no shaft power.",
+      "The propeller receives all its power from exhaust thrust, with no mechanical connection to the engine.",
+      "The turbine drives the propeller only through the exhaust nozzle and without a gearbox."
+    ],
+    "answer": "The turbine transmits power through a shaft and reduction gear train to drive the propeller.",
+    "explanation": "The turboprop extracts additional power from exhaust gases through extra turbine stages and transmits it forward through a shaft and gear train to the propeller. The exhaust still contributes some thrust, but the lecture emphasizes that most turboprop thrust comes from the propeller.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-5",
+      "turboprop",
+      "reduction gearbox",
+      "power transmission"
+    ],
+    "id": 41
+  },
+  {
+    "question": "What distinguishes a free-turbine turboprop arrangement from a direct-propeller-drive arrangement?",
+    "choices": [
+      "Its propeller-driving turbine is independent of the compressor-driving turbine and rotates in the exhaust stream.",
+      "Its propeller is driven directly from the compressor shaft with no independent turbine stage.",
+      "Its compressor and turbine share no shaft, but its propeller is powered by the exhaust nozzle alone.",
+      "Its reduction gearbox is replaced by an inlet guide vane assembly that controls propeller rpm."
+    ],
+    "answer": "Its propeller-driving turbine is independent of the compressor-driving turbine and rotates in the exhaust stream.",
+    "explanation": "The lecture contrasts direct propeller drive, where power is taken from the compressor drive shaft through reduction gearing, with free-turbine drive, where an independent turbine in the exhaust gas stream drives the propeller through its own shaft and reduction gear system.",
+    "difficulty": "hard",
+    "tags": [
+      "batch-5",
+      "free turbine",
+      "turboprop",
+      "engine configurations"
+    ],
+    "id": 42
+  },
+  {
+    "question": "Which set lists the typical turboprop assemblies identified in the PDF?",
+    "choices": [
+      "Power section, reduction gearbox, torquemeter, and accessory-drive housing.",
+      "Inlet guide vane, burner liner, exhaust cone, and afterburner nozzle only.",
+      "Fan duct, bypass mixer, propeller governor, and rocket oxidizer tank.",
+      "Impeller, diffuser, compressor manifold, and liquid-propellant pump assembly only."
+    ],
+    "answer": "Power section, reduction gearbox, torquemeter, and accessory-drive housing.",
+    "explanation": "The notes list four typical turboprop assemblies: the power section; reduction gear or gearbox; torquemeter assembly; and accessory-drive housing. The torquemeter transmits torque from the engine to the reduction gearbox, while the accessory drive provides gear trains for engine-driven accessories.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-5",
+      "turboprop",
+      "assemblies",
+      "torquemeter"
+    ],
+    "id": 43
+  },
+  {
+    "question": "Which statement about turboprop propulsive efficiency matches the lecture?",
+    "choices": [
+      "It decreases as airspeed increases and becomes a limiting factor above roughly Mach 0.6.",
+      "It increases continuously with airspeed and is most effective above the normal turbojet speed range.",
+      "It remains constant with airspeed because the propeller reduction gearbox fixes propeller rpm.",
+      "It is independent of airspeed as long as the engine has a free turbine."
+    ],
+    "answer": "It decreases as airspeed increases and becomes a limiting factor above roughly Mach 0.6.",
+    "explanation": "The lecture says turboprops deliver more thrust at low subsonic speeds and that propulsive efficiency decreases as airspeed increases. It contrasts this with turbojets, whose propulsive efficiency increases with airspeed, and cites speeds above Mach 0.6 as a turboprop limitation.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-5",
+      "turboprop",
+      "propulsive efficiency",
+      "airspeed"
+    ],
+    "id": 44
+  },
+  {
+    "question": "Which description best captures the turbofan's position among the engine types discussed?",
+    "choices": [
+      "It combines high thrust and operating efficiency with higher-speed, high-altitude capability than a typical turboprop.",
+      "It carries its own oxidizer and is therefore independent of atmospheric air at all speeds.",
+      "It produces all thrust through a propeller and has no exhaust contribution.",
+      "It has no turbine stages and relies on shutter valves for intermittent combustion."
+    ],
+    "answer": "It combines high thrust and operating efficiency with higher-speed, high-altitude capability than a typical turboprop.",
+    "explanation": "The lecture describes the turbofan as combining good operating efficiency and high thrust capability with the high-speed, high-altitude capability of a turbojet. Its fan produces a significant portion of total thrust, and its additional turbine work can reduce exhaust velocity and noise compared with a turbojet of equal thrust.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-5",
+      "turbofan",
+      "engine comparison",
+      "performance"
+    ],
+    "id": 45
+  },
+  {
+    "question": "Why can a turbofan be quieter than a turbojet of equal thrust?",
+    "choices": [
+      "Additional turbine stages extract more exhaust energy to drive the fan, reducing the velocity of gas leaving the jet nozzle.",
+      "The fan eliminates combustion and sends all air around the engine core without any exhaust jet.",
+      "The turbofan uses a higher exhaust velocity that shifts noise to frequencies humans cannot hear.",
+      "The turbofan removes the exhaust section and dissipates all remaining energy inside the compressor."
+    ],
+    "answer": "Additional turbine stages extract more exhaust energy to drive the fan, reducing the velocity of gas leaving the jet nozzle.",
+    "explanation": "The PDF explains that additional turbine stages drive the fan by extracting more energy from the exhaust gases. This lowers exhaust velocity through the nozzle and results in a lower noise level than a turbojet of equal thrust, an important consideration for commercial airports.",
+    "difficulty": "hard",
+    "tags": [
+      "batch-5",
+      "turbofan",
+      "noise",
+      "turbine stages"
+    ],
+    "id": 46
+  },
+  {
+    "question": "Which sequence correctly names the main gas-turbine engine sections listed in the PDF?",
+    "choices": [
+      "Air inlet, compressor, diffuser, combustor, turbine, exhaust, and accessory section.",
+      "Air inlet, propeller gearbox, rocket chamber, stator, and external combustion boiler.",
+      "Compressor, afterburner, propeller, oxidizer tank, reduction gearbox, and nozzle only.",
+      "Diffuser, exhaust, air inlet, fuel tank, fan belt, and combustion boiler."
+    ],
+    "answer": "Air inlet, compressor, diffuser, combustor, turbine, exhaust, and accessory section.",
+    "explanation": "The slide listing engine construction names the air inlet, compressor section, diffuser, combustor/combustion chamber, turbine section, exhaust section, and accessory section. It also notes systems for starting, lubrication, fuel supply, and auxiliary purposes such as anti-icing, cooling, and pressurization.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-5",
+      "engine construction",
+      "sections",
+      "recall"
+    ],
+    "id": 47
+  },
+  {
+    "question": "What is the main purpose of the gas-turbine air inlet duct?",
+    "choices": [
+      "To deliver air to the compressor with minimal total-pressure loss and as little turbulence as possible.",
+      "To intentionally lower compressor inlet pressure and create turbulence for better fuel mixing.",
+      "To combust fuel before the air reaches the compressor and turbine sections.",
+      "To extract shaft power from the air and transmit it to the accessory gearbox."
+    ],
+    "answer": "To deliver air to the compressor with minimal total-pressure loss and as little turbulence as possible.",
+    "explanation": "The inlet should conduct air to the compressor with minimum drag or ram-pressure loss and provide smooth, uniform airflow. Proper inlet design improves pressure recovery and engine efficiency; even a small obstruction can cause a severe efficiency loss.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-5",
+      "air inlet",
+      "engine sections",
+      "pressure recovery"
+    ],
+    "id": 48
+  },
+  {
+    "question": "Which statement correctly describes the turbine's relationship to the compressor in a basic turbojet?",
+    "choices": [
+      "The turbine is mounted on a shaft connected to the compressor, so turbine rotation powers compressor operation.",
+      "The turbine is mechanically independent of the compressor and only provides electrical power to the aircraft.",
+      "The turbine compresses incoming air by reducing its temperature before it reaches the combustion chamber.",
+      "The turbine drives the exhaust nozzle directly, while the compressor is powered by ram pressure alone."
+    ],
+    "answer": "The turbine is mounted on a shaft connected to the compressor, so turbine rotation powers compressor operation.",
+    "explanation": "The hot gases from combustion strike the turbine blades and make the turbine rotate. The turbine is connected to the compressor by a shaft; this mechanical connection supplies the power needed for compression. In a turboprop or free-turbine design, additional turbine arrangements can also deliver shaft power for a propeller or rotor.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-5",
+      "turbine",
+      "compressor drive",
+      "shaft"
+    ],
+    "id": 49
+  },
+  {
+    "question": "Which function is assigned to the exhaust section in the lecture?",
+    "choices": [
+      "It straightens turbine discharge flow and provides additional gas acceleration to increase thrust.",
+      "It raises inlet-air pressure before the compressor by recovering ram pressure.",
+      "It distributes diffuser air evenly to the individual combustion chambers.",
+      "It injects fuel into the compressed air and sustains combustion at low velocity."
+    ],
+    "answer": "It straightens turbine discharge flow and provides additional gas acceleration to increase thrust.",
+    "explanation": "The exhaust section is designed to provide additional acceleration to the gases and thereby increase thrust. It also straightens the flow leaving the turbine. The lecture describes a cone mounted in the exhaust duct, also called the tailpipe, whose shape varies with engine design and operating range.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-5",
+      "exhaust section",
+      "thrust",
+      "tailpipe"
+    ],
+    "id": 50
+  },
+  {
+    "question": "A compressor blade's angle of attack exceeds its critical value. What condition does the lecture associate with this event?",
+    "choices": [
+      "Compressor stall, in which smooth airflow breaks down and pressure fluctuations can develop.",
+      "Normal ram recovery, in which the inlet raises pressure without changing airflow direction.",
+      "A turbine overspeed condition caused only by the exhaust nozzle's divergent geometry.",
+      "A pulsejet cycle in which shutter valves open and close at regular intervals."
+    ],
+    "answer": "Compressor stall, in which smooth airflow breaks down and pressure fluctuations can develop.",
+    "explanation": "The lecture explains that compressor blades are airfoils and can stall when their angle of attack exceeds the critical angle. Airflow becomes turbulent, slows or stagnates, and may sometimes reverse direction. Severe or hung stalls can significantly reduce engine performance and may damage the engine.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-6",
+      "compressor stall",
+      "angle of attack",
+      "fault diagnosis"
+    ],
+    "id": 51
+  },
+  {
+    "question": "Which combination is identified in the PDF as a possible cause of compressor stall?",
+    "choices": [
+      "Disrupted inlet airflow, abrupt acceleration with excessive fuel flow, or damaged/contaminated compressor components.",
+      "A clean inlet, steady fuel flow, and compressor blades operating below their critical angle of attack.",
+      "Correctly adjusted variable stators, uniform airflow, and stable engine rpm at all operating conditions.",
+      "A normal exhaust cone, a fully functioning torquemeter, and propeller reduction gearing."
+    ],
+    "answer": "Disrupted inlet airflow, abrupt acceleration with excessive fuel flow, or damaged/contaminated compressor components.",
+    "explanation": "The slides list turbulent or disrupted inlet air during severe turbulence or abrupt maneuvers, excessive fuel flow during sudden acceleration with incompatible rpm and airflow, and contamination or damage to compressor blades, stators, or turbine components as causes of compressor stall.",
+    "difficulty": "hard",
+    "tags": [
+      "batch-6",
+      "compressor stall",
+      "causes",
+      "troubleshooting"
+    ],
+    "id": 52
+  },
+  {
+    "question": "Which cockpit indication may accompany a developed compressor stall?",
+    "choices": [
+      "Fluctuating rpm and increased exhaust-gas temperature.",
+      "Steady rpm and a sustained decrease in exhaust-gas temperature.",
+      "A fixed propeller rpm with no change in any engine temperature indication.",
+      "A decrease in all pressure and temperature indications with no rpm fluctuation."
+    ],
+    "answer": "Fluctuating rpm and increased exhaust-gas temperature.",
+    "explanation": "The PDF notes that mild or transient stalls may not appear on cockpit gauges, but a developed stall can show rpm fluctuations and an increase in exhaust-gas temperature. The notes also describe audible symptoms ranging from pulsating or fluttering sounds to a loud explosion in severe cases.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-6",
+      "compressor stall",
+      "EGT",
+      "engine indications"
+    ],
+    "id": 53
+  },
+  {
+    "question": "Which corrective principle does the lecture identify for overcoming a compressor stall?",
+    "choices": [
+      "Reduce the angle of attack on the rotor blades, potentially using variable guide and stator vanes to improve airflow angle.",
+      "Increase the rotor-blade angle of attack so the compressor can force more air into the combustion chamber.",
+      "Increase fuel flow immediately without changing airflow, regardless of compressor speed.",
+      "Close the exhaust nozzle so pressure accumulates behind the turbine and pushes air forward."
+    ],
+    "answer": "Reduce the angle of attack on the rotor blades, potentially using variable guide and stator vanes to improve airflow angle.",
+    "explanation": "The lecture states that the way to overcome a stalled condition is to reduce rotor-blade angle of attack. Variable inlet guide vanes and variable stator vanes can direct incoming air toward the rotor blades at an appropriate angle, helping maintain stable airflow under changing conditions.",
+    "difficulty": "hard",
+    "tags": [
+      "batch-6",
+      "compressor stall",
+      "variable vanes",
+      "recovery"
+    ],
+    "id": 54
+  },
+  {
+    "question": "What is the main limitation of a single-spool compressor noted in the PDF?",
+    "choices": [
+      "Its large rotating mass responds slowly to abrupt control-input changes.",
+      "Its low-pressure and high-pressure compressors rotate independently on coaxial shafts.",
+      "It cannot connect the compressor and turbine on a common shaft.",
+      "It requires a free turbine to drive the compressor at all operating speeds."
+    ],
+    "answer": "Its large rotating mass responds slowly to abrupt control-input changes.",
+    "explanation": "In a single-spool design, the compressor and turbine are connected by one shaft and rotate as one unit. The lecture notes that the design is relatively simple and inexpensive, but its large mass does not respond quickly to abrupt control inputs.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-6",
+      "single spool",
+      "compressor architecture",
+      "response"
+    ],
+    "id": 55
+  },
+  {
+    "question": "In a dual-spool compressor, which components typically drive the low- and high-pressure compressor sections?",
+    "choices": [
+      "The low-pressure turbine drives the low-pressure compressor, while the high-pressure turbine drives the high-pressure compressor.",
+      "The high-pressure turbine drives both compressors, while the low-pressure turbine drives only the exhaust nozzle.",
+      "The low-pressure compressor drives the high-pressure turbine, while the high-pressure compressor drives the propeller.",
+      "A single turbine drives both compressors through one common shaft, as in a single-spool arrangement."
+    ],
+    "answer": "The low-pressure turbine drives the low-pressure compressor, while the high-pressure turbine drives the high-pressure compressor.",
+    "explanation": "The lecture describes the front compressor as the low-pressure or N1 compressor, typically driven by a two-stage low-pressure turbine. The high-pressure or N2 compressor is typically driven by a single-stage high-pressure turbine near the front of the turbine section. Separate coaxial shafts allow the two rotating groups to seek their own operating speeds.",
+    "difficulty": "hard",
+    "tags": [
+      "batch-6",
+      "dual spool",
+      "N1",
+      "N2",
+      "turbine drive"
+    ],
+    "id": 56
+  },
+  {
+    "question": "Which statement correctly describes the triple-spool compressor arrangement in the PDF?",
+    "choices": [
+      "It has low-speed N1, intermediate N2, and high-pressure N3 compressor sections.",
+      "It has one compressor section split into three stationary stator rows called N1, N2, and N3.",
+      "It has three propellers driven by one turbine and no compressor shaft.",
+      "It uses N1 for the exhaust nozzle, N2 for the combustion chamber, and N3 for the accessory gearbox."
+    ],
+    "answer": "It has low-speed N1, intermediate N2, and high-pressure N3 compressor sections.",
+    "explanation": "The lecture labels the fan/low-speed compressor as N1, the intermediate compressor as N2, and the innermost high-pressure compressor as N3. It also notes that the low-speed compressor is typically driven by a multiple-stage low-pressure turbine, while the intermediate and high-pressure compressors are driven by single-stage turbines.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-6",
+      "triple spool",
+      "N1",
+      "N2",
+      "N3"
+    ],
+    "id": 57
+  },
+  {
+    "question": "Why was a hybrid axial-flow/centrifugal-flow compressor developed?",
+    "choices": [
+      "To combine useful features of both compressor types while reducing some of their disadvantages.",
+      "To eliminate the need for a combustion chamber by compressing fuel and air together.",
+      "To make all compressor airflow supersonic before it reaches the turbine.",
+      "To replace all turbine stages with a propeller reduction gearbox."
+    ],
+    "answer": "To combine useful features of both compressor types while reducing some of their disadvantages.",
+    "explanation": "The PDF describes combination compressors as hybrid axial-flow and centrifugal-flow arrangements intended to combine the best features of both and eliminate some disadvantages. It notes their use in some smaller engines installed on business jets and helicopters.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-6",
+      "combination compressor",
+      "design trade-offs",
+      "applications"
+    ],
+    "id": 58
+  },
+  {
+    "question": "Which statement best describes the relationship between a turboprop and a turbojet at increasing airspeed, as presented in the lecture?",
+    "choices": [
+      "Turboprop propulsive efficiency tends to decrease with airspeed, while turbojet propulsive efficiency tends to increase.",
+      "Turboprop propulsive efficiency tends to increase with airspeed, while turbojet efficiency tends to decrease.",
+      "Both engine types have constant propulsive efficiency because thrust is independent of flight speed.",
+      "Both engine types lose all propulsive efficiency once the aircraft exceeds Mach 0.6."
+    ],
+    "answer": "Turboprop propulsive efficiency tends to decrease with airspeed, while turbojet propulsive efficiency tends to increase.",
+    "explanation": "The PDF explicitly contrasts the two trends. Turboprops are effective at low subsonic speeds but are limited as airspeed rises; turbojets benefit from higher airspeed and altitude in the lecture's overview. The question tests the comparative trend rather than an absolute efficiency value.",
+    "difficulty": "hard",
+    "tags": [
+      "batch-6",
+      "turboprop",
+      "turbojet",
+      "propulsive efficiency"
+    ],
+    "id": 59
+  },
+  {
+    "question": "Which statement about compressor airflow velocity and pressure best matches the lecture's axial-stage description?",
+    "choices": [
+      "Rotor blades slightly accelerate the airflow, then stator vanes diffuse it, producing a pressure rise with relatively constant overall velocity.",
+      "Rotor blades diffuse and slow the airflow, then stator vanes accelerate it, producing a pressure drop at each stage.",
+      "Both rotor and stator rows accelerate the air continuously, so pressure remains unchanged through the compressor.",
+      "Rotor blades burn the fuel-air mixture, then stator vanes extract the energy needed to rotate the turbine."
+    ],
+    "answer": "Rotor blades slightly accelerate the airflow, then stator vanes diffuse it, producing a pressure rise with relatively constant overall velocity.",
+    "explanation": "The PDF explains that velocity is alternately increased and decreased through the compressor: rotor blades slightly accelerate the flow, and stator vanes diffuse it, slowing it and increasing pressure. The overall result is increased air pressure and relatively constant velocity from compressor inlet to outlet.",
+    "difficulty": "hard",
+    "tags": [
+      "batch-6",
+      "axial compressor",
+      "velocity",
+      "pressure rise"
+    ],
+    "id": 60
+  }
+]

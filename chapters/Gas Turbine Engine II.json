@@ -1,0 +1,1257 @@
+[
+  {
+    "question": "Where is the combustion section normally located in a gas-turbine engine?",
+    "choices": [
+      "Between the compressor diffuser and the turbine section.",
+      "Between the turbine section and the exhaust nozzle.",
+      "Ahead of the compressor and behind the air inlet.",
+      "Inside the exhaust duct and aft of the turbine nozzle."
+    ],
+    "answer": "Between the compressor diffuser and the turbine section.",
+    "explanation": "The combustor receives compressed air from the compressor diffuser and sends hot combustion gases to the turbine. Its position lets it add heat to the compressed airflow before the turbine extracts energy.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-1",
+      "combustion section",
+      "engine layout"
+    ],
+    "id": 1
+  },
+  {
+    "question": "Which set contains the basic elements common to gas-turbine combustion sections in the PDF?",
+    "choices": [
+      "Combustion chambers, fuel injection, ignition, and fuel drainage.",
+      "Compressor rotors, turbine disks, exhaust cones, and thrust reversers.",
+      "Fuel tanks, reduction gearboxes, propeller governors, and oil coolers.",
+      "Afterburner flame holders, nozzle actuators, EPR probes, and nacelle vents."
+    ],
+    "answer": "Combustion chambers, fuel injection, ignition, and fuel drainage.",
+    "explanation": "The PDF lists one or more combustors, a fuel-injection system, an ignition source, and a fuel-drainage system as the common basic elements. The other options mix components from other engine systems.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-1",
+      "combustor",
+      "components",
+      "fundamentals"
+    ],
+    "id": 2
+  },
+  {
+    "question": "Which task is NOT a primary function of the combustion section?",
+    "choices": [
+      "Extracting mechanical energy from hot gases to drive the compressor.",
+      "Mixing fuel and air in a suitable ratio for efficient burning.",
+      "Burning the mixture while limiting pressure loss through the chamber.",
+      "Delivering evenly distributed hot gases to the turbine section."
+    ],
+    "answer": "Extracting mechanical energy from hot gases to drive the compressor.",
+    "explanation": "The turbine extracts energy from hot gases and transmits it through a shaft. The combustor mixes fuel and air, burns the mixture efficiently, controls the gas temperature, and distributes the hot flow evenly to the turbine.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-1",
+      "combustion section",
+      "turbine function",
+      "component roles"
+    ],
+    "id": 3
+  },
+  {
+    "question": "Approximately what proportion of incoming air is designated as primary air in a gas-turbine combustion section?",
+    "choices": [
+      "About 25 to 35 percent of the incoming air.",
+      "About 5 to 10 percent of the incoming air.",
+      "About 45 to 55 percent of the incoming air.",
+      "About 65 to 75 percent of the incoming air."
+    ],
+    "answer": "About 25 to 35 percent of the incoming air.",
+    "explanation": "The lecture assigns approximately 25–35% of incoming air to the primary zone, where it supports combustion. Much of the remaining air helps cool and dilute the gases before they reach the turbine.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-1",
+      "primary air",
+      "combustion",
+      "percentages"
+    ],
+    "id": 4
+  },
+  {
+    "question": "Why does the combustion chamber require air beyond the amount needed to burn the fuel directly?",
+    "choices": [
+      "Additional air cools and dilutes the hot gases before they reach the turbine.",
+      "Additional air prevents the compressor from producing any pressure rise.",
+      "Additional air replaces the fuel-drainage system after ignition begins.",
+      "Additional air is used only to increase the pressure ratio across the exhaust nozzle."
+    ],
+    "answer": "Additional air cools and dilutes the hot gases before they reach the turbine.",
+    "explanation": "The combustion zone uses only part of the compressor discharge air for primary combustion. The remaining air is used for cooling and dilution so turbine-inlet gas temperature and temperature distribution remain within acceptable limits.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-1",
+      "combustion air",
+      "cooling",
+      "turbine protection"
+    ],
+    "id": 5
+  },
+  {
+    "question": "What is the function of the fuel-drainage system in a gas-turbine combustion section?",
+    "choices": [
+      "It removes unburned fuel and helps prevent accumulation that could cause hazardous ignition.",
+      "It continuously returns all burning fuel from the combustor to the main fuel tank.",
+      "It meters the exact fuel quantity entering each nozzle during normal steady operation.",
+      "It drains compressor oil from the turbine bearings whenever the engine accelerates."
+    ],
+    "answer": "It removes unburned fuel and helps prevent accumulation that could cause hazardous ignition.",
+    "explanation": "The drainage system removes unburned fuel from the combustion section, especially after shutdown, to prevent pooling and hazardous ignition during a subsequent start. Fuel metering is the responsibility of the fuel-control and injection systems.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-1",
+      "fuel drainage",
+      "combustor safety",
+      "maintenance"
+    ],
+    "id": 6
+  },
+  {
+    "question": "Which components form the typical high-energy capacitor-discharge ignition system described in the lecture?",
+    "choices": [
+      "An exciter unit, two high-tension cables, and two spark igniters.",
+      "A fuel-control unit, two drain valves, and one turbine thermocouple.",
+      "A compressor diffuser, two fuel manifolds, and two exhaust flame holders.",
+      "A starter-generator, two oil pumps, and a single pressure transducer."
+    ],
+    "answer": "An exciter unit, two high-tension cables, and two spark igniters.",
+    "explanation": "The PDF describes a high-energy capacitor-discharge system with an exciter, two high-tension cables, and two spark igniters. It produces a powerful spark suitable for igniting the fuel-air mixture during starting.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-1",
+      "ignition",
+      "exciter",
+      "spark igniters"
+    ],
+    "id": 7
+  },
+  {
+    "question": "What spark rate is given for the typical ignition system in the PDF?",
+    "choices": [
+      "Approximately 60 to 100 sparks per minute.",
+      "Approximately 6 to 10 sparks per second.",
+      "Approximately 600 to 1,000 sparks per minute.",
+      "Approximately 2 to 5 sparks per minute."
+    ],
+    "answer": "Approximately 60 to 100 sparks per minute.",
+    "explanation": "The lecture states that the ignition system produces about 60–100 sparks per minute, creating a ball of fire at the igniter electrodes. This is a specific recall point from the slides.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-1",
+      "ignition",
+      "spark rate",
+      "lecture detail"
+    ],
+    "id": 8
+  },
+  {
+    "question": "Which combustion-chamber arrangement is described as allowing individual combustors to be removed for inspection?",
+    "choices": [
+      "Multiple-can combustion chambers.",
+      "A single continuous annular combustion chamber.",
+      "A can-annular chamber with all liners permanently joined.",
+      "A reverse-flow exhaust chamber integrated into the nozzle."
+    ],
+    "answer": "Multiple-can combustion chambers.",
+    "explanation": "The PDF notes that individual combustors in a multiple-can arrangement can be removed separately for inspection. This improves access to individual cans compared with a single continuous annular liner.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-1",
+      "combustor types",
+      "multiple-can",
+      "inspection"
+    ],
+    "id": 9
+  },
+  {
+    "question": "Which statement best characterizes an annular combustor?",
+    "choices": [
+      "It uses a continuous ring-shaped combustion liner around the engine axis.",
+      "It consists of separate combustion cans arranged around the engine circumference.",
+      "It places one isolated combustor behind each turbine stage.",
+      "It uses an external flame tube mounted outside the engine casing."
+    ],
+    "answer": "It uses a continuous ring-shaped combustion liner around the engine axis.",
+    "explanation": "An annular combustor has a continuous annular or basket-shaped liner. Multiple-can designs use separate cans, while can-annular designs combine individual liners within a common outer casing.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-1",
+      "annular combustor",
+      "combustor types",
+      "construction"
+    ],
+    "id": 10
+  },
+  {
+    "question": "What is the defining construction feature of a can-annular combustor?",
+    "choices": [
+      "Separate can-like liners are arranged inside a common annular casing.",
+      "A single continuous liner replaces all individual cans and outer casing sections.",
+      "Separate combustors are placed in series, each driven by a different compressor spool.",
+      "Fuel burns in the tailpipe after the turbine rather than in a combustion chamber."
+    ],
+    "answer": "Separate can-like liners are arranged inside a common annular casing.",
+    "explanation": "The can-annular design combines features of multiple-can and annular arrangements: individual cans or liners are arranged around the engine within a common casing. It is distinct from one continuous annular combustion liner.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-2",
+      "can-annular",
+      "combustor types",
+      "construction"
+    ],
+    "id": 11
+  },
+  {
+    "question": "What is meant by lean die-out in a gas-turbine combustor?",
+    "choices": [
+      "Combustion is extinguished because the fuel-air mixture becomes too lean to sustain the flame.",
+      "Combustion stops because the mixture contains too much fuel during rapid acceleration.",
+      "The turbine loses power because its nozzle guide vanes are blocked by excessive soot.",
+      "The engine fails to reach idle because the starter disengages before sufficient rpm."
+    ],
+    "answer": "Combustion is extinguished because the fuel-air mixture becomes too lean to sustain the flame.",
+    "explanation": "The PDF associates lean die-out with high-altitude operation, where low air pressure and low fuel flow can make the mixture too lean to sustain combustion. It differs from rich blow-out, which can occur during rapid acceleration.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-2",
+      "lean die-out",
+      "combustion limits",
+      "high altitude"
+    ],
+    "id": 12
+  },
+  {
+    "question": "Which operating condition is associated with rich blow-out in the PDF?",
+    "choices": [
+      "Rapid engine acceleration that creates an excessively rich fuel-air mixture.",
+      "High-altitude operation with too little fuel to sustain a flame.",
+      "Normal shutdown after the engine has stabilized at ground idle.",
+      "A turbine overspeed caused by a blocked exhaust nozzle."
+    ],
+    "answer": "Rapid engine acceleration that creates an excessively rich fuel-air mixture.",
+    "explanation": "The lecture describes rich blow-out as occurring during rapid engine acceleration. If fuel delivery increases faster than available airflow, the mixture can become too rich for stable combustion.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-2",
+      "rich blow-out",
+      "combustion limits",
+      "acceleration"
+    ],
+    "id": 13
+  },
+  {
+    "question": "What is the turbine section's principal energy-conversion role?",
+    "choices": [
+      "It converts part of the hot gas stream's energy into shaft work to drive engine components.",
+      "It converts shaft work into fuel pressure before the fuel reaches the combustor.",
+      "It converts all remaining gas energy into thrust without rotating components.",
+      "It converts compressor discharge air into a continuous flame before the exhaust section."
+    ],
+    "answer": "It converts part of the hot gas stream's energy into shaft work to drive engine components.",
+    "explanation": "The turbine extracts energy from hot combustion gases and transfers it through a shaft to drive the compressor and, depending on engine type, other loads. The exhaust nozzle uses the remaining gas energy to help produce thrust.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-2",
+      "turbine section",
+      "energy conversion",
+      "shaft work"
+    ],
+    "id": 14
+  },
+  {
+    "question": "Where is the turbine nozzle assembly located, and what is its main purpose?",
+    "choices": [
+      "Immediately aft of the combustion section, where it directs hot gas onto the turbine blades at a suitable angle.",
+      "Immediately aft of the exhaust nozzle, where it redirects ambient air into the compressor.",
+      "Ahead of the fuel nozzles, where it atomizes fuel before ignition.",
+      "Inside the accessory gearbox, where it converts torque into hydraulic pressure."
+    ],
+    "answer": "Immediately aft of the combustion section, where it directs hot gas onto the turbine blades at a suitable angle.",
+    "explanation": "The turbine nozzle or nozzle guide vanes are located directly aft of the combustion chamber. They accelerate and direct the hot gases onto the turbine rotor blades at the angle needed for efficient energy transfer.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-2",
+      "turbine nozzle",
+      "nozzle guide vanes",
+      "gas direction"
+    ],
+    "id": 15
+  },
+  {
+    "question": "Why are turbine nozzle vanes set at a particular angle?",
+    "choices": [
+      "To direct the high-velocity gases onto turbine rotor blades in the intended direction.",
+      "To ensure the gas enters the compressor at a supersonic speed.",
+      "To make fuel spray backward into the combustion liner during ignition.",
+      "To reduce shaft torque by directing all gas parallel to the engine axis."
+    ],
+    "answer": "To direct the high-velocity gases onto turbine rotor blades in the intended direction.",
+    "explanation": "The nozzle guide vanes establish the direction and velocity of the gas entering the turbine rotor. Their angle is selected to produce the desired force on the blades and efficient energy extraction.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-2",
+      "turbine nozzle",
+      "blade angle",
+      "gas dynamics"
+    ],
+    "id": 16
+  },
+  {
+    "question": "Why do many gas-turbine engines use multiple turbine stages?",
+    "choices": [
+      "A single turbine wheel may be unable to absorb enough energy from the gas stream to drive the compressor efficiently.",
+      "Each turbine stage must burn additional fuel because the preceding stage removes all oxygen.",
+      "Multiple stages prevent any pressure drop across the turbine and keep gas temperature constant.",
+      "A single turbine wheel cannot rotate unless the exhaust nozzle is mechanically connected to it."
+    ],
+    "answer": "A single turbine wheel may be unable to absorb enough energy from the gas stream to drive the compressor efficiently.",
+    "explanation": "The PDF explains that one turbine wheel may not absorb enough energy to drive the compressor. Multiple stages extract energy progressively, with each stage removing part of the available energy from the gas stream.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-2",
+      "turbine stages",
+      "energy extraction",
+      "design"
+    ],
+    "id": 17
+  },
+  {
+    "question": "Which description best distinguishes an impulse turbine blade arrangement?",
+    "choices": [
+      "Most of the pressure drop occurs in the stationary nozzle, and the rotor mainly changes gas momentum.",
+      "The rotor produces the entire pressure drop while the stationary nozzle only supports the casing.",
+      "The gas expands equally in the nozzle and rotor, with no change in velocity through either.",
+      "The rotor blades remain stationary while the nozzle rotates to drive the shaft."
+    ],
+    "answer": "Most of the pressure drop occurs in the stationary nozzle, and the rotor mainly changes gas momentum.",
+    "explanation": "In an impulse turbine, the stationary nozzle converts pressure into high gas velocity before the flow reaches the rotor. The rotor extracts energy primarily by changing the momentum and direction of the flow.",
+    "difficulty": "hard",
+    "tags": [
+      "batch-2",
+      "impulse turbine",
+      "turbine blade types",
+      "pressure drop"
+    ],
+    "id": 18
+  },
+  {
+    "question": "Which statement best describes reaction turbine blades?",
+    "choices": [
+      "The gas expands through the rotor passages as well as the stationary passages, producing a reaction force on the rotor.",
+      "All useful expansion occurs before the rotor, leaving the rotor to change direction without pressure change.",
+      "The blades generate thrust by spraying fuel into the exhaust downstream of the turbine.",
+      "The rotor blades are stationary airfoils that guide the gas without extracting shaft work."
+    ],
+    "answer": "The gas expands through the rotor passages as well as the stationary passages, producing a reaction force on the rotor.",
+    "explanation": "In a reaction turbine, expansion occurs through both stationary and rotating blade passages. The pressure change through the rotor contributes to the force that drives the wheel, unlike a pure impulse arrangement where most pressure drop occurs in the nozzle.",
+    "difficulty": "hard",
+    "tags": [
+      "batch-2",
+      "reaction turbine",
+      "turbine blade types",
+      "expansion"
+    ],
+    "id": 19
+  },
+  {
+    "question": "What is the purpose of shrouded turbine blades?",
+    "choices": [
+      "Their outer shrouds help limit gas leakage and improve control of flow around the blade tips.",
+      "They create an open gap at each blade tip to increase bypass flow through the turbine.",
+      "They replace the turbine disk and transmit torque directly to the exhaust nozzle.",
+      "They provide the primary ignition source for the combustion chamber."
+    ],
+    "answer": "Their outer shrouds help limit gas leakage and improve control of flow around the blade tips.",
+    "explanation": "The PDF distinguishes open and shrouded blades. Shrouds at the blade tips help reduce leakage and support more controlled flow, though blade designs must also account for mass, stress, and high-temperature operation.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-2",
+      "shrouded blades",
+      "turbine construction",
+      "leakage"
+    ],
+    "id": 20
+  },
+  {
+    "question": "Why is turbine-blade cooling necessary?",
+    "choices": [
+      "Turbine gas temperatures can exceed the temperature limits of blade materials, so cooling protects component integrity.",
+      "Cooling is required mainly to increase the fuel temperature before it enters the injectors.",
+      "Cooling prevents the turbine from extracting any energy and keeps all gas energy for the nozzle.",
+      "Cooling is used to make the turbine rotate at the same rpm as the compressor in every engine."
+    ],
+    "answer": "Turbine gas temperatures can exceed the temperature limits of blade materials, so cooling protects component integrity.",
+    "explanation": "Turbine components face extreme temperatures. Cooling methods protect blades and vanes from overheating and extend their service life, often using compressor bleed air routed through internal passages or over component surfaces.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-3",
+      "turbine cooling",
+      "blade materials",
+      "thermal protection"
+    ],
+    "id": 21
+  },
+  {
+    "question": "Which pair names the turbine cooling approaches described in the lecture?",
+    "choices": [
+      "Convection/film cooling and transpiration cooling.",
+      "Ram compression and variable-area exhaust cooling.",
+      "Fuel drainage and compressor stall recovery.",
+      "Impulse cooling and reaction cooling."
+    ],
+    "answer": "Convection/film cooling and transpiration cooling.",
+    "explanation": "The PDF identifies convection/film cooling and transpiration cooling. Convection cooling removes heat through internal passages; film cooling allows cooler air to emerge through holes and form a protective layer over hot surfaces. Transpiration cooling uses many small passages or porous material to distribute coolant.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-3",
+      "turbine cooling",
+      "film cooling",
+      "transpiration cooling"
+    ],
+    "id": 22
+  },
+  {
+    "question": "How does film cooling protect a turbine blade surface?",
+    "choices": [
+      "Cooler bleed air exits small holes and forms a protective layer between the hot gas and blade surface.",
+      "Fuel is sprayed over the blade so evaporation keeps the metal below its melting point.",
+      "The blade rotates so quickly that the hot gas cannot transfer heat to the metal.",
+      "The exhaust nozzle reduces ambient pressure until the blade temperature falls automatically."
+    ],
+    "answer": "Cooler bleed air exits small holes and forms a protective layer between the hot gas and blade surface.",
+    "explanation": "In film cooling, compressor bleed air is routed through internal passages and exits through holes in the blade or vane. The air forms a cooler film along the surface, reducing direct exposure to the hot combustion gases.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-3",
+      "film cooling",
+      "bleed air",
+      "turbine blades"
+    ],
+    "id": 23
+  },
+  {
+    "question": "What does an active clearance control system seek to regulate in some high-bypass turbofan engines?",
+    "choices": [
+      "The thermal expansion of the turbine case to maintain suitable blade-tip clearance.",
+      "The amount of fuel drained from the combustor after every shutdown.",
+      "The propeller blade pitch as engine pressure ratio changes during climb.",
+      "The number of sparks produced by the ignition exciter during engine start."
+    ],
+    "answer": "The thermal expansion of the turbine case to maintain suitable blade-tip clearance.",
+    "explanation": "The lecture says active clearance control manages turbine-case thermal expansion to provide optimum blade-tip clearance. Clearance that is too large increases leakage; clearance that is too small risks blade-tip rubbing as parts expand.",
+    "difficulty": "hard",
+    "tags": [
+      "batch-3",
+      "active clearance control",
+      "turbine case",
+      "blade-tip clearance"
+    ],
+    "id": 24
+  },
+  {
+    "question": "What is the common purpose of the exhaust cone, tailpipe, and exhaust nozzle?",
+    "choices": [
+      "To direct hot gases rearward with limited turbulence while providing high exit velocity.",
+      "To mix fuel and primary air and hold the flame inside the combustor.",
+      "To compress inlet air and distribute it to the turbine nozzle guide vanes.",
+      "To cool turbine disks by routing oil through the exhaust casing."
+    ],
+    "answer": "To direct hot gases rearward with limited turbulence while providing high exit velocity.",
+    "explanation": "The PDF gives the exhaust section a shared function: guide hot gases rearward without excessive turbulence and impart high final or exit velocity. The exhaust section therefore affects the amount of thrust produced.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-3",
+      "exhaust section",
+      "thrust",
+      "components"
+    ],
+    "id": 25
+  },
+  {
+    "question": "Which set lists the components of a typical exhaust section in the lecture?",
+    "choices": [
+      "Exhaust cone, exhaust duct or tailpipe, and exhaust nozzle.",
+      "Diffuser, compressor manifold, fuel liner, and turbine disk.",
+      "Impeller, stator, reduction gearbox, and torquemeter.",
+      "Fuel manifold, igniter exciter, flame holder, and afterburner spray bars."
+    ],
+    "answer": "Exhaust cone, exhaust duct or tailpipe, and exhaust nozzle.",
+    "explanation": "The PDF names the exhaust cone, exhaust duct/tailpipe, and exhaust nozzle. The cone is the rear-most component of a typical gas-turbine engine; the tailpipe and nozzle may be classified as airframe components in the lecture.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-3",
+      "exhaust section",
+      "tailpipe",
+      "exhaust nozzle"
+    ],
+    "id": 26
+  },
+  {
+    "question": "What is the primary function of the exhaust duct or tailpipe?",
+    "choices": [
+      "To collect and straighten turbine-discharge gases before they pass to the exhaust nozzle.",
+      "To meter fuel and distribute it evenly among the combustion cans.",
+      "To turn the compressor shaft and extract torque from the gas stream.",
+      "To route high-pressure air to the cabin and anti-icing system."
+    ],
+    "answer": "To collect and straighten turbine-discharge gases before they pass to the exhaust nozzle.",
+    "explanation": "The tailpipe collects and straightens gas leaving the turbine and conveys it toward the exhaust nozzle. It must do so while limiting undesirable flow losses.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-3",
+      "tailpipe",
+      "exhaust flow",
+      "function"
+    ],
+    "id": 27
+  },
+  {
+    "question": "What is the main effect of a converging exhaust nozzle when operating with subsonic flow?",
+    "choices": [
+      "It accelerates the gas as the flow area decreases, converting pressure energy into velocity.",
+      "It slows the gas as the flow area decreases, converting velocity into static pressure.",
+      "It raises compressor pressure ratio by sending exhaust gas back through the turbine.",
+      "It makes exhaust pressure equal ambient pressure by adding fuel after the turbine."
+    ],
+    "answer": "It accelerates the gas as the flow area decreases, converting pressure energy into velocity.",
+    "explanation": "For subsonic flow, a converging nozzle accelerates the gas as area decreases. The resulting higher exhaust velocity contributes to thrust. The exact behavior of a nozzle depends on the flow regime and pressure ratio.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-3",
+      "converging nozzle",
+      "exhaust velocity",
+      "flow area"
+    ],
+    "id": 28
+  },
+  {
+    "question": "Where is an afterburner typically installed in a gas-turbine engine?",
+    "choices": [
+      "Immediately aft of the last turbine stage and forward of the exhaust nozzle.",
+      "Ahead of the compressor and inside the air inlet duct.",
+      "Between the compressor and the main combustion chamber.",
+      "Inside the turbine disk, downstream of the exhaust nozzle."
+    ],
+    "answer": "Immediately aft of the last turbine stage and forward of the exhaust nozzle.",
+    "explanation": "The PDF places the afterburner in the tailpipe between the final turbine stage and exhaust nozzle. Its fuel manifold, ignition source, and flame holder allow additional combustion in the exhaust stream.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-3",
+      "afterburner",
+      "location",
+      "engine layout"
+    ],
+    "id": 29
+  },
+  {
+    "question": "Why can an afterburner burn additional fuel even though the main combustor is upstream?",
+    "choices": [
+      "The exhaust still contains substantial oxygen because not all compressor-discharge air is used for primary combustion.",
+      "The turbine converts all exhaust gas into pure oxygen before it reaches the tailpipe.",
+      "The afterburner carries a separate oxidizer tank that supplies oxygen directly to the spray bars.",
+      "The main combustor intentionally removes all nitrogen so the tailpipe becomes self-igniting."
+    ],
+    "answer": "The exhaust still contains substantial oxygen because not all compressor-discharge air is used for primary combustion.",
+    "explanation": "The lecture explains that only part of compressor-discharge air supports combustion in the main combustor; much of the remaining air is used for cooling and mixes with the turbine exhaust. Residual oxygen permits additional fuel to burn in the afterburner.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-3",
+      "afterburner",
+      "oxygen",
+      "combustion principle"
+    ],
+    "id": 30
+  },
+  {
+    "question": "Which trade-off does the PDF associate with afterburner use?",
+    "choices": [
+      "Thrust may increase by as much as 100 percent, while fuel flow can rise to three to five times normal.",
+      "Thrust may increase by 10 percent, while fuel flow falls to one-third of normal.",
+      "Thrust remains unchanged, while fuel flow is reduced through lower turbine temperature.",
+      "Thrust doubles without a fuel-flow penalty because the afterburner uses residual oxygen alone."
+    ],
+    "answer": "Thrust may increase by as much as 100 percent, while fuel flow can rise to three to five times normal.",
+    "explanation": "The lecture says afterburners can provide up to a 100% thrust increase at the expense of fuel flow three to five times higher than normal. The extra thrust is therefore useful for short-duration takeoff, climb, or combat demands, but inefficient for routine operation.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "afterburner",
+      "thrust augmentation",
+      "fuel consumption"
+    ],
+    "id": 31
+  },
+  {
+    "question": "What is the role of a flame holder in an afterburner?",
+    "choices": [
+      "It stabilizes a flame in the fast-moving tailpipe flow so injected fuel can continue burning.",
+      "It drains unburned fuel from the main combustor after the engine is shut down.",
+      "It directs compressor discharge air onto the turbine rotor blades at the correct angle.",
+      "It reverses exhaust flow during landing by mechanically blocking the nozzle."
+    ],
+    "answer": "It stabilizes a flame in the fast-moving tailpipe flow so injected fuel can continue burning.",
+    "explanation": "The flame holder creates a region where the flame can remain stable despite the high-speed exhaust flow. The afterburner also uses fuel spray bars or nozzles and an ignition source.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "flame holder",
+      "afterburner",
+      "combustion stability"
+    ],
+    "id": 32
+  },
+  {
+    "question": "In the lecture, where may water or a water-alcohol mixture be injected for thrust augmentation?",
+    "choices": [
+      "The compressor inlet, diffuser ahead of the combustor, combustion chamber, or selected combinations.",
+      "Only into the exhaust nozzle after all turbine stages have discharged their gases.",
+      "Only into the accessory gearbox to reduce mechanical friction during takeoff.",
+      "Only into the fuel tank so that the fuel control unit meters a denser liquid."
+    ],
+    "answer": "The compressor inlet, diffuser ahead of the combustor, combustion chamber, or selected combinations.",
+    "explanation": "The slides describe water or a water-methanol/alcohol mixture injected at the compressor inlet, the diffuser just ahead of the combustor, the combustion chamber, or a combination of these locations.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "water injection",
+      "thrust augmentation",
+      "injection location"
+    ],
+    "id": 33
+  },
+  {
+    "question": "Which explanation best describes how water injection can increase thrust?",
+    "choices": [
+      "It cools the air mass, increases density, and adds water molecules while maintaining engine air pressure.",
+      "It raises inlet-air temperature and reduces density so the compressor can turn faster.",
+      "It removes oxygen from the combustor, forcing the turbine to extract more energy from less fuel.",
+      "It reduces the mass flow through the engine while increasing thrust by lowering exhaust velocity."
+    ],
+    "answer": "It cools the air mass, increases density, and adds water molecules while maintaining engine air pressure.",
+    "explanation": "The lecture says water injection cools the air mass and increases density; adding water molecules also maintains the same engine air pressure. These effects can allow greater mass flow and thrust under the conditions described in the material.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "water injection",
+      "density",
+      "thrust augmentation"
+    ],
+    "id": 34
+  },
+  {
+    "question": "Why are thrust reversers fitted to many turbojet- and turbofan-powered aircraft?",
+    "choices": [
+      "They redirect exhaust flow to produce a force opposing forward motion during landing rollout.",
+      "They increase forward thrust during takeoff by straightening the turbine discharge flow.",
+      "They replace the wheel brakes entirely by absorbing heat inside the exhaust cone.",
+      "They lower fuel consumption in cruise by reducing the compressor pressure ratio."
+    ],
+    "answer": "They redirect exhaust flow to produce a force opposing forward motion during landing rollout.",
+    "explanation": "Thrust reversers assist braking by redirecting exhaust flow to produce thrust opposite the direction of travel. They reduce the energy that must be dissipated by wheel brakes and can help limit brake wear and heat buildup.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-4",
+      "thrust reverser",
+      "landing",
+      "braking"
+    ],
+    "id": 35
+  },
+  {
+    "question": "Which actuation methods are identified for thrust reversers on large transport-category aircraft?",
+    "choices": [
+      "Hydraulic actuation or pneumatic actuation using engine bleed air.",
+      "Fuel-pressure actuation or ignition-exciter actuation only.",
+      "Turbine-blade centrifugal actuation or compressor-stator actuation only.",
+      "Water-injection actuation or EPR-probe differential-pressure actuation."
+    ],
+    "answer": "Hydraulic actuation or pneumatic actuation using engine bleed air.",
+    "explanation": "The PDF notes that some reversers are electrically powered, while many large transports use hydraulic power from the aircraft system or pneumatic actuators powered by engine bleed air.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "thrust reverser",
+      "actuation",
+      "hydraulics",
+      "pneumatics"
+    ],
+    "id": 36
+  },
+  {
+    "question": "What is the correct general sequence for selecting reverse thrust described in the lecture?",
+    "choices": [
+      "Retard the power levers to ground idle, select reverse, then advance power as needed to decelerate.",
+      "Advance the power levers to takeoff power, select reverse, then increase fuel flow before landing.",
+      "Select reverse at maximum forward thrust, then retard the levers after the aircraft stops.",
+      "Shut down the engine, deploy the reverser, and restart the engine at reverse idle."
+    ],
+    "answer": "Retard the power levers to ground idle, select reverse, then advance power as needed to decelerate.",
+    "explanation": "The described sequence is to bring the power levers back to ground idle, select reverse thrust, then advance the levers as required to slow the aircraft. The levers are then returned to ground idle and reverse is deselected.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "thrust reverser",
+      "operating sequence",
+      "ground operations"
+    ],
+    "id": 37
+  },
+  {
+    "question": "How does a mechanical-blockage thrust reverser redirect exhaust gases?",
+    "choices": [
+      "A movable obstruction, such as a clamshell-shaped device, blocks and redirects the exhaust forward.",
+      "A variable stator changes compressor airflow so the engine's internal shaft rotates backward.",
+      "A fuel spray bar ignites the tailpipe gases and makes the exhaust reverse without moving parts.",
+      "A converging nozzle increases exhaust velocity while leaving its direction unchanged."
+    ],
+    "answer": "A movable obstruction, such as a clamshell-shaped device, blocks and redirects the exhaust forward.",
+    "explanation": "Mechanical-blockage reversers place a movable obstruction in the exhaust stream, either before or after it exits the duct. The lecture calls this the clamshell type because of the shape of the blocking devices.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "mechanical blockage",
+      "clamshell reverser",
+      "design"
+    ],
+    "id": 38
+  },
+  {
+    "question": "What is the principal function of an engine noise suppressor?",
+    "choices": [
+      "To reduce noise from the high-velocity exhaust by changing how the exhaust flow mixes with surrounding air.",
+      "To increase exhaust noise so ground personnel can identify engine rpm by sound alone.",
+      "To eliminate combustion noise by reducing fuel flow to zero after ignition.",
+      "To reverse exhaust flow and replace the thrust reverser during landing."
+    ],
+    "answer": "To reduce noise from the high-velocity exhaust by changing how the exhaust flow mixes with surrounding air.",
+    "explanation": "Noise suppressors are intended to reduce jet noise, commonly by promoting more rapid mixing between the exhaust and ambient air. The PDF's overview includes noise suppressors among thrust and exhaust-related engine systems.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "noise suppressor",
+      "exhaust",
+      "noise reduction"
+    ],
+    "id": 39
+  },
+  {
+    "question": "What is the primary function of the accessory section on a gas-turbine engine?",
+    "choices": [
+      "It provides mounting and drive arrangements for engine accessories and auxiliary systems.",
+      "It burns the fuel-air mixture and distributes hot gases to the turbine.",
+      "It accelerates exhaust gases through a converging nozzle to create thrust.",
+      "It measures turbine discharge pressure and sends the signal to the cockpit EPR gauge."
+    ],
+    "answer": "It provides mounting and drive arrangements for engine accessories and auxiliary systems.",
+    "explanation": "The accessory section houses or drives engine accessories, commonly through an accessory gearbox. It supports systems such as fuel, oil, starting, and other engine functions rather than directly performing combustion or exhaust acceleration.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-4",
+      "accessory section",
+      "engine systems",
+      "gearbox"
+    ],
+    "id": 40
+  },
+  {
+    "question": "What is an engine station-numbering system used for?",
+    "choices": [
+      "To identify specific locations along the engine flow path for technical reference and measurements.",
+      "To number the cylinders in a reciprocating engine according to firing order.",
+      "To identify the order in which an aircraft's engines must be started.",
+      "To indicate the number of compressor blades installed in each axial stage."
+    ],
+    "answer": "To identify specific locations along the engine flow path for technical reference and measurements.",
+    "explanation": "Station numbering assigns reference numbers to defined engine locations, allowing technical documents and measurements to identify where pressure, temperature, or other conditions are taken. The exact station definitions depend on the engine and reference convention.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-5",
+      "engine station numbering",
+      "technical references",
+      "instrumentation"
+    ],
+    "id": 41
+  },
+  {
+    "question": "What does propulsive efficiency compare in the lecture's definition?",
+    "choices": [
+      "Useful propulsive output associated with thrust and flight speed against the energy supplied in a usable form.",
+      "Heat released by combustion against the chemical energy stored in the fuel.",
+      "Actual engine power against the thermal energy contained in the fuel consumed.",
+      "Fuel flow required per hour against the turbine inlet temperature at takeoff."
+    ],
+    "answer": "Useful propulsive output associated with thrust and flight speed against the energy supplied in a usable form.",
+    "explanation": "The lecture defines propulsive efficiency in terms of thrust developed by the jet nozzle compared with energy supplied in a usable form. It provides the relation ηp = 2Va/(Vj + Va), where Va is aircraft velocity and Vj is jet velocity under the stated idealized assumptions.",
+    "difficulty": "hard",
+    "tags": [
+      "batch-5",
+      "propulsive efficiency",
+      "formula",
+      "performance"
+    ],
+    "id": 42
+  },
+  {
+    "question": "Which formula for propulsive efficiency is shown in the PDF?",
+    "choices": [
+      "ηp = 2Va / (Vj + Va).",
+      "ηp = (Vj + Va) / 2Va.",
+      "ηp = Wf / FN.",
+      "ηp = FN / (Wf × Vj)."
+    ],
+    "answer": "ηp = 2Va / (Vj + Va).",
+    "explanation": "The slide presents propulsive efficiency as 2Va divided by the sum of jet velocity and aircraft velocity. Do not confuse this expression with thrust-specific fuel consumption, which is fuel flow divided by net thrust.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-5",
+      "propulsive efficiency",
+      "formula recall",
+      "equations"
+    ],
+    "id": 43
+  },
+  {
+    "question": "What does thrust-specific fuel consumption (TSFC) represent?",
+    "choices": [
+      "Fuel flow required to produce a unit of net thrust.",
+      "Net thrust produced per unit of fuel mass stored in the tanks.",
+      "Thermal energy released per unit of turbine inlet temperature.",
+      "Exhaust velocity divided by the mass flow entering the compressor."
+    ],
+    "answer": "Fuel flow required to produce a unit of net thrust.",
+    "explanation": "The PDF defines TSFC as the amount of fuel required to produce one pound of thrust and gives TSFC = Wf/FN. For a given thrust, a lower TSFC indicates less fuel is required and therefore better fuel economy by this measure.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-5",
+      "TSFC",
+      "fuel efficiency",
+      "formula"
+    ],
+    "id": 44
+  },
+  {
+    "question": "Two engines produce the same net thrust. Which one has the lower TSFC?",
+    "choices": [
+      "The engine that consumes less fuel per hour to produce that thrust.",
+      "The engine with the greater fuel flow at the same net thrust.",
+      "The engine with the higher turbine temperature regardless of fuel flow.",
+      "The engine with the larger exhaust nozzle regardless of its measured output."
+    ],
+    "answer": "The engine that consumes less fuel per hour to produce that thrust.",
+    "explanation": "TSFC is fuel flow divided by net thrust. When net thrust is equal, the engine with the lower fuel flow has the lower TSFC and requires less fuel per unit thrust.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-5",
+      "TSFC",
+      "comparison",
+      "fuel economy"
+    ],
+    "id": 45
+  },
+  {
+    "question": "How does the lecture define combustion efficiency?",
+    "choices": [
+      "Heat actually released during burning divided by the fuel's available heat potential.",
+      "Actual shaft power divided by the total thermal energy in the fuel consumed.",
+      "Net thrust divided by the fuel flow measured in pounds per hour.",
+      "Turbine discharge pressure divided by compressor inlet pressure."
+    ],
+    "answer": "Heat actually released during burning divided by the fuel's available heat potential.",
+    "explanation": "Combustion efficiency compares the heat released during combustion with the maximum heat potential of the fuel burned. It is distinct from thermal efficiency and propulsive efficiency.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-5",
+      "combustion efficiency",
+      "definitions",
+      "engine efficiency"
+    ],
+    "id": 46
+  },
+  {
+    "question": "Which set of factors is identified as determining gas-turbine thermal efficiency?",
+    "choices": [
+      "Turbine inlet temperature, compression ratio, and compressor/turbine component efficiencies.",
+      "Fuel tank volume, exhaust-nozzle color, and the number of igniter cables.",
+      "Aircraft landing mass, thrust-reverser type, and oil temperature alone.",
+      "Fan diameter, cabin pressure, and the number of cockpit engine displays."
+    ],
+    "answer": "Turbine inlet temperature, compression ratio, and compressor/turbine component efficiencies.",
+    "explanation": "The lecture lists turbine inlet temperature, compression ratio, and compressor and turbine component efficiencies as the primary factors determining thermal efficiency. It also notes that thermal efficiency increases as turbine inlet temperature increases, subject to engine design and material limits.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-5",
+      "thermal efficiency",
+      "TIT",
+      "compression ratio"
+    ],
+    "id": 47
+  },
+  {
+    "question": "What is the engine pressure ratio (EPR) defined as in the PDF?",
+    "choices": [
+      "Turbine discharge pressure divided by compressor inlet pressure.",
+      "Compressor outlet pressure divided by compressor inlet pressure.",
+      "Compressor inlet pressure divided by turbine discharge pressure.",
+      "Exhaust static pressure divided by ambient static pressure."
+    ],
+    "answer": "Turbine discharge pressure divided by compressor inlet pressure.",
+    "explanation": "The lecture defines EPR as turbine discharge pressure divided by compressor inlet pressure. It uses total-pressure probes at the inlet station Pt2 and exhaust station Pt7, with signals sent to a differential pressure transducer that drives the cockpit gauge.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-5",
+      "EPR",
+      "engine instruments",
+      "pressure ratio"
+    ],
+    "id": 48
+  },
+  {
+    "question": "Which engine parameter is an EPR gauge commonly used to indicate on many turbofan-powered aircraft?",
+    "choices": [
+      "The amount of thrust being produced, inferred from the pressure ratio.",
+      "The amount of shaft twist delivered to a propeller reduction gearbox.",
+      "The average oil temperature at the accessory section outlet.",
+      "The exact mass of fuel remaining in the aircraft's tanks."
+    ],
+    "answer": "The amount of thrust being produced, inferred from the pressure ratio.",
+    "explanation": "The PDF says an EPR gauge indicates the amount of thrust produced in many turbofan-powered aircraft. It measures a pressure ratio using inlet and turbine-discharge pressure pickups rather than directly measuring force at the engine mount.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-5",
+      "EPR",
+      "thrust indication",
+      "instrumentation"
+    ],
+    "id": 49
+  },
+  {
+    "question": "Why is turbine temperature monitored closely during engine operation?",
+    "choices": [
+      "Excessive temperature can overheat turbine blades and other hot-section components, compromising engine integrity.",
+      "It directly measures the amount of fuel stored in the tanks and prevents fuel starvation.",
+      "It indicates only cabin air temperature and has no bearing on turbine operating limits.",
+      "It replaces the need to monitor engine speed, oil pressure, or fuel flow."
+    ],
+    "answer": "Excessive temperature can overheat turbine blades and other hot-section components, compromising engine integrity.",
+    "explanation": "The lecture identifies turbine-section temperature as one of the most limiting factors in operating a gas turbine. EGT and related temperature indications help prevent overheating and monitor engine operating condition.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-5",
+      "EGT",
+      "temperature limits",
+      "engine monitoring"
+    ],
+    "id": 50
+  },
+  {
+    "question": "What does the cockpit EGT indicator generally display when multiple thermocouples are installed around the exhaust casing?",
+    "choices": [
+      "The average temperature measured by the individual thermocouples.",
+      "The highest instantaneous pressure recorded by the Pt7 pressure probe.",
+      "The sum of all turbine blade temperatures without averaging.",
+      "The temperature of the fuel before it reaches the combustion nozzles."
+    ],
+    "answer": "The average temperature measured by the individual thermocouples.",
+    "explanation": "The PDF states that several thermocouples are spaced around the exhaust casing and the cockpit EGT indicator shows the average temperature measured by them. The exact system name may vary with sensor location, such as TIT, TOT, ITT, or TGT.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-6",
+      "EGT",
+      "thermocouples",
+      "temperature measurement"
+    ],
+    "id": 51
+  },
+  {
+    "question": "Which statement accurately describes torque meters?",
+    "choices": [
+      "They provide power-output information for turboprop and turboshaft engines that drive propellers or rotors.",
+      "They measure compressor inlet pressure to calculate EPR in every turbojet engine.",
+      "They measure fuel temperature so the cockpit can correct the mass-flow indication.",
+      "They measure exhaust temperature and are used only during hot-start detection."
+    ],
+    "answer": "They provide power-output information for turboprop and turboshaft engines that drive propellers or rotors.",
+    "explanation": "Turboprop and turboshaft engines are designed to deliver shaft torque to a propeller or rotor. A torque meter gives the pilot information about engine power output and may be calibrated in percent, foot-pounds, shaft horsepower, or psi depending on design.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-6",
+      "torque meter",
+      "turboprop",
+      "turboshaft"
+    ],
+    "id": 52
+  },
+  {
+    "question": "How can a shaft-based torque-measuring system determine torque, as described in the PDF?",
+    "choices": [
+      "Sensors measure the amount of twist in the driveshaft caused by transmitted torque.",
+      "A thermocouple measures the temperature rise across the turbine disk.",
+      "A Pt2 probe measures the difference between compressor inlet and outlet pressure.",
+      "A fuel-flow meter measures the volume of fuel passing through the spray bars."
+    ],
+    "answer": "Sensors measure the amount of twist in the driveshaft caused by transmitted torque.",
+    "explanation": "One method uses sensors on the driveshaft to detect the twist produced by torque. The resulting electrical signals are processed to position the cockpit indicator.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-6",
+      "torque meter",
+      "shaft twist",
+      "measurement"
+    ],
+    "id": 53
+  },
+  {
+    "question": "Why is fuel flow on many turbine engines measured by mass rather than volume?",
+    "choices": [
+      "Jet-fuel volume changes with temperature, while mass measurement is less affected by that volume change.",
+      "Jet-fuel mass changes substantially with temperature, while its volume remains constant.",
+      "Mass measurement eliminates the need to know fuel density or engine operating conditions.",
+      "Volume measurement is impossible because jet fuel becomes a gas before entering the combustor."
+    ],
+    "answer": "Jet-fuel volume changes with temperature, while mass measurement is less affected by that volume change.",
+    "explanation": "The lecture notes that jet-fuel volume changes with temperature, so many turbine engines measure fuel flow as mass per unit time, such as pounds per hour. This provides a more consistent indication of fuel consumption.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-6",
+      "fuel flow",
+      "mass flow",
+      "temperature"
+    ],
+    "id": 54
+  },
+  {
+    "question": "Which statement correctly distinguishes compressor-speed indication on centrifugal- and axial-compressor engines in the PDF?",
+    "choices": [
+      "Centrifugal-compressor rpm can directly indicate thrust, while axial-compressor rpm is used mainly for speed monitoring and overspeed detection.",
+      "Axial-compressor rpm directly measures thrust, while centrifugal-compressor rpm is used only to detect hot starts.",
+      "Both compressor types use rpm only to measure fuel flow, not engine speed or thrust.",
+      "Neither compressor type uses tachometers because EPR measures all engine conditions."
+    ],
+    "answer": "Centrifugal-compressor rpm can directly indicate thrust, while axial-compressor rpm is used mainly for speed monitoring and overspeed detection.",
+    "explanation": "The lecture says compressor rpm directly indicates thrust on engines using centrifugal compressors. For axial-flow compressors, rpm is used primarily to monitor engine speed during starting and identify overspeed conditions.",
+    "difficulty": "hard",
+    "tags": [
+      "batch-6",
+      "compressor speed",
+      "tachometer",
+      "engine instruments"
+    ],
+    "id": 55
+  },
+  {
+    "question": "What is the main difference between a hot start and a hung start in the lecture?",
+    "choices": [
+      "A hot start involves excessive temperature from an overly rich mixture; a hung start fails to accelerate to idle rpm despite a normal start and acceptable EGT.",
+      "A hot start fails to reach idle with normal EGT; a hung start always produces flames and a rapid temperature rise.",
+      "A hot start occurs only after shutdown; a hung start occurs only when the exhaust nozzle is fully open.",
+      "A hot start is caused by low oil pressure alone; a hung start is caused by excessive turbine inlet temperature."
+    ],
+    "answer": "A hot start involves excessive temperature from an overly rich mixture; a hung start fails to accelerate to idle rpm despite a normal start and acceptable EGT.",
+    "explanation": "The PDF describes a hot start as ignition with an excessively rich fuel-air mixture, leading to rapid temperature rise. A hung start has a normal ignition and EGT within limits, but the engine fails to accelerate to idle rpm, often because starter power or duration is insufficient.",
+    "difficulty": "hard",
+    "tags": [
+      "batch-6",
+      "hot start",
+      "hung start",
+      "troubleshooting"
+    ],
+    "id": 56
+  },
+  {
+    "question": "Which indications are associated with a hot start in the PDF?",
+    "choices": [
+      "Rapid ITT or TOT rise, slow N1 increase, and possible exhaust flames.",
+      "Normal EGT, normal acceleration, and stable idle rpm without abnormal indications.",
+      "Low oil temperature, high cabin pressure, and a decreasing fuel-flow indication only.",
+      "A fixed N1 value, no combustion, and a turbine discharge pressure of zero."
+    ],
+    "answer": "Rapid ITT or TOT rise, slow N1 increase, and possible exhaust flames.",
+    "explanation": "The lecture lists rapid ITT or TOT increase, slow N1 rise, and exhaust flames as indications of a hot start. If a temperature limit is exceeded, fuel should be shut off immediately and the manufacturer's maintenance instructions followed.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-6",
+      "hot start",
+      "ITT",
+      "TOT",
+      "N1"
+    ],
+    "id": 57
+  },
+  {
+    "question": "What should be done if a turbine temperature indication exceeds its allowable limit during start?",
+    "choices": [
+      "Shut off fuel immediately and follow the manufacturer's inspection guidance.",
+      "Increase fuel flow to accelerate the engine through the high-temperature region.",
+      "Continue starting until idle rpm is reached, then record the temperature afterward.",
+      "Deploy the thrust reverser to reduce exhaust pressure and allow ignition to stabilize."
+    ],
+    "answer": "Shut off fuel immediately and follow the manufacturer's inspection guidance.",
+    "explanation": "The PDF instructs that if a temperature indication exceeds its allowable limit, fuel to the engine should be shut off immediately. The manufacturer's maintenance manual should be consulted for inspection or overhaul requirements following a hot start.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-6",
+      "hot start",
+      "safety",
+      "starting procedure"
+    ],
+    "id": 58
+  },
+  {
+    "question": "Which condition best identifies a hung start?",
+    "choices": [
+      "The engine lights normally and EGT remains within limits, but rpm does not accelerate to idle.",
+      "The engine temperature rises rapidly beyond limits and flames appear at the exhaust.",
+      "The engine reaches idle normally but fails to shut down after fuel is cut off.",
+      "The starter fails to rotate the engine and no ignition or EGT rise occurs."
+    ],
+    "answer": "The engine lights normally and EGT remains within limits, but rpm does not accelerate to idle.",
+    "explanation": "In a hung start, ignition and temperature are normal, but the engine fails to accelerate to idle rpm. The lecture attributes it to the starter cutting out too soon or a starting power source that cannot provide sufficient energy.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-6",
+      "hung start",
+      "engine starting",
+      "diagnosis"
+    ],
+    "id": 59
+  },
+  {
+    "question": "What should follow a hung start before another start attempt?",
+    "choices": [
+      "Shut the engine down and correct the cause of insufficient starting speed.",
+      "Increase the throttle to maximum and continue until the engine self-accelerates.",
+      "Leave the engine running at low rpm until the EGT falls below ambient temperature.",
+      "Select reverse thrust and repeat the start with the exhaust flow redirected."
+    ],
+    "answer": "Shut the engine down and correct the cause of insufficient starting speed.",
+    "explanation": "The PDF directs that a hung-start engine be shut down and the cause of insufficient starting speed corrected before another attempt. Repeated attempts without correcting the cause may worsen the condition or create additional risk.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-6",
+      "hung start",
+      "troubleshooting",
+      "safety"
+    ],
+    "id": 60
+  },
+  {
+    "question": "Why is a gas-turbine engine typically operated at idle for 30 seconds or more before shutdown?",
+    "choices": [
+      "To let component temperatures stabilize and allow oil-system scavenging to occur.",
+      "To raise turbine inlet temperature to its maximum and remove all combustion deposits.",
+      "To increase compressor pressure ratio while the starter is disengaged.",
+      "To ensure the afterburner fuel manifold is completely filled before the next start."
+    ],
+    "answer": "To let component temperatures stabilize and allow oil-system scavenging to occur.",
+    "explanation": "The lecture recommends running at idle for 30 seconds or more before shutdown. This permits temperatures to stabilize and allows oil-system scavenging; improper shutdown can lead to uneven cooling.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-7",
+      "engine shutdown",
+      "idle period",
+      "oil scavenging"
+    ],
+    "id": 61
+  },
+  {
+    "question": "Which is a stated reason for conducting an engine run after maintenance?",
+    "choices": [
+      "To check engine-system performance or investigate a reported discrepancy under operating conditions.",
+      "To increase the compressor's design pressure ratio by changing the stator geometry during the run.",
+      "To calibrate the aircraft's landing gear by measuring thrust reverser temperature only.",
+      "To eliminate the need for post-maintenance inspection and documentation."
+    ],
+    "answer": "To check engine-system performance or investigate a reported discrepancy under operating conditions.",
+    "explanation": "The PDF lists troubleshooting a flight-crew-reported discrepancy, checking system performance after maintenance, and taxiing an aircraft between maintenance areas as reasons for conducting an engine run.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-7",
+      "engine run",
+      "maintenance",
+      "troubleshooting"
+    ],
+    "id": 62
+  },
+  {
+    "question": "What is the purpose of intake safety arcs during engine ground operations?",
+    "choices": [
+      "To keep personnel clear of ingestion hazards and reduce the risk of foreign-object damage.",
+      "To keep personnel away from hot exhaust gases and prevent jet blast damage only.",
+      "To mark the maximum distance for operating the thrust reverser during landing.",
+      "To show where fuel drainage from the combustion section should be collected."
+    ],
+    "answer": "To keep personnel clear of ingestion hazards and reduce the risk of foreign-object damage.",
+    "explanation": "The lecture says intake safety arcs protect personnel from being drawn into the inlet and help prevent engine damage due to ingestion. Exhaust safety arcs separately protect people and equipment from jet blast.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-7",
+      "ground operations",
+      "intake safety arc",
+      "FOD"
+    ],
+    "id": 63
+  },
+  {
+    "question": "Which statement correctly distinguishes intake and exhaust safety arcs?",
+    "choices": [
+      "Intake arcs address ingestion hazards; exhaust arcs address jet-blast hazards to people and equipment.",
+      "Intake arcs address hot exhaust temperatures; exhaust arcs prevent debris from entering the compressor.",
+      "Both arcs are used only to protect the aircraft from tire failure during landing rollout.",
+      "Intake arcs define engine starting rpm, while exhaust arcs define the maximum turbine temperature."
+    ],
+    "answer": "Intake arcs address ingestion hazards; exhaust arcs address jet-blast hazards to people and equipment.",
+    "explanation": "The PDF's ground-operations figure explains that intake arcs reduce injury and ingestion risk, while exhaust arcs protect surrounding personnel and equipment from jet blast.",
+    "difficulty": "medium",
+    "tags": [
+      "batch-7",
+      "ground operations",
+      "safety arcs",
+      "jet blast"
+    ],
+    "id": 64
+  },
+  {
+    "question": "Which set lists common engine power ratings in the PDF?",
+    "choices": [
+      "Takeoff, maximum continuous, maximum cruise, cruise, maximum climb, ground idle, and flight idle.",
+      "Ignition, hot start, hung start, reverse, afterburner, and shutdown only.",
+      "Primary, secondary, tertiary, impulse, reaction, and transpiration power.",
+      "Compressor, diffuser, combustor, turbine, tailpipe, and nozzle ratings."
+    ],
+    "answer": "Takeoff, maximum continuous, maximum cruise, cruise, maximum climb, ground idle, and flight idle.",
+    "explanation": "The slides list takeoff power, maximum continuous power, maximum cruise power, cruise power, maximum climb power, ground idle, and flight idle as common modern commercial gas-turbine power ratings.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-7",
+      "engine power ratings",
+      "takeoff power",
+      "idle"
+    ],
+    "id": 65
+  },
+  {
+    "question": "What does a takeoff power rating represent?",
+    "choices": [
+      "The amount of engine power permitted for use during takeoff.",
+      "The highest power the engine may sustain continuously throughout a flight.",
+      "The power setting used only while the aircraft is stationary at ground idle.",
+      "The minimum power required to keep the engine self-accelerating after start."
+    ],
+    "answer": "The amount of engine power permitted for use during takeoff.",
+    "explanation": "The lecture defines a takeoff power rating as the amount of power an aircraft engine is allowed to produce for takeoff. It is distinct from continuous and cruise ratings, which have different operating limitations.",
+    "difficulty": "easy",
+    "tags": [
+      "batch-7",
+      "takeoff power rating",
+      "power limits",
+      "definitions"
+    ],
+    "id": 66
+  }
+]

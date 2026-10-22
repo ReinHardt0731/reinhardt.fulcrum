@@ -639,6 +639,14 @@
           "file": "chapters/gas-turbine-fuel-control-starting-ignition-lubrication-and-anti-icing-systems.json"
         },
         {
+          "title": "Gas Turbine Engine I",
+          "file": "chapters/GAs Turbine Engine.json"
+        },
+        {
+          "title": "Gas Turbine Engine II",
+          "file": "chapters/Gas Turbine Engine II.json"
+        },
+        {
           "title": "Propellers and Propeller Control",
           "file": "chapters/propellers-and-propeller-control.json"
         },
@@ -661,6 +669,10 @@
         {
           "title": "Volare - Instrumentation",
           "file": "chapters/volare-instrumentation.json"
+        },
+        {
+          "title": "Chapter 3",
+          "file": "chapters/Chapter3.json"
         },
         {
           "title": "Chapter 4",
@@ -696,7 +708,7 @@
         }
       ],
       "notesPath": "powerplant.md",
-      "updatedAt": "2026-10-02T07:48:44.460Z"
+      "updatedAt": "2026-10-22T08:20:05.000Z"
     }
   ],
   "chapterData": {

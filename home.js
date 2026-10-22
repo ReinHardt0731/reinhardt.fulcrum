@@ -1,4 +1,4 @@
-import { initHomePage } from "./shared.js?v=question-progress-20261022-1";
+import { initHomePage } from "./shared.js?v=powerplant-library-20261022-3";
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";

@@ -1,0 +1,663 @@
+[
+  {
+    "question": "Why does a piston engine require a cooling system even though its purpose is to convert fuel energy into mechanical work?",
+    "choices": [
+      "Only about 25–28% of the released heat becomes useful work, while much of the remainder must be managed",
+      "Nearly all released heat becomes mechanical work, but the exhaust must be cooled to increase compression",
+      "The cooling system is needed mainly to prevent the fuel tank from expanding",
+      "Cooling is required only when the engine is operated above its rated RPM"
+    ],
+    "answer": "Only about 25–28% of the released heat becomes useful work, while much of the remainder must be managed",
+    "explanation": "The chapter states that thermal efficiency is at best around **25–28%**. Roughly 40% of the fuel energy leaves through the exhaust, while another 32% raises engine-component temperatures and must be controlled.",
+    "difficulty": "easy",
+    "tags": [
+      "reasons for cooling",
+      "thermal efficiency"
+    ]
+  },
+  {
+    "question": "According to the chapter, approximately what proportion of fuel energy is carried away by the exhaust gases?",
+    "choices": [
+      "About 40%",
+      "About 25–28%",
+      "About 32%",
+      "More than 70% as a precise exhaust-only figure"
+    ],
+    "answer": "About 40%",
+    "explanation": "The chapter attributes around **40%** of the released fuel energy to the exhaust gases. It separately identifies approximately 32% as raising engine-component temperatures.",
+    "difficulty": "medium",
+    "tags": [
+      "heat distribution",
+      "exhaust gases"
+    ]
+  },
+  {
+    "question": "Which condition is correctly matched with the mechanism described in the chapter?",
+    "choices": [
+      "Pre-ignition — fuel ignites before the spark plug fires",
+      "Detonation — the mixture ignites before the spark plug fires in every case",
+      "Thermal shock — lubricating oil viscosity falls because the engine is too cold",
+      "Overcooling — the oil necessarily loses all lubricating properties immediately"
+    ],
+    "answer": "Pre-ignition — fuel ignites before the spark plug fires",
+    "explanation": "**Pre-ignition** occurs when the fuel ignites before the spark plug fires. **Knocking or detonation** refers to an unstable combustion process even after the mixture has been ignited by the spark plug.",
+    "difficulty": "medium",
+    "tags": [
+      "pre-ignition",
+      "detonation",
+      "definitions"
+    ]
+  },
+  {
+    "question": "Which description best distinguishes knocking or detonation from pre-ignition in the chapter?",
+    "choices": [
+      "Detonation is unstable combustion after spark ignition; pre-ignition is ignition before the spark fires",
+      "Detonation occurs only during engine shutdown; pre-ignition occurs only during descent",
+      "Detonation is caused solely by low oil temperature; pre-ignition is caused solely by low airspeed",
+      "They are two names for the same event and are used interchangeably"
+    ],
+    "answer": "Detonation is unstable combustion after spark ignition; pre-ignition is ignition before the spark fires",
+    "explanation": "The key distinction is timing and combustion behaviour: **pre-ignition** happens before the scheduled spark, while **detonation/knocking** is unstable combustion after the spark has ignited the mixture.",
+    "difficulty": "hard",
+    "tags": [
+      "detonation",
+      "pre-ignition",
+      "comparison"
+    ]
+  },
+  {
+    "question": "Which combination describes possible consequences of excessive engine temperature identified in the chapter?",
+    "choices": [
+      "Structural failure, loss of oil lubricating properties, pre-ignition, and detonation",
+      "Reduced internal friction, improved fuel vaporization, and higher brake horsepower",
+      "Lower oil temperature, reduced viscosity, and guaranteed stable combustion",
+      "Increased thermal efficiency without any risk to engine components"
+    ],
+    "answer": "Structural failure, loss of oil lubricating properties, pre-ignition, and detonation",
+    "explanation": "Excessive temperatures can cause **structural failure**, overheat oil until its lubricating properties break down, and contribute to **pre-ignition** and **detonation**. Both combustion problems can reduce engine power.",
+    "difficulty": "medium",
+    "tags": [
+      "overheating",
+      "engine damage"
+    ]
+  },
+  {
+    "question": "Why is operating an engine at too low a temperature also undesirable?",
+    "choices": [
+      "Lubricant viscosity and internal friction increase, while fuel vaporization and combustion can deteriorate",
+      "The oil becomes less viscous, reducing friction but causing immediate detonation",
+      "The engine's thermal efficiency automatically rises without limit",
+      "Low temperature increases fuel evaporation and always produces a richer mixture"
+    ],
+    "answer": "Lubricant viscosity and internal friction increase, while fuel vaporization and combustion can deteriorate",
+    "explanation": "The chapter notes that low temperatures increase lubricant **viscosity and internal friction**, raising friction horsepower and reducing brake horsepower. Low temperature also impairs the change of liquid fuel into vapour.",
+    "difficulty": "hard",
+    "tags": [
+      "under-cooling",
+      "viscosity",
+      "brake horsepower"
+    ]
+  },
+  {
+    "question": "What operating-temperature principle does the chapter recommend?",
+    "choices": [
+      "The highest temperatures consistent with safe operation",
+      "The lowest temperature the cooling system can maintain",
+      "A fixed temperature independent of ambient conditions and power setting",
+      "The maximum possible temperature, even when detonation occurs"
+    ],
+    "answer": "The highest temperatures consistent with safe operation",
+    "explanation": "For efficient operation, the engine should run at the **highest temperatures consistent with safe operation**. The cooling system must accommodate changes in ambient and internal temperatures.",
+    "difficulty": "easy",
+    "tags": [
+      "operating temperature",
+      "cooling principles"
+    ]
+  },
+  {
+    "question": "Which statement correctly describes the liquid-cooling process shown in the chapter?",
+    "choices": [
+      "A water-and-glycol mixture circulates through engine passages, then transfers heat to air in a radiator",
+      "Air is pumped through cylinder passages and then cooled in a header tank",
+      "Oil alone circulates through the radiator and is the designated liquid coolant in the illustrated system",
+      "Coolant passes once through the cylinders and is discarded rather than recirculated"
+    ],
+    "answer": "A water-and-glycol mixture circulates through engine passages, then transfers heat to air in a radiator",
+    "explanation": "The liquid-cooled system circulates a **water-and-glycol mixture** through passages in the cylinders and cylinder heads. The coolant then passes through an air-cooled radiator, where airflow removes heat before the liquid returns to the system.",
+    "difficulty": "easy",
+    "tags": [
+      "liquid cooling",
+      "coolant flow"
+    ]
+  },
+  {
+    "question": "What is the function of the header tank in the liquid-cooling system described?",
+    "choices": [
+      "It serves as the reservoir in which the coolant is stored",
+      "It measures cylinder-head temperature by thermocouple voltage",
+      "It directs cooling air around each cylinder using sealed baffles",
+      "It controls the opening of the cowl flaps in an air-cooled installation"
+    ],
+    "answer": "It serves as the reservoir in which the coolant is stored",
+    "explanation": "The **header tank** is the coolant reservoir. Pipes carry coolant from it to the engine, then from the engine through the radiator and back to the tank.",
+    "difficulty": "easy",
+    "tags": [
+      "header tank",
+      "liquid cooling components"
+    ]
+  },
+  {
+    "question": "Why is the liquid-cooling radiator mounted in the propeller slipstream in the illustrated system?",
+    "choices": [
+      "To maintain airflow through the radiator even when the aircraft is stationary on the ground",
+      "To prevent the coolant from circulating whenever the aircraft is airborne",
+      "To ensure the radiator receives only heated air from the exhaust",
+      "To eliminate the need for an engine-driven coolant pump"
+    ],
+    "answer": "To maintain airflow through the radiator even when the aircraft is stationary on the ground",
+    "explanation": "Mounting the radiator in the **propeller slipstream** provides airflow through it even when the aircraft is stationary on the ground, helping dissipate coolant heat.",
+    "difficulty": "medium",
+    "tags": [
+      "radiator",
+      "propeller slipstream"
+    ]
+  },
+  {
+    "question": "In the liquid-cooling system, which component circulates coolant and which controls its temperature?",
+    "choices": [
+      "Engine-driven pump circulates coolant; thermostat controls temperature",
+      "Thermostat circulates coolant; radiator controls temperature by pumping it",
+      "Header tank circulates coolant; cowl flap controls coolant temperature",
+      "Radiator circulates coolant; thermocouple regulates coolant flow"
+    ],
+    "answer": "Engine-driven pump circulates coolant; thermostat controls temperature",
+    "explanation": "The chapter identifies the **engine-driven pump** as the coolant circulator and the **thermostat** as the device controlling temperature.",
+    "difficulty": "medium",
+    "tags": [
+      "coolant pump",
+      "thermostat"
+    ]
+  },
+  {
+    "question": "Which is a stated advantage of an air-cooled piston engine over a similar-powered liquid-cooled engine?",
+    "choices": [
+      "Lower weight and simpler construction with fewer moving parts",
+      "More precise temperature control and less aerodynamic drag in all installations",
+      "Complete immunity to overheating during ground operation",
+      "Uniform cylinder temperature regardless of airflow distribution"
+    ],
+    "answer": "Lower weight and simpler construction with fewer moving parts",
+    "explanation": "Air cooling is described as **simple, light, and having few moving parts**, making it a preferred choice for many aero piston engines. Liquid cooling, however, offers better temperature control and can produce less drag.",
+    "difficulty": "medium",
+    "tags": [
+      "air cooling",
+      "advantages"
+    ]
+  },
+  {
+    "question": "Why might a powerful, high-speed aircraft use liquid cooling despite the extra weight and risk of leakage?",
+    "choices": [
+      "It provides more effective and controllable cooling and can reduce aircraft drag",
+      "It requires no radiator or coolant passages",
+      "It always weighs less than air cooling at equal power",
+      "It removes the need to monitor engine temperature"
+    ],
+    "answer": "It provides more effective and controllable cooling and can reduce aircraft drag",
+    "explanation": "The chapter notes that **liquid cooling is more efficient**, gives better temperature control, and produces less drag. These benefits can outweigh the extra weight and potential leakage on high-speed aircraft with powerful engines.",
+    "difficulty": "hard",
+    "tags": [
+      "liquid cooling",
+      "air cooling comparison"
+    ]
+  },
+  {
+    "question": "Which two sources of airflow cool an air-cooled engine in normal operation?",
+    "choices": [
+      "Propeller slipstream and the aircraft's forward speed",
+      "Coolant-pump discharge and radiator pressure",
+      "Exhaust-gas flow and oil-pump suction only",
+      "Cabin ventilation and fuel-tank venting"
+    ],
+    "answer": "Propeller slipstream and the aircraft's forward speed",
+    "explanation": "The air-cooled engine transfers heat directly to air supplied by the **propeller slipstream** and the aircraft's **forward speed**.",
+    "difficulty": "easy",
+    "tags": [
+      "air cooling",
+      "airflow"
+    ]
+  },
+  {
+    "question": "What is the primary purpose of engine cowling in an air-cooled installation?",
+    "choices": [
+      "Reduce drag and control airflow so that cooling is distributed appropriately and the front cylinders are not overcooled",
+      "Seal the engine so that no outside air can pass over the cylinders",
+      "Increase airflow only around the front cylinders and prevent it reaching the rear cylinders",
+      "Replace cooling fins by conducting all heat to the exhaust"
+    ],
+    "answer": "Reduce drag and control airflow so that cooling is distributed appropriately and the front cylinders are not overcooled",
+    "explanation": "The **cowling** reduces drag and controls airflow around the engine, helping achieve even cooling and avoiding overcooling at the front of the engine.",
+    "difficulty": "medium",
+    "tags": [
+      "cowling",
+      "airflow management"
+    ]
+  },
+  {
+    "question": "Which change generally improves heat dissipation from an air-cooled engine, all else being equal?",
+    "choices": [
+      "A decrease in ambient air temperature",
+      "An increase in ambient air temperature",
+      "A reduction in airflow over the cylinders",
+      "A tighter fin pitch that greatly restricts airflow"
+    ],
+    "answer": "A decrease in ambient air temperature",
+    "explanation": "The chapter states that heat dissipation is more rapid as **air temperature decreases**, because the temperature difference between the engine and cooling air is greater.",
+    "difficulty": "easy",
+    "tags": [
+      "air temperature",
+      "heat dissipation"
+    ]
+  },
+  {
+    "question": "Why can ground running at high power cause overheating in an air-cooled engine?",
+    "choices": [
+      "The cooling flow may be limited to the propeller slipstream because forward speed is low",
+      "The aircraft's forward speed produces excessive ram cooling on the ground",
+      "The thermostat closes the radiator at high power in every air-cooled engine",
+      "The engine stops producing heat when the aircraft is stationary"
+    ],
+    "answer": "The cooling flow may be limited to the propeller slipstream because forward speed is low",
+    "explanation": "On the ground, the aircraft has little or no **forward-speed airflow**, so cooling depends heavily on propeller slipstream. This may be insufficient during prolonged high-power operation, requiring close monitoring of cylinder-head and oil temperatures.",
+    "difficulty": "hard",
+    "tags": [
+      "ground running",
+      "overheating",
+      "airflow"
+    ]
+  },
+  {
+    "question": "What is the main thermal function of cylinder cooling fins?",
+    "choices": [
+      "Increase the surface area available for transferring heat to the cooling air",
+      "Increase cylinder pressure by restricting the airflow around the engine",
+      "Reduce the cylinder's contact with cooling air to prevent overcooling",
+      "Act as directional seals between the cowling and engine"
+    ],
+    "answer": "Increase the surface area available for transferring heat to the cooling air",
+    "explanation": "**Cooling fins** increase the cylinder's surface area, allowing more heat to transfer to the airflow. Their spacing must balance adequate area against airflow resistance.",
+    "difficulty": "easy",
+    "tags": [
+      "cooling fins",
+      "heat transfer"
+    ]
+  },
+  {
+    "question": "Why must cooling fins not be placed too close together?",
+    "choices": [
+      "Excessive airflow resistance can build pressure, reduce cooling airflow, and increase drag",
+      "Closer fins always reduce surface area and eliminate all heat transfer",
+      "Close spacing causes the thermostat to open too far",
+      "The fins would prevent the cylinder head from generating combustion pressure"
+    ],
+    "answer": "Excessive airflow resistance can build pressure, reduce cooling airflow, and increase drag",
+    "explanation": "Although more fins can increase area, fins placed too close together create excessive **airflow resistance**. The resulting pressure build-up can reduce airflow and increase drag.",
+    "difficulty": "hard",
+    "tags": [
+      "cooling fins",
+      "fin pitch",
+      "airflow resistance"
+    ]
+  },
+  {
+    "question": "The chapter gives an average cooling-fin pitch of approximately:",
+    "choices": [
+      "Five fins per inch",
+      "Five fins per centimetre",
+      "One fin per inch",
+      "Ten fins per foot"
+    ],
+    "answer": "Five fins per inch",
+    "explanation": "The text gives an average fin pitch of about **five fins to the inch**. This is a reference value rather than a universal specification for every engine.",
+    "difficulty": "easy",
+    "tags": [
+      "cooling fins",
+      "fin pitch"
+    ]
+  },
+  {
+    "question": "Why may cooling fins be extended locally around exhaust ports?",
+    "choices": [
+      "To increase local heat-transfer area where temperatures are especially high",
+      "To decrease cooling at the hottest part of the cylinder",
+      "To create a pressure seal between the cylinder and header tank",
+      "To reduce the amount of metal exposed to cooling air"
+    ],
+    "answer": "To increase local heat-transfer area where temperatures are especially high",
+    "explanation": "Fins may be extended at local hot spots, such as **around exhaust ports**, to increase cooling and help produce a more even temperature throughout the component.",
+    "difficulty": "medium",
+    "tags": [
+      "cooling fins",
+      "hot spots",
+      "exhaust ports"
+    ]
+  },
+  {
+    "question": "What is the correct function of baffles in an air-cooled engine?",
+    "choices": [
+      "Guide cooling air completely around the cylinders and prevent it from bypassing them",
+      "Store coolant and compensate for expansion in the liquid-cooling system",
+      "Measure the temperature of the hottest cylinder",
+      "Increase engine power by reducing fuel flow"
+    ],
+    "answer": "Guide cooling air completely around the cylinders and prevent it from bypassing them",
+    "explanation": "**Baffles** are directional air guides. They must fit closely and seal against the cowling so that cooling air flows over the cylinders rather than escaping through gaps.",
+    "difficulty": "easy",
+    "tags": [
+      "baffles",
+      "airflow direction"
+    ]
+  },
+  {
+    "question": "Why should the airflow cross-sectional area be maintained appropriately through the baffle arrangement?",
+    "choices": [
+      "To avoid slowing the airflow and creating unnecessary drag",
+      "To force all air to bypass the cylinders at high power",
+      "To make the airflow stop at each cylinder and increase its temperature",
+      "To prevent the propeller slipstream from entering the cowling"
+    ],
+    "answer": "To avoid slowing the airflow and creating unnecessary drag",
+    "explanation": "The chapter says care is taken to maintain an even **cross-sectional area** so that airflow does not slow down and create drag. Proper baffle fit also prevents cooling air from bypassing the cylinders.",
+    "difficulty": "hard",
+    "tags": [
+      "baffles",
+      "airflow",
+      "drag"
+    ]
+  },
+  {
+    "question": "Why are materials with high thermal conductivity, such as aluminium alloys, used where possible in engine construction?",
+    "choices": [
+      "They help conduct heat away from hot engine components",
+      "They prevent heat from reaching the cylinder head",
+      "They reduce cooling by insulating the combustion chamber",
+      "They eliminate the need for cooling airflow"
+    ],
+    "answer": "They help conduct heat away from hot engine components",
+    "explanation": "Materials with high **thermal conductivity** transfer heat more readily. The chapter notes that aluminium alloys are commonly used; some cylinder heads use steel with a heavy copper deposit on the combustion-chamber face to improve heat flow.",
+    "difficulty": "medium",
+    "tags": [
+      "engine materials",
+      "thermal conductivity"
+    ]
+  },
+  {
+    "question": "When cowl flaps or gills are opened, what aerodynamic effect helps hot air leave the engine compartment?",
+    "choices": [
+      "A pressure drop at the cooling-air outlet encourages heated air to flow through the engine",
+      "A pressure increase at the outlet forces the cooling air back toward the inlet",
+      "The opening isolates the engine from the aircraft's external airflow",
+      "The opening stops the heated air from expanding"
+    ],
+    "answer": "A pressure drop at the cooling-air outlet encourages heated air to flow through the engine",
+    "explanation": "Opening **cowl flaps or gills** creates a pressure drop at the cooling-air outlet, helping heated air flow through the engine and maintaining a high airflow speed over the cylinders.",
+    "difficulty": "hard",
+    "tags": [
+      "cowl flaps",
+      "gills",
+      "pressure differential"
+    ]
+  },
+  {
+    "question": "According to the chapter, what additional use can be made of heat from the engine?",
+    "choices": [
+      "Cabin heating and, when selected, supplying hot air for carburettor de-icing",
+      "Cooling the fuel tank below ambient temperature",
+      "Pressurizing the liquid-coolant header tank with exhaust gas",
+      "Replacing the ignition system during engine start"
+    ],
+    "answer": "Cabin heating and, when selected, supplying hot air for carburettor de-icing",
+    "explanation": "Engine heat can be used for **cabin heating** and can be directed, when selected, to supply hot air for **carburettor de-icing**.",
+    "difficulty": "easy",
+    "tags": [
+      "engine heat",
+      "cabin heating",
+      "carburettor heat"
+    ]
+  },
+  {
+    "question": "If an engine has only one cylinder-head temperature sensor, where should it normally be fitted according to the chapter?",
+    "choices": [
+      "On the hottest cylinder, usually one of the rearmost cylinders",
+      "On the coolest cylinder, usually the foremost cylinder",
+      "On the radiator outlet, regardless of engine layout",
+      "On the oil sump, because oil and cylinder-head temperatures are identical"
+    ],
+    "answer": "On the hottest cylinder, usually one of the rearmost cylinders",
+    "explanation": "If only one sensor is installed, the chapter says it is fitted to the **hottest cylinder**, which is usually one of the rearmost cylinders.",
+    "difficulty": "medium",
+    "tags": [
+      "CHT gauge",
+      "sensor location"
+    ]
+  },
+  {
+    "question": "What does the thermocouple in a cylinder-head temperature gauge produce?",
+    "choices": [
+      "A voltage directly proportional to its temperature",
+      "A pressure directly proportional to cylinder-head temperature",
+      "A coolant flow rate that the thermostat uses to open the radiator",
+      "A resistance that is displayed directly as engine RPM"
+    ],
+    "answer": "A voltage directly proportional to its temperature",
+    "explanation": "The **thermocouple** produces a voltage proportional to its temperature. The cockpit indication is displayed by a sensitive moving-coil meter called a galvanometer, with the scale reading temperature rather than voltage.",
+    "difficulty": "medium",
+    "tags": [
+      "thermocouple",
+      "CHT gauge",
+      "galvanometer"
+    ]
+  },
+  {
+    "question": "During a climb, why can an engine be at increased risk of overheating?",
+    "choices": [
+      "High power generates more heat while reduced forward speed may reduce cooling airflow",
+      "Low power generates maximum heat while forward speed always becomes zero",
+      "The cooling fins stop transferring heat as soon as the aircraft climbs",
+      "The engine's oil system ceases to cool internal components in a climb"
+    ],
+    "answer": "High power generates more heat while reduced forward speed may reduce cooling airflow",
+    "explanation": "A climb often combines **high power** and reduced forward speed, increasing heat generation while potentially reducing cooling airflow. The chapter says climbing at best rate-of-climb speed is preferable to prolonged use of best-angle-of-climb speed.",
+    "difficulty": "hard",
+    "tags": [
+      "climb",
+      "overheating",
+      "Vx",
+      "Vy"
+    ]
+  },
+  {
+    "question": "Why does the chapter prefer climbing at best rate-of-climb speed rather than prolonged use of best-angle-of-climb speed, in relation to cooling?",
+    "choices": [
+      "The best-rate climb generally allows greater forward speed and cooling airflow than a prolonged best-angle climb",
+      "Best-angle speed always produces the lowest cylinder-head temperature because it uses maximum forward speed",
+      "Best-rate speed eliminates the heat generated by high power",
+      "Best-angle speed opens cowl flaps automatically on all aircraft"
+    ],
+    "answer": "The best-rate climb generally allows greater forward speed and cooling airflow than a prolonged best-angle climb",
+    "explanation": "The chapter links overheating risk to high power combined with reduced airflow and states that climbing at **best rate of climb speed (Vy)** is preferable to prolonged use of **best angle of climb speed (Vx)** in this context.",
+    "difficulty": "hard",
+    "tags": [
+      "Vy",
+      "Vx",
+      "cooling airflow"
+    ]
+  },
+  {
+    "question": "What is thermal shock in the context of engine cooling?",
+    "choices": [
+      "A sudden temperature change that can cause engine components, including cylinders, to fracture",
+      "A gradual increase in cylinder-head temperature during a normal climb",
+      "The voltage produced by a thermocouple when temperature is stable",
+      "The increase in oil viscosity that occurs only during hot-weather cruise"
+    ],
+    "answer": "A sudden temperature change that can cause engine components, including cylinders, to fracture",
+    "explanation": "A rapid change in temperature—such as overcooling during a dive after power has been reduced—can cause **thermal shock**. The chapter warns that components may fracture, and cylinders are particularly susceptible.",
+    "difficulty": "medium",
+    "tags": [
+      "thermal shock",
+      "overcooling"
+    ]
+  },
+  {
+    "question": "During descent, why may an abrupt dive with reduced engine power cause overcooling?",
+    "choices": [
+      "Power reduction lowers heat generation while the dive increases airflow over the engine",
+      "Power reduction increases combustion heat while the dive removes all cooling air",
+      "The radiator thermostat forces the air-cooled cylinders to freeze",
+      "The propeller slipstream stops whenever the aircraft descends"
+    ],
+    "answer": "Power reduction lowers heat generation while the dive increases airflow over the engine",
+    "explanation": "In descent, reduced power means less heat is generated, while a dive can increase airflow over the engine. This combination may cause **overcooling** and a rapid temperature change that risks thermal shock.",
+    "difficulty": "hard",
+    "tags": [
+      "descent",
+      "overcooling",
+      "thermal shock"
+    ]
+  },
+  {
+    "question": "When should cowl flaps normally be opened to increase cooling airflow, according to the chapter?",
+    "choices": [
+      "At high power and low airspeed, such as during take-off",
+      "During every descent, to maximize cooling regardless of temperature",
+      "Only after the engine has been shut down",
+      "At high airspeed and low power whenever minimum cooling is desired"
+    ],
+    "answer": "At high power and low airspeed, such as during take-off",
+    "explanation": "At take-off, the engine generates considerable heat while low airspeed limits cooling airflow. The chapter says **cowl flaps should be open** in such conditions to increase cooling, although this increases drag.",
+    "difficulty": "medium",
+    "tags": [
+      "cowl flaps",
+      "take-off",
+      "operational procedures"
+    ]
+  },
+  {
+    "question": "What cowl-flap setting does the chapter generally associate with descent?",
+    "choices": [
+      "Closed, to reduce cooling airflow",
+      "Fully open, to maximize cooling at all times",
+      "Partially open in every aircraft, regardless of installation",
+      "Removed from the cowling to reduce weight"
+    ],
+    "answer": "Closed, to reduce cooling airflow",
+    "explanation": "The chapter recommends closing **cowl flaps in descent** to reduce cooling. In cruise at altitude, they may be partially closed to maintain engine temperature as the colder ambient air improves cooling efficiency.",
+    "difficulty": "medium",
+    "tags": [
+      "cowl flaps",
+      "descent",
+      "cruise"
+    ]
+  },
+  {
+    "question": "Why may cowl flaps be partially closed during cruise at altitude?",
+    "choices": [
+      "Colder ambient air improves cooling efficiency, so reducing cooling airflow can help maintain engine temperature",
+      "The engine produces no heat at altitude and the cowl flaps must seal the exhaust",
+      "The propeller slipstream disappears at altitude",
+      "Partially closing the flaps increases the coolant level in the header tank"
+    ],
+    "answer": "Colder ambient air improves cooling efficiency, so reducing cooling airflow can help maintain engine temperature",
+    "explanation": "At altitude, colder cooling air improves heat transfer. The chapter says cowl flaps may be **partially closed during cruise** to maintain engine temperature and avoid excessive cooling.",
+    "difficulty": "hard",
+    "tags": [
+      "cruise",
+      "altitude",
+      "cowl flaps"
+    ]
+  },
+  {
+    "question": "Which engine temperature indicators should be closely monitored during prolonged ground running?",
+    "choices": [
+      "Cylinder-head temperature and oil temperature",
+      "Cabin temperature and outside-air temperature only",
+      "Fuel quantity and manifold pressure only",
+      "Radiator temperature and thermocouple voltage only, regardless of installed instruments"
+    ],
+    "answer": "Cylinder-head temperature and oil temperature",
+    "explanation": "Because cooling airflow may be inadequate during ground running, the chapter emphasizes close monitoring of **cylinder-head temperature and oil temperature**.",
+    "difficulty": "easy",
+    "tags": [
+      "ground running",
+      "CHT",
+      "oil temperature"
+    ]
+  },
+  {
+    "question": "Which statement about internal engine cooling is explicitly noted in the chapter?",
+    "choices": [
+      "The lubricating system also cools internal components such as pistons and valves",
+      "Only external cooling air cools pistons and valves; oil serves no thermal role",
+      "Pistons are cooled exclusively by the cylinder-head thermocouple",
+      "The header tank circulates oil through the valves and pistons"
+    ],
+    "answer": "The lubricating system also cools internal components such as pistons and valves",
+    "explanation": "The chapter reminds readers that the **lubricating system also cools internal engine parts**, including pistons and valves, in addition to its lubrication function.",
+    "difficulty": "medium",
+    "tags": [
+      "lubrication",
+      "internal cooling"
+    ]
+  },
+  {
+    "question": "Under which mixture condition does the chapter say cylinder-head temperature is highest?",
+    "choices": [
+      "Lean mixture selected for economy or endurance cruise",
+      "Rich mixture selected for maximum cooling in every circumstance",
+      "Any mixture setting, because mixture strength does not affect CHT",
+      "Only a mixture setting used during engine shutdown"
+    ],
+    "answer": "Lean mixture selected for economy or endurance cruise",
+    "explanation": "The chapter states that cylinder-head temperature is affected by mixture strength and that the **highest CHT** occurs when a lean mixture is selected for economy or endurance cruise.",
+    "difficulty": "medium",
+    "tags": [
+      "mixture strength",
+      "CHT",
+      "lean mixture"
+    ]
+  },
+  {
+    "question": "Why should the engine normally be run at approximately 1,000–1,200 RPM before shutdown, according to the chapter?",
+    "choices": [
+      "To help prevent spark-plug fouling after the engine has cooled and stabilized during taxi",
+      "To ensure the engine reaches its maximum possible temperature immediately before stopping",
+      "To force the thermostat to close and drain the coolant",
+      "To clear thermal shock by abruptly cooling the cylinders"
+    ],
+    "answer": "To help prevent spark-plug fouling after the engine has cooled and stabilized during taxi",
+    "explanation": "The chapter recommends running the engine at approximately **1,000–1,200 RPM before shutdown** to prevent plug fouling. Taxiing allows the engine to cool and stabilize; shutting down while very hot can cause uneven cooling and damage.",
+    "difficulty": "medium",
+    "tags": [
+      "shutdown procedure",
+      "RPM",
+      "spark-plug fouling"
+    ]
+  },
+  {
+    "question": "Why should a very hot engine not simply be shut down immediately after high-power operation?",
+    "choices": [
+      "Uneven cooling may occur and damage engine components",
+      "The thermocouple will continue to generate fuel after shutdown",
+      "The engine will automatically detonate after the ignition is switched off",
+      "The cooling fins will expand permanently if airflow continues"
+    ],
+    "answer": "Uneven cooling may occur and damage engine components",
+    "explanation": "The chapter warns that shutting down while the engine is **very hot** can result in uneven cooling and possible damage. The engine should be allowed to cool and stabilize during taxi, with the specified pre-shutdown procedure followed.",
+    "difficulty": "hard",
+    "tags": [
+      "shutdown",
+      "uneven cooling",
+      "engine protection"
+    ]
+  }
+]

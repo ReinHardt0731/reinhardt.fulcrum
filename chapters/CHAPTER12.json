@@ -1,481 +1,645 @@
 [
   {
-    "question": "Which statement BEST describes the indirect fuel-injection system commonly used in aircraft piston engines?",
+    "question": "What is the primary purpose of an aircraft propeller?",
     "choices": [
-      "It injects fuel intermittently directly into the combustion chamber at very high pressure.",
-      "It is a low-pressure, continuous-flow system that sprays fuel into the induction pipe near the inlet valve.",
-      "It relies on a carburettor Venturi to draw fuel into the airflow.",
-      "It delivers fuel only when each inlet valve is fully closed."
+      "To convert the engine’s power into propulsive thrust by accelerating a mass of air rearwards.",
+      "To convert thrust into electrical power.",
+      "To reduce the aircraft’s weight during flight.",
+      "To regulate fuel flow to the cylinders."
     ],
-    "answer": "It is a low-pressure, continuous-flow system that sprays fuel into the induction pipe near the inlet valve.",
-    "explanation": "The chapter describes indirect injection as a **low-pressure, continuous-flow** method. Fuel is sprayed continuously into the induction pipe **as close to the inlet valve as possible**.",
+    "answer": "To convert the engine’s power into propulsive thrust by accelerating a mass of air rearwards.",
+    "explanation": "A propeller **converts engine power into thrust** by imparting rearward acceleration to a large mass of air. Newton’s third law explains the resulting forward thrust.",
     "difficulty": "Easy",
     "tags": [
-      "indirect fuel injection",
-      "principles"
+      "propeller purpose",
+      "thrust"
     ]
   },
   {
-    "question": "Where is fuel sprayed in the low-pressure, continuous-flow indirect injection system?",
+    "question": "Which description best matches a conventional propeller assembly?",
     "choices": [
-      "Into the exhaust manifold",
-      "Directly into the combustion chamber",
-      "Into the induction pipe close to the inlet valve",
-      "Into the crankcase"
+      "Two or more aerodynamically shaped blades attached to a central hub, driven by the engine.",
+      "A single flat plate mounted to the fuselage.",
+      "A set of fuel nozzles fitted inside the induction pipe.",
+      "A freely rotating turbine that is not connected to the engine."
     ],
-    "answer": "Into the induction pipe close to the inlet valve",
-    "explanation": "The fuel is sprayed into the **induction system near the inlet valve**, rather than directly into the combustion chamber.",
+    "answer": "Two or more aerodynamically shaped blades attached to a central hub, driven by the engine.",
+    "explanation": "The chapter defines a propeller as **two or more aerodynamically shaped blades** attached to a central hub, mounted on a shaft driven by the engine.",
     "difficulty": "Easy",
     "tags": [
-      "fuel delivery",
-      "indirect injection"
+      "blade geometry",
+      "hub"
     ]
   },
   {
-    "question": "Which is identified in the chapter as an advantage of low-pressure, continuous-flow indirect injection?",
+    "question": "Which part of a propeller blade is the outermost end?",
     "choices": [
-      "It eliminates the need for any fuel pump.",
-      "It guarantees that fuel consumption is zero at idle.",
-      "It is free from icing problems associated with carburettor operation.",
-      "It requires the pump to be timed precisely to each engine cycle."
+      "Tip",
+      "Root",
+      "Shank",
+      "Butt"
     ],
-    "answer": "It is free from icing problems associated with carburettor operation.",
-    "explanation": "The listed advantages include **low operating pressure**, good fuel distribution, freedom from icing problems, and not needing a pump timed to the operating cycle.",
+    "answer": "Tip",
+    "explanation": "**The tip is the outer end** of the blade. The root is near the hub; the shank and butt are parts of the blade attachment region as shown in the blade-nomenclature figure.",
     "difficulty": "Easy",
     "tags": [
-      "advantages",
-      "icing"
+      "blade terminology"
     ]
   },
   {
-    "question": "In the indirect injection system, what does the air-throttle metering valve vary according to engine speed?",
+    "question": "What does the blade chord represent?",
     "choices": [
-      "Ignition timing",
-      "Fuel pressure",
-      "Cylinder compression ratio",
-      "Exhaust back pressure"
+      "The straight-line distance between the leading edge and trailing edge.",
+      "The distance from the hub to the tip.",
+      "The angle between the propeller axis and the aircraft’s flight path.",
+      "The distance the aircraft travels in one minute."
     ],
-    "answer": "Fuel pressure",
-    "explanation": "The chapter states that the **air throttle metering valve varies fuel pressure according to engine speed**.",
-    "difficulty": "Medium",
-    "tags": [
-      "metering",
-      "fuel pressure"
-    ]
-  },
-  {
-    "question": "How is mixture strength adjusted in the indirect injection system described?",
-    "choices": [
-      "By changing the diameter of the inlet valves during flight",
-      "By manually operating a mixture control valve that adjusts fuel pressure",
-      "By moving the discharge nozzles farther from the inlet ports",
-      "By changing the fuel tank selector to a different tank only"
-    ],
-    "answer": "By manually operating a mixture control valve that adjusts fuel pressure",
-    "explanation": "The pilot-operated **mixture control valve** adjusts fuel pressure to vary mixture strength for altitude and operating conditions.",
+    "answer": "The straight-line distance between the leading edge and trailing edge.",
+    "explanation": "**The chord is the straight-line distance** from the leading edge to the trailing edge of a blade section. It is a local blade-section dimension, not the blade’s span.",
     "difficulty": "Easy",
     "tags": [
-      "mixture control",
-      "fuel pressure"
+      "chord",
+      "blade terminology"
     ]
   },
   {
-    "question": "Which set contains the four main components of the indirect fuel-injection system listed in the chapter?",
+    "question": "What is propeller blade angle (pitch angle) measured between?",
     "choices": [
-      "Carburettor, Venturi, float chamber, and accelerator pump",
-      "Fuel pump, fuel/air control unit, fuel manifold valve, and discharge nozzles",
-      "Magneto, distributor, spark plugs, and ignition harness",
-      "Oil pump, oil cooler, sump, and pressure relief valve"
+      "The blade chord line and the plane of rotation.",
+      "The aircraft longitudinal axis and the horizon.",
+      "The relative airflow and the aircraft’s flight path only.",
+      "The leading edge and the trailing edge."
     ],
-    "answer": "Fuel pump, fuel/air control unit, fuel manifold valve, and discharge nozzles",
-    "explanation": "The chapter lists the **fuel pump**, **fuel/air control unit**, **fuel manifold (distribution) valve**, and **discharge nozzles for each cylinder** as the main components.",
+    "answer": "The blade chord line and the plane of rotation.",
+    "explanation": "**Blade angle, also called pitch or blade angle**, is the angle between the blade chord line and the plane of propeller rotation.",
     "difficulty": "Easy",
     "tags": [
-      "system components"
+      "blade angle",
+      "pitch"
     ]
   },
   {
-    "question": "What is the purpose of the normal throttle valve in the indirect injection system?",
+    "question": "Which statement correctly compares fine and coarse pitch?",
     "choices": [
-      "To control airflow to the engine",
-      "To open all discharge nozzles at engine shutdown",
-      "To select between the mechanical and electrical pumps",
-      "To set the fuel tank vent pressure"
+      "Fine pitch has a smaller blade angle; coarse pitch has a larger blade angle.",
+      "Fine pitch has a larger blade angle; coarse pitch has a smaller blade angle.",
+      "Both have the same blade angle but different blade lengths.",
+      "Pitch describes only the direction of rotation, not blade angle."
     ],
-    "answer": "To control airflow to the engine",
-    "explanation": "The normal **throttle valve controls airflow** to the engine and is connected to the pilot's throttle lever.",
+    "answer": "Fine pitch has a smaller blade angle; coarse pitch has a larger blade angle.",
+    "explanation": "**Fine pitch means a small blade angle**, while coarse pitch means a large blade angle. Variable-pitch propellers alter this angle to suit operating conditions.",
     "difficulty": "Easy",
     "tags": [
-      "throttle",
-      "airflow"
+      "fine pitch",
+      "coarse pitch"
     ]
   },
   {
-    "question": "What airflow feature distinguishes the intake manifold in the described fuel-injection system from a carburettor throat?",
+    "question": "What is the blade’s angle of attack?",
     "choices": [
-      "It contains two Venturis in series.",
-      "It has no Venturi or other restrictions to airflow.",
-      "It is always pressurized above ambient pressure.",
-      "It contains the fuel manifold valve inside the airflow passage."
+      "The angle between the blade chord line and the relative airflow.",
+      "The angle between the blade chord and the plane of rotation.",
+      "The angle between the propeller shaft and the engine crankshaft.",
+      "The angle between the blade tip and the hub."
     ],
-    "answer": "It has no Venturi or other restrictions to airflow.",
-    "explanation": "The chapter explicitly notes that the intake manifold has **no Venturi or other restrictions to airflow**.",
+    "answer": "The angle between the blade chord line and the relative airflow.",
+    "explanation": "**The chapter’s angle-of-attack diagram** identifies it as the angle between the actual blade path/relative airflow and the chord line. It is distinct from geometric blade angle.",
     "difficulty": "Medium",
     "tags": [
-      "intake manifold",
-      "Venturi"
+      "angle of attack",
+      "relative airflow"
     ]
   },
   {
-    "question": "Which component is connected to the pilot's throttle lever and controls airflow?",
+    "question": "What does propeller slip describe in the chapter’s terminology diagram?",
     "choices": [
-      "Mixture control valve",
-      "Fuel manifold valve",
-      "Air throttle valve",
-      "Discharge nozzle"
+      "The difference between geometric pitch and effective/actual advance per revolution.",
+      "The difference between fuel pressure and oil pressure.",
+      "The angle between the blade chord and plane of rotation.",
+      "The amount by which engine rpm falls when the throttle closes."
     ],
-    "answer": "Air throttle valve",
-    "explanation": "The **air throttle valve** is part of the air throttle assembly and is linked to the pilot's throttle lever to control engine airflow.",
+    "answer": "The difference between geometric pitch and effective/actual advance per revolution.",
+    "explanation": "**Geometric pitch is the theoretical distance** moved per revolution; effective pitch is the actual advance. The difference between these is slip.",
+    "difficulty": "Medium",
+    "tags": [
+      "slip",
+      "geometric pitch",
+      "effective pitch"
+    ]
+  },
+  {
+    "question": "Why are propeller blades twisted or washed out from root to tip?",
+    "choices": [
+      "To reduce blade angle toward the tip and help maintain a more even angle of attack along the blade.",
+      "To make the tip angle larger than the root angle at all times.",
+      "To prevent the propeller from rotating at high rpm.",
+      "To eliminate the need for a hub."
+    ],
+    "answer": "To reduce blade angle toward the tip and help maintain a more even angle of attack along the blade.",
+    "explanation": "Rotational speed increases with radius, so the outer blade sections have higher rotational velocity. **Reducing blade angle toward the tip** helps maintain a more even angle of attack and thrust distribution.",
+    "difficulty": "Medium",
+    "tags": [
+      "blade twist",
+      "wash-out"
+    ]
+  },
+  {
+    "question": "What limitation does the chapter identify for a fixed-pitch propeller?",
+    "choices": [
+      "Its blade angle cannot be adjusted to suit changing flight conditions.",
+      "It cannot produce thrust in forward flight.",
+      "It always operates at a constant rpm regardless of throttle setting.",
+      "It requires a hydraulic pitch-change mechanism."
+    ],
+    "answer": "Its blade angle cannot be adjusted to suit changing flight conditions.",
+    "explanation": "**A fixed-pitch propeller has a blade angle set during manufacture**. Changes in airspeed and engine rpm change its angle of attack and efficiency, so it cannot optimize pitch for all conditions.",
     "difficulty": "Easy",
     "tags": [
-      "fuel/air control unit",
-      "throttle"
+      "fixed-pitch propeller",
+      "limitations"
     ]
   },
   {
-    "question": "What is the function of the metering fuel valve?",
+    "question": "Which formula is given for propeller efficiency?",
     "choices": [
-      "It distributes fuel to each cylinder only after the engine stops.",
-      "It controls fuel flow to the fuel manifold valve according to throttle position.",
-      "It bleeds fuel pressure to adjust mixture strength independently of the throttle.",
-      "It measures the quantity of fuel remaining in the tanks."
+      "Thrust power ÷ engine power × 100",
+      "Engine power ÷ thrust power × 100",
+      "Thrust × rpm ÷ fuel pressure",
+      "Blade angle × slip × 100"
     ],
-    "answer": "It controls fuel flow to the fuel manifold valve according to throttle position.",
-    "explanation": "The **metering fuel valve** is connected to the air throttle and proportions fuel flow to airflow, helping provide the correct air/fuel ratio.",
-    "difficulty": "Medium",
-    "tags": [
-      "metering fuel valve",
-      "air/fuel ratio"
-    ]
-  },
-  {
-    "question": "What does the mixture control valve do within the fuel/air control unit?",
-    "choices": [
-      "It varies air intake area by moving the throttle plate.",
-      "It bleeds off fuel pressure applied to the metering valve so the air/fuel ratio can be adjusted.",
-      "It ensures the discharge nozzles are all calibrated differently.",
-      "It automatically switches the engine to diesel operation."
-    ],
-    "answer": "It bleeds off fuel pressure applied to the metering valve so the air/fuel ratio can be adjusted.",
-    "explanation": "The **mixture control valve** bleeds off pressure applied to the metering valve, allowing mixture strength to be varied from the basic metering setting.",
-    "difficulty": "Medium",
-    "tags": [
-      "mixture control valve",
-      "fuel pressure"
-    ]
-  },
-  {
-    "question": "Where is the fuel manifold valve located?",
-    "choices": [
-      "Inside the fuel tank",
-      "On the engine crankcase",
-      "At the end of the exhaust pipe",
-      "Inside the pilot's throttle lever"
-    ],
-    "answer": "On the engine crankcase",
-    "explanation": "The **fuel manifold valve** is located on the engine crankcase and acts as the central distribution point for metered fuel.",
+    "answer": "Thrust power ÷ engine power × 100",
+    "explanation": "**Propeller efficiency is rendered as thrust power divided by engine power**, multiplied by 100. The chapter states typical efficiency is usually around 80–90% under the conditions discussed.",
     "difficulty": "Easy",
     "tags": [
-      "fuel manifold valve",
-      "location"
+      "propeller efficiency",
+      "formula"
     ]
   },
   {
-    "question": "What happens to the outlet ports of the fuel manifold valve when the engine is stopped?",
+    "question": "Why can a variable-pitch propeller be more efficient than a fixed-pitch propeller over a range of conditions?",
     "choices": [
-      "They remain fully open to drain the system.",
-      "They close so fuel cannot flow to the engine.",
-      "They open one at a time in firing order.",
-      "They bypass the discharge nozzles."
+      "It can change blade angle to maintain a more suitable operating condition as airspeed and power change.",
+      "It eliminates all slip at every speed.",
+      "It removes the need for an engine throttle.",
+      "It keeps the blades at one fixed angle throughout flight."
     ],
-    "answer": "They close so fuel cannot flow to the engine.",
-    "explanation": "When the engine is stopped, **all outlet ports are closed**, preventing fuel from flowing to the engine.",
+    "answer": "It can change blade angle to maintain a more suitable operating condition as airspeed and power change.",
+    "explanation": "**Variable pitch allows blade angle to be adjusted** for changing conditions, helping the propeller operate efficiently over a wider range than a fixed-pitch design.",
     "difficulty": "Medium",
     "tags": [
-      "fuel manifold valve",
-      "engine shutdown"
+      "variable pitch",
+      "efficiency"
     ]
   },
   {
-    "question": "What causes the fuel manifold valve ports to open during starting?",
+    "question": "What does a constant-speed propeller system regulate?",
     "choices": [
-      "A rise in fuel pressure caused by engine rotation or the booster pump",
-      "An increase in exhaust temperature",
-      "Movement of the carburettor heat control",
-      "A reduction in fuel tank capacity"
+      "Propeller rpm, by changing blade pitch as required.",
+      "Aircraft airspeed directly, regardless of power.",
+      "Fuel temperature in the tanks.",
+      "The angle of the aircraft’s elevator."
     ],
-    "answer": "A rise in fuel pressure caused by engine rotation or the booster pump",
-    "explanation": "As fuel pressure builds from **engine rotation or booster-pump operation**, the ports to the discharge nozzles open simultaneously.",
-    "difficulty": "Medium",
-    "tags": [
-      "fuel manifold valve",
-      "starting"
-    ]
-  },
-  {
-    "question": "Where is each fuel discharge nozzle fitted, and where is its outlet directed?",
-    "choices": [
-      "In the exhaust stack, directed toward the turbine",
-      "In each cylinder head, directed into the inlet port",
-      "In the fuel tank, directed toward the pump inlet",
-      "In the crankcase, directed toward the oil sump"
-    ],
-    "answer": "In each cylinder head, directed into the inlet port",
-    "explanation": "Each **discharge nozzle is located in the cylinder head**, with its outlet directed into the inlet port.",
+    "answer": "Propeller rpm, by changing blade pitch as required.",
+    "explanation": "**The constant-speed unit (CSU) changes blade pitch** to maintain the selected rpm. The pilot selects rpm with the propeller control; throttle/power setting determines the power available.",
     "difficulty": "Easy",
     "tags": [
-      "discharge nozzle",
-      "location"
+      "constant-speed propeller",
+      "CSU"
     ]
   },
   {
-    "question": "How are discharge nozzles supplied to an individual engine according to the chapter?",
+    "question": "What is the role of the constant-speed unit (CSU) in the system described?",
     "choices": [
-      "As a set, with each nozzle having the same calibration",
-      "As a mixed set with intentionally different calibrations",
-      "One universal nozzle shared by all cylinders",
-      "As uncalibrated parts adjusted by the pilot in flight"
+      "It senses rpm changes and controls oil flow to the pitch-change mechanism to correct rpm.",
+      "It controls only the aircraft’s landing gear.",
+      "It directly measures airspeed and changes flap position.",
+      "It distributes fuel to each cylinder."
     ],
-    "answer": "As a set, with each nozzle having the same calibration",
-    "explanation": "Nozzles are calibrated in several ranges and fitted to individual engines **as a set**, with the nozzles in each set having the same calibration.",
+    "answer": "It senses rpm changes and controls oil flow to the pitch-change mechanism to correct rpm.",
+    "explanation": "**The CSU is an engine-driven governor**. Through flyweights and a speeder spring, it senses rpm and meters oil to the propeller pitch-change mechanism to correct deviations from selected rpm.",
     "difficulty": "Medium",
     "tags": [
-      "nozzle calibration",
-      "maintenance"
+      "CSU",
+      "governor",
+      "oil flow"
     ]
   },
   {
-    "question": "Why does the fuel pump supply more fuel than the engine requires?",
+    "question": "What is the purpose of the alpha range in a propeller system with alpha and beta ranges?",
     "choices": [
-      "To provide a recirculation path for excess fuel",
-      "To intentionally flood the cylinders at all power settings",
-      "To increase the air pressure in the intake manifold",
-      "To eliminate the need for mixture control"
+      "It provides the normal flight range from fine pitch through coarse pitch toward feathering.",
+      "It is exclusively the reverse-thrust range used on the ground.",
+      "It controls fuel mixture only.",
+      "It is the range in which the propeller is mechanically locked and cannot rotate."
     ],
-    "answer": "To provide a recirculation path for excess fuel",
-    "explanation": "The pump supplies more fuel than needed, and the system provides a **recirculation path** for the excess.",
+    "answer": "It provides the normal flight range from fine pitch through coarse pitch toward feathering.",
+    "explanation": "**The chapter describes alpha as the flight range**, including movement from flight fine pitch through coarse pitch toward feathering. Beta is associated with ground/flight-to-reverse pitch operation as described for the system.",
     "difficulty": "Medium",
     "tags": [
-      "fuel pumps",
-      "recirculation"
+      "alpha range",
+      "beta range"
     ]
   },
   {
-    "question": "How are the two fuel pumps arranged in the described indirect injection system?",
+    "question": "What is the beta range primarily associated with in the chapter?",
     "choices": [
-      "In series, with both required to operate at all times",
-      "In parallel, allowing the electrical pump to bypass the mechanical pump when needed",
-      "One in each cylinder head",
-      "In parallel but with no means of bypassing either pump"
+      "Ground handling and reverse-pitch operation, where fitted.",
+      "Normal flight cruise pitch only.",
+      "Fuel injection timing.",
+      "The engine’s ignition timing."
     ],
-    "answer": "In parallel, allowing the electrical pump to bypass the mechanical pump when needed",
-    "explanation": "The two pumps are arranged **in parallel**. If the mechanical pump is not operating, positive pressure from the electrical pump can bypass it.",
-    "difficulty": "Medium",
-    "tags": [
-      "fuel pumps",
-      "parallel arrangement"
-    ]
-  },
-  {
-    "question": "Which use of the electrical fuel pump is specifically mentioned in the chapter?",
-    "choices": [
-      "Changing the ignition timing",
-      "Engine priming and starting, and emergency operation if the mechanical pump is not operating",
-      "Controlling the discharge-nozzle calibration during flight",
-      "Cooling the engine oil"
-    ],
-    "answer": "Engine priming and starting, and emergency operation if the mechanical pump is not operating",
-    "explanation": "The electrical pump can be used for **priming and starting** and in an **emergency**, supplying fuel around the non-operating mechanical pump.",
-    "difficulty": "Medium",
-    "tags": [
-      "electrical fuel pump",
-      "starting"
-    ]
-  },
-  {
-    "question": "Which three control elements are contained in the fuel/air control unit?",
-    "choices": [
-      "Air throttle assembly, throttle metering valve, and mixture control valve",
-      "Fuel manifold valve, fuel pressure gauge, and discharge nozzle",
-      "Mechanical pump, electrical pump, and fuel strainer",
-      "Common rail, injector solenoid, and electronic driver unit"
-    ],
-    "answer": "Air throttle assembly, throttle metering valve, and mixture control valve",
-    "explanation": "The chapter identifies three elements: the **air throttle assembly (throttle valve)**, **throttle metering valve (metering fuel valve)**, and **mixture control valve**.",
+    "answer": "Ground handling and reverse-pitch operation, where fitted.",
+    "explanation": "**The beta range is the ground range** and can include reverse pitch. The chapter notes that operation and availability depend on the propeller/engine installation.",
     "difficulty": "Easy",
     "tags": [
-      "fuel/air control unit",
-      "components"
+      "beta range",
+      "reverse pitch"
     ]
   },
   {
-    "question": "In the diesel fuel-supply description for a light aircraft, what helps move fuel from the wing tanks toward the engine-mounted delivery system?",
+    "question": "In a single-acting propeller, what generally moves the blades toward coarse pitch?",
     "choices": [
-      "Gravity and ram air",
-      "The carburettor Venturi alone",
-      "Exhaust gas pressure only",
-      "The cylinder's compression stroke"
+      "Hydraulic oil pressure acting on the pitch-change piston, against the opposing spring/counterweight forces.",
+      "Fuel pressure in the discharge nozzles.",
+      "The pilot physically twists the blades by hand.",
+      "A reduction in manifold pressure alone, without a pitch mechanism."
     ],
-    "answer": "Gravity and ram air",
-    "explanation": "The chapter says fuel from rigid wing tanks is sent using the effects of **gravity and ram air** to a common strainer and selector valve, then through additional components to the engine.",
+    "answer": "Hydraulic oil pressure acting on the pitch-change piston, against the opposing spring/counterweight forces.",
+    "explanation": "**The single-acting arrangement uses oil pressure** acting on a piston to move the blades toward coarse pitch. Springs and/or counterweights provide the opposing force and may drive the blades toward fine pitch or feather, depending on design.",
+    "difficulty": "Medium",
+    "tags": [
+      "single-acting propeller",
+      "coarse pitch",
+      "piston"
+    ]
+  },
+  {
+    "question": "What distinguishes a double-acting propeller pitch-change mechanism from a single-acting one?",
+    "choices": [
+      "Hydraulic pressure can act on both sides of the piston to drive pitch change in both directions.",
+      "It has no pitch-change piston.",
+      "It can only move toward feather.",
+      "It uses fuel pressure instead of oil pressure."
+    ],
+    "answer": "Hydraulic pressure can act on both sides of the piston to drive pitch change in both directions.",
+    "explanation": "**In a double-acting arrangement, oil is directed to either side** of the pitch-change piston, allowing hydraulic movement toward both fine and coarse pitch. The chapter contrasts this with the single-acting mechanism.",
+    "difficulty": "Medium",
+    "tags": [
+      "double-acting propeller",
+      "pitch-change piston"
+    ]
+  },
+  {
+    "question": "Which three control modes are listed for the CSU/PCU?",
+    "choices": [
+      "Supply oil for fine pitch; shut off oil/hydraulic lock; deliver coarse-pitch oil while allowing fine-pitch oil to drain.",
+      "Increase fuel flow; stop ignition; open the throttle.",
+      "Extend flaps; retract gear; trim elevator.",
+      "Increase airspeed; reduce altitude; adjust mixture."
+    ],
+    "answer": "Supply oil for fine pitch; shut off oil/hydraulic lock; deliver coarse-pitch oil while allowing fine-pitch oil to drain.",
+    "explanation": "**The chapter lists three modes**: supply oil to fine pitch (rpm increases), oil shut-off/hydraulic lock (rpm steady), and drain fine-pitch oil while delivering coarse-pitch oil (rpm decreases).",
+    "difficulty": "Hard",
+    "tags": [
+      "CSU/PCU modes",
+      "oil control"
+    ]
+  },
+  {
+    "question": "When a constant-speed propeller is on-speed, what is the governor’s basic condition?",
+    "choices": [
+      "The selected rpm is maintained and the control valve is in a balanced/neutral condition.",
+      "The propeller is necessarily feathered.",
+      "The engine is stopped and the blades are locked.",
+      "The system continuously drives the blades to maximum coarse pitch."
+    ],
+    "answer": "The selected rpm is maintained and the control valve is in a balanced/neutral condition.",
+    "explanation": "**On-speed means actual rpm matches selected rpm**. The governor’s forces balance, so the control valve returns to its neutral position and there is no net pitch correction.",
+    "difficulty": "Medium",
+    "tags": [
+      "on-speed",
+      "governor"
+    ]
+  },
+  {
+    "question": "What does the CSU do when engine rpm rises above the selected setting in an overspeed condition?",
+    "choices": [
+      "It directs oil to move the blades toward coarse pitch, increasing blade angle and propeller load.",
+      "It moves the blades toward fine pitch to reduce load further.",
+      "It immediately shuts off all engine fuel.",
+      "It commands the propeller to reverse pitch in flight."
+    ],
+    "answer": "It directs oil to move the blades toward coarse pitch, increasing blade angle and propeller load.",
+    "explanation": "**In overspeed, flyweight force overcomes the speeder spring** and moves the control valve. Oil is directed to the coarse-pitch side, increasing blade angle and torque absorption so rpm decreases toward the selected value.",
+    "difficulty": "Hard",
+    "tags": [
+      "overspeed",
+      "coarse pitch"
+    ]
+  },
+  {
+    "question": "What does the CSU do in an underspeed condition?",
+    "choices": [
+      "It allows oil to move the blades toward fine pitch, reducing propeller load so rpm can rise.",
+      "It moves the blades toward maximum coarse pitch to increase load.",
+      "It feathers the propeller immediately in every case.",
+      "It closes the air intake to reduce engine power."
+    ],
+    "answer": "It allows oil to move the blades toward fine pitch, reducing propeller load so rpm can rise.",
+    "explanation": "**When rpm is below the selected setting**, the governor’s flyweights move inward and the control valve directs oil so the blades move toward fine pitch. This reduces propeller load and allows rpm to increase.",
+    "difficulty": "Hard",
+    "tags": [
+      "underspeed",
+      "fine pitch"
+    ]
+  },
+  {
+    "question": "What is the purpose of a propeller control unit (PCU) as described in the chapter?",
+    "choices": [
+      "It provides propeller control and additional functions for single-lever installations, coordinating propeller and engine fuel control.",
+      "It replaces the propeller blades with a turbine.",
+      "It controls only the aircraft’s cabin pressure.",
+      "It is a fuel filter with no connection to propeller pitch."
+    ],
+    "answer": "It provides propeller control and additional functions for single-lever installations, coordinating propeller and engine fuel control.",
+    "explanation": "**The PCU is similar to a basic CSU** but includes additional components and is used with turbo-prop engines and certain single-lever installations. It can coordinate rpm and fuel flow to reduce over-stressing of the turbine and hot-end components.",
+    "difficulty": "Medium",
+    "tags": [
+      "PCU",
+      "single-lever control"
+    ]
+  },
+  {
+    "question": "What is autofeather designed to do?",
+    "choices": [
+      "Automatically feather a propeller when the associated engine’s torque falls to a low value, helping reduce drag after an engine failure.",
+      "Automatically select reverse pitch during every landing.",
+      "Maintain maximum rpm after engine shutdown.",
+      "Prevent any propeller movement on the ground."
+    ],
+    "answer": "Automatically feather a propeller when the associated engine’s torque falls to a low value, helping reduce drag after an engine failure.",
+    "explanation": "**Autofeather uses a torque-related signal** and feathering system to move the affected propeller toward feather when engine torque falls below a threshold, reducing drag after an engine failure.",
+    "difficulty": "Medium",
+    "tags": [
+      "autofeather",
+      "engine failure"
+    ]
+  },
+  {
+    "question": "Why is feathering useful after an engine failure on a multi-engine aircraft?",
+    "choices": [
+      "It turns the blades to a low-drag position, reducing windmilling drag and helping aircraft control/performance.",
+      "It increases drag to slow the aircraft as quickly as possible.",
+      "It guarantees the failed engine will restart.",
+      "It increases fuel flow to the failed engine."
+    ],
+    "answer": "It turns the blades to a low-drag position, reducing windmilling drag and helping aircraft control/performance.",
+    "explanation": "**Feathering turns the blades to a position that minimizes drag** when the propeller is no longer producing useful power. This helps limit drag and adverse handling/performance effects after an engine failure.",
+    "difficulty": "Easy",
+    "tags": [
+      "feathering",
+      "drag"
+    ]
+  },
+  {
+    "question": "In the single-acting propeller described, how is feathering initiated?",
+    "choices": [
+      "The propeller control is moved to the feather position, allowing the system to route oil and/or use spring/counterweight forces to move the blades toward feather.",
+      "The throttle is advanced to maximum power.",
+      "The mixture is set to full rich and left unchanged.",
+      "The aircraft is placed in a steep climb."
+    ],
+    "answer": "The propeller control is moved to the feather position, allowing the system to route oil and/or use spring/counterweight forces to move the blades toward feather.",
+    "explanation": "**The chapter’s feathering description involves moving the propeller control** to the feather position. The pitch-change mechanism and its spring/counterweight or hydraulic arrangements then move the blades toward feather according to design.",
+    "difficulty": "Medium",
+    "tags": [
+      "single-acting feathering",
+      "propeller control"
+    ]
+  },
+  {
+    "question": "What is the purpose of the centrifugal latch fitted to some single-acting propellers?",
+    "choices": [
+      "To prevent the blades moving into feather at low rpm on the ground, and to disengage when rpm rises sufficiently.",
+      "To keep the propeller permanently at maximum rpm.",
+      "To measure fuel pressure.",
+      "To eliminate the need for engine oil."
+    ],
+    "answer": "To prevent the blades moving into feather at low rpm on the ground, and to disengage when rpm rises sufficiently.",
+    "explanation": "**The centrifugal latch prevents unwanted feathering on the ground** after shutdown. When rpm rises above its engagement threshold, centrifugal force disengages the latch so normal pitch movement can occur.",
+    "difficulty": "Hard",
+    "tags": [
+      "centrifugal latch",
+      "ground operation"
+    ]
+  },
+  {
+    "question": "In a double-acting propeller, how is feathering commonly achieved in the chapter’s description?",
+    "choices": [
+      "A feathering oil pump supplies oil to the appropriate side of the pitch-change mechanism to move the blades toward feather.",
+      "A mechanical counterweight alone always feathers the blades.",
+      "Fuel pressure pushes the blades into feather.",
+      "The blades feather automatically whenever the throttle is closed."
+    ],
+    "answer": "A feathering oil pump supplies oil to the appropriate side of the pitch-change mechanism to move the blades toward feather.",
+    "explanation": "**The double-acting installation described uses a feathering oil pump** and associated controls to route oil to the pitch-change mechanism. Specific steps, including hold-on controls, follow the aircraft operating manual.",
+    "difficulty": "Hard",
+    "tags": [
+      "double-acting feathering",
+      "feathering pump"
+    ]
+  },
+  {
+    "question": "What is the beta-range selection warning described for some turboprop installations?",
+    "choices": [
+      "Moving the propeller control into ground fine pitch can produce a significant change in blade angle and must be managed according to the aircraft procedure.",
+      "Beta range is always selected during cruise.",
+      "Beta range means the propeller is feathered and stopped.",
+      "Beta range is unrelated to blade pitch."
+    ],
+    "answer": "Moving the propeller control into ground fine pitch can produce a significant change in blade angle and must be managed according to the aircraft procedure.",
+    "explanation": "**The chapter warns that the propeller lever may be moved** to a ground-fine setting in beta-range systems, and that the selection can significantly alter blade angle. The aircraft’s prescribed procedure must be followed.",
+    "difficulty": "Hard",
+    "tags": [
+      "beta range",
+      "ground fine pitch"
+    ]
+  },
+  {
+    "question": "What is the purpose of propeller synchronizing?",
+    "choices": [
+      "To reduce annoying beat frequency and vibration by matching the rpm of propellers on a multi-engine aircraft.",
+      "To make all engines run at different rpm values.",
+      "To change all propellers to reverse pitch.",
+      "To control the aircraft’s yaw with the rudder only."
+    ],
+    "answer": "To reduce annoying beat frequency and vibration by matching the rpm of propellers on a multi-engine aircraft.",
+    "explanation": "**Synchronizing reduces noise and vibration** by matching propeller rpm. The chapter describes a master/slave arrangement in which the slave governor receives a signal and adjusts rpm to match the master.",
+    "difficulty": "Easy",
+    "tags": [
+      "synchronizing",
+      "master-slave"
+    ]
+  },
+  {
+    "question": "Why may a reduction gearbox be needed on a powerful aero-engine?",
+    "choices": [
+      "To let the engine operate at high rpm while the larger propeller turns at a lower, suitable rpm, reducing tip-speed and compressibility problems.",
+      "To increase propeller rpm above engine rpm in every installation.",
+      "To remove the propeller’s need for blades.",
+      "To increase fuel pressure to the injectors."
+    ],
+    "answer": "To let the engine operate at high rpm while the larger propeller turns at a lower, suitable rpm, reducing tip-speed and compressibility problems.",
+    "explanation": "**A large propeller is more efficient for converting power into thrust**, but tip speed can become excessively high if it turns at engine rpm. Reduction gearing lowers propeller rpm to a suitable value.",
+    "difficulty": "Medium",
+    "tags": [
+      "reduction gearing",
+      "tip speed"
+    ]
+  },
+  {
+    "question": "Which statement describes a parallel spur-gear reduction system?",
+    "choices": [
+      "It uses meshing spur gears to reduce speed; the chapter notes it is mechanically simple and relatively inexpensive.",
+      "It uses only planetary gears and no meshing gear teeth.",
+      "It changes blade pitch by hydraulic pressure only.",
+      "It is a torque-measuring system rather than a gearbox."
+    ],
+    "answer": "It uses meshing spur gears to reduce speed; the chapter notes it is mechanically simple and relatively inexpensive.",
+    "explanation": "**The chapter’s parallel spur-gear description says** it is mechanically simple and relatively cheap to produce, but the layout can be relatively long. It is used on some in-line, V-type, or water-cooled engines.",
+    "difficulty": "Medium",
+    "tags": [
+      "parallel spur gear",
+      "reduction gear types"
+    ]
+  },
+  {
+    "question": "What is a key feature of an epicyclic reduction gear layout?",
+    "choices": [
+      "Its compact arrangement has concentric shafts and planetary gearing, allowing a short installation and torque reaction to be indicated in some systems.",
+      "It uses only two external spur gears on widely separated shafts.",
+      "It has no gear teeth and relies entirely on oil pressure.",
+      "It is used only to control mixture strength."
+    ],
+    "answer": "Its compact arrangement has concentric shafts and planetary gearing, allowing a short installation and torque reaction to be indicated in some systems.",
+    "explanation": "**The chapter describes the epicyclic layout as compact**, with concentric shafts and planetary gears. It also notes that torque reaction can be used to provide a torque indication in the engine instrumentation.",
+    "difficulty": "Hard",
+    "tags": [
+      "epicyclic reduction gear",
+      "planetary gears"
+    ]
+  },
+  {
+    "question": "What information does a torque meter provide to the pilot?",
+    "choices": [
+      "An indication of the power being delivered by the engine, commonly expressed as torque or a related calibrated unit.",
+      "The exact mass of fuel remaining in the tanks only.",
+      "The aircraft’s indicated airspeed only.",
+      "The temperature of each cylinder’s exhaust gas only."
+    ],
+    "answer": "An indication of the power being delivered by the engine, commonly expressed as torque or a related calibrated unit.",
+    "explanation": "**The chapter states that the torque meter informs the pilot** about the amount of power being deployed by the engine. Indications may be calibrated in torque units, percentage, or another suitable power-related unit.",
+    "difficulty": "Easy",
+    "tags": [
+      "torque meter",
+      "power indication"
+    ]
+  },
+  {
+    "question": "Which two torque-signalling methods are described?",
+    "choices": [
+      "Electronic measurement and oil-pressure measurement.",
+      "Magnetic compass and pitot-static measurement.",
+      "Fuel flow and cabin pressure only.",
+      "Mechanical tachometer and altimeter only."
+    ],
+    "answer": "Electronic measurement and oil-pressure measurement.",
+    "explanation": "**The chapter outlines electronic torque measurement**, where a torsional effect is measured electronically, and oil-pressure systems, where torque reaction produces a pressure signal in a torque-transmission mechanism.",
+    "difficulty": "Hard",
+    "tags": [
+      "torque meter",
+      "electronic",
+      "oil pressure"
+    ]
+  },
+  {
+    "question": "What should a pilot remember about propeller checks after engine start?",
+    "choices": [
+      "Checks vary by aircraft type, and the aircraft operating/maintenance procedures and pre-flight visual inspections must be followed.",
+      "All propellers use exactly the same check sequence and rpm values.",
+      "Propeller checks can replace the pre-flight visual inspection.",
+      "A propeller should always be feathered before takeoff."
+    ],
+    "answer": "Checks vary by aircraft type, and the aircraft operating/maintenance procedures and pre-flight visual inspections must be followed.",
+    "explanation": "**The chapter notes that checks vary with aircraft type** and the methods used. It emphasizes following the aircraft’s prescribed checks and completing a thorough pre-flight visual inspection.",
+    "difficulty": "Easy",
+    "tags": [
+      "propeller checks",
+      "operating procedures"
+    ]
+  },
+  {
+    "question": "In the single-acting propeller check example shown, what is the purpose of checking rpm response at selected settings?",
+    "choices": [
+      "To verify propeller control and pitch-change operation through the prescribed rpm changes.",
+      "To test the landing lights.",
+      "To measure the aircraft’s stall speed.",
+      "To determine fuel grade from engine sound."
+    ],
+    "answer": "To verify propeller control and pitch-change operation through the prescribed rpm changes.",
+    "explanation": "**The example includes a power check** with rpm selections and checks of propeller feathering, followed by before-takeoff checks. These steps verify that the propeller control responds as prescribed for that aircraft type.",
+    "difficulty": "Medium",
+    "tags": [
+      "rpm check",
+      "single-acting propeller"
+    ]
+  },
+  {
+    "question": "According to the chapter’s example checklist, what should be checked before takeoff if icing is expected during or immediately after takeoff?",
+    "choices": [
+      "Propeller de-icing equipment and both alternator ammeters, with the selector/checks as specified.",
+      "Only the cabin heater.",
+      "Only the fuel quantity gauge.",
+      "The propeller must be left feathered."
+    ],
+    "answer": "Propeller de-icing equipment and both alternator ammeters, with the selector/checks as specified.",
+    "explanation": "**The illustrated checklist says** that if icing is expected during or immediately after takeoff, select ON and check the propeller de-icing ammeter and both alternator ammeters. These are example-specific procedures, so the aircraft manual governs.",
+    "difficulty": "Medium",
+    "tags": [
+      "propeller de-icing",
+      "before takeoff"
+    ]
+  },
+  {
+    "question": "What is a general characteristic of diesel engines noted in the chapter?",
+    "choices": [
+      "They generally run at lower rpm and higher torque than conventional engines, and may use reduction gearing and constant-speed propellers.",
+      "They always run at higher rpm and lower torque than conventional engines.",
+      "They cannot use propellers.",
+      "Their propeller pitch is never controlled electronically."
+    ],
+    "answer": "They generally run at lower rpm and higher torque than conventional engines, and may use reduction gearing and constant-speed propellers.",
+    "explanation": "**The chapter notes that diesel engines generally run at lower rpm and higher torque**. Gearboxes may reduce engine output rpm to match propeller requirements, and constant-speed propellers may be used.",
     "difficulty": "Medium",
     "tags": [
       "diesel engines",
-      "fuel supply"
+      "reduction gearing"
     ]
   },
   {
-    "question": "Which sequence best matches the diesel fuel path described in the chapter?",
+    "question": "How may propeller pitch and torque-related parameters be controlled on the diesel-engine systems described?",
     "choices": [
-      "Wing tanks → common strainer and selector valve → water-traps, fuel heaters and filters → engine-mounted delivery system",
-      "Wing tanks → discharge nozzle → carburettor Venturi → exhaust",
-      "Fuel manifold valve → wing tanks → oil cooler → injector",
-      "Common rail → fuel tank → water-trap → intake throttle"
+      "Electronically by the FADEC unit.",
+      "Only by a manually operated mixture lever.",
+      "By the landing gear selector.",
+      "They are fixed at manufacture and cannot be changed."
     ],
-    "answer": "Wing tanks → common strainer and selector valve → water-traps, fuel heaters and filters → engine-mounted delivery system",
-    "explanation": "The chapter describes fuel moving from the wing tanks to a **common strainer and selector valve**, then via **water-traps, fuel heaters and filters** to the engine-mounted delivery system.",
+    "answer": "Electronically by the FADEC unit.",
+    "explanation": "**The chapter states that fuel scheduling, propeller pitch, torque-monitoring, and other parameters are controlled electronically by the FADEC unit** in the diesel-engine systems described.",
     "difficulty": "Medium",
     "tags": [
       "diesel engines",
-      "fuel path"
-    ]
-  },
-  {
-    "question": "What does FADEC stand for in the chapter?",
-    "choices": [
-      "Fuel-Air Distribution and Engine Carburation",
-      "Full Authority Digital Engine Control",
-      "Fuel Adjustment During Engine Cranking",
-      "Full Automatic Diesel Exhaust Control"
-    ],
-    "answer": "Full Authority Digital Engine Control",
-    "explanation": "**FADEC** stands for **Full Authority Digital Engine Control**. The chapter describes it as an electronic/computer-controlled dual-channel unit.",
-    "difficulty": "Easy",
-    "tags": [
-      "FADEC",
-      "terminology"
-    ]
-  },
-  {
-    "question": "In the diesel system described, what does FADEC control?",
-    "choices": [
-      "The opening of electronically operated nozzles at the appropriate time and for the required duration",
-      "Only the pilot's manual throttle lever position",
-      "Only the fuel tank selector valve",
-      "The mechanical pump's lubrication schedule"
-    ],
-    "answer": "The opening of electronically operated nozzles at the appropriate time and for the required duration",
-    "explanation": "The chapter states that FADEC opens electronically operated **nozzles at the appropriate time and duration according to demand**.",
-    "difficulty": "Medium",
-    "tags": [
-      "FADEC",
-      "diesel injection"
-    ]
-  },
-  {
-    "question": "In a common-rail injection system, what replaces the older distributor injection pump?",
-    "choices": [
-      "A low-pressure carburettor",
-      "A single extremely high-pressure pump feeding a common storage manifold",
-      "A separate mechanical pump for every cylinder with no shared manifold",
-      "A Venturi-driven fuel suction system"
-    ],
-    "answer": "A single extremely high-pressure pump feeding a common storage manifold",
-    "explanation": "The chapter describes the common-rail system as replacing the older distributor injection pump with a **single extremely high-pressure pump** feeding the **common rail**.",
-    "difficulty": "Medium",
-    "tags": [
-      "common rail",
-      "high-pressure pump"
-    ]
-  },
-  {
-    "question": "According to the chapter, approximately what pressure is given for the common-rail pump in the electronic/common-rail section?",
-    "choices": [
-      "20 bar (290 psi)",
-      "200 bar (2,900 psi)",
-      "2,000 bar (29,000 psi)",
-      "20,000 bar (290,000 psi)"
-    ],
-    "answer": "2,000 bar (29,000 psi)",
-    "explanation": "The chapter gives the common-rail pump pressure as approximately **2,000 bar or 29,000 psi** in the electronic/common-rail section.",
-    "difficulty": "Medium",
-    "tags": [
-      "common rail",
-      "pressure figures"
-    ]
-  },
-  {
-    "question": "How is fuel distributed in a common-rail system?",
-    "choices": [
-      "The common rail distributes high-pressure fuel to computer-controlled injector valves.",
-      "The common rail sends fuel only to the carburettor float chamber.",
-      "Each injector draws fuel directly from a separate wing tank.",
-      "Fuel is mixed with oil inside the common rail before delivery."
-    ],
-    "answer": "The common rail distributes high-pressure fuel to computer-controlled injector valves.",
-    "explanation": "The **common rail** acts as a shared high-pressure storage/distribution manifold that supplies fuel to computer-controlled injector valves.",
-    "difficulty": "Easy",
-    "tags": [
-      "common rail",
-      "fuel distribution"
-    ]
-  },
-  {
-    "question": "Which devices are identified as possible actuators for common-rail injector valves?",
-    "choices": [
-      "Thermostats or pressure relief springs only",
-      "Solenoids or piezoelectric actuators",
-      "Mechanical floats or Venturi slides",
-      "Magnetos or ignition distributors"
-    ],
-    "answer": "Solenoids or piezoelectric actuators",
-    "explanation": "The chapter states that each injector valve may be activated by a **solenoid** or, more recently, by **piezoelectric actuators**.",
-    "difficulty": "Medium",
-    "tags": [
-      "injector valves",
-      "actuators"
-    ]
-  },
-  {
-    "question": "In modern aircraft described in the chapter, what information does FADEC receive to help manage injection?",
-    "choices": [
-      "Air temperature, air density, and throttle position",
-      "Only oil colour and tyre pressure",
-      "Only fuel tank quantity and landing gear position",
-      "Cabin humidity and passenger weight"
-    ],
-    "answer": "Air temperature, air density, and throttle position",
-    "explanation": "The chapter says FADEC receives sensor data such as **air temperature**, **air density**, and **throttle position**.",
-    "difficulty": "Medium",
-    "tags": [
-      "FADEC",
-      "sensors"
-    ]
-  },
-  {
-    "question": "What benefit is attributed to combining advanced injector valves with computer control?",
-    "choices": [
-      "Greater fuel efficiency and more effective power management",
-      "Elimination of the need for any fuel storage",
-      "Guaranteed operation without sensors",
-      "Removal of the need for engine maintenance"
-    ],
-    "answer": "Greater fuel efficiency and more effective power management",
-    "explanation": "The chapter concludes that advanced injector valves combined with computer control lead to **greater fuel efficiency** and **more effective power management**.",
-    "difficulty": "Easy",
-    "tags": [
-      "common rail",
-      "advantages"
+      "FADEC"
     ]
   }
 ]
