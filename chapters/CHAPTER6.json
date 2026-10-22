@@ -1,0 +1,482 @@
+[
+  {
+    "question": "Which fuel is commonly used in aircraft piston engines, according to the chapter?",
+    "choices": [
+      "Automotive diesel",
+      "Aviation gasoline (AVGAS)",
+      "Aviation turbine fuel only",
+      "Pure ethanol"
+    ],
+    "answer": "Aviation gasoline (AVGAS)",
+    "explanation": "The chapter identifies **AVGAS** as the gasoline fuel used in aircraft piston engines. It is derived from mineral oil, a blend of hydrogen and carbon.",
+    "difficulty": "easy",
+    "tags": [
+      "AVGAS",
+      "fuel types"
+    ]
+  },
+  {
+    "question": "What is the chapter's stated DERD specification number for aviation gasoline?",
+    "choices": [
+      "DERD 2485",
+      "DERD 100/130",
+      "DERD 98A",
+      "DERD 0.72"
+    ],
+    "answer": "DERD 2485",
+    "explanation": "The chapter states that aviation gasoline is manufactured to specifications issued by the Director of Engine Research and Development, with specification number **DERD 2485**.",
+    "difficulty": "medium",
+    "tags": [
+      "fuel specifications",
+      "DERD"
+    ]
+  },
+  {
+    "question": "What colour identifies AVGAS 100LL in the table?",
+    "choices": [
+      "Green",
+      "Red",
+      "Blue",
+      "Clear"
+    ],
+    "answer": "Blue",
+    "explanation": "The chapter's grade table identifies **AVGAS 100LL as blue**, with a performance number of 100/130 and low lead content.",
+    "difficulty": "easy",
+    "tags": [
+      "AVGAS grades",
+      "colour coding"
+    ]
+  },
+  {
+    "question": "Which grade is listed as green and has a high lead content?",
+    "choices": [
+      "AVGAS 80",
+      "AVGAS 100",
+      "AVGAS 100LL",
+      "AVTUR"
+    ],
+    "answer": "AVGAS 100",
+    "explanation": "The table lists **AVGAS 100** as green, with a 100/130 performance number and high lead content.",
+    "difficulty": "easy",
+    "tags": [
+      "AVGAS grades",
+      "lead content"
+    ]
+  },
+  {
+    "question": "What performance number and colour are listed for AVGAS 80?",
+    "choices": [
+      "100/130, blue",
+      "100/130, green",
+      "80/87, red",
+      "80/87, clear"
+    ],
+    "answer": "80/87, red",
+    "explanation": "The chapter lists **AVGAS 80** as red, with a performance number of 80/87 and very low lead content.",
+    "difficulty": "easy",
+    "tags": [
+      "AVGAS 80",
+      "performance number"
+    ]
+  },
+  {
+    "question": "Why is AVGAS dispensing equipment colour-coded red, according to the chapter?",
+    "choices": [
+      "To increase fuel volatility",
+      "To prevent cross-contamination with other fuels",
+      "To indicate high lead content in every grade",
+      "To identify fuel temperature"
+    ],
+    "answer": "To prevent cross-contamination with other fuels",
+    "explanation": "The chapter says AVGAS dispensing equipment is colour-coded **red to prevent cross-contamination** with other fuels.",
+    "difficulty": "medium",
+    "tags": [
+      "fuel handling",
+      "colour coding"
+    ]
+  },
+  {
+    "question": "What does the calorific value of a fuel measure?",
+    "choices": [
+      "Its resistance to detonation only",
+      "The heat released during combustion",
+      "Its freezing point",
+      "Its ability to prevent carburettor icing"
+    ],
+    "answer": "The heat released during combustion",
+    "explanation": "**Calorific value** measures the amount of heat released during combustion and is expressed in British Thermal Units (BTU) per pound in the chapter.",
+    "difficulty": "easy",
+    "tags": [
+      "calorific value",
+      "combustion"
+    ]
+  },
+  {
+    "question": "According to the chapter, how is calorific value related to specific gravity?",
+    "choices": [
+      "Higher specific gravity means higher calorific value",
+      "Higher specific gravity always means zero calorific value",
+      "There is no relationship stated",
+      "Lower specific gravity always means higher calorific value"
+    ],
+    "answer": "Higher specific gravity means higher calorific value",
+    "explanation": "The text states that calorific value is related to specific gravity: **the higher the specific gravity, the higher the calorific value**.",
+    "difficulty": "medium",
+    "tags": [
+      "specific gravity",
+      "calorific value"
+    ]
+  },
+  {
+    "question": "What is volatility?",
+    "choices": [
+      "A fuel's ability to change readily from liquid to vapour",
+      "A fuel's resistance to corrosion",
+      "The amount of lead in fuel",
+      "The pressure inside a cylinder after combustion"
+    ],
+    "answer": "A fuel's ability to change readily from liquid to vapour",
+    "explanation": "A volatile liquid changes readily from liquid to vapour through heat application or contact with a gas into which it can evaporate. **Volatility** affects how fuel mixes with air.",
+    "difficulty": "easy",
+    "tags": [
+      "volatility",
+      "fuel-air mixture"
+    ]
+  },
+  {
+    "question": "What does the chapter mean by 'low pressure boiling'?",
+    "choices": [
+      "Fuel boils only below freezing",
+      "As atmospheric pressure falls, fuel vaporizes at a lower temperature",
+      "Fuel becomes less volatile at altitude",
+      "Fuel can no longer evaporate"
+    ],
+    "answer": "As atmospheric pressure falls, fuel vaporizes at a lower temperature",
+    "explanation": "When vapour pressure exceeds the atmospheric pressure acting on a liquid, it boils. As atmospheric pressure falls with altitude, fuel vaporizes at a lower temperature, called **low pressure boiling**.",
+    "difficulty": "medium",
+    "tags": [
+      "high volatility",
+      "altitude"
+    ]
+  },
+  {
+    "question": "Why are oxidation inhibitors added to fuel?",
+    "choices": [
+      "To increase sulphur content",
+      "To prevent potentially unstable hydrocarbons from oxidizing",
+      "To make the fuel freeze sooner",
+      "To increase carbon deposits deliberately"
+    ],
+    "answer": "To prevent potentially unstable hydrocarbons from oxidizing",
+    "explanation": "Some hydrocarbons oxidize on contact with air and form resinous gummy compounds and corrosive bodies. **Oxidation inhibitors** help prevent this oxidation.",
+    "difficulty": "medium",
+    "tags": [
+      "stability",
+      "oxidation inhibitors"
+    ]
+  },
+  {
+    "question": "What is the maximum sulphur content permitted in aviation gasoline according to the chapter?",
+    "choices": [
+      "0.1%",
+      "1%",
+      "0.001%",
+      "10%"
+    ],
+    "answer": "0.001%",
+    "explanation": "The chapter states that sulphur content should be kept as low as possible and gives the maximum permitted amount in aviation gasoline as **0.001%**.",
+    "difficulty": "medium",
+    "tags": [
+      "sulphur content",
+      "fuel quality"
+    ]
+  },
+  {
+    "question": "According to the chapter, combustion in the cylinder is best described as:",
+    "choices": [
+      "An uncontrolled explosion",
+      "A controlled rate of burning",
+      "A process that does not produce heat",
+      "A process involving nitrogen as the main active fuel"
+    ],
+    "answer": "A controlled rate of burning",
+    "explanation": "The chapter explicitly states that combustion is a **controlled rate of burning**, not an explosion. The expanding heated gases create pressure energy to do useful work.",
+    "difficulty": "easy",
+    "tags": [
+      "combustion",
+      "fuel-air mixture"
+    ]
+  },
+  {
+    "question": "What flame speed is given for normal combustion in the chapter?",
+    "choices": [
+      "6–8 ft/s",
+      "60–80 ft/s",
+      "600–800 ft/s",
+      "1,000 ft/s"
+    ],
+    "answer": "60–80 ft/s",
+    "explanation": "The chapter states that normal combustion burns rapidly and steadily with a flame speed of **60–80 ft per second**, producing a smooth temperature and pressure rise.",
+    "difficulty": "easy",
+    "tags": [
+      "flame rate",
+      "normal combustion"
+    ]
+  },
+  {
+    "question": "Ideally, when should maximum pressure occur relative to top dead centre (TDC)?",
+    "choices": [
+      "At 30° before TDC",
+      "At TDC exactly",
+      "At 8°–10° after TDC",
+      "At 45° after TDC"
+    ],
+    "answer": "At 8°–10° after TDC",
+    "explanation": "The chapter says maximum pressure should ideally occur when the crank is **8°–10° after TDC**, where it can be used effectively to produce work.",
+    "difficulty": "medium",
+    "tags": [
+      "ignition timing",
+      "TDC"
+    ]
+  },
+  {
+    "question": "Why is ignition timing retarded at low engine speeds, according to the chapter?",
+    "choices": [
+      "To prevent maximum pressure building before the piston reaches TDC",
+      "To increase fuel density",
+      "To make the flame stop spreading",
+      "To prevent the magneto from rotating"
+    ],
+    "answer": "To prevent maximum pressure building before the piston reaches TDC",
+    "explanation": "At low engine speeds, ignition is retarded so that pressure does not build too early, before the piston reaches TDC. As speed increases, ignition is advanced to keep peak pressure near **8°–10° ATDC**.",
+    "difficulty": "hard",
+    "tags": [
+      "variable ignition timing",
+      "engine speed"
+    ]
+  },
+  {
+    "question": "Which change can make the flame rate increase, as described in the chapter?",
+    "choices": [
+      "A leaner mixture in every condition",
+      "A richer mixture or increased cylinder pressure",
+      "A lower cylinder pressure only",
+      "Removing all spark plugs"
+    ],
+    "answer": "A richer mixture or increased cylinder pressure",
+    "explanation": "The chapter notes that the mixture burns faster when made richer or when cylinder pressure increases. At high power, ignition may need to be retarded slightly to maintain stable combustion.",
+    "difficulty": "medium",
+    "tags": [
+      "flame rate",
+      "mixture strength"
+    ]
+  },
+  {
+    "question": "What is detonation (knocking) in a spark-ignition piston engine?",
+    "choices": [
+      "Normal smooth flame travel",
+      "Unstable combustion in which the end gas explodes",
+      "Fuel evaporating in the tank",
+      "A normal change in ignition timing"
+    ],
+    "answer": "Unstable combustion in which the end gas explodes",
+    "explanation": "**Detonation** occurs after ignition and is unstable combustion. The advancing flame heats the unburnt end gas until pressure and temperature cause it to explode rapidly.",
+    "difficulty": "easy",
+    "tags": [
+      "detonation",
+      "knocking"
+    ]
+  },
+  {
+    "question": "What flame speed does the chapter associate with detonation?",
+    "choices": [
+      "60–80 ft/s",
+      "100 ft/s",
+      "1,000 ft/s",
+      "10 ft/s"
+    ],
+    "answer": "1,000 ft/s",
+    "explanation": "The chapter states that during detonation the flame rate increases to approximately **1,000 ft per second**, with violence depending on the amount of end gas remaining.",
+    "difficulty": "medium",
+    "tags": [
+      "detonation",
+      "flame speed"
+    ]
+  },
+  {
+    "question": "Which is a possible effect of detonation?",
+    "choices": [
+      "Reduced pressure loading in all engine parts",
+      "Piston crown burning or collapse and possible mechanical damage",
+      "Guaranteed increase in engine life",
+      "Elimination of exhaust heat"
+    ],
+    "answer": "Piston crown burning or collapse and possible mechanical damage",
+    "explanation": "Detonation can burn or collapse the piston crown, overheat the combustion chamber, damage valves and spark-plug electrodes, and create sudden pressure rises that shock-load engine components.",
+    "difficulty": "medium",
+    "tags": [
+      "effects of detonation",
+      "engine damage"
+    ]
+  },
+  {
+    "question": "Which condition can contribute to detonation?",
+    "choices": [
+      "Correct fuel grade only",
+      "Incorrect ignition timing with the spark too far advanced",
+      "Lower charge temperature in all cases",
+      "A compact combustion chamber by itself"
+    ],
+    "answer": "Incorrect ignition timing with the spark too far advanced",
+    "explanation": "The chapter lists **incorrect ignition timing** as a cause. If the spark is too far advanced, the charge ignites too early and temperatures rise.",
+    "difficulty": "medium",
+    "tags": [
+      "causes of detonation",
+      "ignition timing"
+    ]
+  },
+  {
+    "question": "Why can carbon or coke deposits in the combustion chamber increase detonation risk?",
+    "choices": [
+      "They improve heat dissipation",
+      "They prevent heat from dissipating rapidly",
+      "They reduce all cylinder-head temperatures",
+      "They stop the end gas from being compressed"
+    ],
+    "answer": "They prevent heat from dissipating rapidly",
+    "explanation": "Carbon or coke deposits can insulate combustion-chamber surfaces, preventing heat from dissipating rapidly and contributing to **high cylinder-head temperatures**.",
+    "difficulty": "medium",
+    "tags": [
+      "causes of detonation",
+      "cooling"
+    ]
+  },
+  {
+    "question": "How can a compact combustion chamber help control detonation?",
+    "choices": [
+      "By increasing the distance travelled by the flame",
+      "By reducing flame travel distance and combustion time",
+      "By eliminating the need for fuel",
+      "By making the mixture burn only after exhaust opens"
+    ],
+    "answer": "By reducing flame travel distance and combustion time",
+    "explanation": "A **compact combustion chamber** reduces the distance the flame front travels. Initiating flame from two spark plugs can also reduce the time needed to burn the charge.",
+    "difficulty": "medium",
+    "tags": [
+      "detonation prevention",
+      "combustion chamber"
+    ]
+  },
+  {
+    "question": "Which two reference fuels are used to determine anti-detonation qualities in the chapter?",
+    "choices": [
+      "Benzene and ethanol",
+      "Iso-octane and normal heptane",
+      "AVGAS 80 and AVTUR",
+      "Hydrogen and carbon"
+    ],
+    "answer": "Iso-octane and normal heptane",
+    "explanation": "The chapter identifies **iso-octane and normal heptane** as chemically pure reference fuels used to determine a fuel's anti-detonation qualities under laboratory conditions.",
+    "difficulty": "easy",
+    "tags": [
+      "fuel quality control",
+      "reference fuels"
+    ]
+  },
+  {
+    "question": "What octane rating is assigned to normal heptane in the chapter?",
+    "choices": [
+      "100",
+      "95",
+      "50",
+      "0"
+    ],
+    "answer": "0",
+    "explanation": "The chapter states that **normal heptane** detonates very readily and has a rating of **0**, while iso-octane has a rating of 100.",
+    "difficulty": "easy",
+    "tags": [
+      "octane rating",
+      "normal heptane"
+    ]
+  },
+  {
+    "question": "A test fuel behaves like a blend of 95% iso-octane and 5% normal heptane. What octane rating is assigned in the chapter's example?",
+    "choices": [
+      "5",
+      "50",
+      "95",
+      "100"
+    ],
+    "answer": "95",
+    "explanation": "The chapter explains that if the reference blend contains **95% iso-octane and 5% normal heptane**, the test fuel is given an octane rating of 95.",
+    "difficulty": "medium",
+    "tags": [
+      "octane rating",
+      "fuel testing"
+    ]
+  },
+  {
+    "question": "What does the higher figure in a performance number such as 100/130 represent, according to the chapter?",
+    "choices": [
+      "The weak-mixture detonation point",
+      "The rich-mixture detonation point",
+      "Fuel specific gravity",
+      "The fuel's colour code"
+    ],
+    "answer": "The rich-mixture detonation point",
+    "explanation": "For **AVGAS 100LL**, the chapter explains that the lower performance-number figure is the weak-mixture detonation point and the higher figure is the rich-mixture detonation point.",
+    "difficulty": "hard",
+    "tags": [
+      "performance number",
+      "anti-knock"
+    ]
+  },
+  {
+    "question": "What should be used if the correct octane rating is unavailable, according to the chapter?",
+    "choices": [
+      "A lower octane rating",
+      "A higher octane rating",
+      "Any fuel regardless of grade",
+      "Fuel with the highest volatility only"
+    ],
+    "answer": "A higher octane rating",
+    "explanation": "The chapter warns that using a lower grade than specified can cause detonation. If the correct octane rating is unavailable, **a higher octane rating must be used**.",
+    "difficulty": "medium",
+    "tags": [
+      "fuel quality control",
+      "octane rating"
+    ]
+  },
+  {
+    "question": "What is the principal fuel additive identified in the chapter for reducing detonation?",
+    "choices": [
+      "Tetra Ethyl-lead (TEL)",
+      "Water",
+      "Normal heptane",
+      "Sulphur dioxide"
+    ],
+    "answer": "Tetra Ethyl-lead (TEL)",
+    "explanation": "The chapter identifies **Tetra Ethyl-lead (TEL)** as the principal additive described for reducing peroxide formation that would otherwise encourage detonation.",
+    "difficulty": "easy",
+    "tags": [
+      "fuel additives",
+      "TEL"
+    ]
+  },
+  {
+    "question": "What is pre-ignition (running-on)?",
+    "choices": [
+      "Ignition of the charge before the spark occurs at the spark plug",
+      "Ignition after the exhaust valve opens",
+      "Normal ignition exactly at TDC",
+      "Fuel boiling in the tank"
+    ],
+    "answer": "Ignition of the charge before the spark occurs at the spark plug",
+    "explanation": "**Pre-ignition**, also called running-on in the chapter, is ignition of the charge before the spark occurs. It is usually caused by a local hot spot, such as incandescent carbon or very hot spark-plug points.",
+    "difficulty": "easy",
+    "tags": [
+      "pre-ignition",
+      "hot spots"
+    ]
+  }
+]

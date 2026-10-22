@@ -1,0 +1,485 @@
+[
+  {
+    "question": "Which combination best describes the basic requirements of an aircraft carburation system?",
+    "choices": [
+      "Meter the air/fuel ratio across the operating range, function at relevant altitudes and temperatures, and support starting and engine shut-off",
+      "Maintain a constant fuel flow regardless of throttle position, altitude, or engine speed",
+      "Control only the fuel supply at take-off power and rely on the pilot to correct all other mixtures",
+      "Keep the induction manifold at atmospheric pressure and regulate power by changing fuel pressure alone"
+    ],
+    "answer": "Meter the air/fuel ratio across the operating range, function at relevant altitudes and temperatures, and support starting and engine shut-off",
+    "explanation": "The chapter lists three basic requirements: **control the air/fuel ratio** at selected power outputs and during acceleration/deceleration, function throughout the operating range of altitude and temperature, and provide ease of starting with a means of stopping the engine.",
+    "difficulty": "Easy",
+    "tags": [
+      "carburettor requirements",
+      "air-fuel ratio"
+    ]
+  },
+  {
+    "question": "Compared with a simple float-chamber carburettor, what is a key advantage of an injection carburettor?",
+    "choices": [
+      "It meters fuel more precisely and is less affected by flight manoeuvres",
+      "It eliminates the need to regulate mixture strength at changing altitude",
+      "It uses no induction airflow to determine fuel delivery",
+      "It is completely unaffected by any form of induction icing"
+    ],
+    "answer": "It meters fuel more precisely and is less affected by flight manoeuvres",
+    "explanation": "The text describes the injection carburettor as more sophisticated, providing **more precise fuel metering and a more accurate air/fuel ratio**. It is also less affected by flight manoeuvres and less prone to icing than a float-chamber carburettor, though not absolutely immune to all icing.",
+    "difficulty": "Medium",
+    "tags": [
+      "injection carburettor",
+      "comparison"
+    ]
+  },
+  {
+    "question": "What is the principal role of the float and needle-valve mechanism in a float-chamber carburettor?",
+    "choices": [
+      "To maintain a substantially constant fuel level in the float chamber",
+      "To vary the Venturi throat area as engine speed changes",
+      "To meter the air entering the induction manifold",
+      "To enrich the mixture only at high power"
+    ],
+    "answer": "To maintain a substantially constant fuel level in the float chamber",
+    "explanation": "The float rises and falls with the fuel level and operates a **needle valve** that regulates incoming fuel. This maintains a near-constant level in the chamber so the pressure difference can meter fuel through the discharge system.",
+    "difficulty": "Easy",
+    "tags": [
+      "float chamber",
+      "needle valve"
+    ]
+  },
+  {
+    "question": "According to the Venturi principle, what happens as induction air passes through the carburettor throat?",
+    "choices": [
+      "Air velocity increases while static pressure decreases",
+      "Air velocity decreases while static pressure decreases",
+      "Air velocity and static pressure both increase",
+      "Air velocity remains constant while static pressure increases"
+    ],
+    "answer": "Air velocity increases while static pressure decreases",
+    "explanation": "The Venturi restriction accelerates the airflow. In accordance with **Bernoulli's principle**, the increase in velocity is accompanied by a reduction in static pressure at the throat; this pressure drop helps draw fuel into the airstream.",
+    "difficulty": "Easy",
+    "tags": [
+      "Venturi",
+      "Bernoulli principle"
+    ]
+  },
+  {
+    "question": "In a simple float-chamber carburettor, what provides the pressure difference that discharges fuel into the Venturi?",
+    "choices": [
+      "Float-chamber pressure acting against the lower pressure at the Venturi throat",
+      "High pressure created by the throttle plate downstream of the Venturi",
+      "Fuel-pump pressure acting alone, regardless of induction pressure",
+      "Lower pressure in the float chamber than in the Venturi throat"
+    ],
+    "answer": "Float-chamber pressure acting against the lower pressure at the Venturi throat",
+    "explanation": "The float chamber is referenced to intake/atmospheric pressure, while pressure falls at the Venturi throat. The resulting **pressure differential** drives fuel through the discharge tube and into the airflow.",
+    "difficulty": "Medium",
+    "tags": [
+      "fuel discharge",
+      "pressure differential"
+    ]
+  },
+  {
+    "question": "What primarily determines the amount of fuel discharged by the main jet at a given pressure differential?",
+    "choices": [
+      "The size of the main jet orifice",
+      "The position of the accelerator-pump piston at idle",
+      "The diameter of the air filter housing",
+      "The opening of the oil-cooler shutters"
+    ],
+    "answer": "The size of the main jet orifice",
+    "explanation": "The chapter explains that the **main jet size** determines the quantity of fuel discharged at a particular pressure differential, thereby influencing mixture strength. A fuel strainer may be fitted upstream to help prevent the small jet from becoming blocked.",
+    "difficulty": "Easy",
+    "tags": [
+      "main jet",
+      "fuel metering"
+    ]
+  },
+  {
+    "question": "Why is a pressure-balance duct used between the air intake and the float chamber?",
+    "choices": [
+      "To transmit intake pressure changes to the float chamber and maintain more accurate pressure balance",
+      "To increase float-chamber pressure above intake pressure at all engine speeds",
+      "To isolate the float chamber from changes caused by aircraft speed and manoeuvres",
+      "To provide the only route for fuel to reach the main jet"
+    ],
+    "answer": "To transmit intake pressure changes to the float chamber and maintain more accurate pressure balance",
+    "explanation": "A simple atmospheric vent may not reflect local pressure changes around the air intake during flight. The **pressure-balance duct** connects the float chamber directly to the intake so the pressure conditions across the carburettor remain properly balanced; it may also supply air to the diffuser.",
+    "difficulty": "Medium",
+    "tags": [
+      "pressure-balance duct",
+      "float chamber"
+    ]
+  },
+  {
+    "question": "Why can the mixture become progressively richer as engine speed and airflow increase in a simple carburettor?",
+    "choices": [
+      "Fuel and air do not increase in flow at exactly the same rate as conditions change",
+      "The float chamber automatically raises its fuel level in proportion to engine speed",
+      "The Venturi pressure drop disappears at higher airflow",
+      "The main jet closes progressively as the throttle is opened"
+    ],
+    "answer": "Fuel and air do not increase in flow at exactly the same rate as conditions change",
+    "explanation": "The chapter notes that air and fuel have different flow characteristics. As airflow rises, the fuel proportion can increase disproportionately, causing **progressive enrichment**. A diffuser/air-bleed arrangement can compensate for this effect.",
+    "difficulty": "Medium",
+    "tags": [
+      "mixture strength",
+      "diffuser"
+    ]
+  },
+  {
+    "question": "How does a diffuser well help prevent excessive enrichment above idle?",
+    "choices": [
+      "As fuel level in the well drops, more air holes are uncovered and air enters the discharge tube",
+      "It closes the main jet whenever airflow exceeds idle",
+      "It raises float-chamber pressure to force additional fuel into the Venturi",
+      "It reduces airflow through the Venturi by partially closing the throttle"
+    ],
+    "answer": "As fuel level in the well drops, more air holes are uncovered and air enters the discharge tube",
+    "explanation": "As engine speed increases, the fuel level in the diffuser well falls and progressively exposes **air holes**. Air entering the discharge tube reduces the pressure differential acting on the fuel, helping prevent the mixture from becoming too rich and improving fuel vaporization.",
+    "difficulty": "Medium",
+    "tags": [
+      "diffuser well",
+      "air bleed"
+    ]
+  },
+  {
+    "question": "What is the effect of an air bleed in a carburettor discharge tube?",
+    "choices": [
+      "It introduces air into the fuel stream, breaking the fuel into smaller droplets and retarding fuel flow",
+      "It seals the discharge tube so that fuel flow becomes independent of pressure",
+      "It increases the density of the fuel and causes it to flow as a continuous column",
+      "It raises the pressure drop across the main jet to enrich the mixture at every power setting"
+    ],
+    "answer": "It introduces air into the fuel stream, breaking the fuel into smaller droplets and retarding fuel flow",
+    "explanation": "Air entering through an **air-bleed jet** intermingles with the fuel, causing it to emerge in smaller droplets rather than as a continuous column. This improves atomization and reduces the force driving fuel through the tube, helping control mixture enrichment.",
+    "difficulty": "Medium",
+    "tags": [
+      "air bleed",
+      "atomization"
+    ]
+  },
+  {
+    "question": "Why does the main jet often provide insufficient fuel at very low engine speeds?",
+    "choices": [
+      "The airflow and Venturi depression are too small to draw enough fuel through the main jet",
+      "The float chamber is deliberately emptied whenever the throttle is nearly closed",
+      "The throttle valve completely blocks the fuel passage to the main jet",
+      "The fuel pump stops delivering fuel whenever engine speed falls below cruise"
+    ],
+    "answer": "The airflow and Venturi depression are too small to draw enough fuel through the main jet",
+    "explanation": "At low engine speed, little air passes through the Venturi, so the pressure depression may be insufficient to draw fuel through the main jet. A separate **slow-running system** uses the stronger depression near the throttle valve to supply fuel at idle.",
+    "difficulty": "Easy",
+    "tags": [
+      "slow-running system",
+      "main jet"
+    ]
+  },
+  {
+    "question": "Where does the slow-running system obtain the depression needed to draw fuel at idle?",
+    "choices": [
+      "Near the lip of the nearly closed throttle valve, where depression is strong",
+      "At the Venturi throat, where airflow is at its maximum",
+      "In the float chamber, where fuel pressure is always below manifold pressure",
+      "Downstream of the fuel pump, where pressure rises with reduced throttle"
+    ],
+    "answer": "Near the lip of the nearly closed throttle valve, where depression is strong",
+    "explanation": "With the throttle nearly closed, a strong depression exists around the **throttle-valve lip** even though Venturi airflow is low. The slow-running passage and its own jet use this pressure difference to provide the richer mixture required for idle.",
+    "difficulty": "Medium",
+    "tags": [
+      "slow-running system",
+      "throttle valve"
+    ]
+  },
+  {
+    "question": "What is a carburettor **flat spot**?",
+    "choices": [
+      "A brief hesitation during acceleration caused by a temporary weak mixture",
+      "A steady loss of power caused only by a blocked oil filter",
+      "A period when the mixture is excessively rich at maximum cruising power",
+      "A normal delay while the float chamber fills after the engine stops"
+    ],
+    "answer": "A brief hesitation during acceleration caused by a temporary weak mixture",
+    "explanation": "The chapter defines a **flat spot** as poor response to throttle opening, usually felt as hesitation during acceleration. It can occur when the main system has not yet taken over smoothly from the slow-running system, creating a temporary weak mixture.",
+    "difficulty": "Easy",
+    "tags": [
+      "flat spot",
+      "acceleration"
+    ]
+  },
+  {
+    "question": "Why is a cut-off valve incorporated into the slow-running passage?",
+    "choices": [
+      "To stop fuel delivery at shut-down so the engine stops cleanly and fuel does not wash lubrication from cylinder walls",
+      "To increase fuel flow through the main jet during take-off",
+      "To keep the slow-running system operating after the mixture control is moved to idle cut-off",
+      "To enrich the mixture automatically whenever manifold pressure rises"
+    ],
+    "answer": "To stop fuel delivery at shut-down so the engine stops cleanly and fuel does not wash lubrication from cylinder walls",
+    "explanation": "Operating the cut-off blocks fuel to the slow-running delivery, progressively weakening the mixture until combustion stops. This helps prevent **erratic running from pre-ignition** and reduces fuel condensation that could wash oil from cylinder walls and impair lubrication at the next start.",
+    "difficulty": "Medium",
+    "tags": [
+      "idle cut-off",
+      "engine shut-down"
+    ]
+  },
+  {
+    "question": "Why does a float-chamber carburettor tend to deliver an increasingly rich mixture as altitude increases if no mixture correction is made?",
+    "choices": [
+      "Air density and air mass decrease, but fuel flow does not decrease by the same proportion",
+      "Air density increases while fuel flow remains constant",
+      "The Venturi pressure drop increases enough to stop fuel atomization",
+      "The float chamber automatically raises the fuel level as ambient pressure falls"
+    ],
+    "answer": "Air density and air mass decrease, but fuel flow does not decrease by the same proportion",
+    "explanation": "As altitude increases, **air density decreases**, so less air mass enters the cylinders. Fuel flow does not reduce by the same amount, so the mixture becomes progressively richer. A mixture control allows the pilot to reduce fuel flow for efficient operation.",
+    "difficulty": "Easy",
+    "tags": [
+      "altitude mixture control",
+      "air density"
+    ]
+  },
+  {
+    "question": "How does a needle-type mixture control change mixture strength?",
+    "choices": [
+      "A cockpit control moves a needle to vary the fuel orifice feeding the main jet",
+      "A cockpit control changes the physical diameter of the Venturi throat",
+      "A cockpit control adjusts only the amount of air entering the air filter",
+      "A cockpit control raises the float level to weaken the mixture at altitude"
+    ],
+    "answer": "A cockpit control moves a needle to vary the fuel orifice feeding the main jet",
+    "explanation": "In a **needle-type mixture control**, the cockpit lever raises or lowers a needle that varies fuel flow through an orifice to the main jet. In the fully lowered position described, the needle blocks fuel flow to the main jet and can provide engine shut-off.",
+    "difficulty": "Medium",
+    "tags": [
+      "needle-type mixture control",
+      "mixture"
+    ]
+  },
+  {
+    "question": "In the air-bleed mixture control described, what happens as the control is moved from fully rich toward a weaker setting?",
+    "choices": [
+      "Air pressure in the float chamber is reduced, decreasing the pressure differential that drives fuel",
+      "Air pressure in the float chamber rises, increasing fuel flow through the main jet",
+      "The main jet becomes larger, increasing fuel flow at every airflow rate",
+      "The float valve is held open so that the fuel level rises"
+    ],
+    "answer": "Air pressure in the float chamber is reduced, decreasing the pressure differential that drives fuel",
+    "explanation": "With this design, the air-bleed valve controls air pressure in the float chamber. Closing the valve reduces that pressure, which reduces the **pressure differential acting on the fuel** and weakens the mixture. The illustrated system can also use engine-side throttle suction in idle cut-off to stop fuel flow.",
+    "difficulty": "Hard",
+    "tags": [
+      "air-bleed mixture control",
+      "pressure differential"
+    ]
+  },
+  {
+    "question": "Why is a fuel strainer sometimes fitted immediately before the small metering jets?",
+    "choices": [
+      "To reduce the chance that dirt or debris will block the jets",
+      "To raise fuel pressure whenever the throttle is opened quickly",
+      "To remove air from the induction manifold",
+      "To prevent the float chamber from responding to altitude changes"
+    ],
+    "answer": "To reduce the chance that dirt or debris will block the jets",
+    "explanation": "The fuel jet is one of the smallest orifices in the system. A **fuel strainer** fitted before the jets helps keep dirt and debris from obstructing them, which could disturb fuel metering and mixture strength.",
+    "difficulty": "Easy",
+    "tags": [
+      "fuel strainer",
+      "metering jets"
+    ]
+  },
+  {
+    "question": "Why is a richer mixture required at power settings above the normal cruising range?",
+    "choices": [
+      "To help prevent detonation at high power",
+      "To increase the amount of air entering the cylinders at a fixed throttle setting",
+      "To reduce fuel flow so that cylinder temperatures always rise",
+      "To eliminate the need for mixture control at altitude"
+    ],
+    "answer": "To help prevent detonation at high power",
+    "explanation": "The chapter explains that **high-power settings require mixture enrichment** to help prevent detonation. This may be achieved by an additional power-enrichment/economizer jet or by a system that provides a rich mixture at high power and reduces fuel flow for cruise.",
+    "difficulty": "Easy",
+    "tags": [
+      "power enrichment",
+      "detonation"
+    ]
+  },
+  {
+    "question": "How does a throttle-linked power-enrichment jet typically operate?",
+    "choices": [
+      "It begins opening above a selected cruising-power setting and opens progressively as the throttle advances",
+      "It remains fully open below cruising power and closes at full throttle",
+      "It responds only to altitude and is unaffected by throttle or manifold pressure",
+      "It closes the main jet whenever the throttle is moved rapidly"
+    ],
+    "answer": "It begins opening above a selected cruising-power setting and opens progressively as the throttle advances",
+    "explanation": "The additional needle valve is normally closed below the selected maximum-cruise setting. As the throttle opens beyond that point, the **power-enrichment jet opens progressively**, providing extra fuel at high power. Some systems instead use manifold pressure to relate enrichment to engine power.",
+    "difficulty": "Medium",
+    "tags": [
+      "power-enrichment jet",
+      "high power"
+    ]
+  },
+  {
+    "question": "In the back-suction economizer, what happens when the throttle is reduced from high power to a cruising setting?",
+    "choices": [
+      "Suction is transmitted through the economizer channel, lowering float-chamber pressure and reducing fuel flow",
+      "Float-chamber pressure rises, forcing extra fuel through the main jet",
+      "The economizer jet opens fully to enrich the mixture for cruise",
+      "The Venturi stops producing a pressure drop, so fuel delivery ceases"
+    ],
+    "answer": "Suction is transmitted through the economizer channel, lowering float-chamber pressure and reducing fuel flow",
+    "explanation": "At cruise throttle, airflow past the throttle valve creates suction that is transmitted through the **economizer channel and air jet** to the float chamber. Lower float-chamber pressure reduces the pressure differential driving fuel through the main jet, producing a more economical mixture.",
+    "difficulty": "Hard",
+    "tags": [
+      "back-suction economizer",
+      "cruise mixture"
+    ]
+  },
+  {
+    "question": "Why can rapidly opening the throttle cause a temporary weak mixture?",
+    "choices": [
+      "Airflow increases faster than the fuel-metering system can respond",
+      "Fuel flow immediately increases more rapidly than airflow",
+      "The float chamber instantly loses all fuel as the throttle opens",
+      "The Venturi pressure drop disappears until engine speed stabilizes"
+    ],
+    "answer": "Airflow increases faster than the fuel-metering system can respond",
+    "explanation": "When the throttle opens quickly, air responds almost immediately, while fuel metering responds more slowly. This temporary mismatch can cause a **flat spot or, in a severe case, a weak cut** before fuel flow catches up with airflow.",
+    "difficulty": "Easy",
+    "tags": [
+      "accelerator pump",
+      "weak mixture"
+    ]
+  },
+  {
+    "question": "What is the accelerator pump designed to do during rapid throttle opening?",
+    "choices": [
+      "Inject an additional quantity of fuel into the Venturi to compensate for delayed fuel metering",
+      "Reduce fuel flow until the main jet reaches its new operating condition",
+      "Close the slow-running passage to prevent a rich mixture",
+      "Maintain constant manifold pressure by restricting airflow"
+    ],
+    "answer": "Inject an additional quantity of fuel into the Venturi to compensate for delayed fuel metering",
+    "explanation": "The accelerator pump is linked to the throttle and supplies **extra fuel during throttle opening**. This compensates for the faster response of airflow compared with the fuel-metering system, reducing hesitation caused by a temporary weak mixture.",
+    "difficulty": "Easy",
+    "tags": [
+      "accelerator pump",
+      "throttle response"
+    ]
+  },
+  {
+    "question": "What is the purpose of a controlled bleed or delayed-action plunger in some accelerator pumps?",
+    "choices": [
+      "To tailor the extra-fuel delivery so slow throttle movement does not cause unnecessary enrichment and/or fuel continues briefly after movement",
+      "To prevent the accelerator pump from delivering any fuel at full throttle",
+      "To drain the float chamber whenever the engine is stopped",
+      "To make the main jet independent of airflow"
+    ],
+    "answer": "To tailor the extra-fuel delivery so slow throttle movement does not cause unnecessary enrichment and/or fuel continues briefly after movement",
+    "explanation": "The chapter notes two variations: a **controlled bleed** may let the throttle open slowly without injecting fuel, while a delayed-action plunger may continue supplying an additional quantity for a few seconds after throttle movement stops.",
+    "difficulty": "Hard",
+    "tags": [
+      "accelerator pump",
+      "delayed action"
+    ]
+  },
+  {
+    "question": "What is the normal function of an engine priming pump?",
+    "choices": [
+      "To deliver fuel to the induction manifold near the inlet valve for starting",
+      "To pressurize the float chamber during normal cruise",
+      "To supply extra fuel continuously whenever the throttle is opened",
+      "To remove water from the aircraft fuel tanks"
+    ],
+    "answer": "To deliver fuel to the induction manifold near the inlet valve for starting",
+    "explanation": "A **priming pump** supplies fuel directly to the induction manifold, close to the inlet valve, to assist starting. This is different from the accelerator pump, which supplies extra fuel during throttle opening to prevent a temporary weak mixture.",
+    "difficulty": "Easy",
+    "tags": [
+      "priming",
+      "starting"
+    ]
+  },
+  {
+    "question": "Why should pumping the throttle to prime an engine be discouraged except where the aircraft procedure specifically permits it?",
+    "choices": [
+      "It can increase the risk of a carburettor fire",
+      "It always causes the mixture to become too weak to start",
+      "It prevents fuel from reaching the induction manifold",
+      "It causes the float chamber to remain empty during engine operation"
+    ],
+    "answer": "It can increase the risk of a carburettor fire",
+    "explanation": "The chapter says that pumping the throttle may operate the accelerator pump to introduce fuel, but this practice should be discouraged except on aircraft where it is permitted. Uncontrolled fuel discharge can increase the **risk of carburettor fire**; follow the aircraft's approved starting procedure.",
+    "difficulty": "Medium",
+    "tags": [
+      "priming",
+      "fire risk",
+      "operating procedure"
+    ]
+  },
+  {
+    "question": "Which statement correctly distinguishes a carburettor system from the induction arrangement of a diesel engine, as described in the chapter?",
+    "choices": [
+      "A diesel engine has an air inlet system and filter but does not use a carburettor to meter a fuel-air mixture; its air supply is not throttled",
+      "A diesel engine uses a float chamber to maintain fuel level but has no air filter",
+      "A diesel engine meters fuel by changing the Venturi throat area rather than controlling injection",
+      "A diesel engine uses a carburettor at idle but bypasses it at high power"
+    ],
+    "answer": "A diesel engine has an air inlet system and filter but does not use a carburettor to meter a fuel-air mixture; its air supply is not throttled",
+    "explanation": "The chapter states that diesel engines do not have carburettors. They have an inlet system and air filter, but the **air supply is not throttled** in the manner described for a conventional spark-ignition piston engine; fuel delivery is controlled separately.",
+    "difficulty": "Medium",
+    "tags": [
+      "diesel engine",
+      "induction system"
+    ]
+  },
+  {
+    "question": "In the simple light-aircraft fuel system shown in Figure 8.12, what is the purpose of the fuel drains?",
+    "choices": [
+      "To allow water to be removed from the fuel system before flight",
+      "To provide the normal return path for fuel from the carburettor to the tanks",
+      "To regulate the mixture by changing float-chamber pressure",
+      "To inject priming fuel directly into each cylinder"
+    ],
+    "answer": "To allow water to be removed from the fuel system before flight",
+    "explanation": "**Figure 8.12 on page 110** shows a simple light-aircraft fuel system with tanks, selector, filter/strainer, pump, carburettor, priming arrangement, and fuel drains. The drains allow water to be removed from the fuel system during preflight checks.",
+    "difficulty": "Medium",
+    "tags": [
+      "fuel system",
+      "fuel drains",
+      "Figure 8.12"
+    ]
+  },
+  {
+    "question": "Why may a direct fuel-injection system be described as relatively free from carburettor icing and less affected by flight manoeuvres?",
+    "choices": [
+      "It does not rely on a float-chamber Venturi arrangement to meter fuel into the induction airflow",
+      "It maintains a constant air density in the induction manifold at every altitude",
+      "It prevents moisture from entering the induction system under all conditions",
+      "It uses the throttle valve to warm all incoming air before it reaches the cylinders"
+    ],
+    "answer": "It does not rely on a float-chamber Venturi arrangement to meter fuel into the induction airflow",
+    "explanation": "The chapter says direct injection provides good fuel distribution, is unaffected by flight manoeuvres, and is relatively free from icing. The key distinction is that it **does not depend on the same float-chamber/Venturi fuel-metering arrangement** that makes a conventional carburettor susceptible to carburettor icing. This does not mean all induction icing is impossible.",
+    "difficulty": "Hard",
+    "tags": [
+      "direct injection",
+      "icing",
+      "system comparison"
+    ]
+  },
+  {
+    "question": "Some aircraft use fuel-flow or exhaust-gas-temperature instruments to help the pilot select mixture. What is their purpose?",
+    "choices": [
+      "To provide indications that help the pilot adjust mixture for efficient cruising operation",
+      "To replace the mixture control and automatically stop fuel flow at idle",
+      "To measure the pressure difference across the Venturi directly",
+      "To control the accelerator pump during every throttle movement"
+    ],
+    "answer": "To provide indications that help the pilot adjust mixture for efficient cruising operation",
+    "explanation": "The chapter notes that manual mixture control may be fitted to obtain an economical cruise mixture. **Fuel-flow/pressure gauges and exhaust-gas-temperature gauges** can help the pilot select an appropriate mixture rather than relying only on control position.",
+    "difficulty": "Medium",
+    "tags": [
+      "mixture control",
+      "engine instruments"
+    ]
+  }
+]

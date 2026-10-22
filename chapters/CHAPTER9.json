@@ -1,0 +1,515 @@
+[
+  {
+    "question": "Which atmospheric conditions can allow induction-system icing to occur in piston engines, according to Chapter 9?",
+    "choices": [
+      "Only temperatures below −20°C and relative humidity below 10%.",
+      "High humidity, generally above 50% RH, with temperatures from about −7°C to +33°C.",
+      "Only hot, dry weather above +35°C.",
+      "Only when the aircraft is flying above the tropopause."
+    ],
+    "answer": "High humidity, generally above 50% RH, with temperatures from about −7°C to +33°C.",
+    "explanation": "Chapter 9 warns that **induction-system icing can occur at surprisingly mild temperatures**. Conditions of **more than 50% relative humidity** and temperatures from approximately **−7°C to +33°C** may produce icing in piston-engine induction systems. Figure 9.1 illustrates icing risk across temperature and dew-point conditions, showing why pilots should not assume that icing is possible only in freezing weather.",
+    "difficulty": "easy",
+    "tags": [
+      "induction icing",
+      "humidity",
+      "temperature",
+      "Figure 9.1"
+    ]
+  },
+  {
+    "question": "Why is early recognition of induction icing especially important?",
+    "choices": [
+      "Ice always melts immediately after the throttle is opened.",
+      "Once the engine stops because of induction icing, it may be impossible to restart it in time to prevent an accident.",
+      "Induction icing affects only the aircraft's radio system.",
+      "The engine automatically increases power when ice forms."
+    ],
+    "answer": "Once the engine stops because of induction icing, it may be impossible to restart it in time to prevent an accident.",
+    "explanation": "The chapter emphasizes that **recognition and correction are vital** because ice can progressively restrict the induction airflow and cause a major power loss or engine stoppage. Once an engine has stopped due to induction icing, restarting it may not be possible quickly enough to avoid an accident. Pilots should recognize the conditions and symptoms early and follow the aircraft's approved icing procedure.",
+    "difficulty": "medium",
+    "tags": [
+      "icing recognition",
+      "engine stoppage",
+      "flight safety"
+    ]
+  },
+  {
+    "question": "Which list correctly identifies the three forms of icing described in Chapter 9?",
+    "choices": [
+      "Impact ice, refrigeration (carburettor) ice, and fuel icing.",
+      "Wing ice, oil ice, and exhaust ice.",
+      "Electrical ice, hydraulic ice, and combustion ice.",
+      "Propeller ice, cabin ice, and lubricant ice."
+    ],
+    "answer": "Impact ice, refrigeration (carburettor) ice, and fuel icing.",
+    "explanation": "The chapter identifies three forms: **impact ice**, which can form on air filters and bends in the induction system; **refrigeration ice**, associated with cooling and low pressure in float-type carburettors; and **fuel icing**, caused by moisture in the fuel freezing and accumulating in parts of the induction system. Identifying the type helps explain where the restriction forms and which corrective procedure may be required.",
+    "difficulty": "easy",
+    "tags": [
+      "impact ice",
+      "refrigeration ice",
+      "fuel icing"
+    ]
+  },
+  {
+    "question": "Where does impact ice commonly form in an engine induction system?",
+    "choices": [
+      "On air filters and bends in the induction system.",
+      "Only inside the engine oil pump.",
+      "Exclusively on the exhaust-valve seats.",
+      "Only inside the fuel tank when the aircraft is parked."
+    ],
+    "answer": "On air filters and bends in the induction system.",
+    "explanation": "**Impact ice** forms where incoming air and moisture encounter components such as **air filters and bends in the induction system**. As ice accumulates, it can obstruct the airflow available to the engine. Fuel-injected engines can also experience impact icing, so the absence of a carburettor does not eliminate all induction-icing risks.",
+    "difficulty": "easy",
+    "tags": [
+      "impact ice",
+      "air filter",
+      "induction system"
+    ]
+  },
+  {
+    "question": "What causes refrigeration ice in a float-type carburettor?",
+    "choices": [
+      "Fuel vaporization absorbs heat from the air, while the Venturi pressure drop further reduces temperature and moisture may freeze.",
+      "The exhaust system heats the carburettor above the fuel's boiling point.",
+      "The fuel tank becomes pressurized by the oil pump.",
+      "The throttle valve prevents all air from entering the engine."
+    ],
+    "answer": "Fuel vaporization absorbs heat from the air, while the Venturi pressure drop further reduces temperature and moisture may freeze.",
+    "explanation": "**Refrigeration ice**, commonly called carburettor icing, results from two cooling effects: fuel absorbs heat as it vaporizes, and pressure falls in the **Venturi throat**. Together, these effects can lower the local temperature substantially—Chapter 9 notes a drop of as much as about **22°C below the incoming-air temperature**. If sufficient moisture is present, ice can form around the throttle butterfly and restrict airflow.",
+    "difficulty": "medium",
+    "tags": [
+      "refrigeration ice",
+      "carburettor icing",
+      "Venturi",
+      "fuel vaporization"
+    ]
+  },
+  {
+    "question": "What is fuel icing in the induction system?",
+    "choices": [
+      "Moisture in the fuel comes out of suspension and freezes, tending to collect around bends in the inlet manifold.",
+      "The fuel burns inside the fuel tank before reaching the engine.",
+      "The fuel becomes warmer as it passes through the carburettor.",
+      "Ice forms only on the outside of the aircraft's wings."
+    ],
+    "answer": "Moisture in the fuel comes out of suspension and freezes, tending to collect around bends in the inlet manifold.",
+    "explanation": "According to the chapter, **fuel icing** occurs when moisture carried in the fuel comes out of suspension and freezes at the low temperatures in the carburettor or induction system. The ice tends to adhere around **corners and bends in the inlet manifold**, reducing the flow of air/fuel mixture to the engine. This differs from refrigeration icing, which is caused by cooling and low pressure acting on atmospheric moisture.",
+    "difficulty": "medium",
+    "tags": [
+      "fuel icing",
+      "moisture in fuel",
+      "inlet manifold"
+    ]
+  },
+  {
+    "question": "What is a typical early indication of carburettor icing in an aircraft with a fixed-pitch propeller?",
+    "choices": [
+      "A gradual drop in engine RPM, sometimes accompanied by rough running or vibration.",
+      "An immediate and permanent increase in RPM.",
+      "A sudden increase in cabin temperature with no engine change.",
+      "A rise in fuel quantity indication."
+    ],
+    "answer": "A gradual drop in engine RPM, sometimes accompanied by rough running or vibration.",
+    "explanation": "A common indication is a **gradual decrease in RPM**. The engine may also begin to run roughly or vibrate as the ice restricts airflow and disrupts the air/fuel mixture. Because the symptoms can develop progressively, pilots should not dismiss an unexplained RPM reduction, particularly in damp or cloudy conditions.",
+    "difficulty": "easy",
+    "tags": [
+      "carburettor icing symptoms",
+      "RPM drop",
+      "rough running"
+    ]
+  },
+  {
+    "question": "In an aircraft fitted with a constant-speed propeller, which indications may suggest carburettor icing?",
+    "choices": [
+      "A drop in manifold pressure or a reduction in airspeed during level flight.",
+      "A permanent increase in manifold pressure and airspeed.",
+      "An increase in oil quantity with unchanged engine operation.",
+      "A decrease in cabin altitude only."
+    ],
+    "answer": "A drop in manifold pressure or a reduction in airspeed during level flight.",
+    "explanation": "With a **constant-speed propeller**, the governor may maintain RPM while engine power begins to fall. The pilot may therefore notice a **drop in manifold pressure** or a reduction in airspeed during level flight rather than an obvious RPM decrease. The exact indication depends on the engine and propeller installation, so pilots should monitor all relevant engine instruments.",
+    "difficulty": "medium",
+    "tags": [
+      "constant-speed propeller",
+      "manifold pressure",
+      "icing indications"
+    ]
+  },
+  {
+    "question": "How can carburettor ice affect engine operation if it continues to accumulate?",
+    "choices": [
+      "It reduces the induction opening, may restrict throttle-plate movement, and can eventually block airflow and stop the engine.",
+      "It increases the induction opening and guarantees more power.",
+      "It affects only the fuel gauge and cannot affect engine power.",
+      "It improves fuel vaporization without any disadvantages."
+    ],
+    "answer": "It reduces the induction opening, may restrict throttle-plate movement, and can eventually block airflow and stop the engine.",
+    "explanation": "Ice can build up around the **throttle butterfly**, reducing the effective area through which air enters the engine. It may also interfere with throttle-plate movement. If accumulation continues unchecked, the induction passage can become sufficiently obstructed to cause severe power loss or **engine stoppage**. Prompt use of the correct anti-icing procedure is therefore essential.",
+    "difficulty": "medium",
+    "tags": [
+      "throttle butterfly",
+      "airflow restriction",
+      "engine stoppage"
+    ]
+  },
+  {
+    "question": "According to Chapter 9, what should the pilot do when carburettor icing is suspected?",
+    "choices": [
+      "Select carburettor heat to FULL HOT and leave it there long enough for the ice to clear.",
+      "Use partial heat for exactly five seconds in every aircraft.",
+      "Immediately switch carburettor heat OFF and increase throttle to maximum.",
+      "Cycle rapidly between hot and cold until RPM stabilizes."
+    ],
+    "answer": "Select carburettor heat to FULL HOT and leave it there long enough for the ice to clear.",
+    "explanation": "The chapter directs pilots who suspect carburettor icing to select **FULL HOT** and leave it on for a sufficient period to clear the ice. This may take **up to one minute or longer**, depending on severity and the aircraft. Follow the aircraft checklist and flight manual; the procedure should not be replaced with repeated, premature switching between hot and cold.",
+    "difficulty": "easy",
+    "tags": [
+      "carburettor heat",
+      "FULL HOT",
+      "icing procedure"
+    ]
+  },
+  {
+    "question": "Why should a pilot not immediately return the carburettor heat control to cold if the engine runs rougher after heat is applied?",
+    "choices": [
+      "Melting ice and water passing through the engine can temporarily increase roughness; the heat should remain on long enough to clear the ice.",
+      "Roughness proves that no ice was present.",
+      "The heat control must always remain cold whenever RPM changes.",
+      "Applying heat permanently disables the ignition system."
+    ],
+    "answer": "Melting ice and water passing through the engine can temporarily increase roughness; the heat should remain on long enough to clear the ice.",
+    "explanation": "When hot air is applied, it melts accumulated ice, and the resulting **water passes through the engine**. During this period, the engine may briefly run more roughly or lose additional power. The chapter warns pilots not to interpret this temporary change as proof that the procedure is making the situation worse. Keep the heat selected for the required period and follow the aircraft's approved checklist.",
+    "difficulty": "medium",
+    "tags": [
+      "melting ice",
+      "temporary roughness",
+      "carburettor heat"
+    ]
+  },
+  {
+    "question": "Why is partial carburettor heat generally discouraged unless the aircraft has a carburettor-air-temperature gauge?",
+    "choices": [
+      "Without temperature information, partial heat may not provide enough protection or may leave the system in an unsuitable temperature range.",
+      "Partial heat always produces maximum engine power.",
+      "A temperature gauge prevents all types of icing from forming.",
+      "Partial heat is required only when the engine is stopped."
+    ],
+    "answer": "Without temperature information, partial heat may not provide enough protection or may leave the system in an unsuitable temperature range.",
+    "explanation": "The chapter advises against **partial heat** unless the aircraft is equipped with a carburettor-air-temperature gauge. Without temperature feedback, the pilot cannot accurately assess the resulting induction-air temperature or know whether enough heat is being applied. Use the procedure specified for the aircraft rather than selecting an arbitrary intermediate setting.",
+    "difficulty": "hard",
+    "tags": [
+      "partial heat",
+      "carburettor-air-temperature gauge",
+      "anti-icing"
+    ]
+  },
+  {
+    "question": "Why is carburettor icing particularly likely during a long descent at reduced power?",
+    "choices": [
+      "The engine gradually cools, reducing the effectiveness of the hot-air system, while low-power operation can favour icing.",
+      "The engine becomes hotter continuously and melts every ice crystal.",
+      "The aircraft's fuel supply is automatically cut off during descent.",
+      "The throttle is always fully open during a glide."
+    ],
+    "answer": "The engine gradually cools, reducing the effectiveness of the carburettor hot-air system, while low-power operation can favour icing.",
+    "explanation": "During a prolonged descent or letdown at reduced power, **engine temperatures gradually fall**. Because carburettor heat is derived from heated air around the exhaust, a cooler engine can provide a less effective heat source. Low-power settings are also associated with increased icing susceptibility. The chapter therefore recommends anticipating icing and using the appropriate heat procedure before the engine cools significantly.",
+    "difficulty": "medium",
+    "tags": [
+      "descent",
+      "reduced power",
+      "engine temperature"
+    ]
+  },
+  {
+    "question": "When icing conditions are expected during descent, when should carburettor heat be selected?",
+    "choices": [
+      "Select full hot before reducing power, while the engine is still warm.",
+      "Wait until the engine has stopped, then select hot.",
+      "Select hot only after landing.",
+      "Keep the control cold until the throttle is fully open."
+    ],
+    "answer": "Select full hot before reducing power, while the engine is still warm.",
+    "explanation": "Chapter 9 recommends selecting **FULL HOT before reducing power** when icing conditions exist. Doing so takes advantage of the engine while it is still warm and able to provide a more effective heat source. Waiting until a long descent has cooled the engine can make the hot-air system less effective at melting accumulated ice.",
+    "difficulty": "medium",
+    "tags": [
+      "descent procedure",
+      "FULL HOT",
+      "preventive action"
+    ]
+  },
+  {
+    "question": "At what approximate intervals during a prolonged descent does Chapter 9 recommend periodically increasing power to a cruising setting?",
+    "choices": [
+      "Every 100–200 ft",
+      "Every 500–1,000 ft",
+      "Every 3,000–5,000 ft only",
+      "Only once, immediately after take-off"
+    ],
+    "answer": "Every 500–1,000 ft",
+    "explanation": "The chapter recommends periodically increasing power to a **cruising setting every 500–1,000 ft during the descent**. This helps maintain engine temperature and provides a better heat source for melting ice. The text also notes that periodic increases in power help prevent **lead fouling of spark plugs**. Always use the aircraft's approved descent and engine-management procedure.",
+    "difficulty": "medium",
+    "tags": [
+      "descent intervals",
+      "500–1000 ft",
+      "spark-plug fouling"
+    ]
+  },
+  {
+    "question": "What should be done if carburettor icing may have formed during taxiing or idling before take-off?",
+    "choices": [
+      "Use carburettor heat to clear suspected ice, then select cold before applying take-off power and verify normal take-off power.",
+      "Leave carburettor heat fully hot throughout take-off.",
+      "Ignore the ice because it cannot form at idle.",
+      "Apply partial heat during the take-off roll."
+    ],
+    "answer": "Use carburettor heat to clear suspected ice, then select cold before applying take-off power and verify normal take-off power.",
+    "explanation": "Carburettor icing can occur during **taxiing and idle operation**, when throttle openings are small. If icing is suspected, use heat to clear it on the ground, then return the control to **COLD before applying take-off power**. Confirm that the expected RPM or manifold pressure is available. Chapter 9 explicitly states that carburettor heat must not be used during take-off.",
+    "difficulty": "medium",
+    "tags": [
+      "taxiing",
+      "idle",
+      "take-off procedure"
+    ]
+  },
+  {
+    "question": "Why must carburettor heat not be used during take-off?",
+    "choices": [
+      "It reduces engine power by approximately 15%, which compromises the power available for take-off.",
+      "It increases engine power by exactly 50%.",
+      "It eliminates all fuel from the cylinders.",
+      "It prevents the propeller from turning."
+    ],
+    "answer": "It reduces engine power by approximately 15%, which compromises the power available for take-off.",
+    "explanation": "The chapter states that applying carburettor heat reduces engine power by approximately **15%** and enriches the mixture. Take-off requires the power available from the engine, so carburettor heat must be **OFF/COLD for take-off**, in accordance with the aircraft checklist. If ice is suspected on the ground, clear it before take-off and verify normal power after returning to cold.",
+    "difficulty": "easy",
+    "tags": [
+      "take-off",
+      "power reduction",
+      "carburettor heat"
+    ]
+  },
+  {
+    "question": "Why should carburettor heat not be applied at power settings greater than approximately 80%?",
+    "choices": [
+      "The chapter warns of a risk of detonation and engine damage at high power.",
+      "The carburettor heat control becomes electrically disconnected.",
+      "The fuel automatically freezes at high power.",
+      "High power guarantees that ice has formed."
+    ],
+    "answer": "The chapter warns of a risk of detonation and engine damage at high power.",
+    "explanation": "Chapter 9 warns that carburettor heat should not be applied at power settings above approximately **80%**, because the resulting change in mixture and operating conditions can create a **risk of detonation and engine damage**. The chapter also notes that intake icing should not normally occur at power settings involving a wide-open throttle butterfly. Follow the aircraft-specific procedure and limitations.",
+    "difficulty": "hard",
+    "tags": [
+      "80% power",
+      "detonation",
+      "engine damage"
+    ]
+  },
+  {
+    "question": "Why should continuous use of carburettor heat be avoided once icing has cleared?",
+    "choices": [
+      "It changes mixture strength and can increase engine temperatures; heat should be used only as long as needed.",
+      "It removes all lubrication from the engine instantly.",
+      "It causes the air filter to become permanently blocked.",
+      "It prevents the pilot from monitoring RPM."
+    ],
+    "answer": "It changes mixture strength and can increase engine temperatures; heat should be used only as long as needed.",
+    "explanation": "The chapter advises against continuous carburettor-heat use because it **changes the mixture** and can **increase engine temperatures**, while also reducing power. Heat should be applied for the time needed to clear the ice, then managed according to the aircraft procedure. After leaving icing conditions, do not continue using heat unnecessarily; check periodically for signs that ice has re-formed.",
+    "difficulty": "medium",
+    "tags": [
+      "continuous heat",
+      "mixture strength",
+      "engine temperature"
+    ]
+  },
+  {
+    "question": "What engine-instrument change can indicate that carburettor ice has cleared after heat is returned to cold?",
+    "choices": [
+      "RPM or manifold pressure rises above its original setting.",
+      "Fuel quantity increases suddenly.",
+      "Oil pressure always falls to zero.",
+      "The engine stops producing exhaust gases."
+    ],
+    "answer": "RPM or manifold pressure rises above its original setting.",
+    "explanation": "After ice has cleared, returning the carburettor-heat control to **COLD** should allow normal induction airflow to return. The chapter says this may be recognized when **RPM or manifold pressure rises above the original setting** as the control is returned to cold. Compare the indication with the original setting and use the aircraft's approved procedure rather than relying on one instrument alone.",
+    "difficulty": "medium",
+    "tags": [
+      "ice clearance",
+      "RPM",
+      "manifold pressure"
+    ]
+  },
+  {
+    "question": "Why should carburettor heat use on the ground be kept to a minimum?",
+    "choices": [
+      "The heated air may be unfiltered, allowing dust and dirt into the engine and increasing wear on pistons and cylinders.",
+      "The system cannot produce any heat while the aircraft is stationary.",
+      "Ground use always causes the fuel tank to overflow.",
+      "The heat control changes the aircraft's landing-gear position."
+    ],
+    "answer": "The heated air may be unfiltered, allowing dust and dirt into the engine and increasing wear on pistons and cylinders.",
+    "explanation": "On the ground, the carburettor-heat system may supply **unfiltered air**. Using it unnecessarily can allow dust and dirt to enter the engine, increasing wear on **pistons and cylinders**. The chapter recommends minimizing ground use while still checking that the heater control functions correctly before take-off.",
+    "difficulty": "medium",
+    "tags": [
+      "ground operation",
+      "unfiltered air",
+      "engine wear"
+    ]
+  },
+  {
+    "question": "What RPM response does Chapter 9 give as a typical function check of the carburettor-heat control before take-off?",
+    "choices": [
+      "RPM drops approximately 100 RPM when heat is applied and returns to the selected setting when heat is switched off.",
+      "RPM increases by 1,000 RPM and remains there when heat is switched off.",
+      "RPM must not change at all when heat is applied.",
+      "RPM drops to zero whenever the control is selected hot."
+    ],
+    "answer": "RPM drops approximately 100 RPM when heat is applied and returns to the selected setting when heat is switched off.",
+    "explanation": "For the function check described in Chapter 9, selecting carburettor heat should produce an **RPM drop of approximately 100 RPM**. When the control is returned to **OFF/COLD**, RPM should return to the selected setting. This check helps confirm that the system responds, but pilots should use the aircraft's own checklist and specified indications if they differ.",
+    "difficulty": "easy",
+    "tags": [
+      "function check",
+      "100 RPM drop",
+      "ground operation"
+    ]
+  },
+  {
+    "question": "What should a pilot do when flying in damp, cloudy, foggy, hazy, rainy, or drizzly conditions?",
+    "choices": [
+      "Remain alert for carburettor icing and monitor for unexplained RPM or manifold-pressure loss.",
+      "Assume carburettor icing is impossible unless the outside temperature is below −20°C.",
+      "Keep carburettor heat permanently hot in every flight phase.",
+      "Ignore engine-instrument changes if the aircraft remains level."
+    ],
+    "answer": "Remain alert for carburettor icing and monitor for unexplained RPM or manifold-pressure loss.",
+    "explanation": "The chapter lists **damp, cloudy, foggy, hazy, rainy, and drizzly conditions** as situations in which pilots should be alert to carburettor icing. Monitor engine indications for an unexplained loss of **RPM or manifold pressure** and use the aircraft's icing-check procedure when appropriate. Carburettor icing can occur above freezing, so outside temperature alone is not a reliable reason to dismiss the risk.",
+    "difficulty": "easy",
+    "tags": [
+      "weather conditions",
+      "icing awareness",
+      "engine indications"
+    ]
+  },
+  {
+    "question": "During an icing check in flight, how long does Chapter 9 suggest applying carburettor heat while observing the engine indications?",
+    "choices": [
+      "Approximately 1–2 seconds",
+      "Approximately 15–30 seconds",
+      "Exactly 5 minutes in every aircraft",
+      "Until the engine stops"
+    ],
+    "answer": "Approximately 15–30 seconds",
+    "explanation": "The chapter suggests checking for icing by applying heat for approximately **15–30 seconds**, noting the selected RPM first and then observing the response when heat is applied. If RPM rises while heat is applied, or returns to a higher value than before when cold air is selected again, this can indicate that ice was present. The aircraft checklist takes precedence over generic timing guidance.",
+    "difficulty": "medium",
+    "tags": [
+      "icing check",
+      "15–30 seconds",
+      "RPM monitoring"
+    ]
+  },
+  {
+    "question": "What engine indication may suggest that carburettor ice was present during a heat check?",
+    "choices": [
+      "RPM increases while heat is applied, or returns to a higher value than the original setting when cold air is selected again.",
+      "RPM decreases permanently and can never recover.",
+      "The fuel quantity indication rises by half a tank.",
+      "The oil temperature immediately becomes negative."
+    ],
+    "answer": "RPM increases while heat is applied, or returns to a higher value than the original setting when cold air is selected again.",
+    "explanation": "When carburettor heat is applied, melting ice may initially cause roughness or a further power reduction. If the engine then **gains RPM while heat remains on**, or RPM returns to a **higher value than the original setting after selecting cold**, this suggests that ice has been cleared and airflow has improved. Continue to follow the aircraft's prescribed procedure while icing conditions persist.",
+    "difficulty": "hard",
+    "tags": [
+      "icing indication",
+      "RPM recovery",
+      "carburettor heat"
+    ]
+  },
+  {
+    "question": "How does an alternate-air system help a fuel-injected engine affected by induction icing?",
+    "choices": [
+      "It provides an alternative source or path for induction air when the normal path is obstructed.",
+      "It adds carburettor heat to a float chamber that the engine does not have.",
+      "It injects water into the cylinders to melt ice.",
+      "It shuts off all air to the engine."
+    ],
+    "answer": "It provides an alternative source or path for induction air when the normal path is obstructed.",
+    "explanation": "Fuel-injected engines do not have the same Venturi-related carburettor-icing problem, but they can still suffer from **impact ice** on filters or sensing tubes and **fuel icing** in parts of the induction system. The chapter directs pilots to select the **alternate-air system** and follow the aircraft checklist when appropriate. The system provides another route for induction air if the normal inlet is obstructed.",
+    "difficulty": "medium",
+    "tags": [
+      "fuel-injected engines",
+      "alternate air",
+      "impact icing"
+    ]
+  },
+  {
+    "question": "Why are diesel engines less susceptible to refrigeration icing associated with float-type carburettors?",
+    "choices": [
+      "They do not have a carburettor or the Venturi arrangement responsible for that type of icing.",
+      "They always operate with hot induction air and cannot encounter ice.",
+      "Their fuel is never affected by low temperatures.",
+      "They do not require an air inlet."
+    ],
+    "answer": "They do not have a carburettor or the Venturi arrangement responsible for that type of icing.",
+    "explanation": "Chapter 9 explains that diesel engines do not suffer from **carburettor refrigeration icing** in the same way as conventional float-carburettor engines because they have **no carburettor and no associated Venturi**. However, this does not make them immune to all cold-weather problems: impact icing can block an air filter, and diesel fuel can become more viscous through waxing.",
+    "difficulty": "easy",
+    "tags": [
+      "diesel engines",
+      "refrigeration icing",
+      "Venturi"
+    ]
+  },
+  {
+    "question": "How can impact icing at a diesel engine's air-inlet filter be addressed, according to the chapter?",
+    "choices": [
+      "Ice-guards can bypass the filter when it becomes blocked with ice.",
+      "The engine uses a float chamber to melt the ice.",
+      "The pilot increases the octane rating of the diesel fuel.",
+      "The exhaust valve is held open throughout the flight."
+    ],
+    "answer": "Ice-guards can bypass the filter when it becomes blocked with ice.",
+    "explanation": "The chapter describes **ice-guards** as a way to overcome impact icing at a diesel engine's air-inlet filter. When the filter becomes blocked with ice, the ice-guard arrangement effectively **bypasses the filter**, helping preserve the air supply. This is distinct from carburettor heat used on conventional carburetted piston engines.",
+    "difficulty": "medium",
+    "tags": [
+      "diesel engines",
+      "ice-guards",
+      "air filter"
+    ]
+  },
+  {
+    "question": "What does 'waxing' mean in the context of diesel-engine fuel in cold conditions?",
+    "choices": [
+      "The fuel's viscosity increases at low temperatures, potentially restricting fuel flow.",
+      "The fuel becomes less viscous and automatically increases engine power.",
+      "Ice forms only on the outside of the fuel tank.",
+      "The fuel changes into a lubricant that replaces engine oil."
+    ],
+    "answer": "The fuel's viscosity increases at low temperatures, potentially restricting fuel flow.",
+    "explanation": "**Waxing** refers to a cold-weather fuel problem in which diesel fuel's viscosity increases, making it harder for fuel to flow through the system. The chapter says this can be addressed with **fuel additives** or **fuel heaters** in the lines or filters to pre-heat the fuel. These measures address fuel-flow problems, not the carburettor refrigeration icing found in float-type systems.",
+    "difficulty": "medium",
+    "tags": [
+      "diesel waxing",
+      "fuel viscosity",
+      "fuel heater"
+    ]
+  },
+  {
+    "question": "When should carburettor heat generally remain cold during approach and landing, according to Chapter 9?",
+    "choices": [
+      "During a normal approach and landing, except where a glide approach or suspected/known icing requires the prescribed use of full heat.",
+      "It must remain fully hot during every approach, regardless of conditions.",
+      "It must always be switched off before any descent begins.",
+      "It should be selected only after the aircraft has landed."
+    ],
+    "answer": "During a normal approach and landing, except where a glide approach or suspected/known icing requires the prescribed use of full heat.",
+    "explanation": "The chapter states that carburettor heat should normally remain **COLD during approach and landing**, except for a glide approach. If icing conditions are known or suspected, **FULL HEAT** should be applied according to the aircraft procedure. The control must be returned to cold before applying power for a roller landing or carrying out an overshoot, so full power is available when required.",
+    "difficulty": "hard",
+    "tags": [
+      "approach",
+      "landing",
+      "glide approach",
+      "carburettor heat"
+    ]
+  }
+]

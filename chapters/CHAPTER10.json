@@ -1,0 +1,481 @@
+[
+  {
+    "question": "Which statement BEST describes the indirect fuel-injection system commonly used in aircraft piston engines?",
+    "choices": [
+      "It injects fuel intermittently directly into the combustion chamber at very high pressure.",
+      "It is a low-pressure, continuous-flow system that sprays fuel into the induction pipe near the inlet valve.",
+      "It relies on a carburettor Venturi to draw fuel into the airflow.",
+      "It delivers fuel only when each inlet valve is fully closed."
+    ],
+    "answer": "It is a low-pressure, continuous-flow system that sprays fuel into the induction pipe near the inlet valve.",
+    "explanation": "The chapter describes indirect injection as a **low-pressure, continuous-flow** method. Fuel is sprayed continuously into the induction pipe **as close to the inlet valve as possible**.",
+    "difficulty": "Easy",
+    "tags": [
+      "indirect fuel injection",
+      "principles"
+    ]
+  },
+  {
+    "question": "Where is fuel sprayed in the low-pressure, continuous-flow indirect injection system?",
+    "choices": [
+      "Into the exhaust manifold",
+      "Directly into the combustion chamber",
+      "Into the induction pipe close to the inlet valve",
+      "Into the crankcase"
+    ],
+    "answer": "Into the induction pipe close to the inlet valve",
+    "explanation": "The fuel is sprayed into the **induction system near the inlet valve**, rather than directly into the combustion chamber.",
+    "difficulty": "Easy",
+    "tags": [
+      "fuel delivery",
+      "indirect injection"
+    ]
+  },
+  {
+    "question": "Which is identified in the chapter as an advantage of low-pressure, continuous-flow indirect injection?",
+    "choices": [
+      "It eliminates the need for any fuel pump.",
+      "It guarantees that fuel consumption is zero at idle.",
+      "It is free from icing problems associated with carburettor operation.",
+      "It requires the pump to be timed precisely to each engine cycle."
+    ],
+    "answer": "It is free from icing problems associated with carburettor operation.",
+    "explanation": "The listed advantages include **low operating pressure**, good fuel distribution, freedom from icing problems, and not needing a pump timed to the operating cycle.",
+    "difficulty": "Easy",
+    "tags": [
+      "advantages",
+      "icing"
+    ]
+  },
+  {
+    "question": "In the indirect injection system, what does the air-throttle metering valve vary according to engine speed?",
+    "choices": [
+      "Ignition timing",
+      "Fuel pressure",
+      "Cylinder compression ratio",
+      "Exhaust back pressure"
+    ],
+    "answer": "Fuel pressure",
+    "explanation": "The chapter states that the **air throttle metering valve varies fuel pressure according to engine speed**.",
+    "difficulty": "Medium",
+    "tags": [
+      "metering",
+      "fuel pressure"
+    ]
+  },
+  {
+    "question": "How is mixture strength adjusted in the indirect injection system described?",
+    "choices": [
+      "By changing the diameter of the inlet valves during flight",
+      "By manually operating a mixture control valve that adjusts fuel pressure",
+      "By moving the discharge nozzles farther from the inlet ports",
+      "By changing the fuel tank selector to a different tank only"
+    ],
+    "answer": "By manually operating a mixture control valve that adjusts fuel pressure",
+    "explanation": "The pilot-operated **mixture control valve** adjusts fuel pressure to vary mixture strength for altitude and operating conditions.",
+    "difficulty": "Easy",
+    "tags": [
+      "mixture control",
+      "fuel pressure"
+    ]
+  },
+  {
+    "question": "Which set contains the four main components of the indirect fuel-injection system listed in the chapter?",
+    "choices": [
+      "Carburettor, Venturi, float chamber, and accelerator pump",
+      "Fuel pump, fuel/air control unit, fuel manifold valve, and discharge nozzles",
+      "Magneto, distributor, spark plugs, and ignition harness",
+      "Oil pump, oil cooler, sump, and pressure relief valve"
+    ],
+    "answer": "Fuel pump, fuel/air control unit, fuel manifold valve, and discharge nozzles",
+    "explanation": "The chapter lists the **fuel pump**, **fuel/air control unit**, **fuel manifold (distribution) valve**, and **discharge nozzles for each cylinder** as the main components.",
+    "difficulty": "Easy",
+    "tags": [
+      "system components"
+    ]
+  },
+  {
+    "question": "What is the purpose of the normal throttle valve in the indirect injection system?",
+    "choices": [
+      "To control airflow to the engine",
+      "To open all discharge nozzles at engine shutdown",
+      "To select between the mechanical and electrical pumps",
+      "To set the fuel tank vent pressure"
+    ],
+    "answer": "To control airflow to the engine",
+    "explanation": "The normal **throttle valve controls airflow** to the engine and is connected to the pilot's throttle lever.",
+    "difficulty": "Easy",
+    "tags": [
+      "throttle",
+      "airflow"
+    ]
+  },
+  {
+    "question": "What airflow feature distinguishes the intake manifold in the described fuel-injection system from a carburettor throat?",
+    "choices": [
+      "It contains two Venturis in series.",
+      "It has no Venturi or other restrictions to airflow.",
+      "It is always pressurized above ambient pressure.",
+      "It contains the fuel manifold valve inside the airflow passage."
+    ],
+    "answer": "It has no Venturi or other restrictions to airflow.",
+    "explanation": "The chapter explicitly notes that the intake manifold has **no Venturi or other restrictions to airflow**.",
+    "difficulty": "Medium",
+    "tags": [
+      "intake manifold",
+      "Venturi"
+    ]
+  },
+  {
+    "question": "Which component is connected to the pilot's throttle lever and controls airflow?",
+    "choices": [
+      "Mixture control valve",
+      "Fuel manifold valve",
+      "Air throttle valve",
+      "Discharge nozzle"
+    ],
+    "answer": "Air throttle valve",
+    "explanation": "The **air throttle valve** is part of the air throttle assembly and is linked to the pilot's throttle lever to control engine airflow.",
+    "difficulty": "Easy",
+    "tags": [
+      "fuel/air control unit",
+      "throttle"
+    ]
+  },
+  {
+    "question": "What is the function of the metering fuel valve?",
+    "choices": [
+      "It distributes fuel to each cylinder only after the engine stops.",
+      "It controls fuel flow to the fuel manifold valve according to throttle position.",
+      "It bleeds fuel pressure to adjust mixture strength independently of the throttle.",
+      "It measures the quantity of fuel remaining in the tanks."
+    ],
+    "answer": "It controls fuel flow to the fuel manifold valve according to throttle position.",
+    "explanation": "The **metering fuel valve** is connected to the air throttle and proportions fuel flow to airflow, helping provide the correct air/fuel ratio.",
+    "difficulty": "Medium",
+    "tags": [
+      "metering fuel valve",
+      "air/fuel ratio"
+    ]
+  },
+  {
+    "question": "What does the mixture control valve do within the fuel/air control unit?",
+    "choices": [
+      "It varies air intake area by moving the throttle plate.",
+      "It bleeds off fuel pressure applied to the metering valve so the air/fuel ratio can be adjusted.",
+      "It ensures the discharge nozzles are all calibrated differently.",
+      "It automatically switches the engine to diesel operation."
+    ],
+    "answer": "It bleeds off fuel pressure applied to the metering valve so the air/fuel ratio can be adjusted.",
+    "explanation": "The **mixture control valve** bleeds off pressure applied to the metering valve, allowing mixture strength to be varied from the basic metering setting.",
+    "difficulty": "Medium",
+    "tags": [
+      "mixture control valve",
+      "fuel pressure"
+    ]
+  },
+  {
+    "question": "Where is the fuel manifold valve located?",
+    "choices": [
+      "Inside the fuel tank",
+      "On the engine crankcase",
+      "At the end of the exhaust pipe",
+      "Inside the pilot's throttle lever"
+    ],
+    "answer": "On the engine crankcase",
+    "explanation": "The **fuel manifold valve** is located on the engine crankcase and acts as the central distribution point for metered fuel.",
+    "difficulty": "Easy",
+    "tags": [
+      "fuel manifold valve",
+      "location"
+    ]
+  },
+  {
+    "question": "What happens to the outlet ports of the fuel manifold valve when the engine is stopped?",
+    "choices": [
+      "They remain fully open to drain the system.",
+      "They close so fuel cannot flow to the engine.",
+      "They open one at a time in firing order.",
+      "They bypass the discharge nozzles."
+    ],
+    "answer": "They close so fuel cannot flow to the engine.",
+    "explanation": "When the engine is stopped, **all outlet ports are closed**, preventing fuel from flowing to the engine.",
+    "difficulty": "Medium",
+    "tags": [
+      "fuel manifold valve",
+      "engine shutdown"
+    ]
+  },
+  {
+    "question": "What causes the fuel manifold valve ports to open during starting?",
+    "choices": [
+      "A rise in fuel pressure caused by engine rotation or the booster pump",
+      "An increase in exhaust temperature",
+      "Movement of the carburettor heat control",
+      "A reduction in fuel tank capacity"
+    ],
+    "answer": "A rise in fuel pressure caused by engine rotation or the booster pump",
+    "explanation": "As fuel pressure builds from **engine rotation or booster-pump operation**, the ports to the discharge nozzles open simultaneously.",
+    "difficulty": "Medium",
+    "tags": [
+      "fuel manifold valve",
+      "starting"
+    ]
+  },
+  {
+    "question": "Where is each fuel discharge nozzle fitted, and where is its outlet directed?",
+    "choices": [
+      "In the exhaust stack, directed toward the turbine",
+      "In each cylinder head, directed into the inlet port",
+      "In the fuel tank, directed toward the pump inlet",
+      "In the crankcase, directed toward the oil sump"
+    ],
+    "answer": "In each cylinder head, directed into the inlet port",
+    "explanation": "Each **discharge nozzle is located in the cylinder head**, with its outlet directed into the inlet port.",
+    "difficulty": "Easy",
+    "tags": [
+      "discharge nozzle",
+      "location"
+    ]
+  },
+  {
+    "question": "How are discharge nozzles supplied to an individual engine according to the chapter?",
+    "choices": [
+      "As a set, with each nozzle having the same calibration",
+      "As a mixed set with intentionally different calibrations",
+      "One universal nozzle shared by all cylinders",
+      "As uncalibrated parts adjusted by the pilot in flight"
+    ],
+    "answer": "As a set, with each nozzle having the same calibration",
+    "explanation": "Nozzles are calibrated in several ranges and fitted to individual engines **as a set**, with the nozzles in each set having the same calibration.",
+    "difficulty": "Medium",
+    "tags": [
+      "nozzle calibration",
+      "maintenance"
+    ]
+  },
+  {
+    "question": "Why does the fuel pump supply more fuel than the engine requires?",
+    "choices": [
+      "To provide a recirculation path for excess fuel",
+      "To intentionally flood the cylinders at all power settings",
+      "To increase the air pressure in the intake manifold",
+      "To eliminate the need for mixture control"
+    ],
+    "answer": "To provide a recirculation path for excess fuel",
+    "explanation": "The pump supplies more fuel than needed, and the system provides a **recirculation path** for the excess.",
+    "difficulty": "Medium",
+    "tags": [
+      "fuel pumps",
+      "recirculation"
+    ]
+  },
+  {
+    "question": "How are the two fuel pumps arranged in the described indirect injection system?",
+    "choices": [
+      "In series, with both required to operate at all times",
+      "In parallel, allowing the electrical pump to bypass the mechanical pump when needed",
+      "One in each cylinder head",
+      "In parallel but with no means of bypassing either pump"
+    ],
+    "answer": "In parallel, allowing the electrical pump to bypass the mechanical pump when needed",
+    "explanation": "The two pumps are arranged **in parallel**. If the mechanical pump is not operating, positive pressure from the electrical pump can bypass it.",
+    "difficulty": "Medium",
+    "tags": [
+      "fuel pumps",
+      "parallel arrangement"
+    ]
+  },
+  {
+    "question": "Which use of the electrical fuel pump is specifically mentioned in the chapter?",
+    "choices": [
+      "Changing the ignition timing",
+      "Engine priming and starting, and emergency operation if the mechanical pump is not operating",
+      "Controlling the discharge-nozzle calibration during flight",
+      "Cooling the engine oil"
+    ],
+    "answer": "Engine priming and starting, and emergency operation if the mechanical pump is not operating",
+    "explanation": "The electrical pump can be used for **priming and starting** and in an **emergency**, supplying fuel around the non-operating mechanical pump.",
+    "difficulty": "Medium",
+    "tags": [
+      "electrical fuel pump",
+      "starting"
+    ]
+  },
+  {
+    "question": "Which three control elements are contained in the fuel/air control unit?",
+    "choices": [
+      "Air throttle assembly, throttle metering valve, and mixture control valve",
+      "Fuel manifold valve, fuel pressure gauge, and discharge nozzle",
+      "Mechanical pump, electrical pump, and fuel strainer",
+      "Common rail, injector solenoid, and electronic driver unit"
+    ],
+    "answer": "Air throttle assembly, throttle metering valve, and mixture control valve",
+    "explanation": "The chapter identifies three elements: the **air throttle assembly (throttle valve)**, **throttle metering valve (metering fuel valve)**, and **mixture control valve**.",
+    "difficulty": "Easy",
+    "tags": [
+      "fuel/air control unit",
+      "components"
+    ]
+  },
+  {
+    "question": "In the diesel fuel-supply description for a light aircraft, what helps move fuel from the wing tanks toward the engine-mounted delivery system?",
+    "choices": [
+      "Gravity and ram air",
+      "The carburettor Venturi alone",
+      "Exhaust gas pressure only",
+      "The cylinder's compression stroke"
+    ],
+    "answer": "Gravity and ram air",
+    "explanation": "The chapter says fuel from rigid wing tanks is sent using the effects of **gravity and ram air** to a common strainer and selector valve, then through additional components to the engine.",
+    "difficulty": "Medium",
+    "tags": [
+      "diesel engines",
+      "fuel supply"
+    ]
+  },
+  {
+    "question": "Which sequence best matches the diesel fuel path described in the chapter?",
+    "choices": [
+      "Wing tanks → common strainer and selector valve → water-traps, fuel heaters and filters → engine-mounted delivery system",
+      "Wing tanks → discharge nozzle → carburettor Venturi → exhaust",
+      "Fuel manifold valve → wing tanks → oil cooler → injector",
+      "Common rail → fuel tank → water-trap → intake throttle"
+    ],
+    "answer": "Wing tanks → common strainer and selector valve → water-traps, fuel heaters and filters → engine-mounted delivery system",
+    "explanation": "The chapter describes fuel moving from the wing tanks to a **common strainer and selector valve**, then via **water-traps, fuel heaters and filters** to the engine-mounted delivery system.",
+    "difficulty": "Medium",
+    "tags": [
+      "diesel engines",
+      "fuel path"
+    ]
+  },
+  {
+    "question": "What does FADEC stand for in the chapter?",
+    "choices": [
+      "Fuel-Air Distribution and Engine Carburation",
+      "Full Authority Digital Engine Control",
+      "Fuel Adjustment During Engine Cranking",
+      "Full Automatic Diesel Exhaust Control"
+    ],
+    "answer": "Full Authority Digital Engine Control",
+    "explanation": "**FADEC** stands for **Full Authority Digital Engine Control**. The chapter describes it as an electronic/computer-controlled dual-channel unit.",
+    "difficulty": "Easy",
+    "tags": [
+      "FADEC",
+      "terminology"
+    ]
+  },
+  {
+    "question": "In the diesel system described, what does FADEC control?",
+    "choices": [
+      "The opening of electronically operated nozzles at the appropriate time and for the required duration",
+      "Only the pilot's manual throttle lever position",
+      "Only the fuel tank selector valve",
+      "The mechanical pump's lubrication schedule"
+    ],
+    "answer": "The opening of electronically operated nozzles at the appropriate time and for the required duration",
+    "explanation": "The chapter states that FADEC opens electronically operated **nozzles at the appropriate time and duration according to demand**.",
+    "difficulty": "Medium",
+    "tags": [
+      "FADEC",
+      "diesel injection"
+    ]
+  },
+  {
+    "question": "In a common-rail injection system, what replaces the older distributor injection pump?",
+    "choices": [
+      "A low-pressure carburettor",
+      "A single extremely high-pressure pump feeding a common storage manifold",
+      "A separate mechanical pump for every cylinder with no shared manifold",
+      "A Venturi-driven fuel suction system"
+    ],
+    "answer": "A single extremely high-pressure pump feeding a common storage manifold",
+    "explanation": "The chapter describes the common-rail system as replacing the older distributor injection pump with a **single extremely high-pressure pump** feeding the **common rail**.",
+    "difficulty": "Medium",
+    "tags": [
+      "common rail",
+      "high-pressure pump"
+    ]
+  },
+  {
+    "question": "According to the chapter, approximately what pressure is given for the common-rail pump in the electronic/common-rail section?",
+    "choices": [
+      "20 bar (290 psi)",
+      "200 bar (2,900 psi)",
+      "2,000 bar (29,000 psi)",
+      "20,000 bar (290,000 psi)"
+    ],
+    "answer": "2,000 bar (29,000 psi)",
+    "explanation": "The chapter gives the common-rail pump pressure as approximately **2,000 bar or 29,000 psi** in the electronic/common-rail section.",
+    "difficulty": "Medium",
+    "tags": [
+      "common rail",
+      "pressure figures"
+    ]
+  },
+  {
+    "question": "How is fuel distributed in a common-rail system?",
+    "choices": [
+      "The common rail distributes high-pressure fuel to computer-controlled injector valves.",
+      "The common rail sends fuel only to the carburettor float chamber.",
+      "Each injector draws fuel directly from a separate wing tank.",
+      "Fuel is mixed with oil inside the common rail before delivery."
+    ],
+    "answer": "The common rail distributes high-pressure fuel to computer-controlled injector valves.",
+    "explanation": "The **common rail** acts as a shared high-pressure storage/distribution manifold that supplies fuel to computer-controlled injector valves.",
+    "difficulty": "Easy",
+    "tags": [
+      "common rail",
+      "fuel distribution"
+    ]
+  },
+  {
+    "question": "Which devices are identified as possible actuators for common-rail injector valves?",
+    "choices": [
+      "Thermostats or pressure relief springs only",
+      "Solenoids or piezoelectric actuators",
+      "Mechanical floats or Venturi slides",
+      "Magnetos or ignition distributors"
+    ],
+    "answer": "Solenoids or piezoelectric actuators",
+    "explanation": "The chapter states that each injector valve may be activated by a **solenoid** or, more recently, by **piezoelectric actuators**.",
+    "difficulty": "Medium",
+    "tags": [
+      "injector valves",
+      "actuators"
+    ]
+  },
+  {
+    "question": "In modern aircraft described in the chapter, what information does FADEC receive to help manage injection?",
+    "choices": [
+      "Air temperature, air density, and throttle position",
+      "Only oil colour and tyre pressure",
+      "Only fuel tank quantity and landing gear position",
+      "Cabin humidity and passenger weight"
+    ],
+    "answer": "Air temperature, air density, and throttle position",
+    "explanation": "The chapter says FADEC receives sensor data such as **air temperature**, **air density**, and **throttle position**.",
+    "difficulty": "Medium",
+    "tags": [
+      "FADEC",
+      "sensors"
+    ]
+  },
+  {
+    "question": "What benefit is attributed to combining advanced injector valves with computer control?",
+    "choices": [
+      "Greater fuel efficiency and more effective power management",
+      "Elimination of the need for any fuel storage",
+      "Guaranteed operation without sensors",
+      "Removal of the need for engine maintenance"
+    ],
+    "answer": "Greater fuel efficiency and more effective power management",
+    "explanation": "The chapter concludes that advanced injector valves combined with computer control lead to **greater fuel efficiency** and **more effective power management**.",
+    "difficulty": "Easy",
+    "tags": [
+      "common rail",
+      "advantages"
+    ]
+  }
+]

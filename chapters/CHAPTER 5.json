@@ -1,0 +1,508 @@
+[
+  {
+    "question": "Which statement BEST describes the dual ignition system fitted to aero piston engines?",
+    "choices": [
+      "It uses one magneto and one spark plug per cylinder.",
+      "It uses two electrically independent ignition systems.",
+      "It uses two batteries to power one ignition coil.",
+      "It uses one ignition system that alternates between cylinders."
+    ],
+    "answer": "It uses two electrically independent ignition systems.",
+    "explanation": "Aero piston engines use **dual ignition**: two electrically independent ignition systems. Each cylinder has two spark plugs supplied by two separate magnetos. This improves reliability and helps reduce combustion time by igniting the charge at two points.",
+    "difficulty": "easy",
+    "tags": [
+      "dual ignition",
+      "magnetos",
+      "fundamentals"
+    ]
+  },
+  {
+    "question": "How many spark plugs are fitted to each cylinder in the dual ignition arrangement described in the chapter?",
+    "choices": [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+    ],
+    "answer": "Two",
+    "explanation": "Each cylinder has **two sparking plugs**, fed by two separate magnetos. The arrangement reduces the risk of engine failure caused by a faulty ignition system and improves power output.",
+    "difficulty": "easy",
+    "tags": [
+      "spark plugs",
+      "dual ignition",
+      "reliability"
+    ]
+  },
+  {
+    "question": "What is one important benefit of igniting the cylinder charge at two points?",
+    "choices": [
+      "It eliminates the need for a fuel-air mixture.",
+      "It reduces combustion time.",
+      "It prevents the piston from moving during ignition.",
+      "It removes the need for a distributor."
+    ],
+    "answer": "It reduces combustion time.",
+    "explanation": "The dual ignition system ignites the charge at **two points**, which reduces combustion time and contributes to improved engine power output.",
+    "difficulty": "easy",
+    "tags": [
+      "combustion",
+      "dual ignition",
+      "engine performance"
+    ]
+  },
+  {
+    "question": "Which description BEST defines a magneto according to the chapter?",
+    "choices": [
+      "A battery-operated starter motor",
+      "A self-contained, engine-driven electrical generator",
+      "A mechanical device that meters fuel",
+      "A device that cools the ignition coils"
+    ],
+    "answer": "A self-contained, engine-driven electrical generator",
+    "explanation": "A magneto is a **self-contained engine-driven electrical generator**. It produces extra-high-tension (EHT) electrical sparks at the sparking plugs in the correct firing sequence.",
+    "difficulty": "easy",
+    "tags": [
+      "magnetos",
+      "definition",
+      "EHT"
+    ]
+  },
+  {
+    "question": "What is the main purpose of a magneto in a piston-engine ignition system?",
+    "choices": [
+      "To supply high-voltage sparks to the spark plugs",
+      "To lubricate the distributor rotor",
+      "To regulate engine oil pressure",
+      "To increase the compression ratio"
+    ],
+    "answer": "To supply high-voltage sparks to the spark plugs",
+    "explanation": "The magneto produces **extra-high-tension (EHT) sparks** at the sparking plugs to ignite the petrol-air mixture in the correct firing sequence.",
+    "difficulty": "easy",
+    "tags": [
+      "magnetos",
+      "spark plugs",
+      "ignition"
+    ]
+  },
+  {
+    "question": "Which two principles are combined in the magneto, as described in the chapter?",
+    "choices": [
+      "Electrolysis and thermal expansion",
+      "Permanent magnet generation and a step-up transformer",
+      "Hydraulic pressure and centrifugal force",
+      "Chemical compression and friction heating"
+    ],
+    "answer": "Permanent magnet generation and a step-up transformer",
+    "explanation": "The magneto combines the principles of the **permanent magnet generator (PMG)** and the **step-up transformer** to generate the EHT voltage needed to break down the gap between spark-plug electrodes.",
+    "difficulty": "medium",
+    "tags": [
+      "PMG",
+      "transformer",
+      "magneto operation"
+    ]
+  },
+  {
+    "question": "What happens when the magnetic field in the magneto primary coil collapses?",
+    "choices": [
+      "The secondary coil loses all turns.",
+      "The lines of magnetic force cut the many turns of the secondary coil and induce EHT voltage.",
+      "The distributor stops rotating permanently.",
+      "The capacitor becomes the source of fuel ignition."
+    ],
+    "answer": "The lines of magnetic force cut the many turns of the secondary coil and induce EHT voltage.",
+    "explanation": "When the primary magnetic field collapses, the magnetic lines of force cut the thousands of turns in the **secondary coil**, inducing an **extra-high-tension voltage**.",
+    "difficulty": "medium",
+    "tags": [
+      "primary coil",
+      "secondary coil",
+      "electromagnetic induction"
+    ]
+  },
+  {
+    "question": "Which phenomenon explains the induction of voltage in the magneto secondary coil?",
+    "choices": [
+      "Electromagnetic induction",
+      "Osmosis",
+      "Combustion pressure",
+      "Thermal conduction"
+    ],
+    "answer": "Electromagnetic induction",
+    "explanation": "The chapter identifies the induced voltage as an example of **electromagnetic induction**. The changing magnetic field induces EHT voltage in the secondary coil.",
+    "difficulty": "easy",
+    "tags": [
+      "electromagnetic induction",
+      "magneto theory"
+    ]
+  },
+  {
+    "question": "What is the function of the distributor in the ignition system?",
+    "choices": [
+      "It stores fuel for starting.",
+      "It distributes the induced high voltage to the spark plugs in the correct firing sequence.",
+      "It opens the engine intake valve.",
+      "It prevents the primary circuit from carrying current."
+    ],
+    "answer": "It distributes the induced high voltage to the spark plugs in the correct firing sequence.",
+    "explanation": "The **distributor** is a rotary switch that sends the induced EHT voltage to the spark plugs in the correct firing sequence. The contact-breaker cam and distributor rotor are geared together.",
+    "difficulty": "easy",
+    "tags": [
+      "distributor",
+      "firing sequence",
+      "ignition circuit"
+    ]
+  },
+  {
+    "question": "In the magneto, what causes the contact-breaker points to open at regulated intervals?",
+    "choices": [
+      "A fuel injector",
+      "A cam-operated mechanism",
+      "The spark-plug electrodes",
+      "The grounding wire alone"
+    ],
+    "answer": "A cam-operated mechanism",
+    "explanation": "A small magnetic field in the primary coil is made to collapse at regulated intervals by the opening of a pair of **cam-operated contact-breaker points**.",
+    "difficulty": "medium",
+    "tags": [
+      "contact breaker",
+      "cam",
+      "primary circuit"
+    ]
+  },
+  {
+    "question": "What is the prime function of the capacitor (condenser) across the contact-breaker points?",
+    "choices": [
+      "To prevent burning or arcing across the points and assist in creating extra-high voltage",
+      "To increase fuel pressure",
+      "To slow the distributor rotor",
+      "To keep the spark plugs continuously energized"
+    ],
+    "answer": "To prevent burning or arcing across the points and assist in creating extra-high voltage",
+    "explanation": "The **capacitor (condenser)** prevents burning or arcing across the contact-breaker points and helps create extra-high voltage in the secondary coil by causing a rapid change of magnetic flux in the primary coil.",
+    "difficulty": "easy",
+    "tags": [
+      "capacitor",
+      "condenser",
+      "contact breaker"
+    ]
+  },
+  {
+    "question": "How is the capacitor connected in the magneto circuit?",
+    "choices": [
+      "In series with each spark plug",
+      "In parallel with the contact-breaker points and magneto control switch",
+      "Across the fuel pump",
+      "In series with the distributor rotor only"
+    ],
+    "answer": "In parallel with the contact-breaker points and the magneto control switch",
+    "explanation": "The chapter states that the capacitor is fitted **in parallel with the contact-breaker points and the magneto control switch**.",
+    "difficulty": "medium",
+    "tags": [
+      "capacitor connection",
+      "magneto circuit"
+    ]
+  },
+  {
+    "question": "Why does the capacitor help the primary current collapse rapidly?",
+    "choices": [
+      "It keeps the breaker points closed indefinitely.",
+      "It charges when voltage appears across the points, allowing current in the primary coil to cease and the flux to collapse rapidly.",
+      "It adds fuel to the cylinder.",
+      "It mechanically separates the distributor rotor from the cam."
+    ],
+    "answer": "It charges when voltage appears across the points, allowing current in the primary coil to cease and the flux to collapse rapidly.",
+    "explanation": "When voltage appears across the points, the capacitor charges. Only a small weak spark appears at the breaker points, and primary-coil current ceases, allowing a **very rapid collapse in primary flux**.",
+    "difficulty": "medium",
+    "tags": [
+      "capacitor operation",
+      "primary flux",
+      "magneto"
+    ]
+  },
+  {
+    "question": "How does the ignition switch make the magneto inoperative?",
+    "choices": [
+      "By earthing the primary circuit",
+      "By opening the fuel line",
+      "By grounding the spark-plug electrodes directly",
+      "By disconnecting the distributor rotor mechanically"
+    ],
+    "answer": "By earthing the primary circuit",
+    "explanation": "The ignition switch controls the magneto circuit. The magneto is made inoperative by **earthing the primary circuit**.",
+    "difficulty": "easy",
+    "tags": [
+      "ignition switch",
+      "earthing",
+      "primary circuit"
+    ]
+  },
+  {
+    "question": "According to the chapter, what happens when the ignition switch is in the OFF position?",
+    "choices": [
+      "The switch is open and the engine receives maximum spark energy.",
+      "The switch is closed and short-circuits the contact-breaker points, preventing the primary circuit from making and breaking.",
+      "The capacitor is removed from the circuit.",
+      "The distributor changes the firing order."
+    ],
+    "answer": "The switch is closed and short-circuits the contact-breaker points, preventing the primary circuit from making and breaking.",
+    "explanation": "In the **OFF** position, the switch is closed and short-circuits the contact-breaker points. The primary circuit therefore no longer makes and breaks, so the magneto is disabled.",
+    "difficulty": "medium",
+    "tags": [
+      "ignition switch",
+      "OFF position",
+      "magneto control"
+    ]
+  },
+  {
+    "question": "What is the condition of the ignition switch in the ON position, as described in the chapter?",
+    "choices": [
+      "It is open, and the primary circuit is controlled by the contact breaker.",
+      "It is closed and permanently grounds the primary circuit.",
+      "It disconnects both magnetos from the engine.",
+      "It shorts the secondary coil to the airframe."
+    ],
+    "answer": "It is open, and the primary circuit is controlled by the contact breaker.",
+    "explanation": "In the **ON** position, the ignition switch is open, allowing the primary circuit to be controlled by the action of the contact breaker.",
+    "difficulty": "medium",
+    "tags": [
+      "ignition switch",
+      "ON position",
+      "contact breaker"
+    ]
+  },
+  {
+    "question": "What is the purpose of the grounding wire in the magneto system?",
+    "choices": [
+      "To switch off the magneto when the circuit is grounded",
+      "To increase compression pressure",
+      "To distribute fuel to the cylinders",
+      "To prevent the engine from being turned by the starter"
+    ],
+    "answer": "To switch off the magneto when the circuit is grounded",
+    "explanation": "The **grounding wire** is used to switch off the magneto. If it breaks, the engine may show no apparent change in performance, but if it touches the engine body or airframe, it grounds the primary circuit and switches the magneto off.",
+    "difficulty": "easy",
+    "tags": [
+      "grounding wire",
+      "magneto safety"
+    ]
+  },
+  {
+    "question": "If the grounding wire breaks and touches the engine body or airframe, what is the result?",
+    "choices": [
+      "The magneto is switched off because the primary circuit is grounded.",
+      "The magneto produces a stronger spark.",
+      "The distributor reverses direction.",
+      "The engine automatically switches to diesel ignition."
+    ],
+    "answer": "The magneto is switched off because the primary circuit is grounded.",
+    "explanation": "A broken grounding wire that touches the engine body or airframe has the same effect as grounding the primary circuit. Consequently, **the magneto is switched off**.",
+    "difficulty": "medium",
+    "tags": [
+      "grounding wire fault",
+      "primary circuit",
+      "safety"
+    ]
+  },
+  {
+    "question": "At what engine condition is the Dead Cut Check carried out?",
+    "choices": [
+      "At maximum engine speed",
+      "At slow running",
+      "Only during flight",
+      "With the engine stopped and ignition switched off"
+    ],
+    "answer": "At slow running",
+    "explanation": "The **Dead Cut Check** is carried out at **slow running**. It ensures that the pilot has control of the ignition before performing further checks at higher engine speeds.",
+    "difficulty": "easy",
+    "tags": [
+      "magneto checks",
+      "Dead Cut Check",
+      "slow running"
+    ]
+  },
+  {
+    "question": "During the Dead Cut Check, what should happen to engine RPM when one magneto is switched off at a time?",
+    "choices": [
+      "RPM must drop, but the engine must not stop.",
+      "RPM must increase sharply.",
+      "RPM must remain unchanged under all conditions.",
+      "The engine must stop immediately when either magneto is switched off."
+    ],
+    "answer": "RPM must drop, but the engine must not stop.",
+    "explanation": "The chapter emphasizes: **RPM MUST DROP BUT ENGINE MUST NOT STOP WHILE SWITCHING ONE MAGNETO OFF AT A TIME.** This check is performed at slow running.",
+    "difficulty": "medium",
+    "tags": [
+      "Dead Cut Check",
+      "RPM drop",
+      "magneto safety"
+    ]
+  },
+  {
+    "question": "At approximately what percentage of maximum engine speed is the Magneto RPM Drop Check carried out?",
+    "choices": [
+      "25%",
+      "50%",
+      "75%",
+      "100%"
+    ],
+    "answer": "75%",
+    "explanation": "The **Magneto RPM Drop Check** is carried out at approximately **75% of maximum engine speed** to check that the magneto and sparking plugs are functioning correctly.",
+    "difficulty": "easy",
+    "tags": [
+      "Magneto RPM Drop Check",
+      "engine speed",
+      "inspection"
+    ]
+  },
+  {
+    "question": "Why is there an RPM drop when one magneto is switched off during a magneto check?",
+    "choices": [
+      "The mixture takes longer to burn when ignition occurs from only one magneto and plug per cylinder.",
+      "The compression ratio instantly decreases.",
+      "The engine loses all lubrication.",
+      "The distributor stops rotating."
+    ],
+    "answer": "The mixture takes longer to burn when ignition occurs from only one magneto and plug per cylinder.",
+    "explanation": "With one magneto switched off, each cylinder has ignition from only one plug. The **increased time taken for the mixture to burn** causes the RPM to fall. The drop must remain within the manufacturer's limits.",
+    "difficulty": "medium",
+    "tags": [
+      "RPM drop",
+      "combustion time",
+      "magneto check"
+    ]
+  },
+  {
+    "question": "What is the main purpose of the Magneto RPM Drop Check?",
+    "choices": [
+      "To verify that the magneto and spark plugs are functioning correctly",
+      "To measure fuel-tank capacity",
+      "To determine the compression ratio",
+      "To test the landing gear"
+    ],
+    "answer": "To verify that the magneto and spark plugs are functioning correctly",
+    "explanation": "The check is performed at approximately 75% of maximum engine speed and verifies that the **magneto and sparking plugs are functioning correctly**.",
+    "difficulty": "easy",
+    "tags": [
+      "magneto check",
+      "spark plugs",
+      "inspection"
+    ]
+  },
+  {
+    "question": "Why may an auxiliary starting device be needed when starting an aero piston engine?",
+    "choices": [
+      "The magneto may not produce a spark with adequate energy at the low cranking speed of about 25 RPM.",
+      "The engine has no spark plugs during starting.",
+      "The distributor only works at supersonic speed.",
+      "The engine must be warmed to maximum temperature before ignition."
+    ],
+    "answer": "The magneto may not produce a spark with adequate energy at the low cranking speed of about 25 RPM.",
+    "explanation": "During starting, most aero-engines are cranked at about **25 RPM**. At this speed, the magneto may not produce a spark with enough energy, so auxiliary methods are used to augment the spark.",
+    "difficulty": "medium",
+    "tags": [
+      "auxiliary starting",
+      "starting speed",
+      "magneto"
+    ]
+  },
+  {
+    "question": "What does the High Tension (HT) Booster Coil provide during starting?",
+    "choices": [
+      "A succession of high-voltage electrical impulses to the trailing-starting or retarded brush electrode of the main distributor rotor",
+      "A continuous supply of compressed air to the cylinders",
+      "A low-voltage supply to the fuel injectors",
+      "Mechanical drive to the starter motor"
+    ],
+    "answer": "A succession of high-voltage electrical impulses to the trailing-starting or retarded brush electrode of the main distributor rotor",
+    "explanation": "The **HT Booster Coil** supplies a succession of high-voltage electrical impulses to the trailing-starting or retarded brush electrode of the main distributor rotor. It is switched ON for starting and OFF after start-up.",
+    "difficulty": "medium",
+    "tags": [
+      "HT Booster Coil",
+      "auxiliary starting",
+      "starting ignition"
+    ]
+  },
+  {
+    "question": "When should the HT Booster Coil be switched off?",
+    "choices": [
+      "Before the starter is engaged",
+      "Immediately after start-up",
+      "Only when the engine is at maximum RPM",
+      "It should remain on continuously"
+    ],
+    "answer": "Immediately after start-up",
+    "explanation": "The chapter states that the **HT Booster Coil is switched ON for starting and OFF after start-up**.",
+    "difficulty": "easy",
+    "tags": [
+      "HT Booster Coil",
+      "starting procedure"
+    ]
+  },
+  {
+    "question": "What is the role of the Low Tension (LT) Booster Coil?",
+    "choices": [
+      "It supplies low voltage to the magneto primary during starting, augmenting the primary current.",
+      "It replaces the distributor permanently.",
+      "It supplies high-pressure fuel to the injectors.",
+      "It prevents all current from flowing in the primary circuit."
+    ],
+    "answer": "It supplies low voltage to the magneto primary during starting, augmenting the primary current.",
+    "explanation": "The **LT Booster Coil** supplies low voltage to the magneto primary during the starting sequence. This augmentation of the primary current permits normal magneto operation.",
+    "difficulty": "medium",
+    "tags": [
+      "LT Booster Coil",
+      "primary circuit",
+      "starting"
+    ]
+  },
+  {
+    "question": "Which power source is required by the Low Tension (LT) Booster Coil system described in the chapter?",
+    "choices": [
+      "A battery supply",
+      "A hydraulic accumulator",
+      "A fuel-pressure regulator",
+      "A second distributor rotor"
+    ],
+    "answer": "A battery supply",
+    "explanation": "The LT Booster Coil system requires a **battery supply** and is connected to the primary of the magneto, typically the left magneto.",
+    "difficulty": "medium",
+    "tags": [
+      "LT Booster Coil",
+      "battery",
+      "starting system"
+    ]
+  },
+  {
+    "question": "How does the impulse coupling assist ignition during starting?",
+    "choices": [
+      "It uses a spring to temporarily increase magneto rotational speed, producing a large retarded spark.",
+      "It permanently increases engine compression.",
+      "It cools the magneto to prevent condensation.",
+      "It grounds both magnetos throughout the starting cycle."
+    ],
+    "answer": "It uses a spring to temporarily increase magneto rotational speed, producing a large retarded spark.",
+    "explanation": "The **impulse coupling** is a mechanical device that uses a spring to temporarily increase the magneto's rotational speed, giving a large retarded spark during the starting cycle. The chapter states that no pilot action is necessary.",
+    "difficulty": "medium",
+    "tags": [
+      "impulse coupling",
+      "retarded spark",
+      "starting"
+    ]
+  },
+  {
+    "question": "Why are magneto and distributor assemblies designed with moisture considerations in mind?",
+    "choices": [
+      "Sudden temperature changes can lead to condensation and moisture, which can conduct electricity along unintended paths.",
+      "Moisture is needed to increase spark voltage.",
+      "Condensation prevents all electrical leakage.",
+      "The assemblies are always submerged in fuel."
+    ],
+    "answer": "Sudden temperature changes can lead to condensation and moisture, which can conduct electricity along unintended paths.",
+    "explanation": "Magneto and distributor assemblies experience sudden temperature changes. **Moisture can conduct electricity** and create a stray electrical path through distributor blocks, rotor arms, or coil cases.",
+    "difficulty": "medium",
+    "tags": [
+      "venting",
+      "moisture",
+      "distributor"
+    ]
+  }
+]

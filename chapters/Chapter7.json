@@ -1,0 +1,513 @@
+[
+  {
+    "question": "What is the chemically correct air/fuel ratio by weight stated in the chapter?",
+    "choices": [
+      "8:1",
+      "12.5:1",
+      "15:1",
+      "20:1"
+    ],
+    "answer": "15:1",
+    "explanation": "The **chemically correct ratio** is an air/fuel ratio of **15:1 by weight**. At this proportion, the oxygen in the air is theoretically sufficient to combine with all the hydrogen and carbon in the fuel, allowing complete combustion. The chapter notes that this ratio does not necessarily produce the best practical engine performance because the high combustion temperature can increase the risk of detonation.",
+    "difficulty": "easy",
+    "tags": [
+      "mixture ratio",
+      "chemically correct ratio",
+      "combustion"
+    ]
+  },
+  {
+    "question": "According to the chapter, within what approximate air/fuel ratio range can air and fuel vapour burn?",
+    "choices": [
+      "Between 2:1 and 5:1",
+      "Between 8:1 and 20:1",
+      "Between 15:1 and 30:1",
+      "Between 20:1 and 40:1"
+    ],
+    "answer": "Between 8:1 and 20:1",
+    "explanation": "The chapter states that air and fuel vapour can burn over a range of approximately **8:1 (rich) to 20:1 (weak/lean)**. However, burning within this range does not mean that every mixture gives complete combustion or the best power and economy. The chemically correct ratio for complete combustion is given as 15:1 by weight.",
+    "difficulty": "easy",
+    "tags": [
+      "rich mixture",
+      "weak mixture",
+      "air/fuel ratio"
+    ]
+  },
+  {
+    "question": "Why may the chemically correct mixture fail to give the best practical engine results?",
+    "choices": [
+      "It contains too little air to support combustion.",
+      "Its combustion temperature can be so high that power may be lost through detonation.",
+      "It prevents the engine from producing any heat.",
+      "It always causes the fuel to freeze."
+    ],
+    "answer": "Its combustion temperature can be so high that power may be lost through detonation.",
+    "explanation": "Although the chemically correct mixture theoretically supports complete combustion, the chapter explains that its **combustion temperature may be so high that power is lost through detonation**. Practical mixture settings therefore balance power, cooling, fuel consumption, and smooth operation rather than simply aiming for complete chemical combustion.",
+    "difficulty": "medium",
+    "tags": [
+      "detonation",
+      "chemically correct ratio",
+      "engine performance"
+    ]
+  },
+  {
+    "question": "Why is a slightly rich mixture not necessarily a major disadvantage to power output?",
+    "choices": [
+      "All oxygen is still consumed, while the excess fuel can provide a cooling effect.",
+      "It eliminates the need for ignition timing.",
+      "It makes the fuel contain more oxygen.",
+      "It prevents all heat from being produced."
+    ],
+    "answer": "All oxygen is still consumed, while the excess fuel can provide a cooling effect.",
+    "explanation": "The chapter explains that with a **slightly rich mixture**, the available oxygen is still consumed. The extra fuel does not contribute much additional power, but its cooling effect can be beneficial and can help reduce the risk associated with high combustion temperatures.",
+    "difficulty": "medium",
+    "tags": [
+      "rich mixture",
+      "cooling effect",
+      "power"
+    ]
+  },
+  {
+    "question": "What is the main effect of weakening the mixture too far?",
+    "choices": [
+      "Power increases because all oxygen is used.",
+      "Power decreases because some of the inducted oxygen is not utilized.",
+      "Fuel consumption becomes zero without affecting engine operation.",
+      "The chemically correct ratio changes to 8:1."
+    ],
+    "answer": "Power decreases because some of the inducted oxygen is not utilized.",
+    "explanation": "A **weak mixture** can reduce power rapidly because part of the oxygen drawn into the cylinder is not used effectively in combustion. Although fuel consumption falls, the loss of power may be proportionally greater than the fuel saving, so the engine may become less efficient in terms of power produced per unit of fuel.",
+    "difficulty": "medium",
+    "tags": [
+      "weak mixture",
+      "power loss",
+      "fuel economy"
+    ]
+  },
+  {
+    "question": "What air/fuel ratio does the chapter give as an example of a mixture that may be used instead of the chemically correct ratio to avoid excessively weak cylinders?",
+    "choices": [
+      "8:1",
+      "10:1",
+      "12.5:1",
+      "18:1"
+    ],
+    "answer": "12.5:1",
+    "explanation": "The chapter notes that engines may be operated at a **somewhat richer mixture, such as about 12.5:1**, rather than the chemically correct 15:1. This helps ensure that mixture-distribution differences between cylinders do not leave any cylinder running excessively weak and losing too much power.",
+    "difficulty": "medium",
+    "tags": [
+      "practical mixture ratio",
+      "12.5:1",
+      "cylinder distribution"
+    ]
+  },
+  {
+    "question": "According to the chapter, what can happen to specific fuel consumption (SFC) as mixture strength is weakened below 15:1?",
+    "choices": [
+      "It always increases sharply.",
+      "It decreases because the improvement in efficiency can outweigh the reduction in fuel consumption.",
+      "It becomes unrelated to engine power.",
+      "It remains fixed at zero."
+    ],
+    "answer": "It decreases because the improvement in efficiency can outweigh the reduction in fuel consumption.",
+    "explanation": "Below the chemically correct ratio of **15:1**, the chapter states that specific fuel consumption (SFC) decreases as the mixture is weakened. The reason is that the improvement in efficiency from cooler, slower burning can be proportionally greater than the decrease in fuel consumed, within the operating range described.",
+    "difficulty": "hard",
+    "tags": [
+      "specific fuel consumption",
+      "weak mixture",
+      "efficiency"
+    ]
+  },
+  {
+    "question": "What mixture ratio may be used for economical cruising at moderate power, according to the chapter?",
+    "choices": [
+      "10:1",
+      "12.5:1",
+      "15:1",
+      "18:1"
+    ],
+    "answer": "18:1",
+    "explanation": "For economical cruising at moderate power, the chapter gives an air/fuel ratio of approximately **18:1**. Because this is a leaner mixture, ignition timing may need to be advanced to allow for the slower rate of combustion.",
+    "difficulty": "easy",
+    "tags": [
+      "cruise mixture",
+      "18:1",
+      "economy"
+    ]
+  },
+  {
+    "question": "Why may ignition timing need to be advanced when operating at an economical cruising mixture of about 18:1?",
+    "choices": [
+      "The lean mixture burns more slowly.",
+      "The lean mixture burns instantaneously.",
+      "The spark plugs stop functioning at this ratio.",
+      "The fuel no longer requires oxygen."
+    ],
+    "answer": "The lean mixture burns more slowly.",
+    "explanation": "A lean mixture burns at a **slower rate**, so the ignition may need to be advanced to ensure that the pressure rise occurs at a useful point in the piston cycle. This helps the engine convert combustion pressure into work effectively during economical cruising.",
+    "difficulty": "medium",
+    "tags": [
+      "ignition timing",
+      "lean mixture",
+      "cruise"
+    ]
+  },
+  {
+    "question": "What may happen when an extremely weak mixture is used?",
+    "choices": [
+      "The exhaust valve may be exposed to very high temperatures and crack or distort.",
+      "The exhaust gases become cold immediately.",
+      "The engine can no longer produce any exhaust gases.",
+      "The inlet valve remains permanently closed."
+    ],
+    "answer": "The exhaust valve may be exposed to very high temperatures and crack or distort.",
+    "explanation": "With an **extremely weak mixture**, combustion can continue late into the cycle. Hot gases may still be burning when the exhaust valve opens, exposing the valve to high temperatures that can cause cracking or distortion. The chapter also describes the possibility of hot exhaust gas igniting the incoming charge and causing 'popping back' through the induction manifold.",
+    "difficulty": "hard",
+    "tags": [
+      "extremely weak mixture",
+      "exhaust valve",
+      "popping back"
+    ]
+  },
+  {
+    "question": "What is 'popping back' as described in the chapter?",
+    "choices": [
+      "The starter motor rotating backwards",
+      "Hot exhaust gases igniting the incoming mixture in the induction manifold",
+      "Fuel returning to the tank through the vent",
+      "The piston reversing direction before TDC"
+    ],
+    "answer": "Hot exhaust gases igniting the incoming mixture in the induction manifold",
+    "explanation": "The chapter explains that with very weak mixtures, the exhaust gases may remain hot when the inlet valve opens. These gases can ignite the incoming mixture in the **induction manifold**, producing a condition called **popping back**.",
+    "difficulty": "medium",
+    "tags": [
+      "popping back",
+      "weak mixture",
+      "induction manifold"
+    ]
+  },
+  {
+    "question": "Why can extremely weak mixtures cause engine overheating?",
+    "choices": [
+      "All combustion heat is converted into useful work.",
+      "Slow burning means some heat is not converted into expansion work and must be dissipated by the cooling system.",
+      "The fuel instantly freezes inside the cylinder.",
+      "The engine stops producing exhaust gases."
+    ],
+    "answer": "Slow burning means some heat is not converted into expansion work and must be dissipated by the cooling system.",
+    "explanation": "An **extremely weak mixture** burns slowly, so some heat is not converted into useful work through gas expansion. That heat must instead be removed by the cooling system, increasing the risk of overheating and reducing power output.",
+    "difficulty": "medium",
+    "tags": [
+      "weak mixture",
+      "overheating",
+      "heat loss"
+    ]
+  },
+  {
+    "question": "According to the mixture curve in Figure 7.1, which mixture region is associated with maximum cruise power?",
+    "choices": [
+      "The leanest possible mixture",
+      "Rich cruise",
+      "The chemically correct ratio only",
+      "The idle range"
+    ],
+    "answer": "Rich cruise",
+    "explanation": "In **Figure 7.1**, the rich-cruise region is marked as providing **best power** in the cruising range. The figure contrasts this with the economy-cruise region, which is associated with best specific fuel consumption (SFC), illustrating that maximum power and maximum economy do not occur at the same mixture setting.",
+    "difficulty": "medium",
+    "tags": [
+      "Figure 7.1",
+      "rich cruise",
+      "best power"
+    ]
+  },
+  {
+    "question": "According to Figure 7.1, which cruise mixture region is associated with the best specific fuel consumption (SFC)?",
+    "choices": [
+      "Rich cruise",
+      "Economy cruise",
+      "Take-off power",
+      "The chemically correct ratio"
+    ],
+    "answer": "Economy cruise",
+    "explanation": "**Figure 7.1** labels the economy-cruise region as **best SFC**, meaning it gives the most favourable fuel consumption relative to power output in the operating range shown. It is a fuel-economy setting rather than the setting intended to produce maximum cruise power.",
+    "difficulty": "easy",
+    "tags": [
+      "Figure 7.1",
+      "economy cruise",
+      "SFC"
+    ]
+  },
+  {
+    "question": "Why is a rich mixture required for starting and slow running?",
+    "choices": [
+      "Fuel vaporizes less readily in a cold engine, and exhaust-gas dilution is more significant at low speed.",
+      "A cold engine contains too much oxygen to ignite fuel.",
+      "The spark plugs cannot operate below cruise speed.",
+      "A rich mixture prevents all fuel from vaporizing."
+    ],
+    "answer": "Fuel vaporizes less readily in a cold engine, and exhaust-gas dilution is more significant at low speed.",
+    "explanation": "The chapter gives two reasons for a **rich mixture during starting and slow running**: a cold engine provides little heat to vaporize fuel, and at low speed the incoming charge is more affected by residual exhaust gases. Extra fuel helps ensure enough vapour is available for combustion and supports smooth running.",
+    "difficulty": "medium",
+    "tags": [
+      "starting",
+      "slow running",
+      "rich mixture"
+    ]
+  },
+  {
+    "question": "Why might white smoke be visible at the exhaust during cold starting?",
+    "choices": [
+      "It is always caused by burning engine oil.",
+      "Only the lightest fractions of the fuel vaporize, and water vapour can condense in the cold exhaust.",
+      "The fuel contains no hydrogen.",
+      "The exhaust system is operating at maximum temperature."
+    ],
+    "answer": "Only the lightest fractions of the fuel vaporize, and water vapour can condense in the cold exhaust.",
+    "explanation": "During cold starting, limited engine heat means that only the lighter fractions of fuel may vaporize readily, so some fuel can pass through incompletely burned. The chapter also notes that **water is a product of combustion** and can condense in the cold exhaust, contributing to the appearance of white smoke or vapour. This should diminish as the engine warms.",
+    "difficulty": "hard",
+    "tags": [
+      "cold starting",
+      "white smoke",
+      "fuel vaporization"
+    ]
+  },
+  {
+    "question": "What is one reason a rich mixture helps maintain smooth running at low engine speed?",
+    "choices": [
+      "It compensates for dilution of the incoming charge by residual exhaust gases.",
+      "It increases exhaust-gas inertia at every speed.",
+      "It removes the need for cylinder compression.",
+      "It prevents the inlet valve from opening."
+    ],
+    "answer": "It compensates for dilution of the incoming charge by residual exhaust gases.",
+    "explanation": "At low engine speeds, the exhaust gases may not be scavenged as effectively, and the descending piston can draw some of them back into the cylinder before the exhaust valve closes. This **dilutes the incoming charge**. A richer mixture helps maintain enough combustible vapour for smooth combustion.",
+    "difficulty": "medium",
+    "tags": [
+      "slow running",
+      "exhaust gas dilution",
+      "rich mixture"
+    ]
+  },
+  {
+    "question": "To what approximate air/fuel ratio does the chapter say the mixture should be enriched for take-off power?",
+    "choices": [
+      "18:1",
+      "15:1",
+      "11:1",
+      "10:1"
+    ],
+    "answer": "10:1",
+    "explanation": "For **take-off power**, the chapter says the mixture is enriched to approximately **10:1**. The extra fuel provides a cooling effect, helping reduce detonation risk at high power. Some fuel is not fully burned because there is insufficient oxygen for complete combustion, so the additional power is mainly associated with the greater weight of charge inducted in a given time rather than enrichment alone.",
+    "difficulty": "medium",
+    "tags": [
+      "take-off power",
+      "10:1",
+      "rich mixture"
+    ]
+  },
+  {
+    "question": "Why is the mixture enriched for high-power climbing, according to the chapter?",
+    "choices": [
+      "To increase fuel temperature and accelerate detonation",
+      "To cool the mixture through vaporization and reduce the tendency to detonate",
+      "To eliminate all exhaust gases",
+      "To make the engine operate at the leanest possible setting"
+    ],
+    "answer": "To cool the mixture through vaporization and reduce the tendency to detonate",
+    "explanation": "For **climbing power**, the chapter gives an approximate mixture of **11:1**. The additional fuel absorbs heat as it vaporizes, cooling the mixture and reducing its tendency to detonate when engine power, cylinder pressure, and gas temperature are high.",
+    "difficulty": "medium",
+    "tags": [
+      "climbing power",
+      "11:1",
+      "detonation prevention"
+    ]
+  },
+  {
+    "question": "What air/fuel ratio may be used during cruise power to reduce fuel consumption, according to the chapter?",
+    "choices": [
+      "10:1",
+      "11:1",
+      "15:1",
+      "18:1"
+    ],
+    "answer": "18:1",
+    "explanation": "At moderate **cruise power**, the chapter says the mixture may be leaned to around **18:1** to reduce fuel consumption. This economy setting uses less fuel, but the slower combustion rate means ignition timing may need to be advanced as described in the chapter.",
+    "difficulty": "easy",
+    "tags": [
+      "cruise power",
+      "18:1",
+      "fuel economy"
+    ]
+  },
+  {
+    "question": "What does the chapter say happens as the mixture control is moved from fully rich toward a weaker setting and approaches 15:1?",
+    "choices": [
+      "EGT decreases continuously without reaching a peak.",
+      "EGT approaches a maximum as the mixture reaches the chemically correct ratio.",
+      "CHT immediately becomes zero.",
+      "The engine must stop running at 15:1."
+    ],
+    "answer": "EGT approaches a maximum as the mixture reaches the chemically correct ratio.",
+    "explanation": "As the mixture is leaned from fully rich, the air/fuel ratio approaches the chemically correct value of approximately **15:1**. The chapter explains that the **exhaust gas temperature (EGT) reaches its peak** near this point because combustion heat release is at its maximum in the described operating condition.",
+    "difficulty": "medium",
+    "tags": [
+      "EGT",
+      "15:1",
+      "mixture control"
+    ]
+  },
+  {
+    "question": "What instrument does the chapter identify as a more accurate aid for adjusting the mixture than RPM or airspeed indications?",
+    "choices": [
+      "Oil-pressure gauge",
+      "Exhaust Gas Temperature (EGT) gauge",
+      "Fuel quantity gauge",
+      "Cylinder compression gauge"
+    ],
+    "answer": "Exhaust Gas Temperature (EGT) gauge",
+    "explanation": "The chapter notes that RPM and airspeed can help indicate mixture changes, but a more accurate method is to monitor **exhaust gas temperature (EGT)**. The EGT gauge helps the pilot identify the peak temperature while leaning and then set the mixture according to the aircraft flight manual.",
+    "difficulty": "easy",
+    "tags": [
+      "EGT gauge",
+      "mixture adjustment",
+      "instrumentation"
+    ]
+  },
+  {
+    "question": "What component senses exhaust temperature in the EGT system described in the chapter?",
+    "choices": [
+      "A thermocouple fitted in the exhaust pipe of the hottest cylinder",
+      "A float in the fuel tank",
+      "A pressure switch in the induction manifold",
+      "A magneto contact-breaker cam"
+    ],
+    "answer": "A thermocouple fitted in the exhaust pipe of the hottest cylinder",
+    "explanation": "The **EGT gauge** uses a thermocouple fitted in the exhaust pipe of the hottest cylinder. The thermocouple produces a voltage directly proportional to its temperature, and the gauge is calibrated to display that temperature.",
+    "difficulty": "medium",
+    "tags": [
+      "thermocouple",
+      "EGT gauge",
+      "exhaust system"
+    ]
+  },
+  {
+    "question": "When leaning the mixture while using an EGT gauge, what should the pilot do as EGT reaches its peak, according to the chapter?",
+    "choices": [
+      "Continue leaning indefinitely",
+      "Move the mixture control back toward rich to obtain the specified temperature drop",
+      "Switch off both magnetos",
+      "Immediately select take-off power"
+    ],
+    "answer": "Move the mixture control back toward rich to obtain the specified temperature drop",
+    "explanation": "The chapter instructs that the mixture control should be moved **slowly** while leaning. When EGT reaches its peak, the control should then be moved toward rich until the temperature drops by the amount specified in the aircraft flight manual for the required setting, such as rich cruise.",
+    "difficulty": "hard",
+    "tags": [
+      "peak EGT",
+      "mixture control",
+      "flight manual"
+    ]
+  },
+  {
+    "question": "According to the chapter, how should the mixture normally be adjusted when using the EGT gauge?",
+    "choices": [
+      "At every change in engine power, regardless of procedure",
+      "Only at cruise power settings, and returned to fully rich whenever power is changed",
+      "Only during engine start",
+      "Only when the EGT gauge is disconnected"
+    ],
+    "answer": "Only at cruise power settings, and returned to fully rich whenever power is changed",
+    "explanation": "The chapter states that mixture adjustment is **normally made only at cruise power settings**. It also emphasizes returning the mixture to **FULLY RICH whenever power is changed**, following the aircraft's prescribed operating procedures and flight manual.",
+    "difficulty": "medium",
+    "tags": [
+      "mixture adjustment",
+      "cruise",
+      "operating procedure"
+    ]
+  },
+  {
+    "question": "What may happen to EGT and cylinder-head temperature (CHT) when the mixture is weakened beyond the chemically correct ratio?",
+    "choices": [
+      "Both always fall together.",
+      "EGT falls while CHT rises.",
+      "EGT rises while CHT falls to zero.",
+      "Neither temperature can change."
+    ],
+    "answer": "EGT falls while CHT rises.",
+    "explanation": "The chapter states that weakening the mixture beyond the chemically correct ratio can cause **EGT to fall while CHT rises**. Excessive leaning can therefore increase thermal stress even when the exhaust-temperature reading is decreasing, so the prescribed temperature drop and aircraft flight manual guidance are important.",
+    "difficulty": "hard",
+    "tags": [
+      "EGT",
+      "CHT",
+      "excessive leaning"
+    ]
+  },
+  {
+    "question": "Why do diesel engines generally run lean, according to the chapter?",
+    "choices": [
+      "Their air supply is not throttled and is fed unrestricted into the cylinder as a function of fuel delivery.",
+      "They have no air supply during normal operation.",
+      "They always use a richer mixture than spark-ignition engines.",
+      "They rely on a mixture control lever identical to an aero piston engine."
+    ],
+    "answer": "Their air supply is not throttled and is fed unrestricted into the cylinder as a function of fuel delivery.",
+    "explanation": "The chapter explains that diesel engines generally operate **lean** because air is supplied without the same throttling arrangement used in conventional spark-ignition piston engines. Power is controlled mainly by the amount of fuel delivered, while the air supply remains relatively unrestricted.",
+    "difficulty": "medium",
+    "tags": [
+      "diesel engines",
+      "lean mixture",
+      "fuel delivery"
+    ]
+  },
+  {
+    "question": "Which statement about diesel aero-engines is supported by the chapter?",
+    "choices": [
+      "Detonation is their main operating characteristic.",
+      "They generally operate at higher temperatures and require a reliable, effective cooling system.",
+      "They always use a separate mixture lever like conventional piston engines.",
+      "They do not require any cooling system."
+    ],
+    "answer": "They generally operate at higher temperatures and require a reliable, effective cooling system.",
+    "explanation": "The chapter notes that detonation is not a characteristic problem in the same way as in conventional piston engines, but diesel engines generally run at **higher temperatures**. They therefore require a reliable and effective cooling system. The chapter also describes a single-lever concept similar to that used on some turboprops.",
+    "difficulty": "medium",
+    "tags": [
+      "diesel engines",
+      "cooling",
+      "mixture control"
+    ]
+  },
+  {
+    "question": "According to Figure 7.1, what is the main trade-off between rich-cruise and economy-cruise settings?",
+    "choices": [
+      "Rich cruise favours best power, while economy cruise favours best specific fuel consumption.",
+      "Rich cruise always gives the lowest fuel consumption, while economy cruise gives maximum take-off power.",
+      "Both settings provide identical power and fuel economy.",
+      "Economy cruise is intended only for starting and slow running."
+    ],
+    "answer": "Rich cruise favours best power, while economy cruise favours best specific fuel consumption.",
+    "explanation": "**Figure 7.1** distinguishes the two cruise settings: **rich cruise is associated with best power**, while **economy cruise is associated with best specific fuel consumption (SFC)**. The pilot therefore chooses the setting appropriate to the operating objective, following the aircraft flight manual rather than assuming one mixture setting is best for every condition.",
+    "difficulty": "medium",
+    "tags": [
+      "Figure 7.1",
+      "rich cruise",
+      "economy cruise",
+      "SFC"
+    ]
+  },
+  {
+    "question": "Why should the mixture control be moved slowly when using an EGT gauge to lean the engine?",
+    "choices": [
+      "So the pilot can observe the EGT response and identify the peak temperature accurately.",
+      "To make the engine stop burning fuel before the gauge responds.",
+      "Because the thermocouple measures fuel pressure rather than temperature.",
+      "To keep the mixture permanently at the take-off setting."
+    ],
+    "answer": "So the pilot can observe the EGT response and identify the peak temperature accurately.",
+    "explanation": "The chapter instructs that the mixture control should be moved **slowly** while leaning. This allows the pilot to monitor the changing EGT and identify the **peak EGT** before enriching the mixture to achieve the temperature drop specified in the aircraft flight manual. Rapid adjustment could make the peak harder to identify accurately.",
+    "difficulty": "medium",
+    "tags": [
+      "EGT gauge",
+      "mixture control",
+      "peak EGT"
+    ]
+  }
+]

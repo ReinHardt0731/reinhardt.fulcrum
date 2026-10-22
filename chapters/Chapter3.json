@@ -1,0 +1,499 @@
+[
+  {
+    "question": "What is the **primary task** of an aircraft piston-engine lubrication system?",
+    "choices": [
+      "To reduce friction and component wear between moving parts",
+      "To maintain a fixed engine temperature by stopping oil circulation when hot",
+      "To increase friction at bearings so the rotating parts remain aligned",
+      "To transfer all engine heat directly into the fuel system"
+    ],
+    "answer": "To reduce friction and component wear between moving parts",
+    "explanation": "The chapter identifies **reduction of friction and wear** as the primary task of lubrication. Oil separates moving surfaces and reduces direct metal-to-metal contact. Cooling, cleaning, protection, hydraulic operation, and indication are important secondary functions.",
+    "difficulty": "Easy",
+    "tags": [
+      "lubrication purpose",
+      "friction",
+      "wear"
+    ]
+  },
+  {
+    "question": "How does lubrication help cool a piston engine?",
+    "choices": [
+      "By carrying heat away from internal engine components as oil circulates",
+      "By reducing combustion temperature through a richer fuel mixture",
+      "By stopping oil flow through hot engine areas until they cool",
+      "By transferring heat from the oil into the fuel before combustion"
+    ],
+    "answer": "By carrying heat away from internal engine components as oil circulates",
+    "explanation": "Oil flowing through the engine helps **dissipate heat** from internal components. An oil cooler may then transfer heat from the oil to cooling air, helping prevent the oil from becoming too hot to lubricate effectively.",
+    "difficulty": "Easy",
+    "tags": [
+      "cooling",
+      "oil functions"
+    ]
+  },
+  {
+    "question": "What is the main difference between a **wet-sump** and a **dry-sump** lubrication system?",
+    "choices": [
+      "A wet sump stores oil in the engine sump, while a dry sump stores it in a separate tank",
+      "A wet sump uses a scavenge pump to return oil to a remote tank, while a dry sump stores oil below the crankshaft",
+      "A wet sump uses pressure lubrication, while a dry sump relies only on splash lubrication",
+      "A wet sump has an external oil tank, while a dry sump stores all oil inside the crankcase"
+    ],
+    "answer": "A wet sump stores oil in the engine sump, while a dry sump stores it in a separate tank",
+    "explanation": "In a **wet-sump system**, oil is stored in the bottom sump of the engine. A **dry-sump system** stores oil in a remotely mounted tank and uses a pressure pump to supply oil and scavenge pump(s) to return it.",
+    "difficulty": "Easy",
+    "tags": [
+      "wet sump",
+      "dry sump",
+      "system types"
+    ]
+  },
+  {
+    "question": "Which is a disadvantage of the wet-sump system described in the chapter?",
+    "choices": [
+      "Oil may move away from the pickup during manoeuvres, creating lubrication difficulties",
+      "The oil supply must be returned to a separate tank by a larger-capacity scavenge pump",
+      "The oil is stored remotely, making its temperature more difficult to control",
+      "The system requires a separate tank to provide gravity feed to the pressure pump"
+    ],
+    "answer": "Oil may move away from the pickup during manoeuvres, creating lubrication difficulties",
+    "explanation": "The chapter notes that in a wet-sump system, oil can be flung around by rotating shafts during manoeuvres, potentially causing **over-oiling or interrupted oil supply**. It also lists less temperature control, easier contamination/oxidation, and limited sump capacity.",
+    "difficulty": "Medium",
+    "tags": [
+      "wet sump",
+      "limitations"
+    ]
+  },
+  {
+    "question": "In a dry-sump system, what is the primary function of the **scavenge pump**?",
+    "choices": [
+      "To return oil from the engine sump to the oil tank",
+      "To supply pressurized oil from the tank to the engine bearings",
+      "To regulate maximum oil pressure by returning excess oil to the pump inlet",
+      "To remove large particles before oil enters the pressure pump"
+    ],
+    "answer": "To return oil from the engine sump to the oil tank",
+    "explanation": "The **scavenge pump** removes oil that has collected in the engine sump and returns it to the remote tank, helping keep the sump from flooding. The chapter states that its capacity is commonly about **25–50% greater** than the pressure pump's capacity.",
+    "difficulty": "Easy",
+    "tags": [
+      "scavenge pump",
+      "dry sump"
+    ]
+  },
+  {
+    "question": "Why is the dry-sump scavenge pump usually larger in capacity than the pressure pump?",
+    "choices": [
+      "Because it must return oil mixed with air and prevent the sump from flooding",
+      "Because it supplies oil to the combustion chambers",
+      "Because it must create the highest system pressure",
+      "Because it replaces the oil pressure relief valve"
+    ],
+    "answer": "Because it must return oil mixed with air and prevent the sump from flooding",
+    "explanation": "The chapter specifies a scavenge-pump capacity approximately **25–50% greater** than the pressure pump. The scavenge side must return the oil collected in the sump and accommodate the aerated return flow.",
+    "difficulty": "Medium",
+    "tags": [
+      "scavenge pump",
+      "pump capacity"
+    ]
+  },
+  {
+    "question": "What is the purpose of the **hot pot (hot well)** in a dry-sump oil tank?",
+    "choices": [
+      "To reduce the time needed to warm cold oil by restricting the quantity circulating initially",
+      "To store fuel for engine starting",
+      "To increase oil aeration during normal operation",
+      "To collect metal particles after the oil filter"
+    ],
+    "answer": "To reduce the time needed to warm cold oil by restricting the quantity circulating initially",
+    "explanation": "The **hot pot** is a separate compartment around the oil outlet. When oil is cold and viscous, it restricts the amount initially circulated, helping the engine warm the oil more quickly. As returning oil warms the compartment, more oil can flow into circulation.",
+    "difficulty": "Medium",
+    "tags": [
+      "oil tank",
+      "hot pot",
+      "cold oil"
+    ]
+  },
+  {
+    "question": "What is the purpose of the **suction filter**?",
+    "choices": [
+      "To remove large solid particles before oil enters the pressure pump",
+      "To remove the finest particles after oil has passed through the engine",
+      "To bypass the oil cooler when the oil is cold",
+      "To prevent oil from draining back through the pump after shutdown"
+    ],
+    "answer": "To remove large solid particles before oil enters the pressure pump",
+    "explanation": "The chapter describes a coarse wire-mesh **suction filter** between the tank and pressure pump. It removes large solid particles before they can enter and damage the pump.",
+    "difficulty": "Easy",
+    "tags": [
+      "suction filter",
+      "filtration"
+    ]
+  },
+  {
+    "question": "Which factors affect the actual oil pressure produced by the pressure pump?",
+    "choices": [
+      "Pump speed, oil temperature, and resistance offered by engine components",
+      "Engine displacement, fuel grade, and propeller blade angle",
+      "Oil quantity, outside humidity, and the temperature of the fuel tank",
+      "Airflow through the cooler, tank volume, and the number of cylinders"
+    ],
+    "answer": "Pump speed, oil temperature, and resistance offered by engine components",
+    "explanation": "The chapter states that actual oil pressure depends on **pump speed**, **oil temperature**, and the **resistance offered by the components**. The system must still provide minimum pressure under adverse conditions such as low engine speed and high inlet-oil temperature.",
+    "difficulty": "Medium",
+    "tags": [
+      "oil pressure",
+      "pressure pump"
+    ]
+  },
+  {
+    "question": "What does the **pressure relief valve (PRV)** do?",
+    "choices": [
+      "It limits maximum system oil pressure by returning excess oil to the pump inlet side",
+      "It prevents oil from entering the engine at all",
+      "It measures oil quantity in the tank",
+      "It sends oil from the sump to the tank"
+    ],
+    "answer": "It limits maximum system oil pressure by returning excess oil to the pump inlet side",
+    "explanation": "When oil pressure reaches a predetermined value, the **pressure relief valve opens** and returns sufficient oil to the inlet side of the pump. This prevents dangerously high system pressure.",
+    "difficulty": "Easy",
+    "tags": [
+      "pressure relief valve",
+      "oil pressure"
+    ]
+  },
+  {
+    "question": "What is the purpose of a **check valve** in the oil system?",
+    "choices": [
+      "To stop oil draining through the pressure pump into the crankcase when the engine is stopped",
+      "To increase the oil's viscosity",
+      "To direct cooling air around the oil cooler",
+      "To measure the amount of oil consumed"
+    ],
+    "answer": "To stop oil draining through the pressure pump into the crankcase when the engine is stopped",
+    "explanation": "When an oil tank is above the pump, gravity may force hot, thin oil through pump clearances after shutdown. A **check valve (non-return valve)** holds the oil back until the engine starts, helping prevent the tank from draining into the crankcase and flooding it.",
+    "difficulty": "Medium",
+    "tags": [
+      "check valve",
+      "dry sump",
+      "over-oiling"
+    ]
+  },
+  {
+    "question": "Where is the pressure filter located, and what is its main job?",
+    "choices": [
+      "Downstream of the pressure pump and before oil enters the engine, to remove small solid particles",
+      "Before the tank, to remove water from fuel",
+      "Inside the exhaust, to collect carbon",
+      "After the scavenge pump, to increase oil temperature"
+    ],
+    "answer": "Downstream of the pressure pump and before oil enters the engine, to remove small solid particles",
+    "explanation": "The **pressure filter** is placed after the pressure pump and before oil reaches the engine's bearing surfaces. A spring-loaded bypass valve allows oil to bypass the filter if the oil is cold or the filter element becomes blocked.",
+    "difficulty": "Medium",
+    "tags": [
+      "pressure filter",
+      "bypass valve"
+    ]
+  },
+  {
+    "question": "Why is an **anti-surge and thermostatic by-pass valve** fitted around the oil cooler?",
+    "choices": [
+      "To bypass the cooler when cold, thick oil would otherwise create excessive resistance",
+      "To ensure all oil always passes through a cold cooler",
+      "To prevent the pressure pump from supplying oil",
+      "To reduce the engine's fuel-air ratio"
+    ],
+    "answer": "To bypass the cooler when cold, thick oil would otherwise create excessive resistance",
+    "explanation": "Cold oil is thick and may not pass easily through the cooler's narrow passages. The **anti-surge/thermostatic bypass valve** provides an alternate route, helping prevent excessive pressure and cooler damage while the oil warms.",
+    "difficulty": "Medium",
+    "tags": [
+      "oil cooler",
+      "anti-surge valve"
+    ]
+  },
+  {
+    "question": "Which three factors does the chapter identify as affecting oil temperature?",
+    "choices": [
+      "Engine heat generated, cooling-air temperature, and airflow rate through the cooler",
+      "Fuel pressure, propeller pitch, and cabin altitude",
+      "Oil tank colour, engine paint, and aircraft weight",
+      "Spark-plug gap, magneto timing, and tire pressure"
+    ],
+    "answer": "Engine heat generated, cooling-air temperature, and airflow rate through the cooler",
+    "explanation": "The chapter lists **heat generated by the engine (power)**, **cooling-air temperature**, and **the rate of airflow through the cooler** as the three factors affecting oil temperature.",
+    "difficulty": "Easy",
+    "tags": [
+      "oil cooler",
+      "oil temperature"
+    ]
+  },
+  {
+    "question": "What should generally happen to oil-cooler shutters when the engine is started with cold oil?",
+    "choices": [
+      "They should be closed initially to help the oil temperature rise, then opened as needed",
+      "They should be fully open at all times regardless of temperature",
+      "They should be removed before starting",
+      "They should control the fuel mixture instead of airflow"
+    ],
+    "answer": "They should be closed initially to help the oil temperature rise, then opened as needed",
+    "explanation": "For aircraft fitted with cooler shutters, the chapter says they are **closed at start-up** so cold oil can warm more quickly, then opened to maintain temperature. In flight, shutters may need to close as cooling-air temperature decreases with altitude.",
+    "difficulty": "Medium",
+    "tags": [
+      "oil cooler",
+      "shutters",
+      "cold start"
+    ]
+  },
+  {
+    "question": "Which oil-system indications does the chapter identify as key monitoring parameters?",
+    "choices": [
+      "Oil temperature, oil pressure, and oil quantity",
+      "Oil temperature, fuel pressure, and engine vibration",
+      "Oil pressure, exhaust temperature, and fuel quantity",
+      "Oil quantity, propeller pitch, and cylinder-head temperature"
+    ],
+    "answer": "Oil temperature, oil pressure, and oil quantity",
+    "explanation": "The chapter identifies **temperature, pressure, and quantity** as the oil-system parameters to monitor. Oil temperature and pressure must be indicated on the flight deck; quantity may be displayed or checked before flight by a dipstick or sight glass.",
+    "difficulty": "Easy",
+    "tags": [
+      "monitoring instruments",
+      "oil temperature",
+      "oil pressure",
+      "oil quantity"
+    ]
+  },
+  {
+    "question": "According to the chapter, a temperature in the region of **85°C** would generally be considered:",
+    "choices": [
+      "Normal",
+      "Proof of immediate engine failure",
+      "Too low for any oil circulation",
+      "An indication that the pressure relief valve is stuck open"
+    ],
+    "answer": "Normal",
+    "explanation": "The chapter states that oil temperature is measured at the inlet to the engine pressure pump and that temperatures around **85°C** would be considered normal. Always use the specific aircraft's operating limitations where applicable.",
+    "difficulty": "Medium",
+    "tags": [
+      "oil temperature",
+      "normal indication"
+    ]
+  },
+  {
+    "question": "What is **viscosity**?",
+    "choices": [
+      "The measure of a fluid's internal friction or resistance to flow",
+      "The ability of oil to absorb combustion by-products without thickening",
+      "The pressure that the oil pump can produce at a fixed engine speed",
+      "The rate at which oil transfers heat to the surrounding air"
+    ],
+    "answer": "The measure of a fluid's internal friction or resistance to flow",
+    "explanation": "The chapter defines **viscosity** as a fluid's internal friction or resistance to flow. Thin oil flows freely and has low viscosity; thick oil flows sluggishly and has high viscosity.",
+    "difficulty": "Easy",
+    "tags": [
+      "viscosity",
+      "oil properties"
+    ]
+  },
+  {
+    "question": "How does increasing oil temperature affect viscosity?",
+    "choices": [
+      "It reduces viscosity",
+      "It increases viscosity",
+      "It causes viscosity to remain constant at all temperatures",
+      "It changes the oil's viscosity grade immediately"
+    ],
+    "answer": "It reduces viscosity",
+    "explanation": "The chapter states that **an increase in temperature reduces viscosity**, while a decrease in temperature increases viscosity. Oil must maintain suitable viscosity across the engine's operating-temperature range.",
+    "difficulty": "Easy",
+    "tags": [
+      "viscosity",
+      "temperature"
+    ]
+  },
+  {
+    "question": "Which relationship between SAE and Saybolt Universal numbers is stated in the chapter's example table?",
+    "choices": [
+      "The SAE number is half the Saybolt Universal number",
+      "The SAE number is twice the Saybolt Universal number",
+      "The two numbers are always identical",
+      "The Saybolt Universal number is always lower than the SAE number"
+    ],
+    "answer": "The SAE number is half the Saybolt Universal number",
+    "explanation": "The chapter's table pairs SAE 30 with Saybolt Universal 60, SAE 40 with 80, SAE 50 with 100, and SAE 60 with 120. In these examples, **the SAE number is half the Saybolt Universal number**.",
+    "difficulty": "Medium",
+    "tags": [
+      "viscosity grade",
+      "SAE",
+      "Saybolt Universal"
+    ]
+  },
+  {
+    "question": "What can happen if oil with too high a viscosity is used at too low a temperature?",
+    "choices": [
+      "Starting problems can occur because the oil is too thick to flow readily",
+      "The oil will become thinner and flow too quickly",
+      "The engine will no longer require an oil pump",
+      "The oil temperature indication will become unnecessary"
+    ],
+    "answer": "Starting problems can occur because the oil is too thick to flow readily",
+    "explanation": "The chapter warns that **excessively high viscosity at low temperature** can cause starting problems. Multigrade oils are described as providing low-viscosity characteristics at low temperatures and higher viscosity at high temperatures.",
+    "difficulty": "Medium",
+    "tags": [
+      "viscosity",
+      "cold starting",
+      "multigrade oil"
+    ]
+  },
+  {
+    "question": "What is the difference between **straight oil** and **compound oil** as described in the chapter?",
+    "choices": [
+      "Straight oil contains no additives; compound oil has additives such as antioxidants, detergents, or oiliness agents",
+      "Straight oil is always synthetic; compound oil is always mineral",
+      "Straight oil is used only in diesel engines",
+      "Compound oil contains no lubricating base oil"
+    ],
+    "answer": "Straight oil contains no additives; compound oil has additives such as antioxidants, detergents, or oiliness agents",
+    "explanation": "The chapter describes normal aircraft piston-engine oil as usually **mineral based**. Oil without additives is called straight oil; additives may be included to meet operating requirements, producing compound oils.",
+    "difficulty": "Easy",
+    "tags": [
+      "types of oil",
+      "straight oil",
+      "compound oil"
+    ]
+  },
+  {
+    "question": "What does the designation **AD** mean in the oil terminology used in the chapter?",
+    "choices": [
+      "Ashless Dispersant",
+      "Automatic Drain",
+      "Anti-Detonation",
+      "Aircraft Diesel"
+    ],
+    "answer": "Ashless Dispersant",
+    "explanation": "The chapter states that the letters **AD** stand for **Ashless Dispersant**, describing an oil with specific cleaning qualities. Follow the oil specifications approved for the engine concerned.",
+    "difficulty": "Easy",
+    "tags": [
+      "oil types",
+      "ashless dispersant"
+    ]
+  },
+  {
+    "question": "Why should radial or inverted engines be pulled through the cycle before starting, according to the chapter?",
+    "choices": [
+      "To ensure that oil has not accumulated in lower cylinders and caused hydraulic lock",
+      "To increase fuel pressure in the injection manifold",
+      "To warm the tires before taxiing",
+      "To verify the oil cooler shutters are permanently open"
+    ],
+    "answer": "To ensure that oil has not accumulated in lower cylinders and caused hydraulic lock",
+    "explanation": "Oil can accumulate in the lower cylinders of radial or inverted engines while stopped. Because oil is **incompressible**, attempting to move a piston against a cylinder full of oil can cause serious damage. The chapter advises pulling the engine through the cycle and confirming magnetos are OFF before turning the engine.",
+    "difficulty": "Medium",
+    "tags": [
+      "operational considerations",
+      "hydraulic lock",
+      "starting"
+    ]
+  },
+  {
+    "question": "What should be expected regarding oil pressure immediately after a cold start?",
+    "choices": [
+      "It may initially be excessively high, but should fall into its normal range as the engine warms",
+      "It must remain at zero until the engine reaches cruise power",
+      "It should always be lower than the normal operating range",
+      "It cannot change with oil temperature"
+    ],
+    "answer": "It may initially be excessively high, but should fall into its normal range as the engine warms",
+    "explanation": "Cold oil is more viscous, so pressure may be **excessively high immediately after starting**. The chapter says this can be normal if pressure falls into the normal range as the engine warms. Positive oil pressure should appear within the specified time for the aircraft/engine.",
+    "difficulty": "Medium",
+    "tags": [
+      "oil pressure",
+      "cold start",
+      "operating indications"
+    ]
+  },
+  {
+    "question": "What may **low oil pressure at normal oil temperature** indicate?",
+    "choices": [
+      "Possible impending engine failure, requiring a landing as soon as possible",
+      "That the engine is definitely operating normally",
+      "That the oil is too cold to circulate",
+      "That the oil tank should be filled beyond capacity"
+    ],
+    "answer": "Possible impending engine failure, requiring a landing as soon as possible",
+    "explanation": "The chapter states that pressure fluctuations may result from low oil level or system faults. **Low pressure at normal temperature** may indicate impending engine failure, and a landing should be made as soon as possible.",
+    "difficulty": "Hard",
+    "tags": [
+      "oil pressure",
+      "abnormal indications",
+      "emergency response"
+    ]
+  },
+  {
+    "question": "What is **oil foaming** associated with in the chapter's operational considerations?",
+    "choices": [
+      "Air mixed into the oil, which can contribute to frothing",
+      "An increase in fuel octane",
+      "Excessive propeller blade twist",
+      "Oil becoming completely free of air"
+    ],
+    "answer": "Air mixed into the oil, which can contribute to frothing",
+    "explanation": "The chapter discusses aeration and frothing in the oil tank and describes a de-aerator plate that separates air from returning oil. Excessive frothing can cause oil losses through the crankcase breather.",
+    "difficulty": "Medium",
+    "tags": [
+      "oil tank",
+      "aeration",
+      "foaming"
+    ]
+  },
+  {
+    "question": "What is **coring** during a very cold start?",
+    "choices": [
+      "A condition in which cold, viscous oil does not circulate properly through the oil cooler",
+      "An increase in oil flow caused by hot weather",
+      "A normal propeller feathering procedure",
+      "A type of oil-pressure sensor"
+    ],
+    "answer": "A condition in which cold, viscous oil does not circulate properly through the oil cooler",
+    "explanation": "The chapter describes **coring** as a cold-weather starting problem caused by oil that is too viscous to flow correctly through the cooler. Closing the oil-cooler flaps/shutters initially can help improve flow and warm the oil, following the applicable flight manual.",
+    "difficulty": "Hard",
+    "tags": [
+      "coring",
+      "cold weather",
+      "oil cooler"
+    ]
+  },
+  {
+    "question": "According to the chapter, when should the oil quantity in a dry-sump system be checked for an accurate reading?",
+    "choices": [
+      "Immediately after shutdown, realistically within a few minutes",
+      "Only after the aircraft has been parked for several hours",
+      "Only while the engine is running at maximum power",
+      "Before every flight without regard to shutdown time"
+    ],
+    "answer": "Immediately after shutdown, realistically within a few minutes",
+    "explanation": "After shutdown, oil can migrate under gravity from the tank into the engine sump. The chapter says a dry-sump oil quantity should be checked **immediately after the engine has stopped**, realistically within a few minutes, so the tank reading is accurate.",
+    "difficulty": "Medium",
+    "tags": [
+      "oil quantity",
+      "dry sump",
+      "preflight"
+    ]
+  },
+  {
+    "question": "Why does the chapter advise waiting at least **15–20 minutes** before checking oil quantity on a wet-sump system in the described comparison?",
+    "choices": [
+      "To allow the oil level to settle after oil has drained into the sump",
+      "To allow the oil cooler to freeze",
+      "To ensure the oil pump continues running after shutdown",
+      "To allow the fuel to drain from the tank"
+    ],
+    "answer": "To allow the oil level to settle after oil has drained into the sump",
+    "explanation": "The chapter says that, unlike the immediate check described for a dry-sump system, a **wet-sump system** should be allowed to stand for at least 15–20 minutes before checking, similar to the settling period used for motor cars.",
+    "difficulty": "Medium",
+    "tags": [
+      "oil quantity",
+      "wet sump",
+      "preflight"
+    ]
+  }
+]
