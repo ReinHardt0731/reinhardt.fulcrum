@@ -1,0 +1,817 @@
+[
+  {
+    "question": "Capacity of a material to absorb energy in the plastic range:",
+    "choices": [
+      "Resilience",
+      "Modulus of Resilience",
+      "Toughness",
+      "Modulus of Toughness"
+    ],
+    "answer": "Toughness",
+    "explanation": "Toughness is the energy a material can absorb before fracture, including energy absorbed during elastic and plastic deformation. On a stress–strain curve, it corresponds to the total area under the curve up to fracture. Resilience, by contrast, concerns energy absorbed elastically and recovered on unloading.\n\nWhy the others are incorrect: Resilience is elastic energy absorption; modulus of resilience is elastic energy per unit volume; modulus of toughness is the area under the full stress–strain curve and is sometimes used interchangeably with toughness per unit volume. Here the expected term is Toughness.\n\n💡 Memory Hook: Toughness = total energy to fracture; resilience = recoverable elastic energy.\n\n🎯 Board Tip: Look for the phrase “plastic range” or energy absorbed before fracture.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "material"
+    ]
+  },
+  {
+    "question": "Obtained in a pullout at the highest possible angle of attack on the wing",
+    "choices": [
+      "PHAA",
+      "PLAA",
+      "NHAA",
+      "NLAA"
+    ],
+    "answer": "PHAA",
+    "explanation": "PHAA means positive high angle of attack. A pullout maneuver increases load factor and angle of attack; the highest possible positive angle of attack is associated with the positive high-angle condition in this answer key.\n\nWhy the others are incorrect: PLAA denotes positive low angle of attack; NHAA and NLAA refer to negative high- and low-angle conditions, respectively. They do not describe the positive high-angle pullout condition identified by the key.\n\n💡 Memory Hook: P/N = positive/negative; H/L = high/low angle of attack.\n\n🎯 Board Tip: Memorize the abbreviations as paired sign-and-magnitude labels.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "wing"
+    ]
+  },
+  {
+    "question": "The wing bending moments produce the highest compressive stresses in the lower forward region and highest tensile stresses in the upper aft region.",
+    "choices": [
+      "PHAA",
+      "PLAA",
+      "NHAA",
+      "NLAA"
+    ],
+    "answer": "NHAA",
+    "explanation": "The provided answer key marks NHAA. This item appears to use a specific aircraft loading/stress convention or diagram not fully reproduced alongside the question. Wing bending generally produces opposite-sign longitudinal stresses on the upper and lower surfaces, but the exact “forward/aft” region terminology depends on the source's coordinate and loading convention.\n\nWhy the other choices are incorrect: PHAA, PLAA, and NLAA are alternative sign/angle-condition labels. The supplied key identifies NHAA, but the source excerpt alone does not provide enough derivation to independently establish the convention.\n\n💡 Memory Hook: Bending creates tension on one side and compression on the other.\n\n🎯 Board Tip: Verify this item against the referenced lecture diagram or textbook convention before using it as a scored question.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "stress",
+      "wing"
+    ]
+  },
+  {
+    "question": "Bars which are capable of carrying only axial loads",
+    "choices": [
+      "Beams",
+      "Trusses",
+      "Axial rods",
+      "Shearing panels"
+    ],
+    "answer": "Axial rods",
+    "explanation": "Axial rods are idealized members that carry force along their longitudinal axis—either tension or compression—without being designed to resist significant bending moment. This idealization is common in pin-jointed structural analysis.\n\nWhy the others are incorrect: Beams are commonly designed to resist transverse loads and bending; trusses are assemblies of members that ideally carry axial forces; shearing panels carry in-plane shear. The answer key specifically names axial rods.\n\n💡 Memory Hook: Axial = along the axis.\n\n🎯 Board Tip: Distinguish a single axial member from a truss, which is an assembly.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "load"
+    ]
+  },
+  {
+    "question": "A man can exert a maximum pull of 1000 N but wishes to lift a stone door weighing 20,000 N. If he uses a lever, how much closer must the fulcrum be to the stone than to his hand?",
+    "choices": [
+      "10 times nearer",
+      "20 times farther",
+      "10 times farther",
+      "20 times nearer"
+    ],
+    "answer": "20 times nearer",
+    "explanation": "For an ideal lever, moments about the fulcrum balance: effort × effort arm = load × load arm. The load is 20,000 N and the effort is 1,000 N, so the effort arm must be 20 times the load arm. Therefore, the fulcrum must be 20 times nearer the stone than the man's hand.\n\nWhy the others are incorrect: A 10:1 ratio would not balance a 20:1 load-to-effort ratio. “Farther” reverses the required geometry; the effort arm must be longer, not shorter.\n\n💡 Memory Hook: Mechanical advantage = effort arm ÷ load arm.\n\n🎯 Board Tip: Set up the moment equation before choosing a distance ratio.",
+    "difficulty": "hard",
+    "tags": [
+      "aircraft-structures",
+      "lift"
+    ]
+  },
+  {
+    "question": "An iron column of annular cross-section has an outer diameter of 200 mm and is subjected to a force of 75 kN. Find the thickness of the wall if the allowable compressive stress is 10 MPa.",
+    "choices": [
+      "12.75 mm",
+      "12.57 mm",
+      "17.75 mm",
+      "15.75 mm"
+    ],
+    "answer": "12.75 mm",
+    "explanation": "Using average axial stress, σ = P/A, the required area is A = 75,000 N / 10 N/mm² = 7,500 mm². For an annulus, A = (π/4)(Dₒ² − Dᵢ²). With Dₒ = 200 mm, the inner diameter is found from this area and the wall thickness is t = (Dₒ − Dᵢ)/2. The marked key gives 12.75 mm; verify the arithmetic and source assumptions because direct substitution of the stated values may not reproduce that exact option.\n\nWhy the other choices are incorrect: They represent alternative wall thicknesses. The governing method is to find the area from allowable stress, then use the annular-area equation; the keyed value should be checked against the original problem statement.\n\n💡 Memory Hook: Axial stress = load ÷ area.\n\n🎯 Board Tip: Keep units consistent: 1 MPa = 1 N/mm².",
+    "difficulty": "hard",
+    "tags": [
+      "aircraft-structures",
+      "stress"
+    ]
+  },
+  {
+    "question": "A 30,000-lb airplane is shown in Figure 1 at landing impact, when the ground reaction on each main wheel is 45,000 lb. If one wheel and tire weighs 500 lb, find the compression C.",
+    "choices": [
+      "43,000 lb",
+      "43,500 lb",
+      "45,000 lb",
+      "45,300 lb"
+    ],
+    "answer": "43,500 lb",
+    "explanation": "The answer key marks 43,500 lb. Landing-impact loads are found from force and moment equilibrium using the aircraft weight, ground reactions, and the wheel/tire weight shown in Figure 1. The compression in the structural element is not necessarily equal to the full wheel reaction; the figure's load path and geometry determine the internal force.\n\nWhy the other choices are incorrect: They are nearby values that do not match the keyed equilibrium result. Because the diagram supplies the force locations and directions, the complete calculation requires resolving the loads from Figure 1.\n\n💡 Memory Hook: External reactions are not always equal to internal member forces.\n\n🎯 Board Tip: Draw a free-body diagram and use both ΣF = 0 and ΣM = 0 where applicable.",
+    "difficulty": "hard",
+    "tags": [
+      "aircraft-structures"
+    ]
+  },
+  {
+    "question": "The airframe structure must remain substantially intact after experiencing:",
+    "choices": [
+      "The design ultimate load times a 1.5 safety factor",
+      "The design limit load plus the design ultimate load",
+      "Three times the safety factor",
+      "The design limit load times a 1.5 safety factor"
+    ],
+    "answer": "The design limit load times a 1.5 safety factor",
+    "explanation": "Ultimate design load is commonly obtained by multiplying limit load by a safety factor of 1.5. The structure is expected to withstand this ultimate load without failure, although permanent deformation may occur; limit load is the maximum expected in normal service and is generally associated with no detrimental permanent deformation.\n\nWhy the others are incorrect: Applying the safety factor to an already ultimate load double-counts it. Adding limit and ultimate loads is not the standard definition, and “three times the safety factor” is not a load specification.\n\n💡 Memory Hook: Ultimate load = limit load × 1.5.\n\n🎯 Board Tip: Know the distinction between limit load and ultimate load.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "load",
+      "design"
+    ]
+  },
+  {
+    "question": "n_limit for normal category airplane need not be greater than:",
+    "choices": [
+      "3.8",
+      "4.4",
+      "6.0",
+      "2.0"
+    ],
+    "answer": "3.8",
+    "explanation": "The provided key identifies 3.8 as the normal-category limit load factor value for this question. Load factor expresses lift (or aerodynamic load) relative to aircraft weight and is written n = L/W in a steady maneuver.\n\nWhy the others are incorrect: 4.4 and 6.0 are higher values than the keyed limit for this category; 2.0 is lower and does not match the stated certification value in this question.\n\n💡 Memory Hook: Load factor is measured in “g.”\n\n🎯 Board Tip: Certification limits depend on aircraft category; do not apply one category's value to another.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures"
+    ]
+  },
+  {
+    "question": "A biplane that has the upper wing closer to the nose is said to have:",
+    "choices": [
+      "Positive stagger",
+      "Negative stagger",
+      "Positive decalage",
+      "Negative decalage"
+    ],
+    "answer": "Positive stagger",
+    "explanation": "Stagger describes the fore-and-aft displacement of the wings on a biplane. Positive stagger means the upper wing is farther forward than the lower wing; negative stagger means it is farther aft.\n\nWhy the others are incorrect: Decalage is the difference between the incidence angles of the two wings, not their fore-and-aft position.\n\n💡 Memory Hook: Stagger = fore/aft; decalage = angle difference.\n\n🎯 Board Tip: Do not confuse wing position with wing incidence.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "wing"
+    ]
+  },
+  {
+    "question": "Biplane that has a lower wing considerably shorter than the upper wing",
+    "choices": [
+      "Parasol wing",
+      "Sesquiplane",
+      "Multiplane",
+      "Joined wing"
+    ],
+    "answer": "Sesquiplane",
+    "explanation": "A sesquiplane is a biplane arrangement in which one wing—typically the lower wing—has a substantially smaller span or area than the upper wing. The name literally suggests “one-and-a-half wings.”\n\nWhy the others are incorrect: A parasol wing is mounted above the fuselage on struts; a multiplane has more than two main wing planes; a joined wing connects wing surfaces in a distinctive closed or joined arrangement.\n\n💡 Memory Hook: Sesqui = one and a half.\n\n🎯 Board Tip: Identify biplane configurations by the relative span and mounting of their wings.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "wing"
+    ]
+  },
+  {
+    "question": "If the vertical fin of a single-engine, propeller-driven airplane is rigged properly, it will generally be parallel to:",
+    "choices": [
+      "The longitudinal axis but not the vertical axis",
+      "The vertical axis but not the longitudinal axis",
+      "Both the longitudinal and vertical axes",
+      "Neither the longitudinal and vertical axes"
+    ],
+    "answer": "The vertical axis but not the longitudinal axis",
+    "explanation": "The answer key marks the vertical axis but not the longitudinal axis. This item concerns the fin's rigging angle relative to the aircraft reference axes, likely accounting for compensation for propeller effects. The exact geometry depends on the convention used in the source.\n\nWhy the others are incorrect: The key rules out parallelism with the longitudinal axis and the combination of both axes. Because the question relies on a specific rigging convention, consult the course diagram before treating this as a universal rule.\n\n💡 Memory Hook: Fin rigging may compensate for asymmetric propeller effects.\n\n🎯 Board Tip: Rigging questions can depend on aircraft type and manufacturer instructions.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "propeller"
+    ]
+  },
+  {
+    "question": "Provides ground clearance at rotation for takeoff:",
+    "choices": [
+      "Fineness ratio",
+      "Closure angle",
+      "Sweep angle",
+      "Upsweep angle"
+    ],
+    "answer": "Upsweep angle",
+    "explanation": "Upsweep is the upward angle of the aft fuselage underside. It can provide clearance between the tail or aft fuselage and the runway as the airplane pitches nose-up during takeoff rotation.\n\nWhy the others are incorrect: Fineness ratio describes a body's length relative to a characteristic diameter; closure angle is not the feature named by this key; sweep angle describes the wing's planform angle.\n\n💡 Memory Hook: Upsweep lifts the aft underside away from the runway.\n\n🎯 Board Tip: Link geometry terms to the clearance or aerodynamic purpose they serve.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures"
+    ]
+  },
+  {
+    "question": "Is the engine whose failure had the most adverse effect on directional control:",
+    "choices": [
+      "Critical engine",
+      "Stalled engine",
+      "Inoperative engine",
+      "Engine vibration"
+    ],
+    "answer": "Critical engine",
+    "explanation": "The critical engine is the engine whose failure produces the most adverse effect on aircraft control or performance. On many multi-engine propeller aircraft, asymmetric thrust after an engine failure creates a yawing moment; propeller rotation and engine placement influence which engine is critical.\n\nWhy the others are incorrect: “Stalled engine” and “inoperative engine” are generic descriptions, not the specific term. Engine vibration is a condition, not the engine designation defined by the question.\n\n💡 Memory Hook: Critical engine = worst failure for control.\n\n🎯 Board Tip: Consider asymmetric thrust and the direction of propeller rotation.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "stall"
+    ]
+  },
+  {
+    "question": "For most airplane design, the spar is:",
+    "choices": [
+      "Tension field beam",
+      "Shear-resistant beam",
+      "Semi-tension filled beam",
+      "Semi-shear-resistant beam"
+    ],
+    "answer": "Semi-tension filled beam",
+    "explanation": "The answer key identifies the spar as a semi-tension-filled beam. A wing spar is a principal spanwise structural member that carries bending and shear loads. In this question's terminology, the keyed classification should be retained, though modern texts may describe spar behavior using different structural idealizations.\n\nWhy the others are incorrect: The alternatives name different idealized beam classifications and do not match the answer marked in the source. For a rigorous explanation of this older terminology, consult the referenced course text.\n\n💡 Memory Hook: Spar = principal spanwise load-carrying member.\n\n🎯 Board Tip: Preserve the exact structural terminology used by the exam source.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "design"
+    ]
+  },
+  {
+    "question": "One disadvantage of the swept-back wing is its stalling characteristics. At the stall:",
+    "choices": [
+      "Wing root stalls first, producing a rolling moment",
+      "Wing tip stalls first, producing a nose-down moment",
+      "Leading edge stalls first, producing a nosedown moment",
+      "Wing tip stalls first, producing a pitch-up moment"
+    ],
+    "answer": "Wing tip stalls first, producing a pitch-up moment",
+    "explanation": "A swept-back wing can experience tip stall because spanwise flow transports boundary-layer air outward, potentially making the tips more prone to separation. If one or both tips lose lift first, the aircraft can experience a pitch-up tendency and reduced aileron effectiveness.\n\nWhy the others are incorrect: Root-first stall is often desirable because it preserves tip/aileron effectiveness. The source marks tip stall with a pitch-up moment; the other choices give different stall locations or pitching effects.\n\n💡 Memory Hook: Swept wing + tip stall = possible pitch-up and roll-control problems.\n\n🎯 Board Tip: Tip stall is hazardous because the ailerons are located near the wing tips.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "wing",
+      "stall"
+    ]
+  },
+  {
+    "question": "Increasing the number of propeller blades will:",
+    "choices": [
+      "Decrease torque in the propeller shaft at maximum power",
+      "Increase the maximum absorption of power",
+      "Increase the propeller efficiency",
+      "Increase the noise level at maximum power"
+    ],
+    "answer": "Increase the maximum absorption of power",
+    "explanation": "Adding blades increases the propeller's ability to absorb engine power within a given diameter and operating range. More blade area allows greater power to be transmitted without requiring a larger diameter or excessive loading on each blade.\n\nWhy the others are incorrect: Blade count does not inherently decrease shaft torque at a fixed power and RPM; more blades do not automatically increase efficiency; noise depends on tip speed, loading, and operating conditions rather than blade count alone.\n\n💡 Memory Hook: More blades can absorb more power in a constrained diameter.\n\n🎯 Board Tip: Separate power-absorption capacity from propeller efficiency.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "propeller"
+    ]
+  },
+  {
+    "question": "A damage tolerant structure:",
+    "choices": [
+      "Has degree of structural strength redundancy spread over a large area",
+      "Is light, non-load-bearing structure, damage to which will not adversely affect the aircraft",
+      "Is replaced when it reaches its predicted life",
+      "Need not be repaired until the aircraft undergoes deep maintenance"
+    ],
+    "answer": "Has degree of structural strength redundancy spread over a large area",
+    "explanation": "Damage-tolerant design assumes that flaws or local damage may exist and provides enough residual strength and load-path redundancy for the structure to remain safe until the damage is detected and repaired. Inspection intervals and residual-strength requirements are central to the approach.\n\nWhy the others are incorrect: Damage tolerance is not limited to non-load-bearing parts, nor does it mean simply replacing a component at a predicted life. It also does not permit postponing repairs without regard to approved limits.\n\n💡 Memory Hook: Damage tolerance = detect damage while retaining safe residual strength.\n\n🎯 Board Tip: Do not confuse damage tolerance with safe-life design.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "load"
+    ]
+  },
+  {
+    "question": "An airplane equipped with float is catapulted into the air from a Navy Cruiser as illustrated in Figure 2. The catapulting force P gives the airplane a constant horizontal acceleration of 3g (96.6 ft/sec²). Gross weight is 9,000 lb and catapult track is 35 ft long. Find P.",
+    "choices": [
+      "25,100 lb",
+      "26,100 lb",
+      "27,100 lb",
+      "28,100 lb"
+    ],
+    "answer": "26,100 lb",
+    "explanation": "The keyed answer is 26,100 lb. For constant acceleration, the net horizontal force equals mass times acceleration. In U.S. customary units, aircraft mass in slugs is W/g, so the net force is (W/g)(3g) = 3W = 27,000 lbf before accounting for opposing forces and any additional details shown in Figure 2. The keyed value suggests the diagram or source includes an additional force term; use the complete figure and referenced example to reproduce the exact result.\n\nWhy the others are incorrect: The options are close numerical alternatives. The calculation requires identifying whether drag or another opposing force is included in the force balance, not merely multiplying weight by 3.\n\n💡 Memory Hook: ΣFₓ = (W/g)a.\n\n🎯 Board Tip: Distinguish net force from applied catapult force when drag or other forces are present.",
+    "difficulty": "hard",
+    "tags": [
+      "aircraft-structures"
+    ]
+  },
+  {
+    "question": "In what way is the longitudinal stability affected by the degree of positive camber of the aerofoil?",
+    "choices": [
+      "Positive, because the centre of pressure shifts rearward at increasing angle of attack",
+      "Negative, because the lift vector rotates forward at increasing angle of attack",
+      "Positive, because the lift vector rotates backward at increasing angle of attack",
+      "No effect, because camber produces a constant pitch down moment coefficient, independent of angle of attack"
+    ],
+    "answer": "No effect, because camber produces a constant pitch down moment coefficient, independent of angle of attack",
+    "explanation": "The keyed answer states that camber has no effect on longitudinal stability because it produces a constant pitch-down moment coefficient independent of angle of attack. In the idealized airfoil model used by this question, a constant pitching-moment coefficient does not itself create a change in pitching moment with angle of attack; stability depends on how the net pitching moment changes with angle of attack.\n\nWhy the others are incorrect: The first three attribute stability directly to centre-of-pressure movement or lift-vector rotation. Those descriptions do not match the specific aerodynamic assumption used by the keyed answer.\n\n💡 Memory Hook: Static longitudinal stability depends on the slope of pitching moment versus angle of attack.\n\n🎯 Board Tip: A constant moment coefficient is not the same as a restoring stability derivative.",
+    "difficulty": "hard",
+    "tags": [
+      "aircraft-structures",
+      "stability",
+      "lift"
+    ]
+  },
+  {
+    "question": "How would the exterior appearance of an aeroplane change when trimming for speed increase?",
+    "choices": [
+      "Elevator is deflected further up by a downward-deflected trim tab",
+      "Elevator is deflected further downward by a movable horizontal stabiliser",
+      "Exterior appearance will not change",
+      "Elevator deflection is increased further downward by an upward-deflected trim tab"
+    ],
+    "answer": "Elevator deflection is increased further downward by an upward-deflected trim tab",
+    "explanation": "An upward-deflected trim tab produces an aerodynamic force that tends to drive the elevator in the opposite direction. In the keyed condition, the trim tab is deflected upward and the elevator is deflected further downward to establish the required trim for the speed increase.\n\nWhy the others are incorrect: Option A describes the wrong tab/elevator direction for the keyed condition; option B refers to a different trimming mechanism; option C ignores the visible change in trim surface position.\n\n💡 Memory Hook: A trim tab generally moves opposite the desired elevator effect.\n\n🎯 Board Tip: Trace the aerodynamic force on the tab, then infer the elevator's response.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "speed"
+    ]
+  },
+  {
+    "question": "Differential aileron deflection:",
+    "choices": [
+      "Is required to achieve the required roll-rate",
+      "Equals the drag of the right and left aileron",
+      "Is required to keep total lift constant when ailerons are deflected",
+      "Increases the CLmax"
+    ],
+    "answer": "Equals the drag of the right and left aileron",
+    "explanation": "Differential ailerons are arranged so that the upward-deflecting aileron moves through a greater angle than the downward-deflecting aileron. This helps reduce adverse yaw by limiting the extra drag produced by the downward-deflected aileron. The key phrases the intended result as balancing the drag from the two sides.\n\nWhy the others are incorrect: Differential deflection is not primarily a roll-rate requirement, does not guarantee constant total lift, and does not increase the wing's maximum lift coefficient as its defining purpose.\n\n💡 Memory Hook: Differential aileron = less adverse yaw.\n\n🎯 Board Tip: Remember that downward aileron deflection tends to produce more drag.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "drag",
+      "lift"
+    ]
+  },
+  {
+    "question": "The trailing-edge flaps when extended:",
+    "choices": [
+      "Significantly increase the angle of attack for maximum lift",
+      "Significantly lower the drag",
+      "Worsen the best angle of glide",
+      "Increase the zero-lift angle of attack"
+    ],
+    "answer": "Worsen the best angle of glide",
+    "explanation": "Extending trailing-edge flaps increases camber and usually increases both lift and drag. Because drag rises substantially, the lift-to-drag ratio used for the best glide angle can decrease; the keyed answer describes this as worsening the best angle of glide.\n\nWhy the others are incorrect: Flaps increase the maximum lift coefficient but do not simply increase the aircraft's geometric angle of attack for maximum lift. They generally increase, not lower, drag, and they shift the zero-lift angle in the negative direction for a conventional camber increase.\n\n💡 Memory Hook: Flaps give more lift—and more drag.\n\n🎯 Board Tip: Do not assume a high-lift device improves glide performance.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "drag",
+      "lift",
+      "flap"
+    ]
+  },
+  {
+    "question": "If the total sum of moments about one of its axes is not zero, an aeroplane:",
+    "choices": [
+      "Would be difficult to control",
+      "Would fly a path with constant curvature",
+      "Would not be affected because the situation is normal",
+      "Would experience an angular acceleration about that axis"
+    ],
+    "answer": "Would experience an angular acceleration about that axis",
+    "explanation": "A nonzero resultant moment produces angular acceleration about the relevant axis according to rotational dynamics, ΣM = Iα for a rigid body about a principal axis. The aircraft's angular velocity and attitude therefore change unless the moment is balanced by other moments.\n\nWhy the others are incorrect: Difficulty of control is not the fundamental physical consequence; constant curvature is not guaranteed; and a nonzero moment is not a balanced steady condition.\n\n💡 Memory Hook: Net force changes translation; net moment changes rotation.\n\n🎯 Board Tip: Use ΣM = Iα when a question asks what an unbalanced moment causes.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures"
+    ]
+  },
+  {
+    "question": "For a normal stable aeroplane, the centre of gravity is located:",
+    "choices": [
+      "At the neutral point of the aeroplane",
+      "Between the aft limit and the neutral point",
+      "With a sufficient minimum margin ahead of the neutral point",
+      "Aft of the neutral point"
+    ],
+    "answer": "With a sufficient minimum margin ahead of the neutral point",
+    "explanation": "Positive static longitudinal stability requires the centre of gravity to be ahead of the neutral point. The distance between the CG and neutral point, expressed relative to mean aerodynamic chord, is the static margin. A positive static margin gives a restoring pitching-moment tendency after a small angle-of-attack disturbance.\n\nWhy the others are incorrect: At the neutral point, the static margin is zero; aft of it, the aircraft is statically unstable in the conventional sign convention. A CG position behind the neutral point is therefore not the normal stable condition.\n\n💡 Memory Hook: Stable airplane: CG ahead of neutral point.\n\n🎯 Board Tip: Positive static margin means (neutral point − CG) / MAC is positive.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures"
+    ]
+  },
+  {
+    "question": "VA is:",
+    "choices": [
+      "The speed that should not be exceeded in the climb",
+      "The maximum speed at which maximum elevator deflection up is allowed",
+      "The maximum speed at which rolls are allowed",
+      "The speed at which a heavy transport aeroplane should fly in turbulence"
+    ],
+    "answer": "The maximum speed at which maximum elevator deflection up is allowed",
+    "explanation": "VA is maneuvering speed. In the traditional certification explanation, it is the speed at or below which a full, abrupt control input in a specified direction is expected to stall the wing before structural limit load is exceeded. It is not a blanket guarantee against every combination of control inputs or repeated loads.\n\nWhy the others are incorrect: Climb speed is a different performance speed; VA is not defined specifically as a roll limit; turbulence penetration speed is a separate operational concept and may differ by aircraft.\n\n💡 Memory Hook: VA = maneuvering speed.\n\n🎯 Board Tip: Never treat VA as protection from all possible structural overloads.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "speed"
+    ]
+  },
+  {
+    "question": "Which type of wing arrangement decreases the static lateral stability of an aeroplane?",
+    "choices": [
+      "Increased wing span",
+      "Anhedral",
+      "Dihedral",
+      "High wing"
+    ],
+    "answer": "Anhedral",
+    "explanation": "Anhedral means the wings slope downward from the root toward the tips. This generally reduces the dihedral effect and therefore decreases the aircraft's tendency to roll back toward wings-level after a sideslip.\n\nWhy the others are incorrect: Dihedral usually increases lateral stability; high-wing configuration can contribute a stabilizing effect depending on geometry; increased span alone is not the defining answer in this question.\n\n💡 Memory Hook: Dihedral adds lateral stability; anhedral reduces it.\n\n🎯 Board Tip: Static lateral stability is commonly discussed through the dihedral effect in sideslip.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "wing",
+      "stability"
+    ]
+  },
+  {
+    "question": "The effect of a high wing with zero dihedral is as follows:",
+    "choices": [
+      "Its only purpose is to ease aeroplane loading",
+      "Zero dihedral effect",
+      "Positive dihedral effect",
+      "Negative dihedral effect"
+    ],
+    "answer": "Positive dihedral effect",
+    "explanation": "A high-wing aircraft can exhibit a positive dihedral effect even when the geometric dihedral angle is zero. The wing-fuselage relationship and the aircraft's response to sideslip can create a restoring rolling moment, depending on the overall configuration.\n\nWhy the others are incorrect: Zero geometric dihedral does not necessarily mean zero dihedral effect. The high wing is not solely a loading convenience, and the keyed effect is positive rather than negative.\n\n💡 Memory Hook: Geometric dihedral and aerodynamic dihedral effect are not identical.\n\n🎯 Board Tip: Consider the whole aircraft configuration, not just the visible wing angle.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "load",
+      "wing"
+    ]
+  },
+  {
+    "question": "What is the purpose of an auto-slat system?",
+    "choices": [
+      "Extend automatically when a certain value of angle of attack is exceeded",
+      "Provide automatic slat-in selection after takeoff",
+      "Ensure slats are always extended when the ground/flight system is in the ground position",
+      "Assist the ailerons during rolling"
+    ],
+    "answer": "Extend automatically when a certain value of angle of attack is exceeded",
+    "explanation": "An automatic slat system extends the slats when the aircraft reaches a preset angle-of-attack condition. The slats modify the airflow near the leading edge, helping delay flow separation and improve controllability at high angles of attack.\n\nWhy the others are incorrect: Automatic retraction after takeoff is not the defining purpose; ground/flight logic is a different control function; slats are high-lift devices, not direct aileron-assist devices.\n\n💡 Memory Hook: Auto-slat responds to angle of attack.\n\n🎯 Board Tip: Slats delay stall by improving leading-edge airflow.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "slat"
+    ]
+  },
+  {
+    "question": "In a mechanically controlled aeroplane, the most forward allowable position of the centre of gravity could be limited by the:",
+    "choices": [
+      "Engine thrust, engine location",
+      "Trim system, trim tab surface",
+      "Wing surface, stabilizer surface",
+      "Elevator capability, elevator control forces"
+    ],
+    "answer": "Elevator capability, elevator control forces",
+    "explanation": "An excessively forward CG increases the nose-down pitching tendency and the tailplane/elevator must generate enough balancing moment to trim the aircraft. The forward CG limit can therefore be set by elevator authority and the control forces needed to rotate, flare, or recover.\n\nWhy the others are incorrect: Engine placement and wing/tail geometry affect the CG envelope indirectly, but the immediate handling limitation in the keyed answer is the elevator's ability to provide sufficient pitching moment and acceptable control forces.\n\n💡 Memory Hook: Forward CG = greater nose-down moment and higher elevator demand.\n\n🎯 Board Tip: Forward CG limits are often associated with rotation and flare authority.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "wing"
+    ]
+  },
+  {
+    "question": "'Fail safe construction' is:",
+    "choices": [
+      "A type of construction in which the load is carried by other components if a part of the structure fails",
+      "A construction suitable for aerobatic flight",
+      "A type of construction for small aircraft only",
+      "A simple and cheap type of construction"
+    ],
+    "answer": "A type of construction in which the load is carried by other components if a part of the structure fails",
+    "explanation": "Fail-safe construction provides alternate load paths so that if one structural element fails, other elements can continue carrying the load for a limited period. This helps prevent immediate catastrophic failure and allows time for detection and repair.\n\nWhy the others are incorrect: Fail-safe design is not limited to aerobatic or small aircraft, and it is not defined by low cost or simplicity. It is a structural safety philosophy based on redundancy and residual load-carrying capability.\n\n💡 Memory Hook: Fail-safe = another path carries the load.\n\n🎯 Board Tip: Compare fail-safe with safe-life and damage-tolerant design.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "load"
+    ]
+  },
+  {
+    "question": "Which components does a semi-monocoque fuselage consist of?",
+    "choices": [
+      "Steel tubing, longerons and bulkhead wires",
+      "A stressed skin structure in which the skin is supported by a lightweight framework, such as longerons, stringers and formers",
+      "Metal stringers, bulkheads and fabric covering",
+      "A stressed-skin type in which skin alone provides most strength and no substructure is required"
+    ],
+    "answer": "A stressed skin structure in which the skin is supported by a lightweight framework, such as longerons, stringers and formers",
+    "explanation": "A semi-monocoque fuselage uses a stressed skin supported by a framework of longitudinal members and transverse frames. The skin carries part of the load, while stringers/longerons and frames help maintain shape, resist buckling, and distribute loads.\n\nWhy the others are incorrect: A steel-tube truss is a different construction type; fabric covering is not the defining semi-monocoque skin arrangement; a skin-only structure more closely describes a monocoque idealization.\n\n💡 Memory Hook: Semi-monocoque = stressed skin + supporting framework.\n\n🎯 Board Tip: Know the roles of skin, stringers/longerons, and frames/formers.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "stress",
+      "fuselage"
+    ]
+  },
+  {
+    "question": "In recovery from a spin:",
+    "choices": [
+      "Rudder and ailerons used against the direction of spin rotation",
+      "Ailerons should be kept neutral",
+      "Airspeed increases",
+      "Ailerons used to stop the spin"
+    ],
+    "answer": "Ailerons should be kept neutral",
+    "explanation": "The keyed procedure keeps ailerons neutral. Aileron input during a spin can worsen the stall on one wing or aggravate autorotation, depending on aircraft design. Recovery must follow the aircraft's approved procedure, commonly including reducing angle of attack and applying rudder opposite the rotation.\n\nWhy the others are incorrect: The key does not recommend using ailerons to stop the spin. Airspeed increase is not the primary control action, and recovery is not achieved by simply applying aileron opposite the rotation.\n\n💡 Memory Hook: Spin recovery: reduce angle of attack; keep ailerons neutral unless the POH says otherwise.\n\n🎯 Board Tip: Always follow the specific aircraft flight manual for spin recovery.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "speed"
+    ]
+  },
+  {
+    "question": "The aeroplane fin is of symmetrical aerofoil section and will therefore provide a side-load:",
+    "choices": [
+      "If a suitable angle of attack develops due to either yaw or rudder movement",
+      "Only if a suitable angle of attack develops due to yaw",
+      "Only when the rudder is moved",
+      "Only when the aileron is moved"
+    ],
+    "answer": "If a suitable angle of attack develops due to either yaw or rudder movement",
+    "explanation": "A symmetrical vertical fin produces aerodynamic side force when it encounters a sideslip angle or effective angle of attack. This can arise from yawing motion or rudder deflection; symmetry means it has no camber-induced side force at zero angle of attack, not that it cannot generate side force.\n\nWhy the others are incorrect: Restricting side force to yaw alone ignores rudder-induced flow angle; restricting it to rudder movement ignores sideslip; aileron movement is not the only cause of a fin angle of attack.\n\n💡 Memory Hook: Symmetric airfoil + nonzero angle of attack = aerodynamic force.\n\n🎯 Board Tip: Distinguish geometric symmetry from the ability to generate lift/side force.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "load"
+    ]
+  },
+  {
+    "question": "To ensure that a wing stalls at the root first, stall wedges are:",
+    "choices": [
+      "Installed at the wing trailing edge at the wing root",
+      "Installed at the wing trailing edge at the wing tip",
+      "Installed on the wing leading edge at the wing root",
+      "Installed on the wing leading edge at the wing tip"
+    ],
+    "answer": "Installed on the wing leading edge at the wing root",
+    "explanation": "Stall wedges are placed near the wing root leading edge to promote earlier separation in that region. Root-first stall helps preserve airflow and aileron effectiveness near the tips, improving controllability as the stall develops.\n\nWhy the others are incorrect: Tip placement could encourage tip stall, which is undesirable for aileron control. Trailing-edge placement is not the location identified for a leading-edge stall wedge.\n\n💡 Memory Hook: Root-first stall protects tip control.\n\n🎯 Board Tip: Stall strips/wedges are used to shape the stall progression.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "wing",
+      "stall"
+    ]
+  },
+  {
+    "question": "Flight spoilers:",
+    "choices": [
+      "Can be used to decrease lift to allow controlled descent without reduction of airspeed",
+      "Can be deployed on the down-going wing in a turn to increase lift on that wing",
+      "Can be used with differential ailerons to reduce adverse yaw in a turn",
+      "Can be used in conjunction with aileron during high speed"
+    ],
+    "answer": "Can be used to decrease lift to allow controlled descent without reduction of airspeed",
+    "explanation": "Flight spoilers disrupt airflow over part of the wing and reduce lift. They can be used to increase descent rate without relying solely on pitching the nose down, helping control the flight path while maintaining a desired speed.\n\nWhy the others are incorrect: Spoilers reduce lift rather than increase it on the down-going wing. Reducing adverse yaw is more directly associated with differential ailerons or spoilerons; the key definition here is lift dumping for descent.\n\n💡 Memory Hook: Spoilers spoil lift.\n\n🎯 Board Tip: Separate flight spoilers used for descent from ground spoilers used after touchdown.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "wing",
+      "lift",
+      "speed",
+      "spoiler"
+    ]
+  },
+  {
+    "question": "Changes in aircraft weight:",
+    "choices": [
+      "Will only affect total drag if lift is kept constant",
+      "Will not affect total drag since it is dependent only upon speed",
+      "Cause corresponding changes in total drag due to the associated lift change",
+      "Cause corresponding changes in total drag due to the associated speed change"
+    ],
+    "answer": "Cause corresponding changes in total drag due to the associated lift change",
+    "explanation": "In steady level flight, lift must equal weight. If aircraft weight changes while the aircraft remains in steady level flight, the required lift changes; at the same speed and configuration, this can change angle of attack and induced drag. The keyed answer links weight changes to corresponding changes in total drag through lift.\n\nWhy the others are incorrect: Drag is not dependent only on speed; it also depends on lift, configuration, and the drag polar. Weight does not necessarily change speed automatically, so the explanation based solely on speed is incomplete.\n\n💡 Memory Hook: More weight in level flight requires more lift, usually increasing induced drag.\n\n🎯 Board Tip: State the assumptions—level flight, speed, and configuration—when reasoning about drag.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "drag",
+      "lift",
+      "speed"
+    ]
+  },
+  {
+    "question": "The aircraft stalling speed will:",
+    "choices": [
+      "Decrease with an increase in weight",
+      "Increase with an increase in weight",
+      "Be unaffected by aircraft weight changes since it depends on angle of attack",
+      "Be unaffected by aircraft weight since it is independent of the weight"
+    ],
+    "answer": "Increase with an increase in weight",
+    "explanation": "Stall speed follows from the lift equation at CLmax: Vs = √(2W/(ρSCLmax)). With density, wing area, and maximum lift coefficient held constant, stall speed is proportional to the square root of weight. A heavier aircraft must fly faster to generate the lift needed at the stall boundary.\n\nWhy the others are incorrect: Stall speed does depend on weight through the lift requirement. It is not independent of weight, and it increases rather than decreases as weight rises.\n\n💡 Memory Hook: Double the weight does not double stall speed; Vs scales with √W.\n\n🎯 Board Tip: Remember the square-root relationship in the stall-speed equation.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "stall",
+      "speed"
+    ]
+  },
+  {
+    "question": "Precise points are located on an aircraft by a system of:",
+    "choices": [
+      "Frame stations, vertical lines and lateral lines",
+      "Longitudinal, vertical and lateral lines",
+      "Fuselage and wing zoning",
+      "Frame stations, water lines and buttock lines"
+    ],
+    "answer": "Frame stations, water lines and buttock lines",
+    "explanation": "Aircraft structural locations are commonly defined using fuselage frame stations, water lines, and buttock lines. Frame stations give longitudinal position, water lines give vertical position, and buttock lines give lateral position relative to the aircraft centerline.\n\nWhy the others are incorrect: The alternatives use incomplete or nonstandard combinations. The three named aircraft reference systems provide a consistent coordinate description for locating components and structural details.\n\n💡 Memory Hook: FS = fore/aft; WL = up/down; BL = left/right.\n\n🎯 Board Tip: Learn the three coordinate references and the direction each measures.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "wing",
+      "fuselage"
+    ]
+  },
+  {
+    "question": "How is the radome protected from lightning strike?",
+    "choices": [
+      "Special grease on the hinges",
+      "Diverter strips",
+      "Special paint",
+      "Copper mesh"
+    ],
+    "answer": "Diverter strips",
+    "explanation": "Diverter strips provide a preferred path for lightning attachment and help guide the discharge across the radome surface rather than allowing it to puncture or damage the radome and underlying equipment. Radomes are often nonconductive, so lightning protection requires purpose-designed features.\n\nWhy the others are incorrect: Grease and ordinary paint do not provide a controlled lightning path. Copper mesh can be used in some lightning-protection designs, but the answer marked for this specific question is diverter strips.\n\n💡 Memory Hook: Diverter strips guide lightning around the radome.\n\n🎯 Board Tip: Radome protection is designed to prevent electrical damage and preserve radar transparency.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "lightning"
+    ]
+  },
+  {
+    "question": "What load is a tie rod designed to accept?",
+    "choices": [
+      "Bending",
+      "Tensile",
+      "Torsion",
+      "Compression"
+    ],
+    "answer": "Tensile",
+    "explanation": "A tie rod is primarily designed to carry tensile load—an axial pulling force. It ties or restrains structural components and is generally not intended to act as a bending member.\n\nWhy the others are incorrect: Bending is resisted by beam-like members; torsion is twisting; compression is a pushing load and may cause slender rods to buckle. The defining load for a tie rod is tension.\n\n💡 Memory Hook: Tie rods tie by pulling.\n\n🎯 Board Tip: Match structural-member names to their principal load: tie rod—tension; strut—compression.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "load",
+      "design"
+    ]
+  },
+  {
+    "question": "Which parts of the aircraft are classified secondary structures?",
+    "choices": [
+      "Highly stressed parts that, if damaged, will not cause failure of the aircraft",
+      "Highly stressed parts that, if damaged, may cause aircraft failure and loss of life",
+      "Lightly stressed parts such as fairings, wheel shields and minor component brackets",
+      "Parts for which damage is always allowable for flight"
+    ],
+    "answer": "Highly stressed parts that, if damaged, will not cause failure of the aircraft",
+    "explanation": "The source marks option A: parts that are highly stressed but whose damage will not cause aircraft failure. In structural classification, secondary structures generally do not carry the primary loads essential to overall aircraft integrity, although some may still be significantly loaded. The wording in this source is unusual and should be checked against the course's definitions.\n\nWhy the others are incorrect: Option B describes a critical/primary-structure consequence; option C is a common simplified description of secondary structure but is not the answer marked in this key; option D is unsafe because damage acceptability depends on approved limits.\n\n💡 Memory Hook: Primary structure is essential to overall load-carrying integrity.\n\n🎯 Board Tip: This item has a terminology ambiguity; confirm the intended definition in your reference text.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-structures",
+      "stress"
+    ]
+  },
+  {
+    "question": "Pavement strength of the runway is identified as:",
+    "choices": [
+      "Pavement classification number",
+      "Aircraft classification number",
+      "Runway number",
+      "Airport code"
+    ],
+    "answer": "Pavement classification number",
+    "explanation": "The pavement classification number (PCN) historically expresses the load-carrying strength of an airport pavement for aircraft operations. It is used with aircraft pavement loading information to assess whether an aircraft can operate on a runway or taxiway without exceeding pavement limits.\n\nWhy the others are incorrect: Aircraft classification number describes aircraft pavement loading, runway number identifies runway direction, and airport code identifies the airport rather than pavement strength.\n\n💡 Memory Hook: PCN = pavement capacity; ACN = aircraft loading.\n\n🎯 Board Tip: Some authorities now use newer pavement-rating systems, but PCN is the term expected by this source.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-design",
+      "runway"
+    ]
+  },
+  {
+    "question": "Design phase for configuration, size and weight, performance.",
+    "choices": [
+      "Conceptual design",
+      "Preliminary design",
+      "Detail design",
+      "Production design"
+    ],
+    "answer": "Conceptual design",
+    "explanation": "Conceptual design establishes the overall aircraft configuration and trades among size, weight, performance, mission capability, and feasibility. It is the stage where major layout and design choices are compared before detailed engineering is developed.\n\nWhy the others are incorrect: Preliminary design refines the selected concept and major systems; detail design develops components and manufacturing definition; production design focuses on fabrication and assembly.\n\n💡 Memory Hook: Conceptual = decide what the airplane will be.\n\n🎯 Board Tip: Remember the sequence: conceptual → preliminary → detail/production.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-design",
+      "design"
+    ]
+  },
+  {
+    "question": "Determines how airplane will be fabricated from smallest to final assembly for ease of manufacture.",
+    "choices": [
+      "Conceptual design",
+      "Preliminary design",
+      "Detail design",
+      "Production design"
+    ],
+    "answer": "Production design",
+    "explanation": "Production design translates the airplane design into practical manufacturing and assembly plans. It addresses how parts are made, sequenced, joined, inspected, and assembled efficiently from individual components to the complete aircraft.\n\nWhy the others are incorrect: Conceptual design defines the broad configuration; preliminary design refines the arrangement and major sizing; detail design specifies individual parts, while production design focuses on the manufacturing process and assembly strategy.\n\n💡 Memory Hook: Production design = how to build it.\n\n🎯 Board Tip: If the question emphasizes fabrication sequence and ease of manufacture, think production design.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-design",
+      "design"
+    ]
+  },
+  {
+    "question": "The design cruise speed for jet is at:",
+    "choices": [
+      "0.866 L/Dmax",
+      "L/Dmax",
+      "CLmax",
+      "CDmin"
+    ],
+    "answer": "0.866 L/Dmax",
+    "explanation": "The keyed answer is 0.866 L/Dmax, interpreted as the jet cruise-speed condition associated with a specific aerodynamic efficiency relationship in the source. In standard jet range theory, maximum-range cruise is associated with maximum lift-to-drag ratio for idealized constant-weight jet flight, while other cruise criteria may use a speed factor relative to a reference condition. The notation in the source is ambiguous and should be verified.\n\nWhy the others are incorrect: L/Dmax is a ratio, not a speed by itself; CLmax is a maximum lift coefficient; CDmin is minimum drag coefficient. The keyed option appears to use shorthand or a formatting omission.\n\n💡 Memory Hook: Jet range questions often revolve around L/D and the drag polar.\n\n🎯 Board Tip: Verify whether the original expression includes a speed symbol or a dimensionless multiplier.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-design",
+      "design",
+      "speed"
+    ]
+  },
+  {
+    "question": "A boundary layer fence on a swept wing will:",
+    "choices": [
+      "Increase the critical Mach number",
+      "Improve the lift coefficient of the trailing-edge flap",
+      "Improve the low-speed characteristics",
+      "Improve the high-speed characteristics"
+    ],
+    "answer": "Improve the low-speed characteristics",
+    "explanation": "A boundary-layer fence helps limit spanwise flow on a swept wing. By reducing outward boundary-layer migration, it can improve airflow over the outer wing and preserve control effectiveness, especially at high angles of attack and low speeds.\n\nWhy the others are incorrect: The fence is not primarily a device to increase critical Mach number or flap lift coefficient. Its classic purpose is to control spanwise flow and improve low-speed handling/stall behavior.\n\n💡 Memory Hook: Fence = restrict spanwise flow.\n\n🎯 Board Tip: Distinguish boundary-layer fences from winglets, slats, and vortex generators.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-design",
+      "wing",
+      "lift",
+      "speed",
+      "flap"
+    ]
+  },
+  {
+    "question": "Total weight of aircraft as it begins the mission for which it was designed",
+    "choices": [
+      "Design Takeoff Gross Weight",
+      "Maximum Takeoff Weight",
+      "Empty Weight Fraction",
+      "Fuel Weight Fraction"
+    ],
+    "answer": "Design Takeoff Gross Weight",
+    "explanation": "Design takeoff gross weight is the total aircraft weight at the start of the design mission, including the aircraft, crew, payload, and fuel as defined by the design assumptions. It is a key sizing parameter because many structural and performance requirements depend on takeoff weight.\n\nWhy the others are incorrect: Maximum takeoff weight is a certified or structural operating limit, not necessarily the design-mission starting weight; empty weight fraction and fuel weight fraction are ratios, not total weights.\n\n💡 Memory Hook: Design takeoff gross weight = mission-start weight.\n\n🎯 Board Tip: Separate design sizing assumptions from certified maximum operating limits.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-design",
+      "design"
+    ]
+  },
+  {
+    "question": "Mathematical modeling of outside skin of aircraft with sufficient accuracy to ensure proper fit between different parts",
+    "choices": [
+      "Optimization",
+      "Lofting",
+      "Sizing",
+      "Testing"
+    ],
+    "answer": "Lofting",
+    "explanation": "Lofting is the geometric modeling process used to define smooth external aircraft surfaces and ensure that adjacent components fit together correctly. It is especially important for aerodynamic outer mold lines and for coordinating the shape of skins, panels, and structural interfaces.\n\nWhy the others are incorrect: Optimization searches for a best design according to an objective; sizing determines dimensions or capacities; testing evaluates performance or compliance. Lofting specifically concerns surface geometry and fit.\n\n💡 Memory Hook: Lofting = defining the aircraft's shape.\n\n🎯 Board Tip: Connect lofting with outer mold line and geometric continuity.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-design"
+    ]
+  },
+  {
+    "question": "The bow wave will appear first at:",
+    "choices": [
+      "M = Mcrit",
+      "M = 0.6",
+      "M = 1.3",
+      "M = 1.0"
+    ],
+    "answer": "M = 1.0",
+    "explanation": "The keyed answer is Mach 1.0. A bow shock wave is associated with supersonic flow ahead of a body, when the aircraft moves faster than the local speed of sound. At Mach 1.0, compressibility effects become pronounced, but a distinct detached bow shock in front of a blunt body is characteristic of supersonic conditions; the source's simplified wording should be interpreted carefully.\n\nWhy the others are incorrect: Mcrit is the onset of local sonic flow on a wing, not the same as a bow shock; 0.6 is subsonic; 1.3 is already supersonic, but the key marks 1.0 as the threshold.\n\n💡 Memory Hook: Mach 1 marks the sonic threshold; shock-wave details depend on geometry and local flow.\n\n🎯 Board Tip: Distinguish critical Mach number from the aircraft's free-stream Mach number.",
+    "difficulty": "moderate",
+    "tags": [
+      "aircraft-design"
+    ]
+  }
+]
