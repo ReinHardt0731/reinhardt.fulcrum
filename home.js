@@ -1,4 +1,4 @@
-import { initHomePage } from "./shared.js?v=powerplant-library-20261022-4";
+import { initHomePage } from "./shared.js?v=ata-groups-20261024-1";
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";

@@ -1,4 +1,4 @@
-import { initModePage } from "./shared.js?v=engineering-economics-cache-20261018-1";
+import { initModePage } from "./shared.js?v=ata-groups-20261024-1";
 
 document.addEventListener("DOMContentLoaded", () => {
     initModePage("note");
