@@ -136,8 +136,28 @@
           "file": "chapters/major-and-minor-modifications.json"
         },
         {
-          "title": "ATA Chapters",
-          "file": "chapters/ata-chapters.json"
+          "title": "Aircraft General",
+          "file": "chapters/ata-aircraft-general.json"
+        },
+        {
+          "title": "Airframe Systems",
+          "file": "chapters/ata-airframe-systems.json"
+        },
+        {
+          "title": "Structures",
+          "file": "chapters/ata-structures.json"
+        },
+        {
+          "title": "Propellers / Rotors",
+          "file": "chapters/ata-propellers-rotors.json"
+        },
+        {
+          "title": "Power Plant",
+          "file": "chapters/ata-power-plant.json"
+        },
+        {
+          "title": "Other",
+          "file": "chapters/ata-other.json"
         }
       ],
       "notesPath": "acrm.md",
@@ -31608,21 +31628,71 @@
         }
       ]
     },
-    "chapters/ata-chapters.json": {
-      "title": "ATA Chapters",
+    "chapters/ata-aircraft-general.json": {
+      "title": "Aircraft General",
       "questions": [
         {
-          "question": "Which ATA chapter covers General information?",
+          "question": "Which title matches ATA 00?",
           "questionType": "multiple_choice",
           "choices": [
-            "ATA Chapter 01",
-            "ATA Chapter 02",
-            "ATA Chapter 03",
-            "ATA Chapter 04"
+            "Maintenance Policy",
+            "General",
+            "Operations: Airplane General",
+            "Support Information"
+          ],
+          "answerIndex": 1,
+          "answerText": "General",
+          "explanation": "ATA 00 — General (Aircraft General).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA00",
+            "Aircraft General",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches General?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 00",
+            "ATA 01",
+            "ATA 02",
+            "ATA 03"
           ],
           "answerIndex": 0,
-          "answerText": "ATA Chapter 01",
-          "explanation": "ATA Chapter 01 covers General information.\n\n💡 Memory Hook:\n01 = One Beginning = General.\n\n🎯 Board Tip:\nDon't confuse ATA 01 (General) with ATA 02 (Operations).",
+          "answerText": "ATA 00",
+          "explanation": "General is ATA 00 (Aircraft General).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA00",
+            "Aircraft General",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 01?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Operations: Airplane General",
+            "Support Information",
+            "Airworthiness Limitations",
+            "Maintenance Policy"
+          ],
+          "answerIndex": 3,
+          "answerText": "Maintenance Policy",
+          "explanation": "ATA 01 — Maintenance Policy (Aircraft General).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
@@ -31630,24 +31700,49 @@
           "tags": [
             "ATA",
             "ATA01",
-            "General",
-            "board favorite"
+            "Aircraft General",
+            "Code to title"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which ATA chapter covers Operations?",
+          "question": "Which ATA code matches Maintenance Policy?",
           "questionType": "multiple_choice",
           "choices": [
-            "ATA Chapter 01",
-            "ATA Chapter 02",
-            "ATA Chapter 03",
-            "ATA Chapter 05"
+            "ATA 02",
+            "ATA 03",
+            "ATA 01",
+            "ATA 04"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 01",
+          "explanation": "Maintenance Policy is ATA 01 (Aircraft General).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA01",
+            "Aircraft General",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 02?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Support Information",
+            "Operations: Airplane General",
+            "Airworthiness Limitations",
+            "Time Limits / Maintenance Checks"
           ],
           "answerIndex": 1,
-          "answerText": "ATA Chapter 02",
-          "explanation": "ATA Chapter 02 covers aircraft operations and operational procedures.\n\n💡 Memory Hook:\nAfter learning the General information (01), the aircraft begins Operations (02).\n\n🎯 Board Tip:\nATA 02 is often confused with ATA 03 (Support). Operations is what the aircraft does; Support is what helps it operate.",
+          "answerText": "Operations: Airplane General",
+          "explanation": "ATA 02 — Operations: Airplane General (Aircraft General).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
@@ -31655,23 +31750,49 @@
           "tags": [
             "ATA",
             "ATA02",
-            "Operations"
+            "Aircraft General",
+            "Code to title"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which ATA chapter covers Support?",
+          "question": "Which ATA code matches Operations: Airplane General?",
           "questionType": "multiple_choice",
           "choices": [
-            "ATA Chapter 02",
-            "ATA Chapter 03",
-            "ATA Chapter 04",
-            "ATA Chapter 05"
+            "ATA 02",
+            "ATA 03",
+            "ATA 04",
+            "ATA 05"
           ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 03",
-          "explanation": "ATA Chapter 03 covers Support activities and servicing information.\n\n💡 Memory Hook:\nOperations (02) always need Support (03).\n\n🎯 Board Tip:\nATA 03 is commonly confused with ATA 02. Remember: Operations perform the mission, Support keeps it going.",
+          "answerIndex": 0,
+          "answerText": "ATA 02",
+          "explanation": "Operations: Airplane General is ATA 02 (Aircraft General).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA02",
+            "Aircraft General",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 03?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Airworthiness Limitations",
+            "Time Limits / Maintenance Checks",
+            "Dimensions and Areas",
+            "Support Information"
+          ],
+          "answerIndex": 3,
+          "answerText": "Support Information",
+          "explanation": "ATA 03 — Support Information (Aircraft General).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
@@ -31679,23 +31800,49 @@
           "tags": [
             "ATA",
             "ATA03",
-            "Support"
+            "Aircraft General",
+            "Code to title"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which ATA chapter covers Airworthiness Limitations?",
+          "question": "Which ATA code matches Support Information?",
           "questionType": "multiple_choice",
           "choices": [
-            "ATA Chapter 03",
-            "ATA Chapter 04",
-            "ATA Chapter 05",
-            "ATA Chapter 06"
+            "ATA 04",
+            "ATA 05",
+            "ATA 03",
+            "ATA 06"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 03",
+          "explanation": "Support Information is ATA 03 (Aircraft General).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA03",
+            "Aircraft General",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 04?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Time Limits / Maintenance Checks",
+            "Airworthiness Limitations",
+            "Dimensions and Areas",
+            "Lifting and Shoring"
           ],
           "answerIndex": 1,
-          "answerText": "ATA Chapter 04",
-          "explanation": "ATA Chapter 04 contains Airworthiness Limitations established by the manufacturer and certification authority.\n\n💡 Memory Hook:\nImagine four walls creating LIMITS.\n\n🎯 Board Tip:\nAirworthiness Limitations are mandatory and must never be confused with scheduled maintenance in ATA 05.",
+          "answerText": "Airworthiness Limitations",
+          "explanation": "ATA 04 — Airworthiness Limitations (Aircraft General).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
@@ -31703,23 +31850,49 @@
           "tags": [
             "ATA",
             "ATA04",
-            "Airworthiness"
+            "Aircraft General",
+            "Code to title"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which ATA chapter covers Time Limits and Maintenance Checks?",
+          "question": "Which ATA code matches Airworthiness Limitations?",
           "questionType": "multiple_choice",
           "choices": [
-            "ATA Chapter 04",
-            "ATA Chapter 05",
-            "ATA Chapter 06",
-            "ATA Chapter 07"
+            "ATA 04",
+            "ATA 05",
+            "ATA 06",
+            "ATA 07"
           ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 05",
-          "explanation": "ATA Chapter 05 specifies time limits, life-limited parts, and scheduled maintenance checks.\n\n💡 Memory Hook:\nThink of your 5-year medical checkup—scheduled maintenance.\n\n🎯 Board Tip:\nATA 05 is one of the most frequently referenced chapters during maintenance planning.",
+          "answerIndex": 0,
+          "answerText": "ATA 04",
+          "explanation": "Airworthiness Limitations is ATA 04 (Aircraft General).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA04",
+            "Aircraft General",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 05?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Dimensions and Areas",
+            "Lifting and Shoring",
+            "Leveling and Weighing",
+            "Time Limits / Maintenance Checks"
+          ],
+          "answerIndex": 3,
+          "answerText": "Time Limits / Maintenance Checks",
+          "explanation": "ATA 05 — Time Limits / Maintenance Checks (Aircraft General).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
@@ -31727,23 +31900,49 @@
           "tags": [
             "ATA",
             "ATA05",
-            "Maintenance"
+            "Aircraft General",
+            "Code to title"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which ATA chapter covers Dimensions and Areas?",
+          "question": "Which ATA code matches Time Limits / Maintenance Checks?",
           "questionType": "multiple_choice",
           "choices": [
-            "ATA Chapter 05",
-            "ATA Chapter 06",
-            "ATA Chapter 07",
-            "ATA Chapter 08"
+            "ATA 06",
+            "ATA 07",
+            "ATA 05",
+            "ATA 08"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 05",
+          "explanation": "Time Limits / Maintenance Checks is ATA 05 (Aircraft General).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA05",
+            "Aircraft General",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 06?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Lifting and Shoring",
+            "Dimensions and Areas",
+            "Leveling and Weighing",
+            "Towing and Taxiing"
           ],
           "answerIndex": 1,
-          "answerText": "ATA Chapter 06",
-          "explanation": "ATA Chapter 06 contains aircraft dimensions, station locations, and reference areas.\n\n💡 Memory Hook:\nA cube has six faces—think dimensions.\n\n🎯 Board Tip:\nQuestions involving aircraft stations and reference measurements often relate to ATA 06.",
+          "answerText": "Dimensions and Areas",
+          "explanation": "ATA 06 — Dimensions and Areas (Aircraft General).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
@@ -31751,23 +31950,49 @@
           "tags": [
             "ATA",
             "ATA06",
-            "Dimensions"
+            "Aircraft General",
+            "Code to title"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which ATA chapter covers Lifting and Shoring?",
+          "question": "Which ATA code matches Dimensions and Areas?",
           "questionType": "multiple_choice",
           "choices": [
-            "ATA Chapter 06",
-            "ATA Chapter 07",
-            "ATA Chapter 08",
-            "ATA Chapter 09"
+            "ATA 06",
+            "ATA 07",
+            "ATA 08",
+            "ATA 09"
           ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 07",
-          "explanation": "ATA Chapter 07 provides procedures for lifting, jacking, and shoring the aircraft safely.\n\n💡 Memory Hook:\nLucky number 7 lifts the airplane.\n\n🎯 Board Tip:\nDon't confuse lifting (ATA 07) with towing (ATA 09).",
+          "answerIndex": 0,
+          "answerText": "ATA 06",
+          "explanation": "Dimensions and Areas is ATA 06 (Aircraft General).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA06",
+            "Aircraft General",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 07?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Leveling and Weighing",
+            "Towing and Taxiing",
+            "Parking, Mooring, Storage and Return to Service",
+            "Lifting and Shoring"
+          ],
+          "answerIndex": 3,
+          "answerText": "Lifting and Shoring",
+          "explanation": "ATA 07 — Lifting and Shoring (Aircraft General).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
@@ -31775,23 +32000,49 @@
           "tags": [
             "ATA",
             "ATA07",
-            "Lifting"
+            "Aircraft General",
+            "Code to title"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which ATA chapter covers Leveling and Weighing?",
+          "question": "Which ATA code matches Lifting and Shoring?",
           "questionType": "multiple_choice",
           "choices": [
-            "ATA Chapter 07",
-            "ATA Chapter 08",
-            "ATA Chapter 09",
-            "ATA Chapter 10"
+            "ATA 08",
+            "ATA 09",
+            "ATA 07",
+            "ATA 10"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 07",
+          "explanation": "Lifting and Shoring is ATA 07 (Aircraft General).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA07",
+            "Aircraft General",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 08?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Towing and Taxiing",
+            "Leveling and Weighing",
+            "Parking, Mooring, Storage and Return to Service",
+            "Placards and Markings"
           ],
           "answerIndex": 1,
-          "answerText": "ATA Chapter 08",
-          "explanation": "ATA Chapter 08 contains procedures for aircraft leveling and weighing.\n\n💡 Memory Hook:\nThe number 8 is perfectly balanced.\n\n🎯 Board Tip:\nAircraft weighing procedures are categorized under ATA 08, not Weight and Balance computations in engineering subjects.",
+          "answerText": "Leveling and Weighing",
+          "explanation": "ATA 08 — Leveling and Weighing (Aircraft General).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
@@ -31799,24 +32050,49 @@
           "tags": [
             "ATA",
             "ATA08",
-            "Leveling",
-            "Weighing"
+            "Aircraft General",
+            "Code to title"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which ATA chapter covers Towing and Taxiing?",
+          "question": "Which ATA code matches Leveling and Weighing?",
           "questionType": "multiple_choice",
           "choices": [
-            "ATA Chapter 07",
-            "ATA Chapter 08",
-            "ATA Chapter 09",
-            "ATA Chapter 10"
+            "ATA 08",
+            "ATA 09",
+            "ATA 10",
+            "ATA 11"
           ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 09",
-          "explanation": "ATA Chapter 09 contains towing and taxiing procedures for aircraft movement on the ground.\n\n💡 Memory Hook:\nImagine the number 9 as a tow hook pulling the aircraft.\n\n🎯 Board Tip:\nGround movement procedures belong to ATA 09, while parking belongs to ATA 10.",
+          "answerIndex": 0,
+          "answerText": "ATA 08",
+          "explanation": "Leveling and Weighing is ATA 08 (Aircraft General).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA08",
+            "Aircraft General",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 09?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Parking, Mooring, Storage and Return to Service",
+            "Placards and Markings",
+            "Servicing",
+            "Towing and Taxiing"
+          ],
+          "answerIndex": 3,
+          "answerText": "Towing and Taxiing",
+          "explanation": "ATA 09 — Towing and Taxiing (Aircraft General).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
@@ -31824,24 +32100,49 @@
           "tags": [
             "ATA",
             "ATA09",
-            "Towing",
-            "Taxiing"
+            "Aircraft General",
+            "Code to title"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which ATA chapter covers Parking, Mooring, Storage, and Return to Service?",
+          "question": "Which ATA code matches Towing and Taxiing?",
           "questionType": "multiple_choice",
           "choices": [
-            "ATA Chapter 08",
-            "ATA Chapter 09",
-            "ATA Chapter 10",
-            "ATA Chapter 11"
+            "ATA 10",
+            "ATA 11",
+            "ATA 09",
+            "ATA 12"
           ],
           "answerIndex": 2,
-          "answerText": "ATA Chapter 10",
-          "explanation": "ATA Chapter 10 covers aircraft parking, mooring, storage procedures, and return to service after storage.\n\n💡 Memory Hook:\nA perfect 10 marks the end of the trip—park the aircraft.\n\n🎯 Board Tip:\nATA 09 gets the aircraft to the parking spot; ATA 10 tells you how to secure and store it.",
+          "answerText": "ATA 09",
+          "explanation": "Towing and Taxiing is ATA 09 (Aircraft General).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA09",
+            "Aircraft General",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 10?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Placards and Markings",
+            "Parking, Mooring, Storage and Return to Service",
+            "Servicing",
+            "Vibration and Noise Analysis (Helicopter)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Parking, Mooring, Storage and Return to Service",
+          "explanation": "ATA 10 — Parking, Mooring, Storage and Return to Service (Aircraft General).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
@@ -31849,24 +32150,49 @@
           "tags": [
             "ATA",
             "ATA10",
-            "Parking",
-            "Storage"
+            "Aircraft General",
+            "Code to title"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which ATA chapter covers Placards and Markings?",
+          "question": "Which ATA code matches Parking, Mooring, Storage and Return to Service?",
           "questionType": "multiple_choice",
           "choices": [
-            "ATA Chapter 10",
-            "ATA Chapter 11",
-            "ATA Chapter 12",
-            "ATA Chapter 20"
+            "ATA 10",
+            "ATA 11",
+            "ATA 12",
+            "ATA 18"
           ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 11",
-          "explanation": "ATA Chapter 11 covers aircraft placards, markings, decals, and identification labels.\n\n💡 Memory Hook:\nImagine two '1's standing like sign posts → Placards.\n\n🎯 Board Tip:\nDo not confuse aircraft markings (ATA 11) with servicing procedures (ATA 12).",
+          "answerIndex": 0,
+          "answerText": "ATA 10",
+          "explanation": "Parking, Mooring, Storage and Return to Service is ATA 10 (Aircraft General).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA10",
+            "Aircraft General",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 11?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Servicing",
+            "Vibration and Noise Analysis (Helicopter)",
+            "General",
+            "Placards and Markings"
+          ],
+          "answerIndex": 3,
+          "answerText": "Placards and Markings",
+          "explanation": "ATA 11 — Placards and Markings (Aircraft General).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
@@ -31874,24 +32200,49 @@
           "tags": [
             "ATA",
             "ATA11",
-            "Placards",
-            "Markings"
+            "Aircraft General",
+            "Code to title"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which ATA chapter covers Servicing?",
+          "question": "Which ATA code matches Placards and Markings?",
           "questionType": "multiple_choice",
           "choices": [
-            "ATA Chapter 11",
-            "ATA Chapter 12",
-            "ATA Chapter 20",
-            "ATA Chapter 21"
+            "ATA 12",
+            "ATA 18",
+            "ATA 11",
+            "ATA 00"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 11",
+          "explanation": "Placards and Markings is ATA 11 (Aircraft General).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA11",
+            "Aircraft General",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 12?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Vibration and Noise Analysis (Helicopter)",
+            "Servicing",
+            "General",
+            "Maintenance Policy"
           ],
           "answerIndex": 1,
-          "answerText": "ATA Chapter 12",
-          "explanation": "ATA Chapter 12 covers routine servicing including replenishment of fluids and gases.\n\n💡 Memory Hook:\n12 months = Routine service every year.\n\n🎯 Board Tip:\nServicing includes refilling—not repairing. Repairs belong to other ATA chapters.",
+          "answerText": "Servicing",
+          "explanation": "ATA 12 — Servicing (Aircraft General).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
@@ -31899,1587 +32250,49 @@
           "tags": [
             "ATA",
             "ATA12",
-            "Servicing"
+            "Aircraft General",
+            "Code to title"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which ATA chapter is intentionally reserved for future use?",
+          "question": "Which ATA code matches Servicing?",
           "questionType": "multiple_choice",
           "choices": [
-            "ATA Chapter 13",
-            "ATA Chapter 14",
-            "ATA Chapter 15",
-            "ATA Chapter 16"
+            "ATA 12",
+            "ATA 18",
+            "ATA 00",
+            "ATA 01"
           ],
           "answerIndex": 0,
-          "answerText": "ATA Chapter 13",
-          "explanation": "ATA Chapter 13 is reserved and has no assigned aircraft system.\n\n💡 Memory Hook:\n13 is 'unlucky'—nothing is assigned.\n\n🎯 Board Tip:\nReserved ATA chapters occasionally appear as trivia questions in review exams.",
+          "answerText": "ATA 12",
+          "explanation": "Servicing is ATA 12 (Aircraft General).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
           "explanationCard": null,
           "tags": [
             "ATA",
-            "ATA13",
-            "Reserved"
+            "ATA12",
+            "Aircraft General",
+            "Title to code"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "Which ATA chapter covers Hardware?",
+          "question": "Which title matches ATA 18?",
           "questionType": "multiple_choice",
           "choices": [
-            "ATA Chapter 14",
-            "ATA Chapter 20",
-            "ATA Chapter 32",
-            "ATA Chapter 51"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 20",
-          "explanation": "ATA Chapter 20 covers standard practices including hardware, fasteners, safetying methods, and general maintenance procedures.\n\n💡 Memory Hook:\n20 = Toolbox.\n\n🎯 Board Tip:\nIf the question involves bolts, nuts, screws, rivets, cotter pins, lockwire, or standard maintenance practices, ATA 20 is a strong clue.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA20",
-            "Hardware",
-            "Standard Practices",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Air Conditioning?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 20",
-            "ATA Chapter 21",
-            "ATA Chapter 24",
-            "ATA Chapter 36"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 21",
-          "explanation": "ATA Chapter 21 covers air conditioning, cabin pressurization, heating, cooling, and ventilation systems.\n\n💡 Memory Hook:\n21°C is comfortable room temperature → Air Conditioning.\n\n🎯 Board Tip:\nATA 21 is frequently confused with ATA 36 (Pneumatic), since bleed air supplies many air-conditioning systems.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA21",
-            "Air Conditioning",
-            "Pressurization",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Auto Flight?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 22",
-            "ATA Chapter 27",
-            "ATA Chapter 31",
-            "ATA Chapter 34"
-          ],
-          "answerIndex": 0,
-          "answerText": "ATA Chapter 22",
-          "explanation": "ATA Chapter 22 covers autopilot, flight director, autothrottle, and other automatic flight systems.\n\n💡 Memory Hook:\n22 = Two pilots. Let the autopilot become the second pilot.\n\n🎯 Board Tip:\nAuto Flight controls the aircraft automatically, but Flight Controls themselves belong to ATA 27.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA22",
-            "Autopilot",
-            "Auto Flight"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Communications?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 22",
-            "ATA Chapter 23",
-            "ATA Chapter 24",
-            "ATA Chapter 34"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 23",
-          "explanation": "ATA Chapter 23 covers aircraft communication systems such as VHF, HF, SATCOM, and interphone systems.\n\n💡 Memory Hook:\n23 = 'Call me.' Think communication.\n\n🎯 Board Tip:\nCommunications (ATA 23) transmit voices and data. Navigation belongs to ATA 34.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA23",
-            "Communications"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Electrical Power?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 23",
-            "ATA Chapter 24",
-            "ATA Chapter 33",
-            "ATA Chapter 35"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 24",
-          "explanation": "ATA Chapter 24 covers electrical generation, distribution, batteries, generators, and AC/DC power systems.\n\n💡 Memory Hook:\n24 Hours = Electricity never sleeps.\n\n🎯 Board Tip:\nOne of the highest-yield ATA chapters in both maintenance and troubleshooting questions.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA24",
-            "Electrical Power",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Equipment and Furnishings?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 24",
-            "ATA Chapter 25",
-            "ATA Chapter 33",
-            "ATA Chapter 52"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 25",
-          "explanation": "ATA Chapter 25 covers cabin furnishings, emergency equipment, seats, galleys, lavatories, and miscellaneous cabin equipment.\n\n💡 Memory Hook:\nHotel Room 25 = Everything inside the cabin.\n\n🎯 Board Tip:\nATA 25 focuses on cabin equipment—not aircraft structure.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA25",
-            "Equipment",
-            "Furnishings"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Fire Protection?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 24",
-            "ATA Chapter 25",
-            "ATA Chapter 26",
-            "ATA Chapter 49"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 26",
-          "explanation": "ATA Chapter 26 covers aircraft fire detection, fire warning, and fire extinguishing systems.\n\n💡 Memory Hook:\n26 = Fire Brigade on standby.\n\n🎯 Board Tip:\nATA 26 is commonly paired with engine and APU fire detection questions during board examinations.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA26",
-            "Fire Protection",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Flight Controls?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 22",
-            "ATA Chapter 27",
-            "ATA Chapter 29",
-            "ATA Chapter 32"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 27",
-          "explanation": "ATA Chapter 27 covers the aircraft Flight Control System, including primary and secondary flight controls such as ailerons, elevators, rudders, spoilers, flaps, slats, trim systems, and their associated actuators.\n\n💡 Memory Hook:\n27 = Control Heaven.\nEverything that MOVES the airplane belongs here.\n\n🎯 Board Tip:\nDo not confuse ATA 27 (Flight Controls) with ATA 22 (Auto Flight). Autopilot commands the controls, but the control surfaces themselves belong to ATA 27.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA27",
-            "Flight Controls",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Fuel?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 28",
-            "ATA Chapter 29",
-            "ATA Chapter 36",
-            "ATA Chapter 47"
-          ],
-          "answerIndex": 0,
-          "answerText": "ATA Chapter 28",
-          "explanation": "ATA Chapter 28 covers the aircraft fuel storage, transfer, venting, jettison, indication, and distribution systems.\n\n💡 Memory Hook:\n28 = Fuel on the Gate.\nImagine refueling at Gate 28.\n\n🎯 Board Tip:\nFuel quantity indication is still part of ATA 28 even though instruments are discussed elsewhere.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA28",
-            "Fuel",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Hydraulic Power?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 27",
-            "ATA Chapter 28",
-            "ATA Chapter 29",
-            "ATA Chapter 36"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 29",
-          "explanation": "ATA Chapter 29 covers hydraulic reservoirs, pumps, accumulators, filters, actuators, control valves, and hydraulic distribution systems.\n\n💡 Memory Hook:\n29 = Hydraulic Line.\nThink of hydraulic fluid flowing through Line 29.\n\n🎯 Board Tip:\nMany aircraft systems use hydraulics, but the hydraulic system itself always belongs to ATA 29.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA29",
-            "Hydraulic",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Ice and Rain Protection?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 30",
-            "ATA Chapter 33",
-            "ATA Chapter 36",
-            "ATA Chapter 38"
-          ],
-          "answerIndex": 0,
-          "answerText": "ATA Chapter 30",
-          "explanation": "ATA Chapter 30 covers anti-icing, deicing, rain removal, windshield heating, and ice detection systems.\n\n💡 Memory Hook:\n30°C melts ice.\nThink of warm weather removing ice.\n\n🎯 Board Tip:\nWing anti-ice, engine anti-ice, and windshield anti-ice are all ATA 30.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA30",
-            "Ice Protection",
-            "Rain Protection"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Indicating and Recording Systems?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 31",
-            "ATA Chapter 33",
-            "ATA Chapter 34",
-            "ATA Chapter 45"
-          ],
-          "answerIndex": 0,
-          "answerText": "ATA Chapter 31",
-          "explanation": "ATA Chapter 31 covers cockpit displays, flight recorders, central warning systems, indicating systems, and recording equipment.\n\n💡 Memory Hook:\n31 = Dashboard.\nEverything you SEE inside the cockpit.\n\n🎯 Board Tip:\nFlight Data Recorder (FDR) and Cockpit Voice Recorder (CVR) belong to ATA 31.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA31",
-            "Displays",
-            "Recorder"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Landing Gear?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 29",
-            "ATA Chapter 30",
-            "ATA Chapter 32",
-            "ATA Chapter 52"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 32",
-          "explanation": "ATA Chapter 32 covers landing gear, wheels, brakes, tires, steering, extension and retraction mechanisms.\n\n💡 Memory Hook:\nLanding gear has 3 wheels... think 32.\n\n🎯 Board Tip:\nBrakes and nose wheel steering also belong to ATA 32—not ATA 29—even though hydraulics power them.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA32",
-            "Landing Gear",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Lights?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 24",
-            "ATA Chapter 31",
-            "ATA Chapter 33",
-            "ATA Chapter 34"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 33",
-          "explanation": "ATA Chapter 33 covers exterior and interior aircraft lighting systems including landing lights, taxi lights, navigation lights, strobe lights, beacon lights, and cabin lighting.\n\n💡 Memory Hook:\n33 = Let there be LIGHT.\n\n🎯 Board Tip:\nElectrical Power (ATA 24) supplies electricity, but the lighting equipment belongs to ATA 33.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA33",
-            "Lighting"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Navigation?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 23",
-            "ATA Chapter 31",
-            "ATA Chapter 34",
-            "ATA Chapter 46"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 34",
-          "explanation": "ATA Chapter 34 covers navigation systems including VOR, ILS, GPS, DME, ADF, IRS, and weather radar.\n\n💡 Memory Hook:\n34 = Find the Way.\nThink of a map leading you home.\n\n🎯 Board Tip:\nNavigation (ATA 34) is often confused with Communications (ATA 23). Radios that talk belong to ATA 23; radios that guide belong to ATA 34.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA34",
-            "Navigation",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Oxygen?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 21",
-            "ATA Chapter 30",
-            "ATA Chapter 35",
-            "ATA Chapter 36"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 35",
-          "explanation": "ATA Chapter 35 covers crew and passenger oxygen systems including storage cylinders, masks, regulators, and distribution systems.\n\n💡 Memory Hook:\n35 = Take a Breath.\n\n🎯 Board Tip:\nCabin pressurization belongs to ATA 21, while emergency oxygen belongs to ATA 35.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA35",
-            "Oxygen"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Pneumatic?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 21",
-            "ATA Chapter 29",
-            "ATA Chapter 30",
-            "ATA Chapter 36"
+            "General",
+            "Maintenance Policy",
+            "Operations: Airplane General",
+            "Vibration and Noise Analysis (Helicopter)"
           ],
           "answerIndex": 3,
-          "answerText": "ATA Chapter 36",
-          "explanation": "ATA Chapter 36 covers pneumatic systems including bleed air ducts, valves, pressure regulators, precoolers, and distribution piping.\n\n💡 Memory Hook:\n36 = Hot Air Highway.\nBleed air travels through pneumatic ducts.\n\n🎯 Board Tip:\nThis is one of the most commonly confused ATA chapters. Remember:\n• ATA 21 = Uses the air (Air Conditioning)\n• ATA 30 = Uses hot air for anti-ice\n• ATA 36 = Carries the bleed air itself.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA36",
-            "Pneumatic",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Vacuum systems?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 36",
-            "ATA Chapter 37",
-            "ATA Chapter 38",
-            "ATA Chapter 49"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 37",
-          "explanation": "ATA Chapter 37 covers aircraft vacuum systems, including vacuum pumps, regulators, filters, and distribution lines used to power vacuum-operated instruments.\n\n💡 Memory Hook:\n37 = Suck Heaven.\nVacuum systems suck air—not blow it.\n\n🎯 Board Tip:\nModern transport aircraft rarely use vacuum systems, but legacy aircraft still do. This chapter occasionally appears as a recall question.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA37",
-            "Vacuum"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Water and Waste?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 25",
-            "ATA Chapter 38",
-            "ATA Chapter 45",
-            "ATA Chapter 49"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 38",
-          "explanation": "ATA Chapter 38 covers potable water, waste disposal, lavatory systems, service panels, and drain systems.\n\n💡 Memory Hook:\n38 = Bathroom Gate.\nThink lavatories and water service.\n\n🎯 Board Tip:\nDo not confuse ATA 38 with ATA 25. Cabin furnishings belong to ATA 25, while the water and waste systems belong to ATA 38.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA38",
-            "Water",
-            "Waste"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Electrical and Electronic Panels?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 24",
-            "ATA Chapter 31",
-            "ATA Chapter 39",
-            "ATA Chapter 45"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 39",
-          "explanation": "ATA Chapter 39 covers electrical and electronic equipment panels, racks, and mounting installations.\n\n💡 Memory Hook:\n39 = Control Panel.\n\n🎯 Board Tip:\nATA 24 generates electrical power. ATA 39 houses much of the electrical and electronic equipment.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA39",
-            "Electrical Panels"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter is assigned to Standard Practices - Integrated Modular Avionics?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 20",
-            "ATA Chapter 39",
-            "ATA Chapter 42",
-            "ATA Chapter 46"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 42",
-          "explanation": "ATA Chapter 42 covers Integrated Modular Avionics (IMA), which consolidates multiple avionics functions into shared computing modules.\n\n💡 Memory Hook:\n42 = The Computer Brain.\n\n🎯 Board Tip:\nIMA is common in modern Airbus and Boeing aircraft and is becoming increasingly relevant in maintenance practice.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA42",
-            "IMA",
-            "Avionics"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Central Maintenance System?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 31",
-            "ATA Chapter 42",
-            "ATA Chapter 45",
-            "ATA Chapter 46"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 45",
-          "explanation": "ATA Chapter 45 covers the Central Maintenance System (CMS), which records faults, assists troubleshooting, and supports aircraft maintenance diagnostics.\n\n💡 Memory Hook:\n45 = Maintenance Brain.\n\n🎯 Board Tip:\nCMS stores maintenance information—not flight data. Flight recorders belong to ATA 31.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA45",
-            "Central Maintenance",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Information Systems?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 23",
-            "ATA Chapter 31",
-            "ATA Chapter 45",
-            "ATA Chapter 46"
-          ],
-          "answerIndex": 3,
-          "answerText": "ATA Chapter 46",
-          "explanation": "ATA Chapter 46 covers aircraft information systems, including onboard information management, network services, and data communication between aircraft systems.\n\n💡 Memory Hook:\n46 = Information Highway.\n\n🎯 Board Tip:\nATA 46 deals with data management and information exchange, not radio communications (ATA 23).",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA46",
-            "Information Systems"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Auxiliary Power Unit (APU)?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 26",
-            "ATA Chapter 36",
-            "ATA Chapter 47",
-            "ATA Chapter 49"
-          ],
-          "answerIndex": 3,
-          "answerText": "ATA Chapter 49",
-          "explanation": "ATA Chapter 49 covers the Auxiliary Power Unit (APU), including its installation, controls, starting system, and supporting components.\n\n💡 Memory Hook:\n49 = Little Engine.\nThe APU is the aircraft's 'mini-engine.'\n\n🎯 Board Tip:\nDo not confuse ATA 49 (APU) with ATA 26 (APU Fire Protection). The fire detection system belongs to ATA 26, while the APU itself belongs to ATA 49.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA49",
-            "APU",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Standard Structures?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 20",
-            "ATA Chapter 51",
-            "ATA Chapter 53",
-            "ATA Chapter 57"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 51",
-          "explanation": "ATA Chapter 51 covers Standard Structures and Structural Repair Practices. It includes identification methods, allowable damage limits, repair procedures, corrosion prevention, and standard structural practices applicable throughout the aircraft.\n\n💡 Memory Hook:\n51 = Foundation of Structural Repair.\nEverything starts here.\n\n🎯 Board Tip:\nATA 20 covers standard maintenance practices for hardware, while ATA 51 covers standard structural repair practices. This is a common board trap.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA51",
-            "Standard Structures",
-            "SRM",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Doors?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 25",
-            "ATA Chapter 52",
-            "ATA Chapter 53",
-            "ATA Chapter 56"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 52",
-          "explanation": "ATA Chapter 52 covers passenger doors, cargo doors, emergency exits, service doors, and their associated operating and locking mechanisms.\n\n💡 Memory Hook:\n52 = Front Door.\nImagine opening Door Number 52.\n\n🎯 Board Tip:\nIf the question involves door seals, hinges, latches, or emergency exits, think ATA 52.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA52",
-            "Doors"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers the Fuselage?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 51",
-            "ATA Chapter 52",
-            "ATA Chapter 53",
-            "ATA Chapter 57"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 53",
-          "explanation": "ATA Chapter 53 covers the fuselage structure, including frames, stringers, skin, pressure bulkheads, floor beams, and structural repairs associated with the fuselage.\n\n💡 Memory Hook:\n53 = Body of the Aircraft.\nThe fuselage is the aircraft's body.\n\n🎯 Board Tip:\nWhen structural repair manual questions mention fuselage skins, frames, or stringers, ATA 53 is usually the correct reference.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA53",
-            "Fuselage",
-            "Structure",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Nacelles and Pylons?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 54",
-            "ATA Chapter 55",
-            "ATA Chapter 57",
-            "ATA Chapter 71"
-          ],
-          "answerIndex": 0,
-          "answerText": "ATA Chapter 54",
-          "explanation": "ATA Chapter 54 covers engine nacelles, pylons, cowlings, thrust reverser structure, and supporting engine mounting structures.\n\n💡 Memory Hook:\n54 = Engine House.\nThe nacelle is the engine's home.\n\n🎯 Board Tip:\nDo not confuse ATA 54 (engine support structure) with ATA 71 (the engine itself).",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA54",
-            "Nacelle",
-            "Pylon"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Stabilizers?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 27",
-            "ATA Chapter 55",
-            "ATA Chapter 56",
-            "ATA Chapter 57"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 55",
-          "explanation": "ATA Chapter 55 covers the horizontal stabilizer, vertical stabilizer, and their structural components.\n\n💡 Memory Hook:\n55 = Tail Section.\nThink of the aircraft's tail keeping it stable.\n\n🎯 Board Tip:\nFlight controls such as elevators and rudders belong to ATA 27, but the stabilizer structure belongs to ATA 55.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA55",
-            "Stabilizers",
-            "Empennage"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Windows?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 25",
-            "ATA Chapter 52",
-            "ATA Chapter 56",
-            "ATA Chapter 53"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 56",
-          "explanation": "ATA Chapter 56 covers cockpit windshields, cabin windows, inspection windows, and their installation and maintenance.\n\n💡 Memory Hook:\n56 = Window View.\nLook outside through ATA 56.\n\n🎯 Board Tip:\nWindshield anti-ice belongs to ATA 30, while the windshield structure itself belongs to ATA 56.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA56",
-            "Windows",
-            "Windshield"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Wings?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 53",
-            "ATA Chapter 54",
-            "ATA Chapter 55",
-            "ATA Chapter 57"
-          ],
-          "answerIndex": 3,
-          "answerText": "ATA Chapter 57",
-          "explanation": "ATA Chapter 57 covers the wing structure, including spars, ribs, stringers, skin, fuel tank structural areas, and wing repair procedures.\n\n💡 Memory Hook:\n57 = Wings to Fly.\nThink of the wings lifting the aircraft.\n\n🎯 Board Tip:\nIf the question mentions wing spars, ribs, or wing skin repairs, ATA 57 is the correct chapter. Flight controls mounted on the wing still belong to ATA 27.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA57",
-            "Wings",
-            "Structure",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Standard Practices - Propeller/Rotor?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 20",
-            "ATA Chapter 60",
-            "ATA Chapter 61",
-            "ATA Chapter 70"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 60",
-          "explanation": "ATA Chapter 60 covers standard practices applicable to propeller and rotor systems.\n\n💡 Memory Hook:\n60 = Starting point for propeller/rotor systems.\n\n🎯 Board Tip:\nATA 20 contains general aircraft standard practices, while ATA 60 contains standard practices specific to propellers and rotorcraft.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA60",
-            "Standard Practices",
-            "Propeller"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Propellers and Propulsors?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 60",
-            "ATA Chapter 61",
-            "ATA Chapter 71",
-            "ATA Chapter 72"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 61",
-          "explanation": "ATA Chapter 61 covers propellers, propeller hubs, blades, governors, and propeller control systems.\n\n💡 Memory Hook:\n61 = One Propeller.\n\n🎯 Board Tip:\nFor turboprop aircraft, propeller maintenance is found under ATA 61—not the engine chapters.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA61",
-            "Propeller",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Main Rotor(s)?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 61",
-            "ATA Chapter 62",
-            "ATA Chapter 64",
-            "ATA Chapter 67"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 62",
-          "explanation": "ATA Chapter 62 covers helicopter main rotor blades, hubs, dampers, and associated components.\n\n💡 Memory Hook:\n62 = Two main rotor blades spinning overhead.\n\n🎯 Board Tip:\nATA 62 applies primarily to helicopters and rotorcraft.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA62",
-            "Main Rotor",
-            "Helicopter"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Main Rotor Drive?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 62",
-            "ATA Chapter 63",
-            "ATA Chapter 64",
-            "ATA Chapter 67"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 63",
-          "explanation": "ATA Chapter 63 covers the transmission, gearboxes, drive shafts, and components that transmit power to the main rotor.\n\n💡 Memory Hook:\n63 = Drive the Main Rotor.\n\n🎯 Board Tip:\nATA 62 is the rotor itself; ATA 63 is what turns it.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA63",
-            "Main Rotor Drive",
-            "Helicopter"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Tail Rotor?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 63",
-            "ATA Chapter 64",
-            "ATA Chapter 65",
-            "ATA Chapter 67"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 64",
-          "explanation": "ATA Chapter 64 covers the helicopter tail rotor assembly, blades, hub, and associated components.\n\n💡 Memory Hook:\n64 = Tail Rotor at the back.\n\n🎯 Board Tip:\nDo not confuse ATA 64 (tail rotor) with ATA 65 (tail rotor drive).",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA64",
-            "Tail Rotor",
-            "Helicopter"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Tail Rotor Drive?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 63",
-            "ATA Chapter 64",
-            "ATA Chapter 65",
-            "ATA Chapter 67"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 65",
-          "explanation": "ATA Chapter 65 covers the shafts, gearboxes, couplings, and components that transmit power to the tail rotor.\n\n💡 Memory Hook:\n65 = Drive the Tail.\n\n🎯 Board Tip:\nThink of ATA 65 as the helicopter equivalent of ATA 63, but for the tail rotor.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA65",
-            "Tail Rotor Drive",
-            "Helicopter"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Folding Blades and Pylon?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 64",
-            "ATA Chapter 65",
-            "ATA Chapter 66",
-            "ATA Chapter 67"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 66",
-          "explanation": "ATA Chapter 66 covers blade-folding systems and folding pylons used on certain helicopters, particularly naval rotorcraft.\n\n💡 Memory Hook:\n66 = Fold it for Storage.\n\n🎯 Board Tip:\nThis chapter is mainly encountered in military and shipboard helicopter maintenance.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA66",
-            "Folding Blades",
-            "Helicopter"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Rotors Flight Control?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 27",
-            "ATA Chapter 62",
-            "ATA Chapter 66",
-            "ATA Chapter 67"
-          ],
-          "answerIndex": 3,
-          "answerText": "ATA Chapter 67",
-          "explanation": "ATA Chapter 67 covers helicopter flight control systems including cyclic, collective, anti-torque controls, and associated linkages.\n\n💡 Memory Hook:\n67 = Control the Rotor.\n\n🎯 Board Tip:\nFixed-wing Flight Controls are ATA 27, while helicopter rotor flight controls are ATA 67.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA67",
-            "Rotor Flight Controls",
-            "Helicopter"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter serves as the Standard Practices chapter for Engine systems?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 60",
-            "ATA Chapter 70",
-            "ATA Chapter 71",
-            "ATA Chapter 72"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 70",
-          "explanation": "ATA Chapter 70 covers standard practices applicable to engine maintenance and serves as the introduction to the engine ATA chapters (71–80).\n\n💡 Memory Hook:\n70 = Before the Engine Begins.\n\n🎯 Board Tip:\nATA 70 contains engine-specific standard practices, while ATA 71 begins the Powerplant chapter itself.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA70",
-            "Engine Standard Practices",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers the Powerplant?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 71",
-            "ATA Chapter 72",
-            "ATA Chapter 73",
-            "ATA Chapter 79"
-          ],
-          "answerIndex": 0,
-          "answerText": "ATA Chapter 71",
-          "explanation": "ATA Chapter 71 covers the Powerplant as a whole, including engine installation, engine mounting, nacelle interfaces, and general powerplant information.\n\n💡 Memory Hook:\n71 = Engine Overview.\nThink of it as the table of contents for the powerplant.\n\n🎯 Board Tip:\nATA 71 is the overall powerplant chapter. The individual engine subsystems are covered in ATA 72 through ATA 80.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA71",
-            "Powerplant",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers the Engine?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 71",
-            "ATA Chapter 72",
-            "ATA Chapter 75",
-            "ATA Chapter 79"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 72",
-          "explanation": "ATA Chapter 72 covers the engine core, including compressor, combustion section, turbines, engine casing, and internal engine components.\n\n💡 Memory Hook:\n72 = The Heart of the Engine.\nEverything inside the engine lives here.\n\n🎯 Board Tip:\nIf the question involves compressor blades, combustion chambers, turbine blades, or engine rotors, think ATA 72.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA72",
-            "Engine",
-            "Gas Turbine",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Engine Fuel and Control?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 28",
-            "ATA Chapter 73",
-            "ATA Chapter 76",
-            "ATA Chapter 79"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 73",
-          "explanation": "ATA Chapter 73 covers engine fuel delivery, fuel metering, fuel control units, FADEC fuel scheduling, manifolds, and injectors.\n\n💡 Memory Hook:\n73 = Feed the Engine.\n\n🎯 Board Tip:\nATA 28 stores the aircraft's fuel. ATA 73 manages how fuel is delivered to the engine.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA73",
-            "Engine Fuel",
-            "Fuel Control",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Ignition?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 24",
-            "ATA Chapter 73",
-            "ATA Chapter 74",
-            "ATA Chapter 80"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 74",
-          "explanation": "ATA Chapter 74 covers ignition exciters, ignition leads, igniter plugs, and ignition control during engine starting.\n\n💡 Memory Hook:\n74 = Spark the Fire.\n\n🎯 Board Tip:\nIgnition is mainly required during engine start and relight. It is different from combustion, which belongs to ATA 72.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA74",
-            "Ignition"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Engine Air?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 21",
-            "ATA Chapter 30",
-            "ATA Chapter 36",
-            "ATA Chapter 75"
-          ],
-          "answerIndex": 3,
-          "answerText": "ATA Chapter 75",
-          "explanation": "ATA Chapter 75 covers engine airflow systems including compressor airflow management, cooling air, and active clearance control.\n\n💡 Memory Hook:\n75 = Air Goes In.\n\n🎯 Board Tip:\nDo not confuse ATA 75 (engine airflow) with ATA 36 (aircraft pneumatic system) even though both involve compressed air.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA75",
-            "Engine Air"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Engine Controls?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 22",
-            "ATA Chapter 27",
-            "ATA Chapter 73",
-            "ATA Chapter 76"
-          ],
-          "answerIndex": 3,
-          "answerText": "ATA Chapter 76",
-          "explanation": "ATA Chapter 76 covers throttle controls, engine control linkages, thrust levers, and engine control interfaces.\n\n💡 Memory Hook:\n76 = Pilot Controls the Engine.\n\n🎯 Board Tip:\nATA 73 controls fuel flow inside the engine. ATA 76 covers the pilot's engine control system.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA76",
-            "Engine Controls"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Engine Indicating?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 31",
-            "ATA Chapter 72",
-            "ATA Chapter 77",
-            "ATA Chapter 79"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 77",
-          "explanation": "ATA Chapter 77 covers engine indicating systems such as N1, N2, EGT, oil pressure, oil temperature, fuel flow, vibration, and engine instrumentation.\n\n💡 Memory Hook:\n77 = Engine Dashboard.\nEverything the pilot reads about the engine.\n\n🎯 Board Tip:\nEngine gauges belong to ATA 77, while the general cockpit display system belongs to ATA 31.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA77",
-            "Engine Indicating",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Exhaust?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 72",
-            "ATA Chapter 74",
-            "ATA Chapter 78",
-            "ATA Chapter 80"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 78",
-          "explanation": "ATA Chapter 78 covers engine exhaust systems including exhaust ducts, thrust reversers, exhaust nozzles, and associated components.\n\n💡 Memory Hook:\n78 = Smoke Goes Out.\n\n🎯 Board Tip:\nThrust reverser mechanisms are generally maintained under ATA 78 even though they are mounted on the nacelle.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA78",
-            "Exhaust",
-            "Thrust Reverser"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Oil?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 29",
-            "ATA Chapter 72",
-            "ATA Chapter 77",
-            "ATA Chapter 79"
-          ],
-          "answerIndex": 3,
-          "answerText": "ATA Chapter 79",
-          "explanation": "ATA Chapter 79 covers engine lubrication systems including oil tanks, pumps, filters, coolers, pressure regulation, and oil distribution.\n\n💡 Memory Hook:\n79 = Oil Keeps It Alive.\n\n🎯 Board Tip:\nIf the question involves oil pressure, oil pumps, or lubrication, ATA 79 is the correct chapter.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA79",
-            "Oil",
-            "Lubrication",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Starting?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 74",
-            "ATA Chapter 76",
-            "ATA Chapter 79",
-            "ATA Chapter 80"
-          ],
-          "answerIndex": 3,
-          "answerText": "ATA Chapter 80",
-          "explanation": "ATA Chapter 80 covers engine starting systems including air turbine starters, electric starters, starter generators, and starting controls.\n\n💡 Memory Hook:\n80 = Start the Engine.\nIt's the final chapter before takeoff.\n\n🎯 Board Tip:\nStudents often confuse ATA 74 (Ignition) with ATA 80 (Starting). Ignition creates the spark, while ATA 80 provides the mechanism that cranks or starts the engine.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA80",
-            "Starting",
-            "Engine Start",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Standard Practices – Multi-System?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 20",
-            "ATA Chapter 40",
-            "ATA Chapter 42",
-            "ATA Chapter 45"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 40",
-          "explanation": "ATA Chapter 40 covers Standard Practices that apply across multiple aircraft systems when they cannot be assigned to a single ATA chapter.\n\n💡 Memory Hook:\n40 = For Everyone.\nThink of Chapter 40 as the common toolbox shared by multiple systems.\n\n🎯 Board Tip:\nATA 20 contains standard mechanical practices (hardware, fasteners, etc.), while ATA 40 contains standard practices affecting multiple aircraft systems.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA40",
-            "Standard Practices",
-            "Multi-System"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Water Ballast?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 38",
-            "ATA Chapter 41",
-            "ATA Chapter 47",
-            "ATA Chapter 48"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 41",
-          "explanation": "ATA Chapter 41 covers Water Ballast systems used on aircraft equipped with ballast systems for weight and balance control.\n\n💡 Memory Hook:\n41 = Water for Weight.\n\n🎯 Board Tip:\nWater Ballast systems are uncommon on transport aircraft but may appear as direct ATA recall questions.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA41",
-            "Water Ballast"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Cabin Systems?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 25",
-            "ATA Chapter 43",
-            "ATA Chapter 44",
-            "ATA Chapter 46"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 43",
-          "explanation": "ATA Chapter 43 covers Cabin Systems such as passenger service functions and cabin-related system equipment.\n\n💡 Memory Hook:\n43 = Cabin Comfort.\n\n🎯 Board Tip:\nATA 25 covers cabin equipment and furnishings, while ATA 43 focuses on cabin systems.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA43",
-            "Cabin Systems"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Cabin Systems Information?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 31",
-            "ATA Chapter 43",
-            "ATA Chapter 44",
-            "ATA Chapter 46"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 44",
-          "explanation": "ATA Chapter 44 covers Cabin Systems Information, including information management associated with cabin systems.\n\n💡 Memory Hook:\n44 = Cabin Information.\n\n🎯 Board Tip:\nATA 44 is associated with cabin information functions, while ATA 46 covers aircraft-wide information systems.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA44",
-            "Cabin Information"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Inert Gas System?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 28",
-            "ATA Chapter 47",
-            "ATA Chapter 48",
-            "ATA Chapter 49"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 47",
-          "explanation": "ATA Chapter 47 covers the Inert Gas System used to reduce the flammability of fuel tank vapors by supplying inert gas.\n\n💡 Memory Hook:\n47 = Fuel Tank Protection.\n\n🎯 Board Tip:\nModern transport aircraft often use nitrogen-enriched air to inert fuel tanks. Do not confuse ATA 47 with the fuel system itself (ATA 28).",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA47",
-            "Inert Gas",
-            "Fuel Tank Safety"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Integrated Fuel Systems?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 28",
-            "ATA Chapter 47",
-            "ATA Chapter 48",
-            "ATA Chapter 73"
-          ],
-          "answerIndex": 2,
-          "answerText": "ATA Chapter 48",
-          "explanation": "ATA Chapter 48 covers Integrated Fuel Systems, which coordinate and manage fuel-related functions across multiple aircraft systems.\n\n💡 Memory Hook:\n48 = Fuel Integration.\n\n🎯 Board Tip:\nATA 28 covers the aircraft fuel system itself, while ATA 48 addresses integrated fuel system functions.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA48",
-            "Integrated Fuel Systems"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "Which ATA chapter covers Cargo and Accessory Compartments?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "ATA Chapter 25",
-            "ATA Chapter 50",
-            "ATA Chapter 52",
-            "ATA Chapter 53"
-          ],
-          "answerIndex": 1,
-          "answerText": "ATA Chapter 50",
-          "explanation": "ATA Chapter 50 covers cargo compartments, baggage compartments, and accessory compartments, including their installations and maintenance.\n\n💡 Memory Hook:\n50 = Fifty Bags.\nThink of luggage and cargo storage.\n\n🎯 Board Tip:\nDo not confuse ATA 50 (cargo compartments) with ATA 52 (cargo doors). The compartment and the door are covered in different ATA chapters.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA50",
-            "Cargo Compartments",
-            "board favorite"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "What is the status of ATA Chapter 13 in the ATA iSpec 2200 chapter system?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Servicing",
-            "Reserved",
-            "Cabin Systems",
-            "Water Ballast"
-          ],
-          "answerIndex": 1,
-          "answerText": "Reserved",
-          "explanation": "ATA Chapter 13 is reserved and has no standard ATA system assignment.\n\n💡 Memory Hook:\n13 = Unlucky Number = Nothing Assigned.\n\n🎯 Board Tip:\nIf you encounter ATA 13 in a multiple-choice question asking for an aircraft system, 'Reserved' is the correct answer.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA13",
-            "Reserved"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "What is the status of ATA Chapter 14 in the ATA iSpec 2200 chapter system?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Fire Protection",
-            "Reserved",
-            "Standard Practices",
-            "Engine"
-          ],
-          "answerIndex": 1,
-          "answerText": "Reserved",
-          "explanation": "ATA Chapter 14 is reserved for future use and has no standard ATA assignment.\n\n💡 Memory Hook:\n14 = Empty Slot.\n\n🎯 Board Tip:\nSeveral early ATA chapters are intentionally reserved. Memorize them as reserved rather than trying to assign a system.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA14",
-            "Reserved"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "What is the status of ATA Chapter 15 in the ATA iSpec 2200 chapter system?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Reserved",
-            "Hydraulic Power",
-            "Fuel",
-            "Landing Gear"
-          ],
-          "answerIndex": 0,
-          "answerText": "Reserved",
-          "explanation": "ATA Chapter 15 is reserved and does not correspond to a standard aircraft system.\n\n💡 Memory Hook:\n15 = Reserved.\n\n🎯 Board Tip:\nDo not invent a system assignment for reserved chapters.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA15",
-            "Reserved"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "What is the status of ATA Chapter 16 in the ATA iSpec 2200 chapter system?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Reserved",
-            "Navigation",
-            "Communications",
-            "Cabin Systems"
-          ],
-          "answerIndex": 0,
-          "answerText": "Reserved",
-          "explanation": "ATA Chapter 16 is reserved for future use.\n\n💡 Memory Hook:\n16 = Still Empty.\n\n🎯 Board Tip:\nATA Chapters 13 through 19 are commonly recognized as reserved in the standard ATA chapter numbering system.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA16",
-            "Reserved"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "What is the status of ATA Chapter 17 in the ATA iSpec 2200 chapter system?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Reserved",
-            "Oxygen",
-            "Electrical Power",
-            "Standard Structures"
-          ],
-          "answerIndex": 0,
-          "answerText": "Reserved",
-          "explanation": "ATA Chapter 17 is reserved and has no official ATA system assignment.\n\n💡 Memory Hook:\n17 = Reserved.\n\n🎯 Board Tip:\nIf 'Reserved' appears as an option for ATA 17, it is the correct answer.",
-          "explanationImages": [],
-          "questionImages": [],
-          "questionTable": null,
-          "explanationCard": null,
-          "tags": [
-            "ATA",
-            "ATA17",
-            "Reserved"
-          ],
-          "expectedAnswer": null,
-          "acceptedDeviation": 0
-        },
-        {
-          "question": "What is the status of ATA Chapter 18 in the ATA iSpec 2200 chapter system?",
-          "questionType": "multiple_choice",
-          "choices": [
-            "Reserved",
-            "Engine Air",
-            "Oil",
-            "Information Systems"
-          ],
-          "answerIndex": 0,
-          "answerText": "Reserved",
-          "explanation": "ATA Chapter 18 remains reserved in the ATA chapter numbering system.\n\n💡 Memory Hook:\n18 = No Assignment.\n\n🎯 Board Tip:\nReserved chapters help preserve numbering consistency for future expansion.",
+          "answerText": "Vibration and Noise Analysis (Helicopter)",
+          "explanation": "ATA 18 — Vibration and Noise Analysis (Helicopter) (Aircraft General).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
@@ -33487,81 +32300,3150 @@
           "tags": [
             "ATA",
             "ATA18",
-            "Reserved"
+            "Aircraft General",
+            "Code to title"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "What is the status of ATA Chapter 19 in the ATA iSpec 2200 chapter system?",
+          "question": "Which ATA code matches Vibration and Noise Analysis (Helicopter)?",
           "questionType": "multiple_choice",
           "choices": [
-            "Reserved",
-            "Propellers",
-            "Powerplant",
-            "Servicing"
+            "ATA 00",
+            "ATA 01",
+            "ATA 18",
+            "ATA 02"
           ],
-          "answerIndex": 0,
-          "answerText": "Reserved",
-          "explanation": "ATA Chapter 19 is reserved and has no standard ATA system assignment.\n\n💡 Memory Hook:\n19 = Last Reserved Chapter before ATA 20.\n\n🎯 Board Tip:\nATA 20 begins the Standard Practices chapters used extensively in aircraft maintenance.",
+          "answerIndex": 2,
+          "answerText": "ATA 18",
+          "explanation": "Vibration and Noise Analysis (Helicopter) is ATA 18 (Aircraft General).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
           "explanationCard": null,
           "tags": [
             "ATA",
-            "ATA19",
-            "Reserved"
+            "ATA18",
+            "Aircraft General",
+            "Title to code"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
-        },
+        }
+      ]
+    },
+    "chapters/ata-airframe-systems.json": {
+      "title": "Airframe Systems",
+      "questions": [
         {
-          "question": "What is the status of ATA Chapters 58 and 59 in the ATA iSpec 2200 chapter system?",
+          "question": "Which title matches ATA 20?",
           "questionType": "multiple_choice",
           "choices": [
-            "Landing Gear Systems",
-            "Reserved / Manufacturer-Specific",
-            "Cabin Systems",
-            "Engine Controls"
+            "Air Conditioning",
+            "Standard Practices: Airframe",
+            "Auto Flight",
+            "Communications"
           ],
           "answerIndex": 1,
-          "answerText": "Reserved / Manufacturer-Specific",
-          "explanation": "ATA Chapters 58 and 59 are generally reserved in the standard ATA chapter system and may be assigned by specific manufacturers for specialized applications.\n\n💡 Memory Hook:\n58–59 = Save the Space.\n\n🎯 Board Tip:\nMost commercial aircraft maintenance manuals leave these chapters unassigned unless customized by the manufacturer.",
+          "answerText": "Standard Practices: Airframe",
+          "explanation": "ATA 20 — Standard Practices: Airframe (Airframe Systems).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
           "explanationCard": null,
           "tags": [
             "ATA",
-            "ATA58",
-            "ATA59",
-            "Reserved"
+            "ATA20",
+            "Airframe Systems",
+            "Code to title"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
         },
         {
-          "question": "What is the status of ATA Chapters 68 and 69 in the ATA iSpec 2200 chapter system?",
+          "question": "Which ATA code matches Standard Practices: Airframe?",
           "questionType": "multiple_choice",
           "choices": [
-            "Reserved / Rotorcraft-Specific",
-            "Powerplant",
-            "Propeller Systems",
-            "Cabin Systems"
+            "ATA 20",
+            "ATA 21",
+            "ATA 22",
+            "ATA 23"
           ],
           "answerIndex": 0,
-          "answerText": "Reserved / Rotorcraft-Specific",
-          "explanation": "ATA Chapters 68 and 69 are generally reserved and may be used in specialized rotorcraft or manufacturer-specific documentation.\n\n💡 Memory Hook:\n68–69 = Pause Before the Engine Chapters.\n\n🎯 Board Tip:\nATA 70 begins the engine standard practices section immediately before the Powerplant chapters (71–80).",
+          "answerText": "ATA 20",
+          "explanation": "Standard Practices: Airframe is ATA 20 (Airframe Systems).",
           "explanationImages": [],
           "questionImages": [],
           "questionTable": null,
           "explanationCard": null,
           "tags": [
             "ATA",
-            "ATA68",
-            "ATA69",
-            "Reserved"
+            "ATA20",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 21?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Auto Flight",
+            "Communications",
+            "Electrical Power",
+            "Air Conditioning"
+          ],
+          "answerIndex": 3,
+          "answerText": "Air Conditioning",
+          "explanation": "ATA 21 — Air Conditioning (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA21",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Air Conditioning?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 22",
+            "ATA 23",
+            "ATA 21",
+            "ATA 24"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 21",
+          "explanation": "Air Conditioning is ATA 21 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA21",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 22?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Communications",
+            "Auto Flight",
+            "Electrical Power",
+            "Equipment / Furnishings"
+          ],
+          "answerIndex": 1,
+          "answerText": "Auto Flight",
+          "explanation": "ATA 22 — Auto Flight (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA22",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Auto Flight?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 22",
+            "ATA 23",
+            "ATA 24",
+            "ATA 25"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 22",
+          "explanation": "Auto Flight is ATA 22 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA22",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 23?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Electrical Power",
+            "Equipment / Furnishings",
+            "Fire Protection",
+            "Communications"
+          ],
+          "answerIndex": 3,
+          "answerText": "Communications",
+          "explanation": "ATA 23 — Communications (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA23",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Communications?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 24",
+            "ATA 25",
+            "ATA 23",
+            "ATA 26"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 23",
+          "explanation": "Communications is ATA 23 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA23",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 24?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Equipment / Furnishings",
+            "Electrical Power",
+            "Fire Protection",
+            "Flight Controls"
+          ],
+          "answerIndex": 1,
+          "answerText": "Electrical Power",
+          "explanation": "ATA 24 — Electrical Power (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA24",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Electrical Power?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 24",
+            "ATA 25",
+            "ATA 26",
+            "ATA 27"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 24",
+          "explanation": "Electrical Power is ATA 24 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA24",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 25?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fire Protection",
+            "Flight Controls",
+            "Fuel",
+            "Equipment / Furnishings"
+          ],
+          "answerIndex": 3,
+          "answerText": "Equipment / Furnishings",
+          "explanation": "ATA 25 — Equipment / Furnishings (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA25",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Equipment / Furnishings?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 26",
+            "ATA 27",
+            "ATA 25",
+            "ATA 28"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 25",
+          "explanation": "Equipment / Furnishings is ATA 25 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA25",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 26?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Flight Controls",
+            "Fire Protection",
+            "Fuel",
+            "Hydraulic Power"
+          ],
+          "answerIndex": 1,
+          "answerText": "Fire Protection",
+          "explanation": "ATA 26 — Fire Protection (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA26",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Fire Protection?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 26",
+            "ATA 27",
+            "ATA 28",
+            "ATA 29"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 26",
+          "explanation": "Fire Protection is ATA 26 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA26",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 27?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fuel",
+            "Hydraulic Power",
+            "Ice and Rain Protection",
+            "Flight Controls"
+          ],
+          "answerIndex": 3,
+          "answerText": "Flight Controls",
+          "explanation": "ATA 27 — Flight Controls (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA27",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Flight Controls?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 28",
+            "ATA 29",
+            "ATA 27",
+            "ATA 30"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 27",
+          "explanation": "Flight Controls is ATA 27 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA27",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 28?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Hydraulic Power",
+            "Fuel",
+            "Ice and Rain Protection",
+            "Indicating / Recording Systems"
+          ],
+          "answerIndex": 1,
+          "answerText": "Fuel",
+          "explanation": "ATA 28 — Fuel (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA28",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Fuel?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 28",
+            "ATA 29",
+            "ATA 30",
+            "ATA 31"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 28",
+          "explanation": "Fuel is ATA 28 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA28",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 29?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Ice and Rain Protection",
+            "Indicating / Recording Systems",
+            "Landing Gear",
+            "Hydraulic Power"
+          ],
+          "answerIndex": 3,
+          "answerText": "Hydraulic Power",
+          "explanation": "ATA 29 — Hydraulic Power (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA29",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Hydraulic Power?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 30",
+            "ATA 31",
+            "ATA 29",
+            "ATA 32"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 29",
+          "explanation": "Hydraulic Power is ATA 29 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA29",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 30?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Indicating / Recording Systems",
+            "Ice and Rain Protection",
+            "Landing Gear",
+            "Lights"
+          ],
+          "answerIndex": 1,
+          "answerText": "Ice and Rain Protection",
+          "explanation": "ATA 30 — Ice and Rain Protection (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA30",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Ice and Rain Protection?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 30",
+            "ATA 31",
+            "ATA 32",
+            "ATA 33"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 30",
+          "explanation": "Ice and Rain Protection is ATA 30 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA30",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 31?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Landing Gear",
+            "Lights",
+            "Navigation",
+            "Indicating / Recording Systems"
+          ],
+          "answerIndex": 3,
+          "answerText": "Indicating / Recording Systems",
+          "explanation": "ATA 31 — Indicating / Recording Systems (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA31",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Indicating / Recording Systems?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 32",
+            "ATA 33",
+            "ATA 31",
+            "ATA 34"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 31",
+          "explanation": "Indicating / Recording Systems is ATA 31 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA31",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 32?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Lights",
+            "Landing Gear",
+            "Navigation",
+            "Oxygen"
+          ],
+          "answerIndex": 1,
+          "answerText": "Landing Gear",
+          "explanation": "ATA 32 — Landing Gear (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA32",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Landing Gear?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 32",
+            "ATA 33",
+            "ATA 34",
+            "ATA 35"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 32",
+          "explanation": "Landing Gear is ATA 32 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA32",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 33?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Navigation",
+            "Oxygen",
+            "Pneumatic",
+            "Lights"
+          ],
+          "answerIndex": 3,
+          "answerText": "Lights",
+          "explanation": "ATA 33 — Lights (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA33",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Lights?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 34",
+            "ATA 35",
+            "ATA 33",
+            "ATA 36"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 33",
+          "explanation": "Lights is ATA 33 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA33",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 34?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Oxygen",
+            "Navigation",
+            "Pneumatic",
+            "Vacuum"
+          ],
+          "answerIndex": 1,
+          "answerText": "Navigation",
+          "explanation": "ATA 34 — Navigation (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA34",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Navigation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 34",
+            "ATA 35",
+            "ATA 36",
+            "ATA 37"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 34",
+          "explanation": "Navigation is ATA 34 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA34",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 35?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Pneumatic",
+            "Vacuum",
+            "Water / Waste",
+            "Oxygen"
+          ],
+          "answerIndex": 3,
+          "answerText": "Oxygen",
+          "explanation": "ATA 35 — Oxygen (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA35",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Oxygen?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 36",
+            "ATA 37",
+            "ATA 35",
+            "ATA 38"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 35",
+          "explanation": "Oxygen is ATA 35 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA35",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 36?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Vacuum",
+            "Pneumatic",
+            "Water / Waste",
+            "Electrical-Electronic Panels and Multipurpose Components"
+          ],
+          "answerIndex": 1,
+          "answerText": "Pneumatic",
+          "explanation": "ATA 36 — Pneumatic (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA36",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Pneumatic?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 36",
+            "ATA 37",
+            "ATA 38",
+            "ATA 39"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 36",
+          "explanation": "Pneumatic is ATA 36 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA36",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 37?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Water / Waste",
+            "Electrical-Electronic Panels and Multipurpose Components",
+            "Multisystem",
+            "Vacuum"
+          ],
+          "answerIndex": 3,
+          "answerText": "Vacuum",
+          "explanation": "ATA 37 — Vacuum (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA37",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Vacuum?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 38",
+            "ATA 39",
+            "ATA 37",
+            "ATA 40"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 37",
+          "explanation": "Vacuum is ATA 37 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA37",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 38?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Electrical-Electronic Panels and Multipurpose Components",
+            "Water / Waste",
+            "Multisystem",
+            "Water Ballast"
+          ],
+          "answerIndex": 1,
+          "answerText": "Water / Waste",
+          "explanation": "ATA 38 — Water / Waste (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA38",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Water / Waste?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 38",
+            "ATA 39",
+            "ATA 40",
+            "ATA 41"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 38",
+          "explanation": "Water / Waste is ATA 38 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA38",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 39?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Multisystem",
+            "Water Ballast",
+            "Integrated Modular Avionics",
+            "Electrical-Electronic Panels and Multipurpose Components"
+          ],
+          "answerIndex": 3,
+          "answerText": "Electrical-Electronic Panels and Multipurpose Components",
+          "explanation": "ATA 39 — Electrical-Electronic Panels and Multipurpose Components (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA39",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Electrical-Electronic Panels and Multipurpose Components?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 40",
+            "ATA 41",
+            "ATA 39",
+            "ATA 42"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 39",
+          "explanation": "Electrical-Electronic Panels and Multipurpose Components is ATA 39 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA39",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 40?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Water Ballast",
+            "Multisystem",
+            "Integrated Modular Avionics",
+            "Cabin Systems"
+          ],
+          "answerIndex": 1,
+          "answerText": "Multisystem",
+          "explanation": "ATA 40 — Multisystem (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA40",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Multisystem?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 40",
+            "ATA 41",
+            "ATA 42",
+            "ATA 44"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 40",
+          "explanation": "Multisystem is ATA 40 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA40",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 41?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Integrated Modular Avionics",
+            "Cabin Systems",
+            "Diagnostic and Maintenance Systems",
+            "Water Ballast"
+          ],
+          "answerIndex": 3,
+          "answerText": "Water Ballast",
+          "explanation": "ATA 41 — Water Ballast (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA41",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Water Ballast?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 42",
+            "ATA 44",
+            "ATA 41",
+            "ATA 45"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 41",
+          "explanation": "Water Ballast is ATA 41 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA41",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 42?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cabin Systems",
+            "Integrated Modular Avionics",
+            "Diagnostic and Maintenance Systems",
+            "Information Systems"
+          ],
+          "answerIndex": 1,
+          "answerText": "Integrated Modular Avionics",
+          "explanation": "ATA 42 — Integrated Modular Avionics (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA42",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Integrated Modular Avionics?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 42",
+            "ATA 44",
+            "ATA 45",
+            "ATA 46"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 42",
+          "explanation": "Integrated Modular Avionics is ATA 42 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA42",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 44?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Diagnostic and Maintenance Systems",
+            "Information Systems",
+            "Nitrogen Generation System",
+            "Cabin Systems"
+          ],
+          "answerIndex": 3,
+          "answerText": "Cabin Systems",
+          "explanation": "ATA 44 — Cabin Systems (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA44",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Cabin Systems?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 45",
+            "ATA 46",
+            "ATA 44",
+            "ATA 47"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 44",
+          "explanation": "Cabin Systems is ATA 44 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA44",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 45?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Information Systems",
+            "Diagnostic and Maintenance Systems",
+            "Nitrogen Generation System",
+            "Airborne Auxiliary Power (APU)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Diagnostic and Maintenance Systems",
+          "explanation": "ATA 45 — Diagnostic and Maintenance Systems (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA45",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Diagnostic and Maintenance Systems?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 45",
+            "ATA 46",
+            "ATA 47",
+            "ATA 49"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 45",
+          "explanation": "Diagnostic and Maintenance Systems is ATA 45 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA45",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 46?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Nitrogen Generation System",
+            "Airborne Auxiliary Power (APU)",
+            "Cargo and Accessory Compartments",
+            "Information Systems"
+          ],
+          "answerIndex": 3,
+          "answerText": "Information Systems",
+          "explanation": "ATA 46 — Information Systems (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA46",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Information Systems?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 47",
+            "ATA 49",
+            "ATA 46",
+            "ATA 50"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 46",
+          "explanation": "Information Systems is ATA 46 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA46",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 47?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Airborne Auxiliary Power (APU)",
+            "Nitrogen Generation System",
+            "Cargo and Accessory Compartments",
+            "Standard Practices: Airframe"
+          ],
+          "answerIndex": 1,
+          "answerText": "Nitrogen Generation System",
+          "explanation": "ATA 47 — Nitrogen Generation System (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA47",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Nitrogen Generation System?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 47",
+            "ATA 49",
+            "ATA 50",
+            "ATA 20"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 47",
+          "explanation": "Nitrogen Generation System is ATA 47 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA47",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 49?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cargo and Accessory Compartments",
+            "Standard Practices: Airframe",
+            "Air Conditioning",
+            "Airborne Auxiliary Power (APU)"
+          ],
+          "answerIndex": 3,
+          "answerText": "Airborne Auxiliary Power (APU)",
+          "explanation": "ATA 49 — Airborne Auxiliary Power (APU) (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA49",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Airborne Auxiliary Power (APU)?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 50",
+            "ATA 20",
+            "ATA 49",
+            "ATA 21"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 49",
+          "explanation": "Airborne Auxiliary Power (APU) is ATA 49 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA49",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 50?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Standard Practices: Airframe",
+            "Cargo and Accessory Compartments",
+            "Air Conditioning",
+            "Auto Flight"
+          ],
+          "answerIndex": 1,
+          "answerText": "Cargo and Accessory Compartments",
+          "explanation": "ATA 50 — Cargo and Accessory Compartments (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA50",
+            "Airframe Systems",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Cargo and Accessory Compartments?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 50",
+            "ATA 20",
+            "ATA 21",
+            "ATA 22"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 50",
+          "explanation": "Cargo and Accessory Compartments is ATA 50 (Airframe Systems).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA50",
+            "Airframe Systems",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/ata-structures.json": {
+      "title": "Structures",
+      "questions": [
+        {
+          "question": "Which title matches ATA 51?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Doors",
+            "Standard Practices and Structures: General",
+            "Fuselage",
+            "Nacelles / Pylons"
+          ],
+          "answerIndex": 1,
+          "answerText": "Standard Practices and Structures: General",
+          "explanation": "ATA 51 — Standard Practices and Structures: General (Structures).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA51",
+            "Structures",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Standard Practices and Structures: General?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 51",
+            "ATA 52",
+            "ATA 53",
+            "ATA 54"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 51",
+          "explanation": "Standard Practices and Structures: General is ATA 51 (Structures).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA51",
+            "Structures",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 52?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fuselage",
+            "Nacelles / Pylons",
+            "Stabilizers",
+            "Doors"
+          ],
+          "answerIndex": 3,
+          "answerText": "Doors",
+          "explanation": "ATA 52 — Doors (Structures).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA52",
+            "Structures",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Doors?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 53",
+            "ATA 54",
+            "ATA 52",
+            "ATA 55"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 52",
+          "explanation": "Doors is ATA 52 (Structures).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA52",
+            "Structures",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 53?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Nacelles / Pylons",
+            "Fuselage",
+            "Stabilizers",
+            "Windows"
+          ],
+          "answerIndex": 1,
+          "answerText": "Fuselage",
+          "explanation": "ATA 53 — Fuselage (Structures).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA53",
+            "Structures",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Fuselage?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 53",
+            "ATA 54",
+            "ATA 55",
+            "ATA 56"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 53",
+          "explanation": "Fuselage is ATA 53 (Structures).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA53",
+            "Structures",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 54?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Stabilizers",
+            "Windows",
+            "Wings",
+            "Nacelles / Pylons"
+          ],
+          "answerIndex": 3,
+          "answerText": "Nacelles / Pylons",
+          "explanation": "ATA 54 — Nacelles / Pylons (Structures).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA54",
+            "Structures",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Nacelles / Pylons?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 55",
+            "ATA 56",
+            "ATA 54",
+            "ATA 57"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 54",
+          "explanation": "Nacelles / Pylons is ATA 54 (Structures).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA54",
+            "Structures",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 55?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Windows",
+            "Stabilizers",
+            "Wings",
+            "Standard Practices and Structures: General"
+          ],
+          "answerIndex": 1,
+          "answerText": "Stabilizers",
+          "explanation": "ATA 55 — Stabilizers (Structures).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA55",
+            "Structures",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Stabilizers?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 55",
+            "ATA 56",
+            "ATA 57",
+            "ATA 51"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 55",
+          "explanation": "Stabilizers is ATA 55 (Structures).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA55",
+            "Structures",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 56?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wings",
+            "Standard Practices and Structures: General",
+            "Doors",
+            "Windows"
+          ],
+          "answerIndex": 3,
+          "answerText": "Windows",
+          "explanation": "ATA 56 — Windows (Structures).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA56",
+            "Structures",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Windows?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 57",
+            "ATA 51",
+            "ATA 56",
+            "ATA 52"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 56",
+          "explanation": "Windows is ATA 56 (Structures).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA56",
+            "Structures",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 57?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Standard Practices and Structures: General",
+            "Wings",
+            "Doors",
+            "Fuselage"
+          ],
+          "answerIndex": 1,
+          "answerText": "Wings",
+          "explanation": "ATA 57 — Wings (Structures).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA57",
+            "Structures",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Wings?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 57",
+            "ATA 51",
+            "ATA 52",
+            "ATA 53"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 57",
+          "explanation": "Wings is ATA 57 (Structures).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA57",
+            "Structures",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/ata-propellers-rotors.json": {
+      "title": "Propellers / Rotors",
+      "questions": [
+        {
+          "question": "Which title matches ATA 60?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Propellers / Propulsion",
+            "Standard Practices: Propeller / Rotor",
+            "Main Rotor(s)",
+            "Main Rotor Drive(s)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Standard Practices: Propeller / Rotor",
+          "explanation": "ATA 60 — Standard Practices: Propeller / Rotor (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA60",
+            "Propellers / Rotors",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Standard Practices: Propeller / Rotor?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 60",
+            "ATA 61",
+            "ATA 62",
+            "ATA 63"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 60",
+          "explanation": "Standard Practices: Propeller / Rotor is ATA 60 (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA60",
+            "Propellers / Rotors",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 61?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Main Rotor(s)",
+            "Main Rotor Drive(s)",
+            "Tail Rotor",
+            "Propellers / Propulsion"
+          ],
+          "answerIndex": 3,
+          "answerText": "Propellers / Propulsion",
+          "explanation": "ATA 61 — Propellers / Propulsion (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA61",
+            "Propellers / Rotors",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Propellers / Propulsion?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 62",
+            "ATA 63",
+            "ATA 61",
+            "ATA 64"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 61",
+          "explanation": "Propellers / Propulsion is ATA 61 (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA61",
+            "Propellers / Rotors",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 62?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Main Rotor Drive(s)",
+            "Main Rotor(s)",
+            "Tail Rotor",
+            "Tail Rotor Drive"
+          ],
+          "answerIndex": 1,
+          "answerText": "Main Rotor(s)",
+          "explanation": "ATA 62 — Main Rotor(s) (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA62",
+            "Propellers / Rotors",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Main Rotor(s)?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 62",
+            "ATA 63",
+            "ATA 64",
+            "ATA 65"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 62",
+          "explanation": "Main Rotor(s) is ATA 62 (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA62",
+            "Propellers / Rotors",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 63?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Tail Rotor",
+            "Tail Rotor Drive",
+            "Rotor Blade and Tail Pylon Folding",
+            "Main Rotor Drive(s)"
+          ],
+          "answerIndex": 3,
+          "answerText": "Main Rotor Drive(s)",
+          "explanation": "ATA 63 — Main Rotor Drive(s) (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA63",
+            "Propellers / Rotors",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Main Rotor Drive(s)?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 64",
+            "ATA 65",
+            "ATA 63",
+            "ATA 66"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 63",
+          "explanation": "Main Rotor Drive(s) is ATA 63 (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA63",
+            "Propellers / Rotors",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 64?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Tail Rotor Drive",
+            "Tail Rotor",
+            "Rotor Blade and Tail Pylon Folding",
+            "Rotors Flight Control"
+          ],
+          "answerIndex": 1,
+          "answerText": "Tail Rotor",
+          "explanation": "ATA 64 — Tail Rotor (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA64",
+            "Propellers / Rotors",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Tail Rotor?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 64",
+            "ATA 65",
+            "ATA 66",
+            "ATA 67"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 64",
+          "explanation": "Tail Rotor is ATA 64 (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA64",
+            "Propellers / Rotors",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 65?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rotor Blade and Tail Pylon Folding",
+            "Rotors Flight Control",
+            "Standard Practices: Propeller / Rotor",
+            "Tail Rotor Drive"
+          ],
+          "answerIndex": 3,
+          "answerText": "Tail Rotor Drive",
+          "explanation": "ATA 65 — Tail Rotor Drive (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA65",
+            "Propellers / Rotors",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Tail Rotor Drive?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 66",
+            "ATA 67",
+            "ATA 65",
+            "ATA 60"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 65",
+          "explanation": "Tail Rotor Drive is ATA 65 (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA65",
+            "Propellers / Rotors",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 66?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rotors Flight Control",
+            "Rotor Blade and Tail Pylon Folding",
+            "Standard Practices: Propeller / Rotor",
+            "Propellers / Propulsion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Rotor Blade and Tail Pylon Folding",
+          "explanation": "ATA 66 — Rotor Blade and Tail Pylon Folding (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA66",
+            "Propellers / Rotors",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Rotor Blade and Tail Pylon Folding?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 66",
+            "ATA 67",
+            "ATA 60",
+            "ATA 61"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 66",
+          "explanation": "Rotor Blade and Tail Pylon Folding is ATA 66 (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA66",
+            "Propellers / Rotors",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 67?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Standard Practices: Propeller / Rotor",
+            "Propellers / Propulsion",
+            "Main Rotor(s)",
+            "Rotors Flight Control"
+          ],
+          "answerIndex": 3,
+          "answerText": "Rotors Flight Control",
+          "explanation": "ATA 67 — Rotors Flight Control (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA67",
+            "Propellers / Rotors",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Rotors Flight Control?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 60",
+            "ATA 61",
+            "ATA 67",
+            "ATA 62"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 67",
+          "explanation": "Rotors Flight Control is ATA 67 (Propellers / Rotors).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA67",
+            "Propellers / Rotors",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/ata-power-plant.json": {
+      "title": "Power Plant",
+      "questions": [
+        {
+          "question": "Which title matches ATA 70?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Power Plant",
+            "Standard Practices: Engine",
+            "Engine",
+            "Engine Fuel and Control"
+          ],
+          "answerIndex": 1,
+          "answerText": "Standard Practices: Engine",
+          "explanation": "ATA 70 — Standard Practices: Engine (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA70",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Standard Practices: Engine?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 70",
+            "ATA 71",
+            "ATA 72",
+            "ATA 73"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 70",
+          "explanation": "Standard Practices: Engine is ATA 70 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA70",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 71?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Engine",
+            "Engine Fuel and Control",
+            "Ignition",
+            "Power Plant"
+          ],
+          "answerIndex": 3,
+          "answerText": "Power Plant",
+          "explanation": "ATA 71 — Power Plant (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA71",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Power Plant?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 72",
+            "ATA 73",
+            "ATA 71",
+            "ATA 74"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 71",
+          "explanation": "Power Plant is ATA 71 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA71",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 72?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Engine Fuel and Control",
+            "Engine",
+            "Ignition",
+            "Engine Air (Bleed)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Engine",
+          "explanation": "ATA 72 — Engine (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA72",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Engine?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 72",
+            "ATA 73",
+            "ATA 74",
+            "ATA 75"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 72",
+          "explanation": "Engine is ATA 72 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA72",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 73?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Ignition",
+            "Engine Air (Bleed)",
+            "Engine Controls",
+            "Engine Fuel and Control"
+          ],
+          "answerIndex": 3,
+          "answerText": "Engine Fuel and Control",
+          "explanation": "ATA 73 — Engine Fuel and Control (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA73",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Engine Fuel and Control?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 74",
+            "ATA 75",
+            "ATA 73",
+            "ATA 76"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 73",
+          "explanation": "Engine Fuel and Control is ATA 73 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA73",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 74?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Engine Air (Bleed)",
+            "Ignition",
+            "Engine Controls",
+            "Engine Indicating"
+          ],
+          "answerIndex": 1,
+          "answerText": "Ignition",
+          "explanation": "ATA 74 — Ignition (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA74",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Ignition?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 74",
+            "ATA 75",
+            "ATA 76",
+            "ATA 77"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 74",
+          "explanation": "Ignition is ATA 74 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA74",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 75?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Engine Controls",
+            "Engine Indicating",
+            "Exhaust",
+            "Engine Air (Bleed)"
+          ],
+          "answerIndex": 3,
+          "answerText": "Engine Air (Bleed)",
+          "explanation": "ATA 75 — Engine Air (Bleed) (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA75",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Engine Air (Bleed)?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 76",
+            "ATA 77",
+            "ATA 75",
+            "ATA 78"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 75",
+          "explanation": "Engine Air (Bleed) is ATA 75 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA75",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 76?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Engine Indicating",
+            "Engine Controls",
+            "Exhaust",
+            "Oil"
+          ],
+          "answerIndex": 1,
+          "answerText": "Engine Controls",
+          "explanation": "ATA 76 — Engine Controls (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA76",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Engine Controls?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 76",
+            "ATA 77",
+            "ATA 78",
+            "ATA 79"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 76",
+          "explanation": "Engine Controls is ATA 76 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA76",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 77?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Exhaust",
+            "Oil",
+            "Starting",
+            "Engine Indicating"
+          ],
+          "answerIndex": 3,
+          "answerText": "Engine Indicating",
+          "explanation": "ATA 77 — Engine Indicating (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA77",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Engine Indicating?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 78",
+            "ATA 79",
+            "ATA 77",
+            "ATA 80"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 77",
+          "explanation": "Engine Indicating is ATA 77 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA77",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 78?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Oil",
+            "Exhaust",
+            "Starting",
+            "Turbines (Reciprocating Engines)"
+          ],
+          "answerIndex": 1,
+          "answerText": "Exhaust",
+          "explanation": "ATA 78 — Exhaust (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA78",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Exhaust?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 78",
+            "ATA 79",
+            "ATA 80",
+            "ATA 81"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 78",
+          "explanation": "Exhaust is ATA 78 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA78",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 79?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Starting",
+            "Turbines (Reciprocating Engines)",
+            "Water Injection",
+            "Oil"
+          ],
+          "answerIndex": 3,
+          "answerText": "Oil",
+          "explanation": "ATA 79 — Oil (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA79",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Oil?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 80",
+            "ATA 81",
+            "ATA 79",
+            "ATA 82"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 79",
+          "explanation": "Oil is ATA 79 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA79",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 80?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Turbines (Reciprocating Engines)",
+            "Starting",
+            "Water Injection",
+            "Accessory Gearboxes"
+          ],
+          "answerIndex": 1,
+          "answerText": "Starting",
+          "explanation": "ATA 80 — Starting (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA80",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Starting?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 80",
+            "ATA 81",
+            "ATA 82",
+            "ATA 83"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 80",
+          "explanation": "Starting is ATA 80 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA80",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 81?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Water Injection",
+            "Accessory Gearboxes",
+            "Propulsion Augmentation",
+            "Turbines (Reciprocating Engines)"
+          ],
+          "answerIndex": 3,
+          "answerText": "Turbines (Reciprocating Engines)",
+          "explanation": "ATA 81 — Turbines (Reciprocating Engines) (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA81",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Turbines (Reciprocating Engines)?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 82",
+            "ATA 83",
+            "ATA 81",
+            "ATA 84"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 81",
+          "explanation": "Turbines (Reciprocating Engines) is ATA 81 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA81",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 82?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Accessory Gearboxes",
+            "Water Injection",
+            "Propulsion Augmentation",
+            "Fuel Cell Systems"
+          ],
+          "answerIndex": 1,
+          "answerText": "Water Injection",
+          "explanation": "ATA 82 — Water Injection (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA82",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Water Injection?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 82",
+            "ATA 83",
+            "ATA 84",
+            "ATA 85"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 82",
+          "explanation": "Water Injection is ATA 82 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA82",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 83?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Propulsion Augmentation",
+            "Fuel Cell Systems",
+            "Standard Practices: Engine",
+            "Accessory Gearboxes"
+          ],
+          "answerIndex": 3,
+          "answerText": "Accessory Gearboxes",
+          "explanation": "ATA 83 — Accessory Gearboxes (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA83",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Accessory Gearboxes?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 84",
+            "ATA 85",
+            "ATA 83",
+            "ATA 70"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 83",
+          "explanation": "Accessory Gearboxes is ATA 83 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA83",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 84?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Fuel Cell Systems",
+            "Propulsion Augmentation",
+            "Standard Practices: Engine",
+            "Power Plant"
+          ],
+          "answerIndex": 1,
+          "answerText": "Propulsion Augmentation",
+          "explanation": "ATA 84 — Propulsion Augmentation (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA84",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Propulsion Augmentation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 84",
+            "ATA 85",
+            "ATA 70",
+            "ATA 71"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 84",
+          "explanation": "Propulsion Augmentation is ATA 84 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA84",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 85?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Standard Practices: Engine",
+            "Power Plant",
+            "Engine",
+            "Fuel Cell Systems"
+          ],
+          "answerIndex": 3,
+          "answerText": "Fuel Cell Systems",
+          "explanation": "ATA 85 — Fuel Cell Systems (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA85",
+            "Power Plant",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Fuel Cell Systems?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 70",
+            "ATA 71",
+            "ATA 85",
+            "ATA 72"
+          ],
+          "answerIndex": 2,
+          "answerText": "ATA 85",
+          "explanation": "Fuel Cell Systems is ATA 85 (Power Plant).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA85",
+            "Power Plant",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/ata-other.json": {
+      "title": "Other",
+      "questions": [
+        {
+          "question": "Which title matches ATA 91?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Electrical System Installation",
+            "Charts"
+          ],
+          "answerIndex": 1,
+          "answerText": "Charts",
+          "explanation": "ATA 91 — Charts (Other).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA91",
+            "Other",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Charts?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 91",
+            "ATA 92"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 91",
+          "explanation": "Charts is ATA 91 (Other).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA91",
+            "Other",
+            "Title to code"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which title matches ATA 92?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Charts",
+            "Electrical System Installation"
+          ],
+          "answerIndex": 1,
+          "answerText": "Electrical System Installation",
+          "explanation": "ATA 92 — Electrical System Installation (Other).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA92",
+            "Other",
+            "Code to title"
+          ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which ATA code matches Electrical System Installation?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "ATA 92",
+            "ATA 91"
+          ],
+          "answerIndex": 0,
+          "answerText": "ATA 92",
+          "explanation": "Electrical System Installation is ATA 92 (Other).",
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "tags": [
+            "ATA",
+            "ATA92",
+            "Other",
+            "Title to code"
           ],
           "expectedAnswer": null,
           "acceptedDeviation": 0
