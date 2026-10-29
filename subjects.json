@@ -158,6 +158,14 @@
         {
           "title": "Other",
           "file": "chapters/ata-other.json"
+        },
+        {
+          "title": "Aircraft Materials Mock Exam 2016 (1-50)",
+          "file": "chapters/aircraft-materials-mock-2016-001-050.json"
+        },
+        {
+          "title": "Aircraft Materials Mock Exam 2016 (51-100)",
+          "file": "chapters/aircraft-materials-mock-2016-051-100.json"
         }
       ],
       "notesPath": "acrm.md",
@@ -206673,6 +206681,2416 @@
             "instrumentation",
             "volare"
           ],
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/aircraft-materials-mock-2016-001-050.json": {
+      "title": "Aircraft Materials, Airframe Construction, Repair, and Modification 2016 - Questions 1-50",
+      "questions": [
+        {
+          "question": "Stability about the axis which runs parallel to the line of flight is referred to as",
+          "questionType": "multiple_choice",
+          "choices": [
+            "longitudinal stability",
+            "lateral stability.",
+            "directional stability",
+            "pitch stability"
+          ],
+          "answerIndex": 1,
+          "answerText": "lateral stability.",
+          "explanation": "Correct answer: lateral stability.\n\nLateral stability is an aircraft\u2019s tendency to return toward wings-level after a disturbance that causes rolling. The relevant rotation is about the longitudinal axis, which runs from nose to tail.\n\nKey characteristics:\n\u2022 Longitudinal axis: roll.\n\u2022 Lateral axis: pitch.\n\u2022 Vertical axis: yaw.\n\nWhy the other choices are incorrect:\n\u2022 Longitudinal stability concerns pitching about the lateral axis.\n\u2022 Directional stability concerns yawing about the vertical axis.\n\u2022 Pitch stability is another way to describe stability in pitch, not roll.\n\n\ud83d\udca1 Memory Hook: Roll = longitudinal axis; Pitch = lateral axis; Yaw = vertical axis.\n\n\ud83c\udfaf Board Tip: Identify the axis of rotation, not the direction the aircraft is moving.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What type loads cause the most rivet failures?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Shear",
+            "Bearing",
+            "Bending",
+            "Head"
+          ],
+          "answerIndex": 0,
+          "answerText": "Shear",
+          "explanation": "Correct answer: Shear.\n\nRivets joining overlapping sheets are commonly subjected to shear because the joined parts tend to slide past one another under load. The rivet shank resists this relative movement.\n\nKey characteristics:\n\u2022 Shear acts parallel to the joint interface.\n\u2022 Bearing stress occurs where the rivet presses against the hole wall.\n\u2022 Proper rivet size, installation, and edge distance help maintain joint strength.\n\nWhy the other choices are incorrect:\n\u2022 Bearing is important but is not the keyed answer for the most common rivet loading in this question.\n\u2022 Bending is not the usual primary loading in a properly designed lap joint.\n\u2022 \u201cHead\u201d describes a rivet feature, not a load type.\n\n\ud83d\udca1 Memory Hook: Sheets try to slide; the rivet resists in shear.\n\n\ud83c\udfaf Board Tip: Distinguish shear in the fastener from bearing stress in the material around its hole.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "With which system is differential control associated?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Trim",
+            "Rudder",
+            "Elevator",
+            "Aileron"
+          ],
+          "answerIndex": 3,
+          "answerText": "Aileron",
+          "explanation": "Correct answer: Aileron.\n\nDifferential aileron control makes the upward-moving aileron deflect more than the downward-moving aileron. This helps reduce adverse yaw, in which the nose initially yaws opposite the intended turn because the down-going aileron can create more drag.\n\nKey characteristics:\n\u2022 Ailerons control roll.\n\u2022 Differential movement helps balance drag between the two wings.\n\u2022 It reduces, but does not eliminate every source of, adverse yaw.\n\nWhy the other choices are incorrect:\n\u2022 Trim adjusts control forces or maintains a selected condition.\n\u2022 The rudder primarily controls yaw.\n\u2022 The elevator primarily controls pitch.\n\n\ud83d\udca1 Memory Hook: Ailerons roll; differential action reduces adverse yaw.\n\n\ud83c\udfaf Board Tip: If the question mentions adverse yaw and unequal up/down aileron travel, think differential ailerons.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Clad aluminum alloys are used in aircraft because they",
+          "questionType": "multiple_choice",
+          "choices": [
+            "can be heat treated much easier than the other forms of aluminum.",
+            "are less subject to corrosion than uncoated aluminum alloys.",
+            "are stronger than unclad aluminum alloys.",
+            "are heat resistant"
+          ],
+          "answerIndex": 1,
+          "answerText": "are less subject to corrosion than uncoated aluminum alloys.",
+          "explanation": "Correct answer: are less subject to corrosion than uncoated aluminum alloys.\n\nClad aluminum alloy has a thin layer of relatively corrosion-resistant, commercially pure aluminum bonded to the stronger alloy beneath it. The cladding acts as a protective surface and helps reduce corrosion of the underlying alloy.\n\nKey characteristics:\n\u2022 Protects the core alloy from corrosive exposure.\n\u2022 Preserves much of the strength of the underlying alloy.\n\u2022 Commonly associated with Alclad sheet.\n\nWhy the other choices are incorrect:\n\u2022 Cladding does not make the alloy easier to heat-treat.\n\u2022 The clad layer is generally not used to make the material stronger than the unclad alloy.\n\u2022 Cladding is not primarily a heat-resistance treatment.\n\n\ud83d\udca1 Memory Hook: Clad = corrosion shield.\n\n\ud83c\udfaf Board Tip: Do not confuse corrosion protection from cladding with strengthening from alloying or heat treatment.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "One method of inspecting a laminated fiberglass structure that has been subjected to damage is to",
+          "questionType": "multiple_choice",
+          "choices": [
+            "strip the damaged area of all paint and shine a strong light through the structure.",
+            "use dye-penetrant inspection procedures, exposing the entire damaged area to the penetrant solution.",
+            "use an eddy current probe on both sides of the damaged area.",
+            "perform tap testing"
+          ],
+          "answerIndex": 0,
+          "answerText": "strip the damaged area of all paint and shine a strong light through the structure.",
+          "explanation": "Correct answer: strip the damaged area of all paint and shine a strong light through the structure.\n\nThe supplied key selects removing paint and shining a strong light through the damaged laminate. This is a visual-transmission method intended to help reveal damage in a laminate where light can pass through it; its usefulness depends on the material, access, and damage.\n\nKey characteristics:\n\u2022 Composite damage may include delamination, cracking, or broken fibers.\n\u2022 Inspection methods must suit the laminate and the type of suspected damage.\n\u2022 Follow the aircraft structural repair manual and approved inspection procedures.\n\nWhy the other choices are incorrect according to the supplied key:\n\u2022 Dye penetrant is designed mainly for surface-breaking flaws in nonporous materials, not internal composite delamination.\n\u2022 Eddy-current inspection is primarily used for electrically conductive materials and is not the general method for fiberglass.\n\u2022 Tap testing can be useful for some composite delamination, so this distractor is not universally invalid; the keyed answer is the strong-light method.\n\n\ud83d\udca1 Memory Hook: Fiberglass laminate may be checked by transmitted light when suitable.\n\n\ud83c\udfaf Board Tip: Composite inspection is method- and material-dependent; do not assume one technique detects every type of damage.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The angle of incidence of an airplane at rest",
+          "questionType": "multiple_choice",
+          "choices": [
+            "affects the dihedral of the wings in flight.",
+            "is the same as the angle between the relative wind and the chord of the wing.",
+            "does not change when in flight.",
+            "is set at maximum L/D"
+          ],
+          "answerIndex": 2,
+          "answerText": "does not change when in flight.",
+          "explanation": "Correct answer: does not change when in flight.\n\nAngle of incidence is the fixed geometric angle between an aircraft\u2019s wing chord line and a reference line on the aircraft, commonly the longitudinal datum. It is built into the aircraft design and does not change simply because the aircraft changes pitch in flight.\n\nKey characteristics:\n\u2022 Angle of incidence is a construction/design angle.\n\u2022 Angle of attack is measured between the wing chord and the relative airflow.\n\u2022 Angle of attack changes with flight condition.\n\nWhy the other choices are incorrect:\n\u2022 Incidence does not determine dihedral.\n\u2022 The angle between the relative wind and chord is angle of attack, not incidence.\n\u2022 Incidence is not set universally at maximum lift-to-drag ratio.\n\n\ud83d\udca1 Memory Hook: Incidence is installed; angle of attack is flown.\n\n\ud83c\udfaf Board Tip: A fixed aircraft geometry angle is not the same as an aerodynamic angle that changes with airflow.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The primary alloying agent of 2024-T36 is indicated by the number",
+          "questionType": "multiple_choice",
+          "choices": [
+            "2",
+            "20",
+            "24",
+            "36"
+          ],
+          "answerIndex": 0,
+          "answerText": "2",
+          "explanation": "Correct answer: 2.\n\nIn the standard four-digit aluminum-alloy designation, the first digit identifies the alloy series and its principal alloying family. The 2xxx series uses copper as its principal alloying element, so the first digit in 2024 is 2.\n\nKey characteristics:\n\u2022 First digit: alloy series.\n\u2022 Remaining digits identify the particular alloy within that series.\n\u2022 The temper suffix, such as T3 or T6, describes processing condition\u2014not the primary alloying element.\n\nWhy the other choices are incorrect:\n\u2022 20 and 24 are not the series digit.\n\u2022 36 is not the primary alloying-agent indicator; in the stated designation, it resembles a temper suffix but is not the given answer.\n\n\ud83d\udca1 Memory Hook: 2xxx aluminum = copper family.\n\n\ud83c\udfaf Board Tip: Read alloy series and temper designation separately. Also verify the exact temper, because \u201c2024-T36\u201d may be a transcription error for a more familiar temper designation.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft that is required by Section 91.409, to have a 100-hour inspection may be flown beyond the inspection requirement",
+          "questionType": "multiple_choice",
+          "choices": [
+            "if necessary to reach a place at which the inspection can be accomplished, but a special flight permit is necessary.",
+            "if necessary to reach a place at which the inspection can be accomplished, but not to exceed 10 flight hours without special permit",
+            "if necessary to reach a place at which the inspection can be accomplished, but not to exceed 15 flight hours.",
+            "if necessary to reach a place at which the inspection can be accomplished, but not to exceed 10 flight hours."
+          ],
+          "answerIndex": 3,
+          "answerText": "if necessary to reach a place at which the inspection can be accomplished, but not to exceed 10 flight hours.",
+          "explanation": "Correct answer: if necessary to reach a place at which the inspection can be accomplished, but not to exceed 10 flight hours.\n\nUnder the U.S. rule referenced by the question, a qualifying aircraft may use a limited 10-flight-hour extension beyond the 100-hour inspection interval only when necessary to reach a place where the inspection can be performed. It is not a routine allowance for continued operation.\n\nKey characteristics:\n\u2022 The extension is limited to the purpose of reaching an inspection location.\n\u2022 The extra time is added to the interval; it does not reset the next inspection interval.\n\u2022 Applicable regulations and aircraft-specific requirements must be checked.\n\nWhy the other choices are incorrect:\n\u2022 The keyed rule does not require a special flight permit for this specific 10-hour allowance.\n\u2022 The 15-hour alternatives exceed the stated allowance.\n\u2022 An unrestricted extension is not permitted.\n\n\ud83d\udca1 Memory Hook: 100-hour inspection: up to 10 extra hours only to reach the inspection.\n\n\ud83c\udfaf Board Tip: This is a U.S. FAR question. For real maintenance decisions, confirm the current applicable regulation and jurisdiction.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is generally the best procedure to use when removing a solid shank rivet?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Drill through the manufactured head and shank with a shank size drill and remove the rivet with a punch.",
+            "Drill to the base of the manufactured rivet head with a drill one size smaller than the rivet shank and remove the rivet with a punch.",
+            "Drill through the manufactured head and shank with a drill one size smaller than the rivet and remove the rivet with a punch.",
+            "Drill to the base of the manufactured rivet head with a drill one size larger than the rivet shank and remove the rivet with a punch."
+          ],
+          "answerIndex": 1,
+          "answerText": "Drill to the base of the manufactured rivet head with a drill one size smaller than the rivet shank and remove the rivet with a punch.",
+          "explanation": "Correct answer: Drill to the base of the manufactured rivet head with a drill one size smaller than the rivet shank and remove the rivet with a punch.\n\nTo remove a solid-shank rivet, the usual technique is to drill carefully through the center of the manufactured head using a drill slightly smaller than the shank, stopping at the head-to-shank junction. The head can then be removed and the remaining shank driven out with a punch.\n\nKey characteristics:\n\u2022 Center the drill to avoid damaging the surrounding sheet.\n\u2022 Do not drill through the full shank unnecessarily.\n\u2022 Support the work and use the correct tools and approved maintenance procedure.\n\nWhy the other choices are incorrect:\n\u2022 A shank-size or larger drill risks enlarging the structural hole.\n\u2022 Drilling through the entire rivet can damage the hole or underlying structure.\n\u2022 A drill larger than the shank is especially likely to damage the material.\n\n\ud83d\udca1 Memory Hook: Drill the head, preserve the hole.\n\n\ud83c\udfaf Board Tip: The goal is to remove the fastener while keeping the original hole within allowable limits.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "If a single-rotor helicopter is in forward horizontal flight, the angle of attack of the advancing blade is",
+          "questionType": "multiple_choice",
+          "choices": [
+            "more than the retreating blade.",
+            "equal to the retreating blade.",
+            "less than the retreating blade.",
+            "always greater than the retreating blade"
+          ],
+          "answerIndex": 2,
+          "answerText": "less than the retreating blade.",
+          "explanation": "Correct answer: less than the retreating blade.\n\nIn forward flight, the advancing rotor blade has a higher relative airspeed than the retreating blade. For comparable lift distribution, the advancing blade generally needs a lower angle of attack, while the retreating blade needs a higher one.\n\nKey characteristics:\n\u2022 Advancing blade: blade motion adds to forward-flight speed.\n\u2022 Retreating blade: blade motion subtracts from forward-flight speed.\n\u2022 Collective and cyclic pitch changes help manage rotor lift and balance.\n\nWhy the other choices are incorrect:\n\u2022 Equal angles of attack ignore the difference in relative airflow speed.\n\u2022 Saying the advancing blade has a greater angle of attack reverses the usual relationship described by this question.\n\u2022 \u201cAlways\u201d is too absolute because rotor aerodynamics vary with flight condition and blade position.\n\n\ud83d\udca1 Memory Hook: Advancing blade = faster airflow, generally lower angle of attack.\n\n\ud83c\udfaf Board Tip: Separate relative airspeed from angle of attack; the faster side usually needs less angle of attack for comparable lift.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the purpose of stringers?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To absorb the torsional and compressive stresses",
+            "To produce stress risers and support the fatigue metres",
+            "To prevent buckling and bending by supporting and stiffening the skin",
+            "To support the primary control surfaces"
+          ],
+          "answerIndex": 2,
+          "answerText": "To prevent buckling and bending by supporting and stiffening the skin",
+          "explanation": "Correct answer: To prevent buckling and bending by supporting and stiffening the skin.\n\nStringers are longitudinal stiffeners attached to aircraft skin. They help the skin carry loads and resist local buckling or excessive deformation, especially under compression and bending loads.\n\nKey characteristics:\n\u2022 Run lengthwise along a fuselage or wing.\n\u2022 Support and stiffen thin skin panels.\n\u2022 Work with frames, ribs, and spars as part of the airframe structure.\n\nWhy the other choices are incorrect:\n\u2022 Torsion is resisted by the overall structural arrangement, including closed sections and other members\u2014not stringers alone.\n\u2022 Stringers are not intended to create stress risers.\n\u2022 They do not primarily support the movable control surfaces.\n\n\ud83d\udca1 Memory Hook: Stringers stiffen the skin along the aircraft\u2019s length.\n\n\ud83c\udfaf Board Tip: Stringers are longitudinal; frames and formers generally provide cross-sectional support.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The airframe structure must remain substantially intact after experiencing",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The design ultimate load times a 1.5 safety factor",
+            "The design limit load plus the design ultimate load",
+            "Three times the safety factor",
+            "The design limit load times a 1.5 safety factor"
+          ],
+          "answerIndex": 3,
+          "answerText": "The design limit load times a 1.5 safety factor",
+          "explanation": "Correct answer: The design limit load times a 1.5 safety factor.\n\nThe keyed answer is the design limit load multiplied by a 1.5 safety factor. In conventional aircraft structural design, ultimate load is commonly defined as limit load multiplied by the safety factor; the structure must withstand ultimate load without failure, although permanent deformation may occur.\n\nKey characteristics:\n\u2022 Limit load: the maximum expected load in service.\n\u2022 Ultimate load: limit load \u00d7 safety factor, commonly 1.5 for the standard case.\n\u2022 The exact requirements depend on the applicable certification basis.\n\nWhy the other choices are incorrect:\n\u2022 \u201cUltimate load times 1.5\u201d applies the factor twice.\n\u2022 Adding limit and ultimate loads is not the definition.\n\u2022 \u201cThree times the safety factor\u201d is not a load definition.\n\n\ud83d\udca1 Memory Hook: Ultimate = Limit \u00d7 1.5 (standard exam convention).\n\n\ud83c\udfaf Board Tip: Do not confuse \u201cremain intact at ultimate load\u201d with \u201cno permanent deformation at limit load.\u201d",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The skin of a modern pressurized aircraft",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Is made up of light alloy steel sheets built on the monocoque principle",
+            "Houses the crew and the payload",
+            "Provides aerodynamic lift and prevents corrosion by keeping out adverse weather",
+            "Is primary load bearing structure carrying much of the structural load"
+          ],
+          "answerIndex": 3,
+          "answerText": "Is primary load bearing structure carrying much of the structural load",
+          "explanation": "Correct answer: Is primary load bearing structure carrying much of the structural load.\n\nOn a modern pressurized aircraft, the skin is part of the primary load-bearing structure. It carries aerodynamic loads and contributes to resisting cabin-pressure loads, working together with frames, stringers, and other structural members.\n\nKey characteristics:\n\u2022 The skin is more than an aerodynamic covering.\n\u2022 Pressurization creates repeated stress cycles that matter for fatigue and crack growth.\n\u2022 The skin and stiffeners share loads in a semi-monocoque structure.\n\nWhy the other choices are incorrect:\n\u2022 Aircraft skin is not generally described as light-alloy steel sheets.\n\u2022 The skin does not itself \u201chouse\u201d the crew and payload; the fuselage encloses them.\n\u2022 It does not prevent corrosion simply by keeping out weather.\n\n\ud83d\udca1 Memory Hook: Aircraft skin = aerodynamic surface plus structural member.\n\n\ud83c\udfaf Board Tip: In semi-monocoque construction, skin, stringers, frames, and bulkheads share structural loads.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Station numbers (Stn) and water lines (WL) are:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A means of locating airframe structure and components",
+            "Passenger seat locations",
+            "Runway markings for guiding the aircraft to the terminal",
+            "Compass alignment markings"
+          ],
+          "answerIndex": 0,
+          "answerText": "A means of locating airframe structure and components",
+          "explanation": "Correct answer: A means of locating airframe structure and components.\n\nStation numbers and water lines are aircraft coordinate references used to locate structural points and components accurately. Station numbers commonly measure longitudinal position from a defined datum, while water lines indicate vertical position from a reference plane.\n\nKey characteristics:\n\u2022 Stations locate positions along the aircraft\u2019s length.\n\u2022 Water lines locate vertical positions.\n\u2022 Other coordinate references, such as buttock lines, locate lateral positions.\n\nWhy the other choices are incorrect:\n\u2022 They are not passenger seat numbers.\n\u2022 They are not runway or taxiway markings.\n\u2022 They are not compass-alignment markings.\n\n\ud83d\udca1 Memory Hook: Station = lengthwise; water line = vertical; buttock line = lateral.\n\n\ud83c\udfaf Board Tip: These references help technicians describe exact locations in maintenance manuals and structural repair instructions.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Flight deck windows are constructed from",
+          "questionType": "multiple_choice",
+          "choices": [
+            "An amalgam of strengthened glass and vinyl with rubber pressure seals",
+            "Strengthened glass with shock absorbing vinyl interlayers and rubber pressure seals",
+            "Strengthened clear vinyl with an electrical conducting coat for de-icing and rubber pressure seals",
+            "Strengthened glass with rubber seals"
+          ],
+          "answerIndex": 1,
+          "answerText": "Strengthened glass with shock absorbing vinyl interlayers and rubber pressure seals",
+          "explanation": "Correct answer: Strengthened glass with shock absorbing vinyl interlayers and rubber pressure seals.\n\nThe keyed construction uses strengthened glass with shock-absorbing vinyl interlayers and rubber pressure seals. The interlayers help retain fragments and improve impact resistance, while seals maintain the pressure boundary around the window.\n\nKey characteristics:\n\u2022 Multiple layers can improve strength and damage tolerance.\n\u2022 Interlayers help hold broken glass together.\n\u2022 Pressure seals are important in pressurized aircraft.\n\nWhy the other choices are incorrect:\n\u2022 \u201cAmalgam\u201d is not the precise layered construction stated in the key.\n\u2022 Clear vinyl alone is not the keyed primary window construction.\n\u2022 Strengthened glass with rubber seals alone omits the specified shock-absorbing interlayers.\n\n\ud83d\udca1 Memory Hook: Flight-deck window = strengthened layers + vinyl interlayer + pressure seal.\n\n\ud83c\udfaf Board Tip: Aircraft windows are engineered pressure-boundary components, not ordinary building glass.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A cantilever wing:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Is externally braced with either struts and/or bracing wires",
+            "Is supported at one end only with no external bracing",
+            "Has both an upper and lower airfoil section",
+            "Folds in the root section to ease storage in confined spaces"
+          ],
+          "answerIndex": 1,
+          "answerText": "Is supported at one end only with no external bracing",
+          "explanation": "Correct answer: Is supported at one end only with no external bracing.\n\nA cantilever wing is supported at the wing root without external struts or bracing wires. Its internal structure\u2014typically spars, ribs, skin, and stiffeners\u2014carries the bending and other aerodynamic loads.\n\nKey characteristics:\n\u2022 No external supporting struts are required.\n\u2022 Internal structure transfers wing loads to the fuselage.\n\u2022 Cantilever construction offers a cleaner aerodynamic arrangement than externally braced wings.\n\nWhy the other choices are incorrect:\n\u2022 External struts or wires describe a braced wing.\n\u2022 A cantilever wing is not defined by upper and lower airfoil sections.\n\u2022 Folding is a separate design feature and is not part of the definition.\n\n\ud83d\udca1 Memory Hook: Cantilever = internally supported, externally unbraced.\n\n\ud83c\udfaf Board Tip: \u201cSupported at one end only\u201d is the classic cantilever definition.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A torsion box:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Is a structure within the fuselage to withstand compression, bending, and twisting loads",
+            "Is a structure formed between the wing spars, skin and ribs to resist bending and twisting loads",
+            "Is a structure within the wing for housing the fuel tanks, flight controls and landing gear",
+            "Is a structure designed to reduce weight"
+          ],
+          "answerIndex": 1,
+          "answerText": "Is a structure formed between the wing spars, skin and ribs to resist bending and twisting loads",
+          "explanation": "Correct answer: Is a structure formed between the wing spars, skin and ribs to resist bending and twisting loads.\n\nA wing torsion box is a closed structural section formed mainly by the wing spars and skins, with ribs and related members maintaining shape and transferring loads. Its closed-section arrangement is especially effective at resisting twisting, while also participating in bending-load resistance.\n\nKey characteristics:\n\u2022 Spars and skins form the principal box boundaries.\n\u2022 Ribs help maintain airfoil shape and transfer local loads.\n\u2022 The wing box may also contain fuel or systems, depending on the aircraft design.\n\nWhy the other choices are incorrect:\n\u2022 The question describes a wing structure, not a generic fuselage structure.\n\u2022 Housing fuel or landing gear may be a function of some wing boxes, but it is not the defining purpose.\n\u2022 Weight reduction alone does not define a torsion box.\n\n\ud83d\udca1 Memory Hook: Torsion box = closed wing box that resists twist.\n\n\ud83c\udfaf Board Tip: Closed sections are efficient in torsion because they carry shear flow around the section.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A lightening hole in a rib",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Prevents lightning strikes damaging the fuselage",
+            "Provides a means of passing cable and controls through a pressure bulkhead",
+            "Collects and disposes of electrical charges",
+            "Lightens and stiffens the structure"
+          ],
+          "answerIndex": 3,
+          "answerText": "Lightens and stiffens the structure",
+          "explanation": "Correct answer: Lightens and stiffens the structure.\n\nLightening holes remove material from a rib or other structural member to reduce weight. When properly shaped and located, the holes preserve sufficient strength and stiffness for the intended loads; their edges are designed to avoid excessive stress concentration.\n\nKey characteristics:\n\u2022 Reduce structural mass.\n\u2022 Must not compromise required strength.\n\u2022 Often have rounded edges to reduce stress concentration.\n\nWhy the other choices are incorrect:\n\u2022 They do not protect against lightning strikes.\n\u2022 Passing cables or controls may be possible through suitable openings, but that is not the defining purpose of a lightening hole.\n\u2022 They do not collect or dispose of electrical charges.\n\n\ud83d\udca1 Memory Hook: Lightening hole = less weight while retaining needed structure.\n\n\ud83c\udfaf Board Tip: A lightening hole must be engineered; removing material arbitrarily can weaken a component.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Control surface flutter",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Provides additional lift for takeoff and landing in the event of engine failure",
+            "Occurs at high angles of attack",
+            "Is a destructive vibration that must be damped out within the flight envelope",
+            "Is a means of detecting the critical safe life of the wing"
+          ],
+          "answerIndex": 3,
+          "answerText": "Is a means of detecting the critical safe life of the wing",
+          "explanation": "Correct answer: Is a means of detecting the critical safe life of the wing.\n\nImportant answer-key warning: the supplied key marks \u201ca means of detecting the critical safe life of the wing,\u201d but that is not the standard definition of control-surface flutter. Flutter is a potentially destructive aeroelastic oscillation involving aerodynamic forces, structural elasticity, and inertia. It must be prevented or kept outside the approved flight envelope.\n\nKey characteristics:\n\u2022 Can involve control surfaces and the supporting structure.\n\u2022 May grow rapidly and cause structural failure.\n\u2022 Control balance, stiffness, mass distribution, and approved speed limits are relevant.\n\nWhy the other choices are incorrect:\n\u2022 Flutter is not an extra-lift device.\n\u2022 It is not defined simply as occurring at high angle of attack.\n\u2022 It is not a method for detecting a wing\u2019s safe life.\n\n\ud83d\udca1 Memory Hook: Flutter = dangerous aeroelastic vibration.\n\n\ud83c\udfaf Board Tip: The answer key appears incorrect for this item. Learn the standard definition and verify the original exam source.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A damage tolerant structure",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Has degree of structural strength redundancy spread over a large area",
+            "Is light, non load bearing structure, damage to which will not adversely affect the aircraft",
+            "Is replaced when it reaches its predicted life",
+            "Need not be repaired until the aircraft undergoes deep maintenance"
+          ],
+          "answerIndex": 0,
+          "answerText": "Has degree of structural strength redundancy spread over a large area",
+          "explanation": "Correct answer: Has degree of structural strength redundancy spread over a large area.\n\nA damage-tolerant structure is designed so that flaws or local damage do not immediately cause catastrophic failure. It uses appropriate strength, crack-growth characteristics, inspection intervals, and load paths or redundancy to allow damage to be detected and managed.\n\nKey characteristics:\n\u2022 Damage is expected to be detectable before it becomes critical.\n\u2022 Residual strength must remain adequate for the specified conditions.\n\u2022 Inspection and repair are essential parts of the design philosophy.\n\nWhy the other choices are incorrect:\n\u2022 A non-load-bearing, lightweight part describes a different structural category.\n\u2022 Damage tolerance does not mean automatically replacing a part at a predetermined life.\n\u2022 It does not permit postponing repair until a major maintenance visit regardless of condition.\n\n\ud83d\udca1 Memory Hook: Damage tolerance = damage can exist, but must remain manageable and detectable.\n\n\ud83c\udfaf Board Tip: Damage-tolerant design does not mean damage is harmless or that inspections are optional.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "It is the maximum stress expected in any structural member",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Ultimate strength",
+            "Limit Strength",
+            "Yield strength",
+            "Flexure strength"
+          ],
+          "answerIndex": 1,
+          "answerText": "Limit Strength",
+          "explanation": "Correct answer: Limit Strength.\n\nLimit strength is associated with the maximum expected service load or stress under the design conditions. In standard aircraft terminology, limit load is the maximum anticipated load in service; limit stress is the corresponding stress in a member. The supplied answer calls this \u201cLimit Strength.\u201d\n\nKey characteristics:\n\u2022 Limit conditions represent expected operational extremes.\n\u2022 The structure should not experience detrimental permanent deformation at limit load.\n\u2022 Ultimate load is higher and includes the applicable safety factor.\n\nWhy the other choices are incorrect:\n\u2022 Ultimate strength refers to the maximum stress a material can sustain before failure.\n\u2022 Yield strength marks the onset of significant permanent deformation.\n\u2022 Flexural strength concerns failure under bending.\n\n\ud83d\udca1 Memory Hook: Limit = service design boundary; ultimate = limit multiplied by safety factor.\n\n\ud83c\udfaf Board Tip: Some question banks use \u201climit strength\u201d loosely; distinguish material strength from aircraft design loads.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "It is the ability of metal to resist deformation",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Ultimate strength",
+            "Limit Strength",
+            "Yield strength",
+            "Flexure strength"
+          ],
+          "answerIndex": 2,
+          "answerText": "Yield strength",
+          "explanation": "Correct answer: Yield strength.\n\nYield strength is the stress at which a material begins to undergo permanent plastic deformation. Below yield, deformation is predominantly elastic and the material tends to recover its original shape when unloaded; beyond yield, some deformation remains.\n\nKey characteristics:\n\u2022 Marks the transition to permanent deformation.\n\u2022 Important in selecting metals for aircraft structure.\n\u2022 Is not the same as the maximum stress before rupture.\n\nWhy the other choices are incorrect:\n\u2022 Ultimate strength is the maximum engineering stress reached in a tensile test.\n\u2022 Limit strength is a design-load term in this question\u2019s context.\n\u2022 Flexural strength concerns bending failure.\n\n\ud83d\udca1 Memory Hook: Yield = the material starts to stay deformed.\n\n\ud83c\udfaf Board Tip: \u201cReturns to original shape\u201d points to elastic behavior; \u201cpermanent set\u201d points to yielding.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "It represents the highest stress experienced within the material at its moment of rupture.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Ultimate strength",
+            "Limit Strength",
+            "Yield strength",
+            "Flexure strength"
+          ],
+          "answerIndex": 3,
+          "answerText": "Flexure strength",
+          "explanation": "Correct answer: Flexure strength.\n\nThe wording describes the maximum stress reached at rupture, but the supplied answer key selects flexure strength. Flexural strength specifically refers to stress associated with failure in a bending test, whereas ultimate tensile strength is the maximum engineering stress reached in a tensile test. The question is therefore ambiguous without knowing whether a flexural test is intended.\n\nKey characteristics:\n\u2022 Flexural strength relates to bending.\n\u2022 Ultimate tensile strength relates to a tensile test.\n\u2022 The test method matters when interpreting a strength value.\n\nWhy the other choices may not fit:\n\u2022 Limit strength is a design/service-load concept.\n\u2022 Yield strength is the onset of permanent deformation.\n\u2022 Ultimate strength is the usual term for maximum tensile stress, but the key marks flexure strength.\n\n\ud83d\udca1 Memory Hook: Flexure = bending; ultimate tensile = peak stress in tension.\n\n\ud83c\udfaf Board Tip: Flag this item as potentially imprecise; use the test context to select the correct strength term.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "It is the maximum stress a material can sustain without rupture.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Ultimate strength",
+            "Limit Strength",
+            "Yield strength",
+            "Flexure strength"
+          ],
+          "answerIndex": 0,
+          "answerText": "Ultimate strength",
+          "explanation": "Correct answer: Ultimate strength.\n\nUltimate strength is the maximum stress a material can sustain in a standard stress test before necking/failure behavior leads to rupture, depending on the test and whether engineering or true stress is used. It is distinct from limit load and yield strength.\n\nKey characteristics:\n\u2022 Often reported as ultimate tensile strength for a tensile test.\n\u2022 It is generally higher than yield strength for ductile metals.\n\u2022 It is a material property, unlike aircraft limit and ultimate design loads.\n\nWhy the other choices are incorrect:\n\u2022 Limit strength refers to the expected service/design limit in the question\u2019s terminology.\n\u2022 Yield strength is where permanent deformation begins.\n\u2022 Flexure strength applies to bending tests.\n\n\ud83d\udca1 Memory Hook: Yield = permanent deformation begins; ultimate = peak stress.\n\n\ud83c\udfaf Board Tip: The explanation in the supplied key mistakenly says \u201climit strength\u201d in its last sentence; the answer marked is ultimate strength.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Capacity of a material to absorb energy in the elastic range",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Resilience",
+            "Modulus of Resilience",
+            "Toughness",
+            "Modulus of Toughness"
+          ],
+          "answerIndex": 0,
+          "answerText": "Resilience",
+          "explanation": "Correct answer: Resilience.\n\nResilience is a material\u2019s capacity to absorb energy while deforming elastically and release that energy when unloaded. The material returns to its original shape provided it has not exceeded its elastic limit.\n\nKey characteristics:\n\u2022 Energy absorption occurs in the elastic range.\n\u2022 The deformation is recoverable.\n\u2022 The modulus of resilience quantifies elastic energy absorbed per unit volume.\n\nWhy the other choices are incorrect:\n\u2022 Modulus of resilience is a quantity per unit volume, not the general capacity itself.\n\u2022 Toughness includes energy absorbed through plastic deformation up to fracture.\n\u2022 Modulus of toughness is the total area under the stress\u2013strain curve up to fracture.\n\n\ud83d\udca1 Memory Hook: Resilience = energy stored elastically and returned.\n\n\ud83c\udfaf Board Tip: If the question explicitly says \u201celastic range,\u201d choose resilience or modulus of resilience depending on whether it asks for a property or a quantity per unit volume.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Ratio of maximum energy absorbed per unit volume",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Resilience",
+            "Modulus of Resilience",
+            "Toughness",
+            "Modulus of Toughness"
+          ],
+          "answerIndex": 1,
+          "answerText": "Modulus of Resilience",
+          "explanation": "Correct answer: Modulus of Resilience.\n\nModulus of resilience is the maximum elastic strain energy absorbed per unit volume before yielding. On a stress\u2013strain diagram, it corresponds to the area under the curve within the elastic range.\n\nKey characteristics:\n\u2022 Energy per unit volume.\n\u2022 Applies up to the elastic limit/yield point.\n\u2022 For linear-elastic behavior, it can be expressed as \\(U_r = \u03c3_y^2/(2E)\\), where \u03c3_y is yield stress and E is Young\u2019s modulus.\n\nWhy the other choices are incorrect:\n\u2022 Resilience is the general capacity for elastic energy absorption.\n\u2022 Toughness includes energy absorbed in both elastic and plastic deformation.\n\u2022 Modulus of toughness uses the entire stress\u2013strain area to fracture.\n\n\ud83d\udca1 Memory Hook: Modulus of resilience = area under the elastic portion.\n\n\ud83c\udfaf Board Tip: \u201cPer unit volume\u201d is a strong clue for a modulus/energy-density quantity.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Energy absorption in the plastic range",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Resilience",
+            "Modulus of Resilience",
+            "Toughness",
+            "Modulus of Toughness"
+          ],
+          "answerIndex": 2,
+          "answerText": "Toughness",
+          "explanation": "Correct answer: Toughness.\n\nToughness describes a material\u2019s ability to absorb energy and resist fracture while deforming, including deformation in the plastic range. It depends on both strength and ductility, rather than strength alone.\n\nKey characteristics:\n\u2022 Includes elastic and plastic energy absorption.\n\u2022 A tough material can withstand significant deformation before fracture.\n\u2022 Toughness is represented by the total area under the stress\u2013strain curve up to fracture when expressed per unit volume.\n\nWhy the other choices are incorrect:\n\u2022 Resilience concerns elastic energy only.\n\u2022 Modulus of resilience covers only the elastic portion.\n\u2022 Modulus of toughness is the quantitative energy-per-volume measure associated with the full curve.\n\n\ud83d\udca1 Memory Hook: Toughness = energy absorbed before breaking, including plastic deformation.\n\n\ud83c\udfaf Board Tip: A material can be strong but not very tough if it fractures with little deformation.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Equal to the area under the entire stress-strain curve.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Resilience",
+            "Modulus of Resilience",
+            "Toughness",
+            "Modulus of Toughness"
+          ],
+          "answerIndex": 3,
+          "answerText": "Modulus of Toughness",
+          "explanation": "Correct answer: Modulus of Toughness.\n\nThe modulus of toughness is the energy absorbed per unit volume up to fracture, represented by the entire area under the stress\u2013strain curve. It includes both elastic and plastic deformation.\n\nKey characteristics:\n\u2022 The full curve is considered, not just the elastic portion.\n\u2022 It combines the effects of strength and ductility.\n\u2022 Its units are energy per unit volume, equivalent to stress units.\n\nWhy the other choices are incorrect:\n\u2022 Resilience is the general ability to absorb elastic energy.\n\u2022 Modulus of resilience uses only the elastic-region area.\n\u2022 Toughness is the broader material property; modulus of toughness expresses it quantitatively per unit volume.\n\n\ud83d\udca1 Memory Hook: Resilience = elastic area; toughness modulus = whole area to fracture.\n\n\ud83c\udfaf Board Tip: Watch for \u201centire stress\u2013strain curve\u201d\u2014that phrase signals modulus of toughness.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A material's ability to be bent, formed, or shaped without cracking or breaking",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Malleability",
+            "Ductility",
+            "Toughness",
+            "Fusibility"
+          ],
+          "answerIndex": 0,
+          "answerText": "Malleability",
+          "explanation": "Correct answer: Malleability.\n\nMalleability is the ability of a material, especially a metal, to deform under compressive forces and be formed into sheets or other shapes without cracking. It is especially relevant to processes such as hammering, rolling, and pressing.\n\nKey characteristics:\n\u2022 Primarily associated with plastic deformation under compression.\n\u2022 Allows metal to be shaped into thin sheets.\n\u2022 Depends on material composition and temperature.\n\nWhy the other choices are incorrect:\n\u2022 Ductility is the ability to deform in tension, such as being drawn into wire.\n\u2022 Toughness is energy absorption and resistance to fracture.\n\u2022 Fusibility concerns melting/fusing behavior.\n\n\ud83d\udca1 Memory Hook: Malleable = made into sheets.\n\n\ud83c\udfaf Board Tip: Malleability is usually associated with compression; ductility is associated with tensile drawing.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The ability of metal to be drawn into wire stock, extrusions, or rods",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Malleability",
+            "Ductility",
+            "Toughness",
+            "Fusibility"
+          ],
+          "answerIndex": 1,
+          "answerText": "Ductility",
+          "explanation": "Correct answer: Ductility.\n\nDuctility is the ability of a material to undergo plastic deformation in tension, allowing it to be drawn into wire or elongated without fracturing. It is important when selecting and forming aircraft metals.\n\nKey characteristics:\n\u2022 Associated with tensile deformation.\n\u2022 Often assessed using elongation or reduction of area in a tensile test.\n\u2022 Allows shaping and can provide warning deformation before fracture.\n\nWhy the other choices are incorrect:\n\u2022 Malleability concerns forming under compression, especially into sheets.\n\u2022 Toughness describes energy absorption before fracture.\n\u2022 Fusibility concerns the ability to melt and fuse.\n\n\ud83d\udca1 Memory Hook: Ductile = drawn into wire; malleable = hammered/rolled into sheet.\n\n\ud83c\udfaf Board Tip: \u201cDrawn into wire\u201d is the classic definition of ductility.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Toughness is a material's ability to resist tearing or breaking when it is bent or stretched.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Malleability",
+            "Ductility",
+            "Toughness",
+            "Fusibility"
+          ],
+          "answerIndex": 2,
+          "answerText": "Toughness",
+          "explanation": "Correct answer: Toughness.\n\nToughness is the ability to absorb energy and resist fracture during deformation. The question\u2019s wording emphasizes resisting tearing or breaking while a material is bent or stretched; more precisely, toughness involves both strength and the amount of deformation a material can tolerate before fracture.\n\nKey characteristics:\n\u2022 Includes energy absorbed in elastic and plastic deformation.\n\u2022 Differs from hardness, which concerns resistance to indentation or scratching.\n\u2022 Differs from ductility, which describes plastic deformation in tension.\n\nWhy the other choices are incorrect:\n\u2022 Malleability is the ability to form under compression.\n\u2022 Ductility is the ability to stretch or draw into wire.\n\u2022 Fusibility is related to melting and joining.\n\n\ud83d\udca1 Memory Hook: Toughness = takes energy and deformation before fracture.\n\n\ud83c\udfaf Board Tip: If a question focuses on energy absorption before breaking, think toughness; if it focuses on stretching into wire, think ductility.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The ability of metal to be joined by heating and melting is defined as fusibility.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Malleability",
+            "Ductility",
+            "Toughness",
+            "Fusibility"
+          ],
+          "answerIndex": 3,
+          "answerText": "Fusibility",
+          "explanation": "Correct answer: Fusibility.\n\nFusibility refers to a material\u2019s ability to melt and fuse with another material or with itself during a joining process. In metalworking, the term relates to melting behavior, although weldability is the more specific term for how readily a metal can be welded successfully.\n\nKey characteristics:\n\u2022 Relates to melting and fusion.\n\u2022 Depends on the material and process.\n\u2022 Should not be confused with general formability.\n\nWhy the other choices are incorrect:\n\u2022 Malleability concerns forming into sheets or shapes.\n\u2022 Ductility concerns tensile deformation and wire drawing.\n\u2022 Toughness concerns energy absorption and resistance to fracture.\n\n\ud83d\udca1 Memory Hook: Fusibility = fuse by melting.\n\n\ud83c\udfaf Board Tip: In technical contexts, distinguish fusibility from weldability; the latter includes factors beyond simply melting.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Is a process wherein a piece of metal is worked at temperatures above its critical range.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Forging",
+            "Rolling",
+            "Pressing",
+            "Extrusion"
+          ],
+          "answerIndex": 0,
+          "answerText": "Forging",
+          "explanation": "Correct answer: Forging.\n\nForging shapes metal by applying compressive force, using a hammer, press, or dies. It may be performed hot or cold; the question\u2019s supplied wording specifically describes working metal above its critical range, which points to hot forging in the exam\u2019s framing.\n\nKey characteristics:\n\u2022 Produces shaped components through compressive deformation.\n\u2022 Can refine grain flow and produce strong parts when properly controlled.\n\u2022 Temperature and process depend on the alloy and required properties.\n\nWhy the other choices are incorrect:\n\u2022 Rolling uses rotating rolls to reduce thickness or shape stock.\n\u2022 Pressing is a broad forming method and is not the keyed process here.\n\u2022 Extrusion forces material through a die to produce a constant cross-section.\n\n\ud83d\udca1 Memory Hook: Forging = shape by compressive blows or pressure.\n\n\ud83c\udfaf Board Tip: Forging is not always hot; answer according to the exact wording of the question.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Consists of forming hot metal ingots with rollers to form sheets, bars, and beams.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Forging",
+            "Rolling",
+            "Pressing",
+            "Extrusion"
+          ],
+          "answerIndex": 1,
+          "answerText": "Rolling",
+          "explanation": "Correct answer: Rolling.\n\nRolling forms metal by passing it between rotating rolls to reduce thickness or produce a required cross-section. The question describes hot ingots being rolled into products such as sheets, bars, and beams.\n\nKey characteristics:\n\u2022 Can be hot or cold.\n\u2022 Produces sheet, plate, bar, and structural shapes.\n\u2022 Hot rolling is useful for large reductions in thickness and shaping.\n\nWhy the other choices are incorrect:\n\u2022 Forging uses compressive force from dies, hammers, or presses.\n\u2022 Pressing is not the specific process described by metal passing between rollers.\n\u2022 Extrusion pushes metal through a die opening.\n\n\ud83d\udca1 Memory Hook: Rolling = metal passes between rolls.\n\n\ud83c\udfaf Board Tip: \u201cRollers\u201d is the giveaway; \u201cthrough a die\u201d points to extrusion.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Is used to form large and heavy parts",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Forging",
+            "Rolling",
+            "Pressing",
+            "Extrusion"
+          ],
+          "answerIndex": 2,
+          "answerText": "Pressing",
+          "explanation": "Correct answer: Pressing.\n\nThe supplied key identifies pressing as the process used to form large and heavy parts. A press applies controlled force through tooling to shape or deform material. The exact suitability depends on the press, tooling, material, and component design.\n\nKey characteristics:\n\u2022 Applies force through a press and die/tooling.\n\u2022 Can be used for large formed components when equipment capacity allows.\n\u2022 Process details vary across forging, stamping, and other press-forming operations.\n\nWhy the other choices are incorrect in this item:\n\u2022 Forging is a broader process involving compressive shaping.\n\u2022 Rolling passes material between rolls.\n\u2022 Extrusion forces material through a die to create a continuous cross-section.\n\n\ud83d\udca1 Memory Hook: Pressing = force applied by a press.\n\n\ud83c\udfaf Board Tip: This is a simplified exam classification; in real manufacturing, pressing and forging can overlap depending on the process.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Is the process of forcing metal through a die which imparts a required cross-section to the metal.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Forging",
+            "Rolling",
+            "Pressing",
+            "Extrusion"
+          ],
+          "answerIndex": 3,
+          "answerText": "Extrusion",
+          "explanation": "Correct answer: Extrusion.\n\nExtrusion forces metal through a shaped die opening, producing a long product with a cross-section determined by the die. The process can create complex, consistent profiles used in aircraft structural members and other components.\n\nKey characteristics:\n\u2022 The die determines the cross-sectional shape.\n\u2022 Produces long lengths with a generally constant cross-section.\n\u2022 Can be performed hot or cold depending on material and application.\n\nWhy the other choices are incorrect:\n\u2022 Forging shapes metal with compressive force and dies or hammers.\n\u2022 Rolling passes metal between rollers.\n\u2022 Pressing is a general forming operation and does not specifically mean pushing metal through a die opening.\n\n\ud83d\udca1 Memory Hook: Extrusion = push metal through a shaped opening.\n\n\ud83c\udfaf Board Tip: \u201cRequired cross-section\u201d and \u201cthrough a die\u201d are classic extrusion clues.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Wrought alloy designation",
+          "questionType": "multiple_choice",
+          "choices": [
+            "S",
+            "Without S",
+            "O",
+            "W"
+          ],
+          "answerIndex": 0,
+          "answerText": "S",
+          "explanation": "Correct answer: S.\n\nThe supplied answer key marks \u201cS\u201d as the wrought-alloy designation. However, this does not match the widely used standard aluminum alloy designation system, where wrought alloys are identified by numerical series (such as 2xxx or 7xxx), while cast alloys use a different numerical format. \u201cS\u201d is not a general standard wrought-aluminum prefix in that system.\n\nKey characteristics:\n\u2022 Wrought products are shaped by rolling, extrusion, forging, or similar processes.\n\u2022 Cast products are formed by pouring molten metal into a mold.\n\u2022 Alloy designation conventions depend on the material standard and system being used.\n\nWhy the other choices need caution:\n\u2022 \u201cWithout S,\u201d \u201cO,\u201d and \u201cW\u201d are not general wrought-alloy category prefixes in the standard aluminum numbering system.\n\u2022 O and W commonly appear as temper designations, not wrought/cast product-type labels.\n\n\ud83d\udca1 Memory Hook: Wrought = worked; cast = poured into a mold.\n\n\ud83c\udfaf Board Tip: The supplied key may use a nonstandard convention or contain an error. Verify the exact standard intended by the original exam.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Cast alloy designation",
+          "questionType": "multiple_choice",
+          "choices": [
+            "S",
+            "Without S",
+            "O",
+            "W"
+          ],
+          "answerIndex": 1,
+          "answerText": "Without S",
+          "explanation": "Correct answer: Without S.\n\nThe supplied key marks \u201cWithout S\u201d for cast alloy. In common aluminum alloy designation practice, cast and wrought alloys are distinguished by their numerical designation systems, not by simply adding or omitting an S. Therefore, the keyed response should be treated cautiously unless the course uses a specific alternate convention.\n\nKey characteristics:\n\u2022 Casting forms a part by solidifying molten metal in a mold.\n\u2022 Wrought processing mechanically works metal into shape.\n\u2022 Aluminum alloy designation standards specify distinct formats for cast and wrought alloys.\n\nWhy the other choices need caution:\n\u2022 \u201cS\u201d is not a universal cast/wrought discriminator.\n\u2022 O and W are commonly temper designations, not general cast-alloy labels.\n\n\ud83d\udca1 Memory Hook: Cast = poured; wrought = mechanically worked.\n\n\ud83c\udfaf Board Tip: Memorize the standard system taught in your course, but flag this item for verification because its wording/key do not align with common aluminum alloy designations.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Annealed, soft state",
+          "questionType": "multiple_choice",
+          "choices": [
+            "S",
+            "Without S",
+            "O",
+            "W"
+          ],
+          "answerIndex": 2,
+          "answerText": "O",
+          "explanation": "Correct answer: O.\n\nIn aluminum temper designations, O indicates the annealed condition. Annealing softens the material and generally improves formability by reducing the effects of prior work hardening.\n\nKey characteristics:\n\u2022 O = annealed.\n\u2022 The material is generally relatively soft and formable.\n\u2022 Temper designations follow the alloy designation and indicate processing condition.\n\nWhy the other choices are incorrect:\n\u2022 S and \u201cwithout S\u201d are not the standard temper symbols for annealed aluminum.\n\u2022 W denotes solution heat-treated, unstable condition, not the annealed condition.\n\n\ud83d\udca1 Memory Hook: O = annealed and soft.\n\n\ud83c\udfaf Board Tip: Alloy number tells you the alloy family; temper suffix tells you the condition or treatment.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Intermediate heat treatment",
+          "questionType": "multiple_choice",
+          "choices": [
+            "S",
+            "Without S",
+            "O",
+            "W"
+          ],
+          "answerIndex": 3,
+          "answerText": "W",
+          "explanation": "Correct answer: W.\n\nThe supplied key identifies W as \u201cintermediate heat treatment,\u201d but in standard aluminum temper designations W means solution heat-treated condition, which is unstable and may naturally age after solution heat treatment. \u201cIntermediate heat treatment\u201d is not the clearest standard definition of W.\n\nKey characteristics:\n\u2022 W indicates solution heat-treated condition.\n\u2022 It is typically a temporary temper designation.\n\u2022 O, by contrast, indicates annealed condition.\n\nWhy the other choices are incorrect:\n\u2022 S and \u201cwithout S\u201d are not standard aluminum temper symbols for this condition.\n\u2022 O refers to annealed, soft material.\n\n\ud83d\udca1 Memory Hook: W = solution heat-treated, unstable condition.\n\n\ud83c\udfaf Board Tip: The answer choice W is likely intended, but learn its standard definition rather than \u201cintermediate heat treatment.\u201d",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Combination of iron and carbon",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cementite",
+            "Austenite",
+            "Martensite",
+            "Eutectoid"
+          ],
+          "answerIndex": 0,
+          "answerText": "Cementite",
+          "explanation": "Correct answer: Cementite.\n\nCementite is iron carbide, a compound of iron and carbon with the formula Fe\u2083C. It is a hard and brittle constituent found in steels and cast irons, and it strongly influences hardness and brittleness.\n\nKey characteristics:\n\u2022 Chemical compound of iron and carbon.\n\u2022 Hard and brittle compared with ferrite.\n\u2022 Appears in various steel microstructures.\n\nWhy the other choices are incorrect:\n\u2022 Austenite is a solid solution of carbon in gamma iron.\n\u2022 Martensite is a hard, supersaturated structure formed by rapid cooling of suitable steel.\n\u2022 Eutectoid refers to a specific composition/reaction, not the iron-carbon compound itself.\n\n\ud83d\udca1 Memory Hook: Cementite = Fe\u2083C.\n\n\ud83c\udfaf Board Tip: Do not confuse a phase/compound (cementite) with a microstructure (martensite) or a reaction/composition (eutectoid).",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "steel heated above the critical range (solid solution of cementite in gamma iron)",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cementite",
+            "Austenite",
+            "Martensite",
+            "Eutectoid"
+          ],
+          "answerIndex": 1,
+          "answerText": "Austenite",
+          "explanation": "Correct answer: Austenite.\n\nAustenite is a solid solution of carbon in gamma iron, stable in steel at elevated temperatures over composition-dependent ranges. Heating steel into the appropriate austenitic range is an important step in many heat-treatment processes.\n\nKey characteristics:\n\u2022 Carbon is dissolved in gamma iron.\n\u2022 It forms during heating above the relevant transformation range.\n\u2022 Cooling from austenite can produce different structures depending on cooling rate and alloy composition.\n\nWhy the other choices are incorrect:\n\u2022 Cementite is iron carbide (Fe\u2083C).\n\u2022 Martensite is a hard transformation product associated with rapid cooling.\n\u2022 Eutectoid describes the eutectoid composition or transformation, not the high-temperature solid solution.\n\n\ud83d\udca1 Memory Hook: Austenite = high-temperature gamma iron with carbon dissolved in it.\n\n\ud83c\udfaf Board Tip: Heat-treatment questions often test what forms during heating versus what forms during cooling.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Is the hardest structure obtained in steel.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cementite",
+            "Austenite",
+            "Martensite",
+            "Eutectoid"
+          ],
+          "answerIndex": 2,
+          "answerText": "Martensite",
+          "explanation": "Correct answer: Martensite.\n\nMartensite is a very hard steel microstructure typically formed when austenitized steel is cooled rapidly enough to suppress diffusional transformations. Its high hardness is accompanied by brittleness unless subsequent tempering is performed as appropriate.\n\nKey characteristics:\n\u2022 Forms through a diffusionless transformation during rapid cooling.\n\u2022 High hardness and strength.\n\u2022 Often requires tempering to improve toughness and reduce brittleness.\n\nWhy the other choices are incorrect:\n\u2022 Cementite is iron carbide, not the rapid-quench transformation structure.\n\u2022 Austenite is the high-temperature solid solution.\n\u2022 Eutectoid refers to a composition/transformation concept.\n\n\ud83d\udca1 Memory Hook: Rapid quench from austenite \u2192 martensite.\n\n\ud83c\udfaf Board Tip: Hardness and brittleness commonly rise together in untempered martensitic steel.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Steels containing 0.85 % carbon. Greatest hardness from heat treatment is obtained in this composition.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cementite",
+            "Austenite",
+            "Martensite",
+            "Eutectoid"
+          ],
+          "answerIndex": 3,
+          "answerText": "Eutectoid",
+          "explanation": "Correct answer: Eutectoid.\n\nThe supplied key associates the eutectoid composition with 0.85% carbon. Eutectoid steel is the composition at which austenite transforms into pearlite under equilibrium cooling; many traditional references give a value around 0.76\u20130.80% carbon, while older texts or simplified exam materials may use about 0.85%.\n\nKey characteristics:\n\u2022 Eutectoid refers to a specific steel composition and transformation.\n\u2022 At the eutectoid temperature, austenite transforms into ferrite plus cementite, commonly forming pearlite.\n\u2022 Exact quoted composition depends on the reference and diagram convention.\n\nWhy the other choices are incorrect:\n\u2022 Cementite is Fe\u2083C.\n\u2022 Austenite is carbon dissolved in gamma iron.\n\u2022 Martensite is a hard product of rapid cooling.\n\n\ud83d\udca1 Memory Hook: Eutectoid steel \u2192 austenite transforms to pearlite.\n\n\ud83c\udfaf Board Tip: The answer key\u2019s 0.85% figure may reflect an older/simplified source; check the value used by your course reference.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which rivets should be selected to join two sheets of .032-inch aluminum?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "MS20425D-4-3",
+            "MS20470AD-4-4",
+            "MS20455DD-5-3",
+            "MS20420AD-4-4"
+          ],
+          "answerIndex": 2,
+          "answerText": "MS20455DD-5-3",
+          "explanation": "Correct answer: MS20455DD-5-3.\n\nThe supplied key selects MS20455DD-5-3 for joining two 0.032-inch aluminum sheets, but the question\u2019s answer cannot be independently verified from the key alone because it provides no calculation or selection table. Rivet choice depends on head style, material/alloy, diameter, grip length, joint design, and approved repair data.\n\nKey characteristics:\n\u2022 Rivet diameter and grip length must suit the total material thickness.\n\u2022 Rivet type and material must be compatible with the structure.\n\u2022 The specified maintenance data takes precedence over a generic rule.\n\nWhy the other choices are not established by the supplied source:\n\u2022 The key does not explain why the other part numbers are unsuitable.\n\u2022 Do not infer the right rivet solely from the numeric suffix without the applicable designation standard.\n\n\ud83d\udca1 Memory Hook: Rivet selection = type + diameter + grip + material + approved data.\n\n\ud83c\udfaf Board Tip: Treat the keyed answer as provisional until checked against the original rivet-selection table or maintenance manual.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "How many MS20470 AD-4-6 rivets will be required to attach a 10 x 5 inch plate, using a single row of rivets, minimum edge distance, and 4D spacing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "56",
+            "54",
+            "52",
+            "58"
+          ],
+          "answerIndex": 0,
+          "answerText": "56",
+          "explanation": "Correct answer: 56.\n\nThe supplied key gives 56 rivets for the 10 \u00d7 5 inch plate using a single row, minimum edge distance, and 4D spacing. Rivet count depends on how the rows run, the specified edge distance, the rivet diameter, and how the corner/edge positions are counted. The key provides no diagram or calculation, so its result cannot be fully reconstructed from the supplied explanation alone.\n\nKey characteristics:\n\u2022 4D spacing means center-to-center spacing equal to four rivet diameters.\n\u2022 Minimum edge distance is measured from the hole center to the sheet edge.\n\u2022 A single-row layout must satisfy spacing and edge-distance rules around the relevant perimeter/joint.\n\nWhy the other choices are not established:\n\u2022 The supplied key does not show the layout arithmetic that eliminates 54, 52, or 58.\n\n\ud83d\udca1 Memory Hook: Spacing = center-to-center; edge distance = hole center to edge.\n\n\ud83c\udfaf Board Tip: Sketch the rivet layout and show the counting convention; do not rely on the final number without the diagram.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Anything that needs periodic replacement",
+          "questionType": "multiple_choice",
+          "choices": [
+            "rotable",
+            "repairable",
+            "expendable",
+            "consumable"
+          ],
+          "answerIndex": 0,
+          "answerText": "rotable",
+          "explanation": "Correct answer: rotable.\n\nA rotable item is a component that can be removed, repaired or overhauled as needed, and returned to service or exchanged for another serviceable unit. The supplied key describes it as requiring periodic replacement, but periodic replacement alone is not the defining feature.\n\nKey characteristics:\n\u2022 Usually tracked as a serialized or controlled component.\n\u2022 Can be removed and restored to service through approved maintenance.\n\u2022 Often exchanged to reduce aircraft downtime.\n\nWhy the other choices are incorrect:\n\u2022 Repairable is a broad description of a part that can be repaired; rotable commonly refers to the operational inventory category.\n\u2022 Expendables are discarded rather than restored.\n\u2022 Consumables are used up or rendered unsuitable through use.\n\n\ud83d\udca1 Memory Hook: Rotable = remove, overhaul/repair, return or exchange.\n\n\ud83c\udfaf Board Tip: Do not define a rotable merely as \u201cperiodically replaced\u201d; its repair/overhaul and reuse are the key ideas.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Any part that is usually repaired and then returned to service as repaired/overhauled or even \u201cas new\u201d condition.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "rotable",
+            "repairable",
+            "expendable",
+            "consumable"
+          ],
+          "answerIndex": 1,
+          "answerText": "repairable",
+          "explanation": "Correct answer: repairable.\n\nA repairable part can be repaired or overhauled and then returned to service if it meets the applicable requirements. The term describes the part\u2019s ability to be restored rather than automatically discarded after one use.\n\nKey characteristics:\n\u2022 Can undergo approved maintenance.\n\u2022 Must pass required inspection or testing before return to service.\n\u2022 May be returned in repaired, overhauled, or approved equivalent condition.\n\nWhy the other choices are incorrect:\n\u2022 A rotable is an inventory/maintenance category commonly removed and exchanged for serviceable units.\n\u2022 Expendable items are discarded when unserviceable or at end of life.\n\u2022 Consumables are used up or become unsuitable during installation/use.\n\n\ud83d\udca1 Memory Hook: Repairable = restore it; expendable = discard it.\n\n\ud83c\udfaf Board Tip: \u201cCan be repaired and returned to service\u201d is the core distinction.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Any component that is usually just thrown away at the end of its useable life, this is usually because it is not worth repairing or cannot be repaired or overhauled due to its construction and intended use.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "rotable",
+            "repairable",
+            "expendable",
+            "consumable"
+          ],
+          "answerIndex": 2,
+          "answerText": "expendable",
+          "explanation": "Correct answer: expendable.\n\nAn expendable component is generally discarded when it reaches the end of its useful life or becomes unserviceable, because repair or overhaul is not practical or permitted for that item.\n\nKey characteristics:\n\u2022 Typically replaced rather than repaired.\n\u2022 May be low-cost or designed for limited use.\n\u2022 Disposal and replacement must still follow applicable maintenance procedures.\n\nWhy the other choices are incorrect:\n\u2022 Rotables are commonly removed, repaired/overhauled, and returned to service or exchanged.\n\u2022 Repairable parts can be restored through approved work.\n\u2022 Consumables are items used up or rendered unsuitable through installation/use; the categories can overlap in some inventory systems, so follow the organization\u2019s definitions.\n\n\ud83d\udca1 Memory Hook: Expendable = replace, do not overhaul.\n\n\ud83c\udfaf Board Tip: The exact distinction between expendable and consumable can vary by maintenance inventory system; use the definitions adopted by the question source.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Any component that is rendered unsuitable for reuse when it\u2019s installed and used.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "rotable",
+            "repairable",
+            "expendable",
+            "consumable"
+          ],
+          "answerIndex": 3,
+          "answerText": "consumable",
+          "explanation": "Correct answer: consumable.\n\nA consumable component or material is used during maintenance or operation and is not intended to be reused after installation or use. Examples can include sealants, certain gaskets, safety wire, and fluids, depending on the item and maintenance instructions.\n\nKey characteristics:\n\u2022 Used up, applied, or rendered unsuitable for reuse.\n\u2022 Usually replaced with new material during the relevant maintenance task.\n\u2022 Must meet the required specification and shelf-life/storage conditions.\n\nWhy the other choices are incorrect:\n\u2022 Rotables are removed and restored or exchanged.\n\u2022 Repairable items may be returned to service after approved work.\n\u2022 Expendables are discarded at end of useful life; the boundary between expendable and consumable depends on the inventory system.\n\n\ud83d\udca1 Memory Hook: Consumable = consumed in use or installation.\n\n\ud83c\udfaf Board Tip: Always follow the applicable parts catalog and maintenance organization\u2019s classification rules.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
+    },
+    "chapters/aircraft-materials-mock-2016-051-100.json": {
+      "title": "Aircraft Materials, Airframe Construction, Repair, and Modification 2016 - Questions 51-100",
+      "questions": [
+        {
+          "question": "With a hyd lock there is:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "flow, but no jack movement",
+            "no flow but jack continues to move under gravitational effects",
+            "no flow, jack is stationary",
+            "constant flow"
+          ],
+          "answerIndex": 2,
+          "answerText": "no flow, jack is stationary",
+          "explanation": "Correct answer: no flow, jack is stationary.\n\nA hydraulic lock occurs when hydraulic fluid is trapped and cannot move through the system, preventing the actuator or jack from moving. In the question\u2019s framing, no fluid flow means the jack remains stationary.\n\nKey characteristics:\n\u2022 Trapped fluid resists actuator movement.\n\u2022 Hydraulic locks may result from closed valves or blocked flow paths, depending on the system.\n\u2022 Troubleshooting must follow the aircraft maintenance manual.\n\nWhy the other choices are incorrect:\n\u2022 Flow with no jack movement does not describe the stated lock condition.\n\u2022 A jack continuing to move under gravity implies movement is still occurring.\n\u2022 Constant flow is the opposite of a no-flow lock.\n\n\ud83d\udca1 Memory Hook: Hydraulic lock = trapped fluid, no movement.\n\n\ud83c\udfaf Board Tip: Distinguish a hydraulic lock from a hydraulic leak or a failed actuator.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The primary purpose of a hydraulic reservoir is:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "to compensate for leaks and expansion",
+            "to allow a space into which a spare fluid may be stored",
+            "to indicate system contents",
+            "to maintain fluid between the jack and the accumulator"
+          ],
+          "answerIndex": 0,
+          "answerText": "to compensate for leaks and expansion",
+          "explanation": "Correct answer: to compensate for leaks and expansion.\n\nThe hydraulic reservoir stores the system\u2019s working fluid and accommodates changes in fluid volume as actuators extend or retract, as well as changes due to temperature. It also helps ensure that the pump has an adequate supply of fluid; the keyed answer emphasizes compensation for leakage and expansion.\n\nKey characteristics:\n\u2022 Provides a supply of hydraulic fluid.\n\u2022 Accommodates fluid-volume changes.\n\u2022 May help separate air from fluid, depending on design.\n\nWhy the other choices are incorrect:\n\u2022 Storing spare fluid is too vague and misses the reservoir\u2019s system function.\n\u2022 Fluid quantity indication may be provided, but it is not the primary purpose.\n\u2022 Maintaining fluid between a jack and accumulator is not the reservoir\u2019s general function.\n\n\ud83d\udca1 Memory Hook: Reservoir = supply + volume compensation.\n\n\ud83c\udfaf Board Tip: An accumulator stores pressurized fluid; a reservoir stores the system\u2019s fluid supply.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A relief valve",
+          "questionType": "multiple_choice",
+          "choices": [
+            "relieves below system pressure",
+            "maintains pressure to a priority circuit",
+            "relieves at its design pressure",
+            "prevents excessive pressure through excessive temperature"
+          ],
+          "answerIndex": 2,
+          "answerText": "relieves at its design pressure",
+          "explanation": "Correct answer: relieves at its design pressure.\n\nA hydraulic relief valve opens when system pressure reaches its designed setting, allowing fluid to bypass or return to the reservoir so pressure does not rise beyond the intended limit. It protects components from excessive pressure.\n\nKey characteristics:\n\u2022 Pressure-operated safety device.\n\u2022 Opens at its set/design pressure.\n\u2022 Helps protect pumps, lines, and actuators from overpressure.\n\nWhy the other choices are incorrect:\n\u2022 Relieving below normal system pressure would prevent proper operation.\n\u2022 Maintaining pressure to a priority circuit is the role of a priority valve.\n\u2022 Excessive temperature is not the direct pressure-trigger definition of a relief valve.\n\n\ud83d\udca1 Memory Hook: Relief valve = pressure limit protection.\n\n\ud83c\udfaf Board Tip: Relief valves protect against excessive pressure; priority valves manage which circuit receives flow first.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Pascal\u2019s law states that",
+          "questionType": "multiple_choice",
+          "choices": [
+            "pressure is inversely proportional to load",
+            "liquid is compressible",
+            "oxygen can be used to charge the accumulators",
+            "applied force acts equally in all directions"
+          ],
+          "answerIndex": 3,
+          "answerText": "applied force acts equally in all directions",
+          "explanation": "Correct answer: applied force acts equally in all directions.\n\nPascal\u2019s law states that pressure applied to a confined fluid is transmitted undiminished in all directions throughout the fluid and to the walls of its container. This principle enables hydraulic systems to transmit force.\n\nKey characteristics:\n\u2022 Pressure is transmitted through a confined fluid.\n\u2022 Pressure is force divided by area: \\(P=F/A\\).\n\u2022 A small input force can produce a larger output force when the output piston has a larger area.\n\nWhy the other choices are incorrect:\n\u2022 Pressure is not inversely proportional to load in this way.\n\u2022 Hydraulic liquids are treated as nearly incompressible in normal system operation.\n\u2022 Oxygen must not be used to charge a hydraulic accumulator unless specifically approved; oxygen and hydraulic fluid can create severe fire/explosion hazards.\n\n\ud83d\udca1 Memory Hook: Pascal = pressure transmitted throughout a confined liquid.\n\n\ud83c\udfaf Board Tip: Hydraulic force multiplication comes from different piston areas, not from pressure being \u201ccreated\u201d by the larger piston.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The purpose of an accumulator is to",
+          "questionType": "multiple_choice",
+          "choices": [
+            "relieve excess pressure",
+            "store fluid under pressure",
+            "store compressed gas for tyre inflation",
+            "remove air from the system"
+          ],
+          "answerIndex": 1,
+          "answerText": "store fluid under pressure",
+          "explanation": "Correct answer: store fluid under pressure.\n\nAn accumulator stores hydraulic fluid under pressure, commonly using a gas charge separated from the fluid by a piston, bladder, or diaphragm. It can supply short-term flow, damp pressure pulsations, and help absorb shocks, depending on system design.\n\nKey characteristics:\n\u2022 Stores energy in pressurized hydraulic fluid/gas.\n\u2022 Can provide temporary flow when demand is high.\n\u2022 Can smooth pressure fluctuations.\n\nWhy the other choices are incorrect:\n\u2022 A relief valve relieves excessive pressure.\n\u2022 An accumulator is not a compressed-gas bottle for inflating tires.\n\u2022 Removing air is generally handled by bleeding or system servicing procedures.\n\n\ud83d\udca1 Memory Hook: Accumulator = stored hydraulic energy.\n\n\ud83c\udfaf Board Tip: Reservoir stores fluid at low pressure; accumulator stores fluid under pressure.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Oil is used in an oleo strut to:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "support the weight of the aircraft",
+            "limit the speed of compression of the strut",
+            "lubricate the piston within the cylinder",
+            "limit the speed of extension and compression of the strut"
+          ],
+          "answerIndex": 3,
+          "answerText": "limit the speed of extension and compression of the strut",
+          "explanation": "Correct answer: limit the speed of extension and compression of the strut.\n\nIn an oleo-pneumatic landing-gear strut, compressed gas provides spring action while oil passing through calibrated orifices damps movement. The damping restricts how quickly the strut compresses and extends, helping control landing impact and rebound.\n\nKey characteristics:\n\u2022 Gas provides the spring effect.\n\u2022 Oil flow through orifices provides damping.\n\u2022 Damping controls both compression and extension behavior.\n\nWhy the other choices are incorrect:\n\u2022 Aircraft weight is supported mainly by gas pressure and the strut\u2019s design, not by oil alone.\n\u2022 Limiting compression speed alone is incomplete because damping also controls extension.\n\u2022 Lubrication is not the principal function being tested.\n\n\ud83d\udca1 Memory Hook: Gas = spring; oil = damping.\n\n\ud83c\udfaf Board Tip: For oleo struts, separate the spring function from the damping function.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Inadvertent retraction of the landing gear on the ground:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "not possible because the system is not powerful enough",
+            "prevented by the ground/air logic system",
+            "always a danger when the ground lock has been removed",
+            "the responsibility of the first officer when he is on the aircraft"
+          ],
+          "answerIndex": 1,
+          "answerText": "prevented by the ground/air logic system",
+          "explanation": "Correct answer: prevented by the ground/air logic system.\n\nGround/air logic uses signals such as landing-gear position or weight-on-wheels to inhibit gear retraction while the aircraft is on the ground. The exact safeguards vary by aircraft design, and maintenance procedures may include additional physical ground locks.\n\nKey characteristics:\n\u2022 Helps prevent inadvertent gear retraction on the ground.\n\u2022 May use squat switches or other weight-on-wheels sensing.\n\u2022 Is a system safeguard, not a substitute for approved ground-lock procedures.\n\nWhy the other choices are incorrect:\n\u2022 Hydraulic power may be sufficient to retract gear; power is not the safeguard.\n\u2022 The question\u2019s keyed protection is the ground/air logic system.\n\u2022 Preventing retraction is not simply the first officer\u2019s responsibility.\n\n\ud83d\udca1 Memory Hook: Weight on wheels = gear-retraction inhibit, where designed.\n\n\ud83c\udfaf Board Tip: Never rely on logic alone during maintenance; install required safety pins/locks according to the manual.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The best extinguishant to use on a wheel or brake fire is:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "CO2",
+            "Dry powder",
+            "Freon",
+            "Water"
+          ],
+          "answerIndex": 1,
+          "answerText": "Dry powder",
+          "explanation": "Correct answer: Dry powder.\n\nThe supplied key selects dry powder for a wheel or brake fire. Aircraft wheel/brake fires are hazardous because overheated wheels and tires can fail violently; the correct response depends on the aircraft emergency procedure and the extinguishing agent approved for the situation.\n\nKey characteristics:\n\u2022 Follow aircraft-specific fire procedures and trained-response guidance.\n\u2022 Approach from the direction and distance specified by the procedure; hot wheel/tire assemblies can rupture.\n\u2022 Dry chemical powder is the answer keyed in this question.\n\nWhy the other choices are incorrect according to the supplied key:\n\u2022 CO\u2082 may be less suitable for some wheel/brake fire scenarios and can have limited cooling effect.\n\u2022 Freon is not a general current recommendation.\n\u2022 Water applied incorrectly to overheated wheel assemblies can create additional hazards.\n\n\ud83d\udca1 Memory Hook: Wheel/brake fire = use the approved agent and procedure; keyed answer here is dry powder.\n\n\ud83c\udfaf Board Tip: Treat this as an exam-key answer, not a substitute for current aircraft/operator emergency procedures.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Landing gear ground lock pins are:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "fitted before flight to ensure landing gear locks are fully cocked",
+            "remover prior to flight and returned to stores",
+            "fitted after flight to maintain a hydraulic lock in the down lock jack",
+            "removed prior to flight and stowed on the aircraft where they are visible to the crew"
+          ],
+          "answerIndex": 3,
+          "answerText": "removed prior to flight and stowed on the aircraft where they are visible to the crew",
+          "explanation": "Correct answer: removed prior to flight and stowed on the aircraft where they are visible to the crew.\n\nLanding-gear ground-lock pins mechanically secure the gear against movement while the aircraft is parked or undergoing maintenance. They must be removed before flight and stowed in the designated, visible location so the crew can verify their removal.\n\nKey characteristics:\n\u2022 Prevent unintended landing-gear movement on the ground.\n\u2022 Are removed before flight.\n\u2022 Must be accounted for and stowed as prescribed by the aircraft checklist.\n\nWhy the other choices are incorrect:\n\u2022 They are not fitted before flight to ensure locks are cocked.\n\u2022 Returning them to stores would not match the keyed aircraft-stowage procedure.\n\u2022 They do not create a hydraulic lock in the down-lock jack.\n\n\ud83d\udca1 Memory Hook: Pins in for ground safety; pins out and accounted for before flight.\n\n\ud83c\udfaf Board Tip: Ground-lock pins are safety devices\u2014never assume they have been removed without a positive check.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A likely cause of wheel shimmy is:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "aircraft is overweight",
+            "the tyre pressures are too high",
+            "the aircraft is incorrectly loaded",
+            "a torque link is worn or damaged"
+          ],
+          "answerIndex": 3,
+          "answerText": "a torque link is worn or damaged",
+          "explanation": "Correct answer: a torque link is worn or damaged.\n\nA worn or damaged torque link can allow unwanted movement between landing-gear components, reducing steering/alignment control and contributing to wheel shimmy. Shimmy is an oscillating vibration of the wheel/gear assembly.\n\nKey characteristics:\n\u2022 Torque links help maintain alignment between sliding strut components.\n\u2022 Wear, looseness, damage, or incorrect servicing can contribute to vibration.\n\u2022 Correct diagnosis requires inspection of the whole gear assembly and applicable manual.\n\nWhy the other choices are incorrect:\n\u2022 Aircraft weight or loading is not the specific mechanical cause keyed here.\n\u2022 Excessive tire pressure can affect handling, but the answer key identifies a worn/damaged torque link.\n\n\ud83d\udca1 Memory Hook: Torque link wear = possible shimmy.\n\n\ud83c\udfaf Board Tip: Shimmy is a symptom; inspect the torque links, bearings, tires, steering, and other relevant components as specified.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following may a certificated airframe and powerplant mechanic perform on aircraft and approve for return to service? 1. a 100-hour inspection. 2. an annual inspection, under specified circumstances. 3. a progressive inspection, under specified circumstances.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1, 2",
+            "1, 3",
+            "1, 2, 3",
+            "1 only."
+          ],
+          "answerIndex": 1,
+          "answerText": "1, 3",
+          "explanation": "Correct answer: 1, 3.\n\nUnder the U.S. FAA framework reflected in this question, an appropriately rated mechanic may perform and approve a 100-hour inspection and may perform a progressive inspection when authorized and operating under the required procedures. An annual inspection generally requires an appropriately authorized inspection person, such as an A&P mechanic with Inspection Authorization (IA), subject to the applicable rules.\n\nKey characteristics:\n\u2022 A 100-hour inspection may be performed by a properly rated mechanic.\n\u2022 Progressive inspection approval depends on the applicable program and authorization.\n\u2022 Annual inspection approval is subject to additional authorization requirements.\n\nWhy the other choices are incorrect:\n\u2022 \u201c1, 2\u201d includes annual inspection approval without stating the required authorization.\n\u2022 \u201c1, 2, 3\u201d overstates the general authority of a mechanic without IA.\n\u2022 \u201c1 only\u201d omits the qualifying progressive inspection.\n\n\ud83d\udca1 Memory Hook: A&P can do 100-hour; annual approval generally requires IA under FAA rules.\n\n\ud83c\udfaf Board Tip: This is jurisdiction-specific regulatory material. Check the current regulation and the exact mechanic authorization before applying it in practice.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following describe the effects of annealing steel and aluminum alloys? 1. decrease in internal stress. 2. softening of the metal. 3. improved corrosion resistance.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1, 2",
+            "1, 3",
+            "2, 3",
+            "1 only."
+          ],
+          "answerIndex": 0,
+          "answerText": "1, 2",
+          "explanation": "Correct answer: 1, 2.\n\nAnnealing is a heat-treatment process used to soften metal and reduce residual/internal stresses. The supplied key identifies statements 1 and 2: reduced internal stress and softening. Improved corrosion resistance is not a guaranteed general effect of annealing.\n\nKey characteristics:\n\u2022 Can reduce stresses caused by forming or prior processing.\n\u2022 Usually improves formability by softening the material.\n\u2022 The precise cycle depends on the alloy and required properties.\n\nWhy the other choices are incorrect:\n\u2022 Statements 1 and 3 wrongly assume corrosion resistance is a general result.\n\u2022 Statements 2 and 3 also include the unsupported corrosion claim.\n\u2022 \u201c1 only\u201d omits softening, a common annealing effect.\n\n\ud83d\udca1 Memory Hook: Annealing = relieve stress + soften.\n\n\ud83c\udfaf Board Tip: Heat treatment changes mechanical properties; do not automatically assume it improves corrosion resistance.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the listed conditions is NOT one of the requirements for corrosion to occur?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The presence of an electrolyte.",
+            "Electrical contact between an anodic area and a cathodic area.",
+            "The presence of a passive oxide film.",
+            "anode and cathode."
+          ],
+          "answerIndex": 2,
+          "answerText": "The presence of a passive oxide film.",
+          "explanation": "Correct answer: The presence of a passive oxide film.\n\nElectrochemical corrosion generally requires anodic and cathodic sites, an electrical path between them, and an electrolyte to carry ions. A passive oxide film is not a universal requirement for corrosion; in many cases it protects the metal by reducing the corrosion rate.\n\nKey characteristics:\n\u2022 Anode: oxidation and metal loss occur.\n\u2022 Cathode: reduction reaction occurs.\n\u2022 Electrolyte enables ionic conduction.\n\nWhy the other choices are incorrect:\n\u2022 An electrolyte is a common requirement for ordinary electrochemical corrosion.\n\u2022 Electrical continuity between anodic and cathodic regions allows electron flow.\n\u2022 Anode and cathode regions are part of the electrochemical process.\n\n\ud83d\udca1 Memory Hook: Corrosion cell = anode + cathode + electrical path + electrolyte.\n\n\ud83c\udfaf Board Tip: A passive film can inhibit corrosion; its presence is not required for corrosion to occur.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A primary cause of intergranular corrosion is",
+          "questionType": "multiple_choice",
+          "choices": [
+            "improper heat treatment.",
+            "dissimilar metal contact.",
+            "improper application of primer.",
+            "impurities."
+          ],
+          "answerIndex": 0,
+          "answerText": "improper heat treatment.",
+          "explanation": "Correct answer: improper heat treatment.\n\nIntergranular corrosion attacks along grain boundaries. In certain aluminum alloys, improper heat treatment or exposure in a sensitizing temperature range can cause grain-boundary precipitates and adjacent depleted regions that become electrochemically different, allowing preferential attack.\n\nKey characteristics:\n\u2022 Attack follows grain boundaries.\n\u2022 Alloy composition and thermal history affect susceptibility.\n\u2022 It can progress beneath the surface and may be difficult to see initially.\n\nWhy the other choices are less suitable for the keyed question:\n\u2022 Dissimilar-metal contact is associated with galvanic corrosion.\n\u2022 Improper primer application may allow general or localized corrosion but is not the defining cause here.\n\u2022 Impurities can influence corrosion, but the supplied key identifies improper heat treatment.\n\n\ud83d\udca1 Memory Hook: Intergranular = corrosion between grains.\n\n\ud83c\udfaf Board Tip: Do not confuse intergranular corrosion with exfoliation, which is a layered form of attack associated with elongated grain structure.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of these materials is the most cathodic?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Zinc.",
+            "2024 aluminum alloy.",
+            "Stainless steel.",
+            "7075 aluminum alloy."
+          ],
+          "answerIndex": 2,
+          "answerText": "Stainless steel.",
+          "explanation": "Correct answer: Stainless steel.\n\nIn the supplied choices, stainless steel is identified as the most cathodic relative to zinc and the listed aluminum alloys. In a galvanic couple, the more cathodic material is generally protected while the more anodic material corrodes preferentially; exact ranking depends on alloy, environment, and surface condition.\n\nKey characteristics:\n\u2022 Zinc is commonly used as a sacrificial, anodic material.\n\u2022 Aluminum alloys are generally more anodic than many stainless steels in typical galvanic comparisons.\n\u2022 A small anodic area connected to a large cathodic area can corrode rapidly.\n\nWhy the other choices are incorrect according to the keyed comparison:\n\u2022 Zinc is usually the sacrificial/anodic choice.\n\u2022 2024 and 7075 aluminum alloys are generally anodic relative to stainless steel in the intended comparison.\n\n\ud83d\udca1 Memory Hook: In a galvanic pair, the more anodic metal sacrifices itself.\n\n\ud83c\udfaf Board Tip: Galvanic series depends on the electrolyte and actual alloy condition; use the specified environment when precision matters.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which will weigh the least?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "98 parts of dry air and 2 parts of water vapor.",
+            "35 parts of dry air and 65 parts of water vapor.",
+            "50 parts of dry air and 50 parts of water vapor.",
+            "51 parts of dry air and 49 parts of water vapor."
+          ],
+          "answerIndex": 1,
+          "answerText": "35 parts of dry air and 65 parts of water vapor.",
+          "explanation": "Correct answer: 35 parts of dry air and 65 parts of water vapor.\n\nWater vapor has a lower molecular mass than the main constituents of dry air, so at the same temperature and pressure a mixture containing more water vapor is less dense. The keyed mixture\u201435 parts dry air and 65 parts water vapor\u2014contains the highest water-vapor fraction and therefore weighs least for the same volume and conditions.\n\nKey characteristics:\n\u2022 Dry air has an average molecular mass of about 29 g/mol.\n\u2022 Water vapor has a molecular mass of 18 g/mol.\n\u2022 Humid air is less dense than dry air at the same temperature and pressure.\n\nWhy the other choices are incorrect:\n\u2022 The other mixtures contain less water vapor and more heavier dry-air molecules.\n\u2022 This comparison assumes equal temperature, pressure, and volume.\n\n\ud83d\udca1 Memory Hook: Warm, humid air is less dense than dry air at the same pressure and temperature.\n\n\ud83c\udfaf Board Tip: \u201cHumid air is lighter\u201d is a density comparison under equal conditions, not a claim that humidity always makes an aircraft perform better overall.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which type crack can be detected by magnetic particle inspection using either circular or longitudinal magnetization?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "45\u00b0",
+            "Longitudinal.",
+            "Transverse",
+            "90\u00b0."
+          ],
+          "answerIndex": 0,
+          "answerText": "45\u00b0",
+          "explanation": "Correct answer: 45\u00b0.\n\nMagnetic-particle inspection reveals surface and near-surface discontinuities in ferromagnetic materials. A crack is most easily detected when its direction is approximately perpendicular to the magnetic flux; using two magnetization directions helps detect cracks with different orientations. A crack at 45\u00b0 to one direction can be favorably oriented to at least one of the two fields.\n\nKey characteristics:\n\u2022 The part must be ferromagnetic.\n\u2022 Discontinuities interrupt magnetic flux and create leakage fields.\n\u2022 Circular and longitudinal magnetization produce different flux directions.\n\nWhy the other choices are less suitable in the question\u2019s framing:\n\u2022 A crack parallel to one magnetic field may be poorly indicated under that magnetization.\n\u2022 The point is to use two directions to detect a crack at an intermediate angle.\n\n\ud83d\udca1 Memory Hook: Magnetic particles gather where flux leaks at a discontinuity.\n\n\ud83c\udfaf Board Tip: Best detection occurs when the crack is perpendicular to the magnetic field; multiple magnetization directions improve coverage.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The pattern for an inclusion is a magnetic particle buildup forming",
+          "questionType": "multiple_choice",
+          "choices": [
+            "a fernlike pattern.",
+            "a single line.",
+            "parallel lines.",
+            "random lines."
+          ],
+          "answerIndex": 2,
+          "answerText": "parallel lines.",
+          "explanation": "Correct answer: parallel lines.\n\nThe supplied key says an inclusion produces a parallel-line magnetic-particle pattern. Magnetic-particle indications are interpreted by their shape and distribution, but the exact pattern associated with an inclusion can depend on its orientation, depth, and the reference material used. The supplied answer key gives no supporting explanation beyond the selected pattern.\n\nKey characteristics:\n\u2022 Inclusions are foreign material trapped within a metal.\n\u2022 Magnetic-particle inspection detects leakage fields caused by discontinuities in ferromagnetic parts.\n\u2022 Indication shape alone should be interpreted using the applicable inspection standard and trained judgment.\n\nWhy the other choices are not ruled out by the supplied explanation:\n\u2022 The key does not explain why fernlike, single-line, or random-line patterns are excluded.\n\u2022 The item should be checked against the original inspection-training reference.\n\n\ud83d\udca1 Memory Hook: An indication is a clue\u2014not a diagnosis without interpretation.\n\n\ud83c\udfaf Board Tip: Memorize the keyed \u201cparallel lines\u201d only with the caveat that the source gives no rationale; confirm the pattern in your NDT reference.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which material cannot be heat treated repeatedly without harmful effects?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Unclad aluminum alloy in sheet form.",
+            "6061-T9 stainless steel.",
+            "Clad aluminum alloy.",
+            "Cast aluminum alloy."
+          ],
+          "answerIndex": 2,
+          "answerText": "Clad aluminum alloy.",
+          "explanation": "Correct answer: Clad aluminum alloy.\n\nThe supplied key selects clad aluminum alloy because repeated heat treatment can damage or reduce the effectiveness of the thin pure-aluminum cladding layer. The cladding provides corrosion protection, so fabrication and repair heat exposure must follow approved procedures.\n\nKey characteristics:\n\u2022 Cladding is a thin corrosion-resistant aluminum layer over a stronger alloy core.\n\u2022 Excessive or unsuitable heating can affect alloy temper and surface protection.\n\u2022 Repair and heat-treatment procedures must be alloy-specific.\n\nWhy the other choices are not selected by the key:\n\u2022 The key does not provide a detailed comparison for the other materials.\n\u2022 The option \u201c6061-T9 stainless steel\u201d appears to mix an aluminum alloy designation with \u201cstainless steel,\u201d suggesting a possible transcription error.\n\n\ud83d\udca1 Memory Hook: Alclad = strong core plus thin corrosion-protective surface.\n\n\ud83c\udfaf Board Tip: Treat the item\u2019s keyed answer as intended, but verify the wording and never apply heat treatment without the approved procedure.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Unless otherwise specified or required, aircraft bolts should be installed so that the bolthead is",
+          "questionType": "multiple_choice",
+          "choices": [
+            "upward, or in a forward direction.",
+            "downward, or in a forward direction.",
+            "downward, or in a rearward direction.",
+            "upward, or in a rearward direction."
+          ],
+          "answerIndex": 0,
+          "answerText": "upward, or in a forward direction.",
+          "explanation": "Correct answer: upward, or in a forward direction.\n\nWhen practicable and unless the aircraft or maintenance instructions specify otherwise, bolts are commonly installed with the head upward or forward. This convention can help reduce the chance that a bolt will fall out if its nut or retention is lost, depending on the installation.\n\nKey characteristics:\n\u2022 Follow aircraft-specific drawings and maintenance instructions first.\n\u2022 Bolt orientation is a secondary safeguard, not a substitute for correct locking.\n\u2022 Proper torque, locking devices, and inspection are essential.\n\nWhy the other choices are incorrect:\n\u2022 Downward or rearward orientations do not match the general convention given in the question.\n\u2022 The convention is not absolute where design requirements dictate another orientation.\n\n\ud83d\udca1 Memory Hook: When practicable, bolt head up or forward.\n\n\ud83c\udfaf Board Tip: \u201cUnless otherwise specified\u201d is crucial\u2014approved aircraft instructions always take precedence over a general rule.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which heat-treating process of metal produces a hard, wear-resistant surface over a strong, tough core?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Case hardening.",
+            "Annealing.",
+            "Tempering.",
+            "Normalizing."
+          ],
+          "answerIndex": 0,
+          "answerText": "Case hardening.",
+          "explanation": "Correct answer: Case hardening.\n\nCase hardening creates a hard, wear-resistant outer layer while retaining a tougher, more ductile core. Depending on the process, the surface composition or microstructure is changed by introducing carbon and/or nitrogen or by hardening the surface region.\n\nKey characteristics:\n\u2022 Hard surface resists wear and contact damage.\n\u2022 Tough core supports loads and helps resist impact.\n\u2022 Common methods include carburizing, nitriding, and other surface-hardening processes.\n\nWhy the other choices are incorrect:\n\u2022 Annealing generally softens the metal and relieves stress.\n\u2022 Tempering adjusts the properties of previously hardened steel, usually reducing brittleness.\n\u2022 Normalizing refines or evens out steel structure; it does not specifically create a hard case over a tough core.\n\n\ud83d\udca1 Memory Hook: Case hardening = hard outside, tough inside.\n\n\ud83c\udfaf Board Tip: When a question contrasts a hard surface with a tough core, think case hardening.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Who is responsible for upkeep of the required maintenance records for an aircraft?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The maintaining repair station or authorized inspector.",
+            "The maintaining certificated mechanic.",
+            "The aircraft owner.",
+            "The first officer."
+          ],
+          "answerIndex": 2,
+          "answerText": "The aircraft owner.",
+          "explanation": "Correct answer: The aircraft owner.\n\nUnder the U.S. FAA rules referenced by this question, the aircraft owner or operator is responsible for ensuring required maintenance records are retained and available. The keyed answer is the aircraft owner; operational responsibility may be assigned in practice, but the legal duty depends on the applicable regulation.\n\nKey characteristics:\n\u2022 Maintenance records document inspections, repairs, alterations, and airworthiness status.\n\u2022 Records support traceability and continued airworthiness.\n\u2022 Retention requirements and responsibilities depend on the governing jurisdiction.\n\nWhy the other choices are incorrect in the keyed context:\n\u2022 A repair station or mechanic records and certifies work they perform, but that does not replace the owner/operator\u2019s overall recordkeeping responsibility.\n\u2022 The first officer is not the general party responsible for required maintenance records.\n\n\ud83d\udca1 Memory Hook: Technician documents the work; owner/operator ensures required records are kept.\n\n\ud83c\udfaf Board Tip: This is a regulation-specific question. Confirm current FAA requirements or the applicable national authority\u2019s rules.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The clearance between the piston rings and the ring lands is measured with a",
+          "questionType": "multiple_choice",
+          "choices": [
+            "micrometer caliper.",
+            "thickness gauge.",
+            "depth gauge.",
+            "vernier caliper."
+          ],
+          "answerIndex": 1,
+          "answerText": "thickness gauge.",
+          "explanation": "Correct answer: thickness gauge.\n\nA thickness gauge\u2014often a feeler gauge consisting of thin calibrated blades\u2014is used to measure the clearance between a piston ring and its ring land. The correct blade is selected to fit the gap without forcing it, following the engine maintenance manual.\n\nKey characteristics:\n\u2022 Measures a small clearance or gap.\n\u2022 Blade thickness is marked on the gauge.\n\u2022 Measurements must be compared with the specified limits.\n\nWhy the other choices are incorrect:\n\u2022 A micrometer measures external dimensions with high precision.\n\u2022 A depth gauge measures depth from a reference surface.\n\u2022 A vernier caliper is useful for broader dimensional measurements but is not the usual tool for this narrow ring-land clearance.\n\n\ud83d\udca1 Memory Hook: Feeler/thickness gauge = gap measurement.\n\n\ud83c\udfaf Board Tip: Match the instrument to the dimension: gap, depth, outside diameter, or alignment.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which tool can be used to measure the alignment of a rotor shaft or the plane of rotation of a disk?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Dial indicator.",
+            "Shaft gauge.",
+            "Protractor.",
+            "Depth gauge."
+          ],
+          "answerIndex": 0,
+          "answerText": "Dial indicator.",
+          "explanation": "Correct answer: Dial indicator.\n\nA dial indicator measures small displacement, runout, and alignment variations. When mounted against a rotating shaft or disk, it can show changes in position as the component turns, helping technicians check shaft alignment or the plane/runout of a rotating disk.\n\nKey characteristics:\n\u2022 Measures small movement relative to a reference.\n\u2022 Useful for radial or axial runout checks.\n\u2022 Requires correct setup, contact, and interpretation of the reading.\n\nWhy the other choices are incorrect:\n\u2022 A shaft gauge is not the general instrument identified for these runout measurements in the keyed question.\n\u2022 A protractor measures angles.\n\u2022 A depth gauge measures depth.\n\n\ud83d\udca1 Memory Hook: Dial indicator = tiny movement and runout.\n\n\ud83c\udfaf Board Tip: For alignment or runout, look for an indicator that measures variation as the part rotates.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which is the ratio of the water vapor actually present in the atmosphere to the amount that would be present if the air were saturated at the prevailing temperature and pressure?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Absolute humidity.",
+            "Relative humidity.",
+            "Dewpoint",
+            "Ambien humidity."
+          ],
+          "answerIndex": 1,
+          "answerText": "Relative humidity.",
+          "explanation": "Correct answer: Relative humidity.\n\nRelative humidity is the ratio of the actual water-vapor amount or partial pressure in the air to the saturation amount at the same temperature, expressed as a percentage. The saturation capacity changes strongly with temperature, so relative humidity can change even when the actual water-vapor content changes little.\n\nKey characteristics:\n\u2022 Expressed as a percentage.\n\u2022 Depends on temperature.\n\u2022 100% relative humidity means the air is saturated under the stated conditions.\n\nWhy the other choices are incorrect:\n\u2022 Absolute humidity describes the mass of water vapor per unit volume.\n\u2022 Dew point is the temperature at which air becomes saturated when cooled at constant pressure.\n\u2022 \u201cAmbien humidity\u201d is not the standard term; the intended term may be ambient humidity.\n\n\ud83d\udca1 Memory Hook: Relative humidity = actual vapor \u00f7 saturation vapor \u00d7 100%.\n\n\ud83c\udfaf Board Tip: Relative humidity is not the same as the total mass of water vapor in the air.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which condition indicates a part has cooled too quickly after being welded?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cracking adjacent to the weld.",
+            "Discoloration of the base metal.",
+            "Gas pockets, porosity, and slag inclusions.",
+            "Absence of dark spots."
+          ],
+          "answerIndex": 0,
+          "answerText": "Cracking adjacent to the weld.",
+          "explanation": "Correct answer: Cracking adjacent to the weld.\n\nCracking adjacent to a weld can indicate rapid cooling and high residual stresses, particularly in susceptible alloys or steels. However, weld cracking has multiple possible causes, including material composition, restraint, hydrogen, joint design, and welding procedure; it is not uniquely diagnostic of cooling rate alone.\n\nKey characteristics:\n\u2022 Rapid cooling can produce hard, brittle heat-affected zones in susceptible steels.\n\u2022 Residual stress and contraction can contribute to cracking.\n\u2022 Correct preheat, filler, procedure, and post-weld treatment depend on the material and approved process.\n\nWhy the other choices are less directly associated with rapid cooling in the keyed item:\n\u2022 Discoloration can arise from heat and oxidation but does not specifically indicate excessive cooling rate.\n\u2022 Gas pockets, porosity, and slag inclusions are usually associated with contamination, shielding, or technique.\n\u2022 Absence of dark spots does not diagnose cooling rate.\n\n\ud83d\udca1 Memory Hook: Weld cracking = investigate cooling, stress, material, and procedure.\n\n\ud83c\udfaf Board Tip: The keyed answer is cracking adjacent to the weld, but in real inspection, cracking requires a full cause assessment.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The boiling point of a given liquid varies",
+          "questionType": "multiple_choice",
+          "choices": [
+            "directly with pressure.",
+            "inversely with pressure.",
+            "directly with volume.",
+            "inversely with volume."
+          ],
+          "answerIndex": 0,
+          "answerText": "directly with pressure.",
+          "explanation": "Correct answer: directly with pressure.\n\nFor a given liquid, the boiling point increases as the surrounding pressure increases. A liquid boils when its vapor pressure equals the external pressure; more heating is required to reach that vapor pressure when the external pressure is higher.\n\nKey characteristics:\n\u2022 Lower pressure lowers the boiling point.\n\u2022 Higher pressure raises the boiling point.\n\u2022 This principle is used in pressure cookers and affects boiling at altitude.\n\nWhy the other choices are incorrect:\n\u2022 The relationship is not generally inverse with pressure.\n\u2022 Volume is not the direct variable defining the boiling point in this question.\n\n\ud83d\udca1 Memory Hook: Higher pressure = higher boiling point.\n\n\ud83c\udfaf Board Tip: At high altitude, lower atmospheric pressure means water boils at a lower temperature.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The aluminum code number 1100 identifies what type of aluminum?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aluminum alloy containing 11 percent copper.",
+            "Aluminum alloy containing zinc.",
+            "99 percent commercially pure aluminum.",
+            "99.11 percent aluminum."
+          ],
+          "answerIndex": 2,
+          "answerText": "99 percent commercially pure aluminum.",
+          "explanation": "Correct answer: 99 percent commercially pure aluminum.\n\nThe 1100 aluminum designation identifies a commercially pure aluminum grade with a minimum aluminum content of approximately 99.0%. It has good corrosion resistance and formability, but it is not a high-strength structural alloy like many heat-treatable aircraft aluminum alloys.\n\nKey characteristics:\n\u2022 Commercially pure aluminum, about 99% minimum aluminum.\n\u2022 Good formability and corrosion resistance.\n\u2022 Generally lower strength than precipitation-hardened aircraft alloys.\n\nWhy the other choices are incorrect:\n\u2022 \u201c11 percent copper\u201d is not how the 1100 designation is interpreted.\n\u2022 1100 is not a zinc-alloy identification.\n\u2022 The designation does not mean exactly 99.11% aluminum.\n\n\ud83d\udca1 Memory Hook: 1100 = commercially pure aluminum (about 99%).\n\n\ud83c\udfaf Board Tip: Aluminum alloy digits identify a grade/series; they are not a direct percentage composition code.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The lifting or flaking of the metal at the surface due to delamination of grain boundaries caused by the pressure of corrosion residual product buildup is called",
+          "questionType": "multiple_choice",
+          "choices": [
+            "brinelling",
+            "granulation",
+            "exfoliation",
+            "strain hardening."
+          ],
+          "answerIndex": 2,
+          "answerText": "exfoliation",
+          "explanation": "Correct answer: exfoliation.\n\nExfoliation corrosion is an advanced form of intergranular corrosion in which corrosion products accumulate along elongated grain boundaries, forcing layers of metal apart and causing the surface to lift or flake. It is especially associated with certain wrought alloys and grain structures.\n\nKey characteristics:\n\u2022 Corrosion progresses along grain boundaries.\n\u2022 Products build up and push layers outward.\n\u2022 Can cause significant structural damage beneath an apparently localized surface area.\n\nWhy the other choices are incorrect:\n\u2022 Brinelling refers to indentation or surface damage caused by contact loading.\n\u2022 Granulation is not the standard name for this corrosion form.\n\u2022 Strain hardening is strengthening caused by plastic deformation, not corrosion-layer separation.\n\n\ud83d\udca1 Memory Hook: Exfoliation = corrosion pushes metal layers apart like pages.\n\n\ud83c\udfaf Board Tip: Intergranular corrosion follows grain boundaries; exfoliation is the layered, flaking manifestation.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A nonelectrolytic chemical treatment for aluminum alloys to increase corrosion resistance and paint-bonding qualities is called",
+          "questionType": "multiple_choice",
+          "choices": [
+            "anodizing",
+            "alodizing",
+            "dichromating",
+            "chrome-plating."
+          ],
+          "answerIndex": 1,
+          "answerText": "alodizing",
+          "explanation": "Correct answer: alodizing.\n\nAlodizing, commonly used to refer to a chemical conversion coating process for aluminum, improves corrosion resistance and provides a surface that promotes paint adhesion. Unlike anodizing, the conversion coating is produced chemically rather than by an electrolytic anodizing process.\n\nKey characteristics:\n\u2022 Chemical conversion coating on aluminum.\n\u2022 Improves corrosion protection.\n\u2022 Helps provide a suitable base for primer and paint.\n\nWhy the other choices are incorrect:\n\u2022 Anodizing is an electrochemical process that forms a controlled oxide layer.\n\u2022 Dichromating may be used in some conversion-treatment contexts, but the keyed term here is alodizing.\n\u2022 Chrome-plating deposits a metal coating and is not the described nonelectrolytic conversion treatment.\n\n\ud83d\udca1 Memory Hook: Alodine/Alodizing = chemical conversion coat; anodizing = electrolytic oxide process.\n\n\ud83c\udfaf Board Tip: Look for \u201cnonelectrolytic chemical treatment\u201d when distinguishing alodizing from anodizing.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which part(s) of a semi-monocoque fuselage prevent(s) tension and compression from bending the fuselage?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The fuselage covering.",
+            "Longerons and stringers.",
+            "Bulkheads and skin.",
+            "Stiffiners."
+          ],
+          "answerIndex": 1,
+          "answerText": "Longerons and stringers.",
+          "explanation": "Correct answer: Longerons and stringers.\n\nLongerons and stringers are longitudinal structural members that help carry tension and compression produced by fuselage bending. In a semi-monocoque structure, they work together with the skin, frames, and bulkheads to distribute loads and prevent local buckling.\n\nKey characteristics:\n\u2022 Longerons are major longitudinal members.\n\u2022 Stringers stiffen the skin and help share longitudinal loads.\n\u2022 The skin also carries structural loads in a semi-monocoque fuselage.\n\nWhy the other choices are less complete:\n\u2022 The covering/skin carries load but is not the keyed pair.\n\u2022 Bulkheads and skin support the fuselage shape and pressure loads, but longerons and stringers are the main longitudinal elements cited here.\n\u2022 \u201cStiffeners\u201d is too broad compared with the specific keyed members.\n\n\ud83d\udca1 Memory Hook: Longerons and stringers run lengthwise and carry bending-related tension/compression.\n\n\ud83c\udfaf Board Tip: Semi-monocoque construction shares load among skin, longitudinal stiffeners, and transverse frames.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which fiber to resin (percent) ratio for advanced composite wet lay-ups is generally considered the best for strength?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "40:60.",
+            "50:50.",
+            "60:40.",
+            "51:49."
+          ],
+          "answerIndex": 2,
+          "answerText": "60:40.",
+          "explanation": "Correct answer: 60:40.\n\nThe supplied key identifies a 60:40 fiber-to-resin ratio as generally best for strength in an advanced-composite wet lay-up. The underlying principle is that fibers carry much of the load while resin binds and transfers load between fibers. Too much resin adds weight without proportionate reinforcement; too little resin can leave dry spots and poor bonding.\n\nKey characteristics:\n\u2022 Fibers provide most of the directional tensile strength and stiffness.\n\u2022 Resin binds fibers and transfers shear between them.\n\u2022 The appropriate fiber volume fraction depends on the material system and process.\n\nWhy the other choices are not selected by the supplied key:\n\u2022 40:60 contains a relatively high resin fraction.\n\u2022 50:50 has a lower fiber fraction than the keyed choice.\n\u2022 51:49 is close but not the ratio selected by this exam.\n\n\ud83d\udca1 Memory Hook: Fibers carry the load; resin holds and transfers it.\n\n\ud83c\udfaf Board Tip: Treat 60:40 as the exam\u2019s stated general ratio, not a universal manufacturing specification; follow the approved composite process data.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "When fabricating parts from Alclad 2024-T3 aluminum sheet stock,",
+          "questionType": "multiple_choice",
+          "choices": [
+            "bends should be made with a small radius to develop maximum strength.",
+            "all bends must be 90\u00b0 to the grain.",
+            "all scratches, kinks, tool marks, nicks, etc., must be held to a minimum.",
+            "follow manufacturer\u2019s recommendations."
+          ],
+          "answerIndex": 2,
+          "answerText": "all scratches, kinks, tool marks, nicks, etc., must be held to a minimum.",
+          "explanation": "Correct answer: all scratches, kinks, tool marks, nicks, etc., must be held to a minimum.\n\nAlclad 2024-T3 sheet has a strong heat-treated aluminum-alloy core protected by a thin layer of relatively pure aluminum. Scratches, nicks, kinks, and tool marks should be minimized because they can damage the cladding, create stress concentrations, or initiate fatigue cracks.\n\nKey characteristics:\n\u2022 Cladding protects the underlying alloy against corrosion.\n\u2022 Surface defects can reduce fatigue strength and damage corrosion protection.\n\u2022 Forming must follow specified bend radii, grain direction, and approved procedures.\n\nWhy the other choices are incorrect:\n\u2022 Small bend radii can cause cracking; maximum strength is not obtained by arbitrarily making bends tight.\n\u2022 Not every bend is universally required to be 90\u00b0 to the grain.\n\u2022 Manufacturer/maintenance recommendations are important, but the keyed best answer specifically emphasizes minimizing surface damage.\n\n\ud83d\udca1 Memory Hook: Protect the Alclad surface\u2014avoid scratches, nicks, and kinks.\n\n\ud83c\udfaf Board Tip: Surface damage is not merely cosmetic; it can affect fatigue life and corrosion resistance.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The general rule for finding the proper rivet diameter is",
+          "questionType": "multiple_choice",
+          "choices": [
+            "three times the thickness of the materials to be joined.",
+            "two times the rivet length.",
+            "three times the thickness of the thickest sheet.",
+            "three times the nominal thickness of the sheet."
+          ],
+          "answerIndex": 2,
+          "answerText": "three times the thickness of the thickest sheet.",
+          "explanation": "Correct answer: three times the thickness of the thickest sheet.\n\nA common preliminary rule is to select rivet diameter at about three times the thickness of the thickest sheet being joined. This provides a starting point for conventional solid-rivet selection, but the final diameter must follow structural design and approved maintenance data.\n\nKey characteristics:\n\u2022 Diameter is based on the thickest sheet in the joint.\n\u2022 Grip length must accommodate the total material thickness.\n\u2022 Rivet type, material, spacing, edge distance, and joint loads also matter.\n\nWhy the other choices are incorrect:\n\u2022 Three times the total combined thickness can produce an oversized rivet.\n\u2022 Rivet length does not determine the proper diameter.\n\u2022 The rule refers to the thickest sheet, not necessarily a nominal or average thickness.\n\n\ud83d\udca1 Memory Hook: Rivet diameter \u2248 3 \u00d7 thickest sheet thickness.\n\n\ud83c\udfaf Board Tip: Treat this as a general rule of thumb; use the aircraft\u2019s approved data for actual repairs.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which statement is true regarding the inspection of a stressed skin metal wing assembly known to have been critically loaded?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "If rivets show no visible distortion, further investigation is unnecessary.",
+            "If bearing failure has occurred, the rivet shanks will be joggled.",
+            "If genuine rivet tipping has occurred, groups of consecutive rivet heads will be tipped in the same direction.",
+            "Burn marks on rivet heads."
+          ],
+          "answerIndex": 2,
+          "answerText": "If genuine rivet tipping has occurred, groups of consecutive rivet heads will be tipped in the same direction.",
+          "explanation": "Correct answer: If genuine rivet tipping has occurred, groups of consecutive rivet heads will be tipped in the same direction.\n\nAfter an aircraft structure has experienced a potentially damaging load, groups of consecutive rivet heads tipped in the same direction can indicate genuine rivet tipping and possible joint deformation. Such evidence requires further inspection; the absence of obvious distortion does not prove the structure is undamaged.\n\nKey characteristics:\n\u2022 Inspect patterns across a group of fasteners, not just one rivet.\n\u2022 Look for movement, hole elongation, skin buckling, cracks, and other evidence of overload.\n\u2022 Follow the structural inspection instructions after an overload event.\n\nWhy the other choices are incorrect:\n\u2022 No visible rivet distortion does not automatically rule out hidden damage.\n\u2022 The keyed indicator is the consistent direction of tipped heads.\n\u2022 \u201cBurn marks\u201d are not the described evidence of rivet tipping.\n\n\ud83d\udca1 Memory Hook: Consecutive rivet heads tipped the same way = investigate structural movement.\n\n\ud83c\udfaf Board Tip: After critical loading, do not return the aircraft to service based only on a quick visual check.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Rivet pitch is the distance between the",
+          "questionType": "multiple_choice",
+          "choices": [
+            "centers of rivets in adjacent rows.",
+            "centers of adjacent rivets in the same row.",
+            "heads of rivets in the same row.",
+            "heads of rivets in adjacent rows."
+          ],
+          "answerIndex": 1,
+          "answerText": "centers of adjacent rivets in the same row.",
+          "explanation": "Correct answer: centers of adjacent rivets in the same row.\n\nRivet pitch is the center-to-center distance between adjacent rivets in the same row. It is important for joint strength because rivets that are too close can weaken the sheet between holes, while excessive spacing can reduce the joint\u2019s load-distribution capability.\n\nKey characteristics:\n\u2022 Measured center-to-center along one row.\n\u2022 Transverse spacing between rows is a different dimension.\n\u2022 Minimum pitch and edge distance depend on the rivet size and approved design.\n\nWhy the other choices are incorrect:\n\u2022 Centers in adjacent rows describe transverse spacing, not pitch.\n\u2022 Measuring between rivet heads is inaccurate because head dimensions vary.\n\u2022 Heads do not define the standard center-to-center spacing.\n\n\ud83d\udca1 Memory Hook: Pitch = same-row center to center.\n\n\ud83c\udfaf Board Tip: Distinguish pitch from transverse pitch/row spacing and edge distance.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which rivet is used for riveting magnesium alloy structures?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Mild steel.",
+            "5056 aluminum.",
+            "Monel",
+            "Pure aluminum."
+          ],
+          "answerIndex": 1,
+          "answerText": "5056 aluminum.",
+          "explanation": "Correct answer: 5056 aluminum.\n\nThe supplied key identifies 5056 aluminum rivets for magnesium alloy structures. This selection is associated with compatibility considerations intended to reduce galvanic-corrosion risk when joining magnesium components. Actual fastener selection must still follow the aircraft\u2019s approved design and corrosion-control requirements.\n\nKey characteristics:\n\u2022 Dissimilar metals can form galvanic couples in the presence of an electrolyte.\n\u2022 Fastener alloy and protective treatment matter when joining magnesium.\n\u2022 Isolation, coatings, and sealants may also be required by the design.\n\nWhy the other choices are not selected by the key:\n\u2022 Mild steel, Monel, and pure aluminum have different strength and compatibility characteristics.\n\u2022 The supplied source gives no further comparison, so the answer should be verified against the applicable maintenance reference.\n\n\ud83d\udca1 Memory Hook: Magnesium joints require careful galvanic compatibility; the keyed rivet is 5056 aluminum.\n\n\ud83c\udfaf Board Tip: Never select a fastener by alloy name alone\u2014check strength, corrosion compatibility, and approved instructions.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Aircraft structural units, such as spars, engine supports, etc., which have been built up from sheet metal, are normally",
+          "questionType": "multiple_choice",
+          "choices": [
+            "repairable, using approved methods.",
+            "repairable, except when subjected to compressive loads.",
+            "not repairable, but must be replaced when damaged or deteriorated.",
+            "condemned after its service life."
+          ],
+          "answerIndex": 0,
+          "answerText": "repairable, using approved methods.",
+          "explanation": "Correct answer: repairable, using approved methods.\n\nSheet-metal structural units such as spars and engine supports can often be repaired if an approved repair method exists and the damage remains within specified limits. Repairs must restore required strength, stiffness, geometry, and corrosion protection without introducing unacceptable stress concentrations.\n\nKey characteristics:\n\u2022 Approved data determines whether repair is permitted.\n\u2022 Damage location and load path affect repair acceptability.\n\u2022 Inspection and return-to-service requirements must be met.\n\nWhy the other choices are incorrect:\n\u2022 Compressive loading does not automatically make every sheet-metal structure unrepairable.\n\u2022 Damage does not always require replacement if an approved repair is available.\n\u2022 A component is not automatically condemned solely because it has been in service; limits and inspection findings govern.\n\n\ud83d\udca1 Memory Hook: Repair only when approved data permits and structural limits are met.\n\n\ud83c\udfaf Board Tip: \u201cRepairable\u201d never means \u201crepair however you want\u201d; use approved structural repair data.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Sandwich panels made of metal honeycomb construction are used on modern aircraft because this type of construction",
+          "questionType": "multiple_choice",
+          "choices": [
+            "has a high strength to weight ratio.",
+            "may be repaired by gluing replacement skin to the inner core material with thermoplastic resin.",
+            "is lighter than single sheet skin of the same strength and is more corrosion resistant.",
+            "is fatigue resistant."
+          ],
+          "answerIndex": 0,
+          "answerText": "has a high strength to weight ratio.",
+          "explanation": "Correct answer: has a high strength to weight ratio.\n\nMetal honeycomb sandwich panels use thin face sheets bonded to a lightweight cellular core. The separation between the face sheets greatly increases bending stiffness while adding relatively little weight, giving the construction excellent structural efficiency and a high strength-to-weight ratio.\n\nAdvantages:\n\u2022 High bending stiffness for low mass.\n\u2022 Efficient load carrying when the face sheets and core are properly bonded.\n\u2022 Lightweight construction used in selected aircraft panels and control surfaces.\n\nTypical Core Materials:\n\u2022 Aluminum honeycomb.\n\u2022 Nomex paper honeycomb.\n\u2022 Structural foam.\n\nWhy the other choices are incorrect:\n\u2022 Repairing a panel is not simply a matter of gluing a replacement skin to the core with any thermoplastic resin; approved repair procedures and materials are required.\n\u2022 Honeycomb is not inherently more corrosion-resistant in every construction; material, bonding, moisture ingress, and protection matter.\n\u2022 Fatigue resistance is not the defining reason stated by the key.\n\n\ud83d\udca1 Memory Hook: Core = face-sheet separation without much weight.\n\n\ud83c\udfaf Board Tip: Sandwich construction primarily improves bending stiffness and structural efficiency; follow approved repair data for damaged panels.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The purpose of spring tabs or servo tabs is to",
+          "questionType": "multiple_choice",
+          "choices": [
+            "assist the pilot in moving the control surfaces.",
+            "contribute to the static balance of the control surface.",
+            "make in-flight trim adjustments possible.",
+            "increase flight control effectiveness."
+          ],
+          "answerIndex": 0,
+          "answerText": "assist the pilot in moving the control surfaces.",
+          "explanation": "Correct answer: assist the pilot in moving the control surfaces.\n\nSpring tabs and servo tabs use aerodynamic force on a small tab to help move the main control surface, reducing the force the pilot must apply. A servo tab can move the main surface through aerodynamic action; a spring tab uses a spring mechanism so tab deflection assists when control forces become high.\n\nKey characteristics:\n\u2022 Reduce pilot control effort.\n\u2022 Use airflow over the tab to generate an assisting moment.\n\u2022 Differ from trim tabs, whose primary function is to relieve sustained control force.\n\nWhy the other choices are incorrect:\n\u2022 Static balance is a separate mass-distribution requirement.\n\u2022 In-flight trim adjustment is the primary role of a trim tab, not the general purpose of spring/servo tabs.\n\u2022 They assist movement rather than simply increasing control effectiveness in all conditions.\n\n\ud83d\udca1 Memory Hook: Servo/spring tab = aerodynamic help; trim tab = relieve sustained control force.\n\n\ud83c\udfaf Board Tip: Do not confuse servo tabs, spring tabs, balance tabs, and trim tabs\u2014they may look similar but perform different functions.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What is the purpose of refrigerating 2017 and 2024 aluminum alloy rivets after heat treatment?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To accelerate age hardening.",
+            "To relieve internal stresses.",
+            "To retard age hardening.",
+            "Relieve internal stresses."
+          ],
+          "answerIndex": 2,
+          "answerText": "To retard age hardening.",
+          "explanation": "Correct answer: To retard age hardening.\n\nRefrigerating freshly heat-treated 2017 and 2024 aluminum rivets slows natural age hardening, keeping the rivets soft enough to install for a limited period. After removal from refrigeration, the alloy begins to age-harden, so storage time and installation timing must follow the approved procedure.\n\nKey characteristics:\n\u2022 Delays age hardening after solution heat treatment.\n\u2022 Preserves workability for riveting.\n\u2022 Time and temperature controls are alloy- and procedure-specific.\n\nWhy the other choices are incorrect:\n\u2022 Refrigeration retards rather than accelerates age hardening.\n\u2022 It is not primarily a stress-relief treatment.\n\u2022 It does not inhibit corrosion once installed.\n\n\ud83d\udca1 Memory Hook: Refrigerate heat-treated rivets to slow hardening and preserve softness.\n\n\ud83c\udfaf Board Tip: This applies to specific age-hardening rivet alloys; follow the required time limits and storage procedure.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which procedure is correct when using a reamer to finish a drilled hole to the correct size?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Turn the reamer in the cutting direction when enlarging the hole and in the opposite direction to remove from the hole.",
+            "Turn the reamer only in the cutting direction.",
+            "Apply considerable pressure on the reamer when starting the cut and reduce the pressure when finishing the cut.",
+            "Do not turn the reamer in the cutting direction."
+          ],
+          "answerIndex": 1,
+          "answerText": "Turn the reamer only in the cutting direction.",
+          "explanation": "Correct answer: Turn the reamer only in the cutting direction.\n\nA reamer is used to bring a drilled hole to an accurate final diameter and improve its finish. It should be turned only in its cutting direction; turning it backward while engaged can dull or damage the cutting edges and may mar the hole.\n\nKey characteristics:\n\u2022 Removes a small amount of material for sizing and finishing.\n\u2022 Use the correct reamer size and suitable cutting fluid when specified.\n\u2022 Maintain alignment and avoid forcing the tool.\n\nWhy the other choices are incorrect:\n\u2022 Turning backward to remove the reamer can damage the cutting edges.\n\u2022 Excessive pressure is not appropriate; steady, controlled cutting is required.\n\u2022 \u201cDo not turn in the cutting direction\u201d is the opposite of correct use.\n\n\ud83d\udca1 Memory Hook: Reamer cuts forward only\u2014do not reverse while engaged.\n\n\ud83c\udfaf Board Tip: Drilling makes the hole; reaming brings it to accurate size and finish.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An airplane that has a tendency to gradually increase a pitching moment that has been set into motion has",
+          "questionType": "multiple_choice",
+          "choices": [
+            "poor longitudinal stability.",
+            "good lateral stability.",
+            "poor lateral stability.",
+            "good longitudinal stability"
+          ],
+          "answerIndex": 0,
+          "answerText": "poor longitudinal stability.",
+          "explanation": "Correct answer: poor longitudinal stability.\n\nAn aircraft that tends to increase a pitching motion after a disturbance has poor longitudinal stability. Longitudinal stability concerns pitch about the lateral axis; a stable aircraft tends to oppose the disturbance and return toward its trimmed condition.\n\nKey characteristics:\n\u2022 Longitudinal stability = pitch stability.\n\u2022 Center of gravity and tailplane/elevator characteristics influence it.\n\u2022 A divergent pitching response indicates instability.\n\nWhy the other choices are incorrect:\n\u2022 Lateral stability concerns roll.\n\u2022 Good lateral stability does not describe a growing pitching moment.\n\u2022 Good longitudinal stability would tend to oppose, not amplify, the pitching disturbance.\n\n\ud83d\udca1 Memory Hook: Longitudinal = pitch; growing pitch disturbance = poor stability.\n\n\ud83c\udfaf Board Tip: \u201cGradually increase\u201d signals a divergent or unstable response.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The dimensions of an MS20430AD-4-8 rivet are",
+          "questionType": "multiple_choice",
+          "choices": [
+            "1/8 inch in diameter and 1/4 inch long.",
+            "1/8 inch in diameter and 1/2 inch long.",
+            "4/16 inch in diameter and 8/32 inch long.",
+            "4/8 inch in diameter and 8/16 inch long."
+          ],
+          "answerIndex": 1,
+          "answerText": "1/8 inch in diameter and 1/2 inch long.",
+          "explanation": "Correct answer: 1/8 inch in diameter and 1/2 inch long.\n\nIn the MS20430AD-4-8 designation, the -4 indicates a rivet diameter of 4/32 inch, or 1/8 inch; the -8 indicates a length of 8/16 inch, or 1/2 inch, under the common aircraft rivet code convention used in the question.\n\nKey characteristics:\n\u2022 First dash number: diameter in 1/32-inch increments.\n\u2022 Second dash number: length in 1/16-inch increments.\n\u2022 The MS20430 series identifies a particular rivet head style; AD indicates the alloy/temper code in this designation.\n\nWhy the other choices are incorrect:\n\u2022 1/4 inch length corresponds to a different length code.\n\u2022 The diameter is not 4/16 or 4/8 inch.\n\u2022 The length is not 8/32 inch under the convention used here.\n\n\ud83d\udca1 Memory Hook: Rivet dash code: diameter in 32nds, length in 16ths.\n\n\ud83c\udfaf Board Tip: Decode each dash number separately; do not read the digits as direct fractions.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "If an aircraft\u2019s transparent plastic enclosures exhibit fine cracks which may extend in a network over or under the surface or through the plastic, the plastic is said to be",
+          "questionType": "multiple_choice",
+          "choices": [
+            "hazing",
+            "brinelling",
+            "crazing",
+            "peening"
+          ],
+          "answerIndex": 2,
+          "answerText": "crazing",
+          "explanation": "Correct answer: crazing.\n\nCrazing is a network of fine cracks in transparent plastic, often appearing on or beneath the surface. It may result from stress, chemical exposure, aging, or incompatible cleaning agents and can reduce optical quality and structural integrity.\n\nKey characteristics:\n\u2022 Fine, interconnected crack patterns.\n\u2022 Can occur on or below the surface.\n\u2022 Requires inspection and treatment according to the aircraft\u2019s plastic-window maintenance instructions.\n\nWhy the other choices are incorrect:\n\u2022 Hazing is a loss of clarity or a cloudy appearance, not specifically a network of cracks.\n\u2022 Brinelling is indentation damage associated with contact loading.\n\u2022 Peening is a mechanical surface-working process.\n\n\ud83d\udca1 Memory Hook: Crazing = a web of tiny cracks in plastic.\n\n\ud83c\udfaf Board Tip: Use only approved cleaners and polishing methods on aircraft transparencies; unsuitable chemicals can cause crazing.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An airplane which has good longitudinal stability should have a minimum tendency to",
+          "questionType": "multiple_choice",
+          "choices": [
+            "roll",
+            "pitch",
+            "yaw",
+            "drag"
+          ],
+          "answerIndex": 1,
+          "answerText": "pitch",
+          "explanation": "Correct answer: pitch.\n\nGood longitudinal stability means the aircraft tends to oppose disturbances in pitch and return toward its trimmed angle of attack or flight condition. The keyed answer is that it should have a minimum tendency to pitch away from equilibrium.\n\nKey characteristics:\n\u2022 Longitudinal stability concerns pitch.\n\u2022 It is influenced by center of gravity, tailplane, and aerodynamic moments.\n\u2022 Stability is a tendency to restore equilibrium, not a guarantee that pitch never changes.\n\nWhy the other choices are incorrect:\n\u2022 Roll is associated with lateral stability.\n\u2022 Yaw is associated with directional stability.\n\u2022 Drag is a force, not an axis of rotational stability.\n\n\ud83d\udca1 Memory Hook: Longitudinal = pitch; lateral = roll; directional = yaw.\n\n\ud83c\udfaf Board Tip: \u201cMinimum tendency to pitch\u201d is the exam\u2019s shorthand; technically, stable aircraft can pitch but tend to oppose a disturbance.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "If control cables are adjusted properly and the control surfaces tend to vibrate, the probable cause is",
+          "questionType": "multiple_choice",
+          "choices": [
+            "worn attachment fittings.",
+            "oil can effects on the control surfaces.",
+            "excessive cable tension.",
+            "incorrect mass balance."
+          ],
+          "answerIndex": 0,
+          "answerText": "worn attachment fittings.",
+          "explanation": "Correct answer: worn attachment fittings.\n\nIf control cables are correctly adjusted but control surfaces vibrate, worn attachment fittings can introduce looseness or play that allows the surface to move and vibrate. The supplied key selects worn fittings, but control-surface vibration can also have other causes and requires inspection.\n\nKey characteristics:\n\u2022 Check hinges, bearings, attachment points, and control linkage for wear or looseness.\n\u2022 Verify mass balance and cable tension according to the manual.\n\u2022 Flutter is a serious aeroelastic hazard and must not be dismissed as ordinary vibration.\n\nWhy the other choices are not the keyed answer:\n\u2022 Oil-canning refers to skin-panel deformation and may cause vibration in some cases.\n\u2022 Excessive cable tension is inconsistent with the stated correctly adjusted cables.\n\u2022 Incorrect mass balance can contribute to flutter, so it is not universally impossible; the supplied key simply selects worn attachment fittings.\n\n\ud83d\udca1 Memory Hook: Correct cable tension + vibrating surface \u2192 inspect for looseness and worn fittings.\n\n\ud83c\udfaf Board Tip: Any unexplained control-surface vibration needs prompt maintenance attention; do not assume it is benign.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The purpose of the vertical fin is to provide",
+          "questionType": "multiple_choice",
+          "choices": [
+            "directional stability.",
+            "longitudinal stability.",
+            "lateral stability.",
+            "drag reduction."
+          ],
+          "answerIndex": 0,
+          "answerText": "directional stability.",
+          "explanation": "Correct answer: directional stability.\n\nThe vertical fin provides directional stability, helping the aircraft\u2019s nose align with the relative wind after a yaw disturbance. Its aerodynamic force acts like a weather vane, tending to turn the aircraft back into the airflow.\n\nKey characteristics:\n\u2022 Directional stability is stability in yaw.\n\u2022 The vertical tail produces a restoring yawing moment.\n\u2022 The rudder, attached to the vertical tail, provides pilot-controlled yaw.\n\nWhy the other choices are incorrect:\n\u2022 Longitudinal stability concerns pitch.\n\u2022 Lateral stability concerns roll.\n\u2022 Drag reduction is not the primary purpose of the vertical fin.\n\n\ud83d\udca1 Memory Hook: Vertical fin = weather vane = directional stability.\n\n\ud83c\udfaf Board Tip: Fin provides stability; rudder provides active yaw control.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Cherrymax and Olympic-Lok rivets",
+          "questionType": "multiple_choice",
+          "choices": [
+            "utilize a rivet gun, special rivet set, and bucking bar for installation.",
+            "utilize a pulling tool for installation.",
+            "may be installed with ordinary hand tools.",
+            "are high strength rivets."
+          ],
+          "answerIndex": 1,
+          "answerText": "utilize a pulling tool for installation.",
+          "explanation": "Correct answer: utilize a pulling tool for installation.\n\nCherryMAX and Olympic-Lok are examples of blind rivet systems designed to be installed from one side when access to the back side is limited. They use a dedicated pulling tool to draw the fastener into its installed condition.\n\nKey characteristics:\n\u2022 Useful where conventional bucking-bar access is limited.\n\u2022 Require the correct tool and installation procedure.\n\u2022 Must be selected according to approved structural data and fastener specifications.\n\nWhy the other choices are incorrect:\n\u2022 They are not generally installed with a conventional rivet gun and bucking bar.\n\u2022 Ordinary hand tools are not a substitute for the specified pulling tool.\n\u2022 \u201cHigh strength\u201d alone does not describe the installation method asked about.\n\n\ud83d\udca1 Memory Hook: Blind rivet = one-side access + pulling tool.\n\n\ud83c\udfaf Board Tip: Use the exact approved blind fastener and installation tool; different blind rivet systems are not interchangeable.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A DD rivet is heat treated before use to",
+          "questionType": "multiple_choice",
+          "choices": [
+            "harden and increase strength.",
+            "relieve internal stresses.",
+            "soften to facilitate riveting.",
+            "inhibit corrosion when installed."
+          ],
+          "answerIndex": 2,
+          "answerText": "soften to facilitate riveting.",
+          "explanation": "Correct answer: soften to facilitate riveting.\n\nDD rivets (commonly 2024-T4 rivets in aircraft-maintenance terminology) are heat-treated and then refrigerated to retard age hardening before use. The immediate purpose of the pre-installation heat treatment in this question is to soften the rivet so it can be driven; refrigeration helps maintain that soft condition for a limited time.\n\nKey characteristics:\n\u2022 Soft condition makes riveting easier.\n\u2022 Age hardening increases strength with time after heat treatment.\n\u2022 Storage and installation timing must follow the approved procedure.\n\nWhy the other choices are incorrect:\n\u2022 The pre-installation treatment is not performed to maximize hardness before driving.\n\u2022 It is not primarily a stress-relief treatment.\n\u2022 It does not inhibit corrosion.\n\n\ud83d\udca1 Memory Hook: DD rivets are softened for installation, then age-harden.\n\n\ud83c\udfaf Board Tip: Do not confuse the reason for heat treating with the reason for refrigerating: heat treatment enables a soft condition; refrigeration slows age hardening.",
+          "tags": [
+            "aircraft materials",
+            "mock exam",
+            "2016"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "questionTable": null,
+          "explanationCard": null,
           "expectedAnswer": null,
           "acceptedDeviation": 0
         }
