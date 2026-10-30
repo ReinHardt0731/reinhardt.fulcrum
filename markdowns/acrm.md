@@ -574,3 +574,116 @@
 | Radiography (X-ray) | Internal discontinuities |
 
 ---
+## ATA Chapters (ATA 100 / iSpec 2200)
+
+The ATA chapter system is the standard numbering used to organize aircraft maintenance documentation. Chapters are grouped into sections.
+
+### 1. Aircraft General
+
+| Chapter | Title |
+| ------- | ----- |
+| 05 | Time Limits / Maintenance Checks |
+| 06 | Dimensions and Areas |
+| 07 | Lifting and Shoring |
+| 08 | Leveling and Weighing |
+| 09 | Towing and Taxiing |
+| 10 | Parking, Mooring, Storage and Return to Service |
+| 11 | Placards and Markings |
+| 12 | Servicing |
+| 18 | Vibration and Noise Analysis (Helicopter) |
+
+### 2. Airframe Systems
+
+| Chapter | Title |
+| ------- | ----- |
+| 20 | Standard Practices – Airframe |
+| 21 | Air Conditioning |
+| 22 | Auto Flight |
+| 23 | Communications |
+| 24 | Electrical Power |
+| 25 | Equipment / Furnishings |
+| 26 | Fire Protection |
+| 27 | Flight Controls |
+| 28 | Fuel |
+| 29 | Hydraulic Power |
+| 30 | Ice and Rain Protection |
+| 31 | Indicating / Recording Systems |
+| 32 | Landing Gear |
+| 33 | Lights |
+| 34 | Navigation |
+| 35 | Oxygen |
+| 36 | Pneumatic |
+| 37 | Vacuum |
+| 38 | Water / Waste |
+| 39 | Electrical-Electronic Panels and Multipurpose Components |
+| 41 | Water Ballast |
+| 42 | Integrated Modular Avionics |
+| 44 | Cabin Systems |
+| 45 | Central Maintenance System (Diagnostic and Maintenance System) |
+| 46 | Information Systems |
+| 47 | Nitrogen Generation System |
+| 49 | Airborne Auxiliary Power (APU) |
+| 50 | Cargo and Accessory Compartments |
+
+### 3. Structures
+
+| Chapter | Title |
+| ------- | ----- |
+| 51 | Standard Practices and Structures – General |
+| 52 | Doors |
+| 53 | Fuselage |
+| 54 | Nacelles / Pylons |
+| 55 | Stabilizers |
+| 56 | Windows |
+| 57 | Wings |
+
+### 4. Propeller / Rotor Systems
+
+| Chapter | Title |
+| ------- | ----- |
+| 60 | Standard Practices – Propeller / Rotor |
+| 61 | Propellers / Propulsion |
+| 62 | Main Rotor(s) |
+| 63 | Main Rotor Drive(s) |
+| 64 | Tail Rotor |
+| 65 | Tail Rotor Drive |
+| 66 | Folding Blades / Pylon |
+| 67 | Rotors Flight Control |
+| 68 | Propeller Brake |
+
+### 5. Powerplant
+
+| Chapter | Title |
+| ------- | ----- |
+| 70 | Standard Practices – Engines |
+| 71 | Powerplant |
+| 72 | Engine (Turbine / Turboprop / Ducted Fan / Unducted Fan; Reciprocating) |
+| 73 | Engine Fuel and Control |
+| 74 | Ignition |
+| 75 | Air (Engine Bleed Air) |
+| 76 | Engine Controls |
+| 77 | Engine Indicating |
+| 78 | Exhaust |
+| 79 | Oil |
+| 80 | Starting |
+| 81 | Turbines (Reciprocating Engines) |
+| 82 | Water Injection |
+| 83 | Accessory Gearboxes (Engine Driven) |
+| 84 | Propulsion Augmentation |
+| 85 | Fuel Cell Systems |
+
+### 6. Other / Special
+
+| Chapter | Title |
+| ------- | ----- |
+| 91 | Charts (Wiring Diagrams) |
+| 92 | Electrical System Installation (used by some manufacturers, e.g. wiring) |
+
+### Notes
+
+- **Sub-chapters:** each chapter is divided into **System–Subsystem–Unit** (e.g., **ATA 32-41-00** is Landing Gear → Nose Gear → Steering).
+- **Unused numbers:** gaps (e.g., 13–17, 19, 40, 43, 48, 58–59, 69, 86–90) are reserved or unassigned.
+- **Memory tip:** 21–49 is mostly systems, 51–57 is structures, 60s is rotors/props, and 70s is engines.
+- **Newer standards:** ATA 100 has been superseded by **iSpec 2200** and, in many places, **S1000D**, but the chapter numbering is still the same.
+
+Chapter 92 and a few of the newer numbers vary by manufacturer, so check the specific aircraft's maintenance manual if you need exact usage. If you're reviewing for your board exam, I can also make a quiz or flashcards for these.
