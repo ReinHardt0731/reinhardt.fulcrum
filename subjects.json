@@ -210,10 +210,14 @@
         {
           "title": "Aircraft Materials | Rivet Codes",
           "file": "chapters/aircraft-materials-rivet-codes.json"
+        },
+        {
+          "title": "PreBoards Mock Exam",
+          "file": "chapters/preboards-mock-exam.json"
         }
       ],
       "notesPath": "acrm.md",
-      "updatedAt": "2026-11-01T00:00:00.000Z"
+      "updatedAt": "2026-11-02T00:00:00.000Z"
     },
     {
       "id": "aerodynamics",
