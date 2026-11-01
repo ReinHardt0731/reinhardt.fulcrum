@@ -1,0 +1,15 @@
+{
+  "title": "Aircraft Materials | Rivet Codes",
+  "questions": [
+    {"question":"For 1100 pure aluminum, what third code and head marking are listed?","questionType":"short_answer","answerText":"A, no marking","explanation":"The table lists code A and no head marking for 1100 pure aluminum.","tags":["aircraft materials","rivet codes"]},
+    {"question":"For 2117 aluminum alloy, what third code and head marking are listed?","questionType":"short_answer","answerText":"AD, dimple","explanation":"The table lists code AD with a dimple marking for 2117.","tags":["aircraft materials","rivet codes"]},
+    {"question":"For 5056 aluminum alloy, what third code and head marking are listed?","questionType":"short_answer","answerText":"B, raised cross","explanation":"The table lists code B with a raised cross for 5056.","tags":["aircraft materials","rivet codes"]},
+    {"question":"For 2017 aluminum alloy, what third code and head marking are listed?","questionType":"short_answer","answerText":"D, raised dot","explanation":"The table lists code D with a raised dot for 2017.","tags":["aircraft materials","rivet codes"]},
+    {"question":"For 2024 aluminum alloy, what third code and head marking are listed?","questionType":"short_answer","answerText":"DD, 2 raised dots","explanation":"The table lists code DD with two raised dots for 2024.","tags":["aircraft materials","rivet codes"]},
+    {"question":"For 7050T73 aluminum alloy, what third code and head marking are listed?","questionType":"short_answer","answerText":"E, raised circle","explanation":"The table lists code E with a raised circle for 7050T73.","tags":["aircraft materials","rivet codes"]},
+    {"question":"What third code is listed for corrosion-resistant steel rivets?","questionType":"short_answer","answerText":"F","explanation":"Corrosion-resistant steel is assigned code F.","tags":["aircraft materials","rivet codes"]},
+    {"question":"For Monel rivets, what third code and head marking are listed?","questionType":"short_answer","answerText":"M, 2 recessed dimples","explanation":"The table lists code M with two recessed dimples for Monel.","tags":["aircraft materials","rivet codes"]},
+    {"question":"What does the fourth rivet code indicate?","questionType":"short_answer","answerText":"Shank diameter in 1/32 inch","explanation":"The fourth code gives shank diameter in 1/32-inch increments.","tags":["aircraft materials","rivet codes"]},
+    {"question":"What does the fifth rivet code indicate?","questionType":"short_answer","answerText":"Length in increments of 1/16 inch","explanation":"The fifth code gives length in 1/16-inch increments.","tags":["aircraft materials","rivet codes"]}
+  ]
+}

@@ -166,10 +166,54 @@
         {
           "title": "Aircraft Materials Mock Exam 2016 (51-100)",
           "file": "chapters/aircraft-materials-mock-2016-051-100.json"
+        },
+        {
+          "title": "Aircraft Materials | Composite Direction",
+          "file": "chapters/aircraft-materials-composite-direction.json"
+        },
+        {
+          "title": "Aircraft Materials | Cleaning and Protecting Oils",
+          "file": "chapters/aircraft-materials-cleaning-and-protecting-oils.json"
+        },
+        {
+          "title": "Aircraft Materials | Metal Damage",
+          "file": "chapters/aircraft-materials-metal-damage.json"
+        },
+        {
+          "title": "Aircraft Materials | Aluminum Alloy 4-Digit System",
+          "file": "chapters/aircraft-materials-aluminum-4-digit-system.json"
+        },
+        {
+          "title": "Aircraft Materials | SAE 4-Digit System",
+          "file": "chapters/aircraft-materials-sae-4-digit-system.json"
+        },
+        {
+          "title": "Aircraft Materials | Temper Basics",
+          "file": "chapters/aircraft-materials-temper-basics.json"
+        },
+        {
+          "title": "Aircraft Materials | H-Tempers",
+          "file": "chapters/aircraft-materials-h-tempers.json"
+        },
+        {
+          "title": "Aircraft Materials | T-Tempers (Current Standard)",
+          "file": "chapters/aircraft-materials-t-tempers-current.json"
+        },
+        {
+          "title": "Aircraft Materials | Temper Designation (Older Simplified Version)",
+          "file": "chapters/aircraft-materials-temper-designation-older.json"
+        },
+        {
+          "title": "Aircraft Materials | Current vs. Older Temper Designation",
+          "file": "chapters/aircraft-materials-temper-comparison.json"
+        },
+        {
+          "title": "Aircraft Materials | Rivet Codes",
+          "file": "chapters/aircraft-materials-rivet-codes.json"
         }
       ],
       "notesPath": "acrm.md",
-      "updatedAt": "2026-07-22T04:34:44.450Z"
+      "updatedAt": "2026-11-01T00:00:00.000Z"
     },
     {
       "id": "aerodynamics",
@@ -463,6 +507,10 @@
         {
           "title": "PCAR | Part 13 Accident and Incident Report",
           "file": "chapters/pcar-part-13-accident-and-incident-report.json"
+        },
+        {
+          "title": "PCAR | Part Titles Recall Quiz",
+          "file": "chapters/pcar-titles-recall.json"
         },
         {
           "title": "PD 1570",

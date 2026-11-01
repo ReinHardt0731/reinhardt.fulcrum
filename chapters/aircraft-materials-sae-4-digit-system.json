@@ -1,0 +1,20 @@
+{
+  "title": "Aircraft Materials | SAE 4-Digit System",
+  "questions": [
+    {"question":"In the SAE 4-digit system, what does the first digit identify?","questionType":"short_answer","answerText":"Basic alloying element","explanation":"The first digit identifies the basic alloying element.","tags":["aircraft materials","steel"]},
+    {"question":"What does the second digit indicate in the SAE 4-digit system?","questionType":"short_answer","answerText":"Percentage of the basic alloying element","explanation":"The second digit indicates the percentage of the basic alloying element.","tags":["aircraft materials","steel"]},
+    {"question":"What do the third and fourth digits indicate in the SAE system?","questionType":"short_answer","answerText":"Percentage of carbon in the alloy","explanation":"The third and fourth digits indicate the percentage of carbon in the alloy.","tags":["aircraft materials","steel"]},
+    {"question":"What SAE number group is listed for carbon steel?","questionType":"short_answer","answerText":"1XXX","explanation":"Carbon steel is listed in the 1XXX group.","tags":["aircraft materials","steel"]},
+    {"question":"What SAE number group is listed for nickel steel?","questionType":"short_answer","answerText":"2XXX","explanation":"Nickel steel is listed in the 2XXX group.","tags":["aircraft materials","steel"]},
+    {"question":"What SAE number group is listed for nickel-chromium steel?","questionType":"short_answer","answerText":"3XXX","explanation":"Nickel-chromium steel is listed in the 3XXX group.","tags":["aircraft materials","steel"]},
+    {"question":"What SAE number group is listed for chromium-molybdenum steel?","questionType":"short_answer","answerText":"41XX","explanation":"Chromium-molybdenum steel is listed in the 41XX group.","tags":["aircraft materials","steel"]},
+    {"question":"What SAE number group is listed for chromium steel?","questionType":"short_answer","answerText":"5XXX","explanation":"Chromium steel is listed in the 5XXX group.","tags":["aircraft materials","steel"]},
+    {"question":"What SAE number group is listed for chromium-vanadium steel?","questionType":"short_answer","answerText":"6XXX","explanation":"Chromium-vanadium steel is listed in the 6XXX group.","tags":["aircraft materials","steel"]},
+    {"question":"What SAE number group is listed for national emergency steel?","questionType":"short_answer","answerText":"8XXX","explanation":"National emergency steel is listed in the 8XXX group.","tags":["aircraft materials","steel"]},
+    {"question":"What SAE number group is listed for silicon-manganese steel?","questionType":"short_answer","answerText":"9XXX","explanation":"Silicon-manganese steel is listed in the 9XXX group.","tags":["aircraft materials","steel"]},
+    {"question":"Which steel structure is described as a mixture of iron and carbon?","questionType":"short_answer","answerText":"Cementite","explanation":"Cementite is described as a mixture of iron and carbon.","tags":["aircraft materials","steel structures"]},
+    {"question":"Which steel structure is associated with steel worked up to its critical temperature?","questionType":"short_answer","answerText":"Austenite","explanation":"Austenite is associated with steel worked up to its critical temperature.","tags":["aircraft materials","steel structures"]},
+    {"question":"What is described as the hardest steel structure?","questionType":"short_answer","answerText":"Martensite","explanation":"Martensite is described as the hardest structure.","tags":["aircraft materials","steel structures"]},
+    {"question":"What carbon content is listed for eutectoid?","questionType":"short_answer","answerText":"0.85% carbon","explanation":"The table lists eutectoid as 0.85% carbon.","tags":["aircraft materials","steel structures"]}
+  ]
+}

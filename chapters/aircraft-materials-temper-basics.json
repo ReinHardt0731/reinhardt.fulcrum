@@ -1,0 +1,17 @@
+{
+  "title": "Aircraft Materials | Temper Basics",
+  "questions": [
+    {"question":"Which temper process dissolves alloying elements into aluminum before a quick quench?","questionType":"short_answer","answerText":"Solution heat treatment","explanation":"Solution heat treatment dissolves alloying elements into the aluminum, followed by a quench.","tags":["aircraft materials","tempers"]},
+    {"question":"What is the room-temperature process in which metal hardens over time?","questionType":"short_answer","answerText":"Natural aging","explanation":"Natural aging hardens metal at room temperature over time.","tags":["aircraft materials","tempers"]},
+    {"question":"What process heats metal at a moderate temperature to accelerate precipitation hardening?","questionType":"short_answer","answerText":"Artificial aging","explanation":"Artificial aging heats metal at a moderate temperature to accelerate precipitation hardening.","tags":["aircraft materials","tempers"]},
+    {"question":"What is aging past peak strength to gain stability and corrosion resistance called?","questionType":"short_answer","answerText":"Overaging","explanation":"Overaging trades some strength for stability and corrosion resistance.","tags":["aircraft materials","tempers"]},
+    {"question":"What room-temperature shaping or deformation process strengthens metal?","questionType":"short_answer","answerText":"Cold work","explanation":"Cold work shapes or deforms metal at room temperature and strengthens it.","tags":["aircraft materials","tempers"]},
+    {"question":"What treatment keeps material properties from changing over time?","questionType":"short_answer","answerText":"Stabilizing","explanation":"Stabilizing keeps properties from changing over time.","tags":["aircraft materials","tempers"]},
+    {"question":"What process heats and slowly cools metal to soften it?","questionType":"short_answer","answerText":"Annealing","explanation":"Annealing heats and slowly cools metal to soften it.","tags":["aircraft materials","tempers"]},
+    {"question":"Which basic temper letter means as fabricated?","questionType":"short_answer","answerText":"F","explanation":"F means as fabricated, with no control over properties.","tags":["aircraft materials","tempers"]},
+    {"question":"Which basic temper letter means annealed and is the softest, most ductile condition?","questionType":"short_answer","answerText":"O","explanation":"O means annealed and is the softest, most ductile condition.","tags":["aircraft materials","tempers"]},
+    {"question":"Which basic temper letter means strain hardened?","questionType":"short_answer","answerText":"H","explanation":"H means strain hardened and applies to non-heat-treatable alloys.","tags":["aircraft materials","tempers"]},
+    {"question":"Which basic temper letter means solution heat treated but still unstable?","questionType":"short_answer","answerText":"W","explanation":"W means solution heat treated in an unstable condition whose properties change at room temperature.","tags":["aircraft materials","tempers"]},
+    {"question":"Which basic temper letter means thermally treated to a stable temper?","questionType":"short_answer","answerText":"T","explanation":"T means thermally treated to a stable temper and applies to heat-treatable alloys.","tags":["aircraft materials","tempers"]}
+  ]
+}

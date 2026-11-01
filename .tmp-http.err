@@ -1,0 +1,32 @@
+127.0.0.1 - - [17/Oct/2026 09:44:13] "GET /.tmp-drawer-check.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:44:14] "GET /learn.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:44:14] "GET /styles.css?v=learn-narrow-layout-20261013 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:44:14] "GET /vendor/katex/katex.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:44:14] "GET /vendor/katex/contrib/auto-render.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:44:14] "GET /learn.js?v=structures-design-mock-i-ii-20261017-2 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:44:14] "GET /vendor/nerdamer.all.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:44:14] "GET /vendor/katex/katex.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:44:14] "GET /pomodoro.js?v=pomodoro-duration-units-20261015 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:44:14] "GET /shared.js?v=structures-design-mock-i-ii-20261017-2 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:44:15] "GET /asset/alarm.mp3 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:44:15] "GET /subjects.json?v=structures-design-mock-i-ii-20261017-2 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:44:16] "GET /chapters/structures-design-mock-exam-i.json HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:44:16] "GET /chapters/structures-design-mock-ii.json HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:44:17] code 404, message File not found
+127.0.0.1 - - [17/Oct/2026 09:44:17] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [17/Oct/2026 09:45:51] "GET /.tmp-drawer-check.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:45:51] "GET /learn.html HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:45:52] "GET /vendor/katex/katex.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:45:52] "GET /vendor/katex/katex.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:45:52] "GET /vendor/katex/contrib/auto-render.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:45:52] "GET /learn.js?v=structures-design-mock-i-ii-20261017-2 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:45:52] "GET /vendor/nerdamer.all.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:45:52] "GET /styles.css?v=learn-narrow-layout-20261013 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:45:52] "GET /pomodoro.js?v=pomodoro-duration-units-20261015 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:45:52] "GET /shared.js?v=structures-design-mock-i-ii-20261017-2 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:45:52] "GET /asset/alarm.mp3 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:45:53] "GET /subjects.json?v=structures-design-mock-i-ii-20261017-2 HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:45:54] "GET /chapters/structures-design-mock-exam-i.json HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:45:54] "GET /chapters/structures-design-mock-ii.json HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 09:45:55] code 404, message File not found
+127.0.0.1 - - [17/Oct/2026 09:45:55] "GET /favicon.ico HTTP/1.1" 404 -

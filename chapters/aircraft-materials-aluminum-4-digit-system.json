@@ -1,0 +1,18 @@
+{
+  "title": "Aircraft Materials | Aluminum Alloy 4-Digit System",
+  "questions": [
+    {"question":"In the 4-digit aluminum system, what does the first digit identify?","questionType":"short_answer","answerText":"Alloy type","explanation":"The first digit identifies alloy type.","tags":["aircraft materials","aluminum"]},
+    {"question":"What does the second digit in the 4-digit aluminum system indicate?","questionType":"short_answer","answerText":"Modification of the alloy","explanation":"The second digit indicates modification of the alloy.","tags":["aircraft materials","aluminum"]},
+    {"question":"What do the third and fourth digits indicate in the 4-digit aluminum system?","questionType":"short_answer","answerText":"Purity of aluminum (1% + 0.XX%)","explanation":"The third and fourth digits indicate aluminum purity.","tags":["aircraft materials","aluminum"]},
+    {"question":"Which aluminum alloy series is commercially pure aluminum?","questionType":"short_answer","answerText":"1XXX","explanation":"Aluminum is in the 1XXX series.","tags":["aircraft materials","aluminum"]},
+    {"question":"Which aluminum alloy series uses copper as its main alloying element?","questionType":"short_answer","answerText":"2XXX","explanation":"Copper alloys are in the 2XXX series.","tags":["aircraft materials","aluminum"]},
+    {"question":"Which aluminum alloy series uses manganese?","questionType":"short_answer","answerText":"3XXX","explanation":"Manganese alloys are in the 3XXX series.","tags":["aircraft materials","aluminum"]},
+    {"question":"Which aluminum alloy series uses silicon?","questionType":"short_answer","answerText":"4XXX","explanation":"Silicon alloys are in the 4XXX series.","tags":["aircraft materials","aluminum"]},
+    {"question":"Which aluminum alloy series uses magnesium?","questionType":"short_answer","answerText":"5XXX","explanation":"Magnesium alloys are in the 5XXX series.","tags":["aircraft materials","aluminum"]},
+    {"question":"Which aluminum alloy series uses magnesium and silicon?","questionType":"short_answer","answerText":"6XXX","explanation":"Magnesium-and-silicon alloys are in the 6XXX series.","tags":["aircraft materials","aluminum"]},
+    {"question":"Which aluminum alloy series uses zinc?","questionType":"short_answer","answerText":"7XXX","explanation":"Zinc alloys are in the 7XXX series.","tags":["aircraft materials","aluminum"]},
+    {"question":"Which aluminum alloy series is used for other elements?","questionType":"short_answer","answerText":"8XXX","explanation":"Other elements are grouped in the 8XXX series.","tags":["aircraft materials","aluminum"]},
+    {"question":"How is cast metal formed?","questionType":"short_answer","answerText":"Molten metal poured into a mold","explanation":"Cast metal is made by pouring molten metal into a mold.","tags":["aircraft materials","aluminum","manufacturing"]},
+    {"question":"What does wrought mean?","questionType":"short_answer","answerText":"Metal worked into shape","explanation":"Wrought metal is worked into shape.","tags":["aircraft materials","aluminum","manufacturing"]}
+  ]
+}

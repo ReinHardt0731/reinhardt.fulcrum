@@ -1,0 +1,10 @@
+{
+  "title": "Aircraft Materials | Composite Direction",
+  "questions": [
+    {"question":"In fabric, which direction runs along the width?","questionType":"short_answer","answerText":"Warp direction","explanation":"Warp direction runs along the width.","tags":["aircraft materials","composites"]},
+    {"question":"Which fabric direction runs along the height?","questionType":"short_answer","answerText":"Fill","explanation":"Fill runs along the height.","tags":["aircraft materials","composites"]},
+    {"question":"What term describes the diagonal fabric direction?","questionType":"short_answer","answerText":"Bias","explanation":"Bias is diagonal.","tags":["aircraft materials","composites"]},
+    {"question":"What runs parallel to the 0° direction?","questionType":"short_answer","answerText":"Selvage","explanation":"Selvage runs parallel to the 0° direction.","tags":["aircraft materials","composites"]},
+    {"question":"What is the main direction of a honeycomb structure called?","questionType":"short_answer","answerText":"Ribbon","explanation":"Ribbon is the main direction of the honeycomb structure.","tags":["aircraft materials","composites"]}
+  ]
+}

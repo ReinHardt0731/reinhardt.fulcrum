@@ -1,0 +1,14 @@
+{
+  "title": "Aircraft Materials | H-Tempers",
+  "questions": [
+    {"question":"In an HXX designation, what does first-X code 1 mean?","questionType":"short_answer","answerText":"Cold worked only (no anneal)","explanation":"A first X of 1 means cold worked only, with no anneal.","tags":["aircraft materials","H-tempers"]},
+    {"question":"In an HXX designation, what does first-X code 2 mean?","questionType":"short_answer","answerText":"Cold worked + partial anneal","explanation":"A first X of 2 means cold worked plus partial anneal.","tags":["aircraft materials","H-tempers"]},
+    {"question":"In an HXX designation, what does first-X code 3 mean?","questionType":"short_answer","answerText":"Cold worked + stabilized","explanation":"A first X of 3 means cold worked plus stabilized.","tags":["aircraft materials","H-tempers"]},
+    {"question":"In an HXX designation, what does first-X code 4 mean?","questionType":"short_answer","answerText":"Cold worked + baked","explanation":"A first X of 4 means cold worked plus baked.","tags":["aircraft materials","H-tempers"]},
+    {"question":"In an HXX designation, what degree of strain hardening does second-X code 2 represent?","questionType":"short_answer","answerText":"¼ hard","explanation":"A second X of 2 represents quarter hard.","tags":["aircraft materials","H-tempers"]},
+    {"question":"In an HXX designation, what degree of strain hardening does second-X code 4 represent?","questionType":"short_answer","answerText":"½ hard","explanation":"A second X of 4 represents half hard.","tags":["aircraft materials","H-tempers"]},
+    {"question":"In an HXX designation, what degree of strain hardening does second-X code 6 represent?","questionType":"short_answer","answerText":"¾ hard","explanation":"A second X of 6 represents three-quarter hard.","tags":["aircraft materials","H-tempers"]},
+    {"question":"In an HXX designation, what degree of strain hardening does second-X code 8 represent?","questionType":"short_answer","answerText":"Fully hard","explanation":"A second X of 8 represents fully hard.","tags":["aircraft materials","H-tempers"]},
+    {"question":"In an HXX designation, what degree of strain hardening does second-X code 9 represent?","questionType":"short_answer","answerText":"Extra hard","explanation":"A second X of 9 represents extra hard.","tags":["aircraft materials","H-tempers"]}
+  ]
+}

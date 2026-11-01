@@ -1,0 +1,9 @@
+{
+  "title": "Aircraft Materials | Metal Damage",
+  "questions": [
+    {"question":"What type of damage results in a cross-sectional change?","questionType":"short_answer","answerText":"Nicks","explanation":"Nicks result in a cross-sectional change.","tags":["aircraft materials","metal damage"]},
+    {"question":"What damage has broken edges without a crack?","questionType":"short_answer","answerText":"Gouge","explanation":"A gouge has broken edges without a crack.","tags":["aircraft materials","metal damage"]},
+    {"question":"What type of damage results from surface erosion?","questionType":"short_answer","answerText":"Abrasion","explanation":"Abrasion results from surface erosion.","tags":["aircraft materials","metal damage"]},
+    {"question":"What damage consists of punctures through the complete thickness?","questionType":"short_answer","answerText":"Holes","explanation":"Holes are punctures that breach the complete thickness.","tags":["aircraft materials","metal damage"]}
+  ]
+}

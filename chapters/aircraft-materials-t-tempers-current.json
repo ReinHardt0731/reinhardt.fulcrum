@@ -1,0 +1,15 @@
+{
+  "title": "Aircraft Materials | T-Tempers (Current Standard)",
+  "questions": [
+    {"question":"What sequence defines T1 in the current standard?","questionType":"short_answer","answerText":"Natural aging after cooling from elevated-temperature shaping","explanation":"T1 is cooled from an elevated-temperature shaping process and naturally aged.","tags":["aircraft materials","T-tempers"]},
+    {"question":"What extra step is added to T2 before natural aging?","questionType":"short_answer","answerText":"Cold work","explanation":"T2 adds cold work before natural aging after cooling from elevated-temperature shaping.","tags":["aircraft materials","T-tempers"]},
+    {"question":"What three steps define T3?","questionType":"short_answer","answerText":"Solution heat treated, cold worked, and naturally aged","explanation":"T3 is solution heat treated, cold worked, and naturally aged.","tags":["aircraft materials","T-tempers"]},
+    {"question":"What two steps define T4?","questionType":"short_answer","answerText":"Solution heat treated and naturally aged","explanation":"T4 is solution heat treated and naturally aged, without the cold work in T3.","tags":["aircraft materials","T-tempers"]},
+    {"question":"What sequence defines T5, which does not use solution heat treatment?","questionType":"short_answer","answerText":"Cooled from elevated-temperature shaping and artificially aged","explanation":"T5 is cooled from an elevated-temperature shaping process and artificially aged, without solution treatment.","tags":["aircraft materials","T-tempers"]},
+    {"question":"What two treatments define T6?","questionType":"short_answer","answerText":"Solution heat treated and artificially aged","explanation":"T6 is solution heat treated and artificially aged.","tags":["aircraft materials","T-tempers"]},
+    {"question":"What defines T7 after solution heat treatment?","questionType":"short_answer","answerText":"Artificially overaged","explanation":"T7 is solution heat treated and artificially overaged.","tags":["aircraft materials","T-tempers"]},
+    {"question":"In T8, does cold work happen before or after artificial aging?","questionType":"short_answer","answerText":"Before artificial aging","explanation":"T8 is solution heat treated, cold worked, and then artificially aged.","tags":["aircraft materials","T-tempers"]},
+    {"question":"In T9, does cold work happen before or after artificial aging?","questionType":"short_answer","answerText":"After artificial aging","explanation":"T9 is solution heat treated and artificially aged before cold work.","tags":["aircraft materials","T-tempers"]},
+    {"question":"What steps are added to cooled elevated-temperature shaping to make T10?","questionType":"short_answer","answerText":"Cold work and artificial aging","explanation":"T10 is cooled from elevated-temperature shaping, cold worked, and artificially aged.","tags":["aircraft materials","T-tempers"]}
+  ]
+}

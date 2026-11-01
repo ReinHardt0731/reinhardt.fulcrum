@@ -1,4 +1,4 @@
-import { initHomePage } from "./shared.js?v=aircraft-materials-2016-20261029-1";
+import { initHomePage } from "./shared.js?v=aircraft-materials-reference-20261101-1";
 
 if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
