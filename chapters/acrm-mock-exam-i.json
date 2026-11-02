@@ -686,9 +686,9 @@
         "Split"
       ],
       "questionType": "multiple_choice",
-      "answerIndex": 3,
-      "answerText": "Split",
-      "explanation": "A split is a separation of the wood along the grain, extending through the member, here caused by driving a screw into thin wood.\n\n**Why the other choices are incorrect:**\n- Compression → Crushing or buckling of fibers under load.\n- Check → A lengthwise separation across the rings caused by drying.\n- Shake → A separation along the grain between growth rings, present in the living tree.\n\n**Differentiate Similar Concepts:**\n- Split → Through-separation along the grain from mechanical cause.\n- Check → Drying crack.\n- Shake → Ring separation from growth.\n- Compression failure → Crushed fibers.\n\n**💡 Memory Hook:**\nScrew in thin wood, it splits.\n\n**🎯 Board Tip:**\nLook for the cause: drying means check, growth means shake, mechanical means split.",
+      "answerIndex": 2,
+      "answerText": "Shake",
+      "explanation": "A shake is a lengthwise separation of the wood along the grain. In this item, the screw drove the fibers apart along the grain of the thin member, and the exam key classifies that grain-direction separation as a shake.\n\n**Why the other choices are incorrect:**\n- Compression → Crushing or buckling of the fibers under load, not a separation along the grain.\n- Check → A lengthwise separation across the growth rings, caused by drying.\n- Split → A separation that runs completely through the member, usually from impact or over-driving.\n\n**Differentiate Similar Concepts:**\n- Shake → Separation along the grain (between or along the growth rings).\n- Check → Drying crack across the rings.\n- Split → Separation all the way through the member.\n- Compression failure → Crushed or wrinkled fibers.\n\n**💡 Memory Hook:**\nShake = the grain shakes apart lengthwise.\n\n**🎯 Board Tip:**\nDefinitions of shake, check, and split vary slightly between textbooks. Follow the wording of your reviewer's key for this item.",
       "tags": [
         "ACRM",
         "mock exam",
@@ -998,9 +998,9 @@
         "Abrasive wheel"
       ],
       "questionType": "multiple_choice",
-      "answerIndex": 2,
-      "answerText": "Chemical paint stripper",
-      "explanation": "Source caution: The provided answer key flags this item for verification against your reviewer because wording can vary by reference.\n\nRadomes must stay radio-transparent and keep a precise thickness. Abrasive methods can thin or damage the laminate, so an approved chemical stripper (used per the manufacturer's data) is the preferred way to remove paint.\n\n**Why the other choices are incorrect:**\n- Dry sanding → Removes laminate and changes thickness.\n- Bead blasting → Can erode the fiberglass surface.\n- Abrasive wheel → Too aggressive for a thin laminate.\n\n**Differentiate Similar Concepts:**\n- Chemical stripper → Removes coating, spares the laminate when used correctly.\n- Abrasive methods → Remove material from the part too.\n\n**💡 Memory Hook:**\nRadome: strip, don't scrape.\n\n**🎯 Board Tip:**\nAlways check the radome manufacturer's repair manual, because thickness and paint type affect radar performance.",
+      "answerIndex": 0,
+      "answerText": "Dry sanding",
+      "explanation": "For a fiberglass radome, light, controlled dry sanding removes the old paint without soaking the laminate or eroding it. Chemical strippers can attack the resin and seep into the laminate, and aggressive blasting or wheels can thin it. Keep the sanding light so the radome keeps its thickness and radio transparency.\n\n**Why the other choices are incorrect:**\n- Bead blasting → Can erode the fiberglass surface and thin the laminate.\n- Chemical paint stripper → Can attack the resin and soak into the laminate.\n- Abrasive wheel → Too aggressive for a thin laminate.\n\n**Differentiate Similar Concepts:**\n- Dry sanding → Controlled, light removal of the coating only.\n- Blasting or wheel → Removes material from the part too.\n- Chemical stripper → Risk to resin and laminate.\n\n**💡 Memory Hook:**\nRadome: sand it light, keep it thin.\n\n**🎯 Board Tip:**\nAlways check the radome manufacturer's repair manual, because thickness and paint build-up affect radar performance.",
       "tags": [
         "ACRM",
         "mock exam",
@@ -1166,9 +1166,9 @@
         "Reducing"
       ],
       "questionType": "multiple_choice",
-      "answerIndex": 1,
-      "answerText": "Oxidizing",
-      "explanation": "Brazing (and bronze welding) uses a slightly oxidizing flame, with a little excess oxygen, which helps the filler flow and avoids carbon contamination.\n\n**Why the other choices are incorrect:**\n- Carburizing → Used for aluminum and some hard-facing.\n- Neutral → Used for welding steel.\n- Reducing → Another name for a carburizing (excess fuel) flame.\n\n**Differentiate Similar Concepts:**\n- Neutral → Steel welding.\n- Carburizing (reducing) → Aluminum welding.\n- Oxidizing → Brazing and bronze welding.\n\n**💡 Memory Hook:**\nBrazing = Brass = Oxidizing.\n\n**🎯 Board Tip:**\nMatch each flame to its metal or process; it is a repeated item.",
+      "answerIndex": 2,
+      "answerText": "Neutral",
+      "explanation": "A neutral flame (equal oxygen and acetylene) heats the joint without oxidizing or carburizing the base metal, so the filler can wet and flow cleanly. This is the flame setting your answer key uses for brazing.\n\n**Why the other choices are incorrect:**\n- Carburizing → Excess acetylene, used for aluminum and hard-facing.\n- Oxidizing → Excess oxygen, which burns the base metal and filler.\n- Reducing → Another name for a carburizing (excess fuel) flame.\n\n**Differentiate Similar Concepts:**\n- Neutral → Steel welding and brazing.\n- Carburizing (reducing) → Aluminum welding.\n- Oxidizing → Special cases such as some bronze welding.\n\n**💡 Memory Hook:**\nBrazing = balanced, neutral.\n\n**🎯 Board Tip:**\nSome references call for a slightly oxidizing flame for brass or bronze work. If a question says only \"brazing,\" go with neutral.",
       "tags": [
         "ACRM",
         "mock exam",

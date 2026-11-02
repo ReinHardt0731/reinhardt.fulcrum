@@ -14,7 +14,7 @@ export const ADMIN_PASSWORD = "prepcore";
 export const NOTES_PATH = "./markdowns";
 // Bump this when subjects.json or its chapter payloads change. It invalidates both
 // the browser's HTTP cache and the persistent normalized-library cache.
-const SUBJECTS_CACHE_VERSION = "aircraft-materials-reference-20261102-5";
+const SUBJECTS_CACHE_VERSION = "aircraft-materials-reference-20261102-6";
 const SUBJECTS_PATH = `./subjects.json?v=${SUBJECTS_CACHE_VERSION}`;
 const VALID_MODES = new Set(["quiz", "learn", "flashcards", "exam", "note"]);
 const SUBJECTS_CACHE_KEY = `prepcore.web.subjectsCache.${SUBJECTS_CACHE_VERSION}`;
@@ -481,6 +481,37 @@ export function recordQuizSessionProgress(session) {
         questionCount: summary.total,
         summaryType: "session"
     });
+}
+
+function updateSavedProgressSummary(session, summary, examRecordId = "") {
+    if (!session || !summary) return false;
+    const entries = getProgressEntries();
+    let targetIndex = -1;
+    if (text(session.mode) === "exam" && examRecordId) {
+        targetIndex = entries.findIndex((entry) => text(entry.examRecordId) === text(examRecordId));
+    } else if (text(session.mode) === "quiz") {
+        for (let index = entries.length - 1; index >= 0; index -= 1) {
+            const entry = entries[index];
+            if (text(entry.mode) === "quiz"
+                && text(entry.summaryType) === "session"
+                && text(entry.subjectId) === text(session.subjectId)
+                && text(entry.chapterTitle) === text(session.chapterTitle)) {
+                targetIndex = index;
+                break;
+            }
+        }
+    }
+    if (targetIndex < 0) return false;
+
+    entries[targetIndex] = {
+        ...entries[targetIndex],
+        attempted: summary.total,
+        correct: summary.correctCount,
+        accuracy: summary.accuracy,
+        questionCount: summary.total
+    };
+    saveProgressEntries(entries);
+    return true;
 }
 
 export function recordSessionProgress(session) {
@@ -2591,6 +2622,46 @@ function refreshSavedQuestions(savedQuestions, chapter) {
     });
 }
 
+function refreshSavedAnswerResults(questions, answers, session) {
+    if (!Array.isArray(answers)) return { answers: [], changed: false };
+    let changed = false;
+    const refreshedAnswers = answers.map((answer, index) => {
+        const question = questions?.[index];
+        if (!answer || !question) return answer || null;
+
+        const submittedAnswer = question.questionType === "multiple_choice"
+            ? answer.userAnswerIndex
+            : answer.userAnswer;
+        if (submittedAnswer === null || submittedAnswer === undefined || submittedAnswer === "") return answer;
+        if (question.questionType === "multiple_choice"
+            && (!Number.isInteger(Number(submittedAnswer))
+                || Number(submittedAnswer) < 0
+                || Number(submittedAnswer) >= (question.choices?.length || 0))) {
+            return answer;
+        }
+
+        const refreshed = {
+            ...answer,
+            ...buildQuestionResult(
+                question,
+                session,
+                submittedAnswer,
+                isQuestionCorrect(question, submittedAnswer),
+                Boolean(answer.isUnsure)
+            )
+        };
+        if (JSON.stringify(refreshed) !== JSON.stringify(answer)) changed = true;
+        return refreshed;
+    });
+    return { answers: refreshedAnswers, changed };
+}
+
+function refreshSavedLastResult(lastResult, questions, answers) {
+    if (!lastResult) return null;
+    const resultIndex = questions.findIndex((question) => text(question?.question) === text(lastResult.questionText));
+    return resultIndex >= 0 && answers[resultIndex] ? answers[resultIndex] : lastResult;
+}
+
 function restoreQuizSession(subject, chapter) {
     const saved = getScopedSession(QUIZ_SESSION_KEY, "quiz", subject, chapter);
     if (!saved || !subject || !chapter || saved.subjectId !== subject.id || saved.chapterTitle !== chapter.title) {
@@ -2606,18 +2677,22 @@ function restoreQuizSession(subject, chapter) {
     session.answers = Array.isArray(saved.answers)
         ? saved.answers.slice(0, session.questions.length).map((entry) => entry || null)
         : session.questions.map(() => null);
+    session.answers = refreshSavedAnswerResults(session.questions, session.answers, session).answers;
     session.drafts = Array.isArray(saved.drafts)
         ? saved.drafts.slice(0, session.questions.length).map((entry) => text(entry))
         : session.questions.map(() => "");
     session.index = Math.max(0, Math.min(Number(saved.index) || 0, session.questions.length - 1));
     session.complete = Boolean(saved.complete);
-    session.currentSummary = saved.currentSummary || (session.complete ? summarizeResults(session) : null);
+    session.currentSummary = session.complete ? summarizeResults(session) : (saved.currentSummary || null);
     session.assessmentModalShown = Boolean(saved.assessmentModalShown);
     session.progressRecorded = Boolean(saved.progressRecorded);
     session.selectedChoice = saved.selectedChoice ?? null;
     session.typedAnswer = saved.typedAnswer ?? "";
-    session.lastResult = saved.lastResult || null;
-    saveQuizChapterProgress(session);
+    session.lastResult = refreshSavedLastResult(saved.lastResult, session.questions, session.answers);
+    if (session.complete && session.progressRecorded) {
+        updateSavedProgressSummary(session, session.currentSummary);
+    }
+    saveQuizSession(session);
 
     return session;
 }
@@ -2716,17 +2791,18 @@ function restoreModeSession(subject, chapter, mode) {
     session.answers = Array.isArray(saved.answers)
         ? saved.answers.slice(0, session.questions.length).map((entry) => entry || null)
         : session.questions.map(() => null);
+    session.answers = refreshSavedAnswerResults(session.questions, session.answers, session).answers;
     session.drafts = Array.isArray(saved.drafts)
         ? saved.drafts.slice(0, session.questions.length).map((entry) => text(entry))
         : session.questions.map(() => "");
     session.index = Math.max(0, Math.min(Number(saved.index) || 0, session.questions.length - 1));
     session.complete = Boolean(saved.complete);
-    session.currentSummary = saved.currentSummary || (session.complete ? summarizeResults(session) : null);
+    session.currentSummary = (session.complete || saved.submitted) ? summarizeResults(session) : (saved.currentSummary || null);
     session.revealed = Boolean(saved.revealed);
     session.reviewed = Boolean(saved.reviewed);
     session.selectedChoice = saved.selectedChoice ?? null;
     session.typedAnswer = saved.typedAnswer ?? "";
-    session.lastResult = saved.lastResult || null;
+    session.lastResult = refreshSavedLastResult(saved.lastResult, session.questions, session.answers);
     session.assessmentModalShown = Boolean(saved.assessmentModalShown);
     session.progressRecorded = Boolean(saved.progressRecorded);
     session.reviewLabel = text(saved.reviewLabel);
@@ -2757,6 +2833,10 @@ function restoreModeSession(subject, chapter, mode) {
     session.learnMistakesReviewedCount = Math.max(0, Number(saved.learnMistakesReviewedCount) || 0);
     session.learnRecordedCheckpointIds = Array.isArray(saved.learnRecordedCheckpointIds) ? saved.learnRecordedCheckpointIds.map(text) : [];
     session.learnSlideNext = Boolean(saved.learnSlideNext);
+    if (mode === "learn" && session.learnAnsweredOrder.length) {
+        session.learnFirstAttemptCorrectCount = session.learnAnsweredOrder
+            .filter((index) => session.answers[index]?.correct).length;
+    }
     session.unsureFlags = Array.isArray(saved.unsureFlags)
         ? saved.unsureFlags.slice(0, session.questions.length).map(Boolean)
         : session.questions.map(() => false);
@@ -2776,7 +2856,12 @@ function restoreModeSession(subject, chapter, mode) {
         session.startedAt = Number(saved.startedAt) || null;
         session.recordSaved = Boolean(saved.recordSaved);
         session.questionCount = session.questions.length;
+        if ((session.complete || session.submitted) && session.progressRecorded) {
+            updateSavedProgressSummary(session, session.currentSummary, session.examRecordId);
+        }
     }
+
+    saveModeSession(session);
 
     return session;
 }
@@ -7842,6 +7927,47 @@ function createAttemptHoverPreview(record, attempt) {
     return preview;
 }
 
+async function refreshSavedExamRecords(records, subjectState) {
+    const subjects = Array.isArray(subjectState?.subjects) ? subjectState.subjects : [];
+    const refreshedRecords = await Promise.all((Array.isArray(records) ? records : []).map(async (record) => {
+        const subject = subjects.find((entry) => text(entry.id) === text(record?.subjectId));
+        if (!subject || !Array.isArray(record?.questions)) return record;
+
+        const fallbackChapterTitle = record.selectedChapterTitles?.length === 1
+            ? record.selectedChapterTitles[0]
+            : record.chapterTitle;
+        const questions = record.questions.map((savedQuestion) => {
+            const chapterTitle = text(savedQuestion?.chapterTitle || fallbackChapterTitle);
+            const chapter = subject.chapters.find((entry) => text(entry.title) === chapterTitle);
+            return chapter ? refreshSavedQuestions([savedQuestion], chapter)[0] : savedQuestion;
+        });
+        const session = { ...record, questions };
+        const answerRefresh = refreshSavedAnswerResults(questions, record.answers, session);
+        session.answers = answerRefresh.answers;
+        if (session.complete || session.submitted || session.currentSummary) {
+            session.currentSummary = summarizeResults(session);
+            if (record.examRecordId) {
+                updateSavedProgressSummary(session, session.currentSummary, record.examRecordId);
+            } else if (record.id) {
+                updateSavedProgressSummary(session, session.currentSummary, record.id);
+            }
+        }
+
+        const changed = JSON.stringify(record.questions) !== JSON.stringify(session.questions)
+            || JSON.stringify(record.answers) !== JSON.stringify(session.answers)
+            || JSON.stringify(record.currentSummary) !== JSON.stringify(session.currentSummary);
+        if (changed) {
+            try {
+                await saveExamRecord(session);
+            } catch (error) {
+                console.warn("Saved Exam results could not be refreshed.", error);
+            }
+        }
+        return session;
+    }));
+    return refreshedRecords;
+}
+
 function renderProgressExamHistory(container, records, subjectState) {
     if (!container) return;
     const subjects = Array.isArray(subjectState?.subjects) ? subjectState.subjects : [];
@@ -11598,7 +11724,12 @@ export function initProgressPage() {
                     return { subjects: [], activeSubject: null };
                 })
             ]).then(([records, subjectState]) => {
-                renderProgressExamHistory(attemptHistoryCard, records, subjectState);
+                refreshSavedExamRecords(records, subjectState)
+                    .then((refreshedRecords) => renderProgressExamHistory(attemptHistoryCard, refreshedRecords, subjectState))
+                    .catch((error) => {
+                        console.warn("Saved Exam results could not be refreshed.", error);
+                        renderProgressExamHistory(attemptHistoryCard, records, subjectState);
+                    });
             });
         }
     }
