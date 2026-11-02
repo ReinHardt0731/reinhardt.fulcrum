@@ -38,9 +38,9 @@
         "Control system",
         "Close-tolerance structure"
       ],
-      "answerIndex": 2,
-      "answerText": "Control system",
-      "explanation": "⚠️ Answer key check: This answer was inferred, not highlighted in the source, and the keyed answer (Control system) conflicts with the standard circuit-function code as I know it. Confirm against your reviewer or AC 43.13-1B before relying on it.  \n  \nIn aircraft wiring and cable identification, a circuit-function letter shows which system a conductor serves. As far as I know, the letter X stands for AC power, while control surfaces use the letter C.  \n  \nWhy the other choices are incorrect:  \n• Auxiliary power → This is not what X stands for in the circuit-function code.  \n• Control system → Control surfaces use the letter C, not X.  \n• Close-tolerance structure → This relates to the triangle marking on close-tolerance bolts, not a cable marking.  \n  \nDifferentiate Similar Concepts:  \n• X → AC power.  \n• C → Control surfaces.  \n• Triangle (on a bolt head) → Close-tolerance bolt.  \n  \n💡 Memory Hook:  \nX = AC (X marks the cross-over of alternating current).  \n  \n🎯 Board Tip:  \nMemorize the circuit-function letters as a short list; exam items often swap them.",
+      "answerIndex": 0,
+      "answerText": "AC power",
+      "explanation": "Correct answer: AC power.\n\nIn the cable-identification convention used by this exam question, X indicates AC power. Control system is not the keyed meaning of X here. Aircraft cable markings should be interpreted using the aircraft wiring diagram and applicable manufacturer documentation.",
       "tags": [
         "preboards",
         "mock exam",
