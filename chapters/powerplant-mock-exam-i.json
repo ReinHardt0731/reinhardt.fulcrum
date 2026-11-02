@@ -1,0 +1,1208 @@
+{
+  "title": "Powerplant Mock Exam I",
+  "sourceFiles": [
+    "F:\\Powerplant Mock I.md"
+  ],
+  "questions": [
+    {
+      "question": "A turbojet engine is moving 150 lb of air per second through the engine. The air enters going 100 fps and leaves going 1,200 fps. How much thrust (in pounds) is the engine creating?",
+      "choices": [
+        "2,408 lbs",
+        "4,753 lbs",
+        "5,124 lbs",
+        "6,124 lbs"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "5,124 lbs",
+      "explanation": "Thrust comes from the change in momentum of the air passing through the engine (Newton's 2nd law):\n\n$$F = \\frac{\\dot w}{g}\\,(V_{exit} - V_{inlet})$$\n\n$$F = \\frac{150}{32.2}\\,(1200 - 100)$$\n\n$$F \\approx 5{,}124\\ \\text{lb}$$\n\n**Why the other choices are incorrect:**\n- a. 2,408 lbs → Results from using the wrong velocity change (not 1,100 fps).\n- b. 4,753 lbs → Arises from a wrong value of $g$ or a wrong ΔV.\n- d. 6,124 lbs → Adds an arbitrary 1,000 lb; no basis in the formula.\n\n**Differentiate Similar Concepts:**\n- Mass flow ($\\dot m = \\dot w / g$) → slugs/s, not lb/s.\n- Weight flow ($\\dot w$) → lb/s; must be divided by $g$ before multiplying by ΔV.\n- Net thrust → uses $V_{exit} - V_{inlet}$; gross thrust ignores inlet momentum (ram drag).\n\n**💡 Memory Hook:**\nThrust = (weight flow ÷ g) × ΔV. \"Divide by g, then push the speed difference.\"\n\n**🎯 Board Tip:**\nIf the problem gives *lb of air*, divide by 32.2 first. Always use the **difference** in velocities.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The dynamic dampers work on the principle of:",
+      "choices": [
+        "Equilibrium Theory",
+        "Law of Inertia",
+        "Pendulum theory",
+        "None of the above"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Pendulum theory",
+      "explanation": "A dynamic damper is a small counterweight hung on the crankshaft cheek that is free to swing, like a short pendulum. It is tuned so its natural frequency matches the troublesome torsional vibration, so it absorbs and cancels the vibration energy.\n\n**Why the other choices are incorrect:**\n- Equilibrium Theory → Not a vibration-damping principle used in engine design.\n- Law of Inertia → Inertia is involved in any moving mass, but it is not the operating principle of the damper.\n- None of the above → Incorrect, since pendulum theory applies.\n\n**Differentiate Similar Concepts:**\n- Static counterweight → Fixed to the crank cheek; balances rotating weight.\n- Dynamic damper → Free-swinging pendulum; cancels torsional vibration.\n- Propeller-induced vibration → Dampened by the pendulum action at the right frequency.\n\n**💡 Memory Hook:**\nDamper = Dangling pendulum.\n\n**🎯 Board Tip:**\n\"Dynamic damper\" and \"pendulum\" almost always go together on the board exam.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Prolonged use of low R.P.M. could cause contamination of the:",
+      "choices": [
+        "Oil Filter",
+        "Spark Plug",
+        "Carburetor",
+        "Oil Pump"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "Spark Plug",
+      "explanation": "At low RPM, combustion temperatures are low and the mixture is rich. Carbon, lead, and oil deposits build up on the plug electrodes and nose insulator, causing fouling and misfires.\n\n**Why the other choices are incorrect:**\n- Oil Filter → Clogs from debris over time, not from low-RPM operation.\n- Carburetor → Not directly contaminated by combustion byproducts.\n- Oil Pump → Lubrication system; unaffected by combustion deposits.\n\n**Differentiate Similar Concepts:**\n- Lead fouling → Gray/black deposits from TEL in AVGAS.\n- Carbon fouling → Dry, soft black soot from rich mixture or low power.\n- Oil fouling → Wet, shiny deposits from oil leaking past rings.\n\n**💡 Memory Hook:**\nLow and slow = plug woe.\n\n**🎯 Board Tip:**\nCure for low-RPM fouling: run the engine at a higher power setting to \"burn off\" the deposits.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What type of jet fuel used by the military has anti-icing, corrosion inhibitor, and anti-static additives?",
+      "choices": [
+        "Jet A",
+        "JP-8",
+        "JP-4",
+        "AVGAS 100LL"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "JP-8",
+      "explanation": "JP-8 (NATO F-34) is the standard military kerosene fuel. It is essentially Jet A-1 with a mandatory additive package: fuel system icing inhibitor (FSII), corrosion inhibitor/lubricity improver (CI/LI), and static dissipator additive (SDA).\n\n**Why the other choices are incorrect:**\n- Jet A → Commercial fuel; additives are optional and not a built-in military package.\n- JP-4 → Older wide-cut (gasoline-kerosene) military fuel, largely retired in favor of JP-8 for safety.\n- AVGAS 100LL → Aviation gasoline for piston engines; not a jet fuel.\n\n**Differentiate Similar Concepts:**\n- Jet A / A-1 → Commercial kerosene.\n- JP-4 → Wide-cut, higher volatility, former USAF fuel.\n- JP-8 → Kerosene + FSII + CI/LI + SDA (current military standard).\n\n**💡 Memory Hook:**\nJP-8 = \"Jet Plus 8 additives\" (military Jet A-1 with extras).\n\n**🎯 Board Tip:**\nMilitary + additives + kerosene-based = JP-8.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Two gaseous streams enter a combining tube and leave as a single mixture. For one gas: $A_1 = 75\\ \\text{in}^2$, $v_1 = 500$ fps, $V_1 = 10\\ \\text{ft}^3/\\text{lb}$; for the other gas: $A_2 = 50\\ \\text{in}^2$, $\\dot m_2 = 60{,}000$ lb/hr, $\\rho_2 = 0.12\\ \\text{lb/ft}^3$. At exit, $v_3 = 350$ fps, $V_3 = 7\\ \\text{ft}^3/\\text{lb}$. Find the velocity ($v_2$) at section 2 and the area at the exit section.",
+      "choices": [
+        "$v_2 = 400$ fps; $A_3 = 123\\ \\text{in}^2$",
+        "$v_2 = 350$ fps; $A_3 = 0.85\\ \\text{ft}^2$",
+        "$v_2 = 500$ fps; $A_3 = 144\\ \\text{in}^2$",
+        "$v_2 = 250$ fps; $A_3 = 85\\ \\text{in}^2$"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "$v_2 = 400$ fps; $A_3 = 123\\ \\text{in}^2$",
+      "explanation": "Velocity at section 2 from continuity:\n\n$$\\dot m_2 = \\rho_2 A_2 v_2 \\;\\Rightarrow\\; v_2 = \\frac{60000/3600}{(0.12)(50/144)} = 400\\ \\text{fps}$$\n\nMass flow of gas 1:\n\n$$\\dot m_1 = \\frac{A_1 v_1}{V_1} = \\frac{(75/144)(500)}{10} = 26.04\\ \\text{lb/s}$$\n\nMixture and exit area (conservation of mass):\n\n$$\\dot m_3 = \\dot m_1 + \\dot m_2 = 26.04 + 16.67 = 42.71\\ \\text{lb/s}$$\n\n$$A_3 = \\frac{\\dot m_3 V_3}{v_3} = \\frac{(42.71)(7)}{350} = 0.854\\ \\text{ft}^2 = 123\\ \\text{in}^2$$\n\n**Why the other choices are incorrect:**\n- b → Area is right (0.85 ft² ≈ 123 in²) but $v_2 = 350$ fps is wrong; that is the exit velocity.\n- c → $v_2 = 500$ fps is the velocity of gas 1, not gas 2.\n- d → Neither value satisfies continuity.\n\n**Differentiate Similar Concepts:**\n- Specific volume $V$ (ft³/lb) → inverse of density $\\rho$ (lb/ft³).\n- $\\dot m = \\rho A v = A v / V$ → both forms are the same equation.\n- Conservation of mass → $\\dot m_{in} = \\dot m_{out}$ for steady flow.\n\n**💡 Memory Hook:**\nStreams merge → masses add: $\\dot m_3 = \\dot m_1 + \\dot m_2$.\n\n**🎯 Board Tip:**\nCheck your units: in² → ft² (÷144), lb/hr → lb/s (÷3600). Two answer options may hide the same area in different units.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A vacuum gauge mounted on a condenser reads 0.66 m Hg. What is the absolute pressure in the condenser in kPa when the atmospheric pressure is 101.3 kPa?",
+      "choices": [
+        "88.01 kPa",
+        "11.01 kPa",
+        "189.29 kPa",
+        "13.28 kPa"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "13.28 kPa",
+      "explanation": "Absolute pressure = atmospheric − vacuum. Convert the vacuum reading first:\n\n$$P_{vac} = 0.66\\ \\text{m Hg}\\times\\frac{101.325\\ \\text{kPa}}{0.76\\ \\text{m Hg}} \\approx 88.0\\ \\text{kPa}$$\n\n$$P_{abs} = P_{atm} - P_{vac} = 101.3 - 88.0 \\approx 13.28\\ \\text{kPa}$$\n\n**Why the other choices are incorrect:**\n- a. 88.01 kPa → This is the vacuum pressure itself, not the absolute pressure.\n- b. 11.01 kPa → Conversion error.\n- c. 189.29 kPa → Adds vacuum to atmospheric (sign error).\n\n**Differentiate Similar Concepts:**\n- Gauge pressure → above atmospheric: $P_{abs} = P_{atm} + P_{gauge}$.\n- Vacuum pressure → below atmospheric: $P_{abs} = P_{atm} - P_{vac}$.\n- Absolute pressure → measured from perfect vacuum (always positive).\n\n**💡 Memory Hook:**\nVacuum = Vanishing pressure → subtract.\n\n**🎯 Board Tip:**\n\"Vacuum\" or \"negative gauge\" → subtract. Remember 760 mm Hg = 101.325 kPa.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A Carnot engine operating between 775 K and 305 K produces 54 kJ of work. Determine the thermal efficiency (e) and the heat added (QA).",
+      "choices": [
+        "e = 60.65%, QA = 54.01 kJ",
+        "e = 60.65%, QA = 89.04 kJ",
+        "e = 60.65%, QA = 40.97 kJ",
+        "e = 60.65%, QA = 137.23 kJ"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "e = 60.65%, QA = 89.04 kJ",
+      "explanation": "$$e = 1 - \\frac{T_L}{T_H} = 1 - \\frac{305}{775} = 0.6065$$\n\n$$Q_A = \\frac{W}{e} = \\frac{54}{0.6065} = 89.04\\ \\text{kJ}$$\n\n**Why the other choices are incorrect:**\n- a. 54.01 kJ → Equals the work; it ignores the efficiency.\n- c. 40.97 kJ → Multiplies W by (1 − e) incorrectly.\n- d. 137.23 kJ → Divides by the wrong ratio.\n\n**Differentiate Similar Concepts:**\n- $Q_A$ → heat added (from the hot reservoir).\n- $Q_R$ → heat rejected: $Q_R = Q_A - W = 35.04$ kJ.\n- Efficiency → always less than 100%, so $Q_A > W$.\n\n**💡 Memory Hook:**\nHeat in is always bigger than work out: $Q_A = W/e$.\n\n**🎯 Board Tip:**\nUse **absolute** temperatures (K or °R) in Carnot formulas. Quick check: $Q_A$ must exceed $W$.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A centrifugal pump operating under steady flow conditions delivers 2,270 kg/min of water from an initial pressure of 82,740 Pa to a final pressure of 275,800 Pa. The diameter of the inlet pipe to the pump is 10.16 cm and the diameter of the discharge pipe is 15.24 cm. What is the work?",
+      "choices": [
+        "−125.4 kJ/min",
+        "234.8 kJ/min",
+        "−312.5 kJ/min",
+        "−458.1 kJ/min"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "−458.1 kJ/min",
+      "explanation": "*(best-matching option; see note)*\n\nApply the steady-flow energy equation (no elevation change, no heat loss, incompressible water):\n\n$$w = \\frac{P_2 - P_1}{\\rho} + \\frac{v_2^2 - v_1^2}{2}$$\n\nVelocities from continuity ($\\dot V = 0.03783\\ \\text{m}^3/\\text{s}$):\n\n$$v_1 = \\frac{0.03783}{\\pi(0.1016)^2/4} = 4.67\\ \\text{m/s}, \\qquad v_2 = \\frac{0.03783}{\\pi(0.1524)^2/4} = 2.07\\ \\text{m/s}$$\n\n$$\\frac{P_2-P_1}{\\rho} = \\frac{193{,}060}{1000} = 193.06\\ \\text{J/kg}$$\n\nThe negative sign means work is done **on** the fluid by the pump. Pump work is mostly the pressure rise; the kinetic-energy term is small.\n\n> ⚠️ **Note:** My own calculation with the stated diameters gives about 418 kJ/min, which is not among the options. The option \"−458.1 kJ/min\" corresponds to $193.06 + 8.74 = 201.8$ J/kg, i.e., the kinetic-energy term added with the opposite sign. The answer key likely used that. Option d is the closest, with the correct sign and magnitude.\n\n**Why the other choices are incorrect:**\n- a. −125.4 kJ/min → Too small; the pressure rise alone is already larger.\n- b. 234.8 kJ/min → Positive sign wrongly implies the fluid does work.\n- c. −312.5 kJ/min → Does not match any consistent combination of the terms.\n\n**Differentiate Similar Concepts:**\n- Pump → adds energy to fluid (work input, negative by the \"work by system\" convention).\n- Turbine → extracts energy from fluid (work output, positive).\n- Flow work ($P/\\rho$) vs. kinetic energy ($v^2/2$) → both appear in the steady-flow energy equation.\n\n**💡 Memory Hook:**\nPump pushes pressure up → work goes IN (negative).\n\n**🎯 Board Tip:**\nIf your result is not in the choices, check the sign convention and pick the closest consistent one.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What generates the mechanical energy needed to accomplish work in a reciprocating engine?",
+      "choices": [
+        "The back-and-forth motion of the cylinders, which generates mechanical energy to accomplish work.",
+        "The reciprocating motion of the crankshaft assembly, which translates linear movement into rotational movement.",
+        "The reciprocating motion of the pistons, which is caused by the expansion of combustion gases.",
+        "The back-and-forth movement of the connecting rods, which converts thermal energy into thrust."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "The reciprocating motion of the pistons, which is caused by the expansion of combustion gases.",
+      "explanation": "Burning fuel-air mixture raises pressure, and expanding gases push the piston down in the cylinder. This reciprocating piston motion is the source of mechanical energy; the connecting rod and crankshaft only transmit and convert it.\n\n**Why the other choices are incorrect:**\n- a → Cylinders are fixed; they do not move back and forth.\n- b → The crankshaft *converts* motion; it does not generate the energy.\n- d → Connecting rods transmit force, and a piston engine's output is shaft power, not direct thrust.\n\n**Differentiate Similar Concepts:**\n- Piston → receives the gas force (energy source).\n- Connecting rod → transmits force from piston to crank.\n- Crankshaft → converts linear to rotary motion.\n\n**💡 Memory Hook:**\nGas pushes piston → piston makes power.\n\n**🎯 Board Tip:**\n\"Generates\" = where the energy originates → the **piston**.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "If a helicopter's CG moves outside the allowable range, which flight control is most directly affected?",
+      "choices": [
+        "Collective Pitch Control",
+        "Anti-Torque Rotor",
+        "Cyclic Pitch Control",
+        "Throttle"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Cyclic Pitch Control",
+      "explanation": "The cyclic tilts the rotor disc to counter the pitch/roll moment from an off-center CG. When the CG is outside limits, the required cyclic displacement can exceed the available cyclic travel (control authority), so the pilot cannot hold attitude.\n\n**Why the other choices are incorrect:**\n- Collective → Controls total lift (rotor pitch of all blades); not the attitude trim.\n- Anti-Torque Rotor → Controls yaw, not the longitudinal/lateral balance.\n- Throttle → Manages engine power only.\n\n**Differentiate Similar Concepts:**\n- Cyclic → tilts the disc, controls direction/attitude.\n- Collective → changes lift/climb-descend.\n- Pedals → control yaw.\n\n**💡 Memory Hook:**\nCG off? Cyclic runs out.\n\n**🎯 Board Tip:**\nHelicopter CG problems = cyclic authority and loss of control.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The Textron Lycoming model AEIO 540 L1B5 is a high-performance aerobatic engine. What physical design characteristic does the letter 'O' represent?",
+      "choices": [
+        "Modifications from basic model",
+        "Overhead valve arrangement",
+        "Horizontally Opposed Cylinder Arrangement",
+        "Cylinder displacement"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Horizontally Opposed Cylinder Arrangement",
+      "explanation": "In the Lycoming designation, the letters describe features: **A** = aerobatic (inverted oil/fuel capability), **E** = fuel-injected/electronic variant letter, **I** = fuel injected, **O** = horizontally opposed. The number (540) is the displacement in cubic inches, and the suffix (L1B5) denotes modifications.\n\n**Why the other choices are incorrect:**\n- a → Modifications are given by the suffix (e.g., L1B5).\n- b → Overhead valve is not what \"O\" stands for.\n- d → Displacement is the number 540 (cu in).\n\n**Differentiate Similar Concepts:**\n- Prefix letters → engine type/features (A, I, O, T...).\n- Number → displacement.\n- Suffix → modification series.\n\n**💡 Memory Hook:**\nO = Opposed. Cylinders face off like boxers.\n\n**🎯 Board Tip:**\nLycoming \"O-\" = opposed; \"T\" = turbocharged; \"G\" = geared; \"S\" = supercharged.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A pinion gear with 10 teeth is driving a spur gear with 40 teeth. The spur gear is rotating at 160 rpm. Calculate the speed of the pinion gear.",
+      "choices": [
+        "600 rpm",
+        "10.67 rps",
+        "60 rad/s",
+        "40 Hz"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "10.67 rps",
+      "explanation": "Gear speeds are inversely proportional to tooth counts:\n\n$$N_{pinion} = N_{spur}\\times\\frac{T_{spur}}{T_{pinion}} = 160\\times\\frac{40}{10} = 640\\ \\text{rpm}$$\n\n$$640\\ \\text{rpm}\\div 60 = 10.67\\ \\text{rps}$$\n\n**Why the other choices are incorrect:**\n- a. 600 rpm → Slightly off from 640 rpm.\n- c. 60 rad/s → 640 rpm ≈ 67 rad/s.\n- d. 40 Hz → 640 rpm = 10.67 Hz, not 40.\n\n**Differentiate Similar Concepts:**\n- rpm → revolutions per minute.\n- rps (Hz) → revolutions per second = rpm ÷ 60.\n- rad/s → $\\omega = 2\\pi\\,(\\text{rps})$.\n\n**💡 Memory Hook:**\nSmall gear spins fast; big gear spins slow.\n\n**🎯 Board Tip:**\nConvert rpm → rps → rad/s carefully; options often hide the same value in different units.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The highest pressure in a gas turbine engine occurs:",
+      "choices": [
+        "Between the compressor and the combustion chamber.",
+        "In the combustion chamber.",
+        "In the jet pipe.",
+        "At the P1 probe."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "Between the compressor and the combustion chamber.",
+      "explanation": "The compressor raises pressure stage by stage; the highest static pressure is at the compressor exit/diffuser, just before the combustion chamber. Pressure then drops slightly through the combustor (pressure loss) and falls much more through the turbine and nozzle.\n\n**Why the other choices are incorrect:**\n- b. Combustion chamber → Slight pressure loss occurs due to heat addition and friction.\n- c. Jet pipe → Low pressure after the turbine.\n- d. P1 probe → Inlet pressure, the lowest in the compression path.\n\n**Differentiate Similar Concepts:**\n- Compressor outlet → maximum pressure (P3).\n- Combustor → nearly constant pressure (small drop).\n- Turbine/nozzle → pressure converts into velocity.\n\n**💡 Memory Hook:**\nSqueeze, Burn, Blow. Max squeeze happens before the burn.\n\n**🎯 Board Tip:**\nMax pressure = compressor discharge; max temperature = turbine inlet (after combustion).",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Consider an engine operating on the ideal Diesel cycle with air as the working fluid. The volume of the cylinder is 1200 cm³ at the beginning of the compression process, 75 cm³ at the end, and 150 cm³ after the heat-addition process. Air is at 17°C and 100 kPa at the beginning of the compression process. Determine the mean effective pressure.",
+      "choices": [
+        "481 kPa",
+        "574 kPa",
+        "695 kPa",
+        "928 kPa"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "695 kPa",
+      "explanation": "Compression ratio and cutoff ratio:\n\n$$r = \\frac{1200}{75} = 16, \\qquad r_c = \\frac{150}{75} = 2$$\n\nPressure at the end of compression (isentropic, $k = 1.4$):\n\n$$P_2 = P_1 r^{k} = 100(16)^{1.4} = 4850\\ \\text{kPa}$$\n\nHeat added (constant pressure, per cycle):\n\n$$Q_{in} = \\frac{k}{k-1}\\,P_2\\,(V_3 - V_2) = 3.5\\,(4850)(75\\times10^{-6}) = 1.273\\ \\text{kJ}$$\n\nThermal efficiency:\n\n$$\\eta = 1 - \\frac{1}{r^{k-1}}\\cdot\\frac{r_c^{k}-1}{k(r_c-1)} = 1 - \\frac{1}{3.031}\\cdot\\frac{2.639-1}{1.4} = 0.614$$\n\nNet work and MEP:\n\n$$W_{net} = \\eta\\,Q_{in} = 0.781\\ \\text{kJ}$$\n\n$$\\text{MEP} = \\frac{W_{net}}{V_1 - V_2} = \\frac{0.781}{1125\\times10^{-6}} \\approx 695\\ \\text{kPa}$$\n\n**Why the other choices are incorrect:**\n- a, b, d → Result from using the wrong displacement volume or a wrong cutoff ratio.\n\n**Differentiate Similar Concepts:**\n- Otto → heat added at constant volume.\n- Diesel → heat added at constant pressure; efficiency depends on both $r$ and $r_c$.\n- MEP → net work ÷ displacement volume ($V_1 - V_2$).\n\n**💡 Memory Hook:**\nMEP = Work ÷ swept volume.\n\n**🎯 Board Tip:**\nDisplacement = $V_{max} - V_{min}$, **not** $V_{max}$ alone.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "During assembly and disassembly, which of the following materials are generally allowed by the manufacturer to mark parts directly exposed to the engine's gas path? (1.) layout dye (2.) commercial felt tip marker (3.) wax or grease pencil (4.) chalk (5.) graphite lead pencil.",
+      "choices": [
+        "2, 4, and 5",
+        "1, 3 and 4",
+        "1, 2, and 4",
+        "2, 3, and 5"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "1, 2, and 4",
+      "explanation": "*(moderate confidence; always follow the engine manufacturer's manual)*\n\nMarking materials for hot-section/gas-path parts must not leave residues that burn, carburize, or corrode the metal at high temperature. Graphite pencil marks can cause carbon contamination and intergranular attack on nickel and titanium alloys, so (5) is excluded. Layout dye, approved felt-tip markers, and chalk are the generally accepted marking materials listed here. Wax/grease pencils are commonly restricted because the residue can burn and leave deposits.\n\n**Why the other choices are incorrect:**\n- a. 2, 4, 5 → Includes graphite.\n- b. 1, 3, 4 → Includes wax/grease pencil.\n- d. 2, 3, 5 → Includes both wax and graphite.\n\n**Differentiate Similar Concepts:**\n- Graphite pencil → forbidden on heated/gas-path parts.\n- Layout dye → thin, non-reactive marking medium.\n- Felt-tip marker → acceptable if halogen- and sulfur-free per the manual.\n\n**💡 Memory Hook:**\nNo lead, no lead-in-pencil: \"Graphite hurts hot metal.\"\n\n**🎯 Board Tip:**\nAnything with the word \"pencil\" and \"graphite\" on a hot part → eliminate it first.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "There are supplied 317 kJ/cycle to an ideal Diesel engine operating on 227 g air: $p_1 = 97.91$ kPa, $t_1 = 48.9°C$, $p_2 = 3930$ kPa. Determine the thermal efficiency.",
+      "choices": [
+        "33.80%",
+        "56.80%",
+        "65.41%",
+        "72.40%"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "56.80%",
+      "explanation": "Compression ratio from the isentropic relation:\n\n$$\\frac{p_2}{p_1} = r^{k} \\;\\Rightarrow\\; r = \\left(\\frac{3930}{97.91}\\right)^{1/1.4} = 13.98$$\n\nTemperatures:\n\n$$T_2 = T_1 r^{k-1} = 322.05\\,(13.98)^{0.4} = 925\\ \\text{K}$$\n\n$$Q_{in} = m c_p (T_3 - T_2) \\Rightarrow T_3 = 925 + \\frac{317}{(0.227)(1.005)} = 2314\\ \\text{K}$$\n\nCutoff ratio and efficiency:\n\n$$r_c = \\frac{T_3}{T_2} = 2.50$$\n\n$$\\eta = 1 - \\frac{1}{r^{k-1}}\\cdot\\frac{r_c^{k}-1}{k(r_c-1)} = 1 - \\frac{1}{2.872}\\cdot\\frac{3.61-1}{1.4(1.50)} \\approx 0.568$$\n\n**Why the other choices are incorrect:**\n- a, c, d → Typical errors: using the wrong $k$, treating the cycle as Otto ($\\eta = 1 - r^{1-k} \\approx 65\\%$), or an arithmetic slip on $r_c$.\n\n**Differentiate Similar Concepts:**\n- Otto efficiency → depends only on $r$.\n- Diesel efficiency → depends on $r$ **and** $r_c$; lower than Otto at the same $r$.\n- $r_c$ → ratio of volumes (or temperatures) across the heat-addition process.\n\n**💡 Memory Hook:**\nDiesel = Otto minus the cutoff penalty.\n\n**🎯 Board Tip:**\nGet $r$ from the pressure ratio, then $T_2$, $T_3$, $r_c$. Work in kelvins.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How do the weight and balance considerations of a helicopter differ from those of an airplane?",
+      "choices": [
+        "Helicopters are far more critical and the center of gravity (CG) range is much more limited.",
+        "Fixed-wing airplanes are far more critical and the center of gravity (CG) range is much more limited.",
+        "Helicopters have a wider, more forgiving CG range due to the multi-directional lifting capability of the main rotor system.",
+        "Fixed-wing airplanes must calculate longitudinal CG limits, whereas helicopters only require lateral CG calculations."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "Helicopters are far more critical and the center of gravity (CG) range is much more limited.",
+      "explanation": "A helicopter hangs from a single point (the rotor mast), so the CG must stay very close to it. The permitted CG envelope is narrow, and both longitudinal **and** lateral CG must be checked. Off-limits CG reduces cyclic authority and can cause severe attitude changes.\n\n**Why the other choices are incorrect:**\n- b → Reverse of reality; airplanes have wider CG ranges.\n- c → Rotors do not give a wider CG range; the opposite is true.\n- d → Helicopters need both longitudinal and lateral CG computation.\n\n**Differentiate Similar Concepts:**\n- Airplane → CG range measured along the longitudinal axis (% MAC); wide envelope.\n- Helicopter → narrow envelope in both longitudinal and lateral directions.\n- Hanging load (helicopter) → pendulum-like, CG must stay below the mast.\n\n**💡 Memory Hook:**\nHelicopter = hanging from a hook; stay under the hook.\n\n**🎯 Board Tip:**\n\"Helicopter\" + \"CG\" → narrow, critical, two axes.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Gas turbines use for lubrication:",
+      "choices": [
+        "Silicon fluid",
+        "Mineral oil straight",
+        "Multi-grade 20/50",
+        "Synthetic oil"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "Synthetic oil",
+      "explanation": "Turbine engines operate at very high temperatures and bearing speeds. Synthetic (ester-based) oils resist thermal breakdown and coking, keep viscosity stable across a wide temperature range, and are standard for gas turbines (e.g., MIL-PRF-23699, MIL-PRF-7808).\n\n**Why the other choices are incorrect:**\n- Silicon fluid → Poor lubricity; not used as a turbine engine oil.\n- Mineral oil straight → Breaks down at high temperatures; used in piston engines.\n- Multi-grade 20/50 → A piston-engine oil.\n\n**Differentiate Similar Concepts:**\n- Piston engines → mineral or semi-synthetic oils (SAE 50, 20W-50).\n- Turbine engines → synthetic ester oils.\n- Type I (5 cSt) vs. Type II (7.5 cSt) → both synthetic; not interchangeable casually.\n\n**💡 Memory Hook:**\nTurbine = Thermal-tough = Synthetic.\n\n**🎯 Board Tip:**\nNever mix mineral and synthetic oils unless the manual allows it.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Consider a simple ideal Brayton cycle with air as the working fluid. The pressure ratio of the cycle is 8, and the minimum and maximum temperatures are 300 and 1300 K, respectively. Now the pressure ratio is doubled without changing the minimum and maximum temperatures in the cycle. Determine the change in the thermal efficiency of the cycle as a result of this modification. Assume constant specific heat for air.",
+      "choices": [
+        "7.50%",
+        "9.90%",
+        "10.60%",
+        "12.60%"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "9.90%",
+      "explanation": "Brayton efficiency depends only on pressure ratio:\n\n$$\\eta = 1 - r_p^{-(k-1)/k}$$\n\nAt $r_p = 8$:\n\n$$\\eta_1 = 1 - 8^{-0.2857} = 0.4479$$\n\nAt $r_p = 16$:\n\n$$\\eta_2 = 1 - 16^{-0.2857} = 0.5471$$\n\n$$\\Delta\\eta = 0.5471 - 0.4479 \\approx 0.099 = 9.9\\%$$\n\n**Why the other choices are incorrect:**\n- a, c, d → Result from wrong exponents or from using $T_{max}/T_{min}$ in the efficiency formula.\n\n**Differentiate Similar Concepts:**\n- Ideal Brayton efficiency → function of $r_p$ only.\n- Net work → depends on $r_p$ **and** $T_{max}/T_{min}$ (peaks at an optimum $r_p$).\n- Real engines → efficiency also limited by component losses.\n\n**💡 Memory Hook:**\nBrayton: more squeeze = more efficiency.\n\n**🎯 Board Tip:**\nThe temperatures are distractors for efficiency. Use only $r_p$ and $k$.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In modern gas turbine engines (GTE), higher operating temperatures are required. To survive these temperatures, single-crystal blades are used. The development of these single-crystal structures allowed the removal of grain-boundary strengthening elements such as boron and carbon which had traditionally been added. Why does removing these strengthening elements allow the blade to withstand higher operating temperatures?",
+      "choices": [
+        "The use of nickel as the solvent can be justified on account of its FCC crystal structure, which eliminates the need for any chemical alloying elements.",
+        "Removing them increases the density of the materials of choice for high-temperature operation, allowing the turbine blading to absorb more kinetic energy from the expanding gas stream.",
+        "Their removal enabled better heat treatments to reduce micro-segregation and eutectic content induced by casting, whilst avoiding incipient melting during heat treatment. The fatigue life is then improved.",
+        "Boron and carbon act as a vacuum catalyst, causing the nickel solvent to completely sublime into gas despite its low rates of thermally activated processes."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Their removal enabled better heat treatments to reduce micro-segregation and eutectic content induced by casting, whilst avoiding incipient melting during heat treatment. The fatigue life is then improved.",
+      "explanation": "Boron and carbon lower the melting point of the grain-boundary regions. In single crystals there are no grain boundaries, so these elements are unnecessary. Removing them raises the incipient-melting temperature, which lets engineers use higher solution heat-treatment temperatures. That reduces micro-segregation and eutectic phases from casting, improving creep and fatigue properties.\n\n**Why the other choices are incorrect:**\n- a → FCC structure helps but does not eliminate the need for alloying.\n- b → Density change is not the reason.\n- d → Nonsense; nickel does not sublime.\n\n**Differentiate Similar Concepts:**\n- Equiaxed (conventional) → many grain boundaries; needs B, C, Hf.\n- Directionally solidified → aligned grains; fewer transverse boundaries.\n- Single crystal → no grain boundaries; highest temperature capability.\n\n**💡 Memory Hook:**\nNo boundaries → no B and C → hotter heat treatment.\n\n**🎯 Board Tip:**\nSingle crystal + \"removing B and C\" → incipient melting avoided.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "On a four-cylinder engine with a total volume of 9600cc, bore area of 100 cm², and a crank throw of 10 cm, what would the Compression Ratio be?",
+      "choices": [
+        "7:1",
+        "8:1",
+        "2.4:1",
+        "6:1"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "6:1",
+      "explanation": "Volume per cylinder (total cylinder volume at BDC):\n\n$$V_1 = \\frac{9600}{4} = 2400\\ \\text{cm}^3$$\n\nStroke is twice the crank throw (crank radius):\n\n$$L = 2\\times 10 = 20\\ \\text{cm}$$\n\n$$V_d = A\\,L = (100)(20) = 2000\\ \\text{cm}^3$$\n\n$$V_c = V_1 - V_d = 400\\ \\text{cm}^3$$\n\n$$r = \\frac{V_1}{V_c} = \\frac{2400}{400} = 6$$\n\n**Why the other choices are incorrect:**\n- a, b → Not consistent with the given volumes.\n- c. 2.4:1 → Comes from using stroke = 10 cm, an error.\n\n**Differentiate Similar Concepts:**\n- Crank throw → offset (radius) of the crank pin.\n- Stroke → $2\\times$ crank throw.\n- Clearance volume → volume above the piston at TDC.\n\n**💡 Memory Hook:**\nStroke = 2 × throw.\n\n**🎯 Board Tip:**\n\"Crank throw\" and \"stroke\" are different. Always double the throw.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How is proper end-gap clearance on new piston rings assured during the overhaul of an engine?",
+      "choices": [
+        "By accurately measuring and matching the outside diameter of the rings with the inside diameter of the cylinders.",
+        "By using rings specified by the engine manufacturer.",
+        "By placing the rings in the cylinder and measuring the end-gap with a feeler gauge.",
+        "None of the above"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "By placing the rings in the cylinder and measuring the end-gap with a feeler gauge.",
+      "explanation": "Each ring is squared in the cylinder barrel (usually using a piston to position it) and the gap between the ring ends is measured with a feeler gauge. If the gap is too small, the ring is filed to size.\n\n**Why the other choices are incorrect:**\n- a → Ring OD is not how end gap is verified.\n- b → Correct rings are necessary but do not guarantee proper gap.\n- d → Incorrect since (c) is right.\n\n**Differentiate Similar Concepts:**\n- End gap → measured with the ring in the cylinder.\n- Side clearance → ring in its groove, measured with a feeler gauge.\n- Ring tension → checked on a tension tester.\n\n**💡 Memory Hook:**\nRing in the bore, feeler gauge for the gap.\n\n**🎯 Board Tip:**\nEnd gap too tight → ring butts, scores the cylinder. Too loose → blow-by.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An \"ideal rocket engine\" is designed to operate at sea level using a propellant whose products of combustion have a specific heat ratio k of 1.3. Determine the required chamber pressure if the exit Mach number is 2.52. Also determine the nozzle area ratio between the throat and exit.",
+      "choices": [
+        "Chamber Pressure = 1.32 MPa, Area Ratio = 1.95",
+        "Chamber Pressure = 1.84 MPa, Area Ratio = 1.68",
+        "Chamber Pressure = 1.84 MPa, Area Ratio = 3.02",
+        "Chamber Pressure = 1.69 MPa, Area Ratio = 3.02"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Chamber Pressure = 1.84 MPa, Area Ratio = 3.02",
+      "explanation": "\"Ideal at sea level\" means the exit pressure equals ambient pressure (101.325 kPa). Isentropic relation:\n\n$$\\frac{P_c}{P_e} = \\left(1 + \\frac{k-1}{2}M_e^2\\right)^{\\frac{k}{k-1}} = \\left(1 + 0.15(2.52)^2\\right)^{4.333} = 18.17$$\n\n$$P_c = 18.17\\,(101.325) \\approx 1.84\\ \\text{MPa}$$\n\nArea ratio:\n\n$$\\frac{A_e}{A_t} = \\frac{1}{M_e}\\left[\\frac{2}{k+1}\\left(1+\\frac{k-1}{2}M_e^2\\right)\\right]^{\\frac{k+1}{2(k-1)}} = \\frac{1}{2.52}\\,[1.698]^{3.833} \\approx 3.02$$\n\n**Why the other choices are incorrect:**\n- a, b → Wrong chamber pressure and/or area ratio.\n- d → Area ratio is right but chamber pressure does not match.\n\n**Differentiate Similar Concepts:**\n- Underexpanded → exit pressure > ambient.\n- Ideally expanded → exit pressure = ambient.\n- Overexpanded → exit pressure < ambient.\n\n**💡 Memory Hook:**\nIdeal nozzle: $P_e = P_{amb}$.\n\n**🎯 Board Tip:**\nMemorize both isentropic relations and plug in carefully; check both values together.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following refers to the average velocity at which propellant is being ejected from the rocket vehicle?",
+      "choices": [
+        "Burn out velocity",
+        "Splash down velocity",
+        "Terminal velocity",
+        "Effective Exhaust velocity"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "Effective Exhaust velocity",
+      "explanation": "Effective exhaust velocity ($c = I_{sp}\\,g_0$) is the average speed of the propellant relative to the rocket. It is what appears in the rocket equation.\n\n$$\\Delta V = c\\,\\ln\\frac{m_0}{m_f}$$\n\n**Why the other choices are incorrect:**\n- Burn out velocity → Rocket speed at the end of burning.\n- Splash down velocity → Speed at landing/ocean impact.\n- Terminal velocity → Constant fall speed where drag equals weight.\n\n**Differentiate Similar Concepts:**\n- Exhaust velocity → propellant speed relative to rocket.\n- Vehicle velocity → rocket speed relative to ground.\n- $I_{sp}$ → $c/g_0$ (seconds).\n\n**💡 Memory Hook:**\nExhaust is \"Effective\" = the exit speed that makes thrust.\n\n**🎯 Board Tip:**\n\"Propellant\" + \"velocity\" → exhaust velocity.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A cycle that has 2 isothermal and 2 isochoric processes.",
+      "choices": [
+        "Stirling",
+        "Carnot",
+        "Avogadro",
+        "Ericsson"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "Stirling",
+      "explanation": "The Stirling cycle consists of isothermal compression, constant-volume (isochoric) heat addition, isothermal expansion, and constant-volume heat rejection (regeneration).\n\n**Why the other choices are incorrect:**\n- Carnot → 2 isothermal + 2 adiabatic (isentropic).\n- Avogadro → A law/number about gas molecules, not a cycle.\n- Ericsson → 2 isothermal + 2 isobaric.\n\n**Differentiate Similar Concepts:**\n- Stirling → isothermal + isochoric.\n- Ericsson → isothermal + isobaric.\n- Carnot → isothermal + isentropic.\n\n**💡 Memory Hook:**\nStirling = \"Stir at constant Volume\".\n\n**🎯 Board Tip:**\nStirling and Ericsson are regenerative cycles. Know their pairings.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following is NOT a characteristic of a steady-flow system?",
+      "choices": [
+        "Mass contained within the system remains invariant with respect to time.",
+        "Quantity of working substance within the control volume varies continuously during operation.",
+        "Energy content within the system remains unaltered throughout the process.",
+        "Thermodynamic state of the working substance at a given location remains invariant with time."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "Quantity of working substance within the control volume varies continuously during operation.",
+      "explanation": "In steady flow, properties at any location do not change with time, and the amount of mass and energy inside the control volume stays constant. A quantity that \"varies continuously\" describes unsteady (transient) flow.\n\n**Why the other choices are incorrect:**\n- a → True: $\\dot m_{in} = \\dot m_{out}$, so the contained mass is constant.\n- c → True: the energy stored in the control volume is constant.\n- d → True: properties at each point are time-invariant.\n\n**Differentiate Similar Concepts:**\n- Steady flow → no change with time at a point.\n- Uniform flow → no change with position.\n- Transient flow → properties change with time (e.g., tank filling).\n\n**💡 Memory Hook:**\nSteady = Static in time.\n\n**🎯 Board Tip:**\nFor \"NOT a characteristic\" questions, pick the statement describing change over time.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "During a knife-edge test, a crankshaft consistently rotates until a specific crank cheek comes to rest at the lowest point. What does this behavior indicate?",
+      "choices": [
+        "The crankshaft has acceptable static balance.",
+        "The crank cheeks need replacements.",
+        "The crankshaft requires immediate replacement regardless of runout.",
+        "The crankshaft is out of static balance due to heavy weight at that crank cheek."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "The crankshaft is out of static balance due to heavy weight at that crank cheek.",
+      "explanation": "A balanced shaft on knife edges should stay at any position. If it always rolls to the same position, the heavy side settles at the bottom, so there is excess weight at that point (static imbalance).\n\n**Why the other choices are incorrect:**\n- a → A balanced shaft would not return to a preferred position.\n- b → Imbalance is corrected by adjusting weight, not automatically by replacing cheeks.\n- c → Imbalance alone does not demand immediate replacement.\n\n**Differentiate Similar Concepts:**\n- Static balance → tested on knife edges (no rotation).\n- Dynamic balance → tested on a spinning machine.\n- Runout → measured with a dial indicator.\n\n**💡 Memory Hook:**\nHeavy side sinks.\n\n**🎯 Board Tip:**\nKnife-edge test = static balance check.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In an aircraft cabin environmental control system, what is the primary function and control mechanism of the gasper air system?",
+      "choices": [
+        "It ducts ambient air from the engine exhaust shroud to provide emergency heating controlled automatically by cabin thermostats.",
+        "It routes heated bleed air from the turbine compressor to the electronics bay via manual valves in the main cabin.",
+        "It ducts cooling air from the cold air manifold to adjustable overhead passenger nozzles via a flight deck-controlled inline fan.",
+        "It pulls high-pressure ram air directly from the nose cowl to pressurize the cargo hold via an automatic outflow valve."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "It ducts cooling air from the cold air manifold to adjustable overhead passenger nozzles via a flight deck-controlled inline fan.",
+      "explanation": "Gaspers are the individual adjustable air vents above passengers. They deliver cool air from the cold air manifold (conditioned air), with an inline fan boosting airflow when needed (especially on the ground).\n\n**Why the other choices are incorrect:**\n- a → Describes emergency/exhaust heating, not gaspers.\n- b → Heated bleed air is not what gaspers supply.\n- d → Cargo pressurization is a different system.\n\n**Differentiate Similar Concepts:**\n- Gasper → personal cooling vent.\n- Air conditioning pack → produces the conditioned air.\n- Outflow valve → controls cabin pressure.\n\n**💡 Memory Hook:**\nGasper = \"gasp for cool air.\"\n\n**🎯 Board Tip:**\nGasper → overhead adjustable nozzles with cool air.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "As an aircraft moves toward higher airspeeds, the engine thrust output begins to increase again. This is due to:",
+      "choices": [
+        "Reduced friction along the internal exhaust duct.",
+        "Increased pressure of ram recovery.",
+        "Decrease in turbine inlet temperature.",
+        "A decrease in compressor pressure ratio."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "Increased pressure of ram recovery.",
+      "explanation": "At first, thrust drops with speed because of ram drag (incoming air has momentum). At higher speeds, the inlet's ram compression raises the pressure entering the compressor, increasing mass flow and overall pressure ratio. Thrust then rises again.\n\n**Why the other choices are incorrect:**\n- a → Duct friction is not the cause.\n- c → TIT is not what drives the thrust recovery.\n- d → Ram effect increases, not decreases, pressure ratio.\n\n**Differentiate Similar Concepts:**\n- Ram drag → decreases thrust as speed rises.\n- Ram recovery → increases inlet pressure, boosting thrust at high speeds.\n- Ram effect → conversion of dynamic pressure to static pressure in the inlet.\n\n**💡 Memory Hook:**\nFaster in = squeezed more = push back.\n\n**🎯 Board Tip:**\n\"Thrust dips then rises with speed\" → ram recovery.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Baffle check valves installed in aircraft fuel tanks are intended to:",
+      "choices": [
+        "Damp or reduce fuel movement within the tank.",
+        "Prevent fuel from moving toward the wingtip.",
+        "Close the vent lines during turbulence.",
+        "Prevent positive pressure from building up inside the tank."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "Prevent fuel from moving toward the wingtip.",
+      "explanation": "Baffle check valves are one-way flapper valves in the tank baffles (ribs). They allow fuel to flow inboard toward the boost pump area but block its flow back outboard, keeping fuel near the pump inlet during banks and maneuvers.\n\n**Why the other choices are incorrect:**\n- a → That is the function of the baffles themselves (damping slosh).\n- c → Vent lines use float/vent valves, not baffle check valves.\n- d → Relief and vent valves handle tank pressure.\n\n**Differentiate Similar Concepts:**\n- Baffle → plate that reduces slosh.\n- Baffle check valve → one-way valve letting fuel move inboard only.\n- Vent valve → regulates tank pressure.\n\n**💡 Memory Hook:**\nCheck valve = one-way street toward the pump.\n\n**🎯 Board Tip:**\nFuel moving toward the wingtip is bad; the check valve stops it.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why is the specific heat at constant pressure greater than the specific heat at constant volume for an ideal gas?",
+      "choices": [
+        "At constant volume, the gas requires additional heat because maintaining a fixed volume increases the internal energy more rapidly than maintaining a fixed pressure.",
+        "At constant volume, the gas performs expansion work internally, requiring less heat to produce the same temperature increase than at constant pressure.",
+        "At constant pressure, the gas absorbs less heat because the increase in volume offsets the increase in internal energy, resulting in a larger temperature change.",
+        "At constant pressure, the gas requires additional heat because part of the supplied energy is converted into expansion work as the gas volume increases."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "At constant pressure, the gas requires additional heat because part of the supplied energy is converted into expansion work as the gas volume increases.",
+      "explanation": "At constant pressure, the gas expands as it is heated. Part of the added heat raises internal energy (temperature), and part does expansion work on the surroundings:\n\n$$c_p - c_v = R$$\n\nAt constant volume, no boundary work is done, so all heat goes into raising temperature.\n\n**Why the other choices are incorrect:**\n- a → Internal energy depends only on temperature for an ideal gas, regardless of path.\n- b → No expansion work happens at constant volume.\n- c → The gas needs more heat, not less.\n\n**Differentiate Similar Concepts:**\n- $c_v$ → heat per degree at constant volume (only $\\Delta u$).\n- $c_p$ → heat per degree at constant pressure ($\\Delta u$ + work).\n- $k = c_p/c_v$ → specific heat ratio (1.4 for air).\n\n**💡 Memory Hook:**\nConstant pressure = heat pays for the push too.\n\n**🎯 Board Tip:**\n$c_p > c_v$ because of expansion work, always.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The thrust of a gas turbine engine is indicated by the:",
+      "choices": [
+        "EPR",
+        "EGT",
+        "CAT",
+        "TIT"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "EPR",
+      "explanation": "Engine Pressure Ratio (turbine discharge total pressure ÷ compressor inlet total pressure) is directly related to thrust, so it is used as a thrust indicator in many turbofans.\n\n**Why the other choices are incorrect:**\n- EGT → Exhaust gas temperature, monitors engine health/limits.\n- CAT → Compressor air temperature (or clear air turbulence), not thrust.\n- TIT → Turbine inlet temperature, a limit parameter.\n\n**Differentiate Similar Concepts:**\n- EPR → thrust indication (pressure-based).\n- N1 (fan speed) → also a thrust indicator on many engines.\n- EGT/TIT → temperature limits and engine condition.\n\n**💡 Memory Hook:**\nEPR = Engine's Push Rating.\n\n**🎯 Board Tip:**\nThrust: EPR or N1. Temperature gauges protect the engine.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "If the intake valve is opened too early in the cycle of operation of a four-stroke cycle engine, it may result in:",
+      "choices": [
+        "Backfiring into the induction system.",
+        "Engine kickback.",
+        "Improper scavenging of exhaust gases.",
+        "Excessive exhaust back pressure."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "Backfiring into the induction system.",
+      "explanation": "If the intake valve opens too early, the cylinder still contains hot burning gases from the previous cycle. The flame can pass into the intake manifold, igniting the fresh mixture in the induction system (backfire).\n\n**Why the other choices are incorrect:**\n- b. Engine kickback → Caused by ignition timing too far advanced during starting.\n- c. Improper scavenging → Relates to valve overlap and late exhaust closing.\n- d. Excessive back pressure → Related to exhaust restrictions.\n\n**Differentiate Similar Concepts:**\n- Backfire → combustion in the intake system or exhaust.\n- Afterfire → burning unburned fuel in the exhaust.\n- Kickback → starting problem from early spark.\n\n**💡 Memory Hook:**\nEarly intake = fire flies backward.\n\n**🎯 Board Tip:**\nIntake valve timing issues → backfire.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An ideal gas has a gas constant R = 0.3 kJ/kg·K and a constant-volume specific heat $c_v$ = 0.7 kJ/kg·K. If the gas has a temperature change of 100°C, the change in internal energy is: (in kJ/kg)",
+      "choices": [
+        "100",
+        "70",
+        "30",
+        "0"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "70",
+      "explanation": "$$\\Delta u = c_v\\,\\Delta T = (0.7)(100) = 70\\ \\text{kJ/kg}$$\n\n(A 100°C change equals a 100 K change.)\n\n**Why the other choices are incorrect:**\n- a. 100 → Equals ΔT, not multiplied by $c_v$.\n- c. 30 → Uses $R$ instead of $c_v$ (0.3 × 100).\n- d. 0 → Would be true only if there were no temperature change.\n\n**Differentiate Similar Concepts:**\n- $\\Delta u = c_v \\Delta T$ → internal energy (any ideal-gas process).\n- $\\Delta h = c_p \\Delta T$ → enthalpy, with $c_p = c_v + R = 1.0$ kJ/kg·K.\n- R → gas constant, used in $PV = mRT$, not in $\\Delta u$.\n\n**💡 Memory Hook:**\nu goes with v ($c_v$); h goes with p ($c_p$).\n\n**🎯 Board Tip:**\nInternal energy of an ideal gas depends only on temperature.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In an aircraft dry-sump engine lubrication system, why is the capacity of the scavenge pump designed to be greater than the pressure pump?",
+      "choices": [
+        "To ensure high oil pressure is delivered directly to the propeller governor.",
+        "To bypass the oil cooler during cold engine starts.",
+        "To force excess oil through the engine breathers during high-altitude flight.",
+        "To prevent oil accumulation in the oil crankcase or accessory housing."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "To prevent oil accumulation in the oil crankcase or accessory housing.",
+      "explanation": "The scavenge side removes oil plus entrained air and blow-by gases. Because the returning mixture has greater volume, the scavenge pump needs more capacity than the pressure pump. This keeps the sump/crankcase from filling with oil, which would cause churning, overheating, and oil leakage.\n\n**Why the other choices are incorrect:**\n- a → Pressure is set by the pressure pump and relief valve.\n- b → Cooler bypass is handled by a thermostatic valve.\n- c → Oil should not be forced out through breathers.\n\n**Differentiate Similar Concepts:**\n- Pressure pump → delivers oil to bearings.\n- Scavenge pump → returns oil (plus air) to the tank; larger capacity.\n- Dry sump → oil stored in a separate tank, not in the crankcase.\n\n**💡 Memory Hook:**\nScavenge > Supply = Sump stays dry.\n\n**🎯 Board Tip:**\nDry-sump + \"scavenge greater\" → prevent accumulation.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A weak fuel-to-air mixture along with normal airflow through a turbine engine may result in:",
+      "choices": [
+        "A rich flameout.",
+        "A lean flameout.",
+        "High EGT.",
+        "Reduced compressor RPM."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "A lean flameout.",
+      "explanation": "A weak (lean) mixture means too little fuel for the airflow. The flame becomes unstable and can extinguish, especially during rapid deceleration (lean die-out).\n\n**Why the other choices are incorrect:**\n- a. Rich flameout → Caused by too much fuel (rapid acceleration).\n- c. High EGT → Occurs with excessive fuel, not a weak mixture.\n- d. Reduced compressor RPM → A consequence of flameout, not the direct result.\n\n**Differentiate Similar Concepts:**\n- Lean flameout (lean die-out) → too little fuel, usually in decel at high altitude.\n- Rich flameout → too much fuel, typically in a fast throttle advance.\n- Hot start → excess fuel raising EGT.\n\n**💡 Memory Hook:**\nWeak mix = flame goes weak = flames out.\n\n**🎯 Board Tip:**\nLean = lean flameout; rich = rich blowout/hot start.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A mass of 1.5 kg of air at 120 kPa and 24°C is contained in a gas-tight, piston-cylinder device. The air is now compressed to a final pressure of 600 kPa. During the process, heat is transferred from the air such that the temperature inside the cylinder remains constant. Calculate the work input during this process.",
+      "choices": [
+        "102.9 kJ",
+        "153.4 kJ",
+        "205.9 kJ",
+        "257.8 kJ"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "205.9 kJ",
+      "explanation": "Constant temperature = isothermal compression of an ideal gas:\n\n$$W = mRT\\ln\\frac{P_1}{P_2}$$\n\n$$W = (1.5)(0.287)(297.15)\\ln\\frac{120}{600} = 127.9\\,(-1.609) = -205.9\\ \\text{kJ}$$\n\nThe negative sign means work is done **on** the gas, so the work input is 205.9 kJ.\n\n**Why the other choices are incorrect:**\n- a, b, d → Result from arithmetic errors, using °C instead of K, or a wrong pressure ratio.\n\n**Differentiate Similar Concepts:**\n- Isothermal → $T$ constant, $W = mRT\\ln(V_2/V_1)$.\n- Adiabatic → no heat transfer, $W = \\dfrac{mR(T_1 - T_2)}{k-1}$.\n- Isobaric → $W = P\\,\\Delta V$.\n\n**💡 Memory Hook:**\nIso-thermal: ln of the ratio, times mRT.\n\n**🎯 Board Tip:**\nConvert to kelvins ($24 + 273.15 = 297.15$ K). Compression → work in.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Electric motors are often classified according to the method of connecting the field coils and armature. Aircraft engine starter motors are generally of which type?",
+      "choices": [
+        "Compound",
+        "Shunt",
+        "Parallel",
+        "Series"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "Series",
+      "explanation": "In a series-wound motor, the field and armature carry the same current. This produces very high starting torque, which is exactly what is needed to crank an engine from rest.\n\n**Why the other choices are incorrect:**\n- Compound → Some torque and speed regulation, but not the typical starter choice.\n- Shunt → Nearly constant speed, low starting torque.\n- Parallel → Not a standard motor classification (the term is a connection description, not a motor type).\n\n**Differentiate Similar Concepts:**\n- Series → high starting torque, speed varies with load.\n- Shunt → constant speed, lower starting torque.\n- Compound → mix of both.\n\n**💡 Memory Hook:**\nSeries = Starter.\n\n**🎯 Board Tip:**\nStarter = series; constant-speed devices (e.g., fuel pumps) = shunt.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In a single-spool gas turbine engine, the compressor RPM is:",
+      "choices": [
+        "Greater than turbine RPM",
+        "Less than turbine RPM",
+        "Same as turbine RPM",
+        "Not related to turbine RPM"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Same as turbine RPM",
+      "explanation": "In a single-spool engine, the compressor and turbine are mounted on the same shaft, so they rotate at the same speed. Dual- and triple-spool engines have separate shafts that rotate at different speeds.\n\n**Why the other choices are incorrect:**\n- a, b → Would require a gearbox between them.\n- d → They are directly linked mechanically.\n\n**Differentiate Similar Concepts:**\n- Single spool → one shaft, one speed (N).\n- Twin spool → N1 (low) and N2 (high) shafts.\n- Free turbine → power turbine on its own shaft.\n\n**💡 Memory Hook:**\nSingle spool = same shaft = same speed.\n\n**🎯 Board Tip:**\nSame shaft, same RPM.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An ideal Otto cycle has a compression ratio of 8. At the beginning of the compression process, air is at 95 kPa and 27°C. A total of 750 kJ/kg of heat is transferred to the air during the constant-volume heat-addition process. Taking into account the variation of specific heats with temperature, what is the thermal efficiency of the cycle?",
+      "choices": [
+        "57.90%",
+        "52.30%",
+        "42.80%",
+        "47.60%"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "52.30%",
+      "explanation": "With **variable specific heats**, use the air tables (at $T_1 = 300$ K: $u_1 = 214.07$ kJ/kg, $v_{r1} = 621.2$).\n\nIsentropic compression:\n\n$$v_{r2} = \\frac{v_{r1}}{r} = \\frac{621.2}{8} = 77.65 \\;\\Rightarrow\\; T_2 = 673\\ \\text{K},\\ u_2 = 491.2\\ \\text{kJ/kg}$$\n\nHeat addition:\n\n$$u_3 = u_2 + q_{in} = 491.2 + 750 = 1241.2\\ \\text{kJ/kg} \\;\\Rightarrow\\; T_3 \\approx 1539\\ \\text{K}$$\n\nIsentropic expansion gives $T_4 \\approx 774.5$ K, $u_4 \\approx 571.7$ kJ/kg.\n\n$$w_{net} = q_{in} - (u_4 - u_1) = 750 - 357.6 = 392.4\\ \\text{kJ/kg}$$\n\n$$\\eta = \\frac{w_{net}}{q_{in}} = \\frac{392.4}{750} = 52.3\\%$$\n\nFor comparison, constant specific heats would give:\n\n$$\\eta = 1 - r^{1-k} = 1 - 8^{-0.4} = 56.5\\%$$\n\n**Why the other choices are incorrect:**\n- a. 57.90% → Close to the constant-specific-heat result; ignores the temperature variation.\n- c, d → Not supported by any consistent calculation.\n\n**Differentiate Similar Concepts:**\n- Cold-air-standard (constant $c$) → overestimates efficiency.\n- Variable specific heats → more realistic, lower efficiency.\n- Otto efficiency → depends on the compression ratio.\n\n**💡 Memory Hook:**\nHot air = higher $c_v$ = lower efficiency than the textbook formula.\n\n**🎯 Board Tip:**\n\"Taking into account variation of specific heats\" → use the air tables, not $1 - r^{1-k}$.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which is true regarding the functions and operation of a propeller governor?\n\nI. It functions as both an engine rpm-sensing device and a high-pressure oil pump.\nII. It responds to changes in engine rpm by directing oil under pressure to or releasing oil from the propeller hydraulic cylinder.\nIII. It directly controls engine fuel flow to regulate propeller RPM during flight.\nIV. The pilot sets a specific RPM by compressing or releasing the governor speeder spring via the flight deck propeller control.",
+      "choices": [
+        "I only.",
+        "I, II, and III.",
+        "II only.",
+        "I, II, IV."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "I, II, IV.",
+      "explanation": "The governor contains flyweights that sense rpm and a gear-type pump that boosts oil pressure. The flyweights move the pilot valve to send oil to or drain it from the prop hub, changing blade pitch. The pilot sets the desired rpm via the speeder spring. Statement III is false: the governor controls **blade pitch**, not fuel flow.\n\n**Why the other choices are incorrect:**\n- a. I only → Misses II and IV.\n- b. I, II, III → Includes the false statement III.\n- c. II only → Misses I and IV.\n\n**Differentiate Similar Concepts:**\n- Propeller governor → controls rpm by changing blade pitch.\n- Fuel control → controls fuel flow (the throttle/power lever).\n- Speeder spring → sets the selected rpm (flyweights balance against it).\n\n**💡 Memory Hook:**\nGovernor governs pitch, not fuel.\n\n**🎯 Board Tip:**\nAny statement saying the governor \"controls fuel\" is wrong.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For an ideal gas undergoing an isentropic process, what is the fundamental relationship between pressure and volume?",
+      "choices": [
+        "Pressure is directly proportional to volume.",
+        "Pressure is inversely proportional to volume.",
+        "Pressure is inversely proportional to volume raised to the specific heat ratio.",
+        "Pressure is directly proportional to volume raised to the power of the universal gas constant."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Pressure is inversely proportional to volume raised to the specific heat ratio.",
+      "explanation": "For an isentropic (reversible adiabatic) ideal-gas process:\n\n$$P V^{k} = \\text{constant} \\;\\Rightarrow\\; P \\propto \\frac{1}{V^{k}}$$\n\nwhere $k = c_p/c_v$.\n\n**Why the other choices are incorrect:**\n- a → Pressure and volume move in opposite directions.\n- b → That is isothermal ($PV = \\text{const}$), with no exponent $k$.\n- d → The universal gas constant does not appear as the exponent.\n\n**Differentiate Similar Concepts:**\n- Isothermal → $PV = C$.\n- Isentropic → $PV^{k} = C$.\n- Polytropic → $PV^{n} = C$ (general case).\n\n**💡 Memory Hook:**\nIsentropic: add the \"k\" power.\n\n**🎯 Board Tip:**\nCompressing adiabatically heats the gas, so pressure rises faster than in the isothermal case.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A condition that may increase the likelihood of detonation in a piston engine is:",
+      "choices": [
+        "An engine with a low compression ratio.",
+        "Slightly retarding the ignition timing.",
+        "Using fuel with a high-octane rating compared to using one with a low octane rating.",
+        "Too lean fuel/air mixture ratio."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "Too lean fuel/air mixture ratio.",
+      "explanation": "A lean mixture burns hotter and slower, raising cylinder temperature and pressure so the end gas can auto-ignite (detonate).\n\n**Why the other choices are incorrect:**\n- a → Lower compression lowers pressure and temperature, reducing detonation.\n- b → Retarding timing lowers peak pressure; it reduces detonation.\n- c → Higher octane resists detonation; low-octane fuel increases it.\n\n**Differentiate Similar Concepts:**\n- Detonation → explosive auto-ignition of end gas after normal ignition.\n- Pre-ignition → ignition **before** the spark (hot spots).\n- Octane rating → resistance to detonation.\n\n**💡 Memory Hook:**\nLean, Hot, and Hit (knock).\n\n**🎯 Board Tip:**\nDetonation causes: lean mixture, over-advanced timing, high temperatures, low-octane fuel.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Air at 10°C and 80 kPa enters the diffuser of a jet engine steadily with a velocity of 200 m/s. The inlet area of the diffuser is 0.4 m². The air leaves the diffuser with a velocity that is very small compared with the inlet velocity. Determine the mass flow rate of the air and the temperature of the air leaving the diffuser.",
+      "choices": [
+        "78.8 kg/s, 303 K",
+        "68.8 kg/s, 293 K",
+        "78.7 kg/s, 323.15 K",
+        "68.7 kg/s, 29°C"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "78.8 kg/s, 303 K",
+      "explanation": "Density of the inlet air (use 80 kPa and 283.15 K):\n\n$$\\rho_1 = \\frac{P_1}{RT_1} = \\frac{80}{(0.287)(283.15)} = 0.9845\\ \\text{kg/m}^3$$\n\nMass flow rate:\n\n$$\\dot m = \\rho_1 A_1 V_1 = (0.9845)(0.4)(200) = 78.8\\ \\text{kg/s}$$\n\nEnergy balance across the diffuser ($V_2 \\approx 0$):\n\n$$T_2 = T_1 + \\frac{V_1^2}{2c_p} = 283.15 + \\frac{(200)^2}{2(1005)} = 303\\ \\text{K}\\ (\\approx 29.9°\\text{C})$$\n\n**Why the other choices are incorrect:**\n- b → Mass flow and temperature both too low.\n- c. 78.7 kg/s, 323.15 K → Temperature rise is overstated (323 K = 50°C).\n- d. 68.7 kg/s, 29°C → Temperature is close, but the mass flow is wrong.\n\n**Differentiate Similar Concepts:**\n- Diffuser → decelerates flow, raising pressure and temperature.\n- Nozzle → accelerates flow, dropping pressure and temperature.\n- Stagnation temperature → $T_0 = T + V^2/(2c_p)$.\n\n**💡 Memory Hook:**\nSlow it down, heat it up.\n\n**🎯 Board Tip:**\nAlways use absolute pressure and temperature (K) in $\\rho = P/RT$. A common mistake is using 100 kPa or °C.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A successful start of a turbine engine is initially indicated by:",
+      "choices": [
+        "Increase in engine speed (RPM).",
+        "Rise in exhaust gas temperature.",
+        "Increase in engine oil pressure.",
+        "Increase in engine fuel flow."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "Rise in exhaust gas temperature.",
+      "explanation": "*(moderate confidence)*\n\n\"Light-off\" (ignition of the fuel in the combustor) is confirmed by a rise in EGT after fuel flow begins. RPM and oil pressure rise from the moment the starter turns the engine, so they only show it is cranking, not that combustion has started.\n\n**Why the other choices are incorrect:**\n- a. RPM increase → Occurs from starter motoring alone.\n- c. Oil pressure increase → Rises as soon as the engine rotates, before ignition.\n- d. Fuel flow increase → Shows fuel is being supplied, not that it has lit.\n\n**Differentiate Similar Concepts:**\n- Light-off → EGT rise confirms ignition.\n- Hung start → RPM stalls below idle.\n- Hot start → EGT exceeds limits.\n\n**💡 Memory Hook:**\nNo heat, no start: EGT is the \"lit\" signal.\n\n**🎯 Board Tip:**\nWatch EGT for light-off within the time limit; if no EGT rise, abort the start.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A reciprocating engine intake valve opens at 15° before TDC and closes 50° after BDC. What is the total duration, in degrees, that the intake valve remains open?",
+      "choices": [
+        "35°",
+        "180°",
+        "135°",
+        "245°"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "245°",
+      "explanation": "From TDC to BDC is 180°.\n\n$$\\text{Duration} = 15° + 180° + 50° = 245°$$\n\n**Why the other choices are incorrect:**\n- a. 35° → 50° − 15°, not the correct addition.\n- b. 180° → Only one stroke; ignores the lead and lag angles.\n- c. 135° → 180° − 50° + 15°, wrong arithmetic.\n\n**Differentiate Similar Concepts:**\n- Valve lead → opens **before** TDC.\n- Valve lag → closes **after** BDC.\n- Valve overlap → both intake and exhaust open near TDC.\n\n**💡 Memory Hook:**\nOpen early + stroke + close late = add them all.\n\n**🎯 Board Tip:**\nDuration = advance + 180° + lag.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The can-type combustion chamber is typically used on:",
+      "choices": [
+        "Turboshaft",
+        "Turbofan",
+        "Turboprop",
+        "Turbojet"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "Turbojet",
+      "explanation": "*(moderate confidence)*\n\nCan-type (multiple-can) combustors are the classic design of early turbojets, especially those with centrifugal compressors (e.g., Whittle-type, Derwent, Nene) and early axial engines. They are easy to build, service, and test, since each can is independent. Modern turbofans mostly use annular combustors.\n\n**Why the other choices are incorrect:**\n- Turboshaft, Turboprop → Some use cans, but they are not the \"typical\" classic application.\n- Turbofan → Modern designs mostly use annular combustors.\n\n**Differentiate Similar Concepts:**\n- Can-type → separate liners and casings; easy maintenance, heavier.\n- Can-annular → cans inside a common outer casing.\n- Annular → single ring-shaped liner; compact, best efficiency.\n\n**💡 Memory Hook:**\nCan = old-school jet. Ring = modern.\n\n**🎯 Board Tip:**\nCan → early turbojet / centrifugal; annular → modern high-performance engines.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A 3-cubic meter rigid tank contains nitrogen gas at 500 kPa and 300 K. Now heat is transferred to the nitrogen in the tank and the pressure of nitrogen rises to 800 kPa. The work done during this process is:",
+      "choices": [
+        "500 kJ",
+        "900 kJ",
+        "2400 kJ",
+        "0 kJ"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "0 kJ",
+      "explanation": "A rigid tank has a fixed volume, so there is no boundary movement:\n\n$$W = \\int P\\,dV = 0 \\quad (dV = 0)$$\n\nAll the heat added raises the internal energy (and temperature and pressure) of the gas.\n\n**Why the other choices are incorrect:**\n- a, b, c → Result from wrongly using $P\\Delta V$ with a pressure difference, or $V\\Delta P$, which is not work.\n\n**Differentiate Similar Concepts:**\n- Isochoric (constant volume) → $W = 0$, $Q = \\Delta U$.\n- Isobaric → $W = P\\Delta V$.\n- $V\\Delta P$ → a quantity, but not boundary work.\n\n**💡 Memory Hook:**\nRigid = no motion = no work.\n\n**🎯 Board Tip:**\n\"Rigid tank\" or \"constant volume\" → $W = 0$ immediately.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The kinetic energy of a fluid increases as it is accelerated in an adiabatic nozzle. Where does this energy come from?",
+      "choices": [
+        "Flow work",
+        "Internal Energy",
+        "Enthalpy",
+        "Entropy"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Enthalpy",
+      "explanation": "For a steady-flow adiabatic nozzle with no work and no elevation change:\n\n$$h_1 + \\frac{V_1^2}{2} = h_2 + \\frac{V_2^2}{2}$$\n\n$$\\Delta\\!\\left(\\frac{V^2}{2}\\right) = h_1 - h_2$$\n\nThe drop in enthalpy (internal energy plus flow work, $h = u + Pv$) is converted into kinetic energy.\n\n**Why the other choices are incorrect:**\n- a. Flow work → Only one part of enthalpy.\n- b. Internal energy → Another part of enthalpy; it does not account for the flow-work contribution.\n- d. Entropy → Not a form of energy.\n\n**Differentiate Similar Concepts:**\n- Internal energy ($u$) → molecular energy.\n- Enthalpy ($h = u + Pv$) → total energy of flowing fluid (includes flow work).\n- Entropy ($s$) → measure of disorder/irreversibility.\n\n**💡 Memory Hook:**\nNozzle = enthalpy goes down, speed goes up.\n\n**🎯 Board Tip:**\nFor flowing fluids, think enthalpy, not just internal energy.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In the Ryanair/Malta Air Boeing 737-800 incident in July 2026, a fractured fan blade penetrated the engine casing and produced damage outside the engine. This most directly indicates a failure of the engine's:",
+      "choices": [
+        "Compressor pressure-ratio",
+        "Containment capability",
+        "Fan blades",
+        "Pressure-sealing function"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "Containment capability",
+      "explanation": "The casing is designed to contain fragments if a blade fails. When a fractured blade passes through the casing and damages the surrounding structure, the key failure is the containment system, not simply the blade fracture.\n\n**Why the other choices are incorrect:**\n- a → A pressure-ratio problem does not cause debris to exit the casing.\n- c → The blade fracture is the initiating event, but the question asks what the outside damage indicates.\n- d → Sealing relates to air/oil leakage, not debris.\n\n**Differentiate Similar Concepts:**\n- Uncontained failure → fragments exit the casing.\n- Contained failure → fragments stay inside the casing.\n- Blade-out test → certification test proving containment.\n\n**💡 Memory Hook:**\nDamage outside the casing = containment lost.\n\n**🎯 Board Tip:**\nDebris through the case → failure of containment.",
+      "tags": [
+        "Powerplant Mock Exam I",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}
