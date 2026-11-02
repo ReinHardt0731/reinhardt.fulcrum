@@ -1,0 +1,1209 @@
+{
+  "title": "ACRM Mock Exam I",
+  "sourceFiles": [
+    "F:\\ResearchFiles\\ACRM Mock Exam I.md",
+    "F:\\ResearchFiles\\ACRM Mock Exam I Esplaination and Answers.md"
+  ],
+  "questions": [
+    {
+      "question": "To fuel an aircraft without risk of sudden explosion due to fuel vapors, this procedure should be done first:",
+      "choices": [
+        "Grounding the aircraft first.",
+        "Remove Cargo.",
+        "Leave the fuel port open.",
+        "Leave the drain port open."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "Grounding the aircraft first.",
+      "explanation": "Fuel flowing through hoses and nozzles builds up static electricity. Grounding (and bonding) equalizes the electrical potential between the aircraft, the fuel truck, and the earth, so no spark can jump to ignite fuel vapors. It must be done before any fuel port is opened.\n\n**Why the other choices are incorrect:**\n- Remove cargo → Does nothing about static ignition.\n- Leave the fuel port open → Exposes vapors and gives no static protection.\n- Leave the drain port open → Leaks fuel and creates a bigger fire hazard.\n\n**Differentiate Similar Concepts:**\n- Grounding → Aircraft connected to the earth.\n- Bonding → Aircraft connected to the fuel nozzle or truck.\n- Both → Equalize potential so no spark forms.\n\n**💡 Memory Hook:**\nGround first, fuel second.\n\n**🎯 Board Tip:**\nSequence questions reward the answer that happens *before* any fuel path is opened.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "As per AC 43.13-1B, the following are the contents of a survival raft except:",
+      "choices": [
+        "Protective ointment",
+        "Oars",
+        "Sponge",
+        "Axe"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "Axe",
+      "explanation": "The AC 43.13-1B raft survival kit lists items such as a sponge, protective (sunburn) ointment, oars, a raft knife, signal flares, first-aid kit, and repair kits. An axe is not in the list. A heavy sharp tool is a hazard to an inflatable raft, which is why only a safety raft knife is carried.\n\n**Why the other choices are incorrect:**\n- Protective ointment → Sunburn protection is part of the kit.\n- Oars → Needed to propel and steer the raft.\n- Sponge → Used to bail and to collect water.\n\n**Differentiate Similar Concepts:**\n- Raft knife → Cuts lines, built to avoid puncturing the raft.\n- Axe → Not part of the inflatable raft kit.\n\n**💡 Memory Hook:**\nAxe plus inflatable raft equals pop.\n\n**🎯 Board Tip:**\n\"Except\" questions: find the one item that does not belong, not the one you recognize best.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The document where an aircraft's Datum can be identified:",
+      "choices": [
+        "Placard",
+        "TCDS",
+        "STC",
+        "AMM"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "TCDS",
+      "explanation": "The Type Certificate Data Sheet (TCDS) gives the datum location, CG range, leveling means, maximum weights, and other certified limits for the aircraft type.\n\n**Why the other choices are incorrect:**\n- Placard → Displays an operating limitation in the aircraft, not the datum definition.\n- STC → Approves a modification to the type design.\n- AMM → Gives maintenance procedures from the manufacturer.\n\n**Differentiate Similar Concepts:**\n- TCDS → Certified type data (datum, CG range, weights).\n- STC → Approved modification.\n- AMM → How to maintain.\n- Placard → Limits shown to the crew.\n\n**💡 Memory Hook:**\nTCDS = the aircraft's ID card.\n\n**🎯 Board Tip:**\nAny weight and balance reference question points first to the TCDS.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A heavy metal object with a point on one end and a string to another. It makes a perpendicular line from where the string is attached, commonly used in CG computation.",
+      "choices": [
+        "Laser level",
+        "Spirit level",
+        "Plumb bob",
+        "Spike"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Plumb bob",
+      "explanation": "A plumb bob hangs from a string so the point marks the exact spot directly below the attachment point. In weight and balance work it transfers a reference point (such as the datum or a scale location) to the floor.\n\n**Why the other choices are incorrect:**\n- Laser level → Projects a beam or line, not a hanging point.\n- Spirit level → Uses a bubble to show level or horizontal.\n- Spike → Not a measuring instrument.\n\n**Differentiate Similar Concepts:**\n- Plumb bob → True vertical by gravity.\n- Spirit level → Horizontal by bubble.\n- Laser level → Horizontal or vertical by projected beam.\n\n**💡 Memory Hook:**\nPlumb = plummet, it drops straight down.\n\n**🎯 Board Tip:**\nWhenever the stem says \"string\" and \"point,\" think plumb bob.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Fluids NOT considered as empty weight fluids EXCEPT:",
+      "choices": [
+        "Potable Water",
+        "Lavatory Pre-charge Water",
+        "Engine Oil",
+        "Water for Water injection"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Engine Oil",
+      "explanation": "In the weight and balance framework used by this exam (see Q22), empty weight includes unusable (undrainable) fuel, hydraulic fluid, and engine oil. Potable water, lavatory pre-charge water, and water-injection fluid are operating items that are added as useful load, not part of empty weight.\n\n**Why the other choices are incorrect:**\n- Potable water → Operating item, not empty weight.\n- Lavatory pre-charge water → Operating item, not empty weight.\n- Water for water injection → Consumed in operation, so it is useful load.\n\n**Differentiate Similar Concepts:**\n- Empty weight fluids → Unusable fuel, hydraulic fluid, engine oil.\n- Useful load fluids → Usable fuel, potable water, lavatory water, injection water.\n\n**💡 Memory Hook:**\nIf it stays in the aircraft system when the tanks are \"empty,\" it counts as empty weight.\n\n**🎯 Board Tip:**\nRead the double negative slowly: \"NOT considered ... EXCEPT\" means the answer *is* an empty weight fluid.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Crystal type of titanium where it provides all round performance and resistance to oxidization.",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "A",
+      "explanation": "Source caution: The provided answer key flags this item for verification against your reviewer because wording can vary by reference.\n\nType A (alpha) titanium, the hexagonal close-packed form, is known for weldability, good all-round behavior, and resistance to oxidation at elevated temperature.\n\n**Why the other choices are incorrect:**\n- B → Beta type, valued for high strength and formability, with less weldability.\n- C → Alpha-beta mixture, a compromise heat-treatable class.\n- D → Not a titanium classification.\n\n**Differentiate Similar Concepts:**\n- Alpha (A) → Weldable, oxidation resistant.\n- Beta (B) → High strength, formable.\n- Alpha-beta (C) → Balanced, heat treatable.\n\n**💡 Memory Hook:**\nA for all-round.\n\n**🎯 Board Tip:**\nCheck how your reviewer labels the three titanium types; the letter-to-type mapping is what this item tests.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A metal material is decided to be implemented to a complex fairing. The major property of a metal for this application should be:",
+      "choices": [
+        "Ductility",
+        "Malleability",
+        "Strength",
+        "Elasticity"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "Malleability",
+      "explanation": "Malleability is the ability to be hammered, pressed, or rolled into shape without cracking. Forming a complex fairing is mostly compressive shaping, so malleability is the key property.\n\n**Why the other choices are incorrect:**\n- Ductility → Ability to be drawn out under tension, like wire.\n- Strength → Resists load, but does not help forming.\n- Elasticity → Ability to spring back, which works against forming.\n\n**Differentiate Similar Concepts:**\n- Malleability → Shaped by compression (hammering, rolling).\n- Ductility → Stretched by tension (wire drawing).\n- Elasticity → Returns to original shape.\n\n**💡 Memory Hook:**\nMalleable = mallet.\n\n**🎯 Board Tip:**\nMalleability and ductility are often confused; ask whether the forming load is squeezing or pulling.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An experimental supersonic aircraft was designed with loose fuel tank fittings such that it leaks on the ground but is leak proof in the hot supersonic flight regime. This exploits the ________ property of metal.",
+      "choices": [
+        "Fusibility",
+        "Conductivity",
+        "Thermal Expansion",
+        "Ductility"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Thermal Expansion",
+      "explanation": "Aerodynamic heating makes the metal expand. The designed gaps in the fittings close as the parts expand, so the tank seals in flight but leaks on the cold ground.\n\n**Why the other choices are incorrect:**\n- Fusibility → Ability to melt and fuse.\n- Conductivity → Heat or electrical transfer, not a change in fit.\n- Ductility → Ability to stretch plastically.\n\n**Differentiate Similar Concepts:**\n- Thermal expansion → Dimensions change with temperature.\n- Conductivity → How easily heat or current flows.\n- Fusibility → Ease of melting.\n\n**💡 Memory Hook:**\nHot metal grows, gaps close.\n\n**🎯 Board Tip:**\nWords like \"hot regime\" and \"leak proof\" in the stem point to a dimensional change, not a flow property.\n\n---",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "This SAE Steel series are known for strength, toughness, and wear and fatigue resistance, especially when heat treated. Special grades of these series are ideal for Springs, Ball, and Roller bearings.",
+      "choices": [
+        "6XXX",
+        "7XXX",
+        "8XXX",
+        "9XXX"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "6XXX",
+      "explanation": "Source caution: The provided answer key flags this item for verification against your reviewer because wording can vary by reference.\n\nThe SAE 6XXX series is chromium-vanadium steel. It is known for strength, toughness, and fatigue and wear resistance when heat treated, and it is the series associated with springs.\n\n**Why the other choices are incorrect:**\n- 7XXX → Tungsten series, obsolete and not a standard aircraft choice.\n- 8XXX → Nickel-chromium-molybdenum steels.\n- 9XXX → Silicon-manganese steels.\n\n**Differentiate Similar Concepts:**\n- 4XXX → Molybdenum steel.\n- 5XXX → Chromium steel.\n- 6XXX → Chromium-vanadium steel.\n- 8XXX → Nickel-chromium-molybdenum steel.\n\n**💡 Memory Hook:**\n6 = chrome-vanadium = springs.\n\n**🎯 Board Tip:**\nMemorize the first digit of the SAE series, since the first digit names the main alloying element.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "There are two metals commonly found in aircraft exhausts and an electrochemical test must be performed. After preparation, the result indicates a bright pink spot. This metal is:",
+      "choices": [
+        "Monel",
+        "Inconel",
+        "Stainless Steel",
+        "CRES"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "Inconel",
+      "explanation": "Source caution: The provided answer key flags this item for verification against your reviewer because wording can vary by reference.\n\nThe spot test is used to tell Inconel from stainless steel in exhaust parts. Inconel is a nickel-rich alloy, and the nickel reaction produces the bright pink spot.\n\n**Why the other choices are incorrect:**\n- Monel → Nickel-copper alloy, not a typical exhaust metal.\n- Stainless steel → Contains less nickel, so it gives a different, weaker result.\n- CRES → \"Corrosion-resistant steel,\" which is another name for stainless steel.\n\n**Differentiate Similar Concepts:**\n- Inconel → Nickel-chromium alloy, high nickel, pink spot.\n- Stainless steel (CRES) → Iron-chromium-nickel, different spot result.\n- Monel → Nickel-copper.\n\n**💡 Memory Hook:**\nNickel-rich turns pink.\n\n**🎯 Board Tip:**\nStainless steel and CRES are the same material family, so neither can be the unique answer in a four-choice item.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An aluminum component is to be created en masse with high tolerance requirements. The recommended manufacturing method for this component is:",
+      "choices": [
+        "Wrought",
+        "Sand mold",
+        "Permanent Mold",
+        "Die Cast"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "Die Cast",
+      "explanation": "Die casting forces molten metal into a steel die under pressure. It gives the best dimensional accuracy and surface finish at high production rates.\n\n**Why the other choices are incorrect:**\n- Wrought → Rolled or forged stock, not a mass casting route.\n- Sand mold → Low cost but rough tolerance and finish.\n- Permanent mold → Better than sand, but still looser than die casting.\n\n**Differentiate Similar Concepts:**\n- Sand mold → Cheap, one-time mold, rough.\n- Permanent mold → Reusable mold, gravity fed.\n- Die cast → Reusable mold, pressure fed, tightest tolerance.\n\n**💡 Memory Hook:**\nDie cast = die hard accuracy.\n\n**🎯 Board Tip:**\n\"Mass production\" plus \"tight tolerance\" almost always means die casting.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "This copper alloy is ideal for bushings and bearings due to its tensile strength when heat treated.",
+      "choices": [
+        "Muntz Metal",
+        "Brass",
+        "Beryllium copper",
+        "Bronze"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Beryllium copper",
+      "explanation": "Beryllium copper can be heat treated to high tensile strength and hardness while keeping good wear and fatigue properties, which suits bushings, bearings, and springs.\n\n**Why the other choices are incorrect:**\n- Muntz metal → Brass (60% Cu, 40% Zn), used for condenser tubes and fittings.\n- Brass → Copper-zinc alloy, not hardened by heat treatment.\n- Bronze → Copper-tin alloy, a bearing metal, but not noted for heat-treat strengthening.\n\n**Differentiate Similar Concepts:**\n- Brass → Copper + zinc.\n- Bronze → Copper + tin.\n- Beryllium copper → Copper + beryllium, heat treatable.\n\n**💡 Memory Hook:**\nBe-Cu = heat it, it gets tough.\n\n**🎯 Board Tip:**\n\"Heat treated\" in a copper alloy question points to beryllium copper.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "According to FAA advisory material and standard maintenance practices, how should dual redundant hydraulic system lines for critical flight controls be routed through the aircraft structure?",
+      "choices": [
+        "Bundled tightly together with heavy tie-wraps to simplify spatial tracking and structural inspection.",
+        "Routed through the exact same structural channel to minimize weight and harness complexity.",
+        "Separated by a physical barrier or routed through distinct, separate structural paths to prevent a single localized event from disabling both systems.",
+        "Placed in direct contact with electrical wiring bundles to facilitate shared structural support brackets."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Separated by a physical barrier or routed through distinct, separate structural paths to prevent a single localized event from disabling both systems.",
+      "explanation": "Redundant systems exist so that one failure cannot take out both. Separate routing or a barrier keeps one localized event (fire, rupture, debris) from disabling both lines.\n\n**Why the other choices are incorrect:**\n- Bundled tightly → Common damage would hit both lines.\n- Same structural channel → Saves weight but defeats redundancy.\n- In contact with wiring → Chafing, heat, and leaks can damage both systems.\n\n**Differentiate Similar Concepts:**\n- Redundancy → Backup exists.\n- Separation → Backup cannot be hit by the same event.\n\n**💡 Memory Hook:**\nTwo lines, two paths.\n\n**🎯 Board Tip:**\nRedundancy only counts if the routing keeps the paths independent.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Wrought aluminum with the designation 7075-W (1/2 hr).",
+      "choices": [
+        "Zinc primary alloy element, No modifications, 5.6%, Solution heat treated, unstable temper, Aged 30 minutes.",
+        "Zinc primary alloy element, No modifications, 7.5%, Solution heat treated.",
+        "Zinc primary alloy element, No modifications, 5.6%, Solution heat treated.",
+        "Zinc primary alloy element, No modifications, 7.5%, Solution heat treated, tempered for 30 minutes."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "Zinc primary alloy element, No modifications, 5.6%, Solution heat treated, unstable temper, Aged 30 minutes.",
+      "explanation": "Decode 7075-W:\n- 7 → Zinc is the main alloying element.\n- 0 → No modification to the original alloy.\n- 75 → Alloy identifier (nominal zinc about 5.6%).\n- W → Solution heat treated, unstable temper.\n- (1/2 hr) → Natural aging time after quenching.\n\n**Why the other choices are incorrect:**\n- b, d → State 7.5% zinc, which is wrong; the \"75\" is an identifier, not the percentage.\n- c → Leaves out the unstable temper and the 30 minute aging time.\n\n**Differentiate Similar Concepts:**\n- W → Solution heat treated, unstable.\n- T → Solution heat treated and stabilized (for example T6).\n- O → Annealed.\n- H → Strain hardened.\n\n**💡 Memory Hook:**\nW = Waiting (unstable, still aging).\n\n**🎯 Board Tip:**\nThe last two digits of a wrought alloy number are an identifier, not a percentage.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A type of seal used in fluid systems that contains moving parts such as pumps and actuator cylinders.",
+      "choices": [
+        "Gasket",
+        "Wiper",
+        "Packing",
+        "Polytetrafluoroethylene tape"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Packing",
+      "explanation": "Packings (such as O-rings, V-rings, and U-cups) are dynamic seals that seal around moving parts like pistons and shafts.\n\n**Why the other choices are incorrect:**\n- Gasket → Static seal between stationary mating surfaces.\n- Wiper → Cleans the rod and keeps dirt out, but does not seal fluid.\n- PTFE tape → Thread sealant for fittings, not a dynamic seal.\n\n**Differentiate Similar Concepts:**\n- Gasket → Static seal.\n- Packing → Dynamic seal.\n- Wiper → Contaminant exclusion.\n\n**💡 Memory Hook:**\nPacking packs around motion.\n\n**🎯 Board Tip:**\nMoving part in the stem means a packing, stationary parts means a gasket.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An aluminum wing spar was connected to an alclad skin with a copper rivet. This fastener combination will likely form:",
+      "choices": [
+        "Pitting corrosion",
+        "Fatigue corrosion",
+        "Fretting corrosion",
+        "Galvanic corrosion"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "Galvanic corrosion",
+      "explanation": "Dissimilar metals in contact with an electrolyte form a galvanic cell. Copper is far more noble than aluminum, so the aluminum corrodes quickly.\n\n**Why the other choices are incorrect:**\n- Pitting → Localized holes, but not the cause of this pairing.\n- Fatigue corrosion → Corrosion combined with cyclic stress.\n- Fretting → Wear from small relative motion between tight surfaces.\n\n**Differentiate Similar Concepts:**\n- Galvanic → Dissimilar metals plus electrolyte.\n- Fretting → Rubbing with small motion.\n- Pitting → Localized pits from breakdown of the protective film.\n\n**💡 Memory Hook:**\nTwo metals, one wet bridge, galvanic.\n\n**🎯 Board Tip:**\nDissimilar metals in the stem almost always mean galvanic corrosion.\n\n---",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In aircraft structural design, fail-safe and safe-life philosophies are used to manage structural integrity. Which of the following best describes the \"fail-safe\" design concept regarding fatigue and maintenance?",
+      "choices": [
+        "The structure is designed so that a single failure will not result in catastrophic loss; the remaining structure can safely carry redistributed loads until damage is detected during inspections.",
+        "The part is permanently retired and discarded immediately upon reaching a predetermined number of operating hours, regardless of inspection findings.",
+        "The structural components are manufactured using infinitely durable alloys that do not experience cyclic fatigue under standard operational limits.",
+        "Operational load limits are progressively increased in flight until minor structural yielding alerts the flight crew to schedule maintenance."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "The structure is designed so that a single failure will not result in catastrophic loss; the remaining structure can safely carry redistributed loads until damage is detected during inspections.",
+      "explanation": "Fail-safe design uses multiple load paths and crack-stopping features so that a failed member is carried by the rest of the structure until inspection finds it.\n\n**Why the other choices are incorrect:**\n- b → That is safe-life: the part is retired at a set life.\n- c → No structure is immune to fatigue.\n- d → Yielding in flight to prompt maintenance is never a design philosophy.\n\n**Differentiate Similar Concepts:**\n- Fail-safe → Survives a failure and relies on inspection.\n- Safe-life → Retired before failure, regardless of condition.\n\n**💡 Memory Hook:**\nFail-safe = fails, but safely.\n\n**🎯 Board Tip:**\nFail-safe depends on inspections, safe-life depends on retirement time.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For cleaning a lead acid battery compartment where spilled acid may have occurred, which chemicals are appropriate for the task?",
+      "choices": [
+        "Baking Soda",
+        "Water",
+        "Ionic Detergent",
+        "Phenolic solvent"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "Baking Soda",
+      "explanation": "Lead-acid battery electrolyte is sulfuric acid. A sodium bicarbonate (baking soda) solution neutralizes it, and the area is then rinsed with water.\n\n**Why the other choices are incorrect:**\n- Water → Dilutes and rinses, but does not neutralize the acid.\n- Ionic detergent → Does not neutralize and can leave residue.\n- Phenolic solvent → A hazardous solvent that is not a neutralizer.\n\n**Differentiate Similar Concepts:**\n- Lead-acid spill (acid) → Neutralize with baking soda.\n- Nickel-cadmium spill (alkaline) → Neutralize with a mild acid such as boric acid or vinegar.\n\n**💡 Memory Hook:**\nAcid meets bicarbonate.\n\n**🎯 Board Tip:**\nAlways match the neutralizer to the electrolyte type.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An aluminum surface being prepared for painting corroded after some time. Which of the following work done most likely caused the corrosion?",
+      "choices": [
+        "A non-ionic detergent cleaner was used to remove the preservative coating.",
+        "A non-woven fine abrasive pad previously used on steel was borrowed for surface preparation.",
+        "Emulsion cleaner was mixed and used as per instruction.",
+        "A coarse aluminum wool for removing large portions of paint."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "A non-woven fine abrasive pad previously used on steel was borrowed for surface preparation.",
+      "explanation": "Steel particles embedded in the pad transfer to the aluminum. Those iron particles create galvanic cells that corrode the aluminum.\n\n**Why the other choices are incorrect:**\n- a → A non-ionic detergent is a correct way to remove preservative.\n- c → Emulsion cleaner used as instructed is normal practice.\n- d → Aluminum wool on aluminum is compatible, though coarse, and does not introduce a foreign metal.\n\n**Differentiate Similar Concepts:**\n- Dedicated abrasives → Use separate abrasives for aluminum.\n- Cross-contamination → Steel residue on aluminum starts galvanic attack.\n\n**💡 Memory Hook:**\nNever let steel touch the aluminum pad.\n\n**🎯 Board Tip:**\nTool contamination is a classic cause of corrosion on prepared aluminum.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Phenolic, urea-formaldehyde, and melamine formaldehyde are examples of plastics that do not appreciably soften under high temperature.",
+      "choices": [
+        "Thermoplastic",
+        "Thermoset",
+        "Bakelite",
+        "Polystyrene"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "Thermoset",
+      "explanation": "Phenolic, urea-formaldehyde, and melamine formaldehyde cure by cross-linking permanently. Reheating does not soften them.\n\n**Why the other choices are incorrect:**\n- Thermoplastic → Softens when heated and can be reshaped.\n- Bakelite → A specific thermoset example, not the class name asked for.\n- Polystyrene → A thermoplastic.\n\n**Differentiate Similar Concepts:**\n- Thermoplastic → Soften on heating, reformable.\n- Thermoset → Cure once, then stay rigid.\n\n**💡 Memory Hook:**\nThermoset = \"set\" like concrete.\n\n**🎯 Board Tip:**\nThe question asks for the category, so choose the class, not the example.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A 0.032 in aluminum plate is to be riveted. If the joint is a single lap joint, what is the length and diameter of the standard rivet to be used?",
+      "choices": [
+        "D = 1/8 in, L = 3/32 in",
+        "D = 3/32 in, L = 3/16 in",
+        "D = 3/32 in, L = 3/32 in",
+        "D = 0.096 in, L = 0.208 in"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "D = 3/32 in, L = 3/16 in",
+      "explanation": "Rivet diameter is about three times the thickest sheet:\n\n$$D = 3T = 3(0.032) = 0.096\\ \\text{in} \\approx \\tfrac{3}{32}\\ \\text{in}$$\n\nRivet length is the grip (two sheets) plus 1.5 diameters for the shop head:\n\n$$L = (0.032 + 0.032) + 1.5\\left(\\tfrac{3}{32}\\right) \\approx 0.205\\ \\text{in} \\approx \\tfrac{3}{16}\\ \\text{in}$$\n\n**Why the other choices are incorrect:**\n- a → Too thick a rivet for a 0.032 plate with a length that is too short.\n- c → The length is too short to form the shop head.\n- d → The exact computed values, but not standard rivet sizes, and the question asks for the standard rivet.\n\n**Differentiate Similar Concepts:**\n- Diameter → About 3 × thickest sheet.\n- Length → Grip + 1.5 × diameter.\n\n**💡 Memory Hook:**\n3T for diameter, 1.5D for the tail.\n\n**🎯 Board Tip:**\nRound the computed value to a standard rivet size, not the raw number.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A private jet has a current ramp weight of 13260 lb, CG at FS 201.52. The loads are: Structural Empty Weight of 8266 lb, two pilots: 200 lb each at FS131, Passengers and cargo: 1000 lb total FS 230, Fuel load: 3560 lb, 400 lb of it is reserve, and 8 lb undrainable at FS205, Lavatory water: 21 lb FS274, Hydraulic Fluids: 8 lb FS 285, Engine oil: 18 lb FS 285. Find the Standard Empty Weight.",
+      "choices": [
+        "8700 lb",
+        "8300 lb",
+        "8274 lb",
+        "8321 lb"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "8300 lb",
+      "explanation": "Check the data: the ramp weight is made of the structural empty weight, crew, payload, usable fuel, and the empty-weight fluids.\n\n$$8266 + 400 + 1000 + 3560 + 8 + 8 + 18 = 13260\\ \\text{lb}$$\n\nStandard empty weight adds the empty-weight fluids to the structural empty weight:\n\n$$SEW_{standard} = 8266 + 8_{\\text{unusable fuel}} + 8_{\\text{hydraulic}} + 18_{\\text{oil}} = 8300\\ \\text{lb}$$\n\n**Why the other choices are incorrect:**\n- a → A rounded figure that matches no calculation.\n- c → Adds only part of the fluids (8266 + 8).\n- d → Wrongly adds the 21 lb of lavatory water, which is an operating item.\n\n**Differentiate Similar Concepts:**\n- Structural empty weight → Airframe, engines, fixed equipment.\n- Standard empty weight → Structural plus unusable fuel, hydraulic fluid, oil.\n- Useful load → Crew, passengers, cargo, usable fuel, potable and lavatory water.\n\n**💡 Memory Hook:**\nStandard empty = structure + stuck fluids.\n\n**🎯 Board Tip:**\nReconcile the ramp weight first; it tells you which items are already counted.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Most effective means to provide even pressure on a composite repair.",
+      "choices": [
+        "Shot Bag",
+        "Cleco",
+        "Spring Clamp",
+        "Vacuum Bagging"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "Vacuum Bagging",
+      "explanation": "Vacuum bagging applies atmospheric pressure uniformly over the whole repair, squeezing out air and excess resin and holding the plies in contact while curing.\n\n**Why the other choices are incorrect:**\n- Shot bag → Weight is uneven and limited.\n- Cleco → A temporary fastener, not a pressure device.\n- Spring clamp → Point loads only.\n\n**Differentiate Similar Concepts:**\n- Vacuum bag → Uniform pressure over the area.\n- Clamp or cleco → Local pressure only.\n\n**💡 Memory Hook:**\nVacuum = all-over squeeze.\n\n**🎯 Board Tip:**\n\"Even\" or \"uniform\" in a composite stem means vacuum bagging.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In welding inspections, the ________ is the distance through the center from the root to the face.",
+      "choices": [
+        "Bead",
+        "Toe",
+        "Throat",
+        "Lap"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Throat",
+      "explanation": "The throat of a weld is the distance from the root to the face. It measures the effective thickness of the weld.\n\n**Why the other choices are incorrect:**\n- Bead → The weld deposit itself.\n- Toe → The junction between the weld face and the base metal.\n- Lap → Describes the joint overlap, not a weld dimension.\n\n**Differentiate Similar Concepts:**\n- Throat → Root to face.\n- Toe → Edge where weld meets base metal.\n- Root → Where the weld penetrates at the back.\n- Face → The exposed surface of the weld.\n\n**💡 Memory Hook:**\nThroat = the depth you swallow.\n\n**🎯 Board Tip:**\nLearn the weld anatomy terms: face, toe, root, throat, and bead.\n\n---",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The flame when welding aluminum should be slightly:",
+      "choices": [
+        "Carbonic",
+        "Nitridic",
+        "Carburizing",
+        "Oxidizing"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Carburizing",
+      "explanation": "A slightly carburizing (excess acetylene) flame prevents oxidation of aluminum, which forms a tenacious oxide layer.\n\n**Why the other choices are incorrect:**\n- Carbonic → Not a flame type.\n- Nitridic → Not a flame type.\n- Oxidizing → Excess oxygen would oxidize and weaken the weld.\n\n**Differentiate Similar Concepts:**\n- Neutral → Equal oxygen and acetylene, for steel.\n- Carburizing → Excess acetylene, for aluminum.\n- Oxidizing → Excess oxygen, for brazing brass or bronze.\n\n**💡 Memory Hook:**\nAluminum wants an acetylene-rich flame.\n\n**🎯 Board Tip:**\nMemorize which metal goes with which flame; it is a repeated item.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "This residue when not cleaned after welding will corrode the metal.",
+      "choices": [
+        "Slag",
+        "Filler",
+        "Flux",
+        "Burr"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Flux",
+      "explanation": "Welding and brazing flux is chemically active and absorbs moisture, so leftover flux continues to attack the metal. It must be removed completely.\n\n**Why the other choices are incorrect:**\n- Slag → A brittle residue that is chipped off and is not corrosive in the same way.\n- Filler → Added metal that becomes part of the weld.\n- Burr → A rough edge from machining.\n\n**Differentiate Similar Concepts:**\n- Flux → Chemical cleaner, corrosive residue.\n- Slag → Hard residue formed from flux or coating.\n- Filler → Rod or wire melted into the joint.\n\n**💡 Memory Hook:**\nFlux must flush.\n\n**🎯 Board Tip:**\nAfter aluminum welding, wash the flux off with hot water.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The threads on an acetylene line uses",
+      "choices": [
+        "Left-handed threads",
+        "Right-handed threads",
+        "Snap on threads",
+        "Welded threads"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "Left-handed threads",
+      "explanation": "Fuel gas fittings use left-handed threads so they cannot be mistaken for oxygen fittings, which are right-handed.\n\n**Why the other choices are incorrect:**\n- Right-handed → Used for oxygen.\n- Snap-on → Not used for high-pressure welding gases.\n- Welded → Permanent and not serviceable.\n\n**Differentiate Similar Concepts:**\n- Oxygen line → Right-hand thread.\n- Acetylene (fuel gas) line → Left-hand thread, often notched nut.\n\n**💡 Memory Hook:**\nFuel is Flipped (left).\n\n**🎯 Board Tip:**\nDifferent thread directions prevent dangerous cross-connection.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "One of the most durable topcoats in aviation, often used in hostile environments such as agricultural and Seaplanes.",
+      "choices": [
+        "Synthetic Enamels",
+        "Acrylic Lacquer",
+        "Polyurethane",
+        "Acrylic Urethanes"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Polyurethane",
+      "explanation": "Polyurethane finishes are among the most durable in aviation, with excellent chemical, abrasion, and weather resistance, which suits agricultural aircraft and seaplanes.\n\n**Why the other choices are incorrect:**\n- Synthetic enamel → Less durable.\n- Acrylic lacquer → Easy to apply, but less chemical and abrasion resistant.\n- Acrylic urethane → A good finish, but polyurethane is the standard answer for the harshest environments.\n\n**Differentiate Similar Concepts:**\n- Lacquer → Dries by evaporation, easy repair, less durable.\n- Enamel → Cures by oxidation, moderate durability.\n- Polyurethane → Cross-linked, toughest.\n\n**💡 Memory Hook:**\nPoly-urethane = poly-tough.\n\n**🎯 Board Tip:**\nHostile environment means polyurethane.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "During an installation of a thin wood member, a technician drove a screw through the wood, causing a failure along the grains of the wood. This is a ________ failure.",
+      "choices": [
+        "Compression",
+        "Check",
+        "Shake",
+        "Split"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "Split",
+      "explanation": "A split is a separation of the wood along the grain, extending through the member, here caused by driving a screw into thin wood.\n\n**Why the other choices are incorrect:**\n- Compression → Crushing or buckling of fibers under load.\n- Check → A lengthwise separation across the rings caused by drying.\n- Shake → A separation along the grain between growth rings, present in the living tree.\n\n**Differentiate Similar Concepts:**\n- Split → Through-separation along the grain from mechanical cause.\n- Check → Drying crack.\n- Shake → Ring separation from growth.\n- Compression failure → Crushed fibers.\n\n**💡 Memory Hook:**\nScrew in thin wood, it splits.\n\n**🎯 Board Tip:**\nLook for the cause: drying means check, growth means shake, mechanical means split.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How do semi-monocoque fuselage structures primarily distribute bending, shear, and torsional loads applied to the aircraft body?",
+      "choices": [
+        "Exclusively through heavy internal steel space trusses, leaving the outer skin completely unloaded for aerodynamic smoothness.",
+        "Solely by transferring torsional loads through transverse bulkheads without utilizing longitudinal stringers.",
+        "By relying entirely on the skin to resist all compressive loads while bulkheads bear tension only.",
+        "By sharing the load between a stressed outer skin and an internal framework of bulkheads, formers, and longitudinal stringers."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "By sharing the load between a stressed outer skin and an internal framework of bulkheads, formers, and longitudinal stringers.",
+      "explanation": "In a semi-monocoque structure the skin carries part of the load, while stringers, longerons, formers, and bulkheads carry the rest and keep the skin stable.\n\n**Why the other choices are incorrect:**\n- a → Describes a truss with an unloaded skin.\n- b → Ignores the stringers that carry bending loads.\n- c → Skin does not carry only compression, and bulkheads do not carry only tension.\n\n**Differentiate Similar Concepts:**\n- Truss → Frame carries everything, skin is a cover.\n- Monocoque → Skin carries nearly everything.\n- Semi-monocoque → Skin plus internal framework share the load.\n\n**💡 Memory Hook:**\nSemi = shared.\n\n**🎯 Board Tip:**\nModern transport fuselages are semi-monocoque.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A nylon self-locking nut is to be used inside the engine bay. This is:",
+      "choices": [
+        "Perfectly acceptable",
+        "Not allowed",
+        "Not ideal, a metal nut should be used instead of the nylon nut due to the heat generated inside the bay.",
+        "Acceptable as long as the locations are as specified by the engine manufacturer."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "Acceptable as long as the locations are as specified by the engine manufacturer.",
+      "explanation": "Nylon-insert locknuts are limited by temperature (generally about 250°F or 121°C). They may be used in an engine bay only where the engine or airframe manufacturer permits it.\n\n**Why the other choices are incorrect:**\n- a → Not universally acceptable, since heat limits apply.\n- b → Not a blanket prohibition; the manufacturer may specify them.\n- c → Overstates the rule, since some locations are approved.\n\n**Differentiate Similar Concepts:**\n- Nylon insert nut → Limited temperature, reusable a limited number of times.\n- All-metal locknut → For high-temperature areas.\n\n**💡 Memory Hook:**\nNylon melts, check the manual.\n\n**🎯 Board Tip:**\nManufacturer data always overrides general rules.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The most positive way to secure bolts.",
+      "choices": [
+        "Threadlocker",
+        "Safetying",
+        "PTFE Tape",
+        "Cyanoacrylate"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "Safetying",
+      "explanation": "Safety wire, cotter pins, and similar mechanical devices physically prevent a fastener from backing off, even if preload is lost.\n\n**Why the other choices are incorrect:**\n- Threadlocker → Chemical, can lose effect.\n- PTFE tape → A thread sealant, not a locking method.\n- Cyanoacrylate → Adhesive, not an approved locking method.\n\n**Differentiate Similar Concepts:**\n- Safetying → Mechanical, positive lock.\n- Friction locking → Self-locking nuts.\n- Chemical locking → Threadlockers.\n\n**💡 Memory Hook:**\nSafetying = physical safety net.\n\n**🎯 Board Tip:**\n\"Most positive\" always means a mechanical lock.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "These cracks are often found in service, jagged in appearance, and where stress concentration exists.",
+      "choices": [
+        "Fatigue",
+        "Heat Treat",
+        "Hairline",
+        "Shrink"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "Fatigue",
+      "explanation": "Fatigue cracks start at stress concentrations (holes, notches, sharp corners) after repeated loading cycles in service.\n\n**Why the other choices are incorrect:**\n- Heat treat cracks → Form during heat treatment or quenching, not in service.\n- Hairline → Describes fine size, not the cause.\n- Shrink → Forms in castings as they cool.\n\n**Differentiate Similar Concepts:**\n- Fatigue → In service, from cyclic stress.\n- Heat treat → In manufacturing.\n- Shrink → In casting solidification.\n\n**💡 Memory Hook:**\nRepeated load, tired metal.\n\n**🎯 Board Tip:**\n\"In service\" plus \"stress concentration\" means fatigue.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "During ultrasonic testing of a solid metal bar, three peaks appeared in the display scope. This indicates:",
+      "choices": [
+        "A metal bar without faults",
+        "A previously welded bar",
+        "An inclusion",
+        "A crack"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "A crack",
+      "explanation": "Source caution: The provided answer key flags this item for verification against your reviewer because wording can vary by reference.\n\nA sound pulse in a sound bar shows the initial (front surface) pulse and the back wall echo. A third peak between them means a reflector inside the bar, such as a crack.\n\n**Why the other choices are incorrect:**\n- Bar without faults → Would show only the front and back wall signals.\n- Previously welded bar → A weld alone does not create this signal pattern.\n- Inclusion → Also reflects, but a crack is the usual answer for a sharp, strong reflector.\n\n**Differentiate Similar Concepts:**\n- Front surface echo → Entry point.\n- Back wall echo → Far side.\n- Extra peak between → Internal discontinuity.\n\n**💡 Memory Hook:**\nExtra peak, extra problem.\n\n**🎯 Board Tip:**\nCount the signals: two is normal, three means a flaw.\n\n---",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A cleaning agent that attacks both oil, grease, rubber, and acrylics.",
+      "choices": [
+        "Aliphatic naphtha",
+        "Aromatic naphtha",
+        "Kerosene",
+        "Gasoline"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "Aromatic naphtha",
+      "explanation": "Aromatic naphtha is a strong solvent that dissolves oils and greases, but it also attacks rubber and acrylics. It must be kept away from seals and transparencies.\n\n**Why the other choices are incorrect:**\n- Aliphatic naphtha → A milder solvent used to clean acrylics.\n- Kerosene → Lighter oil solvent, much less aggressive.\n- Gasoline → Not an approved cleaning solvent because of fire hazard.\n\n**Differentiate Similar Concepts:**\n- Aliphatic naphtha → Mild, safe for acrylics.\n- Aromatic naphtha → Aggressive, attacks rubber and acrylics.\n\n**💡 Memory Hook:**\nAromatic = aggressive.\n\n**🎯 Board Tip:**\nAliphatic is the gentle one, aromatic the strong one.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Why are sharp re-entrant corners, abrupt changes in cross-sectional area, or unradiused cutouts strictly avoided or modified during aircraft structural design and repair?",
+      "choices": [
+        "They tend to trap excess preservation grease and moisture, causing rapid galvanic corrosion during service.",
+        "They increase internal cabin noise and aerodynamic pressure drag within the ventilation ducting.",
+        "They act as severe stress concentration points where local stresses multiply well above the average load, significantly accelerating fatigue crack initiation.",
+        "They render the metal excessively ductile, preventing proper hardening and heat treatment during manufacturing."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "They act as severe stress concentration points where local stresses multiply well above the average load, significantly accelerating fatigue crack initiation.",
+      "explanation": "Abrupt geometry changes force stress lines to crowd together, raising local stress well above the average. Cracks start there under cyclic loading, which is why corners are radiused and cutouts are rounded.\n\n**Why the other choices are incorrect:**\n- a → Moisture traps are a corrosion issue, not the main reason.\n- b → Noise and ducts are unrelated.\n- d → Geometry does not change the metal's ductility.\n\n**Differentiate Similar Concepts:**\n- Stress concentration → Local peak stress at geometry changes.\n- Fatigue → Crack growth from repeated loads.\n\n**💡 Memory Hook:**\nSharp corner, short life.\n\n**🎯 Board Tip:**\nRound corners and stop-drill cracks to reduce stress concentration.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Field application of protective oxide layer through chemical means:",
+      "choices": [
+        "Alclad",
+        "Alodizing",
+        "Anodizing",
+        "Painting"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "Alodizing",
+      "explanation": "Alodizing (chemical conversion coating) is applied by brush or wipe with chemicals and forms a protective oxide film on aluminum. It can be done in the field.\n\n**Why the other choices are incorrect:**\n- Alclad → A pure aluminum layer rolled onto the sheet at the mill.\n- Anodizing → Electrolytic process done in tanks, not by simple chemical wipe.\n- Painting → A coating, not an oxide layer.\n\n**Differentiate Similar Concepts:**\n- Anodizing → Electrical, shop tank process.\n- Alodizing → Chemical, can be field applied.\n- Alclad → Factory cladding.\n\n**💡 Memory Hook:**\nAlodine = apply in the field.\n\n**🎯 Board Tip:**\n\"Field\" and \"chemical\" together point to alodizing.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In a NEMA 5-15 plug (US type B electrical socket with ground pin), which prong corresponds with the live or power prong?",
+      "choices": [
+        "White",
+        "Green",
+        "Black",
+        "Red"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Black",
+      "explanation": "In US wiring, black is the hot (live) conductor, white is neutral, and green is ground.\n\n**Why the other choices are incorrect:**\n- White → Neutral.\n- Green → Ground (safety earth).\n- Red → Used for a second hot in some 240 V or switch wiring, not on a 5-15.\n\n**Differentiate Similar Concepts:**\n- Black → Hot.\n- White → Neutral.\n- Green → Ground.\n\n**💡 Memory Hook:**\nBlack = hot (live).\n\n**🎯 Board Tip:**\nMemorize the US color code; colors differ in other countries.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In a cabin fire, this fire extinguishing compound is the best option due to it being not harmful to humans in moderate amount.",
+      "choices": [
+        "CO2",
+        "Halon 1301",
+        "AFFF",
+        "NO2"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "Halon 1301",
+      "explanation": "Halon 1301 is effective in small amounts and has the lowest toxicity of the common agents, so it is safe for occupants at normal extinguishing concentrations.\n\n**Why the other choices are incorrect:**\n- CO2 → Displaces oxygen and can cause asphyxiation in enclosed cabins.\n- AFFF → A foam for fuel pool fires, not for cabin use.\n- NO2 → Nitrogen dioxide is a toxic gas, not an extinguishing agent.\n\n**Differentiate Similar Concepts:**\n- Halon 1301 → Cabin and electrical fires, low toxicity.\n- CO2 → Good extinguishing agent, but an asphyxiation risk indoors.\n- AFFF → Fuel spill fires outdoors.\n\n**💡 Memory Hook:**\nHalon is hall-safe.\n\n**🎯 Board Tip:**\nIn occupied compartments, choose the least toxic agent.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Monel contains ___% Ni and ___% Cu",
+      "choices": [
+        "68, 29",
+        "18, 8",
+        "80, 14",
+        "97, 2"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "68, 29",
+      "explanation": "Monel is a nickel-copper alloy of about 68% nickel and 29% copper, with small amounts of iron and manganese.\n\n**Why the other choices are incorrect:**\n- b → Resembles 18-8 stainless steel proportions.\n- c → About 80% Ni and 14% Cr is Inconel.\n- d → 97 and 2 does not match any standard aircraft alloy of this type.\n\n**Differentiate Similar Concepts:**\n- Monel → Nickel-copper.\n- Inconel → Nickel-chromium.\n- 18-8 stainless → Iron with 18% Cr and 8% Ni.\n\n**💡 Memory Hook:**\nMonel = Ni + Cu, about two-thirds nickel.\n\n**🎯 Board Tip:**\nPair each alloy with its main elements: Monel (Ni, Cu), Inconel (Ni, Cr).",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Medium carbon steel has ___% to ___% carbon content",
+      "choices": [
+        "3, 5",
+        "0.3, 0.5",
+        "0.5, 1.05",
+        "5, 10.5"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "0.3, 0.5",
+      "explanation": "Medium carbon steel has about 0.30 to 0.50% carbon, giving a balance of strength and toughness suitable for heat treatment.\n\n**Why the other choices are incorrect:**\n- a → 3 to 5% is cast iron territory.\n- c → 0.5 to 1.05% is high carbon steel.\n- d → 5 to 10.5% is far beyond steel.\n\n**Differentiate Similar Concepts:**\n- Low carbon → About 0.10 to 0.30%.\n- Medium carbon → About 0.30 to 0.50%.\n- High carbon → About 0.50 to 1.05%.\n\n**💡 Memory Hook:**\nMedium = point-three to point-five.\n\n**🎯 Board Tip:**\nWatch the decimal point; percent values here are tenths of a percent.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A fiberglass radome is to be repainted. To remove the paint, which of the following is the best option:",
+      "choices": [
+        "Dry sanding",
+        "Bead blasting",
+        "Chemical paint stripper",
+        "Abrasive wheel"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Chemical paint stripper",
+      "explanation": "Source caution: The provided answer key flags this item for verification against your reviewer because wording can vary by reference.\n\nRadomes must stay radio-transparent and keep a precise thickness. Abrasive methods can thin or damage the laminate, so an approved chemical stripper (used per the manufacturer's data) is the preferred way to remove paint.\n\n**Why the other choices are incorrect:**\n- Dry sanding → Removes laminate and changes thickness.\n- Bead blasting → Can erode the fiberglass surface.\n- Abrasive wheel → Too aggressive for a thin laminate.\n\n**Differentiate Similar Concepts:**\n- Chemical stripper → Removes coating, spares the laminate when used correctly.\n- Abrasive methods → Remove material from the part too.\n\n**💡 Memory Hook:**\nRadome: strip, don't scrape.\n\n**🎯 Board Tip:**\nAlways check the radome manufacturer's repair manual, because thickness and paint type affect radar performance.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "If an acid electrolyte was spilled in the battery compartment, which of the following choices can be used to neutralize the spill?",
+      "choices": [
+        "Boric Acid",
+        "Vinegar",
+        "Acetic acid",
+        "Sodium Bicarbonate"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 3,
+      "answerText": "Sodium Bicarbonate",
+      "explanation": "Acid electrolyte (lead-acid, sulfuric acid) is neutralized with a base. Sodium bicarbonate is a mild base that neutralizes the acid safely.\n\n**Why the other choices are incorrect:**\n- Boric acid → Neutralizes alkaline (nickel-cadmium) electrolyte.\n- Vinegar → A weak acid, used for alkaline spills.\n- Acetic acid → Same as vinegar, an acid.\n\n**Differentiate Similar Concepts:**\n- Acid spill → Neutralize with a base (sodium bicarbonate).\n- Alkaline spill → Neutralize with an acid (boric acid, vinegar).\n\n**💡 Memory Hook:**\nAcid needs a base.\n\n**🎯 Board Tip:**\nIdentify the battery chemistry first, then pick the opposite.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For a 90-degree bend of a sheet metal, the setback is the:",
+      "choices": [
+        "Radius of the bend",
+        "Thickness of the bend",
+        "Bend radius plus the thickness",
+        "Bend radius plus the neutral axis distance"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Bend radius plus the thickness",
+      "explanation": "For a 90° bend the setback is the distance from the bend tangent line to the mold point:\n\n$$SB = R + T$$\n\n**Why the other choices are incorrect:**\n- a → Radius alone ignores the thickness.\n- b → Thickness alone ignores the radius.\n- d → The neutral axis distance is used for bend allowance, not setback.\n\n**Differentiate Similar Concepts:**\n- Setback → Layout distance, R + T at 90°.\n- Bend allowance → Length of the neutral axis arc.\n\n**💡 Memory Hook:**\nSetback = Radius + Thickness.\n\n**🎯 Board Tip:**\nFor angles other than 90°, multiply (R + T) by the K factor.\n\n---",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A sheet metal (T = 0.064 in) is to be bent upwards by 45 degrees. The bend radius is 0.250 in. The setback required is:",
+      "choices": [
+        "0.13",
+        "0.314",
+        "0.222",
+        "0.443"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "0.13",
+      "explanation": "The setback uses the K factor for the bend angle:\n\n$$K = \\tan\\left(\\frac{\\theta}{2}\\right) = \\tan(22.5^\\circ) = 0.4142$$\n\n$$SB = K\\,(R + T) = 0.4142\\,(0.250 + 0.064) = 0.4142 \\times 0.314 \\approx 0.130\\ \\text{in}$$\n\n**Why the other choices are incorrect:**\n- b (0.314) → That is R + T, the setback for a 90° bend.\n- c (0.222) → Does not match the formula.\n- d (0.443) → Does not match the formula.\n\n**Differentiate Similar Concepts:**\n- 90° bend → K = 1.\n- 45° bend → K = 0.4142.\n- 135° bend → Use K = tan(θ/2) with the proper bend angle.\n\n**💡 Memory Hook:**\nK = tan of half the angle.\n\n**🎯 Board Tip:**\nDo not choose R + T unless the bend is exactly 90 degrees.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "2117-T rivet is indicated by:",
+      "choices": [
+        "A plain head",
+        "A dimple",
+        "A raised cross",
+        "A raised circle"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "A dimple",
+      "explanation": "The 2117-T rivet (\"AD\" rivet) has a dimpled head.\n\n**Why the other choices are incorrect:**\n- Plain head → 1100 rivets.\n- Raised cross → 5056 rivets.\n- Raised circle (dot) → 2017-T rivets.\n\n**Differentiate Similar Concepts:**\n- 1100 → Plain head.\n- 2117-T → Dimple.\n- 2017-T → Raised dot.\n- 2024-T → Raised double dash.\n- 5056 → Raised cross.\n\n**💡 Memory Hook:**\n2117 = a dimple, \"AD\".\n\n**🎯 Board Tip:**\nLearn the head marking table; it is a frequent identification item.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An acrylic windshield is cracked and was decided to temporarily repair the item. Which of the following is an appropriate repair procedure?",
+      "choices": [
+        "Stop-drill the crack ends.",
+        "Stop-drill the crack ends and apply cyanoacrylate.",
+        "Stop-drill the crack ends and apply machine screws, nuts, and washers.",
+        "Stop-drill the crack ends, apply brass safety wire and clear silicone."
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 2,
+      "answerText": "Stop-drill the crack ends and apply machine screws, nuts, and washers.",
+      "explanation": "AC 43.13-1B shows temporary repair methods for cracked transparent plastic: stop-drill the ends of the crack, then clamp the crack together with small machine screws, nuts, and washers (or lace it with stainless steel wire).\n\n**Why the other choices are incorrect:**\n- a → Stop-drilling alone stops propagation but does not hold the crack closed.\n- b → Cyanoacrylate is not an approved repair adhesive for acrylic.\n- d → The approved wire is stainless steel, not brass, and silicone is not a structural repair.\n\n**Differentiate Similar Concepts:**\n- Stop-drill → Stops the crack from growing.\n- Mechanical clamping → Holds the crack together temporarily.\n- Permanent repair → Patch or replacement.\n\n**💡 Memory Hook:**\nDrill the ends, bolt the middle.\n\n**🎯 Board Tip:**\nTemporary repairs are meant only until the part can be replaced.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Also known as Stick Welding.",
+      "choices": [
+        "GTAW",
+        "SMAW",
+        "LMAW",
+        "GMAW"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "SMAW",
+      "explanation": "Shielded Metal Arc Welding uses a flux-coated consumable electrode (a \"stick\").\n\n**Why the other choices are incorrect:**\n- GTAW → Gas tungsten arc (TIG), non-consumable tungsten electrode.\n- LMAW → Not a standard arc welding process.\n- GMAW → Gas metal arc (MIG), continuous wire.\n\n**Differentiate Similar Concepts:**\n- SMAW → Stick.\n- GTAW → TIG.\n- GMAW → MIG.\n\n**💡 Memory Hook:**\nS for Stick, S for Shielded.\n\n**🎯 Board Tip:**\nKnow the common welding acronyms and their nicknames.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Brazing requires a ________ flame.",
+      "choices": [
+        "Carburizing",
+        "Oxidizing",
+        "Neutral",
+        "Reducing"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 1,
+      "answerText": "Oxidizing",
+      "explanation": "Brazing (and bronze welding) uses a slightly oxidizing flame, with a little excess oxygen, which helps the filler flow and avoids carbon contamination.\n\n**Why the other choices are incorrect:**\n- Carburizing → Used for aluminum and some hard-facing.\n- Neutral → Used for welding steel.\n- Reducing → Another name for a carburizing (excess fuel) flame.\n\n**Differentiate Similar Concepts:**\n- Neutral → Steel welding.\n- Carburizing (reducing) → Aluminum welding.\n- Oxidizing → Brazing and bronze welding.\n\n**💡 Memory Hook:**\nBrazing = Brass = Oxidizing.\n\n**🎯 Board Tip:**\nMatch each flame to its metal or process; it is a repeated item.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An experimental cargo aircraft was fitted with a 1000 lb fuel bladder in the cargo bay at FS 350. The cargo aircraft's integral tanks carries 2000 lb of fuel at FS 120. The fuel can be pumped to or from the bladder to the integral tanks mid-flight but consumes fuel from the integral tanks only. The engines consume fuel at a rate of 1200 lb/h. The current aircraft's Weight and CG is 24000 lb, FS 125. Which of the choices would put the aircraft out of CG range if the range is +3 and -2 of the current CG position if it has flown for ninety minutes?",
+      "choices": [
+        "Pump 235 lbs to the integral tanks",
+        "Pump 200 lbs to the integral tanks",
+        "Pump 200 lbs to the bladder",
+        "Pump 240 lbs to the bladder **— NOTHING FOLLOWS —**"
+      ],
+      "questionType": "multiple_choice",
+      "answerIndex": 0,
+      "answerText": "Pump 235 lbs to the integral tanks",
+      "explanation": "Start with the weight and moment, and the CG limits of FS 123 to FS 128 (current CG FS 125, range -2 and +3):\n\n$$M_0 = 24000 \\times 125 = 3{,}000{,}000\\ \\text{lb-in}$$\n\nFuel burned in 90 minutes, taken from the integral tanks at FS 120:\n\n$$1200 \\times 1.5 = 1800\\ \\text{lb}$$\n\n$$W = 24000 - 1800 = 22{,}200\\ \\text{lb}$$\n\n$$M = 3{,}000{,}000 - 1800(120) = 2{,}784{,}000\\ \\text{lb-in}$$\n\nMoving $x$ lb from the bladder (FS 350) to the integral tanks (FS 120) changes the moment by:\n\n$$\\Delta M = -x\\,(350 - 120) = -230x$$\n\nFor 235 lb:\n\n$$CG = \\frac{2{,}784{,}000 - 230(235)}{22{,}200} = \\frac{2{,}729{,}950}{22{,}200} \\approx 122.97$$\n\nThat is forward of the FS 123 limit, so it is out of range.\n\n**Why the other choices are incorrect:**\n- b (200 lb to the integral tanks) → CG ≈ 123.33, inside the range.\n- c (200 lb to the bladder) → CG ≈ 127.48, inside the range.\n- d (240 lb to the bladder) → Only 200 lb remains in the integral tanks, so it is not possible, and the CG would still be about 127.89.\n\n**Differentiate Similar Concepts:**\n- Pump to the integral tanks (FS 120) → CG moves forward.\n- Pump to the bladder (FS 350) → CG moves aft.\n\n**💡 Memory Hook:**\nMove weight forward, CG moves forward.\n\n**🎯 Board Tip:**\nCompute the CG after the fuel burn first, then test each transfer against the limits.",
+      "tags": [
+        "ACRM",
+        "mock exam",
+        "Part I"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "questionTable": null,
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}
