@@ -14,7 +14,7 @@ export const ADMIN_PASSWORD = "prepcore";
 export const NOTES_PATH = "./markdowns";
 // Bump this when subjects.json or its chapter payloads change. It invalidates both
 // the browser's HTTP cache and the persistent normalized-library cache.
-const SUBJECTS_CACHE_VERSION = "aircraft-materials-reference-20261102-2";
+const SUBJECTS_CACHE_VERSION = "aircraft-materials-reference-20261102-3";
 const SUBJECTS_PATH = `./subjects.json?v=${SUBJECTS_CACHE_VERSION}`;
 const VALID_MODES = new Set(["quiz", "learn", "flashcards", "exam", "note"]);
 const SUBJECTS_CACHE_KEY = `prepcore.web.subjectsCache.${SUBJECTS_CACHE_VERSION}`;

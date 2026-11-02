@@ -15,7 +15,7 @@
       ],
       "answerIndex": 2,
       "answerText": "ferrous metals only",
-      "explanation": "",
+      "explanation": "Normalizing is a heat-treating process used on ferrous metals only. The steel is heated above its critical temperature range and then cooled in still air, which refines the grain structure and relieves internal stresses left by forging, casting, machining, or welding.  \n  \nWhy the other choices are incorrect:  \n• Non-ferrous metals aside from aluminum → Metals such as copper and magnesium alloys are annealed or stress-relieved; normalizing depends on iron-carbon transformations that they do not have.  \n• Aluminum alloys only → Aluminum alloys are solution heat-treated, quenched, and aged (or annealed), never normalized.  \n• Both ferrous and non-ferrous metals → Normalizing is limited to ferrous metals, so adding non-ferrous makes the statement wrong.  \n  \nDifferentiate Similar Concepts:  \n• Normalizing → Ferrous only, air-cooled, refines grain.  \n• Annealing → Softens the metal, slow furnace cooling.  \n• Hardening → Heat and quench to increase hardness.  \n• Tempering → Reheat after hardening to reduce brittleness.  \n  \n💡 Memory Hook:  \nNormalizing = Normal air cooling, for Iron (Fe) only.  \n  \n🎯 Board Tip:  \nNormalizing and annealing both heat the metal, but normalizing cools in open air (stronger, finer grain) while annealing cools slowly in the furnace (softer).",
       "tags": [
         "preboards",
         "mock exam",
@@ -40,7 +40,7 @@
       ],
       "answerIndex": 2,
       "answerText": "Control system",
-      "explanation": "",
+      "explanation": "⚠️ Answer key check: This answer was inferred, not highlighted in the source, and the keyed answer (Control system) conflicts with the standard circuit-function code as I know it. Confirm against your reviewer or AC 43.13-1B before relying on it.  \n  \nIn aircraft wiring and cable identification, a circuit-function letter shows which system a conductor serves. As far as I know, the letter X stands for AC power, while control surfaces use the letter C.  \n  \nWhy the other choices are incorrect:  \n• Auxiliary power → This is not what X stands for in the circuit-function code.  \n• Control system → Control surfaces use the letter C, not X.  \n• Close-tolerance structure → This relates to the triangle marking on close-tolerance bolts, not a cable marking.  \n  \nDifferentiate Similar Concepts:  \n• X → AC power.  \n• C → Control surfaces.  \n• Triangle (on a bolt head) → Close-tolerance bolt.  \n  \n💡 Memory Hook:  \nX = AC (X marks the cross-over of alternating current).  \n  \n🎯 Board Tip:  \nMemorize the circuit-function letters as a short list; exam items often swap them.",
       "tags": [
         "preboards",
         "mock exam",
@@ -65,7 +65,7 @@
       ],
       "answerIndex": 2,
       "answerText": "Below annealing temperature",
-      "explanation": "",
+      "explanation": "Tempering reheats hardened steel to a temperature below its critical (annealing) temperature and then cools it. Because the steel is not heated back into the critical range, it keeps most of its hardness while internal stresses and brittleness are reduced.  \n  \nWhy the other choices are incorrect:  \n• Above annealing temperature → Heating above the critical range re-austenitizes the steel, which undoes the hardening instead of toughening it.  \n• At annealing temperature → That is the annealing cycle itself, which makes steel soft and removes the hardness you want to keep.  \n• 1.5 times the annealing temperature → No such rule exists, and that temperature would be near melting and ruin the part.  \n  \nDifferentiate Similar Concepts:  \n• Hardening → Heat above critical, then quench.  \n• Tempering → Reheat below critical to reduce brittleness.  \n• Annealing → Heat and cool slowly to soften.  \n• Normalizing → Heat and air-cool to refine grain.  \n  \n💡 Memory Hook:  \nTemper = Tone it down (reheat below the critical temperature).  \n  \n🎯 Board Tip:  \nTempering always follows hardening, and it always trades a little hardness for extra toughness.",
       "tags": [
         "preboards",
         "mock exam",
@@ -90,7 +90,7 @@
       ],
       "answerIndex": 2,
       "answerText": "should be replaced immediately",
-      "explanation": "",
+      "explanation": "Creep is slow, permanent deformation under constant stress at high temperature. It has three phases, and the tertiary phase is the accelerating stage just before rupture. A part in tertiary creep is near failure and should be replaced immediately.  \n  \nWhy the other choices are incorrect:  \n• Stop drilled and condition-monitored → Stop drilling is a repair for cracks, and a part near creep rupture cannot be safely monitored.  \n• Dye-penetrant inspection → Penetrant finds surface cracks, but tertiary creep already means the material is about to fail.  \n• Still safe to be used → This describes the primary or secondary phases, not the tertiary.  \n  \nDifferentiate Similar Concepts:  \n• Primary creep → Strain rate decreases.  \n• Secondary creep → Steady, nearly constant strain rate.  \n• Tertiary creep → Rapidly accelerating strain leading to rupture.  \n  \n💡 Memory Hook:  \nTertiary = Terminal.  \n  \n🎯 Board Tip:  \nCreep matters most for turbine blades and other hot-section parts, where heat and sustained stress act together.",
       "tags": [
         "preboards",
         "mock exam",
@@ -115,7 +115,7 @@
       ],
       "answerIndex": 0,
       "answerText": "clean, dry threads.",
-      "explanation": "",
+      "explanation": "Standard torque values for aircraft nuts and bolts assume clean, dry threads unless the manufacturer says otherwise. Torque is only a way to measure bolt preload, and friction at the threads changes how much preload a given torque produces.  \n  \nWhy the other choices are incorrect:  \n• Clean, lightly-oiled threads → Lubrication lowers friction, so the same torque produces more preload and can overstress the bolt.  \n• Clean, oil-soaked threads → Even more friction is removed, so the bolt would be badly over-tightened at the table value.  \n• Both dry and lightly oiled threads → The tables are written for one thread condition, not two.  \n  \nDifferentiate Similar Concepts:  \n• Dry threads → Table torque values apply.  \n• Lubricated threads → Use a reduced torque only if the manufacturer specifies it.  \n  \n💡 Memory Hook:  \nDry torque = default torque.  \n  \n🎯 Board Tip:  \nAlways follow the maintenance manual first. If it specifies lubricated threads, use its value instead of the general table.",
       "tags": [
         "preboards",
         "mock exam",
@@ -140,7 +140,7 @@
       ],
       "answerIndex": 3,
       "answerText": "Corrosion-resistant and low expansion coefficient",
-      "explanation": "",
+      "explanation": "⚠️ Answer key check: This answer was inferred, and option B is also arguable on pure material properties. Confirm the exact wording in your reference.  \n  \nNickel-chromium alloys (such as Inconel) are used in exhaust systems because they resist corrosion and stay dimensionally stable at high temperature. Their low coefficient of thermal expansion helps limit warping and cracking as the exhaust heats and cools.  \n  \nWhy the other choices are incorrect:  \n• Lightweight and flexible → Nickel-chromium alloys are dense and fairly stiff, so they are chosen for heat resistance, not weight savings.  \n• Corrosion-resistant and low heat conductivity → Low conductivity is plausible for these alloys, but the exam's intended pairing is corrosion resistance with low expansion.  \n• Corrosion-resistant and high heat conductivity → Nickel-chromium alloys are poor heat conductors, so this is false.  \n  \nDifferentiate Similar Concepts:  \n• Inconel → Nickel-chromium alloy for hot exhaust parts.  \n• Stainless steel → Common exhaust material, less heat-tolerant than Inconel.  \n• Titanium → Light and strong, used in some cooler exhaust areas.  \n  \n💡 Memory Hook:  \nNickel + Chromium = Never Cracking when hot.  \n  \n🎯 Board Tip:  \nThink heat plus corrosion: hot-section parts are made of nickel-based alloys.",
       "tags": [
         "preboards",
         "mock exam",
@@ -165,7 +165,7 @@
       ],
       "answerIndex": 1,
       "answerText": "According to the inner diameter",
-      "explanation": "",
+      "explanation": "Hoses are sized by their inside diameter, which determines flow capacity. Hose size is usually written as a dash number in sixteenths of an inch of inside diameter.  \n  \nWhy the other choices are incorrect:  \n• Outer diameter → This is how rigid tubing is sized, not hose.  \n• Max allowable load → Hoses are not classified by load.  \n• Max applied pressure → Pressure rating is a separate specification (low, medium, high pressure), not the sizing category.  \n  \nDifferentiate Similar Concepts:  \n• Tubing → Sized by outside diameter.  \n• Hose → Sized by inside diameter.  \n• Pressure rating → Separate classification of the hose.  \n  \n💡 Memory Hook:  \nHose = Hole size (inside diameter).  \n  \n🎯 Board Tip:  \nTube = Outside, Hose = Inside. This pair shows up often.",
       "tags": [
         "preboards",
         "mock exam",
@@ -190,7 +190,7 @@
       ],
       "answerIndex": 2,
       "answerText": "1/4 inch in diameter and 3/8 inch in length",
-      "explanation": "",
+      "explanation": "In MS20430AD8-6, the AD is the rivet material (2117-T4), the first number (8) is the diameter in 32nds of an inch, and the second number (6) is the length in 16ths of an inch. So the diameter is 8/32 = 1/4 inch and the length is 6/16 = 3/8 inch.  \n  \nWhy the other choices are incorrect:  \n• 3/8 inch in length and 1/4 inch in diameter → This has the same dimensions as the keyed answer. It looks like a duplicate in the source, so choose the keyed option (C).  \n• 1/2 inch in length and 3/16 inch in diameter → That would be a 6-8 rivet (6/32 = 3/16 inch, 8/16 = 1/2 inch).  \n• 3/16 inch in diameter and 1/2 inch in length → Same dimensions as the previous option, again a 6-8 rivet.  \n  \nDifferentiate Similar Concepts:  \n• Diameter number → Thirty-seconds of an inch.  \n• Length number → Sixteenths of an inch.  \n  \n💡 Memory Hook:  \nDiameter in 32nds, Length in 16ths.  \n  \n🎯 Board Tip:  \nOptions A and C are identical in this file; decide by letter if you see this in practice. Always convert both numbers before looking at the choices.",
       "tags": [
         "preboards",
         "mock exam",
@@ -215,7 +215,7 @@
       ],
       "answerIndex": 1,
       "answerText": "thermoplastic",
-      "explanation": "",
+      "explanation": "A thermoplastic softens and flows again when it is reheated, so it can be reshaped many times. Acrylic (Plexiglas) and nylon are common aircraft examples.  \n  \nWhy the other choices are incorrect:  \n• Thermocure → Not a standard plastics term.  \n• Thermoset → Once cured, it permanently hardens and cannot be softened again (epoxy, polyester).  \n• Thermoflow → Not a standard plastics term.  \n  \nDifferentiate Similar Concepts:  \n• Thermoplastic → Re-softens with heat.  \n• Thermoset → Cures permanently, does not re-soften.  \n  \n💡 Memory Hook:  \nThermo-PLASTIC = Plastic again when heated.  \n  \n🎯 Board Tip:  \nComposite matrix resins such as epoxy are thermosets, which is why they cannot be reshaped after curing.",
       "tags": [
         "preboards",
         "mock exam",
@@ -240,7 +240,7 @@
       ],
       "answerIndex": 3,
       "answerText": "thickness gauge",
-      "explanation": "",
+      "explanation": "Piston ring side clearance is the gap between the ring and the groove land. It is checked by sliding a thickness (feeler) gauge between the ring and the land.  \n  \nWhy the other choices are incorrect:  \n• Dial gauge → Used for bore and runout checks, not for a thin gap in a ring groove.  \n• Micrometer caliper gauge → Measures outside dimensions such as ring thickness, not clearance.  \n• Protractor → Measures angles.  \n  \nDifferentiate Similar Concepts:  \n• Side clearance → Feeler gauge between ring and land.  \n• End gap → Feeler gauge with the ring squared in the cylinder.  \n  \n💡 Memory Hook:  \nSide gap = Slide a feeler.  \n  \n🎯 Board Tip:  \nBoth ring side clearance and end gap use a feeler gauge, but the ring is positioned differently.",
       "tags": [
         "preboards",
         "mock exam",
@@ -265,7 +265,7 @@
       ],
       "answerIndex": 3,
       "answerText": "5.8 inches ahead of the main wheels.",
-      "explanation": "",
+      "explanation": "Find the CG by taking moments about the main wheels. The nose wheel supports 150 lb at a distance of 68 inches from the mains, and the total weight is 800 + 810 + 150 = 1,760 lb.  \n  \n$$CG = \\frac{F \\times L}{W} = \\frac{150 \\times 68}{1{,}760} \\approx 5.8\\ \\text{in}$$  \n  \nThe CG is about 5.8 inches ahead of the main wheels. The mains are 12 + 68 = 80 inches aft of the datum, so the CG is about 74.2 inches aft of the firewall, which is not among the other choices.  \n  \nWhy the other choices are incorrect:  \n• 62.2 inches behind the firewall → This would put the CG far too far forward.  \n• 73.2 inches behind the firewall → Close, but about 1 inch off the calculated 74.2 inches.  \n• 75.2 inches behind the firewall → Close, but about 1 inch off the calculated 74.2 inches.  \n  \nDifferentiate Similar Concepts:  \n• Moment → Weight × arm.  \n• CG → Total moment ÷ total weight.  \n• Nose-wheel method → Use nose weight, wheelbase, and total weight.  \n  \n💡 Memory Hook:  \nCG from the mains = (Nose weight × Wheelbase) ÷ Total weight.  \n  \n🎯 Board Tip:  \nAdd all three scale readings for total weight, and watch whether the distances are measured from the datum or from the mains.",
       "tags": [
         "preboards",
         "mock exam",
@@ -290,7 +290,7 @@
       ],
       "answerIndex": 3,
       "answerText": "Warp",
-      "explanation": "",
+      "explanation": "In a woven fabric, the warp threads run lengthwise and are the straightest, so they carry the most load. The weft (fill) threads run across and have more crimp, so they are somewhat weaker.  \n  \nWhy the other choices are incorrect:  \n• All → Fabrics are not equally strong in every direction.  \n• Bias → Loads at 45° are carried mostly by the weave stretching, so this is the weakest direction.  \n• Weft → Strong, but with more crimp and usually less strength than the warp.  \n  \nDifferentiate Similar Concepts:  \n• Warp → Lengthwise, strongest.  \n• Weft (fill) → Crosswise, less strong.  \n• Bias → 45°, most stretch and drape, lowest strength.  \n  \n💡 Memory Hook:  \nWARP = Wire-straight, strongest.  \n  \n🎯 Board Tip:  \nAlways check fiber direction when laying up composite plies; strength depends on it.",
       "tags": [
         "preboards",
         "mock exam",
@@ -315,7 +315,7 @@
       ],
       "answerIndex": 3,
       "answerText": "To relieve its internal stresses and reduce its brittleness.",
-      "explanation": "",
+      "explanation": "Hardened steel is very hard but brittle and contains internal stresses from quenching. Tempering reheats it to a controlled lower temperature to relieve those stresses and reduce brittleness, trading a small amount of hardness for toughness.  \n  \nWhy the other choices are incorrect:  \n• To increase its hardness and ductility → Tempering slightly reduces hardness, and hardness and ductility do not rise together.  \n• To increase its strength and decrease its internal stresses → Tempering mainly improves toughness; strength typically drops slightly.  \n• To relieve its internal stresses and increase its brittleness → Tempering reduces brittleness; it never increases it.  \n  \nDifferentiate Similar Concepts:  \n• Hardening → Raises hardness and brittleness.  \n• Tempering → Reduces brittleness and stress.  \n• Annealing → Makes the steel soft and ductile.  \n  \n💡 Memory Hook:  \nTemper = Tame the brittleness.  \n  \n🎯 Board Tip:  \nLook for the choice that says relieves stress and reduces brittleness; wrong choices usually reverse one of those two.",
       "tags": [
         "preboards",
         "mock exam",
@@ -340,7 +340,7 @@
       ],
       "answerIndex": 2,
       "answerText": "Red",
-      "explanation": "",
+      "explanation": "⚠️ Answer key check: This answer was inferred, and the keyed answer (Red) conflicts with the standard code as I know it (brown for fire protection). Verify in AC 43.13-1B before relying on it.  \n  \nFire-extinguisher (fire-protection) lines are identified with a brown color code in the standard line-identification chart.  \n  \nWhy the other choices are incorrect:  \n• Black → Not the code for fire-protection lines.  \n• Red → Commonly used for fuel or other flammable fluid lines, not fire-extinguishing lines.  \n• Yellow → Commonly used for lubricating oil lines.  \n  \nDifferentiate Similar Concepts:  \n• Fire protection → Brown.  \n• Fuel → Red.  \n• Lubricating oil → Yellow.  \n  \n💡 Memory Hook:  \nFire extinguisher = Brown, as in brown-out the flames.  \n  \n🎯 Board Tip:  \nMemorize the line-identification table as a group; fuel, oil, hydraulic, oxygen, and fire protection all have different colors.",
       "tags": [
         "preboards",
         "mock exam",
@@ -365,7 +365,7 @@
       ],
       "answerIndex": 2,
       "answerText": "Red",
-      "explanation": "",
+      "explanation": "⚠️ Answer key check: This answer was inferred, and I could not match Red to any standard AN fitting color. Please confirm against the source key.  \n  \nI can't confirm a red AN fitting from the standard references I know. AN fittings are normally identified by material: blue for aluminum alloy, and black or cadmium-plated for steel.  \n  \n💡 Memory Hook:  \nAN fittings → Check the color against the material, not the fluid.  \n  \n🎯 Board Tip:  \nCheck the source PDF for the exact wording and answer before studying this item.",
       "tags": [
         "preboards",
         "mock exam",
@@ -390,7 +390,7 @@
       ],
       "answerIndex": 3,
       "answerText": "prevent the formation of oxides in the puddle",
-      "explanation": "",
+      "explanation": "In Gas Tungsten Arc Welding (TIG), a stream of inert gas such as argon or helium surrounds the arc and puddle. It keeps oxygen and nitrogen from the air away from the molten metal and the tungsten electrode, preventing oxides and contamination.  \n  \nWhy the other choices are incorrect:  \n• Attract oxygen to the puddle → The opposite of the gas's purpose.  \n• Concentrate the heat of the arc and prevent its dissipation → The arc itself sets the heat concentration, not the shielding gas.  \n• Lower the temperature required to properly fuse the metal → Shielding gas does not change the fusion temperature.  \n  \nDifferentiate Similar Concepts:  \n• GTAW → Tungsten electrode, inert shielding gas.  \n• Oxy-acetylene → Flame plus flux or filler, no shielding gas.  \n  \n💡 Memory Hook:  \nInert gas = Invisible shield.  \n  \n🎯 Board Tip:  \nThe gas protects the weld, not the filler rod. Inert means it does not react with the metal.",
       "tags": [
         "preboards",
         "mock exam",
@@ -415,7 +415,7 @@
       ],
       "answerIndex": 0,
       "answerText": "device for causing the fire-extinguishing agent to be released",
-      "explanation": "",
+      "explanation": "A squib is a small explosive cartridge inside the discharge valve of a fire-extinguisher bottle. When it is fired electrically, it breaks the frangible disk and releases the extinguishing agent.  \n  \nWhy the other choices are incorrect:  \n• Probe for installing frangible disks → Not a tool; the squib is part of the bottle assembly.  \n• Temperature-sensing device → That describes a fire detector.  \n• Wizard-born muggle → A joke option, not a real answer.  \n  \nDifferentiate Similar Concepts:  \n• Squib → Fires the extinguisher bottle.  \n• Frangible disk → Seals the bottle until it ruptures.  \n• Fire detector → Senses heat or flame.  \n  \n💡 Memory Hook:  \nSquib = Squirts the agent.  \n  \n🎯 Board Tip:  \nSquibs have a service life; check the cartridge date and keep a record for replacement.",
       "tags": [
         "preboards",
         "mock exam",
@@ -440,7 +440,7 @@
       ],
       "answerIndex": 2,
       "answerText": "Neutral",
-      "explanation": "",
+      "explanation": "A neutral oxy-acetylene flame (equal oxygen and acetylene) is used to weld stainless steel. It limits oxidation of chromium and avoids adding carbon, both of which hurt corrosion resistance.  \n  \nWhy the other choices are incorrect:  \n• Slightly carburizing → Extra carbon can form chromium carbides and reduce corrosion resistance.  \n• Slightly oxidizing → Burns off chromium and makes the weld brittle and porous.  \n• Welding stainless steel is not acceptable for aircraft → Incorrect; stainless steel is routinely welded on aircraft parts such as exhaust components.  \n  \nDifferentiate Similar Concepts:  \n• Neutral flame → Balanced, used for most steels.  \n• Carburizing flame → Excess acetylene.  \n• Oxidizing flame → Excess oxygen.  \n  \n💡 Memory Hook:  \nNeutral flame = Neutral outcome, no added carbon or oxidation.  \n  \n🎯 Board Tip:  \nKnow all three flame types and which metals prefer each.",
       "tags": [
         "preboards",
         "mock exam",
@@ -465,7 +465,7 @@
       ],
       "answerIndex": 3,
       "answerText": "Case hardening",
-      "explanation": "",
+      "explanation": "Case hardening changes the chemistry of the metal's surface by adding carbon or nitrogen (carburizing, nitriding, cyaniding), creating a hard surface over a tougher core.  \n  \nWhy the other choices are incorrect:  \n• Welding → Joins metals; it is not a heat-treating operation that adds carbon or nitrogen to the surface.  \n• Tempering → Reduces brittleness after hardening and does not change the surface chemistry.  \n• Normalizing → Refines grain and relieves stress without changing the chemistry.  \n  \nDifferentiate Similar Concepts:  \n• Case hardening → Hard surface, tough core.  \n• Through hardening → Uniform hardness throughout.  \n• Tempering → Reduces brittleness.  \n  \n💡 Memory Hook:  \nCase hardening = Carbon coat on the case.  \n  \n🎯 Board Tip:  \nLook for key words such as introducing carbon or nitrogen at the surface; they point to case hardening.",
       "tags": [
         "preboards",
         "mock exam",
@@ -490,7 +490,7 @@
       ],
       "answerIndex": 1,
       "answerText": "hardness",
-      "explanation": "",
+      "explanation": "⚠️ Answer key check: The question text is missing in the source PDF. This explanation assumes it describes resistance to indentation, scratching, or abrasion, so confirm the wording.  \n  \nHardness is a material's ability to resist localized surface deformation such as indentation, scratching, or abrasion. It is one of the primary properties evaluated during quality control of aircraft materials.  \n  \nWhy the other choices are incorrect:  \n• Toughness refers to the ability to absorb energy before fracture.  \n• Ductility is the ability to deform plastically under tensile loading.  \n• Fusibility is the ability of a metal to become liquid when heated and to join with other metals.  \n  \nDifferentiate Similar Concepts:  \n• Hardness → Resists indentation.  \n• Toughness → Resists fracture.  \n• Ductility → Stretches before breaking.  \n• Fusibility → Melts and fuses.  \n  \n💡 Memory Hook:  \nHardness = Hard to dent.  \n  \n🎯 Board Tip:  \nHardness and toughness are not synonymous. A very hard material may still fracture easily.",
       "tags": [
         "preboards",
         "mock exam",
@@ -515,7 +515,7 @@
       ],
       "answerIndex": 2,
       "answerText": "major repair",
-      "explanation": "",
+      "explanation": "Replacing a damaged vertical stabilizer with an identical new part restores the aircraft to its original design, so it is a repair rather than an alteration. A vertical stabilizer is primary structure, so the repair is major.  \n  \nWhy the other choices are incorrect:  \n• Major alteration → An alteration changes the type design; an identical replacement does not.  \n• Minor alteration → Same problem; this is not a design change.  \n• Minor repair → Minor repairs are simple and do not affect structural strength or flight characteristics. Replacing a primary structure does.  \n  \nDifferentiate Similar Concepts:  \n• Repair → Returns to the original condition.  \n• Alteration → Changes the original design.  \n• Major → Affects structure, weight, balance, or flight characteristics.  \n  \n💡 Memory Hook:  \nSame part back = Repair; different part = Alteration.  \n  \n🎯 Board Tip:  \nMajor repairs and alterations are recorded on FAA Form 337. Minor repairs are not.",
       "tags": [
         "preboards",
         "mock exam",
@@ -540,7 +540,7 @@
       ],
       "answerIndex": 0,
       "answerText": "A glossy, blush-free finish",
-      "explanation": "",
+      "explanation": "⚠️ Answer key check: This answer was inferred and one option is blank in the source. Confirm the exact question wording before relying on it.  \n  \nBlushing (a milky, dull finish) happens when moisture condenses in a drying coat, which is a problem in high humidity. In low humidity, a topcoat applied about 30 to 40 minutes after the wash primer should dry to a glossy, blush-free finish.  \n  \nWhy the other choices are incorrect:  \n• Option B → The text is missing in the source file.  \n• Corrosion → Wash primer provides corrosion protection; the topcoat timing here does not cause corrosion.  \n• Reflection of ultraviolet from the fabric → Unrelated to wash primer and topcoat on aluminum.  \n  \nDifferentiate Similar Concepts:  \n• Blushing → High humidity, moisture trapped in the finish.  \n• Runs and sags → Too much material in one coat.  \n  \n💡 Memory Hook:  \nLow humidity = No blush.  \n  \n🎯 Board Tip:  \nHumidity and temperature control how finishes behave; know the typical defects and their causes.",
       "tags": [
         "preboards",
         "mock exam",
@@ -565,7 +565,7 @@
       ],
       "answerIndex": 3,
       "answerText": "1.88 inches aft of the original empty weight CG",
-      "explanation": "",
+      "explanation": "⚠️ Answer key check: Part of the question is missing in the source (alteration details), so I could not re-derive the 1.88 inches. The highlighted answer comes from the source key.  \n  \nTo find how alterations shift the empty-weight CG, update the weight and moment totals and recompute the CG.  \n  \n$$CG = \\frac{\\text{Total moment}}{\\text{Total weight}}$$  \n  \n$$CG_{\\text{original}} = \\frac{101{,}673.78}{2{,}886} \\approx 35.23\\ \\text{in}$$  \n  \n$$\\Delta CG = CG_{\\text{new}} - CG_{\\text{original}}$$  \n  \nThe source highlights 1.88 inches aft of the original empty-weight CG as correct.  \n  \nWhy the other choices are incorrect:  \n• Other choices → They are distractors; they cannot be checked here because the alteration details are missing in the source.  \n  \nDifferentiate Similar Concepts:  \n• Items removed → Subtract their weight and moment.  \n• Items added → Add their weight and moment.  \n  \n💡 Memory Hook:  \nRemove, add, then divide: new CG = new moment ÷ new weight.  \n  \n🎯 Board Tip:  \nRemoved items subtract their weight and moment; added items add them. A positive answer means the CG moved aft.",
       "tags": [
         "preboards",
         "mock exam",
@@ -590,7 +590,7 @@
       ],
       "answerIndex": 3,
       "answerText": "material compatibility",
-      "explanation": "",
+      "explanation": "The filler rod must be compatible with the base metal so the weld has the right strength, composition, and corrosion resistance. Material compatibility is the most important consideration when choosing a welding rod.  \n  \nWhy the other choices are incorrect:  \n• Ambient conditions → Affect technique, but they do not decide which rod to use.  \n• Amount of acetylene → A gas supply setting, unrelated to choosing a rod.  \n• Flame temperature → Set by the gas mixture and tip, not the factor that picks the rod.  \n  \nDifferentiate Similar Concepts:  \n• Filler rod → Matches or complements the base metal.  \n• Tip size → Controls heat input.  \n  \n💡 Memory Hook:  \nRod = Right match.  \n  \n🎯 Board Tip:  \nAlways use a rod that matches the base metal specification; the wrong rod can weaken the joint.",
       "tags": [
         "preboards",
         "mock exam",
@@ -615,7 +615,7 @@
       ],
       "answerIndex": 3,
       "answerText": "Too much material applied in one coat",
-      "explanation": "",
+      "explanation": "Runs and sags happen when too much finish is applied in one coat. The wet film is too thick to hold in place and flows downward before it dries.  \n  \nWhy the other choices are incorrect:  \n• Low atmospheric humidity → Low humidity speeds drying; runs are not caused by it.  \n• Material is being applied too fast → A fast pass lays down a thin coat, which causes dry spray rather than runs.  \n• Material is being applied too slow → A slow pass can cause a heavy coat, but the root cause is too much material, which is the keyed answer.  \n  \nDifferentiate Similar Concepts:  \n• Runs and sags → Too much material.  \n• Orange peel → Poor flow or fast drying.  \n• Blushing → Moisture in humid conditions.  \n  \n💡 Memory Hook:  \nHeavy coat = Heavy drips.  \n  \n🎯 Board Tip:  \nSeveral light coats beat one heavy coat; this also helps control runs.",
       "tags": [
         "preboards",
         "mock exam",
@@ -640,7 +640,7 @@
       ],
       "answerIndex": 3,
       "answerText": "tensile strength",
-      "explanation": "",
+      "explanation": "Aircraft covering fabric is graded by tensile strength, which is the load a strip of fabric can carry before breaking (for example Grade A versus Intermediate).  \n  \nWhy the other choices are incorrect:  \n• Bearing strength → Applies to the material around fastener holes, not fabric classification.  \n• Compressive strength → Fabric carries tension, not compression.  \n• Shear strength → Not the basis for fabric grading.  \n  \nDifferentiate Similar Concepts:  \n• Tensile → Pulling apart.  \n• Compressive → Pushing together.  \n• Shear → Sliding apart.  \n  \n💡 Memory Hook:  \nFabric = Tensile.  \n  \n🎯 Board Tip:  \nFabric grade tells you strength under tension, which is the main load on fabric covering.",
       "tags": [
         "preboards",
         "mock exam",
@@ -665,7 +665,7 @@
       ],
       "answerIndex": 2,
       "answerText": "Nut",
-      "explanation": "",
+      "explanation": "A nut is the female fastener with internal threads. It screws onto a bolt or stud with external threads.  \n  \nWhy the other choices are incorrect:  \n• Bolt → The male fastener with external threads.  \n• Joggle → An offset bend in sheet metal, not a fastener.  \n• Washer → A flat ring that spreads load and has no threads.  \n  \nDifferentiate Similar Concepts:  \n• Male fastener → External threads (bolt, screw).  \n• Female fastener → Internal threads (nut).  \n  \n💡 Memory Hook:  \nNut = Notch inside (threads inside).  \n  \n🎯 Board Tip:  \nKnow which parts are male and which are female before reading fastener questions.",
       "tags": [
         "preboards",
         "mock exam",
@@ -690,7 +690,7 @@
       ],
       "answerIndex": 0,
       "answerText": "Clevis",
-      "explanation": "",
+      "explanation": "⚠️ Answer key check: This answer was inferred, and the keyed answer (Clevis) conflicts with the standard AN bolt marking as I know it. Verify in AC 43.13-1B.  \n  \nOn AN bolts, a single raised dash on the head marks a corrosion-resistant bolt.  \n  \nWhy the other choices are incorrect:  \n• Clevis → A clevis bolt is recognized by its rounded, slotted head, not by a single-line mark.  \n• Low-strength material → Not a head-marking category.  \n• Special → Special-purpose bolts are marked SPS, not with a single dash.  \n  \nDifferentiate Similar Concepts:  \n• X or asterisk → Standard steel bolt.  \n• Triangle → Close-tolerance bolt.  \n• Single dash → Corrosion-resistant bolt.  \n• Two dashes → Aluminum alloy bolt.  \n• SPS → Special-purpose bolt.  \n  \n💡 Memory Hook:  \nOne dash = Corrosion-resistant (CRES).  \n  \n🎯 Board Tip:  \nLearn the head markings as a set; exam items usually test one against the others.",
       "tags": [
         "preboards",
         "mock exam",
@@ -715,7 +715,7 @@
       ],
       "answerIndex": 3,
       "answerText": "No external bracing is needed.",
-      "explanation": "",
+      "explanation": "A cantilever wing carries its loads through internal structure (spars and ribs) attached directly to the fuselage, so no external struts or wires are needed.  \n  \nWhy the other choices are incorrect:  \n• Non-adjustable lift struts → Strut-braced wings use struts; cantilever wings have none.  \n• Only one lift strut on each side → This describes a strut-braced wing.  \n• External bracing is needed → The opposite of cantilever.  \n  \nDifferentiate Similar Concepts:  \n• Cantilever → No external bracing.  \n• Strut-braced → Uses lift struts.  \n• Wire-braced → Uses flying and landing wires.  \n  \n💡 Memory Hook:  \nCantilever = Can stand alone.  \n  \n🎯 Board Tip:  \nCantilever wings need stronger internal spars, so they are heavier inside but cleaner aerodynamically.",
       "tags": [
         "preboards",
         "mock exam",
@@ -740,7 +740,7 @@
       ],
       "answerIndex": 3,
       "answerText": "equal to the length of the unthreaded portion of the bolt shank",
-      "explanation": "",
+      "explanation": "The grip of a bolt is its unthreaded shank length. Ideally the grip matches the thickness of the material being clamped so the threads do not bear on the material and the nut seats properly.  \n  \nWhy the other choices are incorrect:  \n• Diameter → A bolt's diameter is not a grip length.  \n• Equal to thrice the thickness of the material → Too long; the nut would bottom out.  \n• One and one half times the thickness of the material → Too long; the threads would bear on the joint.  \n  \nDifferentiate Similar Concepts:  \n• Grip length → Unthreaded part of the shank.  \n• Shank → The bolt body without head or threads.  \n  \n💡 Memory Hook:  \nGrip = Gripping the material with shank.  \n  \n🎯 Board Tip:  \nA bolt that is slightly too long can be corrected with washers, but one that is too short cannot grip the joint.",
       "tags": [
         "preboards",
         "mock exam",
@@ -765,7 +765,7 @@
       ],
       "answerIndex": 1,
       "answerText": "2024",
-      "explanation": "",
+      "explanation": "⚠️ Answer key check: Question text is missing in the source, so this assumes it asks for the rivet alloy stored cold to retard aging.  \n  \nAlloy 2024 (DD rivets) hardens very quickly after heat treatment, so these rivets are kept refrigerated (ice-box rivets) to retard aging until they are driven.  \n  \nWhy the other choices are incorrect:  \n• 2017 → Also an ice-box rivet, but it age-hardens more slowly and is usually less strictly controlled than 2024.  \n• 5056 → Not heat-treated, used on magnesium; it does not need refrigeration.  \n• 7050 → A high-strength aluminum alloy used in structure, not for ice-box rivets.  \n  \nDifferentiate Similar Concepts:  \n• 2017 (D) → Ice-box rivet.  \n• 2024 (DD) → Ice-box rivet, ages fastest.  \n• 2117 (AD) → Used as received, no heat treatment needed.  \n  \n💡 Memory Hook:  \nDD = Deep-freeze Drivers.  \n  \n🎯 Board Tip:  \nKnow which rivets must be stored cold and how long after removal they can be driven.",
       "tags": [
         "preboards",
         "mock exam",
@@ -790,7 +790,7 @@
       ],
       "answerIndex": 3,
       "answerText": "universal",
-      "explanation": "",
+      "explanation": "⚠️ Answer key check: This answer was inferred, and the keyed answer (Universal) conflicts with the standard MS rivet series as I know it (MS20430 = round head). Verify before relying on it.  \n  \nMS20430 is the military round-head solid rivet (the replacement for AN430). In MS20430DD 4-8, DD means 2024-T31 aluminum, the diameter is 4/32 = 1/8 inch, and the length is 8/16 = 1/2 inch.  \n  \nWhy the other choices are incorrect:  \n• Countersunk → This is the MS20426 series.  \n• Flat → This is the MS20442 series.  \n• Universal → This is the MS20470 series.  \n  \nDifferentiate Similar Concepts:  \n• MS20426 → Countersunk.  \n• MS20430 → Round.  \n• MS20442 → Flat.  \n• MS20470 → Universal.  \n  \n💡 Memory Hook:  \n430 = Round, 470 = Universal.  \n  \n🎯 Board Tip:  \nKnow the head type for each MS number, and read dash numbers as 32nds (diameter) and 16ths (length).",
       "tags": [
         "preboards",
         "mock exam",
@@ -815,7 +815,7 @@
       ],
       "answerIndex": 3,
       "answerText": "100 feet",
-      "explanation": "",
+      "explanation": "⚠️ Answer key check: Published idle-power distances vary by source and engine type. This explanation follows the keyed 100 feet; verify against your reference.  \n  \nBehind an idling turbojet or turbofan engine, the exhaust hazard area is large because of high-velocity exhaust. The keyed answer is 100 feet, and the area grows much larger as engine power increases.  \n  \nWhy the other choices are incorrect:  \n• 25 feet → Far too short for an exhaust danger zone.  \n• 50 feet → Still too short for a turbine engine.  \n• 75 feet → Still short of the keyed distance.  \n  \nDifferentiate Similar Concepts:  \n• Intake hazard → Suction danger in front of the engine.  \n• Exhaust hazard → Heat and blast behind the engine.  \n  \n💡 Memory Hook:  \nIdle exhaust = Keep a long distance back, 100 ft in this key.  \n  \n🎯 Board Tip:  \nDanger areas grow with power. Know that the exhaust hazard is far longer than the intake hazard.",
       "tags": [
         "preboards",
         "mock exam",
@@ -840,7 +840,7 @@
       ],
       "answerIndex": 2,
       "answerText": "boric acid",
-      "explanation": "",
+      "explanation": "Nickel-cadmium battery electrolyte is potassium hydroxide, which is alkaline. A weak acid such as boric acid neutralizes it on battery cases and drain surfaces.  \n  \nWhy the other choices are incorrect:  \n• Aliphatic naphtha → A cleaning solvent, not a neutralizer.  \n• Aromatic naphtha → A stronger solvent used for paint removal, not a neutralizer.  \n• Linseed oil → A drying oil used on wood; it does not neutralize anything.  \n  \nDifferentiate Similar Concepts:  \n• NiCd battery (alkaline) → Boric acid or vinegar.  \n• Lead-acid battery (acid) → Sodium bicarbonate (baking soda).  \n  \n💡 Memory Hook:  \nAlkaline battery = Acid cleanup (boric acid).  \n  \n🎯 Board Tip:  \nNever mix up battery types or tools; using the wrong neutralizer can cause a reaction and contaminate the battery.",
       "tags": [
         "preboards",
         "mock exam",
@@ -865,7 +865,7 @@
       ],
       "answerIndex": 0,
       "answerText": "one and one-half times the diameter of the rivet shank",
-      "explanation": "",
+      "explanation": "A properly formed rivet shop head is 1½ times the rivet shank diameter in width and ½ the diameter in height.  \n  \nWhy the other choices are incorrect:  \n• One-half times the diameter of the rivet shank → That is the height of the shop head, not its width.  \n• One and one-half times the diameter of the manufactured head → The reference is the shank diameter, not the manufactured head.  \n• One-half times the diameter of the manufactured head → Wrong reference and wrong factor.  \n  \nDifferentiate Similar Concepts:  \n• Shop head width → 1½ D.  \n• Shop head height → ½ D.  \n  \n💡 Memory Hook:  \n1½ wide, ½ high.  \n  \n🎯 Board Tip:  \nThe shop head is the head formed during driving. Know both its width and its height.",
       "tags": [
         "preboards",
         "mock exam",
@@ -890,7 +890,7 @@
       ],
       "answerIndex": 1,
       "answerText": "60:40",
-      "explanation": "",
+      "explanation": "For wet lay-ups, a fiber-to-resin ratio of about 60:40 (more fiber than resin) is generally best for strength. The fibers carry the load, and the resin only needs to hold and protect them.  \n  \nWhy the other choices are incorrect:  \n• 40:60 → Resin-rich, so heavy and weaker.  \n• 50:50 → Better than 40:60, but still carries too much resin.  \n• 70:30 → Resin-starved, with dry spots, voids, and weak bonding.  \n  \nDifferentiate Similar Concepts:  \n• Fiber → Carries the load.  \n• Resin → Holds fibers and transfers load.  \n  \n💡 Memory Hook:  \n60 fiber : 40 resin.  \n  \n🎯 Board Tip:  \nMore resin does not mean more strength; too much resin adds weight and too little leaves dry spots.",
       "tags": [
         "preboards",
         "mock exam",
@@ -915,7 +915,7 @@
       ],
       "answerIndex": 0,
       "answerText": "Alodizing",
-      "explanation": "",
+      "explanation": "Alodizing is a non-electrolytic chemical conversion treatment for aluminum alloys. It increases corrosion resistance and provides a good surface for paint adhesion without using electric current.  \n  \nWhy the other choices are incorrect:  \n• Anodizing → Uses electric current (electrolytic) to build a thicker oxide layer.  \n• Dichromating → Chromate conversion treatment mainly used on magnesium.  \n• Galvanizing → A zinc coating process for steel, not for aluminum.  \n  \nDifferentiate Similar Concepts:  \n• Alodizing → Chemical, no current, aluminum.  \n• Anodizing → Electrolytic, aluminum.  \n• Dichromating → Chemical, magnesium.  \n• Galvanizing → Zinc coating on steel.  \n  \n💡 Memory Hook:  \nAlodine = Aluminum, no electricity; Anodize = Applies electricity.  \n  \n🎯 Board Tip:  \nThe words non-electrolytic and chemical point to alodizing; electrolytic points to anodizing.",
       "tags": [
         "preboards",
         "mock exam",
@@ -940,7 +940,7 @@
       ],
       "answerIndex": 0,
       "answerText": "difference between the maximum gross weight and empty weight",
-      "explanation": "",
+      "explanation": "Useful load is the maximum gross weight minus the empty weight. It is what the aircraft can carry: fuel, crew, passengers, and baggage.  \n  \n$$W_{\\text{useful}} = W_{\\text{gross}} - W_{\\text{empty}}$$  \n  \nWhy the other choices are incorrect:  \n• Sum of the maximum gross weight and empty weight → Adding the two gives a meaningless number.  \n• Difference between the ramp weight and the weight of fuel used for ground maneuvers → This gives takeoff weight, not useful load.  \n• Difference between maximum take-off weight and fuel used airborne → This approximates landing weight.  \n  \nDifferentiate Similar Concepts:  \n• Empty weight → Aircraft structure and fixed equipment.  \n• Useful load → What you can add.  \n• Gross weight → Total aircraft weight.  \n  \n💡 Memory Hook:  \nUseful = Max minus Empty.  \n  \n🎯 Board Tip:  \nUseful load includes fuel, crew, passengers, and baggage.",
       "tags": [
         "preboards",
         "mock exam",
@@ -965,7 +965,7 @@
       ],
       "answerIndex": 0,
       "answerText": "six rings per inch",
-      "explanation": "",
+      "explanation": "The minimum grain count for softwoods such as spruce is six annual rings per inch. Fewer rings indicate coarse, weaker wood.  \n  \nWhy the other choices are incorrect:  \n• Eight rings per inch → Acceptable, but not the minimum.  \n• Twelve rings per inch → Acceptable, but not the minimum.  \n• Sixteen rings per inch → Acceptable, but not the minimum.  \n  \nDifferentiate Similar Concepts:  \n• Grain count → Rings per inch.  \n• Slope of grain → Maximum allowed is 1:15.  \n  \n💡 Memory Hook:  \nSix rings per inch minimum.  \n  \n🎯 Board Tip:  \nHigher ring counts are fine; the exam asks for the minimum.",
       "tags": [
         "preboards",
         "mock exam",
@@ -990,7 +990,7 @@
       ],
       "answerIndex": 0,
       "answerText": "2D",
-      "explanation": "",
+      "explanation": "The smallest allowable edge distance is 2D (twice the rivet diameter), measured from the center of the rivet hole to the edge of the sheet.  \n  \nWhy the other choices are incorrect:  \n• 3D → The minimum rivet pitch, not the edge distance.  \n• 4D → The maximum edge distance.  \n• 12D → The maximum rivet pitch.  \n  \nDifferentiate Similar Concepts:  \n• Edge distance → 2D minimum, 4D maximum.  \n• Rivet pitch → 3D minimum, 12D maximum.  \n  \n💡 Memory Hook:  \nEdge 2D, Pitch 3D.  \n  \n🎯 Board Tip:  \nMemorize the four numbers (2D, 4D, 3D, 12D) and what each applies to.",
       "tags": [
         "preboards",
         "mock exam",
@@ -1015,7 +1015,7 @@
       ],
       "answerIndex": 1,
       "answerText": "high permeability and low retentivity",
-      "explanation": "",
+      "explanation": "Magnetic-particle inspection uses ferromagnetic particles with high permeability (easily magnetized) and low retentivity (they do not stay magnetized). They gather at flux leakage from cracks without clumping on the background.  \n  \nWhy the other choices are incorrect:  \n• High permeability and high retentivity → Particles stay magnetized and cling to each other and the surface, giving false indications.  \n• Low permeability and high retentivity → They respond poorly and stay magnetized.  \n• Low permeability and low retentivity → They respond poorly to the magnetic field.  \n  \nDifferentiate Similar Concepts:  \n• Permeability → How easily a material is magnetized.  \n• Retentivity → How well it stays magnetized.  \n  \n💡 Memory Hook:  \nParticles = Pick up easily, let go easily.  \n  \n🎯 Board Tip:  \nRemember to demagnetize the part after inspection.",
       "tags": [
         "preboards",
         "mock exam",
@@ -1040,7 +1040,7 @@
       ],
       "answerIndex": 0,
       "answerText": "free fit",
-      "explanation": "",
+      "explanation": "⚠️ Answer key check: This answer was inferred, and the keyed answer (Free fit) conflicts with what I recall (Class 3, medium fit). Please verify in your reference.  \n  \nClass 3 (medium fit) is commonly cited for aircraft bolt threads, giving a snug but easy-to-assemble fit that resists loosening and still allows quick installation.  \n  \nWhy the other choices are incorrect:  \n• Free fit → Class 2, a general-purpose fit.  \n• Interference fit → Not used for threads; this describes press-fitted parts.  \n• Loose fit → Class 1, the loosest fit.  \n  \nDifferentiate Similar Concepts:  \n• Class 1 → Loose fit.  \n• Class 2 → Free fit.  \n• Class 3 → Medium fit.  \n• Class 4 → Close fit.  \n  \n💡 Memory Hook:  \nClass 3 = Medium, mid-aircraft grade.  \n  \n🎯 Board Tip:  \nKnow the four thread fit classes in order of tightness.",
       "tags": [
         "preboards",
         "mock exam",
@@ -1065,7 +1065,7 @@
       ],
       "answerIndex": 3,
       "answerText": "Shear",
-      "explanation": "",
+      "explanation": "Rivets are designed to carry shear loads (forces trying to slide the joined sheets past each other). Shear is the load most likely to cause rivet failure, and rivets should not carry tension.  \n  \nWhy the other choices are incorrect:  \n• Bearing → Failure occurs in the sheet around the hole, not in the rivet.  \n• Bending → Not a typical rivet failure load.  \n• Compression → Not a typical rivet failure load.  \n  \nDifferentiate Similar Concepts:  \n• Shear → Sliding load.  \n• Bearing → Crushing at the hole edge.  \n• Tension → Pulling load.  \n  \n💡 Memory Hook:  \nRivets Rip sideways (shear).  \n  \n🎯 Board Tip:  \nRivets are strong in shear and weak in tension; design joints so they work in shear.",
       "tags": [
         "preboards",
         "mock exam",
@@ -1090,7 +1090,7 @@
       ],
       "answerIndex": 2,
       "answerText": "5000 series; 3000 series",
-      "explanation": "",
+      "explanation": "In aluminum alloy designations, the 5000 series uses magnesium as the principal alloying agent, and the 3000 series uses manganese.  \n  \nWhy the other choices are incorrect:  \n• 3000 series; 5000 series → Reversed.  \n• 3000 series; 4000 series → 3000 is manganese, and 4000 is silicon.  \n• 5000 series; 4000 series → 5000 is magnesium, and 4000 is silicon, not manganese.  \n  \nDifferentiate Similar Concepts:  \n• 1xxx → Pure aluminum.  \n• 2xxx → Copper.  \n• 3xxx → Manganese.  \n• 4xxx → Silicon.  \n• 5xxx → Magnesium.  \n• 6xxx → Magnesium and silicon.  \n• 7xxx → Zinc.  \n  \n💡 Memory Hook:  \n3 = Manganese, 5 = Magnesium.  \n  \n🎯 Board Tip:  \nKnow the full series list; the exam often tests several at once.",
       "tags": [
         "preboards",
         "mock exam",
@@ -1115,7 +1115,7 @@
       ],
       "answerIndex": 2,
       "answerText": "change the washers and try again",
-      "explanation": "",
+      "explanation": "If the cotter pin hole does not align within the allowed torque range, change the washer (use a thicker or thinner AN960) and try again. This keeps the torque within limits while allowing the cotter pin to be installed.  \n  \nWhy the other choices are incorrect:  \n• Tighten below the torque range → Under-torque risks a loose joint.  \n• Let it be because it is a normal practice → Without the cotter pin the nut is not secured.  \n• Exceed the maximum recommended torque by no more than 10% → Over-torque can overstress the bolt, so it is not the preferred fix.  \n  \nDifferentiate Similar Concepts:  \n• Castle nut → Slots for a cotter pin.  \n• Torque range → Preload limits that must stay within spec.  \n  \n💡 Memory Hook:  \nNo hole match? Switch the washer.  \n  \n🎯 Board Tip:  \nShift alignment with washers and keep the torque in range.",
       "tags": [
         "preboards",
         "mock exam",
@@ -1140,7 +1140,7 @@
       ],
       "answerIndex": 3,
       "answerText": "standard steel bolts",
-      "explanation": "",
+      "explanation": "Aircraft bolts marked with a cross (X) or an asterisk on the head are standard steel AN bolts.  \n  \nWhy the other choices are incorrect:  \n• Close-tolerance bolts → Marked with a triangle.  \n• Made of aluminum alloy → Marked with two raised dashes.  \n• Magnetically inspected → A process step, not what the cross or asterisk shows.  \n  \nDifferentiate Similar Concepts:  \n• X or asterisk → Standard steel bolt.  \n• Triangle → Close-tolerance bolt.  \n• Single dash → Corrosion-resistant.  \n• Two dashes → Aluminum alloy.  \n  \n💡 Memory Hook:  \nX marks the standard steel spot.  \n  \n🎯 Board Tip:  \nHead markings are tested often; learn them as a set.",
       "tags": [
         "preboards",
         "mock exam",
@@ -1165,7 +1165,7 @@
       ],
       "answerIndex": 3,
       "answerText": "Statement 1 is incorrect; Statement 2 is correct.",
-      "explanation": "",
+      "explanation": "Permanent ballast is added weight installed to keep the CG within limits, and it stays in the aircraft for the long term. That makes Statement 2 correct. Statement 1 is wrong because ballast increases the empty weight, and with a fixed gross weight the useful load decreases.  \n  \n$$W_{\\text{useful}} = W_{\\text{gross}} - W_{\\text{empty}}$$  \n  \nWhy the other choices are incorrect:  \n• Both statements are correct → Statement 1 reverses the effect on empty weight and useful load.  \n• Both statements are incorrect → Statement 2 is correct.  \n• Statement 1 is correct; Statement 2 is incorrect → Reversed; Statement 2 is correct and Statement 1 is wrong.  \n  \nDifferentiate Similar Concepts:  \n• Permanent ballast → Stays installed; counts in empty weight.  \n• Temporary ballast → Removable; used for loading adjustments.  \n  \n💡 Memory Hook:  \nBallast adds to empty weight, so useful load drops.  \n  \n🎯 Board Tip:  \nAny change to empty weight changes useful load by the opposite amount.",
       "tags": [
         "preboards",
         "mock exam",
@@ -1190,7 +1190,7 @@
       ],
       "answerIndex": 3,
       "answerText": "amount of heat applied to work",
-      "explanation": "",
+      "explanation": "The torch tip opening size controls how much gas flows, and so how much heat is delivered to the work. A larger tip gives more heat and is used for thicker material.  \n  \nWhy the other choices are incorrect:  \n• Material compatibility → Depends on rod and base metal, not the tip.  \n• Temperature of the flame → Set by the gas type and mixture, not the tip size.  \n• Melting point of the filler material → A property of the filler rod.  \n  \nDifferentiate Similar Concepts:  \n• Tip size → Quantity of heat.  \n• Gas mixture → Flame temperature.  \n  \n💡 Memory Hook:  \nBig tip = Big heat quantity.  \n  \n🎯 Board Tip:  \nMatch the tip to the metal thickness, as too much heat burns through and too little gives poor fusion.",
       "tags": [
         "preboards",
         "mock exam",
@@ -1215,7 +1215,7 @@
       ],
       "answerIndex": 2,
       "answerText": "%MAC i sbetween 45 and 48",
-      "explanation": "",
+      "explanation": "For a tapered wing, first find the mean aerodynamic chord (MAC), then the CG position as a percentage of it.  \n  \n$$MAC = \\frac{2}{3}\\left(C_r + C_t - \\frac{C_r C_t}{C_r + C_t}\\right) = \\frac{2}{3}\\left(70 + 35 - \\frac{70 \\times 35}{105}\\right) \\approx 54.4\\ \\text{in}$$  \n  \n$$\\%MAC = \\frac{CG - LEMAC}{MAC} \\times 100 = \\frac{295 - 270}{54.4} \\times 100 \\approx 45.9\\%$$  \n  \nThat falls between 45 and 48.  \n  \nWhy the other choices are incorrect:  \n• Between 39 and 42 → Result of using a wrong MAC.  \n• Between 42 and 45 → Result of an arithmetic slip.  \n• Between 48 and 51 → Result of an arithmetic slip.  \n  \nDifferentiate Similar Concepts:  \n• LEMAC → Leading edge of the MAC.  \n• %MAC → CG position along the MAC.  \n  \n💡 Memory Hook:  \nSubtract LEMAC from CG, then divide by MAC.  \n  \n🎯 Board Tip:  \nAlways compute MAC first for a tapered wing; averaging the chords is only an approximation.",
       "tags": [
         "preboards",
         "mock exam",
@@ -1240,7 +1240,7 @@
       ],
       "answerIndex": 2,
       "answerText": "lateral stability",
-      "explanation": "",
+      "explanation": "Ailerons control roll about the longitudinal axis, which is lateral stability and control.  \n  \nWhy the other choices are incorrect:  \n• Directional stability → Yaw about the vertical axis, handled by the rudder and vertical fin.  \n• Longitudinal stability → Pitch about the lateral axis, handled by the elevator and horizontal stabilizer.  \n• Horizontal stability → Not a standard stability term.  \n  \nDifferentiate Similar Concepts:  \n• Ailerons → Roll → Lateral.  \n• Elevator → Pitch → Longitudinal.  \n• Rudder → Yaw → Directional.  \n  \n💡 Memory Hook:  \nAilerons = Roll = Lateral.  \n  \n🎯 Board Tip:  \nMatch each control surface to its axis and its type of stability.",
       "tags": [
         "preboards",
         "mock exam",
