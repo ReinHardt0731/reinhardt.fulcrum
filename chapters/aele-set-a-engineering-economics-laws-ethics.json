@@ -1,0 +1,1205 @@
+{
+  "title": "AELE Set A: Engineering Economics, Laws and Ethics",
+  "questions": [
+    {
+      "question": "There shall be at least ___ fire extinguishers with Halon 1211 on aircraft with a passenger capacity of 61 or more.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answerIndex": 1,
+      "answerText": "2",
+      "explanation": "Aircraft with 61–200 passenger seats need at least two hand fire extinguishers.\n\nWhy the other choices are incorrect:\n- 1 → Enough only for 7–30 seats.\n- 3 → Required only above 200 seats.\n- 4 → Not the minimum for this range.\n\nDifferentiate Similar Concepts:\n- 7–30 seats → 1 extinguisher.\n- 31–60 seats → 2 extinguishers (per applicable rules, at least one Halon).\n- 61–200 seats → 2 extinguishers.\n\n💡 Memory Hook:\n61 and up, \"two\" to cover the crew.\n\n🎯 Board Tip:\nCount the seats first, then match the band.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "No pilot may conduct fish spotting operations unless he or she has a:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "CPL",
+        "PPL",
+        "SPL",
+        "ATPL"
+      ],
+      "answerIndex": 0,
+      "answerText": "CPL",
+      "explanation": "Fish spotting is aerial work done for hire, so a Commercial Pilot License is required.\n\nWhy the other choices are incorrect:\n- PPL → No compensation allowed.\n- SPL → Student pilot, restricted.\n- ATPL → Higher than needed, not the minimum.\n\nDifferentiate Similar Concepts:\n- PPL → Private, no pay.\n- CPL → Flying for hire, including aerial work.\n- ATPL → Airline captain level.\n\n💡 Memory Hook:\nFish = Fee = Commercial.\n\n🎯 Board Tip:\nAerial work for pay = at least CPL.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Calculated by dividing total passenger revenue by total capacity.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "CASK",
+        "ASK",
+        "RASK",
+        "RPK"
+      ],
+      "answerIndex": 2,
+      "answerText": "RASK",
+      "explanation": "RASK = Revenue per Available Seat Kilometer.\n\nWhy the other choices are incorrect:\n- CASK → Cost per ASK.\n- ASK → Capacity itself (seats × km).\n- RPK → Demand actually flown (paying pax × km).\n\nDifferentiate Similar Concepts:\n- RASK → Revenue ÷ ASK.\n- CASK → Cost ÷ ASK.\n- Yield → Revenue ÷ RPK.\n\n💡 Memory Hook:\nR for Revenue, C for Cost.\n\n🎯 Board Tip:\nRevenue over capacity = RASK.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "If ₱750.00 is invested at the end of each year for 6 years, at an annual interest rate of 6%, what is the total amount available immediately after the sixth deposit?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "₱4,500.00",
+        "₱4,950.00",
+        "₱5,230",
+        "₱5,680"
+      ],
+      "answerIndex": 2,
+      "answerText": "₱5,230",
+      "explanation": "Ordinary annuity future value:\nFV = A[((1+i)ⁿ − 1)/i] = 750[(1.06⁶ − 1)/0.06] = 750(6.9753) ≈ ₱5,231 → nearest ₱5,230.\n\nWhy the other choices are incorrect:\n- ₱4,500 → Just 750 × 6 with no interest.\n- ₱4,950 → Understates the interest.\n- ₱5,680 → Overstates the interest.\n\nDifferentiate Similar Concepts:\n- Ordinary annuity → Payments at end of period.\n- Annuity due → Payments at start of period.\n\n💡 Memory Hook:\nDeposit at the end, FV with the (1+i)ⁿ − 1.\n\n🎯 Board Tip:\n\"Immediately after the sixth deposit\" means no extra compounding after year 6.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "If the bearing strength of a rigid pavement, resting on a medium strength subgrade, has been assessed by technical evaluation to be PCN 80 and there is no tire pressure limitation, then the reported information would be:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "PCN 80 / R / B / W / T",
+        "PCN 80 R / A / X / U",
+        "PCN 80 / R / B / Y / T",
+        "PCN 80 R / A / Y / T"
+      ],
+      "answerIndex": 0,
+      "answerText": "PCN 80 / R / B / W / T",
+      "explanation": "PCN format: number / pavement type / subgrade / tire pressure / evaluation method.\nR = rigid, B = medium subgrade, W = no pressure limit, T = technical evaluation.\n\nWhy the other choices are incorrect:\n- B → A/X/U = flexible/high pressure limit/using aircraft experience.\n- C → Y is a medium (1.00–1.50 MPa) tire pressure limit, not \"no limit\".\n- D → A is flexible pavement and Y is a limited tire pressure.\n\nDifferentiate Similar Concepts:\n- Pavement: R rigid, F flexible.\n- Subgrade: A high, B medium, C low, D ultra-low.\n- Tire pressure: W no limit, X high, Y medium, Z low.\n- Evaluation: T technical, U using aircraft.\n\n💡 Memory Hook:\nR-B-W-T = \"Really Big, With Tests\".\n\n🎯 Board Tip:\nDecode PCN one letter at a time.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An Aerodrome Reference Code of 4F indicates a runway reference field length of ___ and an aircraft wingspan of ___.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1 200 m up to but not including 1 800 m; 52 m up to but not including 65 m.",
+        "1 800 m and over; 80 m up to but not including 100 m.",
+        "1 200 m up to but not including 1 800 m; 65 m up to but not including 80 m.",
+        "1 800 m and over; 65 m up to but not including 80 m."
+      ],
+      "answerIndex": 3,
+      "answerText": "1 800 m and over; 65 m up to but not including 80 m.",
+      "explanation": "Code number 4 = reference field length of 1,800 m and over.\nCode letter F = wingspan of 65 m up to but not including 80 m.\n\nWhy the other choices are incorrect:\n- A → That is code 3 length with a code D wingspan.\n- B → 80 m to <100 m is not code F for this setup.\n- C → 1,200–<1,800 m is code 3.\n\nDifferentiate Similar Concepts:\n- Code number → Field length (1 to 4).\n- Code letter → Wingspan (A to F).\n\n💡 Memory Hook:\n4 = 4th band, longest runway; F = Fat wings.\n\n🎯 Board Tip:\nNumber is runway, letter is wingspan.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The passers of the first AELE conducted by the Board of Aeronautical Engineering took their oath in:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "July 1983",
+        "November 1983",
+        "July 1987",
+        "November 1987"
+      ],
+      "answerIndex": 1,
+      "answerText": "November 1983",
+      "explanation": "First AELE oath-taking ⚠️\n**Answer: B. November 1983** *(low confidence)*\n\nI could not verify this date. It is my best recall of the first batch's oath-taking after the Board was constituted under PD 1570.\n\nWhy the other choices are incorrect:\n- July 1983, July 1987, November 1987 → Not matching my recall.\n\nDifferentiate Similar Concepts:\n- PD 1570 → Law regulating the practice, signed in 1978.\n- First AELE → Held years after the law was passed.\n\n💡 Memory Hook:\nLaw first (1978), first batch later (1983).\n\n🎯 Board Tip:\nHistory items are memorization, so check your handout.\n\nSource note: The reviewer flags this answer as uncertain; verify it against the applicable official reference.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Flash resistant, according to the FAA, means:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "capacity to withstand the heat associated with fire at least as well as steel in dimensions appropriate for the purpose for which they are used.",
+        "not susceptible to combustion to the point of propagating a flame, beyond safe limits, after the ignition source is removed.",
+        "not susceptible to burning violently when ignited.",
+        "capacity to prevent ignition when exposed to an open flame."
+      ],
+      "answerIndex": 2,
+      "answerText": "not susceptible to burning violently when ignited.",
+      "explanation": "FAR 1.1 defines flash resistant this way.\n\nWhy the other choices are incorrect:\n- A → That describes fireproof.\n- B → That describes flame resistant.\n- D → Not a regulatory definition.\n\nDifferentiate Similar Concepts:\n- Fireproof → Withstands heat at least as well as steel.\n- Flame resistant → Will not propagate flame after the source is removed.\n- Flash resistant → Will not burn violently when ignited.\n\n💡 Memory Hook:\nFlash = Fast burn is the thing you avoid.\n\n🎯 Board Tip:\nThree fire terms, three definitions. Learn them as a set.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "If you borrow money from your friend with simple interest of 12%, find the present worth of ₱20,000, which is due at the end of 9 months.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "₱18,350",
+        "₱19,490",
+        "₱28,390",
+        "₱42,950"
+      ],
+      "answerIndex": 0,
+      "answerText": "₱18,350",
+      "explanation": "P = F / (1 + in) = 20,000 / (1 + 0.12 × 0.75) = 20,000 / 1.09 = ₱18,348.62 ≈ ₱18,350.\n\nWhy the other choices are incorrect:\n- ₱19,490, ₱28,390, ₱42,950 → Wrong period or used compounding or multiplication instead of division.\n\nDifferentiate Similar Concepts:\n- Simple interest → I = Pin.\n- Compound interest → F = P(1+i)ⁿ.\n\n💡 Memory Hook:\nMonths ÷ 12 before multiplying.\n\n🎯 Board Tip:\n9 months = 0.75 year.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Airframe rating class 1 covers:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Composite construction of large aircraft.",
+        "All-metal construction of small aircraft.",
+        "Composite construction of small aircraft.",
+        "All-metal construction of large aircraft."
+      ],
+      "answerIndex": 2,
+      "answerText": "Composite construction of small aircraft.",
+      "explanation": "Airframe ratings: Class 1 composite small, Class 2 composite large, Class 3 all-metal small, Class 4 all-metal large.\n\nWhy the other choices are incorrect:\n- Composite, large → Class 2.\n- All-metal, small → Class 3.\n- All-metal, large → Class 4.\n\nDifferentiate Similar Concepts:\n- Classes 1 and 2 → Composite (small, large).\n- Classes 3 and 4 → All-metal (small, large).\n\n💡 Memory Hook:\nOdd = small, Even = large; low numbers = composite.\n\n🎯 Board Tip:\nMemorize the 2×2 grid.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A function where the management identifies its objectives, achievements, and alternatives.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Staffing",
+        "Controlling",
+        "Organizing",
+        "Planning"
+      ],
+      "answerIndex": 3,
+      "answerText": "Planning",
+      "explanation": "Planning sets goals and chooses among alternatives.\n\nWhy the other choices are incorrect:\n- Staffing → Placing people in roles.\n- Controlling → Monitoring versus the plan.\n- Organizing → Arranging resources and structure.\n\nDifferentiate Similar Concepts:\n- Planning → What and how.\n- Organizing → Who and with what.\n- Controlling → Did it work?\n\n💡 Memory Hook:\nPlan first, always.\n\n🎯 Board Tip:\n\"Objectives and alternatives\" = planning.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An RPAS operator shall be required to obtain a CoA when:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "RPA is operated at a safe horizontal distance of at least 150 meters from residential, commercial, industrial, or recreational areas.",
+        "RPA is operated at a safe horizontal distance of at least 30 meters from assemblies of people and uninvolved persons.",
+        "RPA maintains an altitude within 120 m AGL.",
+        "RPA has a maximum take-off mass of 30 kg."
+      ],
+      "answerIndex": 3,
+      "answerText": "RPA has a maximum take-off mass of 30 kg.",
+      "explanation": "RPAS operator required to obtain a CoA ⚠️\n**Answer: D. RPA has a maximum take-off mass of 30 kg.** *(low confidence)*\n\nA heavier aircraft sits outside the lightest operating category, so extra authorization is more likely. The other choices read like conditions of ordinary, low-risk operation.\n\nWhy the other choices are incorrect:\n- A, B → Distance from people or buildings are safety conditions.\n- C → 120 m AGL is the usual ceiling in the light category.\n\nDifferentiate Similar Concepts:\n- Remote Pilot License → Personal qualification.\n- CoA / operator authorization → Approval for the operation or operator.\n\n💡 Memory Hook:\nHeavier RPA = heavier paperwork.\n\n🎯 Board Tip:\nCheck the current CAAP RPAS rule for exact thresholds.\n\nSource note: The reviewer flags this answer as uncertain; verify it against the applicable official reference.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A barrette is composed of at least how many lights?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answerIndex": 2,
+      "answerText": "3",
+      "explanation": "A barrette is at least three lights closely spaced in a line.\n\nWhy the other choices are incorrect:\n- 1, 2 → Too few to form a bar.\n- 4 → More than the minimum.\n\nDifferentiate Similar Concepts:\n- Barrette → 3 or more closely spaced lights forming a short bar.\n- Crossbar → A longer bar across the centerline.\n\n💡 Memory Hook:\nBarrette = Bar of 3.\n\n🎯 Board Tip:\nBar = at least 3.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The Board of Aeronautical Engineering may reissue a revoked Certificate of Registration after:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "6 months from the date of revocation.",
+        "1 year from the date of revocation.",
+        "2 years from the date of revocation.",
+        "3 years from the date of revocation."
+      ],
+      "answerIndex": 2,
+      "answerText": "2 years from the date of revocation.",
+      "explanation": "PD 1570 allows the Board to reissue after two years.\n\nWhy the other choices are incorrect:\n- 6 months, 1 year → Too short.\n- 3 years → Longer than the rule.\n\nDifferentiate Similar Concepts:\n- Suspension → Temporary.\n- Revocation → Canceled, with a waiting period before reissue.\n\n💡 Memory Hook:\nRevoked = Two-year timeout.\n\n🎯 Board Tip:\nLearn the key numbers in PD 1570.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Regulation governing the approval of aircraft maintenance organizations was found in:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "JAR-66",
+        "JAR-145",
+        "JAR-OPS 1",
+        "JAR-43"
+      ],
+      "answerIndex": 1,
+      "answerText": "JAR-145",
+      "explanation": "JAR-145 covers approved maintenance organizations.\n\nWhy the other choices are incorrect:\n- JAR-66 → Certifying staff licensing.\n- JAR-OPS 1 → Commercial air transport operations.\n- JAR-43 → Not the maintenance organization rule.\n\nDifferentiate Similar Concepts:\n- 145 → Organizations.\n- 66 → People (licenses).\n- 147 → Training organizations.\n- M → Continuing airworthiness.\n\n💡 Memory Hook:\n145 = Organization, 66 = Person.\n\n🎯 Board Tip:\nPart numbers are favorite board items.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A radio service panel truck initially costs ₱60,000.00. Its resale value at the end of the 5th year of its useful life is estimated at ₱15,000.00. Determine the depreciation charge for 2nd year using declining balance method.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "₱9,840",
+        "₱10,500",
+        "₱11,010",
+        "₱12,160"
+      ],
+      "answerIndex": 2,
+      "answerText": "₱11,010",
+      "explanation": "Rate k = 1 − (SV/FC)^(1/n) = 1 − (15,000/60,000)^(1/5) = 0.2421.\nYear 1 depreciation = 0.2421 × 60,000 = ₱14,526; book value = ₱45,474.\nYear 2 depreciation = 0.2421 × 45,474 ≈ **₱11,010**.\n\nWhy the other choices are incorrect:\n- ₱9,840, ₱10,500, ₱12,160 → Result of rounding k poorly or using the wrong base.\n\nDifferentiate Similar Concepts:\n- Declining balance (Matheson) → Fixed rate on book value.\n- Straight line → Same amount each year.\n\n💡 Memory Hook:\nEach year, rate × what's left.\n\n🎯 Board Tip:\nKeep k to four decimals to avoid rounding errors.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "When an aircraft is inspected under Part 91 and found to be unairworthy, what action must the person performing the inspection take in addition to making the maintenance logbook entry?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Submit a Malfunction or Defect Report (M&D) directly to the FAA within 48 hours.",
+        "Provide a dated list of discrepancies and unairworthy items to the aircraft owner or lessee.",
+        "Surrender the aircraft's Airworthiness Certificate to the nearest FSDO until repairs are made.",
+        "Require an immediate reinspection by an Inspection Authorization (IA) holder."
+      ],
+      "answerIndex": 1,
+      "answerText": "Provide a dated list of discrepancies and unairworthy items to the aircraft owner or lessee.",
+      "explanation": "The inspector gives the owner a signed, dated list of discrepancies, in addition to the logbook entry.\n\nWhy the other choices are incorrect:\n- A → An M&D report is not the required action here.\n- C → The certificate is not surrendered.\n- D → An IA reinspection is not mandated.\n\nDifferentiate Similar Concepts:\n- Discrepancy list → Given to owner.\n- Logbook entry → Records the inspection result.\n\n💡 Memory Hook:\nFound a fault? Hand the owner the list.\n\n🎯 Board Tip:\nOwner gets the list, logbook gets the entry.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An aircraft used only on behalf of the Philippine government (except for commercial purposes) or exclusively leased for at least 90 continuous days.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Civil aircraft",
+        "Private aircraft",
+        "Government aircraft",
+        "State aircraft"
+      ],
+      "answerIndex": 2,
+      "answerText": "Government aircraft",
+      "explanation": "This is the definition wording for a government aircraft (non-commercial government use).\n\nWhy the other choices are incorrect:\n- Civil aircraft → All non-state aircraft.\n- Private aircraft → Non-commercial private use.\n- State aircraft → Chicago Convention term for military, customs and police aircraft.\n\nDifferentiate Similar Concepts:\n- Government → Used for government service.\n- State → Military, customs, police.\n\n💡 Memory Hook:\nGovernment service = government aircraft.\n\n🎯 Board Tip:\nWatch for the \"90 continuous days\" clue.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following is true for minimum takeoff safety speed (V2MIN) of a transport category aircraft, in terms of calibrated airspeed?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Not less than 1.13VSR for two-engine and three-engine turbo-propeller and reciprocating engine-powered airplanes.",
+        "Not less than 1.08VSR for two-engine and three-engine turbo-propeller and reciprocating engine-powered airplanes.",
+        "Not less than 1.08VSR for turbojet-powered airplanes without provisions for obtaining a significant reduction in the one-engine-inoperative power-on stall speed.",
+        "1.13 times VMC."
+      ],
+      "answerIndex": 0,
+      "answerText": "Not less than 1.13VSR for two-engine and three-engine turbo-propeller and reciprocating engine-powered airplanes.",
+      "explanation": "Why the other choices are incorrect:\n- B → 1.08 is for the other categories, not two- and three-engine props.\n- C → 1.08VSR applies to turbojets and to props with more than three engines under specific conditions, but the full clause does not match this statement.\n- D → V2MIN is stated against VSR, not VMC multiplied by 1.13 as written.\n\nDifferentiate Similar Concepts:\n- 1.13 VSR → Two- and three-engine props.\n- 1.08 VSR → Turbojets and four-engine props with significant power-on stall reduction.\n\n💡 Memory Hook:\nFewer engines, bigger margin (1.13).\n\n🎯 Board Tip:\nMemorize both numbers and who gets which.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The current Director General of CAAP is:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Capt. Manuel Antonio L. Tamayo",
+        "Brig. Gen. Ruben F. Ciron",
+        "Lt. Gen. Raul L. Del Rosario",
+        "Capt. Jim C. Sydiongco"
+      ],
+      "answerIndex": 2,
+      "answerText": "Lt. Gen. Raul L. Del Rosario",
+      "explanation": "Del Rosario took over from Capt. Manuel Antonio Tamayo in early 2025 (Acting DG, then DG).\n\nWhy the other choices are incorrect:\n- Tamayo → Previous DG.\n- Ciron → Not the DG.\n- Sydiongco → Held other posts (Undersecretary for Aviation and Airports).\n\nDifferentiate Similar Concepts:\n- Acting DG → Temporary designation.\n- DG → Full appointment.\n\n💡 Memory Hook:\nRosario replaced Tamayo.\n\n🎯 Board Tip:\nCurrent officials change. Verify close to exam day.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "This law states that when one of the factors of production is fixed in quantity or is difficult to increase, increasing the other factors of production will result in a less than proportionate increase in output.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Law of demand",
+        "Law of diminishing return",
+        "Law of supply",
+        "Law of supply and demand"
+      ],
+      "answerIndex": 1,
+      "answerText": "Law of diminishing return",
+      "explanation": "Adding more of a variable input to a fixed one yields smaller and smaller output increases.\n\nWhy the other choices are incorrect:\n- Law of demand → Price vs. quantity demanded.\n- Law of supply → Price vs. quantity supplied.\n- Supply and demand → Market equilibrium.\n\nDifferentiate Similar Concepts:\n- Diminishing returns → Production.\n- Supply and demand → Market price.\n\n💡 Memory Hook:\nSame land, more workers, less extra crop.\n\n🎯 Board Tip:\n\"Fixed factor\" is the key phrase.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Continuing Airworthiness is defined as:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A set of processes by which an aircraft, remote pilot station, engine, propeller or part complies with the applicable airworthiness requirements and remains in a condition for safe operation throughout its operating life.",
+        "A process of establishing that an aircraft, engine, propeller, or aeronautical product has been designed, manufactured, and certified in accordance with the applicable airworthiness standards before it is issued an airworthiness certificate and authorized for its initial operation.",
+        "A regulatory procedure through which the aviation authority monitors aircraft operators, maintenance organizations, and personnel to verify compliance with approved maintenance programs, operational procedures, and applicable aviation safety regulations.",
+        "A status of an aircraft, remote pilot station, engine, propeller or part when it conforms to its approved design and is in a condition for safe operation."
+      ],
+      "answerIndex": 0,
+      "answerText": "A set of processes by which an aircraft, remote pilot station, engine, propeller or part complies with the applicable airworthiness requirements and remains in a condition for safe operation throughout its operating life.",
+      "explanation": "Why the other choices are incorrect:\n- B → Initial airworthiness (before first certificate).\n- C → Safety oversight.\n- D → Airworthy status, not the process.\n\nDifferentiate Similar Concepts:\n- Initial airworthiness → Design, manufacture, certification.\n- Continuing airworthiness → Keeping it airworthy through life.\n\n💡 Memory Hook:\nContinuing = Continuous processes.\n\n🎯 Board Tip:\n\"Throughout operating life\" is the giveaway.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The cost of producing a small transistor radio set is ₱25.00 for labor and ₱35.00 for material. The fixed charges for operating the plant are ₱120,000.00 per month. The variable cost is ₱2.00 per set. If the radio can be sold for ₱85.00 each, how many sets must be produced per month to break even?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "5218",
+        "5220",
+        "5529",
+        "5416"
+      ],
+      "answerIndex": 0,
+      "answerText": "5218",
+      "explanation": "Variable cost per set = 25 + 35 + 2 = ₱62.\nBreak-even = Fixed cost / (Price − Variable cost) = 120,000 / (85 − 62) = 5,217.4 → **5218** sets (round up).\n\nWhy the other choices are incorrect:\n- 5220, 5529, 5416 → Mis-added the variable cost components.\n\nDifferentiate Similar Concepts:\n- Fixed cost → Does not change with output.\n- Variable cost → Per unit.\n\n💡 Memory Hook:\nFixed ÷ margin per unit.\n\n🎯 Board Tip:\nAdd all per-unit costs before dividing, and round up.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "When may the final report of an aircraft accident investigation be made public according to PCAR Part 13?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Immediately after the report is made.",
+        "When ICAO authorized it.",
+        "30 days after the accident occurs.",
+        "Only after the final report has been sent to the relevant Contracting States."
+      ],
+      "answerIndex": 3,
+      "answerText": "Only after the final report has been sent to the relevant Contracting States.",
+      "explanation": "Public release of the final accident report (PCAR Part 13) ⚠️\n**Answer: D. Only after the final report has been sent to the relevant Contracting States.** *(moderate confidence)*\n\nAnnex 13-style rules require sending the report to the concerned States before release.\n\nWhy the other choices are incorrect:\n- A → Immediate release is not allowed.\n- B → ICAO does not authorize release.\n- C → No 30-day rule.\n\nDifferentiate Similar Concepts:\n- Preliminary report → Sent to States quickly.\n- Final report → Sent, then made public.\n\n💡 Memory Hook:\nTell the States, then tell the public.\n\n🎯 Board Tip:\nSequence questions: notify first, publish later.\n\nSource note: The reviewer flags this answer as uncertain; verify it against the applicable official reference.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A B3 category AML holder is restricted to issue a CRS to which group of aircraft?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Piston-engine non-pressurized aircraft with MTOM of 2,000 kg and below.",
+        "Piston-engine non-pressurized aircraft with MTOM of 2,000 kg and above.",
+        "All non-pressurized piston-engine aircraft.",
+        "Sailplanes, powered sailplanes, and hot-air balloons only."
+      ],
+      "answerIndex": 0,
+      "answerText": "Piston-engine non-pressurized aircraft with MTOM of 2,000 kg and below.",
+      "explanation": "B3 covers non-pressurized piston-engine aeroplanes up to 2,000 kg MTOM.\n\nWhy the other choices are incorrect:\n- B → \"And above\" reverses the limit.\n- C → Ignores the 2,000 kg limit.\n- D → That is not B3.\n\nDifferentiate Similar Concepts:\n- B1 → Mechanical.\n- B2 → Avionics.\n- B3 → Piston aeroplanes, non-pressurized, ≤2,000 kg.\n\n💡 Memory Hook:\nB3 = Basic piston, light.\n\n🎯 Board Tip:\nLearn B1, B2, B3 as a trio.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "In deciding whether the transport is urgent, the Authority will consider why it is important for a consignment to reach its destination quickly or why it has been necessary to make an application at short notice. Which of the following is not considered as extremely urgent?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The air transport of critical medical supplies required immediately for emergency humanitarian operations.",
+        "Urgent dispatch of containment equipment and specialized chemicals required to mitigate an active pest infestation threatening public health.",
+        "A sudden equipment failure at an international facility causing severe economic losses.",
+        "A short-notice national security imperative requiring immediate movement of restricted goods."
+      ],
+      "answerIndex": 2,
+      "answerText": "A sudden equipment failure at an international facility causing severe economic losses.",
+      "explanation": "Humanitarian, public health and national security cases are life-or-security matters. Economic loss alone is not treated as extremely urgent.\n\nWhy the other choices are incorrect:\n- A, B, D → Humanitarian, public health and national security cases.\n\nDifferentiate Similar Concepts:\n- Urgent (life/safety/security) → Extremely urgent.\n- Commercial loss → Not extreme.\n\n💡 Memory Hook:\nLives and security beat money.\n\n🎯 Board Tip:\n\"Not\" question: find the odd one out.\n\nSource note: The reviewer flags this answer as uncertain; verify it against the applicable official reference.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An airline flies a 150-seat aircraft on a 2,000 km route. If the flight achieves a PLF of 80%, how many RPK were generated?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "200,000",
+        "220,000",
+        "240,000",
+        "260,000"
+      ],
+      "answerIndex": 2,
+      "answerText": "240,000",
+      "explanation": "RPK = paying passengers × distance = (150 × 0.80) × 2,000 = 120 × 2,000 = 240,000.\n\nWhy the other choices are incorrect:\n- 200,000, 220,000, 260,000 → Wrong load factor.\n\nDifferentiate Similar Concepts:\n- ASK → 150 × 2,000 = 300,000.\n- RPK → 240,000.\n- PLF → RPK ÷ ASK = 0.80.\n\n💡 Memory Hook:\nPassengers actually flown × km.\n\n🎯 Board Tip:\nApply PLF to seats first.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "As per EASA Part M, how many consecutive times may an Airworthiness Review Certificate (ARC) be extended by an appropriately authorized CAMO before a full physical and document review is required?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Once",
+        "Twice",
+        "Thrice",
+        "An ARC cannot be extended under any circumstances"
+      ],
+      "answerIndex": 1,
+      "answerText": "Twice",
+      "explanation": "A CAMO may extend an ARC up to twice (one year each) before a full airworthiness review.\n\nWhy the other choices are incorrect:\n- Once, Thrice → Wrong count.\n- Cannot be extended → Extension is allowed.\n\nDifferentiate Similar Concepts:\n- ARC → Valid one year.\n- Extension → Up to two times by the CAMO.\n\n💡 Memory Hook:\nTwo extensions, then a full review.\n\n🎯 Board Tip:\nNumber questions need exact recall.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "If money is worth 8%, calculate the present value of a perpetuity of ₱1000 payable annually when first payment due at the end of 4 years.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "₱9,222.90",
+        "₱9,832.63",
+        "₱8,933.80",
+        "₱9,922.90"
+      ],
+      "answerIndex": 3,
+      "answerText": "₱9,922.90",
+      "explanation": "Perpetuity value one period before the first payment (year 3): 1,000 / 0.08 = ₱12,500.\nPV today = 12,500 / 1.08³ = 12,500 / 1.259712 = **₱9,922.90**.\n\nWhy the other choices are incorrect:\n- ₱9,222.90, ₱9,832.63, ₱8,933.80 → Discounted by the wrong number of years.\n\nDifferentiate Similar Concepts:\n- Ordinary perpetuity → P = A/i, first payment at year 1.\n- Deferred perpetuity → Discount further back.\n\n💡 Memory Hook:\nValue it one year before the first payment, then discount.\n\n🎯 Board Tip:\nFirst payment at year 4 means discount 3 years, not 4.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Where can you find procedures concerning the design and application of instrument flight procedures, including departure, arrival, and approach procedures?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Doc 4444",
+        "Doc 8168",
+        "Doc 10066",
+        "Doc 9868"
+      ],
+      "answerIndex": 1,
+      "answerText": "Doc 8168",
+      "explanation": "PANS-OPS (Doc 8168) covers procedure design, including departure, arrival and approach.\n\nWhy the other choices are incorrect:\n- Doc 4444 → PANS-ATM.\n- Doc 10066 → PANS-AIM.\n- Doc 9868 → PANS-TRG.\n\nDifferentiate Similar Concepts:\n- 8168 → Procedures design and flying (PANS-OPS).\n- 4444 → Air traffic management.\n\n💡 Memory Hook:\n8168 = Approach and Departure.\n\n🎯 Board Tip:\nMatch doc number to PANS series.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An amount of money payable to a beneficiary at regular intervals for a prescribed period of time out of a fund reserved for that purpose.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Annuity",
+        "Depreciation",
+        "Depletion",
+        "Present Worth"
+      ],
+      "answerIndex": 0,
+      "answerText": "Annuity",
+      "explanation": "An annuity is a series of equal payments at equal intervals.\n\nWhy the other choices are incorrect:\n- Depreciation → Loss of value of an asset.\n- Depletion → Using up natural resources.\n- Present worth → Value today of future money.\n\nDifferentiate Similar Concepts:\n- Annuity → Payment stream.\n- Depletion → Resource consumption.\n\n💡 Memory Hook:\nAnnuity = Annual payments.\n\n🎯 Board Tip:\n\"Regular intervals\" = annuity.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following is not included among the powers and duties of the Board of Aeronautical Engineering under PD 1570?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Issue, suspend, or revoke certificates of registration and professional licenses of aeronautical engineers.",
+        "Administer oaths in connection with the implementation of the law.",
+        "Investigate violations of PD 1570 and its implementing rules and regulations.",
+        "Conduct licensure examination for aeronautical engineers."
+      ],
+      "answerIndex": 3,
+      "answerText": "Conduct licensure examination for aeronautical engineers.",
+      "explanation": "Not a power or duty of the Board under PD 1570 ⚠️\n**Answer: D. Conduct licensure examination for aeronautical engineers.** *(low confidence)*\n\nThe Board's listed powers include issuing, suspending and revoking certificates, administering oaths, and investigating violations. Licensure exams are given through the PRC with the Board, which makes this the least clearly a Board power.\n\nWhy the other choices are incorrect:\n- A, B, C → Commonly listed Board powers.\n\nDifferentiate Similar Concepts:\n- Board → Regulates the profession.\n- PRC → Administers exams and issues licenses on the Board's behalf.\n\n💡 Memory Hook:\nBoard polices, PRC proctors.\n\n🎯 Board Tip:\nCheck the exact wording of PD 1570 Section on powers and duties.\n\nSource note: The reviewer flags this answer as uncertain; verify it against the applicable official reference.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What primary organizational body is established to assist the Director General in executing safety oversight, certification, and inspection functions?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "EFIS",
+        "FISS",
+        "FSIS",
+        "FSSI"
+      ],
+      "answerIndex": 2,
+      "answerText": "FSIS",
+      "explanation": "Flight Standards Inspectorate Service.\n\nWhy the other choices are incorrect:\n- EFIS → Electronic Flight Instrument System.\n- FISS, FSSI → Not CAAP bodies.\n\nDifferentiate Similar Concepts:\n- FSIS → Flight Standards Inspectorate Service.\n- EFIS → Cockpit display.\n\n💡 Memory Hook:\nFS = Flight Standards.\n\n🎯 Board Tip:\nLearn the CAAP service acronyms.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "For an aircraft with a passenger seating configuration of 20 to 40 seats, what is the minimum emergency exit?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "At least two exits, one of which must be a Type II or larger exit.",
+        "At least two exits, both of which must be Type II or larger exits.",
+        "At least one exit, which may be a Type III or larger exit.",
+        "At least one exit, which may be a Type I or larger exit."
+      ],
+      "answerIndex": 1,
+      "answerText": "At least two exits, both of which must be Type II or larger exits.",
+      "explanation": "Minimum emergency exits for 20 to 40 passenger seats ⚠️\n**Answer: B. At least two exits, both of which must be Type II or larger exits.** *(low confidence)*\n\nFor mid-size passenger counts, at least one exit on each side is needed, each of a minimum size.\n\nWhy the other choices are incorrect:\n- A → Only one of the exits is sized.\n- C, D → Single-exit configurations are too small for this seat count.\n\nDifferentiate Similar Concepts:\n- Larger exit types → Larger openings, used for larger passenger counts.\n- Fewer than 20 seats → Smaller requirements.\n\n💡 Memory Hook:\nMedium seats, two doors.\n\n🎯 Board Tip:\nVerify against FAR 25.807 / CAAP equivalents.\n\nSource note: The reviewer flags this answer as uncertain; verify it against the applicable official reference.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How long will it take for an investment to triple if it earns 8% interest compounded semi-annually?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "13 years",
+        "14 years",
+        "15 years",
+        "16 years"
+      ],
+      "answerIndex": 1,
+      "answerText": "14 years",
+      "explanation": "(1.04)ⁿ = 3 → n = ln 3 / ln 1.04 = 28.01 periods = **14 years**.\n\nWhy the other choices are incorrect:\n- 13, 15, 16 years → Do not fit 28 periods.\n\nDifferentiate Similar Concepts:\n- Semi-annual → 2 periods per year, rate per period = 4%.\n\n💡 Memory Hook:\nPeriods ÷ 2 = years.\n\n🎯 Board Tip:\nUse the periodic rate, then convert back to years.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The amount of fuel calculated using the estimated mass on arrival at the destination alternate aerodrome, or the destination aerodrome when no destination alternate aerodrome is required.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Additional Fuel",
+        "Final Reserve Fuel",
+        "Destination Alternate Fuel",
+        "Contingency Fuel"
+      ],
+      "answerIndex": 1,
+      "answerText": "Final Reserve Fuel",
+      "explanation": "Final reserve fuel is based on estimated mass on arrival at the destination alternate, or at the destination if no alternate is required.\n\nWhy the other choices are incorrect:\n- Additional fuel → Extra to make sure a safe diversion.\n- Destination alternate fuel → Fuel to fly to the alternate.\n- Contingency fuel → Covers unforeseen factors.\n\nDifferentiate Similar Concepts:\n- Final reserve → Last cushion at arrival.\n- Contingency → En route variation.\n\n💡 Memory Hook:\nFinal = arrival mass based.\n\n🎯 Board Tip:\nKnow the fuel components in order.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "No cable smaller than ___ in diameter may be used in the aileron, elevator, or rudder systems.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1/8 inches",
+        "1/4 inches",
+        "1/16 inches",
+        "1/32 inches"
+      ],
+      "answerIndex": 0,
+      "answerText": "1/8 inches",
+      "explanation": "Primary control cables may not be smaller than 1/8 inch.\n\nWhy the other choices are incorrect:\n- 1/4 → Not the minimum.\n- 1/16, 1/32 → Too small for primary controls.\n\nDifferentiate Similar Concepts:\n- Primary controls → Min 1/8 in.\n- Small trim/secondary → Smaller cables are allowed.\n\n💡 Memory Hook:\n1/8 for the big three.\n\n🎯 Board Tip:\nSmaller cables fail the rule.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "₱200,000 was deposited for a period of 4 years and 6 months and bears an interest of ₱85,649.25. What is the rate of interest if it is compounded quarterly?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "8%",
+        "7%",
+        "6%",
+        "5%"
+      ],
+      "answerIndex": 0,
+      "answerText": "8%",
+      "explanation": "Amount = 200,000 + 85,649.25 = 285,649.25.\nRatio = 1.428246 = (1 + i)¹⁸ (4.5 years × 4 = 18 quarters).\ni = 2% per quarter, so the nominal rate = 8%.\n\nWhy the other choices are incorrect:\n- 7%, 6%, 5% → Give lower accumulated amounts.\n\nDifferentiate Similar Concepts:\n- Periodic rate → 2% per quarter.\n- Nominal rate → 8% per year.\n\n💡 Memory Hook:\nQuarterly rate × 4 = nominal.\n\n🎯 Board Tip:\nConvert 4 years 6 months to 18 quarters.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "On September 30, 2026, flydubai Flight FZ1073 from Dubai to Tel Aviv was diverted to Tabuk, Saudi Arabia, following an incident in the cockpit involving the pilot and the co-pilot. Which international aviation convention is most relevant to this incident?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Hague Convention",
+        "Warsaw Convention",
+        "Rome Convention",
+        "Montreal Convention"
+      ],
+      "answerIndex": 0,
+      "answerText": "Hague Convention",
+      "explanation": "Convention most relevant to the flydubai FZ1073 cockpit incident ⚠️\n**Answer: A. Hague Convention** *(low confidence)*\n\nAn incident between the pilots involves control of the aircraft in flight. The Hague Convention addresses unlawful seizure or exercise of control. The Tokyo Convention (offences on board) would fit best but is not offered.\n\nWhy the other choices are incorrect:\n- Warsaw → Carrier liability.\n- Rome → Damage to third parties on the surface.\n- Montreal → Liability (1999) or sabotage offences (1971).\n\nDifferentiate Similar Concepts:\n- Tokyo → Offences on board, authority of the commander.\n- Hague → Seizure of aircraft.\n- Montreal (1971) → Acts against safety of civil aviation.\n\n💡 Memory Hook:\nHague = Hijack.\n\n🎯 Board Tip:\nIf the ideal answer is missing, pick the closest.\n\nSource note: The reviewer flags this answer as uncertain; verify it against the applicable official reference.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Metric system that represents paying passenger demand generated over a specified distance.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "ASK",
+        "RPK",
+        "CASK",
+        "PLF"
+      ],
+      "answerIndex": 1,
+      "answerText": "RPK",
+      "explanation": "Revenue Passenger Kilometers.\n\nWhy the other choices are incorrect:\n- ASK → Capacity.\n- CASK → Unit cost.\n- PLF → Percentage of seats filled.\n\nDifferentiate Similar Concepts:\n- RPK → Demand.\n- ASK → Supply.\n- PLF → RPK ÷ ASK.\n\n💡 Memory Hook:\nR for Revenue passengers actually carried.\n\n🎯 Board Tip:\nDemand = RPK, capacity = ASK.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "According to ICAO Annex 12, upon the occurrence of this phase, the rescue coordination centre shall immediately initiate action by search and rescue units in accordance with the appropriate plan of operation.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Uncertainty phase",
+        "Alert phase",
+        "Distress phase",
+        "Emergency phase"
+      ],
+      "answerIndex": 2,
+      "answerText": "Distress phase",
+      "explanation": "In a distress phase, the RCC immediately initiates SAR action.\n\nWhy the other choices are incorrect:\n- Uncertainty phase → Doubt about safety, begin inquiry.\n- Alert phase → Apprehension, escalate alerting.\n- Emergency phase → General term covering all three phases.\n\nDifferentiate Similar Concepts:\n- Uncertainty → Alert → Distress, in increasing severity.\n\n💡 Memory Hook:\nDistress = Dispatch now.\n\n🎯 Board Tip:\nEmergency is the umbrella, not a phase level.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An equipment costs ₱550,000 and has a salvage value of ₱30,000 after 20 years of useful life. What will be the book value at the end of 5 years using double declining method?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "₱324,770",
+        "₱326,870",
+        "₱420,000",
+        "₱368,000"
+      ],
+      "answerIndex": 0,
+      "answerText": "₱324,770",
+      "explanation": "Rate = 2/N = 2/20 = 0.10.\nBV₅ = 550,000(1 − 0.10)⁵ = 550,000(0.59049) = **₱324,770**.\n\nWhy the other choices are incorrect:\n- ₱326,870 → Rounding error.\n- ₱420,000, ₱368,000 → Do not fit the formula.\n\nDifferentiate Similar Concepts:\n- DDB → Rate is 2/N applied to book value.\n- Straight line → Constant amount.\n\n💡 Memory Hook:\nTwice the straight-line rate.\n\n🎯 Board Tip:\nIgnore salvage until the final check.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The recorded current value of an asset. First cost less accumulated depreciation, amortization, or depletion.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Sunk Cost",
+        "Present Value",
+        "Salvage Value",
+        "Book Value"
+      ],
+      "answerIndex": 3,
+      "answerText": "Book Value",
+      "explanation": "Book value is the recorded current value of an asset.\n\nWhy the other choices are incorrect:\n- Sunk cost → Past cost that cannot be recovered.\n- Present value → Discounted future amount.\n- Salvage value → End-of-life value.\n\nDifferentiate Similar Concepts:\n- Book value → Accounting value now.\n- Market value → What it would sell for.\n\n💡 Memory Hook:\nBooks = records.\n\n🎯 Board Tip:\nCost minus accumulated depreciation = book value.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which institution was the first in the Philippines to offer a degree in Aeronautical Engineering?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Philippine State College of Aeronautics",
+        "PATTS College of Aeronautics",
+        "WCC Aeronautical and Technological College",
+        "FEATI University"
+      ],
+      "answerIndex": 1,
+      "answerText": "PATTS College of Aeronautics",
+      "explanation": "First institution to offer Aeronautical Engineering in the Philippines ⚠️\n**Answer: B. PATTS College of Aeronautics** *(low confidence)*\n\nPATTS and FEATI are both early pioneers. I'm going with PATTS but could not confirm.\n\nWhy the other choices are incorrect:\n- PhilSCA → Established later.\n- WCC → Later school.\n- FEATI → Also a pioneer, a close call.\n\nDifferentiate Similar Concepts:\n- PATTS → Air technical training school origins.\n- FEATI → Far Eastern Air Transport school origins.\n\n💡 Memory Hook:\nPATTS = Pioneer.\n\n🎯 Board Tip:\nVerify with your school's history notes.\n\nSource note: The reviewer flags this answer as uncertain; verify it against the applicable official reference.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which type of propeller must complete 500 representative flight cycles across the range of pitch and rotational speed during the applicable functional tests?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Governing propellers",
+        "Manually-controllable propellers",
+        "Reversible-pitch propellers",
+        "Feathering propellers"
+      ],
+      "answerIndex": 1,
+      "answerText": "Manually-controllable propellers",
+      "explanation": "Manually controllable propellers need 500 cycles. Governing, feathering and reversing propellers need 1,500.\n\nWhy the other choices are incorrect:\n- Governing, feathering, reversible-pitch → 1,500 cycles.\n\nDifferentiate Similar Concepts:\n- Manual → 500 cycles.\n- Automatic and reversing → 1,500 cycles.\n\n💡 Memory Hook:\nManual = Minimum cycles.\n\n🎯 Board Tip:\nMemorize 500 vs 1,500.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "A buyer purchased a ₱150,000 parcel of land through monthly installments. The loan carries an interest rate of 10% nominal, compounded monthly, and is payable over 15 years. What is the monthly amortization?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "₱1612",
+        "₱1832",
+        "₱1634",
+        "₱1561"
+      ],
+      "answerIndex": 0,
+      "answerText": "₱1612",
+      "explanation": "i = 0.10/12 = 0.008333, n = 180.\nA = P·i / [1 − (1 + i)⁻ⁿ] = 150,000(0.008333) / (1 − 0.2245) = 1,250 / 0.7755 ≈ **₱1,612**.\n\nWhy the other choices are incorrect:\n- ₱1,832, ₱1,634, ₱1,561 → Wrong rate or term.\n\nDifferentiate Similar Concepts:\n- Amortization → Equal payments covering interest and principal.\n\n💡 Memory Hook:\nMonthly rate, monthly count.\n\n🎯 Board Tip:\n15 years × 12 = 180 payments.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Which of the following best describes straight-line depreciation?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A method in which the depreciation expense is highest during the early years and decreases over the asset's useful life.",
+        "A method in which the amount to be recovered or written off is spread uniformly over the estimated life of an asset in terms of time periods or units of output.",
+        "A method in which the entire depreciable cost of an asset is charged as an expense during the first year of its useful life.",
+        "A method in which depreciation is based primarily on the asset's current market value at the end of each accounting period."
+      ],
+      "answerIndex": 1,
+      "answerText": "A method in which the amount to be recovered or written off is spread uniformly over the estimated life of an asset in terms of time periods or units of output.",
+      "explanation": "Why the other choices are incorrect:\n- A → Accelerated methods.\n- C → Immediate write-off.\n- D → Market-value based, not straight line.\n\nDifferentiate Similar Concepts:\n- Straight line → Same each year.\n- Declining balance → Higher in early years.\n\n💡 Memory Hook:\nStraight line = Same line every year.\n\n🎯 Board Tip:\n\"Uniformly\" is the key word.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "The repeating switching on and off of the landing lights is an example of:",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Distress signals",
+        "Emergency signals",
+        "Intercept signals",
+        "Urgency signals"
+      ],
+      "answerIndex": 3,
+      "answerText": "Urgency signals",
+      "explanation": "Repeated switching of landing lights, or flashing of navigation lights in a manner distinct from normal flashing, indicates urgency.\n\nWhy the other choices are incorrect:\n- Distress → Rockets, flares, MAYDAY.\n- Emergency → General umbrella.\n- Intercept → Wing rocking and similar signals.\n\nDifferentiate Similar Concepts:\n- Distress → Grave and imminent danger.\n- Urgency → Concern for safety, but no immediate danger.\n\n💡 Memory Hook:\nLights flicker for Urgency (PAN-PAN).\n\n🎯 Board Tip:\nMAYDAY = distress, PAN-PAN = urgency.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "An annual deposit of ₱1350 is placed on the fund at the end of each year for 5 years. If the fund invested has a rate of interest of 6% compounded annually, how much is the worth of this fund at the end of 8 years?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "₱8,090",
+        "₱10,000",
+        "₱9,060",
+        "₱9,070"
+      ],
+      "answerIndex": 2,
+      "answerText": "₱9,060",
+      "explanation": "FV at year 5 = 1,350[(1.06⁵ − 1)/0.06] = 1,350(5.6371) = ₱7,610.\nLet it grow 3 more years: 7,610 × 1.06³ = 7,610 × 1.191 = ₱9,063 → nearest **₱9,060**.\n\nWhy the other choices are incorrect:\n- ₱8,090 → Stops compounding too early.\n- ₱10,000 → Overstates the growth.\n- ₱9,070 → Very close, but rounding gives ₱9,063.\n\nDifferentiate Similar Concepts:\n- FV of annuity → Value at last deposit.\n- Then compound alone → For the remaining years.\n\n💡 Memory Hook:\nAnnuity first, lump sum growth next.\n\n🎯 Board Tip:\nTwo stages: annuity FV, then single-sum growth.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What explicitly constitutes \"the offence\" in article 1 of 1970 Hague Convention?\n\n\n\n\n\n*----- NOTHING FOLLOWS -----*\n\n---\n\n## Answer Key (my own)\n\n| # | Ans | Basis / working |\n|---|-----|-----------------|\n| 1 | b | 61–200 passenger seats → 2 hand extinguishers |\n| 2 | a | Fish spotting is commercial work → CPL |\n| 3 | c | RASK = revenue ÷ ASK |\n| 4 | c | FV annuity = 750·[(1.06⁶−1)/0.06] = ₱5,231 → closest ₱5,230 |\n| 5 | a | Rigid = R, medium subgrade = B, no tire pressure limit = W, technical evaluation = T |\n| 6 | d | Code 4 = 1,800 m and over; Code F wingspan = 65 m to <80 m |\n| 7 | b ⚠️ | Not sure, based on recall of the first-batch oath date |\n| 8 | c | FAR 1.1: flash resistant = not susceptible to burning violently when ignited |\n| 9 | a | P = 20,000 / (1 + 0.12·0.75) = ₱18,348.62 → ₱18,350 |\n| 10 | c | Class 1 = composite, small; 2 = composite, large; 3 = all-metal, small; 4 = all-metal, large |\n| 11 | d | Planning |\n| 12 | d ⚠️ | Weight above the lighter-class limit is the likeliest CoA trigger; the other options read like conditions of normal operation |\n| 13 | c | A barrette is at least 3 closely spaced lights |\n| 14 | c | PD 1570: 2 years after revocation |\n| 15 | b | JAR-145 = maintenance organization approvals |\n| 16 | c | k = 1 − (15,000/60,000)^(1/5) = 0.2421; Yr 2 dep = 0.2421 × 45,474 ≈ ₱11,010 |\n| 17 | b | Provide a dated list of discrepancies to the owner (FAR 91.417 / 43.11) |\n| 18 | c | Government aircraft (FAA \"public aircraft\"-style definition with 90-day lease) |\n| 19 | a | V2MIN = 1.13 VSR for 2- and 3-engine props and reciprocating engines; 1.08 VSR for turbojets |\n| 20 | c | Lt. Gen. Raul Del Rosario replaced Capt. Tamayo in Feb/Mar 2025 (verified via web search) |\n| 21 | b | Law of diminishing returns |\n| 22 | a | Definition of continuing airworthiness (ICAO/CAAP wording) |\n| 23 | a | BEP = 120,000 / (85 − 62) = 5,217.4 → 5218 |\n| 24 | d ⚠️ | Annex 13 style: report released after being sent to concerned States |\n| 25 | a | B3 = piston-engine non-pressurised aeroplanes, MTOM 2,000 kg and below |\n| 26 | c ⚠️ | Economic loss alone is not treated as \"extremely urgent\" |\n| 27 | c | RPK = 150 × 0.80 × 2,000 = 240,000 |\n| 28 | b | ARC may be extended up to twice by the CAMO |\n| 29 | d | PV = (1000/0.08) / 1.08³ = ₱9,922.90 |\n| 30 | b | PANS-OPS (Doc 8168) |\n| 31 | a | Annuity |\n| 32 | d ⚠️ | Exams are administered by the PRC with the Board; least clearly a Board power |\n| 33 | c | FSIS (Flight Standards Inspectorate Service) |\n| 34 | b ⚠️ | Best fit: two exits, one on each side (FAR 25.807-type requirement) |\n| 35 | b | n = ln3 / ln1.04 = 28.01 periods ≈ 14 years |\n| 36 | b | Final Reserve Fuel |\n| 37 | a | 1/8 in (FAR 23.689) |\n| 38 | a | 285,649.25/200,000 = 1.42825 = (1 + i)^18 → i = 2%/qtr = 8% nominal |\n| 39 | a ⚠️ | Closest match for control of the aircraft being contested; Tokyo Convention is not offered |\n| 40 | b | RPK |\n| 41 | c | Distress phase → immediate SAR action |\n| 42 | a | BV₅ = 550,000 × (1 − 2/20)⁵ = ₱324,770 |\n| 43 | d | Book value |\n| 44 | b ⚠️ | PATTS vs FEATI is a close call; going with PATTS |\n| 45 | b | Manually-controllable propellers: 500 cycles (governing/feathering/reversing: 1,500) |\n| 46 | a | i = 0.10/12, n = 180 → payment ≈ ₱1,612 |\n| 47 | b | Straight-line spreads cost uniformly |\n| 48 | d | Annex 2: urgency signals include repeated switching of landing lights |\n| 49 | c | FV₅ = 1350 × 5.6371 = 7,610; × 1.06³ = ₱9,063 → ₱9,060 |\n| 50 | d | Hague 1970 Art. 1: unlawful seizure/exercise of control of an aircraft in flight |\n\n### Quick list\n1-b 2-a 3-c 4-c 5-a 6-d 7-b 8-c 9-a 10-c\n11-d 12-d 13-c 14-c 15-b 16-c 17-b 18-c 19-a 20-c\n21-b 22-a 23-a 24-d 25-a 26-c 27-c 28-b 29-d 30-b\n31-a 32-d 33-c 34-b 35-b 36-b 37-a 38-a 39-a 40-b\n41-c 42-a 43-d 44-b 45-b 46-a 47-b 48-d 49-c 50-d",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Sabotaging or destroying air navigation facilities on the ground.",
+        "Smuggling illegal contraband or weapons onboard a commercial international flight.",
+        "Destroying or damaging an aircraft while it is in flight with the intent to endanger its safety.",
+        "Unlawfully, by force or threat thereof, seizing or exercising control of an aircraft in flight, including attempting or being an accomplice to such an act."
+      ],
+      "answerIndex": 3,
+      "answerText": "Unlawfully, by force or threat thereof, seizing or exercising control of an aircraft in flight, including attempting or being an accomplice to such an act.",
+      "explanation": "Why the other choices are incorrect:\n- A → Covered by the Montreal Convention (1971) and Protocol.\n- B → Smuggling is not the offence.\n- C → Destroying an aircraft is a Montreal Convention offence.\n\nDifferentiate Similar Concepts:\n- Hague (1970) → Unlawful seizure.\n- Montreal (1971) → Sabotage and acts against safety.\n- Tokyo (1963) → Offences on board.\n\n💡 Memory Hook:\nHague = Hijack.\n\n🎯 Board Tip:\nLearn the three conventions side by side.",
+      "tags": [
+        "AELE",
+        "Engineering Economics",
+        "Laws and Ethics",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}

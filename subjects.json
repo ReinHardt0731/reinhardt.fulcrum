@@ -348,7 +348,7 @@
         }
       ],
       "notesPath": "aerodynamics.md",
-      "updatedAt": "2026-11-03T13:47:39.421Z"
+      "updatedAt": "2026-11-03T14:22:02.016Z"
     },
     {
       "id": "aircraft-structure-and-design",
@@ -565,6 +565,10 @@
           "file": "chapters/volare-air-law-and-atc.json"
         },
         {
+          "title": "AELE Set A: Engineering Economics, Laws and Ethics",
+          "file": "chapters/aele-set-a-engineering-economics-laws-ethics.json"
+        },
+        {
           "title": "ECON Definition I",
           "file": "chapters/econ-definition-i.json"
         },
@@ -582,7 +586,7 @@
         }
       ],
       "notesPath": "airlaw.md",
-      "updatedAt": "2026-10-18T12:50:12.341Z"
+      "updatedAt": "2026-11-03T14:01:22.472Z"
     },
     {
       "id": "math",
