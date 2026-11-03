@@ -341,10 +341,14 @@
         {
           "title": "Chapter 10: Hypersonic Vehicles",
           "file": "chapters/introduction-to-flight-anderson-chapter-10-hypersonic-vehicles.json"
+        },
+        {
+          "title": "Aerodynamics Mock Exam I",
+          "file": "chapters/aerodynamics-mock-exam-i.json"
         }
       ],
       "notesPath": "aerodynamics.md",
-      "updatedAt": "2026-10-16T08:13:40.551Z"
+      "updatedAt": "2026-11-03T13:47:39.421Z"
     },
     {
       "id": "aircraft-structure-and-design",
@@ -436,10 +440,14 @@
         {
           "title": "Aircraft Structure and Design Mock Exam III",
           "file": "chapters/preboard_aircraft_structures_design_question_bank.json"
+        },
+        {
+          "title": "Structures Mock Exam I",
+          "file": "chapters/structures-mock-exam-i.json"
         }
       ],
       "notesPath": "structuredesign.md",
-      "updatedAt": "2026-10-03T04:49:29.646Z"
+      "updatedAt": "2026-11-03T13:47:39.421Z"
     },
     {
       "id": "airlaw",
@@ -674,10 +682,14 @@
         {
           "title": "Applied Math Review",
           "file": "chapters/applied-math-review.json"
+        },
+        {
+          "title": "Math Mock Exam I",
+          "file": "chapters/math-mock-exam-i.json"
         }
       ],
       "notesPath": "math.md",
-      "updatedAt": "2026-10-07T07:26:31.000Z"
+      "updatedAt": "2026-11-03T13:47:39.421Z"
     },
     {
       "id": "powerplant",

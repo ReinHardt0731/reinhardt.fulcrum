@@ -1,0 +1,1155 @@
+{
+  "title": "Aerodynamics Mock Exam I",
+  "questions": [
+    {
+      "question": "Lift of a Boeing 777 wing at minimum thrust required (M = 0.55, AR = 1.3, c = 11.6 ft)\n\nLift of a Boeing 777 wing at minimum thrust required (M = 0.55, AR = 1.3, c = 11.6 ft)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "68,199",
+        "70,548",
+        "63,785 lbs",
+        "67,150 lbs"
+      ],
+      "answerIndex": 3,
+      "answerText": "67,150 lbs",
+      "explanation": "Minimum thrust required is the minimum-drag condition, where the induced drag equals the parasite drag.\n\n$$C_L=\\sqrt{\\frac{C_{D0}}{k}}=\\sqrt{\\frac{0.022}{0.03}}=0.8563$$\n\n$$S=AR\\,c^2=1.3(11.6)^2=174.9\\ \\text{ft}^2$$\n\n$$V=Ma=0.55(1116.45)=614\\ \\text{ft/s}$$\n\n$$q=\\tfrac{1}{2}\\rho V^2=\\tfrac{1}{2}(0.002377)(614)^2=448.1\\ \\text{psf}$$\n\n$$L=qSC_L=(448.1)(174.9)(0.8563)\\approx 67{,}100\\ \\text{lb}$$\n\nWhy the other choices are incorrect:\n- 68,199 / 70,548 / 63,785 lbs → Come from a wrong CL (for example the min-power CL) or a wrong wing area.\n\nDifferentiate Similar Concepts:\n- Min thrust required → Max L/D, so CD0 = k·CL².\n- Min power required → CL = √(3CD0/k), CD = 4CD0.\n\n💡 Memory Hook:\nMin drag: parasite = induced.\n\n🎯 Board Tip:\nGet S from AR·c², then CL = √(CD0/k).",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Statements about air density\n\nStatements about air density\nWhich statements are correct?\n\n- 1 - Density is measured in millibars.\n- 2 - Density increases with increasing altitude.\n- 3 - If temperature increases the density will increase.\n- 4 - As altitude increases, density will decrease.\n- 5 - Temperature decreases with increasing altitude, this will cause air density to increase.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "4 only",
+        "Statement 1 only",
+        "Statement 2 only",
+        "Statement 3 only"
+      ],
+      "answerIndex": 0,
+      "answerText": "4 only",
+      "explanation": "Density decreases with altitude because the pressure drop outweighs the small temperature drop.\n\nWhy the other choices are incorrect:\n- Statement 1 → Millibars measure pressure. Density is in kg/m³ or slug/ft³.\n- Statement 2 → Density falls with altitude.\n- Statement 3 → Higher temperature lowers density (ρ = p/RT).\n- Statement 5 → Colder air alone would be denser, but the pressure drop dominates, so density still decreases with altitude.\n\nDifferentiate Similar Concepts:\n- Pressure → Millibars, hPa, psf.\n- Density → Mass per volume.\n- Temperature up → Density down at constant pressure.\n\n💡 Memory Hook:\nHigher, thinner.\n\n🎯 Board Tip:\nρ = p/(RT). Altitude lowers p faster than it lowers T.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "How dihedral gives a restoring rolling moment\n\nHow dihedral gives a restoring rolling moment",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The ascending panel does not get the restoring lift. The effect depends on sideslip, not the first roll rate.",
+        "Pure roll rate gives damping in roll (roll damping), which is not dihedral effect.",
+        "Across the lower, down-slanted wing during the resulting sideslip vector toward the low wing",
+        "Dihedral effect depends on sideslip airflow, not on static bank angle alone."
+      ],
+      "answerIndex": 2,
+      "answerText": "Across the lower, down-slanted wing during the resulting sideslip vector toward the low wing",
+      "explanation": "A roll produces sideslip toward the low wing. That sideslip flows across the lower, dihedral-angled wing at a higher effective angle of attack. The extra lift on the low wing rolls the aircraft back toward level.\n\nWhy the other choices are incorrect:\n- A → The ascending panel does not get the restoring lift. The effect depends on sideslip, not the first roll rate.\n- B → Pure roll rate gives damping in roll (roll damping), which is not dihedral effect.\n- D → Dihedral effect depends on sideslip airflow, not on static bank angle alone.\n\nDifferentiate Similar Concepts:\n- Dihedral effect → Rolling moment due to sideslip (Clβ).\n- Roll damping → Rolling moment due to roll rate (Clp).\n\n💡 Memory Hook:\nSlip toward the low wing, the low wing lifts more.\n\n🎯 Board Tip:\nDihedral works through sideslip.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Time to climb to 8,500 ft (ROC = 650 fpm at sea level, service ceiling 12,000 ft)\n\nTime to climb to 8,500 ft (ROC = 650 fpm at sea level, service ceiling 12,000 ft)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "18.24",
+        "19.96 minutes",
+        "19.88",
+        "17.63"
+      ],
+      "answerIndex": 1,
+      "answerText": "19.96 minutes",
+      "explanation": "The service ceiling is where ROC falls to 100 fpm, and ROC is assumed to decrease linearly with altitude.\n\n$$ROC(h)=ROC_0-\\frac{ROC_0-100}{h_s}\\,h$$\n\n$$t=\\frac{h_s}{ROC_0-100}\\ln\\!\\left[\\frac{ROC_0}{ROC_0-\\dfrac{(ROC_0-100)\\,h}{h_s}}\\right]$$\n\n$$t=\\frac{12000}{550}\\ln\\!\\left[\\frac{650}{650-389.6}\\right]=21.82(0.9147)\\approx 19.96\\ \\text{min}$$\n\nWhy the other choices are incorrect:\n- 18.24 / 19.88 / 17.63 → Use slightly wrong ROC at the ceiling or wrong rounding.\n- Using ROC = 0 at 12,000 ft (the absolute-ceiling formula) gives 22.75 min, which is not a choice.\n\nDifferentiate Similar Concepts:\n- Service ceiling → ROC = 100 fpm.\n- Absolute ceiling → ROC = 0.\n\n💡 Memory Hook:\nService = 100.\n\n🎯 Board Tip:\nCheck which ceiling the problem gives before choosing the formula.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Hypersonic shock layer compared with supersonic flow over a sharp wedge\n\nHypersonic shock layer compared with supersonic flow over a sharp wedge",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The shock angle gets smaller, not larger, and the shock does not detach.",
+        "The shock wave lies much closer to the body surface at hypersonic speeds, creating a thin shock layer that can merge with a thick boundary layer at low Reynolds numbers",
+        "Streamlines bend through the shock, so they do not stay parallel to the freestream.",
+        "The layer gets thinner, and viscous effects grow in importance."
+      ],
+      "answerIndex": 1,
+      "answerText": "The shock wave lies much closer to the body surface at hypersonic speeds, creating a thin shock layer that can merge with a thick boundary layer at low Reynolds numbers",
+      "explanation": "As M increases, the oblique shock angle approaches the wedge angle. The layer between the shock and the body becomes thin and can merge with the boundary layer (viscous interaction).\n\nWhy the other choices are incorrect:\n- A → The shock angle gets smaller, not larger, and the shock does not detach.\n- C → Streamlines bend through the shock, so they do not stay parallel to the freestream.\n- D → The layer gets thinner, and viscous effects grow in importance.\n\nDifferentiate Similar Concepts:\n- Supersonic → Shock stands off at a moderate angle.\n- Hypersonic → Thin shock layer and viscous interaction.\n\n💡 Memory Hook:\nHyper speed, hugging shock.\n\n🎯 Board Tip:\nHypersonic = thin shock layer.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Aircraft most likely to suffer wing drop after a single engine failure\n\nAircraft most likely to suffer wing drop after a single engine failure",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A twin propeller aircraft in the climb out",
+        "Four-engine propeller in cruise",
+        "Twin jet in climb out",
+        "Four-engine jet in cruise"
+      ],
+      "answerIndex": 0,
+      "answerText": "A twin propeller aircraft in the climb out",
+      "explanation": "At low speed and high power, the thrust asymmetry is large and the rudder and aileron are less effective. Propeller slipstream adds to the lift asymmetry. A twin propeller climb-out is therefore the worst case.\n\nWhy the other choices are incorrect:\n- Four-engine propeller in cruise → High speed, good control authority, and less asymmetry per engine.\n- Twin jet in climb out → Asymmetry exists but there is no propeller slipstream effect.\n- Four-engine jet in cruise → Least asymmetry and highest control power.\n\nDifferentiate Similar Concepts:\n- Asymmetric thrust → Yaw, then roll.\n- Slipstream effect → Extra lift change on the wing behind the working engine.\n\n💡 Memory Hook:\nLow and slow with one prop gone, the wing drops.\n\n🎯 Board Tip:\nTwin + prop + low speed = worst engine-out roll.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Effect of extending Fowler-type trailing edge flaps\n\nEffect of extending Fowler-type trailing edge flaps",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A force which reduces drag",
+        "A nose-down pitching moment",
+        "No pitching moment",
+        "A nose-up pitching moment"
+      ],
+      "answerIndex": 1,
+      "answerText": "A nose-down pitching moment",
+      "explanation": "Fowler flaps add camber and area. The center of pressure moves aft, so the nose-down pitching moment about the aerodynamic center becomes more negative.\n\nWhy the other choices are incorrect:\n- A force which reduces drag → Flaps raise drag.\n- No pitching moment → Added camber always changes Cm.\n- A nose-up pitching moment → Opposite sign.\n\nDifferentiate Similar Concepts:\n- Fowler → Slides aft, increases area and camber.\n- Plain flap → Hinges down, increases camber only.\n\n💡 Memory Hook:\nFlaps down, nose down.\n\n🎯 Board Tip:\nCamber up means more negative Cm.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Mach number after a 10° convex (expansion) corner (M1 = 2.0)\n\nMach number after a 10° convex (expansion) corner (M1 = 2.0)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "3.38",
+        "2.38",
+        "1.38",
+        "0.38"
+      ],
+      "answerIndex": 1,
+      "answerText": "2.38",
+      "explanation": "An expansion around a convex corner follows Prandtl-Meyer theory.\n\n$$\\nu(M)=\\sqrt{\\frac{\\gamma+1}{\\gamma-1}}\\arctan\\sqrt{\\frac{\\gamma-1}{\\gamma+1}(M^2-1)}-\\arctan\\sqrt{M^2-1}$$\n\n$$\\nu(2.0)=26.38^\\circ$$\n\n$$\\nu_2=\\nu_1+\\theta=26.38^\\circ+10^\\circ=36.38^\\circ \\;\\Rightarrow\\; M_2\\approx 2.38$$\n\nWhy the other choices are incorrect:\n- 3.38 → Added 1.0 to the Mach number instead of 10° to ν.\n- 1.38 / 0.38 → Treat the corner like a compression, so M drops.\n\nDifferentiate Similar Concepts:\n- Convex corner → Expansion fan, M up, p down.\n- Concave corner → Oblique shock, M down, p up.\n\n💡 Memory Hook:\nTurn away, speed up.\n\n🎯 Board Tip:\nAdd the deflection angle to ν(M1) and read M2 from the table.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Effect of moving the center of gravity forward\n\nEffect of moving the center of gravity forward",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Longitudinal is affected.",
+        "Directional is also affected, and lateral is not.",
+        "Lateral does not decrease.",
+        "Increase longitudinal and directional stability, no effect on lateral"
+      ],
+      "answerIndex": 3,
+      "answerText": "Increase longitudinal and directional stability, no effect on lateral",
+      "explanation": "A forward CG increases the static margin (longitudinal). It also lengthens the tail arm, which raises directional stability. Lateral stability depends mainly on dihedral, sweep and high wing position, not on CG location.\n\nWhy the other choices are incorrect:\n- A → Longitudinal is affected.\n- B → Directional is also affected, and lateral is not.\n- C → Lateral does not decrease.\n\nDifferentiate Similar Concepts:\n- Forward CG → More stable, heavier stick force, and nose-heavy.\n- Aft CG → Less stable and more maneuverable.\n\n💡 Memory Hook:\nCG forward, tail arm longer.\n\n🎯 Board Tip:\nCG moves change pitch and yaw stability. Roll stays the same.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Minimum power required in clean configuration (CD = 0.048 + 0.059CL², W = 6,780 lb, S = 255 ft²)\n\nMinimum power required in clean configuration (CD = 0.048 + 0.059CL², W = 6,780 lb, S = 255 ft²)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "99,711.04 hp",
+        "135,187.93 ft·lb",
+        "s",
+        "181.29 hp"
+      ],
+      "answerIndex": 3,
+      "answerText": "181.29 hp",
+      "explanation": "For minimum power required, CL = √(3CD0/k) and CD = 4CD0.\n\n$$C_L=\\sqrt{\\frac{3(0.048)}{0.059}}=1.562,\\qquad C_D=4(0.048)=0.192$$\n\n$$V=\\sqrt{\\frac{2W}{\\rho S C_L}}=\\sqrt{\\frac{2(6780)}{(0.002377)(255)(1.562)}}=119.7\\ \\text{ft/s}$$\n\n$$D=\\frac{W}{L/D}=\\frac{6780}{1.562/0.192}=833.3\\ \\text{lb}$$\n\n$$P_R=DV=833.3(119.7)\\approx 99{,}711\\ \\text{ft·lb/s}=\\frac{99{,}711}{550}=181.29\\ \\text{hp}$$\n\nWhy the other choices are incorrect:\n- 99,711.04 hp → The number is right but the unit is wrong (it is ft·lb/s).\n- 135,187.93 ft·lb/s → Uses the wrong CL or the max-L/D condition.\n- 99.71 kW → Wrong unit conversion.\n\nDifferentiate Similar Concepts:\n- Min power → CL = √(3CD0/k).\n- Min drag → CL = √(CD0/k).\n\n💡 Memory Hook:\nPower needs the 3, drag does not.\n\n🎯 Board Tip:\nCheck the unit: 550 ft·lb/s = 1 hp.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Benefit of morphing trailing edge technology on 3D wings\n\nBenefit of morphing trailing edge technology on 3D wings",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1% drag reduction at design conditions, 5% cruise fuel reduction.",
+        "5% drag reduction at off-design conditions, 1% at design conditions, with no measurable change in fuel burn.",
+        "5% increase in CLmax with a 5% increase in parasite drag across all flight regimes.",
+        "Complete elimination of profile drag during cruise, giving a 10% fuel reduction."
+      ],
+      "answerIndex": 1,
+      "answerText": "5% drag reduction at off-design conditions, 1% at design conditions, with no measurable change in fuel burn.",
+      "explanation": "Reported results for morphing trailing edges: small gains (about 1%) at the design point, and larger gains (up to about 5%) off-design, where a fixed wing is not optimal.\n\nWhy the other choices are incorrect:\n- A → Overstates the fuel benefit and reverses the design and off-design gains.\n- C → Morphing does not raise parasite drag everywhere.\n- D → Profile drag cannot be eliminated.\n\nDifferentiate Similar Concepts:\n- Design point → Fixed wing is already near optimal, so the gain is small.\n- Off-design → Morphing can re-shape the wing, so the gain is larger.\n\n💡 Memory Hook:\nMorph helps most away from home.\n\n🎯 Board Tip:\nBeware of answers with \"eliminate\" or \"no change\".\n\nSource note: the choices were partly cropped/rotated in the photo, so the wording is my best reading.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What provides maximum glide range?\n\nWhat provides maximum glide range?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Strong headwind",
+        "Light headwind",
+        "Strong tailwind",
+        "Light tailwind"
+      ],
+      "answerIndex": 2,
+      "answerText": "Strong tailwind",
+      "explanation": "Glide range is distance over the ground. A tailwind adds to groundspeed during the glide, and a headwind subtracts from it. A stronger tailwind gives more range.\n\nWhy the other choices are incorrect:\n- Strong headwind → Shortest range.\n- Light headwind → Still reduces range.\n- Light tailwind → Helps, but less than a strong tailwind.\n\nDifferentiate Similar Concepts:\n- Still-air range → Set by L/D max.\n- Ground range → L/D plus wind.\n\n💡 Memory Hook:\nTail wind, long glide.\n\n🎯 Board Tip:\nWind changes ground distance, not the glide ratio through the air.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "What lets an airplane execute a turn?\n\nWhat lets an airplane execute a turn?",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Centrifugal force",
+        "Movement of rudder, aileron and elevator",
+        "Horizontal component of lift",
+        "Deflection of flaps and spoilers"
+      ],
+      "answerIndex": 2,
+      "answerText": "Horizontal component of lift",
+      "explanation": "Banking tilts the lift vector. Its horizontal component provides the centripetal force.\n\nWhy the other choices are incorrect:\n- Centrifugal force → A reaction effect, not the cause.\n- Movement of rudder, aileron and elevator → These set up the bank but do not supply the turning force.\n- Deflection of flaps and spoilers → Not the turning force.\n\nDifferentiate Similar Concepts:\n- Centripetal force → Real, toward the center.\n- Centrifugal force → Apparent, away from the center.\n\n💡 Memory Hook:\nBank the lift, bend the path.\n\n🎯 Board Tip:\nTurn force = L sin φ.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "High-speed boundary layer detachment near the transonic region (\"shock stall\")\n\nHigh-speed boundary layer detachment near the transonic region (\"shock stall\")",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Shock stall is not caused by extreme angle of attack alone.",
+        "Trailing edge separation at the start of the shock is not the same thing.",
+        "The severe separation of the boundary layer downstream of a shock wave, driven by the abrupt adverse pressure gradient across the shock",
+        "Describes a detached bow wave on a blunt body, not shock stall."
+      ],
+      "answerIndex": 2,
+      "answerText": "The severe separation of the boundary layer downstream of a shock wave, driven by the abrupt adverse pressure gradient across the shock",
+      "explanation": "A shock on the upper surface creates a sudden pressure rise. The boundary layer cannot overcome it and separates, causing a loss of lift and buffet.\n\nWhy the other choices are incorrect:\n- A → Shock stall is not caused by extreme angle of attack alone.\n- B → Trailing edge separation at the start of the shock is not the same thing.\n- D → Describes a detached bow wave on a blunt body, not shock stall.\n\nDifferentiate Similar Concepts:\n- Low-speed stall → Separation due to high α.\n- Shock stall → Separation due to a shock-induced pressure rise.\n\n💡 Memory Hook:\nShock hits, flow quits.\n\n🎯 Board Tip:\nShock stall = shock plus adverse pressure gradient.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Meaning of \"circulation\" in the Kutta-Joukowski theorem\n\nMeaning of \"circulation\" in the Kutta-Joukowski theorem",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Scalar line integral of the fluid velocity vector evaluated around a closed contour enclosing the airfoil section",
+        "Circulation is closed-contour, not an open streamline.",
+        "It is a line integral, not an area integral of the vorticity tensor flux.",
+        "Not a boundary-layer integral from the stagnation point."
+      ],
+      "answerIndex": 0,
+      "answerText": "Scalar line integral of the fluid velocity vector evaluated around a closed contour enclosing the airfoil section",
+      "explanation": "$$\\Gamma=\\oint_C \\vec{V}\\cdot d\\vec{s}$$\n\n$$L'=\\rho_\\infty V_\\infty \\Gamma$$\n\nWhy the other choices are incorrect:\n- B → Circulation is closed-contour, not an open streamline.\n- C → It is a line integral, not an area integral of the vorticity tensor flux.\n- D → Not a boundary-layer integral from the stagnation point.\n\nDifferentiate Similar Concepts:\n- Circulation → Line integral of velocity around a closed loop.\n- Vorticity → Local curl of velocity.\n\n💡 Memory Hook:\nLoop the airfoil, add up the velocity.\n\n🎯 Board Tip:\nΓ = ∮V·ds, and lift per span = ρVΓ.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Two identical aircraft in a 20° coordinated turn (A at 130 kt, B at 200 kt)\n\nTwo identical aircraft in a 20° coordinated turn (A at 130 kt, B at 200 kt)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "n depends only on bank angle, so both are equal.",
+        "A flies the tighter (smaller-radius) turn.",
+        "A needs the higher CL, because L = nW and CL ∝ 1/V².",
+        "Aircraft A achieves a higher angular rate of turn than Aircraft B"
+      ],
+      "answerIndex": 3,
+      "answerText": "Aircraft A achieves a higher angular rate of turn than Aircraft B",
+      "explanation": "$$n=\\frac{1}{\\cos\\phi}=\\frac{1}{\\cos 20^\\circ}=1.064\\ \\text{(same for both)}$$\n\n$$\\omega=\\frac{g\\tan\\phi}{V}$$\n\n$$r=\\frac{V^2}{g\\tan\\phi}$$\n\nAt 130 kt (66.9 m/s), ω ≈ 3.1°/s and r ≈ 1,250 m. At 200 kt (102.9 m/s), ω ≈ 2.0°/s and r ≈ 2,970 m.\n\nWhy the other choices are incorrect:\n- A → n depends only on bank angle, so both are equal.\n- B → A flies the tighter (smaller-radius) turn.\n- C → A needs the higher CL, because L = nW and CL ∝ 1/V².\n\nDifferentiate Similar Concepts:\n- Load factor → Fixed by bank angle.\n- Turn rate and radius → Depend on speed.\n\n💡 Memory Hook:\nSlow means a tight and fast turn.\n\n🎯 Board Tip:\nSame bank means same n. Compare V only for ω and r.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Pressure in a tapering copper pipe (10 in to 7 in, 1,000 gal/min, p1 = 17 psi)\n\nPressure in a tapering copper pipe (10 in to 7 in, 1,000 gal/min, p1 = 17 psi)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "2,400 psf",
+        "2,500",
+        "2,600",
+        "2,700 psf"
+      ],
+      "answerIndex": 0,
+      "answerText": "2,400 psf",
+      "explanation": "$$Q=1000\\ \\text{gal/min}=2.228\\ \\text{ft}^3/\\text{s}$$\n\n$$V_1=\\frac{Q}{A_1}=\\frac{2.228}{0.5454}=4.085\\ \\text{ft/s},\\qquad V_2=\\frac{2.228}{0.2673}=8.336\\ \\text{ft/s}$$\n\n$$p_2=p_1-\\tfrac{1}{2}\\rho\\,(V_2^2-V_1^2)$$\n\n$$p_2=17(144)-\\tfrac{1}{2}\\left(\\frac{62.4}{32.174}\\right)(69.49-16.69)=2448-51.2\\approx 2397\\ \\text{psf}\\approx 2400\\ \\text{psf}$$\n\nWhy the other choices are incorrect:\n- 2,500 / 2,600 / 2,700 psf → Would need a pressure drop below zero, or the pressure going up in the narrower section.\n\nDifferentiate Similar Concepts:\n- Continuity → A1V1 = A2V2.\n- Bernoulli → Narrower section means faster flow and lower pressure.\n\n💡 Memory Hook:\nSqueeze the pipe, speed up, pressure drops.\n\n🎯 Board Tip:\nConvert psi to psf (×144) and use slugs for ρ.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Maximum angle of climb (W = 60,000 lb, D = 18,000 lb, Tmax = 45,000 lb)\n\nMaximum angle of climb (W = 60,000 lb, D = 18,000 lb, Tmax = 45,000 lb)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "26.7°",
+        "17.5°",
+        "31.2°",
+        "48.6°"
+      ],
+      "answerIndex": 0,
+      "answerText": "26.7°",
+      "explanation": "$$\\sin\\gamma=\\frac{T-D}{W}=\\frac{45{,}000-18{,}000}{60{,}000}=0.45$$\n\n$$\\gamma=\\sin^{-1}(0.45)=26.74^\\circ$$\n\nWhy the other choices are incorrect:\n- 17.5° → Uses the drag (18,000 lb) instead of the excess thrust, so sin⁻¹(18,000/60,000).\n- 31.2° / 48.6° → Use the wrong thrust excess or tan instead of sin.\n\nDifferentiate Similar Concepts:\n- Climb angle → Excess thrust over weight.\n- Rate of climb → Excess power over weight.\n\n💡 Memory Hook:\nExcess thrust over weight gives sin γ.\n\n🎯 Board Tip:\nLevel flight thrust equals drag, so excess = Tavail − D.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Maximizing turn rate and minimizing turn radius\n\nMaximizing turn rate and minimizing turn radius",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Less bank and more speed worsen both.",
+        "More bank helps, but more speed hurts.",
+        "Increase the bank angle while decreasing true airspeed",
+        "Constant bank at Va does not optimize anything."
+      ],
+      "answerIndex": 2,
+      "answerText": "Increase the bank angle while decreasing true airspeed",
+      "explanation": "$$\\omega=\\frac{g\\tan\\phi}{V}$$\n\n$$r=\\frac{V^2}{g\\tan\\phi}$$\n\nBoth improve when tan φ goes up and V goes down.\n\nWhy the other choices are incorrect:\n- A → Less bank and more speed worsen both.\n- B → More bank helps, but more speed hurts.\n- D → Constant bank at Va does not optimize anything.\n\nDifferentiate Similar Concepts:\n- Turn rate → Higher with more bank, lower V.\n- Turn radius → Smaller with more bank, lower V.\n\n💡 Memory Hook:\nBank more, slow down.\n\n🎯 Board Tip:\nω has V in the denominator and r has V².",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Trimming a nose-heavy aircraft\n\nTrimming a nose-heavy aircraft",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Forward trim wheel lowers the nose.",
+        "The top of the trim wheel is moved backwards to raise the nose. This moves the elevator trim tab down and the elevator up",
+        "The tab moves down, not up, for nose-up trim.",
+        "Same error as C."
+      ],
+      "answerIndex": 1,
+      "answerText": "The top of the trim wheel is moved backwards to raise the nose. This moves the elevator trim tab down and the elevator up",
+      "explanation": "The tab deflects down, so it creates an upward force aft of the elevator hinge. That pushes the elevator trailing edge up, which gives a tail-down force and a nose-up moment.\n\nWhy the other choices are incorrect:\n- A → Forward trim wheel lowers the nose.\n- C → The tab moves down, not up, for nose-up trim.\n- D → Same error as C.\n\nDifferentiate Similar Concepts:\n- Trim tab → Moves opposite to the elevator.\n- Elevator → Moves in the desired direction.\n\n💡 Memory Hook:\nTab down, elevator up.\n\n🎯 Board Tip:\nWheel back means nose up.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Lowering flaps during the take-off run\n\nLowering flaps during the take-off run",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Lift changes as soon as the flaps move, not only at liftoff.",
+        "The lift would increase when the flaps are lowered",
+        "Lift does not decrease.",
+        "Flaps add drag, so acceleration would decrease."
+      ],
+      "answerIndex": 1,
+      "answerText": "The lift would increase when the flaps are lowered",
+      "explanation": "Flaps increase camber and CL immediately at any speed.\n\nWhy the other choices are incorrect:\n- A → Lift changes as soon as the flaps move, not only at liftoff.\n- C → Lift does not decrease.\n- D → Flaps add drag, so acceleration would decrease.\n\nDifferentiate Similar Concepts:\n- Flaps down → More lift and more drag.\n- Takeoff flaps → Moderate setting to balance lift against drag.\n\n💡 Memory Hook:\nFlaps down, lift up, drag up.\n\n🎯 Board Tip:\nFlaps always add drag along with lift.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Drag from airfoil normal and axial force coefficients (α = 2°, 90 mph, S = 3.78 ft²)\n\nDrag from airfoil normal and axial force coefficients (α = 2°, 90 mph, S = 3.78 ft²)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "9.36 lbs",
+        "55.56 lb",
+        "62.74 lb",
+        "2.19 lb"
+      ],
+      "answerIndex": 0,
+      "answerText": "9.36 lbs",
+      "explanation": "$$c_d=c_n\\sin\\alpha+c_a\\cos\\alpha=0.7070\\sin 2^\\circ+0.095\\cos 2^\\circ=0.1196$$\n\n$$V=90\\ \\text{mph}=132\\ \\text{ft/s}$$\n\n$$q=\\tfrac{1}{2}(0.002377)(132)^2=20.71\\ \\text{psf}$$\n\n$$D=q\\,S\\,c_d=(20.71)(3.78)(0.1196)=9.36\\ \\text{lb}$$\n\nWhy the other choices are incorrect:\n- 55.56 lb → Roughly lift (cl = cn·cosα − ca·sinα) instead of drag.\n- 62.74 lb / 2.19 lb → Wrong conversion of mph or wrong sign in the resolution.\n\nDifferentiate Similar Concepts:\n- Normal and axial → Perpendicular and parallel to the chord.\n- Lift and drag → Perpendicular and parallel to the freestream.\n\n💡 Memory Hook:\nDrag = N sin α + A cos α.\n\n🎯 Board Tip:\nConvert mph to ft/s with ×1.4667.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Elevator position to start recovery from a developed spin\n\nElevator position to start recovery from a developed spin",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Up elevator deepens the stall.",
+        "Deflected downward to reduce the wing section angle of attack below critical and re-establish attached airflow",
+        "Neutral does not break the stall.",
+        "Floating the elevator gives no control to reduce α."
+      ],
+      "answerIndex": 1,
+      "answerText": "Deflected downward to reduce the wing section angle of attack below critical and re-establish attached airflow",
+      "explanation": "After the rudder is used against the spin, forward elevator lowers the nose and reduces the angle of attack below the stall angle. That breaks the autorotation.\n\nWhy the other choices are incorrect:\n- A → Up elevator deepens the stall.\n- C → Neutral does not break the stall.\n- D → Floating the elevator gives no control to reduce α.\n\nDifferentiate Similar Concepts:\n- Spin recovery → Opposite rudder, then forward elevator, then neutralize the controls.\n- Stall recovery → Reduce α and add power.\n\n💡 Memory Hook:\nUnstall by pushing forward.\n\n🎯 Board Tip:\nRudder first, elevator forward second.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Flying at the angle of attack for CLmax at a heavier weight\n\nFlying at the angle of attack for CLmax at a heavier weight",
+      "questionType": "multiple_choice",
+      "choices": [
+        "That is the stall α already, and going further is a stall.",
+        "The α is fixed, but the speed is not.",
+        "It is possible, and stalls prove it.",
+        "Increase the Indicated Air Speed (IAS)"
+      ],
+      "answerIndex": 3,
+      "answerText": "Increase the Indicated Air Speed (IAS)",
+      "explanation": "$$V_s=\\sqrt{\\frac{2W}{\\rho S C_{L,max}}}$$\n\nCLmax occurs at the same α, so a heavier airplane needs a higher speed to make the extra lift at that α.\n\nWhy the other choices are incorrect:\n- A → That is the stall α already, and going further is a stall.\n- B → The α is fixed, but the speed is not.\n- C → It is possible, and stalls prove it.\n\nDifferentiate Similar Concepts:\n- Stall angle → Fixed by the airfoil.\n- Stall speed → Changes with weight and load factor.\n\n💡 Memory Hook:\nHeavier means faster to stall.\n\n🎯 Board Tip:\nα stall stays fixed. Vs moves.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Rocket chamber pressure (ṁ = 287.2 kg/s, T0 = 3600 K, A* = 0.2 m², k = 1.2, M = 16 g/mol)\n\nRocket chamber pressure (ṁ = 287.2 kg/s, T0 = 3600 K, A* = 0.2 m², k = 1.2, M = 16 g/mol)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "450",
+        "500",
+        "3,030 kPa",
+        "778 kPa"
+      ],
+      "answerIndex": 2,
+      "answerText": "3,030 kPa",
+      "explanation": "The throat is choked, so the mass flow depends on the reservoir pressure.\n\n$$R=\\frac{8314}{16}=519.6\\ \\text{J/kg·K}$$\n\n$$\\dot m=\\frac{p_0A^*}{\\sqrt{T_0}}\\sqrt{\\frac{k}{R}}\\left(\\frac{2}{k+1}\\right)^{\\frac{k+1}{2(k-1)}}$$\n\n$$p_0=\\frac{287.2}{(0.2)(8.0097\\times10^{-4})(0.5921)}\\approx 3.03\\times10^{6}\\ \\text{Pa}=3030\\ \\text{kPa}$$\n\nWhy the other choices are incorrect:\n- 450 / 500 / 778 kPa → Come from using a wrong gas constant (for example the universal R without dividing by M) or leaving out the choked-flow factor.\n\nDifferentiate Similar Concepts:\n- Chamber pressure → Stagnation pressure p0.\n- Throat pressure → Lower, about 0.56 p0 for k = 1.2.\n\n💡 Memory Hook:\nChoked flow: more p0, more ṁ.\n\n🎯 Board Tip:\nR = 8314 / molar mass, in J/kg·K.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Abrupt shock when a supersonic stream is turned into itself\n\nAbrupt shock when a supersonic stream is turned into itself",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Oblique shockwave",
+        "Expansion fan",
+        "Normal shockwave",
+        "Compression wave"
+      ],
+      "answerIndex": 0,
+      "answerText": "Oblique shockwave",
+      "explanation": "When a supersonic flow is turned into itself (a compression corner), the passage narrows and the flow density rises abruptly across an inclined shock. That inclined shock is an oblique shock.\n\nWhy the other choices are incorrect:\n- Expansion fan → Flow turns away from itself, and the flow accelerates smoothly.\n- Normal shockwave → Perpendicular to the flow and has no turning.\n- Compression wave → Weak, gradual compression, not an abrupt discontinuity.\n\nDifferentiate Similar Concepts:\n- Oblique shock → Compression turn, abrupt, M drops.\n- Prandtl-Meyer fan → Expansion turn, smooth, M rises.\n\n💡 Memory Hook:\nTurn into the flow, get a shock.\n\n🎯 Board Tip:\nConcave corner = oblique shock. Convex corner = expansion fan.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Center of pressure of a symmetric airfoil as angle of attack increases (subsonic)\n\nCenter of pressure of a symmetric airfoil as angle of attack increases (subsonic)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Exhibit spatial translation confined to a negligible, near-stationary longitudinal range",
+        "Aft CP movement happens for cambered sections at low α.",
+        "Almost right, but \"zero\" is an absolute claim. A is the better wording.",
+        "Forward CP movement describes cambered airfoils."
+      ],
+      "answerIndex": 0,
+      "answerText": "Exhibit spatial translation confined to a negligible, near-stationary longitudinal range",
+      "explanation": "For a symmetric airfoil in subsonic flow, the center of pressure stays near the quarter-chord at all small-to-moderate α. A cambered airfoil is the one whose CP moves forward as α rises.\n\nWhy the other choices are incorrect:\n- B → Aft CP movement happens for cambered sections at low α.\n- C → Almost right, but \"zero\" is an absolute claim. A is the better wording.\n- D → Forward CP movement describes cambered airfoils.\n\nDifferentiate Similar Concepts:\n- Symmetric airfoil → CP is nearly fixed at about c/4.\n- Cambered airfoil → CP moves forward as α increases.\n\n💡 Memory Hook:\nSymmetric, steady CP.\n\n🎯 Board Tip:\nThis item is ambiguous between A and C. Pick the \"near-stationary\" wording.\n\nSource note: choices A and C are near-duplicates; A is the safer \"most correct\" choice.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Separated shear layer that reattaches (recirculation bubble)\n\nSeparated shear layer that reattaches (recirculation bubble)\nThe printed choices repeat Q27's list and do not describe a separation bubble.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "A fixed bubble that does not move with angle of attack",
+        "The bubble moves aft as angle of attack increases",
+        "The bubble keeps the same length as angle of attack increases",
+        "The bubble shortens and moves forward toward the leading edge as angle of attack increases."
+      ],
+      "answerIndex": 3,
+      "answerText": "The bubble shortens and moves forward toward the leading edge as angle of attack increases.",
+      "explanation": "A separation bubble is a closed recirculation region. As α increases, the bubble shortens and moves forward toward the leading edge as the adverse pressure gradient steepens. It adds drag and can burst, which causes stall.\n\nWhy the other choices are incorrect:\n- A / C → Imply a fixed, motionless region, which is not how a bubble behaves.\n- B → A bubble does not slide aft with α. It moves forward.\n\nDifferentiate Similar Concepts:\n- Short bubble → Local effect, small lift and drag penalty.\n- Long bubble → Large lift loss, and it can burst.\n\n💡 Memory Hook:\nMore α, the bubble moves forward.\n\n🎯 Board Tip:\nAsk your reviewer to confirm this item. The printed options look like a copy-paste error.\n\nSource note: the printed choices look copy-pasted from Q27 and do not describe a separation bubble. D is the closest fit.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Velocity at point 1 on an airfoil (M∞ = 0.6, p∞ = 1 atm, T∞ = 59°F, p1 = 0.7545 atm)\n\nVelocity at point 1 on an airfoil (M∞ = 0.6, p∞ = 1 atm, T∞ = 59°F, p1 = 0.7545 atm)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "294.21 m/s",
+        "333.75",
+        "877.49",
+        "955.66"
+      ],
+      "answerIndex": 0,
+      "answerText": "294.21 m/s",
+      "explanation": "Isentropic flow:\n\n$$\\frac{p_0}{p_\\infty}=\\left(1+0.2(0.6)^2\\right)^{3.5}=1.2756\\;\\Rightarrow\\;p_0=1.2756\\ \\text{atm}$$\n\n$$\\frac{p_0}{p_1}=\\frac{1.2756}{0.7545}=1.691=\\left(1+0.2M_1^2\\right)^{3.5}\\;\\Rightarrow\\;M_1=0.90$$\n\n$$T_0=288.15(1.072)=308.9\\ \\text{K},\\qquad T_1=\\frac{T_0}{1+0.2M_1^2}=265.9\\ \\text{K}$$\n\n$$a_1=\\sqrt{1.4(287)(265.9)}=326.8\\ \\text{m/s}$$\n\n$$V_1=M_1a_1=0.90(326.8)\\approx 294\\ \\text{m/s}$$\n\nWhy the other choices are incorrect:\n- 333.75 / 877.49 / 955.66 → Use the freestream speed of sound, or ft/s values, or the wrong T.\n\nDifferentiate Similar Concepts:\n- Freestream a → Based on T∞.\n- Local a → Based on local T1, which is lower where the flow is faster.\n\n💡 Memory Hook:\nFaster, colder, slower sound.\n\n🎯 Board Tip:\nUse the local temperature for the local speed of sound.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Specific impulse and propellant molecular weight in electric propulsion\n\nSpecific impulse and propellant molecular weight in electric propulsion",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Heavier propellant gives lower Isp, not higher.",
+        "Isp depends on particle mass and energy, so molecular weight matters.",
+        "Specific impulse varies inversely with molecular weight, so low-molecular-weight propellants can reach exceptionally high Isp when accelerated by electric power",
+        "It is an inverse square-root type relation, not an inverse square, and it does not restrict electric systems to dense liquids."
+      ],
+      "answerIndex": 2,
+      "answerText": "Specific impulse varies inversely with molecular weight, so low-molecular-weight propellants can reach exceptionally high Isp when accelerated by electric power",
+      "explanation": "For the same energy input, a lighter particle reaches a higher exhaust speed (Isp ∝ ve ∝ √(energy/mass)).\n\nWhy the other choices are incorrect:\n- A → Heavier propellant gives lower Isp, not higher.\n- B → Isp depends on particle mass and energy, so molecular weight matters.\n- D → It is an inverse square-root type relation, not an inverse square, and it does not restrict electric systems to dense liquids.\n\nDifferentiate Similar Concepts:\n- Chemical rockets → Isp ∝ √(T/M).\n- Electric → Much higher energy per unit mass, so far higher Isp.\n\n💡 Memory Hook:\nLight particles fly fast.\n\n🎯 Board Tip:\nIsp goes up as M goes down.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "NACA seven-digit series: the fifth character\n\nNACA seven-digit series: the fifth character",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Maximum thickness",
+        "Design lift coefficient",
+        "Maximum camber in % chord",
+        "Location of maximum thickness"
+      ],
+      "answerIndex": 1,
+      "answerText": "Design lift coefficient",
+      "explanation": "Example: NACA 747A315.\n\n- 7 → Series.\n- 4 → Extent of the favorable pressure gradient on the upper surface (% chord).\n- 7 → Extent of the favorable gradient on the lower surface (% chord).\n- A → Thickness distribution and leading edge radius (letter).\n- 3 → Design CL in tenths (0.3).\n- 15 → Maximum thickness (% chord).\n\nWhy the other choices are incorrect:\n- Maximum thickness → Last two digits.\n- Maximum camber in % chord → Not defined this way in the 7-digit series.\n- Location of maximum thickness → Not a digit in this series.\n\nDifferentiate Similar Concepts:\n- 4-digit → Camber, camber position, thickness.\n- 5-digit → Design CL, camber position, thickness.\n- 7-digit → Laminar-flow design, with the letter counted as a character.\n\n💡 Memory Hook:\nCount the letter. The fifth character is CL design.\n\n🎯 Board Tip:\nLast two digits are always thickness.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Maximum glide distance of a drone from 1,800 ft (CD = 0.02 + 0.034CL²)\n\nMaximum glide distance of a drone from 1,800 ft (CD = 0.02 + 0.034CL²)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "345.13 ft",
+        "6.54 miles",
+        "11,000 m",
+        "105 km"
+      ],
+      "answerIndex": 1,
+      "answerText": "6.54 miles",
+      "explanation": "The greatest distance in still air is the maximum glide, which depends on max L/D only.\n\n$$\\left(\\frac{L}{D}\\right)_{max}=\\frac{1}{2\\sqrt{C_{D0}\\,k}}=\\frac{1}{2\\sqrt{(0.02)(0.034)}}=19.17$$\n\n$$R=h\\left(\\frac{L}{D}\\right)_{max}=1800(19.17)=34{,}500\\ \\text{ft}=6.54\\ \\text{mi}$$\n\nWhy the other choices are incorrect:\n- 345.13 ft → Decimal-place trap (off by a factor of 100).\n- 11,000 m / 105 km → Wrong unit or a wrong L/D.\n\nDifferentiate Similar Concepts:\n- Glide range → h × L/D.\n- Weight and wing loading → Do not change max glide range, only the speed to fly it.\n\n💡 Memory Hook:\nRange = height times L/D.\n\n🎯 Board Tip:\nWeight and wing loading are distractors here.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Manometer height difference in a wind tunnel (V = 45 m/s, area ratio 18/1.5, ρ_Hg = 1360 kg/m³ as printed)\n\nManometer height difference in a wind tunnel (V = 45 m/s, area ratio 18/1.5, ρ_Hg = 1360 kg/m³ as printed)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.009 m",
+        "0.09 ft",
+        "0.93 ft",
+        "9.24 cm"
+      ],
+      "answerIndex": 3,
+      "answerText": "9.24 cm",
+      "explanation": "$$\\frac{A_2}{A_1}=\\frac{1.5}{18}=\\frac{1}{12}$$\n\n$$\\Delta p=\\tfrac{1}{2}\\rho V_2^2\\left[1-\\left(\\frac{A_2}{A_1}\\right)^2\\right]=\\tfrac{1}{2}(1.225)(45)^2\\left(1-\\frac{1}{144}\\right)=1231.7\\ \\text{Pa}$$\n\n$$h=\\frac{\\Delta p}{\\rho_{Hg}\\,g}=\\frac{1231.7}{(1360)(9.81)}=0.0923\\ \\text{m}\\approx 9.24\\ \\text{cm}$$\n\nWhy the other choices are incorrect:\n- 0.009 m / 0.09 ft → Wrong decimal place or unit.\n- 0.93 ft → Wrong unit conversion.\n\nDifferentiate Similar Concepts:\n- Continuity → V1 = V2 (A2/A1).\n- Bernoulli → Δp = ½ρ(V2² − V1²).\n\n💡 Memory Hook:\nContraction raises speed, manometer reads the drop.\n\n🎯 Board Tip:\nReal mercury is 13,600 kg/m³. Use the density the problem prints.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Time to climb to 95% of the absolute ceiling (ROC0 = 1,200 ft/min, habs = 24,000 ft)\n\nTime to climb to 95% of the absolute ceiling (ROC0 = 1,200 ft/min, habs = 24,000 ft)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "59.91 mins",
+        "39.92",
+        "48.25",
+        "52.33"
+      ],
+      "answerIndex": 0,
+      "answerText": "59.91 mins",
+      "explanation": "For a linear ROC decrease, ROC = ROC0(1 − h/habs). At 95% of the ceiling, ROC = 0.05·ROC0.\n\n$$t=\\frac{h_{abs}}{ROC_0}\\ln\\!\\left(\\frac{ROC_0}{ROC}\\right)=\\frac{24{,}000}{1200}\\ln(20)=20(2.9957)=59.91\\ \\text{min}$$\n\nWhy the other choices are incorrect:\n- 39.92 / 48.25 / 52.33 → Use the wrong fraction of the ceiling or drop the natural log.\n\nDifferentiate Similar Concepts:\n- Absolute ceiling → ROC = 0, infinite time to reach.\n- 95% of ceiling → A finite time.\n\n💡 Memory Hook:\nClimb time is a log, not a straight line.\n\n🎯 Board Tip:\nUse ln(1/(1 − fraction)).",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Ailerons returned to neutral, then the aircraft returns to wings level\n\nAilerons returned to neutral, then the aircraft returns to wings level",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Neutrally stable",
+        "Statically stable and dynamically stable",
+        "Statically stable, dynamically neutral",
+        "Statically stable only"
+      ],
+      "answerIndex": 1,
+      "answerText": "Statically stable and dynamically stable",
+      "explanation": "Returning to the original wings-level attitude without control input means the aircraft moves back toward equilibrium (static stability). It settles there with the motion dying out (dynamic stability).\n\nWhy the other choices are incorrect:\n- Neutrally stable → It would stay at the new bank angle.\n- Statically stable, dynamically neutral → The motion would persist and not settle.\n- Statically stable only → The question implies a return to level, which means damped motion.\n\nDifferentiate Similar Concepts:\n- Static stability → Initial tendency to return.\n- Dynamic stability → Behavior over time (damping).\n\n💡 Memory Hook:\nReturns and settles, so it is stable both ways.\n\n🎯 Board Tip:\nReturns without more input = statically and dynamically stable.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Sound arrival time for a Mach 3 missile at 5 km altitude\n\nSound arrival time for a Mach 3 missile at 5 km altitude",
+      "questionType": "multiple_choice",
+      "choices": [
+        "28.3 s",
+        "35.7 s",
+        "44.1 s",
+        "52.1 s"
+      ],
+      "answerIndex": 2,
+      "answerText": "44.1 s",
+      "explanation": "The Mach angle is:\n\n$$\\mu=\\sin^{-1}\\!\\left(\\frac{1}{M}\\right)=\\sin^{-1}\\!\\left(\\frac{1}{3}\\right)=19.47^\\circ$$\n\nThe missile must be ahead of the observer by:\n\n$$x=\\frac{h}{\\tan\\mu}=5000\\sqrt{M^2-1}=14{,}142\\ \\text{m}$$\n\nAt 5 km altitude (standard), a = 320.5 m/s.\n\n$$\\frac{x}{a}=\\frac{14{,}142}{320.5}=44.1\\ \\text{s}$$\n\nMy own derivation, dividing by the missile speed instead, gives:\n\n$$t=\\frac{x}{V}=\\frac{14{,}142}{3(320.5)}=14.7\\ \\text{s}$$\n\n14.7 s is not among the choices. The 44.1 s choice matches x/a, so that is most likely what the reviewer keyed.\n\nWhy the other choices are incorrect:\n- 28.3 s / 35.7 s / 52.1 s → Do not match any standard Mach-cone derivation.\n\nDifferentiate Similar Concepts:\n- Mach angle → sin μ = 1/M.\n- Mach cone arrival → The observer hears it when the cone sweeps past.\n\n💡 Memory Hook:\nMach cone, then sound.\n\n🎯 Board Tip:\nVerify this item with your reviewer. The physically consistent time is about 14.7 s.\n\nSource note: my derivation gives about 14.7 s, which is not among the choices. C is the likely keyed answer (see item).",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Statements about airfoil geometry\n\nStatements about airfoil geometry\nWhich statements are correct?\n\n- 1 - Maximum camber is the maximum distance between the top and bottom surface of an aerofoil section.\n- 2 - The thickness/chord ratio is expressed as a percentage of the chord.\n- 3 - It is easier for air to flow over a well-rounded leading-edge radius than a sharp leading edge.\n- 4 - Two-dimensional airflow over a wing assumes no spanwise pressure differential along the entire span.",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Statement 1 only",
+        "All correct",
+        "All statements except 1",
+        "All incorrect"
+      ],
+      "answerIndex": 2,
+      "answerText": "All statements except 1",
+      "explanation": "Why the other choices are incorrect:\n- Statement 1 → Maximum thickness is the distance between the upper and lower surfaces. Maximum camber is the distance from the mean camber line to the chord line.\n- All correct → Statement 1 is wrong.\n- All incorrect → Statements 2, 3 and 4 are correct.\n- All except 4 → Statement 4 is correct (2D flow = no spanwise flow).\n\nDifferentiate Similar Concepts:\n- Thickness → Upper to lower surface.\n- Camber → Mean line to chord line.\n\n💡 Memory Hook:\nThickness is top to bottom. Camber is the curve of the middle.\n\n🎯 Board Tip:\nCamber is measured from the mean camber line.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Stall angle (CLmax) as a boundary condition\n\nStall angle (CLmax) as a boundary condition",
+      "questionType": "multiple_choice",
+      "choices": [
+        "It does not vary with the ground-relative velocity vector",
+        "the wind.",
+        "It does not scale directly with dynamic pressure.",
+        "Remains invariant for a given aerodynamic profile regardless of airflow speed and changes in total gross aircraft mass"
+      ],
+      "answerIndex": 3,
+      "answerText": "Remains invariant for a given aerodynamic profile regardless of airflow speed and changes in total gross aircraft mass",
+      "explanation": "For a given airfoil (ignoring Reynolds and Mach effects), the stall angle of attack is a property of the shape. Weight and speed change the stall speed, not the stall angle.\n\nWhy the other choices are incorrect:\n- A → It does not vary with the ground-relative velocity vector or the wind.\n- B → It does not scale directly with dynamic pressure.\n- C → It does not depend systematically on density altitude or airspeed.\n\nDifferentiate Similar Concepts:\n- Stall angle → Fixed by the airfoil.\n- Stall speed → Depends on weight, altitude and load factor.\n\n💡 Memory Hook:\nSame wing, same stall angle.\n\n🎯 Board Tip:\nStall angle does not change with weight.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Airspeed from a pitot-static reading of 6 in of water (standard sea level, incompressible)\n\nAirspeed from a pitot-static reading of 6 in of water (standard sea level, incompressible)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "162 fps",
+        "155",
+        "179 fps",
+        "78 fps"
+      ],
+      "answerIndex": 0,
+      "answerText": "162 fps",
+      "explanation": "$$\\Delta p=6\\ \\text{in H}_2\\text{O}\\times 5.2\\ \\text{psf/in}=31.2\\ \\text{psf}$$\n\n$$V=\\sqrt{\\frac{2\\Delta p}{\\rho}}=\\sqrt{\\frac{2(31.2)}{0.002377}}=162\\ \\text{ft/s}$$\n\nWhy the other choices are incorrect:\n- 155 / 179 fps → Use a slightly wrong conversion of inches of water to psf.\n- 78 fps → Forgets the factor of 2 in the dynamic pressure formula.\n\nDifferentiate Similar Concepts:\n- Pitot-static difference → Dynamic pressure q.\n- Airspeed → V = √(2q/ρ).\n\n💡 Memory Hook:\nWater gauge to psf, then square-root.\n\n🎯 Board Tip:\n1 inch of water is about 5.2 psf.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Correcting indicated air temperature to true outside air temperature\n\nCorrecting indicated air temperature to true outside air temperature",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Position error",
+        "Altitude error",
+        "Compressibility error",
+        "Pressure error"
+      ],
+      "answerIndex": 2,
+      "answerText": "Compressibility error",
+      "explanation": "The probe heats the air as it slows (ram rise), and the heating grows with the square of Mach. That error is corrected to get true outside air temperature.\n\nWhy the other choices are incorrect:\n- Position error → Applies to the static pressure source and airspeed.\n- Altitude error → Not a temperature correction.\n- Pressure error → Not the usual temperature correction.\n\nDifferentiate Similar Concepts:\n- Compressibility → Ram heating of the temperature probe.\n- Position error → Static port placement.\n\n💡 Memory Hook:\nFast air heats the probe.\n\n🎯 Board Tip:\nIAT to OAT means a ram-rise correction.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Angle of attack for 160 lb/ft of lift at 170 mph, 15,000 ft (a0 = 0.111/deg, αL=0 = −3.5°, c = 8 ft)\n\nAngle of attack for 160 lb/ft of lift at 170 mph, 15,000 ft (a0 = 0.111/deg, αL=0 = −3.5°, c = 8 ft)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "0.45",
+        "0.38°",
+        "0.63",
+        "0.78"
+      ],
+      "answerIndex": 1,
+      "answerText": "0.38°",
+      "explanation": "At 15,000 ft (standard), ρ = 0.0014962 slug/ft³. V = 170 mph = 249.3 ft/s.\n\n$$q=\\tfrac{1}{2}\\rho V^2=\\tfrac{1}{2}(0.0014962)(249.3)^2=46.5\\ \\text{psf}$$\n\n$$c_l=\\frac{L'}{q\\,c}=\\frac{160}{(46.5)(8)}=0.430$$\n\n$$\\alpha=\\frac{c_l}{a_0}+\\alpha_{L=0}=\\frac{0.430}{0.111}-3.5=0.37^\\circ\\approx 0.38^\\circ$$\n\nWhy the other choices are incorrect:\n- 0.45 / 0.63 / 0.78 → Use sea-level density or forget the chord when finding cl.\n\nDifferentiate Similar Concepts:\n- Section cl → Uses lift per unit span and the chord.\n- Zero-lift angle → Negative for cambered airfoils.\n\n💡 Memory Hook:\nα = cl/a0 + αL=0.\n\n🎯 Board Tip:\nUse the density at the given altitude.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Increasing geometric dihedral during a steady sideslip\n\nIncreasing geometric dihedral during a steady sideslip",
+      "questionType": "multiple_choice",
+      "choices": [
+        "The required lateral control force increases",
+        "Decreases",
+        "Does not change",
+        "Stick force per g decreases"
+      ],
+      "answerIndex": 0,
+      "answerText": "The required lateral control force increases",
+      "explanation": "More dihedral means more rolling moment due to sideslip. To hold the same sideslip angle at constant speed, the pilot needs more opposite aileron, so the lateral control force increases.\n\nWhy the other choices are incorrect:\n- Decreases → Opposite effect.\n- Does not change → Dihedral directly changes Clβ.\n- Stick force per g decreases → That is a longitudinal (pitch) quantity.\n\nDifferentiate Similar Concepts:\n- Lateral control force → Roll axis.\n- Stick force per g → Pitch axis.\n\n💡 Memory Hook:\nMore dihedral, more aileron to hold a slip.\n\n🎯 Board Tip:\nDihedral effect is felt as aileron force in a sideslip.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Temperature at point A (p = 18.78 psi, standard sea-level density)\n\nTemperature at point A (p = 18.78 psi, standard sea-level density)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "663 °R",
+        "698",
+        "460",
+        "580 °R"
+      ],
+      "answerIndex": 0,
+      "answerText": "663 °R",
+      "explanation": "$$T=\\frac{p}{\\rho R}=\\frac{18.78(144)}{(0.002377)(1716)}=\\frac{2704.3}{4.079}\\approx 663\\ ^\\circ\\text{R}$$\n\nWhy the other choices are incorrect:\n- 698 / 460 / 580 °R → Forget the ×144 conversion, or use a wrong R.\n\nDifferentiate Similar Concepts:\n- Rankine → °F + 459.67.\n- Equation of state → p = ρRT.\n\n💡 Memory Hook:\np over ρR gives T.\n\n🎯 Board Tip:\nConvert psi to psf before using the gas law.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Downstream Mach number across a normal shock\n\nDownstream Mach number across a normal shock",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Downstream is subsonic (M < 1), not \"low-supersonic\".",
+        "It does not stop at M = 1.",
+        "Mach number decreases, even though the static temperature rises.",
+        "Decelerated across the wave, transitioning permanently to a subsonic state (M < 1)"
+      ],
+      "answerIndex": 3,
+      "answerText": "Decelerated across the wave, transitioning permanently to a subsonic state (M < 1)",
+      "explanation": "Across a normal shock, the Mach number always drops from supersonic to subsonic. Pressure, density and temperature rise.\n\nWhy the other choices are incorrect:\n- A → Downstream is subsonic (M < 1), not \"low-supersonic\".\n- B → It does not stop at M = 1.\n- C → Mach number decreases, even though the static temperature rises.\n\nDifferentiate Similar Concepts:\n- Normal shock → M2 < 1 always.\n- Oblique shock → M2 may stay supersonic.\n\n💡 Memory Hook:\nNormal shock, subsonic after.\n\n🎯 Board Tip:\nM1 > 1 gives M2 < 1.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Operating beyond the certified maximum altitude (coffin corner)\n\nOperating beyond the certified maximum altitude (coffin corner)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Structural failure comes from overload, not directly from this margin.",
+        "High-speed buffet",
+        "Shock-induced separation is related, but the usual textbook name for the phenomenon is high-speed buffet.",
+        "Mach tuck is a trim/pitch effect past critical Mach."
+      ],
+      "answerIndex": 1,
+      "answerText": "High-speed buffet",
+      "explanation": "At high altitude, the margin between low-speed stall buffet and Mach buffet shrinks. A small increase in speed or load factor causes Mach (high-speed) buffet.\n\nWhy the other choices are incorrect:\n- A → Structural failure comes from overload, not directly from this margin.\n- C → Shock-induced separation is related, but the usual textbook name for the phenomenon is high-speed buffet.\n- D → Mach tuck is a trim/pitch effect past critical Mach.\n\nDifferentiate Similar Concepts:\n- Low-speed buffet → Stall onset.\n- High-speed buffet → Shock-induced separation.\n- Mach tuck → Pitch-down trim change.\n\n💡 Memory Hook:\nCoffin corner: two buffets meet.\n\n🎯 Board Tip:\nC is close, so choose \"high-speed buffet\" as the standard answer.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Reynolds number of a wing (AR = 1.71, span = 12 ft, M = 0.13, standard sea level)\n\nReynolds number of a wing (AR = 1.71, span = 12 ft, M = 0.13, standard sea level)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "6.48 × 10⁵",
+        "6.46 × 10⁶",
+        "6.44 × 10⁷",
+        "6.46 × 10⁸"
+      ],
+      "answerIndex": 1,
+      "answerText": "6.46 × 10⁶",
+      "explanation": "$$c=\\frac{b}{AR}=\\frac{12}{1.71}=7.02\\ \\text{ft}$$\n\n$$V=Ma=0.13(1116.45)=145.1\\ \\text{ft/s}$$\n\n$$Re=\\frac{Vc}{\\nu}=\\frac{(145.1)(7.02)}{1.572\\times10^{-4}}\\approx 6.5\\times10^{6}$$\n\nWhy the other choices are incorrect:\n- 6.48 × 10⁵ → Right digits, wrong exponent.\n- 6.44 × 10⁷ / 6.46 × 10⁸ → Wrong exponent or wrong chord.\n\nDifferentiate Similar Concepts:\n- Span → Total wing length.\n- Chord → Used for Re (c = b/AR for a rectangular wing).\n\n💡 Memory Hook:\nRe uses chord, not span.\n\n🎯 Board Tip:\nCheck the exponent first. The digits are the same in several options.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Ground effect on a cambered airfoil (NACA 4412) at low and higher angles of attack\n\nGround effect on a cambered airfoil (NACA 4412) at low and higher angles of attack",
+      "questionType": "multiple_choice",
+      "choices": [
+        "Reverses the two regimes.",
+        "Lift does not decrease uniformly across all α.",
+        "Ground effect does change lift, not only pitching moment and drag.",
+        "Lift is reduced at low angles of attack, whereas it increases in close proximity to the ground at angles of attack between 4° to 8° due to greater lower-surface pressure"
+      ],
+      "answerIndex": 3,
+      "answerText": "Lift is reduced at low angles of attack, whereas it increases in close proximity to the ground at angles of attack between 4° to 8° due to greater lower-surface pressure",
+      "explanation": "At low α, the converging channel under the airfoil speeds the flow up (suction), which reduces lift. At higher α, the ram (pressure build-up) effect under the lower surface dominates and lift rises.\n\nWhy the other choices are incorrect:\n- A → Reverses the two regimes.\n- B → Lift does not decrease uniformly across all α.\n- C → Ground effect does change lift, not only pitching moment and drag.\n\nDifferentiate Similar Concepts:\n- Suction effect → Low α, lift loss.\n- Ram effect → Higher α, lift gain.\n\n💡 Memory Hook:\nLow α sucks, high α rams.\n\n🎯 Board Tip:\nGround effect is not always a lift gain at low α.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Static lateral and directional stability\n\nStatic lateral and directional stability",
+      "questionType": "multiple_choice",
+      "choices": [
+        "More powerful engines do not add directional stability and can reduce it.",
+        "An aeroplane with excessive static directional stability in relation to its static lateral stability will be prone to spiral dive (spiral instability)",
+        "The two are coupled through sideslip.",
+        "Dutch roll is caused by too much lateral stability relative to directional."
+      ],
+      "answerIndex": 1,
+      "answerText": "An aeroplane with excessive static directional stability in relation to its static lateral stability will be prone to spiral dive (spiral instability)",
+      "explanation": "Strong weathercock stability (yaw) with weak dihedral effect (roll) makes the nose follow the sideslip faster than the wings level, so the bank and turn tighten into a spiral dive.\n\nWhy the other choices are incorrect:\n- A → More powerful engines do not add directional stability and can reduce it.\n- C → The two are coupled through sideslip.\n- D → Dutch roll is caused by too much lateral stability relative to directional.\n\nDifferentiate Similar Concepts:\n- Too much directional (relative to lateral) → Spiral dive.\n- Too much lateral (relative to directional) → Dutch roll.\n\n💡 Memory Hook:\nBig fin, spiral in.\n\n🎯 Board Tip:\nFin dominates gives spiral. Dihedral dominates gives Dutch roll.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Test section Mach number (T0 = 587 °R, V = 1586 ft/s, adiabatic)\n\nTest section Mach number (T0 = 587 °R, V = 1586 ft/s, adiabatic)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "1.67",
+        "1.9",
+        "2.66",
+        "3.88"
+      ],
+      "answerIndex": 0,
+      "answerText": "1.67",
+      "explanation": "$$c_p=\\frac{\\gamma R}{\\gamma-1}=6006\\ \\text{ft·lb/(slug·°R)}$$\n\n$$T=T_0-\\frac{V^2}{2c_p}=587-\\frac{1586^2}{2(6006)}=377.6\\ ^\\circ\\text{R}$$\n\n$$a=\\sqrt{\\gamma RT}=\\sqrt{1.4(1716)(377.6)}=952.4\\ \\text{ft/s}$$\n\n$$M=\\frac{V}{a}=\\frac{1586}{952.4}=1.67$$\n\nWhy the other choices are incorrect:\n- 1.9 / 2.66 / 3.88 → Use T0 for the speed of sound or forget the 2cp term.\n\nDifferentiate Similar Concepts:\n- Reservoir temperature → Stagnation T0.\n- Test section temperature → Static T.\n\n💡 Memory Hook:\nSubtract the kinetic energy to get static T.\n\n🎯 Board Tip:\nNever use T0 for the local speed of sound.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    },
+    {
+      "question": "Maximizing CL and total lift at low airspeed (takeoff and landing)\n\nMaximizing CL and total lift at low airspeed (takeoff and landing)",
+      "questionType": "multiple_choice",
+      "choices": [
+        "High camber profile",
+        "Low camber profile",
+        "Low aspect ratio",
+        "High aspect ratio"
+      ],
+      "answerIndex": 0,
+      "answerText": "High camber profile",
+      "explanation": "High camber raises the airfoil CLmax and lift at a given α, which is what flaps and slats imitate.\n\nWhy the other choices are incorrect:\n- Low camber profile → Lower CL.\n- Low aspect ratio → Lower lift-curve slope (3D effects), so lower CL.\n- High aspect ratio → Improves efficiency but does not raise CLmax the way camber does.\n\nDifferentiate Similar Concepts:\n- Camber → Raises CL at a given α.\n- Aspect ratio → Reduces induced drag and increases the lift-curve slope.\n\n💡 Memory Hook:\nCurve it to lift it.\n\n🎯 Board Tip:\nCamber is the low-speed lift tool.",
+      "tags": [
+        "aerodynamics",
+        "mock exam",
+        "Set A"
+      ],
+      "explanationImages": [],
+      "questionImages": [],
+      "explanationCard": null,
+      "expectedAnswer": null,
+      "acceptedDeviation": 0
+    }
+  ]
+}
