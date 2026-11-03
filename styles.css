@@ -19,6 +19,30 @@
     --shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
 }
 
+@font-face {
+    font-family: "IBM Plex Sans";
+    src: url("./vendor/ibm-plex-sans/IBMPlexSans-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IBM Plex Sans";
+    src: url("./vendor/ibm-plex-sans/IBMPlexSans-SemiBold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IBM Plex Sans";
+    src: url("./vendor/ibm-plex-sans/IBMPlexSans-Bold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -7987,7 +8011,8 @@ body.mode-page .workspace > .mode-topbar::before {
 }
 
 .question-card h4 {
-    font-weight: 600;
+    font-weight: 400;
+    font-family: "IBM Plex Sans", sans-serif;
 }
 
 .question-data-table-wrap {
@@ -8082,6 +8107,7 @@ body.mode-page .workspace > .mode-topbar::before {
     color: var(--text);
     background: rgba(255, 255, 255, 0.04);
     text-align: left;
+    font-family: "IBM Plex Sans", sans-serif;
     transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
 }
 
@@ -8551,7 +8577,8 @@ body.mode-page .workspace > .mode-topbar::before {
 .flashcard-face-text {
     font-size: clamp(1.15rem, 2vw, 1.45rem);
     line-height: 1.65;
-    font-weight: 700;
+    font-weight: 400;
+    font-family: "IBM Plex Sans", sans-serif;
 }
 
 .flashcard-explanation {
@@ -8631,9 +8658,9 @@ body.mode-page .workspace > .mode-topbar::before {
 
 .exam-missed-question .exam-missed-question-prompt {
     margin: 0 0 8px;
-    font-family: inherit;
+    font-family: "IBM Plex Sans", sans-serif;
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.5;
 }
 
