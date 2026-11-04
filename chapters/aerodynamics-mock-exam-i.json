@@ -240,9 +240,9 @@
         "A 5% increase in maximum lift coefficient accompanied by a 5% increase in parasite drag across all flight regimes.",
         "A complete elimination of profile drag during cruise, leading to a 10% reduction in total aircraft fuel consumption."
       ],
-      "answerIndex": 1,
-      "answerText": "A 5% reduction in drag at design conditions and a 1% reduction in drag at off-design conditions, with no measurable change in fuel burn.",
-      "explanation": "Reported results for morphing trailing edges: small gains (about 1%) at the design point, and larger gains (up to about 5%) off-design, where a fixed wing is not optimal.\n\nWhy the other choices are incorrect:\n- A → Overstates the fuel benefit and reverses the design and off-design gains.\n- C → Morphing does not raise parasite drag everywhere.\n- D → Profile drag cannot be eliminated.\n\nDifferentiate Similar Concepts:\n- Design point → Fixed wing is already near optimal, so the gain is small.\n- Off-design → Morphing can re-shape the wing, so the gain is larger.\n\n💡 Memory Hook:\nMorph helps most away from home.\n\n🎯 Board Tip:\nBeware of answers with \"eliminate\" or \"no change\".\n\nSource note: the choices were partly cropped/rotated in the photo, so the wording is my best reading.",
+      "answerIndex": 0,
+      "answerText": "A 1% reduction in drag at design conditions, a 5% reduction in off-design conditions, and a 1% reduction in cruise fuel consumption.",
+      "explanation": "The intended result is a modest drag reduction at the design point and a larger reduction off-design, where a fixed wing is less well matched to the flight condition. Choice A gives the corresponding 1% and 5% drag reductions and 1% cruise fuel-consumption reduction.\n\nWhy the other choices are incorrect:\n- A → Overstates the fuel benefit and reverses the design and off-design gains.\n- C → Morphing does not raise parasite drag everywhere.\n- D → Profile drag cannot be eliminated.\n\nDifferentiate Similar Concepts:\n- Design point → Fixed wing is already near optimal, so the gain is small.\n- Off-design → Morphing can re-shape the wing, so the gain is larger.\n\n💡 Memory Hook:\nMorph helps most away from home.\n\n🎯 Board Tip:\nTreat large blanket claims such as \"eliminate\" or \"no change\" with care.\n\nSource note: the choices were partly cropped/rotated in the photo, so the wording is my best reading.",
       "tags": [
         "aerodynamics",
         "mock exam",
@@ -512,12 +512,12 @@
       "questionType": "multiple_choice",
       "choices": [
         "Deflected upward to increase the effective angle of attack past the critical stall boundary along the main wing section.",
-        "Deflected downward to reduce the wing section angle of attack below critical thresholds and re-establish attached laminar airflow.",
+        "Deflected downward to reduce the aircraft angle of attack below the critical value and restore attached flow.",
         "Positioned in a neutral longitudinal trim state to equalize upper and lower horizontal stabilizer pressure differentials.",
         "Uncoupled and permitted to float freely under the influence of local relative airflow vectors along the empennage."
       ],
       "answerIndex": 1,
-      "answerText": "Deflected downward to reduce the wing section angle of attack below critical thresholds and re-establish attached laminar airflow.",
+      "answerText": "Deflected downward to reduce the aircraft angle of attack below the critical value and restore attached flow.",
       "explanation": "After the rudder is used against the spin, forward elevator lowers the nose and reduces the angle of attack below the stall angle. That breaks the autorotation.\n\nWhy the other choices are incorrect:\n- A → Up elevator deepens the stall.\n- C → Neutral does not break the stall.\n- D → Floating the elevator gives no control to reduce α.\n\nDifferentiate Similar Concepts:\n- Spin recovery → Opposite rudder, then forward elevator, then neutralize the controls.\n- Stall recovery → Reduce α and add power.\n\n💡 Memory Hook:\nUnstall by pushing forward.\n\n🎯 Board Tip:\nRudder first, elevator forward second.",
       "tags": [
         "aerodynamics",
@@ -626,14 +626,14 @@
       "question": "What aerodynamic phenomenon occurs when the shear layer of a separated flow reattaches to an airfoil surface downstream to create a closed recirculation region, and how does it impact aerodynamic performance relative to fully attached airflow?",
       "questionType": "multiple_choice",
       "choices": [
-        "Exhibit spatial translation confined to a negligible, near-stationary longitudinal range.",
-        "Undergo a progressive aft movement toward the trailing edge along the chordwise surface.",
-        "Experience zero net spatial displacement relative to the chord line.",
-        "Translate forward toward the leading edge as the local pressure gradient steepens."
+        "A separation bubble; recirculating flow adds drag and can reduce lift, and bubble bursting may trigger stall.",
+        "A laminar separation bubble; it eliminates pressure drag and increases lift compared with fully attached flow.",
+        "A normal shock; it raises local Mach number and removes the boundary layer from the entire airfoil.",
+        "A leading-edge vortex; it suppresses separation and guarantees attached flow at higher angles of attack."
       ],
-      "answerIndex": 3,
-      "answerText": "Translate forward toward the leading edge as the local pressure gradient steepens.",
-      "explanation": "A separation bubble is a closed recirculation region. As α increases, the bubble shortens and moves forward toward the leading edge as the adverse pressure gradient steepens. It adds drag and can burst, which causes stall.\n\nWhy the other choices are incorrect:\n- A / C → Imply a fixed, motionless region, which is not how a bubble behaves.\n- B → A bubble does not slide aft with α. It moves forward.\n\nDifferentiate Similar Concepts:\n- Short bubble → Local effect, small lift and drag penalty.\n- Long bubble → Large lift loss, and it can burst.\n\n💡 Memory Hook:\nMore α, the bubble moves forward.\n\n🎯 Board Tip:\nAsk your reviewer to confirm this item. The printed options look like a copy-paste error.\n\nSource note: the printed choices look copy-pasted from Q27 and do not describe a separation bubble. D is the closest fit.",
+      "answerIndex": 0,
+      "answerText": "A separation bubble; recirculating flow adds drag and can reduce lift, and bubble bursting may trigger stall.",
+      "explanation": "This is a laminar separation bubble: the separated shear layer reattaches downstream and encloses a recirculating region. The bubble adds drag and can alter or reduce lift; if it bursts or grows, it can precipitate stall. Compared with fully attached flow, it is a loss-producing separated-flow feature.",
       "tags": [
         "aerodynamics",
         "mock exam",
@@ -674,12 +674,12 @@
       "choices": [
         "Specific impulse varies directly with molecular weight, making heavier propellants more efficient for high-thrust operations.",
         "Specific impulse is completely independent of molecular weight because electric propulsion relies exclusively on electromagnetic fields rather than gas expansion.",
-        "Specific impulse varies inversely with molecular weight, enabling low-molecular-weight propellants to achieve exceptionally high specific impulse values when accelerated by electric power.",
+        "Specific impulse is approximately inversely proportional to the square root of propellant molecular weight for the same ion charge state and accelerating voltage; lighter propellants can reach higher exhaust speeds.",
         "Specific impulse varies inversely with the square of the molecular weight, restricting electric propulsion systems to high-density liquid propellants."
       ],
       "answerIndex": 2,
-      "answerText": "Specific impulse varies inversely with molecular weight, enabling low-molecular-weight propellants to achieve exceptionally high specific impulse values when accelerated by electric power.",
-      "explanation": "For the same energy input, a lighter particle reaches a higher exhaust speed (Isp ∝ ve ∝ √(energy/mass)).\n\nWhy the other choices are incorrect:\n- A → Heavier propellant gives lower Isp, not higher.\n- B → Isp depends on particle mass and energy, so molecular weight matters.\n- D → It is an inverse square-root type relation, not an inverse square, and it does not restrict electric systems to dense liquids.\n\nDifferentiate Similar Concepts:\n- Chemical rockets → Isp ∝ √(T/M).\n- Electric → Much higher energy per unit mass, so far higher Isp.\n\n💡 Memory Hook:\nLight particles fly fast.\n\n🎯 Board Tip:\nIsp goes up as M goes down.",
+      "answerText": "Specific impulse is approximately inversely proportional to the square root of propellant molecular weight for the same ion charge state and accelerating voltage; lighter propellants can reach higher exhaust speeds.",
+      "explanation": "For an electrostatic thruster at a fixed accelerating voltage and ion charge state, exhaust speed varies as the inverse square root of ion mass (and hence molecular or atomic weight). Lower-mass propellant can therefore produce higher specific impulse. Actual performance also depends on ionization and thruster efficiency.",
       "tags": [
         "aerodynamics",
         "mock exam",
@@ -1060,7 +1060,7 @@
       "acceptedDeviation": 0
     },
     {
-      "question": "How does ground effect impact the aerodynamic lift characteristics of a standard cambered airfoil (such as the NACA 4412) operating at low angles of attack (α < 4°) versus higher angles of attack when in close proximity to the ground plane?",
+      "question": "In moving-ground tests of a NACA 4412 airfoil at Reynolds number 3 × 10^5, how did lift change as ground clearance decreased at small angles (α < 4°) versus 4°–8°?",
       "questionType": "multiple_choice",
       "choices": [
         "Lift is increased at low angles of attack due to ram-pressure effects, but decreased at higher angles of attack due to premature boundary layer separation.",
@@ -1070,7 +1070,7 @@
       ],
       "answerIndex": 3,
       "answerText": "Lift is reduced at low angles of attack, whereas it increases in close proximity to the ground at angles of attack between 4° to 8° due to greater lower-surface pressure.",
-      "explanation": "At low α, the converging channel under the airfoil speeds the flow up (suction), which reduces lift. At higher α, the ram (pressure build-up) effect under the lower surface dominates and lift rises.\n\nWhy the other choices are incorrect:\n- A → Reverses the two regimes.\n- B → Lift does not decrease uniformly across all α.\n- C → Ground effect does change lift, not only pitching moment and drag.\n\nDifferentiate Similar Concepts:\n- Suction effect → Low α, lift loss.\n- Ram effect → Higher α, lift gain.\n\n💡 Memory Hook:\nLow α sucks, high α rams.\n\n🎯 Board Tip:\nGround effect is not always a lift gain at low α.",
+      "explanation": "In the cited moving-ground tests of a NACA 4412 at Re = 3 × 10^5, lift decreased as clearance fell at small angles of attack and increased as clearance fell at higher angles of attack. This trend is specific to the tested airfoil, Reynolds number, and moving-ground setup; ground-effect results can differ with ground boundary condition and clearance.",
       "tags": [
         "aerodynamics",
         "mock exam",
