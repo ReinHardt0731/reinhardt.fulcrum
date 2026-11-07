@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" role="img" aria-labelledby="title desc">
+  <title id="title">Rectangular hollow box section</title>
+  <desc id="desc">A symmetric hollow rectangular section, 200 millimeters high, with a 300 millimeter clear opening, 30 millimeter side walls, and 30 millimeter top and bottom flanges. The centroidal x and y axes cross at the center.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#263442"/></marker>
+    <style>
+      .part{fill:#e9eef3;stroke:#263442;stroke-width:2.4;stroke-linejoin:round}
+      .opening{fill:#fff;stroke:#263442;stroke-width:2.2}
+      .dim{fill:none;stroke:#263442;stroke-width:1.6;marker-start:url(#arrow);marker-end:url(#arrow)}
+      .ext{fill:none;stroke:#647383;stroke-width:1.2}
+      .axis{fill:none;stroke:#506171;stroke-width:1.5;stroke-dasharray:7 5}
+      .label{font:18px Arial, sans-serif;fill:#18232e}
+      .math{font:italic 20px Georgia, serif;fill:#18232e}
+      .small{font:16px Arial, sans-serif;fill:#18232e}
+    </style>
+  </defs>
+  <!-- Cross-section: 30 mm walls/flanges around a 300 mm by 140 mm opening. -->
+  <path class="part" fill-rule="evenodd" d="M167 74 H513 V294 H167 Z M196 107 H484 V261 H196 Z"/>
+  <path class="opening" d="M196 107 H484 V261 H196 Z"/>
+  <!-- Centroidal axes through the center of the symmetric section. -->
+  <line class="axis" x1="112" y1="184" x2="559" y2="184"/>
+  <line class="axis" x1="340" y1="47" x2="340" y2="322"/>
+  <text class="math" x="566" y="191">x</text>
+  <text class="math" x="347" y="43">y</text>
+  <!-- Overall height. -->
+  <line class="ext" x1="167" y1="74" x2="91" y2="74"/>
+  <line class="ext" x1="167" y1="294" x2="91" y2="294"/>
+  <line class="dim" x1="99" y1="81" x2="99" y2="287"/>
+  <text class="label" transform="translate(76 184) rotate(-90)" text-anchor="middle">200 mm</text>
+  <!-- Clear opening width. -->
+  <line class="ext" x1="196" y1="261" x2="196" y2="386"/>
+  <line class="ext" x1="484" y1="261" x2="484" y2="386"/>
+  <line class="dim" x1="203" y1="382" x2="477" y2="382"/>
+  <text class="label" x="340" y="410" text-anchor="middle">300 mm</text>
+  <!-- Side wall thicknesses. -->
+  <line class="dim" x1="170" y1="322" x2="193" y2="322"/>
+  <text class="small" x="180" y="352" text-anchor="middle">30 mm</text>
+  <line class="dim" x1="487" y1="322" x2="510" y2="322"/>
+  <text class="small" x="498" y="352" text-anchor="middle">30 mm</text>
+  <!-- Top and bottom flange thicknesses. -->
+  <line class="ext" x1="513" y1="74" x2="573" y2="74"/>
+  <line class="ext" x1="484" y1="107" x2="573" y2="107"/>
+  <line class="dim" x1="564" y1="81" x2="564" y2="100"/>
+  <text class="small" x="578" y="98">30 mm</text>
+  <line class="ext" x1="484" y1="261" x2="573" y2="261"/>
+  <line class="ext" x1="513" y1="294" x2="573" y2="294"/>
+  <line class="dim" x1="564" y1="268" x2="564" y2="287"/>
+  <text class="small" x="578" y="285">30 mm</text>
+</svg>

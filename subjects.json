@@ -211581,6 +211581,1173 @@
           "acceptedDeviation": 0
         }
       ]
+    },
+    "chapters/structures-mock-exam-i.json": {
+      "title": "Structures Mock Exam I",
+      "questions": [
+        {
+          "question": "In biplane wing configuration terminology, how is wing stagger classified when the leading edge of the upper wing is positioned further forward toward the nose of the aircraft relative to the lower wing?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Negative stagger.",
+            "Positive stagger.",
+            "Decalage angle.",
+            "Interplane sweepback."
+          ],
+          "answerIndex": 1,
+          "answerText": "Positive stagger.",
+          "explanation": "Positive stagger means the upper wing's leading edge sits ahead of the lower wing's. Negative stagger is the reverse.\n\nWhy the other choices are incorrect:\n- Negative stagger → Lower wing is ahead of the upper wing.\n- Decalage angle → Difference in incidence between the two wings, not their fore-aft position.\n- Interplane sweepback → Not a stagger classification.\n\nDifferentiate Similar Concepts:\n- Stagger → Fore/aft offset of the wings.\n- Decalage → Difference in incidence angle.\n- Gap → Vertical separation.\n\n💡 Memory Hook:\nPositive = Upper is Up front.\n\n🎯 Board Tip:\nUpper wing forward = positive stagger.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "When does asymmetric blade effect cause the aeroplane to yaw to the left?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "When at high angles of attack.",
+            "When at high airspeeds.",
+            "When at low angles of attack.",
+            "In the cruise at low altitude."
+          ],
+          "answerIndex": 0,
+          "answerText": "When at high angles of attack.",
+          "explanation": "At high angle of attack the propeller disc is inclined to the relative wind. The descending blade has a higher angle of attack and produces more thrust, shifting the thrust line and yawing the aircraft left (for a clockwise prop viewed from the cockpit).\n\nWhy the other choices are incorrect:\n- High airspeeds → Disc is nearly perpendicular to the wind, so the effect is negligible.\n- Low angles of attack → Blades see about equal inflow.\n- Cruise at low altitude → Not the cause.\n\nDifferentiate Similar Concepts:\n- Asymmetric blade effect → Aerodynamic, from disc inclination.\n- Gyroscopic precession → Reaction to a force on the spinning disc.\n\n💡 Memory Hook:\nHigh AoA, high yaw.\n\n🎯 Board Tip:\nAsymmetric blade effect = high AoA + disc tilt.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "If a force is applied to the circumference of a rotating mass, the reaction to the force will act at 90 degrees in the direction of rotation. This phenomenon is called:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "P-Factor.",
+            "Asymmetric Blade Effect.",
+            "Gyroscopic Precession.",
+            "Rigidity in Space."
+          ],
+          "answerIndex": 2,
+          "answerText": "Gyroscopic Precession.",
+          "explanation": "An applied force on a spinning body shows its effect 90° later in the direction of rotation.\n\nWhy the other choices are incorrect:\n- P-Factor → Asymmetric thrust at high AoA.\n- Asymmetric blade effect → Same family as P-factor, not a 90° reaction.\n- Rigidity in space → Tendency to keep the same orientation, not the 90° response.\n\nDifferentiate Similar Concepts:\n- Rigidity in space → Resists change.\n- Precession → Responds 90° later when force is applied.\n\n💡 Memory Hook:\nPush here, it moves 90° later.\n\n🎯 Board Tip:\n\"90° in the direction of rotation\" = precession.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "In aircraft landing-load analysis with zero angle of roll, why are both level landing and three-point landing conditions evaluated?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "To ensure the aircraft maintains equilibrium with aerodynamic lift equal to its weight throughout touchdown.",
+            "To eliminate lateral and torsional loads by ensuring that all landing gear contact the runway simultaneously.",
+            "To maintain uniform landing-gear strut compression and prevent dynamic rebound during touchdown.",
+            "To define critical landing-load conditions based on ground-reaction forces, pitching moments, and the sequence of landing-gear contact."
+          ],
+          "answerIndex": 3,
+          "answerText": "To define critical landing-load conditions based on ground-reaction forces, pitching moments, and the sequence of landing-gear contact.",
+          "explanation": "Each condition produces different ground reactions, pitching moments and gear contact order, so both are checked to find the critical load case.\n\nWhy the other choices are incorrect:\n- A → Lift equal to weight is not the purpose of the analysis.\n- B → Lateral/torsional loads are not eliminated; gear never contacts simultaneously in reality.\n- C → Uniform strut compression is not the objective.\n\nDifferentiate Similar Concepts:\n- Level landing → Main gear first, then the nose or tail rotates down.\n- Three-point landing → All wheels contact together.\n\n💡 Memory Hook:\nTwo attitudes, two worst cases.\n\n🎯 Board Tip:\nLanding-load analysis picks the critical case.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During a coordinated turn, the inclinometer ball remains centered. However, a pilot notices that the ball has moved to the outside of the turn. What condition does this indicate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A slipping turn caused by insufficient rudder in the direction of the turn.",
+            "A skidding turn caused by excessive rudder in the direction of the turn.",
+            "A coordinated turn with balanced lateral forces.",
+            "A stall condition due to excessive bank angle."
+          ],
+          "answerIndex": 1,
+          "answerText": "A skidding turn caused by excessive rudder in the direction of the turn.",
+          "explanation": "Ball outside = skid. Too much rudder (or too little bank) pushes the nose toward the turn faster than the bank supports.\n\nWhy the other choices are incorrect:\n- Slipping turn → Ball moves inside.\n- Coordinated turn → Ball stays centered.\n- Stall condition → Not shown by the ball.\n\nDifferentiate Similar Concepts:\n- Slip → Ball inside, too much bank.\n- Skid → Ball outside, too much rudder.\n\n💡 Memory Hook:\nSkid = Slide Out.\n\n🎯 Board Tip:\nBall outside = skid; ball inside = slip.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "An aircraft designer increases the wing loading of an aircraft while keeping the wing area constant. Considering its effect on performance and structural behavior, which of the following statements is most accurate?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Stall speed decreases, takeoff field length shortens, and load factor capability increases for a given lift coefficient.",
+            "Stall speed increases, takeoff and landing field length increase, and for a given lift coefficient the load factor decreases at a given speed.",
+            "Stall speed remains constant, but field length increases due to higher drag and reduced thrust.",
+            "Stall speed increases, but field length decreases due to improved aerodynamic efficiency."
+          ],
+          "answerIndex": 1,
+          "answerText": "Stall speed increases, takeoff and landing field length increase, and for a given lift coefficient the load factor decreases at a given speed.",
+          "explanation": "Higher W/S raises stall speed (Vs ∝ √(W/S)) and lengthens the field. Since n = qSCL/W, a larger W lowers n for the same CL and speed.\n\nWhy the other choices are incorrect:\n- A → Stall speed does not decrease with higher loading.\n- C → Stall speed cannot stay constant when W/S rises.\n- D → Field length does not fall when W/S rises.\n\nDifferentiate Similar Concepts:\n- High wing loading → Fast stall, long runs, good gust response.\n- Low wing loading → Slow stall, short runs, gusty ride.\n\n💡 Memory Hook:\nHeavy wing, Hot landing.\n\n🎯 Board Tip:\nMore W/S = more Vs and longer fields.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "If the cabin is to be pressurized, this feature on the rear of the fuselage is critical for maintaining pressure.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Formers",
+            "Stringers",
+            "Bulkhead",
+            "Ribs"
+          ],
+          "answerIndex": 2,
+          "answerText": "Bulkhead",
+          "explanation": "A (rear) pressure bulkhead seals the aft end of the pressurized cabin.\n\nWhy the other choices are incorrect:\n- Formers → Shape the fuselage.\n- Stringers → Longitudinal stiffeners.\n- Ribs → Wing/control surface members.\n\nDifferentiate Similar Concepts:\n- Bulkhead → Transverse structure that can seal pressure.\n- Former → Lightweight shape ring.\n- Stringer → Longitudinal stiffener.\n\n💡 Memory Hook:\nBulk = bulky wall that holds the pressure.\n\n🎯 Board Tip:\nPressure + rear fuselage = pressure bulkhead.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "In a fully articulated main rotor system, which hinge allows the rotor blade to rotate about its spanwise axis to change blade pitch?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Flap hinge",
+            "Vertical drag hinge",
+            "Feathering hinge",
+            "Teetering hinge"
+          ],
+          "answerIndex": 2,
+          "answerText": "Feathering hinge",
+          "explanation": "The feathering (pitch) hinge lets the blade rotate about its spanwise axis to change pitch.\n\nWhy the other choices are incorrect:\n- Flap hinge → Up/down flapping.\n- Vertical drag hinge → Lead/lag.\n- Teetering hinge → Seesaw motion of a two-blade rotor.\n\nDifferentiate Similar Concepts:\n- Flap → Up/down.\n- Drag → Fore/aft.\n- Feather → Pitch.\n\n💡 Memory Hook:\nFeather = Feather the pitch.\n\n🎯 Board Tip:\nSpanwise axis rotation = feathering.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The Dry Operating Mass is the total mass of the aeroplane ready for a specific type of operation and includes:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Crew and passenger baggage, special equipment, water and chemicals.",
+            "Crew and their hold baggage, special equipment, water and contingency fuel.",
+            "Crew baggage, catering and other special equipment, potable water and lavatory chemicals.",
+            "Crew and baggage, catering and passenger service equipment, potable water and lavatory chemicals."
+          ],
+          "answerIndex": 3,
+          "answerText": "Crew and baggage, catering and passenger service equipment, potable water and lavatory chemicals.",
+          "explanation": "DOM is the aircraft ready for operation, excluding usable fuel and traffic load.\n\nWhy the other choices are incorrect:\n- A → Passenger baggage is traffic load.\n- B → Contingency fuel is fuel, not DOM.\n- C → \"Crew baggage only\" misses the standard definition wording.\n\nDifferentiate Similar Concepts:\n- DOM → Aircraft + crew, catering, water, chemicals.\n- ZFM → DOM + traffic load.\n- TOM → ZFM + fuel.\n\n💡 Memory Hook:\nDry = no fuel, no pax.\n\n🎯 Board Tip:\nDOM excludes usable fuel and traffic load.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Determine the location ȳ of the centroidal axis of the beam's cross-sectional area. Neglect the size of the corner welds at A and B for the calculation.\n\nFigure: A T-shaped section with a horizontal flange (150 mm wide × 15 mm thick) at the top. A vertical web (15 mm wide, 150 mm tall) connects at corner B. At the bottom of the web (point A) is a circle of radius 50 mm. The centroidal axis x̄–x̄ passes through point C, and ȳ is measured from the top of the flange down to the axis.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "200 mm",
+            "154 mm",
+            "166 mm",
+            "198 mm"
+          ],
+          "answerIndex": 1,
+          "answerText": "154 mm",
+          "explanation": "Flange 150 × 15 (A = 2250, y = 7.5), web 15 × 150 (A = 2250, y = 90), circle r = 50 (A ≈ 7854, y = 215).\nȳ = ΣyA / ΣA = (16 875 + 202 500 + 1 688 610) / 12 354 ≈ 154 mm.\n\nWhy the other choices are incorrect:\n- 200 mm, 166 mm, 198 mm → Come from wrong areas or arms.\n\nDifferentiate Similar Concepts:\n- Centroid → Area-weighted position.\n- Moment of inertia → Needs the parallel axis theorem.\n\n💡 Memory Hook:\nȳ = ΣyA / ΣA.\n\n🎯 Board Tip:\nBreak into simple shapes, then weigh.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [
+            {
+              "src": "asset/structures-mock/exam-i-q10-centroid-figure.svg",
+              "alt": "T-shaped beam section joined to a 50 mm radius circle, with dimensions and centroidal axes marked.",
+              "caption": "Cross-section for Question 10."
+            }
+          ],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Upon touchdown, the auto-speed brake system automatically drives the speed brake lever to the UP position to deploy all ground spoilers. What primary electrical signal from the anti-skid system triggers this automated deployment?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wheel spin-up signals generated as main landing gear wheels accelerate upon ground contact.",
+            "Hydroplaning pressure signals sent from hydraulic brake return lines.",
+            "Anti-skid brake pressure release signals sent to the main gear brake control valves.",
+            "Nose wheel steering deflection signals sent through the rudder pedal transducers."
+          ],
+          "answerIndex": 0,
+          "answerText": "Wheel spin-up signals generated as main landing gear wheels accelerate upon ground contact.",
+          "explanation": "Wheel spin-up from the anti-skid transducers tells the system the aircraft is on the ground.\n\nWhy the other choices are incorrect:\n- Hydroplaning pressure signals → Not a trigger.\n- Anti-skid release signals → Result of braking, not the trigger.\n- Nose wheel steering signals → Not related.\n\nDifferentiate Similar Concepts:\n- Spin-up → Touchdown detection.\n- Anti-skid release → Brake modulation.\n\n💡 Memory Hook:\nWheels spin, spoilers win.\n\n🎯 Board Tip:\nAuto-speedbrake = main wheel spin-up.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "During a high angle of attack climb, an aircraft equipped with a single right-hand rotating propeller experiences a left yawing tendency (P-Factor). What aerodynamic change directly causes this asymmetrical thrust?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The ascending blade moves faster through the air than the descending blade.",
+            "The descending blade operates at a higher angle of attack than the ascending blade.",
+            "The relative wind acts perpendicular to the propeller disc, shifting the thrust vector upward.",
+            "Gyroscopic precession forces the propeller disc to tilt toward the left wing."
+          ],
+          "answerIndex": 1,
+          "answerText": "The descending blade operates at a higher angle of attack than the ascending blade.",
+          "explanation": "At high AoA the descending blade sees a larger angle of attack and makes more thrust, shifting the thrust line to the right and yawing the aircraft left.\n\nWhy the other choices are incorrect:\n- A → Ascending blade is not faster.\n- C → Relative wind is not perpendicular to the disc.\n- D → That is precession, not P-factor.\n\nDifferentiate Similar Concepts:\n- P-factor → Asymmetric thrust.\n- Precession → 90° reaction.\n\n💡 Memory Hook:\nDown blade bites more.\n\n🎯 Board Tip:\nP-factor = descending blade bigger AoA.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "What underlying mechanical mechanism causes inertia coupling during rapid aircraft rolling maneuvers, and under what flight conditions does it typically become a critical hazard?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "It is caused by asymmetric wing fuel slosh, becoming most hazardous during low-altitude, low-speed final approaches where control authority is minimal.",
+            "It results from the complete alignment of the wind axis with the geometric principal axis, eliminating damping forces at transonic speeds.",
+            "It is caused by over-deflected ailerons generating excessive adverse yaw, which can only occur during steady-state straight and level flight.",
+            "It is driven by centrifugal forces pulling off-axis forebody and aft-fuselage masses away from the roll axis, becoming problematic at high altitudes and high Mach numbers where aerodynamic restoring and tail effectiveness are reduced."
+          ],
+          "answerIndex": 3,
+          "answerText": "It is driven by centrifugal forces pulling off-axis forebody and aft-fuselage masses away from the roll axis, becoming problematic at high altitudes and high Mach numbers where aerodynamic restoring and tail effectiveness are reduced.",
+          "explanation": "Mass concentrated in the fuselage resists the roll axis alignment, creating pitch/yaw coupling.\n\nWhy the other choices are incorrect:\n- A → Fuel slosh is not the mechanism.\n- B → Principal axis alignment is not the cause.\n- C → Aileron adverse yaw is not inertia coupling and it is not limited to steady flight.\n\nDifferentiate Similar Concepts:\n- Inertia coupling → Mass distribution + high roll rate.\n- Adverse yaw → Aerodynamic.\n\n💡 Memory Hook:\nLong fuselage + fast roll = trouble.\n\n🎯 Board Tip:\nInertia coupling = high altitude, high Mach, fast roll.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Failure due to repeated application of loads:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Dynamic Failure",
+            "Bearing Failure",
+            "Fatigue Failure",
+            "Stress Failure"
+          ],
+          "answerIndex": 2,
+          "answerText": "Fatigue Failure",
+          "explanation": "Cyclic loading causes cracks to start and grow below the static strength.\n\nWhy the other choices are incorrect:\n- Dynamic failure → Sudden load.\n- Bearing failure → Contact stress at a hole.\n- Stress failure → Single over-stress.\n\nDifferentiate Similar Concepts:\n- Fatigue → Repeated.\n- Static → One load.\n\n💡 Memory Hook:\nFatigue = Frequent.\n\n🎯 Board Tip:\nRepeated loads = fatigue.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Recovery from a stall in any airplane becomes more difficult when its:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Center of gravity moves aft.",
+            "Center of gravity moves forward.",
+            "Elevator trim is adjusted nose down.",
+            "Rudder travel is improperly adjusted."
+          ],
+          "answerIndex": 0,
+          "answerText": "Center of gravity moves aft.",
+          "explanation": "An aft CG reduces tail arm and nose-down authority, making recovery harder.\n\nWhy the other choices are incorrect:\n- CG forward → Easier nose-down recovery.\n- Elevator trim nose down → Helps recovery.\n- Rudder travel → Not the main factor.\n\nDifferentiate Similar Concepts:\n- Aft CG → Less stable, harder recovery.\n- Forward CG → More stable, higher stall speed.\n\n💡 Memory Hook:\nAft = Awful for recovery.\n\n🎯 Board Tip:\nAft CG makes stalls harder to recover from.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following best describes the PLAA (Positive Low Angle of Attack) loading condition?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "A condition where the aircraft experiences positive load at high angle of attack, typically near stall.",
+            "A condition where the aircraft experiences maximum positive load factor at high speed and low angle of attack.",
+            "A condition involving negative load at high angle of attack during inverted flight.",
+            "A condition where negative load occurs at low angle of attack due to downward gusts."
+          ],
+          "answerIndex": 1,
+          "answerText": "A condition where the aircraft experiences maximum positive load factor at high speed and low angle of attack.",
+          "explanation": "PLAA = Positive Low Angle of Attack, at high speed.\n\nWhy the other choices are incorrect:\n- A → That is PHAA (positive high AoA).\n- C → That is NHAA (negative high AoA).\n- D → Not the PLAA definition.\n\nDifferentiate Similar Concepts:\n- PHAA → Positive, high AoA.\n- PLAA → Positive, low AoA.\n- NHAA → Negative, high AoA.\n- NLAA → Negative, low AoA.\n\n💡 Memory Hook:\nPositive + Low = fast and flat.\n\n🎯 Board Tip:\nMatch the letters: P-L-A-A.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A fixed pitch propeller is designed for best efficiency only at a given combination of:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Airspeed and RPM.",
+            "Airspeed and Altitude.",
+            "Altitude and RPM.",
+            "Torque and Blade Angle."
+          ],
+          "answerIndex": 0,
+          "answerText": "Airspeed and RPM.",
+          "explanation": "A fixed blade angle gives its best advance ratio (V/nD) at one airspeed and RPM combination.\n\nWhy the other choices are incorrect:\n- Airspeed and altitude, Altitude and RPM → Altitude is not what sets the design point.\n- Torque and blade angle → Blade angle is fixed.\n\nDifferentiate Similar Concepts:\n- Fixed pitch → One efficient point.\n- Constant speed → Efficient across a range.\n\n💡 Memory Hook:\nFixed pitch = fixed speed sweet spot.\n\n🎯 Board Tip:\nAdvance ratio = airspeed and RPM.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "This is an introduced hole in the middle ply of the cabin window. The purpose of this hole is to ensure that the pressure on all plies of the window remain equal.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Cutout.",
+            "Exhaust hole.",
+            "Over pressure valve.",
+            "Bleed hole."
+          ],
+          "answerIndex": 3,
+          "answerText": "Bleed hole.",
+          "explanation": "The bleed hole keeps the outer ply carrying the pressure load and equalizes pressure to the cabin on the middle ply.\n\nWhy the other choices are incorrect:\n- Cutout → Opening in a structure.\n- Exhaust hole → Not a window term.\n- Over pressure valve → Different device.\n\nDifferentiate Similar Concepts:\n- Bleed hole → Window pane equalization.\n- Outflow valve → Cabin pressure control.\n\n💡 Memory Hook:\nBleed = Balance.\n\n🎯 Board Tip:\nWindow middle-ply hole = bleed hole.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "This landing gear configuration provides the following primary design characteristics:\n\n- I. More propeller ground clearance\n\n- II. Susceptible to nosing over\n\n- III. Susceptible to ground looping\n\n- IV. Easier lift production on ground due to attitude\n\nOptions:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Nose wheel type design.",
+            "Tail wheel type design.",
+            "Bicycle Type.",
+            "Single main type."
+          ],
+          "answerIndex": 1,
+          "answerText": "Tail wheel type design.",
+          "explanation": "Tailwheel gear provides more propeller clearance, is susceptible to ground looping, and sits at a high attitude for easier lift on the ground.\n\nWhy the other choices are incorrect:\n- Nose wheel → Stable on the ground, less ground-loop prone.\n- Bicycle → Two main wheels in line.\n- Single main → Not a standard conventional gear.\n\nDifferentiate Similar Concepts:\n- Tailwheel → Prop clearance, ground loop.\n- Tricycle → Stable, good visibility.\n\n💡 Memory Hook:\nTail-dragger = Twitchy on the ground.\n\n🎯 Board Tip:\nGround loop = tailwheel.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Determine the moment of inertia of the beam's cross-sectional area about the centroidal x and y axes.\n\nFigure: A rectangular hollow box section, 200 mm tall overall, with two vertical walls (30 mm thick each) and an inner opening 300 mm wide. Horizontal flanges at top and bottom are 30 mm thick. The centroidal x axis runs horizontally and the y axis vertically through the center.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Ix = 185×10^6 mm^4, Iy = 463×10^6 mm^4",
+            "Ix = 171×10^6 mm^4, Iy = 569×10^6 mm^4",
+            "Ix = 165×10^6 mm^4, Iy = 483×10^6 mm^4",
+            "Ix = 171×10^6 mm^4, Iy = 463×10^6 mm^4 *(The page lists each option as two values, an upper and a lower one, presumably for the x and y axes in that order.)*"
+          ],
+          "answerIndex": 3,
+          "answerText": "Ix = 171×10^6 mm^4, Iy = 463×10^6 mm^4 *(The page lists each option as two values, an upper and a lower one, presumably for the x and y axes in that order.)*",
+          "explanation": "Outer 360 × 200, inner 300 × 140.\nIx = (360·200³ − 300·140³)/12 ≈ 171×10⁶ mm⁴.\nIy = (200·360³ − 140·300³)/12 ≈ 463×10⁶ mm⁴.\n\nWhy the other choices are incorrect:\n- A, B, C → Wrong dimensions or swapped axes.\n\nDifferentiate Similar Concepts:\n- Ix → About the horizontal centroidal axis.\n- Iy → About the vertical centroidal axis.\n\n💡 Memory Hook:\nBig minus small, divide by 12.\n\n🎯 Board Tip:\nHollow box = outer minus inner.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [
+            {
+              "src": "asset/structures-mock/exam-i-q20-box-section-figure.svg",
+              "alt": "Rectangular hollow box section, 200 mm tall, with 30 mm walls and flanges and a 300 mm inner opening.",
+              "caption": "Cross-section for Question 20."
+            }
+          ],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Under 14 CFR Part 23, which of the following combinations of fluids and items must be included when calculating the aircraft's official empty weight and corresponding center of gravity (C.G.)?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Unusable fuel, full operating oil, full hydraulic fluid, and fixed ballast.",
+            "Usable fuel, undrainable oil only, hydraulic fluid, and potable water.",
+            "Full usable fuel, full operating oil, lavatory precharge water, and removable ballast.",
+            "Unusable fuel, full engine water injection fluid, and full hydraulic fluid."
+          ],
+          "answerIndex": 0,
+          "answerText": "Unusable fuel, full operating oil, full hydraulic fluid, and fixed ballast.",
+          "explanation": "Empty weight includes fixed ballast, unusable fuel, full operating fluids (oil, hydraulic fluid).\n\nWhy the other choices are incorrect:\n- B → Usable fuel and undrainable oil only are not included.\n- C → Usable fuel and removable ballast are excluded.\n- D → Water injection fluid is not in the list.\n\nDifferentiate Similar Concepts:\n- Empty weight → Unusable fuel + full oil/hydraulic.\n- Useful load → Usable fuel, crew, pax, baggage.\n\n💡 Memory Hook:\nEmpty = Everything fixed.\n\n🎯 Board Tip:\nUnusable fuel is IN, usable fuel is OUT.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "At high airspeeds, flexible high-aspect-ratio wings can experience a dangerous aeroelastic phenomenon known as \"aileron reversal.\" What structural and aerodynamic interaction causes this condition when an outboard aileron is deflected downward?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The downward aileron increases wing lift, causing the wingtip to twist upward and increase the overall angle of attack.",
+            "The aerodynamic moment created by the deflected aileron twists the wing trailing edge upward, reducing the wing's angle of attack and causing roll in the opposite direction.",
+            "High dynamic pressure locks the aileron actuator, causing the opposite aileron to flutter and reverse roll direction.",
+            "Increased induced drag on the outboard wing causes severe adverse yaw that overrides the rolling moment."
+          ],
+          "answerIndex": 1,
+          "answerText": "The aerodynamic moment created by the deflected aileron twists the wing trailing edge upward, reducing the wing's angle of attack and causing roll in the opposite direction.",
+          "explanation": "At high dynamic pressure the wing's torsional flexibility lets the aileron moment overpower the wing's stiffness.\n\nWhy the other choices are incorrect:\n- A → Twisting up would add lift.\n- C → Not an actuator lock.\n- D → Adverse yaw is separate.\n\nDifferentiate Similar Concepts:\n- Aileron reversal → Aeroelastic twist.\n- Adverse yaw → Induced drag difference.\n\n💡 Memory Hook:\nWing twists, roll flips.\n\n🎯 Board Tip:\nReversal = flexible wing + high speed.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which aircraft structural design philosophy relies on multiple load paths to allow adjacent structural members to safely carry redistributed loads following a partial failure, provided a mandatory scheduled inspection program is maintained to detect damage before total failure occurs?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Safe-Life Design.",
+            "Fail-Safe Design.",
+            "Monocoque Design.",
+            "Infinite-Life Design."
+          ],
+          "answerIndex": 1,
+          "answerText": "Fail-Safe Design.",
+          "explanation": "Fail-safe structures survive a partial failure with remaining paths, provided inspection finds the damage.\n\nWhy the other choices are incorrect:\n- Safe-life → Retire after a set life, no damage tolerance.\n- Monocoque → Skin carries the load.\n- Infinite-life → Not a recognized philosophy.\n\nDifferentiate Similar Concepts:\n- Fail-safe → Redundant paths + inspection.\n- Safe-life → Replace after hours.\n\n💡 Memory Hook:\nFail-safe = Fail, but still safe.\n\n🎯 Board Tip:\nRedundancy + inspections = fail-safe.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Anti-servo tabs are also frequently referred to as \"anti-balance tabs.\" How does their aerodynamic effect compare directly to a standard servo or balance tab?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Both tabs function identically to decrease control surface sensitivity at low airspeeds.",
+            "Balance tabs move in the same direction as the surface, while anti-servo tabs move in the opposite direction.",
+            "Anti-servo tabs operate only on ailerons, whereas balance tabs operate only on elevators.",
+            "Balance tabs decrease control stick force, while anti-servo tabs increase required control effort."
+          ],
+          "answerIndex": 3,
+          "answerText": "Balance tabs decrease control stick force, while anti-servo tabs increase required control effort.",
+          "explanation": "Balance tabs move opposite to the surface and assist. Anti-servo tabs move the same way and add stability and stick force.\n\nWhy the other choices are incorrect:\n- A → They do not function identically.\n- B → Directions are reversed.\n- C → Not limited to specific surfaces.\n\nDifferentiate Similar Concepts:\n- Balance/servo → Reduces force.\n- Anti-servo → Increases force, adds stability.\n\n💡 Memory Hook:\nAnti = Against pilot ease.\n\n🎯 Board Tip:\nAnti-servo = more stick force.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The rudder is the primary flight control surface responsible for directional control. Pushing the left rudder pedal forward causes which of the following mechanical and aerodynamic actions?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The rudder deflects to the left, causing the tail to move right and the nose to yaw left about the lateral axis.",
+            "The rudder deflects to the left, causing the tail to move right and the nose to yaw left about the longitudinal axis.",
+            "The rudder deflects to the left, causing aerodynamic force to push the tail to the right and yaw the nose to the left about the vertical axis.",
+            "The right rudder pedal moves forward simultaneously, locking the vertical stabilizer in trail."
+          ],
+          "answerIndex": 2,
+          "answerText": "The rudder deflects to the left, causing aerodynamic force to push the tail to the right and yaw the nose to the left about the vertical axis.",
+          "explanation": "Yaw is rotation about the vertical axis.\n\nWhy the other choices are incorrect:\n- A → Lateral axis is pitch.\n- B → Longitudinal axis is roll.\n- D → Impossible mechanical statement.\n\nDifferentiate Similar Concepts:\n- Vertical axis → Yaw (rudder).\n- Longitudinal → Roll (aileron).\n- Lateral → Pitch (elevator).\n\n💡 Memory Hook:\nLeft foot, nose left.\n\n🎯 Board Tip:\nRudder = yaw = vertical axis.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "This fitting can be used to establish or control the direction and line of action of a force applied to the structure. Since it has no rotational resistance, no couples in any plane can be applied to it.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Pin.",
+            "Ball and Socket.",
+            "Roller.",
+            "Threaded."
+          ],
+          "answerIndex": 1,
+          "answerText": "Ball and Socket.",
+          "explanation": "It controls the direction and line of action of a force but cannot carry couples in any plane.\n\nWhy the other choices are incorrect:\n- Pin → Resists couples in some planes.\n- Roller → Resists only normal force.\n- Threaded → Resists rotation.\n\nDifferentiate Similar Concepts:\n- Ball and socket → No moment in any plane.\n- Pin → Free in one plane only.\n\n💡 Memory Hook:\nBall spins any way.\n\n🎯 Board Tip:\nNo couples in any plane = ball and socket.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Which of the following does the moment of inertia of an aircraft act through?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Aerodynamic Center.",
+            "Center of Lift",
+            "Center of Thrust.",
+            "Center of Gravity."
+          ],
+          "answerIndex": 3,
+          "answerText": "Center of Gravity.",
+          "explanation": "Mass moments of inertia are measured about axes through the CG.\n\nWhy the other choices are incorrect:\n- Aerodynamic center, center of lift, center of thrust → Aerodynamic, not mass based.\n\nDifferentiate Similar Concepts:\n- CG → Mass.\n- AC/CL → Aerodynamics.\n\n💡 Memory Hook:\nInertia is about mass, mass is at CG.\n\n🎯 Board Tip:\nRotation of the aircraft = about the CG.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Determine the elongation in a helical steel spring composed of 10 turns of 10-mm-diameter wire on a mean radius of 50 mm when the spring is supporting a load of 1.0 kN. Use G = 83 GPa.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "105.4 mm",
+            "52.7 mm",
+            "96.4 mm",
+            "70.26 mm"
+          ],
+          "answerIndex": 2,
+          "answerText": "96.4 mm",
+          "explanation": "For a helical spring: δ = 64PR³n / (G d⁴), which is the same as 8PD³n / (G d⁴) with D = 2R.\nWith P = 1000 N, R = 50 mm, n = 10, G = 83 000 N/mm², d = 10 mm:\nδ = 64(1000)(50³)(10) / (83 000 × 10⁴) = 8.0×10¹⁰ / 8.3×10⁸ ≈ **96.4 mm**.\n\nWhy the other choices are incorrect:\n- 105.4 mm, 52.7 mm, 70.26 mm → Come from a wrong radius, diameter or constant (for example, using 8PR³n/(Gd⁴) gives only about 12 mm).\n\nDifferentiate Similar Concepts:\n- R-form → 64PR³n / (G d⁴).\n- D-form → 8PD³n / (G d⁴), where D = 2R.\n\n💡 Memory Hook:\nWith R, the constant is 64. With D, it is 8.\n\n🎯 Board Tip:\nCheck whether the problem gives mean radius or mean diameter before choosing the constant.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A shock type combining the spring effects using compressed air with a damping effect via a piston forcing oil through a small hole.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Bungee Cord.",
+            "Helical Spring.",
+            "Hydro-pneumatic Suspension.",
+            "Oleo Shock Absorber."
+          ],
+          "answerIndex": 3,
+          "answerText": "Oleo Shock Absorber.",
+          "explanation": "Oil is forced through an orifice for damping, and air compresses as the spring.\n\nWhy the other choices are incorrect:\n- Bungee cord → Elastic cords.\n- Helical spring → Steel coil.\n- Hydro-pneumatic suspension → Different arrangement (gas/liquid separated).\n\nDifferentiate Similar Concepts:\n- Oleo → Air + oil, orifice damping.\n- Spring strut → Metal spring only.\n\n💡 Memory Hook:\nOleo = Oil + air.\n\n🎯 Board Tip:\nAir-oil strut with orifice = oleo.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "For supersonic fighters that are considered short winged and span, which design features offers increased lift especially in supersonic regimes due to the shock wave at the fuselage edges generating a great deal of lift?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Coke bottle fuselage.",
+            "Blended wing.",
+            "Narrow fuselage.",
+            "Swept wings."
+          ],
+          "answerIndex": 1,
+          "answerText": "Blended wing.",
+          "explanation": "A blended wing-body shape generates lift over the fuselage, helping short-span supersonic aircraft.\n\nWhy the other choices are incorrect:\n- Coke bottle fuselage → Area rule drag reduction.\n- Narrow fuselage → Reduces wave drag only.\n- Swept wings → Delay shock formation.\n\nDifferentiate Similar Concepts:\n- Area rule/coke bottle → Reduces wave drag.\n- Blended wing → Lift from the body.\n\n💡 Memory Hook:\nBlend the body, borrow the lift.\n\n🎯 Board Tip:\nFuselage generating lift = blended wing.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "To improve aerodynamic efficiency, the wing and fuselage connection can be smoothly blended using a \\_\\_\\_\\_\\_\\_\\_\\_, generally defined by a circular arc of varying radius, tangent to both wing and fuselage.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Fillet.",
+            "Wing Incidence.",
+            "Wing Sweep.",
+            "Area Mach Rule."
+          ],
+          "answerIndex": 0,
+          "answerText": "Wing Fillet.",
+          "explanation": "A fillet blends the wing and fuselage tangent to both, reducing interference drag.\n\nWhy the other choices are incorrect:\n- Wing incidence → Angle setting.\n- Wing sweep → Planform angle.\n- Area Mach rule → Area distribution for wave drag.\n\nDifferentiate Similar Concepts:\n- Fillet → Smooth junction.\n- Fairing → Streamlined cover.\n\n💡 Memory Hook:\nFillet fills the corner.\n\n🎯 Board Tip:\nSmooth blend at junction = fillet.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The thrust required is \\_\\_\\_\\_\\_\\_\\_\\_ at all altitudes at the same EAS and mass but the thrust available \\_\\_\\_\\_\\_\\_\\_\\_ with increasing altitude.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "same, same.",
+            "same, decrease.",
+            "decrease, decrease.",
+            "decrease, same."
+          ],
+          "answerIndex": 1,
+          "answerText": "same, decrease.",
+          "explanation": "Thrust required stays the same at the same EAS and weight, but thrust available drops with altitude.\n\nWhy the other choices are incorrect:\n- Same/same → Available thrust does fall.\n- Decrease/decrease → Required thrust does not change.\n- Decrease/same → Reversed.\n\nDifferentiate Similar Concepts:\n- Required → Set by drag at EAS and weight.\n- Available → Engine, falls with density.\n\n💡 Memory Hook:\nNeed stays, supply shrinks.\n\n🎯 Board Tip:\nSame EAS = same required.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "You are the pilot inside of a coaxial rotor helicopter without a tail rotor and you want to yaw right while in hover without changing altitude. Which of the following corresponds to the correct actuations of the mast blades from your perspective?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "The clockwise rotating rotor increases collective while the Counter clockwise rotating rotor decreases collective.",
+            "The clockwise rotating rotor decreases collective while the Counter clockwise rotating rotor increases collective.",
+            "Both rotors increases collective.",
+            "Both rotors decreases collective."
+          ],
+          "answerIndex": 0,
+          "answerText": "The clockwise rotating rotor increases collective while the Counter clockwise rotating rotor decreases collective.",
+          "explanation": "Coaxial helicopter: yaw right in hover\nYou are the pilot inside a coaxial-rotor helicopter without a tail rotor, in hover at constant altitude, and you want to yaw right. Which actuation of the mast blades is correct from your perspective?\n\n- a. The counter-clockwise rotating rotor increases collective while the clockwise rotating rotor decreases collective.\n- b. The counter-clockwise rotating rotor decreases collective while the clockwise rotating rotor increases collective.\n- c. Both rotors increase collective.\n- d. Both rotors decrease collective.\n\n**Answer: A.** *(Choices A and B were swapped from the original so the key is physically correct.)*\n\nYaw is controlled by differential collective, which creates unequal rotor torques. The counter-clockwise rotor pushes back on the fuselage clockwise (viewed from above). More collective on that rotor, and less on the clockwise one, gives a net clockwise reaction, so the nose yaws right. Total thrust stays about the same, so altitude is held.\n\nWhy the other choices are incorrect:\n- B → Reversed differential, so the nose yaws left.\n- C → Raises total thrust and climbs, with no net yaw.\n- D → Lowers total thrust and descends, with no net yaw.\n\nDifferentiate Similar Concepts:\n- Differential collective → Yaw.\n- Collective on both rotors → Climb or descend.\n\n💡 Memory Hook:\nThe rotor you load up pushes the fuselage the opposite way.\n\n🎯 Board Tip:\nYaw right means clockwise from above, so the counter-clockwise rotor gets more collective.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The largest penalty for using an external brace to support a wing.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Lift",
+            "Drag",
+            "Thrust",
+            "Weight"
+          ],
+          "answerIndex": 1,
+          "answerText": "Drag",
+          "explanation": "External struts add large parasite drag.\n\nWhy the other choices are incorrect:\n- Lift → Not reduced.\n- Thrust → Not affected.\n- Weight → Braces save weight.\n\nDifferentiate Similar Concepts:\n- Cantilever → Heavy but clean.\n- Braced → Light but draggy.\n\n💡 Memory Hook:\nStruts = drag.\n\n🎯 Board Tip:\nBraced wing = weight saving, drag penalty.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The optimal Fuselage length to diameter ratio provides the following qualities **except**:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Lowest zero lift drag.",
+            "Lowest Wetted area.",
+            "Provides maximum internal volume.",
+            "Minimum directional stability margin."
+          ],
+          "answerIndex": 3,
+          "answerText": "Minimum directional stability margin.",
+          "explanation": "The optimum fineness ratio gives lowest zero-lift drag, lowest wetted area and maximum internal volume, but it does not minimize stability margin.\n\nWhy the other choices are incorrect:\n- A, B, C → Qualities provided by the optimum ratio.\n\nDifferentiate Similar Concepts:\n- Fineness ratio → Length/diameter.\n- Stability margin → Not set by it.\n\n💡 Memory Hook:\nFineness = drag, area, volume.\n\n🎯 Board Tip:\n\"Except\" questions: find the odd one out.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "This landing gear is ideal for large gear travel such as carrier landings or rough field landings.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Trailing link gear.",
+            "Oleo-pneumatic shock.",
+            "Rubber Blocks.",
+            "Rigid Axle."
+          ],
+          "answerIndex": 0,
+          "answerText": "Trailing link gear.",
+          "explanation": "The trailing link lets the wheel travel a long stroke and absorbs high sink-rate impacts.\n\nWhy the other choices are incorrect:\n- Oleo-pneumatic shock → A strut type, not the large-travel arrangement.\n- Rubber blocks → Small travel.\n- Rigid axle → No travel.\n\nDifferentiate Similar Concepts:\n- Trailing link → Large travel.\n- Rigid → None.\n\n💡 Memory Hook:\nTrailing = Takes the thump.\n\n🎯 Board Tip:\nCarrier = trailing link.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The angle between the fuselage centerline and the chord line at the wing's root.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Wing Incidence.",
+            "Wing Dihedral.",
+            "Washout.",
+            "Wash-in."
+          ],
+          "answerIndex": 0,
+          "answerText": "Wing Incidence.",
+          "explanation": "Incidence is the fixed angle between the fuselage reference line and the root chord.\n\nWhy the other choices are incorrect:\n- Dihedral → Vertical tilt of the wing.\n- Washout → Tip twist downward.\n- Wash-in → Tip twist upward.\n\nDifferentiate Similar Concepts:\n- Incidence → Root angle to fuselage.\n- Washout → Twist along the span.\n\n💡 Memory Hook:\nIncidence = Installed angle.\n\n🎯 Board Tip:\nFuselage vs. chord at root = incidence.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "On a lift distribution graph of the wing per span starting from the port side of a low winged aircraft, deploying the inboard flaps would cause the graph to:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Add a bump of lift forces near the edges of the graph.",
+            "Add lift forces to the direct middle of the aircraft.",
+            "Add lift forces corresponding to the flap locations.",
+            "Add lift forces corresponding to the slat locations."
+          ],
+          "answerIndex": 2,
+          "answerText": "Add lift forces corresponding to the flap locations.",
+          "explanation": "Deployed flaps increase local lift, so the graph shows added lift at the flap span.\n\nWhy the other choices are incorrect:\n- A → Bumps at the edges do not match the flap.\n- B → Lift is not added at the middle of the aircraft only.\n- D → Slats are not deployed.\n\nDifferentiate Similar Concepts:\n- Flap → Raises local lift.\n- Slat → Delays stall at the leading edge.\n\n💡 Memory Hook:\nFlaps down, bump where the flaps are.\n\n🎯 Board Tip:\nLocal lift change = at the device span.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The lifting line theory is only applicable up to the airfoil's \\_\\_\\_\\_\\_\\_\\_\\_.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Angle of Attack.",
+            "Critical Mach Angle.",
+            "Stall Angle.",
+            "Incidence Angle."
+          ],
+          "answerIndex": 2,
+          "answerText": "Stall Angle.",
+          "explanation": "Lifting line theory assumes attached, linear flow, which holds up to stall.\n\nWhy the other choices are incorrect:\n- Angle of attack → Too general.\n- Critical Mach angle → Compressibility.\n- Incidence angle → Rigging angle.\n\nDifferentiate Similar Concepts:\n- Linear region → Up to stall.\n- Post-stall → Separated flow.\n\n💡 Memory Hook:\nLinear until stall.\n\n🎯 Board Tip:\nLifting line = attached flow only.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A wooden I beam is to be constructed out of three 1\" × 5\" planks. They are glued so that the joint is structurally identical to the wooden sections. Compute for the moment of inertia.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "101.25 in^4",
+            "21.25 in^4",
+            "90.83 in^4",
+            "41.25 in^4"
+          ],
+          "answerIndex": 0,
+          "answerText": "101.25 in^4",
+          "explanation": "Section is 5\" wide flanges, 1\" thick, and a 5\" web at 1\" thick, total height 7\".\nI = (5·7³ − 4·5³)/12 = (1715 − 500)/12 = 101.25 in⁴.\n\nWhy the other choices are incorrect:\n- B, C, D → Wrong dimensions or missing the flange offset.\n\nDifferentiate Similar Concepts:\n- I-beam → Outer rectangle minus two voids.\n\n💡 Memory Hook:\n(BH³ − bh³)/12.\n\n🎯 Board Tip:\nSketch the section first.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "To achieve an elliptical lift distribution, this wing planform provides the best properties.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Rectangular.",
+            "Tapered.",
+            "Trapezoidal.",
+            "Elliptical."
+          ],
+          "answerIndex": 3,
+          "answerText": "Elliptical.",
+          "explanation": "An elliptical planform gives an elliptical lift distribution and minimum induced drag.\n\nWhy the other choices are incorrect:\n- Rectangular, Trapezoidal, Tapered → Approximate but not elliptical.\n\nDifferentiate Similar Concepts:\n- Elliptical → Best efficiency, harder to build.\n- Tapered → Good compromise.\n\n💡 Memory Hook:\nElliptical lift = elliptical wing.\n\n🎯 Board Tip:\nSpitfire = elliptical.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A row of rivets are used to fasten two plates loaded in tension. The compressive contact stress developed along the interior surface of the plate holes due to the pressure exerted by the rivet shanks is classified as:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Shear.",
+            "Tensile.",
+            "Torsional.",
+            "Bearing."
+          ],
+          "answerIndex": 3,
+          "answerText": "Bearing.",
+          "explanation": "Bearing stress is the contact pressure between the rivet shank and the hole wall.\n\nWhy the other choices are incorrect:\n- Shear → Across the rivet cross-section.\n- Tensile → Pulling stress in the plate.\n- Torsional → Twisting.\n\nDifferentiate Similar Concepts:\n- Bearing → Contact pressure.\n- Shear → Sliding.\n\n💡 Memory Hook:\nBearing = pressed against the hole.\n\n🎯 Board Tip:\nRivet vs. hole contact = bearing.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "A clevis is used to suspend a 10 kN load. What diameter should the bolt use if it has t = 100 MPa and a factor of safety of 2?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "11.3 mm",
+            "16.0 mm",
+            "8.0 mm",
+            "22.6 mm"
+          ],
+          "answerIndex": 0,
+          "answerText": "11.3 mm",
+          "explanation": "Design load = 20 kN. Clevis = double shear, so A = P/(2τ) = 20 000/(2·100) = 100 mm².\nd = √(4A/π) = 11.28 mm.\n\nWhy the other choices are incorrect:\n- B, C, D → Single shear or missing FS.\n\nDifferentiate Similar Concepts:\n- Single shear → One plane.\n- Double shear → Two planes.\n\n💡 Memory Hook:\nClevis = double shear.\n\n🎯 Board Tip:\nApply the factor of safety to the load first.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Color specification of an aircraft's white position light.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "White",
+            "Bright white",
+            "#FFFFFF",
+            "Aviation White"
+          ],
+          "answerIndex": 3,
+          "answerText": "Aviation White",
+          "explanation": "Position lights follow aviation color specifications.\n\nWhy the other choices are incorrect:\n- White, Bright white, #FFFFFF → Generic color descriptions.\n\nDifferentiate Similar Concepts:\n- Aviation white → Regulated color.\n- Generic white → Not specified.\n\n💡 Memory Hook:\nAircraft lights use aviation colors.\n\n🎯 Board Tip:\nAviation white, aviation red, aviation green.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The maximum operating limit speed, in Mach number:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Vmo",
+            "Mmo",
+            "Vmm",
+            "Mvo"
+          ],
+          "answerIndex": 1,
+          "answerText": "Mmo",
+          "explanation": "Mmo is the maximum operating Mach number. Vmo is in speed units (knots).\n\nWhy the other choices are incorrect:\n- Vmo → Speed, not Mach.\n- Vmm, Mvo → Not standard terms.\n\nDifferentiate Similar Concepts:\n- Vmo → Max operating speed.\n- Mmo → Max operating Mach.\n\n💡 Memory Hook:\nM for Mach.\n\n🎯 Board Tip:\nMach number limit = Mmo.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "Design Cruising Speed",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Vmo",
+            "Vmax",
+            "Vc",
+            "Vd"
+          ],
+          "answerIndex": 2,
+          "answerText": "Vc",
+          "explanation": "Vc is the design cruising speed.\n\nWhy the other choices are incorrect:\n- Vmo → Max operating.\n- Vmax → Maximum speed.\n- Vd → Design dive speed.\n\nDifferentiate Similar Concepts:\n- Vc → Cruise.\n- Vd → Dive.\n- Va → Maneuvering.\n\n💡 Memory Hook:\nC = Cruise.\n\n🎯 Board Tip:\nSubscript letter hints the meaning.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "From the top of the helicopter looking down, the rotors spin in a counterclockwise manner. If the pilot is taking off and desires to hover in place and keep the current heading, the immediate inputs they should make are:",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Yaw Left, Roll Right.",
+            "Yaw Right, Roll Right.",
+            "Yaw Left Roll Left.",
+            "Yaw Right Roll Left."
+          ],
+          "answerIndex": 1,
+          "answerText": "Yaw Right, Roll Right.",
+          "explanation": "CCW rotor (viewed from above), hover and hold heading\nFrom the top of the helicopter looking down, the main rotor spins counter-clockwise. The pilot takes off and wants to hover in place and keep the current heading. The immediate inputs they should make are:\n\n- a. Yaw Left, Roll Right.\n- b. Yaw Left, Roll Left.\n- c. Yaw Right, Roll Right.\n- d. Yaw Right, Roll Left.\n\n**Answer: B.** *(Choices B and C were swapped from the original so the key is physically correct.)*\n\nA counter-clockwise rotor reacts on the fuselage clockwise, so the nose tends to yaw right. The pilot counters with left pedal (yaw left). The tail rotor thrust that holds heading pushes the helicopter to the right (translating tendency), so the pilot applies left cyclic (roll left) to stay in place.\n\nWhy the other choices are incorrect:\n- A → Left yaw is right, but rolling right adds to the rightward drift.\n- C → Both inputs go with the torque and drift instead of against them.\n- D → Right yaw adds to the torque, and only the roll is right.\n\nDifferentiate Similar Concepts:\n- Torque → Fuselage yaws opposite to the rotor spin, countered by pedal.\n- Translating tendency → Drift in the direction of tail rotor thrust, countered by cyclic.\n\n💡 Memory Hook:\nCounter the torque and counter the drift.\n\n🎯 Board Tip:\nDraw the rotor direction first, then work out torque and tail rotor thrust.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The value of angular momentum of a rotating body does not change unless an external force is applied.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Venturi Effect.",
+            "Magnus Effect.",
+            "Coriolis Effect.",
+            "Coanda Effect."
+          ],
+          "answerIndex": 2,
+          "answerText": "Coriolis Effect.",
+          "explanation": "Conservation of angular momentum drives Coriolis effect (blade speed changes as the radius changes).\n\nWhy the other choices are incorrect:\n- Venturi → Pressure/velocity in a duct.\n- Magnus → Spinning body lift.\n- Coanda → Flow following a surface.\n\nDifferentiate Similar Concepts:\n- Coriolis → Angular momentum conservation.\n- Gyroscopic precession → 90° response.\n\n💡 Memory Hook:\nIce skater pulls arms in, spins faster.\n\n🎯 Board Tip:\nAngular momentum + radius change = Coriolis.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "This rotor system is susceptible to mast bumping.",
+          "questionType": "multiple_choice",
+          "choices": [
+            "Semi Rigid.",
+            "Rigid.",
+            "Fully Articulated.",
+            "Tandem."
+          ],
+          "answerIndex": 0,
+          "answerText": "Semi Rigid.",
+          "explanation": "Semi-rigid (teetering) rotors can have the hub strike the mast under low-G flight.\n\nWhy the other choices are incorrect:\n- Rigid → Hinge-less, rigid mast moment.\n- Fully articulated → Hinges prevent bumping.\n- Tandem → Not typically a mast-bumping concern.\n\nDifferentiate Similar Concepts:\n- Semi-rigid → Teeter, mast bump.\n- Articulated → Flap/drag hinges.\n\n💡 Memory Hook:\nTeeter = Totter into the mast.\n\n🎯 Board Tip:\nLow-G + teetering rotor = mast bumping.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        },
+        {
+          "question": "The nose wheel load is 1400 N, left main landing gear at 2800 N and the right main landing gear at 2900 N. If the distances between the nose and the center of the main landing gear is 5 m, and the distances between a main landing gear from the butt line is 2 m, how far off from the butt line is CG location of the aircraft?",
+          "questionType": "multiple_choice",
+          "choices": [
+            "0.0141 m",
+            "0.0351 m",
+            "0.1408 m",
+            "0.0282 m ---"
+          ],
+          "answerIndex": 3,
+          "answerText": "0.0282 m ---",
+          "explanation": "Total weight = 1400 + 2800 + 2900 = 7100 N.\nMoment about the centerline = (2900 − 2800) × 2 = 200 N·m.\nCG offset = 200 / 7100 = 0.0282 m (toward the heavier right side).\n\nWhy the other choices are incorrect:\n- A, B, C → Use the wrong arm or exclude the nose load from the total.\n\nDifferentiate Similar Concepts:\n- Lateral CG → Moments about the butt line.\n- Longitudinal CG → Moments about the nose.\n\n💡 Memory Hook:\nDifference × arm ÷ total.\n\n🎯 Board Tip:\nThe 5 m nose distance is not needed here.",
+          "tags": [
+            "structures and design",
+            "mock exam",
+            "Set A"
+          ],
+          "explanationImages": [],
+          "questionImages": [],
+          "explanationCard": null,
+          "expectedAnswer": null,
+          "acceptedDeviation": 0
+        }
+      ]
     }
 }
 }

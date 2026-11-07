@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 580" role="img" aria-labelledby="title desc">
+  <title id="title">T-section with circular lower member</title>
+  <desc id="desc">A 150 millimeter wide flange, 15 millimeters thick, joins a 15 millimeter web 150 millimeters long above a circle of 50 millimeter radius. The centroidal x axis passes through C, and y-bar is measured from the top flange.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#263442"/></marker>
+    <style>
+      .part{fill:#e9eef3;stroke:#263442;stroke-width:2.4;stroke-linejoin:round}
+      .dim{fill:none;stroke:#263442;stroke-width:1.6;marker-start:url(#arrow);marker-end:url(#arrow)}
+      .ext{fill:none;stroke:#647383;stroke-width:1.2}
+      .axis{fill:none;stroke:#506171;stroke-width:1.5;stroke-dasharray:7 5}
+      .label{font:18px Arial, sans-serif;fill:#18232e}
+      .math{font:italic 20px Georgia, serif;fill:#18232e}
+      .small{font:16px Arial, sans-serif;fill:#18232e}
+    </style>
+  </defs>
+  <!-- Circular member, then the web and flange. -->
+  <circle class="part" cx="242" cy="462" r="90"/>
+  <rect class="part" x="228.5" y="102" width="27" height="270"/>
+  <rect class="part" x="107" y="75" width="270" height="27"/>
+  <!-- Centroidal x-x axis and centroid C. -->
+  <line class="axis" x1="83" y1="282" x2="401" y2="282"/>
+  <circle cx="242" cy="282" r="4.5" fill="#18232e"/>
+  <text class="small" x="251" y="270">C</text>
+  <text class="math" x="76" y="289">x</text>
+  <line class="ext" x1="76" y1="272" x2="88" y2="272"/>
+  <text class="math" x="405" y="289">x</text>
+  <line class="ext" x1="405" y1="272" x2="417" y2="272"/>
+  <!-- ? measurement from the top of the flange to the centroidal axis. -->
+  <line class="ext" x1="377" y1="75" x2="428" y2="75"/>
+  <line class="ext" x1="242" y1="282" x2="428" y2="282"/>
+  <line class="dim" x1="419" y1="82" x2="419" y2="275"/>
+  <text class="math" x="434" y="185">y</text>
+  <line class="ext" x1="434" y1="168" x2="447" y2="168"/>
+  <!-- Flange width and thickness. -->
+  <line class="ext" x1="107" y1="75" x2="107" y2="49"/>
+  <line class="ext" x1="377" y1="75" x2="377" y2="49"/>
+  <line class="dim" x1="114" y1="51" x2="370" y2="51"/>
+  <text class="label" x="242" y="39" text-anchor="middle">150 mm</text>
+  <line class="dim" x1="91" y1="78" x2="91" y2="99"/>
+  <text class="small" x="22" y="93">15 mm</text>
+  <!-- Web length and width. -->
+  <line class="ext" x1="107" y1="102" x2="69" y2="102"/>
+  <line class="ext" x1="228.5" y1="372" x2="69" y2="372"/>
+  <line class="dim" x1="76" y1="109" x2="76" y2="365"/>
+  <text class="label" transform="translate(55 237) rotate(-90)" text-anchor="middle">150 mm</text>
+  <line class="dim" x1="229" y1="221" x2="255" y2="221"/>
+  <text class="small" x="266" y="227">15 mm</text>
+  <text class="math" x="263" y="119">B</text>
+  <text class="math" x="242" y="370" text-anchor="middle">A</text>
+  <!-- Radius leader. -->
+  <line class="ext" x1="242" y1="462" x2="181" y2="522"/>
+  <text class="small" x="112" y="535">50 mm</text>
+</svg>
